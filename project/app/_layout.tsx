@@ -18,6 +18,8 @@ import { AuthProvider } from '@/context/auth-context';
 
 SplashScreen.preventAutoHideAsync();
 
+import ResponsiveContainer from '@/components/ResponsiveContainer';
+
 export default function RootLayout() {
   useFrameworkReady();
   useFullscreen();
@@ -41,12 +43,14 @@ export default function RootLayout() {
 
   return (
     <AuthProvider>
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="light" backgroundColor="#667eea" translucent={true} />
+      <ResponsiveContainer>
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+          <Stack.Screen name="+not-found" />
+        </Stack>
+        <StatusBar style="light" backgroundColor="#667eea" translucent={true} />
+      </ResponsiveContainer>
     </AuthProvider>
   );
 }

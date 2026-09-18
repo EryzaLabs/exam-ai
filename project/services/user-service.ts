@@ -12,6 +12,7 @@ export interface UserProfile {
   updatedAt: string;
   stats: UserStats;
   profileCompleted?: boolean;
+  isSubscribed?: boolean;
 }
 
 export interface UserStats {
@@ -97,6 +98,25 @@ class UserService {
       });
     } catch (error) {
       console.error('Error updating user profile:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Update subscription status
+   */
+  async setSubscriptionStatus(status: boolean): Promise<void> {
+    try {
+      const userId = auth.currentUser?.uid;
+      if (!userId) throw new Error('User not authenticated');
+
+      const userRef = doc(db, 'users', userId);
+      await updateDoc(userRef, {
+        isSubscribed: status,
+        updatedAt: new Date().toISOString(),
+      });
+    } catch (error) {
+      console.error('Error updating subscription status:', error);
       throw error;
     }
   }

@@ -28,7 +28,9 @@ import {
 } from 'lucide-react-native';
 import SSCCGLService, { ParsedMockTest } from '@/services/ssc-cgl-service';
 import { TestProgressService, SavedTestState } from '@/services/test-progress-service';
-// import { PAPERS, PaperDefinition } from '@/data/generated_papers'; // No longer using bundled papers
+import userService from '@/services/user-service';
+import { initiatePayment } from '@/utils/razorpay';
+import { auth } from '@/services/firebaseConfig';
 
 const { width } = Dimensions.get('window');
 
@@ -48,11 +50,21 @@ export default function TestListScreen() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
   const [activeTest, setActiveTest] = useState<SavedTestState | null>(null);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [paymentLoading, setPaymentLoading] = useState(false);
 
   useEffect(() => {
     loadTests();
     loadActiveTest();
+    checkSubscription();
   }, []);
+
+  const checkSubscription = async () => {
+    const profile = await userService.getUserProfile();
+    if (profile?.isSubscribed) {
+      setIsSubscribed(true);
+    }
+  };
 
   useEffect(() => {
     filterTests();
@@ -72,6 +84,24 @@ export default function TestListScreen() {
   const handleRefresh = () => {
       loadTests();
       loadActiveTest();
+      checkSubscription();
+  };
+
+  const handlePayment = () => {
+    setPaymentLoading(true);
+    initiatePayment(
+      async () => {
+        // On success
+        await userService.setSubscriptionStatus(true);
+        setIsSubscribed(true);
+        setPaymentLoading(false);
+        alert('Payment successful! You now have full access.');
+      },
+      (error) => {
+        setPaymentLoading(false);
+        alert(`Payment failed: ${error}`);
+      }
+    );
   };
 
   const loadTests = async () => {
@@ -124,6 +154,11 @@ export default function TestListScreen() {
   };
 
   const handleTestSelect = async (paper: ServerPaper) => {
+    if (!isSubscribed) {
+      handlePayment();
+      return;
+    }
+    
     try {
       setLoadingTestId(paper.id);
       
@@ -164,7 +199,6 @@ export default function TestListScreen() {
 
     return (
       <TouchableOpacity
-        key={test.id}
         style={styles.testCard}
         onPress={() => handleTestSelect(test)}
         activeOpacity={0.7}
@@ -184,7 +218,7 @@ export default function TestListScreen() {
               <FileText size={24} color="#fff" />
             </View>
             <View style={styles.testCardBadge}>
-              <Text style={styles.testCardBadgeText}>SSC CGL</Text>
+              <Text style={styles.testCardBadgeText}>UPSC Principal</Text>
             </View>
              {test.hasAnswers && (
                 <View style={[styles.testCardBadge, {backgroundColor: 'rgba(255,255,255,0.3)', marginLeft: 8}]}>
@@ -224,9 +258,9 @@ export default function TestListScreen() {
             </Text>
             <View style={styles.testCardAction}>
               <Text style={styles.testCardActionText}>
-                 {loadingTestId === test.id ? 'Loading...' : 'Start Test'}
+                 {loadingTestId === test.id ? 'Loading...' : (isSubscribed ? 'Start Test' : 'Unlock - ₹500')}
               </Text>
-              <ChevronRight size={18} color="#fff" />
+              {isSubscribed ? <ChevronRight size={18} color="#fff" /> : <Text style={{color: '#fff', fontSize: 16}}>🔒</Text>}
             </View>
           </View>
         </LinearGradient>
@@ -326,7 +360,7 @@ export default function TestListScreen() {
       <LinearGradient colors={['#4A90E2', '#357ABD']} style={styles.header}>
         <View style={styles.headerTop}>
             <View style={{flex: 1}}>
-                <Text style={styles.headerTitle}>SSC CGL Mock Tests</Text>
+                <Text style={styles.headerTitle}>UPSC Principal Mock Tests</Text>
                 <Text style={styles.headerSubtitle}>
                 {filteredTests.length} test{filteredTests.length !== 1 ? 's' : ''} available
                 </Text>
@@ -375,8 +409,12 @@ export default function TestListScreen() {
             </Text>
           </View>
         ) : (
-          <View style={styles.testsGrid}>
-            {filteredTests.map((test) => renderTestCard(test))}
+          <View style={[styles.testsGrid, width > 768 && styles.testsGridWeb]}>
+            {filteredTests.map((test) => (
+              <View key={test.id} style={width > 768 ? styles.testCardWrapperWeb : undefined}>
+                {renderTestCard(test)}
+              </View>
+            ))}
           </View>
         )}
       </ScrollView>
@@ -477,6 +515,15 @@ const styles = StyleSheet.create({
   },
   testsGrid: {
     gap: 12,
+  },
+  testsGridWeb: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 16,
+  },
+  testCardWrapperWeb: {
+    width: '48%', // For a 2-column grid on tablets/desktop
+    marginBottom: 4,
   },
   testCard: {
     borderRadius: 16,

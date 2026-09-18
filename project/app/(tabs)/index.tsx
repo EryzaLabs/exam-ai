@@ -242,7 +242,7 @@ export default function EnhancedHomeScreen() {
         <View style={styles.section}>
           <View style={styles.sectionHeader}>
             <BookOpen size={20} color="#FF6B35" />
-            <Text style={styles.sectionTitle}>SSC CGL Mock Tests</Text>
+            <Text style={styles.sectionTitle}>UPSC Principal Mock Tests</Text>
             <View style={styles.newBadge}>
               <Text style={styles.newBadgeText}>NEW</Text>
             </View>
@@ -260,9 +260,9 @@ export default function EnhancedHomeScreen() {
                   <BookOpen size={32} color="#FFFFFF" />
                 </View>
                 <View style={styles.mockTestInfo}>
-                  <Text style={styles.mockTestTitle}>Take Full-Length Mock Tests</Text>
+                  <Text style={styles.mockTestTitle}>UPSC Principal Test Series</Text>
                   <Text style={styles.mockTestSubtitle}>
-                    50+ SSC CGL papers with AI-generated explanations
+                    Complete mock test series for Rs 500
                   </Text>
                   <View style={styles.mockTestFeatures}>
                     <View style={styles.mockTestFeature}>

@@ -23,13 +23,11 @@ router.get('/', (req: Request, res: Response) => {
     // Sort files by name (which effectively sorts by year/date roughly or at least consistently)
     files.sort().reverse(); 
 
-    const papers = files.map(filename => {
+    const papers = files.map((filename, index) => {
         const hasAnswers = fs.existsSync(path.join(ANSWERS_DIR, filename));
-        // We can optionally read the file to get title, but that might be slow for 200 files.
-        // For now, let's use the filename as ID.
         return {
             id: filename,
-            title: filename.replace('.json', '').replace(/_/g, ' '),
+            title: `UPSC Principal Mock Test ${index + 1}`,
             filename,
             hasAnswers
         };

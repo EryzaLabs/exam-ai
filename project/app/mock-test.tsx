@@ -13,6 +13,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import ResponsiveContainer from '@/components/ResponsiveContainer';
 import { useLocalSearchParams, router } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import {
@@ -541,14 +542,17 @@ export default function MockTestScreen() {
       <Modal
         visible={showQuestionPalette}
         animationType="slide"
-        transparent={true}
+        presentationStyle="pageSheet"
         onRequestClose={() => setShowQuestionPalette(false)}
       >
-        <View style={styles.modalOverlay}>
-          <View style={styles.paletteContainer}>
+        <ResponsiveContainer>
+          <SafeAreaView style={styles.paletteContainer}>
             <View style={styles.paletteHeader}>
               <Text style={styles.paletteTitle}>Question Palette</Text>
-              <TouchableOpacity onPress={() => setShowQuestionPalette(false)}>
+              <TouchableOpacity
+                style={styles.paletteCloseButton}
+                onPress={() => setShowQuestionPalette(false)}
+              >
                 <X size={24} color="#333" />
               </TouchableOpacity>
             </View>
@@ -620,8 +624,8 @@ export default function MockTestScreen() {
             >
               <Text style={styles.paletteSubmitButtonText}>Submit Test</Text>
             </TouchableOpacity>
-          </View>
-        </View>
+          </SafeAreaView>
+        </ResponsiveContainer>
       </Modal>
     );
   };

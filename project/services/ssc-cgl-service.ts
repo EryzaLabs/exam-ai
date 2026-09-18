@@ -237,8 +237,8 @@ class SSCCGLService {
 
     const mockTest: ParsedMockTest = {
       id: paper._id,
-      title: paper.title || 'Untitled Test',
-      examType: paper.course || 'SSC CGL',
+      title: 'UPSC Principal Exam Mock Test', // Rebranded
+      examType: 'UPSC Principal',
       duration: paper.duration || 3600,
       totalQuestions,
       totalMarks,
