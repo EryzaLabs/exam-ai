@@ -53,6 +53,7 @@ export default function TabLayout() {
         name="battle"
         options={{
           title: 'Battle',
+          href: null,
           tabBarIcon: ({ size, color }) => (
             <Swords size={size} color={color} />
           ),
@@ -62,6 +63,7 @@ export default function TabLayout() {
         name="bookmarks"
         options={{
           title: 'Bookmarks',
+          href: null,
           tabBarIcon: ({ size, color }) => (
             <Bookmark size={size} color={color} />
           ),
@@ -71,6 +73,7 @@ export default function TabLayout() {
         name="progress"
         options={{
           title: 'Progress',
+          href: null,
           tabBarIcon: ({ size, color }) => (
             <TrendUp size={size} color={color} />
           ),
@@ -80,6 +83,7 @@ export default function TabLayout() {
         name="leaderboard"
         options={{
           title: 'Leaderboard',
+          href: null,
           tabBarIcon: ({ size, color }) => (
             <Trophy size={size} color={color} />
           ),

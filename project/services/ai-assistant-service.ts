@@ -4,8 +4,8 @@
  */
 
 const HACKCLUB_API_URL = 'https://ai.hackclub.com/proxy/v1/chat/completions';
-const HACKCLUB_API_KEY = 'sk-hc-v1-703d0e95412148bfbd5e5066e9d0e759640e99a53df040a08d9c66c5085b1355';
-const MODEL = 'openai/gpt-oss-120b';
+const HACKCLUB_API_KEY = process.env.EXPO_PUBLIC_VLM_API_KEY || '';
+const MODEL = 'gpt-4o-mini';
 
 export interface ChatMessage {
   role: 'user' | 'assistant' | 'system';
@@ -45,6 +45,9 @@ export async function sendChatMessage(
 
     if (!response.ok) {
       const errorText = await response.text();
+      if (response.status === 401 || errorText.includes('Authentication failed')) {
+        throw new Error('API Key Expired or Invalid. Please update HACKCLUB_API_KEY in ai-assistant-service.ts');
+      }
       throw new Error(`AI API Error: ${response.status} - ${errorText}`);
     }
 

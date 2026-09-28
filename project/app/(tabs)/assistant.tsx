@@ -13,7 +13,8 @@ import {
   StatusBar,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Send, Bot, User } from 'lucide-react-native';
+import { useLocalSearchParams } from 'expo-router';
+import { Send, Bot, User, FileText, Brain, TrendingUp, Target } from 'lucide-react-native';
 import {
   ChatMessage as AIMessage,
   chatWithHistory,
@@ -25,10 +26,10 @@ interface Message extends AIMessage {
 }
 
 const QUICK_ACTIONS = [
-  { icon: '📚', label: 'Study Tips', action: 'study_tips' },
-  { icon: '💡', label: 'Explain Concept', action: 'explain' },
-  { icon: '❓', label: 'Solve Doubt', action: 'doubt' },
-  { icon: '🎯', label: 'Practice Questions', action: 'practice' },
+  { icon: <FileText size={24} color="#667eea" />, label: 'Simplify Rule/Act', action: 'simplify' },
+  { icon: <Brain size={24} color="#667eea" />, label: 'Create Mnemonic', action: 'mnemonic' },
+  { icon: <TrendingUp size={24} color="#667eea" />, label: 'Analyze Weakness', action: 'analyze' },
+  { icon: <Target size={24} color="#667eea" />, label: 'Generate Quiz', action: 'quiz' },
 ];
 
 export default function AssistantScreen() {
@@ -36,13 +37,25 @@ export default function AssistantScreen() {
     {
       id: '1',
       role: 'assistant',
-      content: "Hi! I'm your AI study assistant. I can help you with:\n\n📚 Understanding difficult concepts\n💡 Getting detailed explanations\n❓ Solving doubts\n🎯 Study tips and strategies\n\nHow can I help you today?",
+      content: "Hi! I'm your UPSC Principal AI Assistant. I can help you with:\n\n• Simplifying complex administrative rules\n• Creating mnemonics for memorization\n• Analyzing your test weaknesses\n• Generating quick quizzes on specific topics\n• Explaining concepts in English and Hindi\n\nWhat would you like to do?",
       timestamp: new Date(),
     },
   ]);
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const scrollViewRef = useRef<ScrollView>(null);
+  const params = useLocalSearchParams();
+  const initialPromptProcessed = useRef(false);
+
+  useEffect(() => {
+    if (params.prompt && !initialPromptProcessed.current) {
+      initialPromptProcessed.current = true;
+      const promptText = params.prompt as string;
+      setInputText(promptText);
+      // Slight delay to ensure UI mounts before sending
+      setTimeout(() => sendMessage(promptText), 500);
+    }
+  }, [params.prompt]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -85,12 +98,13 @@ export default function AssistantScreen() {
       setMessages((prev) => [...prev, assistantMessage]);
     } catch (error) {
       console.error('Error sending message:', error);
-      Alert.alert('Error', 'Failed to get response. Please try again.');
+      const errorMsg = (error as Error).message || 'Failed to get response.';
+      Alert.alert('Error', errorMsg);
 
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: "Sorry, I couldn't process your request. Please try again.",
+        content: `Error: ${errorMsg}`,
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, errorMessage]);
@@ -102,21 +116,22 @@ export default function AssistantScreen() {
   const handleQuickAction = async (action: string) => {
     let prompt = '';
     switch (action) {
-      case 'study_tips':
-        prompt = 'Can you give me study tips for competitive exams?';
+      case 'simplify':
+        prompt = 'Can you simplify the General Financial Rules (GFR) or CCS Conduct Rules for me in simple terms?';
         break;
-      case 'explain':
-        prompt = 'I need help understanding a concept. Can you explain it to me?';
+      case 'mnemonic':
+        prompt = 'Create a mnemonic to help me remember the components of the National Curriculum Framework (NCF) 2005.';
         break;
-      case 'doubt':
-        prompt = 'I have a doubt. Can you help me solve it?';
+      case 'analyze':
+        prompt = 'Analyze my mock test performance and tell me which areas of Educational Administration I need to focus on.';
         break;
-      case 'practice':
-        prompt = 'Can you generate some practice questions for me?';
+      case 'quiz':
+        prompt = 'Give me 5 quick practice questions specifically on the Right to Education (RTE) Act 2009.';
         break;
     }
     if (prompt) {
       setInputText(prompt);
+      sendMessage(prompt);
     }
   };
 
@@ -179,7 +194,7 @@ export default function AssistantScreen() {
                   style={styles.quickActionButton}
                   onPress={() => handleQuickAction(action.action)}
                 >
-                  <Text style={styles.quickActionIcon}>{action.icon}</Text>
+                  <View style={styles.quickActionIcon}>{action.icon}</View>
                   <Text style={styles.quickActionLabel}>{action.label}</Text>
                 </TouchableOpacity>
               ))}
@@ -366,7 +381,7 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   quickActionIcon: {
-    fontSize: 24,
+    marginBottom: 4,
   },
   quickActionLabel: {
     fontSize: 11,

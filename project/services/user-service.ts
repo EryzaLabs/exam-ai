@@ -6,14 +6,24 @@ export interface UserProfile {
   uid: string;
   email: string;
   displayName: string;
-  exams: string[];
-  experienceLevel: 'beginner' | 'intermediate' | 'advanced';
-  targetExamDate?: string;
+  photoURL?: string | null;
+  phoneNumber?: string | null;
+  targetCadre: string; // e.g., 'KVS', 'NVS', 'UPSC', 'State Dept'
+  currentDesignation: string; // e.g., 'Teacher', 'Vice Principal', 'Other'
+  weakestSubject: string; // e.g., 'Education Policy', 'Service Matters', etc.
+  languagePreference: 'English' | 'Hindi';
+  notificationsEnabled: boolean;
   createdAt: string;
   updatedAt: string;
   stats: UserStats;
   profileCompleted?: boolean;
   isSubscribed?: boolean;
+}
+
+export interface TopicStats {
+  accuracy: number;
+  attempted: number;
+  correct: number;
 }
 
 export interface UserStats {
@@ -22,6 +32,7 @@ export interface UserStats {
   streak: number;
   totalTests: number;
   lastActiveDate?: string;
+  topicStats?: Record<string, TopicStats>; // Map of topic IDs to performance
 }
 
 class UserService {
@@ -67,8 +78,8 @@ class UserService {
     const profile = await this.getUserProfile(uid);
     return profile?.profileCompleted === true || (
       !!profile?.displayName && 
-      profile?.exams?.length > 0 && 
-      !!profile?.experienceLevel
+      !!profile?.targetCadre && 
+      !!profile?.currentDesignation
     );
   }
 

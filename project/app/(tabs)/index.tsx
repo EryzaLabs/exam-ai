@@ -248,7 +248,7 @@ export default function EnhancedHomeScreen() {
             </View>
           </View>
 
-          <TouchableOpacity style={styles.mockTestCard} onPress={() => router.push('/test-list')}>
+          <TouchableOpacity style={styles.mockTestCard} onPress={() => router.push('/practice')}>
             <LinearGradient
               colors={['#4A90E2', '#357ABD']}
               start={{ x: 0, y: 0 }}
@@ -318,23 +318,6 @@ export default function EnhancedHomeScreen() {
               </LinearGradient>
             </TouchableOpacity>
           </View>
-
-          <TouchableOpacity style={styles.battleCard} onPress={openBattle}>
-            <LinearGradient
-              colors={['#667eea', '#764ba2']}
-              style={styles.battleGradient}
-            >
-              <Swords size={24} color="#FFFFFF" />
-              <View style={styles.battleContent}>
-                <Text style={styles.battleTitle}>Challenge Friends</Text>
-                <Text style={styles.battleSubtitle}>Compete in real-time history battles</Text>
-              </View>
-              <View style={styles.battleBadge}>
-                <Users size={16} color="#667eea" />
-                <Text style={styles.battleBadgeText}>Live</Text>
-              </View>
-            </LinearGradient>
-          </TouchableOpacity>
         </View>
 
         {/* Today's Achievements */}

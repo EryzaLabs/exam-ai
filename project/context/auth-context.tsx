@@ -45,8 +45,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         const hasProfile = await UserService.hasCompletedProfile();
         if (!hasProfile && !segments.includes('profile-setup')) {
           router.replace('/profile-setup');
-        } else if (hasProfile && !segments.includes('login') && !segments.includes('signup')) {
+        } else if (hasProfile) {
           router.replace('/');
+        }
+      };
+      checkProfile();
+    } else if (user && !inAuthGroup) {
+      // Also check profile for users who just signed in via Google (they land on main app)
+      const checkProfile = async () => {
+        const hasProfile = await UserService.hasCompletedProfile();
+        if (!hasProfile) {
+          router.replace('/profile-setup');
         }
       };
       checkProfile();

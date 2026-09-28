@@ -580,13 +580,26 @@ export default function TestResultScreen() {
                   <View style={styles.solutionExplanation}>
                     <View style={styles.solutionExplanationHeader}>
                       <Text style={styles.solutionExplanationTitle}>Explanation</Text>
-                      <TouchableOpacity
-                        style={styles.reportButton}
-                        onPress={() => handleReportQuestion(question)}
-                      >
-                        <Flag size={16} color="#FF9500" />
-                        <Text style={styles.reportButtonText}>Report</Text>
-                      </TouchableOpacity>
+                      <View style={{flexDirection: 'row', gap: 8}}>
+                        <TouchableOpacity
+                          style={[styles.reportButton, {borderColor: '#4A90E2', backgroundColor: '#F0F7FF'}]}
+                          onPress={() => {
+                            const prompt = `Can you explain this question in detail?\n\nQuestion: ${question.questionText}\n\nCorrect Answer: Option ${question.correctAnswerIndex + 1}`;
+                            router.push({ pathname: '/assistant', params: { prompt } });
+                          }}
+                        >
+                          <Lightbulb size={16} color="#4A90E2" />
+                          <Text style={[styles.reportButtonText, {color: '#4A90E2'}]}>Ask AI</Text>
+                        </TouchableOpacity>
+                        
+                        <TouchableOpacity
+                          style={styles.reportButton}
+                          onPress={() => handleReportQuestion(question)}
+                        >
+                          <Flag size={16} color="#FF9500" />
+                          <Text style={styles.reportButtonText}>Report</Text>
+                        </TouchableOpacity>
+                      </View>
                     </View>
                     <Text style={styles.solutionExplanationText}>
                       {question.explanation.english}
@@ -693,7 +706,7 @@ export default function TestResultScreen() {
       <View style={styles.footer}>
         <TouchableOpacity
           style={styles.footerButton}
-          onPress={() => router.replace('/test-list')}
+          onPress={() => router.replace('/practice')}
         >
           <Home size={20} color="#4A90E2" />
           <Text style={styles.footerButtonText}>Back to Tests</Text>
