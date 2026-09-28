@@ -1,7 +1,8 @@
 import { initializeApp } from 'firebase/app';
-import { initializeAuth, getReactNativePersistence, Auth } from 'firebase/auth';
+import { initializeAuth, getReactNativePersistence, getAuth, Auth } from 'firebase/auth';
 import { getFirestore, Firestore, enableIndexedDbPersistence, initializeFirestore, CACHE_SIZE_UNLIMITED } from 'firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform } from 'react-native';
 
 // Your web app's Firebase configuration
 export const firebaseConfig = {
@@ -14,13 +15,32 @@ export const firebaseConfig = {
   measurementId: "G-E8M12HYRNN"
 };
 
-// Initialize Firebase
+// Initialize Firebase (Modular)
 const app = initializeApp(firebaseConfig);
 
-// Initialize Auth with AsyncStorage persistence
-const auth: Auth = initializeAuth(app, {
-  persistence: getReactNativePersistence(AsyncStorage)
-});
+// Initialize Firebase (Compat) for expo-firebase-recaptcha on Web
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
+
+// Initialize Auth with platform-specific persistence
+let auth: Auth;
+
+if (Platform.OS === 'web') {
+  auth = getAuth(app);
+} else {
+  // Try to use AsyncStorage, but wrap in try-catch in case getReactNativePersistence is undefined on web bundler
+  try {
+    auth = initializeAuth(app, {
+      persistence: getReactNativePersistence(AsyncStorage)
+    });
+  } catch (e) {
+    auth = getAuth(app);
+  }
+}
 
 // Initialize Firestore with offline persistence
 const db: Firestore = initializeFirestore(app, {

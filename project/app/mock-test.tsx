@@ -87,14 +87,6 @@ export default function MockTestScreen() {
     };
   }, []);
 
-  useEffect(() => {
-    const backAction = () => {
-        handleBack();
-        return true;
-    };
-    const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
-    return () => backHandler.remove();
-  }, [handleBack]);
 
 
   // Auto-save every 30 seconds
@@ -326,6 +318,15 @@ export default function MockTestScreen() {
     await saveProgress();
     router.back();
   };
+  
+  useEffect(() => {
+    const backAction = () => {
+        handleBack();
+        return true;
+    };
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+    return () => backHandler.remove();
+  }, [handleBack]);
    
   const performSubmit = async () => {
     try {

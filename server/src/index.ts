@@ -49,8 +49,12 @@ dirs.forEach((dir) => {
 
 // Middleware
 app.use(helmet());
+const corsOrigin = process.env.CORS_ORIGIN 
+  ? process.env.CORS_ORIGIN.split(',').map(origin => origin.trim()) 
+  : '*';
+
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || '*',
+  origin: corsOrigin,
   credentials: true,
 }));
 app.use(compression());

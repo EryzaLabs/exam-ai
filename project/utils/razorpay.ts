@@ -42,7 +42,7 @@ export const initiatePayment = async (
     const orderResponse = await fetch(`${RAZORPAY_API_URL}/payment/create-order`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ amount: 500, currency: 'INR' })
+      body: JSON.stringify({ amount: 50000, currency: 'INR' }) // 50000 paise = 500 INR
     });
     
     if (!orderResponse.ok) {
@@ -89,6 +89,11 @@ export const initiatePayment = async (
       },
       theme: {
         color: '#4A90E2'
+      },
+      modal: {
+        ondismiss: function() {
+          onError('Payment cancelled by user');
+        }
       }
     };
 
