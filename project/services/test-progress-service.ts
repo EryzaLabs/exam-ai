@@ -100,10 +100,13 @@ export const TestProgressService = {
       await setDoc(docRef, result);
       console.log('Test result saved to Firestore');
 
+      // Calculate total attempted from section analytics
+      const totalAttempted = result.sectionAnalytics ? result.sectionAnalytics.reduce((sum, section) => sum + section.attempted, 0) : 0;
+
       // Update user statistics in background (non-blocking)
       console.log('Triggering user statistics update...');
       UserService.updateUserStats({
-        questionsAttempted: result.totalQuestions,
+        questionsAttempted: totalAttempted,
         accuracy: result.accuracy,
         totalTests: 1, // increment handled in service
       }).catch(err => console.error('Failed to update user stats:', err));

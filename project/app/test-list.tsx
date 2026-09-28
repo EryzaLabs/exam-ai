@@ -14,6 +14,12 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import {
+  Folder,
+  ArrowLeft,
+  ArrowRight,
+  LayoutGrid,
+  HelpCircle,
+  SlidersHorizontal,
   FileText,
   Clock,
   Award,
@@ -48,7 +54,8 @@ export default function TestListScreen() {
   const [loading, setLoading] = useState(true);
   const [loadingTestId, setLoadingTestId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+  const [category, setCategory] = useState<'all' | 'full' | 'topic'>('all');
+  const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
   const [activeTest, setActiveTest] = useState<SavedTestState | null>(null);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [paymentLoading, setPaymentLoading] = useState(false);
@@ -68,7 +75,23 @@ export default function TestListScreen() {
 
   useEffect(() => {
     filterTests();
-  }, [searchQuery, selectedYear, tests]);
+  }, [searchQuery, category, selectedTopic, tests]);
+
+  const getTopicFromFilename = (filename: string): string | null => {
+    if (!filename.includes('topic_wise/')) return null;
+    const base = filename.split('topic_wise/')[1];
+    const topicId = base.split('_test_')[0];
+    return topicId.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  };
+
+  const uniqueTopics = useMemo(() => {
+    const topics = new Set<string>();
+    tests.forEach(t => {
+      const topic = getTopicFromFilename(t.filename);
+      if (topic) topics.add(topic);
+    });
+    return Array.from(topics).sort();
+  }, [tests]);
 
   const loadActiveTest = async () => {
     const saved = await TestProgressService.getCurrentTest();
@@ -88,6 +111,7 @@ export default function TestListScreen() {
   };
 
   const handlePayment = () => {
+    // We allow guests to purchase via local AsyncStorage caching
     setPaymentLoading(true);
     initiatePayment(
       async () => {
@@ -123,19 +147,18 @@ export default function TestListScreen() {
   const filterTests = () => {
     let filtered = [...tests];
 
-    // Filter by search query
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
-      filtered = filtered.filter(
-        (test) =>
-          test.title.toLowerCase().includes(query)
-      );
+    if (category === 'full') {
+      filtered = filtered.filter(t => t.filename.includes('full_mocks/'));
+    } else if (category === 'topic') {
+      filtered = filtered.filter(t => t.filename.includes('topic_wise/'));
+      if (selectedTopic) {
+        filtered = filtered.filter(t => getTopicFromFilename(t.filename) === selectedTopic);
+      }
     }
 
-    // Filter by year
-    // Note: We need to extract year from title since PaperDefinition doesn't have metadata prop yet
-    if (selectedYear) {
-      filtered = filtered.filter((test) => test.title.includes(selectedYear.toString()));
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter((test) => test.title.toLowerCase().includes(query));
     }
 
     setFilteredTests(filtered);
@@ -169,7 +192,7 @@ export default function TestListScreen() {
       const loadedTest = await SSCCGLService.fetchPaper(paper.filename);
 
       router.push({
-        pathname: '/mock-test',
+        pathname: '/test-instructions',
         params: { testId: loadedTest.id },
       });
     } catch (error) {
@@ -192,78 +215,76 @@ export default function TestListScreen() {
   };
 
   const renderTestCard = (test: ServerPaper) => {
-    // Defaults for listing
-    const duration = 60 * 60; // 60s * 60m = 1 hour
-    const totalQuestions = 100;
-    const totalMarks = 200;
+    // Dynamic calculations based on test type
+    const isMock = test.filename.includes('full_mocks');
+    const totalQuestions = isMock ? 120 : 20;
+    const duration = isMock ? 7200 : 1200; // 2 hours for mocks, 20 mins for topics
+    const totalMarks = totalQuestions * 2.5; // 2.5 marks per question
 
     return (
       <TouchableOpacity
-        style={styles.testCard}
+        style={styles.newTestCard}
         onPress={() => handleTestSelect(test)}
         activeOpacity={0.7}
         disabled={!!loadingTestId}
       >
-        <LinearGradient
-          colors={['#4A90E2', '#357ABD']}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 1 }}
-          style={[styles.testCardGradient, { opacity: loadingTestId === test.id ? 0.7 : 1 }]}
-        >
-          {loadingTestId === test.id && (
-            <ActivityIndicator color="white" style={{position: 'absolute', top: 10, right: 10}} />
-          )}
-          <View style={styles.testCardHeader}>
-            <View style={styles.testCardIcon}>
-              <FileText size={24} color="#fff" />
+        <View style={styles.testCardHeaderNew}>
+          <View style={styles.testCardIconNew}>
+             <FileText size={24} color="#4A90E2" />
+          </View>
+          <View style={styles.testCardBadgesNew}>
+            <View style={styles.testCardBadgePrimary}>
+              <Text style={styles.testCardBadgeTextPrimary}>UPSC Principal</Text>
             </View>
-            <View style={styles.testCardBadge}>
-              <Text style={styles.testCardBadgeText}>UPSC Principal</Text>
-            </View>
-             {test.hasAnswers && (
-                <View style={[styles.testCardBadge, {backgroundColor: 'rgba(255,255,255,0.3)', marginLeft: 8}]}>
-                  <Text style={styles.testCardBadgeText}>With Solutions</Text>
+            {test.hasAnswers && (
+              <View style={styles.testCardBadgeSuccess}>
+                <BookOpen size={12} color="#4CAF50" style={{marginRight: 4}} />
+                <Text style={styles.testCardBadgeTextSuccess}>With Solutions</Text>
+              </View>
+            )}
+          </View>
+        </View>
+
+        <Text style={styles.testCardTitleNew} numberOfLines={2}>
+          {test.title}
+        </Text>
+
+        <View style={styles.testCardBottomNew}>
+           <View style={styles.testCardStatsRowNew}>
+             <View style={styles.testCardStatNew}>
+                <HelpCircle size={18} color="#666" style={{marginBottom: 4}} />
+                <View style={styles.statTextGroupNew}>
+                  <Text style={styles.statValueNew}>{totalQuestions}</Text>
+                  <Text style={styles.statLabelNew}>Questions</Text>
                 </View>
-             )}
-          </View>
-
-          <Text style={styles.testCardTitle} numberOfLines={2}>
-            {test.title}
-          </Text>
-
-          {/* 
-          <View style={styles.testCardMeta}>
-             Meta data extracted from title is tricky without parsing, skipping for now
-          </View> 
-          */}
-
-          <View style={styles.testCardStats}>
-            <View style={styles.testCardStat}>
-              <BookOpen size={18} color="#fff" />
-              <Text style={styles.testCardStatText}>{totalQuestions} Qs</Text>
-            </View>
-            <View style={styles.testCardStat}>
-              <Clock size={18} color="#fff" />
-              <Text style={styles.testCardStatText}>{formatDuration(duration)}</Text>
-            </View>
-            <View style={styles.testCardStat}>
-              <Award size={18} color="#fff" />
-              <Text style={styles.testCardStatText}>{totalMarks} Marks</Text>
-            </View>
-          </View>
-
-          <View style={styles.testCardFooter}>
-            <Text style={styles.testCardSections}>
-              4 Sections
-            </Text>
-            <View style={styles.testCardAction}>
-              <Text style={styles.testCardActionText}>
-                 {loadingTestId === test.id ? 'Loading...' : (isSubscribed ? 'Start Test' : 'Unlock - ₹500')}
-              </Text>
-              {isSubscribed ? <ChevronRight size={18} color="#fff" /> : <Text style={{color: '#fff', fontSize: 16}}>🔒</Text>}
-            </View>
-          </View>
-        </LinearGradient>
+             </View>
+             <View style={styles.testCardStatNew}>
+                <Clock size={18} color="#666" style={{marginBottom: 4}} />
+                <View style={styles.statTextGroupNew}>
+                  <Text style={styles.statValueNew}>{formatDuration(duration)}</Text>
+                  <Text style={styles.statLabelNew}>Duration</Text>
+                </View>
+             </View>
+             <View style={styles.testCardStatNew}>
+                <Award size={18} color="#666" style={{marginBottom: 4}} />
+                <View style={styles.statTextGroupNew}>
+                  <Text style={styles.statValueNew}>{totalMarks}</Text>
+                  <Text style={styles.statLabelNew}>Marks</Text>
+                </View>
+             </View>
+           </View>
+           
+           <TouchableOpacity 
+             style={styles.startTestButtonNew}
+             onPress={() => handleTestSelect(test)}
+             disabled={!!loadingTestId}
+           >
+             <Text style={styles.startTestButtonTextNew}>
+                {loadingTestId === test.id ? 'Loading' : (isSubscribed ? 'Start Test' : 'Unlock')}
+             </Text>
+             {isSubscribed ? <ArrowRight size={16} color="#fff" style={{marginLeft: 4}} /> : <Text style={{color: '#fff', fontSize: 12, marginLeft: 4}}>🔒</Text>}
+           </TouchableOpacity>
+        </View>
       </TouchableOpacity>
     );
   };
@@ -273,75 +294,134 @@ export default function TestListScreen() {
     
     return (
        <TouchableOpacity
-        style={styles.resumeCard} 
+        style={styles.resumeCardNew} 
         onPress={() => router.push({ pathname: '/mock-test', params: { testId: activeTest.testId, resume: 'true' } })}
         activeOpacity={0.9}
        >
-           <LinearGradient colors={['#FF9800', '#F57C00']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.resumeGradient}>
-               <View style={styles.resumeContent}>
-                   <View style={styles.resumeIcon}>
-                       <PlayCircle color="#fff" size={32} />
+           <View style={styles.resumeGradientNew}>
+               <View style={styles.resumeContentNew}>
+                   <View style={styles.resumeIconNew}>
+                       <PlayCircle color="#F57C00" size={40} strokeWidth={1.5} />
                    </View>
-                   <View style={styles.resumeInfo}>
-                       <Text style={styles.resumeTitle}>Resume Test</Text>
-                       <Text style={styles.resumeSubtitle} numberOfLines={1}>
-                            {activeTestTitle || 'Continue your previous attempt'}
+                   <View style={styles.resumeInfoNew}>
+                       <Text style={styles.resumeTitleNew}>CONTINUE TEST</Text>
+                       <Text style={styles.resumeSubtitleNew} numberOfLines={1}>
+                            {activeTestTitle || 'Unfinished Test'}
                        </Text>
-                       <Text style={styles.resumeMeta}>
+                       <Text style={styles.resumeMetaNew}>
                            {activeTest.currentQuestionIndex + 1} questions attempted • {Math.floor(activeTest.timeRemaining / 60)}m left
                        </Text>
                    </View>
+                   <View style={styles.resumeButtonNew}>
+                       <Text style={styles.resumeButtonTextNew}>Resume</Text>
+                       <ArrowRight color="#fff" size={16} style={{marginLeft: 4}} />
+                   </View>
                </View>
-               <ChevronRight color="#fff" size={24} />
-           </LinearGradient>
+               <View style={styles.resumeProgressContainerNew}>
+                  <View style={styles.resumeProgressBarNew}>
+                     <View style={[styles.resumeProgressFillNew, { width: '10%' }]} />
+                  </View>
+                  <Text style={styles.resumeProgressTextNew}>10%</Text>
+               </View>
+           </View>
        </TouchableOpacity>
     );
   };
 
-  const renderYearFilters = () => {
-    const years = getUniqueYears();
-    if (years.length === 0) return null;
-
+  const renderCategoryTabs = () => {
     return (
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        style={styles.yearFilters}
-        contentContainerStyle={styles.yearFiltersContent}
+        style={styles.categoryTabs}
+        contentContainerStyle={styles.categoryTabsContent}
       >
         <TouchableOpacity
-          style={[styles.yearFilterButton, !selectedYear && styles.yearFilterButtonActive]}
-          onPress={() => setSelectedYear(null)}
+          style={[styles.categoryTab, category === 'all' && styles.categoryTabActive]}
+          onPress={() => { setCategory('all'); setSelectedTopic(null); }}
         >
-          <Text
-            style={[
-              styles.yearFilterButtonText,
-              !selectedYear && styles.yearFilterButtonTextActive,
-            ]}
-          >
-            All Years
-          </Text>
+          <LayoutGrid size={16} color={category === 'all' ? '#fff' : '#666'} style={{marginRight: 6}} />
+          <Text style={[styles.categoryTabText, category === 'all' && styles.categoryTabTextActive]}>All Tests</Text>
         </TouchableOpacity>
-        {years.map((year) => (
-          <TouchableOpacity
-            key={year}
-            style={[
-              styles.yearFilterButton,
-              selectedYear === year && styles.yearFilterButtonActive,
-            ]}
-            onPress={() => setSelectedYear(year)}
-          >
-            <Text
-              style={[
-                styles.yearFilterButtonText,
-                selectedYear === year && styles.yearFilterButtonTextActive,
-              ]}
-            >
-              {year}
-            </Text>
-          </TouchableOpacity>
-        ))}
+        <TouchableOpacity
+          style={[styles.categoryTab, category === 'full' && styles.categoryTabActive]}
+          onPress={() => { setCategory('full'); setSelectedTopic(null); }}
+        >
+          <FileText size={16} color={category === 'full' ? '#fff' : '#666'} style={{marginRight: 6}} />
+          <Text style={[styles.categoryTabText, category === 'full' && styles.categoryTabTextActive]}>Full Mocks</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.categoryTab, category === 'topic' && styles.categoryTabActive]}
+          onPress={() => setCategory('topic')}
+        >
+          <BookOpen size={16} color={category === 'topic' ? '#fff' : '#666'} style={{marginRight: 6}} />
+          <Text style={[styles.categoryTabText, category === 'topic' && styles.categoryTabTextActive]}>Topic Wise</Text>
+        </TouchableOpacity>
       </ScrollView>
+    );
+  };
+
+  const getTopicColor = (index: number) => {
+    const colors = [
+      { bg: '#E3F2FD', icon: '#1976D2' },
+      { bg: '#E8F5E9', icon: '#388E3C' },
+      { bg: '#F3E5F5', icon: '#7B1FA2' },
+      { bg: '#FFEBEE', icon: '#D32F2F' },
+      { bg: '#FFF3E0', icon: '#F57C00' },
+    ];
+    return colors[index % colors.length];
+  };
+
+  const renderTopicGrid = () => {
+    return (
+      <View style={styles.topicGrid}>
+        <View style={styles.topicGridHeader}>
+          <Text style={styles.topicGridTitle}>Topics</Text>
+          <View style={styles.topicGridSort}>
+             <Text style={styles.topicGridSortText}>Sort: Default</Text>
+             <ChevronRight size={16} color="#666" style={{transform: [{rotate: '90deg'}]}} />
+          </View>
+        </View>
+
+        {uniqueTopics.map((topic, index) => {
+          const count = tests.filter(t => getTopicFromFilename(t.filename) === topic).length;
+          if (searchQuery && !topic.toLowerCase().includes(searchQuery.toLowerCase())) return null;
+          
+          const theme = getTopicColor(index);
+          const attempted = 0; // Hardcoded for demo
+          const progress = count > 0 ? (attempted / count) * 100 : 0;
+
+          return (
+            <TouchableOpacity
+              key={topic}
+              style={styles.topicCardNew}
+              onPress={() => setSelectedTopic(topic)}
+              activeOpacity={0.7}
+            >
+              <View style={[styles.topicIconContainerNew, { backgroundColor: theme.bg }]}>
+                {index % 4 === 0 && <BookOpen size={24} color={theme.icon} />}
+                {index % 4 === 1 && <Folder size={24} color={theme.icon} />}
+                {index % 4 === 2 && <Award size={24} color={theme.icon} />}
+                {index % 4 === 3 && <FileText size={24} color={theme.icon} />}
+              </View>
+              
+              <View style={styles.topicContentNew}>
+                <View style={styles.topicCardHeaderNewContainer}>
+                  <Text style={styles.topicCardTitleNew}>{topic}</Text>
+                  <Text style={styles.topicCardAttemptedNew}>{attempted}/{count} attempted</Text>
+                </View>
+                <Text style={styles.topicCardSubtitleNew}>{count} Tests</Text>
+                
+                <View style={styles.topicProgressBarContainer}>
+                   <View style={[styles.topicProgressBarFill, { width: `${progress}%`, backgroundColor: theme.icon }]} />
+                </View>
+              </View>
+              
+              <ChevronRight size={20} color="#ccc" style={{marginLeft: 12}} />
+            </TouchableOpacity>
+          );
+        })}
+      </View>
     );
   };
 
@@ -357,36 +437,47 @@ export default function TestListScreen() {
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       {/* Header */}
-      <LinearGradient colors={['#4A90E2', '#357ABD']} style={styles.header}>
-        <View style={styles.headerTop}>
+      <LinearGradient colors={['#4A90E2', '#357ABD']} style={styles.headerNew}>
+        <View style={styles.headerTopNew}>
             <View style={{flex: 1}}>
-                <Text style={styles.headerTitle}>UPSC Principal Mock Tests</Text>
-                <Text style={styles.headerSubtitle}>
-                {filteredTests.length} test{filteredTests.length !== 1 ? 's' : ''} available
+                <Text style={styles.headerTitleNew}>UPSC Principal{'\n'}Mock Tests</Text>
+                <Text style={styles.headerSubtitleNew}>
+                {filteredTests.length} tests available  •  Practice by topic
                 </Text>
             </View>
-            <TouchableOpacity onPress={() => router.push('/test-history')} style={styles.historyButton}>
-                <History color="#fff" size={24} />
-            </TouchableOpacity>
         </View>
       </LinearGradient>
 
       {/* Search Bar */}
-      <View style={styles.searchContainer}>
-        <View style={styles.searchBar}>
+      <View style={styles.searchContainerNew}>
+        <View style={styles.searchBarNew}>
           <Search size={20} color="#666" />
           <TextInput
-            style={styles.searchInput}
-            placeholder="Search tests..."
+            style={styles.searchInputNew}
+            placeholder="Search tests, topics..."
             value={searchQuery}
             onChangeText={setSearchQuery}
             placeholderTextColor="#999"
           />
         </View>
+        <TouchableOpacity style={styles.filterButtonNew}>
+           <SlidersHorizontal size={20} color="#666" />
+        </TouchableOpacity>
       </View>
 
-      {/* Year Filters */}
-      {renderYearFilters()}
+      {/* Category Tabs */}
+      {renderCategoryTabs()}
+
+      {/* Selected Topic Header */}
+      {category === 'topic' && selectedTopic && (
+        <View style={styles.selectedTopicHeader}>
+          <TouchableOpacity onPress={() => setSelectedTopic(null)} style={styles.backButton}>
+            <ArrowLeft size={20} color="#4A90E2" />
+            <Text style={styles.backButtonText}>All Topics</Text>
+          </TouchableOpacity>
+          <Text style={styles.selectedTopicTitle}>{selectedTopic}</Text>
+        </View>
+      )}
 
       {/* Test List */}
       <ScrollView
@@ -398,13 +489,15 @@ export default function TestListScreen() {
       >
         {renderResumeCard()}
 
-        {filteredTests.length === 0 ? (
+        {category === 'topic' && !selectedTopic ? (
+          renderTopicGrid()
+        ) : filteredTests.length === 0 ? (
           <View style={styles.emptyState}>
             <FileText size={64} color="#ccc" />
             <Text style={styles.emptyStateTitle}>No tests found</Text>
             <Text style={styles.emptyStateText}>
-              {searchQuery || selectedYear
-                ? 'Try adjusting your search or filters'
+              {searchQuery
+                ? 'Try adjusting your search'
                 : 'No tests available at the moment'}
             </Text>
           </View>
@@ -473,18 +566,18 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#333',
   },
-  yearFilters: {
+  categoryTabs: {
     backgroundColor: '#fff',
     borderBottomWidth: 1,
     borderBottomColor: '#e0e0e0',
     maxHeight: 56,
   },
-  yearFiltersContent: {
+  categoryTabsContent: {
     paddingHorizontal: 16,
     paddingVertical: 8,
     gap: 8,
   },
-  yearFilterButton: {
+  categoryTab: {
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 20,
@@ -494,16 +587,72 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  yearFilterButtonActive: {
+  categoryTabActive: {
     backgroundColor: '#4A90E2',
   },
-  yearFilterButtonText: {
+  categoryTabText: {
     fontSize: 14,
     fontWeight: '600',
     color: '#666',
   },
-  yearFilterButtonTextActive: {
+  categoryTabTextActive: {
     color: '#fff',
+  },
+  selectedTopicHeader: {
+    backgroundColor: '#fff',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: '#e0e0e0',
+  },
+  backButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  backButtonText: {
+    color: '#4A90E2',
+    fontSize: 15,
+    fontWeight: '600',
+    marginLeft: 4,
+  },
+  selectedTopicTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: '#333',
+  },
+  topicGrid: {
+    padding: 16,
+    gap: 12,
+  },
+  topicCard: {
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.05,
+    shadowRadius: 4,
+    elevation: 2,
+    marginBottom: 12,
+  },
+  topicIcon: {
+    marginRight: 16,
+  },
+  topicContent: {
+    flex: 1,
+  },
+  topicCardTitle: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#333',
+    marginBottom: 4,
+  },
+  topicCardSubtitle: {
+    fontSize: 13,
+    color: '#666',
   },
   content: {
     flex: 1,
@@ -695,9 +844,315 @@ const styles = StyleSheet.create({
       color: 'rgba(255,255,255,0.9)',
       marginBottom: 2,
   },
-  resumeMeta: {
-      fontSize: 12,
-      color: 'rgba(255,255,255,0.8)',
-      fontWeight: '600',
+  // --- NEW STYLES FOR OVERHAUL ---
+  headerNew: {
+    paddingHorizontal: 20,
+    paddingTop: 40,
+    paddingBottom: 24,
+    borderBottomLeftRadius: 24,
+    borderBottomRightRadius: 24,
+  },
+  headerTopNew: {
+    flexDirection: 'row',
+  },
+  headerTitleNew: {
+    fontSize: 28,
+    fontWeight: '800',
+    color: '#fff',
+    marginBottom: 8,
+    lineHeight: 34,
+  },
+  headerSubtitleNew: {
+    fontSize: 14,
+    color: 'rgba(255,255,255,0.9)',
+  },
+  searchContainerNew: {
+    flexDirection: 'row',
+    paddingHorizontal: 16,
+    paddingVertical: 16,
+    gap: 12,
+  },
+  searchBarNew: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.05,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  searchInputNew: {
+    flex: 1,
+    marginLeft: 12,
+    fontSize: 16,
+    color: '#333',
+  },
+  filterButtonNew: {
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    width: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.05,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  resumeCardNew: {
+    marginHorizontal: 16,
+    marginTop: 8,
+    marginBottom: 16,
+    borderRadius: 16,
+    overflow: 'hidden',
+  },
+  resumeGradientNew: {
+    backgroundColor: '#FFF3E0',
+    padding: 16,
+  },
+  resumeContentNew: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  resumeIconNew: {
+    marginRight: 16,
+  },
+  resumeInfoNew: {
+    flex: 1,
+  },
+  resumeTitleNew: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#F57C00',
+    letterSpacing: 0.5,
+    marginBottom: 4,
+  },
+  resumeSubtitleNew: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#333',
+    marginBottom: 4,
+  },
+  resumeMetaNew: {
+    fontSize: 13,
+    color: '#666',
+  },
+  resumeButtonNew: {
+    backgroundColor: '#F57C00',
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderRadius: 24,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  resumeButtonTextNew: {
+    color: '#fff',
+    fontWeight: '700',
+    fontSize: 14,
+  },
+  resumeProgressContainerNew: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 16,
+    gap: 12,
+  },
+  resumeProgressBarNew: {
+    flex: 1,
+    height: 6,
+    backgroundColor: 'rgba(245, 124, 0, 0.2)',
+    borderRadius: 3,
+    overflow: 'hidden',
+  },
+  resumeProgressFillNew: {
+    height: '100%',
+    backgroundColor: '#F57C00',
+    borderRadius: 3,
+  },
+  resumeProgressTextNew: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: '#333',
+  },
+  newTestCard: {
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    padding: 16,
+    marginHorizontal: 16,
+    marginBottom: 16,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.05,
+    shadowRadius: 8,
+    elevation: 3,
+  },
+  testCardHeaderNew: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  testCardIconNew: {
+    backgroundColor: '#E3F2FD',
+    padding: 10,
+    borderRadius: 12,
+    marginRight: 12,
+  },
+  testCardBadgesNew: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  testCardBadgePrimary: {
+    backgroundColor: '#E3F2FD',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  testCardBadgeTextPrimary: {
+    color: '#4A90E2',
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  testCardBadgeSuccess: {
+    backgroundColor: '#E8F5E9',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  testCardBadgeTextSuccess: {
+    color: '#4CAF50',
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  testCardTitleNew: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#333',
+    marginBottom: 16,
+    lineHeight: 24,
+  },
+  testCardBottomNew: {
+    borderTopWidth: 1,
+    borderTopColor: '#f0f0f0',
+    paddingTop: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  testCardStatsRowNew: {
+    flexDirection: 'row',
+    gap: 16,
+  },
+  testCardStatNew: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  statTextGroupNew: {
+    flexDirection: 'column',
+  },
+  statValueNew: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#333',
+  },
+  statLabelNew: {
+    fontSize: 11,
+    color: '#888',
+  },
+  startTestButtonNew: {
+    backgroundColor: '#4A90E2',
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderRadius: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  startTestButtonTextNew: {
+    color: '#fff',
+    fontWeight: '600',
+    fontSize: 14,
+  },
+  topicGridHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 12,
+    paddingHorizontal: 4,
+  },
+  topicGridTitle: {
+    fontSize: 20,
+    fontWeight: '800',
+    color: '#111',
+  },
+  topicGridSort: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#f5f5f5',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 16,
+  },
+  topicGridSortText: {
+    fontSize: 13,
+    color: '#666',
+    fontWeight: '500',
+    marginRight: 4,
+  },
+  topicCardNew: {
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    padding: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.05,
+    shadowRadius: 8,
+    elevation: 3,
+    marginBottom: 16,
+  },
+  topicIconContainerNew: {
+    width: 60,
+    height: 60,
+    borderRadius: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 16,
+  },
+  topicContentNew: {
+    flex: 1,
+  },
+  topicCardHeaderNewContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    marginBottom: 4,
+  },
+  topicCardAttemptedNew: {
+    fontSize: 12,
+    color: '#888',
+  },
+  topicCardSubtitleNew: {
+    fontSize: 13,
+    color: '#888',
+    marginBottom: 12,
+  },
+  topicProgressBarContainer: {
+    height: 6,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 3,
+    overflow: 'hidden',
+  },
+  topicProgressBarFill: {
+    height: '100%',
+    borderRadius: 3,
   },
 });

@@ -103,6 +103,8 @@ export interface ParsedQuestion {
   sectionId: string;
   questionText: string; // HTML content
   options: string[]; // Array of option values
+  questionTextHindi?: string; // ADDED
+  optionsHindi?: string[]; // ADDED
   correctAnswerIndex: number; // 0-based index
   correctAnswerText: string;
   explanation: {
@@ -213,57 +215,42 @@ class SSCCGLService {
   /**
    * Load a single SSC CGL paper from JSON
    */
-  async loadPaper(paperData: any, answersData?: SSCCGLPaperWithAnswers): Promise<ParsedMockTest> {
-    // Handle wrapped response format { success: true, data: { ... } }
+  async loadPaper(paperData: any, answersData?: any): Promise<ParsedMockTest> {
     const paper = paperData.data || paperData;
-
-    const answersMap = this.createAnswersMap(answersData);
     
-    // Extract metadata from title
-    const metadata = this.extractMetadata(paper.title || '');
+    // Fallbacks for the new schema
+    const testName = paper.test_name || 'UPSC Principal Exam Mock Test';
+    const testId = paper.test_id || paper.id || 'unknown_id';
     
-    const sections: ParsedSection[] = (paper.sections || []).map((section: any) => ({
-      id: section._id,
-      title: section.title,
-      questionCount: section.qCount,
-      questions: (section.questions || []).map((q: any) => this.parseQuestion(q, section._id, answersMap)),
-    }));
+    // New schema doesn't have sections, just a flat array of questions
+    const rawQuestions = paper.questions || [];
+    
+    const parsedQuestions = rawQuestions.map((q: any) => this.parseQuestion(q, 'main'));
 
-    const totalQuestions = sections.reduce((sum, s) => sum + s.questionCount, 0);
-    const totalMarks = sections.reduce(
-      (sum, s) => sum + s.questions.reduce((qSum, q) => qSum + q.marks.positive, 0),
-      0
-    );
+    const section = {
+      id: 'main',
+      title: 'General',
+      questionCount: parsedQuestions.length,
+      questions: parsedQuestions
+    };
+
+    const sections = [section];
+    const totalQuestions = parsedQuestions.length;
+    const totalMarks = totalQuestions * 2.5; // 120 questions * 2.5 = 300 marks
 
     const mockTest: ParsedMockTest = {
-      id: paper._id,
-      title: 'UPSC Principal Exam Mock Test', // Rebranded
+      id: testId,
+      title: testName,
       examType: 'UPSC Principal',
-      duration: paper.duration || 3600,
+      duration: paper.duration || 7200, // 2 hours = 7200 seconds
       totalQuestions,
       totalMarks,
       sections,
-      metadata,
+      metadata: this.extractMetadata(testName),
     };
 
     this.papers.set(mockTest.id, mockTest);
     return mockTest;
-  }
-
-  /**
-   * Create a map of answers by question ID
-   */
-  private createAnswersMap(answersData?: SSCCGLPaperWithAnswers): Map<string, any> {
-    const map = new Map();
-    if (!answersData) return map;
-
-    answersData.sections.forEach((section) => {
-      section.questions.forEach((q) => {
-        map.set(q.question_id, q.ai_generated);
-      });
-    });
-
-    return map;
   }
 
   /**
@@ -317,62 +304,45 @@ class SSCCGLService {
    * Parse a single question
    */
   private parseQuestion(
-    question: SSCCGLQuestion,
-    sectionId: string,
-    answersMap: Map<string, any>
+    question: any,
+    sectionId: string
   ): ParsedQuestion {
-    const aiAnswer = answersMap.get(question._id);
-    const options = question.en.options.map((opt) => this.processContent(opt.value));
+    const optionsEn = question.options_english || [];
+    const options = optionsEn.map((opt: string) => this.processContent(opt));
     
-    // Extract correct answer index from AI data
-    const correctAnswerIndex = this.extractCorrectAnswerIndex(aiAnswer, options);
-    const correctAnswerText = aiAnswer?.english?.correct_answer || '';
+    let correctAnswerIndex = 0;
+    if (typeof question.correct_answer === 'string') {
+        const labels = ['a', 'b', 'c', 'd'];
+        correctAnswerIndex = labels.indexOf(question.correct_answer.toLowerCase());
+        if (correctAnswerIndex === -1) correctAnswerIndex = 0;
+    } else if (typeof question.correct_answer === 'number') {
+        correctAnswerIndex = question.correct_answer;
+    }
+
+    const correctAnswerText = options[correctAnswerIndex] || '';
 
     return {
-      id: question._id,
+      id: question.id || String(Math.random()),
       sectionId,
-      questionText: this.processContent(question.en.value),
+      questionText: this.processContent(question.question_english || ''),
       options,
+      questionTextHindi: this.processContent(question.question_hindi || ''),
+      optionsHindi: (question.options_hindi || []).map((opt: string) => this.processContent(opt)),
       correctAnswerIndex,
       correctAnswerText,
       explanation: {
-        english: this.processContent(aiAnswer?.english?.explanation || 'No explanation available'),
-        hindi: aiAnswer?.hindi?.explanation, // Hindi might need specific font/processing later
+        english: this.processContent(question.explanation_english || 'No explanation available'),
+        hindi: this.processContent(question.explanation_hindi || ''),
       },
-      keyConcepts: aiAnswer?.english?.key_concepts || [],
+      keyConcepts: question.key_facts || [],
       marks: {
-        positive: question.posMarks,
-        negative: question.negMarks,
+        positive: 2.5,
+        negative: 0.833, // 33.33% of 2.5 marks
       },
       metadata: {
         language: 'en',
       },
     };
-  }
-
-  /**
-   * Extract correct answer index from AI answer
-   */
-  private extractCorrectAnswerIndex(aiAnswer: any, options: string[]): number {
-    if (!aiAnswer?.english?.correct_answer) return -1;
-
-    // Ensure correctAnswer is a string before using string methods
-    const correctAnswer = String(aiAnswer.english.correct_answer);
-    
-    // Try to extract option number (e.g., "2. 13" -> index 1)
-    if (typeof correctAnswer.match === 'function') {
-      const match = correctAnswer.match(/^(\d+)\./);
-      if (match) {
-        return parseInt(match[1]) - 1; // Convert 1-based to 0-based
-      }
-    }
-
-    // Try to match the answer text with options
-    const answerText = correctAnswer.replace(/^\d+\.\s*/, '').trim();
-    const index = options.findIndex((opt) => opt.trim() === answerText);
-    if (index !== -1) return index;
-
-    return 0; // Default to first option
   }
 
   /**
@@ -495,8 +465,8 @@ class SSCCGLService {
     // Calculate overall score
     const score = attempt.answers.reduce((sum, ans) => sum + ans.marksAwarded, 0);
     const correctAnswers = attempt.answers.filter((a) => a.isCorrect).length;
-    const totalQuestions = paper.totalQuestions;
-    const accuracy = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0;
+    const attemptedQuestions = attempt.answers.length;
+    const accuracy = attemptedQuestions > 0 ? (correctAnswers / attemptedQuestions) * 100 : 0;
     const timeTaken = (endTime.getTime() - attempt.startTime.getTime()) / 1000;
 
     attempt.score = score;

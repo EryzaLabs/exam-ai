@@ -78,7 +78,11 @@ def generate_questions(topic, context, previous_questions=[]):
     You are an expert UPSC Principal exam setter.
     Create {QUESTIONS_PER_REQUEST} highly specific, verifiable multiple-choice questions about "{topic}".
     Ensure a mix of difficulty: 3 Medium, 1 Hard, 1 Easy. Ensure no duplicates from standard knowledge.
-    Mimic the UPSC statement-based or analytical style seen in the GNCTD Principal papers.
+    Mimic the exact style seen in the GNCTD Principal papers.
+    IMPORTANT: You MUST heavily include complex question formats such as:
+    1. "Match the Following" (List I vs List II) with options like A-1, B-2, C-3.
+    2. "Statement based" questions (e.g., "Consider the following statements... Which is/are correct?").
+    3. "Incorrect Pair" identification (e.g., "Which of the following pairs is NOT correctly matched?").
     {avoid_prompt}
     CRITICAL: YOU MUST USE ONLY THE CONTEXT PROVIDED BELOW. DO NOT HALLUCINATE OR USE OUTSIDE MEMORY.
     For each question, extract a verbatim exact quote from the context that proves the answer, and provide the exact URL it came from.

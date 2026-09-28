@@ -1,4 +1,5 @@
 import { doc, getDoc, setDoc, updateDoc, collection, query, where, getDocs } from 'firebase/firestore';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { db, auth } from './firebaseConfig';
 
 export interface UserProfile {
@@ -29,14 +30,30 @@ class UserService {
    */
   async getUserProfile(uid?: string): Promise<UserProfile | null> {
     try {
+      // Instantly load from local storage to beat Firebase's slow auth hydration
+      let isSubscribedLocal = false;
+      try {
+         const subState = await AsyncStorage.getItem('@course_subscription_status');
+         if (subState === 'true') {
+             isSubscribedLocal = true;
+         }
+      } catch (e) {}
+
       const userId = uid || auth.currentUser?.uid;
-      if (!userId) return null;
+      if (!userId) {
+          return { isSubscribed: isSubscribedLocal } as UserProfile;
+      }
 
       const userDoc = await getDoc(doc(db, 'users', userId));
       if (userDoc.exists()) {
-        return userDoc.data() as UserProfile;
+        const data = userDoc.data() as UserProfile;
+        if (isSubscribedLocal && !data.isSubscribed) {
+            data.isSubscribed = true;
+            this.setSubscriptionStatus(true);
+        }
+        return data;
       }
-      return null;
+      return { isSubscribed: isSubscribedLocal } as UserProfile;
     } catch (error) {
       console.error('Error getting user profile:', error);
       return null;
@@ -67,11 +84,30 @@ class UserService {
       const userDoc = await getDoc(userRef);
 
       if (userDoc.exists()) {
-        const currentStats = userDoc.data().stats || {};
+        const currentStats = userDoc.data().stats || { questionsAttempted: 0, accuracy: 0, streak: 0, totalTests: 0 };
+        
+        // Calculate incremental values
+        const newTotalTests = (currentStats.totalTests || 0) + (stats.totalTests || 0);
+        const newQuestionsAttempted = (currentStats.questionsAttempted || 0) + (stats.questionsAttempted || 0);
+        
+        // Calculate running average for accuracy
+        let newAccuracy = currentStats.accuracy || 0;
+        if (stats.accuracy !== undefined) {
+           if (currentStats.totalTests > 0) {
+              const totalPastAccuracy = currentStats.accuracy * currentStats.totalTests;
+              newAccuracy = (totalPastAccuracy + stats.accuracy) / newTotalTests;
+           } else {
+              newAccuracy = stats.accuracy;
+           }
+        }
+
         await updateDoc(userRef, {
           stats: {
             ...currentStats,
             ...stats,
+            totalTests: newTotalTests,
+            questionsAttempted: newQuestionsAttempted,
+            accuracy: newAccuracy,
             lastActiveDate: new Date().toISOString(),
           },
           updatedAt: new Date().toISOString(),
@@ -107,17 +143,20 @@ class UserService {
    */
   async setSubscriptionStatus(status: boolean): Promise<void> {
     try {
-      const userId = auth.currentUser?.uid;
-      if (!userId) throw new Error('User not authenticated');
+      // 1. Instantly cache on device so it never asks again
+      await AsyncStorage.setItem('@course_subscription_status', status ? 'true' : 'false');
 
-      const userRef = doc(db, 'users', userId);
-      await updateDoc(userRef, {
-        isSubscribed: status,
-        updatedAt: new Date().toISOString(),
-      });
+      // 2. Sync to cloud if they are logged in
+      const userId = auth.currentUser?.uid;
+      if (userId) {
+        const userRef = doc(db, 'users', userId);
+        await updateDoc(userRef, {
+          isSubscribed: status,
+          updatedAt: new Date().toISOString(),
+        });
+      }
     } catch (error) {
       console.error('Error updating subscription status:', error);
-      throw error;
     }
   }
 

@@ -531,7 +531,7 @@ export default function TestResultScreen() {
                   <View style={styles.solutionQuestion}>
                     <RenderHtml
                       contentWidth={width - 64}
-                      source={{ html: question.questionText }}
+                      source={{ html: question.questionText.replace(/\n/g, '<br />') }}
                       baseStyle={styles.solutionQuestionText}
                     />
                   </View>
@@ -568,7 +568,7 @@ export default function TestResultScreen() {
                           </View>
                           <RenderHtml
                             contentWidth={width - 96}
-                            source={{ html: option }}
+                            source={{ html: option.replace(/\n/g, '<br />') }}
                             baseStyle={styles.solutionOptionText}
                           />
                         </View>

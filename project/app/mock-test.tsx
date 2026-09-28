@@ -64,8 +64,10 @@ export default function MockTestScreen() {
   const source = params.source as string; // 'testseries' or undefined
   const seriesFolder = params.seriesFolder as string;
   const sectionFolder = params.sectionFolder as string;
+  const initialLang = (params.lang as string) || 'english';
 
   const [test, setTest] = useState<ParsedMockTest | null>(null);
+  const [language, setLanguage] = useState<'english' | 'hindi'>(initialLang as any);
   const [attempt, setAttempt] = useState<TestAttempt | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [questionStates, setQuestionStates] = useState<Map<string, QuestionState>>(new Map());
@@ -730,12 +732,28 @@ export default function MockTestScreen() {
           <Text style={styles.headerTitle} numberOfLines={1}>
             {test.title}
           </Text>
-          <TouchableOpacity
-            style={styles.headerRight}
-            onPress={() => setShowQuestionPalette(true)}
-          >
-            <Menu size={24} color="#fff" />
-          </TouchableOpacity>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <TouchableOpacity
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.2)',
+                paddingHorizontal: 12,
+                paddingVertical: 6,
+                borderRadius: 16,
+                marginRight: 12
+              }}
+              onPress={() => setLanguage(l => l === 'english' ? 'hindi' : 'english')}
+            >
+              <Text style={{color: '#fff', fontWeight: 'bold', fontSize: 13}}>
+                {language === 'english' ? 'A/अ' : 'अ/A'}
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.headerRight}
+              onPress={() => setShowQuestionPalette(true)}
+            >
+              <Menu size={24} color="#fff" />
+            </TouchableOpacity>
+          </View>
         </View>
 
         <View style={styles.headerStats}>
@@ -774,14 +792,14 @@ export default function MockTestScreen() {
             <View style={styles.questionContainer}>
               <RenderHtml
                 contentWidth={width - 48}
-                source={{ html: currentQuestion.questionText }}
+                source={{ html: (language === 'hindi' && currentQuestion.questionTextHindi ? currentQuestion.questionTextHindi : currentQuestion.questionText).replace(/\n/g, '<br />') }}
                 baseStyle={styles.questionText}
                 tagsStyles={{ img: { maxWidth: '100%' } }}
               />
             </View>
 
             <View style={styles.optionsContainer}>
-              {currentQuestion.options.map((option, index) => {
+              {(language === 'hindi' && currentQuestion.optionsHindi && currentQuestion.optionsHindi.length > 0 ? currentQuestion.optionsHindi : currentQuestion.options).map((option, index) => {
                 const isSelected = currentState?.selectedOption === index;
 
                 return (
@@ -796,7 +814,7 @@ export default function MockTestScreen() {
                     </View>
                     <RenderHtml
                       contentWidth={width - 120}
-                      source={{ html: option }}
+                      source={{ html: option.replace(/\n/g, '<br />') }}
                       baseStyle={styles.optionText}
                       tagsStyles={{ img: { maxWidth: '100%' } }}
                     />
@@ -1142,7 +1160,8 @@ const styles = StyleSheet.create({
   },
   paletteContainer: {
     width: width * 0.9,
-    minHeight: '40%',
+    maxHeight: '90%',
+    flex: 1,
     backgroundColor: '#fff',
     borderRadius: 16,
     overflow: 'hidden',
