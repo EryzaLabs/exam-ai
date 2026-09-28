@@ -10,7 +10,7 @@ interface ResponsiveContainerProps {
 export default function ResponsiveContainer({
   children,
   style,
-  maxWidth = 1000, // Balanced width for both text readability and grid layouts
+  maxWidth = '100%', // Fully responsive for web
 }: ResponsiveContainerProps) {
   const { width } = useWindowDimensions();
   const isWideScreen = width > maxWidth;
@@ -24,11 +24,6 @@ export default function ResponsiveContainer({
             maxWidth, 
             width: '100%', 
             alignSelf: 'center', 
-            shadowColor: '#000',
-            shadowOffset: { width: 0, height: 0 },
-            shadowOpacity: 0.1,
-            shadowRadius: 20,
-            elevation: 10
           } as any,
           style,
         ]}
@@ -46,7 +41,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   webBackground: {
-    backgroundColor: '#f1f5f9', // Light gray background for the empty space on wide screens
+    backgroundColor: '#fff', // Keep it white
   },
   innerContainer: {
     flex: 1,

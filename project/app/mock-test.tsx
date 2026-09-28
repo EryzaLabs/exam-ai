@@ -74,6 +74,7 @@ export default function MockTestScreen() {
   const [timeRemaining, setTimeRemaining] = useState(0);
   const [showQuestionPalette, setShowQuestionPalette] = useState(false);
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
+  const [showBackConfirm, setShowBackConfirm] = useState(false);
   const [questionStartTime, setQuestionStartTime] = useState(Date.now());
   const [isSaving, setIsSaving] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -316,31 +317,7 @@ export default function MockTestScreen() {
   };
 
   const handleBack = () => {
-    Alert.alert(
-      'Pause or Exit Test',
-      'What would you like to do?',
-      [
-        {
-          text: 'Cancel Test (Reset)',
-          style: 'destructive',
-          onPress: async () => {
-            await TestProgressService.clearCurrentTest();
-            router.back();
-          },
-        },
-        {
-          text: 'Pause for Later',
-          onPress: async () => {
-            await saveProgress();
-            router.back();
-          },
-        },
-        {
-          text: 'Keep Taking Test',
-          style: 'cancel',
-        },
-      ]
-    );
+    setShowBackConfirm(true);
   };
   
   useEffect(() => {
@@ -655,6 +632,59 @@ export default function MockTestScreen() {
     );
   };
 
+  const renderBackConfirmModal = () => (
+    <Modal
+      visible={showBackConfirm}
+      animationType="fade"
+      transparent={true}
+      onRequestClose={() => setShowBackConfirm(false)}
+    >
+      <View style={styles.modalOverlay}>
+        <View style={styles.submitConfirmContainer}>
+          <View style={styles.submitConfirmHeader}>
+            <AlertCircle size={48} color="#FF9800" />
+            <Text style={styles.submitConfirmTitle}>Pause or Exit Test</Text>
+          </View>
+
+          <Text style={styles.submitConfirmMessage}>
+            What would you like to do? You can pause the test and resume later, or cancel and reset it completely.
+          </Text>
+
+          <View style={[styles.submitConfirmButtons, {flexDirection: 'column', gap: 12}]}>
+            <TouchableOpacity
+              style={[styles.confirmButton, {backgroundColor: '#4CAF50', width: '100%'}]}
+              onPress={async () => {
+                setShowBackConfirm(false);
+                await saveProgress();
+                router.back();
+              }}
+            >
+              <Text style={styles.confirmButtonText}>Pause for Later</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={[styles.confirmButton, {backgroundColor: '#F44336', width: '100%'}]}
+              onPress={async () => {
+                setShowBackConfirm(false);
+                await TestProgressService.clearCurrentTest();
+                router.back();
+              }}
+            >
+              <Text style={styles.confirmButtonText}>Cancel Test (Reset)</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={[styles.cancelButton, {width: '100%'}]}
+              onPress={() => setShowBackConfirm(false)}
+            >
+              <Text style={styles.cancelButtonText}>Keep Taking Test</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  );
+
   const renderSubmitConfirmModal = () => (
     <Modal
       visible={showSubmitConfirm}
@@ -916,6 +946,7 @@ export default function MockTestScreen() {
 
       {renderQuestionPalette()}
       {renderSubmitConfirmModal()}
+      {renderBackConfirmModal()}
       
       {/* Submitting Overlay */}
       {isSubmitting && (
@@ -1298,6 +1329,7 @@ const styles = StyleSheet.create({
   },
   submitConfirmContainer: {
     width: width * 0.85,
+    maxWidth: 400,
     backgroundColor: '#fff',
     borderRadius: 16,
     padding: 24,
@@ -1378,21 +1410,43 @@ const styles = StyleSheet.create({
   },
   submittingContainer: {
     backgroundColor: '#fff',
-    borderRadius: 16,
     padding: 32,
+    borderRadius: 16,
     alignItems: 'center',
-    minWidth: 250,
   },
   submittingText: {
     fontSize: 18,
     fontWeight: '700',
     color: '#333',
     marginTop: 16,
+    marginBottom: 8,
   },
   submittingSubtext: {
     fontSize: 14,
     color: '#666',
-    marginTop: 8,
     textAlign: 'center',
+  },
+  confirmButton: {
+    paddingVertical: 14,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  confirmButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '700',
+  },
+  cancelButton: {
+    backgroundColor: '#f5f5f5',
+    paddingVertical: 14,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  cancelButtonText: {
+    color: '#666',
+    fontSize: 16,
+    fontWeight: '600',
   },
 });
