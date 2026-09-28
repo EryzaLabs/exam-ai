@@ -439,6 +439,9 @@ export default function TestListScreen() {
       {/* Header */}
       <LinearGradient colors={['#4A90E2', '#357ABD']} style={styles.headerNew}>
         <View style={styles.headerTopNew}>
+            <TouchableOpacity onPress={() => router.back()} style={{marginRight: 16, marginTop: 6}}>
+              <ArrowLeft size={24} color="#fff" />
+            </TouchableOpacity>
             <View style={{flex: 1}}>
                 <Text style={styles.headerTitleNew}>UPSC Principal{'\n'}Mock Tests</Text>
                 <Text style={styles.headerSubtitleNew}>

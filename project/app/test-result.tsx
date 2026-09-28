@@ -33,6 +33,7 @@ import {
   Flag,
   RefreshCw,
   X as CloseIcon,
+  ArrowLeft,
 } from 'lucide-react-native';
 import RenderHtml from 'react-native-render-html';
 import SSCCGLService, {
@@ -627,7 +628,12 @@ export default function TestResultScreen() {
         colors={['#4A90E2', '#357ABD']}
         style={styles.header}
       >
-        <Text style={styles.headerTitle}>Test Results</Text>
+        <View style={{flexDirection: 'row', alignItems: 'center', marginBottom: 4}}>
+          <TouchableOpacity onPress={() => router.back()} style={{marginRight: 12}}>
+            <ArrowLeft size={24} color="#fff" />
+          </TouchableOpacity>
+          <Text style={styles.headerTitle}>Test Results</Text>
+        </View>
         <Text style={styles.headerSubtitle}>{test.title}</Text>
       </LinearGradient>
 

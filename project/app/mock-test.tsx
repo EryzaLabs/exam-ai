@@ -315,10 +315,32 @@ export default function MockTestScreen() {
     }
   };
 
-  const handleBack = async () => {
-    // Automatically save and exit
-    await saveProgress();
-    router.back();
+  const handleBack = () => {
+    Alert.alert(
+      'Pause or Exit Test',
+      'What would you like to do?',
+      [
+        {
+          text: 'Cancel Test (Reset)',
+          style: 'destructive',
+          onPress: async () => {
+            await TestProgressService.clearCurrentTest();
+            router.back();
+          },
+        },
+        {
+          text: 'Pause for Later',
+          onPress: async () => {
+            await saveProgress();
+            router.back();
+          },
+        },
+        {
+          text: 'Keep Taking Test',
+          style: 'cancel',
+        },
+      ]
+    );
   };
   
   useEffect(() => {
