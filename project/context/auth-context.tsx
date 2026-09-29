@@ -42,7 +42,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     } else if (user && inAuthGroup) {
       // Check if user has completed profile
       const checkProfile = async () => {
-        const hasProfile = await UserService.hasCompletedProfile();
+        const hasProfile = await UserService.hasCompletedProfile(user.uid);
         if (!hasProfile && !segments.includes('profile-setup')) {
           router.replace('/profile-setup');
         } else if (hasProfile) {
@@ -53,7 +53,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     } else if (user && !inAuthGroup) {
       // Also check profile for users who just signed in via Google (they land on main app)
       const checkProfile = async () => {
-        const hasProfile = await UserService.hasCompletedProfile();
+        const hasProfile = await UserService.hasCompletedProfile(user.uid);
         if (!hasProfile) {
           router.replace('/profile-setup');
         }

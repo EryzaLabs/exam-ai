@@ -75,12 +75,25 @@ class UserService {
    * Check if user has completed profile setup
    */
   async hasCompletedProfile(uid?: string): Promise<boolean> {
+    try {
+      const localStatus = await AsyncStorage.getItem('@profile_completed');
+      if (localStatus === 'true') return true;
+    } catch(e) {}
+
     const profile = await this.getUserProfile(uid);
-    return profile?.profileCompleted === true || (
+    const isCompleted = profile?.profileCompleted === true || (
       !!profile?.displayName && 
       !!profile?.targetCadre && 
       !!profile?.currentDesignation
     );
+
+    if (isCompleted) {
+       try {
+         await AsyncStorage.setItem('@profile_completed', 'true');
+       } catch(e) {}
+    }
+
+    return isCompleted;
   }
 
   /**

@@ -13,22 +13,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
-import {
-  Bell,
-  LogOut,
-  Target,
-  ChevronRight,
-  Award,
-  BookOpen,
-  TrendingUp,
-  Shield,
-  HelpCircle,
-  FileText,
-  History,
-  Trash2,
-  CalendarDays,
-  Globe
-} from 'lucide-react-native';
+import { Bell, LogOut, Target, ChevronRight, Award, BookOpen, TrendingUp, Shield, HelpCircle, FileText, History, Trash2, CalendarDays, Globe } from 'lucide-react-native';
 import { useAuth } from '@/context/auth-context';
 import { signOut, deleteUser } from 'firebase/auth';
 import { auth } from '@/services/firebaseConfig';
@@ -56,19 +41,19 @@ export default function ProfileScreen() {
 
   const loadUserData = async () => {
     if (!user) return;
-    
+
     setLoading(true);
     try {
       const profile = await UserService.getUserProfile();
       const stats = await UserService.getUserStatistics();
-      
+
       if (profile) {
         setUserProfile(profile);
         setUserName(profile.displayName);
         setUserEmail(profile.email || user.phoneNumber || 'No email provided');
         setNotificationsEnabled(profile.notificationsEnabled ?? true);
       }
-      
+
       setUserStats(stats);
     } catch (error) {
       console.error('Error loading user data:', error);
@@ -95,16 +80,16 @@ export default function ProfileScreen() {
       'Are you sure you want to logout?',
       [
         { text: 'Cancel', style: 'cancel' },
-        { 
-          text: 'Logout', 
-          style: 'destructive', 
+        {
+          text: 'Logout',
+          style: 'destructive',
           onPress: async () => {
             try {
               await signOut(auth);
             } catch (e) {
               Alert.alert("Error", "Failed to logout");
             }
-          } 
+          }
         }
       ]
     );
@@ -116,9 +101,9 @@ export default function ProfileScreen() {
       'This action is permanent and will delete all your test history, stats, and saved bookmarks. Are you absolutely sure?',
       [
         { text: 'Cancel', style: 'cancel' },
-        { 
-          text: 'Delete Permanently', 
-          style: 'destructive', 
+        {
+          text: 'Delete Permanently',
+          style: 'destructive',
           onPress: async () => {
             try {
               if (auth.currentUser) {
@@ -132,7 +117,7 @@ export default function ProfileScreen() {
                 Alert.alert("Error", "Failed to delete account: " + error.message);
               }
             }
-          } 
+          }
         }
       ]
     );
@@ -212,8 +197,8 @@ export default function ProfileScreen() {
           <View style={styles.sectionHeader}>
             <Text style={styles.sectionTitle}>This Week's Goal</Text>
             <Text style={styles.streakStatus}>
-              {userStats?.streak && userStats.streak > 0 
-                ? `${userStats.streak} Day Streak! 🔥` 
+              {userStats?.streak && userStats.streak > 0
+                ? `${userStats.streak} Day Streak! 🔥`
                 : 'Start your streak today'}
             </Text>
           </View>
@@ -223,7 +208,7 @@ export default function ProfileScreen() {
               const currentDayIndex = new Date().getDay();
               const isPastOrToday = i <= currentDayIndex;
               const isFilled = isPastOrToday && (i === currentDayIndex ? (userStats?.streak || 0) > 0 : Math.random() > 0.3); // mock past days for visual effect if real data isn't easily array-mapped here
-              
+
               return (
                 <View key={i} style={styles.calendarDay}>
                   <Text style={[styles.dayLabel, i === currentDayIndex && styles.dayLabelToday]}>{day}</Text>
@@ -256,7 +241,7 @@ export default function ProfileScreen() {
                 <Text style={styles.badgeText}>{userProfile.targetCadre || 'UPSC'}</Text>
               </View>
             </View>
-            
+
             <View style={styles.infoRow}>
               <Text style={styles.infoLabel}>Current Designation</Text>
               <Text style={styles.infoValue}>{userProfile.currentDesignation || 'Teacher'}</Text>
@@ -332,7 +317,7 @@ export default function ProfileScreen() {
             <Text style={styles.menuLabel}>Terms of Service</Text>
             <ChevronRight size={20} color="#CBD5E0" />
           </TouchableOpacity>
-          
+
           <TouchableOpacity style={styles.menuItem} onPress={() => openLink('mailto:support@example.com')}>
             <View style={[styles.menuIconCircle, { backgroundColor: '#EBF8FF' }]}>
               <HelpCircle size={20} color="#4299E1" />

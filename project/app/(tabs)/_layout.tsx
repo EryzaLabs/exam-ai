@@ -1,7 +1,11 @@
 import { Tabs } from 'expo-router';
 import { Home, Brain, MessageSquare, TrendingUp as TrendUp, Trophy, User, Bookmark, Swords } from 'lucide-react-native';
+import { useWindowDimensions } from 'react-native';
 
 export default function TabLayout() {
+  const { width } = useWindowDimensions();
+  const isLargeScreen = width > 1024;
+
   return (
     <Tabs
       screenOptions={{
@@ -15,6 +19,7 @@ export default function TabLayout() {
           paddingBottom: 0,
           paddingTop: 8,
           height: 60,
+          display: isLargeScreen ? 'none' : 'flex',
         },
         tabBarLabelStyle: {
           fontSize: 12,
