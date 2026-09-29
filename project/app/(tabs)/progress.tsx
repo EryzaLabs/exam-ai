@@ -11,6 +11,8 @@ import {
   RefreshControl,
   ActivityIndicator,
   Alert,
+  useWindowDimensions,
+  Pressable,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
@@ -35,6 +37,7 @@ import Card from '@/components/Card';
 import UserService, { UserStats, UserProfile } from '@/services/user-service';
 import { TestProgressService, TestResult } from '@/services/test-progress-service';
 import TestSeriesService from '@/services/testseries-service';
+import DesktopDashboard from '@/components/DesktopDashboard';
 
 const { width } = Dimensions.get('window');
 
@@ -42,10 +45,12 @@ export default function ProgressScreen() {
   const [selectedPeriod, setSelectedPeriod] = useState<'week' | 'month' | 'year'>('week');
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
+  const { width: windowWidth } = useWindowDimensions();
+  const isLargeScreen = windowWidth >= 1024;
   const [userStats, setUserStats] = useState<UserStats | null>(null);
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
   const [testHistory, setTestHistory] = useState<TestResult[]>([]);
-  const [examRankings, setExamRankings] = useState<Record<string, string>>({});
+  const [hoveredBarIndex, setHoveredBarIndex] = useState<number | null>(null);
 
   useEffect(() => {
     loadProgressData();
@@ -79,19 +84,6 @@ export default function ProgressScreen() {
       setUserStats(stats);
       setUserProfile(profile);
       setTestHistory(history);
-      
-      // Calculate exam-specific rankings
-      if (profile && profile.exams && history.length > 0) {
-        const rankings: Record<string, string> = {};
-        profile.exams.forEach(exam => {
-          const examTests = history.filter(t => t.testTitle?.includes(exam));
-          const avgAccuracy = examTests.length > 0
-            ? examTests.reduce((sum, t) => sum + t.accuracy, 0) / examTests.length
-            : 0;
-          rankings[exam] = calculateRank(avgAccuracy);
-        });
-        setExamRankings(rankings);
-      }
     } catch (error) {
       console.error('Error loading progress data:', error);
       // Set default empty states to ensure UI renders
@@ -149,6 +141,20 @@ export default function ProgressScreen() {
           
           console.log(`✅ Status updated successfully`);
           updatedAny = true;
+        } else if (status.status === 'not-found') {
+          console.log(`🚀 Answer generation not started. Triggering it now for ${test.testId}...`);
+          
+          // We don't have the original path, but backend will do a global search using testId
+          // if the path fails, so we can pass a dummy path that includes the testId
+          const dummyPath = `testseries/unknown_section/unknown_${test.testId}.json.gz`;
+          
+          await TestSeriesService.requestAnswerGeneration(test.testId, dummyPath)
+            .then(() => {
+              console.log(`✅ Requested generation for ${test.testId}`);
+              // Update status to 'pending' to reflect it has been requested
+              TestProgressService.updateAnswerGenerationStatus(test.attemptId, 'pending');
+            })
+            .catch(err => console.error('Failed to trigger generation:', err));
         } else {
           console.log(`⏳ Still pending: status=${status.status}, answersAvailable=${status.answersAvailable}`);
         }
@@ -183,39 +189,69 @@ export default function ProgressScreen() {
     return 'Beginner';
   };
 
-  const renderSimpleChart = (data: number[], color: string) => {
+  const renderSimpleChart = (data: number[], labels: string[], color: string) => {
     if (data.length === 0) return null;
-    const maxValue = Math.max(...data, 1);
-    const chartWidth = width - 64;
+    const maxValue = Math.max(...data, 100);
     const chartHeight = 120;
     
     return (
       <View style={[styles.chartContainer, { height: chartHeight }]}>
-        <View style={styles.chartArea}>
+        <View style={{ flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'flex-start', height: chartHeight - 40 }}>
           {data.map((value, index) => {
-            const barHeight = (value / maxValue) * (chartHeight - 40);
-            const barWidth = (chartWidth - 40) / data.length - 4;
+            const barHeight = Math.max((value / maxValue) * (chartHeight - 40), 4); // min height 4
+            const isHovered = hoveredBarIndex === index;
             
             return (
-              <View
-                key={index}
-                style={[
-                  styles.chartBar,
-                  {
-                    height: barHeight,
-                    width: barWidth,
-                    backgroundColor: color,
-                    marginRight: 4,
-                  }
-                ]}
-              />
+              <View key={index} style={{ flex: 1, maxWidth: 40, marginRight: 8, alignItems: 'center' }}>
+                {isHovered && (
+                  <View style={{
+                    position: 'absolute',
+                    top: -30,
+                    backgroundColor: '#1E293B',
+                    paddingHorizontal: 8,
+                    paddingVertical: 4,
+                    borderRadius: 6,
+                    zIndex: 10,
+                    minWidth: 40,
+                    alignItems: 'center'
+                  }}>
+                    <Text style={{ color: '#fff', fontSize: 11, fontWeight: 'bold' }}>
+                      {value.toFixed(1)}%
+                    </Text>
+                    {/* Small triangle pointer */}
+                    <View style={{
+                      position: 'absolute',
+                      bottom: -4,
+                      width: 8,
+                      height: 8,
+                      backgroundColor: '#1E293B',
+                      transform: [{ rotate: '45deg' }]
+                    }} />
+                  </View>
+                )}
+                <Pressable
+                  onHoverIn={() => setHoveredBarIndex(index)}
+                  onHoverOut={() => setHoveredBarIndex(null)}
+                  style={[
+                    styles.chartBar,
+                    {
+                      height: barHeight,
+                      width: '100%',
+                      backgroundColor: isHovered ? '#2563EB' : color, // Slightly darker blue on hover
+                      opacity: isHovered ? 1 : 0.85,
+                      transform: [{ scaleY: isHovered ? 1.05 : 1 }],
+                      transformOrigin: 'bottom'
+                    }
+                  ]}
+                />
+              </View>
             );
           })}
         </View>
-        <View style={styles.chartLabels}>
-          {data.map((_, index) => (
-            <Text key={index} style={styles.chartLabel}>
-              {index + 1}
+        <View style={{ flexDirection: 'row', justifyContent: 'flex-start', marginTop: 8 }}>
+          {labels.map((label, index) => (
+            <Text key={index} style={{ flex: 1, maxWidth: 40, marginRight: 8, textAlign: 'center', fontSize: 12, color: '#8E8E93', fontWeight: '500' }}>
+              {label}
             </Text>
           ))}
         </View>
@@ -223,11 +259,53 @@ export default function ProgressScreen() {
     );
   };
 
+  const getFilteredHistory = () => {
+    const now = new Date();
+    return testHistory.filter(test => {
+      if (!test.date) return false;
+      const testDate = new Date(test.date);
+      if (selectedPeriod === 'week') {
+        return testDate >= new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+      } else if (selectedPeriod === 'month') {
+        return testDate >= new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+      } else {
+        return testDate >= new Date(now.getTime() - 365 * 24 * 60 * 60 * 1000);
+      }
+    });
+  };
+
+  const filteredHistory = getFilteredHistory();
+
+  // Dynamically compute stats based on filtered history
+  let totalQuestionsAttempted = 0;
+  let totalCorrectAnswers = 0;
+  filteredHistory.forEach(t => {
+    if (t.sectionAnalytics && t.sectionAnalytics.length > 0) {
+      t.sectionAnalytics.forEach(sec => {
+        totalQuestionsAttempted += sec.attempted || 0;
+        totalCorrectAnswers += sec.correct || 0;
+      });
+    } else {
+      totalQuestionsAttempted += (t as any).totalQuestions || 0;
+      if ((t as any).totalQuestions && t.accuracy) {
+        totalCorrectAnswers += Math.round(((t as any).totalQuestions * t.accuracy) / 100);
+      }
+    }
+  });
+
+  const displayStats = {
+    totalTests: filteredHistory.length,
+    questionsAttempted: totalQuestionsAttempted,
+    accuracy: totalQuestionsAttempted > 0 ? (totalCorrectAnswers / totalQuestionsAttempted) * 100 : 0,
+    streak: userStats?.streak || 0,
+  };
+
   const getRecentTestsData = () => {
-    const recent = testHistory.slice(0, 7).reverse();
+    const recent = filteredHistory.slice(0, 7).reverse();
     return {
       accuracy: recent.map(t => t.accuracy),
-      questions: recent.map(t => t.totalQuestions),
+      questions: recent.map(t => (t as any).totalQuestions || 0),
+      labels: recent.map((_, i) => `T${i + 1}`)
     };
   };
 
@@ -242,31 +320,36 @@ export default function ProgressScreen() {
     );
   }
 
+  // Calculate exam-specific rankings based on filtered history
+  const examRankings: Record<string, string> = {};
+  if (userProfile && userProfile.exams && filteredHistory.length > 0) {
+    userProfile.exams.forEach(exam => {
+      const examTests = filteredHistory.filter(t => t.testTitle?.includes(exam));
+      if (examTests.length > 0) {
+        const avgAccuracy = examTests.reduce((sum, t) => sum + t.accuracy, 0) / examTests.length;
+        examRankings[exam] = calculateRank(avgAccuracy);
+      }
+    });
+  }
+
   const recentData = getRecentTestsData();
   const accuracyData = recentData.accuracy;
   const questionsData = recentData.questions;
 
-  return (
-    <SafeAreaView style={styles.container}>
+  const content = (
+    <SafeAreaView style={[styles.container, isLargeScreen && { flex: undefined, minHeight: 600 }]}>
       {/* Header */}
-      <LinearGradient
-        colors={['#667eea', '#764ba2']}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 1 }}
-        style={styles.headerGradient}
-      >
-        <View style={styles.header}>
-          <View style={styles.headerLeft}>
-            <View style={styles.progressIcon}>
-              <TrendUp size={24} color="#FFFFFF" />
-            </View>
-            <View>
-              <Text style={styles.headerTitle}>Progress</Text>
-              <Text style={styles.headerSubtitle}>Track your learning journey</Text>
-            </View>
+      <View style={styles.headerNew}>
+        <View style={styles.headerLeft}>
+          <View style={styles.progressIconNew}>
+            <TrendUp size={24} color="#2563EB" />
+          </View>
+          <View>
+            <Text style={styles.headerTitleNew}>Progress</Text>
+            <Text style={styles.headerSubtitleNew}>Track your learning journey</Text>
           </View>
         </View>
-      </LinearGradient>
+      </View>
 
       {/* Period Selector */}
       <View style={styles.periodSelector}>
@@ -300,7 +383,7 @@ export default function ProgressScreen() {
               <Trophy size={64} color="#ccc" />
               <Text style={styles.emptyTitle}>No Progress Yet</Text>
               <Text style={styles.emptyText}>
-                Take your first test to start tracking your progress!
+                Take your first test this {selectedPeriod} to start tracking your progress!
               </Text>
             </View>
           </Card>
@@ -308,49 +391,49 @@ export default function ProgressScreen() {
           <>
             {/* Overall Stats Grid */}
             <View style={styles.statsGrid}>
-              <View style={styles.statCard}>
-                <LinearGradient
-                  colors={['#667eea', '#764ba2']}
-                  style={styles.statGradient}
-                >
-                  <Target size={20} color="#FFFFFF" />
-                  <Text style={styles.statValue}>{userStats?.accuracy.toFixed(1) || 0}%</Text>
-                  <Text style={styles.statLabel}>Overall Accuracy</Text>
-                  <Text style={styles.statRank}>{calculateRank(userStats?.accuracy || 0)}</Text>
-                </LinearGradient>
+              <View style={[styles.statCardNew, { backgroundColor: '#F0F9FF', borderColor: '#BAE6FD' }]}>
+                <View style={[styles.statIconBox, { backgroundColor: '#DBEAFE' }]}>
+                  <Target size={20} color="#2563EB" />
+                </View>
+                <View style={{ marginTop: 12 }}>
+                  <Text style={styles.statValueNew}>{displayStats.accuracy.toFixed(1)}%</Text>
+                  <Text style={styles.statLabelNew}>Overall Accuracy</Text>
+                  <Text style={styles.statRankNew}>{calculateRank(displayStats.accuracy)}</Text>
+                </View>
               </View>
               
-              <View style={styles.statCard}>
-                <LinearGradient
-                  colors={['#f093fb', '#f5576c']}
-                  style={styles.statGradient}
-                >
-                  <Zap size={20} color="#FFFFFF" />
-                  <Text style={styles.statValue}>{userStats?.streak || 0}</Text>
-                  <Text style={styles.statLabel}>Day Streak</Text>
-                </LinearGradient>
+              <View style={[styles.statCardNew, { backgroundColor: '#FFF7ED', borderColor: '#FED7AA' }]}>
+                <View style={[styles.statIconBox, { backgroundColor: '#FFEDD5' }]}>
+                  <Zap size={20} color="#EA580C" />
+                </View>
+                <View style={{ marginTop: 12 }}>
+                  <Text style={styles.statValueNew}>{displayStats.streak}</Text>
+                  <Text style={styles.statLabelNew}>Day Streak</Text>
+                </View>
               </View>
               
-              <View style={styles.statCard}>
-                <LinearGradient
-                  colors={['#4facfe', '#00f2fe']}
-                  style={styles.statGradient}
-                >
-                  <BookOpen size={20} color="#FFFFFF" />
-                  <Text style={styles.statValue}>{userStats?.questionsAttempted || 0}</Text>
-                  <Text style={styles.statLabel}>Questions</Text>
-                </LinearGradient>
-              </View>
+              <TouchableOpacity 
+                style={[styles.statCardNew, { backgroundColor: '#F0FDF4', borderColor: '#BBF7D0' }]}
+                onPress={() => router.push('/test-history')}
+                activeOpacity={0.7}
+              >
+                <View style={[styles.statIconBox, { backgroundColor: '#DCFCE7' }]}>
+                  <BookOpen size={20} color="#16A34A" />
+                </View>
+                <View style={{ marginTop: 12 }}>
+                  <Text style={styles.statValueNew}>{displayStats.questionsAttempted}</Text>
+                  <Text style={styles.statLabelNew}>Questions</Text>
+                </View>
+              </TouchableOpacity>
               
-              <View style={styles.statCard}>
-                <LinearGradient
-                  colors={['#43e97b', '#38f9d7']}
-                  style={styles.statGradient}
-                >
-                  <Trophy size={20} color="#FFFFFF" />
-                  <Text style={styles.statValue}>{userStats?.totalTests || 0}</Text>
-                  <Text style={styles.statLabel}>Tests Taken</Text>
-                </LinearGradient>
+              <View style={[styles.statCardNew, { backgroundColor: '#FAF5FF', borderColor: '#E9D5FF' }]}>
+                <View style={[styles.statIconBox, { backgroundColor: '#F3E8FF' }]}>
+                  <Trophy size={20} color="#9333EA" />
+                </View>
+                <View style={{ marginTop: 12 }}>
+                  <Text style={styles.statValueNew}>{displayStats.totalTests}</Text>
+                  <Text style={styles.statLabelNew}>Tests Taken</Text>
+                </View>
               </View>
             </View>
 
@@ -382,15 +465,20 @@ export default function ProgressScreen() {
                   <Text style={styles.cardTitle}>Accuracy Trend</Text>
                 </View>
                 <Text style={styles.chartDescription}>Your accuracy over recent tests</Text>
-                {renderSimpleChart(accuracyData, '#007AFF')}
+                {renderSimpleChart(accuracyData, recentData.labels, '#007AFF')}
               </Card>
             )}
 
             {/* Recent Tests */}
             <Card>
-              <Text style={styles.cardTitle}>Recent Tests</Text>
+              <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+                <Text style={[styles.cardTitle, { marginBottom: 0 }]}>Recent Tests</Text>
+                <TouchableOpacity onPress={() => router.push('/test-history')}>
+                  <Text style={{ color: '#2563EB', fontWeight: '600' }}>View All →</Text>
+                </TouchableOpacity>
+              </View>
               <View style={styles.testsContainer}>
-                {testHistory.slice(0, 5).map((test, index) => (
+                {filteredHistory.slice(0, 5).map((test, index) => (
                   <TouchableOpacity 
                     key={index} 
                     style={styles.testItem}
@@ -434,7 +522,7 @@ export default function ProgressScreen() {
                       <View style={styles.testStats}>
                         <Text style={styles.testAccuracy}>{test.accuracy.toFixed(1)}%</Text>
                         <Text style={styles.testScore}>
-                          {test.correctAnswers}/{test.totalQuestions}
+                          {test.overallScore}/{test.totalMarks} Marks
                         </Text>
                       </View>
                     ) : (
@@ -452,6 +540,12 @@ export default function ProgressScreen() {
       </ScrollView>
     </SafeAreaView>
   );
+
+  if (isLargeScreen) {
+    return <DesktopDashboard>{content}</DesktopDashboard>;
+  }
+
+  return content;
 }
 
 const getRankColor = (rank: string): string => {
@@ -477,43 +571,76 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 16,
   },
-  headerGradient: {
+  headerNew: {
+    padding: 24,
+    backgroundColor: '#fff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#f1f5f9',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     marginHorizontal: 16,
     borderRadius: 16,
     marginTop: 16,
-    overflow: 'hidden',
-  },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingVertical: 24,
-    paddingHorizontal: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.05,
+    shadowRadius: 8,
+    elevation: 3,
   },
   headerLeft: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 16,
   },
-  progressIcon: {
+  progressIconNew: {
     width: 48,
     height: 48,
     borderRadius: 24,
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    alignItems: 'center',
+    backgroundColor: '#EFF6FF',
     justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 16,
   },
-  headerTitle: {
+  headerTitleNew: {
     fontSize: 24,
-    fontFamily: 'Inter-Bold',
-    color: '#FFFFFF',
+    fontWeight: '800',
+    color: '#0F172A',
   },
-  headerSubtitle: {
+  headerSubtitleNew: {
     fontSize: 14,
-    fontFamily: 'Inter-Regular',
-    color: '#FFFFFF',
-    opacity: 0.9,
-    marginTop: 2,
+    color: '#64748B',
+    marginTop: 4,
+  },
+  statCardNew: {
+    flex: 1,
+    minWidth: '45%',
+    padding: 16,
+    borderRadius: 16,
+    borderWidth: 1,
+  },
+  statIconBox: {
+    width: 40,
+    height: 40,
+    borderRadius: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  statValueNew: {
+    fontSize: 24,
+    fontWeight: '800',
+    color: '#0F172A',
+  },
+  statLabelNew: {
+    fontSize: 13,
+    color: '#64748B',
+    marginTop: 4,
+    fontWeight: '500',
+  },
+  statRankNew: {
+    fontSize: 12,
+    color: '#2563EB',
+    fontWeight: '600',
+    marginTop: 4,
   },
   periodSelector: {
     flexDirection: 'row',

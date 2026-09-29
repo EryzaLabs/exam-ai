@@ -9,9 +9,11 @@ import {
   ActivityIndicator,
   RefreshControl,
   TextInput,
+  useWindowDimensions,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { router } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
+import DesktopDashboard from '@/components/DesktopDashboard';
 import { LinearGradient } from 'expo-linear-gradient';
 import {
   Folder,
@@ -53,12 +55,16 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const [filteredTests, setFilteredTests] = useState<ServerPaper[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadingTestId, setLoadingTestId] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const { q } = useLocalSearchParams();
+  const [searchQuery, setSearchQuery] = useState(typeof q === 'string' ? q : '');
   const [category, setCategory] = useState<'all' | 'full' | 'topic'>('all');
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
-  const [activeTest, setActiveTest] = useState<SavedTestState | null>(null);
+  const [activeTests, setActiveTests] = useState<SavedTestState[]>([]);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [paymentLoading, setPaymentLoading] = useState(false);
+
+  const { width: windowWidth } = useWindowDimensions();
+  const isLargeScreen = windowWidth >= 1024;
 
   useEffect(() => {
     loadTests();
@@ -94,15 +100,11 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   }, [tests]);
 
   const loadActiveTest = async () => {
-    const saved = await TestProgressService.getCurrentTest();
-    setActiveTest(saved);
+    const saved = await TestProgressService.getSavedTests();
+    setActiveTests(saved);
   };
 
-  const activeTestTitle = useMemo(() => {
-      if (!activeTest) return '';
-      const t = tests.find(t => t.id === activeTest.testId);
-      return t ? t.title : 'Unfinished Test';
-  }, [activeTest, tests]);
+  // Not needed globally, we compute it per test in render
 
   const handleRefresh = () => {
       loadTests();
@@ -289,43 +291,49 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     );
   };
 
-  const renderResumeCard = () => {
-    if (!activeTest) return null;
+  const renderResumeCards = () => {
+    if (activeTests.length === 0) return null;
     
-    return (
-       <TouchableOpacity
-        style={styles.resumeCardNew} 
-        onPress={() => router.push({ pathname: '/mock-test', params: { testId: activeTest.testId, resume: 'true' } })}
-        activeOpacity={0.9}
-       >
-           <View style={styles.resumeGradientNew}>
-               <View style={styles.resumeContentNew}>
-                   <View style={styles.resumeIconNew}>
-                       <PlayCircle color="#F57C00" size={40} strokeWidth={1.5} />
-                   </View>
-                   <View style={styles.resumeInfoNew}>
-                       <Text style={styles.resumeTitleNew}>CONTINUE TEST</Text>
-                       <Text style={styles.resumeSubtitleNew} numberOfLines={1}>
-                            {activeTestTitle || 'Unfinished Test'}
-                       </Text>
-                       <Text style={styles.resumeMetaNew}>
-                           {activeTest.currentQuestionIndex + 1} questions attempted • {Math.floor(activeTest.timeRemaining / 60)}m left
-                       </Text>
-                   </View>
-                   <View style={styles.resumeButtonNew}>
-                       <Text style={styles.resumeButtonTextNew}>Resume</Text>
-                       <ArrowRight color="#fff" size={16} style={{marginLeft: 4}} />
-                   </View>
-               </View>
-               <View style={styles.resumeProgressContainerNew}>
-                  <View style={styles.resumeProgressBarNew}>
-                     <View style={[styles.resumeProgressFillNew, { width: '10%' }]} />
-                  </View>
-                  <Text style={styles.resumeProgressTextNew}>10%</Text>
-               </View>
-           </View>
-       </TouchableOpacity>
-    );
+    return activeTests.map(testState => {
+      const t = tests.find(x => x.id === testState.testId);
+      const title = t ? t.title : 'Unfinished Test';
+
+      return (
+         <TouchableOpacity
+          key={testState.testId}
+          style={styles.resumeCardNew} 
+          onPress={() => router.push({ pathname: '/mock-test', params: { testId: testState.testId, resume: 'true' } })}
+          activeOpacity={0.9}
+         >
+             <View style={styles.resumeGradientNew}>
+                 <View style={styles.resumeContentNew}>
+                     <View style={styles.resumeIconNew}>
+                         <PlayCircle color="#F57C00" size={40} strokeWidth={1.5} />
+                     </View>
+                     <View style={styles.resumeInfoNew}>
+                         <Text style={styles.resumeTitleNew}>CONTINUE TEST</Text>
+                         <Text style={styles.resumeSubtitleNew} numberOfLines={1}>
+                              {title}
+                         </Text>
+                         <Text style={styles.resumeMetaNew}>
+                             {testState.currentQuestionIndex + 1} questions attempted • {Math.floor(testState.timeRemaining / 60)}m left
+                         </Text>
+                     </View>
+                     <View style={styles.resumeButtonNew}>
+                         <Text style={styles.resumeButtonTextNew}>Resume</Text>
+                         <ArrowRight color="#fff" size={16} style={{marginLeft: 4}} />
+                     </View>
+                 </View>
+                 <View style={styles.resumeProgressContainerNew}>
+                    <View style={styles.resumeProgressBarNew}>
+                       <View style={[styles.resumeProgressFillNew, { width: '10%' }]} />
+                    </View>
+                    <Text style={styles.resumeProgressTextNew}>10%</Text>
+                 </View>
+             </View>
+         </TouchableOpacity>
+      );
+    });
   };
 
   const renderCategoryTabs = () => {
@@ -434,8 +442,8 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     );
   }
 
-  return (
-    <SafeAreaView style={styles.container} edges={['top']}>
+  const content = (
+    <SafeAreaView style={[styles.container, isLargeScreen && { flex: undefined, minHeight: 600 }]} edges={['top']}>
       {/* Header */}
       <LinearGradient colors={['#4A90E2', '#357ABD']} style={styles.headerNew}>
         <View style={styles.headerTopNew}>
@@ -492,7 +500,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           <RefreshControl refreshing={loading} onRefresh={handleRefresh} colors={['#4A90E2']} />
         }
       >
-        {renderResumeCard()}
+        {renderResumeCards()}
 
         {category === 'topic' && !selectedTopic ? (
           renderTopicGrid()
@@ -518,6 +526,12 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
       </ScrollView>
     </SafeAreaView>
   );
+
+  if (isLargeScreen) {
+    return <DesktopDashboard>{content}</DesktopDashboard>;
+  }
+
+  return content;
 }
 
 const styles = StyleSheet.create({

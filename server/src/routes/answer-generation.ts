@@ -65,14 +65,43 @@ router.post('/generate', async (req: Request, res: Response) => {
     // Resolve actual file path if testFilePath doesn't include title prefix
     let actualTestFilePath = testFilePath;
     if (!fs.existsSync(path.join(DATA_ROOT, testFilePath))) {
-      // Try to find file with title prefix - extract directory and look for _testId pattern
       const testFileDir = path.dirname(path.join(DATA_ROOT, testFilePath));
       if (fs.existsSync(testFileDir)) {
         const files = fs.readdirSync(testFileDir);
         const matchingFile = files.find(f => f.endsWith(`_${testId}.json.gz`) || f === `${testId}.json.gz`);
         if (matchingFile) {
           actualTestFilePath = path.join(path.dirname(testFilePath), matchingFile);
-          console.log(`[Answer Gen] Resolved file: ${matchingFile}`);
+          console.log(`[Answer Gen] Resolved file locally: ${matchingFile}`);
+        }
+      }
+
+      // If STILL not found locally, perform a global search across testseries
+      if (!fs.existsSync(path.join(DATA_ROOT, actualTestFilePath))) {
+        console.log(`[Answer Gen] Performing global search for ${testId}`);
+        const TESTSERIES_DIR = path.join(DATA_ROOT, 'testseries');
+        let foundPath: string | null = null;
+        
+        if (fs.existsSync(TESTSERIES_DIR)) {
+          const searchFolder = (folderPath: string) => {
+            if (foundPath) return;
+            const items = fs.readdirSync(folderPath, { withFileTypes: true });
+            for (const item of items) {
+              if (item.isDirectory()) {
+                searchFolder(path.join(folderPath, item.name));
+              } else if (item.isFile()) {
+                if (item.name.endsWith(`_${testId}.json.gz`) || item.name === `${testId}.json.gz` || item.name.endsWith(`_${testId}.json`) || item.name === `${testId}.json`) {
+                  foundPath = path.join(folderPath, item.name);
+                  return;
+                }
+              }
+            }
+          };
+          searchFolder(TESTSERIES_DIR);
+          
+          if (foundPath) {
+            actualTestFilePath = path.relative(DATA_ROOT, foundPath);
+            console.log(`[Answer Gen] Global search found file: ${actualTestFilePath}`);
+          }
         }
       }
     }

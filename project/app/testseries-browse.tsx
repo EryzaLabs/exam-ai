@@ -8,10 +8,12 @@ import {
   Alert,
   ActivityIndicator,
   TextInput,
+  useWindowDimensions,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { ChevronLeft, Search } from 'lucide-react-native';
+import DesktopDashboard from '@/components/DesktopDashboard';
 import TestSeriesService, { TestSeries } from '@/services/testseries-service';
 
 export default function TestSeriesBrowseScreen() {
@@ -20,6 +22,9 @@ export default function TestSeriesBrowseScreen() {
   const [isLoading, setIsLoading] = useState(true);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  
+  const { width } = useWindowDimensions();
+  const isLargeScreen = width >= 1024;
   const [currentPage, setCurrentPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const [totalCount, setTotalCount] = useState(0);
@@ -49,7 +54,11 @@ export default function TestSeriesBrowseScreen() {
       
       const data = await TestSeriesService.fetchTestSeries(page, 20);
       
-      const newSeries = append ? [...testSeries, ...data.testSeries] : data.testSeries;
+      const upscSeries = data.testSeries.filter(series => 
+        series.title.toLowerCase().includes('upsc')
+      );
+      
+      const newSeries = append ? [...testSeries, ...upscSeries] : upscSeries;
       setTestSeries(newSeries);
       setFilteredSeries(searchQuery ? newSeries.filter((s) =>
         s.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -84,12 +93,14 @@ export default function TestSeriesBrowseScreen() {
     });
   };
 
-  return (
-    <SafeAreaView style={styles.container} edges={['top', 'bottom']}>
+  const content = (
+    <SafeAreaView style={[styles.container, isLargeScreen && { flex: undefined, minHeight: 600 }]} edges={['top', 'bottom']}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <ChevronLeft size={24} color="#007AFF" />
-        </TouchableOpacity>
+        {!isLargeScreen && (
+          <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+            <ChevronLeft size={24} color="#007AFF" />
+          </TouchableOpacity>
+        )}
         <Text style={styles.headerTitle}>Test Series</Text>
         <View style={{ width: 24 }} />
       </View>
@@ -172,6 +183,12 @@ export default function TestSeriesBrowseScreen() {
       )}
     </SafeAreaView>
   );
+
+  if (isLargeScreen) {
+    return <DesktopDashboard>{content}</DesktopDashboard>;
+  }
+
+  return content;
 }
 
 const styles = StyleSheet.create({

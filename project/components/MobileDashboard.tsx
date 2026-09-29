@@ -37,6 +37,7 @@ export default function MobileDashboard({
   refreshing,
   onRefresh,
 }: any) {
+  const [searchQuery, setSearchQuery] = React.useState('');
   return (
     <View style={styles.container}>
       <StatusBar style="light" />
@@ -68,14 +69,14 @@ export default function MobileDashboard({
                 <View style={styles.notificationDot} />
               </TouchableOpacity>
             </View>
-            
+
             <View style={styles.headerSpacer} />
           </SafeAreaView>
         </ImageBackground>
 
         {/* MAIN CONTENT AREA */}
         <View style={styles.contentArea}>
-          
+
           {/* FLOATING SEARCH BAR */}
           <View style={styles.searchWrapper}>
             <View style={styles.searchContainer}>
@@ -84,6 +85,14 @@ export default function MobileDashboard({
                 style={styles.searchInput}
                 placeholder="Search tests, topics, or keywords..."
                 placeholderTextColor="#94A3B8"
+                value={searchQuery}
+                onChangeText={setSearchQuery}
+                onSubmitEditing={() => {
+                  if (searchQuery.trim()) {
+                    router.push({ pathname: '/test-list', params: { q: searchQuery.trim() } });
+                  }
+                }}
+                returnKeyType="search"
               />
             </View>
           </View>
@@ -156,15 +165,15 @@ export default function MobileDashboard({
 
           {/* PILLS */}
           <View style={styles.pillsRow}>
-            <TouchableOpacity style={[styles.pill, styles.pillActive]}>
+            <TouchableOpacity style={[styles.pill, styles.pillActive]} onPress={() => router.push('/test-list')}>
               <Grid size={16} color="#fff" />
               <Text style={[styles.pillTxt, styles.pillTxtActive]}>All Tests</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.pill}>
+            <TouchableOpacity style={styles.pill} onPress={() => router.push('/testseries-browse')}>
               <FileText size={16} color="#475569" />
               <Text style={styles.pillTxt}>Full Mocks</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.pill}>
+            <TouchableOpacity style={styles.pill} onPress={() => router.push('/test-list')}>
               <BookOpen size={16} color="#475569" />
               <Text style={styles.pillTxt}>Topic Wise</Text>
             </TouchableOpacity>
@@ -178,7 +187,7 @@ export default function MobileDashboard({
             </View>
             <TouchableOpacity><Text style={styles.viewAll}>View All →</Text></TouchableOpacity>
           </View>
-          
+
           <ImageBackground
             source={require('@/assets/images/upsc-bg.png')}
             style={[styles.featuredBanner, { backgroundColor: '#1E40AF' }]}
@@ -198,7 +207,7 @@ export default function MobileDashboard({
                 <Text style={styles.featuredTagTxt}>Featured</Text>
               </View>
             </View>
-            
+
             <View style={styles.featuredTitleRow}>
               <View style={{ flex: 1 }}>
                 <Text style={styles.featuredTitle}>UPSC Principal Test Series</Text>
@@ -225,23 +234,23 @@ export default function MobileDashboard({
           </View>
 
           <View style={styles.practiceModesRow}>
-             <LinearGradient colors={['#FFC5C5', '#FFDADA']} style={styles.modeCard}>
-                <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
-                <View style={{ flex: 1 }}>
-                   <Text style={styles.modeTitle}>AI Test</Text>
-                   <Text style={styles.modeDesc}>Adaptive questions based on your performance.</Text>
-                </View>
-                <View style={styles.modeArrow}><ArrowRight size={16} color="#DC2626" /></View>
-             </LinearGradient>
-             
-             <LinearGradient colors={['#A7F3D0', '#D1FAE5']} style={styles.modeCard}>
-                <View style={styles.modeIconGreen}><Zap size={24} color="#059669" /></View>
-                <View style={{ flex: 1 }}>
-                   <Text style={styles.modeTitle}>Quick Practice</Text>
-                   <Text style={styles.modeDesc}>Random questions from all topics.</Text>
-                </View>
-                <View style={styles.modeArrow}><ArrowRight size={16} color="#059669" /></View>
-             </LinearGradient>
+            <LinearGradient colors={['#FFC5C5', '#FFDADA']} style={styles.modeCard}>
+              <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.modeTitle}>AI Test</Text>
+                <Text style={styles.modeDesc}>Adaptive questions based on your performance.</Text>
+              </View>
+              <View style={styles.modeArrow}><ArrowRight size={16} color="#DC2626" /></View>
+            </LinearGradient>
+
+            <LinearGradient colors={['#A7F3D0', '#D1FAE5']} style={styles.modeCard}>
+              <View style={styles.modeIconGreen}><Zap size={24} color="#059669" /></View>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.modeTitle}>Quick Practice</Text>
+                <Text style={styles.modeDesc}>Random questions from all topics.</Text>
+              </View>
+              <View style={styles.modeArrow}><ArrowRight size={16} color="#059669" /></View>
+            </LinearGradient>
           </View>
 
           {/* RECENT TESTS */}
@@ -254,34 +263,34 @@ export default function MobileDashboard({
           </View>
 
           <View style={styles.recentTestsList}>
-             {(!performance?.recentTests || performance.recentTests.length === 0) ? (
-               <View style={{ padding: 24, backgroundColor: '#fff', borderRadius: 16, width: '100%', alignItems: 'center' }}>
-                 <Text style={{ color: '#64748B' }}>No recent tests found. Start practicing!</Text>
-               </View>
-             ) : (
-               performance.recentTests.slice(0, 3).map((test: any, i: number) => (
-                 <View key={i} style={styles.recentTestCard}>
-                    <View style={styles.rtcHeader}>
-                       <View style={styles.rtcIcon}><FileText size={20} color="#3B82F6" /></View>
-                       <View style={{ flex: 1 }}>
-                          <Text style={styles.rtcTitle}>{test.title || `Test ${i+1}`}</Text>
-                          <Text style={styles.rtcDate}>{test.date || 'Recently'} • {test.type || 'Practice'}</Text>
-                       </View>
-                       <View style={styles.rtcStatus}>
-                          <Text style={styles.rtcStatusText}>{test.status === 'in-progress' ? 'In Progress' : 'Completed'}</Text>
-                       </View>
+            {(!performance?.recentTests || performance.recentTests.length === 0) ? (
+              <View style={{ padding: 24, backgroundColor: '#fff', borderRadius: 16, width: '100%', alignItems: 'center' }}>
+                <Text style={{ color: '#64748B' }}>No recent tests found. Start practicing!</Text>
+              </View>
+            ) : (
+              performance.recentTests.slice(0, 3).map((test: any, i: number) => (
+                <View key={i} style={styles.recentTestCard}>
+                  <View style={styles.rtcHeader}>
+                    <View style={styles.rtcIcon}><FileText size={20} color="#3B82F6" /></View>
+                    <View style={{ flex: 1 }}>
+                      <Text style={styles.rtcTitle}>{test.title || `Test ${i + 1}`}</Text>
+                      <Text style={styles.rtcDate}>{test.date || 'Recently'} • {test.type || 'Practice'}</Text>
                     </View>
-                    <View style={styles.rtcMetrics}>
-                       <View style={styles.rtcMetric}><FileText size={16} color="#94A3B8" /><View><Text style={styles.rtcMetricVal}>{test.questions || 0}</Text><Text style={styles.rtcMetricTxt}>Questions</Text></View></View>
-                       <View style={styles.rtcMetric}><Clock size={16} color="#94A3B8" /><View><Text style={styles.rtcMetricVal}>{test.duration || '0m'}</Text><Text style={styles.rtcMetricTxt}>Duration</Text></View></View>
-                       <View style={styles.rtcMetric}><Star size={16} color="#94A3B8" /><View><Text style={styles.rtcMetricVal}>{test.score || 0}%</Text><Text style={styles.rtcMetricTxt}>Score</Text></View></View>
-                       <ChevronRight size={20} color="#CBD5E1" style={{ marginLeft: 'auto' }} />
+                    <View style={styles.rtcStatus}>
+                      <Text style={styles.rtcStatusText}>{test.status === 'in-progress' ? 'In Progress' : 'Completed'}</Text>
                     </View>
-                 </View>
-               ))
-             )}
+                  </View>
+                  <View style={styles.rtcMetrics}>
+                    <View style={styles.rtcMetric}><FileText size={16} color="#94A3B8" /><View><Text style={styles.rtcMetricVal}>{test.questions || 0}</Text><Text style={styles.rtcMetricTxt}>Questions</Text></View></View>
+                    <View style={styles.rtcMetric}><Clock size={16} color="#94A3B8" /><View><Text style={styles.rtcMetricVal}>{test.duration || '0m'}</Text><Text style={styles.rtcMetricTxt}>Duration</Text></View></View>
+                    <View style={styles.rtcMetric}><Star size={16} color="#94A3B8" /><View><Text style={styles.rtcMetricVal}>{test.score || 0}%</Text><Text style={styles.rtcMetricTxt}>Score</Text></View></View>
+                    <ChevronRight size={20} color="#CBD5E1" style={{ marginLeft: 'auto' }} />
+                  </View>
+                </View>
+              ))
+            )}
           </View>
-          
+
           <View style={{ height: 100 }} />
         </View>
       </ScrollView>

@@ -86,13 +86,29 @@ export default function TestResultScreen() {
             
             // Ensure Paper is Loaded
             let testData = SSCCGLService.getPaper(result.testId);
+            
             if (!testData) {
-                // Fetch list to find filename for this ID
-                const papers = await SSCCGLService.fetchPapersList();
-                const paperInfo = papers.find((p: any) => p.id === result!.testId);
+                // 1. Try TestSeries cache first
+                let cachedPaper = await TestSeriesService.getTestPaperFromCache(result.testId);
                 
-                if (paperInfo && paperInfo.filename) {
-                    testData = await SSCCGLService.fetchPaper(paperInfo.filename);
+                // 2. Try Global search if cache fails (user cleared cache or switched devices)
+                if (!cachedPaper) {
+                    cachedPaper = await TestSeriesService.fetchTestPaperGlobally(result.testId);
+                }
+
+                if (cachedPaper) {
+                    await SSCCGLService.storePaperInMemory(cachedPaper);
+                    testData = SSCCGLService.getPaper(result.testId);
+                }
+
+                // 3. Try old local papers list if still not found
+                if (!testData) {
+                  const papers = await SSCCGLService.fetchPapersList();
+                  const paperInfo = papers.find((p: any) => p.id === result!.testId);
+                  
+                  if (paperInfo && paperInfo.filename) {
+                      testData = await SSCCGLService.fetchPaper(paperInfo.filename);
+                  }
                 }
             }
             

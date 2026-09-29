@@ -5,7 +5,8 @@ import { BookMarked, Trash2 } from 'lucide-react-native';
 import Card from '@/components/Card';
 import { collection, query, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import { db, auth } from '@/services/firebaseConfig';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, useWindowDimensions } from 'react-native';
+import DesktopDashboard from '@/components/DesktopDashboard';
 
 interface Bookmark {
   id: string;
@@ -20,6 +21,8 @@ export default function BookmarksScreen() {
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
+  const { width } = useWindowDimensions();
+  const isLargeScreen = width >= 1024;
 
   useEffect(() => {
     loadBookmarks();
@@ -73,18 +76,20 @@ export default function BookmarksScreen() {
   };
 
   if (loading) {
-    return (
-      <SafeAreaView style={styles.container} edges={['bottom']}>
+    const loadingContent = (
+      <SafeAreaView style={[styles.container, isLargeScreen && { flex: undefined, minHeight: 600 }]} edges={['bottom']}>
         <View style={styles.loadingContainer}>
           <ActivityIndicator size="large" color="#667eea" />
           <Text style={styles.loadingText}>Loading bookmarks...</Text>
         </View>
       </SafeAreaView>
     );
+    if (isLargeScreen) return <DesktopDashboard>{loadingContent}</DesktopDashboard>;
+    return loadingContent;
   }
 
-  return (
-    <SafeAreaView style={styles.container} edges={['bottom']}>
+  const content = (
+    <SafeAreaView style={[styles.container, isLargeScreen && { flex: undefined, minHeight: 600 }]} edges={['bottom']}>
       <ScrollView 
         style={styles.scrollView} 
         showsVerticalScrollIndicator={false}
@@ -140,6 +145,12 @@ export default function BookmarksScreen() {
       </ScrollView>
     </SafeAreaView>
   );
+
+  if (isLargeScreen) {
+    return <DesktopDashboard>{content}</DesktopDashboard>;
+  }
+
+  return content;
 }
 
 const styles = StyleSheet.create({

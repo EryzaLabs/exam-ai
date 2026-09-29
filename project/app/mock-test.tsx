@@ -27,6 +27,7 @@ import {
   AlertCircle,
   Send,
   Save,
+  Bookmark,
 } from 'lucide-react-native';
 import RenderHtml from 'react-native-render-html';
 import SSCCGLService, {
@@ -37,6 +38,7 @@ import SSCCGLService, {
 } from '@/services/ssc-cgl-service';
 import { TestProgressService, SavedTestState, TestResult } from '@/services/test-progress-service';
 import TestSeriesService from '@/services/testseries-service';
+import { addBookmark } from '@/services/bookmark-service';
 
 const { width } = Dimensions.get('window');
 
@@ -169,8 +171,8 @@ export default function MockTestScreen() {
       
       // Check if we are resuming
       if (resume) {
-        const savedState = await TestProgressService.getCurrentTest();
-        if (savedState && savedState.testId === testId) {
+        const savedState = await TestProgressService.getTestProgress(testId);
+        if (savedState) {
              console.log("Resuming test...");
              
              // Restore shuffled question order
@@ -353,8 +355,16 @@ export default function MockTestScreen() {
         const answersStatus = await TestSeriesService.checkAnswerGenerationStatus(testId);
         
         if (answersStatus.status === 'not-found' || !answersStatus.answersAvailable) {
-          // Answers still not ready (generation might still be in progress)
-          console.log('Answers not yet ready, saving with pending status...');
+          // If answers generation hasn't started at all, trigger it now!
+          if (answersStatus.status === 'not-found') {
+            console.log('Answers not generated yet. Triggering generation now...');
+            const dummyPath = `testseries/unknown_section/unknown_${testId}.json.gz`;
+            TestSeriesService.requestAnswerGeneration(testId, dummyPath)
+              .catch(err => console.error('Failed to start answer generation:', err));
+          } else {
+            console.log('Answers not yet ready, saving with pending status...');
+          }
+
           Alert.alert(
             'Evaluation Pending',
             'Your answers are being processed. You can check your results in the Test History page once evaluation is complete.',
@@ -374,7 +384,7 @@ export default function MockTestScreen() {
           }
 
           // Clear active test
-          await TestProgressService.clearCurrentTest();
+          await TestProgressService.clearTestProgress(testId);
 
           // Navigate to progress tab
           router.replace('/(tabs)/progress');
@@ -401,7 +411,7 @@ export default function MockTestScreen() {
         
         console.log('Test result saved, clearing active test...');
         // Clear active test
-        await TestProgressService.clearCurrentTest();
+        await TestProgressService.clearTestProgress(testId);
 
         console.log('Navigating to results...');
         router.replace({
@@ -499,6 +509,23 @@ export default function MockTestScreen() {
 
   const handlePrevious = () => {
     navigateToQuestion(currentQuestionIndex - 1);
+  };
+
+  const handleBookmark = async () => {
+    const currentQuestion = getCurrentQuestion();
+    if (!currentQuestion) return;
+    
+    try {
+      await addBookmark({
+        questionId: currentQuestion.id,
+        questionText: currentQuestion.questionText,
+        testTitle: test?.title,
+      });
+      Alert.alert('Success', 'Question bookmarked successfully!');
+    } catch (error) {
+      console.error('Failed to bookmark:', error);
+      Alert.alert('Error', 'Failed to bookmark question. Please try again.');
+    }
   };
 
   const handleSubmit = () => {
@@ -666,7 +693,7 @@ export default function MockTestScreen() {
               style={[styles.confirmButton, {backgroundColor: '#F44336', width: '100%'}]}
               onPress={async () => {
                 setShowBackConfirm(false);
-                await TestProgressService.clearCurrentTest();
+                await TestProgressService.clearTestProgress(testId);
                 router.back();
               }}
             >
@@ -834,10 +861,15 @@ export default function MockTestScreen() {
               <Text style={styles.questionNumber}>
                 Question {currentQuestionIndex + 1} of {questions.length}
               </Text>
-              <View style={styles.questionMarks}>
-                <Text style={styles.questionMarksText}>
-                  +{currentQuestion.marks.positive} / -{currentQuestion.marks.negative}
-                </Text>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+                <TouchableOpacity onPress={handleBookmark} style={{ padding: 4 }}>
+                  <Bookmark size={20} color="#3B82F6" />
+                </TouchableOpacity>
+                <View style={styles.questionMarks}>
+                  <Text style={styles.questionMarksText}>
+                    +{currentQuestion.marks.positive} / -{currentQuestion.marks.negative}
+                  </Text>
+                </View>
               </View>
             </View>
 

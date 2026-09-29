@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import pako from 'pako'; // For gzip decompression in app
 
-const SERVER_URL = process.env.EXPO_PUBLIC_SERVER_URL || 'https://exambc.alaotach.com';
+const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://exambc.alaotach.com/api';
 
 export interface TestSeries {
   id: string;
@@ -64,7 +64,7 @@ const TestSeriesService = {
     totalPages: number;
   }> {
     try {
-      const response = await fetch(`${SERVER_URL}/api/testseries?page=${page}&limit=${limit}`);
+      const response = await fetch(`${API_URL}/testseries?page=${page}&limit=${limit}`);
       if (!response.ok) {
         throw new Error(`Failed to fetch test series: ${response.statusText}`);
       }
@@ -81,7 +81,7 @@ const TestSeriesService = {
    */
   async fetchAllTestSeries(): Promise<TestSeries[]> {
     try {
-      const response = await fetch(`${SERVER_URL}/api/testseries?limit=9999`);
+      const response = await fetch(`${API_URL}/testseries?limit=9999`);
       if (!response.ok) {
         throw new Error(`Failed to fetch test series: ${response.statusText}`);
       }
@@ -99,7 +99,7 @@ const TestSeriesService = {
   async fetchSectionTests(seriesFolder: string, sectionFolder: string): Promise<{ section: any; tests: Test[] }> {
     try {
       const response = await fetch(
-        `${SERVER_URL}/api/testseries/${encodeURIComponent(seriesFolder)}/${encodeURIComponent(sectionFolder)}`
+        `${API_URL}/testseries/${encodeURIComponent(seriesFolder)}/${encodeURIComponent(sectionFolder)}`
       );
       if (!response.ok) {
         throw new Error(`Failed to fetch section tests: ${response.statusText}`);
@@ -125,7 +125,7 @@ const TestSeriesService = {
         return JSON.parse(cached);
       }
 
-      const url = `${SERVER_URL}/api/testseries/${encodeURIComponent(seriesFolder)}/${encodeURIComponent(sectionFolder)}/${encodeURIComponent(testId)}`;
+      const url = `${API_URL}/testseries/${encodeURIComponent(seriesFolder)}/${encodeURIComponent(sectionFolder)}/${encodeURIComponent(testId)}`;
       console.log('Fetching test from server:', url);
       
       const response = await fetch(url);
@@ -151,11 +151,48 @@ const TestSeriesService = {
   },
 
   /**
+   * Look up a test paper from cache by testId only
+   */
+  async getTestPaperFromCache(testId: string): Promise<TestPaper | null> {
+    try {
+      const keys = await AsyncStorage.getAllKeys();
+      const testKey = keys.find(k => k.startsWith('test_') && k.endsWith(`_${testId}`));
+      if (testKey) {
+        const cached = await AsyncStorage.getItem(testKey);
+        if (cached) {
+          return JSON.parse(cached);
+        }
+      }
+      return null;
+    } catch (error) {
+      console.error('Error getting test paper from cache:', error);
+      return null;
+    }
+  },
+
+  /**
+   * Look up a test paper globally from the server by testId only
+   */
+  async fetchTestPaperGlobally(testId: string): Promise<TestPaper | null> {
+    try {
+      const response = await fetch(`${API_URL}/testseries/test/${encodeURIComponent(testId)}`);
+      if (!response.ok) {
+        return null;
+      }
+      const testData = await response.json();
+      return testData;
+    } catch (error) {
+      console.error('Error fetching test paper globally:', error);
+      return null;
+    }
+  },
+
+  /**
    * Trigger answer generation for a test
    */
   async requestAnswerGeneration(testId: string, testFilePath: string): Promise<AnswerGenerationStatus> {
     try {
-      const response = await fetch(`${SERVER_URL}/api/answers/generate`, {
+      const response = await fetch(`${API_URL}/answers/generate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -180,7 +217,7 @@ const TestSeriesService = {
    */
   async checkAnswerGenerationStatus(testId: string): Promise<AnswerGenerationStatus> {
     try {
-      const response = await fetch(`${SERVER_URL}/api/answers/status/${encodeURIComponent(testId)}`);
+      const response = await fetch(`${API_URL}/answers/status/${encodeURIComponent(testId)}`);
       
       if (response.status === 404) {
         return {
@@ -207,7 +244,7 @@ const TestSeriesService = {
    */
   async fetchAnswers(testFileName: string): Promise<any> {
     try {
-      const response = await fetch(`${SERVER_URL}/api/answers/${encodeURIComponent(testFileName)}`);
+      const response = await fetch(`${API_URL}/answers/${encodeURIComponent(testFileName)}`);
       
       if (response.status === 404) {
         return null; // Answers not available

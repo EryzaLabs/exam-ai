@@ -23,11 +23,19 @@ import {
   ChevronDown,
   Star
 } from 'lucide-react-native';
-import { router } from 'expo-router';
+import { router, usePathname } from 'expo-router';
 import { useAuth } from '@/context/auth-context';
+import { useDashboardData } from '@/hooks/useDashboardData';
 
-export default function DesktopDashboard({ performance, dashboardStats }: any) {
+export default function DesktopDashboard({ performance: propPerformance, dashboardStats: propDashboardStats, children }: any) {
   const { user } = useAuth();
+  const [searchQuery, setSearchQuery] = React.useState('');
+  const pathname = usePathname();
+  
+  // Use hook data if props aren't explicitly provided
+  const { performance: hookPerformance, dashboardStats: hookDashboardStats, loading } = useDashboardData();
+  const performance = propPerformance || hookPerformance;
+  const dashboardStats = propDashboardStats || hookDashboardStats;
   return (
     <View style={styles.container}>
       {/* LEFT SIDEBAR */}
@@ -43,37 +51,37 @@ export default function DesktopDashboard({ performance, dashboardStats }: any) {
         </View>
 
         <ScrollView style={styles.navMenu} showsVerticalScrollIndicator={false}>
-          <TouchableOpacity style={[styles.navItem, styles.navItemActive]}>
-            <Home size={20} color="#fff" />
-            <Text style={[styles.navText, styles.navTextActive]}>Home</Text>
+          <TouchableOpacity style={[styles.navItem, pathname === '/' && styles.navItemActive]} onPress={() => router.push('/')}>
+            <Home size={20} color={pathname === '/' ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, pathname === '/' && styles.navTextActive]}>Home</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.navItem}>
-            <FileText size={20} color="#64748B" />
-            <Text style={styles.navText}>Tests</Text>
+          <TouchableOpacity style={[styles.navItem, pathname === '/test-list' && styles.navItemActive]} onPress={() => router.push('/test-list')}>
+            <FileText size={20} color={pathname === '/test-list' ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, pathname === '/test-list' && styles.navTextActive]}>Tests</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.navItem}>
-            <Clock size={20} color="#64748B" />
-            <Text style={styles.navText}>Full Mocks</Text>
+          <TouchableOpacity style={[styles.navItem, pathname === '/testseries-browse' && styles.navItemActive]} onPress={() => router.push('/testseries-browse')}>
+            <Clock size={20} color={pathname === '/testseries-browse' ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, pathname === '/testseries-browse' && styles.navTextActive]}>Full Mocks</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.navItem}>
+          <TouchableOpacity style={[styles.navItem, false && styles.navItemActive]} onPress={() => router.push({ pathname: '/test-list', params: { category: 'topic' } })}>
             <Grid size={20} color="#64748B" />
-            <Text style={styles.navText}>Topic Wise</Text>
+            <Text style={[styles.navText, false && styles.navTextActive]}>Topic Wise</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.navItem}>
-            <Zap size={20} color="#64748B" />
-            <Text style={styles.navText}>Practice</Text>
+          <TouchableOpacity style={[styles.navItem, pathname === '/practice' && styles.navItemActive]} onPress={() => router.push('/practice')}>
+            <Zap size={20} color={pathname === '/practice' ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, pathname === '/practice' && styles.navTextActive]}>Practice</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.navItem}>
-            <BarChart2 size={20} color="#64748B" />
-            <Text style={styles.navText}>Analytics</Text>
+          <TouchableOpacity style={[styles.navItem, (pathname === '/progress' || pathname === '/test-history') && styles.navItemActive]} onPress={() => router.push('/progress')}>
+            <BarChart2 size={20} color={(pathname === '/progress' || pathname === '/test-history') ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, (pathname === '/progress' || pathname === '/test-history') && styles.navTextActive]}>Analytics</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.navItem}>
-            <MessageSquare size={20} color="#64748B" />
-            <Text style={styles.navText}>AI Assistant</Text>
+          <TouchableOpacity style={[styles.navItem, pathname === '/assistant' && styles.navItemActive]} onPress={() => router.push('/assistant')}>
+            <MessageSquare size={20} color={pathname === '/assistant' ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, pathname === '/assistant' && styles.navTextActive]}>AI Assistant</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.navItem}>
-            <Bookmark size={20} color="#64748B" />
-            <Text style={styles.navText}>Bookmarks</Text>
+          <TouchableOpacity style={[styles.navItem, pathname === '/bookmarks' && styles.navItemActive]} onPress={() => router.push('/bookmarks')}>
+            <Bookmark size={20} color={pathname === '/bookmarks' ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, pathname === '/bookmarks' && styles.navTextActive]}>Bookmarks</Text>
           </TouchableOpacity>
         </ScrollView>
 
@@ -97,6 +105,14 @@ export default function DesktopDashboard({ performance, dashboardStats }: any) {
               style={styles.searchInput}
               placeholder="Search tests, topics, or keywords..."
               placeholderTextColor="#94A3B8"
+              value={searchQuery}
+              onChangeText={setSearchQuery}
+              onSubmitEditing={() => {
+                if (searchQuery.trim()) {
+                  router.push({ pathname: '/test-list', params: { q: searchQuery.trim() } });
+                }
+              }}
+              returnKeyType="search"
             />
           </View>
           <View style={styles.topBarRight}>
@@ -117,8 +133,10 @@ export default function DesktopDashboard({ performance, dashboardStats }: any) {
         </View>
 
         <ScrollView style={styles.scrollContent} showsVerticalScrollIndicator={false}>
-          {/* HERO BANNER */}
-          <ImageBackground
+          {children || (
+            <>
+              {/* HERO BANNER */}
+              <ImageBackground
             source={require('@/assets/images/upsc-bg.png')}
             style={[styles.heroBanner, { backgroundColor: '#E0E7FF' }]}
             imageStyle={{ borderRadius: 24, opacity: 0.9, width: '100%', height: '100%' }}
@@ -179,7 +197,9 @@ export default function DesktopDashboard({ performance, dashboardStats }: any) {
                <BookOpen size={20} color="#F97316" />
                <Text style={styles.sectionTitle}>UPSC Principal Mock Tests</Text>
             </View>
-            <TouchableOpacity><Text style={styles.viewAll}>View All →</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => router.push('/testseries-browse')}>
+              <Text style={styles.viewAll}>View All →</Text>
+            </TouchableOpacity>
           </View>
           
           <ImageBackground
@@ -206,7 +226,7 @@ export default function DesktopDashboard({ performance, dashboardStats }: any) {
                    <View style={styles.perk}><Brain size={14} color="#fff" /><Text style={styles.perkText}>Detailed Solutions</Text></View>
                 </View>
              </View>
-             <TouchableOpacity style={styles.browseBtn}>
+             <TouchableOpacity style={styles.browseBtn} onPress={() => router.push('/testseries-browse')}>
                 <Text style={styles.browseBtnText}>Browse Tests →</Text>
              </TouchableOpacity>
           </ImageBackground>
@@ -254,7 +274,9 @@ export default function DesktopDashboard({ performance, dashboardStats }: any) {
                <Clock size={20} color="#3B82F6" />
                <Text style={styles.sectionTitle}>Recent Tests</Text>
             </View>
-            <TouchableOpacity><Text style={styles.viewAll}>View All →</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => router.push('/test-list')}>
+              <Text style={styles.viewAll}>View All →</Text>
+            </TouchableOpacity>
           </View>
 
           <View style={styles.recentTestsRow}>
@@ -287,6 +309,8 @@ export default function DesktopDashboard({ performance, dashboardStats }: any) {
                ))
              )}
           </View>
+            </>
+          )}
         </ScrollView>
       </View>
 
@@ -297,7 +321,9 @@ export default function DesktopDashboard({ performance, dashboardStats }: any) {
           <View style={styles.widgetHeader}>
              <Target size={20} color="#059669" />
              <Text style={styles.widgetTitle}>Your Progress</Text>
-             <TouchableOpacity style={{marginLeft: 'auto'}}><Text style={styles.viewAll}>View Analytics →</Text></TouchableOpacity>
+             <TouchableOpacity style={{marginLeft: 'auto'}} onPress={() => router.push('/progress')}>
+               <Text style={styles.viewAll}>View Analytics →</Text>
+             </TouchableOpacity>
           </View>
           <View style={styles.progressBody}>
              <View style={styles.donutPlaceholder}>
@@ -325,7 +351,7 @@ export default function DesktopDashboard({ performance, dashboardStats }: any) {
         </View>
 
         {/* Current Streak */}
-        <View style={styles.widgetCard}>
+        <TouchableOpacity style={styles.widgetCard} onPress={() => router.push('/progress')} activeOpacity={0.7}>
           <View style={styles.widgetHeader}>
              <View style={styles.streakIcon}><Zap size={20} color="#F59E0B" fill="#F59E0B" /></View>
              <View>
@@ -349,14 +375,16 @@ export default function DesktopDashboard({ performance, dashboardStats }: any) {
                  );
              })}
           </View>
-        </View>
+        </TouchableOpacity>
 
         {/* Topic Performance */}
         <View style={styles.widgetCard}>
           <View style={styles.widgetHeader}>
              <BarChart2 size={20} color="#3B82F6" />
              <Text style={styles.widgetTitle}>Topic Performance</Text>
-             <TouchableOpacity style={{marginLeft: 'auto'}}><Text style={styles.viewAll}>View Details →</Text></TouchableOpacity>
+             <TouchableOpacity style={{marginLeft: 'auto'}} onPress={() => router.push('/progress')}>
+               <Text style={styles.viewAll}>View Details →</Text>
+             </TouchableOpacity>
           </View>
           
           <View style={styles.topicsList}>

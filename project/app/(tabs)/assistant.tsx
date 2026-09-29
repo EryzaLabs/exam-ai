@@ -11,7 +11,9 @@ import {
   ActivityIndicator,
   Alert,
   StatusBar,
+  useWindowDimensions,
 } from 'react-native';
+import DesktopDashboard from '@/components/DesktopDashboard';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams } from 'expo-router';
 import { Send, Bot, User, FileText, Brain, TrendingUp, Target } from 'lucide-react-native';
@@ -46,6 +48,8 @@ export default function AssistantScreen() {
   const scrollViewRef = useRef<ScrollView>(null);
   const params = useLocalSearchParams();
   const initialPromptProcessed = useRef(false);
+  const { width } = useWindowDimensions();
+  const isLargeScreen = width >= 1024;
 
   useEffect(() => {
     if (params.prompt && !initialPromptProcessed.current) {
@@ -159,8 +163,8 @@ export default function AssistantScreen() {
     );
   };
 
-  return (
-    <SafeAreaView style={styles.container} edges={['bottom']}>
+  const content = (
+    <SafeAreaView style={[styles.container, isLargeScreen && { flex: undefined, minHeight: 600 }]} edges={['bottom']}>
       <KeyboardAvoidingView
         style={styles.container}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -295,6 +299,12 @@ export default function AssistantScreen() {
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
+
+  if (isLargeScreen) {
+    return <DesktopDashboard>{content}</DesktopDashboard>;
+  }
+
+  return content;
 }
 
 const styles = StyleSheet.create({

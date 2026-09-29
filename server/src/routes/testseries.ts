@@ -170,6 +170,67 @@ router.get('/:seriesFolder/:sectionFolder', (req: Request, res: Response) => {
 });
 
 /**
+ * GET /api/testseries/test/:testId - Search for a test paper globally by ID
+ */
+router.get('/test/:testId', async (req: Request, res: Response) => {
+  try {
+    const { testId } = req.params;
+    console.log(`[TestSeries] Global search for test: ${testId}`);
+
+    if (!fs.existsSync(TESTSERIES_DIR)) {
+      return res.status(404).json({ error: 'Testseries directory not found' });
+    }
+
+    let foundFilePath: string | null = null;
+    let needsDecompression = false;
+
+    // Recursively search all folders
+    const searchFolder = (folderPath: string) => {
+      if (foundFilePath) return; // Stop if already found
+      const items = fs.readdirSync(folderPath, { withFileTypes: true });
+      for (const item of items) {
+        if (item.isDirectory()) {
+          searchFolder(path.join(folderPath, item.name));
+        } else if (item.isFile()) {
+          if (item.name.endsWith(`_${testId}.json.gz`) || item.name === `${testId}.json.gz`) {
+            foundFilePath = path.join(folderPath, item.name);
+            needsDecompression = true;
+            return;
+          } else if (item.name.endsWith(`_${testId}.json`) || item.name === `${testId}.json`) {
+            foundFilePath = path.join(folderPath, item.name);
+            needsDecompression = false;
+            return;
+          }
+        }
+      }
+    };
+
+    searchFolder(TESTSERIES_DIR);
+
+    if (!foundFilePath) {
+      console.error(`[TestSeries] Global search failed for TestID: ${testId}`);
+      return res.status(404).json({ error: 'Test paper not found globally' });
+    }
+
+    console.log(`[TestSeries] Global search found file: ${foundFilePath}`);
+
+    if (needsDecompression) {
+      const compressedData = fs.readFileSync(foundFilePath);
+      const decompressedData = await gunzip(compressedData);
+      const jsonString = decompressedData.toString('utf-8');
+      const testData = JSON.parse(jsonString);
+      res.json(testData);
+    } else {
+      res.setHeader('Content-Type', 'application/json');
+      fs.createReadStream(foundFilePath).pipe(res);
+    }
+  } catch (error: any) {
+    console.error('[TestSeries] Error serving test paper globally:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
  * GET /api/testseries/:seriesFolder/:sectionFolder/:testId - Get decompressed test paper
  */
 router.get('/:seriesFolder/:sectionFolder/:testId', async (req: Request, res: Response) => {

@@ -41,7 +41,7 @@ export const TestProgressService = {
       const user = auth.currentUser;
       if (!user) return; 
 
-      const docRef = doc(db, 'users', user.uid, 'active_tests', 'current');
+      const docRef = doc(db, 'users', user.uid, 'active_tests', state.testId);
       
       // Ensure clean serialization - convert to JSON and back to remove any non-serializable data
       const cleanState = JSON.parse(JSON.stringify(state));
@@ -53,12 +53,12 @@ export const TestProgressService = {
     }
   },
 
-  async getCurrentTest(): Promise<SavedTestState | null> {
+  async getTestProgress(testId: string): Promise<SavedTestState | null> {
     try {
       const user = auth.currentUser;
       if (!user) return null;
 
-      const docRef = doc(db, 'users', user.uid, 'active_tests', 'current');
+      const docRef = doc(db, 'users', user.uid, 'active_tests', testId);
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists()) {
@@ -72,15 +72,28 @@ export const TestProgressService = {
     }
   },
 
-  async clearCurrentTest(): Promise<void> {
+  async clearTestProgress(testId: string): Promise<void> {
     try {
       const user = auth.currentUser;
       if (!user) return;
 
-      const docRef = doc(db, 'users', user.uid, 'active_tests', 'current');
+      const docRef = doc(db, 'users', user.uid, 'active_tests', testId);
       await deleteDoc(docRef);
     } catch (e) {
       console.error('Failed to clear current test', e);
+    }
+  },
+
+  async getSavedTests(): Promise<SavedTestState[]> {
+    try {
+      const user = auth.currentUser;
+      if (!user) return [];
+      const colRef = collection(db, 'users', user.uid, 'active_tests');
+      const snap = await getDocs(colRef);
+      return snap.docs.map(d => d.data() as SavedTestState);
+    } catch (e) {
+      console.error('Failed to get saved tests', e);
+      return [];
     }
   },
 
