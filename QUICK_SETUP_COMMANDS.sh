@@ -23,9 +23,6 @@ sudo apt install -y nodejs
 # Install Python and other tools
 sudo apt install -y python3 python3-pip python3-venv
 
-# Install PM2
-sudo npm install -g pm2
-
 # Install Nginx
 sudo apt install -y nginx
 
@@ -67,13 +64,12 @@ echo "sudo systemctl restart nginx"
 echo "sudo systemctl enable nginx"
 
 # ====================
-# STEP 6: Start Application with PM2
+# STEP 6: Start Application with systemd
 # ====================
 cd ~/exam-ai
-pm2 start ecosystem.config.json
-pm2 save
-pm2 startup
-# Run the command that PM2 outputs from the above command
+sudo cp exam-ai.service /etc/systemd/system/exam-ai.service
+sudo systemctl daemon-reload
+sudo systemctl enable --now exam-ai.service
 
 # ====================
 # STEP 7: Setup SSL (Replace your-domain.com with your actual domain)
@@ -84,9 +80,9 @@ echo "sudo certbot --nginx -d your-domain.com -d www.your-domain.com"
 # ====================
 # STEP 8: Verify Everything is Running
 # ====================
-pm2 status
+sudo systemctl status exam-ai.service --no-pager
 sudo systemctl status nginx
-curl http://localhost:3000/health
+curl http://localhost:5670/health
 
 echo ""
 echo "Setup complete! Visit https://your-domain.com to verify"

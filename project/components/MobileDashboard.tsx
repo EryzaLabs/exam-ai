@@ -64,7 +64,10 @@ export default function MobileDashboard({
                 <Text style={styles.headerTitle}>Mock Tests</Text>
                 <Text style={styles.headerSubtitle}>Practice. Analyze. Improve.</Text>
               </View>
-              <TouchableOpacity style={styles.bellBtn}>
+              <TouchableOpacity style={styles.bellBtn} onPress={() => {
+                const { Alert } = require('react-native');
+                Alert.alert('Notifications', 'No new notifications at the moment.');
+              }}>
                 <Bell size={24} color="#3B82F6" />
                 <View style={styles.notificationDot} />
               </TouchableOpacity>
@@ -234,23 +237,27 @@ export default function MobileDashboard({
           </View>
 
           <View style={styles.practiceModesRow}>
-            <LinearGradient colors={['#FFC5C5', '#FFDADA']} style={styles.modeCard}>
-              <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
-              <View style={{ flex: 1 }}>
-                <Text style={styles.modeTitle}>AI Test</Text>
-                <Text style={styles.modeDesc}>Adaptive questions based on your performance.</Text>
-              </View>
-              <View style={styles.modeArrow}><ArrowRight size={16} color="#DC2626" /></View>
-            </LinearGradient>
+            <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push('/practice')}>
+              <LinearGradient colors={['#FFC5C5', '#FFDADA']} style={styles.modeCard}>
+                <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.modeTitle}>AI Test</Text>
+                  <Text style={styles.modeDesc}>Adaptive questions based on your performance.</Text>
+                </View>
+                <View style={styles.modeArrow}><ArrowRight size={16} color="#DC2626" /></View>
+              </LinearGradient>
+            </TouchableOpacity>
 
-            <LinearGradient colors={['#A7F3D0', '#D1FAE5']} style={styles.modeCard}>
-              <View style={styles.modeIconGreen}><Zap size={24} color="#059669" /></View>
-              <View style={{ flex: 1 }}>
-                <Text style={styles.modeTitle}>Quick Practice</Text>
-                <Text style={styles.modeDesc}>Random questions from all topics.</Text>
-              </View>
-              <View style={styles.modeArrow}><ArrowRight size={16} color="#059669" /></View>
-            </LinearGradient>
+            <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push('/practice')}>
+              <LinearGradient colors={['#A7F3D0', '#D1FAE5']} style={styles.modeCard}>
+                <View style={styles.modeIconGreen}><Zap size={24} color="#059669" /></View>
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.modeTitle}>Quick Practice</Text>
+                  <Text style={styles.modeDesc}>Random questions from all topics.</Text>
+                </View>
+                <View style={styles.modeArrow}><ArrowRight size={16} color="#059669" /></View>
+              </LinearGradient>
+            </TouchableOpacity>
           </View>
 
           {/* RECENT TESTS */}

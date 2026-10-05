@@ -38,7 +38,7 @@ import SSCCGLService, { ParsedMockTest } from '@/services/ssc-cgl-service';
 import { TestProgressService, SavedTestState } from '@/services/test-progress-service';
 import userService from '@/services/user-service';
 import { initiatePayment } from '@/utils/razorpay';
-import { auth } from '@/services/firebaseConfig';
+import { useAuth } from '@/context/auth-context';
 
 const { width } = Dimensions.get('window');
 
@@ -62,6 +62,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const [activeTests, setActiveTests] = useState<SavedTestState[]>([]);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [paymentLoading, setPaymentLoading] = useState(false);
+  const { user } = useAuth();
 
   const { width: windowWidth } = useWindowDimensions();
   const isLargeScreen = windowWidth >= 1024;
@@ -69,13 +70,20 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   useEffect(() => {
     loadTests();
     loadActiveTest();
-    checkSubscription();
   }, []);
 
+  useEffect(() => {
+    if (user !== undefined) {
+      checkSubscription();
+    }
+  }, [user]);
+
   const checkSubscription = async () => {
-    const profile = await userService.getUserProfile();
+    const profile = await userService.getUserProfile(user?.uid);
     if (profile?.isSubscribed) {
       setIsSubscribed(true);
+    } else {
+      setIsSubscribed(false);
     }
   };
 

@@ -50,7 +50,7 @@ cd "$APP_DIR" || error "App directory not found: $APP_DIR"
 
 # Stop existing server
 log "Stopping existing server..."
-pm2 stop exam-ai-server || warn "No existing server to stop"
+sudo systemctl stop exam-ai.service || warn "No existing systemd service to stop"
 
 # Pull latest code
 log "Pulling latest code from repository..."
@@ -97,38 +97,31 @@ if [ ! -f "server/dist/index.js" ]; then
     error "Build output not found: server/dist/index.js"
 fi
 
-# Start server with PM2
-log "Starting server with PM2..."
-cd server
-pm2 delete exam-ai-server || true
-pm2 start dist/index.js --name exam-ai-server \
-    --time \
-    --log-date-format "YYYY-MM-DD HH:mm:ss Z" \
-    --merge-logs \
-    --output ../logs/pm2-out.log \
-    --error ../logs/pm2-error.log
-
-# Save PM2 configuration
-pm2 save
+# Install and start the systemd service
+log "Installing systemd service..."
+sudo cp "$APP_DIR/exam-ai.service" /etc/systemd/system/exam-ai.service
+sudo systemctl daemon-reload
+sudo systemctl enable exam-ai.service
+sudo systemctl restart exam-ai.service
 
 # Wait for server to start
 log "Waiting for server to start..."
 sleep 5
 
 # Check if server is running
-if pm2 list | grep -q "exam-ai-server.*online"; then
+if sudo systemctl is-active --quiet exam-ai.service; then
     log "✅ Server started successfully!"
 else
-    error "Server failed to start. Check logs with: pm2 logs exam-ai-server"
+    error "Server failed to start. Check logs with: sudo journalctl -u exam-ai.service -n 100"
 fi
 
 # Show server status
-pm2 status exam-ai-server
+sudo systemctl status exam-ai.service --no-pager
 
 # Health check
 log "Performing health check..."
 sleep 3
-HEALTH_CHECK=$(curl -s http://localhost:3000/health || echo "failed")
+HEALTH_CHECK=$(curl -s http://localhost:5670/health || echo "failed")
 if [[ "$HEALTH_CHECK" == *"ok"* ]] || [[ "$HEALTH_CHECK" == *"healthy"* ]]; then
     log "✅ Health check passed!"
 else
@@ -148,12 +141,12 @@ ls -t | tail -n +11 | xargs -r rm --
 log "================================================"
 log "Deployment completed successfully! 🎉"
 log "================================================"
-log "Server logs: pm2 logs exam-ai-server"
+log "Server logs: sudo journalctl -u exam-ai.service -f"
 log "Application logs: $APP_DIR/logs/"
-log "PM2 status: pm2 status"
+log "Service status: sudo systemctl status exam-ai.service"
 log "Backup created: $BACKUP_DIR/$BACKUP_NAME"
 log "================================================"
 
 # Show recent logs
 log "Recent logs:"
-pm2 logs exam-ai-server --lines 20 --nostream
+sudo journalctl -u exam-ai.service -n 20 --no-pager

@@ -522,7 +522,7 @@ export default function ProgressScreen() {
                       <View style={styles.testStats}>
                         <Text style={styles.testAccuracy}>{test.accuracy.toFixed(1)}%</Text>
                         <Text style={styles.testScore}>
-                          {test.overallScore}/{test.totalMarks} Marks
+                          {Number(test.overallScore).toFixed(1)}/{test.totalMarks} Marks
                         </Text>
                       </View>
                     ) : (

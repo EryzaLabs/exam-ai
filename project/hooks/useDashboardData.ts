@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import UserService from '@/services/user-service';
 import { TestProgressService } from '@/services/test-progress-service';
-import { auth } from '@/services/firebaseConfig';
+import { useAuth } from '@/context/auth-context';
 
 export interface DashboardStats {
   questionsAttempted: number;
@@ -19,11 +19,11 @@ export function useDashboardData() {
   const [performance, setPerformance] = useState<any>(null);
   const [dashboardStats, setDashboardStats] = useState<DashboardStats | null>(null);
   const [loading, setLoading] = useState(true);
+  const { user } = useAuth();
 
   const loadData = async () => {
     try {
       setLoading(true);
-      const user = auth.currentUser;
       if (!user) {
          setLoading(false);
          return;
@@ -155,7 +155,7 @@ export function useDashboardData() {
 
   useEffect(() => {
     loadData();
-  }, []);
+  }, [user]);
 
   return { performance, dashboardStats, loading, reloadData: loadData };
 }

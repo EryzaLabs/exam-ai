@@ -57,11 +57,9 @@ ENDSSH
         rm -f private_key.pem
 
     - name: Verify deployment
-      env:
-        HOST: ${{ secrets.EC2_HOST }}
       run: |
         sleep 10
-        curl -f http://$HOST:3000/health || exit 1
+        curl --fail --silent --show-error https://astra-backend.eryzalabs.cloud/health || exit 1
         echo "✅ Deployment verified!"
 
     - name: Notify on failure

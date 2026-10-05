@@ -3,7 +3,7 @@
  * Use this in the React Native app to connect to backend
  */
 
-const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'https://exambc.alaotach.com/api';
+const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'https://astra-backend.eryzalabs.cloud/api';
 const API_KEY = process.env.API_KEY; // Optional
 
 interface FetchOptions extends RequestInit {

@@ -29,15 +29,15 @@ export default function TestInstructionsScreen() {
         <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
           <ArrowLeft size={24} color="#333" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>General Instructions</Text>
+        <Text style={styles.headerTitle}>{language === 'hindi' ? 'सामान्य निर्देश' : 'General Instructions'}</Text>
         <View style={{ width: 24 }} />
       </View>
 
       <ScrollView style={styles.content} contentContainerStyle={{ padding: 20 }}>
         {/* Language Selection */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Choose your default language:</Text>
-          <Text style={styles.sectionSubtitle}>You can switch between English and Hindi anytime during the test.</Text>
+          <Text style={styles.sectionTitle}>{language === 'hindi' ? 'अपनी डिफ़ॉल्ट भाषा चुनें:' : 'Choose your default language:'}</Text>
+          <Text style={styles.sectionSubtitle}>{language === 'hindi' ? 'आप परीक्षा के दौरान किसी भी समय अंग्रेजी और हिंदी के बीच स्विच कर सकते हैं।' : 'You can switch between English and Hindi anytime during the test.'}</Text>
           
           <View style={styles.languageOptions}>
             <TouchableOpacity 
@@ -60,31 +60,51 @@ export default function TestInstructionsScreen() {
 
         {/* Instructions */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Please read the following instructions carefully:</Text>
+          <Text style={styles.sectionTitle}>
+            {language === 'hindi' ? 'कृपया निम्नलिखित निर्देशों को ध्यान से पढ़ें:' : 'Please read the following instructions carefully:'}
+          </Text>
           
           <View style={styles.instructionItem}>
             <AlertCircle size={20} color="#4A90E2" style={styles.instructionIcon} />
-            <Text style={styles.instructionText}>The test contains multiple-choice questions. Each question has exactly one correct answer.</Text>
+            <Text style={styles.instructionText}>
+              {language === 'hindi' ? 'परीक्षा में बहुविकल्पीय प्रश्न हैं। प्रत्येक प्रश्न का केवल एक सही उत्तर है।' : 'The test contains multiple-choice questions. Each question has exactly one correct answer.'}
+            </Text>
           </View>
           
           <View style={styles.instructionItem}>
             <CheckCircle size={20} color="#4CAF50" style={styles.instructionIcon} />
-            <Text style={styles.instructionText}>Every correct answer awards <Text style={{fontWeight: 'bold'}}>+2.5 marks</Text>.</Text>
+            <Text style={styles.instructionText}>
+              {language === 'hindi' ? (
+                <>प्रत्येक सही उत्तर के लिए <Text style={{fontWeight: 'bold'}}>+2.5 अंक</Text> दिए जाएंगे।</>
+              ) : (
+                <>Every correct answer awards <Text style={{fontWeight: 'bold'}}>+2.5 marks</Text>.</>
+              )}
+            </Text>
           </View>
           
           <View style={styles.instructionItem}>
             <AlertCircle size={20} color="#F44336" style={styles.instructionIcon} />
-            <Text style={styles.instructionText}>There is a negative marking of <Text style={{fontWeight: 'bold'}}>-0.833 marks</Text> for each incorrect answer.</Text>
+            <Text style={styles.instructionText}>
+              {language === 'hindi' ? (
+                <>प्रत्येक गलत उत्तर के लिए <Text style={{fontWeight: 'bold'}}>-0.833 अंक</Text> की नकारात्मक मार्किंग (नेगेटिव मार्किंग) है।</>
+              ) : (
+                <>There is a negative marking of <Text style={{fontWeight: 'bold'}}>-0.833 marks</Text> for each incorrect answer.</>
+              )}
+            </Text>
           </View>
           
           <View style={styles.instructionItem}>
             <Clock size={20} color="#FF9800" style={styles.instructionIcon} />
-            <Text style={styles.instructionText}>The timer will run continuously. If you close the app, the test will be paused and you can resume it later.</Text>
+            <Text style={styles.instructionText}>
+              {language === 'hindi' ? 'टाइमर लगातार चलेगा। यदि आप ऐप बंद करते हैं, तो परीक्षा रुक जाएगी और आप इसे बाद में फिर से शुरू कर सकते हैं।' : 'The timer will run continuously. If you close the app, the test will be paused and you can resume it later.'}
+            </Text>
           </View>
           
           <View style={styles.instructionItem}>
             <BookOpen size={20} color="#9C27B0" style={styles.instructionIcon} />
-            <Text style={styles.instructionText}>Do not press the browser back button or refresh the page, as it may disrupt your test session.</Text>
+            <Text style={styles.instructionText}>
+              {language === 'hindi' ? 'ब्राउज़र का बैक बटन न दबाएं या पेज को रिफ्रेश न करें, क्योंकि इससे आपका परीक्षा सत्र बाधित हो सकता है।' : 'Do not press the browser back button or refresh the page, as it may disrupt your test session.'}
+            </Text>
           </View>
         </View>
 
@@ -98,7 +118,7 @@ export default function TestInstructionsScreen() {
             {agreed && <CheckCircle size={16} color="#fff" />}
           </View>
           <Text style={styles.declarationText}>
-            I have read and understood all the instructions. I agree to abide by the rules.
+            {language === 'hindi' ? 'मैंने सभी निर्देशों को पढ़ और समझ लिया है। मैं नियमों का पालन करने के लिए सहमत हूँ।' : 'I have read and understood all the instructions. I agree to abide by the rules.'}
           </Text>
         </TouchableOpacity>
         
@@ -112,7 +132,7 @@ export default function TestInstructionsScreen() {
           onPress={handleStartTest}
           disabled={!agreed}
         >
-          <Text style={styles.startButtonText}>I am ready to begin</Text>
+          <Text style={styles.startButtonText}>{language === 'hindi' ? 'मैं शुरू करने के लिए तैयार हूँ' : 'I am ready to begin'}</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>

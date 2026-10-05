@@ -5,7 +5,7 @@
 
 import { Platform } from 'react-native';
 
-const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://exambc.alaotach.com/api';
+const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://astra-backend.eryzalabs.cloud/api';
 
 export interface SSCCGLOption {
   prompt: string;

@@ -29,20 +29,18 @@ echo "=== Step 3: Creating logs directory ==="
 cd ~/exam-ai
 mkdir -p logs
 
-# 4. START APPLICATION WITH PM2
+# 4. START APPLICATION WITH SYSTEMD
 echo ""
 echo "=== Step 4: Starting application ==="
-pm2 start ecosystem.config.json
-pm2 save
-pm2 startup
+sudo cp ~/exam-ai/exam-ai.service /etc/systemd/system/exam-ai.service
+sudo systemctl daemon-reload
+sudo systemctl enable --now exam-ai.service
 
 echo ""
-echo "=== IMPORTANT: Copy and run the command PM2 outputs above ==="
-echo ""
-echo "After running the PM2 startup command, continue with:"
+echo "After starting the systemd service, continue with:"
 echo "1. Configure Nginx (see VM_SETUP_SSL_GUIDE.md Step 5)"
 echo "2. Setup SSL with Certbot (see VM_SETUP_SSL_GUIDE.md Step 8)"
 echo ""
 echo "Check application status:"
-pm2 status
-pm2 logs exam-ai-server
+sudo systemctl status exam-ai.service --no-pager
+sudo journalctl -u exam-ai.service -n 100 --no-pager

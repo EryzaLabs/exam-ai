@@ -1,0 +1,19 @@
+[Unit]
+Description=Exam AI backend API
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/exam-ai/server
+EnvironmentFile=/home/ubuntu/exam-ai/server/.env
+Environment=NODE_ENV=production
+Environment=PORT=5670
+ExecStart=/usr/bin/node /home/ubuntu/exam-ai/server/dist/index.js
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

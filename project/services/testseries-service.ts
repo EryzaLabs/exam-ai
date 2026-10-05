@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import pako from 'pako'; // For gzip decompression in app
 
-const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://exambc.alaotach.com/api';
+const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://astra-backend.eryzalabs.cloud/api';
 
 export interface TestSeries {
   id: string;

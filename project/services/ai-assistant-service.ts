@@ -3,7 +3,12 @@
  * Provides AI-powered features like question explanations, doubt solving, and study assistance
  */
 
-const HACKCLUB_API_URL = 'https://ai.hackclub.com/proxy/v1/chat/completions';
+import { Platform } from 'react-native';
+
+const BASE_URL = 'https://ai.hackclub.com/proxy/v1/chat/completions';
+const HACKCLUB_API_URL = Platform.OS === 'web' 
+  ? `https://corsproxy.io/?${encodeURIComponent(BASE_URL)}` 
+  : BASE_URL;
 const HACKCLUB_API_KEY = process.env.EXPO_PUBLIC_VLM_API_KEY || '';
 const MODEL = 'gpt-4o-mini';
 
@@ -230,11 +235,15 @@ Provide:
  */
 export async function chatWithHistory(
   conversationHistory: ChatMessage[],
-  newMessage: string
+  newMessage: string,
+  userContext?: string
 ): Promise<AIResponse> {
   const systemPrompt: ChatMessage = {
     role: 'system',
-    content: 'You are a helpful study assistant for competitive exam preparation. Provide clear, accurate answers and explanations. Be encouraging and supportive.',
+    content: `You are Vidya (विद्या), a helpful study assistant for competitive exam preparation. Provide clear, accurate answers and explanations. Be encouraging and supportive. You can understand and speak Hindi.
+    
+User Context and App Data:
+${userContext || 'No specific context available at the moment.'}`,
   };
 
   const messages: ChatMessage[] = [

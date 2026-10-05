@@ -517,7 +517,9 @@ class EnhancedQuestionDatabase {
 
   private constructor() {
     this.apiKey = process.env.EXPO_PUBLIC_BHARATKOSH_API_KEY || '';
-    this.baseURL = process.env.EXPO_PUBLIC_BHARATKOSH_BASE_URL || 'https://ai.hackclub.com/proxy/v1';
+    const defaultUrl = 'https://ai.hackclub.com/proxy/v1';
+    this.baseURL = process.env.EXPO_PUBLIC_BHARATKOSH_BASE_URL || 
+      (Platform.OS === 'web' ? `https://corsproxy.io/?${encodeURIComponent(defaultUrl)}` : defaultUrl);
     // Load data asynchronously to prevent blocking app initialization
     this.initializeAsync();
   }

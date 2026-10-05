@@ -60,13 +60,6 @@ else
     fail "Python 3.11 not installed"
 fi
 
-# Check PM2
-if command -v pm2 &> /dev/null; then
-    pass "PM2 installed"
-else
-    fail "PM2 not installed"
-fi
-
 # Check Nginx
 if command -v nginx &> /dev/null; then
     pass "Nginx installed"
@@ -119,21 +112,21 @@ else
     fail ".env file not found"
 fi
 
-# Check PM2 process
+# Check systemd service
 echo ""
-echo "3. PM2 Process Check"
-echo "--------------------"
+echo "3. systemd Service Check"
+echo "------------------------"
 
-if pm2 list | grep -q "exam-ai-server"; then
-    pass "PM2 process exists"
-    
-    if pm2 list | grep "exam-ai-server" | grep -q "online"; then
-        pass "Server is running"
-    else
-        fail "Server is not running"
-    fi
+if systemctl is-enabled --quiet exam-ai.service; then
+    pass "exam-ai.service is enabled"
 else
-    fail "PM2 process not found"
+    fail "exam-ai.service is not enabled"
+fi
+
+if systemctl is-active --quiet exam-ai.service; then
+    pass "Server is running"
+else
+    fail "Server is not running"
 fi
 
 # Check ports
@@ -141,10 +134,10 @@ echo ""
 echo "4. Port Check"
 echo "-------------"
 
-if netstat -tuln | grep -q ":3000"; then
-    pass "Port 3000 is listening"
+if netstat -tuln | grep -q ":5670"; then
+    pass "Port 5670 is listening"
 else
-    fail "Port 3000 is not listening"
+    fail "Port 5670 is not listening"
 fi
 
 if netstat -tuln | grep -q ":80"; then
@@ -158,7 +151,7 @@ echo ""
 echo "5. API Health Check"
 echo "-------------------"
 
-if curl -s -o /dev/null -w "%{http_code}" http://localhost:3000/health | grep -q "200"; then
+if curl -s -o /dev/null -w "%{http_code}" http://localhost:5670/health | grep -q "200"; then
     pass "API health endpoint responding"
 else
     fail "API health endpoint not responding"
@@ -240,13 +233,10 @@ echo "-------------"
 if [ -d "logs" ]; then
     pass "Logs directory exists"
     
-    if [ -f "logs/pm2-error.log" ]; then
-        ERROR_COUNT=$(tail -100 logs/pm2-error.log | grep -i "error" | wc -l)
-        if [ $ERROR_COUNT -eq 0 ]; then
-            pass "No recent errors in PM2 logs"
-        else
-            warn "Found $ERROR_COUNT errors in PM2 logs"
-        fi
+    if journalctl -u exam-ai.service -n 100 --no-pager | grep -qi "error"; then
+        warn "Found recent errors in systemd logs"
+    else
+        pass "No recent errors in systemd logs"
     fi
 else
     warn "Logs directory not found"

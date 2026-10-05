@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, TextInput, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, TextInput, ImageBackground, Alert } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import {
   BookOpen,
@@ -27,7 +27,7 @@ import { router, usePathname } from 'expo-router';
 import { useAuth } from '@/context/auth-context';
 import { useDashboardData } from '@/hooks/useDashboardData';
 
-export default function DesktopDashboard({ performance: propPerformance, dashboardStats: propDashboardStats, children }: any) {
+export default function DesktopDashboard({ performance: propPerformance, dashboardStats: propDashboardStats, children, disableScroll }: any) {
   const { user } = useAuth();
   const [searchQuery, setSearchQuery] = React.useState('');
   const pathname = usePathname();
@@ -116,11 +116,11 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
             />
           </View>
           <View style={styles.topBarRight}>
-            <TouchableOpacity style={styles.bellBtn}>
+            <TouchableOpacity style={styles.bellBtn} onPress={() => Alert.alert('Notifications', 'No new notifications at the moment.')}>
               <Bell size={20} color="#64748B" />
               <View style={styles.notificationDot} />
             </TouchableOpacity>
-            <View style={styles.userProfile}>
+            <TouchableOpacity style={styles.userProfile} onPress={() => router.push('/profile')} activeOpacity={0.7}>
               <View style={styles.avatar}>
                 <Text style={styles.avatarText}>{(dashboardStats?.userName || user?.displayName)?.[0]?.toUpperCase() || 'U'}</Text>
               </View>
@@ -128,13 +128,18 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                 <Text style={styles.userName}>{dashboardStats?.userName || user?.displayName || 'User'}</Text>
                 <Text style={styles.userRole}>{dashboardStats?.rank || 'Beginner'}</Text>
               </View>
-            </View>
+            </TouchableOpacity>
           </View>
         </View>
 
-        <ScrollView style={styles.scrollContent} showsVerticalScrollIndicator={false}>
-          {children || (
-            <>
+        {disableScroll ? (
+          <View style={[styles.scrollContent, { flex: 1, padding: 0 }]}>
+            {children}
+          </View>
+        ) : (
+          <ScrollView style={styles.scrollContent} showsVerticalScrollIndicator={false}>
+            {children || (
+              <>
               {/* HERO BANNER */}
               <ImageBackground
             source={require('@/assets/images/upsc-bg.png')}
@@ -240,32 +245,38 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           </View>
 
           <View style={styles.practiceModesRow}>
-             <LinearGradient colors={['#FEACA1', '#FEACA1']} style={styles.modeCard}>
-                <View style={{ flex: 1 }}>
-                   <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
-                   <Text style={styles.modeTitle}>AI Test</Text>
-                   <Text style={styles.modeDesc}>Adaptive questions based on your performance</Text>
-                </View>
-                <View style={styles.modeArrow}><ArrowRight size={16} color="#DC2626" /></View>
-             </LinearGradient>
+             <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push('/practice')}>
+               <LinearGradient colors={['#FEACA1', '#FEACA1']} style={styles.modeCard}>
+                  <View style={{ flex: 1 }}>
+                     <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
+                     <Text style={styles.modeTitle}>AI Test</Text>
+                     <Text style={styles.modeDesc}>Adaptive questions based on your performance</Text>
+                  </View>
+                  <View style={styles.modeArrow}><ArrowRight size={16} color="#DC2626" /></View>
+               </LinearGradient>
+             </TouchableOpacity>
              
-             <LinearGradient colors={['#A7F3D0', '#A7F3D0']} style={styles.modeCard}>
-                <View style={{ flex: 1 }}>
-                   <View style={styles.modeIconGreen}><Zap size={24} color="#059669" /></View>
-                   <Text style={styles.modeTitle}>Quick Practice</Text>
-                   <Text style={styles.modeDesc}>Random questions from all topics</Text>
-                </View>
-                <View style={styles.modeArrow}><ArrowRight size={16} color="#059669" /></View>
-             </LinearGradient>
+             <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push('/practice')}>
+               <LinearGradient colors={['#A7F3D0', '#A7F3D0']} style={styles.modeCard}>
+                  <View style={{ flex: 1 }}>
+                     <View style={styles.modeIconGreen}><Zap size={24} color="#059669" /></View>
+                     <Text style={styles.modeTitle}>Quick Practice</Text>
+                     <Text style={styles.modeDesc}>Random questions from all topics</Text>
+                  </View>
+                  <View style={styles.modeArrow}><ArrowRight size={16} color="#059669" /></View>
+               </LinearGradient>
+             </TouchableOpacity>
 
-             <LinearGradient colors={['#E9D5FF', '#E9D5FF']} style={styles.modeCard}>
-                <View style={{ flex: 1 }}>
-                   <View style={styles.modeIconPurple}><Library size={24} color="#7C3AED" /></View>
-                   <Text style={styles.modeTitle}>Topic Wise</Text>
-                   <Text style={styles.modeDesc}>Focus on specific topics and weak areas</Text>
-                </View>
-                <View style={styles.modeArrow}><ArrowRight size={16} color="#7C3AED" /></View>
-             </LinearGradient>
+             <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push({ pathname: '/test-list', params: { category: 'topic' } })}>
+               <LinearGradient colors={['#E9D5FF', '#E9D5FF']} style={styles.modeCard}>
+                  <View style={{ flex: 1 }}>
+                     <View style={styles.modeIconPurple}><Library size={24} color="#7C3AED" /></View>
+                     <Text style={styles.modeTitle}>Topic Wise</Text>
+                     <Text style={styles.modeDesc}>Focus on specific topics and weak areas</Text>
+                  </View>
+                  <View style={styles.modeArrow}><ArrowRight size={16} color="#7C3AED" /></View>
+               </LinearGradient>
+             </TouchableOpacity>
           </View>
 
           {/* RECENT TESTS */}
@@ -310,8 +321,9 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
              )}
           </View>
             </>
-          )}
-        </ScrollView>
+            )}
+          </ScrollView>
+        )}
       </View>
 
       {/* RIGHT SIDEBAR */}

@@ -1,6 +1,6 @@
 import { Platform } from 'react-native';
 
-const RAZORPAY_API_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000/api';
+const RAZORPAY_API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://astra-backend.eryzalabs.cloud/api';
 
 // Dynamically load razorpay checkout script for web
 const loadRazorpayScript = () => {
@@ -32,6 +32,13 @@ export const initiatePayment = async (
       // In a real app, you would use react-native-razorpay here
       // For this demo which focuses on the website, we fallback to a mock success
       console.log('Simulating payment on native app');
+      onSuccess();
+      return;
+    }
+
+    // Bypass Razorpay for local development to allow easy testing/restoring of purchases
+    if (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+      console.log('Simulating payment success on localhost');
       onSuccess();
       return;
     }

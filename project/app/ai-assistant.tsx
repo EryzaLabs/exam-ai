@@ -21,6 +21,10 @@ import {
   solveDoubt,
   getStudyTips,
 } from '@/services/ai-assistant-service';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useDashboardData } from '@/hooks/useDashboardData';
+
+const CHAT_HISTORY_KEY = '@vidya_chat_history';
 
 interface Message extends ChatMessage {
   id: string;
@@ -35,17 +39,41 @@ const QUICK_ACTIONS = [
 ];
 
 export default function AIAssistantScreen() {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: '1',
-      role: 'assistant',
-      content: "Hi! I'm your AI study assistant. I can help you with:\n\n📚 Understanding difficult concepts\n💡 Getting detailed explanations\n❓ Solving doubts\n🎯 Study tips and strategies\n\nHow can I help you today?",
-      timestamp: new Date(),
-    },
-  ]);
+  const { dashboardStats, performance } = useDashboardData();
+  const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const scrollViewRef = useRef<ScrollView>(null);
+
+  useEffect(() => {
+    const loadHistory = async () => {
+      try {
+        const saved = await AsyncStorage.getItem(CHAT_HISTORY_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          setMessages(parsed.map((m: any) => ({ ...m, timestamp: new Date(m.timestamp) })));
+        } else {
+          setMessages([
+            {
+              id: '1',
+              role: 'assistant',
+              content: "Namaste! I am Vidya (विद्या), your AI study assistant. I can help you with:\n\n📚 Understanding difficult concepts\n💡 Getting detailed explanations\n❓ Solving doubts\n🎯 Study tips and strategies\n\nHow can I help you today?",
+              timestamp: new Date(),
+            },
+          ]);
+        }
+      } catch (e) {
+        console.error('Failed to load chat history', e);
+      }
+    };
+    loadHistory();
+  }, []);
+
+  useEffect(() => {
+    if (messages.length > 0) {
+      AsyncStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(messages)).catch(e => console.error('Failed to save chat history', e));
+    }
+  }, [messages]);
 
   useEffect(() => {
     // Scroll to bottom when new messages arrive
@@ -79,8 +107,14 @@ export default function AIAssistantScreen() {
           content: m.content,
         }));
 
+      // Construct context from dashboard data
+      const contextStr = JSON.stringify({
+        stats: dashboardStats,
+        performance: performance,
+      });
+
       // Send to AI
-      const response = await chatWithHistory(history, messageText);
+      const response = await chatWithHistory(history, messageText, contextStr);
 
       // Add assistant message
       const assistantMessage: Message = {
@@ -147,6 +181,7 @@ export default function AIAssistantScreen() {
                 timestamp: new Date(),
               },
             ]);
+            AsyncStorage.removeItem(CHAT_HISTORY_KEY);
           },
         },
       ]
@@ -160,6 +195,7 @@ export default function AIAssistantScreen() {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 20}
       >
+        <View style={styles.contentWrapper}>
         {/* Header */}
         <View style={styles.header}>
           <View style={styles.headerLeft}>
@@ -167,7 +203,7 @@ export default function AIAssistantScreen() {
               <Bot size={24} color="#667eea" />
             </View>
             <View>
-              <Text style={styles.headerTitle}>AI Assistant</Text>
+              <Text style={styles.headerTitle}>Vidya (विद्या) AI</Text>
               <View style={styles.statusContainer}>
                 <View style={styles.statusDot} />
                 <Text style={styles.statusText}>Online</Text>
@@ -290,6 +326,7 @@ export default function AIAssistantScreen() {
             AI responses may not always be accurate. Verify important information.
           </Text>
         </View>
+        </View>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
@@ -298,105 +335,129 @@ export default function AIAssistantScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F9FAFB',
+    backgroundColor: '#F8FAFC',
+  },
+  contentWrapper: {
+    flex: 1,
+    width: '100%',
+    maxWidth: 900,
+    alignSelf: 'center',
+    backgroundColor: '#ffffff',
+    ...(Platform.OS === 'web' && {
+      shadowColor: '#64748b',
+      shadowOffset: { width: 0, height: 10 },
+      shadowOpacity: 0.08,
+      shadowRadius: 30,
+      borderLeftWidth: 1,
+      borderRightWidth: 1,
+      borderColor: '#f1f5f9',
+    }),
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 16,
-    backgroundColor: '#fff',
+    padding: 20,
+    backgroundColor: '#ffffff',
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#f1f5f9',
   },
   headerLeft: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
+    gap: 16,
   },
   botIcon: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
+    width: 48,
+    height: 48,
+    borderRadius: 24,
     backgroundColor: '#EEF2FF',
     justifyContent: 'center',
     alignItems: 'center',
   },
   headerTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#1F2937',
+    fontSize: 20,
+    fontWeight: '700',
+    color: '#0f172a',
   },
   statusContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
-    marginTop: 2,
+    gap: 6,
+    marginTop: 4,
   },
   statusDot: {
-    width: 6,
-    height: 6,
-    borderRadius: 3,
+    width: 8,
+    height: 8,
+    borderRadius: 4,
     backgroundColor: '#10B981',
   },
   statusText: {
-    fontSize: 12,
-    color: '#6B7280',
+    fontSize: 13,
+    color: '#64748b',
+    fontWeight: '500',
   },
   clearButton: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 6,
-    backgroundColor: '#FEE2E2',
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderRadius: 20,
+    backgroundColor: '#fef2f2',
   },
   clearButtonText: {
     fontSize: 14,
-    fontWeight: '500',
-    color: '#DC2626',
+    fontWeight: '600',
+    color: '#ef4444',
   },
   quickActionsContainer: {
-    padding: 16,
-    backgroundColor: '#fff',
+    padding: 20,
+    backgroundColor: '#ffffff',
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#f1f5f9',
   },
   quickActionsTitle: {
-    fontSize: 14,
+    fontSize: 15,
     fontWeight: '600',
-    color: '#6B7280',
-    marginBottom: 12,
+    color: '#64748b',
+    marginBottom: 16,
   },
   quickActions: {
     flexDirection: 'row',
-    gap: 8,
+    gap: 12,
   },
   quickActionButton: {
     flex: 1,
-    padding: 12,
-    borderRadius: 8,
-    backgroundColor: '#F3F4F6',
+    padding: 16,
+    borderRadius: 16,
+    backgroundColor: '#f8fafc',
+    borderWidth: 1,
+    borderColor: '#e2e8f0',
     alignItems: 'center',
-    gap: 4,
+    gap: 8,
+    ...(Platform.OS === 'web' && {
+      transition: 'all 0.2s ease',
+      cursor: 'pointer',
+    }),
   },
   quickActionIcon: {
-    fontSize: 24,
+    fontSize: 28,
   },
   quickActionLabel: {
-    fontSize: 11,
-    fontWeight: '500',
-    color: '#374151',
+    fontSize: 13,
+    fontWeight: '600',
+    color: '#334155',
     textAlign: 'center',
   },
   messagesContainer: {
     flex: 1,
+    backgroundColor: '#fafaf9',
   },
   messagesContent: {
-    padding: 16,
-    gap: 16,
+    padding: 20,
+    gap: 20,
   },
   messageRow: {
     flexDirection: 'row',
-    gap: 8,
+    gap: 12,
     maxWidth: '85%',
   },
   userMessageRow: {
@@ -407,107 +468,129 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
   },
   messageIcon: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
-    backgroundColor: '#667eea',
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: '#6366f1',
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 4,
   },
   messageBubble: {
     flex: 1,
-    padding: 12,
-    borderRadius: 12,
+    padding: 16,
+    borderRadius: 20,
   },
   userBubble: {
-    backgroundColor: '#667eea',
+    backgroundColor: '#6366f1',
     borderBottomRightRadius: 4,
+    ...(Platform.OS === 'web' && {
+      shadowColor: '#6366f1',
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.2,
+      shadowRadius: 8,
+    }),
   },
   assistantBubble: {
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#e2e8f0',
     borderBottomLeftRadius: 4,
+    ...(Platform.OS === 'web' && {
+      shadowColor: '#94a3b8',
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.1,
+      shadowRadius: 8,
+    }),
   },
   messageText: {
-    fontSize: 15,
-    lineHeight: 22,
+    fontSize: 16,
+    lineHeight: 24,
   },
   userMessageText: {
-    color: '#fff',
+    color: '#ffffff',
   },
   assistantMessageText: {
-    color: '#1F2937',
+    color: '#334155',
   },
   messageTime: {
-    fontSize: 11,
-    marginTop: 4,
+    fontSize: 12,
+    marginTop: 8,
   },
   userMessageTime: {
     color: 'rgba(255, 255, 255, 0.7)',
     textAlign: 'right',
   },
   assistantMessageTime: {
-    color: '#9CA3AF',
+    color: '#94a3b8',
   },
   loadingContainer: {
     alignSelf: 'flex-start',
     flexDirection: 'row',
-    gap: 8,
+    gap: 12,
   },
   loadingBubble: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
-    padding: 12,
-    backgroundColor: '#fff',
+    gap: 12,
+    padding: 16,
+    backgroundColor: '#ffffff',
     borderWidth: 1,
-    borderColor: '#E5E7EB',
-    borderRadius: 12,
+    borderColor: '#e2e8f0',
+    borderRadius: 20,
     borderBottomLeftRadius: 4,
   },
   loadingText: {
-    fontSize: 14,
-    color: '#6B7280',
+    fontSize: 15,
+    color: '#64748b',
+    fontWeight: '500',
   },
   inputContainer: {
-    padding: 16,
-    backgroundColor: '#fff',
+    padding: 20,
+    backgroundColor: '#ffffff',
     borderTopWidth: 1,
-    borderTopColor: '#E5E7EB',
+    borderTopColor: '#f1f5f9',
   },
   inputWrapper: {
     flexDirection: 'row',
     alignItems: 'flex-end',
-    gap: 8,
-    marginBottom: 8,
+    gap: 12,
+    marginBottom: 12,
   },
   input: {
     flex: 1,
-    minHeight: 44,
-    maxHeight: 100,
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    backgroundColor: '#F3F4F6',
-    borderRadius: 22,
-    fontSize: 15,
-    color: '#1F2937',
+    minHeight: 52,
+    maxHeight: 120,
+    paddingHorizontal: 20,
+    paddingVertical: 14,
+    backgroundColor: '#f8fafc',
+    borderWidth: 1,
+    borderColor: '#e2e8f0',
+    borderRadius: 26,
+    fontSize: 16,
+    color: '#0f172a',
   },
   sendButton: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    backgroundColor: '#667eea',
+    width: 52,
+    height: 52,
+    borderRadius: 26,
+    backgroundColor: '#6366f1',
     justifyContent: 'center',
     alignItems: 'center',
+    ...(Platform.OS === 'web' && {
+      shadowColor: '#6366f1',
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
+    }),
   },
   sendButtonDisabled: {
-    opacity: 0.5,
+    opacity: 0.4,
+    backgroundColor: '#94a3b8',
   },
   disclaimer: {
-    fontSize: 11,
-    color: '#9CA3AF',
+    fontSize: 12,
+    color: '#94a3b8',
     textAlign: 'center',
   },
 });

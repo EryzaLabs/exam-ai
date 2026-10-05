@@ -29,7 +29,7 @@ import paymentRoutes from './routes/payment';
 
 // Initialize Express app
 const app: Express = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5670;
 
 // Ensure required directories exist
 const dirs = [

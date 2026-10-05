@@ -20,13 +20,16 @@ import { auth } from '@/services/firebaseConfig';
 import UserService, { UserProfile, UserStats } from '@/services/user-service';
 import { router } from 'expo-router';
 import * as WebBrowser from 'expo-web-browser';
-
-const { width } = Dimensions.get('window');
+import DesktopDashboard from '@/components/DesktopDashboard';
+import { useWindowDimensions } from 'react-native';
 
 // 7-day streak calendar days
 const WEEK_DAYS = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
 export default function ProfileScreen() {
+  const { width } = useWindowDimensions();
+  const isLargeScreen = width >= 1024;
+  
   const { user } = useAuth();
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
@@ -143,9 +146,10 @@ export default function ProfileScreen() {
     );
   }
 
-  return (
+  const content = (
     <SafeAreaView style={styles.container} edges={['top']}>
       <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.contentWrapper}>
         {/* Profile Header */}
         <LinearGradient
           colors={['#4A90E2', '#357ABD', '#2B6CB0']}
@@ -204,10 +208,9 @@ export default function ProfileScreen() {
           </View>
           <View style={styles.calendarStrip}>
             {WEEK_DAYS.map((day, i) => {
-              // Simple mock visualization for current day vs previous days
               const currentDayIndex = new Date().getDay();
-              const isPastOrToday = i <= currentDayIndex;
-              const isFilled = isPastOrToday && (i === currentDayIndex ? (userStats?.streak || 0) > 0 : Math.random() > 0.3); // mock past days for visual effect if real data isn't easily array-mapped here
+              const streak = userStats?.streak || 0;
+              const isFilled = i <= currentDayIndex && i > currentDayIndex - streak;
 
               return (
                 <View key={i} style={styles.calendarDay}>
@@ -341,15 +344,26 @@ export default function ProfileScreen() {
         </View>
 
         <Text style={styles.versionText}>Version 1.0.1</Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
+
+  if (isLargeScreen) {
+    return <DesktopDashboard disableScroll>{content}</DesktopDashboard>;
+  }
+
+  return content;
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F7FAFC',
+    backgroundColor: '#F8FAFC',
+  },
+  contentWrapper: {
+    width: '100%',
+    paddingBottom: 40,
   },
   loadingContainer: {
     flex: 1,
@@ -362,9 +376,12 @@ const styles = StyleSheet.create({
     color: '#718096',
   },
   headerGradient: {
-    paddingTop: 24,
-    paddingBottom: 32,
+    paddingTop: 32,
+    paddingBottom: 48,
     alignItems: 'center',
+    borderBottomLeftRadius: 32,
+    borderBottomRightRadius: 32,
+    marginBottom: 8,
   },
   headerContent: {
     alignItems: 'center',
