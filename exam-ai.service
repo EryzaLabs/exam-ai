@@ -4,13 +4,13 @@ After=network.target
 
 [Service]
 Type=simple
-User=ubuntu
-Group=ubuntu
-WorkingDirectory=/home/ubuntu/exam-ai/server
-EnvironmentFile=/home/ubuntu/exam-ai/server/.env
+User=aloo
+Group=aloo
+WorkingDirectory=/home/aloo/exam-ai/server
+EnvironmentFile=/home/aloo/exam-ai/server/.env
 Environment=NODE_ENV=production
 Environment=PORT=5670
-ExecStart=/usr/bin/node /home/ubuntu/exam-ai/server/dist/index.js
+ExecStart=/usr/bin/node /home/aloo/exam-ai/server/dist/index.js
 Restart=always
 RestartSec=5
 TimeoutStopSec=30

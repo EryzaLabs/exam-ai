@@ -32,7 +32,7 @@ jobs:
       env:
         PRIVATE_KEY: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
         HOST: ${{ secrets.EC2_HOST }}
-        USER: ubuntu
+        USER: aloo
       run: |
         echo "$PRIVATE_KEY" > private_key.pem
         chmod 600 private_key.pem
@@ -45,11 +45,11 @@ jobs:
           --exclude 'output' \
           --exclude 'cache' \
           --exclude 'temp' \
-          ./ $USER@$HOST:/home/ubuntu/exam-ai/
+          ./ $USER@$HOST:/home/aloo/exam-ai/
         
         # Run deployment script on EC2
         ssh -i private_key.pem -o StrictHostKeyChecking=no $USER@$HOST << 'ENDSSH'
-          cd /home/ubuntu/exam-ai
+          cd /home/aloo/exam-ai
           chmod +x deploy-aws.sh
           ./deploy-aws.sh
 ENDSSH

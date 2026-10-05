@@ -8,8 +8,8 @@ set -e  # Exit on error
 echo "🚀 Starting Exam AI Deployment on AWS EC2..."
 
 # Configuration
-APP_DIR="/home/ubuntu/exam-ai"
-BACKUP_DIR="/home/ubuntu/backups"
+APP_DIR="/home/aloo/exam-ai"
+BACKUP_DIR="/home/aloo/backups"
 LOG_FILE="/var/log/exam-ai-deploy.log"
 
 # Colors for output
@@ -31,9 +31,9 @@ warn() {
     echo -e "${YELLOW}[$(date +'%Y-%m-%d %H:%M:%S')] WARNING:${NC} $1" | tee -a "$LOG_FILE"
 }
 
-# Check if running as ubuntu user
-if [ "$USER" != "ubuntu" ]; then
-    error "This script should be run as ubuntu user"
+# Check if running as the deployment user
+if [ "$USER" != "aloo" ]; then
+    error "This script should be run as aloo user"
 fi
 
 # Create backup

@@ -77,9 +77,9 @@ echo "2. Application Check"
 echo "--------------------"
 
 # Check if app directory exists
-if [ -d "/home/ubuntu/exam-ai" ]; then
+if [ -d "/home/aloo/exam-ai" ]; then
     pass "Application directory exists"
-    cd /home/ubuntu/exam-ai
+    cd /home/aloo/exam-ai
 else
     fail "Application directory not found"
     exit 1
