@@ -374,12 +374,14 @@ export default function MockTestScreen() {
           // Save partial result with pending status
           const partialAnalytics = SSCCGLService.submitTest(attemptId);
           if (partialAnalytics) {
+            const currentQuestionOrder = test?.sections.flatMap(section => section.questions.map(q => q.id));
             await TestProgressService.saveTestResult({
               ...partialAnalytics,
               date: new Date().toISOString(),
               testTitle: test?.title,
               answerGenerationStatus: answersStatus.status === 'not-found' ? 'pending' : answersStatus.status as any,
-              evaluationStatus: 'pending'
+              evaluationStatus: 'pending',
+              questionOrder: currentQuestionOrder
             });
           }
 
@@ -401,12 +403,14 @@ export default function MockTestScreen() {
       if (analytics) {
         console.log('Analytics calculated, saving to history...');
         // Save to history
+        const currentQuestionOrder = test?.sections.flatMap(section => section.questions.map(q => q.id));
         await TestProgressService.saveTestResult({
             ...analytics,
             date: new Date().toISOString(),
             testTitle: test?.title,
             answerGenerationStatus: source === 'testseries' ? 'completed' : 'not-needed',
-            evaluationStatus: 'completed'
+            evaluationStatus: 'completed',
+            questionOrder: currentQuestionOrder
         });
         
         console.log('Test result saved, clearing active test...');

@@ -29,6 +29,9 @@ import {
   ChevronRight,
   Zap,
   Brain,
+  Crown,
+  Sparkles,
+  Lock,
 } from 'lucide-react-native';
 
 export default function MobileDashboard({
@@ -182,51 +185,94 @@ export default function MobileDashboard({
             </TouchableOpacity>
           </View>
 
+          {/* GO PREMIUM PROMO CARD */}
+          <TouchableOpacity 
+            style={styles.premiumBannerCard} 
+            onPress={() => router.push('/premium')}
+            activeOpacity={0.9}
+          >
+            <LinearGradient
+              colors={['#1E1B4B', '#312E81', '#4338CA']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              style={styles.premiumBannerGradient}
+            >
+              <View style={styles.premiumBannerHeader}>
+                <View style={styles.premiumBadge}>
+                  <Crown size={12} color="#F59E0B" />
+                  <Text style={styles.premiumBadgeText}>PREMIUM PASS</Text>
+                </View>
+                <View style={styles.premiumPriceTag}>
+                  <Text style={styles.premiumPriceDiscount}>67% OFF</Text>
+                  <Text style={styles.premiumPriceText}>₹499</Text>
+                </View>
+              </View>
+
+              <Text style={styles.premiumBannerTitle}>UPSC Principal 2026 Test Series</Text>
+              <Text style={styles.premiumBannerSubtitle}>
+                Unlock 50+ Full Mocks • Detailed AI Analytics • Bilingual English & Hindi
+              </Text>
+
+              <View style={styles.premiumBannerFooter}>
+                <View style={styles.premiumPerksRow}>
+                  <Sparkles size={14} color="#FBBF24" />
+                  <Text style={styles.premiumPerksText}>Unlimited Re-attempts & Solutions</Text>
+                </View>
+                <View style={styles.premiumActionBtn}>
+                  <Text style={styles.premiumActionBtnText}>Upgrade</Text>
+                  <ChevronRight size={16} color="#4338CA" />
+                </View>
+              </View>
+            </LinearGradient>
+          </TouchableOpacity>
+
           {/* FEATURED BANNER */}
           <View style={styles.sectionHeader}>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
               <Star size={20} color="#F59E0B" fill="#F59E0B" />
               <Text style={styles.sectionTitle}>Featured</Text>
             </View>
-            <TouchableOpacity><Text style={styles.viewAll}>View All →</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => router.push('/premium')}><Text style={styles.viewAll}>Go Premium →</Text></TouchableOpacity>
           </View>
 
-          <ImageBackground
-            source={require('@/assets/images/upsc-bg.png')}
-            style={[styles.featuredBanner, { backgroundColor: '#1E40AF' }]}
-            imageStyle={{ borderRadius: 24, opacity: 0.35, width: '100%', height: '100%' }}
-            resizeMode="cover"
-          >
-            <LinearGradient
-              colors={['rgba(30,64,175,0.8)', 'rgba(59,130,246,0.6)']}
-              style={[StyleSheet.absoluteFillObject, { borderRadius: 24 }]}
-            />
-            <View style={styles.featuredTagsRow}>
-              <View style={styles.featuredTagBg}>
-                <Text style={styles.featuredTagTxt}>UPSC Principal</Text>
+          <TouchableOpacity onPress={() => router.push('/premium')} activeOpacity={0.92}>
+            <ImageBackground
+              source={require('@/assets/images/upsc-bg.png')}
+              style={[styles.featuredBanner, { backgroundColor: '#1E40AF' }]}
+              imageStyle={{ borderRadius: 24, opacity: 0.35, width: '100%', height: '100%' }}
+              resizeMode="cover"
+            >
+              <LinearGradient
+                colors={['rgba(30,64,175,0.8)', 'rgba(59,130,246,0.6)']}
+                style={[StyleSheet.absoluteFillObject, { borderRadius: 24 }]}
+              />
+              <View style={styles.featuredTagsRow}>
+                <View style={styles.featuredTagBg}>
+                  <Text style={styles.featuredTagTxt}>UPSC Principal</Text>
+                </View>
+                <View style={[styles.featuredTagBg, { flexDirection: 'row', alignItems: 'center', gap: 4 }]}>
+                  <Star size={12} color="#F59E0B" fill="#F59E0B" />
+                  <Text style={styles.featuredTagTxt}>Featured</Text>
+                </View>
               </View>
-              <View style={[styles.featuredTagBg, { flexDirection: 'row', alignItems: 'center', gap: 4 }]}>
-                <Star size={12} color="#F59E0B" fill="#F59E0B" />
-                <Text style={styles.featuredTagTxt}>Featured</Text>
-              </View>
-            </View>
 
-            <View style={styles.featuredTitleRow}>
-              <View style={{ flex: 1 }}>
-                <Text style={styles.featuredTitle}>UPSC Principal Test Series</Text>
-                <Text style={styles.featuredDesc}>Complete mock test series for comprehensive preparation.</Text>
+              <View style={styles.featuredTitleRow}>
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.featuredTitle}>UPSC Principal Test Series</Text>
+                  <Text style={styles.featuredDesc}>Complete mock test series for comprehensive preparation.</Text>
+                </View>
+                <View style={styles.featuredArrowBtn}>
+                  <ChevronRight size={24} color="#fff" />
+                </View>
               </View>
-              <View style={styles.featuredArrowBtn}>
-                <ChevronRight size={24} color="#fff" />
-              </View>
-            </View>
 
-            <View style={styles.featuredPerks}>
-              <View style={styles.perk}><FileText size={14} color="#fff" /><Text style={styles.perkText}>28 Tests</Text></View>
-              <View style={styles.perk}><Clock size={14} color="#fff" /><Text style={styles.perkText}>Timed Tests</Text></View>
-              <View style={styles.perk}><BarChart2 size={14} color="#fff" /><Text style={styles.perkText}>Detailed Analytics</Text></View>
-            </View>
-          </ImageBackground>
+              <View style={styles.featuredPerks}>
+                <View style={styles.perk}><FileText size={14} color="#fff" /><Text style={styles.perkText}>50+ Tests</Text></View>
+                <View style={styles.perk}><Clock size={14} color="#fff" /><Text style={styles.perkText}>Timed Tests</Text></View>
+                <View style={styles.perk}><BarChart2 size={14} color="#fff" /><Text style={styles.perkText}>Detailed Analytics</Text></View>
+              </View>
+            </ImageBackground>
+          </TouchableOpacity>
 
           {/* PRACTICE MODE */}
           <View style={styles.sectionHeader}>
@@ -689,5 +735,106 @@ const styles = StyleSheet.create({
   },
   rtcMetricTxt: {
     fontSize: 10, color: '#64748B',
-  }
+  },
+  premiumBannerCard: {
+    borderRadius: 20,
+    marginBottom: 24,
+    overflow: 'hidden',
+    shadowColor: '#4338CA',
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.25,
+    shadowRadius: 14,
+    elevation: 6,
+  },
+  premiumBannerGradient: {
+    padding: 18,
+    borderRadius: 20,
+  },
+  premiumBannerHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 10,
+  },
+  premiumBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: 'rgba(245, 158, 11, 0.18)',
+    borderWidth: 1,
+    borderColor: 'rgba(245, 158, 11, 0.4)',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  premiumBadgeText: {
+    fontSize: 10,
+    fontWeight: '800',
+    color: '#FBBF24',
+    letterSpacing: 0.6,
+  },
+  premiumPriceTag: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: 'rgba(255, 255, 255, 0.12)',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 8,
+  },
+  premiumPriceDiscount: {
+    fontSize: 10,
+    fontWeight: '700',
+    color: '#34D399',
+  },
+  premiumPriceText: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#fff',
+  },
+  premiumBannerTitle: {
+    fontSize: 17,
+    fontWeight: '800',
+    color: '#fff',
+    marginBottom: 4,
+  },
+  premiumBannerSubtitle: {
+    fontSize: 12,
+    color: 'rgba(255, 255, 255, 0.82)',
+    lineHeight: 17,
+    marginBottom: 14,
+  },
+  premiumBannerFooter: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingTop: 12,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(255, 255, 255, 0.12)',
+  },
+  premiumPerksRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    flex: 1,
+  },
+  premiumPerksText: {
+    fontSize: 11,
+    fontWeight: '600',
+    color: 'rgba(255, 255, 255, 0.9)',
+  },
+  premiumActionBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: '#fff',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 12,
+  },
+  premiumActionBtnText: {
+    fontSize: 12,
+    fontWeight: '800',
+    color: '#4338CA',
+  },
 });

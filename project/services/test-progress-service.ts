@@ -31,6 +31,7 @@ export interface TestResult extends TestAnalytics {
   answerGenerationStatus?: 'not-needed' | 'pending' | 'in-progress' | 'completed' | 'failed';
   evaluationStatus?: 'pending' | 'completed';
   answerGenerationError?: string;
+  questionOrder?: string[]; // Array of question IDs in the order they were presented to the user
 }
 
 export const TestProgressService = {
@@ -211,14 +212,14 @@ export const TestProgressService = {
   /**
    * Re-evaluate a test with AI-generated answers
    */
-  async reevaluateTest(attemptId: string, aiAnswers: any): Promise<TestResult | null> {
+  async reevaluateTest(attemptId: string, aiAnswers: any): Promise<TestResult | undefined> {
     try {
       const user = auth.currentUser;
-      if (!user) return null;
+      if (!user) return undefined;
 
       // Get original test result
       const testResult = await this.getTestResult(attemptId);
-      if (!testResult) return null;
+      if (!testResult) return undefined;
 
       console.log('Re-evaluating test:', attemptId);
       
@@ -239,7 +240,7 @@ export const TestProgressService = {
       return await this.getTestResult(attemptId);
     } catch (e) {
       console.error('Failed to re-evaluate test:', e);
-      return null;
+      return undefined;
     }
   }
 };

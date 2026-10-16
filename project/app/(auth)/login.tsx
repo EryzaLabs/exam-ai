@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   View,
   Text,
@@ -10,92 +10,80 @@ import {
   KeyboardAvoidingView,
   Platform,
   ScrollView,
+  Image,
+  useWindowDimensions,
 } from 'react-native';
-import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithCredential, PhoneAuthProvider, sendPasswordResetEmail } from 'firebase/auth';
-import { auth, firebaseConfig } from '@/services/firebaseConfig';
-import { Link, useRouter } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import {
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signInWithCredential,
+} from 'firebase/auth';
+import { auth } from '@/services/firebaseConfig';
+import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Eye, EyeOff } from 'lucide-react-native';
 import * as WebBrowser from 'expo-web-browser';
 import * as Google from 'expo-auth-session/providers/google';
 import { makeRedirectUri } from 'expo-auth-session';
-import { Mail, Lock, Eye, EyeOff, ArrowRight, GraduationCap, Phone, Chrome } from 'lucide-react-native';
-import { FirebaseRecaptchaVerifierModal } from 'expo-firebase-recaptcha';
+import Svg, { Path } from 'react-native-svg';
 
 WebBrowser.maybeCompleteAuthSession();
 
+function GoogleIcon() {
+  return (
+    <Svg width={18} height={18} viewBox="0 0 24 24">
+      <Path
+        fill="#4285F4"
+        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1Z"
+      />
+      <Path
+        fill="#34A853"
+        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23Z"
+      />
+      <Path
+        fill="#FBBC05"
+        d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84Z"
+      />
+      <Path
+        fill="#EA4335"
+        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06L5.84 9.9C6.71 7.31 9.14 5.38 12 5.38Z"
+      />
+    </Svg>
+  );
+}
+
+const proof = [
+  {
+    initials: 'JD',
+    src: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80',
+  },
+  {
+    initials: 'MK',
+    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80',
+  },
+  {
+    initials: 'AR',
+    src: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&h=120&q=80',
+  },
+];
+
 export default function LoginScreen() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
+  const { width } = useWindowDimensions();
+  const isDesktop = width >= 768;
   const router = useRouter();
 
-  // Phone Auth State
-  const [loginMode, setLoginMode] = useState<'email' | 'phone'>('email');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [verificationCode, setVerificationCode] = useState('');
-  const [verificationId, setVerificationId] = useState('');
-  const [resendTimer, setResendTimer] = useState(0);
-  const recaptchaVerifier = React.useRef(null);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  // Input refs for keyboard chaining
-  const passwordRef = React.useRef<TextInput>(null);
+  const passwordRef = useRef<TextInput>(null);
 
-  useEffect(() => {
-    let interval: any;
-    if (resendTimer > 0) {
-      interval = setInterval(() => setResendTimer((prev) => prev - 1), 1000);
-    }
-    return () => clearInterval(interval);
-  }, [resendTimer]);
-
-  const sendVerification = async () => {
-    const trimmedPhone = phoneNumber.trim();
-    if (!trimmedPhone) {
-      Alert.alert('Error', 'Please enter a valid phone number with country code (e.g. +91...)');
-      return;
-    }
-    setLoading(true);
-    try {
-      const phoneProvider = new PhoneAuthProvider(auth);
-      const vid = await phoneProvider.verifyPhoneNumber(
-        trimmedPhone,
-        recaptchaVerifier.current!
-      );
-      setVerificationId(vid);
-      setResendTimer(30); // 30 second cooldown
-      Alert.alert('Code Sent', 'Please check your phone for the verification code.');
-    } catch (err: any) {
-      let message = err.message || 'Phone authentication failed.';
-      if (err.code === 'auth/too-many-requests') message = 'Too many attempts. Please try again later.';
-      if (err.code === 'auth/invalid-phone-number') message = 'Invalid phone number format. Include country code (e.g. +91).';
-      Alert.alert('Error', message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const confirmCode = async () => {
-    const trimmedCode = verificationCode.trim();
-    if (!trimmedCode || !verificationId) {
-      Alert.alert('Error', 'Please enter the verification code');
-      return;
-    }
-    setLoading(true);
-    try {
-      const credential = PhoneAuthProvider.credential(verificationId, trimmedCode);
-      await signInWithCredential(auth, credential);
-    } catch (err: any) {
-      let message = 'Invalid code. Please try again.';
-      if (err.code === 'auth/invalid-verification-code') message = 'The verification code is incorrect.';
-      if (err.code === 'auth/code-expired') message = 'Code expired. Please request a new one.';
-      Alert.alert('Error', message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
+  // Native Google Auth Session
   const [request, response, promptAsync] = Google.useIdTokenAuthRequest({
     clientId: process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID || '70133368788-u3k4o6hglldr2n7dgt9ofbe21ro9scbj.apps.googleusercontent.com',
     iosClientId: process.env.EXPO_PUBLIC_IOS_CLIENT_ID,
@@ -110,7 +98,7 @@ export default function LoginScreen() {
       setLoading(true);
       signInWithCredential(auth, credential)
         .catch((error) => {
-          Alert.alert('Google Sign-In Error', error.message);
+          showAlert('Google Sign-In Error', error.message);
         })
         .finally(() => {
           setLoading(false);
@@ -118,20 +106,51 @@ export default function LoginScreen() {
     }
   }, [response]);
 
+  const showAlert = (title: string, message: string) => {
+    if (Platform.OS === 'web') {
+      window.alert(`${title}: ${message}`);
+    } else {
+      Alert.alert(title, message);
+    }
+  };
+
+  const handleGoogleSignIn = async () => {
+    setLoading(true);
+    try {
+      if (Platform.OS === 'web') {
+        const provider = new GoogleAuthProvider();
+        provider.setCustomParameters({ prompt: 'select_account' });
+        await signInWithPopup(auth, provider);
+      } else {
+        if (request) {
+          await promptAsync();
+        } else {
+          showAlert('Google Sign-In', 'Google Sign-In is initializing, please try again.');
+        }
+      }
+    } catch (error: any) {
+      if (error.code !== 'auth/popup-closed-by-user') {
+        showAlert('Google Sign-In Error', error.message || 'Failed to sign in with Google');
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleForgotPassword = async () => {
     const trimmedEmail = email.trim();
     if (!trimmedEmail) {
-      Alert.alert('Forgot Password', 'Please enter your email address first.');
+      showAlert('Forgot Password', 'Please enter your email address first.');
       return;
     }
     try {
       await sendPasswordResetEmail(auth, trimmedEmail);
-      Alert.alert('Email Sent', 'Password reset instructions have been sent to your email.');
+      showAlert('Email Sent', 'Password reset instructions have been sent to your email.');
     } catch (error: any) {
       let message = 'Failed to send reset email.';
       if (error.code === 'auth/user-not-found') message = 'No account found with this email.';
       if (error.code === 'auth/invalid-email') message = 'Invalid email address.';
-      Alert.alert('Error', message);
+      showAlert('Error', message);
     }
   };
 
@@ -140,7 +159,7 @@ export default function LoginScreen() {
     const trimmedPassword = password;
 
     if (!trimmedEmail || !trimmedPassword) {
-      Alert.alert('Error', 'Please enter both email and password');
+      showAlert('Error', 'Please enter both email and password');
       return;
     }
 
@@ -166,465 +185,407 @@ export default function LoginScreen() {
           message = 'This account has been disabled.';
           break;
         case 'auth/network-request-failed':
-          message = 'Network error. Please check your internet connection and try again.';
+          message = 'Network error. Please check your internet connection.';
           break;
         case 'auth/too-many-requests':
           message = 'Too many failed attempts. Please try again later.';
           break;
+        default:
+          message = error.message || message;
       }
-      Alert.alert('Login Failed', message);
+      showAlert('Login Failed', message);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      style={styles.container}
-    >
-      <StatusBar style="light" />
-      <LinearGradient
-        colors={['#4A90E2', '#357ABD', '#2B6CB0']}
-        style={styles.headerGradient}
+    <SafeAreaView style={[styles.safeArea, { backgroundColor: isDesktop ? '#F1F5F9' : '#FFFFFF' }]} edges={['top', 'bottom']}>
+      <StatusBar style="dark" />
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        style={styles.container}
       >
-        <View style={styles.logoContainer}>
-          <View style={styles.logoCircle}>
-            <GraduationCap size={32} color="#4A90E2" />
-          </View>
-          <Text style={styles.brandName}>UPSC Principal</Text>
-          <Text style={styles.brandTagline}>Ace your exam with confidence</Text>
-        </View>
-      </LinearGradient>
-
-      <View style={styles.formCard}>
-        <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollContent} keyboardShouldPersistTaps="handled">
-          <Text style={styles.formTitle}>Welcome Back</Text>
-          <Text style={styles.formSubtitle}>Sign in to continue your progress</Text>
-
-          {/* Mode Switcher */}
-          <View style={styles.modeSwitchContainer}>
-            <TouchableOpacity
-              style={[styles.modeButton, loginMode === 'email' && styles.modeButtonActive]}
-              onPress={() => setLoginMode('email')}
-              accessibilityRole="button"
-              accessibilityLabel="Sign in with email"
-            >
-              <Mail size={18} color={loginMode === 'email' ? '#fff' : '#718096'} />
-              <Text style={[styles.modeButtonText, loginMode === 'email' && styles.modeButtonTextActive]}>Email</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[styles.modeButton, loginMode === 'phone' && styles.modeButtonActive]}
-              onPress={() => setLoginMode('phone')}
-              accessibilityRole="button"
-              accessibilityLabel="Sign in with phone"
-            >
-              <Phone size={18} color={loginMode === 'phone' ? '#fff' : '#718096'} />
-              <Text style={[styles.modeButtonText, loginMode === 'phone' && styles.modeButtonTextActive]}>Phone</Text>
-            </TouchableOpacity>
-          </View>
-
-          {loginMode === 'email' ? (
-            <>
-              <View style={styles.inputWrapper}>
-                <View style={styles.inputIconContainer}>
-                  <Mail size={20} color="#8E8E93" />
-                </View>
-                <TextInput
-                  style={styles.input}
-                  placeholder="Email address"
-                  placeholderTextColor="#A0AEC0"
-                  value={email}
-                  onChangeText={setEmail}
-                  autoCapitalize="none"
-                  keyboardType="email-address"
-                  textContentType="emailAddress"
-                  autoComplete="email"
-                  returnKeyType="next"
-                  blurOnSubmit={false}
-                  onSubmitEditing={() => passwordRef.current?.focus()}
-                  accessibilityLabel="Email address"
-                />
-              </View>
-
-              <View style={styles.inputWrapper}>
-                <View style={styles.inputIconContainer}>
-                  <Lock size={20} color="#8E8E93" />
-                </View>
-                <TextInput
-                  ref={passwordRef}
-                  style={styles.input}
-                  placeholder="Password"
-                  placeholderTextColor="#A0AEC0"
-                  value={password}
-                  onChangeText={setPassword}
-                  secureTextEntry={!showPassword}
-                  textContentType="password"
-                  autoComplete="password"
-                  returnKeyType="done"
-                  onSubmitEditing={handleLogin}
-                  accessibilityLabel="Password"
-                />
-                <TouchableOpacity
-                  style={styles.eyeButton}
-                  onPress={() => setShowPassword(!showPassword)}
-                  accessibilityLabel={showPassword ? 'Hide password' : 'Show password'}
-                  accessibilityRole="button"
-                >
-                  {showPassword ? <EyeOff size={20} color="#8E8E93" /> : <Eye size={20} color="#8E8E93" />}
-                </TouchableOpacity>
-              </View>
-
-              <View style={styles.forgotPasswordContainer}>
-                <TouchableOpacity onPress={handleForgotPassword}>
-                  <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
-                </TouchableOpacity>
-              </View>
-
-              <TouchableOpacity
-                style={[styles.primaryButton, loading && styles.primaryButtonDisabled]}
-                onPress={handleLogin}
-                disabled={loading}
-                accessibilityRole="button"
-                accessibilityLabel="Sign in"
+        <ScrollView
+          contentContainerStyle={[
+            styles.scrollWrapper,
+            isDesktop ? styles.scrollWrapperDesktop : styles.scrollWrapperMobile,
+          ]}
+          showsVerticalScrollIndicator={false}
+          keyboardShouldPersistTaps="handled"
+        >
+          <View style={[styles.card, isDesktop ? styles.cardDesktop : styles.cardMobile]}>
+            {/* Desktop Left Hero Banner */}
+            {isDesktop && (
+              <LinearGradient
+                colors={['#1E3A8A', '#1E40AF', '#2563EB']}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 0.5, y: 1 }}
+                style={styles.heroBanner}
               >
-                <LinearGradient
-                  colors={loading ? ['#A0AEC0', '#A0AEC0'] : ['#4A90E2', '#357ABD']}
-                  style={styles.primaryGradient}
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 0 }}
+                <View style={styles.blurOrb} />
+
+                {/* Brand Header */}
+                <View style={styles.brandBadge}>
+                  <View style={styles.brandIconBox}>
+                    <View style={styles.brandDiamond} />
+                  </View>
+                  <Text style={styles.brandText}>Exam AI</Text>
+                </View>
+
+                {/* Hero Headline */}
+                <View style={styles.headlineContainer}>
+                  <Text style={styles.heroHeadline}>
+                    Ace your exam with confidence.
+                  </Text>
+                </View>
+
+                {/* Social Proof */}
+                <View style={styles.proofContainer}>
+                  <View style={styles.proofAvatars}>
+                    {proof.map((p, index) => (
+                      <Image
+                        key={p.initials}
+                        source={{ uri: p.src }}
+                        style={[
+                          styles.proofAvatar,
+                          { zIndex: proof.length - index, marginLeft: index === 0 ? 0 : -8 },
+                        ]}
+                      />
+                    ))}
+                  </View>
+                  <Text style={styles.proofText}>Join 40,000+ aspirants on Exam AI</Text>
+                </View>
+              </LinearGradient>
+            )}
+
+            {/* Form Section */}
+            <View style={[styles.formPanel, isDesktop ? styles.formPanelDesktop : styles.formPanelMobile]}>
+              {/* Mobile Brand Header */}
+              {!isDesktop && (
+                <View style={styles.mobileBrandHeader}>
+                  <View style={styles.brandIconBoxMobile}>
+                    <View style={styles.brandDiamondMobile} />
+                  </View>
+                  <Text style={styles.brandTextMobile}>Exam AI</Text>
+                </View>
+              )}
+
+              <View style={styles.formHeader}>
+                <Text style={styles.title}>Welcome back</Text>
+                <Text style={styles.subtitle}>
+                  Sign in to your Exam AI account.
+                </Text>
+              </View>
+
+              {/* Google Sign In Button */}
+              <TouchableOpacity
+                style={styles.googleButton}
+                onPress={handleGoogleSignIn}
+                disabled={loading}
+                activeOpacity={0.8}
+              >
+                <GoogleIcon />
+                <Text style={styles.googleButtonText}>Continue with Google</Text>
+              </TouchableOpacity>
+
+              {/* Divider */}
+              <View style={styles.dividerRow}>
+                <View style={styles.dividerLine} />
+                <Text style={styles.dividerText}>or</Text>
+                <View style={styles.dividerLine} />
+              </View>
+
+              <View style={styles.formFields}>
+                {/* Email Field */}
+                <View style={styles.fieldGroup}>
+                  <Text style={styles.label}>Email</Text>
+                  <View style={styles.inputBox}>
+                    <TextInput
+                      style={styles.input}
+                      placeholder="you@example.com"
+                      placeholderTextColor="#94A3B8"
+                      value={email}
+                      onChangeText={setEmail}
+                      autoCapitalize="none"
+                      keyboardType="email-address"
+                      autoComplete="email"
+                      returnKeyType="next"
+                      onSubmitEditing={() => passwordRef.current?.focus()}
+                    />
+                  </View>
+                </View>
+
+                {/* Password Field */}
+                <View style={styles.fieldGroup}>
+                  <View style={styles.labelRow}>
+                    <Text style={styles.label}>Password</Text>
+                    <TouchableOpacity onPress={handleForgotPassword} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+                      <Text style={styles.forgotText}>Forgot?</Text>
+                    </TouchableOpacity>
+                  </View>
+                  <View style={styles.inputBox}>
+                    <TextInput
+                      ref={passwordRef}
+                      style={styles.input}
+                      placeholder="••••••••"
+                      placeholderTextColor="#94A3B8"
+                      value={password}
+                      onChangeText={setPassword}
+                      secureTextEntry={!showPassword}
+                      autoCapitalize="none"
+                      autoComplete="current-password"
+                      returnKeyType="done"
+                      onSubmitEditing={handleLogin}
+                    />
+                    <TouchableOpacity
+                      style={styles.eyeBtn}
+                      onPress={() => setShowPassword(!showPassword)}
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+                    >
+                      {showPassword ? (
+                        <EyeOff size={18} color="#94A3B8" />
+                      ) : (
+                        <Eye size={18} color="#94A3B8" />
+                      )}
+                    </TouchableOpacity>
+                  </View>
+                </View>
+
+                {/* Submit Button */}
+                <TouchableOpacity
+                  style={[styles.primaryButton, loading && styles.buttonDisabled]}
+                  onPress={handleLogin}
+                  disabled={loading}
+                  activeOpacity={0.85}
                 >
                   {loading ? (
-                    <ActivityIndicator color="#fff" />
+                    <ActivityIndicator size="small" color="#FFFFFF" />
                   ) : (
-                    <>
-                      <Text style={styles.primaryButtonText}>Sign In</Text>
-                      <ArrowRight size={20} color="#fff" />
-                    </>
+                    <Text style={styles.primaryButtonText}>Sign in</Text>
                   )}
-                </LinearGradient>
-              </TouchableOpacity>
-            </>
-          ) : (
-            <>
-              {!verificationId ? (
-                <>
-                  <View style={styles.inputWrapper}>
-                    <View style={styles.inputIconContainer}>
-                      <Phone size={20} color="#8E8E93" />
-                    </View>
-                    <TextInput
-                      style={styles.input}
-                      placeholder="+91 99999 99999"
-                      placeholderTextColor="#A0AEC0"
-                      value={phoneNumber}
-                      onChangeText={setPhoneNumber}
-                      keyboardType="phone-pad"
-                      textContentType="telephoneNumber"
-                      autoComplete="tel"
-                      returnKeyType="done"
-                      onSubmitEditing={sendVerification}
-                      accessibilityLabel="Phone number with country code"
-                    />
-                  </View>
-                  <TouchableOpacity
-                    style={[styles.primaryButton, loading && styles.primaryButtonDisabled]}
-                    onPress={sendVerification}
-                    disabled={loading}
-                    accessibilityRole="button"
-                  >
-                    <LinearGradient
-                      colors={loading ? ['#A0AEC0', '#A0AEC0'] : ['#4A90E2', '#357ABD']}
-                      style={styles.primaryGradient}
-                      start={{ x: 0, y: 0 }}
-                      end={{ x: 1, y: 0 }}
-                    >
-                      {loading ? (
-                        <ActivityIndicator color="#fff" />
-                      ) : (
-                        <>
-                          <Text style={styles.primaryButtonText}>Send Code</Text>
-                          <ArrowRight size={20} color="#fff" />
-                        </>
-                      )}
-                    </LinearGradient>
-                  </TouchableOpacity>
-                </>
-              ) : (
-                <>
-                  <View style={styles.inputWrapper}>
-                    <View style={styles.inputIconContainer}>
-                      <Lock size={20} color="#8E8E93" />
-                    </View>
-                    <TextInput
-                      style={styles.input}
-                      placeholder="Enter 6-digit code"
-                      placeholderTextColor="#A0AEC0"
-                      value={verificationCode}
-                      onChangeText={setVerificationCode}
-                      keyboardType="number-pad"
-                      returnKeyType="done"
-                      onSubmitEditing={confirmCode}
-                      accessibilityLabel="Verification code"
-                    />
-                  </View>
-                  <TouchableOpacity
-                    style={[styles.primaryButton, loading && styles.primaryButtonDisabled]}
-                    onPress={confirmCode}
-                    disabled={loading}
-                    accessibilityRole="button"
-                  >
-                    <LinearGradient
-                      colors={loading ? ['#A0AEC0', '#A0AEC0'] : ['#4A90E2', '#357ABD']}
-                      style={styles.primaryGradient}
-                      start={{ x: 0, y: 0 }}
-                      end={{ x: 1, y: 0 }}
-                    >
-                      {loading ? (
-                        <ActivityIndicator color="#fff" />
-                      ) : (
-                        <>
-                          <Text style={styles.primaryButtonText}>Verify & Sign In</Text>
-                          <ArrowRight size={20} color="#fff" />
-                        </>
-                      )}
-                    </LinearGradient>
-                  </TouchableOpacity>
-                  
-                  <View style={styles.phoneActionRow}>
-                    <TouchableOpacity
-                      onPress={() => { setVerificationId(''); setVerificationCode(''); setResendTimer(0); }}
-                      style={styles.textButton}
-                      accessibilityRole="button"
-                    >
-                      <Text style={styles.textButtonLabel}>Change Number</Text>
-                    </TouchableOpacity>
+                </TouchableOpacity>
+              </View>
 
-                    <TouchableOpacity
-                      onPress={sendVerification}
-                      disabled={resendTimer > 0 || loading}
-                      style={styles.textButton}
-                      accessibilityRole="button"
-                    >
-                      <Text style={[styles.textButtonLabel, resendTimer > 0 && { color: '#A0AEC0' }]}>
-                        {resendTimer > 0 ? `Resend Code (${resendTimer}s)` : 'Resend Code'}
-                      </Text>
-                    </TouchableOpacity>
-                  </View>
-                </>
-              )}
-            </>
-          )}
-
-          <FirebaseRecaptchaVerifierModal
-            ref={recaptchaVerifier}
-            firebaseConfig={firebaseConfig}
-            attemptInvisibleVerification={true}
-          />
-
-          <View style={styles.dividerContainer}>
-            <View style={styles.dividerLine} />
-            <Text style={styles.dividerText}>OR</Text>
-            <View style={styles.dividerLine} />
-          </View>
-
-          <TouchableOpacity
-            style={styles.googleButton}
-            onPress={() => promptAsync()}
-            disabled={!request || loading}
-            accessibilityRole="button"
-            accessibilityLabel="Continue with Google"
-          >
-            <Chrome size={20} color="#4285F4" style={{ marginRight: 10 }} />
-            <Text style={styles.googleButtonText}>Continue with Google</Text>
-          </TouchableOpacity>
-
-          <View style={styles.footer}>
-            <Text style={styles.footerText}>Don't have an account? </Text>
-            <Link href="/signup" asChild>
-              <TouchableOpacity>
-                <Text style={styles.linkText}>Sign Up</Text>
-              </TouchableOpacity>
-            </Link>
+              {/* Switcher to Sign Up */}
+              <View style={styles.footerRow}>
+                <Text style={styles.footerText}>No account? </Text>
+                <TouchableOpacity onPress={() => router.push('/signup')}>
+                  <Text style={styles.footerLink}>Create account</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
           </View>
         </ScrollView>
-      </View>
-    </KeyboardAvoidingView>
+      </KeyboardAvoidingView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+  },
   container: {
     flex: 1,
-    backgroundColor: '#4A90E2',
   },
-  headerGradient: {
-    paddingTop: Platform.OS === 'ios' ? 60 : 50,
-    paddingBottom: 40,
-    alignItems: 'center',
+  scrollWrapper: {
+    flexGrow: 1,
   },
-  logoContainer: {
-    alignItems: 'center',
-  },
-  logoCircle: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+  scrollWrapperDesktop: {
     justifyContent: 'center',
-    marginBottom: 16,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.15,
-    shadowRadius: 8,
-    elevation: 4,
+    alignItems: 'center',
+    padding: 24,
   },
-  brandName: {
-    fontSize: 24,
-    fontWeight: '800',
-    color: '#fff',
-    letterSpacing: 0.5,
-  },
-  brandTagline: {
-    fontSize: 14,
-    color: 'rgba(255,255,255,0.8)',
-    marginTop: 4,
-  },
-  formCard: {
-    flex: 1,
-    backgroundColor: '#fff',
-    borderTopLeftRadius: 28,
-    borderTopRightRadius: 28,
-    marginTop: -20,
+  scrollWrapperMobile: {
+    justifyContent: 'center',
     paddingHorizontal: 24,
-    paddingTop: 32,
+    paddingVertical: 32,
   },
-  scrollContent: {
-    paddingBottom: 40,
+  card: {
+    width: '100%',
   },
-  formTitle: {
-    fontSize: 26,
-    fontWeight: '700',
-    color: '#1A202C',
-    marginBottom: 4,
-  },
-  formSubtitle: {
-    fontSize: 15,
-    color: '#718096',
-    marginBottom: 24,
-  },
-  modeSwitchContainer: {
+  cardDesktop: {
+    maxWidth: 880,
     flexDirection: 'row',
-    marginBottom: 20,
-    backgroundColor: '#F7FAFC',
-    borderRadius: 12,
-    padding: 4,
+    minHeight: 520,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 24,
+    overflow: 'hidden',
+    shadowColor: '#0F172A',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.08,
+    shadowRadius: 30,
+    elevation: 8,
     borderWidth: 1,
     borderColor: '#E2E8F0',
   },
-  modeButton: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    borderRadius: 10,
-    gap: 6,
-  },
-  modeButtonActive: {
-    backgroundColor: '#4A90E2',
-    shadowColor: '#4A90E2',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-    elevation: 3,
-  },
-  modeButtonText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#718096',
-  },
-  modeButtonTextActive: {
-    color: '#fff',
-  },
-  inputWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#F7FAFC',
-    borderRadius: 12,
-    borderWidth: 1.5,
-    borderColor: '#E2E8F0',
-    marginBottom: 16,
-    height: 54,
-  },
-  inputIconContainer: {
-    paddingLeft: 16,
-    paddingRight: 8,
-  },
-  input: {
-    flex: 1,
-    fontSize: 16,
-    color: '#1A202C',
-    paddingVertical: 0,
-  },
-  eyeButton: {
-    padding: 16,
-  },
-  primaryButton: {
-    borderRadius: 12,
-    overflow: 'hidden',
-    marginTop: 4,
-    shadowColor: '#4A90E2',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 4,
-  },
-  primaryButtonDisabled: {
-    shadowOpacity: 0,
+  cardMobile: {
+    maxWidth: '100%',
+    backgroundColor: '#FFFFFF',
+    borderWidth: 0,
     elevation: 0,
+    shadowOpacity: 0,
   },
-  primaryGradient: {
+  // Hero Banner (Desktop Only)
+  heroBanner: {
+    flex: 0.9,
+    padding: 36,
+    justifyContent: 'space-between',
+    position: 'relative',
+    overflow: 'hidden',
+  },
+  blurOrb: {
+    position: 'absolute',
+    top: -80,
+    right: -80,
+    width: 240,
+    height: 240,
+    borderRadius: 120,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+  },
+  brandBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  brandIconBox: {
+    width: 32,
+    height: 32,
+    borderRadius: 8,
+    backgroundColor: 'rgba(255, 255, 255, 0.18)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.3)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  brandDiamond: {
+    width: 12,
+    height: 12,
+    borderRadius: 3,
+    backgroundColor: '#FFFFFF',
+    transform: [{ rotate: '45deg' }],
+  },
+  brandText: {
+    color: '#FFFFFF',
+    fontSize: 15,
+    fontWeight: '700',
+    letterSpacing: -0.3,
+  },
+  headlineContainer: {
+    marginVertical: 32,
+  },
+  heroHeadline: {
+    color: '#FFFFFF',
+    fontSize: 26,
+    fontWeight: '700',
+    lineHeight: 32,
+    letterSpacing: -0.5,
+  },
+  proofContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  proofAvatars: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  proofAvatar: {
+    width: 28,
+    height: 28,
+    borderRadius: 14,
+    borderWidth: 2,
+    borderColor: '#1E3A8A',
+  },
+  proofText: {
+    color: 'rgba(255, 255, 255, 0.85)',
+    fontSize: 12,
+    fontWeight: '500',
+    flexShrink: 1,
+  },
+  // Mobile Brand Header
+  mobileBrandHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    marginBottom: 24,
+  },
+  brandIconBoxMobile: {
+    width: 34,
+    height: 34,
+    borderRadius: 9,
+    backgroundColor: '#2563EB',
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#2563EB',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  brandDiamondMobile: {
+    width: 13,
+    height: 13,
+    borderRadius: 3,
+    backgroundColor: '#FFFFFF',
+    transform: [{ rotate: '45deg' }],
+  },
+  brandTextMobile: {
+    color: '#0F172A',
+    fontSize: 18,
+    fontWeight: '800',
+    letterSpacing: -0.4,
+  },
+  // Form Panel
+  formPanel: {
+    justifyContent: 'center',
+    backgroundColor: '#FFFFFF',
+  },
+  formPanelDesktop: {
+    flex: 1.1,
+    padding: 40,
+  },
+  formPanelMobile: {
+    width: '100%',
+    padding: 0,
+  },
+  formHeader: {
+    marginBottom: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: '#0F172A',
+    letterSpacing: -0.5,
+  },
+  subtitle: {
+    fontSize: 13,
+    color: '#64748B',
+    marginTop: 4,
+  },
+  // Google Button
+  googleButton: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 16,
-    gap: 8,
+    height: 44,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+    backgroundColor: '#FFFFFF',
+    gap: 10,
   },
-  primaryButtonText: {
-    color: '#fff',
-    fontSize: 17,
-    fontWeight: '700',
-  },
-  forgotPasswordContainer: {
-    alignItems: 'flex-end',
-    marginBottom: 16,
-    marginTop: -4,
-  },
-  forgotPasswordText: {
-    color: '#4A90E2',
+  googleButtonText: {
     fontSize: 14,
     fontWeight: '600',
+    color: '#0F172A',
   },
-  phoneActionRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 20,
-    paddingHorizontal: 8,
-  },
-  textButton: {
-    padding: 4,
-  },
-  textButtonLabel: {
-    color: '#4A90E2',
-    fontSize: 14,
-    fontWeight: '600',
-  },
-  dividerContainer: {
+  dividerRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 24,
+    gap: 12,
+    marginVertical: 18,
   },
   dividerLine: {
     flex: 1,
@@ -632,38 +593,86 @@ const styles = StyleSheet.create({
     backgroundColor: '#E2E8F0',
   },
   dividerText: {
-    marginHorizontal: 16,
-    color: '#A0AEC0',
-    fontSize: 13,
+    fontSize: 11,
+    color: '#94A3B8',
     fontWeight: '600',
+    textTransform: 'uppercase',
   },
-  googleButton: {
-    height: 54,
-    backgroundColor: '#fff',
-    borderWidth: 1.5,
-    borderColor: '#E2E8F0',
-    borderRadius: 12,
+  formFields: {
+    gap: 16,
+  },
+  fieldGroup: {
+    gap: 6,
+  },
+  labelRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  label: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: '#334155',
+  },
+  forgotText: {
+    fontSize: 12,
+    color: '#2563EB',
+    fontWeight: '500',
+  },
+  inputBox: {
     flexDirection: 'row',
     alignItems: 'center',
+    height: 46,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+    borderRadius: 10,
+    paddingHorizontal: 14,
+    backgroundColor: '#FFFFFF',
+  },
+  input: {
+    flex: 1,
+    fontSize: 14,
+    color: '#0F172A',
+    paddingVertical: 0,
+  },
+  eyeBtn: {
+    padding: 6,
+  },
+  primaryButton: {
+    height: 46,
+    backgroundColor: '#2563EB',
+    borderRadius: 10,
+    alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 6,
+    shadowColor: '#2563EB',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 8,
+    elevation: 3,
   },
-  googleButtonText: {
-    color: '#1A202C',
-    fontSize: 16,
+  buttonDisabled: {
+    opacity: 0.65,
+  },
+  primaryButtonText: {
+    color: '#FFFFFF',
+    fontSize: 15,
     fontWeight: '600',
+    letterSpacing: -0.2,
   },
-  footer: {
+  footerRow: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginTop: 28,
+    alignItems: 'center',
+    marginTop: 24,
   },
   footerText: {
-    color: '#718096',
-    fontSize: 15,
+    fontSize: 13,
+    color: '#64748B',
   },
-  linkText: {
-    color: '#4A90E2',
-    fontSize: 15,
-    fontWeight: '700',
+  footerLink: {
+    fontSize: 13,
+    color: '#2563EB',
+    fontWeight: '600',
   },
 });

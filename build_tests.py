@@ -65,10 +65,17 @@ def build_tests():
         print("No questions found to build mock tests!")
         return
 
-    for i in range(FULL_TEST_COUNT):
-        # We sample random questions across ALL topics for the mock test
-        sample_size = min(FULL_TEST_SIZE, len(all_questions_pool))
-        mock_questions = random.sample(all_questions_pool, sample_size)
+    # Shuffle the pool so questions across all topics are evenly distributed
+    random.shuffle(all_questions_pool)
+    
+    # Calculate how many full mock tests can be made with 120 questions each (e.g. 3,145 // 120 = 26 full tests)
+    total_full_tests = len(all_questions_pool) // FULL_TEST_SIZE
+    print(f"Total question pool: {len(all_questions_pool)} questions. Generating {total_full_tests} unique full mocks of {FULL_TEST_SIZE} questions each...")
+
+    for i in range(total_full_tests):
+        start_idx = i * FULL_TEST_SIZE
+        end_idx = start_idx + FULL_TEST_SIZE
+        mock_questions = all_questions_pool[start_idx:end_idx]
         
         test_data = {
             "test_id": str(uuid.uuid4()),
@@ -82,7 +89,7 @@ def build_tests():
         with open(out_path, "w", encoding="utf-8") as out:
             json.dump(test_data, out, ensure_ascii=False, indent=2)
             
-    print(f"Generated {FULL_TEST_COUNT} Full Mock Tests in {TESTS_DIR}/full_mocks/")
+    print(f"Generated {total_full_tests} Full Mock Tests in {TESTS_DIR}/full_mocks/")
     print("Done! All tests are ready for the app.")
 
 if __name__ == "__main__":

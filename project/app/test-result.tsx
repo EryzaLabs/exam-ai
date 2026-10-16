@@ -56,6 +56,7 @@ export default function TestResultScreen() {
   const [analytics, setAnalytics] = useState<TestAnalytics | null>(null);
   const [test, setTest] = useState<ParsedMockTest | null>(null);
   const [selectedTab, setSelectedTab] = useState<'overview' | 'sections' | 'solutions'>('overview');
+  const [language, setLanguage] = useState<'english' | 'hindi'>('english');
   const [showReportModal, setShowReportModal] = useState(false);
   const [reportingQuestion, setReportingQuestion] = useState<ParsedQuestion | null>(null);
   const [reportType, setReportType] = useState<ReportType>('wrong_answer');
@@ -158,6 +159,39 @@ export default function TestResultScreen() {
               } catch (error) {
                 console.error('Error fetching AI answers:', error);
               }
+            }
+
+            // Restore exact question order that user saw during the test
+            if (testData && result.questionOrder && result.questionOrder.length > 0) {
+              const questionMap = new Map<string, ParsedQuestion>();
+              testData.sections.forEach(s => s.questions.forEach(q => questionMap.set(q.id, q)));
+              
+              const sectionStartIndices: number[] = [];
+              let curIdx = 0;
+              testData.sections.forEach(sec => {
+                sectionStartIndices.push(curIdx);
+                curIdx += sec.questions.length;
+              });
+
+              testData = {
+                ...testData,
+                sections: testData.sections.map((section, sIdx) => {
+                  const start = sectionStartIndices[sIdx];
+                  const end = sIdx < testData!.sections.length - 1 
+                    ? sectionStartIndices[sIdx + 1] 
+                    : result.questionOrder!.length;
+                  const secQuestionIds = result.questionOrder!.slice(start, end);
+                  
+                  const orderedQuestions = secQuestionIds
+                    .map(qId => questionMap.get(qId)!)
+                    .filter(Boolean);
+
+                  return {
+                    ...section,
+                    questions: orderedQuestions.length > 0 ? orderedQuestions : section.questions
+                  };
+                })
+              };
             }
             
             setTest(testData || null);
@@ -505,13 +539,16 @@ export default function TestResultScreen() {
     if (!attempt) return null;
 
     const allQuestions = test.sections.flatMap((s) => s.questions);
+    let globalQuestionCounter = 0;
 
     return (
       <View style={styles.tabContent}>
         {test.sections.map((section) => (
           <View key={section.id} style={styles.solutionsSection}>
             <Text style={styles.solutionsSectionTitle}>{section.title}</Text>
-            {section.questions.map((question, index) => {
+            {section.questions.map((question) => {
+              globalQuestionCounter += 1;
+              const currentNum = globalQuestionCounter;
               const userAnswer = attempt.answers.find((a) => a.questionId === question.id);
               const isCorrect = userAnswer?.isCorrect;
               const isAttempted = userAnswer !== undefined;
@@ -520,7 +557,7 @@ export default function TestResultScreen() {
                 <View key={question.id} style={styles.solutionCard}>
                   <View style={styles.solutionHeader}>
                     <Text style={styles.solutionQuestionNumber}>
-                      Question {index + 1}
+                      Question {currentNum}
                     </Text>
                     <View
                       style={[
@@ -548,13 +585,13 @@ export default function TestResultScreen() {
                   <View style={styles.solutionQuestion}>
                     <RenderHtml
                       contentWidth={width - 64}
-                      source={{ html: question.questionText.replace(/\n/g, '<br />') }}
+                      source={{ html: (language === 'hindi' && question.questionTextHindi ? question.questionTextHindi : question.questionText).replace(/\n/g, '<br />') }}
                       baseStyle={styles.solutionQuestionText}
                     />
                   </View>
 
                   <View style={styles.solutionOptions}>
-                    {question.options.map((option, optIndex) => {
+                    {(language === 'hindi' && question.optionsHindi && question.optionsHindi.length > 0 ? question.optionsHindi : question.options).map((option, optIndex) => {
                       const isCorrectAnswer = optIndex === question.correctAnswerIndex;
                       const isUserAnswer = optIndex === userAnswer?.selectedOption;
 
@@ -618,7 +655,9 @@ export default function TestResultScreen() {
                       </View>
                     </View>
                     <Text style={styles.solutionExplanationText}>
-                      {question.explanation.english}
+                      {language === 'hindi' && question.explanation.hindi 
+                        ? question.explanation.hindi 
+                        : question.explanation.english}
                     </Text>
                     {question.keyConcepts.length > 0 && (
                       <View style={styles.solutionKeyConcepts}>
@@ -657,11 +696,26 @@ export default function TestResultScreen() {
         colors={['#4A90E2', '#357ABD']}
         style={styles.header}
       >
-        <View style={{flexDirection: 'row', alignItems: 'center', marginBottom: 4}}>
-          <TouchableOpacity onPress={() => router.back()} style={{marginRight: 12}}>
-            <ArrowLeft size={24} color="#fff" />
+        <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 4}}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <TouchableOpacity onPress={() => router.back()} style={{marginRight: 12}}>
+              <ArrowLeft size={24} color="#fff" />
+            </TouchableOpacity>
+            <Text style={styles.headerTitle}>Test Results</Text>
+          </View>
+          <TouchableOpacity
+            style={{
+              backgroundColor: 'rgba(255,255,255,0.2)',
+              paddingHorizontal: 12,
+              paddingVertical: 6,
+              borderRadius: 16,
+            }}
+            onPress={() => setLanguage(l => l === 'english' ? 'hindi' : 'english')}
+          >
+            <Text style={{color: '#fff', fontWeight: 'bold', fontSize: 13}}>
+              {language === 'english' ? 'A/अ' : 'अ/A'}
+            </Text>
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>Test Results</Text>
         </View>
         <Text style={styles.headerSubtitle}>{test.title}</Text>
       </LinearGradient>

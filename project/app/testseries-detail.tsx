@@ -10,9 +10,10 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router, useLocalSearchParams } from 'expo-router';
-import { ChevronLeft } from 'lucide-react-native';
+import { ChevronLeft, Crown, Sparkles, Lock } from 'lucide-react-native';
 import TestSeriesService, { Section, Test } from '@/services/testseries-service';
 import SSCCGLService from '@/services/ssc-cgl-service';
+import userService from '@/services/user-service';
 
 type SectionWithTests = Section & { tests?: Test[] };
 
@@ -24,10 +25,21 @@ export default function TestSeriesDetailScreen() {
   const [isLoading, setIsLoading] = useState(true);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [loadingTestId, setLoadingTestId] = useState<string | null>(null);
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   useEffect(() => {
     loadSections();
+    checkSubscription();
   }, []);
+
+  const checkSubscription = async () => {
+    try {
+      const profile = await userService.getUserProfile();
+      setIsSubscribed(!!profile?.isSubscribed);
+    } catch (e) {
+      console.error('Error checking subscription:', e);
+    }
+  };
 
   const loadSections = async () => {
     try {
@@ -73,7 +85,12 @@ export default function TestSeriesDetailScreen() {
     setExpandedSections(newExpanded);
   };
 
-  const handleTestPress = async (sectionFolder: string, test: Test) => {
+  const handleTestPress = async (sectionFolder: string, test: Test, isLocked: boolean = false) => {
+    if (isLocked) {
+      router.push('/premium');
+      return;
+    }
+
     try {
       setLoadingTestId(test.id);
 
@@ -150,11 +167,33 @@ export default function TestSeriesDetailScreen() {
       </View>
 
       <ScrollView style={styles.scrollView}>
+        {!isSubscribed && (
+          <TouchableOpacity
+            style={styles.premiumBanner}
+            onPress={() => router.push('/premium')}
+            activeOpacity={0.9}
+          >
+            <View style={{ flex: 1, marginRight: 12 }}>
+              <View style={styles.premiumBannerTag}>
+                <Crown size={12} color="#F59E0B" />
+                <Text style={styles.premiumBannerTagText}>SPECIAL PASS • ₹499</Text>
+              </View>
+              <Text style={styles.premiumBannerTitle}>Unlock All Tests in This Series</Text>
+              <Text style={styles.premiumBannerSubtitle}>
+                Get unlimited attempts, bilingual solutions & performance rank
+              </Text>
+            </View>
+            <View style={styles.premiumBannerBtn}>
+              <Text style={styles.premiumBannerBtnText}>Upgrade</Text>
+            </View>
+          </TouchableOpacity>
+        )}
+
         <Text style={styles.sectionCountText}>
           {sections.length} sections • {sections.reduce((sum, s) => sum + s.availableTests, 0)} tests
         </Text>
 
-        {sections.map((section) => (
+        {sections.map((section, sectionIndex) => (
           <View key={section.id} style={styles.sectionCard}>
             <TouchableOpacity
               onPress={() => toggleSection(section.id)}
@@ -175,45 +214,65 @@ export default function TestSeriesDetailScreen() {
 
             {expandedSections.has(section.id) && section.tests && section.tests.length > 0 && (
               <View style={styles.testsContainer}>
-                {section.tests.slice(0, 10).map((test) => (
-                  <TouchableOpacity
-                    key={test.id}
-                    style={styles.testItem}
-                    onPress={() => handleTestPress(section.folderName || section.id, test)}
-                    disabled={loadingTestId === test.id}
-                  >
-                    <View style={styles.testInfo}>
-                      <Text style={styles.testTitle} numberOfLines={2}>
-                        {test.title}
-                      </Text>
-                      {test.description && (
-                        <Text style={styles.testDescription} numberOfLines={1}>
-                          {test.description}
-                        </Text>
-                      )}
-                      <View style={styles.testMeta}>
-                        {test.questionCount && (
-                          <Text style={styles.testMetaText}>
-                            {test.questionCount} Qs
+                {section.tests.slice(0, 10).map((test, testIndex) => {
+                  const isLocked = !isSubscribed && (sectionIndex > 0 || testIndex > 0);
+                  return (
+                    <TouchableOpacity
+                      key={test.id}
+                      style={[styles.testItem, isLocked && styles.testItemLocked]}
+                      onPress={() => handleTestPress(section.folderName || section.id, test, isLocked)}
+                      disabled={loadingTestId === test.id}
+                    >
+                      <View style={styles.testInfo}>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 4, flexWrap: 'wrap' }}>
+                          {isLocked ? (
+                            <View style={styles.badgeLocked}>
+                              <Text style={styles.badgeLockedText}>🔒 Premium</Text>
+                            </View>
+                          ) : !isSubscribed && sectionIndex === 0 && testIndex === 0 ? (
+                            <View style={styles.badgeFree}>
+                              <Text style={styles.badgeFreeText}>✨ Free Demo</Text>
+                            </View>
+                          ) : null}
+                          <Text style={styles.testTitle} numberOfLines={2}>
+                            {test.title}
+                          </Text>
+                        </View>
+                        {test.description && (
+                          <Text style={styles.testDescription} numberOfLines={1}>
+                            {test.description}
                           </Text>
                         )}
-                        {test.duration && (
-                          <Text style={styles.testMetaText}>• {test.duration} min</Text>
-                        )}
-                        {test.totalMark && (
-                          <Text style={styles.testMetaText}>• {test.totalMark} marks</Text>
-                        )}
+                        <View style={styles.testMeta}>
+                          {test.questionCount && (
+                            <Text style={styles.testMetaText}>
+                              {test.questionCount} Qs
+                            </Text>
+                          )}
+                          {test.duration && (
+                            <Text style={styles.testMetaText}>• {test.duration} min</Text>
+                          )}
+                          {test.totalMark && (
+                            <Text style={styles.testMetaText}>• {test.totalMark} marks</Text>
+                          )}
+                        </View>
                       </View>
-                    </View>
-                    {loadingTestId === test.id ? (
-                      <ActivityIndicator size="small" color="#667eea" />
-                    ) : (
-                      <View style={styles.startButton}>
-                        <Text style={styles.startButtonText}>Start</Text>
-                      </View>
-                    )}
-                  </TouchableOpacity>
-                ))}
+                      {loadingTestId === test.id ? (
+                        <ActivityIndicator size="small" color="#667eea" />
+                      ) : isLocked ? (
+                        <View style={styles.unlockButton}>
+                          <Text style={styles.unlockButtonText}>🔒 Unlock</Text>
+                        </View>
+                      ) : (
+                        <View style={styles.startButton}>
+                          <Text style={styles.startButtonText}>
+                            {!isSubscribed && sectionIndex === 0 && testIndex === 0 ? 'Free Demo' : 'Start'}
+                          </Text>
+                        </View>
+                      )}
+                    </TouchableOpacity>
+                  );
+                })}
                 {section.tests.length > 10 && (
                   <Text style={styles.moreTestsText}>
                     +{section.tests.length - 10} more tests available
@@ -380,5 +439,90 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: 'Inter-Regular',
     color: '#8E8E93',
+  },
+  premiumBanner: {
+    backgroundColor: '#1E1B4B',
+    borderRadius: 14,
+    padding: 16,
+    marginBottom: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  premiumBannerTag: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    alignSelf: 'flex-start',
+    backgroundColor: 'rgba(245, 158, 11, 0.2)',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 6,
+    marginBottom: 6,
+  },
+  premiumBannerTagText: {
+    fontSize: 10,
+    fontWeight: '800',
+    color: '#FBBF24',
+  },
+  premiumBannerTitle: {
+    fontSize: 15,
+    fontWeight: '800',
+    color: '#FFFFFF',
+    marginBottom: 2,
+  },
+  premiumBannerSubtitle: {
+    fontSize: 11,
+    color: 'rgba(255, 255, 255, 0.8)',
+  },
+  premiumBannerBtn: {
+    backgroundColor: '#FFFFFF',
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+    borderRadius: 8,
+  },
+  premiumBannerBtnText: {
+    fontSize: 12,
+    fontWeight: '800',
+    color: '#1E1B4B',
+  },
+  testItemLocked: {
+    backgroundColor: '#FFFBEB',
+  },
+  badgeLocked: {
+    backgroundColor: '#FEF3C7',
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 6,
+    marginRight: 6,
+  },
+  badgeLockedText: {
+    fontSize: 10,
+    fontWeight: '700',
+    color: '#D97706',
+  },
+  badgeFree: {
+    backgroundColor: '#DCFCE7',
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 6,
+    marginRight: 6,
+  },
+  badgeFreeText: {
+    fontSize: 10,
+    fontWeight: '700',
+    color: '#15803D',
+  },
+  unlockButton: {
+    backgroundColor: '#D97706',
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 6,
+    marginLeft: 12,
+  },
+  unlockButtonText: {
+    fontSize: 13,
+    fontFamily: 'Inter-SemiBold',
+    color: '#FFFFFF',
   },
 });

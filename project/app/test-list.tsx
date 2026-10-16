@@ -187,8 +187,9 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   };
 
   const handleTestSelect = async (paper: ServerPaper) => {
-    if (!isSubscribed) {
-      handlePayment();
+    const isFirstTest = tests.length > 0 && tests[0].id === paper.id;
+    if (!isSubscribed && !isFirstTest) {
+      router.push('/premium');
       return;
     }
     
@@ -230,22 +231,34 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     const totalQuestions = isMock ? 120 : 20;
     const duration = isMock ? 7200 : 1200; // 2 hours for mocks, 20 mins for topics
     const totalMarks = totalQuestions * 2.5; // 2.5 marks per question
+    const isFirstTest = tests.length > 0 && tests[0].id === test.id;
+    const isLocked = !isSubscribed && !isFirstTest;
 
     return (
       <TouchableOpacity
-        style={styles.newTestCard}
+        style={[styles.newTestCard, isLocked && styles.newTestCardLocked]}
         onPress={() => handleTestSelect(test)}
         activeOpacity={0.7}
         disabled={!!loadingTestId}
       >
         <View style={styles.testCardHeaderNew}>
-          <View style={styles.testCardIconNew}>
-             <FileText size={24} color="#4A90E2" />
+          <View style={[styles.testCardIconNew, isLocked && { backgroundColor: '#FEF3C7' }]}>
+             {isLocked ? <Text style={{ fontSize: 18 }}>🔒</Text> : <FileText size={24} color="#4A90E2" />}
           </View>
           <View style={styles.testCardBadgesNew}>
-            <View style={styles.testCardBadgePrimary}>
-              <Text style={styles.testCardBadgeTextPrimary}>UPSC Principal</Text>
-            </View>
+            {isLocked ? (
+              <View style={styles.testCardBadgeLocked}>
+                <Text style={styles.testCardBadgeTextLocked}>🔒 Premium</Text>
+              </View>
+            ) : isFirstTest && !isSubscribed ? (
+              <View style={styles.testCardBadgeFree}>
+                <Text style={styles.testCardBadgeTextFree}>✨ Free Demo</Text>
+              </View>
+            ) : (
+              <View style={styles.testCardBadgePrimary}>
+                <Text style={styles.testCardBadgeTextPrimary}>UPSC Principal</Text>
+              </View>
+            )}
             {test.hasAnswers && (
               <View style={styles.testCardBadgeSuccess}>
                 <BookOpen size={12} color="#4CAF50" style={{marginRight: 4}} />
@@ -285,14 +298,24 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
            </View>
            
            <TouchableOpacity 
-             style={styles.startTestButtonNew}
+             style={[styles.startTestButtonNew, isLocked && styles.unlockTestButtonNew]}
              onPress={() => handleTestSelect(test)}
              disabled={!!loadingTestId}
            >
-             <Text style={styles.startTestButtonTextNew}>
-                {loadingTestId === test.id ? 'Loading' : (isSubscribed ? 'Start Test' : 'Unlock')}
+             <Text style={[styles.startTestButtonTextNew, isLocked && styles.unlockTestButtonTextNew]}>
+                {loadingTestId === test.id
+                  ? 'Loading'
+                  : isLocked
+                  ? 'Unlock @ ₹499'
+                  : isFirstTest && !isSubscribed
+                  ? 'Start Free Demo'
+                  : 'Start Test'}
              </Text>
-             {isSubscribed ? <ArrowRight size={16} color="#fff" style={{marginLeft: 4}} /> : <Text style={{color: '#fff', fontSize: 12, marginLeft: 4}}>🔒</Text>}
+             {isLocked ? (
+               <Text style={{ fontSize: 13, marginLeft: 4 }}>🔒</Text>
+             ) : (
+               <ArrowRight size={16} color="#fff" style={{ marginLeft: 4 }} />
+             )}
            </TouchableOpacity>
         </View>
       </TouchableOpacity>
@@ -508,6 +531,35 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           <RefreshControl refreshing={loading} onRefresh={handleRefresh} colors={['#4A90E2']} />
         }
       >
+        {!isSubscribed && (
+          <TouchableOpacity
+            style={styles.premiumListBanner}
+            onPress={() => router.push('/premium')}
+            activeOpacity={0.9}
+          >
+            <LinearGradient
+              colors={['#1E1B4B', '#3730A3']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+              style={styles.premiumListBannerGradient}
+            >
+              <View style={{ flex: 1, marginRight: 12 }}>
+                <View style={styles.premiumListBannerTag}>
+                  <Text style={styles.premiumListBannerTagText}>⚡ SPECIAL LAUNCH OFFER • ₹499</Text>
+                </View>
+                <Text style={styles.premiumListBannerTitle}>UPSC Principal 2026 Test Pass</Text>
+                <Text style={styles.premiumListBannerSub}>
+                  Unlock all 50+ Full Mocks, AI Diagnostics & Bilingual Explanations
+                </Text>
+              </View>
+              <View style={styles.premiumListBannerButton}>
+                <Text style={styles.premiumListBannerButtonText}>Upgrade</Text>
+                <ArrowRight size={14} color="#3730A3" style={{ marginLeft: 4 }} />
+              </View>
+            </LinearGradient>
+          </TouchableOpacity>
+        )}
+
         {renderResumeCards()}
 
         {category === 'topic' && !selectedTopic ? (
@@ -1181,5 +1233,94 @@ const styles = StyleSheet.create({
   topicProgressBarFill: {
     height: '100%',
     borderRadius: 3,
+  },
+  newTestCardLocked: {
+    borderColor: '#FDE68A',
+    borderWidth: 1,
+  },
+  testCardBadgeLocked: {
+    backgroundColor: '#FEF3C7',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  testCardBadgeTextLocked: {
+    color: '#D97706',
+    fontSize: 12,
+    fontWeight: '700',
+  },
+  testCardBadgeFree: {
+    backgroundColor: '#DCFCE7',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  testCardBadgeTextFree: {
+    color: '#15803D',
+    fontSize: 12,
+    fontWeight: '700',
+  },
+  unlockTestButtonNew: {
+    backgroundColor: '#D97706',
+  },
+  unlockTestButtonTextNew: {
+    color: '#fff',
+    fontWeight: '700',
+  },
+  premiumListBanner: {
+    marginBottom: 16,
+    borderRadius: 16,
+    overflow: 'hidden',
+    shadowColor: '#3730A3',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.15,
+    shadowRadius: 10,
+    elevation: 4,
+  },
+  premiumListBannerGradient: {
+    padding: 16,
+    borderRadius: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  premiumListBannerTag: {
+    alignSelf: 'flex-start',
+    backgroundColor: 'rgba(245, 158, 11, 0.2)',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 6,
+    marginBottom: 6,
+    borderWidth: 1,
+    borderColor: 'rgba(245, 158, 11, 0.4)',
+  },
+  premiumListBannerTagText: {
+    fontSize: 10,
+    fontWeight: '800',
+    color: '#FBBF24',
+    letterSpacing: 0.4,
+  },
+  premiumListBannerTitle: {
+    fontSize: 16,
+    fontWeight: '800',
+    color: '#fff',
+    marginBottom: 3,
+  },
+  premiumListBannerSub: {
+    fontSize: 11,
+    color: 'rgba(255, 255, 255, 0.82)',
+  },
+  premiumListBannerButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 12,
+  },
+  premiumListBannerButtonText: {
+    fontSize: 12,
+    fontWeight: '800',
+    color: '#3730A3',
   },
 });

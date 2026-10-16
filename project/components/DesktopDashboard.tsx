@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, TextInput, ImageBackground, Alert } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, TextInput, ImageBackground, Alert, Platform } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import {
   BookOpen,
@@ -21,11 +21,16 @@ import {
   Brain,
   Library,
   ChevronDown,
-  Star
+  Star,
+  LogOut,
+  ArrowRight
 } from 'lucide-react-native';
 import { router, usePathname } from 'expo-router';
 import { useAuth } from '@/context/auth-context';
 import { useDashboardData } from '@/hooks/useDashboardData';
+import { signOut } from 'firebase/auth';
+import { auth } from '@/services/firebaseConfig';
+import Svg, { Circle } from 'react-native-svg';
 
 export default function DesktopDashboard({ performance: propPerformance, dashboardStats: propDashboardStats, children, disableScroll }: any) {
   const { user } = useAuth();
@@ -36,6 +41,38 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
   const { performance: hookPerformance, dashboardStats: hookDashboardStats, loading } = useDashboardData();
   const performance = propPerformance || hookPerformance;
   const dashboardStats = propDashboardStats || hookDashboardStats;
+
+  const handleLogout = () => {
+    const doSignOut = async () => {
+      try {
+        await signOut(auth);
+        router.replace('/login');
+      } catch (err: any) {
+        const msg = 'Failed to log out: ' + (err?.message || 'Unknown error');
+        if (Platform.OS === 'web') {
+          window.alert(msg);
+        } else {
+          Alert.alert('Error', msg);
+        }
+      }
+    };
+
+    if (Platform.OS === 'web') {
+      if (window.confirm('Are you sure you want to log out?')) {
+        doSignOut();
+      }
+      return;
+    }
+
+    Alert.alert(
+      'Log Out',
+      'Are you sure you want to log out?',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        { text: 'Log Out', style: 'destructive', onPress: doSignOut }
+      ]
+    );
+  };
   return (
     <View style={styles.container}>
       {/* LEFT SIDEBAR */}
@@ -83,16 +120,28 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
             <Bookmark size={20} color={pathname === '/bookmarks' ? '#fff' : '#64748B'} />
             <Text style={[styles.navText, pathname === '/bookmarks' && styles.navTextActive]}>Bookmarks</Text>
           </TouchableOpacity>
+          <TouchableOpacity style={[styles.navItem, pathname === '/profile' && styles.navItemActive]} onPress={() => router.push('/profile')}>
+            <User size={20} color={pathname === '/profile' ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, pathname === '/profile' && styles.navTextActive]}>Profile</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.navItem} onPress={handleLogout}>
+            <LogOut size={20} color="#EF4444" />
+            <Text style={[styles.navText, { color: '#EF4444', fontWeight: '600' }]}>Log Out</Text>
+          </TouchableOpacity>
         </ScrollView>
 
-        <View style={styles.premiumCard}>
+        <TouchableOpacity 
+          style={styles.premiumCard}
+          onPress={() => router.push('/premium')}
+          activeOpacity={0.85}
+        >
           <Crown size={24} color="#F59E0B" style={{ marginBottom: 12 }} />
           <Text style={styles.premiumTitle}>Go Premium</Text>
-          <Text style={styles.premiumDesc}>Unlock full mocks, detailed analytics and more.</Text>
-          <TouchableOpacity style={styles.premiumBtn}>
+          <Text style={styles.premiumDesc}>Unlock all 50+ mocks, detailed analytics & more.</Text>
+          <View style={styles.premiumBtn}>
             <ArrowRight size={16} color="#475569" />
-          </TouchableOpacity>
-        </View>
+          </View>
+        </TouchableOpacity>
       </View>
 
       {/* CENTER CONTENT */}
@@ -128,6 +177,13 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                 <Text style={styles.userName}>{dashboardStats?.userName || user?.displayName || 'User'}</Text>
                 <Text style={styles.userRole}>{dashboardStats?.rank || 'Beginner'}</Text>
               </View>
+            </TouchableOpacity>
+            <TouchableOpacity 
+              style={styles.logoutIconBtn} 
+              onPress={handleLogout}
+              accessibilityLabel="Log Out"
+            >
+              <LogOut size={18} color="#EF4444" />
             </TouchableOpacity>
           </View>
         </View>
@@ -337,29 +393,66 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                <Text style={styles.viewAll}>View Analytics →</Text>
              </TouchableOpacity>
           </View>
-          <View style={styles.progressBody}>
-             <View style={styles.donutPlaceholder}>
-                <View style={styles.donutRing} />
-                <View style={styles.donutInner}>
-                   <Text style={styles.donutVal}>{dashboardStats?.accuracy?.toFixed(1) || '0'}%</Text>
-                   <Text style={styles.donutLbl}>Accuracy</Text>
-                </View>
-             </View>
-             <View style={styles.progressStats}>
-                <View style={styles.pStatItem}>
-                   <View style={styles.pStatIconB}><FileText size={16} color="#3B82F6" /></View>
-                   <View><Text style={styles.pStatVal}>{dashboardStats?.questionsAttempted || 0}</Text><Text style={styles.pStatLbl}>Questions Attempted</Text></View>
-                </View>
-                <View style={styles.pStatItem}>
-                   <View style={styles.pStatIconP}><Clock size={16} color="#7C3AED" /></View>
-                   <View><Text style={styles.pStatVal}>{Math.floor((dashboardStats?.timeSpent || 0) / 60)}h {(dashboardStats?.timeSpent || 0) % 60}m</Text><Text style={styles.pStatLbl}>Total Study Time</Text></View>
-                </View>
-                <View style={styles.pStatItem}>
-                   <View style={styles.pStatIconO}><BarChart2 size={16} color="#EA580C" /></View>
-                   <View><Text style={styles.pStatVal}>{dashboardStats?.totalTopics || 0}</Text><Text style={styles.pStatLbl}>Topics Covered</Text></View>
-                </View>
-             </View>
-          </View>
+          {(() => {
+            const rawAccuracy = Number(dashboardStats?.accuracy) || 0;
+            const accuracyVal = Math.min(Math.max(rawAccuracy, 0), 100);
+            const ringRadius = 40;
+            const ringCircumference = 2 * Math.PI * ringRadius;
+            const ringOffset = ringCircumference - (ringCircumference * accuracyVal) / 100;
+            const ringColor = accuracyVal >= 70 ? '#10B981' : accuracyVal >= 40 ? '#3B82F6' : '#EF4444';
+
+            return (
+              <View style={styles.progressBody}>
+                 <View style={styles.donutContainer}>
+                    <Svg width={100} height={100} viewBox="0 0 100 100">
+                      {/* Background Track */}
+                      <Circle
+                        cx={50}
+                        cy={50}
+                        r={ringRadius}
+                        stroke="#E2E8F0"
+                        strokeWidth={8}
+                        fill="transparent"
+                      />
+                      {/* Accurate Progress Ring */}
+                      {accuracyVal > 0 && (
+                        <Circle
+                          cx={50}
+                          cy={50}
+                          r={ringRadius}
+                          stroke={ringColor}
+                          strokeWidth={8}
+                          strokeDasharray={`${ringCircumference} ${ringCircumference}`}
+                          strokeDashoffset={ringOffset}
+                          strokeLinecap="round"
+                          fill="transparent"
+                          rotation="-90"
+                          origin="50, 50"
+                        />
+                      )}
+                    </Svg>
+                    <View style={styles.donutInner}>
+                       <Text style={styles.donutVal}>{accuracyVal.toFixed(1)}%</Text>
+                       <Text style={styles.donutLbl}>Accuracy</Text>
+                    </View>
+                 </View>
+                 <View style={styles.progressStats}>
+                    <View style={styles.pStatItem}>
+                       <View style={styles.pStatIconB}><FileText size={16} color="#3B82F6" /></View>
+                       <View><Text style={styles.pStatVal}>{dashboardStats?.questionsAttempted || 0}</Text><Text style={styles.pStatLbl}>Questions Attempted</Text></View>
+                    </View>
+                    <View style={styles.pStatItem}>
+                       <View style={styles.pStatIconP}><Clock size={16} color="#7C3AED" /></View>
+                       <View><Text style={styles.pStatVal}>{Math.floor((dashboardStats?.timeSpent || 0) / 60)}h {(dashboardStats?.timeSpent || 0) % 60}m</Text><Text style={styles.pStatLbl}>Total Study Time</Text></View>
+                    </View>
+                    <View style={styles.pStatItem}>
+                       <View style={styles.pStatIconO}><BarChart2 size={16} color="#EA580C" /></View>
+                       <View><Text style={styles.pStatVal}>{dashboardStats?.totalTopics || 0}</Text><Text style={styles.pStatLbl}>Topics Covered</Text></View>
+                    </View>
+                 </View>
+              </View>
+            );
+          })()}
         </View>
 
         {/* Current Streak */}
@@ -424,9 +517,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
       </View>
     </View>
   );
-}
-
-const ArrowRight = ({size, color, style}: any) => <View style={style}><Text style={{color, fontSize: size}}>→</Text></View>;
+};
 const Check = ({size, color, style}: any) => <View style={style}><Text style={{color, fontSize: size}}>✓</Text></View>;
 
 const styles = StyleSheet.create({
@@ -589,6 +680,18 @@ const styles = StyleSheet.create({
   userRole: {
     fontSize: 13,
     color: '#64748B',
+  },
+  logoutIconBtn: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: '#FEE2E2',
+    backgroundColor: '#FEF2F2',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 16,
+    cursor: 'pointer',
   },
   scrollContent: {
     padding: 32,
@@ -848,17 +951,26 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 20,
   },
-  donutPlaceholder: {
-    width: 100, height: 100, borderRadius: 50, borderWidth: 8, borderColor: '#34D399', borderTopColor: '#E2E8F0', alignItems: 'center', justifyContent: 'center',
+  donutContainer: {
+    width: 100,
+    height: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
   },
   donutInner: {
+    position: 'absolute',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   donutVal: {
-    fontSize: 20, fontWeight: '800', color: '#0F172A',
+    fontSize: 20,
+    fontWeight: '800',
+    color: '#0F172A',
   },
   donutLbl: {
-    fontSize: 10, color: '#64748B',
+    fontSize: 10,
+    color: '#64748B',
   },
   progressStats: {
     flex: 1, gap: 16,

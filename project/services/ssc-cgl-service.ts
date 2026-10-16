@@ -576,7 +576,10 @@ class SSCCGLService {
     }
 
     // Check for skipped questions
-    const highSkipSections = sectionAnalytics.filter((s) => s.skipped > s.questionCount * 0.2);
+    const highSkipSections = sectionAnalytics.filter((s) => {
+      const totalSectionQuestions = s.attempted + s.skipped;
+      return totalSectionQuestions > 0 && s.skipped > totalSectionQuestions * 0.2;
+    });
     if (highSkipSections.length > 0) {
       recommendations.push(
         `Attempt more questions in: ${highSkipSections.map((s) => s.sectionTitle).join(', ')}`

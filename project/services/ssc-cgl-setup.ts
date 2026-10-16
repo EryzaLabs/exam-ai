@@ -5,7 +5,7 @@
  * Copy this code to your app's initialization file
  */
 
-import SSCCGLService from './services/ssc-cgl-service';
+import SSCCGLService from './ssc-cgl-service';
 
 /**
  * STEP 1: Load papers when app starts

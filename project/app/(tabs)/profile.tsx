@@ -77,7 +77,28 @@ export default function ProfileScreen() {
     }
   };
 
+  const doSignOut = async () => {
+    try {
+      await signOut(auth);
+      router.replace('/login');
+    } catch (e: any) {
+      const msg = 'Failed to logout: ' + (e?.message || 'Unknown error');
+      if (Platform.OS === 'web') {
+        window.alert(msg);
+      } else {
+        Alert.alert('Error', msg);
+      }
+    }
+  };
+
   const handleLogout = () => {
+    if (Platform.OS === 'web') {
+      if (window.confirm('Are you sure you want to logout?')) {
+        doSignOut();
+      }
+      return;
+    }
+
     Alert.alert(
       'Logout',
       'Are you sure you want to logout?',
@@ -86,41 +107,55 @@ export default function ProfileScreen() {
         {
           text: 'Logout',
           style: 'destructive',
-          onPress: async () => {
-            try {
-              await signOut(auth);
-            } catch (e) {
-              Alert.alert("Error", "Failed to logout");
-            }
-          }
+          onPress: doSignOut
         }
       ]
     );
   };
 
+  const doDeleteAccount = async () => {
+    try {
+      if (auth.currentUser) {
+        await deleteUser(auth.currentUser);
+        router.replace('/login');
+      }
+    } catch (error: any) {
+      if (error.code === 'auth/requires-recent-login') {
+        const msg = 'Please log out and log back in before deleting your account for security reasons.';
+        if (Platform.OS === 'web') {
+          window.alert(msg);
+        } else {
+          Alert.alert('Authentication Required', msg);
+        }
+      } else {
+        const msg = 'Failed to delete account: ' + (error?.message || 'Unknown error');
+        if (Platform.OS === 'web') {
+          window.alert(msg);
+        } else {
+          Alert.alert('Error', msg);
+        }
+      }
+    }
+  };
+
   const handleDeleteAccount = () => {
+    const confirmMsg = 'This action is permanent and will delete all your test history, stats, and saved bookmarks. Are you absolutely sure?';
+    if (Platform.OS === 'web') {
+      if (window.confirm(confirmMsg)) {
+        doDeleteAccount();
+      }
+      return;
+    }
+
     Alert.alert(
       'Delete Account',
-      'This action is permanent and will delete all your test history, stats, and saved bookmarks. Are you absolutely sure?',
+      confirmMsg,
       [
         { text: 'Cancel', style: 'cancel' },
         {
           text: 'Delete Permanently',
           style: 'destructive',
-          onPress: async () => {
-            try {
-              if (auth.currentUser) {
-                await deleteUser(auth.currentUser);
-                // Auth observer will auto-route to login
-              }
-            } catch (error: any) {
-              if (error.code === 'auth/requires-recent-login') {
-                Alert.alert('Authentication Required', 'Please log out and log back in before deleting your account for security reasons.');
-              } else {
-                Alert.alert("Error", "Failed to delete account: " + error.message);
-              }
-            }
-          }
+          onPress: doDeleteAccount
         }
       ]
     );
