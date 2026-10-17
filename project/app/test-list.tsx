@@ -34,9 +34,13 @@ import {
   TrendingUp,
   PlayCircle,
   History,
+  CheckCircle2,
+  Circle,
+  Eye,
+  RotateCcw,
 } from 'lucide-react-native';
 import SSCCGLService, { ParsedMockTest } from '@/services/ssc-cgl-service';
-import { TestProgressService, SavedTestState } from '@/services/test-progress-service';
+import { TestProgressService, SavedTestState, TestResult } from '@/services/test-progress-service';
 import userService from '@/services/user-service';
 import { initiatePayment } from '@/utils/cashfree';
 import { useAuth } from '@/context/auth-context';
@@ -56,10 +60,13 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const [filteredTests, setFilteredTests] = useState<ServerPaper[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadingTestId, setLoadingTestId] = useState<string | null>(null);
-  const params = useLocalSearchParams<{ q?: string; category?: string }>();
+  const params = useLocalSearchParams<{ q?: string; category?: string; filter?: string }>();
   const [searchQuery, setSearchQuery] = useState(typeof params.q === 'string' ? params.q : '');
   const initialCategory = params.category === 'full' || params.category === 'topic' ? params.category : 'all';
   const [category, setCategory] = useState<'all' | 'full' | 'topic'>(initialCategory);
+  const initialFilter = params.filter === 'attempted' || params.filter === 'unattempted' ? params.filter : 'all';
+  const [attemptFilter, setAttemptFilter] = useState<'all' | 'attempted' | 'unattempted'>(initialFilter);
+  const [history, setHistory] = useState<TestResult[]>([]);
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
   const [activeTests, setActiveTests] = useState<SavedTestState[]>([]);
   const { user, isSubscribed: authSubscribed, isSubscriptionLoading, refreshSubscription } = useAuth();
@@ -83,13 +90,24 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   useEffect(() => {
     loadTests();
     loadActiveTest();
+    loadHistory();
   }, []);
 
   useEffect(() => {
     if (user !== undefined) {
       checkSubscription();
+      loadHistory();
     }
   }, [user]);
+
+  const loadHistory = async () => {
+    try {
+      const userHistory = await TestProgressService.getTestHistory();
+      setHistory(userHistory);
+    } catch (e) {
+      console.error('Error loading history in test-list:', e);
+    }
+  };
 
   const checkSubscription = async () => {
     setCheckingSubscription(true);
@@ -107,10 +125,6 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     }
   };
 
-  useEffect(() => {
-    filterTests();
-  }, [searchQuery, category, selectedTopic, tests]);
-
   const getTopicFromFilename = (filename: string): string | null => {
     if (!filename.includes('topic_wise/')) return null;
     const base = filename.split('topic_wise/')[1];
@@ -127,6 +141,30 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     return Array.from(topics).sort();
   }, [tests]);
 
+  const attemptedMap = useMemo(() => {
+    const map = new Map<string, TestResult>();
+    history.forEach(h => {
+      if (!h.testId) return;
+      const existing = map.get(h.testId);
+      if (!existing || new Date(h.date).getTime() > new Date(existing.date).getTime()) {
+        map.set(h.testId, h);
+      }
+    });
+    return map;
+  }, [history]);
+
+  const attemptedCount = useMemo(() => {
+    return tests.filter(t => attemptedMap.has(t.id)).length;
+  }, [tests, attemptedMap]);
+
+  const unattemptedCount = useMemo(() => {
+    return Math.max(0, tests.length - attemptedCount);
+  }, [tests, attemptedCount]);
+
+  useEffect(() => {
+    filterTests();
+  }, [searchQuery, category, selectedTopic, tests, attemptFilter, attemptedMap]);
+
   const loadActiveTest = async () => {
     const saved = await TestProgressService.getSavedTests();
     setActiveTests(saved);
@@ -137,6 +175,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const handleRefresh = () => {
       loadTests();
       loadActiveTest();
+      loadHistory();
       checkSubscription();
   };
 
@@ -184,6 +223,13 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
       if (selectedTopic) {
         filtered = filtered.filter(t => getTopicFromFilename(t.filename) === selectedTopic);
       }
+    }
+
+    // Filter by attempted / unattempted status
+    if (attemptFilter === 'attempted') {
+      filtered = filtered.filter(t => attemptedMap.has(t.id));
+    } else if (attemptFilter === 'unattempted') {
+      filtered = filtered.filter(t => !attemptedMap.has(t.id));
     }
 
     if (searchQuery.trim()) {
@@ -259,6 +305,8 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     const totalMarks = totalQuestions * 2.5; // 2.5 marks per question
     const isFirstTest = tests.length > 0 && tests[0].id === test.id;
     const isLocked = !isSubscribed && !isFirstTest;
+    const attempt = attemptedMap.get(test.id);
+    const isAttempted = !!attempt;
 
     return (
       <TouchableOpacity
@@ -268,10 +316,28 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         disabled={!!loadingTestId}
       >
         <View style={styles.testCardHeaderNew}>
-          <View style={[styles.testCardIconNew, isLocked && { backgroundColor: '#FEF3C7' }]}>
-             {isLocked ? <Text style={{ fontSize: 18 }}>🔒</Text> : <FileText size={24} color="#4A90E2" />}
+          <View style={[styles.testCardIconNew, isLocked ? { backgroundColor: '#FEF3C7' } : isAttempted ? { backgroundColor: '#DCFCE7' } : undefined]}>
+             {isLocked ? (
+               <Text style={{ fontSize: 18 }}>🔒</Text>
+             ) : isAttempted ? (
+               <CheckCircle2 size={22} color="#16A34A" />
+             ) : (
+               <FileText size={24} color="#4A90E2" />
+             )}
           </View>
           <View style={styles.testCardBadgesNew}>
+            {isAttempted ? (
+              <View style={styles.testCardBadgeAttempted}>
+                <CheckCircle2 size={12} color="#15803D" style={{marginRight: 4}} />
+                <Text style={styles.testCardBadgeTextAttempted}>Attempted • {Math.round(attempt.accuracy || 0)}%</Text>
+              </View>
+            ) : (
+              <View style={styles.testCardBadgeUnattempted}>
+                <Circle size={10} color="#64748B" style={{marginRight: 4}} />
+                <Text style={styles.testCardBadgeTextUnattempted}>Not Attempted</Text>
+              </View>
+            )}
+
             {isLocked ? (
               <View style={styles.testCardBadgeLocked}>
                 <Text style={styles.testCardBadgeTextLocked}>🔒 Premium</Text>
@@ -323,26 +389,51 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
              </View>
            </View>
            
-           <TouchableOpacity 
-             style={[styles.startTestButtonNew, isLocked && styles.unlockTestButtonNew]}
-             onPress={() => handleTestSelect(test)}
-             disabled={!!loadingTestId}
-           >
-             <Text style={[styles.startTestButtonTextNew, isLocked && styles.unlockTestButtonTextNew]}>
-                {loadingTestId === test.id
-                  ? 'Loading'
-                  : isLocked
-                  ? 'Unlock @ ₹499'
-                  : isFirstTest && !isSubscribed
-                  ? 'Start Free Demo'
-                  : 'Start Test'}
-             </Text>
-             {isLocked ? (
-               <Text style={{ fontSize: 13, marginLeft: 4 }}>🔒</Text>
-             ) : (
-               <ArrowRight size={16} color="#fff" style={{ marginLeft: 4 }} />
-             )}
-           </TouchableOpacity>
+           {isAttempted ? (
+             <View style={styles.actionButtonsRowNew}>
+               <TouchableOpacity
+                 style={styles.viewResultButtonNew}
+                 onPress={() => router.push({ pathname: '/test-result', params: { attemptId: attempt.attemptId } })}
+                 activeOpacity={0.8}
+               >
+                 <Eye size={13} color="#fff" style={{ marginRight: 4 }} />
+                 <Text style={styles.viewResultButtonTextNew}>Result</Text>
+               </TouchableOpacity>
+
+               <TouchableOpacity 
+                 style={styles.retakeTestButtonNew}
+                 onPress={() => handleTestSelect(test)}
+                 disabled={!!loadingTestId}
+                 activeOpacity={0.8}
+               >
+                 <RotateCcw size={13} color="#1D4ED8" style={{ marginRight: 4 }} />
+                 <Text style={styles.retakeTestButtonTextNew}>
+                   {loadingTestId === test.id ? 'Loading' : 'Retake'}
+                 </Text>
+               </TouchableOpacity>
+             </View>
+           ) : (
+             <TouchableOpacity 
+               style={[styles.startTestButtonNew, isLocked && styles.unlockTestButtonNew]}
+               onPress={() => handleTestSelect(test)}
+               disabled={!!loadingTestId}
+             >
+               <Text style={[styles.startTestButtonTextNew, isLocked && styles.unlockTestButtonTextNew]}>
+                  {loadingTestId === test.id
+                    ? 'Loading'
+                    : isLocked
+                    ? 'Unlock @ ₹499'
+                    : isFirstTest && !isSubscribed
+                    ? 'Start Free Demo'
+                    : 'Start Test'}
+               </Text>
+               {isLocked ? (
+                 <Text style={{ fontSize: 13, marginLeft: 4 }}>🔒</Text>
+               ) : (
+                 <ArrowRight size={16} color="#fff" style={{ marginLeft: 4 }} />
+               )}
+             </TouchableOpacity>
+           )}
         </View>
       </TouchableOpacity>
     );
@@ -464,7 +555,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           if (searchQuery && !topic.toLowerCase().includes(searchQuery.toLowerCase())) return null;
           
           const theme = getTopicColor(index);
-          const attempted = 0; // Hardcoded for demo
+          const attempted = tests.filter(t => getTopicFromFilename(t.filename) === topic && attemptedMap.has(t.id)).length;
           const progress = count > 0 ? (attempted / count) * 100 : 0;
 
           return (
@@ -567,13 +658,56 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             placeholderTextColor="#999"
           />
         </View>
-        <TouchableOpacity style={styles.filterButtonNew}>
-           <SlidersHorizontal size={20} color="#666" />
+        <TouchableOpacity 
+          style={[styles.filterButtonNew, attemptFilter !== 'all' && styles.filterButtonNewActive]}
+          onPress={() => {
+            if (attemptFilter === 'all') setAttemptFilter('attempted');
+            else if (attemptFilter === 'attempted') setAttemptFilter('unattempted');
+            else setAttemptFilter('all');
+          }}
+          activeOpacity={0.7}
+        >
+           <SlidersHorizontal size={20} color={attemptFilter !== 'all' ? '#4A90E2' : '#666'} />
         </TouchableOpacity>
       </View>
 
       {/* Category Tabs */}
       {renderCategoryTabs()}
+
+      {/* Attempted / Unattempted Filter Pills */}
+      <View style={styles.statusFilterRow}>
+        <TouchableOpacity
+          style={[styles.statusFilterChip, attemptFilter === 'all' && styles.statusFilterChipActive]}
+          onPress={() => setAttemptFilter('all')}
+          activeOpacity={0.7}
+        >
+          <Text style={[styles.statusFilterText, attemptFilter === 'all' && styles.statusFilterTextActive]}>
+            All ({tests.length})
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.statusFilterChip, attemptFilter === 'attempted' && styles.statusFilterChipActive]}
+          onPress={() => setAttemptFilter('attempted')}
+          activeOpacity={0.7}
+        >
+          <CheckCircle2 size={13} color={attemptFilter === 'attempted' ? '#fff' : '#16A34A'} style={{marginRight: 4}} />
+          <Text style={[styles.statusFilterText, attemptFilter === 'attempted' && styles.statusFilterTextActive]}>
+            Attempted ({attemptedCount})
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.statusFilterChip, attemptFilter === 'unattempted' && styles.statusFilterChipActive]}
+          onPress={() => setAttemptFilter('unattempted')}
+          activeOpacity={0.7}
+        >
+          <Circle size={11} color={attemptFilter === 'unattempted' ? '#fff' : '#64748B'} style={{marginRight: 4}} />
+          <Text style={[styles.statusFilterText, attemptFilter === 'unattempted' && styles.statusFilterTextActive]}>
+            Unattempted ({unattemptedCount})
+          </Text>
+        </TouchableOpacity>
+      </View>
 
       {/* Selected Topic Header */}
       {category === 'topic' && selectedTopic && (
@@ -1404,5 +1538,101 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '800',
     color: '#3730A3',
+  },
+  statusFilterRow: {
+    flexDirection: 'row',
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    backgroundColor: '#fff',
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
+    gap: 8,
+  },
+  statusFilterChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 14,
+    paddingVertical: 7,
+    borderRadius: 16,
+    backgroundColor: '#F8FAFC',
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+  },
+  statusFilterChipActive: {
+    backgroundColor: '#2563EB',
+    borderColor: '#2563EB',
+  },
+  statusFilterText: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: '#475569',
+  },
+  statusFilterTextActive: {
+    color: '#fff',
+    fontWeight: '700',
+  },
+  filterButtonNewActive: {
+    borderColor: '#4A90E2',
+    borderWidth: 1.5,
+    backgroundColor: '#EFF6FF',
+  },
+  testCardBadgeAttempted: {
+    backgroundColor: '#DCFCE7',
+    paddingHorizontal: 9,
+    paddingVertical: 4,
+    borderRadius: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  testCardBadgeTextAttempted: {
+    color: '#15803D',
+    fontSize: 11,
+    fontWeight: '700',
+  },
+  testCardBadgeUnattempted: {
+    backgroundColor: '#F1F5F9',
+    paddingHorizontal: 9,
+    paddingVertical: 4,
+    borderRadius: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  testCardBadgeTextUnattempted: {
+    color: '#64748B',
+    fontSize: 11,
+    fontWeight: '600',
+  },
+  actionButtonsRowNew: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  viewResultButtonNew: {
+    backgroundColor: '#16A34A',
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  viewResultButtonTextNew: {
+    color: '#fff',
+    fontWeight: '700',
+    fontSize: 13,
+  },
+  retakeTestButtonNew: {
+    backgroundColor: '#EFF6FF',
+    borderWidth: 1,
+    borderColor: '#BFDBFE',
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+    borderRadius: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  retakeTestButtonTextNew: {
+    color: '#1D4ED8',
+    fontWeight: '700',
+    fontSize: 13,
   },
 });
