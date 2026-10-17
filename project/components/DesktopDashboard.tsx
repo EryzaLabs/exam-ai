@@ -38,11 +38,19 @@ import UserService from '@/services/user-service';
 import Svg, { Circle } from 'react-native-svg';
 
 export default function DesktopDashboard({ performance: propPerformance, dashboardStats: propDashboardStats, children, disableScroll }: any) {
-  const { user, isSubscribed: authSubscribed, isSubscriptionLoading } = useAuth();
+  const { user, isSubscribed: authSubscribed, isSubscriptionLoading, requireAuth } = useAuth();
   const [searchQuery, setSearchQuery] = React.useState('');
   const pathname = usePathname();
   const searchParams = useLocalSearchParams<{ category?: string }>();
   const activeCategory = searchParams?.category;
+
+  const navigateToCategory = (cat: 'all' | 'full' | 'topic') => {
+    if (pathname === '/test-list' || pathname?.includes('test-list')) {
+      router.setParams({ category: cat });
+    } else {
+      router.push({ pathname: '/test-list', params: { category: cat } });
+    }
+  };
   
   // Use hook data if props aren't explicitly provided
   const { performance: hookPerformance, dashboardStats: hookDashboardStats, loading } = useDashboardData();
@@ -55,7 +63,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
     const doSignOut = async () => {
       try {
         await signOut(auth);
-        router.replace('/login');
+        router.replace('/');
       } catch (err: any) {
         const msg = 'Failed to log out: ' + (err?.message || 'Unknown error');
         if (Platform.OS === 'web') {
@@ -97,58 +105,86 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
         </View>
 
         <ScrollView style={styles.navMenu} showsVerticalScrollIndicator={false}>
-          <TouchableOpacity style={[styles.navItem, pathname === '/' && styles.navItemActive]} onPress={() => router.push('/')}>
-            <Home size={20} color={pathname === '/' ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, pathname === '/' && styles.navTextActive]}>Home</Text>
-          </TouchableOpacity>
           <TouchableOpacity 
-            style={[styles.navItem, pathname === '/test-list' && (!activeCategory || activeCategory === 'all') && styles.navItemActive]} 
-            onPress={() => router.push({ pathname: '/test-list', params: { category: 'all' } })}
+            style={[styles.navItem, (pathname === '/' || pathname === '/index') && styles.navItemActive]} 
+            onPress={() => router.push('/')}
           >
-            <FileText size={20} color={pathname === '/test-list' && (!activeCategory || activeCategory === 'all') ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, pathname === '/test-list' && (!activeCategory || activeCategory === 'all') && styles.navTextActive]}>Tests</Text>
+            <Home size={20} color={(pathname === '/' || pathname === '/index') ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, (pathname === '/' || pathname === '/index') && styles.navTextActive]}>Home</Text>
           </TouchableOpacity>
+
           <TouchableOpacity 
-            style={[styles.navItem, pathname === '/test-list' && activeCategory === 'full' && styles.navItemActive]} 
-            onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}
+            style={[styles.navItem, (pathname === '/test-list' || pathname?.includes('test-list')) && (!activeCategory || activeCategory === 'all') && styles.navItemActive]} 
+            onPress={() => navigateToCategory('all')}
           >
-            <Clock size={20} color={pathname === '/test-list' && activeCategory === 'full' ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, pathname === '/test-list' && activeCategory === 'full' && styles.navTextActive]}>Full Mocks</Text>
+            <FileText size={20} color={(pathname === '/test-list' || pathname?.includes('test-list')) && (!activeCategory || activeCategory === 'all') ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, (pathname === '/test-list' || pathname?.includes('test-list')) && (!activeCategory || activeCategory === 'all') && styles.navTextActive]}>Tests</Text>
           </TouchableOpacity>
+
           <TouchableOpacity 
-            style={[styles.navItem, pathname === '/test-list' && activeCategory === 'topic' && styles.navItemActive]} 
-            onPress={() => router.push({ pathname: '/test-list', params: { category: 'topic' } })}
+            style={[styles.navItem, (pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'full' && styles.navItemActive]} 
+            onPress={() => navigateToCategory('full')}
           >
-            <Grid size={20} color={pathname === '/test-list' && activeCategory === 'topic' ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, pathname === '/test-list' && activeCategory === 'topic' && styles.navTextActive]}>Topic Wise</Text>
+            <Clock size={20} color={(pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'full' ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, (pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'full' && styles.navTextActive]}>Full Mocks</Text>
           </TouchableOpacity>
+
           <TouchableOpacity 
-            style={[styles.navItem, pathname === '/custom-test' && styles.navItemActive]} 
-            onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-test' : '/premium'), { title: 'Sign In for Custom Tests', feature: 'Custom Test Builder' })}
+            style={[styles.navItem, (pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'topic' && styles.navItemActive]} 
+            onPress={() => navigateToCategory('topic')}
           >
-            <SlidersHorizontal size={20} color={pathname === '/custom-test' ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, pathname === '/custom-test' && styles.navTextActive]}>Custom Test 👑</Text>
+            <Grid size={20} color={(pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'topic' ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, (pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'topic' && styles.navTextActive]}>Topic Wise</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.navItem, pathname === '/practice' && styles.navItemActive]} onPress={() => requireAuth(() => router.push('/practice'), { title: 'Sign In for Practice Mode', feature: 'Practice Mode' })}>
-            <Zap size={20} color={pathname === '/practice' ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, pathname === '/practice' && styles.navTextActive]}>Practice</Text>
+
+          <TouchableOpacity 
+            style={[styles.navItem, (pathname === '/custom-test' || pathname?.includes('custom-test')) && styles.navItemActive]} 
+            onPress={() => router.push(isSubscribed ? '/custom-test' : '/premium')}
+          >
+            <SlidersHorizontal size={20} color={(pathname === '/custom-test' || pathname?.includes('custom-test')) ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, (pathname === '/custom-test' || pathname?.includes('custom-test')) && styles.navTextActive]}>Custom Test 👑</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.navItem, (pathname === '/progress' || pathname === '/test-history') && styles.navItemActive]} onPress={() => requireAuth(() => router.push('/progress'), { title: 'Sign In to View Analytics', feature: 'Performance Analytics' })}>
-            <BarChart2 size={20} color={(pathname === '/progress' || pathname === '/test-history') ? '#fff' : '#64748B'} />
+
+          <TouchableOpacity 
+            style={[styles.navItem, (pathname === '/practice' || pathname?.includes('practice')) && styles.navItemActive]} 
+            onPress={() => router.push('/practice')}
+          >
+            <Zap size={20} color={(pathname === '/practice' || pathname?.includes('practice')) ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, (pathname === '/practice' || pathname?.includes('practice')) && styles.navTextActive]}>Practice</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity 
+            style={[styles.navItem, (pathname === '/progress' || pathname === '/test-history' || pathname?.includes('progress') || pathname?.includes('test-history')) && styles.navItemActive]} 
+            onPress={() => requireAuth(() => router.push('/progress'), { title: 'Sign In to View Analytics', feature: 'Performance Analytics' })}
+          >
+            <BarChart2 size={20} color={(pathname === '/progress' || pathname === '/test-history' || pathname?.includes('progress') || pathname?.includes('test-history')) ? '#fff' : '#64748B'} />
             <Text style={[styles.navText, (pathname === '/progress' || pathname === '/test-history') && styles.navTextActive]}>Analytics</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.navItem, pathname === '/assistant' && styles.navItemActive]} onPress={() => requireAuth(() => router.push('/assistant'), { title: 'Sign In to use AI Assistant', feature: 'AI Assistant' })}>
-            <MessageSquare size={20} color={pathname === '/assistant' ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, pathname === '/assistant' && styles.navTextActive]}>AI Assistant</Text>
+
+          <TouchableOpacity 
+            style={[styles.navItem, (pathname === '/assistant' || pathname?.includes('assistant')) && styles.navItemActive]} 
+            onPress={() => router.push('/assistant')}
+          >
+            <MessageSquare size={20} color={(pathname === '/assistant' || pathname?.includes('assistant')) ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, (pathname === '/assistant' || pathname?.includes('assistant')) && styles.navTextActive]}>AI Assistant</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.navItem, pathname === '/bookmarks' && styles.navItemActive]} onPress={() => requireAuth(() => router.push('/bookmarks'), { title: 'Sign In to View Bookmarks', feature: 'Bookmarks' })}>
-            <Bookmark size={20} color={pathname === '/bookmarks' ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, pathname === '/bookmarks' && styles.navTextActive]}>Bookmarks</Text>
+
+          <TouchableOpacity 
+            style={[styles.navItem, (pathname === '/bookmarks' || pathname?.includes('bookmarks')) && styles.navItemActive]} 
+            onPress={() => router.push('/bookmarks')}
+          >
+            <Bookmark size={20} color={(pathname === '/bookmarks' || pathname?.includes('bookmarks')) ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, (pathname === '/bookmarks' || pathname?.includes('bookmarks')) && styles.navTextActive]}>Bookmarks</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.navItem, pathname === '/profile' && styles.navItemActive]} onPress={() => requireAuth(() => router.push('/profile'), { title: 'Sign In to View Profile', feature: 'Profile' })}>
-            <User size={20} color={pathname === '/profile' ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, pathname === '/profile' && styles.navTextActive]}>Profile</Text>
+
+          <TouchableOpacity 
+            style={[styles.navItem, (pathname === '/profile' || pathname?.includes('profile')) && styles.navItemActive]} 
+            onPress={() => router.push('/profile')}
+          >
+            <User size={20} color={(pathname === '/profile' || pathname?.includes('profile')) ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, (pathname === '/profile' || pathname?.includes('profile')) && styles.navTextActive]}>Profile</Text>
           </TouchableOpacity>
+
           {user ? (
             <TouchableOpacity style={styles.navItem} onPress={handleLogout}>
               <LogOut size={20} color="#EF4444" />
@@ -195,7 +231,11 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
               onChangeText={setSearchQuery}
               onSubmitEditing={() => {
                 if (searchQuery.trim()) {
-                  router.push({ pathname: '/test-list', params: { q: searchQuery.trim() } });
+                  if (pathname === '/test-list' || pathname?.includes('test-list')) {
+                    router.setParams({ q: searchQuery.trim() });
+                  } else {
+                    router.push({ pathname: '/test-list', params: { q: searchQuery.trim() } });
+                  }
                 }
               }}
               returnKeyType="search"
