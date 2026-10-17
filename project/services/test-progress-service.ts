@@ -1,4 +1,4 @@
-// services/test-progress-service.ts
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { auth, db } from './firebaseConfig';
 import { 
   doc, 
@@ -22,6 +22,9 @@ export interface SavedTestState {
   answers: Record<string, number>;
   lastUpdated: number;
   questionOrder?: string[]; // Array of question IDs in shuffled order
+  testTitle?: string;
+  totalQuestions?: number;
+  filename?: string;
 }
 
 export interface TestResult extends TestAnalytics {
@@ -39,15 +42,27 @@ export const TestProgressService = {
 
   async saveCurrentTest(state: SavedTestState): Promise<void> {
     try {
-      const user = auth.currentUser;
-      if (!user) return; 
-
-      const docRef = doc(db, 'users', user.uid, 'active_tests', state.testId);
-      
-      // Ensure clean serialization - convert to JSON and back to remove any non-serializable data
+      // Ensure clean serialization
       const cleanState = JSON.parse(JSON.stringify(state));
-      
-      await setDoc(docRef, cleanState);
+
+      // 1. Always save to local AsyncStorage for instant retrieval
+      try {
+        await AsyncStorage.setItem(`@active_test_${state.testId}`, JSON.stringify(cleanState));
+        const rawIds = await AsyncStorage.getItem('@active_test_ids');
+        const ids: string[] = rawIds ? JSON.parse(rawIds) : [];
+        if (!ids.includes(state.testId)) {
+          await AsyncStorage.setItem('@active_test_ids', JSON.stringify([...ids, state.testId]));
+        }
+      } catch (storageErr) {
+        console.warn('AsyncStorage save failed for test progress:', storageErr);
+      }
+
+      // 2. Sync to Firestore if authenticated
+      const user = auth.currentUser;
+      if (user) {
+        const docRef = doc(db, 'users', user.uid, 'active_tests', state.testId);
+        await setDoc(docRef, cleanState);
+      }
     } catch (e) {
       console.error('Failed to save test progress', e);
       throw e;
@@ -57,16 +72,24 @@ export const TestProgressService = {
   async getTestProgress(testId: string): Promise<SavedTestState | null> {
     try {
       const user = auth.currentUser;
-      if (!user) return null;
-
-      const docRef = doc(db, 'users', user.uid, 'active_tests', testId);
-      const docSnap = await getDoc(docRef);
-
-      if (docSnap.exists()) {
-        return docSnap.data() as SavedTestState;
-      } else {
-        return null;
+      if (user) {
+        try {
+          const docRef = doc(db, 'users', user.uid, 'active_tests', testId);
+          const docSnap = await getDoc(docRef);
+          if (docSnap.exists()) {
+            return docSnap.data() as SavedTestState;
+          }
+        } catch (fsErr) {
+          console.warn('Firestore getTestProgress failed, trying local storage:', fsErr);
+        }
       }
+
+      // Fallback to local AsyncStorage
+      const local = await AsyncStorage.getItem(`@active_test_${testId}`);
+      if (local) {
+        return JSON.parse(local) as SavedTestState;
+      }
+      return null;
     } catch (e) {
       console.error('Failed to load current test', e);
       return null;
@@ -75,27 +98,72 @@ export const TestProgressService = {
 
   async clearTestProgress(testId: string): Promise<void> {
     try {
-      const user = auth.currentUser;
-      if (!user) return;
+      // 1. Remove from local AsyncStorage
+      try {
+        await AsyncStorage.removeItem(`@active_test_${testId}`);
+        const rawIds = await AsyncStorage.getItem('@active_test_ids');
+        if (rawIds) {
+          const ids: string[] = JSON.parse(rawIds);
+          const filtered = ids.filter((id) => id !== testId);
+          await AsyncStorage.setItem('@active_test_ids', JSON.stringify(filtered));
+        }
+      } catch (storageErr) {
+        console.warn('AsyncStorage clear failed:', storageErr);
+      }
 
-      const docRef = doc(db, 'users', user.uid, 'active_tests', testId);
-      await deleteDoc(docRef);
+      // 2. Remove from Firestore
+      const user = auth.currentUser;
+      if (user) {
+        const docRef = doc(db, 'users', user.uid, 'active_tests', testId);
+        await deleteDoc(docRef);
+      }
     } catch (e) {
       console.error('Failed to clear current test', e);
     }
   },
 
   async getSavedTests(): Promise<SavedTestState[]> {
+    const testsMap = new Map<string, SavedTestState>();
+
+    // 1. Load from local AsyncStorage
+    try {
+      const rawIds = await AsyncStorage.getItem('@active_test_ids');
+      if (rawIds) {
+        const ids: string[] = JSON.parse(rawIds);
+        for (const id of ids) {
+          const item = await AsyncStorage.getItem(`@active_test_${id}`);
+          if (item) {
+            const parsed = JSON.parse(item) as SavedTestState;
+            testsMap.set(parsed.testId, parsed);
+          }
+        }
+      }
+    } catch (storageErr) {
+      console.warn('AsyncStorage getSavedTests error:', storageErr);
+    }
+
+    // 2. Merge with Firestore active_tests
     try {
       const user = auth.currentUser;
-      if (!user) return [];
-      const colRef = collection(db, 'users', user.uid, 'active_tests');
-      const snap = await getDocs(colRef);
-      return snap.docs.map(d => d.data() as SavedTestState);
+      if (user) {
+        const colRef = collection(db, 'users', user.uid, 'active_tests');
+        const snap = await getDocs(colRef);
+        snap.docs.forEach((d) => {
+          const data = d.data() as SavedTestState;
+          const existing = testsMap.get(data.testId);
+          if (!existing || (data.lastUpdated || 0) > (existing.lastUpdated || 0)) {
+            testsMap.set(data.testId, data);
+          }
+        });
+      }
     } catch (e) {
-      console.error('Failed to get saved tests', e);
-      return [];
+      console.error('Failed to get saved tests from Firestore', e);
     }
+
+    // Sort by lastUpdated descending (most recently played first)
+    return Array.from(testsMap.values()).sort(
+      (a, b) => (b.lastUpdated || 0) - (a.lastUpdated || 0)
+    );
   },
 
   // --- History Management ---

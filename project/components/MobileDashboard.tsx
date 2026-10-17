@@ -34,6 +34,7 @@ import {
   Lock,
 } from 'lucide-react-native';
 import { useAuth } from '@/context/auth-context';
+import { TestProgressService, SavedTestState } from '@/services/test-progress-service';
 
 export default function MobileDashboard({
   performance,
@@ -42,8 +43,44 @@ export default function MobileDashboard({
   onRefresh,
 }: any) {
   const [searchQuery, setSearchQuery] = React.useState('');
+  const [activeTest, setActiveTest] = React.useState<SavedTestState | null>(null);
   const { user, isSubscribed: authSubscribed, isSubscriptionLoading } = useAuth();
   const isSubscribed = authSubscribed || dashboardStats?.isSubscribed === true;
+
+  const loadActiveTest = React.useCallback(async () => {
+    try {
+      const saved = await TestProgressService.getSavedTests();
+      if (saved && saved.length > 0) {
+        setActiveTest(saved[0]);
+      } else {
+        setActiveTest(null);
+      }
+    } catch (err) {
+      console.warn('Error loading active test in MobileDashboard:', err);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    loadActiveTest();
+  }, [user, refreshing, loadActiveTest]);
+
+  const handleResumeTest = () => {
+    if (activeTest) {
+      router.push({
+        pathname: '/mock-test',
+        params: {
+          testId: activeTest.testId,
+          resume: 'true',
+          filename: activeTest.filename || '',
+        },
+      });
+    } else {
+      router.push({
+        pathname: '/test-list',
+        params: { category: 'full' },
+      });
+    }
+  };
   return (
     <View style={styles.container}>
       <StatusBar style="light" />
@@ -153,31 +190,79 @@ export default function MobileDashboard({
             </View>
           </View>
 
-          {/* CONTINUE TEST CARD */}
-          <View style={styles.resumeCard}>
-            <View style={styles.resumeTop}>
-              <View style={styles.playBtnContainer}>
-                <View style={styles.playBtnOuter}>
-                  <View style={styles.playBtnInner}>
-                    <Play size={20} color="#fff" fill="#fff" />
+          {/* CONTINUE / START TEST CARD */}
+          {activeTest ? (
+            <TouchableOpacity 
+              style={styles.resumeCard} 
+              activeOpacity={0.9}
+              onPress={handleResumeTest}
+            >
+              <View style={styles.resumeTop}>
+                <View style={styles.playBtnContainer}>
+                  <View style={styles.playBtnOuter}>
+                    <View style={styles.playBtnInner}>
+                      <Play size={20} color="#fff" fill="#fff" />
+                    </View>
                   </View>
                 </View>
+                <View style={styles.resumeInfo}>
+                  <Text style={styles.resumeTag}>CONTINUE TEST</Text>
+                  <Text style={styles.resumeTitle} numberOfLines={1}>
+                    {activeTest.testTitle || 'Unfinished Mock Test'}
+                  </Text>
+                  <Text style={styles.resumeDesc}>
+                    {(Object.keys(activeTest.answers || {}).length || (activeTest.currentQuestionIndex + 1))} questions attempted • {Math.max(1, Math.floor((activeTest.timeRemaining || 0) / 60))}m left
+                  </Text>
+                </View>
+                <TouchableOpacity style={styles.resumeBtn} onPress={handleResumeTest}>
+                  <Text style={styles.resumeBtnTxt}>Resume</Text>
+                  <ArrowRight size={16} color="#fff" />
+                </TouchableOpacity>
               </View>
-              <View style={styles.resumeInfo}>
-                <Text style={styles.resumeTag}>CONTINUE TEST</Text>
-                <Text style={styles.resumeTitle}>Unfinished Test</Text>
-                <Text style={styles.resumeDesc}>10 questions attempted • 119m left</Text>
+              {(() => {
+                const attempted = Object.keys(activeTest.answers || {}).length || (activeTest.currentQuestionIndex + 1);
+                const total = activeTest.totalQuestions || 120;
+                const pct = Math.min(100, Math.max(1, Math.round((attempted / total) * 100)));
+                return (
+                  <>
+                    <View style={styles.progressBarBg}>
+                      <View style={[styles.progressBarFill, { width: `${pct}%` }]} />
+                    </View>
+                    <Text style={styles.progressText}>{pct}%</Text>
+                  </>
+                );
+              })()}
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity 
+              style={styles.resumeCard} 
+              activeOpacity={0.9}
+              onPress={handleResumeTest}
+            >
+              <View style={styles.resumeTop}>
+                <View style={styles.playBtnContainer}>
+                  <View style={styles.playBtnOuter}>
+                    <View style={styles.playBtnInner}>
+                      <Play size={20} color="#fff" fill="#fff" />
+                    </View>
+                  </View>
+                </View>
+                <View style={styles.resumeInfo}>
+                  <Text style={styles.resumeTag}>START PRACTICE</Text>
+                  <Text style={styles.resumeTitle}>Full Mock Test 1</Text>
+                  <Text style={styles.resumeDesc}>120 questions • 120m duration</Text>
+                </View>
+                <TouchableOpacity style={styles.resumeBtn} onPress={handleResumeTest}>
+                  <Text style={styles.resumeBtnTxt}>Start</Text>
+                  <ArrowRight size={16} color="#fff" />
+                </TouchableOpacity>
               </View>
-              <TouchableOpacity style={styles.resumeBtn}>
-                <Text style={styles.resumeBtnTxt}>Resume</Text>
-                <ArrowRight size={16} color="#fff" />
-              </TouchableOpacity>
-            </View>
-            <View style={styles.progressBarBg}>
-              <View style={[styles.progressBarFill, { width: '10%' }]} />
-            </View>
-            <Text style={styles.progressText}>10%</Text>
-          </View>
+              <View style={styles.progressBarBg}>
+                <View style={[styles.progressBarFill, { width: '0%' }]} />
+              </View>
+              <Text style={styles.progressText}>0%</Text>
+            </TouchableOpacity>
+          )}
 
           {/* PILLS */}
           <View style={styles.pillsRow}>

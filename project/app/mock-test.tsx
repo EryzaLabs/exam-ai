@@ -154,7 +154,10 @@ export default function MockTestScreen() {
       questionStates: questionStatesObj,
       answers: answersRecord,
       lastUpdated: Date.now(),
-      questionOrder
+      questionOrder,
+      testTitle: test.title,
+      totalQuestions: test.sections.reduce((sum, s) => sum + s.questions.length, 0),
+      filename: (params.filename as string) || (test as any).filename,
     };
 
     await TestProgressService.saveCurrentTest(state);
@@ -162,18 +165,49 @@ export default function MockTestScreen() {
 
   const loadTest = async () => {
     try {
-      const paper = await SSCCGLService.getPaper(testId);
+      let savedState: SavedTestState | null = null;
+      if (resume) {
+        savedState = await TestProgressService.getTestProgress(testId);
+      }
+
+      let paper = SSCCGLService.getPaper(testId);
+
+      // If paper is not loaded in memory yet (e.g. fresh reload or direct resume), retrieve it
       if (!paper) {
-        Alert.alert('Error', 'Test not found');
+        let cachedPaper = await TestSeriesService.getTestPaperFromCache(testId);
+
+        if (!cachedPaper) {
+          cachedPaper = await TestSeriesService.fetchTestPaperGlobally(testId);
+        }
+
+        if (cachedPaper) {
+          await SSCCGLService.storePaperInMemory(cachedPaper);
+          paper = SSCCGLService.getPaper(testId);
+        }
+
+        if (!paper) {
+          const targetFilename = (params.filename as string) || savedState?.filename;
+          if (targetFilename) {
+            paper = await SSCCGLService.fetchPaper(targetFilename);
+          } else {
+            const papers = await SSCCGLService.fetchPapersList();
+            const paperInfo = papers.find((p: any) => p.id === testId);
+            if (paperInfo && paperInfo.filename) {
+              paper = await SSCCGLService.fetchPaper(paperInfo.filename);
+            }
+          }
+        }
+      }
+
+      if (!paper) {
+        Alert.alert('Error', 'Test paper could not be loaded');
         router.back();
         return;
       }
       
       // Check if we are resuming
-      if (resume) {
-        const savedState = await TestProgressService.getTestProgress(testId);
-        if (savedState) {
-             console.log("Resuming test...");
+      if (resume && savedState) {
+        console.log("Resuming test...");
              
              // Restore shuffled question order
              let restoredPaper = paper;
@@ -257,7 +291,6 @@ export default function MockTestScreen() {
              setTimeRemaining(savedState.timeRemaining);
              return; 
         }
-      }
 
       // Start Fresh
       setTimeRemaining(paper.duration);
@@ -308,7 +341,10 @@ export default function MockTestScreen() {
           questionStates: statesObj,
           answers: {},
           lastUpdated: Date.now(),
-          questionOrder
+          questionOrder,
+          testTitle: shuffledPaper.title,
+          totalQuestions: shuffledPaper.sections.reduce((sum, s) => sum + s.questions.length, 0),
+          filename: (params.filename as string) || (shuffledPaper as any).filename,
       });
 
     } catch (error) {

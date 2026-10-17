@@ -353,13 +353,24 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     
     return activeTests.map(testState => {
       const t = tests.find(x => x.id === testState.testId);
-      const title = t ? t.title : 'Unfinished Test';
+      const title = testState.testTitle || (t ? t.title : 'Unfinished Test');
+      const attemptedCount = Object.keys(testState.answers || {}).length || (testState.currentQuestionIndex + 1);
+      const totalQs = testState.totalQuestions || (t?.filename?.includes('full_mocks') ? 120 : 20);
+      const percent = Math.min(100, Math.max(1, Math.round((attemptedCount / totalQs) * 100)));
+      const minutesLeft = Math.floor((testState.timeRemaining || 0) / 60);
 
       return (
          <TouchableOpacity
           key={testState.testId}
           style={styles.resumeCardNew} 
-          onPress={() => router.push({ pathname: '/mock-test', params: { testId: testState.testId, resume: 'true' } })}
+          onPress={() => router.push({ 
+            pathname: '/mock-test', 
+            params: { 
+              testId: testState.testId, 
+              resume: 'true',
+              filename: testState.filename || t?.filename || '',
+            } 
+          })}
           activeOpacity={0.9}
          >
              <View style={styles.resumeGradientNew}>
@@ -373,7 +384,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                               {title}
                          </Text>
                          <Text style={styles.resumeMetaNew}>
-                             {testState.currentQuestionIndex + 1} questions attempted • {Math.floor(testState.timeRemaining / 60)}m left
+                             {attemptedCount} questions attempted • {minutesLeft}m left
                          </Text>
                      </View>
                      <View style={styles.resumeButtonNew}>
@@ -383,9 +394,9 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                  </View>
                  <View style={styles.resumeProgressContainerNew}>
                     <View style={styles.resumeProgressBarNew}>
-                       <View style={[styles.resumeProgressFillNew, { width: '10%' }]} />
+                       <View style={[styles.resumeProgressFillNew, { width: `${percent}%` }]} />
                     </View>
-                    <Text style={styles.resumeProgressTextNew}>10%</Text>
+                    <Text style={styles.resumeProgressTextNew}>{percent}%</Text>
                  </View>
              </View>
          </TouchableOpacity>
