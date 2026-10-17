@@ -7,7 +7,6 @@ exports.calculateDiscount = exports.COUPONS = void 0;
 const express_1 = require("express");
 const crypto_1 = __importDefault(require("crypto"));
 const firebase_admin_1 = require("../firebase-admin");
-const firestore_1 = require("firebase-admin/firestore");
 const router = (0, express_1.Router)();
 // Cashfree Gateway Configuration
 const getCashfreeConfig = () => {
@@ -462,9 +461,8 @@ router.get('/subscription-status/:uid', async (req, res) => {
         }
         // 2. Check Firestore if initialized
         try {
-            const adminApp = (0, firebase_admin_1.getFirebaseAdmin)();
-            if (adminApp) {
-                const db = (0, firestore_1.getFirestore)();
+            const db = (0, firebase_admin_1.getFirestoreAdmin)();
+            if (db) {
                 const docSnap = await db.doc(`subscriptions/${uid}`).get();
                 if (docSnap.exists) {
                     const d = docSnap.data();

@@ -1,7 +1,7 @@
 import { Router, Request, Response } from 'express';
 import crypto from 'crypto';
-import { recordBackendSubscription, getLocalSubscriptions, saveLocalSubscription, getFirebaseAdmin } from '../firebase-admin';
-import { getFirestore } from 'firebase-admin/firestore';
+import { recordBackendSubscription, getLocalSubscriptions, saveLocalSubscription, getFirebaseAdmin, getFirestoreAdmin } from '../firebase-admin';
+
 
 const router = Router();
 
@@ -555,9 +555,8 @@ router.get('/subscription-status/:uid', async (req: Request, res: Response) => {
 
     // 2. Check Firestore if initialized
     try {
-      const adminApp = getFirebaseAdmin();
-      if (adminApp) {
-        const db = getFirestore();
+      const db = getFirestoreAdmin();
+      if (db) {
         const docSnap = await db.doc(`subscriptions/${uid}`).get();
         if (docSnap.exists) {
           const d = docSnap.data();

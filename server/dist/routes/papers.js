@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.invalidatePapersCache = invalidatePapersCache;
 const express_1 = require("express");
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
@@ -13,43 +14,62 @@ const router = (0, express_1.Router)();
 const DATA_ROOT = path_1.default.resolve(__dirname, '../../../');
 const TESTS_DIR = path_1.default.join(DATA_ROOT, 'tests_json');
 const ANSWERS_DIR = path_1.default.join(DATA_ROOT, 'ai_generated_answers');
-// GET /api/papers - List all available papers
+// In-memory cache for high performance & 0ms responses without blocking event loop
+let cachedPapersList = null;
+let lastPapersCacheTime = 0;
+const PAPERS_CACHE_TTL = 3 * 60 * 1000; // 3 minutes
+function invalidatePapersCache() {
+    cachedPapersList = null;
+}
+function loadAllPapersList() {
+    const fullMockDir = path_1.default.join(TESTS_DIR, 'full_mocks');
+    const topicWiseDir = path_1.default.join(TESTS_DIR, 'topic_wise');
+    const customMockDir = path_1.default.join(TESTS_DIR, 'custom_mocks');
+    let allFiles = [];
+    if (fs_1.default.existsSync(fullMockDir)) {
+        const files = fs_1.default.readdirSync(fullMockDir).filter(f => f.endsWith('.json'));
+        files.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+        allFiles.push(...files.map(f => ({ filename: `full_mocks/${f}`, fullPath: path_1.default.join(fullMockDir, f) })));
+    }
+    if (fs_1.default.existsSync(topicWiseDir)) {
+        const files = fs_1.default.readdirSync(topicWiseDir).filter(f => f.endsWith('.json'));
+        files.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+        allFiles.push(...files.map(f => ({ filename: `topic_wise/${f}`, fullPath: path_1.default.join(topicWiseDir, f) })));
+    }
+    if (fs_1.default.existsSync(customMockDir)) {
+        const files = fs_1.default.readdirSync(customMockDir).filter(f => f.endsWith('.json'));
+        files.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+        allFiles.push(...files.map(f => ({ filename: `custom_mocks/${f}`, fullPath: path_1.default.join(customMockDir, f) })));
+    }
+    return allFiles.map((fileObj) => {
+        let title = "UPSC Principal Test";
+        let testId = fileObj.filename;
+        try {
+            const fileData = JSON.parse(fs_1.default.readFileSync(fileObj.fullPath, 'utf8'));
+            title = fileData.test_name || title;
+            if (fileData.test_id) {
+                testId = fileData.test_id;
+            }
+        }
+        catch (e) { }
+        return {
+            id: fileObj.filename,
+            testId: testId,
+            title: title,
+            filename: fileObj.filename,
+            hasAnswers: true
+        };
+    });
+}
+// GET /api/papers - List all available papers (Instant in-memory cached response)
 router.get('/', (req, res) => {
     try {
-        const fullMockDir = path_1.default.join(TESTS_DIR, 'full_mocks');
-        const topicWiseDir = path_1.default.join(TESTS_DIR, 'topic_wise');
-        let allFiles = [];
-        if (fs_1.default.existsSync(fullMockDir)) {
-            const files = fs_1.default.readdirSync(fullMockDir).filter(f => f.endsWith('.json'));
-            files.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
-            allFiles.push(...files.map(f => ({ filename: `full_mocks/${f}`, fullPath: path_1.default.join(fullMockDir, f) })));
+        const now = Date.now();
+        if (!cachedPapersList || (now - lastPapersCacheTime > PAPERS_CACHE_TTL)) {
+            cachedPapersList = loadAllPapersList();
+            lastPapersCacheTime = now;
         }
-        if (fs_1.default.existsSync(topicWiseDir)) {
-            const files = fs_1.default.readdirSync(topicWiseDir).filter(f => f.endsWith('.json'));
-            files.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
-            allFiles.push(...files.map(f => ({ filename: `topic_wise/${f}`, fullPath: path_1.default.join(topicWiseDir, f) })));
-        }
-        const papers = allFiles.map((fileObj) => {
-            // Read the actual title and test_id from the JSON file!
-            let title = "UPSC Principal Test";
-            let testId = fileObj.filename;
-            try {
-                const fileData = JSON.parse(fs_1.default.readFileSync(fileObj.fullPath, 'utf8'));
-                title = fileData.test_name || title;
-                if (fileData.test_id) {
-                    testId = fileData.test_id;
-                }
-            }
-            catch (e) { }
-            return {
-                id: fileObj.filename,
-                testId: testId,
-                title: title,
-                filename: fileObj.filename,
-                hasAnswers: true // Answers are embedded in our new JSONs
-            };
-        });
-        res.json(papers);
+        res.json(cachedPapersList);
     }
     catch (error) {
         console.error('Error listing papers:', error);
