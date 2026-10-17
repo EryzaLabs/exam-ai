@@ -611,7 +611,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           if (searchQuery && !topic.toLowerCase().includes(searchQuery.toLowerCase())) return null;
           
           const theme = getTopicColor(index);
-          const attempted = tests.filter(t => getTopicFromFilename(t.filename) === topic && attemptedMap.has(t.id)).length;
+          const attempted = tests.filter(t => getTopicFromFilename(t.filename) === topic && !!getAttemptForTest(t)).length;
           const progress = count > 0 ? (attempted / count) * 100 : 0;
 
           return (
