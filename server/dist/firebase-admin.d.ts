@@ -1,9 +1,7 @@
 export declare function getFirebaseAdmin(): import("firebase-admin/app").App;
 export declare function getFirestoreAdmin(): FirebaseFirestore.Firestore | null;
-/**
- * Backend function to write subscription status using Firebase Admin SDK.
- * Bypasses Firestore Security Rules completely.
- */
+export declare function getLocalSubscriptions(): Record<string, any>;
+export declare function saveLocalSubscription(uid: string, data: any): void;
 export declare function recordBackendSubscription({ uid, orderId, amount, currency, customerEmail, customerPhone, periodDays, }: {
     uid: string;
     orderId: string;

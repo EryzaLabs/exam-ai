@@ -7,6 +7,7 @@ exports.calculateDiscount = exports.COUPONS = void 0;
 const express_1 = require("express");
 const crypto_1 = __importDefault(require("crypto"));
 const firebase_admin_1 = require("../firebase-admin");
+const firestore_1 = require("firebase-admin/firestore");
 const router = (0, express_1.Router)();
 // Cashfree Gateway Configuration
 const getCashfreeConfig = () => {
@@ -437,6 +438,54 @@ router.post('/webhook', async (req, res) => {
     catch (error) {
         console.error('[Cashfree Webhook] Error processing webhook:', error);
         res.status(500).json({ error: error.message });
+    }
+});
+/**
+ * GET /api/payment/subscription-status/:uid
+ * Checks subscription status across local disk registry and Firestore
+ */
+router.get('/subscription-status/:uid', async (req, res) => {
+    try {
+        const { uid } = req.params;
+        if (!uid) {
+            return res.status(400).json({ isSubscribed: false, error: 'UID required' });
+        }
+        // 1. Check local persistent disk registry
+        const localSubs = (0, firebase_admin_1.getLocalSubscriptions)();
+        if (localSubs[uid] && (localSubs[uid].isSubscribed || localSubs[uid].status === 'active')) {
+            return res.json({
+                isSubscribed: true,
+                status: 'active',
+                source: 'local',
+                subscription: localSubs[uid],
+            });
+        }
+        // 2. Check Firestore if initialized
+        try {
+            const adminApp = (0, firebase_admin_1.getFirebaseAdmin)();
+            if (adminApp) {
+                const db = (0, firestore_1.getFirestore)();
+                const docSnap = await db.doc(`subscriptions/${uid}`).get();
+                if (docSnap.exists) {
+                    const d = docSnap.data();
+                    if (d?.status === 'active' || d?.isSubscribed === true) {
+                        (0, firebase_admin_1.saveLocalSubscription)(uid, d);
+                        return res.json({
+                            isSubscribed: true,
+                            status: 'active',
+                            source: 'firestore',
+                            subscription: d,
+                        });
+                    }
+                }
+            }
+        }
+        catch (e) { }
+        return res.json({ isSubscribed: false, status: 'inactive' });
+    }
+    catch (error) {
+        console.error('Error checking subscription status:', error);
+        res.status(500).json({ isSubscribed: false, error: error.message });
     }
 });
 exports.default = router;

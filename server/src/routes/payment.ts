@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import crypto from 'crypto';
-import { recordBackendSubscription } from '../firebase-admin';
+import { recordBackendSubscription, getLocalSubscriptions, saveLocalSubscription, getFirebaseAdmin } from '../firebase-admin';
+import { getFirestore } from 'firebase-admin/firestore';
 
 const router = Router();
 
@@ -526,6 +527,57 @@ router.post('/webhook', async (req: Request, res: Response) => {
   } catch (error: any) {
     console.error('[Cashfree Webhook] Error processing webhook:', error);
     res.status(500).json({ error: error.message });
+  }
+});
+
+
+/**
+ * GET /api/payment/subscription-status/:uid
+ * Checks subscription status across local disk registry and Firestore
+ */
+router.get('/subscription-status/:uid', async (req: Request, res: Response) => {
+  try {
+    const { uid } = req.params;
+    if (!uid) {
+      return res.status(400).json({ isSubscribed: false, error: 'UID required' });
+    }
+
+    // 1. Check local persistent disk registry
+    const localSubs = getLocalSubscriptions();
+    if (localSubs[uid] && (localSubs[uid].isSubscribed || localSubs[uid].status === 'active')) {
+      return res.json({
+        isSubscribed: true,
+        status: 'active',
+        source: 'local',
+        subscription: localSubs[uid],
+      });
+    }
+
+    // 2. Check Firestore if initialized
+    try {
+      const adminApp = getFirebaseAdmin();
+      if (adminApp) {
+        const db = getFirestore();
+        const docSnap = await db.doc(`subscriptions/${uid}`).get();
+        if (docSnap.exists) {
+          const d = docSnap.data();
+          if (d?.status === 'active' || d?.isSubscribed === true) {
+            saveLocalSubscription(uid, d);
+            return res.json({
+              isSubscribed: true,
+              status: 'active',
+              source: 'firestore',
+              subscription: d,
+            });
+          }
+        }
+      }
+    } catch (e) {}
+
+    return res.json({ isSubscribed: false, status: 'inactive' });
+  } catch (error: any) {
+    console.error('Error checking subscription status:', error);
+    res.status(500).json({ isSubscribed: false, error: error.message });
   }
 });
 

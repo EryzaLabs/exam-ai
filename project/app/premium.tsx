@@ -132,8 +132,27 @@ export default function PremiumScreen() {
     setCheckingStatus(true);
     try {
       if (user?.uid) {
+        const cached = await AsyncStorage.getItem(`@user_subscribed_${user.uid}`).catch(() => null);
+        if (cached === 'true') {
+          setLocalSubscribed(true);
+        }
+
         const profile = await userService.getUserProfile(user.uid);
-        setLocalSubscribed(profile?.isSubscribed === true);
+        if (profile?.isSubscribed === true) {
+          setLocalSubscribed(true);
+        }
+
+        try {
+          const res = await fetch(`${API_BASE_URL}/payment/subscription-status/${user.uid}`);
+          if (res.ok) {
+            const data = await res.json();
+            if (data?.isSubscribed) {
+              setLocalSubscribed(true);
+              await AsyncStorage.setItem(`@user_subscribed_${user.uid}`, 'true').catch(() => {});
+            }
+          }
+        } catch (err) {}
+
         const savedPhone = profile?.phoneNumber || user?.phoneNumber || (await AsyncStorage.getItem('@user_phone_number')) || '';
         if (savedPhone) {
           setPhoneNumber(savedPhone.replace(/\D/g, '').slice(-10));
@@ -170,6 +189,9 @@ export default function PremiumScreen() {
         });
         const data = await res.json();
         if (data.success) {
+          if (user?.uid) {
+            await AsyncStorage.setItem(`@user_subscribed_${user.uid}`, 'true').catch(() => {});
+          }
           await refreshSubscription();
           setLocalSubscribed(true);
           const msg = data.message || `🎉 Coupon '${appliedCoupon.code}' applied! 100% Lifetime Premium Access activated.`;

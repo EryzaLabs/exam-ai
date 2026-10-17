@@ -4,6 +4,9 @@ import { auth, db } from '@/services/firebaseConfig';
 import { doc, onSnapshot, getDoc } from 'firebase/firestore';
 import { useRouter, useSegments, useRootNavigationState } from 'expo-router';
 import UserService from '@/services/user-service';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000/api';
 
 interface AuthContextType {
   user: User | null;
@@ -62,6 +65,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       if (authUser) {
         setIsSubscriptionLoading(true);
+
+        // Parallel verification with backend
+        fetch(`${API_BASE_URL}/payment/subscription-status/${authUser.uid}`)
+          .then(r => r.json())
+          .then(bData => {
+            if (bData?.isSubscribed) {
+              setIsSubscribed(true);
+              AsyncStorage.setItem(`@user_subscribed_${authUser.uid}`, 'true').catch(() => {});
+            }
+          })
+          .catch(() => {});
 
         // Realtime listener: updates instantly when backend writes status.
         // Route changes NEVER trigger a database read!

@@ -5,6 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getFirebaseAdmin = getFirebaseAdmin;
 exports.getFirestoreAdmin = getFirestoreAdmin;
+exports.getLocalSubscriptions = getLocalSubscriptions;
+exports.saveLocalSubscription = saveLocalSubscription;
 exports.recordBackendSubscription = recordBackendSubscription;
 const app_1 = require("firebase-admin/app");
 const firestore_1 = require("firebase-admin/firestore");
@@ -87,6 +89,36 @@ function getFirestoreAdmin() {
  * Backend function to write subscription status using Firebase Admin SDK.
  * Bypasses Firestore Security Rules completely.
  */
+const LOCAL_SUB_FILE = path_1.default.resolve(process.cwd(), 'data/subscriptions.json');
+function getLocalSubscriptions() {
+    try {
+        if (fs_1.default.existsSync(LOCAL_SUB_FILE)) {
+            return JSON.parse(fs_1.default.readFileSync(LOCAL_SUB_FILE, 'utf8'));
+        }
+    }
+    catch (e) { }
+    return {};
+}
+function saveLocalSubscription(uid, data) {
+    try {
+        const dir = path_1.default.dirname(LOCAL_SUB_FILE);
+        if (!fs_1.default.existsSync(dir))
+            fs_1.default.mkdirSync(dir, { recursive: true });
+        const subs = getLocalSubscriptions();
+        subs[uid] = {
+            uid,
+            isSubscribed: true,
+            status: 'active',
+            updatedAt: new Date().toISOString(),
+            ...data,
+        };
+        fs_1.default.writeFileSync(LOCAL_SUB_FILE, JSON.stringify(subs, null, 2), 'utf8');
+        console.log(`[Subscription Registry] Saved subscription for ${uid} to local disk`);
+    }
+    catch (e) {
+        console.error('[Subscription Registry] Error saving to disk:', e);
+    }
+}
 async function recordBackendSubscription({ uid, orderId, amount, currency = 'INR', customerEmail, customerPhone, periodDays = 365, }) {
     try {
         getFirebaseAdmin();
@@ -94,6 +126,16 @@ async function recordBackendSubscription({ uid, orderId, amount, currency = 'INR
         const now = Date.now();
         const periodEnd = now + periodDays * 24 * 60 * 60 * 1000;
         const periodEndTimestamp = firestore_1.Timestamp.fromMillis(periodEnd);
+        // 0. Save immediately to local persistent disk registry
+        saveLocalSubscription(uid, {
+            orderId,
+            amount,
+            currency,
+            customerEmail,
+            customerPhone,
+            periodDays,
+            expiresAt: new Date(Date.now() + periodDays * 24 * 60 * 60 * 1000).toISOString(),
+        });
         console.log(`[Firebase Admin] Writing active subscription for UID: ${uid}, Order: ${orderId}`);
         // 1. Write to subscriptions/{uid} (strict rule: read: if auth.uid == uid; write: if false)
         await db.doc(`subscriptions/${uid}`).set({
