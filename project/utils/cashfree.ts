@@ -44,6 +44,7 @@ export interface InitiatePaymentOptions {
   userPhone?: string;
   amountInPaise?: number;
   amountInRupees?: number;
+  couponCode?: string;
 }
 
 /**
@@ -114,6 +115,7 @@ export const initiatePayment = async (
         customer_name: optionsInput?.userName || 'Aspirant',
         customer_email: optionsInput?.userEmail || 'aspirant@exam-ai.com',
         customer_phone: userPhone || '9999999999',
+        coupon_code: optionsInput?.couponCode,
       }),
     });
 

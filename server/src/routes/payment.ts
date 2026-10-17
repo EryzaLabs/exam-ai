@@ -32,6 +32,68 @@ const getCashfreeConfig = () => {
   };
 };
 
+// ==============================================================================
+// COUPON CODES CONFIGURATION
+// ==============================================================================
+export interface CouponDefinition {
+  code: string;
+  discountType: 'free' | 'percent' | 'flat';
+  value: number; // 100 for 100%, or flat amount in INR
+  description: string;
+  active: boolean;
+}
+
+export const COUPONS: Record<string, CouponDefinition> = {
+  'ATROCIOUS2512': {
+    code: 'Atrocious2512',
+    discountType: 'free',
+    value: 100,
+    description: '100% OFF • VIP Lifetime Full Premium Access',
+    active: true,
+  },
+  'EXAMAI50': {
+    code: 'EXAMAI50',
+    discountType: 'percent',
+    value: 50,
+    description: '50% OFF • Special Aspirant Discount',
+    active: true,
+  },
+  'EARLYBIRD': {
+    code: 'EARLYBIRD',
+    discountType: 'flat',
+    value: 200,
+    description: 'Flat ₹200 OFF • Early Bird Offer',
+    active: true,
+  },
+};
+
+export const calculateDiscount = (coupon: CouponDefinition, basePrice: number = 499) => {
+  if (coupon.discountType === 'free') {
+    return {
+      discountAmount: basePrice,
+      finalAmount: 0,
+      isFree: true,
+    };
+  }
+  if (coupon.discountType === 'percent') {
+    const discount = Math.round((basePrice * coupon.value) / 100);
+    return {
+      discountAmount: discount,
+      finalAmount: Math.max(1, basePrice - discount),
+      isFree: false,
+    };
+  }
+  if (coupon.discountType === 'flat') {
+    const discount = Math.min(basePrice - 1, coupon.value);
+    return {
+      discountAmount: discount,
+      finalAmount: Math.max(1, basePrice - discount),
+      isFree: false,
+    };
+  }
+  return { discountAmount: 0, finalAmount: basePrice, isFree: false };
+};
+
 /**
  * POST /api/payment/create-order
  * Creates an order on Cashfree Payment Gateway and returns the payment_session_id
@@ -47,6 +109,7 @@ router.post('/create-order', async (req: Request, res: Response) => {
       customer_email = 'aspirant@exam-ai.com',
       customer_phone = '9999999999',
       return_url,
+      coupon_code,
     } = req.body;
 
     if (!amount || amount <= 0) {
@@ -58,6 +121,15 @@ router.post('/create-order', async (req: Request, res: Response) => {
     let finalAmount = Number(amount);
     if (finalAmount >= 10000) {
       finalAmount = Math.round((finalAmount / 100) * 100) / 100;
+    }
+
+    if (coupon_code) {
+      const cleanCoupon = String(coupon_code).trim().toUpperCase();
+      const coupon = COUPONS[cleanCoupon];
+      if (coupon && coupon.active) {
+        const { finalAmount: calcAmount } = calculateDiscount(coupon, finalAmount || 499);
+        finalAmount = calcAmount;
+      }
     }
 
     const { appId, secretKey, env, apiVersion, baseUrl } = getCashfreeConfig();
@@ -287,6 +359,108 @@ router.get('/status/:orderId', async (req: Request, res: Response) => {
   } catch (error: any) {
     console.error('[Cashfree] Exception in get status:', error);
     res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * POST /api/payment/validate-coupon
+ * Verifies coupon validity and calculates discount
+ */
+router.post('/validate-coupon', (req: Request, res: Response) => {
+  try {
+    const { code } = req.body;
+    if (!code || typeof code !== 'string') {
+      return res.status(400).json({ valid: false, error: 'Please enter a coupon code' });
+    }
+
+    const cleanCode = code.trim().toUpperCase();
+    const coupon = COUPONS[cleanCode];
+
+    if (!coupon || !coupon.active) {
+      return res.status(404).json({ valid: false, error: 'Invalid or expired coupon code' });
+    }
+
+    const { discountAmount, finalAmount, isFree } = calculateDiscount(coupon, 499);
+
+    return res.json({
+      valid: true,
+      code: coupon.code,
+      discountType: coupon.discountType,
+      discountValue: coupon.value,
+      discountAmount,
+      finalAmount,
+      isFree,
+      description: coupon.description,
+    });
+  } catch (error: any) {
+    console.error('Error validating coupon:', error);
+    res.status(500).json({ valid: false, error: error.message });
+  }
+});
+
+/**
+ * POST /api/payment/redeem-coupon
+ * Direct redemption for 100% free / VIP coupons (e.g. Atrocious2512)
+ */
+router.post('/redeem-coupon', async (req: Request, res: Response) => {
+  try {
+    const { code, uid, customer_email, customer_phone } = req.body;
+
+    if (!uid) {
+      return res.status(400).json({ success: false, error: 'Please log in to redeem your coupon code' });
+    }
+
+    if (!code || typeof code !== 'string') {
+      return res.status(400).json({ success: false, error: 'Coupon code is required' });
+    }
+
+    const cleanCode = code.trim().toUpperCase();
+    const coupon = COUPONS[cleanCode];
+
+    if (!coupon || !coupon.active) {
+      return res.status(404).json({ success: false, error: 'Invalid or expired coupon code' });
+    }
+
+    const { discountAmount, finalAmount, isFree } = calculateDiscount(coupon, 499);
+
+    if (isFree) {
+      // 100% Free VIP activation directly in Firestore via Admin SDK
+      const orderId = `coupon_${cleanCode.toLowerCase()}_${Date.now()}`;
+      const activated = await recordBackendSubscription({
+        uid,
+        orderId,
+        amount: 0,
+        currency: 'INR',
+        customerEmail: customer_email || '',
+        customerPhone: customer_phone || '',
+        periodDays: 3650, // 10 years / Lifetime
+      });
+
+      if (!activated) {
+        return res.status(500).json({ success: false, error: 'Failed to activate coupon subscription' });
+      }
+
+      console.log(`[Coupon] User ${uid} redeemed 100% free coupon ${coupon.code}`);
+      return res.json({
+        success: true,
+        isFree: true,
+        code: coupon.code,
+        message: `🎉 Coupon '${coupon.code}' applied! 100% Full Lifetime Premium Access activated.`,
+      });
+    }
+
+    // For partial discount coupons, return discounted price info
+    return res.json({
+      success: true,
+      isFree: false,
+      code: coupon.code,
+      discountAmount,
+      finalAmount,
+      message: `Coupon '${coupon.code}' applied. New amount: ₹${finalAmount}`,
+    });
+  } catch (error: any) {
+    console.error('Error redeeming coupon:', error);
+    res.status(500).json({ success: false, error: error.message });
   }
 });
 

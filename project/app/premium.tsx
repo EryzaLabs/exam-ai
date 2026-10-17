@@ -48,6 +48,8 @@ import userService from '@/services/user-service';
 import { initiatePayment } from '@/utils/cashfree';
 import DesktopDashboard from '@/components/DesktopDashboard';
 
+const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000/api';
+
 export default function PremiumScreen() {
   const { width } = useWindowDimensions();
   const isDesktop = width >= 1024;
@@ -67,6 +69,60 @@ export default function PremiumScreen() {
   const [showPhoneModal, setShowPhoneModal] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [phoneError, setPhoneError] = useState('');
+
+  // Coupon State
+  const [couponInput, setCouponInput] = useState('');
+  const [appliedCoupon, setAppliedCoupon] = useState<{
+    code: string;
+    discountType: string;
+    discountAmount: number;
+    finalAmount: number;
+    isFree: boolean;
+    description: string;
+  } | null>(null);
+  const [couponLoading, setCouponLoading] = useState(false);
+  const [couponError, setCouponError] = useState('');
+  const [couponSuccess, setCouponSuccess] = useState('');
+
+  const handleApplyCoupon = async () => {
+    const code = couponInput.trim();
+    if (!code) {
+      setCouponError('Please enter a coupon code');
+      return;
+    }
+    setCouponLoading(true);
+    setCouponError('');
+    setCouponSuccess('');
+
+    try {
+      const res = await fetch(`${API_BASE_URL}/payment/validate-coupon`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code }),
+      });
+      const data = await res.json();
+      if (data.valid) {
+        setAppliedCoupon(data);
+        setCouponSuccess(data.description || `Coupon ${data.code} applied!`);
+        setCouponError('');
+      } else {
+        setAppliedCoupon(null);
+        setCouponError(data.error || 'Invalid or expired coupon code');
+      }
+    } catch (e) {
+      console.error('Coupon validation error:', e);
+      setCouponError('Could not validate coupon. Please try again.');
+    } finally {
+      setCouponLoading(false);
+    }
+  };
+
+  const handleRemoveCoupon = () => {
+    setAppliedCoupon(null);
+    setCouponInput('');
+    setCouponError('');
+    setCouponSuccess('');
+  };
 
   useEffect(() => {
     checkSubscriptionStatus();
@@ -92,7 +148,48 @@ export default function PremiumScreen() {
     }
   };
 
-  const handlePurchase = () => {
+  const handlePurchase = async () => {
+    if (!user) {
+      router.push('/(auth)/login');
+      return;
+    }
+
+    // If 100% Free VIP coupon (e.g. Atrocious2512), redeem directly on backend without payment gateway
+    if (appliedCoupon && appliedCoupon.isFree) {
+      setLoading(true);
+      try {
+        const res = await fetch(`${API_BASE_URL}/payment/redeem-coupon`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            code: appliedCoupon.code,
+            uid: user.uid,
+            customer_email: user.email || '',
+            customer_phone: phoneNumber || '',
+          }),
+        });
+        const data = await res.json();
+        if (data.success) {
+          await refreshSubscription();
+          setLocalSubscribed(true);
+          const msg = data.message || `🎉 Coupon '${appliedCoupon.code}' applied! 100% Lifetime Premium Access activated.`;
+          if (Platform.OS === 'web') {
+            window.alert(msg);
+          } else {
+            alert(msg);
+          }
+        } else {
+          alert(data.error || 'Failed to redeem coupon code');
+        }
+      } catch (err: any) {
+        console.error('Error redeeming coupon:', err);
+        alert('Failed to redeem coupon. Please try again.');
+      } finally {
+        setLoading(false);
+      }
+      return;
+    }
+
     setPhoneError('');
     setShowPhoneModal(true);
   };
@@ -137,7 +234,8 @@ export default function PremiumScreen() {
         userName: user?.displayName || (user?.email ? user.email.split('@')[0] : 'Aspirant'),
         userEmail: user?.email || '',
         userPhone: phone,
-        amountInPaise: 49900,
+        amountInRupees: appliedCoupon ? appliedCoupon.finalAmount : 499,
+        couponCode: appliedCoupon?.code,
       }
     );
   };
@@ -441,21 +539,88 @@ export default function PremiumScreen() {
                   <Text style={styles.trustShieldText}>Official GNCTD & KVS Pattern</Text>
                 </View>
 
-                {/* Massive ₹499 Price Anchor */}
+                {/* Massive Price Anchor */}
                 <View style={styles.anchorPriceBlock}>
                   <View style={styles.anchorPriceRow}>
                     <Text style={styles.anchorCurrency}>₹</Text>
-                    <Text style={styles.anchorAmount}>499</Text>
+                    <Text style={styles.anchorAmount}>
+                      {appliedCoupon ? (appliedCoupon.isFree ? '0' : appliedCoupon.finalAmount) : '499'}
+                    </Text>
+                    {appliedCoupon?.isFree && (
+                      <View style={{ marginLeft: 8, backgroundColor: '#DCFCE7', paddingHorizontal: 8, paddingVertical: 2, borderRadius: 6, alignSelf: 'center' }}>
+                        <Text style={{ color: '#16A34A', fontWeight: '800', fontSize: 13 }}>FREE</Text>
+                      </View>
+                    )}
                   </View>
                   <View style={styles.anchorDiscountRow}>
                     <Text style={styles.anchorOriginalPrice}>₹1,499</Text>
-                    <View style={styles.anchorSavePill}>
-                      <Text style={styles.anchorSavePillText}>Save ₹1,000 (67% OFF)</Text>
+                    <View style={[styles.anchorSavePill, appliedCoupon && { backgroundColor: '#DCFCE7' }]}>
+                      <Text style={[styles.anchorSavePillText, appliedCoupon && { color: '#15803D' }]}>
+                        {appliedCoupon
+                          ? (appliedCoupon.isFree ? `🎉 100% OFF with '${appliedCoupon.code}'` : `Save ₹${1499 - appliedCoupon.finalAmount}`)
+                          : 'Save ₹1,000 (67% OFF)'}
+                      </Text>
                     </View>
                   </View>
                   <Text style={styles.anchorTermsText}>
                     One-time payment · No recurring charges
                   </Text>
+                </View>
+
+                {/* Coupon Code Section */}
+                <View style={styles.couponContainer}>
+                  <View style={styles.couponHeader}>
+                    <Sparkles size={16} color="#7C3AED" />
+                    <Text style={styles.couponHeaderText}>Have a Promo / Coupon Code?</Text>
+                  </View>
+                  
+                  {appliedCoupon ? (
+                    <View style={styles.appliedCouponBadge}>
+                      <View style={{ flex: 1 }}>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                          <CheckCircle2 size={16} color="#16A34A" />
+                          <Text style={styles.appliedCouponCode}>{appliedCoupon.code}</Text>
+                          <View style={styles.appliedPill}>
+                            <Text style={styles.appliedPillText}>APPLIED</Text>
+                          </View>
+                        </View>
+                        <Text style={styles.appliedCouponDesc}>{appliedCoupon.description}</Text>
+                      </View>
+                      <TouchableOpacity onPress={handleRemoveCoupon} style={styles.removeCouponBtn}>
+                        <Text style={styles.removeCouponText}>Remove</Text>
+                      </TouchableOpacity>
+                    </View>
+                  ) : (
+                    <View>
+                      <View style={styles.couponInputRow}>
+                        <TextInput
+                          style={styles.couponInput}
+                          placeholder="Enter coupon (e.g. Atrocious2512)"
+                          placeholderTextColor="#94A3B8"
+                          value={couponInput}
+                          onChangeText={(t) => {
+                            setCouponInput(t);
+                            setCouponError('');
+                          }}
+                          autoCapitalize="characters"
+                        />
+                        <TouchableOpacity 
+                          style={[styles.applyCouponBtn, (!couponInput.trim() || couponLoading) && styles.applyCouponBtnDisabled]}
+                          onPress={handleApplyCoupon}
+                          disabled={!couponInput.trim() || couponLoading}
+                        >
+                          {couponLoading ? (
+                            <ActivityIndicator size="small" color="#fff" />
+                          ) : (
+                            <Text style={styles.applyCouponBtnText}>Apply</Text>
+                          )}
+                        </TouchableOpacity>
+                      </View>
+                      {couponError ? (
+                        <Text style={styles.couponErrorText}>{couponError}</Text>
+                      ) : null}
+                    </View>
+                  )}
                 </View>
 
                 {/* Primary Action Button */}
@@ -466,7 +631,7 @@ export default function PremiumScreen() {
                   activeOpacity={0.9}
                 >
                   <LinearGradient
-                    colors={['#2563EB', '#1D4ED8']}
+                    colors={appliedCoupon?.isFree ? ['#059669', '#047857'] : ['#2563EB', '#1D4ED8']}
                     start={{ x: 0, y: 0 }}
                     end={{ x: 1, y: 1 }}
                     style={styles.payNowGradient}
@@ -476,7 +641,13 @@ export default function PremiumScreen() {
                     ) : (
                       <>
                         <Lock size={18} color="#FFFFFF" />
-                        <Text style={styles.payNowBtnText}>Get Full Test Access · ₹499</Text>
+                        <Text style={styles.payNowBtnText}>
+                          {appliedCoupon?.isFree
+                            ? '✨ Unlock Lifetime Access · Free'
+                            : appliedCoupon
+                            ? `Get Full Test Access · ₹${appliedCoupon.finalAmount}`
+                            : 'Get Full Test Access · ₹499'}
+                        </Text>
                       </>
                     )}
                   </LinearGradient>
@@ -990,7 +1161,7 @@ export default function PremiumScreen() {
               activeOpacity={0.9}
             >
               <Text style={styles.bottomBtnText}>
-                {loading ? 'Processing...' : 'Get Full Test Access · ₹499'}
+                {loading ? 'Processing...' : appliedCoupon?.isFree ? '✨ Unlock Lifetime Access · Free' : appliedCoupon ? `Get Full Test Access · ₹${appliedCoupon.finalAmount}` : 'Get Full Test Access · ₹499'}
               </Text>
             </TouchableOpacity>
 
@@ -1088,7 +1259,7 @@ export default function PremiumScreen() {
               {loading ? (
                 <ActivityIndicator size="small" color="#FFFFFF" />
               ) : (
-                <Text style={styles.modalSubmitBtnText}>Proceed to Payment · ₹499</Text>
+                <Text style={styles.modalSubmitBtnText}>Proceed to Payment · ₹{appliedCoupon ? appliedCoupon.finalAmount : 499}</Text>
               )}
             </TouchableOpacity>
 
@@ -1217,7 +1388,7 @@ export default function PremiumScreen() {
         <View style={styles.stickyMobileBar}>
           <View>
             <View style={styles.stickyPriceRow}>
-              <Text style={styles.stickyPrice}>₹499</Text>
+              <Text style={styles.stickyPrice}>{appliedCoupon ? (appliedCoupon.isFree ? '₹0' : `₹${appliedCoupon.finalAmount}`) : '₹499'}</Text>
               <Text style={styles.stickyPriceCut}>₹1,499</Text>
             </View>
             <Text style={styles.stickyPeriod}>Full 2026 Exam Cycle</Text>
@@ -1231,7 +1402,7 @@ export default function PremiumScreen() {
             {loading ? (
               <ActivityIndicator size="small" color="#FFFFFF" />
             ) : (
-              <Text style={styles.stickyBuyBtnText}>Get Full Test Access · ₹499</Text>
+              <Text style={styles.stickyBuyBtnText}>{appliedCoupon?.isFree ? '✨ Unlock Free' : appliedCoupon ? `Pay ₹${appliedCoupon.finalAmount}` : 'Get Full Test Access · ₹499'}</Text>
             )}
           </TouchableOpacity>
         </View>
@@ -1243,6 +1414,107 @@ export default function PremiumScreen() {
 }
 
 const styles = StyleSheet.create({
+  // Coupon Box Styles
+  couponContainer: {
+    backgroundColor: '#F8FAFC',
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+    padding: 14,
+    marginBottom: 16,
+  },
+  couponHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    marginBottom: 10,
+  },
+  couponHeaderText: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: '#475569',
+  },
+  couponInputRow: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  couponInput: {
+    flex: 1,
+    height: 42,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#CBD5E1',
+    paddingHorizontal: 12,
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#0F172A',
+    letterSpacing: 0.5,
+  },
+  applyCouponBtn: {
+    backgroundColor: '#2563EB',
+    borderRadius: 10,
+    paddingHorizontal: 18,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  applyCouponBtnDisabled: {
+    backgroundColor: '#94A3B8',
+  },
+  applyCouponBtnText: {
+    color: '#FFFFFF',
+    fontWeight: '700',
+    fontSize: 13,
+  },
+  couponErrorText: {
+    fontSize: 12,
+    color: '#DC2626',
+    marginTop: 6,
+    fontWeight: '500',
+  },
+  appliedCouponBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: '#F0FDF4',
+    borderWidth: 1,
+    borderColor: '#86EFAC',
+    borderRadius: 10,
+    padding: 10,
+  },
+  appliedCouponCode: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#15803D',
+    letterSpacing: 0.5,
+  },
+  appliedPill: {
+    backgroundColor: '#DCFCE7',
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
+  },
+  appliedPillText: {
+    fontSize: 10,
+    fontWeight: '800',
+    color: '#16A34A',
+  },
+  appliedCouponDesc: {
+    fontSize: 12,
+    color: '#166534',
+    marginTop: 2,
+    fontWeight: '500',
+  },
+  removeCouponBtn: {
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+  },
+  removeCouponText: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: '#DC2626',
+  },
+
   pageWrapper: {
     padding: 16,
     maxWidth: 1140,
