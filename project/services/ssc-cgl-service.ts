@@ -202,6 +202,36 @@ class SSCCGLService {
   }
 
   /**
+   * Fetch custom test topics with metadata
+   */
+  async fetchCustomTopics(): Promise<{ topics: any[]; categories: string[]; totalTopics: number; totalQuestions: number }> {
+    const response = await fetch(`${API_URL}/papers/custom/topics`);
+    if (!response.ok) throw new Error(`Failed to fetch topics: ${response.status}`);
+    return response.json();
+  }
+
+  /**
+   * Create custom mock test
+   */
+  async createCustomTest(params: {
+    topics: string[];
+    questionCount: number;
+    durationMinutes: number;
+    title?: string;
+  }): Promise<{ success: boolean; testId: string; filename: string; paper: any }> {
+    const response = await fetch(`${API_URL}/papers/custom/create`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(params),
+    });
+    if (!response.ok) {
+      const err = await response.json().catch(() => ({}));
+      throw new Error(err.error || `Failed to create test: ${response.status}`);
+    }
+    return response.json();
+  }
+
+  /**
    * Fetch paper content from server by identifier (UUID testId or filename)
    */
   async fetchPaperById(identifier: string): Promise<ParsedMockTest | null> {
@@ -246,7 +276,7 @@ class SSCCGLService {
       id: testId,
       title: testName,
       examType: 'UPSC Principal',
-      duration: paper.duration || 7200, // 2 hours = 7200 seconds
+      duration: paper.duration || (paper.duration_minutes ? paper.duration_minutes * 60 : 7200),
       totalQuestions,
       totalMarks,
       sections,

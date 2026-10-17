@@ -32,6 +32,7 @@ import {
   Crown,
   Sparkles,
   Lock,
+  SlidersHorizontal,
 } from 'lucide-react-native';
 import { useAuth } from '@/context/auth-context';
 import { TestProgressService, SavedTestState } from '@/services/test-progress-service';
@@ -351,6 +352,39 @@ export default function MobileDashboard({
               <Text style={styles.sectionTitle}>Practice Mode</Text>
             </View>
           </View>
+
+          {/* CUSTOM TEST BUILDER (PREMIUM EXCLUSIVE) */}
+          <TouchableOpacity 
+            style={styles.customTestCard} 
+            activeOpacity={0.88}
+            onPress={() => router.push(isSubscribed ? '/custom-test' : '/premium')}
+          >
+            <LinearGradient
+              colors={['#1E1B4B', '#3730A3', '#4F46E5']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+              style={styles.customTestGradient}
+            >
+              <View style={styles.customTestIconBox}>
+                <SlidersHorizontal size={20} color="#FBBF24" />
+              </View>
+              <View style={{ flex: 1, marginLeft: 12 }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                  <Text style={styles.customTestTitle}>Custom Test Builder</Text>
+                  <View style={styles.customTestBadge}>
+                    <Crown size={10} color="#F59E0B" />
+                    <Text style={styles.customTestBadgeText}>PREMIUM</Text>
+                  </View>
+                </View>
+                <Text style={styles.customTestSubtitle}>
+                  Choose custom topics, question count & duration
+                </Text>
+              </View>
+              <View style={styles.customTestArrow}>
+                <ArrowRight size={16} color="#FFFFFF" />
+              </View>
+            </LinearGradient>
+          </TouchableOpacity>
 
           <View style={styles.practiceModesRow}>
             <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push('/practice')}>
@@ -919,5 +953,62 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '800',
     color: '#4338CA',
+  },
+  customTestCard: {
+    borderRadius: 16,
+    overflow: 'hidden',
+    marginBottom: 12,
+    shadowColor: '#4F46E5',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.15,
+    shadowRadius: 8,
+    elevation: 4,
+  },
+  customTestGradient: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 16,
+  },
+  customTestIconBox: {
+    width: 42,
+    height: 42,
+    borderRadius: 12,
+    backgroundColor: 'rgba(255, 255, 255, 0.12)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  customTestTitle: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#FFFFFF',
+  },
+  customTestBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 3,
+    backgroundColor: 'rgba(245, 158, 11, 0.25)',
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 6,
+    borderWidth: 1,
+    borderColor: 'rgba(245, 158, 11, 0.5)',
+  },
+  customTestBadgeText: {
+    fontSize: 9,
+    fontWeight: '800',
+    color: '#FBBF24',
+  },
+  customTestSubtitle: {
+    fontSize: 12,
+    color: '#E0E7FF',
+    marginTop: 2,
+  },
+  customTestArrow: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

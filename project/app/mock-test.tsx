@@ -190,10 +190,13 @@ export default function MockTestScreen() {
           if (targetFilename) {
             paper = await SSCCGLService.fetchPaper(targetFilename);
           } else {
-            const papers = await SSCCGLService.fetchPapersList();
-            const paperInfo = papers.find((p: any) => p.id === testId);
-            if (paperInfo && paperInfo.filename) {
-              paper = await SSCCGLService.fetchPaper(paperInfo.filename);
+            paper = await SSCCGLService.fetchPaperById(testId);
+            if (!paper) {
+              const papers = await SSCCGLService.fetchPapersList();
+              const paperInfo = papers.find((p: any) => p.id === testId || p.testId === testId);
+              if (paperInfo && paperInfo.filename) {
+                paper = await SSCCGLService.fetchPaper(paperInfo.filename);
+              }
             }
           }
         }

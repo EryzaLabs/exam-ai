@@ -54,7 +54,12 @@ app.use((0, cors_1.default)({
     credentials: true,
 }));
 app.use((0, compression_1.default)());
-app.use(express_1.default.json({ limit: '10mb' }));
+app.use(express_1.default.json({
+    limit: '10mb',
+    verify: (req, _res, buf) => {
+        req.rawBody = buf.toString();
+    },
+}));
 app.use(express_1.default.urlencoded({ extended: true, limit: '10mb' }));
 app.use((0, morgan_1.default)(process.env.LOG_LEVEL || 'dev'));
 // API Routes

@@ -573,6 +573,13 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           <BookOpen size={16} color={category === 'topic' ? '#fff' : '#666'} style={{marginRight: 6}} />
           <Text style={[styles.categoryTabText, category === 'topic' && styles.categoryTabTextActive]}>Topic Wise</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.categoryTab, { backgroundColor: '#EEF2FF', borderColor: '#C7D2FE', borderWidth: 1 }]}
+          onPress={() => router.push(isSubscribed ? '/custom-test' : '/premium')}
+        >
+          <SlidersHorizontal size={16} color="#4F46E5" style={{marginRight: 6}} />
+          <Text style={[styles.categoryTabText, { color: '#4F46E5', fontWeight: '700' }]}>Custom Test 👑</Text>
+        </TouchableOpacity>
       </ScrollView>
     );
   };

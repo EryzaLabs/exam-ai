@@ -24,7 +24,8 @@ import {
   Star,
   LogOut,
   ArrowRight,
-  ShieldCheck
+  ShieldCheck,
+  SlidersHorizontal,
 } from 'lucide-react-native';
 import { router, usePathname, useLocalSearchParams } from 'expo-router';
 import { useAuth } from '@/context/auth-context';
@@ -119,6 +120,13 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           >
             <Grid size={20} color={pathname === '/test-list' && activeCategory === 'topic' ? '#fff' : '#64748B'} />
             <Text style={[styles.navText, pathname === '/test-list' && activeCategory === 'topic' && styles.navTextActive]}>Topic Wise</Text>
+          </TouchableOpacity>
+          <TouchableOpacity 
+            style={[styles.navItem, pathname === '/custom-test' && styles.navItemActive]} 
+            onPress={() => router.push(isSubscribed ? '/custom-test' : '/premium')}
+          >
+            <SlidersHorizontal size={20} color={pathname === '/custom-test' ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, pathname === '/custom-test' && styles.navTextActive]}>Custom Test 👑</Text>
           </TouchableOpacity>
           <TouchableOpacity style={[styles.navItem, pathname === '/practice' && styles.navItemActive]} onPress={() => router.push('/practice')}>
             <Zap size={20} color={pathname === '/practice' ? '#fff' : '#64748B'} />
@@ -364,6 +372,20 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                      <Text style={styles.modeDesc}>Focus on specific topics and weak areas</Text>
                   </View>
                   <View style={styles.modeArrow}><ArrowRight size={16} color="#7C3AED" /></View>
+               </LinearGradient>
+             </TouchableOpacity>
+
+             <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push(isSubscribed ? '/custom-test' : '/premium')}>
+               <LinearGradient colors={['#C7D2FE', '#E0E7FF']} style={styles.modeCard}>
+                  <View style={{ flex: 1 }}>
+                     <View style={styles.modeIconIndigo}><SlidersHorizontal size={24} color="#4F46E5" /></View>
+                     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+                       <Text style={styles.modeTitle}>Custom Test</Text>
+                       <Crown size={14} color="#F59E0B" />
+                     </View>
+                     <Text style={styles.modeDesc}>Custom topics, question counts & duration</Text>
+                  </View>
+                  <View style={styles.modeArrow}><ArrowRight size={16} color="#4F46E5" /></View>
                </LinearGradient>
              </TouchableOpacity>
           </View>
@@ -972,6 +994,9 @@ const styles = StyleSheet.create({
   },
   modeIconPurple: {
     width: 48, height: 48, borderRadius: 24, backgroundColor: '#F3E8FF', alignItems: 'center', justifyContent: 'center', marginBottom: 16,
+  },
+  modeIconIndigo: {
+    width: 48, height: 48, borderRadius: 24, backgroundColor: '#EEF2FF', alignItems: 'center', justifyContent: 'center', marginBottom: 16,
   },
   modeTitle: {
     fontSize: 18, fontWeight: '700', color: '#1E293B', marginBottom: 6,
