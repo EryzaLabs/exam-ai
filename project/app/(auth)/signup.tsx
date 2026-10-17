@@ -419,6 +419,14 @@ export default function SignupScreen() {
                   <Text style={styles.footerLink}>Sign in</Text>
                 </TouchableOpacity>
               </View>
+
+              {/* Explore as Guest */}
+              <TouchableOpacity
+                style={{ marginTop: 16, alignItems: 'center', paddingVertical: 6 }}
+                onPress={() => router.replace('/')}
+              >
+                <Text style={{ fontSize: 13, color: '#64748B', fontWeight: '600' }}>← Explore Astra Exam AI as Guest</Text>
+              </TouchableOpacity>
             </View>
           </View>
         </ScrollView>

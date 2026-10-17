@@ -1,24 +1,32 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, SafeAreaView, Dimensions } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
+import { useAuth } from '@/context/auth-context';
 import { ArrowLeft, BookOpen, Clock, AlertCircle, CheckCircle } from 'lucide-react-native';
 
 const { width } = Dimensions.get('window');
 
 export default function TestInstructionsScreen() {
+  const { requireAuth } = useAuth();
   const { testId } = useLocalSearchParams();
   const [language, setLanguage] = useState<'english' | 'hindi'>('english');
   const [agreed, setAgreed] = useState(false);
 
   const handleStartTest = () => {
-    if (!agreed) {
-      alert('Please agree to the instructions to proceed.');
-      return;
-    }
-    
-    router.replace({
-      pathname: '/mock-test',
-      params: { testId, lang: language },
+    requireAuth(() => {
+      if (!agreed) {
+        alert('Please agree to the instructions to proceed.');
+        return;
+      }
+      
+      router.replace({
+        pathname: '/mock-test',
+        params: { testId, lang: language },
+      });
+    }, {
+      title: 'Sign In to Begin Test',
+      feature: 'Mock Test Session',
+      subtitle: 'Create a free account or sign in to start the test timer and save your score.',
     });
   };
 

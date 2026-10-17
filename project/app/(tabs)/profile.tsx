@@ -43,6 +43,10 @@ export default function ProfileScreen() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!user) {
+      setLoading(false);
+      return;
+    }
     loadUserData();
   }, [user]);
 
@@ -180,6 +184,50 @@ export default function ProfileScreen() {
     if (!name) return 'U';
     return name.split(' ').map((n) => n[0]).join('').toUpperCase().slice(0, 2);
   };
+
+  if (!user) {
+    const guestView = (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24, minHeight: 480 }}>
+        <View style={{ width: 72, height: 72, borderRadius: 36, backgroundColor: '#EFF6FF', justifyContent: 'center', alignItems: 'center', marginBottom: 20 }}>
+          <User size={36} color="#3B82F6" />
+        </View>
+        <Text style={{ fontSize: 24, fontWeight: '800', color: '#0F172A', marginBottom: 8, textAlign: 'center' }}>
+          Guest Explorer
+        </Text>
+        <Text style={{ fontSize: 14, color: '#64748B', textAlign: 'center', maxWidth: 360, lineHeight: 22, marginBottom: 28 }}>
+          Sign in or create a free Astra Exam AI account to track your test history, view rank analytics, and manage your subscription.
+        </Text>
+        <View style={{ width: '100%', maxWidth: 320, gap: 12 }}>
+          <TouchableOpacity
+            style={{ backgroundColor: '#3B82F6', paddingVertical: 14, borderRadius: 14, alignItems: 'center', shadowColor: '#3B82F6', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.2, shadowRadius: 8, elevation: 3 }}
+            onPress={() => router.push('/(auth)/signup')}
+          >
+            <Text style={{ color: '#FFFFFF', fontWeight: '700', fontSize: 15 }}>Create Free Account</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{ backgroundColor: '#EFF6FF', paddingVertical: 12, borderRadius: 14, alignItems: 'center', borderWidth: 1, borderColor: '#DBEAFE' }}
+            onPress={() => router.push('/(auth)/login')}
+          >
+            <Text style={{ color: '#1D4ED8', fontWeight: '600', fontSize: 14 }}>Sign In</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+
+    if (isLargeScreen) {
+      return (
+        <DesktopDashboard>
+          {guestView}
+        </DesktopDashboard>
+      );
+    }
+
+    return (
+      <SafeAreaView style={styles.container} edges={['top']}>
+        {guestView}
+      </SafeAreaView>
+    );
+  }
 
   const isPageLoading = loading || isSubscriptionLoading;
 

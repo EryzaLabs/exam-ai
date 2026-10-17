@@ -23,6 +23,7 @@ import {
 } from '@/services/ai-assistant-service';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useDashboardData } from '@/hooks/useDashboardData';
+import { useAuth } from '@/context/auth-context';
 
 const CHAT_HISTORY_KEY = '@vidya_chat_history_tab';
 
@@ -40,6 +41,7 @@ const QUICK_ACTIONS = [
 
 export default function AssistantScreen() {
   const { dashboardStats, performance } = useDashboardData();
+  const { requireAuth } = useAuth();
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);

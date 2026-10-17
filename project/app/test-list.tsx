@@ -69,7 +69,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const [history, setHistory] = useState<TestResult[]>([]);
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
   const [activeTests, setActiveTests] = useState<SavedTestState[]>([]);
-  const { user, isSubscribed: authSubscribed, isSubscriptionLoading, refreshSubscription } = useAuth();
+  const { user, isSubscribed: authSubscribed, isSubscriptionLoading, refreshSubscription, requireAuth } = useAuth();
   const [localSubscribed, setLocalSubscribed] = useState<boolean | null>(null);
   const isSubscribed = localSubscribed !== null ? localSubscribed : authSubscribed;
   const [paymentLoading, setPaymentLoading] = useState(false);

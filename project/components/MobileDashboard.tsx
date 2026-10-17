@@ -66,21 +66,27 @@ export default function MobileDashboard({
   }, [user, refreshing, loadActiveTest]);
 
   const handleResumeTest = () => {
-    if (activeTest) {
-      router.push({
-        pathname: '/mock-test',
-        params: {
-          testId: activeTest.testId,
-          resume: 'true',
-          filename: activeTest.filename || '',
-        },
-      });
-    } else {
-      router.push({
-        pathname: '/test-list',
-        params: { category: 'full' },
-      });
-    }
+    requireAuth(() => {
+      if (activeTest) {
+        router.push({
+          pathname: '/mock-test',
+          params: {
+            testId: activeTest.testId,
+            resume: 'true',
+            filename: activeTest.filename || '',
+          },
+        });
+      } else {
+        router.push({
+          pathname: '/test-list',
+          params: { category: 'full' },
+        });
+      }
+    }, {
+      title: 'Sign In to Start Test',
+      feature: 'Mock Tests',
+      subtitle: 'Create a free account or sign in to start tests and record your score.',
+    });
   };
   return (
     <View style={styles.container}>
@@ -111,16 +117,26 @@ export default function MobileDashboard({
                   )}
                 </View>
                 <Text style={styles.headerSubtitle}>
-                  {isSubscribed ? '👑 Premium Member • All Tests Unlocked' : 'Practice. Analyze. Improve.'}
+                  {isSubscribed ? '👑 Premium Member • All Tests Unlocked' : user ? 'Practice. Analyze. Improve.' : 'Explore 184+ AI Tests & Analytics'}
                 </Text>
               </View>
-              <TouchableOpacity style={styles.bellBtn} onPress={() => {
-                const { Alert } = require('react-native');
-                Alert.alert('Notifications', 'No new notifications at the moment.');
-              }}>
-                <Bell size={24} color="#3B82F6" />
-                <View style={styles.notificationDot} />
-              </TouchableOpacity>
+              {user ? (
+                <TouchableOpacity style={styles.bellBtn} onPress={() => {
+                  const { Alert } = require('react-native');
+                  Alert.alert('Notifications', 'No new notifications at the moment.');
+                }}>
+                  <Bell size={24} color="#3B82F6" />
+                  <View style={styles.notificationDot} />
+                </TouchableOpacity>
+              ) : (
+                <TouchableOpacity 
+                  style={styles.headerAuthPill} 
+                  onPress={() => router.push('/(auth)/login')}
+                  activeOpacity={0.8}
+                >
+                  <Text style={styles.headerAuthPillText}>Sign In</Text>
+                </TouchableOpacity>
+              )}
             </View>
 
             <View style={styles.headerSpacer} />
@@ -149,6 +165,28 @@ export default function MobileDashboard({
               />
             </View>
           </View>
+
+          {/* GUEST BANNER */}
+          {!user && (
+            <View style={styles.guestBanner}>
+              <View style={styles.guestBannerContent}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 4 }}>
+                  <Sparkles size={16} color="#4F46E5" />
+                  <Text style={styles.guestBannerTitle}>Welcome to Astra Exam AI</Text>
+                </View>
+                <Text style={styles.guestBannerText}>
+                  Create a free account to save test scores, track study streaks & get AI weakness analysis.
+                </Text>
+              </View>
+              <TouchableOpacity
+                style={styles.guestBannerBtn}
+                onPress={() => router.push('/(auth)/signup')}
+                activeOpacity={0.85}
+              >
+                <Text style={styles.guestBannerBtnText}>Get Started</Text>
+              </TouchableOpacity>
+            </View>
+          )}
 
           {/* STATS GRID */}
           <View style={styles.statsGrid}>
@@ -356,7 +394,7 @@ export default function MobileDashboard({
           <TouchableOpacity 
             style={styles.customTestCard} 
             activeOpacity={0.88}
-            onPress={() => router.push(isSubscribed ? '/custom-test' : '/premium')}
+            onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-test' : '/premium'), { title: 'Sign In for Custom Test Builder', feature: 'Custom Test Builder' })}
           >
             <LinearGradient
               colors={['#1E1B4B', '#3730A3', '#4F46E5']}
@@ -400,7 +438,7 @@ export default function MobileDashboard({
               </LinearGradient>
             </TouchableOpacity>
 
-            <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push('/practice')}>
+            <TouchableOpacity style={{ flex: 1 }} onPress={() => requireAuth(() => router.push('/practice'), { title: 'Sign In for Quick Practice', feature: 'Practice Mode' })}>
               <LinearGradient colors={['#A7F3D0', '#D1FAE5']} style={styles.modeCard}>
                 <View style={styles.modeIconGreen}><Zap size={24} color="#059669" /></View>
                 <View style={{ flex: 1 }}>
@@ -471,6 +509,64 @@ export default function MobileDashboard({
 }
 
 const styles = StyleSheet.create({
+  headerAuthPill: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 3,
+  },
+  headerAuthPillText: {
+    color: '#2563EB',
+    fontWeight: '700',
+    fontSize: 13,
+  },
+  guestBanner: {
+    backgroundColor: '#FFFFFF',
+    marginHorizontal: 16,
+    marginBottom: 16,
+    borderRadius: 18,
+    padding: 16,
+    borderWidth: 1.5,
+    borderColor: '#EEF2FF',
+    flexDirection: 'row',
+    alignItems: 'center',
+    shadowColor: '#4F46E5',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.08,
+    shadowRadius: 12,
+    elevation: 3,
+  },
+  guestBannerContent: {
+    flex: 1,
+    paddingRight: 12,
+  },
+  guestBannerTitle: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#1E1B4B',
+  },
+  guestBannerText: {
+    fontSize: 12,
+    color: '#64748B',
+    lineHeight: 16,
+  },
+  guestBannerBtn: {
+    backgroundColor: '#3B82F6',
+    paddingVertical: 9,
+    paddingHorizontal: 14,
+    borderRadius: 12,
+  },
+  guestBannerBtnText: {
+    color: '#FFFFFF',
+    fontSize: 12,
+    fontWeight: '700',
+  },
+
   container: {
     flex: 1,
     backgroundColor: '#F8FAFC',

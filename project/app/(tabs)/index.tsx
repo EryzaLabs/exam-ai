@@ -41,6 +41,23 @@ export default function EnhancedHomeScreen() {
     try {
       const user = authUser || auth.currentUser;
       if (!user) {
+         setDashboardStats({
+           questionsAttempted: 0,
+           accuracy: 0,
+           timeSpent: 0,
+           streak: 0,
+           rank: 'Guest Explorer',
+           weeklyImprovement: 0,
+           totalTopics: 0,
+           masteredTopics: 0,
+           totalAvailableTests: 184,
+           userName: 'Guest Explorer',
+           isSubscribed: false,
+         });
+         setPerformance({
+           subjectWisePerformance: {},
+           recentTests: [],
+         });
          setLoading(false);
          return;
       }

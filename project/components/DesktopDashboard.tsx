@@ -23,6 +23,7 @@ import {
   ChevronDown,
   Star,
   LogOut,
+  LogIn,
   ArrowRight,
   ShieldCheck,
   SlidersHorizontal,
@@ -123,35 +124,45 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           </TouchableOpacity>
           <TouchableOpacity 
             style={[styles.navItem, pathname === '/custom-test' && styles.navItemActive]} 
-            onPress={() => router.push(isSubscribed ? '/custom-test' : '/premium')}
+            onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-test' : '/premium'), { title: 'Sign In for Custom Tests', feature: 'Custom Test Builder' })}
           >
             <SlidersHorizontal size={20} color={pathname === '/custom-test' ? '#fff' : '#64748B'} />
             <Text style={[styles.navText, pathname === '/custom-test' && styles.navTextActive]}>Custom Test 👑</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.navItem, pathname === '/practice' && styles.navItemActive]} onPress={() => router.push('/practice')}>
+          <TouchableOpacity style={[styles.navItem, pathname === '/practice' && styles.navItemActive]} onPress={() => requireAuth(() => router.push('/practice'), { title: 'Sign In for Practice Mode', feature: 'Practice Mode' })}>
             <Zap size={20} color={pathname === '/practice' ? '#fff' : '#64748B'} />
             <Text style={[styles.navText, pathname === '/practice' && styles.navTextActive]}>Practice</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.navItem, (pathname === '/progress' || pathname === '/test-history') && styles.navItemActive]} onPress={() => router.push('/progress')}>
+          <TouchableOpacity style={[styles.navItem, (pathname === '/progress' || pathname === '/test-history') && styles.navItemActive]} onPress={() => requireAuth(() => router.push('/progress'), { title: 'Sign In to View Analytics', feature: 'Performance Analytics' })}>
             <BarChart2 size={20} color={(pathname === '/progress' || pathname === '/test-history') ? '#fff' : '#64748B'} />
             <Text style={[styles.navText, (pathname === '/progress' || pathname === '/test-history') && styles.navTextActive]}>Analytics</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.navItem, pathname === '/assistant' && styles.navItemActive]} onPress={() => router.push('/assistant')}>
+          <TouchableOpacity style={[styles.navItem, pathname === '/assistant' && styles.navItemActive]} onPress={() => requireAuth(() => router.push('/assistant'), { title: 'Sign In to use AI Assistant', feature: 'AI Assistant' })}>
             <MessageSquare size={20} color={pathname === '/assistant' ? '#fff' : '#64748B'} />
             <Text style={[styles.navText, pathname === '/assistant' && styles.navTextActive]}>AI Assistant</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.navItem, pathname === '/bookmarks' && styles.navItemActive]} onPress={() => router.push('/bookmarks')}>
+          <TouchableOpacity style={[styles.navItem, pathname === '/bookmarks' && styles.navItemActive]} onPress={() => requireAuth(() => router.push('/bookmarks'), { title: 'Sign In to View Bookmarks', feature: 'Bookmarks' })}>
             <Bookmark size={20} color={pathname === '/bookmarks' ? '#fff' : '#64748B'} />
             <Text style={[styles.navText, pathname === '/bookmarks' && styles.navTextActive]}>Bookmarks</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.navItem, pathname === '/profile' && styles.navItemActive]} onPress={() => router.push('/profile')}>
+          <TouchableOpacity style={[styles.navItem, pathname === '/profile' && styles.navItemActive]} onPress={() => requireAuth(() => router.push('/profile'), { title: 'Sign In to View Profile', feature: 'Profile' })}>
             <User size={20} color={pathname === '/profile' ? '#fff' : '#64748B'} />
             <Text style={[styles.navText, pathname === '/profile' && styles.navTextActive]}>Profile</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.navItem} onPress={handleLogout}>
-            <LogOut size={20} color="#EF4444" />
-            <Text style={[styles.navText, { color: '#EF4444', fontWeight: '600' }]}>Log Out</Text>
-          </TouchableOpacity>
+          {user ? (
+            <TouchableOpacity style={styles.navItem} onPress={handleLogout}>
+              <LogOut size={20} color="#EF4444" />
+              <Text style={[styles.navText, { color: '#EF4444', fontWeight: '600' }]}>Log Out</Text>
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity 
+              style={[styles.navItem, { backgroundColor: '#EFF6FF', borderWidth: 1, borderColor: '#DBEAFE' }]} 
+              onPress={() => router.push('/(auth)/login')}
+            >
+              <LogIn size={20} color="#2563EB" />
+              <Text style={[styles.navText, { color: '#2563EB', fontWeight: '700' }]}>Sign In / Register</Text>
+            </TouchableOpacity>
+          )}
         </ScrollView>
 
         {pathname !== '/premium' && !isSubscriptionLoading && !isSubscribed && (
@@ -195,37 +206,58 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
               <Bell size={20} color="#64748B" />
               <View style={styles.notificationDot} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.userProfile} onPress={() => router.push('/profile')} activeOpacity={0.7}>
-              <View style={styles.avatar}>
-                {(user?.photoURL || dashboardStats?.photoURL) ? (
-                  <Image
-                    source={{ uri: (user?.photoURL || dashboardStats?.photoURL) as string }}
-                    style={styles.avatarImage}
-                    resizeMode="cover"
-                  />
-                ) : (
-                  <Text style={styles.avatarText}>{(dashboardStats?.userName || user?.displayName || user?.email)?.[0]?.toUpperCase() || 'U'}</Text>
-                )}
+            {user ? (
+              <>
+                <TouchableOpacity style={styles.userProfile} onPress={() => router.push('/profile')} activeOpacity={0.7}>
+                  <View style={styles.avatar}>
+                    {(user?.photoURL || dashboardStats?.photoURL) ? (
+                      <Image
+                        source={{ uri: (user?.photoURL || dashboardStats?.photoURL) as string }}
+                        style={styles.avatarImage}
+                        resizeMode="cover"
+                      />
+                    ) : (
+                      <Text style={styles.avatarText}>{(dashboardStats?.userName || user?.displayName || user?.email)?.[0]?.toUpperCase() || 'U'}</Text>
+                    )}
+                  </View>
+                  <View style={{ marginLeft: 12 }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                      <Text style={styles.userName}>{dashboardStats?.userName || user?.displayName || (user?.email ? user.email.split('@')[0] : 'User')}</Text>
+                      {isSubscribed && (
+                        <Crown size={15} color="#F59E0B" fill="#F59E0B" />
+                      )}
+                    </View>
+                    <Text style={[styles.userRole, isSubscribed && { color: '#D97706', fontWeight: '700' }]}>
+                      {isSubscribed ? '👑 Premium Member' : (dashboardStats?.rank || 'Beginner')}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity 
+                  style={styles.logoutIconBtn} 
+                  onPress={handleLogout}
+                  accessibilityLabel="Log Out"
+                >
+                  <LogOut size={18} color="#EF4444" />
+                </TouchableOpacity>
+              </>
+            ) : (
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <TouchableOpacity
+                  style={styles.desktopSignInBtn}
+                  onPress={() => router.push('/(auth)/login')}
+                  activeOpacity={0.8}
+                >
+                  <Text style={styles.desktopSignInBtnText}>Sign In</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.desktopSignUpBtn}
+                  onPress={() => router.push('/(auth)/signup')}
+                  activeOpacity={0.85}
+                >
+                  <Text style={styles.desktopSignUpBtnText}>Get Started Free</Text>
+                </TouchableOpacity>
               </View>
-              <View style={{ marginLeft: 12 }}>
-                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                  <Text style={styles.userName}>{dashboardStats?.userName || user?.displayName || (user?.email ? user.email.split('@')[0] : 'User')}</Text>
-                  {isSubscribed && (
-                    <Crown size={15} color="#F59E0B" fill="#F59E0B" />
-                  )}
-                </View>
-                <Text style={[styles.userRole, isSubscribed && { color: '#D97706', fontWeight: '700' }]}>
-                  {isSubscribed ? '👑 Premium Member' : (dashboardStats?.rank || 'Beginner')}
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity 
-              style={styles.logoutIconBtn} 
-              onPress={handleLogout}
-              accessibilityLabel="Log Out"
-            >
-              <LogOut size={18} color="#EF4444" />
-            </TouchableOpacity>
+            )}
           </View>
         </View>
 
@@ -342,7 +374,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           </View>
 
           <View style={styles.practiceModesRow}>
-             <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push(isSubscribed ? '/custom-ai-test' : '/premium')}>
+             <TouchableOpacity style={{ flex: 1 }} onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-ai-test' : '/premium'), { title: 'Sign In to Generate AI Tests', feature: 'Custom AI Tests' })}>
                <LinearGradient colors={['#FEACA1', '#FEACA1']} style={styles.modeCard}>
                   <View style={{ flex: 1 }}>
                      <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
@@ -356,7 +388,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                </LinearGradient>
              </TouchableOpacity>
              
-             <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push('/practice')}>
+             <TouchableOpacity style={{ flex: 1 }} onPress={() => requireAuth(() => router.push('/practice'), { title: 'Sign In for Practice Mode', feature: 'Practice Mode' })}>
                <LinearGradient colors={['#A7F3D0', '#A7F3D0']} style={styles.modeCard}>
                   <View style={{ flex: 1 }}>
                      <View style={styles.modeIconGreen}><Zap size={24} color="#059669" /></View>
@@ -378,7 +410,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                </LinearGradient>
              </TouchableOpacity>
 
-             <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push(isSubscribed ? '/custom-test' : '/premium')}>
+             <TouchableOpacity style={{ flex: 1 }} onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-test' : '/premium'), { title: 'Sign In for Custom Test Builder', feature: 'Custom Test Builder' })}>
                <LinearGradient colors={['#C7D2FE', '#E0E7FF']} style={styles.modeCard}>
                   <View style={{ flex: 1 }}>
                      <View style={styles.modeIconIndigo}><SlidersHorizontal size={24} color="#4F46E5" /></View>
@@ -656,6 +688,36 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
 const Check = ({size, color, style}: any) => <View style={style}><Text style={{color, fontSize: size}}>✓</Text></View>;
 
 const styles = StyleSheet.create({
+  desktopSignInBtn: {
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+    backgroundColor: '#FFFFFF',
+  },
+  desktopSignInBtnText: {
+    color: '#334155',
+    fontWeight: '600',
+    fontSize: 14,
+  },
+  desktopSignUpBtn: {
+    paddingVertical: 8,
+    paddingHorizontal: 18,
+    borderRadius: 10,
+    backgroundColor: '#3B82F6',
+    shadowColor: '#3B82F6',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  desktopSignUpBtnText: {
+    color: '#FFFFFF',
+    fontWeight: '700',
+    fontSize: 14,
+  },
+
   container: {
     flex: 1,
     flexDirection: 'row',

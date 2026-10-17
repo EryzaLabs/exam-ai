@@ -4,9 +4,16 @@ import { auth, db } from '@/services/firebaseConfig';
 import { doc, onSnapshot, getDoc } from 'firebase/firestore';
 import { useRouter, useSegments, useRootNavigationState } from 'expo-router';
 import UserService from '@/services/user-service';
+import AuthPromptModal from '@/components/AuthPromptModal';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000/api';
+
+export interface AuthPromptOptions {
+  title?: string;
+  subtitle?: string;
+  feature?: string;
+}
 
 interface AuthContextType {
   user: User | null;
@@ -14,6 +21,9 @@ interface AuthContextType {
   isSubscribed: boolean;
   isSubscriptionLoading: boolean;
   refreshSubscription: () => Promise<boolean>;
+  requireAuth: (callback: () => void, options?: AuthPromptOptions) => void;
+  showAuthPrompt: (options?: AuthPromptOptions) => void;
+  hideAuthPrompt: () => void;
 }
 
 const AuthContext = createContext<AuthContextType>({
@@ -22,6 +32,9 @@ const AuthContext = createContext<AuthContextType>({
   isSubscribed: false,
   isSubscriptionLoading: true,
   refreshSubscription: async () => false,
+  requireAuth: (cb) => cb(),
+  showAuthPrompt: () => {},
+  hideAuthPrompt: () => {},
 });
 
 export const useAuth = () => useContext(AuthContext);
@@ -34,6 +47,34 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const segments = useSegments();
   const router = useRouter();
   const rootNavigationState = useRootNavigationState();
+  const [authPrompt, setAuthPrompt] = useState<{
+    visible: boolean;
+    title?: string;
+    subtitle?: string;
+    feature?: string;
+  }>({ visible: false });
+
+  const showAuthPrompt = React.useCallback((options?: AuthPromptOptions) => {
+    setAuthPrompt({
+      visible: true,
+      title: options?.title,
+      subtitle: options?.subtitle,
+      feature: options?.feature,
+    });
+  }, []);
+
+  const hideAuthPrompt = React.useCallback(() => {
+    setAuthPrompt(prev => ({ ...prev, visible: false }));
+  }, []);
+
+  const requireAuth = React.useCallback((callback: () => void, options?: AuthPromptOptions) => {
+    if (user) {
+      callback();
+    } else {
+      showAuthPrompt(options);
+    }
+  }, [user, showAuthPrompt]);
+
 
   const refreshSubscription = async (targetUid?: string): Promise<boolean> => {
     const uid = targetUid || auth.currentUser?.uid;
@@ -135,9 +176,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     const inAuthGroup = segments[0] === '(auth)';
 
-    if (!user && !inAuthGroup) {
-      // Redirect to the login page if the user is not signed in
-      router.replace('/login');
+    if (!user && inAuthGroup) {
+      // User is already on an auth page (login/signup)
+      return;
+    } else if (!user && !inAuthGroup) {
+      // Allow guest user to explore home, tests, and preview features!
+      // Only redirect if specifically navigating to profile setup
+      if (segments.includes('profile-setup')) {
+        router.replace('/login');
+      }
+      return;
     } else if (user && inAuthGroup) {
       // Check if user has completed profile
       const checkProfile = async () => {
@@ -169,9 +217,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         isSubscribed,
         isSubscriptionLoading,
         refreshSubscription,
+        requireAuth,
+        showAuthPrompt,
+        hideAuthPrompt,
       }}
     >
       {children}
+      <AuthPromptModal
+        visible={authPrompt.visible}
+        onClose={hideAuthPrompt}
+        title={authPrompt.title}
+        subtitle={authPrompt.subtitle}
+        feature={authPrompt.feature}
+      />
     </AuthContext.Provider>
   );
 }

@@ -39,6 +39,7 @@ import SSCCGLService, {
 import { TestProgressService, SavedTestState, TestResult } from '@/services/test-progress-service';
 import TestSeriesService from '@/services/testseries-service';
 import { addBookmark } from '@/services/bookmark-service';
+import { useAuth } from '@/context/auth-context';
 
 const { width } = Dimensions.get('window');
 
@@ -60,6 +61,18 @@ interface QuestionState {
 }
 
 export default function MockTestScreen() {
+  const { user, isLoading: authLoading, showAuthPrompt } = useAuth();
+
+  useEffect(() => {
+    if (!authLoading && !user) {
+      router.replace('/');
+      showAuthPrompt({
+        title: 'Sign In to Start Test',
+        subtitle: 'Please create a free account or sign in to take tests and save your progress.',
+        feature: 'Mock Test',
+      });
+    }
+  }, [authLoading, user, showAuthPrompt]);
   const params = useLocalSearchParams();
   const testId = params.testId as string;
   const resume = params.resume === 'true';
