@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { useColorScheme } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const STORAGE_KEY = '@astra_theme_preference';
@@ -153,31 +152,33 @@ const ThemeContext = createContext<ThemeContextType>({
 export const useTheme = () => useContext(ThemeContext);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const systemScheme = useColorScheme();
-  const [isDark, setIsDark] = useState<boolean>(systemScheme === 'dark');
+  // Default is light theme unless explicitly chosen by the user
+  const [isDark, setIsDark] = useState<boolean>(false);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY).then((val) => {
-      if (val === 'dark') setIsDark(true);
-      else if (val === 'light') setIsDark(false);
-      else setIsDark(systemScheme === 'dark');
+      if (val === 'dark') {
+        setIsDark(true);
+      } else {
+        setIsDark(false); // Default is light theme
+      }
       setLoaded(true);
     }).catch(() => {
-      setIsDark(systemScheme === 'dark');
+      setIsDark(false); // Default is light theme
       setLoaded(true);
     });
   }, []);
 
   useEffect(() => {
-    if (loaded && typeof document !== 'undefined') {
+    if (typeof document !== 'undefined') {
       const bg = isDark ? DarkColors.background : LightColors.background;
       document.body.style.backgroundColor = bg;
       if (document.documentElement) {
         document.documentElement.style.backgroundColor = bg;
       }
     }
-  }, [isDark, loaded]);
+  }, [isDark]);
 
   const toggleTheme = () => {
     setIsDark((prev) => {
@@ -186,8 +187,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       return next;
     });
   };
-
-  if (!loaded) return null;
 
   return (
     <ThemeContext.Provider value={{ isDark, colors: isDark ? DarkColors : LightColors, toggleTheme }}>
