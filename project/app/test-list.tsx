@@ -591,11 +591,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     );
 
     if (isLargeScreen) {
-      return (
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-          {tabs}
-        </View>
-      );
+      return tabs;
     }
 
     return (
@@ -708,7 +704,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     <ContainerComponent style={[styles.container, { backgroundColor: colors.background, flex: 1 }]} edges={isLargeScreen ? [] : ['top']}>
       {isLargeScreen ? (
         <View style={[styles.desktopHeaderRow, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
-          <View style={{ flex: 1 }}>
+          <View style={{ flex: 1, minWidth: 260, marginRight: 16 }}>
             <Text style={[styles.desktopHeaderTitle, { color: colors.textPrimary }]}>
               {category === 'full' ? 'Full Mock Tests' : category === 'topic' ? (selectedTopic || 'Topic-wise Tests') : 'All Mock Tests'}
             </Text>
@@ -972,12 +968,11 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   categoryTab: {
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 20,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 18,
     backgroundColor: '#f5f5f5',
-    marginRight: 8,
-    height: 36,
+    height: 34,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -985,7 +980,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#4A90E2',
   },
   categoryTabText: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '600',
     color: '#666',
   },
@@ -1659,13 +1654,14 @@ const styles = StyleSheet.create({
   },
   desktopHeaderRow: {
     paddingHorizontal: 24,
-    paddingVertical: 18,
+    paddingVertical: 14,
     borderBottomWidth: 1,
     borderBottomColor: '#E2E8F0',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    gap: 16,
+    flexWrap: 'wrap',
+    gap: 12,
   },
   desktopHeaderTitle: {
     fontSize: 22,
@@ -1680,9 +1676,13 @@ const styles = StyleSheet.create({
   desktopControlsRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: 8,
   },
   statusFilterRow: {
     flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
     paddingHorizontal: 16,
     paddingVertical: 10,
     borderBottomWidth: 1,
