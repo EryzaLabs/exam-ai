@@ -33,6 +33,7 @@ import {
   Sparkles,
   Lock,
 } from 'lucide-react-native';
+import { useAuth } from '@/context/auth-context';
 
 export default function MobileDashboard({
   performance,
@@ -41,6 +42,8 @@ export default function MobileDashboard({
   onRefresh,
 }: any) {
   const [searchQuery, setSearchQuery] = React.useState('');
+  const { user, isSubscribed: authSubscribed, isSubscriptionLoading } = useAuth();
+  const isSubscribed = authSubscribed || dashboardStats?.isSubscribed === true;
   return (
     <View style={styles.container}>
       <StatusBar style="light" />
@@ -63,9 +66,16 @@ export default function MobileDashboard({
           <SafeAreaView edges={['top']} style={styles.headerSafeArea}>
             <View style={styles.headerTop}>
               <View>
-                <Text style={styles.headerTitle}>UPSC</Text>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                  <Text style={styles.headerTitle}>UPSC</Text>
+                  {isSubscribed && (
+                    <Crown size={22} color="#F59E0B" fill="#F59E0B" />
+                  )}
+                </View>
                 <Text style={styles.headerTitle}>Mock Tests</Text>
-                <Text style={styles.headerSubtitle}>Practice. Analyze. Improve.</Text>
+                <Text style={styles.headerSubtitle}>
+                  {isSubscribed ? '👑 Premium Member • All Tests Unlocked' : 'Practice. Analyze. Improve.'}
+                </Text>
               </View>
               <TouchableOpacity style={styles.bellBtn} onPress={() => {
                 const { Alert } = require('react-native');
@@ -185,46 +195,48 @@ export default function MobileDashboard({
             </TouchableOpacity>
           </View>
 
-          {/* GO PREMIUM PROMO CARD */}
-          <TouchableOpacity 
-            style={styles.premiumBannerCard} 
-            onPress={() => router.push('/premium')}
-            activeOpacity={0.9}
-          >
-            <LinearGradient
-              colors={['#1E1B4B', '#312E81', '#4338CA']}
-              start={{ x: 0, y: 0 }}
-              end={{ x: 1, y: 1 }}
-              style={styles.premiumBannerGradient}
+          {/* GO PREMIUM PROMO CARD (ONLY SHOWN FOR NON-SUBSCRIBED USERS) */}
+          {!isSubscriptionLoading && !isSubscribed && (
+            <TouchableOpacity 
+              style={styles.premiumBannerCard} 
+              onPress={() => router.push('/premium')}
+              activeOpacity={0.9}
             >
-              <View style={styles.premiumBannerHeader}>
-                <View style={styles.premiumBadge}>
-                  <Crown size={12} color="#F59E0B" />
-                  <Text style={styles.premiumBadgeText}>PREMIUM PASS</Text>
+              <LinearGradient
+                colors={['#1E1B4B', '#312E81', '#4338CA']}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+                style={styles.premiumBannerGradient}
+              >
+                <View style={styles.premiumBannerHeader}>
+                  <View style={styles.premiumBadge}>
+                    <Crown size={12} color="#F59E0B" />
+                    <Text style={styles.premiumBadgeText}>PREMIUM PASS</Text>
+                  </View>
+                  <View style={styles.premiumPriceTag}>
+                    <Text style={styles.premiumPriceDiscount}>67% OFF</Text>
+                    <Text style={styles.premiumPriceText}>₹499</Text>
+                  </View>
                 </View>
-                <View style={styles.premiumPriceTag}>
-                  <Text style={styles.premiumPriceDiscount}>67% OFF</Text>
-                  <Text style={styles.premiumPriceText}>₹499</Text>
-                </View>
-              </View>
 
-              <Text style={styles.premiumBannerTitle}>UPSC Principal 2026 Test Series</Text>
-              <Text style={styles.premiumBannerSubtitle}>
-                Unlock 26 Full Mocks • 158 Topic Tests • Daily New Tests Added
-              </Text>
+                <Text style={styles.premiumBannerTitle}>UPSC Principal 2026 Test Series</Text>
+                <Text style={styles.premiumBannerSubtitle}>
+                  Unlock 26 Full Mocks • 158 Topic Tests • Daily New Tests Added
+                </Text>
 
-              <View style={styles.premiumBannerFooter}>
-                <View style={styles.premiumPerksRow}>
-                  <Sparkles size={14} color="#FBBF24" />
-                  <Text style={styles.premiumPerksText}>Unlimited Re-attempts & Solutions</Text>
+                <View style={styles.premiumBannerFooter}>
+                  <View style={styles.premiumPerksRow}>
+                    <Sparkles size={14} color="#FBBF24" />
+                    <Text style={styles.premiumPerksText}>Unlimited Re-attempts & Solutions</Text>
+                  </View>
+                  <View style={styles.premiumActionBtn}>
+                    <Text style={styles.premiumActionBtnText}>Upgrade</Text>
+                    <ChevronRight size={16} color="#4338CA" />
+                  </View>
                 </View>
-                <View style={styles.premiumActionBtn}>
-                  <Text style={styles.premiumActionBtnText}>Upgrade</Text>
-                  <ChevronRight size={16} color="#4338CA" />
-                </View>
-              </View>
-            </LinearGradient>
-          </TouchableOpacity>
+              </LinearGradient>
+            </TouchableOpacity>
+          )}
 
           {/* FEATURED BANNER */}
           <View style={styles.sectionHeader}>
@@ -232,10 +244,12 @@ export default function MobileDashboard({
               <Star size={20} color="#F59E0B" fill="#F59E0B" />
               <Text style={styles.sectionTitle}>Featured</Text>
             </View>
-            <TouchableOpacity onPress={() => router.push('/premium')}><Text style={styles.viewAll}>Go Premium →</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => router.push(isSubscribed ? { pathname: '/test-list', params: { category: 'full' } } : '/premium')}>
+              <Text style={styles.viewAll}>{isSubscribed ? 'View All →' : 'Go Premium →'}</Text>
+            </TouchableOpacity>
           </View>
 
-          <TouchableOpacity onPress={() => router.push('/premium')} activeOpacity={0.92}>
+          <TouchableOpacity onPress={() => router.push(isSubscribed ? { pathname: '/test-list', params: { category: 'full' } } : '/premium')} activeOpacity={0.92}>
             <ImageBackground
               source={require('@/assets/images/upsc-bg.png')}
               style={[styles.featuredBanner, { backgroundColor: '#1E40AF' }]}
