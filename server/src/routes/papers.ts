@@ -31,15 +31,20 @@ router.get('/', (req: Request, res: Response) => {
     }
 
     const papers = allFiles.map((fileObj) => {
-        // Read the actual title from the JSON file!
+        // Read the actual title and test_id from the JSON file!
         let title = "UPSC Principal Test";
+        let testId = fileObj.filename;
         try {
             const fileData = JSON.parse(fs.readFileSync(fileObj.fullPath, 'utf8'));
             title = fileData.test_name || title;
+            if (fileData.test_id) {
+                testId = fileData.test_id;
+            }
         } catch (e) {}
         
         return {
             id: fileObj.filename,
+            testId: testId,
             title: title,
             filename: fileObj.filename,
             hasAnswers: true // Answers are embedded in our new JSONs
@@ -49,6 +54,40 @@ router.get('/', (req: Request, res: Response) => {
     res.json(papers);
   } catch (error: any) {
     console.error('Error listing papers:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// GET /api/papers/find/:identifier - Find paper content by test_id or filename
+router.get('/find/:identifier', (req: Request, res: Response) => {
+  try {
+    const identifier = decodeURIComponent(req.params.identifier);
+    const fullMockDir = path.join(TESTS_DIR, 'full_mocks');
+    const topicWiseDir = path.join(TESTS_DIR, 'topic_wise');
+
+    const searchDirs = [fullMockDir, topicWiseDir];
+    for (const dir of searchDirs) {
+      if (!fs.existsSync(dir)) continue;
+      const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
+      for (const file of files) {
+        const fullPath = path.join(dir, file);
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (
+            content.includes(`"test_id": "${identifier}"`) ||
+            content.includes(`"test_id":"${identifier}"`) ||
+            file === identifier ||
+            file.replace('.json', '') === identifier
+          ) {
+            res.setHeader('Content-Type', 'application/json');
+            return res.send(content);
+          }
+        } catch (e) {}
+      }
+    }
+    return res.status(404).json({ error: 'Paper not found' });
+  } catch (error: any) {
+    console.error('Error finding paper by id:', error);
     res.status(500).json({ error: error.message });
   }
 });

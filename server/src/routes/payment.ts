@@ -294,7 +294,7 @@ router.get('/status/:orderId', async (req: Request, res: Response) => {
  * POST /api/payment/webhook
  * Cashfree webhook handler for real-time order/payment notifications
  */
-router.post('/webhook', (req: Request, res: Response) => {
+router.post('/webhook', async (req: Request, res: Response) => {
   try {
     const signature = req.headers['x-webhook-signature'] as string;
     const timestamp = req.headers['x-webhook-timestamp'] as string;

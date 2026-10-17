@@ -442,7 +442,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
              <View style={styles.actionButtonsRowNew}>
                <TouchableOpacity
                  style={styles.viewResultButtonNew}
-                 onPress={() => router.push({ pathname: '/test-result', params: { attemptId: attempt.attemptId } })}
+                 onPress={() => router.push({ pathname: '/test-result', params: { attemptId: attempt.attemptId, testId: test.id, filename: test.filename, testTitle: test.title } })}
                  activeOpacity={0.8}
                >
                  <Eye size={13} color="#fff" style={{ marginRight: 4 }} />

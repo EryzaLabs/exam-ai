@@ -44,7 +44,6 @@ import SSCCGLService, {
   UserAnswer,
 } from '@/services/ssc-cgl-service';
 import { TestProgressService } from '@/services/test-progress-service';
-import TestSeriesService from '@/services/testseries-service';
 import ReportService, { ReportType } from '@/services/report-service';
 
 const { width } = Dimensions.get('window');
@@ -85,80 +84,56 @@ export default function TestResultScreen() {
         if (result) {
             setAnalytics(result);
             
-            // Ensure Paper is Loaded
-            let testData = SSCCGLService.getPaper(result.testId);
+            const targetTestId = result.testId || (params.testId as string);
+            const targetFilename = (result as any).filename || (params.filename as string);
             
-            if (!testData) {
-                // 1. Try TestSeries cache first
-                let cachedPaper = await TestSeriesService.getTestPaperFromCache(result.testId);
-                
-                // 2. Try Global search if cache fails (user cleared cache or switched devices)
-                if (!cachedPaper) {
-                    cachedPaper = await TestSeriesService.fetchTestPaperGlobally(result.testId);
-                }
-
-                if (cachedPaper) {
-                    await SSCCGLService.storePaperInMemory(cachedPaper);
-                    testData = SSCCGLService.getPaper(result.testId);
-                }
-
-                // 3. Try old local papers list if still not found
-                if (!testData) {
-                  const papers = await SSCCGLService.fetchPapersList();
-                  const paperInfo = papers.find((p: any) => p.id === result!.testId);
-                  
-                  if (paperInfo && paperInfo.filename) {
-                      testData = await SSCCGLService.fetchPaper(paperInfo.filename);
-                  }
-                }
+            // Ensure Paper is Loaded
+            let testData: ParsedMockTest | null = null;
+            if (targetTestId) {
+                testData = SSCCGLService.getPaper(targetTestId);
+            }
+            if (!testData && targetFilename) {
+                testData = SSCCGLService.getPaper(targetFilename);
             }
             
-            // Check if AI answers are available and merge them
-            if (testData && result.evaluationStatus === 'completed') {
-              try {
-                const status = await TestSeriesService.checkAnswerGenerationStatus(result.testId);
-                if (status.answersAvailable) {
-                  console.log('Loading AI-generated answers...');
-                  const aiAnswers = await TestSeriesService.fetchAnswers(result.testId);
-                  
-                  if (aiAnswers && aiAnswers.sections) {
-                    // Merge AI explanations into test data
-                    testData.sections.forEach((section: any) => {
-                      const aiSection = aiAnswers.sections.find(
-                        (s: any) => s.section_name === section.title
-                      );
-                      
-                      if (aiSection) {
-                        section.questions.forEach((question: any) => {
-                          const aiQuestion = aiSection.questions.find(
-                            (q: any) => q.question_id === question.id
-                          );
-                          
-                          if (aiQuestion && aiQuestion.ai_generated) {
-                            const aiData = aiQuestion.ai_generated;
-                            
-                            // Update explanation
-                            if (aiData.english && aiData.english.explanation) {
-                              question.explanation = {
-                                english: aiData.english.explanation,
-                                hindi: aiData.hindi?.explanation || aiData.english.explanation
-                              };
-                            }
-                            
-                            // Update key concepts
-                            if (aiData.english && aiData.english.key_concepts) {
-                              question.keyConcepts = aiData.english.key_concepts;
-                            }
-                          }
-                        });
-                      }
-                    });
-                    console.log('AI answers merged successfully');
-                  }
+            if (!testData) {
+                // 1. If filename is provided, fetch directly from /api/papers/:filename
+                if (targetFilename) {
+                    try {
+                        testData = await SSCCGLService.fetchPaper(targetFilename);
+                    } catch (e) {
+                        console.warn('Failed to fetch paper by filename:', e);
+                    }
                 }
-              } catch (error) {
-                console.error('Error fetching AI answers:', error);
-              }
+                
+                // 2. Try fetching by identifier (UUID testId) via /api/papers/find/:id
+                if (!testData && targetTestId) {
+                    try {
+                        testData = await SSCCGLService.fetchPaperById(targetTestId);
+                    } catch (e) {
+                        console.warn('Failed to fetch paper by id:', e);
+                    }
+                }
+                
+                // 3. Match against papers list
+                if (!testData) {
+                    try {
+                        const papers = await SSCCGLService.fetchPapersList();
+                        const paperInfo = papers.find((p: any) => 
+                            p.id === targetTestId || 
+                            p.testId === targetTestId || 
+                            p.filename === targetFilename ||
+                            p.filename === targetTestId ||
+                            (result!.testTitle && p.title && p.title.trim().toLowerCase() === result!.testTitle.trim().toLowerCase()) ||
+                            (params.testTitle && p.title && p.title.trim().toLowerCase() === (params.testTitle as string).trim().toLowerCase())
+                        );
+                        if (paperInfo && paperInfo.filename) {
+                            testData = await SSCCGLService.fetchPaper(paperInfo.filename);
+                        }
+                    } catch (e) {
+                        console.warn('Failed to fetch paper from list:', e);
+                    }
+                }
             }
 
             // Restore exact question order that user saw during the test
@@ -179,8 +154,8 @@ export default function TestResultScreen() {
                   const start = sectionStartIndices[sIdx];
                   const end = sIdx < testData!.sections.length - 1 
                     ? sectionStartIndices[sIdx + 1] 
-                    : result.questionOrder!.length;
-                  const secQuestionIds = result.questionOrder!.slice(start, end);
+                    : result!.questionOrder!.length;
+                  const secQuestionIds = result!.questionOrder!.slice(start, end);
                   
                   const orderedQuestions = secQuestionIds
                     .map(qId => questionMap.get(qId)!)
@@ -215,52 +190,16 @@ export default function TestResultScreen() {
   };
 
   const handleReevaluate = async () => {
-    if (!analytics) return;
-    
-    Alert.alert(
-      'Re-evaluate Test',
-      'This will check for AI-generated answers and update your test evaluation. Continue?',
-      [
-        { text: 'Cancel', style: 'cancel' },
-        {
-          text: 'Re-evaluate',
-          onPress: async () => {
-            try {
-              setIsReevaluating(true);
-              
-              // Check if answers are available
-              const status = await TestSeriesService.checkAnswerGenerationStatus(analytics.testId);
-              
-              if (!status.answersAvailable || status.status !== 'completed') {
-                Alert.alert(
-                  'Not Ready',
-                  'AI answers are not yet available for this test. Please try again later.',
-                  [{ text: 'OK' }]
-                );
-                return;
-              }
-              
-              // Update status in Firebase
-              await TestProgressService.updateAnswerGenerationStatus(attemptId, 'completed');
-              
-              // Reload results
-              await loadResults();
-              
-              Alert.alert(
-                'Success',
-                'Test has been re-evaluated with AI answers.',
-                [{ text: 'OK' }]
-              );
-            } catch (error) {
-              console.error('Re-evaluation error:', error);
-              Alert.alert('Error', 'Failed to re-evaluate test');
-            } finally {
-              setIsReevaluating(false);
-            }
-          }
-        }
-      ]
-    );
+    try {
+      setIsReevaluating(true);
+      await loadResults();
+      Alert.alert('Refreshed', 'Results reloaded successfully.');
+    } catch (error) {
+      console.error('Re-evaluation error:', error);
+      Alert.alert('Error', 'Failed to refresh test results');
+    } finally {
+      setIsReevaluating(false);
+    }
   };
 
   const handleReportQuestion = (question: ParsedQuestion) => {
@@ -535,8 +474,8 @@ export default function TestResultScreen() {
   const renderSolutionsTab = () => {
     if (!test || !analytics) return null;
 
-    const attempt = SSCCGLService.getAttempt(attemptId);
-    if (!attempt) return null;
+    const memoryAttempt = SSCCGLService.getAttempt(attemptId);
+    const answers = memoryAttempt?.answers || (analytics as any)?.answers || [];
 
     const allQuestions = test.sections.flatMap((s) => s.questions);
     let globalQuestionCounter = 0;
@@ -549,7 +488,7 @@ export default function TestResultScreen() {
             {section.questions.map((question) => {
               globalQuestionCounter += 1;
               const currentNum = globalQuestionCounter;
-              const userAnswer = attempt.answers.find((a) => a.questionId === question.id);
+              const userAnswer = answers.find((a: any) => a.questionId === question.id);
               const isCorrect = userAnswer?.isCorrect;
               const isAttempted = userAnswer !== undefined;
 
@@ -776,7 +715,7 @@ export default function TestResultScreen() {
       <View style={styles.footer}>
         <TouchableOpacity
           style={styles.footerButton}
-          onPress={() => router.replace('/practice')}
+          onPress={() => { if (router.canGoBack()) { router.back(); } else { router.replace('/test-list'); } }}
         >
           <Home size={20} color="#4A90E2" />
           <Text style={styles.footerButtonText}>Back to Tests</Text>

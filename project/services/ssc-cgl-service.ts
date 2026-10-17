@@ -5,7 +5,7 @@
 
 import { Platform } from 'react-native';
 
-const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://astra-backend.eryzalabs.cloud/api';
+const API_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000/api';
 
 export interface SSCCGLOption {
   prompt: string;
@@ -194,28 +194,32 @@ class SSCCGLService {
    * Fetch paper content from server
    */
   async fetchPaper(filename: string): Promise<ParsedMockTest> {
-    const response = await fetch(`${API_URL}/papers/${filename}`);
-    if (!response.ok) throw new Error('Failed to fetch paper content');
+    const cleanFilename = filename.startsWith('/') ? filename.slice(1) : filename;
+    const response = await fetch(`${API_URL}/papers/${cleanFilename}`);
+    if (!response.ok) throw new Error(`Failed to fetch paper content: ${response.status}`);
     const paperData = await response.json();
-    
-    // Check if answers exist
-    let answersData = undefined;
-    try {
-        const ansResponse = await fetch(`${API_URL}/papers/${filename}/answers`);
-        if (ansResponse.ok) {
-            answersData = await ansResponse.json();
-        }
-    } catch (e) {
-        // Ignore answer fetch error
-    }
+    return this.loadPaper(paperData, undefined, cleanFilename);
+  }
 
-    return this.loadPaper(paperData, answersData);
+  /**
+   * Fetch paper content from server by identifier (UUID testId or filename)
+   */
+  async fetchPaperById(identifier: string): Promise<ParsedMockTest | null> {
+    try {
+      const response = await fetch(`${API_URL}/papers/find/${encodeURIComponent(identifier)}`);
+      if (!response.ok) return null;
+      const paperData = await response.json();
+      return this.loadPaper(paperData, undefined);
+    } catch (e) {
+      console.warn('fetchPaperById failed:', e);
+      return null;
+    }
   }
 
   /**
    * Load a single SSC CGL paper from JSON
    */
-  async loadPaper(paperData: any, answersData?: any): Promise<ParsedMockTest> {
+  async loadPaper(paperData: any, answersData?: any, filename?: string): Promise<ParsedMockTest> {
     const paper = paperData.data || paperData;
     
     // Fallbacks for the new schema
@@ -248,8 +252,12 @@ class SSCCGLService {
       sections,
       metadata: this.extractMetadata(testName),
     };
+    (mockTest as any).filename = filename || (paper as any).filename;
 
     this.papers.set(mockTest.id, mockTest);
+    if (filename) {
+      this.papers.set(filename, mockTest);
+    }
     return mockTest;
   }
 

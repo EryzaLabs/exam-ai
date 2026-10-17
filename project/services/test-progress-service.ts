@@ -30,6 +30,8 @@ export interface SavedTestState {
 export interface TestResult extends TestAnalytics {
   date: string; // ISO string
   testTitle?: string;
+  filename?: string;
+  answers?: any[];
   id?: string; // Firestore ID
   answerGenerationStatus?: 'not-needed' | 'pending' | 'in-progress' | 'completed' | 'failed';
   evaluationStatus?: 'pending' | 'completed';

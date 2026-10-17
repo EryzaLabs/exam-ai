@@ -443,10 +443,11 @@ export default function MockTestScreen() {
         const currentQuestionOrder = test?.sections.flatMap(section => section.questions.map(q => q.id));
         await TestProgressService.saveTestResult({
             ...analytics,
+            answers: attempt.answers,
             date: new Date().toISOString(),
             testTitle: test?.title,
             filename: (params.filename as string) || (test as any)?.filename || undefined,
-            answerGenerationStatus: source === 'testseries' ? 'completed' : 'not-needed',
+            answerGenerationStatus: 'not-needed',
             evaluationStatus: 'completed',
             questionOrder: currentQuestionOrder
         });
