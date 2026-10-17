@@ -1,4 +1,5 @@
 export declare function getFirebaseAdmin(): import("firebase-admin/app").App;
+export declare function getFirestoreAdmin(): FirebaseFirestore.Firestore | null;
 /**
  * Backend function to write subscription status using Firebase Admin SDK.
  * Bypasses Firestore Security Rules completely.

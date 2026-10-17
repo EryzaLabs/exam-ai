@@ -33,6 +33,8 @@ import {
   X,
   Play,
   RotateCcw,
+  Brain,
+  ChevronRight,
 } from 'lucide-react-native';
 import SSCCGLService from '@/services/ssc-cgl-service';
 import { useAuth } from '@/context/auth-context';
@@ -295,6 +297,34 @@ export default function CustomTestScreen() {
       </View>
 
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+        {/* Universal AI Generator Promo Banner */}
+        <TouchableOpacity
+          style={styles.aiPromoBanner}
+          activeOpacity={0.88}
+          onPress={() => router.push('/custom-ai-test')}
+        >
+          <LinearGradient
+            colors={['#1E1B4B', '#3730A3']}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 0 }}
+            style={styles.aiPromoGradient}
+          >
+            <View style={styles.aiPromoIconBox}>
+              <Brain size={22} color="#FBBF24" />
+            </View>
+            <View style={{ flex: 1, marginLeft: 12 }}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                <Text style={styles.aiPromoTitle}>Test ANY topic in the world</Text>
+                <Sparkles size={14} color="#FBBF24" />
+              </View>
+              <Text style={styles.aiPromoSubtitle}>
+                Try Custom AI Test Studio (1 free test per day)
+              </Text>
+            </View>
+            <ChevronRight size={18} color="#FFFFFF" />
+          </LinearGradient>
+        </TouchableOpacity>
+
         {/* Step 1: Topics Selection */}
         <View style={styles.sectionContainer}>
           <View style={styles.sectionHeaderRow}>
@@ -604,6 +634,38 @@ const styles = StyleSheet.create({
   scrollContent: {
     padding: 16,
     gap: 16,
+  },
+  aiPromoBanner: {
+    borderRadius: 16,
+    overflow: 'hidden',
+    shadowColor: '#3730A3',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.15,
+    shadowRadius: 8,
+    elevation: 3,
+  },
+  aiPromoGradient: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 16,
+  },
+  aiPromoIconBox: {
+    width: 44,
+    height: 44,
+    borderRadius: 12,
+    backgroundColor: 'rgba(255, 255, 255, 0.12)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  aiPromoTitle: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#FFFFFF',
+  },
+  aiPromoSubtitle: {
+    fontSize: 12,
+    color: '#E0E7FF',
+    marginTop: 2,
   },
   sectionContainer: {
     backgroundColor: '#FFFFFF',

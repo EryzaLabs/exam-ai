@@ -4,12 +4,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getFirebaseAdmin = getFirebaseAdmin;
+exports.getFirestoreAdmin = getFirestoreAdmin;
 exports.recordBackendSubscription = recordBackendSubscription;
 const app_1 = require("firebase-admin/app");
 const firestore_1 = require("firebase-admin/firestore");
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
 let isInitialized = false;
+let hasExplicitCredentials = false;
 function getFirebaseAdmin() {
     if (isInitialized && (0, app_1.getApps)().length > 0) {
         return (0, app_1.getApps)()[0];
@@ -24,6 +26,7 @@ function getFirebaseAdmin() {
                 projectId: serviceAccount.project_id || 'exam-ai-a92e0',
             });
             isInitialized = true;
+            hasExplicitCredentials = true;
             console.log('[Firebase Admin] Initialized with FIREBASE_SERVICE_ACCOUNT env');
             return app;
         }
@@ -42,6 +45,7 @@ function getFirebaseAdmin() {
                     projectId: keyData.project_id || 'exam-ai-a92e0',
                 });
                 isInitialized = true;
+                hasExplicitCredentials = true;
                 console.log(`[Firebase Admin] Initialized with key file: ${keyPath}`);
                 return app;
             }
@@ -51,6 +55,7 @@ function getFirebaseAdmin() {
             projectId: process.env.FIREBASE_PROJECT_ID || 'exam-ai-a92e0',
         });
         isInitialized = true;
+        hasExplicitCredentials = false;
         console.log('[Firebase Admin] Initialized with default project config (exam-ai-a92e0)');
         return app;
     }
@@ -62,7 +67,20 @@ function getFirebaseAdmin() {
         console.warn('[Firebase Admin] Initialization warning:', error.message);
         const app = (0, app_1.initializeApp)({ projectId: 'exam-ai-a92e0' });
         isInitialized = true;
+        hasExplicitCredentials = false;
         return app;
+    }
+}
+function getFirestoreAdmin() {
+    try {
+        getFirebaseAdmin();
+        if (!hasExplicitCredentials) {
+            return null;
+        }
+        return (0, firestore_1.getFirestore)();
+    }
+    catch (e) {
+        return null;
     }
 }
 /**

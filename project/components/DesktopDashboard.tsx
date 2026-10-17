@@ -342,12 +342,15 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           </View>
 
           <View style={styles.practiceModesRow}>
-             <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push('/practice')}>
+             <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push(isSubscribed ? '/custom-ai-test' : '/premium')}>
                <LinearGradient colors={['#FEACA1', '#FEACA1']} style={styles.modeCard}>
                   <View style={{ flex: 1 }}>
                      <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
-                     <Text style={styles.modeTitle}>AI Test</Text>
-                     <Text style={styles.modeDesc}>Adaptive questions based on your performance</Text>
+                     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+                       <Text style={styles.modeTitle}>AI Test</Text>
+                       <Crown size={14} color="#F59E0B" />
+                     </View>
+                     <Text style={styles.modeDesc}>Any topic in the world generated with AI (1/day)</Text>
                   </View>
                   <View style={styles.modeArrow}><ArrowRight size={16} color="#DC2626" /></View>
                </LinearGradient>

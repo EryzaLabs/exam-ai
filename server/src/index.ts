@@ -26,6 +26,7 @@ import testseriesRoutes from './routes/testseries';
 import answerGenerationRoutes from './routes/answer-generation';
 import reportsRoutes from './routes/reports';
 import paymentRoutes from './routes/payment';
+import aiTestRoutes from './routes/ai-tests';
 
 // Initialize Express app
 const app: Express = express();
@@ -80,6 +81,7 @@ app.use('/api/testseries', testseriesRoutes);
 app.use('/api/answers', answerGenerationRoutes);
 app.use('/api/reports', reportsRoutes);
 app.use('/api/payment', paymentRoutes);
+app.use('/api/ai-tests', aiTestRoutes);
 
 // Health check
 app.get('/health', (req, res) => {

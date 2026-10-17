@@ -387,12 +387,15 @@ export default function MobileDashboard({
           </TouchableOpacity>
 
           <View style={styles.practiceModesRow}>
-            <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push('/practice')}>
+            <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push(isSubscribed ? '/custom-ai-test' : '/premium')}>
               <LinearGradient colors={['#FFC5C5', '#FFDADA']} style={styles.modeCard}>
                 <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
                 <View style={{ flex: 1 }}>
-                  <Text style={styles.modeTitle}>AI Test</Text>
-                  <Text style={styles.modeDesc}>Adaptive questions based on your performance.</Text>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+                    <Text style={styles.modeTitle}>AI Test</Text>
+                    <Crown size={12} color="#F59E0B" />
+                  </View>
+                  <Text style={styles.modeDesc}>Any topic in the world with AI (1/day).</Text>
                 </View>
                 <View style={styles.modeArrow}><ArrowRight size={16} color="#DC2626" /></View>
               </LinearGradient>

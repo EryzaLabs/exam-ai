@@ -4,6 +4,7 @@ import path from 'path';
 import fs from 'fs';
 
 let isInitialized = false;
+let hasExplicitCredentials = false;
 
 export function getFirebaseAdmin() {
   if (isInitialized && getApps().length > 0) {
@@ -20,6 +21,7 @@ export function getFirebaseAdmin() {
         projectId: serviceAccount.project_id || 'exam-ai-a92e0',
       });
       isInitialized = true;
+      hasExplicitCredentials = true;
       console.log('[Firebase Admin] Initialized with FIREBASE_SERVICE_ACCOUNT env');
       return app;
     }
@@ -40,6 +42,7 @@ export function getFirebaseAdmin() {
           projectId: keyData.project_id || 'exam-ai-a92e0',
         });
         isInitialized = true;
+        hasExplicitCredentials = true;
         console.log(`[Firebase Admin] Initialized with key file: ${keyPath}`);
         return app;
       }
@@ -50,6 +53,7 @@ export function getFirebaseAdmin() {
       projectId: process.env.FIREBASE_PROJECT_ID || 'exam-ai-a92e0',
     });
     isInitialized = true;
+    hasExplicitCredentials = false;
     console.log('[Firebase Admin] Initialized with default project config (exam-ai-a92e0)');
     return app;
   } catch (error: any) {
@@ -60,7 +64,20 @@ export function getFirebaseAdmin() {
     console.warn('[Firebase Admin] Initialization warning:', error.message);
     const app = initializeApp({ projectId: 'exam-ai-a92e0' });
     isInitialized = true;
+    hasExplicitCredentials = false;
     return app;
+  }
+}
+
+export function getFirestoreAdmin() {
+  try {
+    getFirebaseAdmin();
+    if (!hasExplicitCredentials) {
+      return null;
+    }
+    return getFirestore();
+  } catch (e) {
+    return null;
   }
 }
 
