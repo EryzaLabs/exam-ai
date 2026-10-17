@@ -52,7 +52,7 @@ export function SignIn6() {
           <div className="bg-primary-foreground/15 ring-primary-foreground/25 flex size-8 items-center justify-center rounded-lg ring-1">
             <div className="bg-primary-foreground size-3 rotate-45 rounded-[3px]" />
           </div>
-          <span className="text-sm font-semibold tracking-tight">UPSC Principal</span>
+          <span className="text-sm font-semibold tracking-tight">Astra Exam AI</span>
         </div>
 
         <h2 className="relative mt-auto max-w-[15ch] text-[26px] leading-[1.15] font-semibold tracking-tight text-balance">
@@ -83,7 +83,7 @@ export function SignIn6() {
         <div className="flex flex-col gap-1">
           <span className="text-lg font-semibold">Welcome back</span>
           <span className="text-muted-foreground text-xs">
-            Sign in to your UPSC Principal workspace.
+            Sign in to your Astra Exam AI account.
           </span>
         </div>
 

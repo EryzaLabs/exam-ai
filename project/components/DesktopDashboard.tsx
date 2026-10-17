@@ -90,8 +90,8 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
             <BookOpen size={24} color="#fff" />
           </View>
           <View>
-            <Text style={styles.logoText}>UPSC</Text>
-            <Text style={styles.logoSubtext}>Mock Tests</Text>
+            <Text style={styles.logoText}>Astra</Text>
+            <Text style={styles.logoSubtext}>Exam AI</Text>
           </View>
         </View>
 
@@ -245,8 +245,8 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
             resizeMode="cover"
           >
             <View style={styles.heroContent}>
-              <Text style={styles.heroSub}>GO FURTHER</Text>
-              <Text style={styles.heroTitle}>Crack UPSC, One Test at a Time.</Text>
+              <Text style={styles.heroSub}>ASTRA EXAM AI</Text>
+              <Text style={styles.heroTitle}>Master Your Exams with Intelligent AI.</Text>
               <Text style={styles.heroDesc}>Practice. Analyze. Improve. Repeat.</Text>
               
               <View style={styles.heroStatsRow}>

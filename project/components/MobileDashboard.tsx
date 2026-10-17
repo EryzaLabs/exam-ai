@@ -103,14 +103,13 @@ export default function MobileDashboard({
           />
           <SafeAreaView edges={['top']} style={styles.headerSafeArea}>
             <View style={styles.headerTop}>
-              <View>
-                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                  <Text style={styles.headerTitle}>UPSC</Text>
+              <View style={{ flex: 1, paddingRight: 12 }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
+                  <Text style={styles.headerTitle}>Astra Exam AI</Text>
                   {isSubscribed && (
                     <Crown size={22} color="#F59E0B" fill="#F59E0B" />
                   )}
                 </View>
-                <Text style={styles.headerTitle}>Mock Tests</Text>
                 <Text style={styles.headerSubtitle}>
                   {isSubscribed ? '👑 Premium Member • All Tests Unlocked' : 'Practice. Analyze. Improve.'}
                 </Text>
@@ -494,10 +493,11 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   headerTitle: {
-    fontSize: 32,
+    fontSize: 28,
     fontWeight: '800',
     color: '#fff',
-    lineHeight: 36,
+    lineHeight: 34,
+    letterSpacing: -0.5,
   },
   headerSubtitle: {
     fontSize: 14,
