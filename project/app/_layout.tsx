@@ -13,6 +13,7 @@ import {
 } from '@expo-google-fonts/inter';
 import * as SplashScreen from 'expo-splash-screen';
 import * as SystemUI from 'expo-system-ui';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { AuthProvider } from '@/context/auth-context';
 import { SubscriptionProvider } from '@/context/subscription-context';
@@ -43,7 +44,8 @@ export default function RootLayout() {
   }
 
   return (
-    <AuthProvider>
+    <SafeAreaProvider>
+      <AuthProvider>
       <SubscriptionProvider>
         <ResponsiveContainer>
           <Stack screenOptions={{ headerShown: false }}>
@@ -55,5 +57,6 @@ export default function RootLayout() {
         </ResponsiveContainer>
       </SubscriptionProvider>
     </AuthProvider>
+    </SafeAreaProvider>
   );
 }

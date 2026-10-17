@@ -1,10 +1,19 @@
 import { Tabs } from 'expo-router';
 import { Home, Brain, MessageSquare, TrendingUp as TrendUp, Trophy, User, Bookmark, Swords } from 'lucide-react-native';
-import { useWindowDimensions } from 'react-native';
+import { Platform, useWindowDimensions } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function TabLayout() {
   const { width } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
   const isLargeScreen = width > 1024;
+
+  const bottomInset = insets?.bottom ?? 0;
+  const bottomPadding = bottomInset > 0 ? bottomInset : 8;
+  const tabHeight = Platform.select({
+    ios: bottomInset > 0 ? 84 : 68,
+    default: 68 + bottomInset,
+  });
 
   return (
     <Tabs
@@ -16,15 +25,16 @@ export default function TabLayout() {
           backgroundColor: '#FFFFFF',
           borderTopWidth: 1,
           borderTopColor: '#E5E5EA',
-          paddingBottom: 0,
+          paddingBottom: bottomPadding,
           paddingTop: 8,
-          height: 60,
+          height: tabHeight,
           display: isLargeScreen ? 'none' : 'flex',
         },
         tabBarLabelStyle: {
           fontSize: 12,
           fontFamily: 'Inter-Medium',
-          marginTop: 4,
+          marginTop: 2,
+          paddingBottom: 2,
         },
       }}>
       <Tabs.Screen
