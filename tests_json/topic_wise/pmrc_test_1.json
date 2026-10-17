@@ -1,19 +1,19 @@
 {
-  "test_id": "a94bd1f1-d5fa-41e8-8198-e76a11c55a79",
+  "test_id": "a321f07f-bdf8-4219-b528-f9c6eae6b904",
   "test_name": "Topic Test: PMRC - Part 1",
   "type": "topic_wise",
   "topic": "pmrc",
-  "created_at": "2026-10-16T20:04:02.907663",
+  "created_at": "2026-10-17T08:33:52.777750",
   "questions": [
     {
-      "id": "aad6c243-250c-4c32-b60c-6bd461718d5c",
-      "created_at": "2026-10-13T12:43:50.873781",
-      "question_hindi": "UPSC सिविल सेवा परीक्षा में प्रश्नपत्रों की संरचना के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. प्रारंभिक परीक्षा में दो प्रश्नपत्र शामिल होते हैं: सामान्य अध्ययन I और CSAT।\n2. मुख्य परीक्षा में नौ प्रश्नपत्र शामिल होते हैं: निबंध, 4 सामान्य अध्ययन प्रश्नपत्र, 2 वैकल्पिक प्रश्नपत्र और 2 भाषा प्रश्नपत्र।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "id": "0d267386-d776-4e77-b901-7097ec8eee32",
+      "created_at": "2026-10-13T12:36:14.883774",
+      "question_hindi": "UPSC सिविल सेवा परीक्षा की संरचना और प्रश्न-पत्रों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. प्रारंभिक परीक्षा में दो प्रश्न-पत्र होते हैं, जिनमें से प्रत्येक की अवधि 2 घंटे होती है।\n2. मुख्य परीक्षा में नौ प्रश्न-पत्र शामिल होते हैं, जिनमें से प्रत्येक की अवधि 3 घंटे होती है।\n3. मुख्य परीक्षा में, भाषा के प्रश्न-पत्रों सहित सभी नौ प्रश्न-पत्र योग्यता (merit) रैंकिंग में गिने जाते हैं।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
       "options_hindi": [
-        "केवल 2",
-        "1 और 2 दोनों",
-        "केवल 1",
-        "न तो 1, न ही 2"
+        "1, 2 और 3",
+        "केवल 1 और 2",
+        "केवल 2 और 3",
+        "केवल 1 और 3"
       ],
       "option_labels": [
         "A",
@@ -24,292 +24,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the papers structure in the UPSC Civil Services Examination:\n\n1. The Prelims examination consists of two papers: General Studies I and CSAT.\n2. The Mains examination comprises nine papers: Essay, 4 General Studies papers, 2 optional papers, and 2 language papers.\n\nWhich of the statements given above is/are correct?",
+      "question_english": "Consider the following statements regarding the structure and papers of the UPSC Civil Services Examination:\n\n1. The Prelims examination consists of two papers, each with a duration of 2 hours.\n2. The Mains examination comprises nine papers, each having a duration of 3 hours.\n3. In the Mains examination, all nine papers, including the language papers, count toward the merit ranking.\n\nWhich of the statements given above is/are correct?",
       "options_english": [
-        "2 only",
-        "Both 1 and 2",
-        "1 only",
-        "Neither 1 nor 2"
+        "1, 2 and 3",
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only"
       ],
       "correct_answer": "b",
-      "explanation_english": "Both statements are correct. The Prelims stage has two papers (General Studies I & CSAT), whereas the Mains examination consists of nine papers (Essay, 4 GS papers, 2 optional papers, and 2 language papers).",
-      "explanation_hindi": "दोनों कथन सही हैं। प्रारंभिक परीक्षा चरण में दो प्रश्नपत्र (सामान्य अध्ययन I और CSAT) होते हैं, जबकि मुख्य परीक्षा में नौ प्रश्नपत्र (निबंध, 4 सामान्य अध्ययन प्रश्नपत्र, 2 वैकल्पिक प्रश्नपत्र और 2 भाषा प्रश्नपत्र) शामिल होते हैं।",
-      "topic": "PMRC",
-      "difficulty": "easy",
-      "key_facts": [
-        "| Papers | Two – General Studies I & CSAT | Nine – Essay, 4 GS papers, 2 optional papers, 2 language papers |"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T12:43:50.873781"
-    },
-    {
-      "id": "4a5f980d-c711-4c01-8931-7b3932a710a7",
-      "created_at": "2026-10-13T12:36:55.701149",
-      "question_hindi": "प्रधान मंत्री रिसर्च चेयर (PMRC) योजना के तहत किए जाने वाले अनुसंधान के लिए निर्धारित जुड़ाव अवधि (Engagement Period) और कार्यान्वयन समय-सीमा क्या है?",
-      "options_hindi": [
-        "10 वर्ष तक, 2024-25 से 2033-34 के बीच",
-        "7 वर्ष तक, 2026-27 से 2032-33 के बीच",
-        "5 वर्ष तक, 2026-27 से 2030-31 के बीच",
-        "3 वर्ष तक, 2025-26 से 2027-28 के बीच"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "What is the designated engagement period and implementation timeframe for research undertaken under the Prime Minister Research Chair (PMRC) Scheme?",
-      "options_english": [
-        "Up to 10 years, between 2024-25 to 2033-34",
-        "Up to 7 years, between 2026-27 to 2032-33",
-        "Up to 5 years, between 2026-27 to 2030-31",
-        "Up to 3 years, between 2025-26 to 2027-28"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "As per the PMRC Call for Applications document, the designated engagement period under the scheme is up to 5 years, spanning the operational period between 2026-27 to 2030-31.",
-      "explanation_hindi": "PMRC आवेदन आमंत्रण दस्तावेज के अनुसार, योजना के तहत निर्धारित जुड़ाव अवधि 5 वर्ष तक है, जो 2026-27 से 2030-31 के बीच की परिचालन अवधि में फैली हुई है।",
-      "topic": "PMRC",
-      "difficulty": "easy",
-      "key_facts": [
-        "Engagement Period: Up to 5 years, between 2026- 27 to 2030- 31"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T12:36:55.701149"
-    },
-    {
-      "id": "b94f1c9b-fa5d-4ada-a4c5-68715c09ccc6",
-      "created_at": "2026-10-13T12:38:10.085281",
-      "question_hindi": "पेरेंट्स म्यूजिक रिसोर्स सेंटर (PMRC) की स्थापना और पृष्ठभूमि के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. PMRC की स्थापना मई 1985 में चार महिलाओं द्वारा की गई थी, जिन्हें सामूहिक रूप से 'वॉशिंगटन वाइव्स' कहा जाता था।\n2. इस संगठन के गठन को द बीच बॉयज़ के माइक लव और कूर्य बियर के जोसेफ कूर्य से वित्तीय सहायता प्राप्त हुई थी।\n3. सह-संस्थापकों में से एक, सैली नेवियस का विवाह ट्रेजरी सचिव जेम्स बेकर से हुआ था।\n\nऊपर दिए गए कथनों में से कौन से सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3",
-        "1, 2 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the founding and background of the Parents Music Resource Center (PMRC):\n\n1. The PMRC was founded in May 1985 by four women collectively referred to as the 'Washington Wives'.\n2. The organization's formation received financial backing from Mike Love of the Beach Boys and Joseph Coors of Coors beers.\n3. Sally Nevius, one of the co-founders, was married to Treasury Secretary James Baker.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1 and 3 only",
-        "1 and 2 only",
-        "2 and 3 only",
-        "1, 2 and 3"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because Susan Baker was the wife of Treasury Secretary James Baker, while Sally Nevius was the wife of former Washington City Council Chairman John Nevius.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि ट्रेजरी सचिव जेम्स बेकर की पत्नी सुसान बेकर थीं, जबकि सैली नेवियस वॉशिंगटन सिटी काउंसिल के पूर्व अध्यक्ष जॉन नेवियस की पत्नी थीं।",
+      "explanation_english": "Statements 1 and 2 are correct as Prelims has two papers of 2 hours duration each, and Mains has nine papers (Essay, 4 GS papers, 2 optional papers, 2 language papers) of 3 hours duration each. Statement 3 is incorrect because the context explicitly states that for Mains: 'All papers (except language) count toward merit'.",
+      "explanation_hindi": "कथन 1 और 2 सही हैं क्योंकि प्रारंभिक परीक्षा में प्रत्येक 2 घंटे की अवधि के दो प्रश्न-पत्र होते हैं, और मुख्य परीक्षा में प्रत्येक 3 घंटे की अवधि के नौ प्रश्न-पत्र होते हैं। कथन 3 गलत है क्योंकि संदर्भ में स्पष्ट कहा गया है कि मुख्य परीक्षा में: 'All papers (except language) count toward merit' (भाषा के प्रश्न-पत्रों को छोड़कर सभी प्रश्न-पत्र मेरिट में गिने जाते हैं)।",
       "topic": "PMRC",
       "difficulty": "medium",
       "key_facts": [
-        "The Parents Music Resource Center was founded in May 1985. [1] The group's formation was cemented with the financial help of Mike Love of the Beach Boys, and Joseph Coors, the owner of Coors beers. Both had actively supported Reagan's candidacy, and Coors offered offices to the PMRC."
+        "All papers (except language) count toward merit"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-13T12:38:10.085281"
+      "processed_at": "2026-10-13T12:36:14.883774"
     },
     {
-      "id": "3690ad2b-9a06-4fe8-b766-718942ce78e5",
-      "created_at": "2026-10-13T12:39:07.835910",
-      "question_hindi": "प्रधानमंत्री रिसर्च चेयर (PMRC) योजना के उद्देश्यों और रूपरेखा के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. यह योजना शिक्षा मंत्रालय के उच्च शिक्षा विभाग के तहत एक केंद्रीय क्षेत्र योजना (Central Sector Scheme) के रूप में तैयार की गई है।\n2. इसका उद्देश्य विदेश से भारतीय मूल के प्रमुख शोधकर्ताओं, वैज्ञानिकों और पेशेवरों को प्रमुख सरकारी उच्च शिक्षण संस्थानों और राष्ट्रीय प्रयोगशालाओं में जोड़ना है।\n3. योजना के तहत अनुसंधान को निर्देशित करने वाले विषयगत प्राथमिकता वाले क्षेत्रों की समय-समय पर समीक्षा की जाती है ताकि विकसित होती राष्ट्रीय प्राथमिकताओं के साथ तालमेल बना रहे।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3",
-        "1, 2 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the objectives and framework of the Prime Minister Research Chair (PMRC) Scheme:\n\n1. The scheme is designed as a Central Sector Scheme under the Department of Higher Education, Ministry of Education.\n2. It aims to engage leading Indian-origin researchers, scientists, and professionals from abroad at premier government HEIs and national laboratories.\n3. The thematic priority areas guiding research under the scheme are reviewed periodically to maintain alignment with evolving national priorities.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1 and 3 only",
-        "1 and 2 only",
-        "2 and 3 only",
-        "1, 2 and 3"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "All three statements are correct. The scheme is a Central Sector Scheme of the Department of Higher Education, aims to attract and engage leading Indian-origin researchers/professionals from abroad, and mandates that thematic areas guiding research will be reviewed periodically to ensure alignment with national priorities and global standards.",
-      "explanation_hindi": "तीनों कथन सही हैं। यह योजना उच्च शिक्षा विभाग की एक केंद्रीय क्षेत्र योजना है, इसका उद्देश्य विदेश से भारतीय मूल के प्रमुख शोधकर्ताओं/पेशेवरों को आकर्षित करना और जोड़ना है, और यह अनिवार्य करता है कि अनुसंधान का मार्गदर्शन करने वाले विषयगत क्षेत्रों की राष्ट्रीय प्राथमिकताओं और वैश्विक मानकों के साथ संरेखण सुनिश्चित करने के लिए समय-समय पर समीक्षा की जाएगी।",
-      "topic": "PMRC",
-      "difficulty": "medium",
-      "key_facts": [
-        "The Prime Minister Research Chair (PMRC) Scheme is a Central Sector Scheme of the Department of Higher Education, Ministry of Education. It aims to attract and engage leading Indian-origin researchers, scientists, and professionals from abroad and place them at premier government higher education institutions and national research laboratories in India to undertake cutting-edge research. ... Thematic areas shall guide the design and implementation of research under the Scheme and will be reviewed periodically to ensure alignment with evolving national priorities and global standards."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T12:39:07.835910"
-    },
-    {
-      "id": "9cb55d5c-e12c-4f4b-8f23-3ce1d02fed63",
-      "created_at": "2026-10-13T12:32:27.228208",
-      "question_hindi": "राष्ट्रीय अनुसंधान संरचना और PMRC योजना के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. दीर्घकालिक पुनर्वास को अनिवार्य बनाने वाले पारंपरिक फेलोशिप मॉडलों के विपरीत, PMRC योजना ऐसी सहभागिता प्रणालियाँ प्रदान करती है जो अंतर्राष्ट्रीय शोधकर्ताओं की मौजूदा पेशेवर प्रतिबद्धताओं का सम्मान करती हैं।\n2. ANRF अधिनियम, 2023 के तहत स्थापित अनुसंधान राष्ट्रीय अनुसंधान फाउंडेशन (ANRF) के गवर्निंग बोर्ड की अध्यक्षता भारत सरकार के प्रधान वैज्ञानिक सलाहकार द्वारा की जाती है।\n3. अनुसंधान एवं विकास पर भारत का सकल व्यय (GERD) सकल घरेलू उत्पाद (GDP) के लगभग 0.6 से 0.7 प्रतिशत के आसपास है, जो 2 प्रतिशत के अनौपचारिक लक्ष्य से कम है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 2 और 3",
-        "केवल 1 और 2",
-        "1, 2 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the national research architecture and the PMRC Scheme:\n\n1. Unlike traditional fellowship models that mandate long-term relocation, the PMRC Scheme offers engagement pathways that respect the existing professional commitments of international researchers.\n2. The Governing Board of the Anusandhan National Research Foundation (ANRF), established under the ANRF Act, 2023, is chaired by the Principal Scientific Adviser to the Government of India.\n3. India’s Gross Expenditure on R&D (GERD) hovers around 0.6 to 0.7 per cent of GDP, which is below the informal target of 2 per cent.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1 and 3 only",
-        "2 and 3 only",
-        "1 and 2 only",
-        "1, 2 and 3"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Statements 1 and 3 are correct. Statement 2 is incorrect because the Governing Board of the Anusandhan National Research Foundation (ANRF) is chaired by the Prime Minister (not the Principal Scientific Adviser).",
-      "explanation_hindi": "कथन 1 और 3 सही हैं। कथन 2 गलत है क्योंकि अनुसंधान राष्ट्रीय अनुसंधान फाउंडेशन (ANRF) के गवर्निंग बोर्ड की अध्यक्षता प्रधानमंत्री द्वारा की जाती है (प्रधान वैज्ञानिक सलाहकार द्वारा नहीं)।",
-      "topic": "PMRC",
-      "difficulty": "hard",
-      "key_facts": [
-        "The Governing Board is chaired by the Prime Minister; its first meeting was held on 10 September 2024."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T12:32:27.228208"
-    },
-    {
-      "id": "ac04f962-001b-428e-86f5-75d6e42b45d4",
-      "created_at": "2026-10-13T12:36:55.701149",
-      "question_hindi": "प्रधान मंत्री रिसर्च चेयर (PMRC) योजना के तहत मेजबान संस्थानों (Host Institutions) के लिए अनिवार्य भूमिकाओं और प्रावधानों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. योजना में भाग लेने वाले मेजबान संस्थानों से प्रयोगशालाओं, उपकरणों और कम्प्यूटेशनल संसाधनों तक पहुंच सहित वस्तुगत (in-kind) योगदान देने की अपेक्षा की जाती है।\n2. संयुक्त रूप से उत्पादित आरडीआई (RDI) आउटपुट से उत्पन्न ओपन-एक्सेस प्रकाशन शुल्क और पेटेंट कराने की लागत मेजबान संस्थान द्वारा सुलभ कराई जा सकती है।\n3. प्रत्येक मेजबान संस्थान को व्यक्तिगत रूप से प्रत्येक विषयगत प्राथमिकता क्षेत्र में एक प्रमुख संस्थान (Lead Institution) नियुक्त और नामित करने का अधिकार दिया गया है।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
-      "options_hindi": [
-        "केवल 1 और 2",
-        "केवल 2 और 3",
-        "केवल 1",
-        "1, 2 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the roles and provisions mandated for Host Institutions under the Prime Minister Research Chair (PMRC) Scheme:\n\n1. Host Institutions participating in the Scheme are expected to extend in-kind contributions including access to laboratories, instrumentation, and computational resources.\n2. Open-access publication charges and the cost of patenting arising from jointly produced RDI outputs may be enabled by the Host Institution.\n3. Each Host Institution is individually empowered to appoint and designate one Lead Institution across each thematic priority area.\n\nWhich of the statements given above is/are correct?",
-      "options_english": [
-        "1 and 2 only",
-        "2 and 3 only",
-        "1 only",
-        "1, 2 and 3"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Statements 1 and 2 are correct. Host Institutions are expected to provide in-kind contributions (laboratories, computational resources, instrumentation) and may enable open-access publication charges and patenting costs. Statement 3 is incorrect because Lead Institutions are identified by the Empowered Committee (chaired by the Principal Scientific Advisor) and are responsible for evaluating the readiness of prospective Host Institutions, not the other way around.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। मेजबान संस्थानों से वस्तुगत सहायता (प्रयोगशालाएं, कम्प्यूटेशनल संसाधन, उपकरण आदि) प्रदान करने की उम्मीद की जाती है और वे ओपन-एक्सेस प्रकाशन शुल्क और पेटेंट लागत वहन कर सकते हैं। कथन 3 गलत है क्योंकि प्रमुख संस्थानों (Lead Institutions) की पहचान प्रधान वैज्ञानिक सलाहकार की अध्यक्षता वाली अधिकार प्राप्त समिति द्वारा की जाती है और वे संभावित मेजबान संस्थानों की तैयारी का मूल्यांकन करते हैं, न कि इसके विपरीत।",
-      "topic": "PMRC",
-      "difficulty": "medium",
-      "key_facts": [
-        "Host Institutions participating in the Scheme are expected to extend in-kind contributions, including but not limited to access to laboratories, libraries, research facilities, instrumentation, computational resources, collaborative academic environment, publication and institutional support. Open-access publication charges and cost of patenting arising from jointly produced research, development, and innovation (RDI) outputs may be enabled by the Host Institution."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T12:36:55.701149"
-    },
-    {
-      "id": "9d7b5e5e-25f4-48e2-978e-789357d2f193",
-      "created_at": "2026-10-13T12:43:50.873781",
-      "question_hindi": "निम्नलिखित में से परीक्षा और सामान्य श्रेणी के अनुमानित प्रारंभिक परीक्षा कट-ऑफ का कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "RPSC RAS प्रारंभिक – 115–130/200",
-        "BPSC CCE प्रारंभिक – 70–85/150",
-        "UPSC CSE प्रारंभिक – 85–100/200",
-        "UPPSC PCS प्रारंभिक – 95–110/200"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs of examination and approximate General Category Prelims Cutoff range is NOT correctly matched?",
-      "options_english": [
-        "RPSC RAS Prelims – 115–130/200",
-        "BPSC CCE Prelims – 70–85/150",
-        "UPSC CSE Prelims – 85–100/200",
-        "UPPSC PCS Prelims – 95–110/200"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "The cutoff trend for RPSC RAS Prelims is approximately 90–110/200 (not 115–130/200). All other pairs are correctly matched.",
-      "explanation_hindi": "RPSC RAS प्रारंभिक परीक्षा के लिए अनुमानित कट-ऑफ 90–110/200 है (न कि 115–130/200)। अन्य सभी युग्म सही सुमेलित हैं।",
-      "topic": "PMRC",
-      "difficulty": "medium",
-      "key_facts": [
-        "| RPSC RAS Prelims | 90–110/200 | Rajasthan GK heavily tested |"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T12:43:50.873781"
-    },
-    {
-      "id": "da70fb4b-8dc2-4116-b82a-766bea1cc1e7",
-      "created_at": "2026-10-13T12:41:20.326825",
-      "question_hindi": "PMRC की 'फिल्थी फिफ्टीन' सूची में गीतों और उनकी गीत-सामग्री (lyrical content) श्रेणियों का निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "मर्सीफुल फेट – \"Into the Coven\" : तंत्र-मंत्र/जादू-टोना (Occult)",
-        "ट्विस्टेड सिस्टर – \"We're Not Gonna Take It\" : हिंसा (Violence)",
-        "मॉटली क्रू – \"Bastard\" : हिंसा/भाषा (Violence/language)",
-        "डेफ लेपर्ड – \"High 'n' Dry (Saturday Night)\" : सेक्स/हस्तमैथुन (Sex/masturbation)"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs of songs and their PMRC 'Filthy Fifteen' lyrical content categories is NOT correctly matched?",
-      "options_english": [
-        "Mercyful Fate – \"Into the Coven\" : Occult",
-        "Twisted Sister – \"We're Not Gonna Take It\" : Violence",
-        "Mötley Crüe – \"Bastard\" : Violence/language",
-        "Def Leppard – \"High 'n' Dry (Saturday Night)\" : Sex/masturbation"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "Def Leppard's song 'High 'n' Dry (Saturday Night)' was categorized under 'Drug and alcohol use', not 'Sex/masturbation'. Songs categorized under 'Sex/masturbation' were Prince's 'Darling Nikki' and Cyndi Lauper's 'She Bop'.",
-      "explanation_hindi": "डेफ लेपर्ड के गीत 'High 'n' Dry (Saturday Night)' को 'नशीली दवाओं और शराब के उपयोग' (Drug and alcohol use) श्रेणी में रखा गया था, न कि 'सेक्स/हस्तमैथुन' में।",
-      "topic": "PMRC",
-      "difficulty": "medium",
-      "key_facts": [
-        "| 10 | Def Leppard | \" High 'n' Dry (Saturday Night)\" | Drug and alcohol use |"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T12:41:20.326825"
-    },
-    {
-      "id": "564d8c28-7894-4dbd-8c8e-45ee4e032e18",
+      "id": "15f2021c-c180-42db-9963-72226b44e91b",
       "created_at": "2026-10-13T12:42:57.366590",
-      "question_hindi": "प्रधानमंत्री रिसर्च चेयर (PMRC) योजना 2026 के अंतर्गत परिभाषित सहभागिता के तीन करियर-विशिष्ट ट्रैक्स के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (PMRC सहभागिता ट्रैक)\nA. यंग रिसर्च फेलो\nB. सीनियर रिसर्च फेलो\nC. रिसर्च चेयर\n\nसूची II (लक्षित अभ्यर्थी प्रोफाइल)\n1. गहन क्षेत्र विशेषज्ञता रखने वाले मध्य-करियर शोधकर्ता और उद्योग विशेषज्ञ\n2. अंतरराष्ट्रीय स्तर पर मान्यता प्राप्त अकादमिक अगुआ, प्रयोगशाला प्रमुख और वैश्विक प्रौद्योगिकी प्रणेता\n3. अभिनव परियोजनाओं को शुरू करने के लिए तैयार आरंभिक-करियर वैज्ञानिक और पोस्टडॉक्टरल विद्वान\n\nनीचे दिए गए कूट का उपयोग करके सही उत्तर चुनिए:",
+      "question_hindi": "प्रधानमंत्री रिसर्च चेयर (PMRC) योजना 2026 के तहत, विभिन्न विषयगत क्षेत्रों में कार्यान्वयन की सुविधा के लिए शिक्षा मंत्रालय द्वारा कितने प्रमुख संस्थानों को 'लीड संस्थान' (Lead Institutions) के रूप में नामित किया गया है?",
       "options_hindi": [
-        "A-3, B-1, C-2",
-        "A-1, B-3, C-2",
-        "A-3, B-2, C-1",
-        "A-2, B-1, C-3"
+        "7",
+        "10",
+        "13",
+        "5"
       ],
       "option_labels": [
         "A",
@@ -320,245 +61,23 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Match List I with List II regarding the three career-specific tracks of engagement defined under the Prime Minister Research Chair (PMRC) Scheme 2026:\n\nList I (PMRC Engagement Track)\nA. Young Research Fellows\nB. Senior Research Fellows\nC. Research Chairs\n\nList II (Targeted Candidate Profile)\n1. Mid-career researchers and industry experts possessing deep field expertise\n2. Internationally recognized academic leaders, lab heads, and global technology pioneers\n3. Early-career scientists and postdoctoral scholars ready to seed innovative projects\n\nSelect the correct answer using the code given below:",
+      "question_english": "Under the Prime Minister Research Chair (PMRC) Scheme 2026, exactly how many premier institutions have been designated by the Ministry of Education as 'Lead Institutions' to facilitate implementation across thematic areas?",
       "options_english": [
-        "A-3, B-1, C-2",
-        "A-1, B-3, C-2",
-        "A-3, B-2, C-1",
-        "A-2, B-1, C-3"
+        "7",
+        "10",
+        "13",
+        "5"
       ],
       "correct_answer": "a",
-      "explanation_english": "According to the PMRC operational framework: Young Research Fellows are geared toward early-career scientists and postdoctoral scholars ready to seed innovative projects (A-3); Senior Research Fellows are aimed at mid-career researchers and industry experts possessing deep field expertise (B-1); and Research Chairs are reserved for internationally recognized academic leaders, lab heads, and global technology pioneers (C-2).",
-      "explanation_hindi": "PMRC परिचालन ढांचे के अनुसार: यंग रिसर्च फेलो आरंभिक करियर वैज्ञानिकों और पोस्टडॉक्टरल विद्वानों के लिए तैयार किए गए हैं (A-3); सीनियर रिसर्च फेलो मध्य-करियर शोधकर्ताओं और गहन विशेषज्ञता वाले उद्योग विशेषज्ञों के लिए हैं (B-1); तथा रिसर्च चेयर अंतरराष्ट्रीय स्तर पर मान्यता प्राप्त अकादमिक अगुवाओं और वैश्विक प्रौद्योगिकी प्रणेताओं के लिए आरक्षित हैं (C-2)।",
+      "explanation_english": "The Ministry of Education has designated 7 premier institutions (IIT Delhi, IIT Bombay, IIT Madras, IIT Kanpur, IIT Hyderabad, IIT (ISM) Dhanbad, and IISc Bengaluru) as Lead Institutions to facilitate the implementation of the PMRC scheme.",
+      "explanation_hindi": "शिक्षा मंत्रालय ने PMRC योजना के कार्यान्वयन को सुगम बनाने के लिए 7 प्रमुख संस्थानों (IIT दिल्ली, IIT बॉम्बे, IIT मद्रास, IIT कानपुर, IIT हैदराबाद, IIT (ISM) धनबाद और IISc बेंगलुरु) को लीड संस्थानों के रूप में नामित किया है।",
       "topic": "PMRC",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "key_facts": [
-        "The program categorizes incoming international professionals into three age and career-specific tracks: Young Research Fellows: Geared toward early-career scientists and postdoctoral scholars ready to seed innovative projects. Senior Research Fellows: Aimed at mid-career researchers and industry experts possessing deep field expertise. Research Chairs: Reserved for internationally recognized academic leaders, lab heads, and global technology pioneers."
+        "The MoE has designated 7 premier institutions as Lead Institutions to facilitate the implementation of the scheme across various thematic areas."
       ],
       "ai_processed": true,
       "processed_at": "2026-10-13T12:42:57.366590"
-    },
-    {
-      "id": "6370e1c6-ae17-4e20-ac05-7c8fac7f05dd",
-      "created_at": "2026-10-13T12:34:01.928585",
-      "question_hindi": "19 सितंबर 1985 को तथाकथित \"पॉर्न रॉक\" पर संयुक्त राज्य अमेरिका की सीनेट की सुनवाई में किस संगीतकार तिकड़ी ने उपस्थित होकर गवाही दी थी?",
-      "options_hindi": [
-        "प्रिंस, माइकल जैक्सन और ब्रूस स्प्रिंगस्टीन",
-        "एलिस कूपर, ओज़ी ओस्बॉर्न और जीन सिमंस",
-        "डी स्नाइडर, फ्रैंक ज़प्पा और जॉन डेनवर",
-        "स्टीवन टायलर, विंस नील और ब्लैकी लॉलेस"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which trio of musicians appeared and testified before the United States Senate hearing on \"porn rock\" on September 19, 1985?",
-      "options_english": [
-        "Prince, Michael Jackson, and Bruce Springsteen",
-        "Alice Cooper, Ozzy Osbourne, and Gene Simmons",
-        "Dee Snider, Frank Zappa, and John Denver",
-        "Steven Tyler, Vince Neil, and Blackie Lawless"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "On September 19, 1985, the Senate hearing on 'porn rock' featured testimony from PMRC representatives and three prominent musicians: Dee Snider, Frank Zappa, and John Denver.",
-      "explanation_hindi": "19 सितंबर 1985 को 'पॉर्न रॉक' पर आयोजित सीनेट की सुनवाई में PMRC के प्रतिनिधियों और तीन प्रमुख संगीतकारों—डी स्नाइडर, फ्रैंक ज़प्पा और जॉन डेनवर—ने गवाही दी थी।",
-      "topic": "PMRC",
-      "difficulty": "easy",
-      "key_facts": [
-        "The hearing was held on September 19, 1985, when representatives from the PMRC, three musicians— Dee Snider, Frank Zappa, John Denver—and"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T12:34:01.928585"
-    },
-    {
-      "id": "80ed7091-67c4-4421-b23a-39fe7ae80e38",
-      "created_at": "2026-10-13T12:35:10.168866",
-      "question_hindi": "प्रधान मंत्री रिसर्च चेयर (PMRC) योजना 2026 के तहत सहभागिता के तीन स्तरों (Three Tiers of Engagement) के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (करियर स्तर)\nA. यंग रिसर्च फेलो\nB. सीनियर रिसर्च फेलो\nC. रिसर्च चेयर\n\nसूची II (लक्षित प्रोफाइल / समूह)\n1. गहन क्षेत्र विशेषज्ञता रखने वाले मध्य-करियर शोधकर्ताओं और उद्योग विशेषज्ञों के लिए\n2. अंतरराष्ट्रीय स्तर पर मान्यता प्राप्त शैक्षणिक नेताओं, लैब प्रमुखों और वैश्विक प्रौद्योगिकी अग्रदूतों के लिए आरक्षित\n3. नवीन परियोजनाओं को शुरू करने के लिए तैयार प्रारंभिक करियर वैज्ञानिकों और पोस्टडॉक्टरल विद्वानों के लिए\n\nनीचे दिए गए कूट का उपयोग करके सही उत्तर चुनिए:",
-      "options_hindi": [
-        "A-1, B-3, C-2",
-        "A-3, B-2, C-1",
-        "A-3, B-1, C-2",
-        "A-2, B-1, C-3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List I with List II regarding the Three Tiers of Engagement under the Prime Minister Research Chair (PMRC) Scheme 2026:\n\nList I (Career Tier)\nA. Young Research Fellows\nB. Senior Research Fellows\nC. Research Chairs\n\nList II (Target Profile / Cohort)\n1. Aimed at mid-career researchers and industry experts possessing deep field expertise\n2. Reserved for internationally recognized academic leaders, lab heads, and global technology pioneers\n3. Geared toward early-career scientists and postdoctoral scholars ready to seed innovative projects\n\nSelect the correct answer using the code given below:",
-      "options_english": [
-        "A-1, B-3, C-2",
-        "A-3, B-2, C-1",
-        "A-3, B-1, C-2",
-        "A-2, B-1, C-3"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "According to the PMRC Scheme 2026 features:\n- Young Research Fellows: Geared toward early-career scientists and postdoctoral scholars ready to seed innovative projects (A-3).\n- Senior Research Fellows: Aimed at mid-career researchers and industry experts possessing deep field expertise (B-1).\n- Research Chairs: Reserved for internationally recognized academic leaders, lab heads, and global technology pioneers (C-2).",
-      "explanation_hindi": "PMRC योजना 2026 की विशेषताओं के अनुसार:\n- यंग रिसर्च फेलो: नवीन परियोजनाओं को शुरू करने के लिए तैयार प्रारंभिक करियर वैज्ञानिकों और पोस्टडॉक्टरल विद्वानों के लिए (A-3)।\n- सीनियर रिसर्च फेलो: गहन क्षेत्र विशेषज्ञता रखने वाले मध्य-करियर शोधकर्ताओं और उद्योग विशेषज्ञों के लिए (B-1)।\n- रिसर्च चेयर: अंतरराष्ट्रीय स्तर पर मान्यता प्राप्त शैक्षणिक नेताओं, लैब प्रमुखों और वैश्विक प्रौद्योगिकी अग्रदूतों के लिए आरक्षित (C-2)।",
-      "topic": "PMRC",
-      "difficulty": "medium",
-      "key_facts": [
-        "Young Research Fellows: Geared toward early-career scientists and postdoctoral scholars ready to seed innovative projects. - Senior Research Fellows: Aimed at mid-career researchers and industry experts possessing deep field expertise. - Research Chairs: Reserved for internationally recognized academic leaders, lab heads, and global technology pioneers."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T12:35:10.168866"
-    },
-    {
-      "id": "4f7892d8-e842-4b42-89aa-f510e6782232",
-      "created_at": "2026-10-13T12:44:38.437764",
-      "question_hindi": "प्रधानमंत्री रिसर्च चेयर (PMRC) योजना के अंतर्गत संस्थागत उत्तरदायित्वों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. रणनीतिक दिशा और गुणवत्ता आश्वासन प्रदान करने के लिए प्रत्येक विषयगत क्षेत्र के लिए एक प्रमुख संस्थान (Lead Institution) नामित किया गया है।\n2. प्रमुख संस्थान अपने संबंधित विषयगत क्षेत्रों के भीतर संभावित मेजबान संस्थानों (Host Institutions) की तत्परता और उपयुक्तता का मूल्यांकन करने के लिए उत्तरदायी हैं।\n3. मेजबान संस्थानों से इन-काइंड (वस्तु रूप में) योगदान देने की अपेक्षा की जाती है, और संयुक्त रूप से उत्पादित RDI आउटपुट से उत्पन्न होने वाले ओपन-एक्सेस प्रकाशन शुल्क और पेटेंटिंग लागत उनके द्वारा वहन की जा सकती है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the institutional responsibilities under the Prime Minister Research Chair (PMRC) Scheme:\n\n1. One Lead Institution is designated for each thematic area to provide strategic direction and quality assurance.\n2. Lead Institutions are responsible for evaluating the readiness and suitability of prospective Host Institutions within their respective thematic areas.\n3. Host Institutions are expected to extend in-kind contributions, and open-access publication charges and patenting costs arising from joint RDI outputs may be enabled by them.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1 and 3 only",
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "All three statements are correct. One Lead Institution is designated per thematic area to ensure mission alignment and coherence, and they evaluate the readiness and suitability of prospective Host Institutions. Furthermore, Host Institutions provide in-kind contributions such as laboratory access and may enable open-access publication charges and patenting costs.",
-      "explanation_hindi": "तीनों कथन सही हैं। मिशन संरेखण और निरंतरता सुनिश्चित करने के लिए प्रत्येक विषयगत क्षेत्र के लिए एक प्रमुख संस्थान नामित किया जाता है, और वे संभावित मेजबान संस्थानों की तत्परता और उपयुक्तता का मूल्यांकन करते हैं। इसके अतिरिक्त, मेजबान संस्थान प्रयोगशाला पहुंच जैसे इन-काइंड योगदान प्रदान करते हैं और ओपन-एक्सेस प्रकाशन शुल्क तथा पेटेंटिंग लागत को सक्षम कर सकते हैं।",
-      "topic": "PMRC",
-      "difficulty": "medium",
-      "key_facts": [
-        "One Lead Institution is designated for each thematic area. They will provide strategic direction, coherence, and quality assurance across the PMRC ecosystem, ensuring research under PMRC is mission-aligned, non-fragmented, and national impact oriented. Lead Institutions shall also be responsible for evaluating the readiness and suitability of prospective Host Institutions within their respective thematic areas."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T12:44:38.437764"
-    },
-    {
-      "id": "f3ed723b-59fc-4c32-9b6f-508636501074",
-      "created_at": "2026-10-13T12:42:57.366590",
-      "question_hindi": "प्रधानमंत्री रिसर्च चेयर (PMRC) योजना 2026 के अंतर्गत संरचनात्मक विशेषताओं और वित्तीय प्रावधानों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. दीर्घकालिक पुनर्वास की मांग करने वाले पारंपरिक फेलोशिप मॉडलों के विपरीत, यह योजना अंतरराष्ट्रीय शोधकर्ताओं की मौजूदा पेशेवर प्रतिबद्धताओं का सम्मान करते हुए लचीले जुड़ाव मार्ग प्रदान करती है।\n2. प्रारंभिक बजटीय अनुमान बहु-वर्षीय शोध अनुदान, स्थानांतरण भत्ते, संस्थागत फेलोशिप और प्रयोगशाला अवसंरचना के लिए लगभग ₹200 करोड़ की लक्षित तैनाती को दर्शाते हैं।\n3. यह योजना DST, DBT, ICMR और CSIR के अंतर्गत संचालित राष्ट्रीय अनुसंधान प्रयोगशालाओं को मेजबान संस्थान के रूप में कार्य करने से पूरी तरह रोकती है, और पात्रता को केवल विश्वविद्यालयों तक सीमित करती है।\n\nऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
-      "options_hindi": [
-        "केवल 1 और 2",
-        "1, 2 और 3",
-        "केवल 2 और 3",
-        "केवल 1"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the structural features and financial deployment under the Prime Minister Research Chair (PMRC) Scheme 2026:\n\n1. Unlike traditional fellowship models requiring long-term relocation, the scheme provides flexible engagement pathways respecting the existing professional commitments of international researchers.\n2. Early budgetary estimates reflect a targeted deployment of roughly ₹200 crore to support multi-year research grants, relocation allowances, institutional fellowships, and lab infrastructure.\n3. The scheme strictly disallows national research laboratories operating under DST, DBT, ICMR, and CSIR from acting as host institutions, confining eligibility only to universities.\n\nWhich of the statements given above is/are correct?",
-      "options_english": [
-        "1 and 2 only",
-        "1, 2 and 3",
-        "2 and 3 only",
-        "1 only"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because host institution eligibility explicitly includes select national research laboratories operating under DST, DBT, ICMR, and CSIR alongside qualifying higher education institutions.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि मेजबान संस्थान की पात्रता में पात्र उच्च शिक्षण संस्थानों के साथ-साथ DST, DBT, ICMR और CSIR के अंतर्गत संचालित चुनिंदा राष्ट्रीय अनुसंधान प्रयोगशालाएं भी स्पष्ट रूप से शामिल हैं।",
-      "topic": "PMRC",
-      "difficulty": "hard",
-      "key_facts": [
-        "Unlike traditional fellowship models that require long-term relocation, the PMRC Scheme provides engagement pathways that respect the existing professional commitments of international researchers... Early budgetary estimates reflect a targeted deployment of roughly ₹200 crore to fund multi-year research grants, robust relocation allowances, competitive institutional fellowships, and state-of-the-art lab infrastructure for the incoming cohort... This is complemented by select national research laboratories operating under the DST, DBT, ICMR, and CSIR."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T12:42:57.366590"
-    },
-    {
-      "id": "d8490aec-1812-48a6-9d97-84c41c606b0f",
-      "created_at": "2026-10-13T12:40:56.021166",
-      "question_hindi": "दिव्यांगजनों के लिए प्रमुख राष्ट्रीय पहलों के अनुसार, 'सुगम्य भारत अभियान' किन तीन प्रमुख क्षेत्रों में सार्वभौमिक सुगमता प्राप्त करने पर ध्यान केंद्रित करता है?",
-      "options_hindi": [
-        "ग्रामीण आवास, सुरक्षित पेयजल और स्वच्छता सुविधाएँ",
-        "प्राथमिक शिक्षा, माध्यमिक शिक्षा और व्यावसायिक प्रशिक्षण",
-        "तृतीयक स्वास्थ्य सेवा, चिकित्सा बीमा और औषधीय पहुँच",
-        "निर्मित अवसंरचना (बिल्ट इन्फ्रास्ट्रक्चर), परिवहन प्रणालियाँ, और सूचना एवं संचार प्रौद्योगिकी"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "According to the national initiatives highlighted for Persons with Disabilities, the 'Sugamya Bharat Abhiyan' focuses on achieving universal accessibility across which three key domains?",
-      "options_english": [
-        "Rural housing, safe drinking water, and sanitation facilities",
-        "Primary education, secondary education, and vocational training",
-        "Tertiary healthcare, medical insurance, and pharmaceutical access",
-        "Built infrastructure, transport systems, and information and communication technology"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "The Sugamya Bharat Abhiyan (Accessible India Campaign) focuses on achieving universal accessibility for Persons with Disabilities across three key domains: built infrastructure, transport systems, and information and communication technology.",
-      "explanation_hindi": "सुगम्य भारत अभियान दिव्यांगजनों के लिए तीन प्रमुख कार्यक्षेत्रों—निर्मित अवसंरचना (बिल्ट इन्फ्रास्ट्रक्चर), परिवहन प्रणालियों और सूचना एवं संचार प्रौद्योगिकी में सार्वभौमिक सुगमता प्राप्त करने पर केंद्रित है।",
-      "topic": "PMRC",
-      "difficulty": "easy",
-      "key_facts": [
-        "The Sugamya Bharat Abhiyan focuses on achieving universal accessibility for Persons with Disabilities across three key domains — built infrastructure, transport systems and information and communication technology."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T12:40:56.021166"
-    },
-    {
-      "id": "ec6dc37a-7322-4309-98bc-9735a15e2d8f",
-      "created_at": "2026-10-13T12:36:55.701149",
-      "question_hindi": "प्रधान मंत्री रिसर्च चेयर (PMRC) योजना के तहत विषयगत प्राथमिकता वाले क्षेत्रों और उनके निर्दिष्ट प्रक्षेत्रों के संदर्भ में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (विषयगत प्राथमिकता क्षेत्र)\nA. उन्नत संगणना (एडवांस्ड कंप्यूटिंग)\nB. ऊर्जा\nC. उन्नत सामग्री (एडवांस्ड मटेरियल्स)\nD. प्राथमिकता क्षेत्र 13\n\nसूची II (निर्दिष्ट प्रक्षेत्र/क्षेत्र)\n1. महत्वपूर्ण खनिज (क्रिटिकल मिनरल्स)\n2. एआई, क्वांटम कंप्यूटिंग और सुपरकंप्यूटिंग\n3. परमाणु ऊर्जा (एटॉमिक एनर्जी)\n4. संधारणीयता और जलवायु परिवर्तन (सस्टेनेबिलिटी एंड क्लाइमेट चेंज)\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
-      "options_hindi": [
-        "A-3, B-4, C-1, D-2",
-        "A-2, B-4, C-1, D-3",
-        "A-4, B-2, C-1, D-3",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List I with List II regarding the thematic priority sectors and their specified domains under the Prime Minister Research Chair (PMRC) Scheme:\n\nList I (Thematic Priority Sector)\nA. Advanced Computing\nB. Energy\nC. Advanced Materials\nD. Priority Sector 13\n\nList II (Domain / Area Specified)\n1. Critical Minerals\n2. AI, Quantum Computing & Supercomputing\n3. Atomic Energy\n4. Sustainability & Climate Change\n\nSelect the correct answer using the code given below:",
-      "options_english": [
-        "A-3, B-4, C-1, D-2",
-        "A-2, B-4, C-1, D-3",
-        "A-4, B-2, C-1, D-3",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "According to the official PMRC notifications, the 13 thematic priority areas include: Advanced Computing (AI, Quantum Computing & Supercomputing); Energy, Sustainability & Climate Change; Advanced Materials & Critical Minerals; and Priority Sector 13 is designated as Atomic Energy.",
-      "explanation_hindi": "PMRC की आधिकारिक अधिसूचना के अनुसार, 13 प्राथमिकता वाले विषयगत क्षेत्रों में शामिल हैं: एडवांस्ड कंप्यूटिंग (एआई, क्वांटम कंप्यूटिंग और सुपरकंप्यूटिंग); ऊर्जा, संधारणीयता और जलवायु परिवर्तन; उन्नत सामग्री और महत्वपूर्ण खनिज; तथा 13वां प्राथमिकता क्षेत्र परमाणु ऊर्जा (एटॉमिक एनर्जी) है।",
-      "topic": "PMRC",
-      "difficulty": "medium",
-      "key_facts": [
-        "1. Advanced Computing (AI, Quantum Computing & Supercomputing)\n2. Semiconductors\n3. Energy, Sustainability & Climate Change\n4. Cybersecurity\n5. Healthcare & MedTech\n6. Biotechnology\n7. Advanced Materials & Critical Minerals\n8. Space & Defence\n9. Next-Generation Communications\n10. Manufacturing & Industry 4.0\n11. Agri & Food Technologies\n12. Blue Economy\n13. Atomic Energy"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T12:36:55.701149"
     },
     {
       "id": "3800f318-0018-4e67-afe7-5c7c09a05508",
@@ -598,14 +117,14 @@
       "processed_at": "2026-10-13T12:37:30.180542"
     },
     {
-      "id": "616b0e83-fc4e-4a91-a168-31640698592a",
-      "created_at": "2026-10-13T12:43:50.873781",
-      "question_hindi": "UPSC CSE और राज्य PCS परीक्षाओं के बीच प्रतिस्पर्धा तीव्रता के तुलनात्मक आँकड़ों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. UPPSC PCS में, प्रारंभिक-से-मुख्य परीक्षा शॉर्टलिस्ट अनुपात लगभग 1:10–12 है, जबकि UPSC CSE के लिए यह लगभग 1:15 है।\n2. UPSC CSE के लिए अंतिम चयन दर 0.2% से कम है, जबकि BPSC CCE के लिए यह 0.3%–0.6% है।\n3. RPSC RAS के लिए वार्षिक आवेदकों की संख्या 13–14 लाख अनुमानित है, जो UPSC CSE के समान है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "8047bc31-64a9-48a8-b03d-d4cfcea387ff",
+      "created_at": "2026-10-13T12:42:57.366590",
+      "question_hindi": "प्रधानमंत्री रिसर्च चेयर (PMRC) योजना 2026 के संस्थागत श्रेणियों अथवा विषयगत क्षेत्रों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
       "options_hindi": [
-        "1, 2 और 3",
-        "केवल 1 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3"
+        "स्थिरता और जीव विज्ञान: ऊर्जा, स्थिरता और जलवायु परिवर्तन, जैव प्रौद्योगिकी, स्वास्थ्य सेवा और मेडटेक, कृषि और खाद्य प्रौद्योगिकी, और ब्लू इकोनॉमी",
+        "औद्योगिक और अवसंरचना: विनिर्माण और उद्योग 4.0, उन्नत सामग्री और महत्वपूर्ण खनिज, अंतरिक्ष और रक्षा, और परमाणु ऊर्जा",
+        "कम्प्यूटिंग और तकनीक: एडवांस्ड कम्प्यूटिंग, सेमीकंडक्टर्स, नेक्स्ट-जेनेरेशन कम्युनिकेशंस और साइबर सुरक्षा",
+        "लीड हब: IIT दिल्ली, IIT बॉम्बे, IIT रुड़की, IIT खड़गपुर, IIT हैदराबाद, IIT (ISM) धनबाद और IISc बेंगलुरु"
       ],
       "option_labels": [
         "A",
@@ -616,23 +135,282 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the competition intensity metrics comparison between UPSC CSE and State PCS exams:\n\n1. In UPPSC PCS, the Prelims-to-Mains shortlist ratio is approximately 1:10–12, whereas for UPSC CSE it is approximately 1:15.\n2. The final selection rate for UPSC CSE is under 0.2%, whereas for BPSC CCE it stands at 0.3%–0.6%.\n3. The annual applicant count for RPSC RAS is estimated at 13–14 lakh, identical to that of UPSC CSE.\n\nWhich of the statements given above are correct?",
+      "question_english": "Which of the following pairs regarding the institutional categories or thematic domains of the Prime Minister Research Chair (PMRC) Scheme 2026 is NOT correctly matched?",
       "options_english": [
-        "1, 2 and 3",
-        "1 and 3 only",
-        "1 and 2 only",
-        "2 and 3 only"
+        "Sustainability & Biology: Energy, Sustainability & Climate Change, Biotechnology, Healthcare & MedTech, Agri & Food Technologies, and the Blue Economy",
+        "Industrial & Infrastructure: Manufacturing & Industry 4.0, Advanced Materials & Critical Minerals, Space & Defence, and Atomic Energy",
+        "Computing & Tech: Advanced Computing, Semiconductors, Next-Generation Communications, and Cybersecurity",
+        "Lead Hubs: IIT Delhi, IIT Bombay, IIT Roorkee, IIT Kharagpur, IIT Hyderabad, IIT (ISM) Dhanbad, and IISc Bengaluru"
       ],
-      "correct_answer": "c",
-      "explanation_english": "Statements 1 and 2 are correct. In UPPSC PCS, the Prelims-to-Mains shortlist ratio is ~1:10–12, compared to ~1:15 in UPSC CSE. The final selection rate is under 0.2% for UPSC CSE and 0.3%–0.6% for BPSC CCE. Statement 3 is incorrect because RPSC RAS sees approximately 5–7 lakh annual applicants, not 13–14 lakh (which is the applicant pool for UPSC CSE).",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। UPPSC PCS में, प्रारंभिक-से-मुख्य शॉर्टलिस्ट अनुपात ~1:10-12 है, जबकि UPSC CSE में यह ~1:15 है। अंतिम चयन दर UPSC CSE के लिए 0.2% से कम और BPSC CCE के लिए 0.3%-0.6% है। कथन 3 गलत है क्योंकि RPSC RAS में वार्षिक आवेदक लगभग 5-7 लाख हैं, न कि 13-14 लाख (जो UPSC CSE के आवेदकों की संख्या है)।",
+      "correct_answer": "d",
+      "explanation_english": "Pair (d) is NOT correctly matched. The 7 premier institutions designated as Lead Centers are IIT Delhi, IIT Bombay, IIT Madras, IIT Kanpur, IIT Hyderabad, IIT (ISM) Dhanbad, and IISc Bengaluru. IIT Roorkee and IIT Kharagpur are not included in the seven designated Lead Hubs.",
+      "explanation_hindi": "युग्म (d) सही सुमेलित नहीं है। लीड केंद्रों के रूप में नामित 7 प्रमुख संस्थान IIT दिल्ली, IIT बॉम्बे, IIT मद्रास, IIT कानपुर, IIT हैदराबाद, IIT (ISM) धनबाद और IISc बेंगलुरु हैं। IIT रुड़की और IIT खड़गपुर इन सात नामित लीड हब में शामिल नहीं हैं।",
+      "topic": "PMRC",
+      "difficulty": "medium",
+      "key_facts": [
+        "The 7 Lead Hubs: To streamline multi-disciplinary execution, seven premier institutions have been designated as Lead Centers: IIT Delhi, IIT Bombay, IIT Madras, IIT Kanpur, IIT Hyderabad, IIT (ISM) Dhanbad, and IISc Bengaluru."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T12:42:57.366590"
+    },
+    {
+      "id": "9ee81f12-99dc-4522-95ff-b580380e4c31",
+      "created_at": "2026-10-13T12:42:12.322524",
+      "question_hindi": "भारत के राष्ट्रीय अनुसंधान तंत्र के संदर्भ में उल्लिखित प्रमुख अनुसंधान पहलों, योजनाओं और निकायों के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (पहल / योजना / निकाय)\nA. वज्र (VAJRA) फैकल्टी योजना\nB. प्रधानमंत्री रिसर्च फेलोशिप (PMRF)\nC. प्रधानमंत्री रिसर्च चेयर (PMRC)\nD. अनुसंधान नेशनल रिसर्च फाउंडेशन (ANRF)\n\nसूची II (प्रमुख विशेषता / परिभाषित दायरा)\n1. भारतीय विश्वविद्यालयों के साथ विदेशी वैज्ञानिकों और इंजीनियरों को जोड़ने के लिए 2017 में शुरू की गई\n2. वरिष्ठ अकादमिक पदों के बजाय विशेष रूप से डॉक्टरेट विद्वानों को वित्तपोषित करने के लिए तैयार की गई\n3. रिवर्स-ब्रेन-ड्रेन साधन के रूप में कार्य करती है जो पांच वर्ष तक के लिए रिसर्च चेयर प्रदान करती है\n4. 2023 के एक अधिनियम के तहत स्थापित शीर्ष अनुसंधान वित्तपोषण निकाय, जिसने SERB का स्थान लिया\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-2, B-1, C-4, D-3",
+        "A-1, B-2, C-3, D-4",
+        "A-4, B-2, C-3, D-1",
+        "A-1, B-3, C-2, D-4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding key research initiatives, schemes, and bodies mentioned in the context of India's national research architecture:\n\nList I (Initiative / Scheme / Body)\nA. VAJRA Faculty Scheme\nB. Prime Minister’s Research Fellowship (PMRF)\nC. Prime Minister Research Chair (PMRC)\nD. Anusandhan National Research Foundation (ANRF)\n\nList II (Key Attribute / Defining Scope)\n1. Launched in 2017 to engage overseas scientists and engineers with Indian universities\n2. Tailored to fund doctoral scholars rather than senior academic chairs\n3. Serves as a reverse-brain-drain instrument offering research chairs for up to five years\n4. Apex research funding body established under an Act of 2023, subsuming SERB\n\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "A-2, B-1, C-4, D-3",
+        "A-1, B-2, C-3, D-4",
+        "A-4, B-2, C-3, D-1",
+        "A-1, B-3, C-2, D-4"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "VAJRA faculty scheme was launched in 2017 to reverse brain drain. PMRF specifically funds doctoral scholars rather than senior chairs. PMRC is a reverse-brain-drain instrument offering research chairs with a tenure of up to five years. ANRF was established under the ANRF Act, 2023 as an apex funding body subsuming SERB. Therefore, the correct match is A-1, B-2, C-3, D-4.",
+      "explanation_hindi": "ब्रेन ड्रेन को उलटने के लिए 2017 में वज्र (VAJRA) फैकल्टी योजना शुरू की गई थी। PMRF विशेष रूप से वरिष्ठ चेयर के बजाय डॉक्टरेट छात्रों को वित्तपोषित करता है। PMRC एक रिवर्स-ब्रेन-ड्रेन साधन है जो पांच साल तक के कार्यकाल के लिए रिसर्च चेयर प्रदान करता है। ANRF को SERB को समाहित करते हुए 2023 के अधिनियम के तहत शीर्ष अनुसंधान वित्तपोषण निकाय के रूप में स्थापित किया गया था। अतः सही सुमेलन A-1, B-2, C-3, D-4 है।",
       "topic": "PMRC",
       "difficulty": "hard",
       "key_facts": [
-        "| Annual applicants | ~13–14 lakh | 4–6 lakh | 5–7 lakh | 5–7 lakh |\n| Final selections | ~933–1,105 | 200–930 (varies) | 1,000–2,035 | 300–1,096 |\n| Final selection rate | Under 0.2% | 0.3%–0.5% | 0.3%–0.6% | 0.2%–0.4% |\n| Prelims-to-Mains ratio | ~1:15 shortlist | ~1:10–12 shortlist | ~1:6–8 shortlist | ~1:8 shortlist |"
+        "To reverse this trend, the government has launched several initiatives, including the VAJRA faculty scheme (2017) and now the PMRC."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-13T12:43:50.873781"
+      "processed_at": "2026-10-13T12:42:12.322524"
+    },
+    {
+      "id": "ec6dc37a-7322-4309-98bc-9735a15e2d8f",
+      "created_at": "2026-10-13T12:36:55.701149",
+      "question_hindi": "प्रधान मंत्री रिसर्च चेयर (PMRC) योजना के तहत विषयगत प्राथमिकता वाले क्षेत्रों और उनके निर्दिष्ट प्रक्षेत्रों के संदर्भ में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (विषयगत प्राथमिकता क्षेत्र)\nA. उन्नत संगणना (एडवांस्ड कंप्यूटिंग)\nB. ऊर्जा\nC. उन्नत सामग्री (एडवांस्ड मटेरियल्स)\nD. प्राथमिकता क्षेत्र 13\n\nसूची II (निर्दिष्ट प्रक्षेत्र/क्षेत्र)\n1. महत्वपूर्ण खनिज (क्रिटिकल मिनरल्स)\n2. एआई, क्वांटम कंप्यूटिंग और सुपरकंप्यूटिंग\n3. परमाणु ऊर्जा (एटॉमिक एनर्जी)\n4. संधारणीयता और जलवायु परिवर्तन (सस्टेनेबिलिटी एंड क्लाइमेट चेंज)\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-3, B-4, C-1, D-2",
+        "A-2, B-4, C-1, D-3",
+        "A-4, B-2, C-1, D-3",
+        "A-2, B-1, C-4, D-3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding the thematic priority sectors and their specified domains under the Prime Minister Research Chair (PMRC) Scheme:\n\nList I (Thematic Priority Sector)\nA. Advanced Computing\nB. Energy\nC. Advanced Materials\nD. Priority Sector 13\n\nList II (Domain / Area Specified)\n1. Critical Minerals\n2. AI, Quantum Computing & Supercomputing\n3. Atomic Energy\n4. Sustainability & Climate Change\n\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "A-3, B-4, C-1, D-2",
+        "A-2, B-4, C-1, D-3",
+        "A-4, B-2, C-1, D-3",
+        "A-2, B-1, C-4, D-3"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "According to the official PMRC notifications, the 13 thematic priority areas include: Advanced Computing (AI, Quantum Computing & Supercomputing); Energy, Sustainability & Climate Change; Advanced Materials & Critical Minerals; and Priority Sector 13 is designated as Atomic Energy.",
+      "explanation_hindi": "PMRC की आधिकारिक अधिसूचना के अनुसार, 13 प्राथमिकता वाले विषयगत क्षेत्रों में शामिल हैं: एडवांस्ड कंप्यूटिंग (एआई, क्वांटम कंप्यूटिंग और सुपरकंप्यूटिंग); ऊर्जा, संधारणीयता और जलवायु परिवर्तन; उन्नत सामग्री और महत्वपूर्ण खनिज; तथा 13वां प्राथमिकता क्षेत्र परमाणु ऊर्जा (एटॉमिक एनर्जी) है।",
+      "topic": "PMRC",
+      "difficulty": "medium",
+      "key_facts": [
+        "1. Advanced Computing (AI, Quantum Computing & Supercomputing)\n2. Semiconductors\n3. Energy, Sustainability & Climate Change\n4. Cybersecurity\n5. Healthcare & MedTech\n6. Biotechnology\n7. Advanced Materials & Critical Minerals\n8. Space & Defence\n9. Next-Generation Communications\n10. Manufacturing & Industry 4.0\n11. Agri & Food Technologies\n12. Blue Economy\n13. Atomic Energy"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T12:36:55.701149"
+    },
+    {
+      "id": "fbdcd6b9-3450-4e99-96bc-dc2f50f18653",
+      "created_at": "2026-10-13T12:39:07.836451",
+      "question_hindi": "प्रधानमंत्री रिसर्च चेयर (PMRC) योजना के लिए जारी आधिकारिक आवेदन आमंत्रण (Call for Applications) के अनुसार, संभावित मेजबान संस्थानों और PMRC फैलो के लिए निर्धारित आवेदन अवधि क्या है?",
+      "options_hindi": [
+        "1 अप्रैल, 2026 को आरंभ होकर 31 मई, 2026 को समाप्त",
+        "1 जुलाई, 2026 को आरंभ होकर 15 अगस्त, 2026 को समाप्त",
+        "15 जनवरी, 2026 को आरंभ होकर 28 फरवरी, 2026 को समाप्त",
+        "1 जून, 2026 को आरंभ होकर 15 जुलाई, 2026 को समाप्त"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "According to the official Call for Applications for the Prime Minister Research Chair (PMRC) Scheme, what is the specified application window for prospective Host Institutions and PMRC Fellows?",
+      "options_english": [
+        "Opens on April 1, 2026 and closes on May 31, 2026",
+        "Opens on July 1, 2026 and closes on August 15, 2026",
+        "Opens on January 15, 2026 and closes on February 28, 2026",
+        "Opens on June 1, 2026 and closes on July 15, 2026"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "As specifically mentioned on the PMRC Scheme Call for Applications document, the applications open on June 1, 2026 and close on July 15, 2026.",
+      "explanation_hindi": "PMRC योजना के आधिकारिक आवेदन आमंत्रण दस्तावेज़ में स्पष्ट रूप से उल्लेख किया गया है कि आवेदन 1 जून, 2026 को खुलते हैं और 15 जुलाई, 2026 को बंद होते हैं।",
+      "topic": "PMRC",
+      "difficulty": "easy",
+      "key_facts": [
+        "PMRC applications open on June 1, 2026 Closes on July 15, 2026"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T12:39:07.836451"
+    },
+    {
+      "id": "8215e5ed-9e06-475f-ad6b-0c5c8c8ba909",
+      "created_at": "2026-10-13T12:42:57.366590",
+      "question_hindi": "प्रधानमंत्री रिसर्च चेयर (PMRC) योजना 2026 की संरचना और शासन के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. इस योजना की परिचालन संरचना तीन मूलभूत स्तंभों पर आधारित है: लीड संस्थान (Lead Institutions), मेजबान संस्थान (Host Institutions) और PMRC फेलो।\n2. यह पहल भारत के प्रवासी नागरिकों (OCI), भारतीय मूल के व्यक्तियों (PIO) और विदेश में कार्यरत भारतीय नागरिकों के लिए खुली है।\n3. भाग लेने वाले संस्थानों और अध्येताओं के चयन की निगरानी करने वाली अधिकार प्राप्त समिति (Empowered Committee) की अध्यक्षता प्रोफेसर अजय कुमार सूद द्वारा की जाती है।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 2 और 3",
+        "1, 2 और 3",
+        "केवल 1 और 2",
+        "केवल 1 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the architecture and governance of the Prime Minister Research Chair (PMRC) Scheme 2026:\n\n1. The operational architecture of the scheme is structured around three foundational pillars: Lead Institutions, Host Institutions, and PMRC Fellows.\n2. The initiative is open to Overseas Citizens of India (OCI), Persons of Indian Origin (PIO), and Indian nationals working abroad.\n3. The Empowered Committee monitoring the selection of participating institutions and fellows is chaired by Professor Ajay Kumar Sood.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "2 and 3 only",
+        "1, 2 and 3",
+        "1 and 2 only",
+        "1 and 3 only"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "All three statements are correct. The scheme is built upon three pillars: Lead Institutions, Host Institutions, and PMRC Fellows. It is designed to encourage OCIs, PIOs, and Indian nationals abroad to collaborate with Indian institutions. The Empowered Committee that monitors the selection is chaired by Professor Ajay Kumar Sood, the Principal Scientific Advisor to the Government of India.",
+      "explanation_hindi": "तीनों कथन सही हैं। यह योजना तीन स्तंभों पर आधारित है: लीड संस्थान, मेजबान संस्थान और PMRC फेलो। इसे OCI, PIO और विदेश में काम कर रहे भारतीय नागरिकों को भारतीय संस्थानों के साथ सहयोग करने के लिए प्रोत्साहित करने हेतु बनाया गया है। चयन की निगरानी करने वाली अधिकार प्राप्त समिति की अध्यक्षता भारत सरकार के प्रधान वैज्ञानिक सलाहकार प्रोफेसर अजय कुमार सूद करते हैं।",
+      "topic": "PMRC",
+      "difficulty": "medium",
+      "key_facts": [
+        "The scheme identifies 13 priority sectors categorized under three pillars: Lead Institutions, Host Institutions, and PMRC Fellows... This initiative is designed to offer a flexible, prestigious, and well-funded platform that encourages Overseas Citizens of India (OCI), Persons of Indian Origin (PIO), and Indian nationals working abroad to collaborate with domestic institutions... The selection of participating institutions and fellows is monitored by an Empowered Committee chaired by Professor Ajay Kumar Sood, the Principal Scientific Advisor (PSA) to the Government of India."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T12:42:57.366590"
+    },
+    {
+      "id": "84970e3b-62d9-4e46-bf5f-a3051b43a610",
+      "created_at": "2026-10-13T12:31:37.789820",
+      "question_hindi": "प्रधानमंत्री रिसर्च चेयर (PMRC) योजना के तहत मेजबान संस्थानों (Host Institutions) के प्रावधानों के संदर्भ में, निम्नलिखित कथनों पर विचार कीजिए:\n\n1. भाग लेने वाले मेजबान संस्थानों से कम्प्यूटेशनल संसाधनों, उपकरण और अनुसंधान सुविधाओं तक पहुंच जैसे वस्तु-रूप (in-kind) योगदान देने की अपेक्षा की जाती है।\n2. संयुक्त रूप से उत्पादित RDI आउटपुट से उत्पन्न होने वाले ओपन-एक्सेस प्रकाशन शुल्क और पेटेंटिंग की लागत मेजबान संस्थान द्वारा वहन/सक्षम की जा सकती है।\n3. यह योजना भाग लेने वाले मेजबान संस्थानों को पूरी तरह से केंद्र सरकार की संस्थाओं तक ही सीमित रखती है और राज्य उच्च शिक्षण संस्थानों को बाहर करती है।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "options_hindi": [
+        "केवल 1",
+        "केवल 2 और 3",
+        "केवल 1 और 2",
+        "1, 2 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "With reference to the provisions for Host Institutions under the Prime Minister Research Chair (PMRC) Scheme, consider the following statements:\n\n1. Participating Host Institutions are expected to extend in-kind contributions such as computational resources, instrumentation, and access to research facilities.\n2. Open-access publication charges and costs of patenting arising from jointly produced RDI outputs may be enabled by the Host Institution.\n3. The scheme restricts participating Host Institutions strictly to Central Government entities, excluding State Higher Education Institutions.\n\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "1 only",
+        "2 and 3 only",
+        "1 and 2 only",
+        "1, 2 and 3"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Statements 1 and 2 are correct. Host Institutions are expected to extend in-kind contributions including access to laboratories, libraries, research facilities, instrumentation, computational resources, and may enable open-access publication charges and patenting costs. Statement 3 is incorrect because the scheme is explicitly operationalised through India's leading government (Central and State) Higher Education Institutions (HEIs), National Laboratories, and Research Institutes.",
+      "explanation_hindi": "कथन 1 और 2 सही हैं। मेजबान संस्थानों से प्रयोगशालाओं, पुस्तकालयों, अनुसंधान सुविधाओं, उपकरण, कम्प्यूटेशनल संसाधनों तक पहुंच सहित वस्तु-रूप योगदान देने की अपेक्षा की जाती है, और वे ओपन-एक्सेस प्रकाशन शुल्क तथा पेटेंटिंग लागत को सक्षम कर सकते हैं। कथन 3 गलत है क्योंकि यह योजना भारत के प्रमुख सरकारी (केंद्रीय और राज्य) उच्च शिक्षण संस्थानों (HEIs), राष्ट्रीय प्रयोगशालाओं और अनुसंधान संस्थानों के माध्यम से संचालित की जाती है।",
+      "topic": "PMRC",
+      "difficulty": "medium",
+      "key_facts": [
+        "Host Institutions participating in the Scheme are expected to extend in-kind contributions, including but not limited to access to laboratories, libraries, research facilities, instrumentation, computational resources, collaborative academic environment, publication and institutionalsupport. Open-access publication charges and cost of patenting arising from jointly produced research, development, and innovation (RDI) outputs may be enabled by the Host Institution."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T12:31:37.789820"
+    },
+    {
+      "id": "b9497ebe-1ce0-4b50-b261-23bb7f84e6e7",
+      "created_at": "2026-10-13T12:30:39.954447",
+      "question_hindi": "पेरेंट्स म्यूजिक रिसोर्स सेंटर (PMRC) की स्थापना 'वॉशिंगटन वाइव्स' के रूप में जानी जाने वाली चार प्रमुख महिलाओं द्वारा की गई थी। निम्नलिखित में से सह-संस्थापकों और उनके संबंधित पतियों का कौन-सा युग्म सही सुमेलित नहीं है?",
+      "options_hindi": [
+        "पाम होवार – वॉशिंगटन रियलटर रेमंड होवार",
+        "सुसान बेकर – ट्रेजरी सचिव जेम्स बेकर",
+        "टिपर गोर – सीनेटर (और बाद में उपराष्ट्रपति) अल गोर",
+        "सैली नेवियस – जोसेफ कूर्स, कूर्स बीयर्स के मालिक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "The Parents Music Resource Center (PMRC) was founded by four prominent women known as the 'Washington Wives'. Which of the following pairs of co-founders and their respective spouses is NOT correctly matched?",
+      "options_english": [
+        "Pam Howar – Washington realtor Raymond Howar",
+        "Susan Baker – Treasury Secretary James Baker",
+        "Tipper Gore – Senator (and later Vice President) Al Gore",
+        "Sally Nevius – Joseph Coors, the owner of Coors beers"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Sally Nevius was the wife of former Washington City Council Chairman John Nevius, not Joseph Coors. Joseph Coors was the owner of Coors beers who provided financial help and office space to the PMRC.",
+      "explanation_hindi": "सैली नेवियस वॉशिंगटन सिटी काउंसिल के पूर्व अध्यक्ष जॉन नेवियस की पत्नी थीं, न कि जोसेफ कूर्स की। जोसेफ कूर्स 'कूर्स बीयर्स' के मालिक थे, जिन्होंने PMRC को वित्तीय सहायता और कार्यालय प्रदान किया था।",
+      "topic": "PMRC",
+      "difficulty": "easy",
+      "key_facts": [
+        "The women who founded the PMRC are Tipper Gore, wife of Senator and later Vice President Al Gore; Susan Baker, wife of Treasury Secretary James Baker; Pam Howar, wife of Washington realtor Raymond Howar; and Sally Nevius, wife of former Washington City Council Chairman John Nevius."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T12:30:39.954447"
+    },
+    {
+      "id": "4464a783-1222-4b21-8a5f-cc2f103db3c4",
+      "created_at": "2026-10-13T12:42:12.322524",
+      "question_hindi": "PMRC योजना के रणनीतिक उद्देश्यों और वैचारिक ढांचे के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. यह योजना संस्थागत प्रतिभा-एंकरिंग साधन के बजाय विशुद्ध रूप से एक व्यक्तिगत अनुसंधान परियोजना अनुदान के रूप में तैयार की गई है।\n2. वैज्ञानिक नीति में, 'रिवर्स ब्रेन ड्रेन' विशेष रूप से किसी देश के अपने प्रवासी वैज्ञानिकों की वापसी या जुड़ाव को संदर्भित करता है, जबकि 'ब्रेन गेन' राष्ट्रीय मूल की परवाह किए बिना उच्च-कुशल शोधकर्ताओं के शुद्ध आकर्षण को दर्शाता है।\n3. यह योजना अनुसंधान और विकास पर भारत के सकल व्यय (GERD) को संबोधित करने का प्रयास करती है, जो सकल घरेलू उत्पाद (GDP) के लगभग 0.6% से 0.7% के आसपास रुका हुआ है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 2 और 3",
+        "1, 2 और 3",
+        "केवल 1 और 3",
+        "केवल 1 और 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the strategic objectives and conceptual framework of the PMRC Scheme:\n\n1. The scheme is framed strictly as an individual research project grant rather than an institutional talent-anchoring instrument.\n2. In scientific policy, 'reverse brain drain' refers specifically to the return or engagement of a country’s own diaspora scientists, whereas 'brain gain' denotes the net attraction of high-skilled researchers regardless of national origin.\n3. The scheme seeks to address India's Gross Expenditure on R&D (GERD), which has remained stagnant around 0.6% to 0.7% of GDP.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "2 and 3 only",
+        "1, 2 and 3",
+        "1 and 3 only",
+        "1 and 2 only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Statement 1 is incorrect because the scheme is explicitly described as 'a talent-anchoring instrument, not a research grant alone'. Statements 2 and 3 are correct: reverse brain drain refers to the return/engagement of diaspora scientists while brain gain attracts talent regardless of national origin; and India's GERD has hovered around 0.6% to 0.7% (or ~0.65%) of GDP.",
+      "explanation_hindi": "कथन 1 गलत है क्योंकि योजना को स्पष्ट रूप से 'एक प्रतिभा-एंकरिंग साधन, न कि केवल एक शोध अनुदान' के रूप में वर्णित किया गया है। कथन 2 और 3 सही हैं: रिवर्स ब्रेन ड्रेन प्रवासी वैज्ञानिकों की वापसी/संबद्धता को संदर्भित करता है जबकि ब्रेन गेन राष्ट्रीय मूल की परवाह किए बिना प्रतिभा को आकर्षित करता है; तथा भारत का GERD सकल घरेलू उत्पाद के लगभग 0.6% से 0.7% (लगभग 0.65%) के आसपास रहा है।",
+      "topic": "PMRC",
+      "difficulty": "medium",
+      "key_facts": [
+        "The distinction that earns marks. Reverse brain drain is not the same as brain gain. Reverse brain drain is the return, or engagement, of a country’s own diaspora scientists. Brain gain is the net attraction of any high-skilled researcher regardless of national orig"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T12:42:12.322524"
     },
     {
       "id": "41217f1f-d5a2-420d-b65e-206738e8407a",
@@ -672,14 +450,14 @@
       "processed_at": "2026-10-13T12:40:56.021166"
     },
     {
-      "id": "c477f043-6517-462a-9f5a-33cdaa35213e",
-      "created_at": "2026-10-13T12:33:19.526925",
-      "question_hindi": "लोक सेवा आयोगों को प्रभावित करने वाले प्रमुख ऐतिहासिक सुधारों और संशोधनों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. 42वें संशोधन द्वारा संघ लोक सेवा आयोग के परामर्श के दायरे को सीमित कर दिया गया था, जिसे बाद में 44वें संशोधन (1978) द्वारा मूल स्थिति में बहाल किया गया।\n2. कोठारी समिति (1979) ने परीक्षा पैटर्न में बदलाव की सिफारिश की, जिसके फलस्वरूप प्रारंभिक परीक्षा और वैकल्पिक विषयों की शुरुआत हुई।\n3. सेवा संबंधी मामलों के न्यायनिर्णयन हेतु केंद्रीय प्रशासनिक अधिकरण (CAT) और राज्य अधिकरणों की स्थापना के लिए 1985 में अनुच्छेद 323A के तहत प्रशासनिक अधिकरण अधिनियम पारित किया गया था।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "720ef739-8c5b-49f9-a5ca-ca0ec736dbfe",
+      "created_at": "2026-10-13T12:35:10.168866",
+      "question_hindi": "प्रधान मंत्री रिसर्च चेयर (PMRC) योजना 2026 के तहत मेजबान संस्थानों (Host Institutions) की संस्थागत पात्रता के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. पात्र उच्च शिक्षण संस्थानों के अलावा, DST, DBT, ICMR और CSIR के तहत संचालित चुनिंदा राष्ट्रीय अनुसंधान प्रयोगशालाओं को अध्येताओं (फेलो) की मेजबानी करने की अनुमति है।\n2. यह योजना बीस रणनीतिक विषयगत क्षेत्रों में आने वाले शोध प्रस्तावों की अनुमति देती है।\n\nऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
       "options_hindi": [
-        "केवल 1 और 2",
-        "केवल 1 और 3",
-        "केवल 2 और 3",
-        "1, 2 और 3"
+        "1 और 2 दोनों",
+        "न तो 1, न ही 2",
+        "केवल 1",
+        "केवल 2"
       ],
       "option_labels": [
         "A",
@@ -690,31 +468,68 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding key historical reforms and amendments impacting the Public Service Commissions:\n\n1. The 42nd Amendment restricted the scope of UPSC consultation, which was subsequently restored to its original position by the 44th Amendment (1978).\n2. The Kothari Committee (1979) recommended changes to the examination pattern, leading to the introduction of the preliminary examination and optional subjects.\n3. The Administrative Tribunals Act was enacted under Article 323A in 1985 to create the Central Administrative Tribunal (CAT) and state tribunals for service matter adjudication.\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the institutional eligibility for Host Institutions under the Prime Minister Research Chair (PMRC) Scheme 2026:\n\n1. In addition to eligible Higher Education Institutions, select national research laboratories operating under DST, DBT, ICMR, and CSIR are permitted to host fellows.\n2. The scheme allows incoming research proposals across twenty strategic thematic areas.\n\nWhich of the statements given above is/are correct?",
       "options_english": [
-        "1 and 2 only",
-        "1 and 3 only",
-        "2 and 3 only",
-        "1, 2 and 3"
+        "Both 1 and 2",
+        "Neither 1 nor 2",
+        "1 only",
+        "2 only"
       ],
-      "correct_answer": "d",
-      "explanation_english": "All three statements are correct: The 42nd Constitutional Amendment restricted the scope of UPSC consultation, which the 44th Amendment (1978) restored; the Kothari Committee in 1979 led to the introduction of the preliminary examination and optional subjects; and in 1985, the Administrative Tribunals Act was enacted under Article 323A creating CAT and state tribunals.",
-      "explanation_hindi": "तीनों कथन सही हैं: 42वें संवैधानिक संशोधन ने संघ लोक सेवा आयोग के परामर्श के दायरे को सीमित किया था, जिसे 44वें संशोधन (1978) द्वारा बहाल किया गया; 1979 में कोठारी समिति की सिफारिशों के कारण प्रारंभिक परीक्षा और वैकल्पिक विषयों की शुरुआत हुई; और 1985 में अनुच्छेद 323A के तहत प्रशासनिक अधिकरण अधिनियम लागू किया गया, जिससे CAT और राज्य अधिकरण स्थापित हुए।",
+      "correct_answer": "c",
+      "explanation_english": "Statement 1 is correct: The host criteria includes select national research laboratories operating under the DST, DBT, ICMR, and CSIR. Statement 2 is incorrect because the scheme identifies 13 (not twenty) priority sectors / strategic thematic areas.",
+      "explanation_hindi": "कथन 1 सही है: मेजबान मानदंड में DST, DBT, ICMR और CSIR के तहत संचालित चुनिंदा राष्ट्रीय अनुसंधान प्रयोगशालाएं शामिल हैं। कथन 2 गलत है क्योंकि यह योजना 13 (बीस नहीं) प्राथमिकता वाले क्षेत्रों / रणनीतिक विषयगत क्षेत्रों की पहचान करती है।",
       "topic": "PMRC",
       "difficulty": "medium",
       "key_facts": [
-        "1976\n\n42nd Amendment restricted scope of UPSC consultation; 44th Amendment (1978) restored original position\n\n1979\n\nKothari Committee recommended changes to UPSC examination pattern — led to introduction of preliminary examination and optional subjects\n\n1985\n\nAdministrative Tribunals Act enacted under Art 323A — created CAT and state tribunals for service matter adjudication"
+        "This is complemented by select national research laboratories operating under the DST, DBT, ICMR, and CSIR."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-13T12:33:19.526925"
+      "processed_at": "2026-10-13T12:35:10.168866"
     },
     {
-      "id": "6cbecaa9-7846-4769-859f-c568bcc28315",
-      "created_at": "2026-10-13T12:36:14.883774",
-      "question_hindi": "संघ लोक सेवा आयोग (UPSC) सिविल सेवा परीक्षा की मूल्यांकन और अंकन योजना के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. प्रारंभिक (Prelims) चरण में, गलत उत्तरों के लिए एक-तिहाई (1/3) अंक काट लिए जाते हैं।\n2. मुख्य (Mains) चरण में कोई नकारात्मक अंकन (negative marking) नहीं होता है।\n3. प्रारंभिक परीक्षा में, CSAT 33% अर्हक (qualifying) है, जबकि सामान्य अध्ययन के अंकों का उपयोग शॉर्टलिस्टिंग के लिए किया जाता है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "17a94a44-48ee-4a85-94fb-deeb109b0707",
+      "created_at": "2026-10-13T12:35:10.168866",
+      "question_hindi": "प्रधान मंत्री रिसर्च चेयर (PMRC) योजना 2026 के वित्तीय आवंटन और प्रशासन के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. प्रारंभिक बजटीय अनुमान बहु-वर्षीय अनुसंधान अनुदान, स्थानांतरण भत्ते, संस्थागत फेलोशिप और प्रयोगशाला के बुनियादी ढांचे के वित्तपोषण के लिए लगभग ₹200 करोड़ की लक्षित तैनाती को दर्शाते हैं।\n2. अध्येताओं (फेलो) और प्रस्तावों दोनों के मूल्यांकन और चयन की निगरानी भारत सरकार के प्रमुख वैज्ञानिक सलाहकार प्रोफेसर अजय कुमार सूद की अध्यक्षता में एक अधिकार प्राप्त समिति (Empowered Committee) द्वारा की जाती है।\n\nऊपर दिए गए कथनों में से कौन सा/से सही है/हैं?",
       "options_hindi": [
-        "केवल 1 और 2",
+        "केवल 2",
+        "1 और 2 दोनों",
+        "केवल 1",
+        "न तो 1, न ही 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the financial allocation and governance of the Prime Minister Research Chair (PMRC) Scheme 2026:\n\n1. Early budgetary estimates reflect a targeted deployment of roughly ₹200 crore to fund multi-year research grants, relocation allowances, institutional fellowships, and lab infrastructure.\n2. The evaluation and selection of both fellows and proposals are monitored by an Empowered Committee chaired by Professor Ajay Kumar Sood, the Principal Scientific Advisor to the Government of India.\n\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "2 only",
+        "Both 1 and 2",
+        "1 only",
+        "Neither 1 nor 2"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Both statements are correct. According to the source texts: Early budgetary estimates reflect a targeted deployment of roughly ₹200 crore to fund multi-year research grants, robust relocation allowances, competitive institutional fellowships, and state-of-the-art lab infrastructure. Furthermore, the selection is monitored by an Empowered Committee chaired by Professor Ajay Kumar Sood, the Principal Scientific Advisor (PSA) to the Government of India.",
+      "explanation_hindi": "दोनों कथन सही हैं। संदर्भ के अनुसार: प्रारंभिक बजटीय अनुमान बहु-वर्षीय अनुसंधान अनुदान, स्थानांतरण भत्ते, प्रतिस्पर्धी संस्थागत फेलोशिप और अत्याधुनिक प्रयोगशाला अवसंरचना के लिए लगभग ₹200 करोड़ के लक्षित परिनियोजन को दर्शाते हैं। इसके अलावा, चयन की निगरानी भारत सरकार के प्रधान वैज्ञानिक सलाहकार (PSA) प्रोफेसर अजय कुमार सूद की अध्यक्षता वाली एक अधिकार प्राप्त समिति द्वारा की जाती है।",
+      "topic": "PMRC",
+      "difficulty": "hard",
+      "key_facts": [
+        "Early budgetary estimates reflect a targeted deployment of roughly ₹200 crore to fund multi-year research grants, robust relocation allowances, competitive institutional fellowships, and state-of-the-art lab infrastructure for the incoming cohort."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T12:35:10.168866"
+    },
+    {
+      "id": "2714a190-1b02-47c3-932d-1975d377698b",
+      "created_at": "2026-10-13T12:40:56.021166",
+      "question_hindi": "भारत के संविधान के अनुच्छेद 315 और 316 के तहत लोक सेवा आयोगों की संवैधानिक स्थापना और संरचना के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. जहाँ संघ लोक सेवा आयोग (UPSC) और राज्य लोक सेवा आयोग (SPSC) अनुच्छेद 315(1) के तहत अनिवार्य संवैधानिक निकाय हैं, वहीं संयुक्त राज्य लोक सेवा आयोग (JSPSC) का गठन संबंधित राज्य विधानमंडलों के अनुरोध पर संसद के एक अधिनियम द्वारा किया जाता है।\n2. वर्तमान में, भारत के राज्यों में कई संयुक्त राज्य लोक सेवा आयोग (JSPSC) अस्तित्व में हैं और सक्रिय रूप से कार्य कर रहे हैं।\n3. संघ लोक सेवा आयोग (UPSC) के सदस्यों के साथ-साथ संयुक्त राज्य लोक सेवा आयोग (JSPSC) के सदस्यों की नियुक्ति भी राष्ट्रपति द्वारा की जाती है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
         "केवल 1 और 3",
+        "केवल 1 और 2",
         "1, 2 और 3",
         "केवल 2 और 3"
       ],
@@ -727,23 +542,208 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the evaluation and marking scheme of the UPSC Civil Services Examination:\n\n1. In the Prelims stage, one-third (1/3rd) of the marks is deducted for incorrect answers.\n2. In the Mains stage, there is no negative marking.\n3. In Prelims, CSAT is qualifying with a requirement of 33%, while General Studies marks are used for shortlisting.\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the constitutional establishment and composition of Public Service Commissions under Articles 315 and 316 of the Constitution of India:\n\n1. While the UPSC and State PSCs are constitutional bodies mandated under Article 315(1), a Joint State Public Service Commission (JSPSC) is created by an Act of Parliament on the request of the concerned state legislatures.\n2. Currently, multiple Joint State Public Service Commissions (JSPSCs) exist and function actively across Indian states.\n3. Members of the UPSC as well as members of a Joint State Public Service Commission (JSPSC) are appointed by the President.\n\nWhich of the statements given above are correct?",
       "options_english": [
-        "1 and 2 only",
         "1 and 3 only",
+        "1 and 2 only",
         "1, 2 and 3",
         "2 and 3 only"
       ],
-      "correct_answer": "c",
-      "explanation_english": "According to the comparative overview of UPSC Prelims vs. Mains: (1) Under Negative Marking, Prelims has negative marking where 1/3rd of the mark is deducted for incorrect answers, whereas Mains has 'No negative marking'. (2) Under Qualifying Marks, CSAT is qualifying (33%) and GS marks are used for shortlisting in Prelims. Hence, statements 1, 2, and 3 are all correct.",
-      "explanation_hindi": "UPSC प्रारंभिक बनाम मुख्य परीक्षा के तुलनात्मक विवरण के अनुसार: (1) नकारात्मक अंकन के तहत, प्रारंभिक परीक्षा में प्रत्येक गलत उत्तर के लिए 1/3 अंक काटा जाता है, जबकि मुख्य परीक्षा में 'कोई नकारात्मक अंकन नहीं' होता है। (2) अर्हक अंकों के तहत, प्रारंभिक परीक्षा में CSAT 33% अर्हक है और GS अंकों का उपयोग शॉर्टलिस्टिंग के लिए किया जाता है। अतः कथन 1, 2 और 3 तीनों सही हैं।",
+      "correct_answer": "a",
+      "explanation_english": "Statements 1 and 3 are correct. Under Art 315(1), UPSC and SPSCs are constitutional bodies, whereas a JSPSC is created by an Act of Parliament under Art 315(2). Under Art 316(1), UPSC members and JSPSC members are appointed by the President (SPSC members are appointed by the Governor). Statement 2 is incorrect because no JSPSC currently exists in India.",
+      "explanation_hindi": "कथन 1 और 3 सही हैं। अनुच्छेद 315(1) के तहत संघ लोक सेवा आयोग और राज्य लोक सेवा आयोग संवैधानिक निकाय हैं, जबकि अनुच्छेद 315(2) के तहत संयुक्त राज्य लोक सेवा आयोग संसद के एक अधिनियम द्वारा बनाया जाता है। अनुच्छेद 316(1) के तहत संघ लोक सेवा आयोग और JSPSC के सदस्यों की नियुक्ति राष्ट्रपति द्वारा की जाती है। कथन 2 गलत है क्योंकि वर्तमान में भारत में कोई भी JSPSC अस्तित्व में नहीं है।",
+      "topic": "PMRC",
+      "difficulty": "hard",
+      "key_facts": [
+        "Art 315(1) mandates a UPSC for the Union and an SPSC for each state. Art 315(2) allows two or more states to agree on a Joint SPSC (JSPSC), created by an Act of Parliament on the state legislatures' request. UPSC and SPSCs are constitutionally mandated; JSpSCs are optional and statute-based. No JSPSC currently exists in India."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T12:40:56.021166"
+    },
+    {
+      "id": "f070bc88-8096-41fc-ac86-c28fcdaa6a1f",
+      "created_at": "2026-10-13T12:34:01.928585",
+      "question_hindi": "पैरेंट्स म्यूजिक रिसोर्स सेंटर (PMRC) की \"फिल्थी फिफ्टीन\" (Filthy Fifteen) सूची में शामिल गीतों और उनकी संबंधित गीत-सामग्री श्रेणियों के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (गीत)\nA. \"इनटू द कोवेन\" (मर्सीफुल फेट)\nB. \"वी आर नॉट गोना टेक इट\" (ट्विस्टेड सिस्टर)\nC. \"हाई 'एन' ड्राई (सैटरडे नाइट)\" (डेफ लेपर्ड)\nD. \"ईट मी अलाइव\" (जुदास प्रीस्ट)\n\nसूची II (गीत-सामग्री श्रेणी)\n1. हिंसा (Violence)\n2. गुप्त/तांत्रिक विषय (Occult)\n3. यौन/हिंसा (Sex/violence)\n4. नशीली दवाओं और शराब का उपयोग (Drug and alcohol use)\n\nनीचे दिए गए कूट का उपयोग करके सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-2, B-4, C-1, D-3",
+        "A-4, B-1, C-2, D-3",
+        "A-1, B-2, C-3, D-4",
+        "A-2, B-1, C-4, D-3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding songs included in the Parents Music Resource Center's (PMRC) \"Filthy Fifteen\" list and their corresponding lyrical content categories:\n\nList I (Song)\nA. \"Into the Coven\" (Mercyful Fate)\nB. \"We're Not Gonna Take It\" (Twisted Sister)\nC. \"High 'n' Dry (Saturday Night)\" (Def Leppard)\nD. \"Eat Me Alive\" (Judas Priest)\n\nList II (Lyrical Content Category)\n1. Violence\n2. Occult\n3. Sex/violence\n4. Drug and alcohol use\n\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "A-2, B-4, C-1, D-3",
+        "A-4, B-1, C-2, D-3",
+        "A-1, B-2, C-3, D-4",
+        "A-2, B-1, C-4, D-3"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "According to the PMRC's 'Filthy Fifteen' list:\n- 'Into the Coven' by Mercyful Fate was categorized under 'Occult' (A-2).\n- 'We're Not Gonna Take It' by Twisted Sister was categorized under 'Violence' (B-1).\n- 'High 'n' Dry (Saturday Night)' by Def Leppard was categorized under 'Drug and alcohol use' (C-4).\n- 'Eat Me Alive' by Judas Priest was categorized under 'Sex/violence' (D-3).",
+      "explanation_hindi": "PMRC की 'फिल्थी फिफ्टीन' सूची के अनुसार:\n- मर्सीफुल फेट का 'इनटू द कोवेन' 'ओकल्ट' (Occult) श्रेणी में था (A-2)।\n- ट्विस्टेड सिस्टर का 'वी आर नॉट गोना टेक इट' 'हिंसा' (Violence) श्रेणी में था (B-1)।\n- डेफ लेपर्ड का 'हाई 'एन' ड्राई (सैटरडे नाइट)' 'नशीली दवाओं और शराब का उपयोग' श्रेणी में था (C-4)।\n- जुदास प्रीस्ट का 'ईट मी अलाइव' 'यौन/हिंसा' (Sex/violence) श्रेणी में था (D-3)।",
+      "topic": "PMRC",
+      "difficulty": "hard",
+      "key_facts": [
+        "| 3 | Judas Priest | \" Eat Me Alive\" | Sex/violence |\n| 7 | Twisted Sister | \" We're Not Gonna Take It\" | Violence |\n| 10 | Def Leppard | \" High 'n' Dry (Saturday Night)\" | Drug and alcohol use |\n| 11 | Mercyful Fate | \" Into the Coven\" | Occult |"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T12:34:01.928585"
+    },
+    {
+      "id": "92a25f65-226f-4c8e-98b7-b6fa473bba5a",
+      "created_at": "2026-10-13T12:30:39.954447",
+      "question_hindi": "PMRC और 1985 में आयोजित तथाकथित 'पॉर्न रॉक' पर ऐतिहासिक अमेरिकी सीनेट सुनवाई के संदर्भ में, निम्नलिखित कथनों पर विचार कीजिए:\n\n1. सीनेट की सुनवाई होने से पहले, अगस्त 1985 में ही 19 रिकॉर्ड कंपनियां एल्बमों पर 'Parental Guidance: Explicit Lyrics' लेबल लगाने के लिए सहमत हो गई थीं।\n2. सीनेट की यह सुनवाई 19 सितंबर 1985 को हुई थी, जिसमें संगीतकार डी स्नाइडर, फ्रैंक ज़प्पा और जॉन डेनवर की गवाही शामिल थी।\n3. PMRC की 'फिल्थी फिफ्टीन' सूची में, वेनम के 'पॉसेस्ड' और मर्सीफुल फेट के 'इंटू द कोवेन' दोनों को 'मनोगत/तांत्रिक' (Occult) की श्रेणी में चिह्नित किया गया था।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "1, 2 और 3",
+        "केवल 2 और 3",
+        "केवल 1 और 3",
+        "केवल 1 और 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "With reference to the PMRC and the landmark United States Senate hearing on so-called 'porn rock' held in 1985, consider the following statements:\n\n1. In August 1985, 19 record companies had already agreed to put 'Parental Guidance: Explicit Lyrics' labels on albums before the Senate hearing took place.\n2. The Senate hearing took place on September 19, 1985, featuring testimonies from musicians Dee Snider, Frank Zappa, and John Denver.\n3. On the PMRC's 'Filthy Fifteen' list, both Venom's 'Possessed' and Mercyful Fate's 'Into the Coven' were singled out under the lyrical category of 'Occult'.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "1, 2 and 3",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1 and 2 only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "All three statements are historically accurate based on the text: In August 1985, 19 record companies agreed to apply 'Parental Guidance: Explicit Lyrics' labels; the Senate hearing was held on September 19, 1985, featuring musicians Dee Snider, Frank Zappa, and John Denver; and songs #11 (Into the Coven) and #14 (Possessed) were categorized under 'Occult'.",
+      "explanation_hindi": "दिए गए संदर्भ के आधार पर तीनों कथन पूर्णतः सही हैं: अगस्त 1985 में 19 रिकॉर्ड कंपनियों ने 'Parental Guidance: Explicit Lyrics' लेबल लगाने पर सहमति व्यक्त की थी; सीनेट की सुनवाई 19 सितंबर 1985 को आयोजित की गई थी, जिसमें डी स्नाइडर, फ्रैंक ज़प्पा और जॉन डेनवर ने गवाही दी थी; तथा 'इंटू द कोवेन' (#11) और 'पॉसेस्ड' (#14) दोनों को 'Occult' (मनोगत) श्रेणी में रखा गया था।",
+      "topic": "PMRC",
+      "difficulty": "hard",
+      "key_facts": [
+        "In August 1985, 19 record companies agreed to put \"Parental Guidance: Explicit Lyrics\" labels on albums to warn consumers of explicit lyrical content. Before the labels could be put into place, the Senate agreed to hold a hearing on so-called \"porn rock\". [6] The hearing was held on September 19, 1985, when representatives from the PMRC, three musicians— Dee Snider, Frank Zappa, John Denver—and"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T12:30:39.954447"
+    },
+    {
+      "id": "9cb55d5c-e12c-4f4b-8f23-3ce1d02fed63",
+      "created_at": "2026-10-13T12:32:27.228208",
+      "question_hindi": "राष्ट्रीय अनुसंधान संरचना और PMRC योजना के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. दीर्घकालिक पुनर्वास को अनिवार्य बनाने वाले पारंपरिक फेलोशिप मॉडलों के विपरीत, PMRC योजना ऐसी सहभागिता प्रणालियाँ प्रदान करती है जो अंतर्राष्ट्रीय शोधकर्ताओं की मौजूदा पेशेवर प्रतिबद्धताओं का सम्मान करती हैं।\n2. ANRF अधिनियम, 2023 के तहत स्थापित अनुसंधान राष्ट्रीय अनुसंधान फाउंडेशन (ANRF) के गवर्निंग बोर्ड की अध्यक्षता भारत सरकार के प्रधान वैज्ञानिक सलाहकार द्वारा की जाती है।\n3. अनुसंधान एवं विकास पर भारत का सकल व्यय (GERD) सकल घरेलू उत्पाद (GDP) के लगभग 0.6 से 0.7 प्रतिशत के आसपास है, जो 2 प्रतिशत के अनौपचारिक लक्ष्य से कम है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 1 और 3",
+        "केवल 2 और 3",
+        "केवल 1 और 2",
+        "1, 2 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the national research architecture and the PMRC Scheme:\n\n1. Unlike traditional fellowship models that mandate long-term relocation, the PMRC Scheme offers engagement pathways that respect the existing professional commitments of international researchers.\n2. The Governing Board of the Anusandhan National Research Foundation (ANRF), established under the ANRF Act, 2023, is chaired by the Principal Scientific Adviser to the Government of India.\n3. India’s Gross Expenditure on R&D (GERD) hovers around 0.6 to 0.7 per cent of GDP, which is below the informal target of 2 per cent.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "1 and 3 only",
+        "2 and 3 only",
+        "1 and 2 only",
+        "1, 2 and 3"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Statements 1 and 3 are correct. Statement 2 is incorrect because the Governing Board of the Anusandhan National Research Foundation (ANRF) is chaired by the Prime Minister (not the Principal Scientific Adviser).",
+      "explanation_hindi": "कथन 1 और 3 सही हैं। कथन 2 गलत है क्योंकि अनुसंधान राष्ट्रीय अनुसंधान फाउंडेशन (ANRF) के गवर्निंग बोर्ड की अध्यक्षता प्रधानमंत्री द्वारा की जाती है (प्रधान वैज्ञानिक सलाहकार द्वारा नहीं)।",
+      "topic": "PMRC",
+      "difficulty": "hard",
+      "key_facts": [
+        "The Governing Board is chaired by the Prime Minister; its first meeting was held on 10 September 2024."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T12:32:27.228208"
+    },
+    {
+      "id": "815a508f-9a97-4eb2-a511-ba5e0adac098",
+      "created_at": "2026-10-13T12:40:02.897498",
+      "question_hindi": "प्रधान मंत्री रिसर्च चेयर (PMRC) योजना 2026 के तहत विषयगत क्षेत्रों के समन्वय हेतु शिक्षा मंत्रालय द्वारा कितने प्रमुख संस्थानों को 'लीड इंस्टीट्यूशंस' (Lead Institutions) के रूप में नामित किया गया है?",
+      "options_hindi": [
+        "7",
+        "13",
+        "5",
+        "10"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "How many premier institutions have been designated by the Ministry of Education as 'Lead Institutions' to anchor thematic areas under the Prime Minister Research Chair (PMRC) Scheme 2026?",
+      "options_english": [
+        "7",
+        "13",
+        "5",
+        "10"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Ministry of Education (MoE) has designated 7 premier institutions (IIT Delhi, IIT Bombay, IIT Madras, IIT Kanpur, IIT Hyderabad, IIT (ISM) Dhanbad, and IISc Bengaluru) as Lead Institutions to facilitate the implementation of the PMRC Scheme across various thematic areas.",
+      "explanation_hindi": "शिक्षा मंत्रालय (MoE) ने विभिन्न विषयगत क्षेत्रों में PMRC योजना के क्रियान्वयन को सुगम बनाने के लिए 7 प्रमुख संस्थानों (IIT दिल्ली, IIT बॉम्बे, IIT मद्रास, IIT कानपुर, IIT हैदराबाद, IIT (ISM) धनबाद और IISc बेंगलुरु) को लीड इंस्टीट्यूशन के रूप में नामित किया है।",
       "topic": "PMRC",
       "difficulty": "easy",
       "key_facts": [
-        "Negative Marking | Yes (1/3rd of the mark deducted for incorrect answers) | No negative marking"
+        "The MoE has designated 7 premier institutions as Lead Institutions to facilitate the implementation of the scheme across various thematic areas."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-13T12:36:14.883774"
+      "processed_at": "2026-10-13T12:40:02.897498"
+    },
+    {
+      "id": "d97d0896-799a-4fe8-8832-5061105b9ad6",
+      "created_at": "2026-10-13T12:37:30.180542",
+      "question_hindi": "PMRC योजना के संदर्भ में उल्लिखित भारतीय अनुसंधान पहलों और संबंधित निकायों के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (पहल / निकाय)\nA. वज्र (VAJRA) फैकल्टी योजना\nB. पीएमआरएफ (PMRF)\nC. एएनआरएफ (ANRF) अधिनियम, 2023\nD. पीएमआरसी (PMRC) योजना\n\nसूची II (प्रमुख विशेषता / भूमिका)\n1. पूर्ववर्ती SERB को समाहित करने वाला शीर्ष अनुसंधान-वित्तपोषण निकाय\n2. प्रतिभा पलायन को उलटने के लिए 2017 में शुरू की गई एक पहल\n3. तीन करियर स्तरों में भारतीय मूल के वैज्ञानिकों के लिए प्रतिभा-संयोजन (टैलेंट-एंकरिंग) साधन\n4. वरिष्ठ पीठों (चेयर्स) के बजाय डॉक्टरेट अध्येताओं को वित्तपोषित करने वाली डॉक्टरेट फेलोशिप\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-3, B-4, C-1, D-2",
+        "A-2, B-4, C-1, D-3",
+        "A-2, B-1, C-4, D-3",
+        "A-4, B-2, C-1, D-3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding Indian research initiatives and related bodies mentioned in the context of the PMRC Scheme:\n\nList I (Initiative / Body)\nA. VAJRA faculty scheme\nB. PMRF\nC. ANRF Act, 2023\nD. PMRC Scheme\n\nList II (Key Attribute / Role)\n1. Apex research-funding body subsuming the erstwhile SERB\n2. Launched in 2017 as an initiative to reverse brain drain\n3. Talent-anchoring instrument for Indian-origin scientists across three career tiers\n4. Doctoral fellowship funding doctoral scholars rather than senior chairs\n\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "A-3, B-4, C-1, D-2",
+        "A-2, B-4, C-1, D-3",
+        "A-2, B-1, C-4, D-3",
+        "A-4, B-2, C-1, D-3"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "According to the context: VAJRA faculty scheme was launched in 2017 to counter brain drain (A-2); PMRF is an older fellowship that funds doctoral scholars rather than senior chairs (B-4); ANRF was set up under the ANRF Act, 2023, subsuming the erstwhile SERB (C-1); PMRC Scheme is a talent-anchoring instrument across three career tiers (D-3).",
+      "explanation_hindi": "संदर्भ के अनुसार: वज्र (VAJRA) फैकल्टी योजना 2017 में ब्रेन ड्रेन को उलटने के लिए शुरू की गई थी (A-2); PMRF एक पुरानी फेलोशिप है जो वरिष्ठ चेयर्स के बजाय डॉक्टरेट अध्येताओं को वित्तपोषित करती है (B-4); ANRF को ANRF अधिनियम, 2023 के तहत पूर्ववर्ती SERB को शामिल करके स्थापित किया गया था (C-1); PMRC योजना तीन करियर स्तरों में एक प्रतिभा-संयोजन साधन है (D-3)।",
+      "topic": "PMRC",
+      "difficulty": "medium",
+      "key_facts": [
+        "To reverse this trend, the government has launched several initiatives, including the VAJRA faculty scheme (2017) and now the PMRC. ... Distinct from the older Prime Minister’s Research Fellowship (PMRF), which funds doctoral scholars rather than senior chairs. ... ANRF was set up under the ANRF Act, 2023, subsuming the erstwhile SERB."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T12:37:30.180542"
     }
   ]
 }

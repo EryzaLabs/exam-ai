@@ -1,19 +1,19 @@
 {
-  "test_id": "9347c1a2-57e3-423e-84f1-659806b6487a",
+  "test_id": "0dfbd300-1644-4d23-914d-920833371d5b",
   "test_name": "Topic Test: PM SHRI CM SHRI - Part 2",
   "type": "topic_wise",
   "topic": "pm-shri-cm-shri",
-  "created_at": "2026-10-16T20:04:02.867619",
+  "created_at": "2026-10-17T08:33:52.723410",
   "questions": [
     {
-      "id": "c0de944f-1510-4ab1-9045-25d0749d3518",
-      "created_at": "2026-10-12T11:56:55.502026",
-      "question_hindi": "पीएम श्री योजना के अंतर्गत संस्थागत मापदंडों और मूल्यांकन तंत्र के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "id": "d1cadcd2-02b3-422b-aff7-a000d7fc9b39",
+      "created_at": "2026-10-12T11:57:45.583370",
+      "question_hindi": "पीएम-श्री (PM-SHRI) योजना के पाठ्यचर्या और वित्तीय दिशानिर्देशों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. पाठ्यचर्या के लिए, पीएम-श्री विद्यालयों को या तो राष्ट्रीय पाठ्यचर्या की रूपरेखा (NCF) या एनईपी के आधार पर राज्य द्वारा विकसित राज्य पाठ्यचर्या की रूपरेखा (SCF) का पालन करने की अनुमति है।\n2. पीएम-श्री योजना केंद्र और राज्यों द्वारा संयुक्त रूप से 60:40 के अनुपात में वित्तपोषित है।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
       "options_hindi": [
-        "संसाधन प्रभावशीलता मूल्यांकन डोमेन - उपलब्धता, पर्याप्तता, उपयुक्तता और उपयोग",
-        "रूपांतरण रूपरेखा की प्रकृति - सभी राज्यों में कठोर एकरूपता को अनिवार्य बनाने वाला निर्देशात्मक कानून",
-        "छात्र अधिगम मूल्यांकन - योग्यता-आधारित और वास्तविक जीवन की स्थितियों में अनुप्रयोग पर केंद्रित",
-        "परिणामों का मापन और नियमित गुणवत्ता मूल्यांकन - स्कूल गुणवत्ता मूल्यांकन ढांचा (SQAF)"
+        "1 और 2 दोनों",
+        "केवल 1",
+        "केवल 2",
+        "न तो 1, न ही 2"
       ],
       "option_labels": [
         "A",
@@ -24,107 +24,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which of the following pairs regarding the institutional parameters and evaluation mechanisms under the PM SHRI scheme is NOT correctly matched?",
+      "question_english": "Consider the following statements regarding the curricular and financial guidelines of the PM-SHRI scheme:\n\n1. For curriculum, PM-SHRI schools are permitted to follow either the National Curriculum Framework or the State Curriculum Framework developed on the basis of the NEP.\n2. The PM-SHRI scheme is funded jointly by the Centre and the States in a 60:40 ratio.\n\nWhich of the statements given above is/are correct?",
       "options_english": [
-        "Resource effectiveness assessment domains - Availability, adequacy, appropriateness, and utilisation",
-        "Nature of the Transformation Framework - Prescriptive statute mandating rigid uniformity across all states",
-        "Student learning assessment - Competency-based and focused on application to real-life situations",
-        "Measuring outcomes and regular quality evaluations - School Quality Assessment Framework (SQAF)"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Pair 4 is NOT correctly matched. The PM SHRI Guiding Framework explicitly notes that it is 'not prescriptive but suggestive in nature' and specifically warns against homogenisation, uniformization, or rigid structuring, recognizing that school transformation may look different for each school.",
-      "explanation_hindi": "युग्म 4 सही सुमेलित नहीं है। पीएम श्री मार्गदर्शक रूपरेखा स्पष्ट रूप से उल्लेख करती है कि यह 'निर्देशात्मक नहीं बल्कि प्रकृति में सुझावात्मक' है और विशेष रूप से समरूपीकरण, एकरूपता या कठोर संरचना के विरुद्ध आगाह करती है, क्योंकि प्रत्येक स्कूल के लिए स्कूल रूपांतरण भिन्न हो सकता है।",
-      "topic": "PM SHRI / CM SHRI",
-      "difficulty": "medium",
-      "key_facts": [
-        "It is to be noted that the framework is not prescriptive but suggestive in nature. School transformation may look different for each school, and readers can use this framework as a resource that enables the kind of transformation that the school wants. Keeping the purpose of NEP at the centre, any homogenisation /uniformization/ rigid structuring would not allow for uniqueness of excellence."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-12T11:56:55.502026"
-    },
-    {
-      "id": "63ef5674-e43e-4d05-927a-93b521c62bc5",
-      "created_at": "2026-10-12T12:01:49.874142",
-      "question_hindi": "पीएम श्री स्कूलों के प्रशासनिक प्रायोजन और परिचालन मानकों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. पीएम श्री योजना का प्रायोजक विभाग स्कूल शिक्षा और साक्षरता विभाग, शिक्षा मंत्रालय, भारत सरकार है।\n2. प्रत्येक विद्यार्थी के सीखने के प्रतिफल (लर्निंग आउटकम) को ट्रैक किया जाता है, तथा विद्यार्थियों में संचार, सहयोग और आलोचनात्मक सोच जैसे 21वीं सदी के कौशल विकसित किए जाते हैं।\n3. यह योजना पूरे भारत में अधिकतम 10,000 स्कूलों के चयन की ऊपरी सीमा निर्धारित करती है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "1, 2 और 3",
-        "केवल 1 और 2",
-        "केवल 1 और 3",
-        "केवल 2 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the administrative sponsorship and operational parameters of PM SHRI schools:\n\n1. The sponsoring department for the PM SHRI scheme is the Department of School Education & Literacy, Ministry of Education, GoI.\n2. The learning outcome of each student is tracked, with students being developed to acquire 21st-century skills of communication, collaboration, and critical thinking.\n3. The scheme fixes an upper ceiling limit of selecting up to 10,000 schools across India.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1, 2 and 3",
-        "1 and 2 only",
-        "1 and 3 only",
-        "2 and 3 only"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because the scheme stipulates an upper limit of 14,500 schools across India ('with upper limit of 14500 across India' / 'To prepare more than 14,500 PM SHRI Schools'), not 10,000.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि इस योजना में पूरे भारत में अधिकतम 14,500 स्कूलों के चयन की ऊपरी सीमा निर्धारित की गई है ('with upper limit of 14500 across India'), न कि 10,000।",
-      "topic": "PM SHRI / CM SHRI",
-      "difficulty": "medium",
-      "key_facts": [
-        "Department of School Education & Literacy, Ministry of Education, GoI ... Learning Outcome of each student is tracked and students are being developed to have well rounded personality with 21st Century skill of communication, collaboration and critical thinking. ... Maximum two schools (one Elementary & one Secondary/Senior Secondary) are to be selected per block/ULB with upper limit of 14500 across India."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-12T12:01:49.874142"
-    },
-    {
-      "id": "4108cd88-6909-43f9-8e35-c4bc2bd9823c",
-      "created_at": "2026-10-12T11:59:35.206060",
-      "question_hindi": "पीएम श्री योजना के तहत ढांचागत और शैक्षणिक घटकों की संतृप्ति (saturation) के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "माध्यमिक और उच्च माध्यमिक स्कूल : पूर्व-प्राथमिक शिक्षा सहायता और जादुई पिटारा",
-        "माध्यमिक और उच्च माध्यमिक स्कूल : अटल टिंकरिंग लैब और स्कूल नवाचार परिषदें",
-        "प्राथमिक और एलिमेंट्री स्कूल : बाल अनुकूल फर्नीचर और आउटडोर खेल सामग्री",
-        "प्राथमिक और एलिमेंट्री स्कूल : बाला (BaLA) फीचर और जादुई पिटारा"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding the saturation of infrastructural and pedagogical components under the PM SHRI scheme is NOT correctly matched?",
-      "options_english": [
-        "Secondary & Senior Secondary Schools : Pre-school Support and Jadui Pitara",
-        "Secondary & Senior Secondary Schools : Atal Tinkering Lab and School Innovation Councils",
-        "Primary & Elementary Schools : Child Friendly Furniture and Outdoor Play Materials",
-        "Primary & Elementary Schools : BaLA feature and Jadui Pitara"
+        "Both 1 and 2",
+        "1 only",
+        "2 only",
+        "Neither 1 nor 2"
       ],
       "correct_answer": "a",
-      "explanation_english": "Pair 4 is NOT correctly matched. As per the official implementation norms, BaLA feature, Jadui Pitara, Support at Pre-school Education, Child Friendly Furniture, and Outdoor Play Materials are saturated in Primary and Elementary Schools, not in Secondary and Senior Secondary Schools.",
-      "explanation_hindi": "युग्म 4 सही सुमेलित नहीं है। आधिकारिक कार्यान्वयन मानदंडों के अनुसार, बाला (BaLA) फीचर, जादुई पिटारा, पूर्व-प्राथमिक शिक्षा में सहायता, बाल अनुकूल फर्नीचर और आउटडोर खेल सामग्री प्राथमिक और एलिमेंट्री स्कूलों में प्रदान की जाती है, न कि माध्यमिक और उच्च माध्यमिक स्कूलों में।",
+      "explanation_english": "Both statements are correct. According to the Ministry guidelines for PM-SHRI, schools are to follow either the National Curriculum Framework or the State Curriculum Framework developed by the state on the basis of NEP 2020. Furthermore, the scheme is funded by the Centre and states in a 60:40 ratio.",
+      "explanation_hindi": "दोनों कथन सही हैं। पीएम-श्री के लिए मंत्रालय के दिशानिर्देशों के अनुसार, विद्यालयों को या तो राष्ट्रीय पाठ्यचर्या की रूपरेखा या एनईपी 2020 के आधार पर राज्य द्वारा विकसित राज्य पाठ्यचर्या की रूपरेखा का पालन करना होगा। इसके अलावा, यह योजना केंद्र और राज्यों द्वारा 60:40 के अनुपात में वित्तपोषित है।",
       "topic": "PM SHRI / CM SHRI",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "key_facts": [
-        "PM SHRI Scheme is being implemented by saturating all the components such as Bala feature and Jadui Pitara, Support at Pre-school Education, Child Friendly Furniture, Outdoor Play Materials etc. in Primary and Elementary Schools and Furniture, Fully equipped integrated Science Lab/Physics Lab/Chemistry Lab/ Biology Lab, Smart Classrooms, Computer Lab/ ICT Lab, Atal Tinkering Lab, Skill Lab, School lnnovation Councils, Playground with well-equipped sports facilities etc. for secondary and senior secondary schools."
+        "For curriculum, PM-SHRI schools are to follow either the National Curriculum Framework or the State Curriculum Framework developed by the state on the basis of the NEP. The scheme is funded by the Centre and states in a 60:40 ratio."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-12T11:59:35.206060"
+      "processed_at": "2026-10-12T11:57:45.583370"
     },
     {
-      "id": "1092cebd-8872-4253-af7b-61aeb14b1b32",
-      "created_at": "2026-10-12T12:07:55.784862",
-      "question_hindi": "पीएम श्री योजना के अंतर्गत विभिन्न स्कूली स्तरों पर संतृप्त (saturated) किए जाने वाले घटकों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "id": "eeaa24a9-bacc-4466-b977-11f36f255bd8",
+      "created_at": "2026-10-12T11:57:45.583370",
+      "question_hindi": "पीएम श्री (PM SHRI) योजना के तहत कर्नाटक में विशिष्ट विद्यालय घटकों में दर्ज की गई प्रगति के आधार पर सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (कर्नाटक में घटक)\nA. अवसंरचना का उन्नयन (Infrastructure upgraded)\nB. समावेशी सुविधाओं का विकास (Inclusive facilities developed)\nC. आईसीटी और स्मार्ट कक्षाओं की शुरुआत (ICT and smart classrooms introduced)\nD. प्रयोगशालाओं का उन्नयन (Laboratories upgraded)\n\nसूची-II (विद्यालयों की संख्या)\n1. 366 विद्यालय\n2. 477 विद्यालय\n3. 15 विद्यालय\n4. 8 विद्यालय\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
       "options_hindi": [
-        "माध्यमिक और उच्च माध्यमिक विद्यालय : एकीकृत विज्ञान प्रयोगशाला और अटल टिंकरिंग लैब",
-        "प्राथमिक और एलिमेंट्री विद्यालय : पूर्व-प्राथमिक शिक्षा में सहयोग और आउटडोर खेल सामग्री",
-        "प्राथमिक और एलिमेंट्री विद्यालय : बाला (BaLA) फीचर और जादुई पिटारा",
-        "प्राथमिक और एलिमेंट्री विद्यालय : स्कूल इनोवेशन काउंसिल और स्किल लैब"
+        "A-1, B-2, C-3, D-4",
+        "A-2, B-1, C-3, D-4",
+        "A-2, B-1, C-4, D-3",
+        "A-1, B-2, C-4, D-3"
       ],
       "option_labels": [
         "A",
@@ -135,171 +61,23 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which of the following pairs regarding components saturated at different schooling levels under the PM SHRI Scheme is NOT correctly matched?",
+      "question_english": "Match List-I with List-II based on the reported progress across specific school components in Karnataka under the PM SHRI scheme:\n\nList-I (Component in Karnataka)\nA. Infrastructure upgraded\nB. Inclusive facilities developed\nC. ICT and smart classrooms introduced\nD. Laboratories upgraded\n\nList-II (Number of Schools)\n1. 366 schools\n2. 477 schools\n3. 15 schools\n4. 8 schools\n\nSelect the correct answer using the codes given below:",
       "options_english": [
-        "Secondary and Senior Secondary Schools : Integrated Science Lab and Atal Tinkering Lab",
-        "Primary and Elementary Schools : Support at Pre-school Education and Outdoor Play Materials",
-        "Primary and Elementary Schools : BaLA feature and Jadui Pitara",
-        "Primary and Elementary Schools : School Innovation Councils and Skill Lab"
+        "A-1, B-2, C-3, D-4",
+        "A-2, B-1, C-3, D-4",
+        "A-2, B-1, C-4, D-3",
+        "A-1, B-2, C-4, D-3"
       ],
-      "correct_answer": "d",
-      "explanation_english": "School Innovation Councils, Skill Labs, Atal Tinkering Labs, Smart Classrooms, and fully equipped Science/Physics/Chemistry/Biology Labs are designated components saturated specifically in secondary and senior secondary schools, not in primary or elementary schools.",
-      "explanation_hindi": "स्कूल इनोवेशन काउंसिल (School Innovation Councils), स्किल लैब, अटल टिंकरिंग लैब, स्मार्ट क्लासरूम और पूरी तरह से सुसज्जित एकीकृत विज्ञान/भौतिकी/रसायन/जीव विज्ञान प्रयोगशालाएं विशेष रूप से माध्यमिक और उच्च माध्यमिक विद्यालयों के लिए निर्धारित घटक हैं, न कि प्राथमिक या एलिमेंट्री विद्यालयों के लिए।",
+      "correct_answer": "a",
+      "explanation_english": "According to the analysis on PM SHRI implementation in Karnataka, out of 585 selected schools: infrastructure has been upgraded in 366 schools, inclusive facilities have been developed in 477 schools, ICT and smart classrooms have been introduced in 15 schools, and laboratories have been upgraded in 8 schools.",
+      "explanation_hindi": "कर्नाटक में पीएम श्री कार्यान्वयन के विश्लेषण के अनुसार, चयनित 585 विद्यालयों में से: 366 विद्यालयों में अवसंरचना का उन्नयन किया गया है, 477 विद्यालयों में समावेशी सुविधाएं विकसित की गई हैं, 15 विद्यालयों में आईसीटी और स्मार्ट कक्षाएं शुरू की गई हैं, तथा 8 विद्यालयों में प्रयोगशालाओं का उन्नयन किया गया है।",
       "topic": "PM SHRI / CM SHRI",
-      "difficulty": "medium",
+      "difficulty": "hard",
       "key_facts": [
-        "PM SHRI Scheme is being implemented by saturating all the components such as Bala feature and Jadui Pitara, Support at Pre-school Education, Child Friendly Furniture, Outdoor Play Materials etc. in Primary and Elementary Schools and Furniture, Fully equipped integrated Science Lab/Physics Lab/Chemistry Lab/ Biology Lab, Smart Classrooms, Computer Lab/ ICT Lab, Atal Tinkering Lab, Skill Lab, School lnnovation Councils, Playground with well-equipped sports facilities etc. for secondary and senior secondary schools."
+        "It has selected 585 PM SHRI schools, which have recorded progress across several components: infrastructure has been upgraded in 366 schools, ICT and smart classrooms have been introduced in 15 schools, laboratories have been upgraded in 8 schools, inclusive facilities have been developed in 477 schools, green initiatives have been implemented in 585 schools, and 1,077 teachers have been trained under PM SHRI capacity-building programmes."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-12T12:07:55.784862"
-    },
-    {
-      "id": "7deff10b-108c-4583-b91e-adaa2d96c1b1",
-      "created_at": "2026-10-12T11:56:55.502026",
-      "question_hindi": "पीएम श्री 'स्कूल रूपांतरण पर मार्गदर्शक रूपरेखा' (Guiding Framework on School Transformation) की संरचना के आधार पर सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (मार्गदर्शक रूपरेखा का भाग)\nA. भाग I\nB. भाग II\nC. भाग III\n\nसूची-II (मूल विषय / केंद्र बिंदु)\n1. कार्यक्रम संबंधी और वित्तीय मानक, साथ ही सुझावात्मक गतिविधियाँ\n2. स्कूल गुणवत्ता मूल्यांकन ढांचा (SQAF)\n3. सैद्धांतिक पहलू और पीएम श्री स्कूलों के स्तंभ\n\nनीचे दिए गए कूट का उपयोग करके सही उत्तर चुनिए:",
-      "options_hindi": [
-        "A-3, B-2, C-1",
-        "A-1, B-3, C-2",
-        "A-2, B-1, C-3",
-        "A-3, B-1, C-2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List-I with List-II based on the structure of the PM SHRI 'Guiding Framework on School Transformation':\n\nList-I (Part of Guiding Framework)\nA. Part I\nB. Part II\nC. Part III\n\nList-II (Core Subject / Focus Area)\n1. Programmatic and financial norms, along with suggestive activities\n2. School Quality Assessment Framework (SQAF)\n3. Theoretical aspects and pillars of PM SHRI schools\n\nSelect the correct answer using the codes given below:",
-      "options_english": [
-        "A-3, B-2, C-1",
-        "A-1, B-3, C-2",
-        "A-2, B-1, C-3",
-        "A-3, B-1, C-2"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "According to the PM SHRI Guiding Framework on School Transformation (Part 1), the framework is divided into three parts: Part I lays out the theoretical aspects and explores the pillars of transformation; Part II lays out programmatic and financial norms along with suggestive activities; and Part III lays down the School Quality Assessment Framework (SQAF).",
-      "explanation_hindi": "पीएम श्री स्कूल रूपांतरण मार्गदर्शक रूपरेखा (भाग 1) के अनुसार, यह रूपरेखा तीन भागों में विभाजित है: भाग I सैद्धांतिक पहलुओं को प्रस्तुत करता है और रूपांतरण के स्तंभों का पता लगाता है; भाग II सुझाई गई गतिविधियों के साथ कार्यक्रम संबंधी और वित्तीय मानकों को निर्धारित करता है; और भाग III स्कूल गुणवत्ता मूल्यांकन ढांचा (SQAF) निर्धारित करता है।",
-      "topic": "PM SHRI / CM SHRI",
-      "difficulty": "medium",
-      "key_facts": [
-        "Part I: Lays out the theoretical aspects and explores the pillars of the PM SHRI schools, i.e. Curriculum, Pedagogy and Assessment; Access and Infrastructure (Adequacy, Functionality, Aesthetics and Safety); Human Resources and School Leadership; Inclusive Practices and Gender Equity; Management, Monitoring and Governance, and Beneficiary Satisfaction. The section further explains how transformations across these pillars can be brought to life within the school environment. Part II: Lays out the programmatic and financial norms, along with suggestive activities that schools may undertake in order to fulfil the norms. Part III: Lays down School Quality Assessment Framework (SQAF)"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-12T11:56:55.502026"
-    },
-    {
-      "id": "32542e8f-8ad0-4926-91ff-ed1006354b35",
-      "created_at": "2026-10-12T12:09:29.067448",
-      "question_hindi": "पीएम श्री (PM SHRI) योजना के वित्तीय परिव्यय और कार्यान्वयन के बाद के जीवनचक्र के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. इस योजना का कुल वित्तीय परिव्यय 5 वर्षों की अवधि में 27,360 करोड़ रुपये है।\n2. 5 वर्ष की अवधि में कुल परियोजना लागत में राज्यों का हिस्सा 9,232 करोड़ रुपये है।\n3. वर्ष 2026-27 में योजना अवधि के पूर्ण होने के बाद, इन स्कूलों द्वारा प्राप्त बेंचमार्क को बनाए रखने की जिम्मेदारी राज्यों/केंद्र शासित प्रदेशों की होगी।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 2 और 3",
-        "केवल 1 और 3",
-        "केवल 1 और 2",
-        "1, 2 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the financial outlay and post-implementation lifecycle of the PM SHRI Scheme:\n\n1. The total financial outlay of the scheme is Rs. 27,360 crore spread over a period of 5 years.\n2. The state share in the total project cost amounts to Rs. 9,232 crore over the 5-year duration.\n3. After the completion of the scheme period in 2026-27, it shall be the responsibility of the States/UTs to continue to maintain the benchmarks achieved by these schools.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "2 and 3 only",
-        "1 and 3 only",
-        "1 and 2 only",
-        "1, 2 and 3"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "All three statements are correct. The total cost of the project is Rs. 27,360 crore over 5 years (Central share: Rs. 18,128 crore; State share: Rs. 9,232 crore). The duration is from 2022-23 to 2026-27, after which it shall be the responsibility of the states/UTs to continue to maintain the benchmarks achieved by these schools.",
-      "explanation_hindi": "तीनों कथन सही हैं। परियोजना की कुल लागत 5 वर्षों में 27,360 करोड़ रुपये है (केंद्रीय हिस्सा: 18,128 करोड़ रुपये; राज्य का हिस्सा: 9,232 करोड़ रुपये)। इस योजना की अवधि 2022-23 से 2026-27 तक है, जिसके बाद इन स्कूलों द्वारा प्राप्त बेंचमार्क को बनाए रखने की जिम्मेदारी राज्यों/केंद्र शासित प्रदेशों की होगी।",
-      "topic": "PM SHRI / CM SHRI",
-      "difficulty": "medium",
-      "key_facts": [
-        "The total cost of the project will be Rs. 27360 crore spread over a period of 5 years. The total central share is Rs. 18,128 crore and state share is Rs. 9,232 crore over a period of 5 years. ... The duration of the scheme is from 2022-23 to 2026-27, after which it shall be the responsibility of the states/UTs to continue to maintain the benchmarks achieved by these schools."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-12T12:09:29.067448"
-    },
-    {
-      "id": "12ed38f8-988c-4926-96f2-7022872bddbe",
-      "created_at": "2026-10-12T12:09:29.067448",
-      "question_hindi": "पीएम श्री (PM SHRI) योजना के प्रशासनिक और परिचालन विवरण के संबंध में निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "जियो-टैगिंग और संबंधित कार्यों के लिए एजेंसी : भास्कराचार्य राष्ट्रीय अंतरिक्ष अनुप्रयोग और भू-सूचना विज्ञान संस्थान (BISAG-N)",
-        "प्रायोजक विभाग : स्कूली शिक्षा और साक्षरता विभाग, शिक्षा मंत्रालय",
-        "पीएम श्री के तहत संस्थागत स्तंभों की संख्या : एनईपी 2020 के 15 अध्यायों से प्राप्त 12 स्तंभ",
-        "योजना की कुल अवधि : 2022-23 से 2026-27"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding administrative and operational details of the PM SHRI Scheme is NOT correctly matched?",
-      "options_english": [
-        "Agency for Geo-tagging and related tasks : Bhaskaracharya National Institute for Space Applications and Geo-informatics (BISAG-N)",
-        "Sponsoring Department : Department of School Education & Literacy, Ministry of Education",
-        "Number of institutional pillars under PM SHRI : 12 pillars derived from 15 chapters of NEP 2020",
-        "Total duration of the scheme : 2022-23 to 2026-27"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "Option D is incorrectly matched. As per the official FAQs, there are 6 pillars of PM SHRI schools derived from 9 chapters of NEP 2020 (not 12 pillars from 15 chapters). All other pairs are correctly matched.",
-      "explanation_hindi": "विकल्प D गलत सुमेलित है। आधिकारिक अक्सर पूछे जाने वाले प्रश्नों (FAQs) के अनुसार, NEP 2020 के 9 अध्यायों से प्राप्त PM SHRI स्कूलों के 6 स्तंभ (pillars) हैं (न कि 15 अध्यायों से 12 स्तंभ)। अन्य सभी युग्म सही सुमेलित हैं।",
-      "topic": "PM SHRI / CM SHRI",
-      "difficulty": "medium",
-      "key_facts": [
-        "There are 6 pillars of PM SHRI schools derived from 9 chapters of NEP 2020 viz-"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-12T12:09:29.067448"
-    },
-    {
-      "id": "91ad72a9-3821-4d27-9361-cb5ec6cb7d39",
-      "created_at": "2026-10-12T12:05:39.164975",
-      "question_hindi": "शिक्षा मंत्रालय द्वारा प्रलेखित पीएम श्री (PM SHRI) योजना के परिचालन मापदंडों और संस्थागत पहुंच के आधार पर सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (परिचालन मापदंड / मीट्रिक)\nA. पूरे भारत में विकसित किए जाने वाले स्कूलों की कुल लक्षित संख्या\nB. समझौता ज्ञापन (MoU) पर हस्ताक्षर करने वाले राज्यों/केंद्र शासित प्रदेशों सहित KVS/NVS की संख्या\nC. चौथे चरण तक जिन राज्यों/केंद्र शासित प्रदेशों सहित KVS/NVS से स्कूलों का चयन किया गया\nD. योजना की स्वीकृत अवधि\n\nसूची-II (स्वीकृत मान / संख्या)\n1. 32\n2. 33\n3. 14,500 से अधिक\n4. पाँच वर्ष (2022-23 से 2026-27)\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
-      "options_hindi": [
-        "A-3, B-1, C-2, D-4",
-        "A-4, B-2, C-1, D-3",
-        "A-3, B-2, C-1, D-4",
-        "A-2, B-3, C-4, D-1"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List-I with List-II based on the operational parameters and institutional reach of the PM SHRI Scheme as documented by the Ministry of Education:\n\nList-I (Operational Parameter / Metric)\nA. Total target number of schools to be developed across India\nB. States/UTs along with KVS/NVS that have signed the Memorandum of Understanding (MoU)\nC. States/UTs along with KVS/NVS from which schools were selected up to the 4th phase\nD. Approved duration of the scheme\n\nList-II (Approved Value / Count)\n1. 32\n2. 33\n3. More than 14,500\n4. Five years (2022-23 to 2026-27)\n\nSelect the correct answer using the codes given below:",
-      "options_english": [
-        "A-3, B-1, C-2, D-4",
-        "A-4, B-2, C-1, D-3",
-        "A-3, B-2, C-1, D-4",
-        "A-2, B-3, C-4, D-1"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "According to the official Ministry of Education PM SHRI portal:\n1. Total target: 'More than 14500 PM SHRI Schools'\n2. MoU signed: 'A total of 33 States/UTs and KVS/NVS have signed the Memorandum of Understanding (MoU) with Ministry of Education'\n3. Selected up to 4 phases: 'A total of 12,079 schools have been selected from 32 States/UTs and KVS/NVS Schools upto 4 phases'\n4. Duration: 'for the period of five years from year 2022-23 to 2026-27'.\nHence, the correct matching is A-3, B-2, C-1, D-4.",
-      "explanation_hindi": "शिक्षा मंत्रालय के आधिकारिक पीएम श्री पोर्टल के अनुसार:\n1. कुल लक्ष्य: '14500 से अधिक पीएम श्री स्कूल'\n2. हस्ताक्षरित समझौता ज्ञापन (MoU): 'कुल 33 राज्यों/केंद्र शासित प्रदेशों और KVS/NVS ने समझौता ज्ञापन (MoU) पर हस्ताक्षर किए हैं'\n3. चौथे चरण तक चयनित: '4 चरणों तक 32 राज्यों/केंद्र शासित प्रदेशों और KVS/NVS स्कूलों से कुल 12,079 स्कूलों का चयन किया गया है'\n4. अवधि: 'वर्ष 2022-23 से 2026-27 तक पाँच वर्षों की अवधि के लिए'।\nअतः सही सुमेलन A-3, B-2, C-1, D-4 है।",
-      "topic": "PM SHRI / CM SHRI",
-      "difficulty": "medium",
-      "key_facts": [
-        "A total of 33 States/UTs and KVS/NVS have signed the Memorandum of Understanding (MoU) with Ministry of Education for implementation of PM SHRI Scheme. A total of 12,079 schools have been selected from 32 States/UTs and KVS/NVS Schools upto 4 phases"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-12T12:05:39.164975"
+      "processed_at": "2026-10-12T11:57:45.583370"
     },
     {
       "id": "fc2d5807-5c5e-47b3-9e39-ac209c8ee257",
@@ -339,14 +117,14 @@
       "processed_at": "2026-10-12T12:06:19.328572"
     },
     {
-      "id": "a062c325-4ad6-4f8d-aad1-9a92daeccab2",
-      "created_at": "2026-10-12T12:06:19.328572",
-      "question_hindi": "पीएम-श्री (PM-SHRI) योजना के तहत राज्यों की भागीदारी और मूल्यांकन तंत्र के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. केरल द्वारा समझौता ज्ञापन (MoU) पर हस्ताक्षर करने की सहमति के बाद, वर्तमान में केवल तमिलनाडु और पश्चिम बंगाल ही इस योजना से बाहर हैं।\n2. पश्चिम बंगाल ने इस आधार पर इस योजना का विरोध किया है कि राज्य द्वारा वित्तीय लागत का एक हिस्सा वहन करने के बावजूद स्कूल के नाम के आगे 'PM-SHRI' जोड़ना होगा।\n3. इस योजना के तहत, किसी चयनित स्कूल को मिलने वाला फंड स्कूल गुणवत्ता मूल्यांकन फ्रेमवर्क (SQAF) पर उसके स्कोर पर निर्भर करता है।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "id": "b6b0df15-4870-44d5-a33b-ff856e317adc",
+      "created_at": "2026-10-12T12:02:32.694464",
+      "question_hindi": "PM SHRI योजना के लाभार्थी प्रभाव और पर्यावरणीय स्वरूप के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. PM SHRI योजना के तहत 18 लाख से अधिक छात्रों के प्रत्यक्ष लाभार्थी होने की उम्मीद है।\n2. PM SHRI स्कूलों को ग्रीन स्कूल के रूप में विकसित किया जाना है, जिसमें सोलर पैनल, एलईडी लाइट और जल संरक्षण जैसे पहलू शामिल हैं।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
       "options_hindi": [
-        "केवल 2 और 3",
-        "केवल 1 और 2",
-        "केवल 1 और 3",
-        "1, 2 और 3"
+        "केवल 1",
+        "1 और 2 दोनों",
+        "न तो 1, न ही 2",
+        "केवल 2"
       ],
       "option_labels": [
         "A",
@@ -357,60 +135,60 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding state participation and evaluation mechanisms under the PM-SHRI scheme:\n\n1. Following Kerala's agreement to sign the MoU, only Tamil Nadu and West Bengal are currently holding out against the scheme.\n2. West Bengal has opposed the scheme on the grounds that 'PM-SHRI' will have to be pre-fixed to the school's name despite the state bearing part of the financial cost.\n3. Under the scheme, the funds that a selected school receives depend on its score on the School Quality Assessment Framework (SQAF).\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the beneficiary impact and environmental design of the PM SHRI Scheme:\n\n1. Over 18 lakh students are expected to be direct beneficiaries of the PM SHRI scheme.\n2. PM SHRI schools are designed to be developed as Green Schools, incorporating aspects such as solar panels, LED lights, and water conservation.\n\nWhich of the statements given above is/are correct?",
       "options_english": [
-        "2 and 3 only",
-        "1 and 2 only",
-        "1 and 3 only",
-        "1, 2 and 3"
+        "1 only",
+        "Both 1 and 2",
+        "Neither 1 nor 2",
+        "2 only"
       ],
-      "correct_answer": "d",
-      "explanation_english": "All three statements are correct based on recent scheme developments. With Kerala agreeing to sign the MoU, only Tamil Nadu and West Bengal remain holding out. West Bengal opposed the requirement to pre-fix 'PM-SHRI' to school names while bearing 40% cost, and funding release is tied to the School Quality Assessment Framework score.",
-      "explanation_hindi": "तीनों कथन सही हैं। केरल द्वारा समझौता ज्ञापन पर हस्ताक्षर करने की सहमति के बाद, अब केवल तमिलनाडु और पश्चिम बंगाल ही इस योजना से बाहर हैं। पश्चिम बंगाल ने लागत का 40% वहन करने के बावजूद स्कूल के नाम में 'PM-SHRI' जोड़ने का विरोध किया था, और स्कूल को मिलने वाली धनराशि स्कूल गुणवत्ता मूल्यांकन फ्रेमवर्क (SQAF) स्कोर से जुड़ी हुई है।",
-      "topic": "PM SHRI / CM SHRI",
-      "difficulty": "medium",
-      "key_facts": [
-        "With Kerala agreeing to implement it, only Tamil Nadu and West Bengal are currently holding out... West Bengal has opposed the scheme on the grounds that ‘PM-SHRI’ will have to be pre-fixed to the name of the school, despite the state having to bear part of the cost... The funds that a school receives depends on its score on this assessment framework."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-12T12:06:19.328572"
-    },
-    {
-      "id": "e585f413-0868-497e-af38-a477b4117ac9",
-      "created_at": "2026-10-12T12:04:23.206412",
-      "question_hindi": "पीएम श्री (PM SHRI) योजना के चयन चरणों और आरंभिक विवरण के आधार पर सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (चरण / आरंभिक पैरामीटर)\nA. योजना के शुभारंभ की तिथि\nB. चरण 1 चयन\nC. चरण 2 चयन\nD. चरण 3 चयन\n\nसूची-II (मील का पत्थर / परिचालन कदम)\n1. केंद्र और राज्यों/केंद्र शासित प्रदेशों के बीच बेंचमार्क का समर्थन करने के लिए औपचारिक समझौता ज्ञापन (MoU) पर हस्ताक्षर\n2. शॉर्टलिस्ट किए गए स्कूल शैक्षणिक और हरित पहलों को कवर करने वाले ओपन चैलेंज मैट्रिक्स पर प्रतिस्पर्धा करते हैं\n3. यूडीआईएसई+ (UDISE+) डेटाबेस के माध्यम से पात्र आवेदक स्कूलों की प्री-स्क्रीनिंग\n4. 7 सितंबर 2022\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
-      "options_hindi": [
-        "A-4, B-3, C-1, D-2",
-        "A-1, B-4, C-3, D-2",
-        "A-4, B-1, C-3, D-2",
-        "A-1, B-3, C-4, D-2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List-I with List-II based on the selection stages and inception details of the PM SHRI Scheme:\n\nList-I (Stage / Inception Parameter)\nA. Scheme Launch Date\nB. Stage 1 Selection\nC. Stage 2 Selection\nD. Stage 3 Selection\n\nList-II (Milestone / Operational Step)\n1. Formal signing of MoU between Centre and States/UTs committing to support benchmarks\n2. Shortlisted schools compete on an open challenge matrix covering academic and green initiatives\n3. Pre-screening of eligible applicant schools via the UDISE+ database\n4. 7 September 2022\n\nSelect the correct answer using the codes given below:",
-      "options_english": [
-        "A-4, B-3, C-1, D-2",
-        "A-1, B-4, C-3, D-2",
-        "A-4, B-1, C-3, D-2",
-        "A-1, B-3, C-4, D-2"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "The correct match is:\n- Scheme Launch Date: 7 September 2022 (A-4)\n- Stage 1: States/UTs sign a formal MoU with the Central Government agreeing to support prescribed benchmarks (B-1)\n- Stage 2: Eligible applicant schools pre-screened based on mandatory minimum benchmarks verified via the UDISE+ database (C-3)\n- Stage 3: Shortlisted schools compete on an open challenge matrix covering academic performance, green initiatives, and community support (D-2)",
-      "explanation_hindi": "सही सुमेलन इस प्रकार है:\n- योजना शुभारंभ की तिथि: 7 सितंबर 2022 (A-4)\n- चरण 1: राज्यों/संघ राज्य क्षेत्रों द्वारा केंद्र के साथ निर्धारित बेंचमार्क का समर्थन करने हेतु औपचारिक समझौता ज्ञापन (MoU) पर हस्ताक्षर करना (B-1)\n- चरण 2: UDISE+ डेटाबेस के माध्यम से सत्यापित अनिवार्य न्यूनतम मानदंडों के आधार पर प्री-स्क्रीनिंग (C-3)\n- चरण 3: शैक्षणिक प्रदर्शन और पर्यावरण अनुकूल पहलों को कवर करने वाले खुले चैलेंज मैट्रिक्स पर प्रतिस्पर्धा (D-2)",
+      "correct_answer": "b",
+      "explanation_english": "Both statements are correct. The scheme directly targets over 18 lakh students as beneficiaries. Furthermore, PM SHRI schools are designed as Green Schools featuring solar panels, LED lights, nutrition gardens with natural farming, waste management, and water harvesting.",
+      "explanation_hindi": "दोनों कथन सही हैं। इस योजना से 18 लाख से अधिक छात्रों के प्रत्यक्ष रूप से लाभान्वित होने की उम्मीद है। इसके अलावा, PM SHRI स्कूलों को ग्रीन स्कूल के रूप में विकसित किया जाएगा जिसमें सोलर पैनल, एलईडी लाइट, प्राकृतिक खेती के साथ पोषण वाटिकाएं, अपशिष्ट प्रबंधन और जल संचयन शामिल होंगे।",
       "topic": "PM SHRI / CM SHRI",
       "difficulty": "easy",
       "key_facts": [
-        "The Pradhan Mantri Schools for Rising India (PM SHRI) scheme has made major progress since its launch on 7 September 2022.\nStage 1 (State-Level Commitment)- States and Union Territories sign a formal Memorandum of Understanding (MoU) with the Central Government agreeing to support the prescribed benchmarks.\n2. Stage 2 (UDISE+ Filtering)- Eligible applicant schools are pre-screened based on mandatory minimum benchmarks verified via the UDISE+ database.\n3. Stage 3 (Challenge Competition)- Shortlisted schools compete on an open challenge matrix covering academic performance, green initiatives, and community support."
+        "Over 18 lakh students are expected to be direct beneficiaries of the scheme; impact will be generated through the mentoring and handholding of the schools in vicinity of PM SHRI schools Scheme of PM SHRI schools will be implemented as a Centrally Sponsored Scheme; total project cost of Rs. 27360 crores includes a central share of Rs. 18,128 crores for the period 2022-23 to 2026-27 Key Features of PM SHRI Schools • PM SHRI Schools will provide leadership to other schools in their respective regions by providing mentorship. • The PM SHRI Schools will be developed as Green Schools, incorporating environment-friendly aspects like solar panels and LED lights, nutrition gardens with natural farming, waste management, plastic-free, water conservation and harvesting, study of traditions/practices related to protection of the environment, climate change related hackathon and awareness generation to adopt a sustainable lifestyle."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-12T12:04:23.210523"
+      "processed_at": "2026-10-12T12:02:32.694464"
+    },
+    {
+      "id": "0fb4814e-a952-4703-8623-d09c6e2b9b46",
+      "created_at": "2026-10-12T12:07:09.429328",
+      "question_hindi": "PM SHRI स्कूलों पर आधिकारिक कैबिनेट अधिसूचना के अनुसार, इन संस्थानों को 'ग्रीन स्कूल' (Green Schools) के रूप में विकसित करने के लिए निम्नलिखित में से किन पहलुओं को स्पष्ट रूप से शामिल किया गया है?\n\n1. प्राकृतिक खेती के साथ पोषण वाटिकाएं (Nutrition gardens)\n2. सोलर पैनल और एलईडी लाइट्स\n3. जलवायु परिवर्तन से संबंधित हैकाथॉन और जागरूकता सृजन\n4. पर्यावरण संरक्षण से संबंधित परंपराओं/प्रथाओं का अध्ययन\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "options_hindi": [
+        "केवल 2, 3 और 4",
+        "1, 2, 3 और 4",
+        "केवल 1, 2 और 3",
+        "केवल 1 और 4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "According to the official Cabinet notification on PM SHRI Schools, which of the following aspects are explicitly included in developing these institutions as 'Green Schools'?\n\n1. Nutrition gardens with natural farming\n2. Solar panels and LED lights\n3. Climate change related hackathon and awareness generation\n4. Study of traditions/practices related to protection of the environment\n\nSelect the correct answer using the codes given below:",
+      "options_english": [
+        "2, 3 and 4 only",
+        "1, 2, 3 and 4",
+        "1, 2 and 3 only",
+        "1 and 4 only"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "All four aspects are explicitly specified in the official Cabinet notification for developing PM SHRI schools as Green Schools, alongside waste management, plastic-free environment, water conservation and harvesting, and adoption of sustainable lifestyles.",
+      "explanation_hindi": "PM SHRI स्कूलों को ग्रीन स्कूल के रूप में विकसित करने के लिए आधिकारिक कैबिनेट अधिसूचना में अपशिष्ट प्रबंधन, प्लास्टिक-मुक्त परिसर, जल संरक्षण और संचयन तथा संधारणीय जीवन शैली अपनाने के साथ-साथ इन चारों पहलुओं को स्पष्ट रूप से शामिल किया गया है।",
+      "topic": "PM SHRI / CM SHRI",
+      "difficulty": "medium",
+      "key_facts": [
+        "The PM SHRI Schools will be developed as Green schools, incorporating environment friendly aspects like solar panels and LED lights, nutrition gardens with natural farming, waste management, plastic free, water conservation and harvesting, study of traditions/practices related to protection of environment, climate change related hackathon and awareness generation to adopt sustainable lifestyle."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-12T12:07:09.429328"
     },
     {
       "id": "aee36938-d2d5-4186-b6d3-9a16856b9622",
@@ -450,14 +228,14 @@
       "processed_at": "2026-10-12T12:06:19.328572"
     },
     {
-      "id": "1f6abb85-dd33-4758-b2ac-7aaa1d9623d9",
-      "created_at": "2026-10-12T12:02:32.694464",
-      "question_hindi": "PM SHRI स्कूलों के तहत हस्तक्षेपों, शिक्षाशास्त्र और मूल्यांकन के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. छात्रों की रोजगार क्षमता को बढ़ाने के लिए सेक्टर स्किल काउंसिल और स्थानीय उद्योग के साथ संबंधों की तलाश की जाएगी।\n2. 'गुणवत्ता और नवाचार' (Quality and Innovation) के तहत उदाहरण स्वरूप हस्तक्षेपों में बस्ता-मुक्त दिवस (Bagless days) और स्थानीय कारीगरों के साथ इंटर्नशिप शामिल हैं।\n3. सभी ग्रेडों में छात्र मूल्यांकन रटने के बजाय योग्यता-आधारित (competency-based) और वैचारिक समझ पर आधारित करने के लिए डिज़ाइन किया गया है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "57038a21-c846-4292-b313-5bad88d233a2",
+      "created_at": "2026-10-12T12:00:16.896410",
+      "question_hindi": "स्कूल रूपांतरण पर पीएम श्री (PM SHRI) मार्गदर्शक ढांचे के मार्गदर्शक सिद्धांतों और प्रकृति के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. स्थानीय भिन्नताओं को समाप्त करने के लिए यह ढांचा सभी स्कूलों में सख्ती से निर्देशात्मक (prescriptive) और एकसमान है।\n2. कठोर संरचना या एकरूपता से बचा जाता है क्योंकि यह एनईपी (NEP) के तहत परिकल्पित उत्कृष्टता की विशिष्टता की अनुमति नहीं देगा।\n3. यह एक विकासशील दस्तावेज है जिसे राज्य/केंद्र शासित प्रदेश/केवीएस/एनवीएस आवश्यकता और स्थानीय संदर्भ के अनुसार संशोधित या बदला जा सकता है।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
       "options_hindi": [
         "केवल 2 और 3",
-        "केवल 1 और 2",
         "1, 2 और 3",
-        "केवल 1 और 3"
+        "केवल 1 और 3",
+        "केवल 1 और 2"
       ],
       "option_labels": [
         "A",
@@ -468,70 +246,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the interventions, pedagogy, and assessment under PM SHRI schools:\n\n1. Linkage with Sector Skill Councils and local industry is to be explored to enhance student employability.\n2. Illustrative interventions under Quality and Innovation include Bagless days and Internships with Local artisans.\n3. Student assessments across all grades are designed to be competency-based and rooted in conceptual understanding rather than rote learning.\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the guiding principles and nature of the PM SHRI Guiding Framework on School Transformation:\n\n1. The framework is strictly prescriptive and uniform across all schools to eliminate local variations.\n2. Rigid structuring or homogenisation is avoided as it would not allow for the uniqueness of excellence envisioned under the NEP.\n3. It is an evolving document that can be modified or changed as per State/UT/KVS/NVS requirement and local context.\n\nWhich of the statements given above are correct?",
       "options_english": [
         "2 and 3 only",
-        "1 and 2 only",
         "1, 2 and 3",
-        "1 and 3 only"
+        "1 and 3 only",
+        "1 and 2 only"
       ],
-      "correct_answer": "c",
-      "explanation_english": "All three statements are correct according to the PIB release. PM SHRI schools emphasize linkages with Sector Skill Councils and local industry, incorporate Quality and Innovation interventions like Bagless days and Internships with local artisans, and focus on competency-based assessment evaluating application to real-life situations.",
-      "explanation_hindi": "पीआईबी विज्ञप्ति के अनुसार तीनों कथन सही हैं। PM SHRI स्कूल सेक्टर स्किल काउंसिल और स्थानीय उद्योगों के साथ लिंकेज पर जोर देते हैं, बस्ता-मुक्त दिन (Bagless days) और स्थानीय कारीगरों के साथ इंटर्नशिप जैसे गुणवत्ता और नवाचार हस्तक्षेपों को शामिल करते हैं, और वास्तविक जीवन की स्थितियों में अनुप्रयोग का मूल्यांकन करने वाले योग्यता-आधारित मूल्यांकन पर ध्यान केंद्रित करते हैं।",
+      "correct_answer": "a",
+      "explanation_english": "Statement 1 is incorrect because the official guiding framework explicitly clarifies that it is not prescriptive but suggestive in nature. Statements 2 and 3 are correct because rigid structuring/homogenisation would compromise uniqueness, and it is an evolving document modifiable as per local context and State/UT/KVS/NVS requirements.",
+      "explanation_hindi": "कथन 1 गलत है क्योंकि आधिकारिक मार्गदर्शक ढांचा स्पष्ट करता है कि यह निर्देशात्मक (prescriptive) नहीं बल्कि विचारोत्तेजक/सुझावात्मक (suggestive) प्रकृति का है। कथन 2 और 3 सही हैं क्योंकि कठोर संरचना या एकरूपता उत्कृष्टता की विशिष्टता को बाधित करेगी, और यह राज्य/केंद्र शासित प्रदेश/केवीएस/एनवीएस आवश्यकताओं और स्थानीय संदर्भ के अनुसार संशोधित होने वाला दस्तावेज है।",
       "topic": "PM SHRI / CM SHRI",
-      "difficulty": "medium",
+      "difficulty": "hard",
       "key_facts": [
-        "Linkage with Sector Skill Councils and local industry for enhancing employability and providing better employment opportunities will be explored. Focus will be on learning outcomes of every child in every grade. Assessment at all levels will be based on conceptual understanding and application of knowledge to real life situations and will be competency-based. Major illustrative interventions of Scheme of PM SHRI Schools (PM Schools for Rising India) are: 1. Quality and Innovation (Learning Enhancement Programme, Holistic Progress Card, Innovative Pedagogies, Bagless days, Internships with Local artisans, Capacity building etc.)"
+        "It is to be noted that the framework is not prescriptive but suggestive in nature. School transformation may look different for each school, and readers can use this framework as a resource that enables the kind of transformation that the school wants. Keeping the purpose of NEP at the centre, any homogenisation /uniformization/ rigid structuring would not allow for uniqueness of excellence. This is an evolving document, which can be modified/changed as per State/UT/KVS/NVS requirement and local context at any stage."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-12T12:02:32.694464"
+      "processed_at": "2026-10-12T12:00:16.896410"
     },
     {
-      "id": "742471e7-4575-4862-b8b9-203467cf4026",
-      "created_at": "2026-10-12T11:58:53.644256",
-      "question_hindi": "विभिन्न विद्यालय प्रणालियों के संस्थागत प्रकार और नियंत्रक प्रशासनिक मंत्रालय के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "केंद्रीय विद्यालय संगठन (KVS) — शिक्षा मंत्रालय",
-        "एकलव्य मॉडल आवासीय विद्यालय (EMRS) — जनजातीय कार्य मंत्रालय",
-        "नवोदय विद्यालय समिति (NVS) — शिक्षा मंत्रालय",
-        "सैनिक स्कूल — शिक्षा मंत्रालय"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding the institutional type and controlling administrative ministry of different school systems is NOT correctly matched?",
-      "options_english": [
-        "Kendriya Vidyalaya Sangathan (KVS) — Ministry of Education",
-        "Eklavya Model Residential Schools (EMRS) — Ministry of Tribal Affairs",
-        "Navodaya Vidyalaya Samiti (NVS) — Ministry of Education",
-        "Sainik Schools — Ministry of Education"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "Sainik Schools are administered under the Ministry of Defence, not the Ministry of Education. Only KVS, NVS, and PM SHRI are under the Ministry of Education, whereas EMRS falls under the Ministry of Tribal Affairs.",
-      "explanation_hindi": "सैनिक स्कूल रक्षा मंत्रालय के अधीन प्रशासित होते हैं, न कि शिक्षा मंत्रालय के अधीन। केवल KVS, NVS और PM SHRI शिक्षा मंत्रालय के अधीन हैं, जबकि EMRS जनजातीय कार्य मंत्रालय के अधीन आता है।",
-      "topic": "PM SHRI / CM SHRI",
-      "difficulty": "medium",
-      "key_facts": [
-        "Only KVS, NVS and PM SHRI are under Education. Sainik Schools are under DEFENCE; EMRS is under TRIBAL AFFAIRS."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-12T11:58:53.644256"
-    },
-    {
-      "id": "46a037bc-bbd9-424d-bc31-c052de54305c",
-      "created_at": "2026-10-12T12:00:16.896410",
+      "id": "60b6f0c4-9cf3-41fc-ac6c-95d0e76b797d",
+      "created_at": "2026-10-12T12:08:46.274400",
       "question_hindi": "पीएम श्री (PM SHRI) स्कूलों और सीएम श्री (CM SHRI) स्कूलों की तुलना करने वाले निम्नलिखित युग्मों में से कौन-सा सही सुमेलित नहीं है?",
       "options_hindi": [
-        "लक्षित कवरेज: पीएम श्री — देश भर में 14,500+ स्कूल; सीएम श्री — प्रत्येक राज्य में चयनित स्कूलों की एक सीमित संख्या",
-        "संस्थागत फोकस: पीएम श्री — एनईपी 2020 पर आधारित मॉडल स्कूल; सीएम श्री — राज्य स्तरीय \"उत्कृष्टता के विद्यालय\"",
-        "प्रवेश प्रक्रिया: पीएम श्री — बिना किसी प्रवेश परीक्षा के सामान्य सरकारी नियम; सीएम श्री — प्रवेश परीक्षा या लॉटरी प्रणाली संभव",
-        "वित्तीय मॉडल: पीएम श्री — केंद्र सरकार द्वारा 100% वित्तपोषित; सीएम श्री — केंद्र और राज्य द्वारा संयुक्त रूप से वित्तपोषित (60:40)"
+        "प्रवेश के नियम: पीएम श्री – बिना किसी प्रवेश परीक्षा के सामान्य सरकारी नियमों के अनुसार; सीएम श्री – प्रवेश परीक्षा या लॉटरी प्रणाली अपनाई जा सकती है",
+        "प्राथमिक तकनीकी / पाठ्यचर्या फोकस: पीएम श्री – एआई और रोबोटिक्स वाली हाई-टेक लैब; सीएम श्री – एनईपी 2020 को लागू करने वाले हरित कक्षा-कक्ष और डिजिटल बोर्ड",
+        "योजना का नियंत्रण: पीएम श्री – केंद्र प्रायोजित योजना; सीएम श्री – राज्य सरकार की योजना",
+        "वित्तपोषण: पीएम श्री – केंद्र और राज्य की भागीदारी (60:40); सीएम श्री – राज्य सरकार द्वारा पूर्णतः वित्तपोषित"
       ],
       "option_labels": [
         "A",
@@ -544,21 +285,243 @@
       "language": "bilingual",
       "question_english": "Which of the following pairs comparing PM SHRI Schools and CM SHRI Schools is NOT correctly matched?",
       "options_english": [
-        "Target Coverage: PM SHRI — Over 14,500 schools across the country; CM SHRI — Limited number of selected schools in each state",
-        "Institutional Focus: PM SHRI — Model schools based on NEP 2020; CM SHRI — State-level \"Schools of Excellence\"",
-        "Admission Procedure: PM SHRI — General government rules without entrance exams; CM SHRI — Entrance exam or lottery system possible",
-        "Financial Model: PM SHRI — 100% funded by Central Government; CM SHRI — Jointly funded by Centre and State (60:40)"
+        "Admission Norms: PM SHRI – As per general government rules without entrance exams; CM SHRI – Entrance exam or lottery system may be adopted",
+        "Primary Technological / Curricular Focus: PM SHRI – High-tech labs with AI and robotics; CM SHRI – Green classrooms and digital boards implementing NEP 2020",
+        "Scheme Control: PM SHRI – Centrally Sponsored Scheme; CM SHRI – State Government Scheme",
+        "Funding: PM SHRI – Central and State partnership (60:40); CM SHRI – Fully funded by the State Government"
       ],
-      "correct_answer": "d",
-      "explanation_english": "Pair D is incorrectly matched. PM SHRI is a Centrally Sponsored Scheme jointly funded on a 60:40 cost-sharing ratio between the Centre and States. In contrast, CM SHRI schools are fully funded by the respective State Government.",
-      "explanation_hindi": "युग्म D गलत सुमेलित है। पीएम श्री एक केंद्र प्रायोजित योजना है जो केंद्र और राज्यों के बीच 60:40 के लागत-साझाकरण अनुपात पर संयुक्त रूप से वित्तपोषित है। इसके विपरीत, सीएम श्री स्कूल संबंधित राज्य सरकार द्वारा पूरी तरह से वित्तपोषित हैं।",
+      "correct_answer": "b",
+      "explanation_english": "Pair 3 is NOT correctly matched. The focus on high-tech labs and innovative content like AI and robotics is specified for CM SHRI schools, while PM SHRI schools implement all provisions of NEP 2020 emphasising active learning, skill-based education, green classrooms, and digital boards.",
+      "explanation_hindi": "युग्म 3 सही सुमेलित नहीं है। हाई-टेक लैब और एआई तथा रोबोटिक्स जैसे नवोन्मेषी कंटेंट पर ध्यान सीएम श्री (CM SHRI) स्कूलों के लिए निर्दिष्ट है, जबकि पीएम श्री स्कूल एनईपी 2020 के प्रावधानों को लागू करते हुए सक्रिय शिक्षण, कौशल-आधारित शिक्षा, ग्रीन क्लासरूम और डिजिटल बोर्ड पर जोर देते हैं।",
       "topic": "PM SHRI / CM SHRI",
       "difficulty": "medium",
       "key_facts": [
-        "Funding | Partnership between Central and State Governments (60:40) | Fully funded by the State Government"
+        "These schools implement all the provisions of the National Education Policy (NEP) 2020emphasisingg active learning, skill-based education, green classrooms, digital boards, and research-based teaching."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-12T12:00:16.896410"
+      "processed_at": "2026-10-12T12:08:46.274400"
+    },
+    {
+      "id": "62ec6f05-040f-4e95-aaac-39b695c649b0",
+      "created_at": "2026-10-12T11:53:48.741019",
+      "question_hindi": "5 वर्षों की अवधि में फैली पीएम श्री (PM SHRI) योजना की कुल परियोजना लागत और उसमें कुल केंद्रीय हिस्सा कितना है?",
+      "options_hindi": [
+        "कुल लागत: 27,360 करोड़ रुपये; केंद्रीय हिस्सा: 9,232 करोड़ रुपये",
+        "कुल लागत: 25,000 करोड़ रुपये; केंद्रीय हिस्सा: 15,000 करोड़ रुपये",
+        "कुल लागत: 18,128 करोड़ रुपये; केंद्रीय हिस्सा: 12,079 करोड़ रुपये",
+        "कुल लागत: 27,360 करोड़ रुपये; केंद्रीय हिस्सा: 18,128 करोड़ रुपये"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What is the total project cost of the PM SHRI scheme spread over a period of 5 years, along with the total central share?",
+      "options_english": [
+        "Total cost: Rs. 27,360 crore; Central share: Rs. 9,232 crore",
+        "Total cost: Rs. 25,000 crore; Central share: Rs. 15,000 crore",
+        "Total cost: Rs. 18,128 crore; Central share: Rs. 12,079 crore",
+        "Total cost: Rs. 27,360 crore; Central share: Rs. 18,128 crore"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The total cost of the project is Rs. 27,360 crore spread over a period of 5 years, with the central share being Rs. 18,128 crore and state share being Rs. 9,232 crore.",
+      "explanation_hindi": "परियोजना की कुल लागत 5 वर्षों में 27,360 करोड़ रुपये है, जिसमें केंद्र का हिस्सा 18,128 करोड़ रुपये और राज्यों का हिस्सा 9,232 करोड़ रुपये है।",
+      "topic": "PM SHRI / CM SHRI",
+      "difficulty": "easy",
+      "key_facts": [
+        "The total cost of the project will be Rs. 27360 crore spread over a period of 5 years. The total central share is Rs. 18,128 crore and state share is Rs. 9,232 crore over a period of 5 years."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-12T11:53:48.741019"
+    },
+    {
+      "id": "42746a19-e188-4a9b-b2f2-80a90b752771",
+      "created_at": "2026-10-12T11:53:48.741019",
+      "question_hindi": "पीएम श्री योजना के संदर्भ में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "options_hindi": [
+        "प्रति ब्लॉक/ULB अधिकतम आवंटन : तीन विद्यालय (एक प्राथमिक, एक उच्च प्राथमिक, और एक माध्यमिक)",
+        "योजना की प्रकृति : केंद्र प्रायोजित योजना (Centrally Sponsored Scheme)",
+        "योजना की अवधि : 2022-23 से 2026-27",
+        "जियो-टैगिंग हेतु संस्था : BISAG-N"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following pairs regarding the PM SHRI scheme is NOT correctly matched?",
+      "options_english": [
+        "Maximum allocation per block/ULB : Three schools (one Primary, one Elementary, and one Secondary)",
+        "Nature of scheme : Centrally Sponsored Scheme",
+        "Duration of scheme : 2022-23 to 2026-27",
+        "Organization for Geo-tagging : BISAG-N"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The allocation rule specifies a maximum of two schools (one Elementary and one Secondary/Senior Secondary) to be selected per block/ULB, not three.",
+      "explanation_hindi": "योजना के दिशानिर्देशों के अनुसार प्रति ब्लॉक/ULB में अधिकतम दो विद्यालय (एक प्राथमिक/एलिमेंट्री और एक माध्यमिक/उच्च माध्यमिक) चुने जाने हैं, तीन नहीं।",
+      "topic": "PM SHRI / CM SHRI",
+      "difficulty": "medium",
+      "key_facts": [
+        "Maximum two schools (one Elementary & one Secondary/Senior Secondary) are to be selected per block/ULB with upper limit of 14500 across India."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-12T11:53:48.741019"
+    },
+    {
+      "id": "1ce3d651-76fb-4d11-a5e3-5e33bff3c083",
+      "created_at": "2026-10-12T12:04:23.206412",
+      "question_hindi": "पीएम श्री योजना के कार्यान्वयन मील के पत्थर और समय-सीमा के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "options_hindi": [
+        "केरल राज्य द्वारा समझौता ज्ञापन (MoU) पर हस्ताक्षर करने की तिथि — 23 अक्टूबर 2025",
+        "वित्त वर्ष 2025-26 से फंड ऑनबोर्डिंग डिजिटल पोर्टल — SNA SPARSH",
+        "केंद्रीय परियोजना अनुमोदन बोर्ड (PAB) आवंटन में वृद्धि (2023-24 से 2026-27) — लगभग ~45% की वृद्धि",
+        "योजना कार्यान्वयन की कुल अवधि / समय-सीमा — 2022-23 से 2026-27"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following pairs regarding the implementation milestones and timelines of the PM SHRI scheme is NOT correctly matched?",
+      "options_english": [
+        "Date on which the State of Kerala signed the MoU — 23rd October 2025",
+        "Digital tracking portal for fund onboarding from FY 2025–26 — SNA SPARSH",
+        "Central Project Approval Board (PAB) allocation escalation (2023–24 to 2026–27) — Increased by ~45%",
+        "Total duration/timeline of scheme implementation — 2022–23 to 2026–27"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Pair 4 is NOT correctly matched because the Central Project Approval Board (PAB) funding allocation surged by ~107%, rising from ₹2,520 crore in 2023–24 to ₹5,224 crore in 2026–27, not ~45%. All other pairs are accurately matched according to official releases.",
+      "explanation_hindi": "युग्म 4 सही सुमेलित नहीं है क्योंकि केंद्रीय परियोजना अनुमोदन बोर्ड (PAB) निधि आवंटन में ~107% की भारी वृद्धि हुई, जो 2023-24 में ₹2,520 करोड़ से बढ़कर 2026-27 में ₹5,224 करोड़ हो गई, न कि ~45%। अन्य सभी युग्म आधिकारिक विज्ञप्ति के अनुसार सही हैं।",
+      "topic": "PM SHRI / CM SHRI",
+      "difficulty": "medium",
+      "key_facts": [
+        "Central Project Approval Board (PAB) funding allocation surged by ~107%, rising from ₹2,520 crore in 2023–24 to ₹5,224 crore in 2026–27."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-12T12:04:23.206412"
+    },
+    {
+      "id": "12ed38f8-988c-4926-96f2-7022872bddbe",
+      "created_at": "2026-10-12T12:09:29.067448",
+      "question_hindi": "पीएम श्री (PM SHRI) योजना के प्रशासनिक और परिचालन विवरण के संबंध में निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
+      "options_hindi": [
+        "जियो-टैगिंग और संबंधित कार्यों के लिए एजेंसी : भास्कराचार्य राष्ट्रीय अंतरिक्ष अनुप्रयोग और भू-सूचना विज्ञान संस्थान (BISAG-N)",
+        "प्रायोजक विभाग : स्कूली शिक्षा और साक्षरता विभाग, शिक्षा मंत्रालय",
+        "पीएम श्री के तहत संस्थागत स्तंभों की संख्या : एनईपी 2020 के 15 अध्यायों से प्राप्त 12 स्तंभ",
+        "योजना की कुल अवधि : 2022-23 से 2026-27"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following pairs regarding administrative and operational details of the PM SHRI Scheme is NOT correctly matched?",
+      "options_english": [
+        "Agency for Geo-tagging and related tasks : Bhaskaracharya National Institute for Space Applications and Geo-informatics (BISAG-N)",
+        "Sponsoring Department : Department of School Education & Literacy, Ministry of Education",
+        "Number of institutional pillars under PM SHRI : 12 pillars derived from 15 chapters of NEP 2020",
+        "Total duration of the scheme : 2022-23 to 2026-27"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Option D is incorrectly matched. As per the official FAQs, there are 6 pillars of PM SHRI schools derived from 9 chapters of NEP 2020 (not 12 pillars from 15 chapters). All other pairs are correctly matched.",
+      "explanation_hindi": "विकल्प D गलत सुमेलित है। आधिकारिक अक्सर पूछे जाने वाले प्रश्नों (FAQs) के अनुसार, NEP 2020 के 9 अध्यायों से प्राप्त PM SHRI स्कूलों के 6 स्तंभ (pillars) हैं (न कि 15 अध्यायों से 12 स्तंभ)। अन्य सभी युग्म सही सुमेलित हैं।",
+      "topic": "PM SHRI / CM SHRI",
+      "difficulty": "medium",
+      "key_facts": [
+        "There are 6 pillars of PM SHRI schools derived from 9 chapters of NEP 2020 viz-"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-12T12:09:29.067448"
+    },
+    {
+      "id": "415b04e0-5887-4c56-ba26-fe1b9a4d1d7e",
+      "created_at": "2026-10-12T11:56:02.583654",
+      "question_hindi": "पीएम श्री योजना के प्रमुख आंकड़ों और मापदंडों के आधार पर सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (मापदंड / संकेतक)\nA. 2023-24 में प्रोजेक्ट अप्रूवल बोर्ड (PAB) का केंद्रीय शेयर वित्तपोषण\nB. 2026-27 में प्रोजेक्ट अप्रूवल बोर्ड (PAB) का केंद्रीय शेयर वित्तपोषण\nC. जुलाई 2026 तक चयनित कुल स्कूल\nD. लक्षित प्रत्यक्ष छात्र लाभार्थी\n\nसूची-II (आंकड़ा / मान)\n1. ₹5,224 करोड़\n2. ₹2,520 करोड़\n3. 20 लाख से अधिक छात्र\n4. 13,092 स्कूल\n\nनीचे दिए गए कूट का उपयोग करके सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-2, B-1, C-3, D-4",
+        "A-1, B-2, C-3, D-4",
+        "A-2, B-1, C-4, D-3",
+        "A-1, B-2, C-4, D-3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List-I with List-II based on the key figures and parameters of the PM SHRI scheme:\n\nList-I (Parameter / Indicator)\nA. Project Approval Board (PAB) central share funding in 2023–24\nB. Project Approval Board (PAB) central share funding in 2026–27\nC. Total schools selected up to July 2026\nD. Direct student beneficiaries targeted\n\nList-II (Figure / Value)\n1. ₹5,224 crore\n2. ₹2,520 crore\n3. More than 20 lakh students\n4. 13,092 schools\n\nSelect the correct answer using the codes given below:",
+      "options_english": [
+        "A-2, B-1, C-3, D-4",
+        "A-1, B-2, C-3, D-4",
+        "A-2, B-1, C-4, D-3",
+        "A-1, B-2, C-4, D-3"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "As per verified data: PAB central funding was ₹2,520 crore in 2023–24 and rose to ₹5,224 crore in 2026–27 (a ~107% surge). As of July 2026, 13,092 schools have been selected, and the scheme directly targets more than 20 lakh students.",
+      "explanation_hindi": "सत्यापित आंकड़ों के अनुसार: PAB केंद्रीय वित्तपोषण 2023-24 में ₹2,520 करोड़ था और 2026-27 में बढ़कर ₹5,224 करोड़ हो गया (~107% की वृद्धि)। जुलाई 2026 तक, 13,092 स्कूलों का चयन किया गया है, और यह योजना सीधे 20 लाख से अधिक छात्रों को लक्षित करती है।",
+      "topic": "PM SHRI / CM SHRI",
+      "difficulty": "easy",
+      "key_facts": [
+        "Central Project Approval Board (PAB) funding allocation surged by ~107%, rising from ₹2,520 crore in 2023–24 to ₹5,224 crore in 2026–27... directly benefiting more than 20 lakh students... As of July 2026, 13,092 schools have been selected."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-12T11:56:02.583654"
+    },
+    {
+      "id": "08924673-b8fc-4373-9016-bd2813db0bb6",
+      "created_at": "2026-10-12T12:07:09.429328",
+      "question_hindi": "विभिन्न सरकारी स्कूल प्रणालियों के संस्थागत अधिदेश और लक्षित छात्र प्रोफ़ाइल के आधार पर सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (स्कूल प्रणाली)\nA. केंद्रीय विद्यालय (KVS)\nB. नवोदय विद्यालय (NVS)\nC. सैनिक स्कूल\nD. एकलव्य मॉडल आवासीय विद्यालय (EMRS)\n\nसूची-II (लक्षित लाभार्थी समूह / प्रोफ़ाइल)\n1. प्रतिभाशाली ग्रामीण बच्चे\n2. स्थानांतरणीय केंद्र सरकार के कर्मचारियों के बच्चे\n3. अनुसूचित जनजाति के बच्चे\n4. सशस्त्र बलों में जाने के इच्छुक छात्र और छात्राएं\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-2, B-1, C-3, D-4",
+        "A-1, B-2, C-4, D-3",
+        "A-2, B-1, C-4, D-3",
+        "A-4, B-3, C-2, D-1"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List-I with List-II based on the institutional mandate and target student profile of various government school systems:\n\nList-I (School System)\nA. Kendriya Vidyalayas (KVS)\nB. Navodaya Vidyalayas (NVS)\nC. Sainik Schools\nD. Eklavya Model Residential Schools (EMRS)\n\nList-II (Target Beneficiary Group / Profile)\n1. Talented rural children\n2. Children of transferable Central Government employees\n3. Scheduled Tribe children\n4. Boys and girls aiming for the armed forces\n\nSelect the correct answer using the codes given below:",
+      "options_english": [
+        "A-2, B-1, C-3, D-4",
+        "A-1, B-2, C-4, D-3",
+        "A-2, B-1, C-4, D-3",
+        "A-4, B-3, C-2, D-1"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "According to the comparative framework of special school systems: KVS is intended for children of transferable Central Government employees; NVS provides fully residential education for talented rural children; Sainik Schools prepare boys and girls aiming for the armed forces; and EMRS provides residential schooling for Scheduled Tribe children.",
+      "explanation_hindi": "विशेष स्कूल प्रणालियों के तुलनात्मक ढांचे के अनुसार: KVS स्थानांतरणीय केंद्र सरकार के कर्मचारियों के बच्चों के लिए है; NVS प्रतिभाशाली ग्रामीण बच्चों के लिए पूर्णतः आवासीय शिक्षा प्रदान करता है; सैनिक स्कूल सशस्त्र बलों में शामिल होने के इच्छुक बालक-बालिकाओं को तैयार करते हैं; तथा EMRS अनुसूचित जनजाति के बच्चों के लिए आवासीय विद्यालय प्रदान करता है।",
+      "topic": "PM SHRI / CM SHRI",
+      "difficulty": "medium",
+      "key_facts": [
+        "| KVS | Education | Children of transferable Central Government employees | Day school, Classes 1–12 | | NVS | Education | Talented RURAL children | Fully residential, Classes 6–12 | | Sainik Schools | DEFENCE | Boys and girls aiming for the armed forces | Residential, Classes 6–12 | | EMRS | TRIBAL AFFAIRS | Scheduled Tribe children | Residential, Classes 6–12 |"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-12T12:07:09.429328"
     },
     {
       "id": "aeeaaadd-89de-46ae-ab18-06cc0130fd0e",
@@ -598,14 +561,14 @@
       "processed_at": "2026-10-12T12:07:09.429328"
     },
     {
-      "id": "bd670735-83e1-4ee4-8f58-b14f592a7e69",
+      "id": "985ac158-58bd-4d9e-b90a-b77338ed248b",
       "created_at": "2026-10-12T12:03:39.710640",
-      "question_hindi": "समग्र शिक्षा अभियान (SSA) और पीएम श्री (PM SHRI) से संबंधित शिक्षा संबंधी संसदीय स्थायी समिति की रिपोर्ट के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. संसदीय समिति ने कहा कि समग्र शिक्षा अभियान (SSA) पीएम श्री से पहले का है और इसका उद्देश्य राज्यों को शिक्षा का अधिकार (RTE) अधिनियम के लक्ष्यों को प्राप्त करने में मदद करना है।\n2. समिति ने पीएम-पोषण (PM-POSHAN) योजना का विस्तार सरकारी स्कूलों के कक्षा 12 तक के छात्रों के लिए करने की सिफारिश की।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "question_hindi": "स्कूल रूपांतरण पर पीएम श्री (PM SHRI) मार्गदर्शक ढांचे के मार्गदर्शक सिद्धांतों और अनुप्रयोग के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. स्कूल मानकों के अनिवार्य समरूपीकरण को सुनिश्चित करने के लिए यह ढांचा सभी राज्यों और केंद्र शासित प्रदेशों में कड़ाई से निर्देशात्मक और समरूप है।\n2. यह ढांचा उन अवधारणाओं के कार्यान्वयन में सहायता के लिए एक व्यावहारिक मार्गदर्शिका के रूप में कार्य करता है जो कुछ उपयोगकर्ताओं के लिए नई हो सकती हैं।\n3. यह एक विकासशील दस्तावेज है, जिसे किसी भी चरण में राज्य/केंद्र शासित प्रदेश/केवीएस/एनवीएस की आवश्यकता और स्थानीय संदर्भ के अनुसार संशोधित या बदला जा सकता है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
       "options_hindi": [
-        "केवल 1",
-        "केवल 2",
-        "1 और 2 दोनों",
-        "न तो 1, न ही 2"
+        "केवल 1 और 2",
+        "1, 2 और 3",
+        "केवल 2 और 3",
+        "केवल 1 और 3"
       ],
       "option_labels": [
         "A",
@@ -616,32 +579,32 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the report of the Parliamentary Standing Committee on Education concerning Samagra Shiksha Abhiyan (SSA) and PM SHRI:\n\n1. The parliamentary committee observed that SSA predates PM SHRI and is intended to help States achieve the targets of the Right to Education (RTE) Act.\n2. The committee recommended extending the PM-POSHAN coverage to government school students up to Class 12.\n\nWhich of the statements given above is/are correct?",
+      "question_english": "Consider the following statements regarding the guiding principles and application of the PM SHRI Guiding Framework on School Transformation:\n\n1. The framework is strictly prescriptive and uniform across all States and UTs to ensure mandatory homogenisation of school standards.\n2. The framework acts as a practical guide to aid implementation for concepts that may be novel to some users.\n3. It is an evolving document that can be modified or changed as per State/UT/KVS/NVS requirement and local context at any stage.\n\nWhich of the statements given above are correct?",
       "options_english": [
-        "1 only",
-        "2 only",
-        "Both 1 and 2",
-        "Neither 1 nor 2"
+        "1 and 2 only",
+        "1, 2 and 3",
+        "2 and 3 only",
+        "1 and 3 only"
       ],
       "correct_answer": "c",
-      "explanation_english": "Both statements are correct. The parliamentary committee noted that the SSA predates PM SHRI and helps enforce the Right to Education Act, and therefore withholding SSA funds over PM SHRI agreements is unjustified. It also recommended extending PM-POSHAN coverage to students up to Class 12 (currently up to Class 8).",
-      "explanation_hindi": "दोनों कथन सही हैं। संसदीय समिति ने कहा कि समग्र शिक्षा अभियान (SSA) पीएम श्री से पहले का है और शिक्षा के अधिकार अधिनियम को लागू करने में मदद करता है, इसलिए पीएम श्री समझौतों पर SSA निधि रोकना अनुचित है। इसने पीएम-पोषण योजना के दायरे को कक्षा 12 तक के छात्रों (वर्तमान में कक्षा 8 तक) तक बढ़ाने की भी सिफारिश की।",
+      "explanation_english": "Statement 1 is incorrect because the framework is explicitly 'not prescriptive but suggestive in nature' and notes that 'any homogenisation /uniformization/ rigid structuring would not allow for uniqueness of excellence'. Statements 2 and 3 are correct as it serves as a practical guide for novel concepts and is an evolving document modifiable as per State/UT/KVS/NVS requirements.",
+      "explanation_hindi": "कथन 1 गलत है क्योंकि यह ढांचा स्पष्ट रूप से 'निर्देशात्मक नहीं बल्कि सुझावात्मक प्रकृति का है' और उल्लेख करता है कि 'कोई भी समरूपीकरण / एकरूपता / कठोर संरचना उत्कृष्टता की विशिष्टता की अनुमति नहीं देगी'। कथन 2 और 3 सही हैं क्योंकि यह नई अवधारणाओं के लिए एक व्यावहारिक मार्गदर्शिका के रूप में कार्य करता है और एक विकासशील दस्तावेज है जिसे आवश्यकतानुसार संशोधित किया जा सकता है।",
       "topic": "PM SHRI / CM SHRI",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "key_facts": [
-        "The SSA predates PM SHRI and is intended to help States to achieve the targets of the Right to Education Act. The RTE is a law duly passed by Parliament and confers education as a fundamental right onto every child... The report says that PM-POSHAN coverage should be extended to students up to class 12"
+        "It is to be noted that the framework is not prescriptive but suggestive in nature. School transformation may look different for each school, and readers can use this framework as a resource that enables the kind of transformation that the school wants. Keeping the purpose of NEP at the centre, any homogenisation /uniformization/ rigid structuring would not allow for uniqueness of excellence. This is an evolving document, which can be modified/changed as per State/UT/KVS/NVS requirement and local context at any stage... It acts as a practical guide to aid the implementation for concepts that may be novel to some users"
       ],
       "ai_processed": true,
       "processed_at": "2026-10-12T12:03:39.710640"
     },
     {
-      "id": "8bd30658-ecb4-47df-a9b0-4b8a457af59a",
-      "created_at": "2026-10-12T11:54:29.026790",
-      "question_hindi": "पीएम श्री स्कूलों के तहत प्रमुख शैक्षणिक विशेषताओं और उदाहरणार्थ हस्तक्षेपों के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n1. अपनाई जाने वाली शिक्षण पद्धति (pedagogy) खेल/खिलौना आधारित होगी, विशेष रूप से बुनियादी वर्षों (foundational years) में।\n2. रोजगार क्षमता बढ़ाने के लिए सेक्टर स्किल परिषदों (Sector Skill Councils) और स्थानीय उद्योग के साथ संबंधों की संभावनाएं तलाशी जाएंगी।\n3. 'गुणवत्ता और नवाचार' (Quality and Innovation) हस्तक्षेपों में विशेष रूप से 'बस्ता-मुक्त दिवस' (Bagless days) और 'स्थानीय कारीगरों के साथ इंटर्नशिप' शामिल हैं।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "74c78df9-ff48-4157-ab86-065bc4657477",
+      "created_at": "2026-10-12T11:58:53.644256",
+      "question_hindi": "पीएम श्री (PM SHRI) योजना के तहत परिकल्पित 'ग्रीन स्कूल' (Green School) घटकों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. सौर पैनलों और एलईडी लाइटों के साथ-साथ प्राकृतिक खेती वाले पोषण उद्यानों को शामिल करना।\n2. जलवायु परिवर्तन से जुड़े हैकाथॉन का आयोजन करना तथा संधारणीय जीवन शैली अपनाने हेतु जागरूकता पैदा करना।\n3. पर्यावरण संरक्षण से संबंधित परंपराओं और प्रथाओं के अध्ययन को शामिल करना।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
       "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 1 और 2",
         "केवल 2 और 3",
+        "केवल 1 और 2",
+        "केवल 1 और 3",
         "1, 2 और 3"
       ],
       "option_labels": [
@@ -653,33 +616,70 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the key pedagogical features and illustrative interventions under PM SHRI schools:\n1. The pedagogy adopted will be play/toy-based, particularly in the foundational years.\n2. Linkages with Sector Skill Councils and local industry will be explored for enhancing employability.\n3. Quality and Innovation interventions specifically include 'Bagless days' and 'Internships with Local artisans'.\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the 'Green School' components envisioned under the PM SHRI scheme:\n\n1. Incorporating nutrition gardens with natural farming alongside solar panels and LED lights.\n2. Organising climate change related hackathons and generating awareness to adopt a sustainable lifestyle.\n3. Incorporating the study of traditions and practices related to the protection of the environment.\n\nWhich of the statements given above are correct?",
       "options_english": [
-        "1 and 3 only",
-        "1 and 2 only",
         "2 and 3 only",
+        "1 and 2 only",
+        "1 and 3 only",
         "1, 2 and 3"
       ],
       "correct_answer": "d",
-      "explanation_english": "All three statements are correct. The scheme outlines that pedagogy will be experiential, holistic, integrated, play/toy-based (particularly in the foundational years), inquiry-driven, and learner-centric. It explores linkages with Sector Skill Councils and local industry. Moreover, illustrative interventions under Quality and Innovation include the Learning Enhancement Programme, Holistic Progress Card, Innovative Pedagogies, Bagless days, Internships with Local artisans, and Capacity building.",
-      "explanation_hindi": "तीनों कथन सही हैं। योजना के अनुसार, शिक्षण पद्धति अनुभवात्मक, समग्र, एकीकृत, खेल/खिलौना-आधारित (विशेष रूप से बुनियादी वर्षों में), पूछताछ-संचालित और शिक्षार्थी-केंद्रित होगी। रोजगार क्षमता में सुधार हेतु सेक्टर स्किल काउंसिल्स और स्थानीय उद्योगों के साथ लिंकेज का पता लगाया जाएगा। इसके अलावा, गुणवत्ता और नवाचार के तहत बैगलेस डेज (बस्ता-मुक्त दिवस) और स्थानीय कारीगरों के साथ इंटर्नशिप आदि शामिल हैं।",
+      "explanation_english": "All three statements are correct. As per the Union Cabinet approval details, PM SHRI schools are developed as Green schools by incorporating solar panels, LED lights, nutrition gardens with natural farming, waste management, plastic-free zones, water harvesting, study of traditions/practices related to environmental protection, and climate change related hackathons.",
+      "explanation_hindi": "तीनों कथन सही हैं। केंद्रीय मंत्रिमंडल के अनुमोदन विवरण के अनुसार, पीएम श्री स्कूलों को सौर पैनल, एलईडी लाइट, प्राकृतिक खेती वाले पोषण उद्यान, अपशिष्ट प्रबंधन, प्लास्टिक मुक्त क्षेत्र, जल संचयन, पर्यावरण संरक्षण से संबंधित परंपराओं/प्रथाओं के अध्ययन और जलवायु परिवर्तन से संबंधित हैकाथॉन को शामिल करके ग्रीन स्कूल के रूप में विकसित किया जाएगा।",
       "topic": "PM SHRI / CM SHRI",
       "difficulty": "medium",
       "key_facts": [
-        "Pedagogy adopted in these schools will be more experiential, holistic, integrated, play/toy-based (particularly, in the foundational years) inquiry-driven, discovery-oriented, learner-centred, discussion-based, flexible and enjoyable."
+        "The PM SHRI Schools will be developed as Green schools, incorporating environment friendly aspects like solar panels and LED lights, nutrition gardens with natural farming, waste management, plastic free, water conservation and harvesting, study of traditions/practices related to protection of environment, climate change related hackathon and awareness generation to adopt sustainable lifestyle."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-12T11:58:53.644256"
+    },
+    {
+      "id": "ad9d7dac-b162-449d-95a7-2168db004687",
+      "created_at": "2026-10-12T11:54:29.026790",
+      "question_hindi": "पीएम श्री स्कूल (PM SHRI) योजना की विशेषताओं और लाभार्थियों के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n1. 18 लाख से अधिक छात्रों के इस योजना के प्रत्यक्ष लाभार्थी होने की उम्मीद है।\n2. पीएम श्री स्कूलों को ग्रीन स्कूल के रूप में विकसित किया जाएगा, जिसमें प्राकृतिक खेती के साथ पोषण वाटिका (nutrition gardens), अपशिष्ट प्रबंधन और जलवायु परिवर्तन से संबंधित हैकाथॉन जैसे पहलू शामिल होंगे।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "options_hindi": [
+        "1 और 2 दोनों",
+        "केवल 2",
+        "न तो 1, न ही 2",
+        "केवल 1"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the features and beneficiaries of the PM SHRI Schools Scheme:\n1. Over 18 lakh students are expected to be direct beneficiaries of the PM SHRI scheme.\n2. PM SHRI Schools will be developed as Green Schools, incorporating aspects like nutrition gardens with natural farming, waste management, and climate change related hackathons.\n\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "Both 1 and 2",
+        "2 only",
+        "Neither 1 nor 2",
+        "1 only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "According to the official factsheet, over 18 lakh students are expected to be direct beneficiaries of the scheme. Furthermore, PM SHRI Schools will be developed as Green Schools incorporating aspects such as solar panels, LED lights, nutrition gardens with natural farming, waste management, plastic-free environment, water conservation and harvesting, study of traditions/practices related to environmental protection, climate change related hackathons, and awareness generation to adopt a sustainable lifestyle. Therefore, both statements are correct.",
+      "explanation_hindi": "आधिकारिक फैक्टशीट के अनुसार, 18 लाख से अधिक छात्रों के इस योजना के प्रत्यक्ष लाभार्थी होने की उम्मीद है। इसके अलावा, पीएम श्री स्कूलों को ग्रीन स्कूल के रूप में विकसित किया जाएगा, जिसमें सोलर पैनल, एलईडी लाइट, प्राकृतिक खेती के साथ पोषण वाटिका, अपशिष्ट प्रबंधन, प्लास्टिक मुक्त परिसर, जल संरक्षण एवं संचयन, पर्यावरण संरक्षण से संबंधित परंपराओं का अध्ययन, जलवायु परिवर्तन से संबंधित हैकाथॉन और सतत जीवन शैली अपनाने हेतु जागरूकता जैसे पहलू शामिल हैं। अतः दोनों कथन सही हैं।",
+      "topic": "PM SHRI / CM SHRI",
+      "difficulty": "medium",
+      "key_facts": [
+        "Over 18 lakh students are expected to be direct beneficiaries of the scheme; impact will be generated through the mentoring and handholding of the schools in vicinity of PM SHRI schools"
       ],
       "ai_processed": true,
       "processed_at": "2026-10-12T11:54:29.026790"
     },
     {
-      "id": "5527686b-6fa0-42eb-a201-187e21704032",
-      "created_at": "2026-10-12T11:55:23.353704",
-      "question_hindi": "पीएम श्री (PM SHRI) और समग्र शिक्षा अभियान (SSA) के संबंध में शिक्षा, महिला, बाल, युवा एवं खेल संबंधी संसदीय स्थायी समिति के टिप्पणियों के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. पीएम-श्री जैसी अलग योजनाओं के लिए समझौते न करने पर राज्यों के समग्र शिक्षा अभियान (SSA) फंड को रोकना न्यायसंगत नहीं है।\n2. SSA, पीएम श्री से पहले का है और इसका उद्देश्य राज्यों को शिक्षा का अधिकार (RTE) अधिनियम के लक्ष्यों को प्राप्त करने में मदद करना है।\n3. समिति ने कहा कि RTE अधिनियम एक कार्यकारी नीतिगत वक्तव्य (executive policy statement) है, जबकि राष्ट्रीय शिक्षा नीति (NEP) 2020 संसद द्वारा विधिवत पारित कानून है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "db98a20b-4e45-482f-82b6-99074bb9fc7e",
+      "created_at": "2026-10-12T11:54:29.026790",
+      "question_hindi": "पीएम श्री योजना के तहत चौथे चरण तक चयनित 12,079 स्कूलों के श्रेणीवार वितरण के आधार पर सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (स्कूल श्रेणी)\nA. प्राथमिक स्कूल (Primary)\nB. उच्च प्राथमिक/एलिमेंट्री स्कूल (Elementary)\nC. माध्यमिक स्कूल (Secondary)\nD. उच्च माध्यमिक स्कूल (Senior Secondary)\n\nसूची-II (चयनित स्कूलों की संख्या)\n1. 1,329\n2. 3,340\n3. 2,921\n4. 4,489\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
       "options_hindi": [
-        "केवल 1 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3"
+        "A-4, B-3, C-2, D-1",
+        "A-1, B-3, C-2, D-4",
+        "A-1, B-2, C-3, D-4",
+        "A-2, B-1, C-4, D-3"
       ],
       "option_labels": [
         "A",
@@ -690,60 +690,60 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the observations of the Parliamentary Standing Committee on Education, Women, Children, Youth and Sports regarding PM SHRI and Samagra Shiksha Abhiyan (SSA):\n\n1. Withholding Samagra Shiksha Abhiyan (SSA) funds to states for not entering into agreements for separate schemes like PM-SHRI is not justifiable.\n2. The SSA predates PM SHRI and is intended to help States achieve the targets of the Right to Education (RTE) Act.\n3. The committee noted that the RTE Act is an executive policy statement, whereas the National Education Policy (NEP) 2020 is a law duly passed by Parliament.\n\nWhich of the statements given above are correct?",
+      "question_english": "Match List-I with List-II based on the category-wise distribution of the 12,079 schools selected under the PM SHRI scheme up to the 4th phase:\n\nList-I (School Category)\nA. Primary schools\nB. Elementary schools\nC. Secondary schools\nD. Senior secondary schools\n\nList-II (Number of Schools Selected)\n1. 1,329\n2. 3,340\n3. 2,921\n4. 4,489\n\nSelect the correct answer using the codes given below:",
       "options_english": [
-        "1 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only",
-        "2 and 3 only"
+        "A-4, B-3, C-2, D-1",
+        "A-1, B-3, C-2, D-4",
+        "A-1, B-2, C-3, D-4",
+        "A-2, B-1, C-4, D-3"
       ],
       "correct_answer": "c",
-      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because the committee noted that the RTE is a law duly passed by Parliament conferring education as a fundamental right, whereas the NEP 2020 is an executive policy statement that cannot bypass statutory provisions.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि समिति ने स्पष्ट किया कि RTE संसद द्वारा विधिवत पारित एक कानून है जो शिक्षा को मौलिक अधिकार बनाता है, जबकि NEP 2020 एक कार्यकारी नीतिगत वक्तव्य है जो कानूनी प्रावधानों को दरकिनार नहीं कर सकता।",
+      "explanation_english": "According to the Department of School Education and Literacy (Ministry of Education), out of 12,079 schools selected across 32 States/UTs and KVS/NVS up to the 4th phase: 1,329 are Primary schools, 3,340 are Elementary schools, 2,921 are Secondary schools, and 4,489 are Senior Secondary schools.",
+      "explanation_hindi": "स्कूल शिक्षा और साक्षरता विभाग (शिक्षा मंत्रालय) के अनुसार, चौथे चरण तक 32 राज्यों/केंद्र शासित प्रदेशों और KVS/NVS से चयनित 12,079 स्कूलों में से: 1,329 प्राथमिक स्कूल हैं, 3,340 एलिमेंट्री स्कूल हैं, 2,921 माध्यमिक स्कूल हैं तथा 4,489 उच्च माध्यमिक (सीनियर सेकेंडरी) स्कूल हैं।",
+      "topic": "PM SHRI / CM SHRI",
+      "difficulty": "hard",
+      "key_facts": [
+        "A total of 12,079 schools have been selected from 32 States/UTs and KVS/NVS Schools upto 4 phases out of which 1329 schools are Primary, 3340 schools are Elementary, 2921 schools are secondary and 4489 schools are senior secondary."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-12T11:54:29.026790"
+    },
+    {
+      "id": "0a4f386b-1d52-400e-9a1c-f892867253b5",
+      "created_at": "2026-10-12T12:07:55.784862",
+      "question_hindi": "'चैलेंज मेथड' (Challenge Method) के माध्यम से पीएम श्री विद्यालयों के चयन के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. पहले चरण में, राज्यों और केंद्र शासित प्रदेशों को एनईपी 2020 लागू करने के लिए सहमति पत्र (MoU) पर हस्ताक्षर करना आवश्यक है।\n2. दूसरे चरण में, निर्धारित मानकों के आधार पर पात्र विद्यालयों के एक समूह (pool) का पूर्व-चयन किया जाता है।\n3. केवल वे विद्यालय जो दूसरे चरण को पार करते हैं, वे प्रतिस्पर्धा के तीसरे चरण में प्रवेश करते हैं।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 1 और 2",
+        "केवल 2 और 3",
+        "केवल 1 और 3",
+        "1, 2 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the selection of PM SHRI schools through the 'Challenge Method':\n\n1. In the first stage, States and Union Territories are required to sign a Memorandum of Understanding (MoU) agreeing to implement NEP 2020.\n2. In the second stage, a pool of eligible schools is pre-selected based on identified parameters.\n3. Only the schools that successfully clear the second stage enter the third stage of competition.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The PM SHRI selection process follows a transparent Challenge Method with a Three Stage Process: Stage 1 involves States/UTs signing an MoU for implementing NEP 2020; Stage 2 involves pre-selection of a pool of schools based on identified parameters; Stage 3 involves competition among schools that crossed the 2nd stage.",
+      "explanation_hindi": "पीएम श्री चयन प्रक्रिया एक पारदर्शी 'चैलेंज मेथड' पर आधारित है जिसमें त्रि-स्तरीय प्रक्रिया (Three Stage Process) शामिल है: चरण 1 में एनईपी 2020 को लागू करने हेतु राज्यों/केंद्र शासित प्रदेशों द्वारा समझौता ज्ञापन (MoU) पर हस्ताक्षर करना शामिल है; चरण 2 में निर्धारित मानकों के आधार पर विद्यालयों के एक समूह का पूर्व-चयन शामिल है; चरण 3 में वे विद्यालय प्रतिस्पर्धा करते हैं जिन्होंने दूसरे चरण को पार कर लिया है।",
       "topic": "PM SHRI / CM SHRI",
       "difficulty": "medium",
       "key_facts": [
-        "The SSA predates PM SHRI and is intended to help States to achieve the targets of the Right to Education Act. The RTE is a law duly passed by Parliament and confers education as a fundamental right onto every child. The SSA, as a scheme that enforces the fundamental right-based RTE, cannot be bypassed by the NEP, which was an executive policy statement"
+        "Selection through Challenge Method with Three Stage Process - States / UTs to sign MoU for implementing NEP 2020 - Pre-selection of a pool of schools based on identified parameters - Schools that have crossed 2nd stage will enter 3rd Stage"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-12T11:55:23.353704"
-    },
-    {
-      "id": "d1cadcd2-02b3-422b-aff7-a000d7fc9b39",
-      "created_at": "2026-10-12T11:57:45.583370",
-      "question_hindi": "पीएम-श्री (PM-SHRI) योजना के पाठ्यचर्या और वित्तीय दिशानिर्देशों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. पाठ्यचर्या के लिए, पीएम-श्री विद्यालयों को या तो राष्ट्रीय पाठ्यचर्या की रूपरेखा (NCF) या एनईपी के आधार पर राज्य द्वारा विकसित राज्य पाठ्यचर्या की रूपरेखा (SCF) का पालन करने की अनुमति है।\n2. पीएम-श्री योजना केंद्र और राज्यों द्वारा संयुक्त रूप से 60:40 के अनुपात में वित्तपोषित है।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
-      "options_hindi": [
-        "1 और 2 दोनों",
-        "केवल 1",
-        "केवल 2",
-        "न तो 1, न ही 2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the curricular and financial guidelines of the PM-SHRI scheme:\n\n1. For curriculum, PM-SHRI schools are permitted to follow either the National Curriculum Framework or the State Curriculum Framework developed on the basis of the NEP.\n2. The PM-SHRI scheme is funded jointly by the Centre and the States in a 60:40 ratio.\n\nWhich of the statements given above is/are correct?",
-      "options_english": [
-        "Both 1 and 2",
-        "1 only",
-        "2 only",
-        "Neither 1 nor 2"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Both statements are correct. According to the Ministry guidelines for PM-SHRI, schools are to follow either the National Curriculum Framework or the State Curriculum Framework developed by the state on the basis of NEP 2020. Furthermore, the scheme is funded by the Centre and states in a 60:40 ratio.",
-      "explanation_hindi": "दोनों कथन सही हैं। पीएम-श्री के लिए मंत्रालय के दिशानिर्देशों के अनुसार, विद्यालयों को या तो राष्ट्रीय पाठ्यचर्या की रूपरेखा या एनईपी 2020 के आधार पर राज्य द्वारा विकसित राज्य पाठ्यचर्या की रूपरेखा का पालन करना होगा। इसके अलावा, यह योजना केंद्र और राज्यों द्वारा 60:40 के अनुपात में वित्तपोषित है।",
-      "topic": "PM SHRI / CM SHRI",
-      "difficulty": "easy",
-      "key_facts": [
-        "For curriculum, PM-SHRI schools are to follow either the National Curriculum Framework or the State Curriculum Framework developed by the state on the basis of the NEP. The scheme is funded by the Centre and states in a 60:40 ratio."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-12T11:57:45.583370"
+      "processed_at": "2026-10-12T12:07:55.784862"
     }
   ]
 }

@@ -110,7 +110,7 @@ export default function MobileDashboard({
                 <FileText size={18} color="#3B82F6" />
               </View>
               <View>
-                <Text style={styles.statVal}>28</Text>
+                <Text style={styles.statVal}>{dashboardStats?.totalAvailableTests ?? 184}</Text>
                 <Text style={styles.statLbl}>Tests Available</Text>
               </View>
             </View>
@@ -171,15 +171,15 @@ export default function MobileDashboard({
 
           {/* PILLS */}
           <View style={styles.pillsRow}>
-            <TouchableOpacity style={[styles.pill, styles.pillActive]} onPress={() => router.push('/test-list')}>
+            <TouchableOpacity style={[styles.pill, styles.pillActive]} onPress={() => router.push({ pathname: '/test-list', params: { category: 'all' } })}>
               <Grid size={16} color="#fff" />
               <Text style={[styles.pillTxt, styles.pillTxtActive]}>All Tests</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.pill} onPress={() => router.push('/testseries-browse')}>
+            <TouchableOpacity style={styles.pill} onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}>
               <FileText size={16} color="#475569" />
               <Text style={styles.pillTxt}>Full Mocks</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.pill} onPress={() => router.push('/test-list')}>
+            <TouchableOpacity style={styles.pill} onPress={() => router.push({ pathname: '/test-list', params: { category: 'topic' } })}>
               <BookOpen size={16} color="#475569" />
               <Text style={styles.pillTxt}>Topic Wise</Text>
             </TouchableOpacity>
@@ -210,7 +210,7 @@ export default function MobileDashboard({
 
               <Text style={styles.premiumBannerTitle}>UPSC Principal 2026 Test Series</Text>
               <Text style={styles.premiumBannerSubtitle}>
-                Unlock 50+ Full Mocks • Detailed AI Analytics • Bilingual English & Hindi
+                Unlock 26 Full Mocks • 158 Topic Tests • Daily New Tests Added
               </Text>
 
               <View style={styles.premiumBannerFooter}>
@@ -267,7 +267,7 @@ export default function MobileDashboard({
               </View>
 
               <View style={styles.featuredPerks}>
-                <View style={styles.perk}><FileText size={14} color="#fff" /><Text style={styles.perkText}>50+ Tests</Text></View>
+                <View style={styles.perk}><FileText size={14} color="#fff" /><Text style={styles.perkText}>26 Mocks + 158 Topics</Text></View>
                 <View style={styles.perk}><Clock size={14} color="#fff" /><Text style={styles.perkText}>Timed Tests</Text></View>
                 <View style={styles.perk}><BarChart2 size={14} color="#fff" /><Text style={styles.perkText}>Detailed Analytics</Text></View>
               </View>

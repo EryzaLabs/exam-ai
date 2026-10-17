@@ -1,17 +1,24 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { onAuthStateChanged, User } from 'firebase/auth';
-import { auth } from '@/services/firebaseConfig';
+import { auth, db } from '@/services/firebaseConfig';
+import { doc, onSnapshot, getDoc } from 'firebase/firestore';
 import { useRouter, useSegments, useRootNavigationState } from 'expo-router';
 import UserService from '@/services/user-service';
 
 interface AuthContextType {
   user: User | null;
   isLoading: boolean;
+  isSubscribed: boolean;
+  isSubscriptionLoading: boolean;
+  refreshSubscription: () => Promise<boolean>;
 }
 
 const AuthContext = createContext<AuthContextType>({
   user: null,
   isLoading: true,
+  isSubscribed: false,
+  isSubscriptionLoading: true,
+  refreshSubscription: async () => false,
 });
 
 export const useAuth = () => useContext(AuthContext);
@@ -19,17 +26,94 @@ export const useAuth = () => useContext(AuthContext);
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isSubscriptionLoading, setIsSubscriptionLoading] = useState(true);
   const segments = useSegments();
   const router = useRouter();
   const rootNavigationState = useRootNavigationState();
 
+  const refreshSubscription = async (targetUid?: string): Promise<boolean> => {
+    const uid = targetUid || auth.currentUser?.uid;
+    if (!uid) {
+      setIsSubscribed(false);
+      setIsSubscriptionLoading(false);
+      return false;
+    }
+    try {
+      setIsSubscriptionLoading(true);
+      const profile = await UserService.getUserProfile(uid);
+      const subscribed = profile?.isSubscribed === true;
+      setIsSubscribed(subscribed);
+      return subscribed;
+    } catch (e) {
+      console.error('Error refreshing subscription in AuthContext:', e);
+      return false;
+    } finally {
+      setIsSubscriptionLoading(false);
+    }
+  };
+
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (authUser) => {
+    let unsubSub = () => {};
+
+    const unsubscribe = onAuthStateChanged(auth, async (authUser) => {
+      unsubSub();
       setUser(authUser);
-      setIsLoading(false);
+
+      if (authUser) {
+        setIsSubscriptionLoading(true);
+
+        // Realtime listener: updates instantly when backend writes status.
+        // Route changes NEVER trigger a database read!
+        unsubSub = onSnapshot(
+          doc(db, 'subscriptions', authUser.uid),
+          (snap) => {
+            const d = snap.data();
+            const periodEnd = d?.currentPeriodEnd?.toMillis
+              ? d.currentPeriodEnd.toMillis()
+              : d?.currentPeriodEnd;
+            const isPeriodValid = !periodEnd || periodEnd > Date.now();
+            const active =
+              (d?.status === 'active' || d?.isSubscribed === true) && isPeriodValid;
+
+            if (snap.exists() && active) {
+              setIsSubscribed(true);
+              setIsSubscriptionLoading(false);
+              setIsLoading(false);
+            } else {
+              // Backward compatibility check with users/{uid}
+              getDoc(doc(db, 'users', authUser.uid))
+                .then((uSnap) => {
+                  const uData = uSnap.data();
+                  setIsSubscribed(uData?.isSubscribed === true);
+                })
+                .catch(() => {
+                  setIsSubscribed(false);
+                })
+                .finally(() => {
+                  setIsSubscriptionLoading(false);
+                  setIsLoading(false);
+                });
+            }
+          },
+          (err) => {
+            console.error('Error in subscriptions realtime listener:', err);
+            setIsSubscribed(false);
+            setIsSubscriptionLoading(false);
+            setIsLoading(false);
+          }
+        );
+      } else {
+        setIsSubscribed(false);
+        setIsSubscriptionLoading(false);
+        setIsLoading(false);
+      }
     });
 
-    return unsubscribe;
+    return () => {
+      unsubscribe();
+      unsubSub();
+    };
   }, []);
 
   useEffect(() => {
@@ -64,7 +148,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [user, segments, isLoading, rootNavigationState?.key]);
 
   return (
-    <AuthContext.Provider value={{ user, isLoading }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        isLoading,
+        isSubscribed,
+        isSubscriptionLoading,
+        refreshSubscription,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );

@@ -41,30 +41,59 @@ class UserService {
    */
   async getUserProfile(uid?: string): Promise<UserProfile | null> {
     try {
-      // Instantly load from local storage to beat Firebase's slow auth hydration
-      let isSubscribedLocal = false;
-      try {
-         const subState = await AsyncStorage.getItem('@course_subscription_status');
-         if (subState === 'true') {
-             isSubscribedLocal = true;
-         }
-      } catch (e) {}
-
       const userId = uid || auth.currentUser?.uid;
+
+      // Unauthenticated users can never be granted subscription (prevents client-side manipulation)
       if (!userId) {
-          return { isSubscribed: isSubscribedLocal } as UserProfile;
+        return { isSubscribed: false } as UserProfile;
       }
 
+      const authUser = auth.currentUser;
       const userDoc = await getDoc(doc(db, 'users', userId));
       if (userDoc.exists()) {
         const data = userDoc.data() as UserProfile;
-        if (isSubscribedLocal && !data.isSubscribed) {
-            data.isSubscribed = true;
-            this.setSubscriptionStatus(true);
+
+        // Cloud Firestore is the ONLY authoritative source of truth for paid status
+        const isCloudSubscribed = data.isSubscribed === true;
+
+        // Auto-sync Google Auth profile details to Firestore if missing
+        const syncUpdates: Partial<UserProfile> = {};
+        if (!data.email && authUser?.email) syncUpdates.email = authUser.email;
+        if (!data.displayName && authUser?.displayName) syncUpdates.displayName = authUser.displayName;
+        if (!data.photoURL && authUser?.photoURL) syncUpdates.photoURL = authUser.photoURL;
+
+        if (Object.keys(syncUpdates).length > 0) {
+          await setDoc(doc(db, 'users', userId), syncUpdates, { merge: true }).catch(() => {});
         }
-        return data;
+
+        // Cloud is single source of truth: sync to local storage
+        await AsyncStorage.setItem(
+          '@course_subscription_status',
+          isCloudSubscribed ? 'true' : 'false'
+        ).catch(() => {});
+
+        return {
+          ...data,
+          email: data.email || authUser?.email || '',
+          displayName: data.displayName || authUser?.displayName || (authUser?.email ? authUser.email.split('@')[0] : 'User'),
+          photoURL: data.photoURL || authUser?.photoURL || null,
+          isSubscribed: isCloudSubscribed,
+        };
       }
-      return { isSubscribed: isSubscribedLocal } as UserProfile;
+
+      // If document doesn't exist yet, seed initial profile from Google Auth details
+      const initialProfile: Partial<UserProfile> = {
+        uid: userId,
+        email: authUser?.email || '',
+        displayName: authUser?.displayName || (authUser?.email ? authUser.email.split('@')[0] : 'User'),
+        photoURL: authUser?.photoURL || null,
+        isSubscribed: false,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+      await setDoc(doc(db, 'users', userId), initialProfile, { merge: true }).catch(() => {});
+      await AsyncStorage.setItem('@course_subscription_status', 'false').catch(() => {});
+      return initialProfile as UserProfile;
     } catch (error) {
       console.error('Error getting user profile:', error);
       return null;
@@ -163,25 +192,13 @@ class UserService {
   }
 
   /**
-   * Update subscription status
+   * Deprecated client write: Only backend writes subscription status via Firebase Admin SDK
+   * upon verified payment. Direct client writes are rejected by Firestore security rules.
    */
-  async setSubscriptionStatus(status: boolean): Promise<void> {
-    try {
-      // 1. Instantly cache on device so it never asks again
-      await AsyncStorage.setItem('@course_subscription_status', status ? 'true' : 'false');
-
-      // 2. Sync to cloud if they are logged in
-      const userId = auth.currentUser?.uid;
-      if (userId) {
-        const userRef = doc(db, 'users', userId);
-        await updateDoc(userRef, {
-          isSubscribed: status,
-          updatedAt: new Date().toISOString(),
-        });
-      }
-    } catch (error) {
-      console.error('Error updating subscription status:', error);
-    }
+  async setSubscriptionStatus(_status: boolean): Promise<void> {
+    console.warn(
+      '[UserService] Direct client-side subscription writes are disabled for security. Subscription status is strictly verified and written by backend server.'
+    );
   }
 
   /**

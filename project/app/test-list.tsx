@@ -37,7 +37,7 @@ import {
 import SSCCGLService, { ParsedMockTest } from '@/services/ssc-cgl-service';
 import { TestProgressService, SavedTestState } from '@/services/test-progress-service';
 import userService from '@/services/user-service';
-import { initiatePayment } from '@/utils/razorpay';
+import { initiatePayment } from '@/utils/cashfree';
 import { useAuth } from '@/context/auth-context';
 
 const { width } = Dimensions.get('window');
@@ -55,17 +55,29 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const [filteredTests, setFilteredTests] = useState<ServerPaper[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadingTestId, setLoadingTestId] = useState<string | null>(null);
-  const { q } = useLocalSearchParams();
-  const [searchQuery, setSearchQuery] = useState(typeof q === 'string' ? q : '');
-  const [category, setCategory] = useState<'all' | 'full' | 'topic'>('all');
+  const params = useLocalSearchParams<{ q?: string; category?: string }>();
+  const [searchQuery, setSearchQuery] = useState(typeof params.q === 'string' ? params.q : '');
+  const initialCategory = params.category === 'full' || params.category === 'topic' ? params.category : 'all';
+  const [category, setCategory] = useState<'all' | 'full' | 'topic'>(initialCategory);
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
   const [activeTests, setActiveTests] = useState<SavedTestState[]>([]);
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  const { user, isSubscribed: authSubscribed, isSubscriptionLoading, refreshSubscription } = useAuth();
+  const [localSubscribed, setLocalSubscribed] = useState<boolean | null>(null);
+  const isSubscribed = localSubscribed !== null ? localSubscribed : authSubscribed;
   const [paymentLoading, setPaymentLoading] = useState(false);
-  const { user } = useAuth();
+  const [checkingSubscription, setCheckingSubscription] = useState(true);
 
   const { width: windowWidth } = useWindowDimensions();
   const isLargeScreen = windowWidth >= 1024;
+
+  useEffect(() => {
+    if (params.category === 'full' || params.category === 'topic' || params.category === 'all') {
+      setCategory(params.category);
+      if (params.category !== 'topic') {
+        setSelectedTopic(null);
+      }
+    }
+  }, [params.category]);
 
   useEffect(() => {
     loadTests();
@@ -79,11 +91,18 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   }, [user]);
 
   const checkSubscription = async () => {
-    const profile = await userService.getUserProfile(user?.uid);
-    if (profile?.isSubscribed) {
-      setIsSubscribed(true);
-    } else {
-      setIsSubscribed(false);
+    setCheckingSubscription(true);
+    try {
+      if (user?.uid) {
+        const profile = await userService.getUserProfile(user.uid);
+        setLocalSubscribed(profile?.isSubscribed === true);
+      } else {
+        setLocalSubscribed(false);
+      }
+    } catch (e) {
+      console.error('Error checking subscription in test-list:', e);
+    } finally {
+      setCheckingSubscription(false);
     }
   };
 
@@ -125,9 +144,9 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     setPaymentLoading(true);
     initiatePayment(
       async () => {
-        // On success
-        await userService.setSubscriptionStatus(true);
-        setIsSubscribed(true);
+        // On success: backend writes to Firestore, onSnapshot updates state automatically
+        await refreshSubscription();
+        setLocalSubscribed(true);
         setPaymentLoading(false);
         alert('Payment successful! You now have full access.');
       },
@@ -188,7 +207,13 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
   const handleTestSelect = async (paper: ServerPaper) => {
     const isFirstTest = tests.length > 0 && tests[0].id === paper.id;
-    if (!isSubscribed && !isFirstTest) {
+
+    // Direct cloud verification: verify against Firestore before opening test
+    const verifiedProfile = await userService.getUserProfile(user?.uid);
+    const hasActiveSubscription = verifiedProfile?.isSubscribed === true;
+
+    if (!hasActiveSubscription && !isFirstTest) {
+      setLocalSubscribed(false);
       router.push('/premium');
       return;
     }
@@ -464,13 +489,20 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     );
   };
 
-  if (loading) {
-    return (
+  const isPageLoading = loading || isSubscriptionLoading || (user && localSubscribed === null && checkingSubscription);
+
+  if (isPageLoading) {
+    const loadingView = (
       <View style={styles.loadingContainer}>
         <ActivityIndicator size="large" color="#4A90E2" />
-        <Text style={styles.loadingText}>Loading tests...</Text>
+        <Text style={styles.loadingText}>Verifying test access & loading mocks...</Text>
       </View>
     );
+
+    if (isLargeScreen) {
+      return <DesktopDashboard>{loadingView}</DesktopDashboard>;
+    }
+    return loadingView;
   }
 
   const content = (
@@ -486,7 +518,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             <View style={{flex: 1}}>
                 <Text style={styles.headerTitleNew}>UPSC Principal{'\n'}Mock Tests</Text>
                 <Text style={styles.headerSubtitleNew}>
-                {filteredTests.length} tests available  •  Practice by topic
+                {filteredTests.length} tests available  •  {category === 'full' ? '26 Full Mock Tests (120 Qs each)' : category === 'topic' ? '158 Topic-wise Tests' : '26 Full Mocks & 158 Topic Tests'}
                 </Text>
             </View>
         </View>
@@ -1214,6 +1246,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'flex-start',
     marginBottom: 4,
+  },
+  topicCardTitleNew: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#333',
+    flex: 1,
+    marginRight: 8,
   },
   topicCardAttemptedNew: {
     fontSize: 12,

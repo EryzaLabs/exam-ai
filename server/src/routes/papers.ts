@@ -20,10 +20,14 @@ router.get('/', (req: Request, res: Response) => {
     let allFiles: { filename: string, fullPath: string }[] = [];
     
     if (fs.existsSync(fullMockDir)) {
-      allFiles.push(...fs.readdirSync(fullMockDir).filter(f => f.endsWith('.json')).map(f => ({ filename: `full_mocks/${f}`, fullPath: path.join(fullMockDir, f) })));
+      const files = fs.readdirSync(fullMockDir).filter(f => f.endsWith('.json'));
+      files.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+      allFiles.push(...files.map(f => ({ filename: `full_mocks/${f}`, fullPath: path.join(fullMockDir, f) })));
     }
     if (fs.existsSync(topicWiseDir)) {
-      allFiles.push(...fs.readdirSync(topicWiseDir).filter(f => f.endsWith('.json')).map(f => ({ filename: `topic_wise/${f}`, fullPath: path.join(topicWiseDir, f) })));
+      const files = fs.readdirSync(topicWiseDir).filter(f => f.endsWith('.json'));
+      files.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+      allFiles.push(...files.map(f => ({ filename: `topic_wise/${f}`, fullPath: path.join(topicWiseDir, f) })));
     }
 
     const papers = allFiles.map((fileObj) => {

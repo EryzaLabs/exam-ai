@@ -1,88 +1,14 @@
 {
-  "test_id": "5f4310f5-086b-479b-a4a9-f1028deda2d9",
+  "test_id": "d52865e4-b522-434e-a72a-b6b67ab2c4fd",
   "test_name": "Topic Test: PARAKH - Part 1",
   "type": "topic_wise",
   "topic": "parakh",
-  "created_at": "2026-10-16T20:04:02.822797",
+  "created_at": "2026-10-17T08:33:52.643063",
   "questions": [
     {
-      "id": "8be1f1e5-4004-4022-870f-2114551980f1",
-      "created_at": "2026-10-11T08:52:50.308306",
-      "question_hindi": "सूची-I (परख द्वारा आयोजित शिक्षक मूल्यांकन कार्यशाला के चरण) को सूची-II (प्रतिभागी राज्य/केंद्र शासित प्रदेश) के साथ सुमेलित कीजिए और नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:\n\nसूची-I:\nA. चरण I (Phase I)\nB. चरण II (Phase II)\nC. चरण III (Phase III)\nD. चरण IV (Phase IV)\n\nसूची-II:\n1. महाराष्ट्र, गुजरात, कर्नाटक, मेघालय और असम\n2. लक्षद्वीप, झारखंड, ओडिशा, तमिलनाडु और पश्चिम बंगाल\n3. तेलंगाना, अरुणाचल प्रदेश, मणिपुर, लद्दाख और मिजोरम\n4. उत्तर प्रदेश, बिहार, राजस्थान, हरियाणा और दिल्ली",
-      "options_hindi": [
-        "A-4, B-2, C-1, D-3",
-        "A-4, B-1, C-2, D-3",
-        "A-1, B-4, C-2, D-3",
-        "A-3, B-1, C-2, D-4"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List-I (Phases of Workshop for Teacher Assessment conducted by PARAKH) with List-II (Participating States/UTs) and select the correct answer using the codes given below:\n\nList-I:\nA. Phase I\nB. Phase II\nC. Phase III\nD. Phase IV\n\nList-II:\n1. Maharashtra, Gujarat, Karnataka, Meghalaya, and Assam\n2. Lakshadweep, Jharkhand, Odisha, Tamil Nadu, and West Bengal\n3. Telangana, Arunachal Pradesh, Manipur, Ladakh, and Mizoram\n4. Uttar Pradesh, Bihar, Rajasthan, Haryana, and Delhi",
-      "options_english": [
-        "A-4, B-2, C-1, D-3",
-        "A-4, B-1, C-2, D-3",
-        "A-1, B-4, C-2, D-3",
-        "A-3, B-1, C-2, D-4"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "According to the official PARAKH records:\n- Phase I was conducted with Uttar Pradesh, Bihar, Madhya Pradesh, Rajasthan, Haryana, Chhattisgarh, Delhi, Chandigarh, Uttarakhand, Punjab, Andaman & Nicobar Island, Puducherry.\n- Phase II was conducted with Maharashtra, Gujarat, Andhra Pradesh, Karnataka, Himachal Pradesh, Meghalaya, Nagaland, Assam.\n- Phase III was conducted with Lakshadweep, Tripura, Jharkhand, Jammu & Kashmir, Odisha, Goa, Tamil Nadu, Daman & Diu and Dadra & Nagar Haveli, Kerala, Sikkim, West Bengal.\n- Phase IV was conducted with Telangana, Arunachal Pradesh, Manipur, Ladakh, Mizoram.",
-      "explanation_hindi": "परख के आधिकारिक रिकॉर्ड के अनुसार:\n- चरण I: उत्तर प्रदेश, बिहार, मध्य प्रदेश, राजस्थान, हरियाणा, छत्तीसगढ़, दिल्ली, चंडीगढ़, उत्तराखंड, पंजाब, अंडमान और निकोबार द्वीप समूह, पुडुचेरी।\n- चरण II: महाराष्ट्र, गुजरात, आंध्र प्रदेश, कर्नाटक, हिमाचल प्रदेश, मेघालय, नागालैंड, असम।\n- चरण III: लक्षद्वीप, त्रिपुरा, झारखंड, जम्मू और कश्मीर, ओडिशा, गोवा, तमिलनाडु, दमन और दीव तथा दादरा और नगर हवेली, केरल, सिक्किम, पश्चिम बंगाल।\n- चरण IV: तेलंगाना, अरुणाचल प्रदेश, मणिपुर, लद्दाख, मिजोरम।",
-      "topic": "PARAKH",
-      "difficulty": "hard",
-      "key_facts": [
-        "Phase IV-Workshop for Teacher Assessment has been conducted with Telangana, Arunachal Pradesh, Manipur, Ladakh, Mizoram"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-11T08:52:50.308306"
-    },
-    {
-      "id": "477255f3-7009-4ea1-b1e7-10250b3fa93e",
-      "created_at": "2026-10-11T08:47:54.072375",
-      "question_hindi": "भारत भर में परख राष्ट्रीय सर्वेक्षण 2024 निम्नलिखित में से किन विशिष्ट कक्षाओं में आयोजित किया जाता है?",
-      "options_hindi": [
-        "कक्षा 3, 5 और 8",
-        "कक्षा 3, 6 और 9",
-        "कक्षा 5, 8 और 10",
-        "कक्षा 1, 6 और 9"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "In which of the following specific grades is the PARAKH Rashtriya Sarvekshan 2024 conducted across India?",
-      "options_english": [
-        "Grades 3, 5 and 8",
-        "Grades 3, 6 and 9",
-        "Grades 5, 8 and 10",
-        "Grades 1, 6 and 9"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "According to the official FAQ (Q8) for PARAKH Rashtriya Sarvekshan 2024, the survey is conducted in Grades 3, 6, and 9.",
-      "explanation_hindi": "परख राष्ट्रीय सर्वेक्षण 2024 के आधिकारिक FAQ (प्रश्न 8) के अनुसार, यह सर्वेक्षण कक्षा 3, 6 और 9 में आयोजित किया जाता है।",
-      "topic": "PARAKH",
-      "difficulty": "easy",
-      "key_facts": [
-        "Q8. Which are the Grades in which Sarvekshan will be conducted? Grades 3,6 and 9"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-11T08:47:54.072375"
-    },
-    {
-      "id": "982c19bc-dce0-4695-a1fb-158ab84afda3",
+      "id": "010f1ceb-867c-4868-ac43-cff792592b10",
       "created_at": "2026-10-11T08:57:56.035250",
-      "question_hindi": "परख राष्ट्रीय सर्वेक्षण 2024 के ढांचे, स्वरूप और भागीदारी मानदंडों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. इसे पहले राष्ट्रीय उपलब्धि सर्वेक्षण (NAS) के नाम से जाना जाता था।\n2. यह बुनियादी चरण और स्कूली शिक्षा के लिए राष्ट्रीय पाठ्यचर्या रूपरेखा (NCF) में उल्लिखित चरण-विशिष्ट दक्षताओं का मूल्यांकन करता है।\n3. भारत का कोई भी मान्यता प्राप्त विद्यालय स्वेच्छा से इस सर्वेक्षण में पंजीकरण कर भाग ले सकता है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "question_hindi": "परख (PARAKH) की संस्थागत पृष्ठभूमि और तुलनात्मक अंतर्राष्ट्रीय मूल्यांकनों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. अमेरिका स्थित एजुकेशनल टेस्टिंग सर्विस (ETS), जो जीआरई (GRE) और टॉफेल (TOEFL) जैसे मानकीकृत परीक्षण आयोजित करती है, को परख के संचालन का दायित्व सौंपा गया था।\n2. राष्ट्रीय शैक्षिक अनुसंधान और प्रशिक्षण परिषद (NCERT) के शैक्षिक सर्वेक्षण प्रभाग (Educational Survey Division) को परख में रूपांतरित किया गया।\n3. 2009 में ओईसीडी (OECD) द्वारा प्रायोजित 'प्रोग्राम फॉर इंटरनेशनल स्टूडेंट असेसमेंट' (PISA) में भारत की भागीदारी में हिमाचल प्रदेश और तमिलनाडु के विद्यार्थियों ने परीक्षा दी थी।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
       "options_hindi": [
         "केवल 2 और 3",
         "केवल 1 और 2",
@@ -98,33 +24,107 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the framework, design, and participation criteria of PARAKH Rashtriya Sarvekshan 2024:\n\n1. It was formerly known as the National Achievement Survey (NAS).\n2. It assesses stage-specific competencies outlined in the National Curriculum Framework for Foundational Stage and School Education.\n3. Any recognised school in India can voluntarily opt-in and participate in the survey.\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the institutional background of PARAKH and comparative international assessments:\n\n1. The US-based Educational Testing Service (ETS), which conducts standardised tests such as GRE and TOEFL, was given the mandate to run PARAKH.\n2. The Educational Survey division of the National Council of Educational Research and Training (NCERT) was transformed into PARAKH.\n3. In India's participation in the OECD-sponsored Programme for International Student Assessment (PISA) in 2009, students from Himachal Pradesh and Tamil Nadu took the examination.\n\nWhich of the statements given above are correct?",
       "options_english": [
         "2 and 3 only",
         "1 and 2 only",
         "1 and 3 only",
         "1, 2 and 3"
       ],
-      "correct_answer": "b",
-      "explanation_english": "Statements 1 and 2 are correct: PARAKH Rashtriya Sarvekshan was formerly known as NAS and assesses stage-specific competencies outlined in the NCF. Statement 3 is incorrect because participation is not open to any school voluntarily; only schools selected in the representative sample can participate.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं: परख राष्ट्रीय सर्वेक्षण को पहले NAS के रूप में जाना जाता था और यह NCF में उल्लिखित चरण-विशिष्ट दक्षताओं का आकलन करता है। कथन 3 गलत है क्योंकि कोई भी विद्यालय स्वेच्छा से भाग नहीं ले सकता; केवल नमूने (sample) में चयनित विद्यालय ही इसमें भाग ले सकते हैं।",
+      "correct_answer": "d",
+      "explanation_english": "All three statements are correct: (1) Educational Testing Service (ETS) based in Princeton (US), conducting GRE and TOEFL, was mandated to run PARAKH; (2) The Educational Survey division of NCERT transformed itself into PARAKH; (3) In PISA 2009, India was represented by students from Himachal Pradesh and Tamil Nadu.",
+      "explanation_hindi": "तीनों कथन सही हैं: (1) प्रिंसटन (यूएस) स्थित एजुकेशनल टेस्टिंग सर्विस (ETS), जो GRE और TOEFL आयोजित करती है, को परख संचालित करने का जनादेश दिया गया था; (2) NCERT का शैक्षिक सर्वेक्षण प्रभाग परख में रूपांतरित हुआ; (3) 2009 के पीसा (PISA) परीक्षण में भारत की ओर से हिमाचल प्रदेश और तमिलनाडु के छात्रों ने भाग लिया था।",
       "topic": "PARAKH",
-      "difficulty": "medium",
+      "difficulty": "hard",
       "key_facts": [
-        "Formerly known as the National Achievement Survey (NAS), PARAKH Rashtriya 2024 is the largest, nationwide, sample-based educational survey conducted across India ... PARAKH Rashtriya Sarvekshan is based on stage specific competencies mentioned in the National Curriculum Framework for Foundational Stage and School Education across the key curricular domains in different levels ... Q7. Can any school participate in PARAKH Rashtriya Sarvekshan 2024? No, Only the schools selected in sample can participate."
+        "The Educational Survey division of the National Council for Education Research and Training (NCERT), which advises the Union government on curriculum and learning quality improvement in school education, will transform itself into PARAKH ... last month, the globally renowned Educational Testing Service (ETS) based in Princeton (US), which conducts standardised tests such as the GRE (Graduate Record Examination) and TOEFL (Test of English as a Foreign Language), was given the mandate to run PARAKH ... Though not a member of the OECD, India participated in PISA in 2009. Students from Himachal Pradesh and Tamil Nadu took the exam."
       ],
       "ai_processed": true,
       "processed_at": "2026-10-11T08:57:56.035250"
     },
     {
-      "id": "4bccbf38-f329-4069-b936-d085fecf37ec",
-      "created_at": "2026-10-11T08:49:52.129549",
-      "question_hindi": "शिक्षा मंत्रालय और परख (PARAKH) द्वारा स्कूली मूल्यांकन, परीक्षा पद्धतियों और बोर्डों की समकक्षता पर आयोजित पहली राष्ट्रीय स्तर की कार्यशाला के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. कार्यशाला की अध्यक्षता स्कूली शिक्षा और साक्षरता विभाग के सचिव द्वारा की गई थी।\n2. इसमें सीबीएसई, एनसीईआरटी, एनआईओएस, एनसीवीईटी और एनसीटीई सहित राष्ट्रीय शैक्षिक निकायों के अधिकारियों ने भाग लिया।\n3. यह रेखांकित किया गया कि वर्तमान में भारत के विभिन्न राज्यों/केंद्र शासित प्रदेशों में लगभग 60 स्कूल परीक्षा बोर्ड कार्यरत हैं।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "id": "549c9ad9-5398-4c57-9e88-16f4c1835460",
+      "created_at": "2026-10-11T08:53:29.442032",
+      "question_hindi": "सूची-I (परख राष्ट्रीय सर्वेक्षण 2024 के तहत ग्रेड स्तर) को सूची-II (मूल्यांकन अवधि और पाठ्यचर्या फोकस) के साथ सुमेलित कीजिए और नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:\n\nसूची-I:\nA. ग्रेड 3\nB. ग्रेड 6\nC. ग्रेड 9\n\nसूची-II:\n1. 90 मिनट; भाषा, गणित, और हमारे आस-पास की दुनिया (TWAU)\n2. 120 मिनट; भाषा, गणित, विज्ञान और सामाजिक विज्ञान\n3. 90 मिनट; बुनियादी चरण (फाउंडेशनल स्टेज) की दक्षताएं",
       "options_hindi": [
+        "A-3, B-1, C-2",
+        "A-2, B-1, C-3",
+        "A-1, B-3, C-2",
+        "A-3, B-2, C-1"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List-I (Grade Level under PARAKH Rashtriya Sarvekshan 2024) with List-II (Assessment Duration and Curricular Focus) and select the correct answer using the codes given below:\n\nList-I:\nA. Grade 3\nB. Grade 6\nC. Grade 9\n\nList-II:\n1. 90 minutes; Language, Mathematics, and The World Around Us (TWAU)\n2. 120 minutes; Language, Mathematics, Science, and Social Science\n3. 90 minutes; Foundational stage competencies",
+      "options_english": [
+        "A-3, B-1, C-2",
+        "A-2, B-1, C-3",
+        "A-1, B-3, C-2",
+        "A-3, B-2, C-1"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "According to the PARAKH Rashtriya Sarvekshan 2024 specifications: For Grade 3, learners are evaluated in foundational stage competencies with an assessment time of 90 minutes. For Grade 6, learners are evaluated in Language, Mathematics, and The World Around Us (TWAU) with an assessment time of 90 minutes. For Grade 9, learners are evaluated in Language, Mathematics, Science, and Social Science with an assessment time of 120 minutes.",
+      "explanation_hindi": "परख राष्ट्रीय सर्वेक्षण 2024 के विनिर्देशों के अनुसार: ग्रेड 3 के शिक्षार्थियों का मूल्यांकन बुनियादी चरण की दक्षताओं में 90 मिनट की अवधि में किया जाता है। ग्रेड 6 के शिक्षार्थियों का मूल्यांकन भाषा, गणित, और 'द वर्ल्ड अराउंड अस' (TWAU) में 90 मिनट की अवधि में किया जाता है। ग्रेड 9 के शिक्षार्थियों का मूल्यांकन भाषा, गणित, विज्ञान और सामाजिक विज्ञान में 120 मिनट की अवधि में किया जाता है।",
+      "topic": "PARAKH",
+      "difficulty": "medium",
+      "key_facts": [
+        "At Grade 3, learners will be evaluated in foundational stage competencies, and the assessment time will be 90 minutes. At Grade 6, learners will be evaluated in Language, Mathematics, The World Around Us (TWAU) and the assessment time will be 90 minutes. At Grade 9, learners will be evaluated in Language, Mathematics, Science, and Social Science and the Assessment time for them will be 120 minutes."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-11T08:53:29.442032"
+    },
+    {
+      "id": "6fa7602b-fdf4-4fba-99da-b6648dff04c8",
+      "created_at": "2026-10-11T08:50:40.639993",
+      "question_hindi": "सूची-I (परख राष्ट्रीय सर्वेक्षण 2024 के तहत कक्षा स्तर) को सूची-II (मूल्यांकित चरण और प्रमुख पाठ्यचर्या क्षेत्र) के साथ सुमेलित कीजिए और नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:\n\nसूची-I (कक्षा स्तर):\nA. कक्षा 3\nB. कक्षा 6\nC. कक्षा 9\n\nसूची-II (मूल्यांकित चरण और प्रमुख पाठ्यचर्या क्षेत्र):\n1. मिडिल चरण के अंत में: भाषा, गणित, विज्ञान और सामाजिक विज्ञान\n2. बुनियादी चरण (फाउंडेशनल स्टेज) की दक्षताएं\n3. प्रिपरेटरी चरण के अंत में: भाषा, गणित और 'द वर्ल्ड अराउंड अस' (TWAU)\n4. माध्यमिक चरण के अंत में: बहुविषयक शिक्षण क्षेत्र",
+      "options_hindi": [
+        "A-2, B-3, C-1",
+        "A-2, B-1, C-3",
+        "A-1, B-3, C-2",
+        "A-3, B-2, C-1"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List-I (Grade Level under PARAKH Rashtriya Sarvekshan 2024) with List-II (Assessed Stage and Key Curricular Areas) and select the correct answer using the codes given below:\n\nList-I (Grade Level):\nA. Grade 3\nB. Grade 6\nC. Grade 9\n\nList-II (Assessed Stage and Key Curricular Areas):\n1. End of Middle stage: Language, Mathematics, Science, and Social Science\n2. Foundational stage competencies\n3. End of Preparatory stage: Language, Mathematics, and The World Around Us (TWAU)\n4. End of Secondary stage: Multidisciplinary learning areas",
+      "options_english": [
+        "A-2, B-3, C-1",
+        "A-2, B-1, C-3",
+        "A-1, B-3, C-2",
+        "A-3, B-2, C-1"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "According to the official PARAKH Rashtriya Sarvekshan 2024 FAQs, Grade 3 assesses Foundational stage competencies (A-2); Grade 6 assesses competencies at the end of the preparatory stage in Language, Mathematics, and The World Around Us (TWAU) (B-3); and Grade 9 assesses competencies at the end of the middle stage in Language, Mathematics, Science, and Social Science (C-1).",
+      "explanation_hindi": "परख राष्ट्रीय सर्वेक्षण 2024 के आधिकारिक एफएक्यू के अनुसार, कक्षा 3 में बुनियादी चरण (फाउंडेशनल स्टेज) की दक्षताओं का आकलन किया जाता है (A-2); कक्षा 6 में प्रिपरेटरी चरण के अंत में भाषा, गणित और 'द वर्ल्ड अराउंड अस' (TWAU) का आकलन किया जाता है (B-3); तथा कक्षा 9 में मिडिल चरण के अंत में भाषा, गणित, विज्ञान और सामाजिक विज्ञान का आकलन किया जाता है (C-1)।",
+      "topic": "PARAKH",
+      "difficulty": "medium",
+      "key_facts": [
+        "Q12. What are key curricular areas to be assessed in Grade 3? For Grade 3, Foundational stage competencies will be assessed Q13. What are key curricular areas to be assessed in Grade 6? At the end of preparatory stage, the assessment areas include: Language, Mathematics, and The World Around Us (TWAU) for grade 6. Q14. What are curricular areas to be assessed in Grade 9? At the end of middle stage, the assessment areas include: Language, Mathematics, Science, and Social Science for grade 9."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-11T08:50:40.639993"
+    },
+    {
+      "id": "b7ae2dad-a05c-4838-ab62-dfe68a8abb68",
+      "created_at": "2026-10-11T08:51:14.365565",
+      "question_hindi": "परख (PARAKH) के संस्थागत ढांचे और कार्यक्षेत्र के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. राष्ट्रीय शैक्षिक अनुसंधान और प्रशिक्षण परिषद (NCERT) के शैक्षिक सर्वेक्षण प्रभाग को स्वयं को 'परख' में रूपांतरित करने का निर्णय लिया गया था।\n2. परख को संचालित और प्रबंधित करने का दायित्व प्रिंसटन स्थित एजुकेशनल टेस्टिंग सर्विस (ETS) को सौंपा गया था।\n3. अपने प्रारंभिक अधिदेश में, परख को भारत में 30 से अधिक स्कूल बोर्डों में छात्र मूल्यांकन के मानक और दिशानिर्देश निर्धारित करने का दायित्व दिया गया था।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 1 और 2",
         "केवल 1 और 3",
         "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2"
+        "1, 2 और 3"
       ],
       "option_labels": [
         "A",
@@ -135,107 +135,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the 1st National level workshop on school assessments, examination practices, and equivalence of boards organized by the Ministry of Education and PARAKH:\n1. The workshop was chaired by the Secretary, Department of School Education & Literacy.\n2. It was attended by officials from national educational bodies including CBSE, NCERT, NIOS, NCVET, and NCTE.\n3. It was highlighted that there are currently around 60 school examination boards operating across different states/UTs in India.\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the institutional setup and scope of PARAKH:\n\n1. The Educational Survey division of the National Council of Educational Research and Training (NCERT) was slated to transform itself into PARAKH.\n2. The mandate to operate and administer PARAKH was entrusted to the Princeton-based Educational Testing Service (ETS).\n3. In its initial mandate, PARAKH was established to set standards and guidelines for student assessment across over 30 school boards in India.\n\nWhich of the statements given above are correct?",
       "options_english": [
+        "1 and 2 only",
         "1 and 3 only",
         "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only"
+        "1, 2 and 3"
       ],
-      "correct_answer": "c",
-      "explanation_english": "All three statements are correct. The workshop was chaired by Shri Sanjay Kumar, Secretary, Department of School Education & Literacy, attended by officials from Ministry of Education, CBSE, NCERT, NIOS, NCVET, and NCTE, along with State boards. He noted that currently there are around 60 school examination boards operating in different states/UTs.",
-      "explanation_hindi": "तीनों कथन सही हैं। कार्यशाला की अध्यक्षता स्कूली शिक्षा और साक्षरता विभाग के सचिव श्री संजय कुमार ने की। इसमें शिक्षा मंत्रालय, सीबीएसई, एनसीईआरटी, एनआईओएस, एनसीवीईटी और एनसीटीई के अधिकारियों ने राज्य बोर्डों के साथ भाग लिया। उन्होंने उल्लेख किया कि वर्तमान में भारत के विभिन्न राज्यों/केंद्र शासित प्रदेशों में लगभग 60 स्कूल परीक्षा बोर्ड कार्यरत हैं।",
+      "correct_answer": "d",
+      "explanation_english": "All three statements are correct according to the established framework. The Educational Survey division of NCERT transformed into PARAKH. Princeton-based ETS, headed by Amit Sevak, was selected to run PARAKH. It was mandated to establish assessment standards and guidelines across over 30 school boards in India.",
+      "explanation_hindi": "तीनों कथन सही हैं। NCERT का शैक्षिक सर्वेक्षण प्रभाग परख के रूप में रूपांतरित हुआ। प्रिंसटन स्थित ETS (जिसका नेतृत्व अमित सेवक करते हैं) को परख के संचालन का दायित्व दिया गया। इसे भारत के 30 से अधिक स्कूल बोर्डों के लिए मूल्यांकन मानकों और दिशानिर्देशों को स्थापित करने का अधिदेश दिया गया था।",
       "topic": "PARAKH",
-      "difficulty": "medium",
+      "difficulty": "hard",
       "key_facts": [
-        "The workshop was chaired by Shri Sanjay Kumar, Secretary, Department of School Education & Literacy and attended by officials from Ministry of Education, CBSE, NCERT, NIOS, NCVET and NCTE. State Education Secretaries, State Project Directors School, SCERT and officials from State Examination Boards across India also attended the meeting. While addressing the participants, Shri Sanjay Kumar emphasized the need for equivalence of boards. In India, currently there are around 60 school examination boards that are operating in different states/UTs."
+        "PARAKH will set the standards and guidelines for student assessment for the over 30 school boards in India. The Educational Survey division of the National Council for Education Research and Training (NCERT), which advises the Union government on curriculum and learning quality improvement in school education, will transform itself into PARAKH... the globally renowned Educational Testing Service (ETS) based in Princeton (US), which conducts standardised tests such as the GRE (Graduate Record Examination) and TOEFL (Test of English as a Foreign Language), was given the mandate to run PARAKH."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-11T08:49:52.129549"
+      "processed_at": "2026-10-11T08:51:14.365565"
     },
     {
-      "id": "9f65f06d-b5ee-45ab-a111-1207af848b3a",
-      "created_at": "2026-10-11T09:00:23.289684",
-      "question_hindi": "परख राष्ट्रीय सर्वेक्षण के परिचालन पहलुओं और रिपोर्टिंग इकाइयों के संबंध में निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "कक्षा 6 का मूल्यांकित चरण: प्रारंभिक/तैयारी चरण (प्रिपरेटरी स्टेज) का अंत",
-        "प्रदर्शन रिपोर्टिंग की इकाई: व्यक्तिगत प्रतिभागी स्कूल",
-        "मूल्यांकन की प्रकृति: बड़े पैमाने पर, नमूना-आधारित प्रणाली-स्तरीय मूल्यांकन",
-        "स्कूल भागीदारी मानदंड: केवल नमूने (सैंपल) में चयनित स्कूल"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding the operational aspects and reporting units of PARAKH Rashtriya Sarvekshan is NOT correctly matched?",
-      "options_english": [
-        "Grade 6 assessed stage: End of preparatory stage",
-        "Unit for reporting performance: Individual participating school",
-        "Nature of assessment: Large-scale, sample-based system-level assessment",
-        "School participation criteria: Only schools selected in sample"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Pair A is NOT correctly matched. The unit for reporting performance is the District (providing summary at District, State, and National levels), not the individual school. In fact, PARAKH Rashtriya Sarvekshan does not provide individual school or student scores.",
-      "explanation_hindi": "युग्म A सही सुमेलित नहीं है। प्रदर्शन रिपोर्टिंग की इकाई जिला है (जिला, राज्य और राष्ट्रीय स्तर पर सारांश प्रदान करना), व्यक्तिगत स्कूल नहीं। वास्तव में, परख राष्ट्रीय सर्वेक्षण व्यक्तिगत स्कूल या छात्र स्कोर प्रदान नहीं करता है।",
-      "topic": "PARAKH",
-      "difficulty": "medium",
-      "key_facts": [
-        "PARAKH Rashtriya Sarvekshan does not provide individual school or student scores. It provides a summary of performance at the District, State, and National levels, with the district as the unit for reporting"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-11T09:00:23.289684"
-    },
-    {
-      "id": "4ec7f93d-a50e-4a7d-9cfb-3f6175de0a93",
-      "created_at": "2026-10-11T08:56:43.035095",
-      "question_hindi": "NCERT के तहत स्थापित परिवर्णी शब्द 'PARAKH' (परख) का पूर्ण रूप क्या है?",
-      "options_hindi": [
-        "Performance Appraisal, Research, and Analysis of Knowledge for Higher Development",
-        "Performance Assessment, Review, and Analysis of Knowledge for Holistic Development",
-        "Platform for Assessment, Rating, and Analysis of Knowledge for Holistic Development",
-        "Program for Assessment, Review, and Appraisal of Knowledge for Holistic Development"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "What is the full form of the acronym 'PARAKH' established under NCERT?",
-      "options_english": [
-        "Performance Appraisal, Research, and Analysis of Knowledge for Higher Development",
-        "Performance Assessment, Review, and Analysis of Knowledge for Holistic Development",
-        "Platform for Assessment, Rating, and Analysis of Knowledge for Holistic Development",
-        "Program for Assessment, Review, and Appraisal of Knowledge for Holistic Development"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "PARAKH stands for 'Performance Assessment, Review, and Analysis of Knowledge for Holistic Development', functioning as an independent organization / national assessment centre under NCERT.",
-      "explanation_hindi": "PARAKH का पूर्ण रूप 'Performance Assessment, Review, and Analysis of Knowledge for Holistic Development' है, जो NCERT के तहत एक स्वतंत्र संगठन / राष्ट्रीय आकलन केंद्र के रूप में कार्य करता है।",
-      "topic": "PARAKH",
-      "difficulty": "easy",
-      "key_facts": [
-        "The Performance Assessment, Review, and Analysis of Knowledge for Holistic Development (PARAKH), an independent organization under the National Council of Educational Research and Training (NCERT), conducts this survey."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-11T08:56:43.035095"
-    },
-    {
-      "id": "3c655101-f0ee-4992-9d22-641067069b2d",
+      "id": "53ee4e1e-7798-4807-a2f0-db7108873ed4",
       "created_at": "2026-10-11T08:52:00.173565",
-      "question_hindi": "परख राष्ट्रीय सर्वेक्षण (PARAKH Rashtriya Sarvekshan) के आधिकारिक अधिदेश के अनुसार, इस राष्ट्रव्यापी सर्वेक्षण को आयोजित करने का मुख्य उद्देश्य क्या है?",
+      "question_hindi": "सूची-I (परख के अंतर्गत मूल्यांकन घटक / पद) को सूची-II (आधिकारिक विवरण / पैरामीटर) के साथ सुमेलित कीजिए और नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:\n\nसूची-I:\nA. छात्र परीक्षण भार (Student testing load)\nB. रिपोर्टिंग की इकाई (Unit for reporting)\nC. मूल्यांकन रूपरेखा निर्माण का उद्देश्य\nD. 360-डिग्री होलिस्टिक प्रोग्रेस कार्ड (HPC)\n\nसूची-II:\n1. जिला स्तर पर प्रदर्शन का सारांश\n2. प्रत्येक छात्र को दी जाने वाली परीक्षण पुस्तिकाओं और कुल प्रश्नों की संख्या\n3. व्युत्पन्न मापों की वैधता, विश्वसनीयता और व्याख्यात्मकता को बढ़ाना\n4. बुनियादी, प्रारंभिक, मध्य और माध्यमिक चरणों में योग्यता-आधारित शिक्षण-अधिगम में सहायता करना",
       "options_hindi": [
-        "कक्षा 3, 6 और 9 के सभी छात्रों के लिए वार्षिक प्रमाणीकरण परीक्षाएं आयोजित करना",
-        "नीति नियोजन और शैक्षणिक हस्तक्षेपों के लिए जिला, राज्य और राष्ट्रीय स्तर पर छात्रों के सीखने के स्तर पर संरचित फीडबैक प्रदान करना",
-        "माध्यमिक स्तर के छात्रों के लिए विश्वविद्यालय प्रवेश स्क्रीनिंग मूल्यांकन आयोजित करना",
-        "सरकारी स्कूलों में राष्ट्रीय योग्यता पुरस्कारों के लिए व्यक्तिगत विषय शिक्षकों को रैंक प्रदान करना"
+        "A-2, B-1, C-3, D-4",
+        "A-2, B-3, C-1, D-4",
+        "A-1, B-2, C-4, D-3",
+        "A-3, B-1, C-2, D-4"
       ],
       "option_labels": [
         "A",
@@ -246,33 +172,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "According to the official mandate of the PARAKH Rashtriya Sarvekshan, what is the primary purpose of conducting this nationwide survey?",
+      "question_english": "Match List-I (Assessment Component / Term under PARAKH) with List-II (Official Description / Parameter) and select the correct answer using the codes given below:\n\nList-I:\nA. Student testing load\nB. Unit for reporting\nC. Assessment framework design objective\nD. 360-degree Holistic Progress Card (HPC)\n\nList-II:\n1. Summary of performance at District level\n2. Total number of test booklets and items administered to each student\n3. Enhancing validity, reliability, and interpretability of derived measures\n4. Aiding competency-based learning-teaching across Foundational, Preparatory, Middle, and Secondary stages",
       "options_english": [
-        "To conduct high-stakes annual certification examinations for all students in Grades 3, 6, and 9",
-        "To provide structured feedback on student learning levels at District, State, and national levels for policy planning and pedagogical interventions",
-        "To administer university entrance screening assessments for secondary stage students",
-        "To rank individual subject teachers for national merit awards across Government schools"
+        "A-2, B-1, C-3, D-4",
+        "A-2, B-3, C-1, D-4",
+        "A-1, B-2, C-4, D-3",
+        "A-3, B-1, C-2, D-4"
       ],
-      "correct_answer": "b",
-      "explanation_english": "According to FAQ Q2 of PARAKH Rashtriya Sarvekshan, it is conducted 'To provide structured feedback on student learning levels at District, State, and national levels. These inputs are used for policy planning and designing pedagogical interventions to improve quality and ensure equity in learning.'",
-      "explanation_hindi": "परख राष्ट्रीय सर्वेक्षण के अक्सर पूछे जाने वाले प्रश्न (Q2) के अनुसार, इसका आयोजन 'जिला, राज्य और राष्ट्रीय स्तर पर छात्रों के सीखने के स्तर पर संरचित फीडबैक प्रदान करने के लिए किया जाता है। इन जानकारियों का उपयोग गुणवत्ता में सुधार और सीखने में समानता सुनिश्चित करने के लिए नीति नियोजन और शैक्षणिक हस्तक्षेप तैयार करने के लिए किया जाता है।'",
+      "correct_answer": "a",
+      "explanation_english": "According to the PARAKH documents: Student testing load refers to the total number of test booklets and items administered to each student (A-2); reporting is summarized with the district as the unit for reporting (B-1); the survey framework is designed by PARAKH NCERT to enhance validity, reliability, and interpretability of derived measures (C-3); and 360-degree HPCs are developed to aid competency-based learning-teaching across Foundational, Preparatory, Middle, and Secondary stages (D-4).",
+      "explanation_hindi": "परख दस्तावेजों के अनुसार: छात्र परीक्षण भार (Student testing load) प्रत्येक छात्र को दी जाने वाली परीक्षण पुस्तिकाओं और प्रश्नों की कुल संख्या को दर्शाता है (A-2); रिपोर्टिंग के लिए जिला इकाई के रूप में कार्य करता है (B-1); सर्वेक्षण रूपरेखा को प्राप्त मापों की वैधता, विश्वसनीयता और व्याख्यात्मकता को बढ़ाने के लिए डिज़ाइन किया गया है (C-3); और 360-डिग्री एचपीसी (HPC) को बुनियादी, प्रारंभिक, मध्य और माध्यमिक चरणों में योग्यता-आधारित अधिगम-शिक्षण में सहायता के लिए विकसित किया गया है (D-4)।",
       "topic": "PARAKH",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "key_facts": [
-        "To provide structured feedback on student learning levels at District, State, and national levels. These inputs are used for policy planning and designing pedagogical interventions to improve quality and ensure equity in learning."
+        "It refers to the total number of test booklets and items that will be administered to each student... with the district as the unit for reporting... It is carefully designed by the PARAKH NCERT to enhance validity, reliability and interpretability of the derived measures of student learning... 360-degree Holistic Progress Cards has been developed in order to aid assessment of Competency-Based learning-teaching by making assessments more comprehensive and holistic in nature."
       ],
       "ai_processed": true,
       "processed_at": "2026-10-11T08:52:00.173565"
     },
     {
-      "id": "d23f342d-8e9d-4a39-9f06-c7233ceb515c",
-      "created_at": "2026-10-11T08:55:20.935742",
-      "question_hindi": "सूची-I (PARAKH द्वारा प्रबंधित अंतर्राष्ट्रीय मूल्यांकन) को सूची-II (मूल्यांकन का पूर्ण नाम) के साथ सुमेलित कीजिए और नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:\n\nसूची-I:\nA. PISA\nB. TIMSS\nC. PIRLS\n\nसूची-II:\n1. Trends in International Mathematics and Science Study\n2. Progress in International Reading Literacy Study\n3. Programme for International Student Assessment",
+      "id": "f939bc71-2c79-4339-a8a7-9de07f809cf9",
+      "created_at": "2026-10-11T08:49:13.454374",
+      "question_hindi": "परख (PARAKH) के तहत सिफारिशों और परिचालन ढांचों के संबंध में निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
       "options_hindi": [
-        "A-1, B-3, C-2",
-        "A-3, B-1, C-2",
-        "A-3, B-2, C-1",
-        "A-2, B-1, C-3"
+        "चल रहे नियोजन चक्रों में एकीकरण: वार्षिक कार्य योजनाएं और बजट (AWPBs)",
+        "समतुल्यता के लिए शामिल स्कूल बोर्डों की संख्या: केवल 45 माध्यमिक बोर्ड",
+        "प्रश्न पत्रों का मानकीकरण: 'पेशेवर पेपर सेटर्स' का एक संवर्ग विकसित करना",
+        "बड़े पैमाने पर प्रणालीगत स्वास्थ्य जांच सर्वेक्षण: राष्ट्रीय उपलब्धि सर्वेक्षण (NAS) और बुनियादी शिक्षा अध्ययन (FLS)"
       ],
       "option_labels": [
         "A",
@@ -283,33 +209,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Match List-I (International Assessment managed by PARAKH) with List-II (Full Assessment Nomenclature) and select the correct answer using the codes given below:\n\nList-I:\nA. PISA\nB. TIMSS\nC. PIRLS\n\nList-II:\n1. Trends in International Mathematics and Science Study\n2. Progress in International Reading Literacy Study\n3. Programme for International Student Assessment",
+      "question_english": "Which of the following pairs regarding the recommendations and operational frameworks under PARAKH is NOT correctly matched?",
       "options_english": [
-        "A-1, B-3, C-2",
-        "A-3, B-1, C-2",
-        "A-3, B-2, C-1",
-        "A-2, B-1, C-3"
+        "Integration into ongoing planning cycles: Annual Work Plans and Budgets (AWPBs)",
+        "Number of school boards covered for equivalence: 45 secondary boards only",
+        "Standardisation of question papers: Developing a cadre of 'professional paper setters'",
+        "Large-scale health check-up surveys: National Achievement Survey (NAS) and Foundational Learning Study (FLS)"
       ],
       "correct_answer": "b",
-      "explanation_english": "As listed in the official PARAKH mandate: PISA stands for Programme for International Student Assessment; TIMSS stands for Trends in International Mathematics and Science Study; and PIRLS stands for Progress in International Reading Literacy Study.",
-      "explanation_hindi": "PARAKH के आधिकारिक अधिदेश के अनुसार: PISA का पूर्ण रूप 'Programme for International Student Assessment' है; TIMSS का पूर्ण रूप 'Trends in International Mathematics and Science Study' है; और PIRLS का पूर्ण रूप 'Progress in International Reading Literacy Study' है।",
+      "explanation_english": "Pair 4 is NOT correctly matched. There are 69 school boards in the country considered for equivalence, not 45 secondary boards only. These include state boards (secondary, higher secondary, or common), CBSE, ICSE, NIOS, technical and vocational boards, Sanskrit boards, and madrasa boards.",
+      "explanation_hindi": "युग्म 4 सही सुमेलित नहीं है। देश में समतुल्यता के लिए 69 स्कूल बोर्ड हैं (न कि केवल 45 माध्यमिक बोर्ड)। इनमें राज्य बोर्ड, सीबीएसई, आईसीएसई, एनआईओएस, तकनीकी और व्यावसायिक बोर्ड, संस्कृत बोर्ड और मदरसा बोर्ड शामिल हैं।",
       "topic": "PARAKH",
       "difficulty": "medium",
       "key_facts": [
-        "managing India’s participation in international assessments like the Programme for International Student Assessment (PISA), Trends in International Mathematics and Science Study (TIMSS), and Progress in International Reading Literacy Study (PIRLS)."
+        "There are 69 school boards in the country, including the State boards – some are secondary boards only, some are for higher secondary, and some are common for both – and CBSE, ICSE, the National Institute of Open Schooling (NIOS) and other open school boards, technical and vocational boards, Sanskrit boards, and madrasa boards."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-11T08:55:20.935742"
+      "processed_at": "2026-10-11T08:49:13.454374"
     },
     {
-      "id": "27d5ff7f-29b9-48ea-95a2-ccc54f81e58e",
-      "created_at": "2026-10-11T08:49:52.129549",
-      "question_hindi": "परख राष्ट्रीय सर्वेक्षण के प्रसार और भौगोलिक निष्कर्षों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. इस सर्वेक्षण ने पूर्ववर्ती राष्ट्रीय उपलब्धि सर्वेक्षण (NAS) का स्थान लिया है।\n2. दिसंबर 2024 के सर्वेक्षण में सभी राज्यों और केंद्र शासित प्रदेशों के 1 लाख से अधिक स्कूलों के 41 लाख से अधिक छात्रों को शामिल किया गया था।\n3. सर्वेक्षण में सबसे कम अंक मेघालय, अरुणाचल प्रदेश, जम्मू और कश्मीर तथा झारखंड के जिलों में दर्ज किए गए।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "id": "b9b50cee-3f51-450d-89b9-34506822d2c6",
+      "created_at": "2026-10-11T08:54:06.794273",
+      "question_hindi": "परख राष्ट्रीय सर्वेक्षण 2024 की संस्थागत व्यवस्थाओं और भागीदारी नियमों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
       "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2"
+        "ढांचे और उपकरणों का प्रारूप तैयार करने वाला संगठन : राष्ट्रीय मूल्यांकन केंद्र परख, एनसीईआरटी",
+        "सर्वेक्षण का संचालन करने वाले संगठन : सीबीएसई, नई दिल्ली के सहयोग से परख, एनसीईआरटी",
+        "सर्वेक्षण आयोजित करने वाला मंत्रालय : स्कूल शिक्षा और साक्षरता विभाग, शिक्षा मंत्रालय",
+        "स्कूल पात्रता मानदंड : भारत के किसी भी मान्यता प्राप्त स्कूल द्वारा स्वैच्छिक भागीदारी हेतु खुला"
       ],
       "option_labels": [
         "A",
@@ -320,33 +246,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the coverage and geographic findings of the PARAKH Rashtriya Sarvekshan:\n1. The survey replaced the earlier National Achievement Survey (NAS).\n2. The December 2024 survey covered more than 41 lakh students across more than 1 lakh schools in all States and Union Territories.\n3. The lowest scores in the survey were recorded in districts across Meghalaya, Arunachal Pradesh, Jammu & Kashmir, and Jharkhand.\n\nWhich of the statements given above are correct?",
+      "question_english": "Which of the following pairs regarding the institutional arrangements and participation rules of the PARAKH Rashtriya Sarvekshan 2024 is NOT correctly matched?",
       "options_english": [
-        "1 and 3 only",
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only"
+        "Organization designing framework & tools : National Assessment Centre PARAKH, NCERT",
+        "Organizations conducting the survey : PARAKH, NCERT in collaboration with CBSE, New Delhi",
+        "Ministry undertaking the survey : Department of School Education and Literacy, Ministry of Education",
+        "School eligibility criteria : Open to voluntary participation by any recognized school in India"
       ],
-      "correct_answer": "c",
-      "explanation_english": "All three statements are correct. PARAKH replaced the earlier National Achievement Survey (NAS). The survey conducted in December 2024 assessed learning across classes 3, 6, and 9 covering more than 41 lakh students in over 1 lakh schools across all states and UTs. Districts in Meghalaya, Arunachal Pradesh, Jammu & Kashmir, and Jharkhand recorded the lowest scores.",
-      "explanation_hindi": "तीनों कथन सही हैं। परख ने पूर्ववर्ती राष्ट्रीय उपलब्धि सर्वेक्षण (NAS) का स्थान लिया। दिसंबर 2024 में आयोजित सर्वेक्षण में सभी राज्यों और केंद्र शासित प्रदेशों के 1 लाख से अधिक स्कूलों में 41 लाख से अधिक छात्रों का मूल्यांकन किया गया। मेघालय, अरुणाचल प्रदेश, जम्मू और कश्मीर और झारखंड के जिलों में सबसे कम अंक दर्ज किए गए।",
+      "correct_answer": "d",
+      "explanation_english": "Pair 4 is NOT correctly matched. The survey is not open to voluntary participation by any school; only schools specifically selected in the representative sample can participate.",
+      "explanation_hindi": "युग्म 4 सही सुमेलित नहीं है। यह सर्वेक्षण किसी भी स्कूल द्वारा स्वैच्छिक भागीदारी के लिए खुला नहीं है; केवल नमूने (sample) में चुने गए स्कूल ही इसमें भाग ले सकते हैं।",
       "topic": "PARAKH",
       "difficulty": "medium",
       "key_facts": [
-        "It replaced the earlier National Achievement Survey and aims to provide competency‑based assessments. The December 2024 survey covered more than 41 lakh students in over 1 lakh schools across all states and Union territories. It tested foundational literacy and numeracy (class 3), intermediate language and mathematics skills (class 6) and higher‑order thinking in language, mathematics and science (class 9)... while districts in Meghalaya, Arunachal Pradesh, Jammu & Kashmir and Jharkhand recorded the lowest scores."
+        "Q7. Can any school participate in PARAKH Rashtriya Sarvekshan 2024? No, Only the schools selected in sample can participate."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-11T08:49:52.129549"
+      "processed_at": "2026-10-11T08:54:06.794273"
     },
     {
-      "id": "b3dcd530-2bf6-44f2-853b-b054c8a61d5e",
-      "created_at": "2026-10-11T08:58:33.440216",
-      "question_hindi": "परख राष्ट्रीय सर्वेक्षण 2024 के तहत स्थापित अनुवर्ती (फॉलो-अप) हस्तक्षेप तंत्र के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. सर्वेक्षण निष्कर्षों को सार्थक कार्रवाई में बदलने के लिए अल्पकालिक, मध्यावधि और दीर्घकालिक हस्तक्षेपों का एक स्तरीय सेट तैयार किया गया है।\n2. इन हस्तक्षेपों में शिक्षक प्रशिक्षण, सामुदायिक सहभागिता, हस्तक्षेप पुस्तिकाएं (हैंडबुक) और डिजिटल शिक्षण सामग्री शामिल हैं।\n3. निरंतर डेटा उपयोग का समर्थन करने के लिए एक समर्पित प्रबंधन सूचना प्रणाली (MIS) की योजना बनाई गई है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "f2952b3d-d1c2-41f7-bcd5-2512b69b84fb",
+      "created_at": "2026-10-11T08:57:15.451203",
+      "question_hindi": "परख राष्ट्रीय सर्वेक्षण 2024 में मूल्यांकन विनिर्देशों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
       "options_hindi": [
-        "1, 2 और 3",
-        "केवल 1 और 2",
-        "केवल 1 और 3",
-        "केवल 2 और 3"
+        "ग्रेड 6 पाठ्यचर्या क्षेत्र : भाषा, गणित और 'द वर्ल्ड अराउंड अस' (TWAU)",
+        "ग्रेड 9 पाठ्यचर्या क्षेत्र : भाषा, गणित, विज्ञान और पर्यावरण अध्ययन (Environmental Studies)",
+        "प्रदर्शन रिपोर्टिंग की इकाई : जिला स्तर",
+        "ग्रेड 3 पाठ्यचर्या क्षेत्र : बुनियादी चरण की दक्षताएँ (Foundational stage competencies)"
       ],
       "option_labels": [
         "A",
@@ -357,23 +283,23 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the follow-up intervention mechanisms established under PARAKH Rashtriya Sarvekshan 2024:\n\n1. A layered set of short-, mid-, and long-term interventions has been planned to translate survey findings into meaningful action.\n2. The interventions encompass teacher training, community engagement, intervention handbooks, and digital learning materials.\n3. A dedicated Management Information System (MIS) is planned to support continued data use.\n\nWhich of the statements given above are correct?",
+      "question_english": "Which of the following pairs regarding the assessment specifications in PARAKH Rashtriya Sarvekshan 2024 is NOT correctly matched?",
       "options_english": [
-        "1, 2 and 3",
-        "1 and 2 only",
-        "1 and 3 only",
-        "2 and 3 only"
+        "Grade 6 Curricular Area : Language, Mathematics, and The World Around Us (TWAU)",
+        "Grade 9 Curricular Area : Language, Mathematics, Science, and Environmental Studies",
+        "Unit for Performance Reporting : District level",
+        "Grade 3 Curricular Area : Foundational stage competencies"
       ],
-      "correct_answer": "a",
-      "explanation_english": "Statements 1, 2, and 3 are all correct. As stated in the PARAKH Rashtriya Sarvekshan 2024 National Report, a layered set of interventions—short-, mid-, and long-term—supports systemic action. These range from teacher training and community engagement to the development of intervention handbooks, digital learning materials, and a Management Information System (MIS) for continued data use.",
-      "explanation_hindi": "कथन 1, 2 और 3 सभी सही हैं। परख राष्ट्रीय सर्वेक्षण 2024 की राष्ट्रीय रिपोर्ट के अनुसार, प्रणालीगत कार्रवाई का समर्थन करने के लिए अल्पकालिक, मध्यावधि और दीर्घकालिक हस्तक्षेपों का एक स्तरीय सेट तैयार किया गया है। इनमें शिक्षक प्रशिक्षण और सामुदायिक सहभागिता से लेकर हस्तक्षेप पुस्तिकाओं, डिजिटल शिक्षण सामग्री और निरंतर डेटा उपयोग के लिए प्रबंधन सूचना प्रणाली (MIS) का विकास शामिल है।",
+      "correct_answer": "b",
+      "explanation_english": "Pair C is NOT correctly matched. For Grade 9 (at the end of the middle stage), the assessed curricular areas are Language, Mathematics, Science, and Social Science (not Environmental Studies).",
+      "explanation_hindi": "युग्म C सही सुमेलित नहीं है। ग्रेड 9 (मध्य चरण के अंत) के लिए मूल्यांकन क्षेत्र भाषा, गणित, विज्ञान और सामाजिक विज्ञान (सोशल साइंस) हैं, न कि पर्यावरण अध्ययन।",
       "topic": "PARAKH",
       "difficulty": "medium",
       "key_facts": [
-        "A layered set of interventions— short-, mid-, and long-term—will support this process. These range from teacher training and community engagement to the development of intervention handbooks, digital learning materials, and a Management Information System for continued data use."
+        "Q14. What are curricular areas to be assessed in Grade 9? At the end of middle stage, the assessment areas include: Language, Mathematics, Science, and Social Science for grade 9."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-11T08:58:33.440216"
+      "processed_at": "2026-10-11T08:57:15.451203"
     },
     {
       "id": "d4b22c1a-48bd-431c-b7cb-073d208b6b06",
@@ -413,14 +339,14 @@
       "processed_at": "2026-10-11T08:54:37.732762"
     },
     {
-      "id": "12925cfa-846f-47d3-9efe-b994d8f2ecde",
-      "created_at": "2026-10-11T08:56:01.683781",
-      "question_hindi": "परख (PARAKH) द्वारा प्रस्तुत मूल्यांकन और मानकीकरण की सिफारिशों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "id": "81a60161-01c2-4da4-a89e-31883e259352",
+      "created_at": "2026-10-11T08:59:58.840120",
+      "question_hindi": "परख राष्ट्रीय सर्वेक्षण 2024 के प्रशासन और विनिर्देशों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
       "options_hindi": [
-        "क्रेडिट आवंटन : शैक्षणिक विषयों, ऑनलाइन पाठ्यक्रमों और होलिस्टिक प्रोग्रेस कार्ड गतिविधियों के लिए क्रेडिट अर्जित करना",
-        "कक्षा 12 अंतिम मूल्यांकन : पूर्व कक्षाओं के शून्य भारांक के साथ पूरी तरह से एकल सत्र-अंत बोर्ड परीक्षा द्वारा निर्धारित",
-        "प्रश्न बैंक और ब्लूप्रिंट : कक्षा 9 और 11 में परीक्षाओं के मानकीकरण हेतु बोर्डों द्वारा विकसित करने की सिफारिश",
-        "पेशेवर प्रश्न-पत्र निर्माता : कक्षा 9 से 12 तक मानकीकृत प्रश्न-पत्र तैयार करने के लिए प्रशिक्षित शिक्षकों का संवर्ग"
+        "कक्षा 3 मूल्यांकन अवधि : 90 मिनट",
+        "कक्षा 9 मूल्यांकन अवधि : 120 मिनट",
+        "कक्षा 6 मूल्यांकन अवधि : 90 मिनट",
+        "छात्र परीक्षण भार (Student Testing Load) : सर्वेक्षण औपचारिकताओं को पूरा करने के लिए विद्यालय द्वारा व्यतीत कुल समय अवधि"
       ],
       "option_labels": [
         "A",
@@ -431,33 +357,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which of the following pairs regarding the assessment and standardisation recommendations submitted by PARAKH is NOT correctly matched?",
+      "question_english": "Which of the following pairs regarding the administration and specifications of PARAKH Rashtriya Sarvekshan 2024 is NOT correctly matched?",
       "options_english": [
-        "Credit Allocation : Earning credits for academic subjects, online courses, and holistic progress card activities",
-        "Class 12 Final Evaluation : Determined entirely by a standalone terminal board exam with zero weightage from prior classes",
-        "Question Bank & Blueprint : Recommended to be developed by boards for standardisation of exams in classes 9 and 11",
-        "Professional Paper Setters : Cadre of teachers trained to prepare standardized question papers across classes 9 to 12"
+        "Grade 3 Assessment Duration : 90 minutes",
+        "Grade 9 Assessment Duration : 120 minutes",
+        "Grade 6 Assessment Duration : 90 minutes",
+        "Student Testing Load : Total time duration spent by a school to complete survey formalities"
       ],
-      "correct_answer": "b",
-      "explanation_english": "Pair 4 is NOT correctly matched. PARAKH recommended that the Class 12 report card be 'cumulative', incorporating performance across grades 9, 10, and 11 (15% for Class 9, 20% for Class 10, 25% for Class 11, and 40% for Class 12), rather than relying solely on a standalone Class 12 exam.",
-      "explanation_hindi": "युग्म 4 सही सुमेलित नहीं है। परख ने सिफारिश की है कि कक्षा 12 का रिपोर्ट कार्ड 'संचयी' (cumulative) होना चाहिए, जिसमें कक्षा 9, 10 और 11 के प्रदर्शन को भी शामिल किया जाएगा (कक्षा 9 के लिए 15%, कक्षा 10 के लिए 20%, कक्षा 11 के लिए 25% और कक्षा 12 के लिए 40%), न कि केवल एकल कक्षा 12 की परीक्षा पर निर्भर होगा।",
+      "correct_answer": "d",
+      "explanation_english": "Pair D is incorrectly matched. According to official NCERT FAQs, 'Student testing load' refers to the total number of test booklets and items that will be administered to each student, not the time spent by a school.",
+      "explanation_hindi": "युग्म D सही सुमेलित नहीं है। आधिकारिक NCERT FAQ के अनुसार, 'छात्र परीक्षण भार' (Student testing load) का तात्पर्य टेस्ट बुकलेट और प्रश्नों की कुल संख्या से है जो प्रत्येक छात्र को प्रशासित की जाएगी, न कि स्कूल द्वारा व्यतीत समय से।",
       "topic": "PARAKH",
       "difficulty": "medium",
       "key_facts": [
-        "The Class 12 report card is envisaged as a ‘cumulative’ one, and a weight of 15% for Class 9, 20% for Class 10, 25% for Class 11, and 40% for Class 12 will go into the final Class 12 results."
+        "Q15. What is the student testing load? It refers to the total number of test booklets and items that will be administered to each student"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-11T08:56:01.683781"
+      "processed_at": "2026-10-11T08:59:58.840120"
     },
     {
-      "id": "5d7e173c-30b7-42b2-bb78-64455ea48da9",
-      "created_at": "2026-10-11T08:53:29.442032",
-      "question_hindi": "परख राष्ट्रीय सर्वेक्षण 2024 में ग्रेड 3 के प्रमुख निष्कर्षों के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. ग्रामीण विद्यार्थियों ने अपने शहरी समकक्षों की तुलना में थोड़ा बेहतर प्रदर्शन किया।\n2. राज्य सरकार के स्कूलों ने ग्रेड 3 में शीर्ष प्रदर्शन किया, जो निपुण (NIPUN) भारत मिशन की प्रारंभिक सफलता को दर्शाता है।\n3. 2024 में भाषा में औसत राष्ट्रीय स्कोर (64%) 2017 के NAS दौर में दर्ज किए गए स्कोर से अधिक रहा।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "cb182211-aa1b-411c-ab9f-11e42907c5a9",
+      "created_at": "2026-10-11T09:00:23.289684",
+      "question_hindi": "राष्ट्रीय शिक्षा नीति (NEP) 2020 के किस विशिष्ट पैरा के तहत राष्ट्रीय मूल्यांकन केंद्र - परख (PARAKH) की स्थापना का अधिदेश निर्धारित किया गया था?",
       "options_hindi": [
-        "केवल 1 और 2",
-        "केवल 2 और 3",
-        "केवल 1 और 3",
-        "1, 2 और 3"
+        "पैरा 4.4.1",
+        "पैरा 6.4.2",
+        "पैरा 3.1.4",
+        "पैरा 5.2.3"
       ],
       "option_labels": [
         "A",
@@ -468,23 +394,23 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the key findings of Grade 3 in the PARAKH Rashtriya Sarvekshan 2024:\n\n1. Rural students performed marginally better than their urban peers.\n2. State Government schools topped the performance in Grade 3, highlighting the early success of the NIPUN Bharat Mission.\n3. The average national score in language in 2024 (64%) surpassed the score recorded in the 2017 NAS round.\n\nWhich of the statements given above are correct?",
+      "question_english": "Under which specific Paragraph of the National Education Policy (NEP) 2020 was the mandate for setting up the National Assessment Centre - PARAKH established?",
       "options_english": [
-        "1 and 2 only",
-        "2 and 3 only",
-        "1 and 3 only",
-        "1, 2 and 3"
+        "Para 4.4.1",
+        "Para 6.4.2",
+        "Para 3.1.4",
+        "Para 5.2.3"
       ],
       "correct_answer": "a",
-      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because while Grade 3 students scored an average national score of 64% in language in 2024 (up from 62% in 2021), this was lower than the 2017 score of 66.7%, indicating that Class 3 has still not caught up with the performance recorded in 2017.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि यद्यपि ग्रेड 3 के विद्यार्थियों ने 2024 में भाषा में 64% का औसत राष्ट्रीय स्कोर हासिल किया (जो 2021 के 62% से अधिक था), फिर भी यह 2017 के 66.7% के स्कोर से कम था, जिससे स्पष्ट होता है कि कक्षा 3 अभी भी 2017 में दर्ज प्रदर्शन के स्तर तक नहीं पहुंच पाई है।",
+      "explanation_english": "As per the official PARAKH mandate, the National Assessment Centre-PARAKH has been set up at NCERT to fulfill the basic objectives of setting norms, standards, guidelines and implement activities related to student assessment along with other tasks as mandated by Para 4.4.1 of the National Education Policy (NEP) 2020.",
+      "explanation_hindi": "परख के आधिकारिक अधिदेश के अनुसार, राष्ट्रीय मूल्यांकन केंद्र-परख की स्थापना एनसीईआरटी में राष्ट्रीय शिक्षा नीति (NEP) 2020 के पैरा 4.4.1 द्वारा सौंपे गए कार्यों के साथ-साथ छात्र मूल्यांकन से संबंधित मानदंडों, मानकों, दिशानिर्देशों को निर्धारित करने और गतिविधियों को लागू करने के बुनियादी उद्देश्यों को पूरा करने के लिए की गई है।",
       "topic": "PARAKH",
-      "difficulty": "hard",
+      "difficulty": "easy",
       "key_facts": [
-        "Interestingly, rural students performed marginally better than urban peers, and State Government schools topped performance in Grade 3—showcasing the early success of the NIPUN Bharat Mission. However, Class 3 is still not caught up with the performance recorded in 2017. They were assessed in language and Mathematics and fared better compared to 2021. Recorded an average national score of 64% in language in 2024, a two-percentage-point increase from 62% in 2021, but lower than the 2017 score of 66.7%."
+        "along with other tasks as mandated by Para 4.4.1 of the National Education Policy (NEP) 2020."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-11T08:53:29.442032"
+      "processed_at": "2026-10-11T09:00:23.289684"
     },
     {
       "id": "c53b2012-b47c-491b-b5d2-bd90ef6e058f",
@@ -524,14 +450,14 @@
       "processed_at": "2026-10-11T08:58:33.440216"
     },
     {
-      "id": "0d24576e-71a2-49da-b3f8-be2296e9a9fe",
-      "created_at": "2026-10-11T08:59:58.840120",
-      "question_hindi": "सूची-I (परख राष्ट्रीय सर्वेक्षण 2024 में कक्षा स्तर) को सूची-II (प्रशासित टेस्ट बुकलेट और कुल प्रश्नों की संख्या) से सुमेलित कीजिए और नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:\n\nसूची-I:\nA. कक्षा 3\nB. कक्षा 6\nC. कक्षा 9\n\nसूची-II:\n1. 6 टेस्ट बुकलेट और कुल 45 प्रश्न\n2. 6 टेस्ट बुकलेट और कुल 51 प्रश्न\n3. 8 टेस्ट बुकलेट और कुल 60 प्रश्न\n\nकूट:\n    A   B   C",
+      "id": "8581e482-367e-4d39-b6f0-6983b34cf173",
+      "created_at": "2026-10-11T08:54:06.794273",
+      "question_hindi": "परख के तत्वावधान में आयोजित बड़े पैमाने के सर्वेक्षणों और विशिष्ट कार्यशालाओं के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. परख को समय-समय पर NAS और बुनियादी शिक्षण अध्ययन (FLS) जैसे बड़े पैमाने के मूल्यांकनों के माध्यम से प्रणाली स्वास्थ्य जांच (सिस्टम हेल्थ चेक-अप) करने का शासनादेश प्राप्त है।\n2. 'होलिस्टिक प्रोग्रेस कार्ड-एनविजनिंग ए न्यू पैराडाइम इन असेसमेंट बाय परख' शीर्षक वाली एक विशेष कार्यशाला समग्र शिक्षा, छत्तीसगढ़ के सहयोग से आयोजित की गई थी।\n3. 'प्रश्न पत्र निर्माण और प्रश्न पत्रों का प्रारूप' (पेपर सेटिंग एंड डिज़ाइन ऑफ़ क्वेश्चन पेपर्स) विषय पर एक विशेष कार्यशाला कक्षा 10 और 12 पर केंद्रित आयोजित की गई थी।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
       "options_hindi": [
-        "A-2, B-1, C-3",
-        "A-1, B-2, C-3",
-        "A-1, B-3, C-2",
-        "A-3, B-2, C-1"
+        "1, 2 और 3",
+        "केवल 1 और 3",
+        "केवल 2 और 3",
+        "केवल 1 और 2"
       ],
       "option_labels": [
         "A",
@@ -542,143 +468,32 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Match List-I (Grade Level in PARAKH Rashtriya Sarvekshan 2024) with List-II (Test Booklets and Total Items Administered) and select the correct answer using the codes given below:\n\nList-I:\nA. Grade 3\nB. Grade 6\nC. Grade 9\n\nList-II:\n1. 6 test booklets and 45 total items\n2. 6 test booklets and 51 total items\n3. 8 test booklets and 60 total items\n\nCodes:\n    A   B   C",
+      "question_english": "Consider the following statements regarding large-scale surveys and specialized workshops conducted under the aegis of PARAKH:\n\n1. PARAKH is mandated to conduct system health check-ups periodically through large-scale assessments such as NAS and the Foundational Learning Study (FLS).\n2. A specialized workshop titled 'Holistic Progress Card-Envisioning a New Paradigm in Assessment by PARAKH' was organized in collaboration with Samagra Shiksha, Chhattisgarh.\n3. A specific workshop dedicated to 'Paper Setting and Design of Question Papers' was conducted focusing on Grade 10 and 12.\n\nWhich of the statements given above are correct?",
       "options_english": [
-        "A-2, B-1, C-3",
-        "A-1, B-2, C-3",
-        "A-1, B-3, C-2",
-        "A-3, B-2, C-1"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "According to the official FAQs of PARAKH Rashtriya Sarvekshan 2024: Grade 3 has 6 test booklets and 45 total items; Grade 6 has 6 test booklets and 51 total items; Grade 9 has 8 test booklets and 60 total items.",
-      "explanation_hindi": "परख राष्ट्रीय सर्वेक्षण 2024 के आधिकारिक FAQ के अनुसार: कक्षा 3 के लिए 6 टेस्ट बुकलेट और कुल 45 प्रश्न हैं; कक्षा 6 के लिए 6 टेस्ट बुकलेट और कुल 51 प्रश्न हैं; तथा कक्षा 9 के लिए 8 टेस्ट बुकलेट और कुल 60 प्रश्न हैं।",
-      "topic": "PARAKH",
-      "difficulty": "medium",
-      "key_facts": [
-        "Q18. How many test booklets are there for Grade 3? 6 test booklets Q19. How many total items are there in Grade 3? 45 Q20. How many test booklets are there for Grade 6? 6 test booklets Q21. How many total items are there in Grade 6? 51 Q22. How many test booklets are there for Grade 9? 8 test booklets Q23. How many total items are there in Grade 9? 60"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-11T08:59:58.840120"
-    },
-    {
-      "id": "1587c7b9-7fbe-4834-bcfd-c07026ef3ede",
-      "created_at": "2026-10-11T08:59:21.416823",
-      "question_hindi": "सूची-I (परख कार्यशाला / परियोजना) को सूची-II (प्रमुख संबंधित क्षेत्र / दायरा) से सुमेलित कीजिए और नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:\n\nसूची-I:\nA. प्रोजेक्ट विद्यासागर 3.0\nB. परख उद्यम संसार\nC. एफएलएस (FLS) 2025-26 तैयारी बैठक\nD. प्रश्न पत्र प्रारूपण कार्यशाला\n\nसूची-II:\n1. वर्ल्ड ऑफ वर्क (WoW)\n2. राष्ट्रीय सर्वेक्षण 2024 के परिणामों का प्रसार और एचपीसी (HPC) कार्यान्वयन\n3. कक्षा 10 और 12\n4. राज्यों/केंद्र शासित प्रदेशों को प्रारंभिक प्रक्रियाओं से अवगत कराना और कार्यप्रणाली की एकसमान समझ",
-      "options_hindi": [
-        "A-2, B-1, C-4, D-3",
-        "A-1, B-2, C-3, D-4",
-        "A-2, B-4, C-1, D-3",
-        "A-4, B-1, C-2, D-3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List-I (PARAKH Workshop / Project) with List-II (Key Associated Domain / Scope) and select the correct answer using the codes given below:\n\nList-I:\nA. Project Vidyasagar 3.0\nB. PARAKH उद्यम संसार\nC. FLS 2025-26 Preparatory Meeting\nD. Question Paper Design Workshop\n\nList-II:\n1. World of Work (WoW)\n2. Dissemination of Rashtriya Sarvekshan 2024 results and HPC implementation\n3. Grade 10 and 12\n4. Apprising States/UTs of preparatory processes and uniform understanding of methodology",
-      "options_english": [
-        "A-2, B-1, C-4, D-3",
-        "A-1, B-2, C-3, D-4",
-        "A-2, B-4, C-1, D-3",
-        "A-4, B-1, C-2, D-3"
+        "1, 2 and 3",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1 and 2 only"
       ],
       "correct_answer": "a",
-      "explanation_english": "Based on official NCERT PARAKH events: Project Vidyasagar 3.0 deals with Dissemination of Rashtriya Sarvekshan 2024 results and HPC implementation; PARAKH उद्यम संसार is subtitled World of Work (WoW / WoW 2.0); FLS 2025-26 Preparatory meeting was conducted for apprising States/UTs of preparatory processes and proposed methodology; and the Workshop on Paper Setting and Design of Question Papers was held for Grade 10 and 12.",
-      "explanation_hindi": "आधिकारिक एनसीईआरटी परख कार्यक्रमों के अनुसार: प्रोजेक्ट विद्यासागर 3.0 राष्ट्रीय सर्वेक्षण 2024 परिणामों के प्रसार और एचपीसी कार्यान्वयन से संबंधित है; परख उद्यम संसार का उपशीर्षक वर्ल्ड ऑफ वर्क (WoW) है; एफएलएस 2025-26 तैयारी बैठक राज्यों/केंद्र शासित प्रदेशों को प्रारंभिक प्रक्रियाओं और कार्यप्रणाली से अवगत कराने के लिए आयोजित की गई थी; तथा प्रश्न पत्र निर्माण एवं डिजाइन पर कार्यशाला कक्षा 10 और 12 के लिए आयोजित की गई थी।",
+      "explanation_english": "All three statements are correct as per official PARAKH records: (1) PARAKH periodically conducts NAS and FLS as national system health check-ups; (2) the HPC workshop 'Holistic Progress Card-Envisioning a New Paradigm in Assessment by PARAKH' was organized with Chhattisgarh, Samagra Shiksha; (3) a dedicated workshop on 'Paper Setting and Design of Question Papers for Grade 10 and 12' was conducted.",
+      "explanation_hindi": "परख के आधिकारिक अभिलेखों के अनुसार तीनों कथन सही हैं: (1) परख राष्ट्रीय प्रणाली स्वास्थ्य जांच के रूप में NAS और FLS का समय-समय पर संचालन करता है; (2) 'होलिस्टिक प्रोग्रेस कार्ड-एनविजनिंग ए न्यू पैराडाइम इन असेसमेंट बाय परख' कार्यशाला समग्र शिक्षा, छत्तीसगढ़ के साथ आयोजित की गई थी; (3) 'कक्षा 10 और 12 के लिए प्रश्न पत्र निर्माण और प्रश्न पत्रों का प्रारूप' पर एक समर्पित कार्यशाला आयोजित की गई थी।",
       "topic": "PARAKH",
       "difficulty": "medium",
       "key_facts": [
-        "Workshops under the project PARAKH उद्यम संसार (World of Work – WoW 2.0) ... Workshop for Dissemination of the PARAKH Rashtriya Sarvekshan 2024 results and the implementation of Holistic Progress Card (HPC) under Project Vidyasagar 3.0 ... An online orientation meeting was held regarding the forthcoming Foundational Learning Study (FLS) 2025-26 to apprise States/UTs of the preparatory processes and to ensure uniform understanding of the proposed methodology ... Workshop on Paper Setting and Design of Question Papers for Grade 10 and 12"
+        "PARAKH, has been mandated to conduct national school education system health check-ups in the form of large-scale assessments such as the National Achievement Survey (NAS) and the Foundational Learning Study (FLS) to periodically monitor learning achievement levels within the country. ... Workshop for ‘Holistic Progress Card-Envisioning a New Paradigm in Assessment by PARAKH’ has been organized with Chhattisgarh, Samagra Shiksha ... Workshop on Paper Setting and Design of Question Papers for Grade 10 and 12"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-11T08:59:21.416823"
+      "processed_at": "2026-10-11T08:54:06.794273"
     },
     {
-      "id": "ba7a3484-04ba-4a8a-bdf7-b82808b1b20a",
-      "created_at": "2026-10-11T08:59:21.416823",
-      "question_hindi": "परख (PARAKH) द्वारा आयोजित पहलों और कार्यशालाओं के संबंध में निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "योग्यता-आधारित मूल्यांकन के लिए आइटम बैंक निर्माण : काउंसिल ऑफ हायर सेकेंडरी एजुकेशन, मणिपुर",
-        "होलिस्टिक प्रोग्रेस कार्ड - मूल्यांकन में एक नए प्रतिमान की परिकल्पना : छत्तीसगढ़, समग्र शिक्षा",
-        "परख उद्यम संसार : वर्ल्ड ऑफ वर्क (WoW 2.0)",
-        "प्रोजेक्ट विद्यासागर 3.0 : पूर्व-प्राथमिक कक्षा 1 और 2 के लिए प्रश्न पत्र डिजाइन"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding initiatives and workshops organized by PARAKH is NOT correctly matched?",
-      "options_english": [
-        "Item Banks Construction for Competency-Based Assessment : Council of Higher Secondary Education, Manipur",
-        "Holistic Progress Card-Envisioning a New Paradigm in Assessment : Chhattisgarh, Samagra Shiksha",
-        "PARAKH उद्यम संसार : World of Work (WoW 2.0)",
-        "Project Vidyasagar 3.0 : Design of question papers for Pre-Primary Grade 1 and 2"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "In the official activities of PARAKH, Project Vidyasagar 3.0 is associated with the 'Workshop for Dissemination of the PARAKH Rashtriya Sarvekshan 2024 results and the implementation of Holistic Progress Card (HPC)', and not with designing question papers for Pre-Primary Grade 1 and 2.",
-      "explanation_hindi": "परख (PARAKH) की आधिकारिक गतिविधियों के अनुसार, प्रोजेक्ट विद्यासागर 3.0 'परख राष्ट्रीय सर्वेक्षण 2024 के परिणामों के प्रसार और समग्र प्रगति कार्ड (HPC) के कार्यान्वयन की कार्यशाला' से संबंधित है, न कि पूर्व-प्राथमिक कक्षा 1 और 2 के लिए प्रश्न पत्र तैयार करने से।",
-      "topic": "PARAKH",
-      "difficulty": "medium",
-      "key_facts": [
-        "Workshop for Dissemination of the PARAKH Rashtriya Sarvekshan 2024 results and the implementation of Holistic Progress Card (HPC) under Project Vidyasagar 3.0"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-11T08:59:21.416823"
-    },
-    {
-      "id": "3491c7ad-0512-40c2-838a-551c70a4d74f",
-      "created_at": "2026-10-11T08:53:29.442032",
-      "question_hindi": "परख राष्ट्रीय सर्वेक्षण 2024 के तुलनात्मक चक्रों और प्रशासनिक व्यवस्थाओं के संबंध में निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "NAS 2017 के तहत शामिल कक्षाएं : कक्षा 3, 5 और 8",
-        "2017, 2021 और 2024 के बीच सीधा क्रॉस-साइकिल तुलनात्मक अध्ययन : ग्रेड 3, 6 और 9",
-        "NAS 2021 के तहत शामिल कक्षाएं : कक्षा 3, 5, 8 और 10",
-        "शिक्षा मंत्रालय के तहत सहयोगी संस्था : केंद्रीय माध्यमिक शिक्षा बोर्ड (CBSE)"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding the comparative cycles and administrative arrangements of PARAKH Rashtriya Sarvekshan 2024 is NOT correctly matched?",
-      "options_english": [
-        "Classes covered under NAS 2017 : Classes 3, 5, and 8",
-        "Direct cross-cycle comparability across 2017, 2021, and 2024 : Grades 3, 6, and 9",
-        "Classes covered under NAS 2021 : Classes 3, 5, 8, and 10",
-        "Collaborating organization under MoE : Central Board of Secondary Education (CBSE)"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Pair 3 is NOT correctly matched. Because the assessment aligns with NEP 2020 stages, only Grade 3 results can be directly compared across all three cycles (NAS 2017, 2021, and PRS 2024). Comparison of Grade 6 and 9 scores with Grade 5 and 8 scores from previous rounds is likely to lead to spurious conclusions due to structural changes.",
-      "explanation_hindi": "युग्म 3 सही सुमेलित नहीं है। चूंकि मूल्यांकन एनईपी 2020 के चरणों के अनुरूप है, इसलिए केवल ग्रेड 3 के परिणामों की सीधे तीनों चक्रों (NAS 2017, 2021 और PRS 2024) में तुलना की जा सकती है। ग्रेड 6 और 9 के अंकों की तुलना पिछले राउंड के ग्रेड 5 और 8 के अंकों से करने पर संरचनात्मक परिवर्तनों के कारण भ्रामक निष्कर्ष निकल सकते हैं।",
-      "topic": "PARAKH",
-      "difficulty": "medium",
-      "key_facts": [
-        "Since, the assessment aligns with NEP 2020 stages, only Grade 3 results can be directly compared across all three cycles—NAS 2017, 2021 and PRS 2024. Comparison of Grade 6 and 9 scores with Grade 5 and 8 scores from previous rounds of NAS is likely to result in spurious conclusions due to change in the structure of the large-scale assessment."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-11T08:53:29.442032"
-    },
-    {
-      "id": "002203f7-e622-489c-b46b-7e508de17806",
-      "created_at": "2026-10-11T08:55:20.935742",
-      "question_hindi": "राष्ट्रीय मूल्यांकन केंद्र (PARAKH) की नियामक भूमिका और अंतर्राष्ट्रीय मूल्यांकन उत्तरदायित्वों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. PARAKH को NCERT द्वारा भारत के पहले राष्ट्रीय मूल्यांकन नियामक के रूप में अधिसूचित किया गया है।\n2. यह PISA, TIMSS और PIRLS जैसे अंतर्राष्ट्रीय मूल्यांकनों में भारत की भागीदारी के प्रबंधन के लिए जिम्मेदार है।\n3. इसके स्पष्ट उद्देश्यों में आलोचनात्मक और रचनात्मक सोच को बढ़ावा देना तथा उद्योग से जुड़ी शिक्षा प्रदान करना शामिल है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "61c0bb04-19f8-424c-b287-967267e80017",
+      "created_at": "2026-10-11T08:56:43.035095",
+      "question_hindi": "शिक्षा मंत्रालय और परख (PARAKH) द्वारा आयोजित आकलन पर प्रथम राष्ट्रीय स्तर की कार्यशाला के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. इस कार्यशाला की अध्यक्षता स्कूल शिक्षा और साक्षरता विभाग के सचिव द्वारा की गई थी।\n2. भारत में वर्तमान में विभिन्न राज्यों और केंद्र शासित प्रदेशों में लगभग 60 स्कूल परीक्षा बोर्ड कार्यरत हैं।\n3. कार्यशाला का उद्देश्य एक एकीकृत ढांचा स्थापित करना था जो बोर्डों के बीच पाठ्यक्रम मानकों, ग्रेडिंग प्रणालियों और मूल्यांकन पद्धतियों को संरेखित करे ताकि छात्रों के लिए निर्बाध स्थानांतरण सुनिश्चित हो सके।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
       "options_hindi": [
         "केवल 1 और 2",
-        "केवल 1 और 3",
         "1, 2 और 3",
+        "केवल 1 और 3",
         "केवल 2 और 3"
       ],
       "option_labels": [
@@ -690,33 +505,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the regulatory role and international assessment responsibilities of the National Assessment Centre (PARAKH):\n\n1. PARAKH has been notified by NCERT as India’s first national assessment regulator.\n2. It is responsible for managing India’s participation in international assessments such as PISA, TIMSS, and PIRLS.\n3. Among its explicit objectives are to promote critical and creative thinking and impart education associated with the industry.\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the 1st National Level Workshop on Assessment organized by the Ministry of Education and PARAKH:\n\n1. The workshop was chaired by the Secretary, Department of School Education & Literacy.\n2. In India, there are currently around 60 school examination boards operating across different States and Union Territories.\n3. The workshop aimed at establishing a unified framework that aligns curriculum standards, grading systems, and evaluation methodologies across boards to ensure seamless transitions for students.\n\nWhich of the statements given above are correct?",
       "options_english": [
         "1 and 2 only",
-        "1 and 3 only",
         "1, 2 and 3",
+        "1 and 3 only",
         "2 and 3 only"
       ],
-      "correct_answer": "c",
-      "explanation_english": "According to the official details on PARAKH, it has been notified by NCERT as India's first national assessment regulator. Furthermore, the centre is responsible for managing India’s participation in international assessments like the Programme for International Student Assessment (PISA), Trends in International Mathematics and Science Study (TIMSS), and Progress in International Reading Literacy Study (PIRLS). Its stated objectives also include promoting critical and creative thinking, imparting education associated with the industry, and improving the quality of education.",
-      "explanation_hindi": "PARAKH से संबंधित आधिकारिक विवरण के अनुसार, इसे NCERT द्वारा भारत के पहले राष्ट्रीय मूल्यांकन नियामक के रूप में अधिसूचित किया गया है। इसके अलावा, यह केंद्र अंतर्राष्ट्रीय मूल्यांकनों जैसे Programme for International Student Assessment (PISA), Trends in International Mathematics and Science Study (TIMSS), और Progress in International Reading Literacy Study (PIRLS) में भारत की भागीदारी के प्रबंधन के लिए उत्तरदायी है। इसके उद्देश्यों में आलोचनात्मक व रचनात्मक सोच को बढ़ावा देना, उद्योग से जुड़ी शिक्षा प्रदान करना तथा शिक्षा की गुणवत्ता में सुधार करना भी शामिल है।",
+      "correct_answer": "b",
+      "explanation_english": "According to the official report of the workshop, it was chaired by Shri Sanjay Kumar, Secretary, Department of School Education & Literacy. He emphasized that in India, currently around 60 school examination boards operate in different states/UTs, and the aim is to establish a unified framework aligning curriculum standards, grading systems, and evaluation methodologies to enable seamless transitions for students.",
+      "explanation_hindi": "कार्यशाला की आधिकारिक रिपोर्ट के अनुसार, इसकी अध्यक्षता स्कूल शिक्षा और साक्षरता विभाग के सचिव श्री संजय कुमार ने की थी। उन्होंने इस बात पर बल दिया कि भारत में वर्तमान में विभिन्न राज्यों/केंद्र शासित प्रदेशों में लगभग 60 स्कूल परीक्षा बोर्ड कार्यरत हैं, और इसका उद्देश्य एक एकीकृत ढांचा तैयार करना है जो छात्रों के निर्बाध स्थानांतरण को सक्षम करने के लिए पाठ्यक्रम मानकों, ग्रेडिंग प्रणालियों और मूल्यांकन पद्धतियों को संरेखित करे।",
       "topic": "PARAKH",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "key_facts": [
-        "PARAKH has been notified by the National Council for Education Research and Training (NCERT) as India’s first national assessment regulator. ... Moreover, the center will be responsible for managing India’s participation in international assessments like the Programme for International Student Assessment (PISA), Trends in International Mathematics and Science Study (TIMSS), and Progress in International Reading Literacy Study (PIRLS). ... It aims to: Promote critical and creative thinking; Impart education associated with the industry; Improve the quality of education"
+        "The workshop was chaired by Shri Sanjay Kumar, Secretary, Department of School Education & Literacy and attended by officials from Ministry of Education, CBSE, NCERT, NIOS, NCVET and NCTE... While addressing the participants, Shri Sanjay Kumar emphasized the need for equivalence of boards. In India, currently there are around 60 school examination boards that are operating in different states/UTs. The aim is to establish a unified framework that enables seamless transitions for students moving between different boards or regions. This includes aligning curriculum standards, grading systems, and evaluation methodologies to enhance the credibility, recognition of certificates, and grades obtained across boards, he added."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-11T08:55:20.935742"
+      "processed_at": "2026-10-11T08:56:43.035095"
     },
     {
-      "id": "2afe3882-a247-4a2c-b25b-9412a7ed2609",
-      "created_at": "2026-10-11T08:50:40.639993",
-      "question_hindi": "राष्ट्रव्यापी परख राष्ट्रीय सर्वेक्षण 2024 किस तिथि को आयोजित किया जाना निर्धारित था?",
+      "id": "85ccd9c4-e335-41da-8e7c-6d777044a327",
+      "created_at": "2026-10-11T08:52:50.308306",
+      "question_hindi": "परख (PARAKH) द्वारा आयोजित संस्थागत गतिविधियों और उन्मुखीकरण कार्यक्रमों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. आगामी मूलभूत शिक्षण अध्ययन (FLS) 2025-26 हेतु राज्यों/केंद्र शासित प्रदेशों को प्रारंभिक प्रक्रियाओं और एकसमान कार्यप्रणाली से अवगत कराने के लिए एक ऑनलाइन उन्मुखीकरण बैठक आयोजित की गई थी।\n2. आगामी शैक्षणिक और वित्तीय वर्ष के लिए बोर्डों की वर्तमान स्थिति की समीक्षा करने और सहयोगात्मक योजना की सुविधा के लिए बोर्डों हेतु एक राष्ट्रीय कार्यशाला आयोजित की जाती है।\n3. प्रमुख हितधारकों के बीच क्षमता निर्माण और उसे सुदृढ़ करने के लिए परख द्वारा शिक्षक मूल्यांकन पर दो दिवसीय कार्यशालाएं आयोजित की गईं।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
       "options_hindi": [
-        "12 जनवरी 2025",
-        "15 अक्टूबर 2024",
-        "4 दिसंबर 2024",
-        "14 नवंबर 2024"
+        "1, 2 और 3",
+        "केवल 2 और 3",
+        "केवल 1 और 3",
+        "केवल 1 और 2"
       ],
       "option_labels": [
         "A",
@@ -727,23 +542,208 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "On which date was the nationwide PARAKH Rashtriya Sarvekshan 2024 scheduled to be conducted?",
+      "question_english": "Consider the following statements regarding the institutional activities and orientation programs organized by PARAKH:\n\n1. An online orientation meeting was conducted to apprise States/UTs of the preparatory processes and uniform methodology for the forthcoming Foundational Learning Study (FLS) 2025-26.\n2. A National Workshop for Boards is conducted to review the current status of Boards and facilitate collaborative planning for the upcoming academic and financial year.\n3. Two-day Workshops on Teacher Assessment were conducted by PARAKH to strengthen and build capacity among key stakeholders.\n\nWhich of the statements given above are correct?",
       "options_english": [
-        "12th January 2025",
-        "15th October 2024",
-        "4th December 2024",
-        "14th November 2024"
+        "1, 2 and 3",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1 and 2 only"
       ],
-      "correct_answer": "c",
-      "explanation_english": "As per Question 3 of the official PARAKH Rashtriya Sarvekshan 2024 FAQs released by NCERT, the date of PARAKH Rashtriya Sarvekshan 2024 was 4th December 2024.",
-      "explanation_hindi": "एनसीईआरटी द्वारा जारी आधिकारिक परख राष्ट्रीय सर्वेक्षण 2024 एफएक्यू के प्रश्न 3 के अनुसार, परख राष्ट्रीय सर्वेक्षण 2024 की तिथि 4 दिसंबर 2024 थी।",
+      "correct_answer": "a",
+      "explanation_english": "All three statements are correct as per PARAKH's official portal. PARAKH organized an online orientation meeting for FLS 2025-26 to ensure uniform understanding of methodology, conducted National Workshops for Boards to review board status and collaborative planning, and held two-day workshops on Teacher Assessment to strengthen and build stakeholder capacity.",
+      "explanation_hindi": "परख के आधिकारिक पोर्टल के अनुसार तीनों कथन सही हैं। परख ने FLS 2025-26 के लिए राज्यों/केंद्र शासित प्रदेशों को कार्यप्रणाली की एकसमान समझ सुनिश्चित करने हेतु ऑनलाइन उन्मुखीकरण बैठक आयोजित की, बोर्डों की स्थिति की समीक्षा और सहयोगात्मक योजना हेतु राष्ट्रीय कार्यशाला आयोजित की, तथा हितधारकों के क्षमता निर्माण हेतु शिक्षक मूल्यांकन पर दो दिवसीय कार्यशालाएं आयोजित कीं।",
+      "topic": "PARAKH",
+      "difficulty": "medium",
+      "key_facts": [
+        "An online orientation meeting was held regarding the forthcoming Foundational Learning Study (FLS) 2025-26 to apprise States/UTs of the preparatory processes and to ensure uniform understanding of the proposed methodology"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-11T08:52:50.308306"
+    },
+    {
+      "id": "42776a3b-e3fe-46df-91e1-5f0bb381ea7d",
+      "created_at": "2026-10-11T08:57:15.451203",
+      "question_hindi": "परख (PARAKH) के संस्थागत अधिदेश और स्थापना के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. इसकी स्थापना राष्ट्रीय शिक्षा नीति (NEP) 2020 के पैरा 4.4.1 के तहत 8 फरवरी, 2023 की अधिसूचना द्वारा NCERT में एक स्वतंत्र घटक इकाई के रूप में की गई थी।\n2. इसे राष्ट्रीय उपलब्धि सर्वेक्षण (NAS) और मूलभूत शिक्षण अध्ययन (FLS) जैसे बड़े पैमाने के आकलनों के माध्यम से देश के भीतर सीखने के स्तर की समय-समय पर निगरानी करने का अधिदेश दिया गया है।\n3. देश भर में बोर्डों की समकक्षता स्थापित होने के बाद, क्रेडिट अंकों का आवंटन केवल शैक्षणिक शिक्षण पर सख्ती से लागू होना है, जिसमें व्यावसायिक और अनुभवात्मक शिक्षण पूरी तरह से बहिष्कृत रहेगा।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 1 और 3",
+        "केवल 2 और 3",
+        "1, 2 और 3",
+        "केवल 1 और 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the institutional mandate and establishment of PARAKH:\n\n1. It was established as an independent constituent unit at NCERT under Para 4.4.1 of the National Education Policy (NEP) 2020 via a notification dated 8th February, 2023.\n2. It is mandated to periodically monitor national learning achievement levels through large-scale assessments such as the National Achievement Survey (NAS) and the Foundational Learning Study (FLS).\n3. Following board equivalence across the country, credit point allocation is intended to apply strictly to academic learning, completely excluding vocational and experiential learning.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3",
+        "1 and 2 only"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because the official mandate specifies: 'Once equivalence is brought across all Boards of India, it will be possible to allocate credit points to all forms of learning, be it academic, vocational, or experiential.'",
+      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि आधिकारिक दस्तावेज में स्पष्ट कहा गया है: 'एक बार जब भारत के सभी बोर्डों में समकक्षता लाई जाती है, तो सीखने के सभी रूपों को क्रेडिट अंक आवंटित करना संभव होगा, चाहे वह शैक्षणिक हो, व्यावसायिक हो या अनुभवात्मक हो।'",
+      "topic": "PARAKH",
+      "difficulty": "hard",
+      "key_facts": [
+        "The National Assessment Centre-PARAKH (Performance Assessment, Review and Analysis of Knowledge for Holistic Development) has been set up at NCERT as an independent constituent unit via Notification no. 1-4/2012-EC/ 101- 164 of NCERT dated 8th Feb, 2023, to fulfil the basic objectives of setting norms, standards, guidelines and implement activities related to student assessment along with other tasks as mandated by Para 4.4.1 of the National Education Policy (NEP) 2020. ... Once equivalence is brought across all Boards of India, it will be possible to allocate credit points to all forms of learning, be it academic, vocational, or experiential."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-11T08:57:15.451203"
+    },
+    {
+      "id": "407cc235-99c6-4a4b-b247-dc7252693837",
+      "created_at": "2026-10-11T08:56:01.683781",
+      "question_hindi": "सूची-I (कक्षा / ग्रेड स्तर) को सूची-II (परख द्वारा कक्षा 12 के संचयी मूल्यांकन में अनुशंसित भारांक) के साथ सुमेलित कीजिए और नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:\n\nसूची-I:\nA. कक्षा 9\nB. कक्षा 10\nC. कक्षा 11\nD. कक्षा 12\n\nसूची-II:\n1. 40%\n2. 25%\n3. 20%\n4. 15%",
+      "options_hindi": [
+        "A-1, B-2, C-3, D-4",
+        "A-4, B-3, C-2, D-1",
+        "A-3, B-4, C-1, D-2",
+        "A-4, B-2, C-3, D-1"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List-I (Class / Grade Level) with List-II (Recommended Weightage in Class 12 Cumulative Assessment by PARAKH) and select the correct answer using the codes given below:\n\nList-I:\nA. Class 9\nB. Class 10\nC. Class 11\nD. Class 12\n\nList-II:\n1. 40%\n2. 25%\n3. 20%\n4. 15%",
+      "options_english": [
+        "A-1, B-2, C-3, D-4",
+        "A-4, B-3, C-2, D-1",
+        "A-3, B-4, C-1, D-2",
+        "A-4, B-2, C-3, D-1"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "According to the PARAKH equivalence recommendations for school boards, the Class 12 report card is envisaged as a cumulative assessment where student performance across secondary and higher secondary grades contributes towards the final results with the following weightages: Class 9 carries 15%, Class 10 carries 20%, Class 11 carries 25%, and Class 12 carries 40%.",
+      "explanation_hindi": "स्कूल बोर्डों के लिए परख (PARAKH) की समकक्षता संबंधी सिफारिशों के अनुसार, कक्षा 12 के रिपोर्ट कार्ड को एक संचयी (क्युमुलेटिव) मूल्यांकन के रूप में परिकल्पित किया गया है, जिसमें अंतिम परिणाम में कक्षा 9 का भारांक 15%, कक्षा 10 का 20%, कक्षा 11 का 25% और कक्षा 12 का 40% होगा।",
+      "topic": "PARAKH",
+      "difficulty": "hard",
+      "key_facts": [
+        "The Class 12 report card is envisaged as a ‘cumulative’ one, and a weight of 15% for Class 9, 20% for Class 10, 25% for Class 11, and 40% for Class 12 will go into the final Class 12 results."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-11T08:56:01.683781"
+    },
+    {
+      "id": "a9e38aa7-31b7-4477-b8f9-4019b9f3b08b",
+      "created_at": "2026-10-11T08:56:43.035095",
+      "question_hindi": "NCERT द्वारा आयोजित परख राष्ट्रीय सर्वेक्षण के दायरे और प्रशासन के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. इस सर्वेक्षण में कक्षा 3, 6 और 9 के छात्रों के सीखने के स्तर का आकलन किया गया।\n2. दिसंबर 2024 के राष्ट्रीय सर्वेक्षण में सभी राज्यों और केंद्र शासित प्रदेशों के 1 लाख से अधिक स्कूलों के 41 लाख से अधिक छात्रों को शामिल किया गया था।\n3. इस सर्वेक्षण में कक्षा 9 में बुनियादी साक्षरता और संख्यात्मकता का परीक्षण किया गया, जबकि उच्च-स्तरीय चिंतन का परीक्षण विशेष रूप से कक्षा 3 में किया गया।\n\nऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "options_hindi": [
+        "1, 2 और 3",
+        "केवल 2 और 3",
+        "केवल 1",
+        "केवल 1 और 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the coverage and administration of the PARAKH Rashtriya Sarvekshan conducted by NCERT:\n\n1. The survey assessed the learning levels of students across Classes 3, 6, and 9.\n2. The December 2024 national survey covered more than 41 lakh students across over 1 lakh schools in all States and Union Territories.\n3. The survey tested foundational literacy and numeracy in Class 9, while testing higher-order thinking exclusively in Class 3.\n\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "1, 2 and 3",
+        "2 and 3 only",
+        "1 only",
+        "1 and 2 only"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because foundational literacy and numeracy were tested in Class 3, intermediate skills in Class 6, and higher-order thinking in language, mathematics, and science in Class 9.",
+      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि बुनियादी साक्षरता और संख्यात्मकता का परीक्षण कक्षा 3 में किया गया था, मध्यवर्ती कौशल का कक्षा 6 में, तथा भाषा, गणित और विज्ञान में उच्च-स्तरीय चिंतन का परीक्षण कक्षा 9 में किया गया था।",
+      "topic": "PARAKH",
+      "difficulty": "medium",
+      "key_facts": [
+        "Conducted by the NCERT in December 2024, the survey assessed learning levels of students in classes 3, 6 and 9 across Indian states... The December 2024 survey covered more than 41 lakh students in over 1 lakh schools across all states and Union territories. It tested foundational literacy and numeracy (class 3), intermediate language and mathematics skills (class 6) and higher‑order thinking in language, mathematics and science (class 9)."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-11T08:56:43.035095"
+    },
+    {
+      "id": "de26401e-7804-40da-8a4a-98bb9d25bb66",
+      "created_at": "2026-10-11T08:54:37.732762",
+      "question_hindi": "परख (NCERT) के आधिकारिक पोर्टल के अनुसार, परख के मुख्य कार्यकारी अधिकारी (CEO) और NCERT में शैक्षिक सर्वेक्षण प्रभाग के प्रमुख के रूप में कौन कार्यरत हैं?",
+      "options_hindi": [
+        "प्रोफेसर इंद्राणी भादुड़ी",
+        "प्रोफेसर श्रीधर श्रीवास्तव",
+        "प्रोफेसर दिनेश प्रसाद सकलानी",
+        "प्रोफेसर हृषीकेश सेनापति"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "According to the official portal of PARAKH (NCERT), who serves as the CEO of PARAKH and Head of the Educational Survey Division at NCERT?",
+      "options_english": [
+        "Professor Indrani Bhaduri",
+        "Professor Sridhar Srivastava",
+        "Professor Dinesh Prasad Saklani",
+        "Professor Hrushikesh Senapaty"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "As listed in the official contact details on the PARAKH portal, Professor Indrani Bhaduri is the CEO of PARAKH and Head of the Educational Survey Division, NCERT.",
+      "explanation_hindi": "परख पोर्टल पर दिए गए आधिकारिक संपर्क विवरण के अनुसार, प्रोफेसर इंद्राणी भादुड़ी परख की सीईओ और शैक्षिक सर्वेक्षण प्रभाग, एनसीईआरटी की प्रमुख हैं।",
       "topic": "PARAKH",
       "difficulty": "easy",
       "key_facts": [
-        "Q3. What is the date of PARAKH Rashtriya Sarvekshan 2024? 4th December 2024."
+        "Professor Indrani Bhaduri CEO, PARAKH and Head, Educational Survey Divison National Council of Educational Research and Training, Ministry of Education, Govt. of India"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-11T08:50:40.639993"
+      "processed_at": "2026-10-11T08:54:37.732762"
+    },
+    {
+      "id": "af0bca0e-c5a5-41b9-b6d1-8ace4eb7559d",
+      "created_at": "2026-10-11T08:52:50.308306",
+      "question_hindi": "सूची-I (परख पहल / परियोजना का नाम) को सूची-II (प्रमुख कार्यक्षेत्र / सहयोगी संस्था / लक्षित चरण) के साथ सुमेलित कीजिए और नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:\n\nसूची-I:\nA. प्रोजेक्ट विद्यासागर 3.0 (Project Vidyasagar 3.0)\nB. परख उद्यम संसार\nC. प्रश्न पत्र प्रारूप (Question Paper Template) पर पांच दिवसीय कार्यशाला\nD. योग्यता-आधारित मूल्यांकन हेतु आइटम बैंक निर्माण कार्यशाला\n\nसूची-II:\n1. माध्यमिक स्तर पर प्रश्न पत्र प्रारूप का मानकीकरण और HPC\n2. परख राष्ट्रीय सर्वेक्षण 2024 के परिणामों का प्रसार और HPC कार्यान्वयन\n3. वर्ल्ड ऑफ वर्क (WoW 2.0)\n4. उच्चतर माध्यमिक शिक्षा परिषद, मणिपुर",
+      "options_hindi": [
+        "A-1, B-4, C-2, D-3",
+        "A-2, B-3, C-4, D-1",
+        "A-3, B-2, C-1, D-4",
+        "A-2, B-3, C-1, D-4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List-I (PARAKH Initiative / Project Name) with List-II (Key Scope / Associating Agency / Target Stage) and select the correct answer using the codes given below:\n\nList-I:\nA. Project Vidyasagar 3.0\nB. PARAKH उद्यम संसार\nC. Five-day workshop on Question Paper Template\nD. Workshop on Item Bank Construction for Competency-Based Assessment\n\nList-II:\n1. Standardisation of Question Paper Template and HPC at Secondary stage\n2. Dissemination of PARAKH Rashtriya Sarvekshan 2024 results and HPC implementation\n3. World of Work (WoW 2.0)\n4. Council of Higher Secondary Education, Manipur",
+      "options_english": [
+        "A-1, B-4, C-2, D-3",
+        "A-2, B-3, C-4, D-1",
+        "A-3, B-2, C-1, D-4",
+        "A-2, B-3, C-1, D-4"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "According to the official activities of PARAKH:\n- Project Vidyasagar 3.0 corresponds to the workshop for dissemination of PARAKH Rashtriya Sarvekshan 2024 results and implementation of HPC (A-2).\n- PARAKH उद्यम संसार corresponds to the World of Work (WoW / WoW 2.0) project (B-3).\n- The five-day workshop on question paper templates addressed Holistic Progress Card (HPC) at the Secondary stage and standardisation of question paper templates (C-1).\n- Construction of Item Banks for Competency-Based Assessment and HPC was organized with the Council of Higher Secondary Education, Manipur (D-4).",
+      "explanation_hindi": "परख की आधिकारिक गतिविधियों के अनुसार:\n- प्रोजेक्ट विद्यासागर 3.0: परख राष्ट्रीय सर्वेक्षण 2024 के परिणामों के प्रसार और HPC के कार्यान्वयन से संबंधित है (A-2)।\n- परख उद्यम संसार: वर्ल्ड ऑफ वर्क (WoW / WoW 2.0) परियोजना से संबंधित है (B-3)।\n- प्रश्न पत्र प्रारूप पर पांच दिवसीय कार्यशाला: माध्यमिक स्तर पर होलिस्टिक प्रोग्रेस कार्ड (HPC) और प्रश्न पत्र प्रारूप के मानकीकरण पर केंद्रित थी (C-1)।\n- योग्यता-आधारित मूल्यांकन हेतु आइटम बैंक निर्माण: उच्चतर माध्यमिक शिक्षा परिषद, मणिपुर के सहयोग से आयोजित किया गया (D-4)।",
+      "topic": "PARAKH",
+      "difficulty": "medium",
+      "key_facts": [
+        "Workshop for Dissemination of the PARAKH Rashtriya Sarvekshan 2024 results and the implementation of Holistic Progress Card (HPC) under Project Vidyasagar 3.0"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-11T08:52:50.308306"
     }
   ]
 }

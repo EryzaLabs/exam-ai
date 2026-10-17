@@ -10,10 +10,11 @@ import {
   Platform,
   ActivityIndicator,
   Dimensions,
+  Image,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Bell, LogOut, Target, ChevronRight, Award, BookOpen, TrendingUp, Shield, HelpCircle, FileText, History, Trash2, CalendarDays, Globe } from 'lucide-react-native';
+import { Bell, LogOut, Target, ChevronRight, Award, BookOpen, TrendingUp, Shield, HelpCircle, FileText, History, Trash2, CalendarDays, Globe, Crown } from 'lucide-react-native';
 import { useAuth } from '@/context/auth-context';
 import { signOut, deleteUser } from 'firebase/auth';
 import { auth } from '@/services/firebaseConfig';
@@ -30,9 +31,12 @@ export default function ProfileScreen() {
   const { width } = useWindowDimensions();
   const isLargeScreen = width >= 1024;
   
-  const { user } = useAuth();
-  const [userName, setUserName] = useState('');
-  const [userEmail, setUserEmail] = useState('');
+  const { user, isSubscribed: authSubscribed, isSubscriptionLoading } = useAuth();
+  const [userName, setUserName] = useState(user?.displayName || (user?.email ? user.email.split('@')[0] : ''));
+  const [userEmail, setUserEmail] = useState(user?.email || user?.phoneNumber || '');
+  const [userPhoto, setUserPhoto] = useState<string | null>(user?.photoURL || null);
+  const [localSubscribed, setLocalSubscribed] = useState<boolean | null>(null);
+  const isSubscribed = localSubscribed !== null ? localSubscribed : authSubscribed;
   const [notificationsEnabled, setNotificationsEnabled] = useState(true);
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
   const [userStats, setUserStats] = useState<UserStats | null>(null);
@@ -50,12 +54,19 @@ export default function ProfileScreen() {
       const profile = await UserService.getUserProfile();
       const stats = await UserService.getUserStatistics();
 
+      const effectiveName = profile?.displayName || user?.displayName || (user?.email ? user.email.split('@')[0] : 'User');
+      const effectiveEmail = profile?.email || user?.email || user?.phoneNumber || '';
+      const effectivePhoto = profile?.photoURL || user?.photoURL || null;
+
       if (profile) {
         setUserProfile(profile);
-        setUserName(profile.displayName);
-        setUserEmail(profile.email || user.phoneNumber || 'No email provided');
         setNotificationsEnabled(profile.notificationsEnabled ?? true);
       }
+
+      setUserName(effectiveName);
+      setUserEmail(effectiveEmail);
+      setUserPhoto(effectivePhoto);
+      setLocalSubscribed(profile?.isSubscribed === true);
 
       setUserStats(stats);
     } catch (error) {
@@ -170,13 +181,27 @@ export default function ProfileScreen() {
     return name.split(' ').map((n) => n[0]).join('').toUpperCase().slice(0, 2);
   };
 
-  if (loading) {
+  const isPageLoading = loading || isSubscriptionLoading;
+
+  if (isPageLoading) {
+    const loadingView = (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#4A90E2" />
+        <Text style={styles.loadingText}>Loading profile & verifying account...</Text>
+      </View>
+    );
+
+    if (isLargeScreen) {
+      return (
+        <DesktopDashboard>
+          {loadingView}
+        </DesktopDashboard>
+      );
+    }
+
     return (
       <SafeAreaView style={styles.container} edges={['top']}>
-        <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#4A90E2" />
-          <Text style={styles.loadingText}>Loading profile...</Text>
-        </View>
+        {loadingView}
       </SafeAreaView>
     );
   }
@@ -192,10 +217,29 @@ export default function ProfileScreen() {
         >
           <View style={styles.headerContent}>
             <View style={styles.avatarLarge}>
-              <Text style={styles.avatarText}>{getInitials(userName)}</Text>
+              {userPhoto ? (
+                <Image
+                  source={{ uri: userPhoto }}
+                  style={styles.avatarLargeImage}
+                  resizeMode="cover"
+                />
+              ) : (
+                <Text style={styles.avatarText}>{getInitials(userName || userEmail)}</Text>
+              )}
             </View>
-            <Text style={styles.profileName}>{userName}</Text>
-            <Text style={styles.profileEmail}>{userEmail}</Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 4 }}>
+              <Text style={styles.profileName}>{userName || 'User'}</Text>
+              {isSubscribed && (
+                <Crown size={20} color="#FBBF24" fill="#FBBF24" />
+              )}
+            </View>
+            {isSubscribed && (
+              <View style={styles.premiumPill}>
+                <Crown size={12} color="#FBBF24" fill="#FBBF24" />
+                <Text style={styles.premiumPillText}>PREMIUM MEMBER</Text>
+              </View>
+            )}
+            {userEmail ? <Text style={styles.profileEmail}>{userEmail}</Text> : null}
           </View>
         </LinearGradient>
 
@@ -356,7 +400,7 @@ export default function ProfileScreen() {
             <ChevronRight size={20} color="#CBD5E0" />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.menuItem} onPress={() => openLink('mailto:support@example.com')}>
+          <TouchableOpacity style={styles.menuItem} onPress={() => openLink('mailto:support@exam-ai.com')}>
             <View style={[styles.menuIconCircle, { backgroundColor: '#EBF8FF' }]}>
               <HelpCircle size={20} color="#4299E1" />
             </View>
@@ -431,6 +475,12 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     borderWidth: 3,
     borderColor: 'rgba(255,255,255,0.5)',
+    overflow: 'hidden',
+  },
+  avatarLargeImage: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 40,
   },
   avatarText: {
     fontSize: 28,
@@ -447,6 +497,25 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: 'rgba(255,255,255,0.8)',
     marginBottom: 12,
+  },
+  premiumPill: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: 'rgba(251, 191, 36, 0.22)',
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 20,
+    marginTop: 2,
+    marginBottom: 6,
+    borderWidth: 1,
+    borderColor: 'rgba(251, 191, 36, 0.45)',
+  },
+  premiumPillText: {
+    color: '#FEF3C7',
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 0.6,
   },
   statsRow: {
     flexDirection: 'row',

@@ -1,0 +1,36 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // 1. Subscriptions: Client can ONLY read their own subscription document.
+    // Client write is STRICTLY prohibited (allow write: if false).
+    // Only backend (Firebase Admin SDK) can write to this collection.
+    match /subscriptions/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false;
+    }
+
+    // 2. User Profiles:
+    // Clients can read and write their profile details, but CANNOT tamper with subscription fields.
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId
+                    && (!request.resource.data.keys().hasAny(['isSubscribed']) || request.resource.data.isSubscribed == false);
+      allow update: if request.auth != null && request.auth.uid == userId
+                    && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['isSubscribed', 'subscriptionStatus', 'subscriptionOrderId']));
+
+      match /history/{docId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+
+    // 3. Premium Content & Locked Mock Tests
+    match /premiumContent/{doc} {
+      allow read: if request.auth != null && (
+        request.auth.token.subscribed == true ||
+        exists(/databases/$(database)/documents/subscriptions/$(request.auth.uid))
+      );
+      allow write: if false;
+    }
+  }
+}

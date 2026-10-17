@@ -1,19 +1,19 @@
 {
-  "test_id": "52040a07-6e67-4d1c-97d8-d7607c0f4c23",
+  "test_id": "ff2d8987-0523-4136-be3c-c782118c2252",
   "test_name": "Topic Test: NAVODAYA JNV - Part 5",
   "type": "topic_wise",
   "topic": "navodaya-jnv",
-  "created_at": "2026-10-16T20:04:02.682249",
+  "created_at": "2026-10-17T08:33:52.352937",
   "questions": [
     {
-      "id": "72b76695-843f-4aa5-ac8d-07207bdca52a",
-      "created_at": "2026-10-10T07:48:59.926029",
-      "question_hindi": "जवाहर नवोदय विद्यालयों के संबंध में निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
+      "id": "6c774c27-58b2-4420-bcf8-2ff883dc4a8d",
+      "created_at": "2026-10-10T07:55:50.496752",
+      "question_hindi": "नवोदय विद्यालय समिति (NVS) के क्षेत्रीय कार्यालयों और उनके अधिकार क्षेत्र के तहत स्वीकृत JNVs की कुल संख्या (31.03.2020 तक) के संबंध में सूची I को सूची II के साथ सुमेलित करें:\n\nसूची I (क्षेत्रीय कार्यालय)\nA. भोपाल\nB. हैदराबाद\nC. लखनऊ\nD. शिलांग\n\nसूची II (स्वीकृत JNVs की संख्या)\n1. 89\n2. 100\n3. 113\n4. 77\n\nसही कूट का चयन कीजिए:",
       "options_hindi": [
-        "पहले स्थापित JNV (1985-86) – झज्जर (हरियाणा) और अमरावती (महाराष्ट्र)",
-        "विशेष मामले के तहत स्वीकृत JNV – सेनापति-II और उखरूल-II (मणिपुर)",
-        "वह राज्य जहाँ कोई JNV नहीं है – तमिलनाडु",
-        "वह राज्य जो JNV योजना से पूरी तरह बाहर है – केरल"
+        "A-4, B-3, C-1, D-2",
+        "A-3, B-4, C-1, D-2",
+        "A-3, B-4, C-2, D-1",
+        "A-2, B-1, C-4, D-3"
       ],
       "option_labels": [
         "A",
@@ -24,23 +24,60 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which of the following pairs regarding Jawahar Navodaya Vidyalayas is NOT correctly matched?",
+      "question_english": "Match List I with List II regarding the Regional Offices of Navodaya Vidyalaya Samiti (NVS) and the total number of sanctioned JNVs under their jurisdiction (as on 31.03.2020):\n\nList I (Regional Office)\nA. Bhopal\nB. Hyderabad\nC. Lucknow\nD. Shillong\n\nList II (Sanctioned JNVs)\n1. 89\n2. 100\n3. 113\n4. 77\n\nSelect the correct code:",
       "options_english": [
-        "First JNVs established (1985–86) – Jhajjar (Haryana) and Amravati (Maharashtra)",
-        "Special case sanctioned JNVs – Senapati-II and Ukhrul-II (Manipur)",
-        "State without any JNV – Tamil Nadu",
-        "State completely excluded from JNV scheme – Kerala"
+        "A-4, B-3, C-1, D-2",
+        "A-3, B-4, C-1, D-2",
+        "A-3, B-4, C-2, D-1",
+        "A-2, B-1, C-4, D-3"
       ],
-      "correct_answer": "d",
-      "explanation_english": "JNVs exist all over India except Tamil Nadu. Kerala is not excluded; in fact, 14 JNVs are operational in Kerala under the Hyderabad region.",
-      "explanation_hindi": "तमिलनाडु को छोड़कर पूरे भारत में जेएनवी मौजूद हैं। केरल इस योजना से बाहर नहीं है; वास्तव में, हैदराबाद क्षेत्र के अंतर्गत केरल में 14 जेएनवी संचालित हैं।",
+      "correct_answer": "b",
+      "explanation_english": "According to the official NVS Establishment details as on 31.03.2020: Bhopal has 108 + 5 = 113 JNVs; Hyderabad has 74 + 3 = 77 JNVs; Lucknow has 88 + 1 = 89 JNVs; Shillong has 96 + 4 = 100 JNVs.",
+      "explanation_hindi": "31.03.2020 तक NVS स्थापना विवरण के अनुसार: भोपाल में 108 + 5 = 113 JNVs; हैदराबाद में 74 + 3 = 77 JNVs; लखनऊ में 88 + 1 = 89 JNVs; शिलांग में 96 + 4 = 100 JNVs स्वीकृत हैं।",
       "topic": "Navodaya (JNV)",
       "difficulty": "medium",
       "key_facts": [
-        "JNVs exist all over India, with the exception of Tamil Nadu."
+        "1. Bhopal 108 + 5 = 113 ... 3. Hyderabad 74 + 3 = 77 ... 5. Lucknow 88 + 1 = 89 ... 8. Shillong 96 + 4 = 100"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:48:59.926029"
+      "processed_at": "2026-10-10T07:55:50.496752"
+    },
+    {
+      "id": "65b9b17d-1211-4967-a222-64c6cbe36513",
+      "created_at": "2026-10-10T07:50:08.562806",
+      "question_hindi": "नवोदय विद्यालय समिति पर कार्यक्रम मूल्यांकन संगठन (PEO) रिपोर्ट में प्रयुक्त संक्षिप्ताक्षरों के आधार पर सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (संक्षिप्ताक्षर)\nA. CEMC\nB. DEAC\nC. FCSA\nD. NLI\n\nसूची II (पूर्ण रूप)\n1. डेवलपमेंट इवैल्यूएशन एडवाइजरी कमेटी\n2. कंसल्टेंसी इवैल्यूएशन कम मॉनिटरिंग कमेटी\n3. नवोदय लीडरशिप इंस्टीट्यूट\n4. फैकल्टी-कम-सिस्टम एडमिनिस्ट्रेटर\n\nसही कूट का चयन कीजिए:",
+      "options_hindi": [
+        "A-1, B-2, C-4, D-3",
+        "A-2, B-1, C-4, D-3",
+        "A-4, B-3, C-2, D-1",
+        "A-2, B-1, C-3, D-4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II based on the abbreviations used in the Programme Evaluation Organisation (PEO) Report on Navodaya Vidyalaya Samiti:\n\nList I (Abbreviation)\nA. CEMC\nB. DEAC\nC. FCSA\nD. NLI\n\nList II (Full Form)\n1. Development Evaluation Advisory Committee\n2. Consultancy Evaluation cum Monitoring Committee\n3. Navodaya Leadership Institute\n4. Faculty-cum-System Administrator\n\nSelect the correct code:",
+      "options_english": [
+        "A-1, B-2, C-4, D-3",
+        "A-2, B-1, C-4, D-3",
+        "A-4, B-3, C-2, D-1",
+        "A-2, B-1, C-3, D-4"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "According to the List of Abbreviations in PEO Report No. 226 (Evaluation Study on Navodaya Vidyalaya Samiti), CEMC stands for Consultancy Evaluation cum Monitoring Committee, DEAC stands for Development Evaluation Advisory Committee, FCSA stands for Faculty-cum-System Administrator, and NLI stands for Navodaya Leadership Institute.",
+      "explanation_hindi": "पीईओ रिपोर्ट संख्या 226 (नवोदय विद्यालय समिति पर मूल्यांकन अध्ययन) में संक्षिप्ताक्षरों की सूची के अनुसार, CEMC का अर्थ कंसल्टेंसी इवैल्यूएशन कम मॉनिटरिंग कमेटी है, DEAC का अर्थ डेवलपमेंट इवैल्यूएशन एडवाइजरी कमेटी है, FCSA का अर्थ फैकल्टी-कम-सिस्टम एडमिनिस्ट्रेटर है, और NLI का अर्थ नवोदय लीडरशिप इंस्टीट्यूट है।",
+      "topic": "Navodaya (JNV)",
+      "difficulty": "medium",
+      "key_facts": [
+        "CEMC : Consultancy Evaluation cum Monitoring Committee\nDEAC : Development Evaluation Advisory Committee\nFCSA : Faculty-cum-System Administrator\nNLI : Navodaya Leadership Institute"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T07:50:08.562806"
     },
     {
       "id": "3394896d-f192-43db-9dce-b3c66d0e0a6a",
@@ -80,14 +117,14 @@
       "processed_at": "2026-10-10T07:59:26.218586"
     },
     {
-      "id": "f289d635-9085-4f16-839d-2e3eb63f98d3",
-      "created_at": "2026-10-10T07:51:19.341333",
-      "question_hindi": "नवोदय विद्यालय समिति (NVS) के प्रशासनिक पदानुक्रम में, आठ क्षेत्रीय कार्यालयों में से प्रत्येक का नेतृत्व निम्नलिखित में से किस पदनाम द्वारा किया जाता है?",
+      "id": "72b76695-843f-4aa5-ac8d-07207bdca52a",
+      "created_at": "2026-10-10T07:48:59.926029",
+      "question_hindi": "जवाहर नवोदय विद्यालयों के संबंध में निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
       "options_hindi": [
-        "सहायक आयुक्त (Assistant Commissioner)",
-        "महानिदेशक (Director General)",
-        "संयुक्त आयुक्त (Joint Commissioner)",
-        "उपायुक्त (Deputy Commissioner)"
+        "पहले स्थापित JNV (1985-86) – झज्जर (हरियाणा) और अमरावती (महाराष्ट्र)",
+        "विशेष मामले के तहत स्वीकृत JNV – सेनापति-II और उखरूल-II (मणिपुर)",
+        "वह राज्य जहाँ कोई JNV नहीं है – तमिलनाडु",
+        "वह राज्य जो JNV योजना से पूरी तरह बाहर है – केरल"
       ],
       "option_labels": [
         "A",
@@ -98,31 +135,105 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "In the administrative hierarchy of the Navodaya Vidyalaya Samiti (NVS), each of the eight Regional Offices is headed by which of the following designations?",
+      "question_english": "Which of the following pairs regarding Jawahar Navodaya Vidyalayas is NOT correctly matched?",
       "options_english": [
-        "Assistant Commissioner",
-        "Director General",
-        "Joint Commissioner",
-        "Deputy Commissioner"
+        "First JNVs established (1985–86) – Jhajjar (Haryana) and Amravati (Maharashtra)",
+        "Special case sanctioned JNVs – Senapati-II and Ukhrul-II (Manipur)",
+        "State without any JNV – Tamil Nadu",
+        "State completely excluded from JNV scheme – Kerala"
       ],
       "correct_answer": "d",
-      "explanation_english": "As per official NVS records, each of the eight Regional Offices of Navodaya Vidyalaya Samiti is headed by a Deputy Commissioner.",
-      "explanation_hindi": "एनवीएस के आधिकारिक रिकॉर्ड के अनुसार, नवोदय विद्यालय समिति के आठ क्षेत्रीय कार्यालयों में से प्रत्येक का नेतृत्व एक उपायुक्त (Deputy Commissioner) द्वारा किया जाता है।",
+      "explanation_english": "JNVs exist all over India except Tamil Nadu. Kerala is not excluded; in fact, 14 JNVs are operational in Kerala under the Hyderabad region.",
+      "explanation_hindi": "तमिलनाडु को छोड़कर पूरे भारत में जेएनवी मौजूद हैं। केरल इस योजना से बाहर नहीं है; वास्तव में, हैदराबाद क्षेत्र के अंतर्गत केरल में 14 जेएनवी संचालित हैं।",
       "topic": "Navodaya (JNV)",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "key_facts": [
-        "The eight Regional Offices of Navodaya Vidyalaya Samiti are at Bhopal, Chandigarh, Hyderabad, Jaipur, Lucknow, Patna, Pune & Shillong with jurisdiction over different States and UTs. Each Regional Office is headed by a Deputy Commissioner."
+        "JNVs exist all over India, with the exception of Tamil Nadu."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:51:19.341333"
+      "processed_at": "2026-10-10T07:48:59.926029"
     },
     {
-      "id": "3fa0cc2b-be8d-429a-a231-c3f36581b083",
-      "created_at": "2026-10-10T07:50:41.325614",
-      "question_hindi": "जवाहर नवोदय विद्यालयों (JNVs) में प्रवेश पात्रता और शुल्क संरचना के संदर्भ में, निम्नलिखित कथनों पर विचार कीजिए:\n\n1. जवाहर नवोदय विद्यालयों में विद्यालय विकास निधि (VVN) ₹600 प्रति माह ली जाती है और यह केवल कक्षा 9 से 12 तक के विद्यार्थियों से ही ली जाती है।\n2. जिन अभ्यर्थियों ने पिछले शैक्षणिक सत्र में कक्षा 7 उत्तीर्ण कर ली है, वे JNVST में कक्षा 9 में प्रवेश के लिए आवेदन करने के पात्र हैं।\n3. जिन अभ्यर्थियों ने 2026-27 सत्र से पहले कक्षा 10 उत्तीर्ण कर ली है, वे कक्षा 11 पार्श्व प्रवेश (लेटरल एंट्री) के लिए आवेदन करने के पात्र नहीं हैं।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "0ab656da-eca3-4310-b9d9-67f5e6eab1d6",
+      "created_at": "2026-10-10T07:55:31.686060",
+      "question_hindi": "नवोदय विद्यालय समिति (NVS) के क्षेत्रीय कार्यालयों और उनके संबंधित राज्य/केंद्र शासित प्रदेश क्षेत्राधिकार के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (क्षेत्रीय कार्यालय)\nA. भोपाल\nB. जयपुर\nC. लखनऊ\nD. पुणे\n\nसूची II (शामिल राज्य/केंद्र शासित प्रदेश)\n1. दिल्ली, हरियाणा, राजस्थान\n2. उत्तर प्रदेश, उत्तराखंड\n3. छत्तीसगढ़, मध्य प्रदेश, ओडिशा\n4. दादरा और नगर हवेली एवं दमन और दीव यू.टी., गोवा, गुजरात, महाराष्ट्र\n\nसही कूट का चयन कीजिए:",
+      "options_hindi": [
+        "A-3, B-1, C-2, D-4",
+        "A-3, B-2, C-1, D-4",
+        "A-1, B-3, C-4, D-2",
+        "A-4, B-1, C-2, D-3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding the Regional Offices of Navodaya Vidyalaya Samiti (NVS) and their respective State/UT jurisdictions:\n\nList I (Regional Office)\nA. Bhopal\nB. Jaipur\nC. Lucknow\nD. Pune\n\nList II (States/UTs Covered)\n1. Delhi, Haryana, Rajasthan\n2. Uttar Pradesh, Uttarakhand\n3. Chhattisgarh, Madhya Pradesh, Orissa\n4. Dadra Nagar Haveli and Daman & Diu U.T., Goa, Gujarat, Maharashtra\n\nSelect the correct code:",
+      "options_english": [
+        "A-3, B-1, C-2, D-4",
+        "A-3, B-2, C-1, D-4",
+        "A-1, B-3, C-4, D-2",
+        "A-4, B-1, C-2, D-3"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "As per the official NVS Regional Office jurisdiction: Bhopal covers Chhattisgarh, Madhya Pradesh, and Orissa; Jaipur covers Delhi, Haryana, and Rajasthan; Lucknow covers Uttar Pradesh and Uttarakhand; Pune covers Dadra Nagar Haveli and Daman & Diu U.T., Goa, Gujarat, and Maharashtra. Thus, the correct matching is A-3, B-1, C-2, D-4.",
+      "explanation_hindi": "एनवीएस के आधिकारिक क्षेत्रीय कार्यालय क्षेत्राधिकार के अनुसार: भोपाल के अंतर्गत छत्तीसगढ़, मध्य प्रदेश और ओडिशा आते हैं; जयपुर के अंतर्गत दिल्ली, हरियाणा और राजस्थान आते हैं; लखनऊ के अंतर्गत उत्तर प्रदेश और उत्तराखंड आते हैं; पुणे के अंतर्गत दादरा और नगर हवेली एवं दमन और दीव यू.टी., गोवा, गुजरात और महाराष्ट्र आते हैं। अतः सही सुमेलन A-3, B-1, C-2, D-4 है।",
+      "topic": "Navodaya (JNV)",
+      "difficulty": "hard",
+      "key_facts": [
+        "1. | Bhopal | 108 + 5 = 113 | Chhattisgarh (28), Madhya Pradesh (54), Orissa(31) | \n4. | Jaipur | 63 + 2 = 65 | Delhi (9), Haryana (21), Rajasthan(35) | \n5. | Lucknow | 88 + 1 = 89 | Uttar Pradesh (76), Uttarakhand(13) | \n7. | Pune | 71 + 2 = 73 | Dadra Nagar Haveli and Daman & Diu U.T.(3), Goa (2). Gujarat(34), Maharashtra(34) |"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T07:55:31.686060"
+    },
+    {
+      "id": "d08e9e4e-2211-4a18-9e13-d4c37de0fcfc",
+      "created_at": "2026-10-10T08:00:07.744149",
+      "question_hindi": "जवाहर नवोदय विद्यालयों के भौगोलिक विस्तार, परिचालन स्थिति और प्रवेश मूल्यांकन के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. तमिलनाडु राज्य को छोड़कर पूरे भारत में जवाहर नवोदय विद्यालय मौजूद हैं।\n2. शैक्षणिक सत्र 2022-23 तक, स्वीकृत 661 JNV में से 649 JNV क्रियाशील (functional) थे।\n3. जवाहर नवोदय विद्यालय चयन परीक्षा (JNVST) अखिल भारतीय स्तर पर और ब्लॉक तथा जिला स्तर पर प्रतिवर्ष आयोजित की जाती है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
       "options_hindi": [
         "केवल 2 और 3",
+        "1, 2 और 3",
         "केवल 1 और 2",
+        "केवल 1 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the geographical coverage, operational status, and entrance assessment of Jawahar Navodaya Vidyalayas:\n\n1. Jawahar Navodaya Vidyalayas exist all over India, with the exception of the State of Tamil Nadu.\n2. As of the 2022-23 academic session, out of the 661 sanctioned JNVs, 649 JNVs were functional.\n3. The Jawahar Navodaya Vidyalaya Selection Test (JNVST) is conducted annually on an All India basis and at block and district levels.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "2 and 3 only",
+        "1, 2 and 3",
+        "1 and 2 only",
+        "1 and 3 only"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "All three statements are correct. JNVs exist across all states and UTs in India except Tamil Nadu. As of 2022-23, out of 661 sanctioned JNVs, 649 are functional. Furthermore, the selection test (JNVST) is conducted annually on an All India basis and at block and district levels.",
+      "explanation_hindi": "तीनों कथन सही हैं। तमिलनाडु को छोड़कर भारत के सभी राज्यों और केंद्र शासित प्रदेशों में JNV स्थित हैं। 2022-23 तक, स्वीकृत 661 JNV में से 649 क्रियाशील हैं। इसके अलावा, चयन परीक्षा (JNVST) अखिल भारतीय स्तर पर और ब्लॉक तथा जिला स्तर पर प्रतिवर्ष आयोजित की जाती है।",
+      "topic": "Navodaya (JNV)",
+      "difficulty": "medium",
+      "key_facts": [
+        "JNVs exist all over India, with the exception of Tamil Nadu. [6] As of 31-December-2022, 661 JNVs were running... As of the 2022-23 academic session, JNVs had been sanctioned for 638 districts. In addition, ten JNVs have been sanctioned in districts having a large population of ST population, ten in districts having a large concentration of SC population and 3 special JNVs in Manipur and Ratlam, bringing the total number of sanctioned JNVs to 661. [7] Out of these 649 JNVs are functional... The test is held annually on an All India basis and at block and district levels."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:00:07.744149"
+    },
+    {
+      "id": "d3dbbf06-912b-43a6-830c-c237a4826ed9",
+      "created_at": "2026-10-10T07:55:31.686060",
+      "question_hindi": "जवाहर नवोदय विद्यालयों में चयन परीक्षा और प्रवेश नीतियों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. जवाहर नवोदय विद्यालय चयन परीक्षा (JNVST) का प्रारूप प्रारंभ में NCERT द्वारा तैयार और विकसित किया गया था और अब यह CBSE द्वारा आयोजित की जाती है।\n2. JNVST में प्रत्येक जिले में कम से कम 75% सीटें ग्रामीण क्षेत्रों के बच्चों के लिए आरक्षित हैं।\n3. अनुसूचित जातियों और अनुसूचित जनजातियों के आरक्षण के अतिरिक्त, अन्य पिछड़ा वर्ग (OBC) के छात्रों को 27% आरक्षण प्रदान किया जाता है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 1 और 2",
+        "केवल 2 और 3",
         "केवल 1 और 3",
         "1, 2 और 3"
       ],
@@ -135,144 +246,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "With reference to the admission eligibility and fee structure in Jawahar Navodaya Vidyalayas (JNVs), consider the following statements:\n\n1. In Jawahar Navodaya Vidyalayas, the Vidyalaya Vikas Nidhi (VVN) is charged at ₹600 per month and is collected exclusively from students of Classes 9 to 12.\n2. Candidates who have already passed Class 7 in a previous academic session are eligible to apply for Class 9 admission in JNVST.\n3. Candidates who have already passed Class 10 prior to the 2026–27 session are not eligible to apply for Class 11 lateral entry admission.\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the selection test and admission policies in Jawahar Navodaya Vidyalayas:\n\n1. The Jawahar Navodaya Vidyalaya Selection Test (JNVST) was designed and developed initially by NCERT and is now conducted by CBSE.\n2. In JNVST, at least 75% of the seats in each district are reserved for children from rural areas.\n3. Over and above the reservation for Scheduled Castes and Scheduled Tribes, a 27% reservation is provided to OBC students.\n\nWhich of the statements given above are correct?",
       "options_english": [
-        "2 and 3 only",
         "1 and 2 only",
+        "2 and 3 only",
         "1 and 3 only",
         "1, 2 and 3"
       ],
-      "correct_answer": "c",
-      "explanation_english": "Statement 1 is correct: The Vidyalaya Vikas Nidhi (VVN) fee of ₹600 per month is the only charge applicable, and it is collected exclusively from students of Classes 9 to 12. Statement 2 is incorrect: The eligibility criteria specifies that candidates who have already passed Class 7 in a previous academic session are not eligible to apply for Class 9 admission. Statement 3 is correct: Candidates who have already passed Class 10 prior to the 2026-27 session are not eligible to apply for Class 11 lateral entry admission.",
-      "explanation_hindi": "कथन 1 सही है: ₹600 प्रति माह की विद्यालय विकास निधि (VVN) एकमात्र लागू प्रभार है, और यह विशेष रूप से कक्षा 9 से 12 के छात्रों से एकत्र किया जाता है। कथन 2 गलत है: पात्रता मानदंडों के अनुसार, जिन अभ्यर्थियों ने पिछले शैक्षणिक सत्र में कक्षा 7 उत्तीर्ण कर ली है, वे कक्षा 9 में प्रवेश के लिए आवेदन करने के पात्र नहीं हैं। कथन 3 सही है: जिन उम्मीदवारों ने 2026-27 सत्र से पहले कक्षा 10 उत्तीर्ण कर ली है, वे कक्षा 11 लेटरल एंट्री प्रवेश के लिए आवेदन करने के पात्र नहीं हैं।",
-      "topic": "Navodaya (JNV)",
-      "difficulty": "hard",
-      "key_facts": [
-        "The Vidyalaya Vikas Nidhi (VVN) fee of ₹600 per month is the only charge applicable, and it is collected exclusively from students of Classes 9 to 12."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:50:41.325614"
-    },
-    {
-      "id": "1efcc855-7b1d-4945-9277-1b2abe97483e",
-      "created_at": "2026-10-10T07:49:45.159528",
-      "question_hindi": "नवोदय विद्यालय समिति (NVS) के क्षेत्रीय कार्यालयों के अधिकार क्षेत्र के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (क्षेत्रीय कार्यालय)\nA. चंडीगढ़\nB. हैदराबाद\nC. पटना\nD. शिलांग\n\nसूची II (शामिल राज्य/केन्द्र शासित प्रदेश)\n1. बिहार, झारखंड, पश्चिम बंगाल\n2. अरुणाचल प्रदेश, असम, मणिपुर, मेघालय, मिजोरम, नागालैंड, सिक्किम, त्रिपुरा\n3. चंडीगढ़ यू.टी., हिमाचल प्रदेश, जम्मू और कश्मीर, लद्दाख यू.टी., पंजाब\n4. अंडमान और निकोबार द्वीप समूह यू.टी., आंध्र प्रदेश, कर्नाटक, केरल, लक्षद्वीप यू.टी., पांडिचेरी यू.टी., तेलंगाना\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
-      "options_hindi": [
-        "A-2, B-4, C-1, D-3",
-        "A-3, B-1, C-4, D-2",
-        "A-3, B-4, C-1, D-2",
-        "A-4, B-3, C-1, D-2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List I with List II regarding the jurisdiction of Regional Offices of Navodaya Vidyalaya Samiti (NVS):\n\nList I (Regional Office)\nA. Chandigarh\nB. Hyderabad\nC. Patna\nD. Shillong\n\nList II (States/UTs Covered)\n1. Bihar, Jharkhand, West Bengal\n2. Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura\n3. Chandigarh U.T., Himachal Pradesh, Jammu & Kashmir, Ladakh U.T., Punjab\n4. A&N Islands U.T., Andhra Pradesh, Karnataka, Kerala, Lakshadweep U.T., Pondicherry U.T., Telangana\n\nSelect the correct answer using the codes given below:",
-      "options_english": [
-        "A-2, B-4, C-1, D-3",
-        "A-3, B-1, C-4, D-2",
-        "A-3, B-4, C-1, D-2",
-        "A-4, B-3, C-1, D-2"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "According to the official jurisdiction of NVS Regional Offices:\n- Chandigarh covers Chandigarh U.T., Himachal Pradesh, Jammu & Kashmir, Ladakh U.T., and Punjab.\n- Hyderabad covers A&N Islands U.T., Andhra Pradesh, Karnataka, Kerala, Lakshadweep U.T., Pondicherry U.T., and Telangana.\n- Patna covers Bihar, Jharkhand, and West Bengal.\n- Shillong covers Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, and Tripura.",
-      "explanation_hindi": "एनवीएस क्षेत्रीय कार्यालयों के आधिकारिक अधिकार क्षेत्र के अनुसार:\n- चंडीगढ़ के अंतर्गत चंडीगढ़ यू.टी., हिमाचल प्रदेश, जम्मू और कश्मीर, लद्दाख यू.टी., और पंजाब आते हैं।\n- हैदराबाद के अंतर्गत अंडमान और निकोबार द्वीप समूह यू.टी., आंध्र प्रदेश, कर्नाटक, केरल, लक्षद्वीप यू.टी., पांडिचेरी यू.टी., और तेलंगाना आते हैं।\n- पटना के अंतर्गत बिहार, झारखंड, और पश्चिम बंगाल आते हैं।\n- शिलांग के अंतर्गत अरुणाचल प्रदेश, असम, मणिपुर, मेघालय, मिजोरम, नागालैंड, सिक्किम, और त्रिपुरा आते हैं।",
-      "topic": "Navodaya (JNV)",
-      "difficulty": "medium",
-      "key_facts": [
-        "2.|Chandigarh| 57 + 2 = 59|Chandigarh U.T.(1), Himachal Pradesh (12),Jammu & Kashmir (21), Ladakh U.T. (2), Punjab (23)|\n3.|Hyderabad| 74 + 3 = 77|A&N Islands U.T.(3), Andhra Pradesh (15), Karnataka(31), Kerala(14), Lakshadweep U.T.(1), Pondicherry U.T. (4), Telangana(9)|\n4.|Jaipur| 63 + 2 = 65|Delhi (9), Haryana (21), Rajasthan(35)|\n5.|Lucknow| 88 + 1 = 89|Uttar Pradesh (76), Uttarakhand(13)|\n6.|Patna| 81 + 4 = 85|Bihar (39), Jharkhand (26), West Bengal (20)|\n7.|Pune| 71 + 2 = 73|Dadra Nagar Haveli and Daman & Diu U.T.(3), Goa (2). Gujarat(34), Maharashtra(34)|\n8.|Shillong| 96 + 4 = 100|Arunachal Pradesh(18), Assam(28), Manipur (11), Meghalaya (12), Mizoram (8), Nagaland (11), Sikkim (4), Tripura(8)|"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:49:45.159528"
-    },
-    {
-      "id": "267e7b3b-4b75-434e-aaaf-6fe877c300bb",
-      "created_at": "2026-10-10T07:57:42.490312",
-      "question_hindi": "विशेष श्रेणियों के तहत स्वीकृत अतिरिक्त जवाहर नवोदय विद्यालयों के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (जेएनवी स्वीकृत जिला)\nA. सेनापति-II\nB. रतलाम-II\nC. दक्षिण 24 परगना\nD. पलामू\n\nसूची II (श्रेणी / राज्य)\n1. मणिपुर में विशेष मामले के तहत स्वीकृत जेएनवी\n2. मध्य प्रदेश में विशेष मामले के तहत स्वीकृत जेएनवी\n3. पश्चिम बंगाल में एससी बहुल आबादी के लिए अतिरिक्त जेएनवी\n4. झारखंड में एससी बहुल आबादी के लिए अतिरिक्त जेएनवी\n\nसही कूट का चयन कीजिए:",
-      "options_hindi": [
-        "A-2, B-1, C-3, D-4",
-        "A-1, B-2, C-3, D-4",
-        "A-1, B-2, C-4, D-3",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List I with List II regarding the additional Jawahar Navodaya Vidyalayas sanctioned under special categories:\n\nList I (District Sanctioned JNV)\nA. Senapati-II\nB. Ratlam-II\nC. South 24 Parganas\nD. Palamu\n\nList II (Category / State)\n1. Special case JNV in Manipur\n2. Special case JNV in Madhya Pradesh\n3. Additional JNV for SC concentrated population in West Bengal\n4. Additional JNV for SC concentrated population in Jharkhand\n\nSelect the correct code:",
-      "options_english": [
-        "A-2, B-1, C-3, D-4",
-        "A-1, B-2, C-3, D-4",
-        "A-1, B-2, C-4, D-3",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "As per NVS records, 3 JNVs were sanctioned as special cases: Senapati-II (Manipur), Ukhrul-II (Manipur), and Ratlam-II (Madhya Pradesh). In districts with large concentrations of SC population, additional JNVs were sanctioned in Palamu (Jharkhand) and South 24 Parganas (West Bengal) in 2009-10.",
-      "explanation_hindi": "एनवीएस रिकॉर्ड के अनुसार, विशेष मामलों के रूप में 3 जेएनवी स्वीकृत किए गए थे: सेनापति-II (मणिपुर), उखरूल-II (मणिपुर), और रतलाम-II (मध्य प्रदेश)। इसके अलावा, अनुसूचित जाति की अधिक सघनता वाले जिलों में वर्ष 2009-10 में पलामू (झारखंड) और दक्षिण 24 परगना (पश्चिम बंगाल) में अतिरिक्त जेएनवी स्वीकृत किए गए थे।",
-      "topic": "Navodaya (JNV)",
-      "difficulty": "hard",
-      "key_facts": [
-        "3 JNVs have been sanctioned in 03 districts i.e. Senapati-II (Manipur), Ukhrul-II (Manipur) & Ratlam-II (Madhya Pradesh) as special case, bringing the total number of JNVs sanctioned to 661... 5|Jharkhand|Palamu|2009-10| 6|Bihar|Gaya|2009-10| 7|West Bengal|South 24 Paraganas|2009-10|"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:57:42.490312"
-    },
-    {
-      "id": "6f8e5268-03d9-4d51-8e51-68c3941fcf69",
-      "created_at": "2026-10-10T07:48:59.925519",
-      "question_hindi": "नवोदय विद्यालय समिति (NVS) के क्षेत्रीय कार्यालयों के क्षेत्राधिकार के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (क्षेत्रीय कार्यालय)\nA. भोपाल\nB. जयपुर\nC. लखनऊ\nD. पुणे\n\nसूची II (शामिल राज्य/केन्द्र शासित प्रदेश)\n1. दिल्ली, हरियाणा, राजस्थान\n2. छत्तीसगढ़, मध्य प्रदेश, उड़ीसा\n3. दादरा नगर हवेली और दमन एवं दीव यू.टी., गोवा, गुजरात, महाराष्ट्र\n4. उत्तर प्रदेश, उत्तराखंड\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
-      "options_hindi": [
-        "A-3, B-1, C-4, D-2",
-        "A-2, B-4, C-1, D-3",
-        "A-1, B-2, C-3, D-4",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List I with List II regarding the jurisdiction of Regional Offices of Navodaya Vidyalaya Samiti (NVS):\n\nList I (Regional Office)\nA. Bhopal\nB. Jaipur\nC. Lucknow\nD. Pune\n\nList II (States/UTs Covered)\n1. Delhi, Haryana, Rajasthan\n2. Chhattisgarh, Madhya Pradesh, Orissa\n3. Dadra Nagar Haveli and Daman & Diu U.T., Goa, Gujarat, Maharashtra\n4. Uttar Pradesh, Uttarakhand\n\nSelect the correct answer using the codes given below:",
-      "options_english": [
-        "A-3, B-1, C-4, D-2",
-        "A-2, B-4, C-1, D-3",
-        "A-1, B-2, C-3, D-4",
-        "A-2, B-1, C-4, D-3"
-      ],
       "correct_answer": "d",
-      "explanation_english": "According to the official NVS details: Bhopal Region covers Chhattisgarh, Madhya Pradesh, and Orissa; Jaipur Region covers Delhi, Haryana, and Rajasthan; Lucknow Region covers Uttar Pradesh and Uttarakhand; Pune Region covers Dadra Nagar Haveli and Daman & Diu U.T., Goa, Gujarat, and Maharashtra.",
-      "explanation_hindi": "एनवीएस के आधिकारिक विवरण के अनुसार: भोपाल क्षेत्र छत्तीसगढ़, मध्य प्रदेश और उड़ीसा को कवर करता है; जयपुर क्षेत्र दिल्ली, हरियाणा और राजस्थान को कवर करता है; लखनऊ क्षेत्र उत्तर प्रदेश और उत्तराखंड को कवर करता है; पुणे क्षेत्र दादरा नगर हवेली और दमन एवं दीव यू.टी., गोवा, गुजरात और महाराष्ट्र को कवर करता है।",
+      "explanation_english": "According to the official Vision & Mission documentation of NVS, the JNVST was designed and developed initially by NCERT and is now conducted by CBSE. Furthermore, admission provides at least 75% of the seats for rural children, and 27% reservation is provided to OBC students over and above the reservation for SCs & STs. Hence, all statements 1, 2, and 3 are correct.",
+      "explanation_hindi": "एनवीएस के विज़न और मिशन दस्तावेज़ के अनुसार, जेएनवीएसटी का प्रारूप प्रारंभ में एनसीईआरटी द्वारा तैयार और विकसित किया गया था और अब सीबीएसई द्वारा आयोजित किया जाता है। इसके अतिरिक्त, ग्रामीण बच्चों के लिए कम से कम 75% सीटें आरक्षित हैं, तथा अनुसूचित जाति/अनुसूचित जनजाति के आरक्षण के ऊपर 27% आरक्षण ओबीसी छात्रों को दिया जाता है। अतः 1, 2 और 3 तीनों कथन सही हैं।",
       "topic": "Navodaya (JNV)",
       "difficulty": "medium",
       "key_facts": [
-        "Bhopal | 108 + 5 = 113 | Chhattisgarh (28), Madhya Pradesh (54), Orissa(31) | Jaipur | 63 + 2 = 65 | Delhi (9), Haryana (21), Rajasthan(35) | Lucknow | 88 + 1 = 89 | Uttar Pradesh (76), Uttarakhand(13) | Pune | 71 + 2 = 73 | Dadra Nagar Haveli and Daman & Diu U.T.(3), Goa (2). Gujarat(34), Maharashtra(34)"
+        "Navodaya Vidyalayas draw their students strength from talented children, selected on the basis of a merit test, called the Jawahar Navodaya Vidyalaya Selection Test, designed, developed and conducted initially by NCERT and now by CBSE. The test is held annually on an All India basis and at block and district levels... Admission in Jawahar Navodaya Vidyalayas is primarily for children from the rural areas, with provision of at least 75% seats for rural children. Seats are reserved for children from SC& ST communities in proportion to their population in the district but not less than the national average. 27% reservation is provided to the OBC students over and above reservation of SCs& STs."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:48:59.925519"
+      "processed_at": "2026-10-10T07:55:31.686060"
     },
     {
-      "id": "93d9b578-d477-4335-95c1-9cb981cfd0c3",
-      "created_at": "2026-10-10T07:52:00.905281",
-      "question_hindi": "जवाहर नवोदय विद्यालयों (JNVs) के वर्गीकरण और संस्थागत मापदंडों के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (श्रेणी / पैरामीटर)\nA. श्रेणी 'A' विद्यालय\nB. श्रेणी 'B' विद्यालय\nC. श्रेणी 'C' विद्यालय\nD. 2021-22 में कुल क्रियाशील जेएनवी\n\nसूची II (विवरण / मान)\n1. भौतिक सुविधाओं के कारण प्रवेश क्षमता 40 विद्यार्थियों तक सीमित\n2. कक्षा 6 में किसी भी विद्यार्थी को प्रवेश नहीं दे सकते\n3. 80 विद्यार्थियों के प्रवेश हेतु पर्याप्त अवसंरचना\n4. 650\n\nसही कूट का चयन कीजिए:",
+      "id": "508c3fa3-7e2e-4d9c-993c-08b1ac5dd4c3",
+      "created_at": "2026-10-10T07:48:59.926029",
+      "question_hindi": "जवाहर नवोदय विद्यालयों का आधिकारिक संस्कृत ध्येयवाक्य (Motto) क्या है?",
       "options_hindi": [
-        "A-1, B-3, C-2, D-4",
-        "A-3, B-2, C-1, D-4",
-        "A-3, B-1, C-2, D-4",
-        "A-2, B-1, C-3, D-4"
+        "सत्यमेव जयते",
+        "तमसो मा ज्योतिर्गमय",
+        "प्रज्ञानं ब्रह्म",
+        "योगः कर्मसु कौशलम्"
       ],
       "option_labels": [
         "A",
@@ -283,70 +283,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Match List I with List II regarding the categorisation and institutional parameters of Jawahar Navodaya Vidyalayas (JNVs):\n\nList I (Category / Parameter)\nA. Category 'A' Vidyalayas\nB. Category 'B' Vidyalayas\nC. Category 'C' Vidyalayas\nD. Total functional JNVs in 2021-22\n\nList II (Description / Value)\n1. Intake capacity restricted to 40 students due to physical facilities\n2. Cannot admit any student in Class 6 at all\n3. Adequate infrastructure for an intake of 80 students\n4. 650\n\nSelect the correct code:",
+      "question_english": "What is the official Sanskrit motto of Jawahar Navodaya Vidyalayas?",
       "options_english": [
-        "A-1, B-3, C-2, D-4",
-        "A-3, B-2, C-1, D-4",
-        "A-3, B-1, C-2, D-4",
-        "A-2, B-1, C-3, D-4"
+        "सत्यमेव जयते (Satyameva Jayate)",
+        "तमसो मा ज्योतिर्गमय (Tamaso Ma Jyotirgamaya)",
+        "प्रज्ञानं ब्रह्म (Prajñānam Brahma)",
+        "योगः कर्मसु कौशलम् (Yogah Karmasu Kaushalam)"
       ],
       "correct_answer": "c",
-      "explanation_english": "Before the conduct of JNVST, JNVs are categorized based on infrastructure: Category 'A' has adequate infrastructure for 80 students (A-3); Category 'B' has physical facilities restricted to a capacity of 40 students (B-1); and Category 'C' cannot admit any student in Class 6 at all (C-2). In the academic year 2021-22, there were 650 functional JNVs (D-4). Therefore, the correct code is A-3, B-1, C-2, D-4.",
-      "explanation_hindi": "JNVST के आयोजन से पहले, बुनियादी ढांचे के आधार पर जेएनवी को वर्गीकृत किया जाता है: श्रेणी 'A' में 80 छात्रों के लिए पर्याप्त बुनियादी ढांचा है (A-3); श्रेणी 'B' में भौतिक सुविधाओं की क्षमता 40 छात्रों तक सीमित है (B-1); और श्रेणी 'C' कक्षा 6 में किसी भी छात्र को प्रवेश नहीं दे सकती (C-2)। शैक्षणिक वर्ष 2021-22 में 650 कार्यात्मक जेएनवी थे (D-4)। अतः सही कूट A-3, B-1, C-2, D-4 है।",
-      "topic": "Navodaya (JNV)",
-      "difficulty": "medium",
-      "key_facts": [
-        "JNVs with adequate infrastructure for 80 students are in “A” category; those with capacity for 40 are in “B”; and those which cannot admit any student in Class 6 at all are placed in “C”... According to information provided by NVS in response to RTI applications filed in October 2022 by Careers360, there were 650 functional JNVs in 2021-22 and 648 in 2020-21."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:52:00.905281"
-    },
-    {
-      "id": "f1b108a0-7f25-4e3f-a602-4506f891a940",
-      "created_at": "2026-10-10T07:56:59.520681",
-      "question_hindi": "मंत्रिमंडल की नियुक्ति समिति (ACC) द्वारा अनुमोदित कार्मिक एवं प्रशिक्षण विभाग (DoPT) के आदेश के अनुसार, केंद्रीय विद्यालय संगठन (KVS) के आयुक्त के रूप में कार्यरत किस अधिकारी को नवोदय विद्यालय समिति (NVS) के आयुक्त का अतिरिक्त प्रभार सौंपा गया?",
-      "options_hindi": [
-        "आईएएस जयदीप गुप्ता",
-        "आईएएस वाई.एन. चतुर्वेदी",
-        "आईएएस हरिप्रिया पद्मनाभन",
-        "आईएएस विकास गुप्ता"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "As per the Department of Personnel and Training (DoPT) order approved by the Appointments Committee of the Cabinet (ACC), which officer serving as the Commissioner of Kendriya Vidyalaya Sangathan (KVS) was appointed to hold additional charge as the Commissioner of Navodaya Vidyalaya Samiti (NVS)?",
-      "options_english": [
-        "IAS Jaideep Gupta",
-        "IAS Y.N. Chaturvedi",
-        "IAS Haripriya Padmanabhan",
-        "IAS Vikas Gupta"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "Haryana-cadre 2001 batch IAS officer Vikas Gupta, serving as Commissioner of Kendriya Vidyalaya Sangathan (KVS), was given additional charge as Commissioner of Navodaya Vidyalaya Samiti (NVS).",
-      "explanation_hindi": "केंद्रीय विद्यालय संगठन (KVS) के आयुक्त के रूप में कार्यरत हरियाणा कैडर के 2001 बैच के आईएएस अधिकारी विकास गुप्ता को नवोदय विद्यालय समिति (NVS) के आयुक्त का अतिरिक्त प्रभार सौंपा गया था।",
+      "explanation_english": "The motto of Jawahar Navodaya Vidyalaya is 'प्रज्ञानं ब्रह्म' (Prajñānam Brahma), which translates to 'Pure Knowledge is Brahma'.",
+      "explanation_hindi": "जवाहर नवोदय विद्यालय का ध्येयवाक्य 'प्रज्ञानं ब्रह्म' (Prajñānam Brahma) है, जिसका अर्थ 'शुद्ध ज्ञान ही ब्रह्म है' होता है।",
       "topic": "Navodaya (JNV)",
       "difficulty": "easy",
       "key_facts": [
-        "Haryana-cadre IAS officer Vikas Gupta, currently serving as Commissioner of the Kendriya Vidyalaya Sangathan (KVS), has been given additional charge as Commissioner of the Navodaya Vidyalaya Samiti (NVS) under the Department of School Education and Literacy."
+        "Motto | प्रज्ञानं ब्रह्म (Sanskrit) Prajñānam Brahma (ISO) transl. \"Pure Knowledge is Brahma\""
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:56:59.520681"
+      "processed_at": "2026-10-10T07:48:59.926029"
     },
     {
-      "id": "7d2d5e37-9f70-4216-b223-d004375291dc",
-      "created_at": "2026-10-10T07:49:45.159528",
-      "question_hindi": "नवोदय विद्यालय समिति (NVS) की संगठनात्मक एवं प्रशासनिक संरचना के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. समिति के अध्यक्ष केंद्रीय शिक्षा मंत्री होते हैं।\n2. समिति की कार्यकारी समिति को दो उप-समितियों: वित्त समिति और शैक्षणिक सलाहकार समिति द्वारा सहायता प्रदान की जाती है।\n3. प्रशासनिक पदानुक्रम का कार्यकारी प्रमुख, जो समिति की कार्यकारी समिति द्वारा निर्धारित नीतियों को क्रियान्वित करता है, वह संयुक्त आयुक्त (Joint Commissioner) होता है।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "id": "4575653a-8ee6-4032-a7e3-800cf756a206",
+      "created_at": "2026-10-10T07:54:50.453441",
+      "question_hindi": "जवाहर नवोदय विद्यालयों में आधिकारिक प्रवेश अधिसूचना के अनुसार विद्यालय विकास निधि (VVN) के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. विद्यालय विकास निधि (VVN) कक्षा VI से कक्षा XII तक के सभी वर्गों के विद्यार्थियों से ली जाती है।\n2. सभी छात्राएं (बालिकाएं), दिव्यांग विद्यार्थी और अनुसूचित जाति/अनुसूचित जनजाति (SC/ST) वर्ग के विद्यार्थी VVN भुगतान से मुक्त हैं।\n3. सरकारी कर्मचारियों के बच्चों (गैर-छूट प्राप्त) के मामले में, VVN ₹1500/- प्रति माह या अभिभावक द्वारा प्राप्त वास्तविक बाल शिक्षा भत्ता, जो भी कम हो, की दर से लिया जाता है, किंतु यह ₹600/- प्रति माह से कम नहीं होगा।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
       "options_hindi": [
-        "केवल 1 और 2",
-        "1, 2 और 3",
         "केवल 1 और 3",
-        "केवल 2 और 3"
+        "1, 2 और 3",
+        "केवल 2 और 3",
+        "केवल 1 और 2"
       ],
       "option_labels": [
         "A",
@@ -357,23 +320,97 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the organizational and administrative structure of Navodaya Vidyalaya Samiti (NVS):\n\n1. The Chairman of the Samiti is the Union Minister of Education.\n2. The Executive Committee of the Samiti is assisted by two sub-committees: the Finance Committee and the Academic Advisory Committee.\n3. The executive head of the administrative pyramid who executes the policies laid down by the Samiti's executive committee is the Joint Commissioner.\n\nWhich of the statements given above is/are correct?",
+      "question_english": "Consider the following statements regarding Vidyalaya Vikas Nidhi (VVN) in Jawahar Navodaya Vidyalayas as per the official admission notification:\n\n1. Vidyalaya Vikas Nidhi (VVN) is charged from students of all classes from Class VI to Class XII.\n2. All girl students, Divyang students, and students belonging to SC/ST categories are exempted from paying VVN.\n3. For wards of Government employees (non-exempted), VVN is charged at Rs. 1500/- per month or actual Children Education Allowance received per month whichever is less, but not less than Rs. 600/- per month.\n\nWhich of the statements given above are correct?",
       "options_english": [
-        "1 and 2 only",
-        "1, 2 and 3",
         "1 and 3 only",
-        "2 and 3 only"
+        "1, 2 and 3",
+        "2 and 3 only",
+        "1 and 2 only"
       ],
-      "correct_answer": "a",
-      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because the executive head of the administrative pyramid is the Commissioner (not the Joint Commissioner), who executes the policies laid down by the Samiti's executive committee and is assisted at headquarters by Joint Commissioners, Deputy Commissioners, and Assistant Commissioners.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि प्रशासनिक पदानुक्रम के कार्यकारी प्रमुख आयुक्त (Commissioner) होते हैं (न कि संयुक्त आयुक्त), जो समिति की कार्यकारी समिति द्वारा बनाई गई नीतियों को लागू करते हैं और मुख्यालय स्तर पर संयुक्त आयुक्तों, उपायुक्तों और सहायक आयुक्तों द्वारा उनकी सहायता की जाती है।",
+      "correct_answer": "c",
+      "explanation_english": "Statement 1 is incorrect because VVN of Rs. 600/- per month is collected only from the students of Classes IX to XII, not from Classes VI to VIII (education is completely free in those classes). Statements 2 and 3 are correct: SC/ST, Divyang, all Girl students, and BPL family students are fully exempted. For non-exempted wards of government employees, it is charged at Rs. 1500/- per month or actual Children Education Allowance received whichever is less, with a minimum of Rs. 600/- per month.",
+      "explanation_hindi": "कथन 1 गलत है क्योंकि ₹600/- प्रति माह की दर से VVN केवल कक्षा IX से XII के विद्यार्थियों से ली जाती है, कक्षा VI से VIII तक नहीं। कथन 2 और 3 सही हैं: SC/ST, दिव्यांग, सभी बालिकाएं और BPL परिवार के विद्यार्थी पूरी तरह से छूट प्राप्त हैं। सरकारी कर्मचारियों के गैर-छूट प्राप्त बच्चों के लिए, यह ₹1500/- प्रति माह या प्राप्त वास्तविक बाल शिक्षा भत्ता, जो भी कम हो, पर लिया जाता है, किंतु यह ₹600/- प्रति माह से कम नहीं होगा।",
       "topic": "Navodaya (JNV)",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "key_facts": [
-        "The Chairman of the Samiti is the Minister of Education. The Samiti functions through the executive committee under the Chairmanship of the Minister of Education. The executive committee is responsible for the management of all affairs including allocation of funds to the Samiti and has the authority to exercise all powers of Samiti. It is assisted by two sub-committees, the Finance Committee and Academic Advisory Committee. The executive head of the administrative pyramid is the Commissioner who executes the policies laid down by the Samiti's executive committee."
+        "While education in the schools is free including board& lodging, uniform and textbooks, a sum of Rs.600/- per month is collected, only from the students of Classes IX to XII towards Vidyalaya Vikas Nidhi (VVN). However, students belonging to SC/ST categories, Divyang students, all Girl students and the students whose family income is below poverty line (BPL) are exempted. In respect of wards of Government employees other than exempted category (Students of classes VI to VIII, all SC/ST, Girl students, Divyang and wards of BPL families) Vikas Nidhi will be charged @Rs.1500/- per month or actual Children Education Allowance received by the parent per month whichever is less. However, VVN shall not be less than Rs.600/per student per month."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:49:45.159528"
+      "processed_at": "2026-10-10T07:54:50.453441"
+    },
+    {
+      "id": "229e8ce2-310e-4c6f-b68d-7233efe201aa",
+      "created_at": "2026-10-10T08:00:07.744149",
+      "question_hindi": "शुरुआत में, शैक्षणिक वर्ष 1985-86 के दौरान प्रायोगिक तौर पर पहले दो जवाहर नवोदय विद्यालय निम्नलिखित में से किन दो स्थानों पर स्थापित किए गए थे?",
+      "options_hindi": [
+        "झज्जर (हरियाणा) और अमरावती (महाराष्ट्र)",
+        "रोहतक (हरियाणा) और पुणे (महाराष्ट्र)",
+        "करनाल (हरियाणा) और नागपुर (महाराष्ट्र)",
+        "अंबाला (हरियाणा) और नासिक (महाराष्ट्र)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "To start with, the first two Jawahar Navodaya Vidyalayas were established experimentally during the academic year 1985–86 at which of the following two locations?",
+      "options_english": [
+        "Jhajjar (Haryana) and Amravati (Maharashtra)",
+        "Rohtak (Haryana) and Pune (Maharashtra)",
+        "Karnal (Haryana) and Nagpur (Maharashtra)",
+        "Ambala (Haryana) and Nashik (Maharashtra)"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under the policy envisaged in 1985–86, the experiment started by establishing two Jawahar Navodaya Vidyalayas at Jhajjar in Haryana and Amravati in Maharashtra.",
+      "explanation_hindi": "1985-86 में परिकल्पित नीति के तहत, हरियाणा के झज्जर और महाराष्ट्र के अमरावती में दो जवाहर नवोदय विद्यालय स्थापित करके यह प्रयोग शुरू किया गया था।",
+      "topic": "Navodaya (JNV)",
+      "difficulty": "easy",
+      "key_facts": [
+        "To start with, two Jawahar Navodaya Vidyalayas were established during 1985–86, at Jhajjar (Haryana) and Amravati (Maharashtra)."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:00:07.744149"
+    },
+    {
+      "id": "8bfb4d52-a840-438c-b3dd-1aaf58875ebd",
+      "created_at": "2026-10-10T08:01:33.987490",
+      "question_hindi": "राज्यानुसार कार्यात्मक जवाहर नवोदय विद्यालयों की संख्या के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (राज्य)\nA. मिजोरम\nB. नागालैंड\nC. केरल\nD. अरुणाचल प्रदेश\n\nसूची II (कार्यात्मक जेएनवी की संख्या)\n1. 8\n2. 11\n3. 14\n4. 18\n\nनीचे दिए गए कूट का उपयोग करके सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-4, B-3, C-2, D-1",
+        "A-2, B-1, C-4, D-3",
+        "A-3, B-4, C-1, D-2",
+        "A-1, B-2, C-3, D-4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding the state-wise number of functional Jawahar Navodaya Vidyalayas:\n\nList I (State)\nA. Mizoram\nB. Nagaland\nC. Kerala\nD. Arunachal Pradesh\n\nList II (Number of Functional JNVs)\n1. 8\n2. 11\n3. 14\n4. 18\n\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "A-4, B-3, C-2, D-1",
+        "A-2, B-1, C-4, D-3",
+        "A-3, B-4, C-1, D-2",
+        "A-1, B-2, C-3, D-4"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "As per the state-wise distribution list of functional JNVs in the official prospectus: Mizoram has 8 JNVs, Nagaland has 11 JNVs, Kerala has 14 JNVs, and Arunachal Pradesh has 18 JNVs.",
+      "explanation_hindi": "आधिकारिक विवरणिका में कार्यात्मक जेएनवी की राज्यवार सूची के अनुसार: मिजोरम में 8 जेएनवी, नागालैंड में 11 जेएनवी, केरल में 14 जेएनवी और अरुणाचल प्रदेश में 18 जेएनवी हैं।",
+      "topic": "Navodaya (JNV)",
+      "difficulty": "easy",
+      "key_facts": [
+        "| 2 | | Arunachal Pradesh | 18 | ... | 16 | | Kerala | 14 | ... | 23 | | Mizoram | 8 | | 24 | | Nagaland | 11 |"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:01:33.987490"
     },
     {
       "id": "37536831-a8bb-4aad-b4db-59dc3c48deb7",
@@ -413,14 +450,14 @@
       "processed_at": "2026-10-10T07:54:50.453441"
     },
     {
-      "id": "6cec044f-7f52-4d69-a61e-d916fe9b7c8b",
-      "created_at": "2026-10-10T07:58:45.378388",
-      "question_hindi": "विभिन्न शैक्षणिक वर्षों में विभिन्न बुनियादी ढांचा श्रेणियों के तहत जवाहर नवोदय विद्यालयों के वितरण के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (श्रेणी और शैक्षणिक वर्ष)\nA. 2020-21 में श्रेणी B विद्यालय\nB. 2020-21 में श्रेणी C विद्यालय\nC. 2021-22 में श्रेणी C विद्यालय\nD. 2022-23 में श्रेणी C विद्यालय\n\nसूची II (विद्यालयों की संख्या)\n1. 110\n2. 3\n3. 7\n4. 6\n\nसही कूट का चयन कीजिए:",
+      "id": "4bccb0fa-9029-4983-bb8a-40d364a2988f",
+      "created_at": "2026-10-10T07:53:27.801305",
+      "question_hindi": "अनुसूचित जातियों की बड़ी केंद्रित आबादी के कारण अतिरिक्त जेएनवी (JNV) स्वीकृत किए गए जिलों और उनके संबंधित राज्य का निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
       "options_hindi": [
-        "A-4, B-2, C-3, D-1",
-        "A-1, B-2, C-3, D-4",
-        "A-2, B-1, C-4, D-3",
-        "A-1, B-3, C-2, D-4"
+        "गुलबर्गा – कर्नाटक",
+        "पलामू – पश्चिम बंगाल",
+        "गया – बिहार",
+        "प्रकाशम – आंध्र प्रदेश"
       ],
       "option_labels": [
         "A",
@@ -431,208 +468,23 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Match List I with List II regarding the distribution of Jawahar Navodaya Vidyalayas under different infrastructure categories across academic years:\n\nList I (Category & Academic Year)\nA. Category B Vidyalayas in 2020-21\nB. Category C Vidyalayas in 2020-21\nC. Category C Vidyalayas in 2021-22\nD. Category C Vidyalayas in 2022-23\n\nList II (Number of Vidyalayas)\n1. 110\n2. 3\n3. 7\n4. 6\n\nSelect the correct code:",
+      "question_english": "Which of the following pairs of Districts sanctioned with an Additional JNV (due to a large concentrated population of Scheduled Castes) and their respective State is NOT correctly matched?",
       "options_english": [
-        "A-4, B-2, C-3, D-1",
-        "A-1, B-2, C-3, D-4",
-        "A-2, B-1, C-4, D-3",
-        "A-1, B-3, C-2, D-4"
+        "Gulbarga – Karnataka",
+        "Palamu – West Bengal",
+        "Gaya – Bihar",
+        "Prakasam – Andhra Pradesh"
       ],
       "correct_answer": "b",
-      "explanation_english": "As per RTI data provided by NVS on JNV distribution by category: In 2020-21, Category B was 110 and Category C was 3. In 2021-22, Category C was 7. In 2022-23, Category C was 6. Thus, A-1, B-2, C-3, D-4 is correct.",
-      "explanation_hindi": "श्रेणी के आधार पर JNV वितरण पर NVS द्वारा प्रदान किए गए आरटीआई आंकड़ों के अनुसार: 2020-21 में श्रेणी B की संख्या 110 और श्रेणी C की संख्या 3 थी। 2021-22 में श्रेणी C की संख्या 7 थी। 2022-23 में श्रेणी C की संख्या 6 थी। अतः A-1, B-2, C-3, D-4 सही है।",
+      "explanation_english": "As per the list of Additional JNVs Sanctioned for SC Large Concentrated Population Districts, Palamu is located in Jharkhand (sanctioned in 2009-10), whereas South 24 Parganas is the district sanctioned in West Bengal. Gulbarga is in Karnataka, Prakasam is in Andhra Pradesh, and Gaya is in Bihar.",
+      "explanation_hindi": "अनुसूचित जाति की बड़ी केंद्रित आबादी वाले जिलों के लिए स्वीकृत अतिरिक्त जेएनवी की सूची के अनुसार, पलामू झारखंड में स्थित है (2009-10 में स्वीकृत), जबकि पश्चिम बंगाल में स्वीकृत जिला दक्षिण 24 परगना है। गुलबर्गा कर्नाटक में है, प्रकाशम आंध्र प्रदेश में है, और गया बिहार में है।",
       "topic": "Navodaya (JNV)",
       "difficulty": "hard",
       "key_facts": [
-        "B\n\n110\n\n102\n\n102\n\nC\n\n3\n\n7\n\n6"
+        "5|Jharkhand|Palamu|2009-10|\n6|Bihar|Gaya|2009-10|\n7|West Bengal|South 24 Paraganas|2009-10|"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:58:45.378388"
-    },
-    {
-      "id": "02bb1bf7-072b-4263-8f64-551393830154",
-      "created_at": "2026-10-10T07:52:00.905281",
-      "question_hindi": "जवाहर नवोदय विद्यालयों में प्रवेश और आरक्षण अधिदेशों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "अनुसूचित जनजाति (ST) के लिए न्यूनतम आरक्षण स्तर — 7.5%",
-        "ग्रामीण उम्मीदवारों के लिए आरक्षण — कुल सीटों का कम से कम 75%",
-        "छात्राओं के लिए न्यूनतम आरक्षण कोटा — कुल सीटों का 25%",
-        "संयुक्त SC और ST आरक्षण की अधिकतम सीमा — 50%"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding admission and reservation mandates in Jawahar Navodaya Vidyalayas is NOT correctly matched?",
-      "options_english": [
-        "Minimum reservation floor for Scheduled Tribes (ST) — 7.5%",
-        "Reservation for rural candidates — At least 75% of total seats",
-        "Minimum reservation quota for girl students — 25% of total seats",
-        "Upper ceiling for combined SC and ST reservation — 50%"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "Pair 4 is NOT correctly matched. As per JNV norms, a minimum of 33% of the total seats are filled by girls, not 25%. Seats reserved for rural candidates must be at least 75%, and SC/ST reservation cannot fall below the national floors (15% for SC and 7.5% for ST) nor exceed 50% combined.",
-      "explanation_hindi": "युग्म 4 सही सुमेलित नहीं है। जेएनवी के नियमों के अनुसार, कुल सीटों में से न्यूनतम 33% सीटें बालिकाओं द्वारा भरी जाती हैं, न कि 25%। ग्रामीण उम्मीदवारों के लिए आरक्षित सीटें कम से कम 75% होनी चाहिए, और एससी/एसटी आरक्षण राष्ट्रीय स्तर (एससी के लिए 15% और एसटी के लिए 7.5%) से नीचे नहीं जा सकता और न ही दोनों का योग 50% से अधिक हो सकता है।",
-      "topic": "Navodaya (JNV)",
-      "difficulty": "medium",
-      "key_facts": [
-        "The JNVs reserve 75% of the total seats for candidates from rural areas and a minimum 33% of the total seats are filled by girls. Reservation is provided to children belonging to the Scheduled Castes (SC) and Scheduled Tribes (ST) in proportion to their population in the district where JNV is located. However, this reservation will not be less than the national average – 15% for SC and 7.5% for ST – nor more than 50% for both groups taken together."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:52:00.905281"
-    },
-    {
-      "id": "f92ca60d-93a9-4d60-a67b-57cf8d304460",
-      "created_at": "2026-10-10T07:56:32.946786",
-      "question_hindi": "नवोदय विद्यालय समिति (एनवीएस) पर मूल्यांकन अध्ययन में प्रलेखित संक्षिप्ताक्षरों और उनके पूर्ण रूपों का निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "DEAC – डेवलपमेंट इवैल्यूएशन एडवाइजरी कमेटी (Development Evaluation Advisory Committee)",
-        "NLI – नवोदय लिटरेसी इंस्टीट्यूट (Navodaya Literacy Institute)",
-        "CEMC – कंसल्टेंसी इवैल्यूएशन कम मॉनिटरिंग कमेटी (Consultancy Evaluation cum Monitoring Committee)",
-        "FCSA – फैकल्टी-कम-सिस्टम एडमिनिस्ट्रेटर (Faculty-cum-System Administrator)"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs of abbreviations and their corresponding full forms as documented in the Evaluation Study on Navodaya Vidyalaya Samiti (NVS) is NOT correctly matched?",
-      "options_english": [
-        "DEAC – Development Evaluation Advisory Committee",
-        "NLI – Navodaya Literacy Institute",
-        "CEMC – Consultancy Evaluation cum Monitoring Committee",
-        "FCSA – Faculty-cum-System Administrator"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "In the official List of Abbreviations of the Evaluation Study on Navodaya Vidyalaya Samiti (PEO Report No. 226), NLI stands for 'Navodaya Leadership Institute', not 'Navodaya Literacy Institute'. All other pairs are correctly matched.",
-      "explanation_hindi": "नवोदय विद्यालय समिति पर मूल्यांकन अध्ययन (पीईओ रिपोर्ट संख्या 226) की संक्षिप्ताक्षरों की आधिकारिक सूची में, NLI का पूर्ण रूप 'Navodaya Leadership Institute' (नवोदय लीडरशिप इंस्टीट्यूट) है, न कि 'Navodaya Literacy Institute'। अन्य सभी युग्म सही सुमेलित हैं।",
-      "topic": "Navodaya (JNV)",
-      "difficulty": "medium",
-      "key_facts": [
-        "FCSA : Faculty-cum-System Administrator\nCEMC : Consultancy Evaluation cum Monitoring Committee\nDEAC : Development Evaluation Advisory Committee\nNLI : Navodaya Leadership Institute"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:56:32.946786"
-    },
-    {
-      "id": "9a5f779c-8fa4-4cd3-8c49-8e545a798daa",
-      "created_at": "2026-10-10T07:54:09.826797",
-      "question_hindi": "जवाहर नवोदय विद्यालयों (JNVs) की संस्थागत आवासीय आवश्यकताओं और नेतृत्व अध्ययनों के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. जवाहर नवोदय विद्यालयों में शिक्षकों के लिए परिसर (कैंपस) में रहना अनिवार्य है।\n2. कौज़ेस और पोस्नर के लीडरशिप प्रैक्टिसेज इन्वेंटरी (LPI-ऑब्जर्वर) का उपयोग करके जेएनवी और केवी प्राचार्यों की तुलना करने वाले नेतृत्व अभ्यास अध्ययन में, 'मॉडलिंग द वे' (Modeling the Way) नेतृत्व अभ्यास जेएनवी डेटा में दूसरे स्थान पर रहा।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
-      "options_hindi": [
-        "केवल 1",
-        "1 और 2 दोनों",
-        "केवल 2",
-        "न तो 1, न ही 2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the institutional residential requirements and leadership studies of Jawahar Navodaya Vidyalayas (JNVs):\n\n1. Teachers in Jawahar Navodaya Vidyalayas are mandatorily required to stay on campus.\n2. In a leadership practice study comparing JNV and KV principals using the Kouzes and Posner Leadership Practices Inventory (LPI-Observer), the leadership practice 'Modeling the Way' ranked second in JNV data.\n\nWhich of the statements given above is/are correct?",
-      "options_english": [
-        "1 only",
-        "Both 1 and 2",
-        "2 only",
-        "Neither 1 nor 2"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Both statements are correct. In JNVs, teachers are required to stay on the residential campus. Additionally, research on leadership practices of school principals in Kerala revealed that the leadership practice 'Modeling the Way' stood second in rank order in the data of JNV, KV, and other leaders in the world.",
-      "explanation_hindi": "दोनों कथन सही हैं। जेएनवी में शिक्षकों को परिसर में रहना आवश्यक होता है। इसके अतिरिक्त, केरल में स्कूल प्राचार्यों के नेतृत्व प्रथाओं के अध्ययन से पता चला कि 'मॉडलिंग द वे' (Modeling the Way) अभ्यास जेएनवी, केवी और दुनिया के अन्य नेताओं के डेटा में दूसरे स्थान पर रहा।",
-      "topic": "Navodaya (JNV)",
-      "difficulty": "medium",
-      "key_facts": [
-        "The teachers are required to stay in the campus. ... The leadership practice Modeling the Way stands second in rank order in the data of JNV, KV, and other leaders in the world."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:54:09.826797"
-    },
-    {
-      "id": "7141505c-4d86-4631-96f5-02b9ed1543f9",
-      "created_at": "2026-10-10T07:52:39.860613",
-      "question_hindi": "जवाहर नवोदय विद्यालयों के संस्थागत मापदंडों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "निःशुल्क शिक्षा प्रावधान — सामान्य और ओबीसी एपीएल बालकों के लिए स्कूली शिक्षा के सभी 7 वर्षों (कक्षा VI से XII) तक पूर्णतः निःशुल्क",
-        "आधिकारिक छात्र आयु सीमा — 11-19 वर्ष",
-        "छात्र सदन प्रणाली (हाउस सिस्टम) — अरावली, नीलगिरि, शिवालिक, उदयगिरि",
-        "आदर्श वाक्य (ध्येय वाक्य) — प्रज्ञानं ब्रह्म"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding institutional parameters of Jawahar Navodaya Vidyalayas is NOT correctly matched?",
-      "options_english": [
-        "Free Education Provision — Free of cost for all 7 years of schooling (Classes VI to XII) for General and OBC APL boys",
-        "Official Student Age Range — 11–19 years",
-        "Student House System — Aravali, Nilgiri, Shivalik, Udaygiri",
-        "Motto — Prajñānam Brahma"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Pair 4 is NOT correctly matched. Education at JNVs is free of cost for students during the first 3 years of their stay (Classes VI to VIII). From Class IX onwards, a nominal fee of ₹1,125 per month is applicable for general and OBC caste students with an APL card.",
-      "explanation_hindi": "युग्म 4 सही सुमेलित नहीं है। जेएनवी में विद्यार्थियों के रहने के पहले 3 वर्षों (कक्षा 6 से 8) के दौरान शिक्षा निःशुल्क है। कक्षा 9 से आगे, एपीएल कार्ड वाले सामान्य और ओबीसी जाति के छात्रों के लिए ₹1,125 प्रति माह का मामूली शुल्क लागू होता है।",
-      "topic": "Navodaya (JNV)",
-      "difficulty": "medium",
-      "key_facts": [
-        "Budget for all the activities at JNVs is provided by the Department of School Education and Literacy, and it is free of cost for students during the first 3 years of stay, from class IX onwards a nominal fee of ₹ 1,125 per month is applicable for general and OBC caste students with APL card, yearly ₹18,000/-."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:52:39.860613"
-    },
-    {
-      "id": "cafa5398-12f3-4e34-9a23-45da5042ec60",
-      "created_at": "2026-10-10T07:57:42.490312",
-      "question_hindi": "नवोदय विद्यालय समिति (NVS) के प्रशासनिक ढांचे के अनुसार, इसके प्रत्येक क्षेत्रीय कार्यालय का प्रमुख किस पदनाम का अधिकारी होता है?",
-      "options_hindi": [
-        "संयुक्त आयुक्त (Joint Commissioner)",
-        "सहायक आयुक्त (Assistant Commissioner)",
-        "क्षेत्रीय निदेशक (Regional Director)",
-        "उपायुक्त (Deputy Commissioner)"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "According to the administrative setup of Navodaya Vidyalaya Samiti (NVS), each of its Regional Offices is headed by an officer of which designation?",
-      "options_english": [
-        "Joint Commissioner",
-        "Assistant Commissioner",
-        "Regional Director",
-        "Deputy Commissioner"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "The eight Regional Offices of Navodaya Vidyalaya Samiti are located at Bhopal, Chandigarh, Hyderabad, Jaipur, Lucknow, Patna, Pune, and Shillong. Each Regional Office is headed by a Deputy Commissioner.",
-      "explanation_hindi": "नवोदय विद्यालय समिति के आठ क्षेत्रीय कार्यालय भोपाल, चंडीगढ़, हैदराबाद, जयपुर, लखनऊ, पटना, पुणे और शिलांग में स्थित हैं। प्रत्येक क्षेत्रीय कार्यालय का नेतृत्व एक उपायुक्त (Deputy Commissioner) द्वारा किया जाता है।",
-      "topic": "Navodaya (JNV)",
-      "difficulty": "easy",
-      "key_facts": [
-        "Each Regional Office is headed by a Deputy Commissioner."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:57:42.490312"
+      "processed_at": "2026-10-10T07:53:27.801305"
     },
     {
       "id": "34b1bba4-90be-4aa6-82cc-8285f68a98b7",
@@ -672,14 +524,14 @@
       "processed_at": "2026-10-10T08:01:33.987490"
     },
     {
-      "id": "9f65c652-b6bd-495a-88b2-04a6ca5dbc9b",
-      "created_at": "2026-10-10T07:50:08.562806",
-      "question_hindi": "नवोदय विद्यालयों के संबंध में वाई.एन. चतुर्वेदी समिति (2001 में गठित) के निम्नलिखित निष्कर्षों/सिफारिशों पर विचार कीजिए:\n\n1. सीबीएसई बोर्ड परीक्षाओं में, कक्षा X में जेएनवी छात्रों का उत्तीर्ण प्रतिशत सभी छात्रों की तुलना में 20% अधिक और कक्षा XII में 10% अधिक था।\n2. आईआईएम अहमदाबाद द्वारा किए गए एक अध्ययन से पता चला कि लगभग 80% छात्र और उनके परिवार जवाहर नवोदय विद्यालयों की सराहना करते थे।\n3. अध्ययन से पता चला कि नवोदय विद्यालयों से उत्तीर्ण होने वाले 75% छात्रों ने उच्च शिक्षा प्राप्त की।\n\nउपर्युक्त में से कौन से कथन सही हैं?",
+      "id": "1efcc855-7b1d-4945-9277-1b2abe97483e",
+      "created_at": "2026-10-10T07:49:45.159528",
+      "question_hindi": "नवोदय विद्यालय समिति (NVS) के क्षेत्रीय कार्यालयों के अधिकार क्षेत्र के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (क्षेत्रीय कार्यालय)\nA. चंडीगढ़\nB. हैदराबाद\nC. पटना\nD. शिलांग\n\nसूची II (शामिल राज्य/केन्द्र शासित प्रदेश)\n1. बिहार, झारखंड, पश्चिम बंगाल\n2. अरुणाचल प्रदेश, असम, मणिपुर, मेघालय, मिजोरम, नागालैंड, सिक्किम, त्रिपुरा\n3. चंडीगढ़ यू.टी., हिमाचल प्रदेश, जम्मू और कश्मीर, लद्दाख यू.टी., पंजाब\n4. अंडमान और निकोबार द्वीप समूह यू.टी., आंध्र प्रदेश, कर्नाटक, केरल, लक्षद्वीप यू.टी., पांडिचेरी यू.टी., तेलंगाना\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
       "options_hindi": [
-        "1, 2 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3",
-        "केवल 1 और 3"
+        "A-2, B-4, C-1, D-3",
+        "A-3, B-1, C-4, D-2",
+        "A-3, B-4, C-1, D-2",
+        "A-4, B-3, C-1, D-2"
       ],
       "option_labels": [
         "A",
@@ -690,33 +542,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following findings/recommendations of the Y.N. Chaturvedi Committee (constituted in 2001) regarding Navodaya Vidyalayas:\n\n1. In the CBSE board examinations, the pass percentage for JNV students was 20% higher than for all students in Class X, and 10% higher in Class XII.\n2. A study conducted by IIM Ahmedabad showed that about 80% of students and their families were appreciative of Jawahar Navodaya Vidyalayas.\n3. The study revealed that 75% of students passing out of Navodaya Vidyalayas pursued higher education.\n\nWhich of the statements given above are correct?",
+      "question_english": "Match List I with List II regarding the jurisdiction of Regional Offices of Navodaya Vidyalaya Samiti (NVS):\n\nList I (Regional Office)\nA. Chandigarh\nB. Hyderabad\nC. Patna\nD. Shillong\n\nList II (States/UTs Covered)\n1. Bihar, Jharkhand, West Bengal\n2. Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura\n3. Chandigarh U.T., Himachal Pradesh, Jammu & Kashmir, Ladakh U.T., Punjab\n4. A&N Islands U.T., Andhra Pradesh, Karnataka, Kerala, Lakshadweep U.T., Pondicherry U.T., Telangana\n\nSelect the correct answer using the codes given below:",
       "options_english": [
-        "1, 2 and 3",
-        "1 and 2 only",
-        "2 and 3 only",
-        "1 and 3 only"
+        "A-2, B-4, C-1, D-3",
+        "A-3, B-1, C-4, D-2",
+        "A-3, B-4, C-1, D-2",
+        "A-4, B-3, C-1, D-2"
       ],
-      "correct_answer": "a",
-      "explanation_english": "All three statements are correct as per the Y.N. Chaturvedi Committee's summary: pass percentage for JNV students was 20% more for Class X and 10% more for Class XII; the IIM Ahmedabad study noted about 80% appreciation, and 75% of pass-out students pursued higher education.",
-      "explanation_hindi": "वाई.एन. चतुर्वेदी समिति के सारांश के अनुसार तीनों कथन सही हैं: जेएनवी छात्रों का उत्तीर्ण प्रतिशत कक्षा X के लिए 20% अधिक और कक्षा XII के लिए 10% अधिक था; आईआईएम अहमदाबाद के अध्ययन में लगभग 80% सराहना दर्ज की गई, और 75% उत्तीर्ण छात्रों ने उच्च शिक्षा प्राप्त की।",
+      "correct_answer": "c",
+      "explanation_english": "According to the official jurisdiction of NVS Regional Offices:\n- Chandigarh covers Chandigarh U.T., Himachal Pradesh, Jammu & Kashmir, Ladakh U.T., and Punjab.\n- Hyderabad covers A&N Islands U.T., Andhra Pradesh, Karnataka, Kerala, Lakshadweep U.T., Pondicherry U.T., and Telangana.\n- Patna covers Bihar, Jharkhand, and West Bengal.\n- Shillong covers Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, and Tripura.",
+      "explanation_hindi": "एनवीएस क्षेत्रीय कार्यालयों के आधिकारिक अधिकार क्षेत्र के अनुसार:\n- चंडीगढ़ के अंतर्गत चंडीगढ़ यू.टी., हिमाचल प्रदेश, जम्मू और कश्मीर, लद्दाख यू.टी., और पंजाब आते हैं।\n- हैदराबाद के अंतर्गत अंडमान और निकोबार द्वीप समूह यू.टी., आंध्र प्रदेश, कर्नाटक, केरल, लक्षद्वीप यू.टी., पांडिचेरी यू.टी., और तेलंगाना आते हैं।\n- पटना के अंतर्गत बिहार, झारखंड, और पश्चिम बंगाल आते हैं।\n- शिलांग के अंतर्गत अरुणाचल प्रदेश, असम, मणिपुर, मेघालय, मिजोरम, नागालैंड, सिक्किम, और त्रिपुरा आते हैं।",
       "topic": "Navodaya (JNV)",
       "difficulty": "medium",
       "key_facts": [
-        "The pass percentage for Jawahar Navodaya Vidyalaya students appearing in CBSE examination for Class X is 20% more than for all students and 10% more for Class XII... It has been ascertained by the study conducted by the IIM, Ahmedabad that there is general appreciation for the educational facilities offered by the Navodaya Vidyalayas with about 80% students and their families being appreciative of Jawahar Navodaya Vidyalayas. Another indicator about the success of the Scheme of Navodaya Vidyalayas is that 75% of the students passing out of Navodaya Vidyalayas have persued higher education."
+        "2.|Chandigarh| 57 + 2 = 59|Chandigarh U.T.(1), Himachal Pradesh (12),Jammu & Kashmir (21), Ladakh U.T. (2), Punjab (23)|\n3.|Hyderabad| 74 + 3 = 77|A&N Islands U.T.(3), Andhra Pradesh (15), Karnataka(31), Kerala(14), Lakshadweep U.T.(1), Pondicherry U.T. (4), Telangana(9)|\n4.|Jaipur| 63 + 2 = 65|Delhi (9), Haryana (21), Rajasthan(35)|\n5.|Lucknow| 88 + 1 = 89|Uttar Pradesh (76), Uttarakhand(13)|\n6.|Patna| 81 + 4 = 85|Bihar (39), Jharkhand (26), West Bengal (20)|\n7.|Pune| 71 + 2 = 73|Dadra Nagar Haveli and Daman & Diu U.T.(3), Goa (2). Gujarat(34), Maharashtra(34)|\n8.|Shillong| 96 + 4 = 100|Arunachal Pradesh(18), Assam(28), Manipur (11), Meghalaya (12), Mizoram (8), Nagaland (11), Sikkim (4), Tripura(8)|"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:50:08.562806"
+      "processed_at": "2026-10-10T07:49:45.159528"
     },
     {
-      "id": "b4277f3b-e8bc-459a-8d68-6311577c0c53",
-      "created_at": "2026-10-10T07:51:19.341333",
-      "question_hindi": "जवाहर नवोदय विद्यालयों (JNVs) की स्वीकृति और स्थापना के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. भारत के 638 जिलों में कुल 661 जेएनवी स्वीकृत किए गए हैं।\n2. 23 जिलों में अतिरिक्त जेएनवी स्वीकृत किए गए हैं, जिनमें अनुसूचित जाति (SC) और अनुसूचित जनजाति (ST) की बड़ी केंद्रित आबादी वाले जिलों में 10-10 जेएनवी शामिल हैं।\n3. एक विशेष मामले के रूप में सेनापति-II (मणिपुर), उखरुल-II (मणिपुर) और रतलाम-II (मध्य प्रदेश) में तीन अतिरिक्त जेएनवी स्वीकृत किए गए थे।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "8edaed96-7ccd-44db-8737-a64a0912f981",
+      "created_at": "2026-10-10T07:49:45.159528",
+      "question_hindi": "जवाहर नवोदय विद्यालयों में चयन परीक्षा और सीटों के आरक्षण के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. जवाहर नवोदय विद्यालय चयन परीक्षा (JNVST) प्रतिवर्ष अखिल भारतीय स्तर पर तथा ब्लॉक और जिला स्तरों पर आयोजित की जाती है।\n2. कुल सीटों में से एक-तिहाई (1/3) सीटें छात्राओं द्वारा भरी जाती हैं।\n3. तीन प्रतिशत (3%) सीटें दिव्यांग बच्चों के लिए आरक्षित हैं।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
       "options_hindi": [
-        "केवल 1 और 2",
-        "1, 2 और 3",
+        "केवल 2 और 3",
         "केवल 1 और 3",
-        "केवल 2 और 3"
+        "केवल 1 और 2",
+        "1, 2 और 3"
       ],
       "option_labels": [
         "A",
@@ -727,20 +579,168 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "With reference to the sanctioning and establishment of Jawahar Navodaya Vidyalayas (JNVs), consider the following statements:\n\n1. A total of 661 JNVs have been sanctioned across 638 districts of India.\n2. Additional JNVs have been sanctioned in 23 districts, which include 10 JNVs each in districts having large concentrated populations of SCs and STs.\n3. As a special case, three additional JNVs were sanctioned in Senapati-II (Manipur), Ukhrul-II (Manipur), and Ratlam-II (Madhya Pradesh).\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the selection test and seat reservation in Jawahar Navodaya Vidyalayas:\n\n1. The Jawahar Navodaya Vidyalaya Selection Test (JNVST) is held annually on an All India basis and at block and district levels.\n2. One-third (1/3) of the total seats are filled by girl students.\n3. Three percent (3%) of the seats are reserved for disabled children.\n\nWhich of the statements given above are correct?",
       "options_english": [
-        "1 and 2 only",
-        "1, 2 and 3",
+        "2 and 3 only",
         "1 and 3 only",
-        "2 and 3 only"
+        "1 and 2 only",
+        "1, 2 and 3"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "All three statements are correct as per NVS guidelines: JNVST is held annually on an All India basis at block and district levels; 1/3 of the seats are filled by girl students; and 3% of the seats are reserved for disabled children.",
+      "explanation_hindi": "एनवीएस दिशानिर्देशों के अनुसार तीनों कथन सही हैं: जेएनवीएसटी प्रतिवर्ष अखिल भारतीय स्तर पर ब्लॉक और जिला स्तरों पर आयोजित की जाती है; 1/3 सीटें छात्राओं द्वारा भरी जाती हैं; और 3% सीटें दिव्यांग बच्चों के लिए आरक्षित हैं।",
+      "topic": "Navodaya (JNV)",
+      "difficulty": "medium",
+      "key_facts": [
+        "The test is held annually on an All India basis and at block and district levels. The test is objective, class neutral and is so designed as to ensure that rural children are not at a disadvantage while attempting it.\n#### \nReservation of Seats\n\nAdmission in Jawahar Navodaya Vidyalayas is primarily for children from the rural areas, with provision of at least 75% seats for rural children. Seats are reserved for children from SC& ST communities in proportion to their population in the district but not less than the national average. 27% reservation is provided to the OBC students over and above reservation of SCs& STs. 1/3 of the seats are filled by girl students. 3% of the seats are reserved for disabled children."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T07:49:45.159528"
+    },
+    {
+      "id": "004f0562-600e-4249-b0c7-608262a51956",
+      "created_at": "2026-10-10T07:51:19.341333",
+      "question_hindi": "एनवीएस के संबंधित क्षेत्रीय कार्यालयों के तहत स्वीकृत जवाहर नवोदय विद्यालयों की कुल संख्या (अतिरिक्त जेएनवी सहित) के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "options_hindi": [
+        "जयपुर क्षेत्र – 75",
+        "भोपाल क्षेत्र – 113",
+        "लखनऊ क्षेत्र – 89",
+        "पुणे क्षेत्र – 73"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following pairs regarding the total number of sanctioned Jawahar Navodaya Vidyalayas (including additional JNVs) under the respective Regional Offices of NVS is NOT correctly matched?",
+      "options_english": [
+        "Jaipur Region – 75",
+        "Bhopal Region – 113",
+        "Lucknow Region – 89",
+        "Pune Region – 73"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Jaipur Region has 65 sanctioned JNVs (63 + 2 = 65: Delhi 9, Haryana 21, Rajasthan 35), not 75.",
+      "explanation_hindi": "जयपुर क्षेत्र में कुल 65 स्वीकृत जेएनवी (63 + 2 = 65: दिल्ली 9, हरियाणा 21, राजस्थान 35) हैं, न कि 75।",
+      "topic": "Navodaya (JNV)",
+      "difficulty": "medium",
+      "key_facts": [
+        "4.|Jaipur| 63 + 2 = 65|Delhi (9), Haryana (21), Rajasthan(35)|"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T07:51:19.341333"
+    },
+    {
+      "id": "aa5b4ac8-c3b3-4708-958e-0cbc8393a0a7",
+      "created_at": "2026-10-10T07:52:00.905281",
+      "question_hindi": "जवाहर नवोदय विद्यालयों (JNVs) की संरचना और उत्पत्ति के संदर्भ में, निम्नलिखित कथनों पर विचार कीजिए:\n\n1. जवाहर नवोदय विद्यालयों की शुरुआत वर्ष 1985-86 में हुई थी।\n2. 100 प्रतिशत शहरी आबादी वाले जिले के लिए कभी भी जेएनवी स्वीकृत नहीं किया जाता है।\n3. गति-निर्धारक (पेस-सेटिंग) स्कूलों के रूप में, नवोदय विद्यालय कक्षा 1 से शुरू होकर कक्षा 12 तक जाता है।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 1 और 3",
+        "1, 2 और 3",
+        "केवल 2 और 3",
+        "केवल 1 और 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "With reference to the structure and origin of Jawahar Navodaya Vidyalayas (JNVs), consider the following statements:\n\n1. Jawahar Navodaya Vidyalayas were started in the year 1985-86.\n2. A JNV is never sanctioned for a district that has a 100 per cent urban population.\n3. As pace-setting schools, a Navodaya Vidyalaya starts from Class 1 and goes up to Class 12.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "1 and 3 only",
+        "1, 2 and 3",
+        "2 and 3 only",
+        "1 and 2 only"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Statements 1 and 2 are correct. JNVs were started in 1985-86, and because at least 75% of seats are reserved for rural children, a JNV is never sanctioned for a district with a 100% urban population. Statement 3 is incorrect because a Navodaya Vidyalaya starts from Class 6 and goes up to Class 12, not from Class 1.",
+      "explanation_hindi": "कथन 1 और 2 सही हैं। जेएनवी की शुरुआत 1985-86 में हुई थी, और चूंकि कम से कम 75% सीटें ग्रामीण बच्चों के लिए निर्धारित हैं, इसलिए 100% शहरी आबादी वाले जिले के लिए कभी भी जेएनवी स्वीकृत नहीं किया जाता है। कथन 3 गलत है क्योंकि नवोदय विद्यालय कक्षा 6 से शुरू होता है और कक्षा 12 तक जाता है, कक्षा 1 से नहीं।",
+      "topic": "Navodaya (JNV)",
+      "difficulty": "medium",
+      "key_facts": [
+        "Known for producing the best results in board examinations, the JNVs, which were started in 1985-86, have become a passport out of poverty for thousands of underprivileged children... According to norms, at least 75 per cent of the seats in these schools are set aside for rural children. Hence, a JNV is never sanctioned for a district with 100 per cent urban population. A Navodaya Vidyalaya starts from Class 6 and goes up to Class 12."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T07:52:00.905281"
+    },
+    {
+      "id": "267e7b3b-4b75-434e-aaaf-6fe877c300bb",
+      "created_at": "2026-10-10T07:57:42.490312",
+      "question_hindi": "विशेष श्रेणियों के तहत स्वीकृत अतिरिक्त जवाहर नवोदय विद्यालयों के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (जेएनवी स्वीकृत जिला)\nA. सेनापति-II\nB. रतलाम-II\nC. दक्षिण 24 परगना\nD. पलामू\n\nसूची II (श्रेणी / राज्य)\n1. मणिपुर में विशेष मामले के तहत स्वीकृत जेएनवी\n2. मध्य प्रदेश में विशेष मामले के तहत स्वीकृत जेएनवी\n3. पश्चिम बंगाल में एससी बहुल आबादी के लिए अतिरिक्त जेएनवी\n4. झारखंड में एससी बहुल आबादी के लिए अतिरिक्त जेएनवी\n\nसही कूट का चयन कीजिए:",
+      "options_hindi": [
+        "A-2, B-1, C-3, D-4",
+        "A-1, B-2, C-3, D-4",
+        "A-1, B-2, C-4, D-3",
+        "A-2, B-1, C-4, D-3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding the additional Jawahar Navodaya Vidyalayas sanctioned under special categories:\n\nList I (District Sanctioned JNV)\nA. Senapati-II\nB. Ratlam-II\nC. South 24 Parganas\nD. Palamu\n\nList II (Category / State)\n1. Special case JNV in Manipur\n2. Special case JNV in Madhya Pradesh\n3. Additional JNV for SC concentrated population in West Bengal\n4. Additional JNV for SC concentrated population in Jharkhand\n\nSelect the correct code:",
+      "options_english": [
+        "A-2, B-1, C-3, D-4",
+        "A-1, B-2, C-3, D-4",
+        "A-1, B-2, C-4, D-3",
+        "A-2, B-1, C-4, D-3"
       ],
       "correct_answer": "b",
-      "explanation_english": "All three statements are correct. A total of 661 JNVs have been sanctioned in 638 districts. Additional JNVs were sanctioned in 23 districts: 10 in SC-concentrated districts, 10 in ST-concentrated districts, and 3 special-case JNVs (Senapati-II, Ukhrul-II, and Ratlam-II).",
-      "explanation_hindi": "तीनों कथन सही हैं। 638 जिलों में कुल 661 जेएनवी स्वीकृत किए गए हैं। 23 जिलों में अतिरिक्त जेएनवी स्वीकृत किए गए हैं: 10 एससी-केंद्रित जिलों में, 10 एसटी-केंद्रित जिलों में, और 3 विशेष मामले वाले जेएनवी (सेनापति-II, उखरुल-II और रतलाम-II)।",
+      "explanation_english": "As per NVS records, 3 JNVs were sanctioned as special cases: Senapati-II (Manipur), Ukhrul-II (Manipur), and Ratlam-II (Madhya Pradesh). In districts with large concentrations of SC population, additional JNVs were sanctioned in Palamu (Jharkhand) and South 24 Parganas (West Bengal) in 2009-10.",
+      "explanation_hindi": "एनवीएस रिकॉर्ड के अनुसार, विशेष मामलों के रूप में 3 जेएनवी स्वीकृत किए गए थे: सेनापति-II (मणिपुर), उखरूल-II (मणिपुर), और रतलाम-II (मध्य प्रदेश)। इसके अलावा, अनुसूचित जाति की अधिक सघनता वाले जिलों में वर्ष 2009-10 में पलामू (झारखंड) और दक्षिण 24 परगना (पश्चिम बंगाल) में अतिरिक्त जेएनवी स्वीकृत किए गए थे।",
       "topic": "Navodaya (JNV)",
       "difficulty": "hard",
       "key_facts": [
-        "Total 661 JNVs have been sanctioned in 638 districts of India. Additional JNVs have been sanctioned in 23 districts, which include 10 JNVs in SC && 10 JNVs in ST having large concentrated population and 03 JNVs i.e. Senapati-II (Manipur), Ukhrul-II (Manipur) and Ratlam-II (Madhya Pradesh) as a special case."
+        "3 JNVs have been sanctioned in 03 districts i.e. Senapati-II (Manipur), Ukhrul-II (Manipur) & Ratlam-II (Madhya Pradesh) as special case, bringing the total number of JNVs sanctioned to 661... 5|Jharkhand|Palamu|2009-10| 6|Bihar|Gaya|2009-10| 7|West Bengal|South 24 Paraganas|2009-10|"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T07:57:42.490312"
+    },
+    {
+      "id": "f289d635-9085-4f16-839d-2e3eb63f98d3",
+      "created_at": "2026-10-10T07:51:19.341333",
+      "question_hindi": "नवोदय विद्यालय समिति (NVS) के प्रशासनिक पदानुक्रम में, आठ क्षेत्रीय कार्यालयों में से प्रत्येक का नेतृत्व निम्नलिखित में से किस पदनाम द्वारा किया जाता है?",
+      "options_hindi": [
+        "सहायक आयुक्त (Assistant Commissioner)",
+        "महानिदेशक (Director General)",
+        "संयुक्त आयुक्त (Joint Commissioner)",
+        "उपायुक्त (Deputy Commissioner)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In the administrative hierarchy of the Navodaya Vidyalaya Samiti (NVS), each of the eight Regional Offices is headed by which of the following designations?",
+      "options_english": [
+        "Assistant Commissioner",
+        "Director General",
+        "Joint Commissioner",
+        "Deputy Commissioner"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "As per official NVS records, each of the eight Regional Offices of Navodaya Vidyalaya Samiti is headed by a Deputy Commissioner.",
+      "explanation_hindi": "एनवीएस के आधिकारिक रिकॉर्ड के अनुसार, नवोदय विद्यालय समिति के आठ क्षेत्रीय कार्यालयों में से प्रत्येक का नेतृत्व एक उपायुक्त (Deputy Commissioner) द्वारा किया जाता है।",
+      "topic": "Navodaya (JNV)",
+      "difficulty": "easy",
+      "key_facts": [
+        "The eight Regional Offices of Navodaya Vidyalaya Samiti are at Bhopal, Chandigarh, Hyderabad, Jaipur, Lucknow, Patna, Pune & Shillong with jurisdiction over different States and UTs. Each Regional Office is headed by a Deputy Commissioner."
       ],
       "ai_processed": true,
       "processed_at": "2026-10-10T07:51:19.341333"

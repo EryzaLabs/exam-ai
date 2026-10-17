@@ -1,130 +1,19 @@
 {
-  "test_id": "777be3a0-de0e-4ff3-b0f2-88a7c73fc9ac",
+  "test_id": "24895d3f-027c-4f32-a8b1-de9258ccb14c",
   "test_name": "Topic Test: NIOS - Part 5",
   "type": "topic_wise",
   "topic": "nios",
-  "created_at": "2026-10-16T20:04:02.774074",
+  "created_at": "2026-10-17T08:33:52.544626",
   "questions": [
     {
-      "id": "13e6bffd-2ef5-4faa-8a67-354c471dae85",
-      "created_at": "2026-10-14T14:47:08.708149",
-      "question_hindi": "NIOS की कक्षा 10 (माध्यमिक) परीक्षा अनुसूची और समयावधि ढांचे के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. सभी कक्षा 10 सैद्धांतिक परीक्षाएं दोपहर 2:30 बजे शुरू होने के लिए निर्धारित हैं।\n2. व्यावसायिक प्रमाणपत्र परीक्षाएं जैसे कटिंग एंड टेलरिंग (605) और ब्यूटी थेरेपी (640) की अवधि 1.5 घंटे (शाम 4:00 बजे समाप्त) होती है।\n3. शैक्षणिक विषय जैसे गृह विज्ञान (216), गणित (211), और विज्ञान (212) की परीक्षा अवधि शाम 5:30 बजे तक होती है।\n\nऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "id": "3a23a4d5-5ddd-4999-80fc-0db157351b7d",
+      "created_at": "2026-10-13T13:19:01.326658",
+      "question_hindi": "राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS) द्वारा प्रस्तुत पाठ्यक्रमों/स्तरों और औपचारिक विद्यालय प्रणाली में उनकी समकक्षता के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (NIOS पाठ्यक्रम / OBE स्तर)\nA. ओबीई स्तर A (OBE Level A)\nB. ओबीई स्तर B (OBE Level B)\nC. ओबीई स्तर C (OBE Level C)\nD. माध्यमिक पाठ्यक्रम (Secondary Course)\n\nसूची II (औपचारिक प्रणाली में समकक्षता)\n1. कक्षा III के समकक्ष\n2. कक्षा V के समकक्ष\n3. कक्षा VIII के समकक्ष\n4. कक्षा X के समकक्ष\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
       "options_hindi": [
-        "1, 2 और 3",
-        "केवल 2 और 3",
-        "केवल 1",
-        "केवल 1 और 2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the Class 10 (Secondary) examination schedule and duration framework of NIOS:\n\n1. All Class 10 theory examinations are scheduled to commence at 2:30 pm.\n2. Vocational certificate examinations such as Cutting and Tailoring (605) and Beauty Therapy (640) have a duration of 1.5 hours (ending at 4:00 pm).\n3. Academic subjects such as Home Science (216), Mathematics (211), and Science (212) have an examination duration extending until 5:30 pm.\n\nWhich of the statements given above is/are correct?",
-      "options_english": [
-        "1, 2 and 3",
-        "2 and 3 only",
-        "1 only",
-        "1 and 2 only"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because Home Science (216), Mathematics (211), and Science (212) conclude at 5:00 pm (a duration of 2.5 hours, 2:30 pm to 5:00 pm), not 5:30 pm.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि गृह विज्ञान (216), गणित (211) और विज्ञान (212) की परीक्षाएं 2:30 बजे से शाम 5:00 बजे (2.5 घंटे) तक आयोजित की जाती हैं, न कि 5:30 बजे तक।",
-      "topic": "NIOS",
-      "difficulty": "hard",
-      "key_facts": [
-        "All Class 10 examinations will begin at 2:30 pm. Depending on the subject, the paper will end at 4 pm, 4:30 pm, 5 pm or 5:30 pm."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-14T14:47:08.708149"
-    },
-    {
-      "id": "2b0786b6-f58f-4244-9d92-d5c3be9c0269",
-      "created_at": "2026-10-14T14:54:14.150932",
-      "question_hindi": "NIOS की संस्थागत पहचान, समकक्षता और शिक्षण उपागम के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "राष्ट्रीय बोर्ड समकक्षता - CBSE और CISCE के समकक्ष",
-        "CBSE के तहत शुरुआत - 1979 में 'मुक्त विद्यालयी शिक्षा' परियोजना के रूप में शुरू",
-        "सार्वजनिक सेवाओं में रोजगार/पदोन्नति के लिए कक्षा 10 और 12 की समकक्षता का आदेश जारी करने वाली राज्य सरकार - केरल सरकार",
-        "शिक्षण प्रणाली - मुक्त और दूरस्थ माध्यम से शिक्षार्थी-केंद्रित उपागम"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding NIOS institutional identity, equivalency, and instructional approach is NOT correctly matched?",
-      "options_english": [
-        "National board equivalence - At par with CBSE and CISCE",
-        "Origin under CBSE - Started as a project on 'Open Schooling' in 1979",
-        "State Government issuing equivalency order for Class X & XII for Public Services Employment/Promotion - Government of Kerala",
-        "Instructional mode - Learner-centric approach through Open and Distance mode"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "Pair 3 is NOT correctly matched. The official notification highlighted on the NIOS portal states that the order regarding equivalency of the Academic Programme of NIOS Class X and XII Certificate for the purpose of Employment in Public Services / Promotion was issued by the Government of Tamil Nadu, not the Government of Kerala.",
-      "explanation_hindi": "युग्म 3 सही सुमेलित नहीं है। NIOS पोर्टल पर आधिकारिक अधिसूचना के अनुसार, सार्वजनिक सेवाओं में रोजगार/पदोन्नति के प्रयोजनार्थ NIOS कक्षा 10वीं और 12वीं प्रमाण पत्र की शैक्षणिक समकक्षता का आदेश तमिलनाडु सरकार द्वारा जारी किया गया है, न कि केरल सरकार द्वारा।",
-      "topic": "NIOS",
-      "difficulty": "medium",
-      "key_facts": [
-        "Order issued by Government of Tamil Nadu regarding equivalency of the Academic Programme of NIOS Class X and XII Certificate for the purpose of Employment in Public Services / Promotion."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-14T14:54:14.150932"
-    },
-    {
-      "id": "5ecf388d-1419-4d00-8c33-35feea9a9fb5",
-      "created_at": "2026-10-13T13:21:15.694536",
-      "question_hindi": "NIOS द्वारा अपने अकादमिक पाठ्यक्रमों के लिए पेश किए गए पाठ्यचर्या और विषय संयोजन के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (पाठ्यचर्या घटक)\nA. माध्यमिक पाठ्यक्रम (कक्षा-X) के लिए उपलब्ध कुल विषय\nB. माध्यमिक पाठ्यक्रम में शामिल भाषा विषयों की संख्या\nC. उच्चतर माध्यमिक पाठ्यक्रम (कक्षा-XII) के लिए उपलब्ध कुल विषय\nD. उच्चतर माध्यमिक पाठ्यक्रम में शामिल भाषा विषयों की संख्या\n\nसूची II (संख्या / आँकड़ा)\n1. 32 विषय\n2. 17 भाषाएँ\n3. 36 विषय\n4. 11 भाषाएँ\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
-      "options_hindi": [
-        "A-3, B-2, C-1, D-4",
-        "A-3, B-4, C-1, D-2",
+        "A-1, B-3, C-2, D-4",
         "A-1, B-2, C-3, D-4",
-        "A-1, B-4, C-3, D-2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List I with List II regarding the curriculum and subject composition offered by NIOS for its academic courses:\n\nList I (Curricular Component)\nA. Total subjects available for Secondary Course (Class-X)\nB. Number of language subjects included in Secondary Course\nC. Total subjects available for Senior Secondary Course (Class-XII)\nD. Number of language subjects included in Senior Secondary Course\n\nList II (Count / Figure)\n1. 32 subjects\n2. 17 languages\n3. 36 subjects\n4. 11 languages\n\nSelect the correct answer using the code given below:",
-      "options_english": [
         "A-3, B-2, C-1, D-4",
-        "A-3, B-4, C-1, D-2",
-        "A-1, B-2, C-3, D-4",
-        "A-1, B-4, C-3, D-2"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "According to the official NIOS curriculum details: Secondary Course (Class-X) offers 32 subjects including 17 languages. Senior Secondary Course (Class-XII) offers 36 subjects including 11 languages. Therefore, the correct matching is A-1, B-2, C-3, D-4.",
-      "explanation_hindi": "आधिकारिक NIOS पाठ्यचर्या विवरण के अनुसार: माध्यमिक पाठ्यक्रम (कक्षा-X) में 17 भाषाओं सहित कुल 32 विषय उपलब्ध हैं। उच्चतर माध्यमिक पाठ्यक्रम (कक्षा-XII) में 11 भाषाओं सहित कुल 36 विषय उपलब्ध हैं। अतः सही सुमेलन A-1, B-2, C-3, D-4 है।",
-      "topic": "NIOS",
-      "difficulty": "medium",
-      "key_facts": [
-        "Whatare the subjects available for the Secondary Course (Class-X)? Hindi, English, Urdu, Sanskrit... (32 subjects including 17 languages). Whatare the subjects available for the Senior Secondary Course (Class-XIl)? Hindi, English, Bengali, Odia... (36 subjects including 11 languages)."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T13:21:15.694536"
-    },
-    {
-      "id": "582399bc-2e68-4f85-abf9-12370afd2469",
-      "created_at": "2026-10-14T14:48:45.759568",
-      "question_hindi": "राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS) की संस्थागत वितरण प्रणाली और निर्देशात्मक ढांचे के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. NIOS प्रत्यायित संस्थानों (AIs) के एक नेटवर्क के माध्यम से काम करता है, जो अध्ययन केंद्रों के रूप में कार्य करते हैं।\n2. अध्ययन केंद्रों द्वारा संदेह निवारण और शैक्षणिक मार्गदर्शन के लिए व्यक्तिगत संपर्क कार्यक्रम (PCPs) आयोजित किए जाते हैं।\n3. व्यक्तिगत संपर्क कार्यक्रमों की आवृत्ति और प्रारूप सभी केंद्रों पर अनिवार्य रूप से समान होते हैं क्योंकि यह NIOS मुख्यालय द्वारा केंद्रीय रूप से तय किया जाता है।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 1 और 2",
-        "1, 2 और 3",
-        "केवल 2 और 3"
+        "A-2, B-1, C-4, D-3"
       ],
       "option_labels": [
         "A",
@@ -135,23 +24,23 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the institutional delivery mechanism and instructional framework of the National Institute of Open Schooling (NIOS):\n\n1. NIOS operates through a network of Accredited Institutions (AIs), which function as study centres.\n2. Personal Contact Programmes (PCPs) are conducted by study centres for clearing doubts and academic guidance.\n3. The frequency and format of Personal Contact Programmes are strictly uniform across all centres as centrally fixed by NIOS headquarters.\n\nWhich of the statements given above are correct?",
+      "question_english": "Match List I with List II regarding the courses/levels offered by the National Institute of Open Schooling (NIOS) and their formal school equivalence:\n\nList I (NIOS Course / OBE Level)\nA. OBE Level A\nB. OBE Level B\nC. OBE Level C\nD. Secondary Course\n\nList II (Equivalence in Formal System)\n1. Equivalent to Class III\n2. Equivalent to Class V\n3. Equivalent to Class VIII\n4. Equivalent to Class X\n\nSelect the correct answer using the code given below:",
       "options_english": [
-        "1 and 3 only",
-        "1 and 2 only",
-        "1, 2 and 3",
-        "2 and 3 only"
+        "A-1, B-3, C-2, D-4",
+        "A-1, B-2, C-3, D-4",
+        "A-3, B-2, C-1, D-4",
+        "A-2, B-1, C-4, D-3"
       ],
       "correct_answer": "b",
-      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because the frequency and format of PCPs are not centrally fixed; rather, 'The frequency and format are decided by the study centre, based on local needs and learner convenience.'",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि PCPs की आवृत्ति और प्रारूप केंद्रीय रूप से तय नहीं होते हैं; बल्कि, 'आवृत्ति और प्रारूप अध्ययन केंद्र द्वारा स्थानीय आवश्यकताओं और शिक्षार्थियों की सुविधा के आधार पर तय किए जाते हैं।'",
+      "explanation_english": "Under the Open Basic Education (OBE) Programme for the 14+ age group: Level A is equivalent to Class III, Level B is equivalent to Class V, and Level C is equivalent to Class VIII. The Secondary Course corresponds to Class X.",
+      "explanation_hindi": "14+ आयु वर्ग के लिए मुक्त बुनियादी शिक्षा (OBE) कार्यक्रम के अंतर्गत: स्तर A कक्षा III के समकक्ष है, स्तर B कक्षा V के समकक्ष है, और स्तर C कक्षा VIII के समकक्ष है। माध्यमिक पाठ्यक्रम कक्षा X के समकक्ष है।",
       "topic": "NIOS",
       "difficulty": "medium",
       "key_facts": [
-        "The NIOS operates through a network of accredited institutions (AIs), which function as study centres. These centres conduct personal contact programmes (PCPs) — in-person sessions held on weekends or scheduled weekdays — for clearing doubts and academic guidance. The frequency and format are decided by the study centre, based on local needs and learner convenience."
+        "Open Basic Education (OBE) Programme for 14+ years age group (adolescents and adults) that are equivalent to classes of the formal school system - Level A - Equivalent to Class III - Level B - Equivalent to Class V - Level C - Equivalent to Class VIII - Secondary Course—Equivalent to class X"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-14T14:48:45.759568"
+      "processed_at": "2026-10-13T13:19:01.326658"
     },
     {
       "id": "3dbbc748-a2a8-4eb2-9033-8efbe1538b67",
@@ -191,236 +80,14 @@
       "processed_at": "2026-10-14T14:57:56.350036"
     },
     {
-      "id": "3a23a4d5-5ddd-4999-80fc-0db157351b7d",
-      "created_at": "2026-10-13T13:19:01.326658",
-      "question_hindi": "राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS) द्वारा प्रस्तुत पाठ्यक्रमों/स्तरों और औपचारिक विद्यालय प्रणाली में उनकी समकक्षता के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (NIOS पाठ्यक्रम / OBE स्तर)\nA. ओबीई स्तर A (OBE Level A)\nB. ओबीई स्तर B (OBE Level B)\nC. ओबीई स्तर C (OBE Level C)\nD. माध्यमिक पाठ्यक्रम (Secondary Course)\n\nसूची II (औपचारिक प्रणाली में समकक्षता)\n1. कक्षा III के समकक्ष\n2. कक्षा V के समकक्ष\n3. कक्षा VIII के समकक्ष\n4. कक्षा X के समकक्ष\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
-      "options_hindi": [
-        "A-1, B-3, C-2, D-4",
-        "A-1, B-2, C-3, D-4",
-        "A-3, B-2, C-1, D-4",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List I with List II regarding the courses/levels offered by the National Institute of Open Schooling (NIOS) and their formal school equivalence:\n\nList I (NIOS Course / OBE Level)\nA. OBE Level A\nB. OBE Level B\nC. OBE Level C\nD. Secondary Course\n\nList II (Equivalence in Formal System)\n1. Equivalent to Class III\n2. Equivalent to Class V\n3. Equivalent to Class VIII\n4. Equivalent to Class X\n\nSelect the correct answer using the code given below:",
-      "options_english": [
-        "A-1, B-3, C-2, D-4",
-        "A-1, B-2, C-3, D-4",
-        "A-3, B-2, C-1, D-4",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Under the Open Basic Education (OBE) Programme for the 14+ age group: Level A is equivalent to Class III, Level B is equivalent to Class V, and Level C is equivalent to Class VIII. The Secondary Course corresponds to Class X.",
-      "explanation_hindi": "14+ आयु वर्ग के लिए मुक्त बुनियादी शिक्षा (OBE) कार्यक्रम के अंतर्गत: स्तर A कक्षा III के समकक्ष है, स्तर B कक्षा V के समकक्ष है, और स्तर C कक्षा VIII के समकक्ष है। माध्यमिक पाठ्यक्रम कक्षा X के समकक्ष है।",
-      "topic": "NIOS",
-      "difficulty": "medium",
-      "key_facts": [
-        "Open Basic Education (OBE) Programme for 14+ years age group (adolescents and adults) that are equivalent to classes of the formal school system - Level A - Equivalent to Class III - Level B - Equivalent to Class V - Level C - Equivalent to Class VIII - Secondary Course—Equivalent to class X"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T13:19:01.326658"
-    },
-    {
-      "id": "fb453af3-5c7c-4865-8f41-ea7207f87ee0",
-      "created_at": "2026-10-14T14:48:09.931910",
-      "question_hindi": "राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS) के प्रवेश नियमों और पात्रता मानदंडों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. किसी शिक्षार्थी का प्रवेश, एक बार पंजीकृत होने के बाद, प्रवेश की तिथि से 5 वर्ष की अवधि के लिए वैध रहता है।\n2. यदि अभ्यर्थी 15 वर्ष की आयु प्राप्त कर चुका है, तो माध्यमिक परीक्षा उत्तीर्ण किए बिना भी उच्चतर माध्यमिक पाठ्यक्रम में सीधे प्रवेश की अनुमति है।\n3. अनाथों और सड़क पर रहने वाले बच्चों (street children) के मामले में, सरकारी अस्पताल द्वारा जारी आयु संबंधी चिकित्सा प्रमाण पत्र जन्म तिथि के वैध प्रमाण के रूप में स्वीकार्य है।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "1, 2 और 3",
-        "केवल 1 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the admission regulations and eligibility criteria of the National Institute of Open Schooling (NIOS):\n\n1. The admission of a learner, once registered, remains valid for a period of 5 years from the date of admission.\n2. Direct admission to the Senior Secondary course is permitted without passing a secondary examination provided the candidate has attained 15 years of age.\n3. In the case of orphans and street children, a medical certificate in respect of age issued by a Government Hospital is acceptable as a valid proof of date of birth.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1, 2 and 3",
-        "1 and 3 only",
-        "1 and 2 only",
-        "2 and 3 only"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Statement 1 is correct because the admission (once registered) in NIOS is valid for a period of 5 years from the date of admission. Statement 2 is incorrect because direct admission in the Senior Secondary course is NOT permitted; the learner must have passed the Secondary course from a recognized Board, in addition to having the minimum age of 15 years. Statement 3 is correct because for orphans and street children, a medical certificate in respect of age issued by a Government Hospital is acceptable as a valid proof of date of birth.",
-      "explanation_hindi": "कथन 1 सही है क्योंकि NIOS में प्रवेश (पंजीकरण होने के बाद) प्रवेश की तिथि से 5 वर्ष की अवधि के लिए वैध होता है। कथन 2 गलत है क्योंकि उच्चतर माध्यमिक पाठ्यक्रम में सीधे प्रवेश की अनुमति नहीं है; अभ्यर्थी को न्यूनतम 15 वर्ष की आयु के साथ-साथ किसी मान्यता प्राप्त बोर्ड से माध्यमिक पाठ्यक्रम उत्तीर्ण होना आवश्यक है। कथन 3 सही है क्योंकि अनाथों और बेसहारा बच्चों के मामले में सरकारी अस्पताल द्वारा जारी आयु प्रमाण पत्र जन्म तिथि के वैध प्रमाण के रूप में स्वीकार्य है।",
-      "topic": "NIOS",
-      "difficulty": "medium",
-      "key_facts": [
-        "The Admission (once registered) is valid for a period of 5 years from the date of admission. ... Can any learner take direct admission in the Senior Secondary courses? No. In order to take admission in the Senior Secondary course, the learner must have passed the Secondary course from a recognised Board. ... in case of orphans, street children etc., a medical certificate in respect of age issued by a Government Hospital is also acceptable as a valid proof of date of birth."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-14T14:48:09.931910"
-    },
-    {
-      "id": "d05292d8-8ec6-4525-89b8-270fe97cd204",
-      "created_at": "2026-10-14T14:49:29.840228",
-      "question_hindi": "शिक्षा मंत्रालय के आधिकारिक पोर्टल के अनुसार, राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS), जिसे पहले राष्ट्रीय मुक्त विद्यालय (NOS) के रूप में जाना जाता था, की स्थापना किस महीने और वर्ष में हुई थी?",
-      "options_hindi": [
-        "जनवरी, 1986",
-        "नवंबर, 1989",
-        "जुलाई, 1991",
-        "अगस्त, 1992"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "According to the official portal of the Ministry of Education, in which month and year was the National Institute of Open Schooling (NIOS), formerly known as National Open School (NOS), established?",
-      "options_english": [
-        "January, 1986",
-        "November, 1989",
-        "July, 1991",
-        "August, 1992"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "The National Institute of Open Schooling (NIOS), formerly known as National Open School (NOS), was established in November, 1989 as an autonomous organisation in pursuance of National Policy on Education 1986 by the Ministry of Education (MOE), Government of India.",
-      "explanation_hindi": "राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS), जिसे पहले राष्ट्रीय मुक्त विद्यालय (NOS) के नाम से जाना जाता था, की स्थापना राष्ट्रीय शिक्षा नीति 1986 के अनुसरण में भारत सरकार के शिक्षा मंत्रालय (MOE) द्वारा नवंबर, 1989 में एक स्वायत्त संगठन के रूप में की गई थी।",
-      "topic": "NIOS",
-      "difficulty": "easy",
-      "key_facts": [
-        "The National Institute of Open Schooling (NIOS) formerly known as National Open School (NOS) was established in November,1989 as an autonomous organisation in pursuance of National Policy on Education 1986 by the Ministry of Education (MOE), Government of India."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-14T14:49:29.840228"
-    },
-    {
-      "id": "40c07197-71f7-447d-a1e7-86a75fa4dfaa",
-      "created_at": "2026-10-13T13:18:07.967830",
-      "question_hindi": "एनआईओएस (NIOS) की संस्थागत संरचना और अभिशासन के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. यह सोसायटी पंजीकरण अधिनियम (1860) के तहत पंजीकृत एक स्वायत्त संगठन है।\n2. एनआईओएस का मुख्यालय सेक्टर-62, नोएडा (उत्तर प्रदेश) में स्थित है।\n3. एनआईओएस की नीतियां इसके जनरल बॉडी के माध्यम से बनाई जाती हैं, जिसके प्रमुख केंद्रीय मानव संसाधन विकास मंत्री होते हैं।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2",
-        "केवल 1 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the institutional structure and governance of NIOS:\n\n1. It is an autonomous organization registered under the Societies' Registration Act (1860).\n2. The Headquarters of NIOS is located at Sector-62, NOIDA (Uttar Pradesh).\n3. Policies of NIOS are framed through its General Body headed by the Union Minister of Human Resources Development.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only",
-        "1 and 3 only"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "All three statements are correct: NIOS is registered under the Societies’ Registration Act (1860), its Headquarters is at Sector-62 NOIDA (U.P.), and its policies are framed through its General Body headed by the Union Minister of Human Resources Development.",
-      "explanation_hindi": "तीनों कथन सही हैं: एनआईओएस सोसायटी पंजीकरण अधिनियम (1860) के तहत पंजीकृत है, इसका मुख्यालय सेक्टर-62 नोएडा (यूपी) में स्थित है, और इसकी नीतियां इसके जनरल बॉडी के माध्यम से तैयार की जाती हैं जिसके अध्यक्ष केंद्रीय मानव संसाधन विकास मंत्री होते हैं।",
-      "topic": "NIOS",
-      "difficulty": "medium",
-      "key_facts": [
-        "NIOS is an autonomous organization registered under the Societies’ Registration Act (1860). The Headquarters of NIOS is located at A-24/25, Institutional Area, Sector-62 NOIDA (U.P.). Policies of NIOS are framed through its General Body headed by the Union Minister of Human Resources Development."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-13T13:18:07.967830"
-    },
-    {
-      "id": "9ead1172-40d5-4581-8503-9e58dd286f3f",
-      "created_at": "2026-10-14T14:50:15.537498",
-      "question_hindi": "राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS) की पृष्ठभूमि और संस्थागत अधिदेश के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. वर्ष 1986 में, राष्ट्रीय शिक्षा नीति ने देश भर में माध्यमिक स्तर पर चरणबद्ध तरीके से मुक्त शिक्षण सुविधाओं का विस्तार करने के लिए मुक्त विद्यालय प्रणाली को सुदृढ़ करने का सुझाव दिया।\n2. जब शिक्षा मंत्रालय द्वारा राष्ट्रीय मुक्त विद्यालय (NOS) की स्थापना की गई, तब मुक्त विद्यालय पर सीबीएसई (CBSE) की प्रायोगिक परियोजना का एनओएस में समामेलन कर दिया गया।\n3. एनआईओएस (NIOS) एक मुक्त विद्यालय के रूप में कार्य करता है जो विशेष रूप से पूर्व-डिग्री (pre-degree) स्तर तक के शिक्षार्थियों के एक विषम समूह की शैक्षिक आवश्यकताओं को पूरा करने के लिए स्थापित किया गया है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 2 और 3",
-        "केवल 1 और 2",
-        "1, 2 और 3",
-        "केवल 1 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the background and institutional mandate of the National Institute of Open Schooling (NIOS):\n\n1. In 1986, the National Policy on Education suggested strengthening the Open School System for extending open learning facilities in a phased manner at the secondary level across the country.\n2. When the National Open School (NOS) was set up by the Ministry of Education, the pilot project of CBSE on Open School was amalgamated with NOS.\n3. NIOS functions as an open school specifically established to cater to the educational needs of a heterogeneous group of learners up to the pre-degree level.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "2 and 3 only",
-        "1 and 2 only",
-        "1, 2 and 3",
-        "1 and 3 only"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "According to the official profile of NIOS: (1) In 1986, the National Policy on Education suggested strengthening of Open School System for extending open learning facilities in a phased manner at secondary level all over the country as an independent system with its own curriculum and examination leading to certification. (2) The pilot project of CBSE on Open School was amalgamated with NOS. (3) NIOS is an 'Open School' to cater to the needs of a heterogeneous group of learners up to pre-degree level. Hence, all statements 1, 2, and 3 are correct.",
-      "explanation_hindi": "एनआईओएस (NIOS) की आधिकारिक रूपरेखा के अनुसार: (1) 1986 में, राष्ट्रीय शिक्षा नीति ने प्रमाणन की ओर ले जाने वाले अपने स्वयं के पाठ्यक्रम और परीक्षा के साथ एक स्वतंत्र प्रणाली के रूप में देश भर में माध्यमिक स्तर पर चरणबद्ध तरीके से मुक्त शिक्षण सुविधाओं का विस्तार करने के लिए मुक्त विद्यालय प्रणाली को सुदृढ़ करने का सुझाव दिया। (2) मुक्त विद्यालय पर सीबीएसई की प्रायोगिक परियोजना का एनओएस (NOS) के साथ समामेलन कर दिया गया था। (3) एनआईओएस पूर्व-डिग्री स्तर तक के शिक्षार्थियों के एक विषम समूह की आवश्यकताओं को पूरा करने के लिए 'मुक्त विद्यालय' है। अतः कथन 1, 2 और 3 तीनों सही हैं।",
-      "topic": "NIOS",
-      "difficulty": "medium",
-      "key_facts": [
-        "NIOS is \"Open School\" to cater to the needs of a heterogeneous group of learners up to pre-degree level. It was started as a project with in-built flexibilities by the Central Board of Secondary Education (CBSE) in 1979. In 1986, the National Policy on Education suggested strengthening of Open School System for extending open learning facilities in a phased manner at secondary level all over the country as an independent system with its own curriculum and examination leading to certification. Consequently, theMinistry of Education (MOE), Government of India set up the National Open School (NOS) in November 1989. The pilot project of CBSE on Open School was amalgamated with NOS."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-14T14:50:15.537498"
-    },
-    {
-      "id": "96023d12-5d0f-49c0-906f-5b056e83fe3e",
-      "created_at": "2026-10-14T14:48:09.931910",
-      "question_hindi": "NIOS की गतिविधियों, कार्यक्रमों और राज्य-स्तरीय समतुल्यता अधिसूचनाओं के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. शिक्षक शिक्षा (Teacher Education) के अंतर्गत, NIOS आरटीई अधिनियम, 2009 द्वारा अनिवार्य अप्रशिक्षित प्रारंभिक शिक्षकों के प्रशिक्षण हेतु D.El.Ed. कार्यक्रम संचालित करता है।\n2. तमिलनाडु सरकार ने सार्वजनिक सेवाओं में रोजगार और पदोन्नति के उद्देश्य से NIOS कक्षा 10 और 12 के प्रमाणपत्र के शैक्षणिक कार्यक्रम की समतुल्यता के संबंध में आदेश जारी किया।\n3. भारतीय विश्वविद्यालय संघ (AIU) ने 25 जुलाई, 1991 के पत्र के माध्यम से NIOS की सीनियर सेकेंडरी सर्टिफिकेट परीक्षा को समकक्षता प्रदान की।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the activities, programmes, and state-level equivalency notifications of NIOS:\n\n1. Under Teacher Education, NIOS conducts the D.El.Ed. Programme for training untrained elementary teachers as mandated by the RTE Act, 2009.\n2. The Government of Tamil Nadu issued an order regarding the equivalency of the Academic Programme of NIOS Class X and XII Certificate for employment in public services and promotion.\n3. The Association of Indian Universities issued Equivalence of Senior Secondary Certificate Examination of NIOS vide letter dated 25 July, 1991.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1 and 3 only",
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "All three statements are correct: (1) Under Teacher Education, NIOS conducts the D.El.Ed. Programme for training untrained elementary teachers as mandated by the RTE Act, 2009. (2) The official NIOS portal displays the update: 'Order issued by Government of Tamil Nadu regarding equivalency of the Academic Programme of NIOS Class X and XII Certificate for the purpose of Employment in Public Services / Promotion.' (3) Association of Indian Universities issued equivalence vide letter No. EV/11(354)/91/ 25 July, 1991.",
-      "explanation_hindi": "तीनों कथन सही हैं: (1) शिक्षक शिक्षा के तहत, NIOS आरटीई अधिनियम, 2009 के तहत अनिवार्य अप्रशिक्षित शिक्षकों के लिए D.El.Ed कार्यक्रम संचालित करता है। (2) तमिलनाडु सरकार ने सार्वजनिक सेवाओं में रोजगार/पदोन्नति हेतु NIOS कक्षा X और XII प्रमाणपत्र की समतुल्यता पर आदेश जारी किया है। (3) भारतीय विश्वविद्यालय संघ ने 25 जुलाई 1991 के पत्र संख्या EV/11(354)/91 द्वारा NIOS परीक्षा को समकक्षता प्रदान की।",
-      "topic": "NIOS",
-      "difficulty": "medium",
-      "key_facts": [
-        "Teacher Education (D.El.ED. Programme for training of untrained elementary teachers as mandated by RTE Act, 2009) ... Association of Indian Universities, vide letter No. EV/11(354)/91/ 25 July, 1991 issued Equivalence of Senior Secondary Certificate Examination of NIOS. ... Order issued by Government of Tamil Nadu regarding equivalency of the Academic Programme of NIOS Class X and XII Certificate for the purpose of Employment in Public Services / Promotion."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-14T14:48:09.931910"
-    },
-    {
-      "id": "4e201b2b-69c9-4d85-9776-f5159429da0e",
+      "id": "7b94c898-bb6e-42d4-a861-6c784834c66a",
       "created_at": "2026-10-14T14:46:40.601937",
-      "question_hindi": "NIOS की संस्थागत रूपरेखा और प्रशासनिक शासन के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (संस्थागत विशेषता)\nA. पंजीकरण अधिनियम\nB. नीतियां बनाने वाली शासी निकाय\nC. औपचारिक स्थापना तिथि\nD. साधारण सभा (जनरल बॉडी) के अध्यक्ष\n\nसूची II (विवरण)\n1. सोसायटी पंजीकरण अधिनियम (1860)\n2. केंद्रीय मानव संसाधन विकास मंत्री\n3. NIOS की साधारण सभा (General Body)\n4. 12-नवंबर-1989\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "question_hindi": "NIOS के अधिदेश, प्रशासन और संस्थागत नेतृत्व के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
       "options_hindi": [
-        "A-1, B-2, C-4, D-3",
-        "A-1, B-3, C-4, D-2",
-        "A-3, B-1, C-2, D-4",
-        "A-4, B-3, C-1, D-2"
+        "आधिकारिक भाषाएँ : हिंदी और अंग्रेजी (भारत)",
+        "संस्थापक नीति दस्तावेज : राष्ट्रीय शिक्षा नीति 1986",
+        "मूल विभाग : स्कूली शिक्षा और साक्षरता विभाग (DSEL)",
+        "प्रमाणन प्राधिकार : स्नातकोत्तर (post-graduate) स्तर के पाठ्यक्रमों तक का अधिकार"
       ],
       "option_labels": [
         "A",
@@ -431,20 +98,20 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Match List I with List II regarding the institutional profile and administrative governance of NIOS:\n\nList I (Institutional Attribute)\nA. Registration Statute\nB. Governing body framing policies\nC. Formal Establishment Date\nD. Legal Head of the General Body\n\nList II (Description / Details)\n1. Societies’ Registration Act (1860)\n2. Union Minister of Human Resources Development\n3. General Body of NIOS\n4. 12-November-1989\n\nSelect the correct answer using the code given below:",
+      "question_english": "Which of the following pairs regarding the mandate, governance, and institutional leadership of NIOS is NOT correctly matched?",
       "options_english": [
-        "A-1, B-2, C-4, D-3",
-        "A-1, B-3, C-4, D-2",
-        "A-3, B-1, C-2, D-4",
-        "A-4, B-3, C-1, D-2"
+        "Official Languages : Hindi and English (India)",
+        "Founding Policy Instrument : National Policy on Education 1986",
+        "Parent Department : Department of School Education and Literacy (DSEL)",
+        "Certification Authority : Authority up to post-graduate degree level courses"
       ],
-      "correct_answer": "b",
-      "explanation_english": "NIOS is an autonomous organization registered under the Societies’ Registration Act (1860) (A-1). Policies of NIOS are framed through its General Body (B-3). Its formation date is 12-November-1989 (C-4). The General Body is headed by the Union Minister of Human Resources Development (D-2). Therefore, code A-1, B-3, C-4, D-2 is correct.",
-      "explanation_hindi": "NIOS सोसायटी पंजीकरण अधिनियम (1860) (A-1) के तहत पंजीकृत एक स्वायत्त संगठन है। NIOS की नीतियां इसकी साधारण सभा (General Body) (B-3) के माध्यम से बनाई जाती हैं। इसकी स्थापना 12-नवंबर-1989 को हुई थी (C-4)। साधारण सभा की अध्यक्षता केंद्रीय मानव संसाधन विकास मंत्री करते हैं (D-2)। अत: कूट A-1, B-3, C-4, D-2 सही है।",
+      "correct_answer": "d",
+      "explanation_english": "Pair C is not correctly matched. NIOS is vested by the Government of India with the authority to examine and certify learners registered with it up to 'pre-degree level' courses (whether Academic, Technical, or Vocational), not post-graduate level.",
+      "explanation_hindi": "युग्म C सही सुमेलित नहीं है। भारत सरकार द्वारा NIOS को केवल 'प्री-डिग्री स्तर' (pre-degree level) तक के पाठ्यक्रमों (शैक्षणिक, तकनीकी या व्यावसायिक) के शिक्षार्थियों की परीक्षा लेने और प्रमाणित करने का अधिकार दिया गया है, न कि स्नातकोत्तर स्तर का।",
       "topic": "NIOS",
       "difficulty": "medium",
       "key_facts": [
-        "NIOS is an autonomous organization registered under the Societies’ Registration Act (1860). The Headquarters of NIOS is located at A-24/25, Institutional Area, Sector-62 NOIDA (U.P.). Policies of NIOS are framed through its General Body headed by the Union Minister of Human Resources Development."
+        "Government of India through a gazette notification vested NIOS with the authority to examine and certify learners registered with it upto pre degree level courses whether Academic, Technical or Vocational."
       ],
       "ai_processed": true,
       "processed_at": "2026-10-14T14:46:40.601937"
@@ -487,14 +154,14 @@
       "processed_at": "2026-10-13T13:18:07.967830"
     },
     {
-      "id": "c7bf28de-d652-4538-99c6-df6522bbcf55",
+      "id": "216bf174-2cff-4d0b-9063-98445a18d777",
       "created_at": "2026-10-14T14:55:36.482653",
-      "question_hindi": "राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS) के संस्थागत सहयोग, विशिष्ट विषयों और कार्यकारी शासन के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. अंतर्राष्ट्रीय स्तर पर, NIOS कॉमनवेल्थ ऑफ लर्निंग (COL) और यूनेस्को (UNESCO) के साथ सहयोग करता है।\n2. NIOS ने वर्ष 2021 में श्रवण बाधित बच्चों के लिए माध्यमिक स्तर पर एक विषय के रूप में 'भारतीय सांकेतिक भाषा' (Indian Sign Language) की शुरुआत की।\n3. NIOS के कार्यकारी बोर्ड (Executive Board) में चार विशिष्ट क्षेत्रों: अकादमिक, व्यावसायिक, शिक्षार्थी सहायता सेवाएँ और मूल्यांकन के लिए उत्तरदायी निदेशक शामिल हैं।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "question_hindi": "NIOS द्वारा प्रदान की जाने वाली ऑन-डिमांड परीक्षा (ODE) और पाठ्यक्रम प्रावधानों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. स्ट्रीम 1, स्ट्रीम 3 और स्ट्रीम 4 के तहत पंजीकृत शिक्षार्थी माध्यमिक और उच्च माध्यमिक स्तर पर ऑन-डिमांड परीक्षा (ODE) के माध्यम से उपस्थित होने के पात्र हैं।\n2. ऑन-डिमांड परीक्षाएं वर्ष भर आयोजित की जाती हैं, सिवाय अप्रैल-मई और अक्टूबर-नवंबर के महीनों को छोड़कर जब सार्वजनिक परीक्षाएं आयोजित की जा रही होती हैं।\n3. NIOS औद्योगिक प्रशिक्षण संस्थान (ITI) के छात्रों के लिए विशेष रूप से माध्यमिक और उच्च माध्यमिक पाठ्यक्रम प्रदान करता है।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
       "options_hindi": [
+        "केवल 1 और 3",
         "केवल 1 और 2",
-        "केवल 2 और 3",
         "1, 2 और 3",
-        "केवल 1 और 3"
+        "केवल 2 और 3"
       ],
       "option_labels": [
         "A",
@@ -505,33 +172,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the institutional collaboration, specialized subjects, and executive governance of the National Institute of Open Schooling (NIOS):\n\n1. At the international level, NIOS collaborates with the Commonwealth of Learning (COL) and UNESCO.\n2. NIOS introduced Indian Sign Language as a subject at the Secondary Level for Children with Hearing Impairment (Deafness) in 2021.\n3. The Executive Board of NIOS includes Directors responsible for four specific sectors: Academic, Vocational, Student Support Services, and Evaluation.\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the On-Demand Examination (ODE) and course provisions offered by NIOS:\n\n1. Learners registered under Stream 1, Stream 3, and Stream 4 are eligible to appear through the On-Demand Examinations at Secondary and Senior Secondary levels.\n2. On-Demand Examinations are conducted throughout the year, except during the months of April–May and October–November when public examinations take place.\n3. NIOS offers Secondary and Senior Secondary courses specifically aligned for students at the Industrial Training Institute (ITI).\n\nWhich of the statements given above are correct?",
       "options_english": [
+        "1 and 3 only",
         "1 and 2 only",
-        "2 and 3 only",
         "1, 2 and 3",
-        "1 and 3 only"
+        "2 and 3 only"
       ],
       "correct_answer": "c",
-      "explanation_english": "All three statements are correct based on the official documentation: (1) NIOS collaborates internationally with the Commonwealth of Learning (COL) and UNESCO. (2) It introduced Indian Sign Language as a subject at the Secondary Level for Children with Hearing Impairment (Deafness) since 2021. (3) The NIOS Executive Board includes staff from the DSEL, Directors responsible for sectors of the NIOS mission (Academic, Vocational, Student Support Services and Evaluation), as well as a Secretary and Chairman.",
-      "explanation_hindi": "आधिकारिक विवरण के आधार पर तीनों कथन सही हैं: (1) अंतर्राष्ट्रीय स्तर पर NIOS कॉमनवेल्थ ऑफ लर्निंग (COL) और यूनेस्को के साथ सहयोग करता है। (2) इसने वर्ष 2021 से श्रवण बाधित बच्चों के लिए माध्यमिक स्तर पर 'भारतीय सांकेतिक भाषा' को एक विषय के रूप में शामिल किया है। (3) NIOS के कार्यकारी बोर्ड में DSEL के कर्मचारी, NIOS मिशन के चार क्षेत्रों (अकादमिक, व्यावसायिक, शिक्षार्थी सहायता सेवाएँ और मूल्यांकन) के लिए उत्तरदायी निदेशक, सचिव और अध्यक्ष शामिल हैं।",
+      "explanation_english": "All three statements are correct according to the NIOS factsheet: (1) A learner is eligible if registered under Stream 1, 3, and 4 to appear through ODE at Secondary (10th) and Senior Secondary (12th). (2) On Demand Exams are held through the year except for April–May and Oct–Nov when public exams are going on. (3) Courses offered include 'Secondary and Senior Secondary Courses for students at the Industrial Training Institute'.",
+      "explanation_hindi": "NIOS के आधिकारिक विवरण के अनुसार तीनों कथन सही हैं: (1) यदि कोई शिक्षार्थी स्ट्रीम 1, 3 और 4 के तहत पंजीकृत है, तो वह माध्यमिक (10वीं) और उच्च माध्यमिक (12वीं) स्तर पर ODE के माध्यम से उपस्थित होने का पात्र है। (2) ऑन-डिमांड परीक्षाएं वर्ष भर आयोजित की जाती हैं, सिवाय अप्रैल-मई और अक्टूबर-नवंबर के जब सार्वजनिक परीक्षाएं चल रही होती हैं। (3) पेश किए जाने वाले पाठ्यक्रमों में 'औद्योगिक प्रशिक्षण संस्थान (ITI) के छात्रों के लिए माध्यमिक और उच्च माध्यमिक पाठ्यक्रम' भी शामिल हैं।",
       "topic": "NIOS",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "key_facts": [
-        "The NIOS collaborates with the Commonwealth of Learning (COL) and UNESCO. ... Indian Sign Language as a subject at the Secondary Level for Children with Hearing Impairment (Deafness), since 2021. ... The organisation is overseen by an Executive Board including staff from the DSEL, Directors responsible for sectors of the NIOS mission (Academic, Vocational, Student Support Services and Evaluation), as well as a Secretary and Chairman."
+        "However, one is also eligible (If he/she is registered under Stream 1,3 and 4) to appear through the On-Demand Examinations at Secondary (10th) and Senior Secondary (12th). On Demand Exams are held through the year except for April–May and Oct–Nov i.e. when public exams are going on, ODE isn't held. ... Secondary and Senior Secondary Courses for students at the Industrial Training Institute"
       ],
       "ai_processed": true,
       "processed_at": "2026-10-14T14:55:36.482653"
     },
     {
-      "id": "6d72c157-f54a-4361-b020-afe3cf95972a",
-      "created_at": "2026-10-14T14:50:15.537498",
-      "question_hindi": "एनआईओएस (NIOS) के संस्थागत तंत्र, विभागों और सार्वजनिक इंटरफेस के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "id": "582399bc-2e68-4f85-abf9-12370afd2469",
+      "created_at": "2026-10-14T14:48:45.759568",
+      "question_hindi": "राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS) की संस्थागत वितरण प्रणाली और निर्देशात्मक ढांचे के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. NIOS प्रत्यायित संस्थानों (AIs) के एक नेटवर्क के माध्यम से काम करता है, जो अध्ययन केंद्रों के रूप में कार्य करते हैं।\n2. अध्ययन केंद्रों द्वारा संदेह निवारण और शैक्षणिक मार्गदर्शन के लिए व्यक्तिगत संपर्क कार्यक्रम (PCPs) आयोजित किए जाते हैं।\n3. व्यक्तिगत संपर्क कार्यक्रमों की आवृत्ति और प्रारूप सभी केंद्रों पर अनिवार्य रूप से समान होते हैं क्योंकि यह NIOS मुख्यालय द्वारा केंद्रीय रूप से तय किया जाता है।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
       "options_hindi": [
-        "लचीली शिक्षार्थी मूल्यांकन प्रणाली — ऑन-डिमांड परीक्षा (On-Demand Examination)",
-        "आधिकारिक शिक्षार्थी टोल-फ्री हेल्पलाइन — 1800-180-9393",
-        "दृश्य-श्रव्य एवं प्रसारण इकाई — मीडिया इकाई/टेलीकास्ट (Media Unit/Telecast)",
-        "प्राप्त गुणवत्ता प्रबंधन प्रणाली मानक — आईएसओ 14001:2015 प्रमाणन"
+        "केवल 1 और 3",
+        "केवल 1 और 2",
+        "1, 2 और 3",
+        "केवल 2 और 3"
       ],
       "option_labels": [
         "A",
@@ -542,23 +209,23 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which of the following pairs regarding the institutional mechanisms, departments, and public interfaces of NIOS is NOT correctly matched?",
+      "question_english": "Consider the following statements regarding the institutional delivery mechanism and instructional framework of the National Institute of Open Schooling (NIOS):\n\n1. NIOS operates through a network of Accredited Institutions (AIs), which function as study centres.\n2. Personal Contact Programmes (PCPs) are conducted by study centres for clearing doubts and academic guidance.\n3. The frequency and format of Personal Contact Programmes are strictly uniform across all centres as centrally fixed by NIOS headquarters.\n\nWhich of the statements given above are correct?",
       "options_english": [
-        "Flexible Learner Evaluation Window — On-Demand Examination",
-        "Official Learner Toll-Free Helpline — 1800-180-9393",
-        "Audio-Visual & Broadcasting Unit — Media Unit/Telecast",
-        "Quality Management System Standard Attained — ISO 14001:2015 Certification"
+        "1 and 3 only",
+        "1 and 2 only",
+        "1, 2 and 3",
+        "2 and 3 only"
       ],
-      "correct_answer": "d",
-      "explanation_english": "Pair 4 is NOT correctly matched because NIOS holds the 'NIOS ISO 9001:2015 Certification' (Quality Management System), not ISO 14001:2015 (Environmental Management). All other pairs correctly represent official departments/features on the NIOS portal.",
-      "explanation_hindi": "युग्म 4 सही सुमेलित नहीं है क्योंकि एनआईओएस के पास 'NIOS ISO 9001:2015 प्रमाणन' (गुणवत्ता प्रबंधन प्रणाली) है, न कि ISO 14001:2015। अन्य सभी युग्म एनआईओएस पोर्टल पर आधिकारिक विभागों/सुविधाओं को सही रूप से दर्शाते हैं।",
+      "correct_answer": "b",
+      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because the frequency and format of PCPs are not centrally fixed; rather, 'The frequency and format are decided by the study centre, based on local needs and learner convenience.'",
+      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि PCPs की आवृत्ति और प्रारूप केंद्रीय रूप से तय नहीं होते हैं; बल्कि, 'आवृत्ति और प्रारूप अध्ययन केंद्र द्वारा स्थानीय आवश्यकताओं और शिक्षार्थियों की सुविधा के आधार पर तय किए जाते हैं।'",
       "topic": "NIOS",
       "difficulty": "medium",
       "key_facts": [
-        "NIOS ISO 9001:2015 Certification"
+        "The NIOS operates through a network of accredited institutions (AIs), which function as study centres. These centres conduct personal contact programmes (PCPs) — in-person sessions held on weekends or scheduled weekdays — for clearing doubts and academic guidance. The frequency and format are decided by the study centre, based on local needs and learner convenience."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-14T14:50:15.537498"
+      "processed_at": "2026-10-14T14:48:45.759568"
     },
     {
       "id": "62a18a35-c53c-48ee-9a06-5f59d2d55573",
@@ -598,14 +265,14 @@
       "processed_at": "2026-10-13T13:19:30.265435"
     },
     {
-      "id": "fc5ebf1b-ae26-4d64-becd-e9cdd363eb3b",
-      "created_at": "2026-10-14T14:48:09.931910",
-      "question_hindi": "NIOS के नियमों, प्रवेश पात्रता और अध्ययन के माध्यमों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "id": "186e612f-7613-4768-9fd4-c8b10ff11562",
+      "created_at": "2026-10-13T13:19:30.265435",
+      "question_hindi": "NIOS के संस्थागत संगठनात्मक नेटवर्क के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
       "options_hindi": [
-        "शुल्क रियायत के लाभार्थी - महिलाएँ, अनुसूचित जाति/अनुसूचित जनजाति, भूतपूर्व सैनिक और दिव्यांग शिक्षार्थी",
-        "पंजीकरण हेतु वैध जन्म तिथि प्रमाण - सरकारी एजेंसी द्वारा जारी आधार कार्ड",
-        "उच्चतर माध्यमिक पाठ्यक्रम हेतु अध्ययन के माध्यम - तमिल और मलयालम माध्यमों में उपलब्ध",
-        "उच्चतर माध्यमिक पाठ्यक्रम हेतु न्यूनतम आयु - 15 वर्ष"
+        "उप-क्षेत्रीय केंद्र: पाँच उप-क्षेत्रीय केंद्र",
+        "NIOS नेटवर्क में विभाग: पाँच विभाग",
+        "पूरे भारत में क्षेत्रीय केंद्र: 23 क्षेत्रीय केंद्र",
+        "अध्ययन केंद्र (AIs/AVIs): 7,400 से अधिक केंद्र"
       ],
       "option_labels": [
         "A",
@@ -616,23 +283,356 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which of the following pairs regarding NIOS regulations, admission eligibility, and study mediums is NOT correctly matched?",
+      "question_english": "Which of the following pairs regarding the institutional organizational network of NIOS is NOT correctly matched?",
       "options_english": [
-        "Fee concession beneficiaries - Females, SC/ST, Ex-Servicemen, and differently abled learners",
-        "Valid date of birth proof for registration - Aadhaar Card issued by Govt. Agency",
-        "Mediums of study for Senior Secondary Course - Available in Tamil and Malayalam mediums",
-        "Minimum age for Senior Secondary Course - 15 years"
+        "Sub-regional centres: Five sub-regional centres",
+        "Departments in NIOS network: Five departments",
+        "Regional Centres across India: 23 regional centres",
+        "Study centres (AIs/AVIs): More than 7,400 centres"
       ],
-      "correct_answer": "c",
-      "explanation_english": "Pair C is NOT correctly matched. The Senior Secondary course is offered in English, Hindi, Odia, Bengali, Gujarati, and Urdu mediums (6 mediums). Tamil and Malayalam mediums are only available for the Secondary course (which is offered in English, Hindi, Urdu, Marathi, Odia, Telugu, Gujarati, Tamil, and Malayalam).",
-      "explanation_hindi": "युग्म C सही सुमेलित नहीं है। उच्चतर माध्यमिक पाठ्यक्रम अंग्रेजी, हिंदी, उड़िया, बंगाली, गुजराती और उर्दू माध्यमों (6 माध्यमों) में पेश किया जाता है। तमिल और मलयालम माध्यम केवल माध्यमिक पाठ्यक्रम के लिए उपलब्ध हैं।",
+      "correct_answer": "a",
+      "explanation_english": "According to the administrative network details of NIOS, it operates through a network of five departments, 23 regional centres, two sub-regional centres (not five), two NIOS cells, and more than 7,400 study centres (AIs/AVIs) across India and abroad.",
+      "explanation_hindi": "NIOS के प्रशासनिक नेटवर्क विवरण के अनुसार, यह पांच विभागों, 23 क्षेत्रीय केंद्रों, दो उप-क्षेत्रीय केंद्रों (पाँच नहीं), दो NIOS सेल और भारत तथा विदेशों में 7,400 से अधिक अध्ययन केंद्रों (AIs/AVIs) के नेटवर्क के माध्यम से संचालित होता है।",
       "topic": "NIOS",
       "difficulty": "medium",
       "key_facts": [
-        "The NIOS offers the Secondary course in English, Hindi, Urdu, Marathi, Odia, Telugu, Gujarati, Tamil and Malayalam mediums; and the Senior Secondary course in English, Hindi, Odia, Bengali, Gujarati and Urdu mediums."
+        "The NIOS operates through a network of five departments, 23 regional centres, two sub-regional centres, two NIOS cells, and more than 7,400 study centres (AIs/AVIs) across India and abroad."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-14T14:48:09.931910"
+      "processed_at": "2026-10-13T13:19:30.265435"
+    },
+    {
+      "id": "28f8d8bb-e002-42db-9202-e3b44cd25515",
+      "created_at": "2026-10-14T14:46:01.562100",
+      "question_hindi": "एनआईओएस (NIOS) के आधिकारिक दस्तावेजों के अनुसार, किस नीति ने सबसे पहले पूरे देश में माध्यमिक स्तर पर एक स्वतंत्र प्रणाली के रूप में चरणबद्ध तरीके से मुक्त शिक्षण सुविधाओं का विस्तार करने के लिए मुक्त विद्यालय प्रणाली को मजबूत करने का सुझाव दिया था?",
+      "options_hindi": [
+        "राष्ट्रीय शिक्षा नीति, 1968",
+        "शिक्षा का अधिकार अधिनियम, 2009",
+        "राष्ट्रीय शिक्षा नीति, 1986",
+        "प्रारूप राष्ट्रीय शिक्षा नीति, 2019"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "According to official NIOS documentation, which policy first suggested strengthening the Open School System for extending open learning facilities in a phased manner at the secondary level across the country as an independent system?",
+      "options_english": [
+        "National Policy on Education, 1968",
+        "Right to Education Act, 2009",
+        "National Policy on Education, 1986",
+        "Draft National Education Policy, 2019"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "According to the official NIOS profile, in 1986, the National Policy on Education suggested strengthening of the Open School System for extending open learning facilities in a phased manner at the secondary level all over the country as an independent system.",
+      "explanation_hindi": "एनआईओएस के आधिकारिक प्रोफाइल के अनुसार, 1986 में, राष्ट्रीय शिक्षा नीति (NPE 1986) ने अपने स्वयं के पाठ्यक्रम और परीक्षा के साथ देश भर में माध्यमिक स्तर पर मुक्त शिक्षण सुविधाओं का विस्तार करने के लिए मुक्त विद्यालय प्रणाली को मजबूत करने का सुझाव दिया था।",
+      "topic": "NIOS",
+      "difficulty": "medium",
+      "key_facts": [
+        "In 1986, the National Policy on Education suggested strengthening of Open School System for extending open learning facilities in a phased manner at secondary level all over the country as an independent system with its own curriculum and examination leading to certification."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-14T14:46:01.562100"
+    },
+    {
+      "id": "e3ab5b81-09e5-4d1d-b905-a865471fc4ae",
+      "created_at": "2026-10-14T14:57:07.295071",
+      "question_hindi": "NIOS के नियमों, शिक्षण के माध्यमों और शिक्षार्थी लाभों के संदर्भ में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "options_hindi": [
+        "अनाथ और सड़क पर रहने वाले बच्चों के लिए जन्म तिथि का मान्य प्रमाण : सरकारी अस्पताल द्वारा जारी आयु के संबंध में चिकित्सा प्रमाण पत्र",
+        "शुल्क रियायत के लिए पात्र लाभार्थी वर्ग : महिलाएं, अनुसूचित जाति/अनुसूचित जनजाति, पूर्व सैनिक और दिव्यांग शिक्षार्थी",
+        "वरिष्ठ माध्यमिक पाठ्यक्रम के लिए अध्ययन के माध्यम : अंग्रेजी, हिंदी, उड़िया, बंगाली, गुजराती और उर्दू",
+        "माध्यमिक पाठ्यक्रम के लिए उपलब्ध माध्यमों की संख्या : केवल 4 माध्यम (अंग्रेजी, हिंदी, उर्दू और संस्कृत)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following pairs regarding NIOS rules, mediums of instruction, and learner benefits is NOT correctly matched?",
+      "options_english": [
+        "Valid proof of date of birth for orphans and street children : Medical certificate in respect of age issued by a Government Hospital",
+        "Beneficiary groups eligible for fee concessions : Females, SC/ST, Ex-Servicemen, and differently abled/Divyang learners",
+        "Mediums of study for Senior Secondary course : English, Hindi, Odia, Bengali, Gujarati and Urdu",
+        "Number of mediums available for Secondary course : Only 4 mediums (English, Hindi, Urdu, and Sanskrit)"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Pair 4 is NOT correctly matched. NIOS offers the Secondary course in 9 mediums: English, Hindi, Urdu, Marathi, Odia, Telugu, Gujarati, Tamil, and Malayalam mediums, not just 4 mediums.",
+      "explanation_hindi": "युग्म 4 सही सुमेलित नहीं है। NIOS माध्यमिक पाठ्यक्रम 9 माध्यमों में प्रदान करता है: अंग्रेजी, हिंदी, उर्दू, मराठी, उड़िया, तेलुगु, गुजराती, तमिल और मलयालम माध्यम, न कि केवल 4 माध्यम।",
+      "topic": "NIOS",
+      "difficulty": "medium",
+      "key_facts": [
+        "The NIOS offers the Secondary course in English, Hindi, Urdu, Marathi, Odia, Telugu, Gujarati, Tamil and Malayalam mediums; and the Senior Secondary course in English, Hindi, Odia, Bengali, Gujarati and Urdu mediums. ... The certificate of date of birth issued by a Municipal Corporation, a Municipal Body, a Village Panchayat or any other body authorised by the Registrar, Birth and Death, Government of India, and the Aadhaar Card issued by Govt. Agency is a valid proof of date of birth. However, in case of orphans, street children etc., a medical certificate in respect of age issued by a Government Hospital is also acceptable as a valid proof of date of birth. ... The fee concession is provided to females, SC/ST/Ex-Servicemen and differently abled/Divyang learners as per NIOS norms."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-14T14:57:07.295071"
+    },
+    {
+      "id": "7645f2a9-0f9b-423f-873d-756a8001ba26",
+      "created_at": "2026-10-14T14:53:23.851140",
+      "question_hindi": "एनआईओएस (NIOS) के माध्यम से मुक्त विद्यालयी शिक्षा ढांचे को सुदृढ़ करने के संदर्भ में उल्लिखित शाला-बाह्य (आउट-ऑफ-स्कूल) आंकड़ों और राष्ट्रीय शैक्षिक लक्ष्यों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. राष्ट्रीय शिक्षा नीति (NEP) 2020 में 2030 तक प्री-स्कूल से माध्यमिक स्तर तक 100% सकल नामांकन अनुपात (GER) प्राप्त करने का लक्ष्य निर्धारित किया गया है।\n2. आवधिक श्रम बल सर्वेक्षण (PLFS) 2023-24 के अनुसार, 14-18 वर्ष आयु वर्ग के लगभग 2 करोड़ बच्चे स्कूल नहीं जा रहे हैं।\n3. PLFS 2023-24 के आंकड़ों के अनुसार प्रतिवर्ष 50 लाख से अधिक छात्र बोर्ड परीक्षाओं में अनुत्तीर्ण होते हैं।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 2 और 3",
+        "केवल 1 और 2",
+        "केवल 1 और 3",
+        "1, 2 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the out-of-school data and national educational targets cited for strengthening the Open Schooling framework through NIOS:\n\n1. The National Education Policy (NEP) 2020 sets a target of achieving 100% Gross Enrolment Ratio (GER) from pre-school to secondary level by 2030.\n2. According to the Periodic Labour Force Survey (PLFS) 2023-24, nearly 2 crore children aged 14–18 years are not attending school.\n3. PLFS 2023-24 data indicates that over 50 lakh students fail board examinations each year.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "2 and 3 only",
+        "1 and 2 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "According to the official PIB release, NEP 2020 sets a target of achieving 100% Gross Enrolment Ratio (GER) from pre-school to secondary level by 2030. Additionally, according to the annual report of the Periodic Labour Force Survey (PLFS) 2023-24, nearly 2 crore children aged 14-18 years are not attending school, around 11% of children in Grades 3-8 remain out-of-school, and over 50 lakh students fail board examinations each year. Hence, all statements 1, 2, and 3 are correct.",
+      "explanation_hindi": "पीआईबी (PIB) की आधिकारिक विज्ञप्ति के अनुसार, एनईपी (NEP) 2020 के तहत 2030 तक प्री-स्कूल से माध्यमिक स्तर तक 100% सकल नामांकन अनुपात (GER) प्राप्त करने का लक्ष्य रखा गया है। साथ ही, आवधिक श्रम बल सर्वेक्षण (PLFS) 2023-24 की वार्षिक रिपोर्ट के अनुसार, 14-18 वर्ष आयु वर्ग के लगभग 2 करोड़ बच्चे स्कूल नहीं जा रहे हैं तथा प्रतिवर्ष 50 लाख से अधिक छात्र बोर्ड परीक्षाओं में अनुत्तीर्ण होते हैं। अतः कथन 1, 2 और 3 सभी सही हैं।",
+      "topic": "NIOS",
+      "difficulty": "medium",
+      "key_facts": [
+        "The National Education Policy (NEP) 2020 sets a target of achieving 100% Gross Enrolment Ratio (GER) from pre-school to secondary level by 2030. However, according to the annual report of the Periodic Labour Force Survey (PLFS) 2023-24, nearly 2 crore children aged 14-18 years are not attending school, while around 11% of children in Grades 3-8 remain out-of-school and over 50 lakh students fail board examinations each year."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-14T14:53:23.852127"
+    },
+    {
+      "id": "4e201b2b-69c9-4d85-9776-f5159429da0e",
+      "created_at": "2026-10-14T14:46:40.601937",
+      "question_hindi": "NIOS की संस्थागत रूपरेखा और प्रशासनिक शासन के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (संस्थागत विशेषता)\nA. पंजीकरण अधिनियम\nB. नीतियां बनाने वाली शासी निकाय\nC. औपचारिक स्थापना तिथि\nD. साधारण सभा (जनरल बॉडी) के अध्यक्ष\n\nसूची II (विवरण)\n1. सोसायटी पंजीकरण अधिनियम (1860)\n2. केंद्रीय मानव संसाधन विकास मंत्री\n3. NIOS की साधारण सभा (General Body)\n4. 12-नवंबर-1989\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-1, B-2, C-4, D-3",
+        "A-1, B-3, C-4, D-2",
+        "A-3, B-1, C-2, D-4",
+        "A-4, B-3, C-1, D-2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding the institutional profile and administrative governance of NIOS:\n\nList I (Institutional Attribute)\nA. Registration Statute\nB. Governing body framing policies\nC. Formal Establishment Date\nD. Legal Head of the General Body\n\nList II (Description / Details)\n1. Societies’ Registration Act (1860)\n2. Union Minister of Human Resources Development\n3. General Body of NIOS\n4. 12-November-1989\n\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "A-1, B-2, C-4, D-3",
+        "A-1, B-3, C-4, D-2",
+        "A-3, B-1, C-2, D-4",
+        "A-4, B-3, C-1, D-2"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "NIOS is an autonomous organization registered under the Societies’ Registration Act (1860) (A-1). Policies of NIOS are framed through its General Body (B-3). Its formation date is 12-November-1989 (C-4). The General Body is headed by the Union Minister of Human Resources Development (D-2). Therefore, code A-1, B-3, C-4, D-2 is correct.",
+      "explanation_hindi": "NIOS सोसायटी पंजीकरण अधिनियम (1860) (A-1) के तहत पंजीकृत एक स्वायत्त संगठन है। NIOS की नीतियां इसकी साधारण सभा (General Body) (B-3) के माध्यम से बनाई जाती हैं। इसकी स्थापना 12-नवंबर-1989 को हुई थी (C-4)। साधारण सभा की अध्यक्षता केंद्रीय मानव संसाधन विकास मंत्री करते हैं (D-2)। अत: कूट A-1, B-3, C-4, D-2 सही है।",
+      "topic": "NIOS",
+      "difficulty": "medium",
+      "key_facts": [
+        "NIOS is an autonomous organization registered under the Societies’ Registration Act (1860). The Headquarters of NIOS is located at A-24/25, Institutional Area, Sector-62 NOIDA (U.P.). Policies of NIOS are framed through its General Body headed by the Union Minister of Human Resources Development."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-14T14:46:40.601937"
+    },
+    {
+      "id": "70557ace-c303-4a94-ba7e-e0971a5dd3ae",
+      "created_at": "2026-10-14T14:53:23.852127",
+      "question_hindi": "राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS) की आधिकारिक अकादमिक विवरणिका के अनुसार, इसके माध्यमिक, उच्चतर माध्यमिक और व्यावसायिक शिक्षा पाठ्यक्रमों में नामांकित कुल शिक्षार्थियों की संख्या कितनी है?",
+      "options_hindi": [
+        "18 लाख से अधिक शिक्षार्थी",
+        "12 लाख से अधिक शिक्षार्थी",
+        "24 लाख से अधिक शिक्षार्थी",
+        "50 लाख से अधिक शिक्षार्थी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "According to the official Academic Prospectus of the National Institute of Open Schooling (NIOS), what is the total learner enrolment base across its Secondary, Senior Secondary, and Vocational Education courses?",
+      "options_english": [
+        "Over 18 lakh learners",
+        "Over 12 lakh learners",
+        "Over 24 lakh learners",
+        "Over 50 lakh learners"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "According to the NIOS Academic Prospectus, NIOS is the largest open schooling system in the world, with over 24 lakh learners across Secondary, Senior Secondary, and Vocational Education courses.",
+      "explanation_hindi": "एनआईओएस की अकादमिक विवरणिका के अनुसार, एनआईओएस विश्व की सबसे बड़ी मुक्त विद्यालयी शिक्षा प्रणाली है, जिसमें माध्यमिक, उच्चतर माध्यमिक और व्यावसायिक शिक्षा पाठ्यक्रमों में 24 लाख से अधिक शिक्षार्थी नामांकित हैं।",
+      "topic": "NIOS",
+      "difficulty": "easy",
+      "key_facts": [
+        "NIOS is the largest open schooling system in the world, with over 24 lakh learners across Secondary, Senior Secondary, and Vocational Education courses."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-14T14:53:23.852127"
+    },
+    {
+      "id": "c18cb929-effc-4a6b-8621-4e946bcc7591",
+      "created_at": "2026-10-13T13:20:19.086337",
+      "question_hindi": "अक्टूबर-नवंबर 2026 की NIOS सार्वजनिक परीक्षा समय-सारणी और निर्देशों के संदर्भ में, निम्नलिखित कथनों पर विचार कीजिए:\n\n1. माध्यमिक (कक्षा 10) और उच्च माध्यमिक (कक्षा 12) दोनों के छात्रों के लिए सैद्धांतिक परीक्षाएं 22 अक्टूबर, 2026 से शुरू होंगी।\n2. कक्षा 12 की सैद्धांतिक परीक्षाएं कक्षा 10 की अंतिम परीक्षा से ठीक दो दिन पहले समाप्त होती हैं।\n3. आधिकारिक डेट शीट और परीक्षा अधिसूचना को विषय-वार तारीखों, समय और केंद्र-विशिष्ट निर्देशों के लिए अंतिम संदर्भ माना जाना चाहिए।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 1 और 3",
+        "1, 2 और 3",
+        "केवल 1 और 2",
+        "केवल 2 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "With reference to the NIOS public examination schedule and instructions for October-November 2026, consider the following statements:\n\n1. Theory examinations for both Secondary (Class 10) and Senior Secondary (Class 12) students commence on October 22, 2026.\n2. The theory examinations for Class 12 conclude exactly two days prior to the final examination of Class 10.\n3. The official date sheet and examination notification should be treated as the final reference for subject-wise dates, timings, and centre-specific instructions.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "1 and 3 only",
+        "1, 2 and 3",
+        "1 and 2 only",
+        "2 and 3 only"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "All statements are correct. Theory exams begin on October 22, 2026. Class 12 ends on December 5 and Class 10 ends on December 7 (a difference of 2 days). The official date sheet and examination notification should be treated as the final reference for subject-wise dates, timings, and centre-specific instructions.",
+      "explanation_hindi": "सभी कथन सही हैं। सैद्धांतिक परीक्षाएं 22 अक्टूबर, 2026 को शुरू होती हैं। कक्षा 12 की परीक्षाएं 5 दिसंबर को और कक्षा 10 की 7 दिसंबर को समाप्त होती हैं (2 दिन का अंतर)। आधिकारिक डेट शीट और परीक्षा अधिसूचना को विषय-वार तिथियों, समय और केंद्र-विशिष्ट निर्देशों के लिए अंतिम संदर्भ माना जाता है।",
+      "topic": "NIOS",
+      "difficulty": "hard",
+      "key_facts": [
+        "The last examination for NIOS Class 10 students is scheduled for December 7, while the Class 12 theory examinations will conclude on December 5. The timetable specifies subject-wise examination dates and timings to help candidates plan their preparation. Students can check the examination schedule on the official NIOS website, sdmis.nios.ac.in. Candidates should check the dates and timings against their respective subjects and refer to the official notification for any instructions applicable to their examination centre or regional centre."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-13T13:20:19.086337"
+    },
+    {
+      "id": "c535893f-b8ec-417b-8ad5-75e7518cee31",
+      "created_at": "2026-10-14T14:48:45.759568",
+      "question_hindi": "NCERT बनाम NIOS अध्ययन सामग्री की शैक्षणिक और पाठ्य विशेषताओं के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (पाठ्यपुस्तक सामग्री की विशेषता)\nA. प्रयुक्त भाषा की शैली\nB. संरेखण एवं फोकस\nC. प्राथमिक लक्षित पाठक / डिज़ाइन\nD. नेविगेशनल संरचना\n\nसूची II (NIOS सामग्री की विशेषता)\n1. अधिक लचीली होने के लिए डिज़ाइन की गई, लेकिन इसमें कठोर संरचना की कमी हो सकती है\n2. औपचारिक स्कूली शिक्षा तक पहुँच न रखने वाले छात्रों की आवश्यकताओं को पूरा करती है\n3. व्यावहारिक अनुप्रयोगों और संदर्भ-आधारित शिक्षण पर केंद्रित सरल भाषा\n4. वास्तविक जीवन के उदाहरणों के साथ आसान, अधिक सुलभ भाषा\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-2, B-3, C-4, D-1",
+        "A-3, B-4, C-1, D-2",
+        "A-4, B-3, C-2, D-1",
+        "A-4, B-1, C-2, D-3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding the pedagogical and textual characteristics of NCERT vs NIOS materials:\n\nList I (Textbook Material Feature)\nA. Style of language used\nB. Alignment and focus\nC. Primary target audience / design\nD. Navigational structure\n\nList II (NIOS Material Characterization)\n1. Designed to be more flexible, but may lack a rigid structure\n2. Caters to students lacking access to formal schooling\n3. Simpler language focusing on practical applications and context-based learning\n4. Easier, more approachable language with real-life examples\n\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "A-2, B-3, C-4, D-1",
+        "A-3, B-4, C-1, D-2",
+        "A-4, B-3, C-2, D-1",
+        "A-4, B-1, C-2, D-3"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "According to the comparative analysis: A (Language style) matches 4 ('NIOS books use an easier, more approachable language with real-life examples'); B (Alignment/focus) matches 3 ('focus on practical applications, real-world examples, and context-based learning'); C (Target audience) matches 2 ('cater to students who may not have access to formal schooling'); D (Navigational structure) matches 1 ('NIOS books are designed to be more flexible and may lack the structure found in NCERTs'). Hence, the correct code is A-4, B-3, C-2, D-1.",
+      "explanation_hindi": "तुलनात्मक विश्लेषण के अनुसार: A (भाषा शैली) 4 से मेल खाती है ('NIOS पुस्तकें वास्तविक जीवन के उदाहरणों के साथ एक आसान, अधिक सुलभ भाषा का उपयोग करती हैं'); B (फोकस) 3 से मेल खाता है ('व्यावहारिक अनुप्रयोगों, वास्तविक दुनिया के उदाहरणों और संदर्भ-आधारित शिक्षण पर ध्यान केंद्रित करती हैं'); C (लक्षित पाठक) 2 से मेल खाता है ('उन छात्रों की आवश्यकताओं को पूरा करती हैं जिनके पास औपचारिक स्कूली शिक्षा तक पहुंच नहीं हो सकती है'); D (संरचना) 1 से मेल खाती है ('NIOS पुस्तकें अधिक लचीली होने के लिए डिज़ाइन की गई हैं और इनमें NCERT जैसी संरचना का अभाव हो सकता है')। अतः सही कूट A-4, B-3, C-2, D-1 है।",
+      "topic": "NIOS",
+      "difficulty": "medium",
+      "key_facts": [
+        "The NIOS textbooks, on the other hand, cater to students who may not have access to formal schooling. They offer content in a simplified language and focus on practical applications, real-world examples, and context-based learning. Though not as widely popular as NCERT books, NIOS books cover several topics relevant to UPSC, particularly in subjects like Indian culture, environmental studies, and social issues."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-14T14:48:45.759568"
+    },
+    {
+      "id": "9eda2851-f5ed-472e-a36b-6855e8c7f8fb",
+      "created_at": "2026-10-14T14:46:40.601937",
+      "question_hindi": "शिक्षा मंत्रालय द्वारा रेखांकित NIOS के उद्देश्यों और प्राथमिकता प्राप्त लक्षित समूहों के संदर्भ में, निम्नलिखित कथनों पर विचार कीजिए:\n\n1. यह स्कूली स्तर पर मुक्त एवं दूरस्थ शिक्षा प्रणाली के समुचित विकास के संबंध में संबंधित सरकारों के अनुरोध पर या स्वतः संज्ञान (suo moto) लेकर भारत सरकार और राज्यों को व्यावसायिक परामर्श प्रदान करता है।\n2. विशेष आवश्यकता वाले लोग, जिनमें शारीरिक और मानसिक रूप से दिव्यांग व्यक्ति शामिल हैं, स्पष्ट रूप से इसके प्राथमिकता प्राप्त लक्षित समूहों में से एक हैं।\n3. NIOS केवल प्राथमिकता प्राप्त लक्षित समूहों के उम्मीदवारों तक ही नामांकन को पूरी तरह से प्रतिबंधित करता है।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "options_hindi": [
+        "केवल 1 और 2",
+        "केवल 1 और 3",
+        "केवल 2",
+        "1, 2 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "With reference to the objectives and prioritized target groups of NIOS as outlined by the Ministry of Education, consider the following statements:\n\n1. It provides professional advice to the Government of India and to the States regarding proper development of Open and Distance Learning Systems at the school level either upon request or suo moto.\n2. People with special needs, including physically and mentally challenged persons, are explicitly identified as one of its prioritized target groups.\n3. NIOS completely restricts enrolment strictly to candidates from prioritized target groups.\n\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 only",
+        "1, 2 and 3"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because the official text specifies: 'Anybody irrespective of caste, creed and location can seek enrolment in the courses/programmes offered by NIOS.' It prioritizes certain groups but does not restrict enrolment strictly to them.",
+      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि आधिकारिक दस्तावेज में स्पष्ट कहा गया है: 'जाति, पंथ और स्थान पर ध्यान दिए बिना कोई भी व्यक्ति NIOS द्वारा प्रस्तावित पाठ्यक्रमों/कार्यक्रमों में नामांकन करा सकता है।' यह कुछ समूहों को प्राथमिकता देता है किंतु नामांकन को केवल उन्हीं तक सीमित नहीं करता।",
+      "topic": "NIOS",
+      "difficulty": "medium",
+      "key_facts": [
+        "To provide professional advice to the Government of India, and to the States, regarding proper development of Open and Distance Learning System at school level in response to requests from the concerned Government/s or suo moto"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-14T14:46:40.601937"
+    },
+    {
+      "id": "06f8104a-601e-4997-8002-e57bdf1b4d21",
+      "created_at": "2026-10-14T14:46:40.601937",
+      "question_hindi": "राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS) के संगठनात्मक नेटवर्क और संचालन के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. यह पाँच विभागों, 23 क्षेत्रीय केंद्रों, दो उप-क्षेत्रीय केंद्रों और दो NIOS सेल वाले नेटवर्क के माध्यम से संचालित होता है।\n2. NIOS द्वारा प्रस्तावित ओपन बेसिक एजुकेशन (OBE) कार्यक्रम 14+ वर्ष आयु वर्ग (किशोरों और वयस्कों) के लिए है।\n3. सामान्य माध्यमिक शिक्षा के अलावा, NIOS विशेष रूप से औद्योगिक प्रशिक्षण संस्थान (ITI) के छात्रों के लिए माध्यमिक और उच्च माध्यमिक पाठ्यक्रम भी प्रदान करता है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "1, 2 और 3",
+        "केवल 2 और 3",
+        "केवल 1 और 2",
+        "केवल 1 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the organizational network and operations of the National Institute of Open Schooling (NIOS):\n\n1. It operates through a network comprising five departments, 23 regional centres, two sub-regional centres, and two NIOS cells.\n2. The Open Basic Education (OBE) Programme offered by NIOS is meant for the 14+ years age group (adolescents and adults).\n3. In addition to general secondary education, NIOS offers Secondary and Senior Secondary Courses specifically designed for students at the Industrial Training Institute (ITI).\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "1, 2 and 3",
+        "2 and 3 only",
+        "1 and 2 only",
+        "1 and 3 only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "All three statements are correct as per official NIOS operational details. NIOS operates through five departments, 23 regional centres, two sub-regional centres, two NIOS cells, and more than 7,400 study centres. The OBE programme caters to the 14+ years age group (adolescents and adults). It also provides secondary and senior secondary courses for students at the Industrial Training Institute.",
+      "explanation_hindi": "आधिकारिक NIOS संचालन विवरण के अनुसार तीनों कथन सही हैं। NIOS पाँच विभागों, 23 क्षेत्रीय केंद्रों, दो उप-क्षेत्रीय केंद्रों, दो NIOS सेल और 7,400 से अधिक अध्ययन केंद्रों के माध्यम से संचालित होता है। OBE कार्यक्रम 14+ वर्ष आयु वर्ग (किशोरों और वयस्कों) के लिए है। यह औद्योगिक प्रशिक्षण संस्थान (ITI) के छात्रों के लिए माध्यमिक और उच्च माध्यमिक पाठ्यक्रम भी प्रदान करता है।",
+      "topic": "NIOS",
+      "difficulty": "hard",
+      "key_facts": [
+        "The NIOS operates through a network of five departments, 23 regional centres, two sub-regional centres, two NIOS cells, and more than 7,400 study centres (AIs/AVIs) across India and abroad."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-14T14:46:40.601937"
     },
     {
       "id": "01e04d5d-cde6-4363-b831-b0d89e96e8b8",
@@ -672,14 +672,14 @@
       "processed_at": "2026-10-14T14:47:08.708149"
     },
     {
-      "id": "48e124e2-90f0-4ad1-b1fa-386b04d180da",
-      "created_at": "2026-10-13T13:19:01.326658",
-      "question_hindi": "राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS) के पाठ्यक्रम और परीक्षा प्रणाली के संदर्भ में, निम्नलिखित कथनों पर विचार कीजिए:\n\n1. श्रवण बाधित (बधिर) बच्चों के लिए 2021 से माध्यमिक स्तर पर भारतीय सांकेतिक भाषा को एक विषय के रूप में शामिल किया गया।\n2. स्ट्रीम 1, 3 और 4 के तहत पंजीकृत शिक्षार्थी माध्यमिक और वरिष्ठ माध्यमिक स्तरों पर ऑन-डिमांड परीक्षा (ODE) के माध्यम से उपस्थित होने के पात्र हैं।\n3. सार्वजनिक परीक्षाओं और ऑन-डिमांड परीक्षाओं दोनों के परिणाम सामान्यतः परीक्षाओं की अंतिम तिथि के सात सप्ताह बाद घोषित किए जाते हैं।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "0a02645b-aa59-4b77-ada8-cdddfc3cdb34",
+      "created_at": "2026-10-14T14:56:12.431860",
+      "question_hindi": "राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS) द्वारा अपने आधिकारिक पोर्टल पर शिक्षार्थी सहायता और प्रश्नों के लिए निर्धारित आधिकारिक टोल-फ्री हेल्पलाइन नंबर क्या है?",
       "options_hindi": [
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2",
-        "केवल 1 और 3"
+        "1800-111-2222",
+        "1800-180-9393",
+        "1800-180-1500",
+        "1800-200-3456"
       ],
       "option_labels": [
         "A",
@@ -690,33 +690,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "With reference to the curriculum and examination system of the National Institute of Open Schooling (NIOS), consider the following statements:\n\n1. Indian Sign Language was introduced as a subject at the Secondary Level for Children with Hearing Impairment in 2021.\n2. Learners registered under Stream 1, 3, and 4 are eligible to appear through On-Demand Examinations (ODE) at the Secondary and Senior Secondary levels.\n3. Results of both public examinations and on-demand examinations are usually announced seven weeks after the last date of examinations.\n\nWhich of the statements given above are correct?",
+      "question_english": "What is the official toll-free helpline number designated by the National Institute of Open Schooling (NIOS) for learner support and queries on its official portal?",
       "options_english": [
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only",
-        "1 and 3 only"
+        "1800-111-2222",
+        "1800-180-9393",
+        "1800-180-1500",
+        "1800-200-3456"
       ],
       "correct_answer": "b",
-      "explanation_english": "All three statements are correct according to official NIOS specifications: Indian Sign Language was introduced in 2021 for hearing-impaired learners at the Secondary level; learners under Stream 1, 3, and 4 are eligible for ODE; and results for public and on-demand examinations are announced seven weeks after the last date of examinations.",
-      "explanation_hindi": "तीनों कथन सही हैं: माध्यमिक स्तर पर श्रवण बाधित बच्चों के लिए 2021 में भारतीय सांकेतिक भाषा को विषय के रूप में शुरू किया गया था; स्ट्रीम 1, 3 और 4 के तहत शिक्षार्थी ODE के पात्र हैं; तथा सार्वजनिक और ऑन-डिमांड परीक्षाओं के परिणाम अंतिम परीक्षा तिथि के सात सप्ताह बाद घोषित किए जाते हैं।",
+      "explanation_english": "As per the official NIOS portal, the designated toll-free telephone number for learners is 1800-180-9393.",
+      "explanation_hindi": "NIOS के आधिकारिक पोर्टल के अनुसार, शिक्षार्थियों के लिए निर्दिष्ट टोल-फ्री टेलीफोन नंबर 1800-180-9393 है।",
       "topic": "NIOS",
-      "difficulty": "hard",
+      "difficulty": "easy",
       "key_facts": [
-        "Indian Sign Language as a subject at the Secondary Level for Children with Hearing Impairment (Deafness), since 2021. However, one is also eligible (If he/she is registered under Stream 1,3 and 4) to appear through the On-Demand Examinations at Secondary (10th) and Senior Secondary (12th). Results of the public examinations and on demand are usually announced seven weeks after the last date of examinations."
+        "Toll Free:1800-180-9393"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-13T13:19:01.326658"
+      "processed_at": "2026-10-14T14:56:12.431860"
     },
     {
-      "id": "651e6ac3-f5ee-4f81-9bfd-c80249487ae3",
-      "created_at": "2026-10-14T14:47:08.708149",
-      "question_hindi": "NIOS कक्षा 10 परीक्षा के विषयों और उनके निर्धारित विषय कोडों के संबंध में निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
+      "id": "43d92d8b-b8cb-466d-9eca-8bc96682adca",
+      "created_at": "2026-10-14T14:54:49.470179",
+      "question_hindi": "राष्ट्रीय मुक्त विद्यालयी शिक्षा संस्थान (NIOS) के पाठ्यक्रम ढांचे के अनुसार, किशोरों और वयस्कों को शामिल करने वाले मुक्त बुनियादी शिक्षा (OBE) कार्यक्रम के लिए निर्धारित लक्षित आयु वर्ग क्या है?",
       "options_hindi": [
-        "Data Entry Operations (Th) — 229",
-        "Psychology (मनोविज्ञान) — 242",
-        "Indian Culture and Heritage (भारतीय संस्कृति एवं विरासत) — 223",
-        "Accountancy (लेखाशास्त्र) — 224"
+        "केवल 21+ वर्ष आयु वर्ग",
+        "18 से 35 वर्ष आयु वर्ग",
+        "14+ वर्ष आयु वर्ग",
+        "6 से 14 वर्ष आयु वर्ग"
       ],
       "option_labels": [
         "A",
@@ -727,23 +727,23 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which of the following pairs regarding NIOS Class 10 examination subjects and their designated subject codes is NOT correctly matched?",
+      "question_english": "According to the courses framework of the National Institute of Open Schooling (NIOS), what is the specific target age group for the Open Basic Education (OBE) Programme covering adolescents and adults?",
       "options_english": [
-        "Data Entry Operations (Th) — 229",
-        "Psychology — 242",
-        "Indian Culture and Heritage — 223",
-        "Accountancy — 224"
+        "21+ years age group only",
+        "18 to 35 years age group",
+        "14+ years age group",
+        "6 to 14 years age group"
       ],
-      "correct_answer": "b",
-      "explanation_english": "Psychology is assigned subject code 222 (not 242). Hindustani Sangeet is assigned subject code 242.",
-      "explanation_hindi": "मनोविज्ञान (Psychology) का आधिकारिक विषय कोड 222 है (242 नहीं)। कोड 242 हिंदुस्तानी संगीत (Hindustani Sangeet) का है।",
+      "correct_answer": "c",
+      "explanation_english": "The Open Basic Education (OBE) Programme offered by NIOS specifically targets the 14+ years age group (adolescents and adults) with programmes equivalent to classes of the formal school system.",
+      "explanation_hindi": "एनआईओएस द्वारा प्रस्तुत मुक्त बुनियादी शिक्षा (OBE) कार्यक्रम विशेष रूप से औपचारिक स्कूल प्रणाली की कक्षाओं के समकक्ष कार्यक्रमों के साथ 14+ वर्ष के आयु वर्ग (किशोरों और वयस्कों) को लक्षित करता है।",
       "topic": "NIOS",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "key_facts": [
-        "November 4, 2026 (Wednesday) | Psychology (222) | 2:30 pm to 5:30 pm"
+        "Open Basic Education (OBE) Programme for 14+ years age group (adolescents and adults) that are equivalent to classes of the formal school system"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-14T14:47:08.708149"
+      "processed_at": "2026-10-14T14:54:49.470179"
     }
   ]
 }

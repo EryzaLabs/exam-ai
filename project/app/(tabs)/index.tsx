@@ -23,6 +23,9 @@ interface DashboardStats {
   totalTopics: number;
   masteredTopics: number;
   userName?: string;
+  photoURL?: string | null;
+  email?: string;
+  isSubscribed?: boolean;
 }
 
 export default function EnhancedHomeScreen() {
@@ -138,7 +141,10 @@ export default function EnhancedHomeScreen() {
           weeklyImprovement: 0,
           totalTopics: Object.keys(topics).length,
           masteredTopics,
-          userName: profile?.displayName || user.displayName || undefined,
+          userName: profile?.displayName || user.displayName || (user.email ? user.email.split('@')[0] : undefined),
+          photoURL: profile?.photoURL || user.photoURL || null,
+          email: profile?.email || user.email || undefined,
+          isSubscribed: !!profile?.isSubscribed,
       });
 
       setPerformance({

@@ -1,19 +1,19 @@
 {
-  "test_id": "62e9ef80-0d9f-42dc-92fe-f4acc8177f69",
+  "test_id": "6b218e9b-99e0-4d0f-b899-79e9e593a6ed",
   "test_name": "Topic Test: UGC - Part 1",
   "type": "topic_wise",
   "topic": "ugc",
-  "created_at": "2026-10-16T20:04:03.050731",
+  "created_at": "2026-10-17T08:33:53.039908",
   "questions": [
     {
-      "id": "ed415158-60ce-43d8-acf5-b2360cbf660c",
-      "created_at": "2026-10-15T07:48:21.924224",
-      "question_hindi": "प्रधानाचार्य और उप-प्रधानाचार्य पदों के लिए संयुक्त भर्ती परीक्षा के संबंध में गवर्नमेंट स्कूल टीचर्स एसोसिएशन (GSTA), दिल्ली द्वारा UPSC को दिए गए प्रतिवेदन के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. एसोसिएशन ने UPSC से अनुरोध किया कि दिल्ली सरकार के सभी पात्र स्कूल शिक्षकों को चुनाव संबंधी कर्तव्यों से स्थायी छूट दी जाए।\n2. GSTA ने परीक्षा की तिथि को चार से छह सप्ताह के लिए आगे बढ़ाने (पुनर्निर्धारित करने) का अनुरोध किया।\n3. एसोसिएशन ने उल्लेख किया कि बूथ लेवल अधिकारियों (BLOs) और BLO सुपरवाइजरों के रूप में कार्यरत शिक्षक नियमित स्कूल कर्तव्यों के साथ-साथ अप्रैल 2026 से विशेष गहन पुनरीक्षण (SIR) कर्तव्यों का निर्वहन कर रहे हैं।\n\nऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "id": "ef46e1f7-8061-492e-99fb-7aca137565e2",
+      "created_at": "2026-10-15T07:49:25.508830",
+      "question_hindi": "प्राचार्य पद पर नियुक्ति हेतु यूजीसी (UGC) दिशा-निर्देशों के तहत मात्रात्मक आवश्यकताओं और शर्तों के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (मापदंड)\nA. न्यूनतम अकादमिक प्रदर्शन संकेतक (API) स्कोर\nB. प्रकाशित पीयर-रिव्यूड जर्नल्स की न्यूनतम संख्या\nC. शिक्षण, अनुसंधान या प्रशासन में कुल अर्हक सेवा\nD. यूजीसी विनियमों में निर्धारित प्राचार्यों की कार्यकाल सीमा\n\nसूची II (मान / अवधि)\n1. 120\n2. 10\n3. 15 वर्ष\n4. 5 वर्ष\n\nसही कूट का चयन कीजिए:",
       "options_hindi": [
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2",
-        "केवल 3"
+        "A-1, B-2, C-3, D-4",
+        "A-4, B-2, C-3, D-1",
+        "A-1, B-3, C-2, D-4",
+        "A-2, B-1, C-4, D-3"
       ],
       "option_labels": [
         "A",
@@ -24,393 +24,134 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the representation submitted by the Government School Teachers Association (GSTA), Delhi, to the UPSC concerning the Combined Recruitment Test for Principal and Vice-Principal posts:\n\n1. The association requested the UPSC to exempt all eligible Delhi government school teachers permanently from election-related duties.\n2. The GSTA requested a rescheduling of the examination by a period of four to six weeks.\n3. The association cited that teachers engaged as Booth Level Officers (BLOs) and BLO Supervisors had been carrying out Special Intensive Revision (SIR) duties since April 2026 alongside regular school duties.\n\nWhich of the statements given above is/are correct?",
+      "question_english": "Match List I with List II regarding the quantitative requirements and stipulations under the UGC guidelines for Principal postings:\n\nList I (Parameter)\nA. Minimum Academic Performance Indicators (API) score\nB. Minimum number of published peer-reviewed journals\nC. Total qualifying service in teaching, research, or administration\nD. Tenure limit of principals as stipulated in the UGC regulations\n\nList II (Value / Period)\n1. 120\n2. 10\n3. 15 years\n4. 5 years\n\nSelect the correct code:",
       "options_english": [
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only",
-        "3 only"
+        "A-1, B-2, C-3, D-4",
+        "A-4, B-2, C-3, D-1",
+        "A-1, B-3, C-2, D-4",
+        "A-2, B-1, C-4, D-3"
       ],
       "correct_answer": "a",
-      "explanation_english": "Statement 1 is incorrect because the association explicitly clarified that it was not asking for an exemption from election-related duties; instead, it requested UPSC to reschedule the examination by four to six weeks. Statements 2 and 3 are correct as teachers had been working on BLO and BLO Supervisor responsibilities since April 2026 along with regular duties.",
-      "explanation_hindi": "कथन 1 गलत है क्योंकि एसोसिएशन ने स्पष्ट किया कि वह चुनाव संबंधी कर्तव्यों से छूट की मांग नहीं कर रही है; बल्कि वह UPSC से परीक्षा को चार से छह सप्ताह के लिए पुनर्निर्धारित करने का अनुरोध कर रही है। कथन 2 और 3 सही हैं क्योंकि शिक्षक नियमित कर्तव्यों के साथ अप्रैल 2026 से BLO और BLO सुपरवाइजर के रूप में कार्य कर रहे थे।",
+      "explanation_english": "Under the UGC guidelines, the minimum API score is 120, the required published peer-reviewed journals is 10, the qualifying total service in teaching/research/administration is 15 years, and the regulations limit the tenure of principals to 5 years.",
+      "explanation_hindi": "यूजीसी दिशा-निर्देशों के तहत, न्यूनतम एपीआई स्कोर 120 है, प्रकाशित पीयर-रिव्यूड जर्नल्स की संख्या 10 है, शिक्षण/अनुसंधान/प्रशासन में कुल अर्हक सेवा 15 वर्ष है, तथा यूजीसी विनियमों में प्राचार्यों का कार्यकाल 5 वर्ष तक सीमित किया गया है।",
+      "topic": "UGC",
+      "difficulty": "medium",
+      "key_facts": [
+        "the UGC guidelines stipulates at least 10 published peer-reviewed journals and a minimum API (academic performance indicators) score of 120. Besides, while a minimum teaching experience of 15 years in government colleges was another criterion, the UGC rules will enable professors and associate professors with a total service of 15 years of “teaching, research or administration in universities, colleges and other institutions of higher education” to be considered for the position... It also objected to the stipulation in the UGC regulations that limits the tenure of principals to five years."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:49:25.508830"
+    },
+    {
+      "id": "c9d71c02-1ac0-4aa6-bd95-b2f4f2b05bea",
+      "created_at": "2026-10-15T07:50:04.181418",
+      "question_hindi": "उच्च शिक्षण संस्थानों में सहायक प्रोफेसरों की भर्ती के लिए यूजीसी के प्रस्तावित मसौदा नियमों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. यूजीसी ने उच्च शिक्षण संस्थानों में सहायक प्रोफेसरों की भर्ती और पदोन्नति के लिए राष्ट्रीय पात्रता परीक्षा (NET) की अनिवार्यता को समाप्त करने का सुझाव दिया है।\n2. प्रस्तावित मसौदे के तहत, न्यूनतम 55 प्रतिशत अंकों के साथ ME या MTech में स्नातकोत्तर डिग्री रखने वाले उम्मीदवार सहायक प्रोफेसर के पद के लिए पात्र होंगे।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "options_hindi": [
+        "न तो 1, न ही 2",
+        "केवल 1",
+        "1 और 2 दोनों",
+        "केवल 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the proposed UGC draft regulations for hiring assistant professors in higher education institutions:\n\n1. The UGC has advised eliminating the National Eligibility Test (NET) as a mandatory requirement for hiring assistant professors and promotions in higher education institutions.\n2. Under the proposed draft, candidates possessing a postgraduate degree in ME or MTech with a minimum of 55 percent marks will qualify for the position of assistant professor.\n\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "Neither 1 nor 2",
+        "1 only",
+        "Both 1 and 2",
+        "2 only"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "According to the proposed UGC guidelines, the Commission has advised eliminating the National Eligibility Test (NET) as a requirement for hiring assistant professors and promotions in higher education institutions. Furthermore, candidates possessing a postgraduate degree in ME or MTech with a minimum of 55 percent marks will qualify for the entry-level position of assistant professor.",
+      "explanation_hindi": "यूजीसी के प्रस्तावित दिशानिर्देशों के अनुसार, आयोग ने उच्च शिक्षण संस्थानों में सहायक प्रोफेसरों की भर्ती और पदोन्नति के लिए राष्ट्रीय पात्रता परीक्षा (NET) की आवश्यकता को समाप्त करने की सलाह दी है। इसके अतिरिक्त, ME या MTech में न्यूनतम 55 प्रतिशत अंकों के साथ स्नातकोत्तर डिग्री धारक उम्मीदवार सहायक प्रोफेसर (प्रवेश स्तर के पद) के लिए अर्हक होंगे।",
+      "topic": "UGC",
+      "difficulty": "medium",
+      "key_facts": [
+        "According to the guidelines, the UGC has advised eliminating the National Eligibility Test (NET) as a requirement for hiring assistant professors and promotions in higher education institutions. According to the proposal, candidates possessing a postgraduate degree in ME or MTech with a minimum of 55 percent marks will qualify for the position of assistant professor (entry-level position)."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:50:04.181418"
+    },
+    {
+      "id": "4f6f534d-5395-417b-b0f8-a1770b7836a9",
+      "created_at": "2026-10-15T07:40:26.127775",
+      "question_hindi": "1948 में विश्वविद्यालय शिक्षा आयोग की स्थापना किसकी अध्यक्षता में की गई थी, जिसने विश्वविद्यालय अनुदान समिति को विश्वविद्यालय अनुदान आयोग के रूप में पुनर्गठित करने की सिफारिश की थी?",
+      "options_hindi": [
+        "मौलाना अबुल कलाम आज़ाद",
+        "माउंटस्टुआर्ट एल्फिंस्टन",
+        "सर चार्ल्स वुड",
+        "डॉ. एस. राधाकृष्णन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under whose Chairmanship was the University Education Commission set up in 1948, which mooted and recommended the reconstitution of the University Grants Committee into the University Grants Commission?",
+      "options_english": [
+        "Maulana Abul Kalam Azad",
+        "Mountstuart Elphinstone",
+        "Sir Charles Wood",
+        "Dr. S. Radhakrishnan"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Soon after Independence, the University Education Commission was set up in 1948 under the Chairmanship of Dr. S Radhakrishnan, which recommended that the University Grants Committee be reconstituted on the general model of the UGC of the UK.",
+      "explanation_hindi": "स्वतंत्रता के तुरंत बाद, 1948 में डॉ. एस. राधाकृष्णन की अध्यक्षता में विश्वविद्यालय शिक्षा आयोग की स्थापना की गई थी, जिसने सिफारिश की थी कि विश्वविद्यालय अनुदान समिति को यूके के यूजीसी मॉडल पर पुनर्गठित किया जाए।",
+      "topic": "UGC",
+      "difficulty": "easy",
+      "key_facts": [
+        "Soon after Independence, the University Education Commission was set up in 1948 under the Chairmanship of Dr. S Radhakrishnan \"to report on Indian university education and suggest improvements and extensions that might be desirable to suit the present and future needs and aspirations of the country\"."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:40:26.127775"
+    },
+    {
+      "id": "b7de9594-0916-4af8-97fa-72e8f020fe43",
+      "created_at": "2026-10-15T07:50:47.804812",
+      "question_hindi": "UPSC प्रधानाचार्य एवं उप-प्रधानाचार्य भर्ती 2026 में विभिन्न श्रेणियों के लिए निर्धारित अधिकतम आयु सीमा के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (श्रेणी एवं पद)\nA. प्रधानाचार्य (OBC)\nB. प्रधानाचार्य (SC / ST)\nC. उप-प्रधानाचार्य (OBC)\nD. उप-प्रधानाचार्य (SC / ST)\n\nसूची II (अधिकतम आयु सीमा)\n1. 53 वर्ष\n2. 55 वर्ष\n3. 38 वर्ष\n4. 40 वर्ष\n\nसही कूट का चयन कीजिए:",
+      "options_hindi": [
+        "A-1, B-2, C-4, D-3",
+        "A-2, B-1, C-4, D-3",
+        "A-1, B-2, C-3, D-4",
+        "A-3, B-4, C-1, D-2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding the maximum age limits prescribed for different categories in the UPSC Principal and Vice Principal Recruitment 2026:\n\nList I (Category & Post)\nA. Principal (OBC)\nB. Principal (SC / ST)\nC. Vice Principal (OBC)\nD. Vice Principal (SC / ST)\n\nList II (Maximum Age Limit)\n1. 53 Years\n2. 55 Years\n3. 38 Years\n4. 40 Years\n\nSelect the correct code:",
+      "options_english": [
+        "A-1, B-2, C-4, D-3",
+        "A-2, B-1, C-4, D-3",
+        "A-1, B-2, C-3, D-4",
+        "A-3, B-4, C-1, D-2"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under the age criteria: For Principal, the maximum age limit is 53 Years for OBC and 55 Years for SC/ST. For Vice Principal, the maximum age limit is 38 Years for OBC and 40 Years for SC/ST. Hence, the correct matching is A-1, B-2, C-3, D-4.",
+      "explanation_hindi": "आयु मानदंड के अनुसार: प्रधानाचार्य पद हेतु OBC के लिए अधिकतम आयु सीमा 53 वर्ष तथा SC/ST के लिए 55 वर्ष है। उप-प्रधानाचार्य पद हेतु OBC के लिए अधिकतम आयु 38 वर्ष तथा SC/ST के लिए 40 वर्ष है। अतः सही सुमेलन A-1, B-2, C-3, D-4 है।",
       "topic": "UGC",
       "difficulty": "hard",
       "key_facts": [
-        "The association has made it clear that it is not asking for an exemption from election-related duties. Instead, the body is requesting UPSC to reschedule the examination by four to six weeks."
+        "Principal OBC 53 Years SC / ST 55 Years Vice Principal OBC 38 Years SC / ST 40 Years"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-15T07:48:21.924224"
-    },
-    {
-      "id": "9b936fc6-fcac-466f-b40c-2982a4da99b0",
-      "created_at": "2026-10-15T07:39:56.688899",
-      "question_hindi": "यूजीसी (UGC) विनियमों के तहत प्राचार्य (रीडर ग्रेड) के पद पर सीधी भर्ती के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. 7-बिंदु पैमाने पर कम से कम 55% अंकों या इसके समकक्ष ग्रेड B के साथ मास्टर डिग्री अनिवार्य है।\n2. पीएच.डी. या समकक्ष प्रकाशित शोध कार्य अनिवार्य है।\n3. विश्वविद्यालयों/कॉलेजों और उच्च शिक्षा के अन्य संस्थानों में शिक्षण/अनुसंधान का कुल 15 वर्षों का अनुभव अनिवार्य है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3",
-        "1, 2 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the direct recruitment for the post of Principal (Reader’s Grade) under the UGC Regulations:\n\n1. A Master’s Degree with at least 55% of the marks or its equivalent grade of B in the 7-point scale is required.\n2. Ph.D. or equivalent published work is required.\n3. A total experience of 15 years of teaching / Research in Universities / Colleges and other institutions of higher education is required.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1 and 3 only",
-        "1 and 2 only",
-        "2 and 3 only",
-        "1, 2 and 3"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "According to UGC Regulations clause 1.2.0, Principal (Reader's Grade) requires: (1) Master's Degree with at least 55% marks or equivalent grade B, (2) Ph.D. or equivalent published work, and (3) Total experience of 10 years (not 15 years; 15 years is for Professor's Grade). Hence, statement 3 is incorrect.",
-      "explanation_hindi": "यूजीसी विनियमों के खंड 1.2.0 के अनुसार, प्राचार्य (रीडर ग्रेड) के लिए आवश्यक है: (1) कम से कम 55% अंकों या समकक्ष ग्रेड B के साथ मास्टर डिग्री, (2) पीएच.डी. या समकक्ष प्रकाशित शोध कार्य, और (3) 10 वर्षों का कुल शिक्षण/अनुसंधान अनुभव (15 वर्ष प्रोफेसर ग्रेड के लिए है)। अतः कथन 3 गलत है।",
-      "topic": "UGC",
-      "difficulty": "medium",
-      "key_facts": [
-        "1.2.0 Principal (Reader’s Grade)\n1. A Master’s Degree with at least 55% of the marks or its equivalent grade of B in the 7 point scale with latter grades O,A,B,C,D,E and F:\n2. Ph. D. or equivalent published work\n3. Total experience of 10 years of teaching / Research in Universities / Colleges and other institutions of higher education"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:39:56.688899"
-    },
-    {
-      "id": "82cc2072-e2aa-40d0-af59-9c9c4bae24ce",
-      "created_at": "2026-10-15T07:51:23.898203",
-      "question_hindi": "यूजीसी विनियमों के तहत शैक्षणिक पदों के लिए न्यूनतम अर्हताओं के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "रीडर - शिक्षण और/या अनुसंधान का 5 वर्ष का अनुभव (शोध उपाधि प्राप्त करने की अवधि को छोड़कर)",
-        "प्राचार्य (प्रोफेसर ग्रेड) - उच्च शिक्षा संस्थानों में शिक्षण/अनुसंधान का कुल 15 वर्षों का अनुभव",
-        "व्याख्याता (Lecturer) - 7-प्वाइंट स्केल में कम से कम 60% अंक या समकक्ष A ग्रेड के साथ मास्टर डिग्री",
-        "प्राचार्य (रीडर ग्रेड) - उच्च शिक्षा संस्थानों में शिक्षण/अनुसंधान का कुल 10 वर्षों का अनुभव"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding the minimum qualifications for academic posts under the UGC Regulations is NOT correctly matched?",
-      "options_english": [
-        "Reader - Five years of experience of teaching and/or research excluding period spent for obtaining research degrees",
-        "Principal (Professor’s Grade) - Total experience of 15 years of teaching / Research in higher education institutions",
-        "Lecturer - Master's degree with at least 60% of marks or equivalent grade of A in the 7-point scale",
-        "Principal (Reader’s Grade) - Total experience of 10 years of teaching / Research in higher education institutions"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "The requirement for Lecturer is 'Good academic record with at least 55% of the marks or, an equivalent grade of B in the 7 point scale with latter grades O, A, B, C, D, E and F at the Master’s degree level', not 60% marks or Grade A.",
-      "explanation_hindi": "व्याख्याता (Lecturer) के लिए न्यूनतम अर्हता मास्टर डिग्री स्तर पर 'कम से कम 55% अंक या 7-प्वाइंट स्केल (O, A, B, C, D, E और F) में समकक्ष B ग्रेड' है, न कि 60% अंक या A ग्रेड।",
-      "topic": "UGC",
-      "difficulty": "medium",
-      "key_facts": [
-        "1.3.3 Lecturer Good academic record with at least 55% of the marks or, an equivalent grade of B in the 7 point scale with latter grades O, A, B, C, D, E and F at the Master’s degree level"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:51:23.898203"
-    },
-    {
-      "id": "3e59d03b-a89f-4224-8ee5-da7c8d457ed2",
-      "created_at": "2026-10-15T07:47:37.936125",
-      "question_hindi": "विश्वविद्यालय अनुदान आयोग (UGC) द्वारा प्रकाशित समिति रिपोर्टों के संबंध में निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "विश्वविद्यालय एवं कॉलेज शिक्षकों के लिए व्यावसायिक नैतिकता संहिता पर टास्कफोर्स की रिपोर्ट (Report of The Taskforce On Code of Professional Ethics) - 1989",
-        "विश्वविद्यालयों और कॉलेजों में पुस्तकालयाध्यक्षों और शारीरिक शिक्षा निदेशकों की न्यूनतम योग्यता और कार्यभार आदि पर विशेषज्ञ समिति की रिपोर्ट - 1987",
-        "केंद्रीय विश्वविद्यालयों के कामकाज की जांच के लिए गठित समिति की रिपोर्ट (Report of The Committee To Enquire Into The Working of Central Universities) - 1994",
-        "उच्च शिक्षा में महिलाएं और प्रबंधन पर यूजीसी राष्ट्रमंडल सचिवालय कार्यशाला - 1997"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding committee reports published by the University Grants Commission (UGC) is NOT correctly matched?",
-      "options_english": [
-        "Report of The Taskforce On Code of Professional Ethics For University & College Teachers - 1989",
-        "Report of The Expert Commitee On The Minimum Qualifications And Workload Etc. For Librarians And Directors of Physical Education In Universities & Colleges - 1987",
-        "Report of The Committee To Enquire Into The Working of Central Universities - 1994",
-        "UGC Commonwealth Secretariat Workshop On Women And Management In Higher Education - 1997"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "The 'Report of The Committee To Enquire Into The Working of Central Universities' was published in 1984, not 1994.",
-      "explanation_hindi": "'Report of The Committee To Enquire Into The Working of Central Universities' 1984 में प्रकाशित हुई थी, 1994 में नहीं।",
-      "topic": "UGC",
-      "difficulty": "medium",
-      "key_facts": [
-        "Report of The Committee To Enquire Into The Working of Central Universities - 1984"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:47:37.936125"
-    },
-    {
-      "id": "65c29224-6b5e-4c7a-8b48-8cb835d6d281",
-      "created_at": "2026-10-15T07:46:47.874698",
-      "question_hindi": "भारतीय उच्च शिक्षा और यूजीसी के ऐतिहासिक मील के पत्थरों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "विश्वविद्यालय अनुदान समिति के लिए प्रस्तावित पुनर्गठन मॉडल : संयुक्त राज्य अमेरिका का विश्वविद्यालय अनुदान आयोग",
-        "कलकत्ता, बॉम्बे और मद्रास विश्वविद्यालयों की स्थापना : 1857",
-        "अंतर-विश्वविद्यालय बोर्ड (बाद में AIU) की स्थापना : 1925",
-        "डॉ. एस. राधाकृष्णन की अध्यक्षता में विश्वविद्यालय शिक्षा आयोग की स्थापना : 1948"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding the historical milestones in Indian higher education and the UGC is NOT correctly matched?",
-      "options_english": [
-        "Reconstitution model proposed for the University Grants Committee : University Grants Commission of the United States",
-        "Establishment of the universities of Calcutta, Bombay and Madras : 1857",
-        "Inception of Inter-University Board (later AIU) : 1925",
-        "Setting up of the University Education Commission under Dr. S. Radhakrishnan : 1948"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "The University Education Commission of 1948 recommended that the University Grants Committee be reconstituted on the general model of the University Grants Commission of the United Kingdom, NOT the United States.",
-      "explanation_hindi": "1948 के विश्वविद्यालय शिक्षा आयोग ने सिफारिश की थी कि विश्वविद्यालय अनुदान समिति को संयुक्त राज्य अमेरिका के नहीं, बल्कि यूनाइटेड किंगडम (UK) के विश्वविद्यालय अनुदान आयोग के सामान्य मॉडल पर पुनर्गठित किया जाए।",
-      "topic": "UGC",
-      "difficulty": "medium",
-      "key_facts": [
-        "It recommended that the University Grants Committee be reconstituted on the general model of the University Grants Commission of the United Kingdom with a full-time Chairman and other members to be appointed from amongst educationists of repute."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:46:47.874698"
-    },
-    {
-      "id": "d9213e11-6683-4c37-9c6a-3c8007795c5b",
-      "created_at": "2026-10-15T07:43:27.225265",
-      "question_hindi": "उच्च शिक्षा में नियुक्तियों के लिए यूजीसी के प्रस्तावित दिशानिर्देशों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "प्राचार्य की कार्यकाल-उपरांत स्थिति - मूल संगठन में ग्रहणाधिकार (lien) के बिना सेवा से अनिवार्य सेवानिवृत्ति",
-        "कुलपतियों (VC) के लिए पात्रता का विस्तार - शिक्षाविद्, अनुसंधान संगठन, सार्वजनिक नीति, लोक प्रशासन और उद्योग के पेशेवर",
-        "कुलपति पद के लिए चयन का तरीका - अखिल भारतीय समाचार पत्र विज्ञापन और सार्वजनिक घोषणा",
-        "सहायक प्रोफेसर - प्रवेश स्तर का पद"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding the UGC proposed guidelines for higher education appointments is NOT correctly matched?",
-      "options_english": [
-        "Post-tenure status of Principal - Compulsory retirement from service without right of lien to original organization",
-        "Eligibility expansion for Vice-Chancellors - Professionals from academia, research organizations, public policy, public administration, and industry",
-        "Mode of selection for Vice-Chancellor - All-India newspaper advertisement and public announcement",
-        "Assistant Professor - Entry-level position"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Pair 4 is NOT correctly matched. The guidelines state: 'Upon finishing the tenure as principal, the individual will return to his original organization as a professor, in the professor grade, given that he/she meets the eligibility requirements for the position', not compulsory retirement.",
-      "explanation_hindi": "युग्म 4 सही सुमेलित नहीं है। दिशानिर्देशों में कहा गया है: 'प्राचार्य के रूप में कार्यकाल समाप्त होने पर, व्यक्ति अपने मूल संगठन में एक प्रोफेसर के रूप में, प्रोफेसर ग्रेड में वापस लौटेगा, बशर्ते कि वह पद के लिए पात्रता आवश्यकताओं को पूरा करता हो', न कि अनिवार्य सेवानिवृत्ति।",
-      "topic": "UGC",
-      "difficulty": "medium",
-      "key_facts": [
-        "Upon finishing the tenure as principal, the individual will return to his original organization as a professor, in the professor grade, given that he/she meets the eligibility requirements for the position."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:43:27.225265"
-    },
-    {
-      "id": "6150ef86-8eac-4603-b074-bc8ecc4a98d8",
-      "created_at": "2026-10-15T07:41:05.135860",
-      "question_hindi": "UGC के अंतर्गत ऐतिहासिक प्रकाशनों और समितियों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. 1992 में, एक CABE समिति ने ज्ञानम समिति की रिपोर्ट के आधार पर अपनी रिपोर्ट प्रस्तुत की थी।\n2. 1984 में, UGC ने 'विश्वविद्यालयों में अनुसंधान के सुधार के लिए नीति और कार्यक्रम' (Policy And Programme For Improvement of Research In The Universities) शीर्षक से एक प्रकाशन जारी किया।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
-      "options_hindi": [
-        "केवल 2",
-        "1 और 2 दोनों",
-        "केवल 1",
-        "न तो 1, न ही 2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the historical publications and committees under UGC:\n\n1. In 1992, a CABE Committee submitted its report based on the Gnanam Committee Report.\n2. In 1984, the UGC released a publication titled 'Policy And Programme For Improvement of Research In The Universities'.\n\nWhich of the statements given above is/are correct?",
-      "options_english": [
-        "2 only",
-        "Both 1 and 2",
-        "1 only",
-        "Neither 1 nor 2"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Both statements are correct. UGC's official records list the 'Report of The Cabe Committee On Gnanam Committee Report - 1992' and 'UGC's Policy And Programme For Improvement of Research In The Universities -1984'.",
-      "explanation_hindi": "दोनों कथन सही हैं। UGC के आधिकारिक रिकॉर्ड में 'Report of The Cabe Committee On Gnanam Committee Report - 1992' और 'UGC's Policy And Programme For Improvement of Research In The Universities -1984' शामिल हैं।",
-      "topic": "UGC",
-      "difficulty": "medium",
-      "key_facts": [
-        "UGC's Policy And Programme For Improvement of Research In The Universities -1984\n* Report of The Expert Commitee On The Minimum Qualifications And Workload Etc. For Librarians And Directors of Physical Education In Universities &amp; Colleges -1987\n* Report of The Taskforce On Code of Professional Ethics For University & College Teachers -1989\n* List of Degrees Specified For The Purposes of Section 22 of the University Grants Commission Act,1956\n* Report of The UGC Committee Towards New Educational Management 1990\n* Report of The Cabe Committee On Gnanam Committee Report - 1992"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:41:05.135860"
-    },
-    {
-      "id": "71726486-63bb-45bd-aa15-35f89bb9b877",
-      "created_at": "2026-10-15T07:49:25.507825",
-      "question_hindi": "कॉलेजों में प्राचार्यों (Principals) के चयन के लिए यूजीसी (UGC) विनियमों के तहत निर्धारित पात्रता मानदंडों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. उम्मीदवारों के पास पीएच.डी. (Ph.D.) की डिग्री और एसोसिएट प्रोफेसरशिप होनी चाहिए।\n2. दिशा-निर्देशों में कम से कम 10 प्रकाशित पीयर-रिव्यूड जर्नल और न्यूनतम 120 का अकादमिक प्रदर्शन संकेतक (API) स्कोर अनिवार्य किया गया है।\n3. नियमों के तहत विश्वविद्यालयों, कॉलेजों और अन्य उच्च शिक्षण संस्थानों में शिक्षण, अनुसंधान या प्रशासन में कुल 15 वर्षों की सेवा आवश्यक है।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 3",
-        "केवल 1 और 2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the eligibility criteria stipulated under the UGC regulations for the selection of Principals in colleges:\n\n1. Candidates must possess a Ph.D. degree and associate professorship.\n2. The guidelines stipulate at least 10 published peer-reviewed journals and a minimum Academic Performance Indicators (API) score of 120.\n3. The rules require a total service of 15 years of teaching, research, or administration in universities, colleges, and other institutions of higher education.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 3 only",
-        "1 and 2 only"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "According to the reported UGC norms, in addition to the existing eligibility requirements of a Ph.D. and associate professorship, the guidelines stipulate at least 10 published peer-reviewed journals, a minimum API score of 120, and enable professors and associate professors with a total service of 15 years of teaching, research, or administration in universities, colleges, and other institutions of higher education to be considered.",
-      "explanation_hindi": "यूजीसी (UGC) मानदंडों के अनुसार, पीएच.डी. और एसोसिएट प्रोफेसरशिप की अनिवार्य योग्यताओं के अलावा, दिशा-निर्देशों में कम से कम 10 प्रकाशित पीयर-रिव्यूड जर्नल तथा न्यूनतम 120 एपीआई स्कोर निर्धारित किया गया है। साथ ही, विश्वविद्यालयों, कॉलेजों और अन्य उच्च शिक्षण संस्थानों में 'शिक्षण, अनुसंधान या प्रशासन' की कुल 15 वर्षों की सेवा वाले प्रोफेसरों और एसोसिएट प्रोफेसरों को इस पद के लिए पात्र माना गया है।",
-      "topic": "UGC",
-      "difficulty": "medium",
-      "key_facts": [
-        "In addition to the existing eligibility requirements of Ph.D and associate professorship, the UGC guidelines stipulates at least 10 published peer-reviewed journals and a minimum API (academic performance indicators) score of 120. Besides, while a minimum teaching experience of 15 years in government colleges was another criterion, the UGC rules will enable professors and associate professors with a total service of 15 years of “teaching, research or administration in universities, colleges and other institutions of higher education” to be considered for the position."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:49:25.507825"
-    },
-    {
-      "id": "a1ddc8db-fb12-487d-b95a-c6394918b151",
-      "created_at": "2026-10-15T07:52:06.287912",
-      "question_hindi": "विश्वविद्यालय अनुदान आयोग (UGC) द्वारा शुरू की गई प्रमुख पहलों और दिशा-निर्देशों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "यूजीसी विनियमों का संग्रह (Compendium) - 1957-2023",
-        "संकाय के प्रशिक्षण/अभिविन्यास के लिए दिशा-निर्देश - भारतीय पारंपरिक प्रौद्योगिकी (ITT)",
-        "सामाजिक उत्तरदायित्व और सामुदायिक सहभागिता को बढ़ावा देना - 2.0",
-        "मूल्य प्रवाह 2.0 - उच्च शिक्षण संस्थानों में मानवीय मूल्यों और व्यावसायिक नैतिकता का समावेश"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding the Key Initiatives and Guidelines launched by the University Grants Commission (UGC) is NOT correctly matched?",
-      "options_english": [
-        "Compendium of UGC Regulations - 1957-2023",
-        "Guidelines for Training/Orientation of Faculty - Indian Traditional Technology (ITT)",
-        "Fostering Social Responsibility & Community Engagement - 2.0",
-        "Mulya Pravah 2.0 - Inculcation of Human Values and Professional Ethics in Higher Education Institutions"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Under UGC Key Initiatives, the guidelines for faculty training/orientation are titled 'Guidelines for Training/Orientation of Faculty on Indian Knowledge System (IKS)', not Indian Traditional Technology (ITT).",
-      "explanation_hindi": "यूजीसी की प्रमुख पहलों के अंतर्गत, शिक्षकों के प्रशिक्षण/उन्मुखीकरण से संबंधित दिशा-निर्देशों का शीर्षक 'Guidelines for Training/Orientation of Faculty on Indian Knowledge System (IKS)' है, न कि इंडियन ट्रेडिशनल टेक्नोलॉजी (ITT)।",
-      "topic": "UGC",
-      "difficulty": "medium",
-      "key_facts": [
-        "Guidelines for Training/Orientation of Faculty on Indian Knowledge System (IKS)"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:52:06.287912"
-    },
-    {
-      "id": "0430dd62-cdfb-4121-9c13-f422381ed7da",
-      "created_at": "2026-10-15T07:48:56.360071",
-      "question_hindi": "यूजीसी विनियमों के तहत सीधी भर्ती के लिए न्यूनतम आवश्यक शिक्षण/अनुसंधान अनुभव के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (पद)\nA. प्राचार्य (प्रोफेसर ग्रेड)\nB. प्राचार्य (रीडर ग्रेड)\nC. प्रोफेसर (मानविकी / सामाजिक विज्ञान / विज्ञान)\nD. रीडर\n\nसूची II (न्यूनतम अनुभव आवश्यकता)\n1. विश्वविद्यालयों / कॉलेजों / अन्य संस्थानों में शिक्षण / अनुसंधान का कुल 15 वर्षों का अनुभव\n2. विश्वविद्यालयों / कॉलेजों / अन्य संस्थानों में शिक्षण / अनुसंधान का कुल 10 वर्षों का अनुभव\n3. स्नातकोत्तर शिक्षण में 10 वर्ष का अनुभव, और/या विश्वविद्यालय/राष्ट्रीय स्तर के संस्थानों में अनुसंधान का अनुभव\n4. अनुसंधान डिग्री प्राप्त करने में बिताई गई अवधि को छोड़कर शिक्षण और/या अनुसंधान का पांच वर्ष का अनुभव\n\nसही कूट का चयन कीजिए:",
-      "options_hindi": [
-        "A-1, B-2, C-3, D-4",
-        "A-3, B-2, C-1, D-4",
-        "A-1, B-3, C-2, D-4",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List I with List II regarding the minimum required teaching/research experience for direct recruitment under the UGC Regulations:\n\nList I (Post)\nA. Principal (Professor’s Grade)\nB. Principal (Reader’s Grade)\nC. Professor (Humanities / Social Sciences / Sciences)\nD. Reader\n\nList II (Minimum Experience Requirement)\n1. Total experience of 15 years of teaching / Research in Universities / Colleges / other institutions\n2. Total experience of 10 years of teaching / Research in Universities / Colleges / other institutions\n3. 10 years of experience in postgraduate teaching, and/or experience in research at University/National Level institutions\n4. Five years of experience of teaching and/or research excluding the period spent for obtaining research degrees\n\nSelect the correct code:",
-      "options_english": [
-        "A-1, B-2, C-3, D-4",
-        "A-3, B-2, C-1, D-4",
-        "A-1, B-3, C-2, D-4",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Under UGC Regulations (Compendium Page 622): Principal (Professor’s Grade) requires total experience of 15 years (A-1); Principal (Reader’s Grade) requires total experience of 10 years (B-2); Professor requires 10 years of experience in postgraduate teaching and/or research (C-3); Reader requires five years of experience of teaching and/or research excluding research degree period (D-4). Therefore, the correct code is A-1, B-2, C-3, D-4.",
-      "explanation_hindi": "यूजीसी विनियमों (पृष्ठ 622) के अनुसार: प्राचार्य (प्रोफेसर ग्रेड) के लिए 15 वर्ष का कुल अनुभव आवश्यक है (A-1); प्राचार्य (रीडर ग्रेड) के लिए 10 वर्ष का कुल अनुभव आवश्यक है (B-2); प्रोफेसर के लिए स्नातकोत्तर शिक्षण और/या अनुसंधान में 10 वर्ष का अनुभव आवश्यक है (C-3); रीडर के लिए शोध डिग्री अवधि को छोड़कर 5 वर्ष का शिक्षण/अनुसंधान अनुभव आवश्यक है (D-4)। अतः सही कूट A-1, B-2, C-3, D-4 है।",
-      "topic": "UGC",
-      "difficulty": "medium",
-      "key_facts": [
-        "1.1.0 Principal (Professor’s Grade) ... 3. Total experience of 15 years of teaching / Research in Universities / Colleges and other institutions of higher education 1.2.0 Principal (Reader’s Grade) ... 3. Total experience of 10 years of teaching / Research in Universities / Colleges and other institutions of higher education 1.3.1 Professor ... with 10 years of experience in postgraduate teaching, and/or experience in research at the University National Level institutions ... 1.3.2 Reader ... Five years of experience of teaching and/or research excluding the period spent for obtaining the research degrees"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:48:56.360071"
-    },
-    {
-      "id": "01988610-466a-4a8d-815e-a5d16e40eea1",
-      "created_at": "2026-10-15T07:48:21.924224",
-      "question_hindi": "GNCTD स्कूलों में भर्ती के लिए UPSC विज्ञापन संख्या 51/2026 के तहत निर्दिष्ट मापदंडों और आंकड़ों के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (मापदंड)\nA. उप-प्रधानाचार्य (Vice Principal) के कुल पद\nB. प्रधानाचार्य (Principal) के कुल पद\nC. OBC श्रेणी के लिए CRT में अर्हक अंक\nD. सामान्य, OBC और EWS पुरुष उम्मीदवारों के लिए आवेदन शुल्क\n\nसूची II (विनिर्देश / मान)\n1. 704\n2. 124\n3. 100 में से 45\n4. ₹25\n\nसही कूट का चयन कीजिए:",
-      "options_hindi": [
-        "A-1, B-2, C-4, D-3",
-        "A-2, B-1, C-4, D-3",
-        "A-2, B-1, C-3, D-4",
-        "A-1, B-2, C-3, D-4"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List I with List II regarding the parameters and figures specified under UPSC Advt. No. 51/2026 for recruitment in GNCTD schools:\n\nList I (Parameter)\nA. Total vacancies for Vice Principal\nB. Total vacancies for Principal\nC. Qualifying marks in CRT for OBC category\nD. Application fee for General, OBC and EWS male candidates\n\nList II (Specification / Value)\n1. 704\n2. 124\n3. 45 out of 100\n4. Rs 25\n\nSelect the correct code:",
-      "options_english": [
-        "A-1, B-2, C-4, D-3",
-        "A-2, B-1, C-4, D-3",
-        "A-2, B-1, C-3, D-4",
-        "A-1, B-2, C-3, D-4"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "Under UPSC Advt. No. 51/2026, there are 828 total posts comprising 124 Principal and 704 Vice Principal posts. The qualifying marks in CRT are 45 out of 100 for OBC candidates. The application fee is Rs 25 for General, OBC and EWS men (and nil for SC, ST, PwBD and all women). Therefore, the correct matching is A-1, B-2, C-3, D-4.",
-      "explanation_hindi": "UPSC विज्ञापन संख्या 51/2026 के तहत, कुल 828 पद हैं जिनमें 124 प्रधानाचार्य और 704 उप-प्रधानाचार्य के पद शामिल हैं। OBC उम्मीदवारों के लिए CRT में अर्हक अंक 100 में से 45 हैं। सामान्य, OBC और EWS पुरुषों के लिए आवेदन शुल्क ₹25 है। अतः सही सुमेलन A-1, B-2, C-3, D-4 है।",
-      "topic": "UGC",
-      "difficulty": "medium",
-      "key_facts": [
-        "Posts | 828, being 124 Principal and 704 Vice Principal"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:48:21.924224"
+      "processed_at": "2026-10-15T07:50:47.804812"
     },
     {
       "id": "05f76a92-8d70-40d8-afb4-77bba815f288",
@@ -450,13 +191,87 @@
       "processed_at": "2026-10-15T07:42:45.059694"
     },
     {
-      "id": "24341fd1-a680-48f6-a6dd-8c1bc789fc7c",
-      "created_at": "2026-10-15T07:48:56.360071",
-      "question_hindi": "यूजीसी विनियमों में निर्दिष्ट 11 जुलाई 2009 से पूर्व पीएचडी कार्यक्रम के लिए पंजीकृत उम्मीदवारों को नेट/स्लेट/सेट की अनिवार्यता से छूट प्राप्त करने के लिए आवश्यक शर्तों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. उम्मीदवार को नियमित मोड (regular mode) में पीएचडी की डिग्री प्रदान की गई हो।\n2. पीएचडी थीसिस का मूल्यांकन कम से कम तीन बाह्य परीक्षकों द्वारा किया गया हो।\n3. उम्मीदवार का एक खुला पीएचडी मौखिक साक्षात्कार (open Ph.D. viva voce) आयोजित किया गया हो।\n4. उम्मीदवार ने अपने पीएचडी कार्य से दो शोध पत्र प्रकाशित किए हों, जिनमें से कम से कम एक संदर्भित पत्रिका (refereed journal) में हो।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "966a47ac-b4e6-47b7-8c79-faf5603989f2",
+      "created_at": "2026-10-15T07:52:06.287912",
+      "question_hindi": "यूजीसी द्वारा अधिसूचित विनियमों और उनके संबंधित वर्षों के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (यूजीसी विनियम)\nA. यूजीसी (एम.फिल./पीएच.डी. डिग्री प्रदान करने के लिए न्यूनतम मानक और प्रक्रिया) विनियम\nB. यूजीसी (मुक्त और दूरस्थ शिक्षा) विनियम\nC. यूजीसी (श्रेणीबद्ध स्वायत्तता प्रदान करने के लिए (केवल) विश्वविद्यालयों का वर्गीकरण) विनियम\nD. भारतीय और विदेशी उच्च शिक्षण संस्थानों के बीच ट्विनिंग, संयुक्त डिग्री और दोहरी डिग्री कार्यक्रम पेश करने हेतु शैक्षणिक सहयोग विनियम\n\nसूची II (अधिसूचना / प्रारम्भ का वर्ष)\n1. 2016\n2. 2017\n3. 2018\n4. 2022\n\nसही कूट का चयन कीजिए:",
       "options_hindi": [
+        "A-4, B-2, C-3, D-1",
+        "A-1, B-3, C-2, D-4",
+        "A-1, B-2, C-3, D-4",
+        "A-2, B-1, C-4, D-3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding the Regulations notified by the UGC and their respective years:\n\nList I (UGC Regulations)\nA. UGC (Minimum Standards and Procedure for Award of M.Phil./ Ph.D Degrees) Regulations\nB. UGC (Open and Distance Learning) Regulations\nC. UGC (Categorization of Universities (only) for Grant of Graded Autonomy) Regulations\nD. Regulations on Academic Collaboration between Indian and Foreign HEIs to offer Twinning, Joint Degree and Dual Degree Programmes\n\nList II (Year Notified / Introduced)\n1. 2016\n2. 2017\n3. 2018\n4. 2022\n\nSelect the correct code:",
+      "options_english": [
+        "A-4, B-2, C-3, D-1",
+        "A-1, B-3, C-2, D-4",
+        "A-1, B-2, C-3, D-4",
+        "A-2, B-1, C-4, D-3"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "As per UGC notifications and records: Minimum Standards and Procedure for Award of M.Phil./ Ph.D Degrees Regulations were notified in 2016; Open and Distance Learning Regulations in 2017; Categorization of Universities (only) for Grant of Graded Autonomy Regulations in 2018; and Regulations on Academic Collaboration between Indian and Foreign HEIs to offer Twinning, Joint Degree and Dual Degree Programmes in 2022.",
+      "explanation_hindi": "यूजीसी की अधिसूचनाओं के अनुसार: एम.फिल./पीएच.डी. डिग्री विनियम 2016 में; मुक्त और दूरस्थ शिक्षा विनियम 2017 में; ग्रेडेड स्वायत्तता के लिए विश्वविद्यालयों के वर्गीकरण विनियम 2018 में; तथा भारतीय और विदेशी उच्च शिक्षण संस्थानों के बीच ट्विनिंग, संयुक्त व दोहरी डिग्री शैक्षणिक सहयोग विनियम 2022 में अधिसूचित किए गए।",
+      "topic": "UGC",
+      "difficulty": "medium",
+      "key_facts": [
+        "UGC has notified UGC (Minimum Standards and Procedure for Award of M.Phil./ Ph.D Degrees) Regulations, 2016; UGC (Promotion and Maintenance of Standards of Academic Collaboration between Indian and Foreign Educational Institutions) Regulations, 2016; UGC (Open and Distance Learning) Regulations, 2017; UGC (Institutions of Eminence Deemed to be Universities) Regulations, 2017; UGC (Conferment of Autonomous Status upon Colleges and Measures for Maintenance of Standards in Autonomous Colleges) Regulations, 2018 and UGC (Categorization of Universities (only) for Grant of Graded Autonomy) Regulations, 2018."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:52:06.287912"
+    },
+    {
+      "id": "6150ef86-8eac-4603-b074-bc8ecc4a98d8",
+      "created_at": "2026-10-15T07:41:05.135860",
+      "question_hindi": "UGC के अंतर्गत ऐतिहासिक प्रकाशनों और समितियों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. 1992 में, एक CABE समिति ने ज्ञानम समिति की रिपोर्ट के आधार पर अपनी रिपोर्ट प्रस्तुत की थी।\n2. 1984 में, UGC ने 'विश्वविद्यालयों में अनुसंधान के सुधार के लिए नीति और कार्यक्रम' (Policy And Programme For Improvement of Research In The Universities) शीर्षक से एक प्रकाशन जारी किया।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "options_hindi": [
+        "केवल 2",
+        "1 और 2 दोनों",
+        "केवल 1",
+        "न तो 1, न ही 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the historical publications and committees under UGC:\n\n1. In 1992, a CABE Committee submitted its report based on the Gnanam Committee Report.\n2. In 1984, the UGC released a publication titled 'Policy And Programme For Improvement of Research In The Universities'.\n\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "2 only",
+        "Both 1 and 2",
+        "1 only",
+        "Neither 1 nor 2"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Both statements are correct. UGC's official records list the 'Report of The Cabe Committee On Gnanam Committee Report - 1992' and 'UGC's Policy And Programme For Improvement of Research In The Universities -1984'.",
+      "explanation_hindi": "दोनों कथन सही हैं। UGC के आधिकारिक रिकॉर्ड में 'Report of The Cabe Committee On Gnanam Committee Report - 1992' और 'UGC's Policy And Programme For Improvement of Research In The Universities -1984' शामिल हैं।",
+      "topic": "UGC",
+      "difficulty": "medium",
+      "key_facts": [
+        "UGC's Policy And Programme For Improvement of Research In The Universities -1984\n* Report of The Expert Commitee On The Minimum Qualifications And Workload Etc. For Librarians And Directors of Physical Education In Universities &amp; Colleges -1987\n* Report of The Taskforce On Code of Professional Ethics For University & College Teachers -1989\n* List of Degrees Specified For The Purposes of Section 22 of the University Grants Commission Act,1956\n* Report of The UGC Committee Towards New Educational Management 1990\n* Report of The Cabe Committee On Gnanam Committee Report - 1992"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:41:05.135860"
+    },
+    {
+      "id": "1aa9f840-b60e-45a2-ac04-653f87a338bc",
+      "created_at": "2026-10-15T07:46:47.874698",
+      "question_hindi": "विश्वविद्यालय अनुदान आयोग (UGC) के संस्थागतकरण, अधिदेश और कार्यालयों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. वर्ष 1952 में, केंद्र सरकार ने निर्णय लिया कि सार्वजनिक निधि से केंद्रीय और अन्य विश्वविद्यालयों/संस्थानों को सहायता अनुदान के आवंटन से संबंधित सभी मामले यूजीसी को संदर्भित किए जा सकते हैं।\n2. यूजीसी को औपचारिक रूप से नवंबर 1956 में संसद के एक अधिनियम के माध्यम से भारत सरकार के एक सांविधिक निकाय के रूप में स्थापित किया गया था।\n3. यूजीसी का सांविधिक अधिदेश भारत में विश्वविद्यालयी शिक्षा के मानकों के समन्वय, निर्धारण और अनुरक्षण के लिए है।\n4. दिल्ली में यूजीसी के कार्यालय बहादुर शाह ज़फ़र मार्ग, 35, फ़िरोज़ शाह रोड और दिल्ली विश्वविद्यालय के दक्षिणी परिसर (साउथ कैंपस) में स्थित हैं।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "1, 2, 3 और 4",
         "केवल 1, 2 और 3",
         "केवल 1, 3 और 4",
-        "1, 2, 3 और 4",
         "केवल 2, 3 और 4"
       ],
       "option_labels": [
@@ -468,217 +283,32 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the conditions required for candidates registered for the Ph.D. programme prior to July 11, 2009, to be exempted from the requirement of NET/SLET/SET as specified in the UGC Regulations:\n\n1. The Ph.D. degree has been awarded to the candidate in a regular mode.\n2. The Ph.D. thesis has been evaluated by at least three external examiners.\n3. An open Ph.D. viva voce of the candidate had been conducted.\n4. The candidate has published two research papers from his/her Ph.D. work, out of which at least one is in a refereed journal.\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the institutionalization, mandate, and offices of the University Grants Commission (UGC):\n\n1. In 1952, the Union Government decided that all cases pertaining to allocation of grants-in-aid from public funds to Central and other Universities/Institutions might be referred to the UGC.\n2. The UGC was formally established in November 1956 as a statutory body of the Government of India through an Act of Parliament.\n3. The statutory mandate of the UGC is for the coordination, determination, and maintenance of standards of university education in India.\n4. The offices of the UGC in Delhi are located at Bahadur Shah Zafar Marg, 35, Feroze Shah Road, and the South Campus of the University of Delhi.\n\nWhich of the statements given above are correct?",
       "options_english": [
+        "1, 2, 3 and 4",
         "1, 2 and 3 only",
         "1, 3 and 4 only",
-        "1, 2, 3 and 4",
         "2, 3 and 4 only"
       ],
-      "correct_answer": "b",
-      "explanation_english": "According to UGC Regulations Page 879, the conditions for exemption of pre-July 11, 2009 Ph.D. candidates are: a) Ph.D. degree has been awarded to the candidate in a regular mode; b) The Ph.D. thesis has been evaluated by at least two external examiners (Statement 2 mentions three, which is incorrect); c) An open Ph.D. viva voce of the candidate had been conducted; d) candidate has published two research papers from his/her Ph.D. work, out of which, at least one is in a refereed journal. Therefore, statements 1, 3, and 4 are correct.",
-      "explanation_hindi": "यूजीसी विनियम पृष्ठ 879 के अनुसार, 11 जुलाई 2009 से पूर्व पीएचडी पंजीकृत उम्मीदवारों की छूट के लिए शर्तें हैं: a) पीएचडी डिग्री नियमित मोड में प्रदान की गई हो; b) थीसिस का मूल्यांकन कम से कम दो बाह्य परीक्षकों द्वारा किया गया हो (कथन 2 में तीन लिखा है, जो गलत है); c) उम्मीदवार का खुला मौखिक साक्षात्कार (open viva voce) आयोजित किया गया हो; d) पीएचडी कार्य से दो शोध पत्र प्रकाशित किए गए हों, जिनमें से कम से कम एक संदर्भित पत्रिका में हो। अतः कथन 1, 3 और 4 सही हैं।",
-      "topic": "UGC",
-      "difficulty": "hard",
-      "key_facts": [
-        "Provided further, candidates registered for the Ph.D. programme prior to July 11, 2009, shall be governed by the provisions of the then existing Ordinances/ Bye-laws / Regulations of the Institutions awarding the degree and such Ph.D. candidates shall be exempted from the requirement of NET/SLET/SET for recruitment and appointment of Assistant Professor or equivalent positions in Universities/ Colleges /Institutions subject to the fulfilment of the following conditions: a) Ph.D. degree has been awarded to the candidate in a regular mode b) The Ph.D. thesis has been evaluated by at least two external examiners; c) An open Ph.D. viva voce of the candidate had been conducted; d) candidate has published two research papers from his/her Ph.D. work, out of which, at least one is in a refereed journal"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:48:56.360071"
-    },
-    {
-      "id": "0427e6e9-0996-406e-b0c1-43dcbdd84c11",
-      "created_at": "2026-10-15T07:41:46.854127",
-      "question_hindi": "प्रधानाचार्य और उप-प्रधानाचार्य भर्ती परीक्षा के संबंध में गवर्नमेंट स्कूल टीचर्स एसोसिएशन (GSTA), दिल्ली द्वारा UPSC को दिए गए प्रतिवेदन के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. मतदाता सूची के विशेष गहन पुनरीक्षण (SIR) में शिक्षकों के संलग्न होने के कारण GSTA ने UPSC से परीक्षा को चार से छह सप्ताह के लिए पुनर्निर्धारित करने का अनुरोध किया।\n2. एसोसिएशन ने सभी पात्र शिक्षकों को चुनाव संबंधी कर्तव्यों से स्थायी छूट देने की मांग की।\n3. प्रतिवेदन में उद्धृत पात्रता के अनुसार, उप-प्रधानाचार्य पद के लिए पात्रता मानदंडों में PGT के रूप में दो वर्ष की सेवा या TGT के रूप में तीन वर्ष की सेवा शामिल है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "1, 2 और 3",
-        "केवल 1 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the representation made by the Government School Teachers Association (GSTA), Delhi, to the UPSC concerning the Principal and Vice-Principal recruitment test:\n\n1. GSTA requested the UPSC to reschedule the examination by four to six weeks owing to teachers' engagement in Special Intensive Revision (SIR) of electoral rolls.\n2. The association requested a permanent exemption for all eligible teachers from election-related duties.\n3. As cited in the representation, the eligibility criteria for the Vice-Principal post include two years of service as a PGT or three years as a TGT.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1, 2 and 3",
-        "1 and 3 only",
-        "1 and 2 only",
-        "2 and 3 only"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Statements 1 and 3 are correct. GSTA sought a 4 to 6 week delay and cited eligibility criteria of two years service as a PGT or three years as a TGT for the Vice-Principal post. Statement 2 is incorrect because the association explicitly made it clear that it was not asking for an exemption from election-related duties, but merely requesting rescheduling of the exam.",
-      "explanation_hindi": "कथन 1 और 3 सही हैं। GSTA ने 4 से 6 सप्ताह की देरी की मांग की और उप-प्रधानाचार्य पद के लिए PGT के रूप में दो साल या TGT के रूप में तीन साल की सेवा के पात्रता मानदंड का हवाला दिया। कथन 2 गलत है क्योंकि एसोसिएशन ने स्पष्ट किया कि वह चुनाव संबंधी कर्तव्यों से छूट की मांग नहीं कर रहा है, बल्कि केवल परीक्षा पुनर्निर्धारित करने का अनुरोध कर रहा है।",
-      "topic": "UGC",
-      "difficulty": "medium",
-      "key_facts": [
-        "The association has made it clear that it is not asking for an exemption from election-related duties. Instead, the body is requesting UPSC to reschedule the examination by four to six weeks."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:41:46.854127"
-    },
-    {
-      "id": "efeede24-c45c-4890-ba45-d7f397c09dd2",
-      "created_at": "2026-10-15T07:41:05.135860",
-      "question_hindi": "UGC के आधिकारिक प्रकाशनों के अनुसार, UGC रिपोर्टों/पहलों और उनके संबंधित वर्षों का निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "उच्च शिक्षा संस्थानों का UGC वित्तपोषण (पुन्नैया समिति) - 1992-93",
-        "विश्वविद्यालयों और कॉलेजों में पुस्तकालय अध्यक्षों और शारीरिक शिक्षा निदेशकों के लिए न्यूनतम योग्यता और कार्यभार संबंधी विशेषज्ञ समिति की रिपोर्ट - 1995",
-        "सामाजिक रूप से प्रासंगिक कानूनी शिक्षा की दिशा में (Towards A Socially Relevant Legal Education) - 1975-77",
-        "केंद्रीय विश्वविद्यालयों के कामकाज की जांच के लिए गठित समिति की रिपोर्ट - 1984"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs of UGC reports/initiatives and their respective years is NOT correctly matched according to the UGC official publications?",
-      "options_english": [
-        "UGC Funding of Institutions of Higher Education (Punnayya Committee) - 1992-93",
-        "Report of The Expert Committee On Minimum Qualifications And Workload For Librarians And Directors of Physical Education - 1995",
-        "Towards A Socially Relevant Legal Education - 1975-77",
-        "Report of The Committee To Enquire Into The Working of Central Universities - 1984"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "The Report of The Expert Committee On The Minimum Qualifications And Workload Etc. For Librarians And Directors of Physical Education In Universities & Colleges was published in 1987, not 1995.",
-      "explanation_hindi": "विश्वविद्यालयों और कॉलेजों में पुस्तकालय अध्यक्षों और शारीरिक शिक्षा निदेशकों के लिए न्यूनतम योग्यता और कार्यभार आदि पर विशेषज्ञ समिति की रिपोर्ट 1987 में प्रकाशित हुई थी, न कि 1995 में।",
-      "topic": "UGC",
-      "difficulty": "medium",
-      "key_facts": [
-        "Report of The Expert Commitee On The Minimum Qualifications And Workload Etc. For Librarians And Directors of Physical Education In Universities &amp; Colleges -1987"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:41:05.135860"
-    },
-    {
-      "id": "7f527e17-508c-467e-bbb5-b7cc420ec042",
-      "created_at": "2026-10-15T07:48:56.360071",
-      "question_hindi": "यूजीसी विनियमों के अनुसार सीधी भर्ती के तहत, प्राचार्य (प्रोफेसर ग्रेड) और प्राचार्य (रीडर ग्रेड) के पद के लिए स्नातकोत्तर (मास्टर) डिग्री स्तर पर (या 7-बिंदु पैमाने में इसके समकक्ष बी ग्रेड) न्यूनतम कितने प्रतिशत अंकों की आवश्यकता होती है?",
-      "options_hindi": [
-        "55%",
-        "60%",
-        "50%",
-        "65%"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Under direct recruitment as per UGC Regulations, what is the minimum percentage of marks required at the Master's degree level (or its equivalent grade of B in the 7-point scale) for the post of Principal (Professor's Grade) and Principal (Reader's Grade)?",
-      "options_english": [
-        "55%",
-        "60%",
-        "50%",
-        "65%"
-      ],
       "correct_answer": "a",
-      "explanation_english": "As per UGC Regulations (Compendium Page 622), for direct recruitment of both Principal (Professor's Grade) and Principal (Reader's Grade), qualification 1 requires 'A Master’s Degree with at least 55% of the marks or its equivalent grade of B in the 7 point scale with latter grades O,A,B,C,D,E and F'.",
-      "explanation_hindi": "यूजीसी विनियमों (पृष्ठ 622) के अनुसार, प्राचार्य (प्रोफेसर ग्रेड) और प्राचार्य (रीडर ग्रेड) दोनों की सीधी भर्ती के लिए अर्हता 1 में 'कम से कम 55% अंकों के साथ मास्टर डिग्री या 7 बिंदु पैमाने में इसके समकक्ष ग्रेड बी' अनिवार्य किया गया है।",
-      "topic": "UGC",
-      "difficulty": "easy",
-      "key_facts": [
-        "1.1.0 Principal (Professor’s Grade) 1. A Master’s Degree with at least 55% of the marks or its equivalent grade of B in the 7 point scale with latter grades O,A,B,C,D,E and F. ... 1.2.0 Principal (Reader’s Grade) 1. A Master’s Degree with at least 55% of the marks or its equivalent grade of B in the 7 point scale with latter grades O,A,B,C,D,E and F"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:48:56.360071"
-    },
-    {
-      "id": "91fa314d-3d45-44e9-9d55-e3bcb0d8fc25",
-      "created_at": "2026-10-15T07:47:37.936125",
-      "question_hindi": "विश्वविद्यालय अनुदान आयोग (UGC) द्वारा प्रकाशित ऐतिहासिक नीतिगत रिपोर्टों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. यूजीसी ने 1975-77 की अवधि से संबंधित 'टुवर्ड्स ए सोशली रेलेवेंट लीगल एजुकेशन' (Towards A Socially Relevant Legal Education) शीर्षक से रिपोर्ट प्रकाशित की।\n2. 'विश्वविद्यालयों में अनुसंधान के सुधार हेतु यूजीसी की नीति और कार्यक्रम' (UGC's Policy And Programme For Improvement of Research In The Universities) पर रिपोर्ट 1984 में लाई गई थी।\n3. पुन्नैया समिति ने 1992-93 में प्रकाशित अपनी रिपोर्ट में मुख्य रूप से 'उच्च शिक्षा संस्थानों के यूजीसी वित्तपोषण' (UGC Funding of Institutions of Higher Education) का समाधान प्रस्तुत किया।\n\nउपर्युक्त कथनों में से कौन से सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 2",
-        "1, 2 और 3",
-        "केवल 1 और 3",
-        "केवल 2 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding historical policy reports published by the University Grants Commission (UGC):\n\n1. The UGC published the report titled 'Towards A Socially Relevant Legal Education' pertaining to the period 1975-77.\n2. The report on 'UGC's Policy And Programme For Improvement of Research In The Universities' was brought out in 1984.\n3. The Punnayya Committee specifically addressed 'UGC Funding of Institutions of Higher Education' in its report published in 1992-93.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1 and 2 only",
-        "1, 2 and 3",
-        "1 and 3 only",
-        "2 and 3 only"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "All three statements are correct as per official UGC documentation: 'Towards A Socially Relevant Legal Education 1975-77', 'UGC's Policy And Programme For Improvement of Research In The Universities -1984', and 'UGC Funding of Institutions of Higher Education - Punnayya Committee 1992-93'.",
-      "explanation_hindi": "यूजीसी के आधिकारिक दस्तावेजों के अनुसार तीनों कथन सही हैं: 'Towards A Socially Relevant Legal Education 1975-77', 'UGC's Policy And Programme For Improvement of Research In The Universities -1984', तथा 'UGC Funding of Institutions of Higher Education - Punnayya Committee 1992-93'।",
-      "topic": "UGC",
-      "difficulty": "hard",
-      "key_facts": [
-        "Towards A Socially Relevant Legal Education 1975-77\n* Report of The Committee To Enquire Into The Working of Central Universities - 1984\n* UGC's Policy And Programme For Improvement of Research In The Universities -1984\n* Report of The Expert Commitee On The Minimum Qualifications And Workload Etc. For Librarians And Directors of Physical Education In Universities &amp; Colleges -1987\n* Report of The Taskforce On Code of Professional Ethics For University & College Teachers -1989\n* List of Degrees Specified For The Purposes of Section 22 of the University Grants Commission Act,1956\n* Report of The UGC Committee Towards New Educational Management 1990\n* Report of The Cabe Committee On Gnanam Committee Report - 1992\n* UGC Funding of Institutions of Higher Education - Punnayya Committee 1992-93"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-15T07:47:37.936125"
-    },
-    {
-      "id": "cdb4fd50-d83a-4719-adbe-0d568e5c34f6",
-      "created_at": "2026-10-15T07:52:06.287912",
-      "question_hindi": "विश्वविद्यालय अनुदान आयोग (UGC) की शैक्षणिक गुणवत्ता और सुधार पहलों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. यूजीसी ने सभी विश्वविद्यालयों के कुलपतियों से अपने पाठ्यक्रम को अधिक कौशल-उन्मुख और अंतःविषय बनाने के लिए प्रत्येक तीन वर्ष में अपग्रेड और समीक्षा करने का अनुरोध किया है।\n2. चॉइस बेस्ड क्रेडिट सिस्टम (CBCS) एक 'कैफेटेरिया' प्रकार का दृष्टिकोण प्रदान करता है जिसमें छात्र अपनी पसंद के पाठ्यक्रम ले सकते हैं और अपनी गति से सीख सकते हैं।\n3. केंद्र प्रायोजित योजना राष्ट्रीय उच्चतर शिक्षा अभियान (RUSA) असेवित और अल्पसेवित क्षेत्रों में सेवाएं प्रदान करने पर केंद्रित है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the academic quality and reform initiatives of the University Grants Commission (UGC):\n\n1. The UGC has requested the Vice-Chancellors of all Universities to upgrade and review their curriculum every three years.\n2. The Choice Based Credit System (CBCS) provides a 'cafeteria' type approach enabling students to take courses of their choice and learn at their own pace.\n3. Centrally Sponsored Scheme Rashtriya Uchchatar Shiksha Abhiyan (RUSA) focuses on serving the unserved and underserved areas.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1 and 3 only",
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "According to the official release from the Ministry of Human Resource Development, UGC requested Vice-Chancellors to review curriculum every three years to enhance employability. CBCS provides a cafeteria-type approach allowing students to take courses of choice and acquire credits. RUSA is a Centrally Sponsored Scheme with the focus on serving unserved and underserved areas.",
-      "explanation_hindi": "मानव संसाधन विकास मंत्रालय की आधिकारिक विज्ञप्ति के अनुसार, यूजीसी ने रोजगार क्षमता बढ़ाने के लिए कुलपतियों से प्रत्येक तीन वर्ष में पाठ्यक्रम की समीक्षा करने का अनुरोध किया है। CBCS एक 'कैफेटेरिया' दृष्टिकोण प्रदान करता है जो छात्रों को अपनी पसंद के पाठ्यक्रम चुनने और क्रेडिट अर्जित करने की अनुमति देता है। RUSA एक केंद्र प्रायोजित योजना है जिसका ध्यान असेवित और अल्पसेवित क्षेत्रों पर केंद्रित है।",
+      "explanation_english": "All four statements are explicitly verified by the official UGC genesis records: The 1952 Union Government decision on grant allocations, the November 1956 Act of Parliament establishing it as a statutory body for coordination, determination, and maintenance of standards, and the three office locations in Delhi.",
+      "explanation_hindi": "सभी चारों कथन आधिकारिक यूजीसी उत्पत्ति दस्तावेज़ द्वारा सीधे सत्यापित हैं: अनुदान आवंटन पर 1952 का केंद्र सरकार का निर्णय, मानकों के समन्वय, निर्धारण और अनुरक्षण हेतु नवंबर 1956 के संसदीय अधिनियम द्वारा वैधानिक निकाय के रूप में स्थापना, और दिल्ली में इसके तीन कार्यालय स्थल।",
       "topic": "UGC",
       "difficulty": "medium",
       "key_facts": [
-        "UGC has also requested the Vice-Chancellors of all Universities to upgrade and review their curriculum every three years for making them more skill oriented and interdisciplinary and with a purpose of making the students employable. The introduction of Choice Based Credit System (CBCS) is another important measure taken by UGC to enhance academic standards and quality in higher education through innovation and improvements in curriculum, teaching-learning process, examination and evaluation systems. CBCS provides a ‘cafeteria’ type approach in which the students can take courses of their choice, learn at their own pace, undergo additional courses, acquire credits and adopt an interdisciplinary approach to learning."
+        "In 1952, the Union Government decided that all cases pertaining to the allocation of grants-in-aid from public funds to the Central Universities and other Universities and Institutions of higher learning might be referred to the University Grants Commission... The UGC, however, was formally established only in November 1956 as a statutory body of the Government of India through an Act of Parliament for the coordination, determination, and maintenance of standards of university education in India. The offices of the UGC are located in three locations in Delhi: Bahadur Shah Zafar Marg in New Delhi, 35, Feroze Shah Road, and the South Campus of the University of Delhi."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-15T07:52:06.287912"
+      "processed_at": "2026-10-15T07:46:47.874698"
     },
     {
-      "id": "091575c5-ed81-47e2-a73c-5e67b2b647de",
-      "created_at": "2026-10-15T07:49:25.508830",
-      "question_hindi": "यूजीसी प्रारूप विनियम 2025 और कॉलेज प्राचार्यों की नियुक्ति के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. 2025 के नए यूजीसी प्रारूप विनियमों में विश्वविद्यालयों में कुलपतियों (vice-chancellors) की नियुक्ति से संबंधित प्रावधान शामिल हैं।\n2. यूजीसी विनियम चयन समिति द्वारा मूल्यांकित खुली योग्यता (open merit) चयन के माध्यम से प्राचार्य पदों पर सीधी भर्ती की विधि की रूपरेखा तैयार करते हैं।\n3. यूजीसी विनियम वरिष्ठता और उपयुक्तता (fitness) के संयोजन के आधार पर प्राचार्यों की पदोन्नति के लिए एक विस्तृत कोटा और प्रक्रिया निर्धारित करते हैं।\n\nऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "id": "49bb8615-4434-4391-93b7-5b04b4b699da",
+      "created_at": "2026-10-15T07:41:46.854127",
+      "question_hindi": "UPSC विज्ञापन संख्या 51/2026 के तहत जीएनसीटीडी (GNCTD) स्कूलों में प्रधानाचार्य और उप-प्रधानाचार्य के पदों के लिए परीक्षा और मूल्यांकन योजना के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. वस्तुनिष्ठ बहुविकल्पीय संयुक्त भर्ती परीक्षा (CRT) 300 अंकों की होती है और इसका वेटेज 75 प्रतिशत है, जबकि साक्षात्कार का वेटेज 25 प्रतिशत है।\n2. CRT में न्यूनतम अर्हक अंक सामान्य और EWS उम्मीदवारों के लिए 100 में से 50 तथा OBC उम्मीदवारों के लिए 100 में से 45 हैं।\n3. वस्तुनिष्ठ संयुक्त भर्ती परीक्षा में गलत उत्तरों के लिए कोई नकारात्मक अंकन (नेगेटिव मार्किंग) नहीं है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
       "options_hindi": [
+        "1, 2 और 3",
         "केवल 2 और 3",
         "केवल 1 और 2",
-        "1, 2 और 3",
         "केवल 1 और 3"
       ],
       "option_labels": [
@@ -690,23 +320,134 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the UGC draft regulations 2025 and the appointment of college principals:\n\n1. The new UGC draft regulations for 2025 contain provisions pertaining to the appointment of vice-chancellors in universities.\n2. The UGC regulations outline the method of direct recruitment to principal posts through open merit selection assessed by a selection committee.\n3. The UGC regulations specifically prescribe a detailed quota and procedure for the promotion of principals based on seniority combined with fitness.\n\nWhich of the statements given above is/are correct?",
+      "question_english": "Consider the following statements regarding the scheme of examination and evaluation for the posts of Principal and Vice Principal in GNCTD schools under UPSC Advt. No. 51/2026:\n\n1. The objective MCQ Combined Recruitment Test (CRT) carries 300 marks and accounts for 75 per cent weightage, with the interview carrying 25 per cent weightage.\n2. The minimum qualifying marks in the CRT are 50 out of 100 for General and EWS candidates, and 45 out of 100 for OBC candidates.\n3. The objective Combined Recruitment Test has no negative marking for incorrect answers.\n\nWhich of the statements given above are correct?",
       "options_english": [
+        "1, 2 and 3",
         "2 and 3 only",
         "1 and 2 only",
-        "1, 2 and 3",
         "1 and 3 only"
       ],
-      "correct_answer": "b",
-      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because, as highlighted by educational stakeholders, the UGC regulations are totally silent regarding the method of appointment of principals by promotion.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि शैक्षणिक हितधारकों द्वारा बताया गया है कि यूजीसी के विनियम पदोन्नति द्वारा प्राचार्यों की नियुक्ति की पद्धति के संबंध में पूरी तरह मौन हैं।",
+      "correct_answer": "c",
+      "explanation_english": "Statements 1 and 2 are correct. The CRT is an objective MCQ test of 300 marks carrying 75% weightage, and the interview carries 25% weightage. Qualifying marks in CRT are 50 of 100 for General/EWS, 45 for OBC, and 40 for SC/ST/PwBD. Statement 3 is incorrect because there is one-third negative marking per wrong answer.",
+      "explanation_hindi": "कथन 1 और 2 सही हैं। CRT 300 अंकों की एक वस्तुनिष्ठ MCQ परीक्षा है जिसका वेटेज 75% है, और साक्षात्कार का वेटेज 25% है। CRT में अर्हक अंक सामान्य/EWS के लिए 100 में से 50, OBC के लिए 45 और SC/ST/PwBD के लिए 40 हैं। कथन 3 गलत है क्योंकि प्रत्येक गलत उत्तर के लिए एक-तिहाई नकारात्मक अंकन का प्रावधान है।",
       "topic": "UGC",
       "difficulty": "hard",
       "key_facts": [
-        "According to Sukumaran, the previous and the new regulations outline the method of appointment for direct recruitment to fill up the posts of principals in arts and science colleges. The process involves open merit selection assessed by a selection committee. “The regulations are totally silent regarding the method of appointment of principals by promotion. Moreover, there is a divergent High Court opinion in this matter,” he said."
+        "CRT 01.11.2026, objective MCQ, 300 marks, 75 per cent weight. Interview 25 per cent."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-15T07:49:25.508830"
+      "processed_at": "2026-10-15T07:41:46.854127"
+    },
+    {
+      "id": "bcac580c-4d3f-4712-b719-280a77758861",
+      "created_at": "2026-10-15T07:46:21.081259",
+      "question_hindi": "यूजीसी विनियम संग्रह (Compendium of UGC Regulations) के अनुलग्नक के अंतर्गत निर्धारित विशिष्ट अर्हता मानदंडों और गुणात्मक मानकों के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (अकादमिक पद)\nA. प्रोफेसर (Professor)\nB. रीडर (Reader)\nC. प्रवक्ता (Lecturer)\nD. प्राचार्य (प्रोफेसर ग्रेड)\n\nसूची II (निर्धारित विशिष्ट मानदंड/शर्त)\n1. डॉक्टरेट स्तर पर अनुसंधान मार्गदर्शन का अनुभव\n2. शैक्षिक नवाचार तथा नए पाठ्यक्रमों और पाठ्यचर्या के निर्माण में योगदान\n3. स्नातकोत्तर उपाधि अर्हताओं के अतिरिक्त पात्रता परीक्षा उत्तीर्ण करना\n4. विश्वविद्यालयों/महाविद्यालयों में शिक्षण/अनुसंधान का कुल 15 वर्षों का अनुभव\n\nसही कूट का चयन कीजिए:",
+      "options_hindi": [
+        "A-2, B-1, C-4, D-3",
+        "A-4, B-2, C-1, D-3",
+        "A-1, B-4, C-3, D-2",
+        "A-1, B-2, C-3, D-4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding the distinct qualifying criteria and qualitative benchmarks prescribed under the Annexure of the Compendium of UGC Regulations:\n\nList I (Academic Post)\nA. Professor\nB. Reader\nC. Lecturer\nD. Principal (Professor’s Grade)\n\nList II (Distinct Prescribed Requirement/Benchmark)\n1. Experience of guiding research at doctoral level\n2. Contribution to educational innovation and design of new courses and curricula\n3. Clearing the eligibility test in addition to Master's degree qualifications\n4. Total experience of 15 years of teaching / Research in Universities / Colleges\n\nSelect the correct code:",
+      "options_english": [
+        "A-2, B-1, C-4, D-3",
+        "A-4, B-2, C-1, D-3",
+        "A-1, B-4, C-3, D-2",
+        "A-1, B-2, C-3, D-4"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "According to the UGC Regulations: Professor requires experience of guiding research at doctoral level (A-1); Reader requires evidence of scholarship through contribution to educational innovation, design of new courses and curricula (B-2); Lecturer requires clearing the eligibility test besides fulfilling academic qualifications (C-3); and Principal (Professor’s Grade) requires a total experience of 15 years of teaching/research in Universities/Colleges and other higher education institutions (D-4).",
+      "explanation_hindi": "यूजीसी विनियमों के अनुसार: प्रोफेसर के लिए डॉक्टरेट स्तर पर अनुसंधान मार्गदर्शन का अनुभव अपेक्षित है (A-1); रीडर के लिए शैक्षिक नवाचार और नए पाठ्यक्रमों के निर्माण में योगदान का प्रमाण अपेक्षित है (B-2); प्रवक्ता के लिए शैक्षणिक योग्यताओं के साथ-साथ पात्रता परीक्षा उत्तीर्ण करना आवश्यक है (C-3); तथा प्राचार्य (प्रोफेसर ग्रेड) के लिए विश्वविद्यालयों/कॉलेजों में शिक्षण/शोध का कुल 15 वर्षों का अनुभव आवश्यक है (D-4)।",
+      "topic": "UGC",
+      "difficulty": "hard",
+      "key_facts": [
+        "including experience of guiding research at doctoral level. ... contribution to educational innovation, design of new courses and curricula. ... Besides fulfilling the above qualifications, candidates should have cleared the eligibility test ... Total experience of 15 years of teaching / Research in Universities / Colleges and other institutions of higher education"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:46:21.081259"
+    },
+    {
+      "id": "952d41d8-c2d8-42d7-8e83-ccdf74b4231e",
+      "created_at": "2026-10-15T07:40:26.127775",
+      "question_hindi": "विश्वविद्यालय अनुदान आयोग (UGC) के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. विश्वविद्यालय शिक्षा आयोग ने सिफारिश की थी कि विश्वविद्यालय अनुदान समिति का पुनर्गठन संयुक्त राज्य अमेरिका (USA) के विश्वविद्यालय अनुदान आयोग के सामान्य मॉडल पर किया जाए।\n2. यूजीसी के कार्यालय दिल्ली में तीन स्थानों पर स्थित हैं: बहादुर शाह जफर मार्ग, 35, फिरोज शाह रोड और दिल्ली विश्वविद्यालय का दक्षिणी परिसर (साउथ कैंपस)।\n\nऊपर दिए गए कथनों में से कौन-सा/से सही है/हैं?",
+      "options_hindi": [
+        "केवल 2",
+        "1 और 2 दोनों",
+        "केवल 1",
+        "न तो 1, न ही 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the University Grants Commission (UGC):\n\n1. The University Education Commission recommended that the University Grants Committee be reconstituted on the general model of the University Grants Commission of the United States.\n2. The offices of the UGC are located across three locations in Delhi: Bahadur Shah Zafar Marg, 35, Feroze Shah Road, and the South Campus of the University of Delhi.\n\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "2 only",
+        "Both 1 and 2",
+        "1 only",
+        "Neither 1 nor 2"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Statement 1 is incorrect because the University Education Commission recommended reconstitution on the general model of the University Grants Commission of the United Kingdom (not the United States). Statement 2 is correct as the offices of the UGC are situated in three locations in Delhi: Bahadur Shah Zafar Marg, 35 Feroze Shah Road, and the South Campus of the University of Delhi.",
+      "explanation_hindi": "कथन 1 गलत है क्योंकि विश्वविद्यालय शिक्षा आयोग ने यूनाइटेड किंगडम (UK) के विश्वविद्यालय अनुदान आयोग के सामान्य मॉडल पर पुनर्गठन की सिफारिश की थी (संयुक्त राज्य अमेरिका के नहीं)। कथन 2 सही है क्योंकि यूजीसी के कार्यालय दिल्ली में तीन स्थानों पर स्थित हैं: बहादुर शाह जफर मार्ग, 35 फिरोज शाह रोड और दिल्ली विश्वविद्यालय का दक्षिणी परिसर।",
+      "topic": "UGC",
+      "difficulty": "medium",
+      "key_facts": [
+        "It recommended that the University Grants Committee be reconstituted on the general model of the University Grants Commission of the United Kingdom with a full-time Chairman and other members to be appointed from amongst educationists of repute... The offices of the UGC are located in three locations in Delhi: Bahadur Shah Zafar Marg in New Delhi, 35, Feroze Shah Road, and the South Campus of the University of Delhi."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:40:26.127775"
+    },
+    {
+      "id": "7b2315f1-72ba-442b-94ac-564d4ee8bb79",
+      "created_at": "2026-10-15T07:39:56.688899",
+      "question_hindi": "सीधी भर्ती के लिए न्यूनतम योग्यता पर यूजीसी विनियमों के अनुसार, निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "options_hindi": [
+        "प्राचार्य (प्रोफेसर ग्रेड) — शिक्षण/अनुसंधान का कुल 15 वर्षों का अनुभव",
+        "रीडर — शोध डिग्री की अवधि को छोड़कर शिक्षण और/या अनुसंधान का 5 वर्षों का अनुभव",
+        "प्राचार्य (रीडर ग्रेड) — शिक्षण/अनुसंधान का कुल 10 वर्षों का अनुभव",
+        "प्रोफेसर — स्नातकोत्तर शिक्षण में 5 वर्षों का अनुभव"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "According to the UGC Regulations on minimum qualifications for direct recruitment, which of the following pairs is NOT correctly matched?",
+      "options_english": [
+        "Principal (Professor’s Grade) — Total experience of 15 years of teaching / Research",
+        "Reader — 5 years of experience of teaching and/or research excluding research degree period",
+        "Principal (Reader’s Grade) — Total experience of 10 years of teaching / Research",
+        "Professor — 5 years of experience in postgraduate teaching"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under UGC Regulations clause 1.3.1, a Professor requires 10 years of experience in postgraduate teaching, and/or experience in research at the University/National Level institutions, not 5 years.",
+      "explanation_hindi": "यूजीसी विनियमों के खंड 1.3.1 के तहत, प्रोफेसर के लिए स्नातकोत्तर शिक्षण में 10 वर्ष का अनुभव, और/या विश्वविद्यालय/राष्ट्रीय स्तर के संस्थानों में अनुसंधान का अनुभव अनिवार्य है, न कि 5 वर्ष।",
+      "topic": "UGC",
+      "difficulty": "medium",
+      "key_facts": [
+        "1.3.1 Professor\nAn eminent scholar with published work of high quality, actively engaged in research, with 10 years of experience in postgraduate teaching, and/or experience in research at the University National Level institutions, including experience of guiding research at doctoral level."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:39:56.688899"
     },
     {
       "id": "2e7c15f7-f979-4a07-86c7-5cd76ab25f5e",
@@ -744,6 +485,265 @@
       ],
       "ai_processed": true,
       "processed_at": "2026-10-15T07:42:45.059694"
+    },
+    {
+      "id": "2b07445a-e58f-4aae-8a92-082a3ad9bc82",
+      "created_at": "2026-10-15T07:40:26.126785",
+      "question_hindi": "भारत में विश्वविद्यालय अनुदान समिति (University Grants Committee) के प्रारंभिक विकास के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. 1944 में भारत में युद्धोत्तर शैक्षिक विकास पर केंद्रीय शिक्षा सलाहकार बोर्ड (CABE) की रिपोर्ट द्वारा विश्वविद्यालय अनुदान समिति के गठन की सिफारिश की गई थी।\n2. जब 1945 में इसका गठन किया गया, तो विश्वविद्यालय अनुदान समिति को केवल तीन केंद्रीय विश्वविद्यालयों: अलीगढ़, बनारस और दिल्ली के कार्यों की देखरेख का काम सौंपा गया था।\n3. 1947 में, समिति को उस समय मौजूद सभी विश्वविद्यालयों के प्रबंधन की जिम्मेदारी सौंपी गई थी।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 2 और 3",
+        "केवल 1 और 3",
+        "केवल 1 और 2",
+        "1, 2 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the early development of the University Grants Committee in India:\n\n1. The formation of a University Grants Committee was recommended in 1944 by the Report of the Central Advisory Board of Education on Post War Educational Development in India.\n2. When formed in 1945, the University Grants Committee was tasked to oversee the work of only three Central Universities: Aligarh, Banaras, and Delhi.\n3. In 1947, the Committee was entrusted with the responsibility of dealing with all the then existing Universities.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "2 and 3 only",
+        "1 and 3 only",
+        "1 and 2 only",
+        "1, 2 and 3"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "According to the UGC genesis record, the Sargeant Report (1944) of CABE recommended the formation of a University Grants Committee, which was formed in 1945 to oversee the work of the three Central Universities of Aligarh, Banaras and Delhi. In 1947, it was entrusted with dealing with all the then existing Universities. Thus, all three statements are correct.",
+      "explanation_hindi": "यूजीसी (UGC) के इतिहास के अनुसार, CABE की सार्जेंट रिपोर्ट (1944) ने विश्वविद्यालय अनुदान समिति के गठन की सिफारिश की, जिसे 1945 में तीन केंद्रीय विश्वविद्यालयों - अलीगढ़, बनारस और दिल्ली के काम की देखरेख के लिए गठित किया गया था। 1947 में, इसे तत्कालीन सभी मौजूदा विश्वविद्यालयों की जिम्मेदारी सौंपी गई थी। अतः तीनों कथन सही हैं।",
+      "topic": "UGC",
+      "difficulty": "medium",
+      "key_facts": [
+        "The first attempt to formulate a national system of education in India came In 1944, with the Report of the Central Advisory Board of Education on Post War Educational Development in India, also known as the Sargeant Report. It recommended the formation of a University Grants Committee, which was formed in 1945 to oversee the work of the three Central Universities of Aligarh, Banarasand Delhi. In 1947, the Committee was entrusted with the responsibility of dealing with all the then existing Universities."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:40:26.126785"
+    },
+    {
+      "id": "3e8e33d8-0e6f-424d-9ff5-2f56202a620a",
+      "created_at": "2026-10-15T07:50:04.181418",
+      "question_hindi": "शैक्षणिक कर्मचारियों और संस्थागत प्रमुखों के लिए यूजीसी के प्रस्तावित दिशानिर्देशों के तहत मापदंडों और विशिष्टताओं के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (मापदंड)\nA. प्रस्तावित विनियमों पर हितधारकों द्वारा प्रतिक्रिया प्रस्तुत करने की अंतिम तिथि\nB. सहायक प्रोफेसर पात्रता के लिए ME/MTech में आवश्यक न्यूनतम अंकों का प्रतिशत\nC. किसी व्यक्ति को एक ही कॉलेज में प्राचार्य के रूप में सेवा करने की अधिकतम अनुमत अवधि (टर्म)\nD. प्राचार्य के लिए प्रारंभिक नियुक्ति अवधि\n\nसूची II (मान / विशिष्टता)\n1. 5 फरवरी, 2025\n2. 55 प्रतिशत\n3. दो कार्यकाल (टर्म)\n4. पांच वर्ष\n\nसही कूट का चयन कीजिए:",
+      "options_hindi": [
+        "A-1, B-3, C-2, D-4",
+        "A-4, B-2, C-3, D-1",
+        "A-2, B-1, C-4, D-3",
+        "A-1, B-2, C-3, D-4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding the parameters and specifications under the proposed UGC guidelines for academic staff and institutional heads:\n\nList I (Parameter)\nA. Last date for stakeholders to submit feedback on the proposed regulations\nB. Minimum percentage of marks in ME/MTech required for assistant professor eligibility\nC. Maximum terms permitted for an individual to serve as a principal at the same college\nD. Initial appointment duration for a principal\n\nList II (Value / Specification)\n1. February 5, 2025\n2. 55 percent\n3. Two terms\n4. Five years\n\nSelect the correct code:",
+      "options_english": [
+        "A-1, B-3, C-2, D-4",
+        "A-4, B-2, C-3, D-1",
+        "A-2, B-1, C-4, D-3",
+        "A-1, B-2, C-3, D-4"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under the proposed UGC draft regulations: Stakeholders were requested to provide feedback by February 5, 2025; candidates with an ME or MTech degree require at least 55 percent marks to qualify as assistant professor; a principal is appointed for five years; and an individual is permitted to serve as principal for a maximum of two terms at the same college.",
+      "explanation_hindi": "प्रस्तावित यूजीसी मसौदा विनियमों के तहत: हितधारकों से 5 फरवरी, 2025 तक प्रतिक्रिया मांगी गई थी; ME या MTech डिग्री वाले उम्मीदवारों को सहायक प्रोफेसर के रूप में अर्हता प्राप्त करने के लिए कम से कम 55 प्रतिशत अंक चाहिए; एक प्राचार्य को पांच साल के लिए नियुक्त किया जाता है; और किसी व्यक्ति को उसी कॉलेज में अधिकतम दो कार्यकाल तक प्राचार्य के रूप में सेवा करने की अनुमति है।",
+      "topic": "UGC",
+      "difficulty": "medium",
+      "key_facts": [
+        "Stakeholders are requested to provide feedback on the proposed regulations by February 5, 2025. According to the proposal, candidates possessing a postgraduate degree in ME or MTech with a minimum of 55 percent marks will qualify for the position of assistant professor (entry-level position). As per the new guidelines, a principal will be appointed for five years... However, she/he is permitted to serve as a principal for a maximum of two terms at the same college."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:50:04.181418"
+    },
+    {
+      "id": "aeb5e3a5-b9c4-40c9-983f-de9fef019fc8",
+      "created_at": "2026-10-15T07:47:37.936125",
+      "question_hindi": "विश्वविद्यालय अनुदान आयोग (UGC) द्वारा प्रकाशित ऐतिहासिक समिति रिपोर्टों के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (समिति / रिपोर्ट का शीर्षक)\nA. नए शैक्षिक प्रबंधन की दिशा में यूजीसी समिति की रिपोर्ट (Towards New Educational Management)\nB. ज्ञानम समिति की रिपोर्ट पर सीएबीई (CABE) समिति की रिपोर्ट\nC. उच्च शिक्षा संस्थानों का यूजीसी वित्तपोषण - पुन्नैया समिति\nD. विश्वविद्यालयों/शैक्षणिक संस्थानों में रैगिंग की समस्या की रोकथाम हेतु समिति की रिपोर्ट\n\nसूची II (वर्ष)\n1. 1990\n2. 1992\n3. 1992-93\n4. 1999\n\nसही कूट का चयन कीजिए:",
+      "options_hindi": [
+        "A-2, B-1, C-4, D-3",
+        "A-3, B-4, C-1, D-2",
+        "A-1, B-3, C-2, D-4",
+        "A-1, B-2, C-3, D-4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding historical committee reports published by the University Grants Commission (UGC):\n\nList I (Committee / Report Title)\nA. Report of The UGC Committee Towards New Educational Management\nB. Report of The Cabe Committee On Gnanam Committee Report\nC. UGC Funding of Institutions of Higher Education - Punnayya Committee\nD. Report of the Committee to Curb the Menace of Ragging in Universities/Educational Institutions\n\nList II (Year)\n1. 1990\n2. 1992\n3. 1992-93\n4. 1999\n\nSelect the correct code:",
+      "options_english": [
+        "A-2, B-1, C-4, D-3",
+        "A-3, B-4, C-1, D-2",
+        "A-1, B-3, C-2, D-4",
+        "A-1, B-2, C-3, D-4"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "According to the UGC Reports list, the respective publication years are: Report of The UGC Committee Towards New Educational Management (1990), Report of The Cabe Committee On Gnanam Committee Report (1992), UGC Funding of Institutions of Higher Education - Punnayya Committee (1992-93), and Report of the Committee to Curb the Menace of Ragging in Universities/Educational Institutions (1999).",
+      "explanation_hindi": "यूजीसी रिपोर्ट्स सूची के अनुसार, संबंधित प्रकाशन वर्ष हैं: 'Report of The UGC Committee Towards New Educational Management' (1990), 'Report of The Cabe Committee On Gnanam Committee Report' (1992), 'UGC Funding of Institutions of Higher Education - Punnayya Committee' (1992-93), और 'Report of the Committee to Curb the Menace of Ragging in Universities/Educational Institutions' (1999)।",
+      "topic": "UGC",
+      "difficulty": "medium",
+      "key_facts": [
+        "Report of The UGC Committee Towards New Educational Management 1990\n* Report of The Cabe Committee On Gnanam Committee Report - 1992\n* UGC Funding of Institutions of Higher Education - Punnayya Committee 1992-93\n* UGC Commonwealth Secretariat Workshop On Women And Management In Higher Education 1997\n* Report of the Committee to Curb the Menace of Ragging in Universities/Educational Institutions-1999."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:47:37.936125"
+    },
+    {
+      "id": "65d7e8e3-8d62-475e-b503-5de3bd161bb7",
+      "created_at": "2026-10-15T07:46:47.874698",
+      "question_hindi": "स्वतंत्रता से पूर्व विश्वविद्यालय अनुदान समिति (University Grants Committee) के प्रारंभिक विकास और विकास क्रम के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. केंद्रीय शिक्षा सलाहकार बोर्ड की सार्जेंट रिपोर्ट (1944) ने एक विश्वविद्यालय अनुदान समिति के गठन की सिफारिश की थी।\n2. वर्ष 1945 में गठित विश्वविद्यालय अनुदान समिति को प्रारंभ में केवल तीन केंद्रीय विश्वविद्यालयों: अलीगढ़, बनारस और दिल्ली के कार्य की देखरेख का दायित्व सौंपा गया था।\n3. वर्ष 1947 में, समिति को तत्कालीन सभी मौजूदा विश्वविद्यालयों से संबंधित जिम्मेदारी सौंपी गई थी।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 2 और 3",
+        "केवल 1 और 3",
+        "1, 2 और 3",
+        "केवल 1 और 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the early development and evolution of the University Grants Committee prior to Independence:\n\n1. The Sargeant Report (1944) of the Central Advisory Board of Education recommended the formation of a University Grants Committee.\n2. The University Grants Committee formed in 1945 was initially mandated to oversee the work of only three Central Universities: Aligarh, Banaras, and Delhi.\n3. In 1947, the Committee was entrusted with the responsibility of dealing with all the then existing Universities.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3",
+        "1 and 2 only"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "According to the UGC genesis document, all three statements are correct: The Sargeant Report of 1944 recommended the formation of the University Grants Committee, which was formed in 1945 to oversee Aligarh, Banaras, and Delhi Central Universities. In 1947, it was entrusted with all then existing universities.",
+      "explanation_hindi": "यूजीसी के इतिहास दस्तावेज़ के अनुसार, तीनों कथन सही हैं: 1944 की सार्जेंट रिपोर्ट ने विश्वविद्यालय अनुदान समिति के गठन की सिफारिश की, जिसे 1945 में अलीगढ़, बनारस और दिल्ली के तीन केंद्रीय विश्वविद्यालयों के कार्य की देखरेख के लिए गठित किया गया था। 1947 में, इसे तत्कालीन सभी मौजूदा विश्वविद्यालयों की जिम्मेदारी सौंपी गई थी।",
+      "topic": "UGC",
+      "difficulty": "medium",
+      "key_facts": [
+        "The first attempt to formulate a national system of education in India came In 1944, with the Report of the Central Advisory Board of Education on Post War Educational Development in India, also known as the Sargeant Report. It recommended the formation of a University Grants Committee, which was formed in 1945 to oversee the work of the three Central Universities of Aligarh, Banarasand Delhi. In 1947, the Committee was entrusted with the responsibility of dealing with all the then existing Universities."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:46:47.874698"
+    },
+    {
+      "id": "c62a96d0-d473-4970-b979-aac54ba9ba55",
+      "created_at": "2026-10-15T07:40:26.127775",
+      "question_hindi": "विश्वविद्यालय अनुदान आयोग की ऐतिहासिक पृष्ठभूमि और स्थापना के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "options_hindi": [
+        "यूजीसी का उद्घाटन (1953) - डॉ. एस. राधाकृष्णन द्वारा औपचारिक रूप से उद्घाटित",
+        "सर चार्ल्स वुड का डिस्पैच (1854) - भारत में अंग्रेजी शिक्षा का मैग्ना कार्टा",
+        "विश्वविद्यालय शिक्षा आयोग (1948) - डॉ. एस. राधाकृष्णन की अध्यक्षता में",
+        "अंतर-विश्वविद्यालय बोर्ड (1925) - बाद में भारतीय विश्वविद्यालय संघ के रूप में जाना गया"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following pairs regarding the historical background and establishment of the University Grants Commission is NOT correctly matched?",
+      "options_english": [
+        "Inauguration of the UGC (1953) - Formally inaugurated by Dr. S. Radhakrishnan",
+        "Sir Charles Wood's Dispatch (1854) - Magna Carta of English Education in India",
+        "University Education Commission (1948) - Chaired by Dr. S. Radhakrishnan",
+        "Inter-University Board (1925) - Later known as Association of Indian Universities"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Pair C is NOT correctly matched. The University Grants Commission (UGC) was formally inaugurated by late Shri Maulana Abul Kalam Azad, the then Minister of Education, Natural Resources and Scientific Research, on 28 December 1953 (and addressed by Pandit Jawaharlal Nehru), not by Dr. S. Radhakrishnan.",
+      "explanation_hindi": "युग्म C सही सुमेलित नहीं है। विश्वविद्यालय अनुदान आयोग (UGC) का औपचारिक उद्घाटन 28 दिसंबर 1953 को तत्कालीन शिक्षा, प्राकृतिक संसाधन और वैज्ञानिक अनुसंधान मंत्री मौलाना अबुल कलाम आज़ाद द्वारा किया गया था (तथा पंडित जवाहरलाल नेहरू ने इसे संबोधित किया था), डॉ. एस. राधाकृष्णन द्वारा नहीं।",
+      "topic": "UGC",
+      "difficulty": "medium",
+      "key_facts": [
+        "Consequently, the University Grants Commission (UGC) was formally inaugurated by late Shri Maulana Abul Kalam Azad, the then Minister of Education, Natural Resources and Scientific Research on 28 December 1953."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:40:26.127775"
+    },
+    {
+      "id": "dbca9e6b-bcd2-46a7-9738-d3dc441df744",
+      "created_at": "2026-10-15T07:43:58.465412",
+      "question_hindi": "प्राचार्य और उप-प्राचार्य के लिए UPSC संयुक्त भर्ती परीक्षा (CRT) की परीक्षा योजना और पैटर्न के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. वस्तुनिष्ठ CRT में दो घंटे की अवधि के साथ अधिकतम 300 अंक होते हैं।\n2. अंतिम मेरिट में, CRT और साक्षात्कार का अनुपात 75 : 25 होता है।\n3. प्रत्येक गलत उत्तर के लिए उस प्रश्न के निर्धारित अंकों में से आधे (one-half) अंक काटे जाते हैं।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 2 और 3",
+        "1, 2 और 3",
+        "केवल 1 और 3",
+        "केवल 1 और 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the examination scheme and pattern of the UPSC Combined Recruitment Test (CRT) for Principal and Vice-Principal:\n\n1. The objective CRT carries a maximum of 300 marks with a duration of two hours.\n2. In the final merit, the ratio of CRT to Interview is 75 : 25.\n3. A penalty of one-half of the marks assigned to a question is deducted for every incorrect answer.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "2 and 3 only",
+        "1, 2 and 3",
+        "1 and 3 only",
+        "1 and 2 only"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "According to the CRT scheme, the test has a duration of two hours and maximum marks of 300. The final merit ratio between CRT and Interview is 75 : 25. The negative marking is one-third (not one-half) of the marks assigned to that question for every wrong answer.",
+      "explanation_hindi": "CRT योजना के अनुसार, परीक्षा की अवधि दो घंटे और अधिकतम अंक 300 हैं। CRT और साक्षात्कार के बीच अंतिम मेरिट का अनुपात 75 : 25 है। प्रत्येक गलत उत्तर के लिए नकारात्मक अंकन उस प्रश्न के लिए निर्धारित अंकों का एक-तिहाई (न कि आधा) होता है।",
+      "topic": "UGC",
+      "difficulty": "medium",
+      "key_facts": [
+        "One objective paper of 300 marks decides 75% of your final merit. This guide carries the official scheme, the eight syllabus heads as UPSC printed them"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:43:58.465412"
+    },
+    {
+      "id": "0430dd62-cdfb-4121-9c13-f422381ed7da",
+      "created_at": "2026-10-15T07:48:56.360071",
+      "question_hindi": "यूजीसी विनियमों के तहत सीधी भर्ती के लिए न्यूनतम आवश्यक शिक्षण/अनुसंधान अनुभव के संबंध में सूची I को सूची II के साथ सुमेलित कीजिए:\n\nसूची I (पद)\nA. प्राचार्य (प्रोफेसर ग्रेड)\nB. प्राचार्य (रीडर ग्रेड)\nC. प्रोफेसर (मानविकी / सामाजिक विज्ञान / विज्ञान)\nD. रीडर\n\nसूची II (न्यूनतम अनुभव आवश्यकता)\n1. विश्वविद्यालयों / कॉलेजों / अन्य संस्थानों में शिक्षण / अनुसंधान का कुल 15 वर्षों का अनुभव\n2. विश्वविद्यालयों / कॉलेजों / अन्य संस्थानों में शिक्षण / अनुसंधान का कुल 10 वर्षों का अनुभव\n3. स्नातकोत्तर शिक्षण में 10 वर्ष का अनुभव, और/या विश्वविद्यालय/राष्ट्रीय स्तर के संस्थानों में अनुसंधान का अनुभव\n4. अनुसंधान डिग्री प्राप्त करने में बिताई गई अवधि को छोड़कर शिक्षण और/या अनुसंधान का पांच वर्ष का अनुभव\n\nसही कूट का चयन कीजिए:",
+      "options_hindi": [
+        "A-1, B-2, C-3, D-4",
+        "A-3, B-2, C-1, D-4",
+        "A-1, B-3, C-2, D-4",
+        "A-2, B-1, C-4, D-3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List I with List II regarding the minimum required teaching/research experience for direct recruitment under the UGC Regulations:\n\nList I (Post)\nA. Principal (Professor’s Grade)\nB. Principal (Reader’s Grade)\nC. Professor (Humanities / Social Sciences / Sciences)\nD. Reader\n\nList II (Minimum Experience Requirement)\n1. Total experience of 15 years of teaching / Research in Universities / Colleges / other institutions\n2. Total experience of 10 years of teaching / Research in Universities / Colleges / other institutions\n3. 10 years of experience in postgraduate teaching, and/or experience in research at University/National Level institutions\n4. Five years of experience of teaching and/or research excluding the period spent for obtaining research degrees\n\nSelect the correct code:",
+      "options_english": [
+        "A-1, B-2, C-3, D-4",
+        "A-3, B-2, C-1, D-4",
+        "A-1, B-3, C-2, D-4",
+        "A-2, B-1, C-4, D-3"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under UGC Regulations (Compendium Page 622): Principal (Professor’s Grade) requires total experience of 15 years (A-1); Principal (Reader’s Grade) requires total experience of 10 years (B-2); Professor requires 10 years of experience in postgraduate teaching and/or research (C-3); Reader requires five years of experience of teaching and/or research excluding research degree period (D-4). Therefore, the correct code is A-1, B-2, C-3, D-4.",
+      "explanation_hindi": "यूजीसी विनियमों (पृष्ठ 622) के अनुसार: प्राचार्य (प्रोफेसर ग्रेड) के लिए 15 वर्ष का कुल अनुभव आवश्यक है (A-1); प्राचार्य (रीडर ग्रेड) के लिए 10 वर्ष का कुल अनुभव आवश्यक है (B-2); प्रोफेसर के लिए स्नातकोत्तर शिक्षण और/या अनुसंधान में 10 वर्ष का अनुभव आवश्यक है (C-3); रीडर के लिए शोध डिग्री अवधि को छोड़कर 5 वर्ष का शिक्षण/अनुसंधान अनुभव आवश्यक है (D-4)। अतः सही कूट A-1, B-2, C-3, D-4 है।",
+      "topic": "UGC",
+      "difficulty": "medium",
+      "key_facts": [
+        "1.1.0 Principal (Professor’s Grade) ... 3. Total experience of 15 years of teaching / Research in Universities / Colleges and other institutions of higher education 1.2.0 Principal (Reader’s Grade) ... 3. Total experience of 10 years of teaching / Research in Universities / Colleges and other institutions of higher education 1.3.1 Professor ... with 10 years of experience in postgraduate teaching, and/or experience in research at the University National Level institutions ... 1.3.2 Reader ... Five years of experience of teaching and/or research excluding the period spent for obtaining the research degrees"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-15T07:48:56.360071"
     }
   ]
 }

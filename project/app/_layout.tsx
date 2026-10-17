@@ -15,6 +15,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import * as SystemUI from 'expo-system-ui';
 
 import { AuthProvider } from '@/context/auth-context';
+import { SubscriptionProvider } from '@/context/subscription-context';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -43,14 +44,16 @@ export default function RootLayout() {
 
   return (
     <AuthProvider>
-      <ResponsiveContainer>
-        <Stack screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-          <Stack.Screen name="+not-found" />
-        </Stack>
-        <StatusBar style="light" backgroundColor="#667eea" translucent={true} />
-      </ResponsiveContainer>
+      <SubscriptionProvider>
+        <ResponsiveContainer>
+          <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+            <Stack.Screen name="+not-found" />
+          </Stack>
+          <StatusBar style="light" backgroundColor="#667eea" translucent={true} />
+        </ResponsiveContainer>
+      </SubscriptionProvider>
     </AuthProvider>
   );
 }

@@ -1,18 +1,129 @@
 {
-  "test_id": "4df83222-1870-41b2-ade1-00e3a137e183",
+  "test_id": "7e1e1285-afd9-4878-acfd-32c30191f049",
   "test_name": "Topic Test: POCSO - Part 5",
   "type": "topic_wise",
   "topic": "pocso",
-  "created_at": "2026-10-16T20:04:02.940390",
+  "created_at": "2026-10-17T08:33:52.823000",
   "questions": [
     {
-      "id": "9e7e0466-8268-4df8-b79f-e47dd4bde931",
-      "created_at": "2026-09-28T17:53:42.850628",
-      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (POCSO) अधिनियम, 2012 की धारा 20 के तहत, किसी बच्चे से जुड़ी यौन शोषक या अश्लील सामग्री मिलने पर विशेष किशोर पुलिस इकाई या स्थानीय पुलिस को सूचना देने की बाध्यता निम्नलिखित में से किन प्रतिष्ठानों में कार्यरत कर्मियों पर स्पष्ट रूप से लागू होती है?\n1. होटल या लॉज\n2. अस्पताल\n3. क्लब\n4. स्टूडियो या फोटोग्राफिक सुविधाएं\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "id": "1674cc08-c5de-4c9f-a357-bfc7af47ab2b",
+      "created_at": "2026-10-03T06:18:33.758020",
+      "question_hindi": "विधि सेंटर फॉर लीगल पॉलिसी की रिपोर्ट 'ए डिकेड ऑफ पोक्सो' में दी गई चित्र संख्याओं (Figure Numbers) और उनके विवरणों का निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
       "options_hindi": [
+        "Fig. 5.10 - स्टेट-वाइज़ डिस्पोजल पैटर्न्स इन पोक्सो केसेस",
+        "Fig. 4.2 - पेंडेंसी ऑफ पोक्सो केसेस",
+        "Fig. 4.1 - टाइम टेकन ड्यूरिंग इन्वेस्टिगेशन स्टेज",
+        "Fig. 5.6 - डिस्ट्रिक्ट्स विद लोएस्ट डिस्पोजल रेट्स"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following pairs of Figure Numbers and their corresponding descriptions in the report 'A Decade of POCSO' (Vidhi Centre for Legal Policy) is NOT correctly matched?",
+      "options_english": [
+        "Fig. 5.10 - State-wise disposal patterns in POCSO cases",
+        "Fig. 4.2 - Pendency of POCSO cases",
+        "Fig. 4.1 - Time taken during investigation stage",
+        "Fig. 5.6 - Districts with lowest disposal rates"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Fig. 5.10 corresponds to 'Average case length by state and year', whereas 'State-wise disposal patterns in POCSO cases' is represented by Fig. 5.9.",
+      "explanation_hindi": "Fig. 5.10 का शीर्षक 'एवरेज केस लेंथ बाई स्टेट एंड ईयर' है, जबकि 'स्टेट-वाइज़ डिस्पोजल पैटर्न्स इन पोक्सो केसेस' Fig. 5.9 से संबंधित है।",
+      "topic": "POCSO",
+      "difficulty": "medium",
+      "key_facts": [
+        "74 Fig. 5.9: State-wise disposal patterns in POCSO cases\n76 Fig. 5.10: Average case length by state and year"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-03T06:18:33.758020"
+    },
+    {
+      "id": "4547774e-ef2f-4b77-b9f4-69e5ba7b048f",
+      "created_at": "2026-09-28T17:51:18.827696",
+      "question_hindi": "यह फैसला सुनाते हुए कि वैवाहिक विवादों में पॉक्सो के तहत गिरफ्तारी की शक्ति एक वैधानिक विवेकाधिकार है न कि प्राथमिकी दर्ज करने का स्वतः परिणाम, सर्वोच्च न्यायालय द्वारा बिना वारंट के गिरफ्तारी को नियंत्रित करने वाले किस कानूनी प्रावधान पर विशेष रूप से भरोसा किया गया था?",
+      "options_hindi": [
+        "लैंगिक अपराधों से बालकों का संरक्षण अधिनियम, 2012 की धारा 19",
+        "भारतीय नागरिक सुरक्षा संहिता, 2023 (BNSS) की धारा 35",
+        "लैंगिक अपराधों से बालकों का संरक्षण अधिनियम, 2012 की धारा 33",
+        "भारतीय न्याय संहिता, 2023 (BNS) की धारा 107"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In ruling that the power to arrest under POCSO in matrimonial disputes is a statutory discretion and not an automatic consequence of registering an FIR, which legal provision governing arrest without warrant was specifically relied upon by the Supreme Court?",
+      "options_english": [
+        "Section 19 of the Protection of Children from Sexual Offences Act, 2012",
+        "Section 35 of the Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS)",
+        "Section 33 of the Protection of Children from Sexual Offences Act, 2012",
+        "Section 107 of the Bharatiya Nyaya Sanhita, 2023 (BNS)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Supreme Court relied on Section 35 of the Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS), which governs arrest without warrant, holding that arrest is a statutory discretion and not an automatic consequence of registering an FIR.",
+      "explanation_hindi": "सर्वोच्च न्यायालय ने भारतीय नागरिक सुरक्षा संहिता, 2023 (BNSS) की धारा 35 पर भरोसा किया, जो बिना वारंट के गिरफ्तारी को नियंत्रित करती है, और यह माना कि गिरफ्तारी एक वैधानिक विवेकाधिकार है और प्राथमिकी दर्ज करने का स्वतः परिणाम नहीं है।",
+      "topic": "POCSO",
+      "difficulty": "medium",
+      "key_facts": [
+        "The Court relied on Section 35 of the Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS), which governs arrest without warrant. It held that the power to arrest is a statutory discretion and not an automatic consequence of registration of an FIR."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-09-28T17:51:18.827696"
+    },
+    {
+      "id": "486af410-0c3a-4be9-b8d3-c9855de238a3",
+      "created_at": "2026-09-28T17:57:02.237346",
+      "question_hindi": "'इम्प्लीकेशन्स ऑफ द पॉक्सो एक्ट एंड डिटर्मिनेंट्स ऑफ चाइल्ड सेक्सुअल अब्यूज इन इंडिया' (मैती एवं चक्रवर्ती, 2023) शीर्षक वाले राज्य-स्तरीय अर्थमितीय अध्ययन के अनुभवजन्य निष्कर्षों के अनुसार, POCSO अधिनियम के कार्यान्वयन ने भारत में बच्चों के खिलाफ यौन अपराधों की घटनाओं की विकास दर को किस दर से किस दर तक बदल दिया?",
+      "options_hindi": [
+        "6.890% से −3.450%",
+        "5.214% से −2.115%",
+        "3.541% से −0.812%",
+        "4.681% से −4.611%"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In the state-level econometric study titled 'Implications of the POCSO Act and determinants of child sexual abuse in India' (Maity & Chakraborty, 2023), the empirical findings revealed that the implementation of the POCSO Act altered the growth rate of incidents of sexual offences against children in India from:",
+      "options_english": [
+        "6.890% to −3.450%",
+        "5.214% to −2.115%",
+        "3.541% to −0.812%",
+        "4.681% to −4.611%"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The empirical econometric analysis in the study demonstrated that the POCSO Act succeeded in reducing the growth rate of incidents of sexual offences against children in India from 4.681% to −4.611%.",
+      "explanation_hindi": "अध्ययन के अनुभवजन्य अर्थमितीय विश्लेषण से पता चला कि POCSO अधिनियम भारत में बच्चों के खिलाफ यौन अपराधों की घटनाओं की विकास दर को 4.681% से घटाकर −4.611% करने में सफल रहा।",
+      "topic": "POCSO",
+      "difficulty": "hard",
+      "key_facts": [
+        "Our empirical results reveal that the POCSO Act has reduced the Growth rate of incidents of sexual offences against children in India from 4.681% to −4.611."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-09-28T17:57:02.237346"
+    },
+    {
+      "id": "33a2c23a-7f21-4d0a-9a7e-ac23c5dff854",
+      "created_at": "2026-09-28T17:51:18.827696",
+      "question_hindi": "वैवाहिक विवादों में पॉक्सो के दुरुपयोग के खिलाफ सुरक्षा उपाय स्थापित करने वाले फैसले ('R' बनाम 'E' एवं अन्य) में, सर्वोच्च न्यायालय द्वारा निम्नलिखित में से किन पूर्व न्यायिक निर्णयों को स्पष्ट रूप से उद्धृत किया गया था, जिन्होंने वैवाहिक विवादों के दौरान आपराधिक कार्यवाही के दुरुपयोग को मान्यता दी थी?\n1. गेड्डम झांसी बनाम तेलंगाना राज्य\n2. अछिन गुप्ता बनाम हरियाणा राज्य\n3. सुहारा बनाम मुहम्मद जलील\n4. ईश्वर चंद शर्मा बनाम उत्तर प्रदेश राज्य\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "options_hindi": [
+        "1, 2, 3 और 4",
         "केवल 1, 2 और 4",
         "केवल 1 और 4",
-        "1, 2, 3 और 4",
         "केवल 2 और 3"
       ],
       "option_labels": [
@@ -24,430 +135,23 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Under Section 20 of the Protection of Children from Sexual Offences (POCSO) Act, 2012, an obligation to report sexually exploitative or pornographic material involving a child to the Special Juvenile Police Unit or local police is explicitly imposed on personnel employed in which of the following establishments?\n1. Hotel or lodge\n2. Hospital\n3. Club\n4. Studio or photographic facilities\n\nSelect the correct answer using the code given below:",
+      "question_english": "In the judgment ('R' v 'E' & Anr) establishing safeguards against the misuse of POCSO in matrimonial disputes, which of the following earlier court decisions were explicitly cited by the Supreme Court as having recognized instances of criminal proceedings being invoked during matrimonial disputes?\n1. Geddam Jhansi v State of Telangana\n2. Achin Gupta v State of Haryana\n3. Suhara v Muhammed Jaleel\n4. Ishwar Chand Sharma v State of Uttar Pradesh\n\nSelect the correct answer using the code given below:",
       "options_english": [
+        "1, 2, 3 and 4",
         "1, 2 and 4 only",
         "1 and 4 only",
-        "1, 2, 3 and 4",
         "2 and 3 only"
       ],
-      "correct_answer": "c",
-      "explanation_english": "Under Section 20 of Chapter V, it is obligatory for media personnel and personnel employed by a hotel, lodge, hospital, club, studio, or photographic facilities to provide information on coming across any material or object sexually exploitative of a child to the Special Juvenile Police Unit or local police.",
-      "explanation_hindi": "अध्याय V की धारा 20 के तहत, मीडिया कर्मियों तथा होटल, लॉज, अस्पताल, क्लब, स्टूडियो या फोटोग्राफिक सुविधाओं में कार्यरत कर्मियों के लिए यह अनिवार्य है कि वे बच्चे के यौन शोषण से संबंधित किसी भी सामग्री या वस्तु के मिलने पर इसकी जानकारी विशेष किशोर पुलिस इकाई या स्थानीय पुलिस को दें।",
-      "topic": "POCSO",
-      "difficulty": "medium",
-      "key_facts": [
-        "Under Sec 20 of the act under chapter V makes it obligatory for media personnel’s and personnel employed by hotel or lodge or hospital or club or studio or photographic facilities, by whatever name called, irrespective of the number of persons employed therein, shall, on coming across any material or object which is sexually exploitative of the child including pornographic, sexually-related or making obscene representation of a child or children through the use of any medium, shall provide such information to the Special Juvenile Police Unit, or to the local police"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-09-28T17:53:42.850628"
-    },
-    {
-      "id": "ee5e16ed-902f-4616-9aff-44caaaaf55f0",
-      "created_at": "2026-10-03T06:17:02.227228",
-      "question_hindi": "विधि और न्याय मंत्रालय के अनुसार, विशेष पॉक्सो (POCSO) अदालतों सहित फास्ट ट्रैक विशेष अदालतों (FTSCs) की स्थापना के लिए केंद्र प्रायोजित योजना को किस तिथि तक बढ़ा दिया गया है?",
-      "options_hindi": [
-        "30 सितंबर, 2026",
-        "2 अक्टूबर, 2026",
-        "31 मार्च, 2027",
-        "31 दिसंबर, 2026"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "According to the Ministry of Law and Justice, the centrally sponsored scheme for setting up Fast Track Special Courts (FTSCs), including Special POCSO Courts, has been extended up to which date?",
-      "options_english": [
-        "September 30, 2026",
-        "October 2, 2026",
-        "March 31, 2027",
-        "December 31, 2026"
-      ],
       "correct_answer": "a",
-      "explanation_english": "The government stated in the Rajya Sabha that the centrally sponsored scheme for setting up FTSCs has been temporarily extended till September 30, 2026.",
-      "explanation_hindi": "सरकार ने राज्यसभा में कहा कि FTSCs स्थापित करने की केंद्र प्रायोजित योजना को अस्थायी रूप से 30 सितंबर, 2026 तक बढ़ा दिया गया है।",
-      "topic": "POCSO",
-      "difficulty": "easy",
-      "key_facts": [
-        "The government said that the centrally sponsored scheme for setting up FTSCs has been temporarily extended till September 30, 2026."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-03T06:17:02.227228"
-    },
-    {
-      "id": "17c42c8d-9981-4717-8f16-78bd5e874f77",
-      "created_at": "2026-10-03T06:20:14.864251",
-      "question_hindi": "सूची I (पॉक्सो अधिनियम, 2012 की धाराएं) को सूची II (सांविधिक शीर्षक/विषय-वस्तु) के साथ सुमेलित कीजिए और नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:\n\nसूची I (धारा)\nA. धारा 24\nB. धारा 27\nC. धारा 29\nD. धारा 30\n\nसूची II (सांविधिक शीर्षक/विषय-वस्तु)\n1. आपराधिक मानसिक स्थिति की उपधारणा\n2. कतिपय अपराधों के संबंध में उपधारणा\n3. बालक की चिकित्सीय परीक्षा\n4. बालक के कथन का अभिलिखित किया जाना\n\nकूट:",
-      "options_hindi": [
-        "A-3, B-4, C-2, D-1",
-        "A-3, B-4, C-1, D-2",
-        "A-4, B-3, C-2, D-1",
-        "A-4, B-3, C-1, D-2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List I (Sections of the POCSO Act, 2012) with List II (Statutory Title/Subject Matter) and select the correct answer using the code given below:\n\nList I (Section)\nA. Section 24\nB. Section 27\nC. Section 29\nD. Section 30\n\nList II (Statutory Title/Subject Matter)\n1. Presumption of culpable mental state\n2. Presumption as to certain offences\n3. Medical examination of a child\n4. Recording of statement of a child\n\nCode:",
-      "options_english": [
-        "A-3, B-4, C-2, D-1",
-        "A-3, B-4, C-1, D-2",
-        "A-4, B-3, C-2, D-1",
-        "A-4, B-3, C-1, D-2"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "Under the Protection of Children from Sexual Offences Act, 2012: Section 24 deals with 'Recording of statement of a child'; Section 27 deals with 'Medical examination of a child'; Section 29 deals with 'Presumption as to certain offences'; and Section 30 deals with 'Presumption of culpable mental state'. Hence, the correct mapping is A-4, B-3, C-2, D-1.",
-      "explanation_hindi": "लैंगिक अपराधों से बालकों का संरक्षण अधिनियम, 2012 के तहत: धारा 24 'बालक के कथन का अभिलिखित किया जाना' से संबंधित है; धारा 27 'बालक की चिकित्सीय परीक्षा' से संबंधित है; धारा 29 'कतिपय अपराधों के संबंध में उपधारणा' से संबंधित है; तथा धारा 30 'आपराधिक मानसिक स्थिति की उपधारणा' से संबंधित है। अत: सही सुमेलन A-4, B-3, C-2, D-1 है।",
-      "topic": "POCSO",
-      "difficulty": "medium",
-      "key_facts": [
-        "24. Recording of statement of a child. \n25. Recording of statement of a child by Magistrate. \n26. Additional provisions regarding statement to be recorded. \n27. Medical examination of a child. \n\nCHAPTER VII\n\nSPECIAL COURTS\n\n28. Designation of Special Courts. \n29. Presumption as to certain offences. \n30. Presumption of culpable mental state."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-03T06:20:14.864251"
-    },
-    {
-      "id": "32350877-ef5d-481b-93f4-5d9380855fad",
-      "created_at": "2026-10-03T06:17:02.227228",
-      "question_hindi": "पॉक्सो और बलात्कार के मामलों से निपटने के लिए फास्ट ट्रैक विशेष अदालत (FTSC) योजना के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. FTSCs को अक्टूबर 2019 में केंद्र प्रायोजित योजना (CSS) के रूप में शुरू किया गया था।\n2. परिचालन ढांचे के तहत, केंद्र अधिकांश राज्यों के लिए 60% और केंद्र शासित प्रदेशों के लिए 90% खर्च वहन करता है।\n3. प्रत्येक FTSC में प्रति अदालत 7 की संख्या में न्यायिक अधिकारियों और सहायक कर्मचारियों की नियुक्ति शामिल है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 2",
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the Fast Track Special Courts (FTSCs) Scheme for handling POCSO and rape cases:\n\n1. FTSCs were launched in October 2019 as a Centrally Sponsored Scheme (CSS).\n2. Under the operational framework, the Centre bears 60% of the cost for most states and 90% for Union Territories.\n3. Each FTSC involves the appointment of judicial officers and support staff numbering 7 per court.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1 and 2 only",
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 3 only"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "All three statements are correct. The FTSC scheme was launched in October 2019 as a Centrally Sponsored Scheme to expedite trials of POCSO and rape cases. The operational framework involves judicial officers and support staff (7 per court), funded with the Centre bearing 60% of the cost for most states and 90% for Union Territories.",
-      "explanation_hindi": "तीनों कथन सही हैं। पॉक्सो और बलात्कार के मामलों के त्वरित परीक्षण के लिए अक्टूबर 2019 में एक केंद्र प्रायोजित योजना के रूप में FTSC योजना शुरू की गई थी। परिचालन ढांचे में न्यायिक अधिकारी और सहायक कर्मचारी (प्रति अदालत 7) शामिल हैं, जिसमें केंद्र अधिकांश राज्यों के लिए 60% और केंद्र शासित प्रदेशों के लिए 90% लागत वहन करता है।",
-      "topic": "POCSO",
-      "difficulty": "medium",
-      "key_facts": [
-        "The operational framework of FTSCs involves the appointment of judicial officers and support staff (7 per court), funded jointly by the Centre and States/UTs, with the Centre bearing 60% of the cost for most states and 90% for Union Territories."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-03T06:17:02.227228"
-    },
-    {
-      "id": "894f271e-518f-4dc0-a83c-f985e7325e90",
-      "created_at": "2026-10-03T06:19:29.820206",
-      "question_hindi": "मैती एवं चक्रवर्ती (2023) के शोध पत्र में बाल यौन अपराधों और पोक्सो अधिनियम पर प्रस्तुत अनुभवजन्य निष्कर्षों तथा अंतर्राष्ट्रीय तुलनात्मक आंकड़ों के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. अकेले वर्ष 2021 में भारत में लैंगिक अपराधों से बालकों का संरक्षण (पोक्सो) अधिनियम, 2012 के तहत कुल 53,874 मामले दर्ज किए गए थे।\n2. अनुभवजन्य परिणाम यह दर्शाते हैं कि पोक्सो अधिनियम ने भारत में बच्चों के विरुद्ध यौन अपराधों की घटनाओं की वृद्धि दर को 4.681% से घटाकर -4.611% कर दिया है।\n3. वैश्विक स्तर पर बाल यौन शोषण (CSA) की उच्चतम व्यापकता अफ्रीका में (34.4%) दर्ज की गई है, जबकि यूरोप में यह 9.2% और अमेरिका में 10.1% है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "1, 2 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3",
-        "केवल 1 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the empirical findings and international comparative statistics on child sexual offences documented by Maity & Chakraborty (2023):\n\n1. In the year 2021 alone, a total of 53,874 cases were registered in India under the Protection of Children from Sexual Offences (POCSO) Act, 2012.\n2. Empirical econometric findings reveal that the POCSO Act reduced the growth rate of incidents of sexual offences against children in India from 4.681% to −4.611%.\n3. Globally, the highest prevalence of Child Sexual Abuse (CSA) is observed in Africa (34.4%), compared to 9.2% in Europe and 10.1% in America.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1, 2 and 3",
-        "1 and 2 only",
-        "2 and 3 only",
-        "1 and 3 only"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "All three statements are correct according to Maity & Chakraborty (2023): In 2021, 53,874 POCSO cases were registered; empirical analysis showed that the Act decreased the growth rate of child sexual offence incidents from 4.681% to −4.611%; and globally, the prevalence of child sexual abuse was reported as 34.4% in Africa, 9.2% in Europe, and 10.1% in America.",
-      "explanation_hindi": "मैती और चक्रवर्ती (2023) के अनुसार तीनों कथन सही हैं: वर्ष 2021 में पोक्सो अधिनियम के अंतर्गत 53,874 मामले दर्ज हुए; अनुभवजन्य विश्लेषण से पता चला कि इस अधिनियम ने बाल यौन अपराधों की वृद्धि दर को 4.681% से घटाकर -4.611% कर दिया; तथा वैश्विक स्तर पर अफ्रीका में इसकी व्यापकता सर्वाधिक 34.4% पाई गई, जबकि यूरोप में 9.2% और अमेरिका में 10.1% थी।",
+      "explanation_english": "The Supreme Court explicitly referred to all four earlier decisions: Geddam Jhansi v State of Telangana, Achin Gupta v State of Haryana, Ishwar Chand Sharma v State of Uttar Pradesh, and the Kerala High Court's decision in Suhara v Muhammed Jaleel.",
+      "explanation_hindi": "सर्वोच्च न्यायालय ने स्पष्ट रूप से इन चारों पूर्व निर्णयों का उल्लेख किया: गेड्डम झांसी बनाम तेलंगाना राज्य, अछिन गुप्ता बनाम हरियाणा राज्य, ईश्वर चंद शर्मा बनाम उत्तर प्रदेश राज्य, और केरल उच्च न्यायालय का सुहारा बनाम मुहम्मद जलील मामला।",
       "topic": "POCSO",
       "difficulty": "hard",
       "key_facts": [
-        "In 2021 only there were 53,874 cases registered under Protection of Children from Sexual Offences Act of 2012. ... Our empirical results reveal that the POCSO Act has reduced the Growth rate of incidents of sexual offences against children in India from 4.681% to −4.611. ... Globally, the highest prevalence of Child Sexual Abuse (CSA) is observed in Africa and the corresponding figure is 34.4% (Wihbey, 2011; Behere and Mulmule, 2013). The reported CSA cases in Europe and America are 9.2% and 10.1%, respectively (Wihbey, 2011)."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-03T06:19:29.820206"
-    },
-    {
-      "id": "74008307-21bc-49aa-bac5-b0e6d21bfcf4",
-      "created_at": "2026-09-28T17:48:49.157370",
-      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (POCSO) अधिनियम, 2012 के तहत अधिदेशित बाल-अनुकूल प्रक्रियाओं के संदर्भ में, निम्नलिखित कथनों पर विचार कीजिए:\n1. बालक का बयान अधिमानतः उप-निरीक्षक (सब-इंस्पेक्टर) से अनिम्न रैंक की महिला पुलिस अधिकारी द्वारा दर्ज किया जाता है।\n2. असाधारण परिस्थितियों में और मजिस्ट्रेट की अनुमति से, किसी बच्चे को रात में पुलिस स्टेशन में रोका जा सकता है।\n3. बालक का बयान दर्ज करते समय पुलिस अधिकारी को वर्दी में नहीं होना चाहिए।\n4. यदि पीड़िता एक बालिका है, तो चिकित्सा परीक्षण एक महिला चिकित्सक द्वारा किया जाना चाहिए।\nउपर्युक्त में से कौन-से कथन सही हैं?",
-      "options_hindi": [
-        "केवल 1, 3 और 4",
-        "केवल 1, 2 और 3",
-        "केवल 2 और 4",
-        "1, 2, 3 और 4"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "With reference to the child-friendly procedures mandated under the Protection of Children from Sexual Offences (POCSO) Act, 2012, consider the following statements:\n1. The statement of the child is preferably recorded by a woman police officer not below the rank of sub-inspector.\n2. Under exceptional circumstances and with the permission of a magistrate, a child may be detained in the police station during the night.\n3. The police officer must not be in uniform while recording the statement of the child.\n4. If the victim is a girl child, the medical examination must be conducted by a woman doctor.\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1, 3 and 4 only",
-        "1, 2 and 3 only",
-        "2 and 4 only",
-        "1, 2, 3 and 4"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Statement 2 is incorrect because the Act strictly provides that 'No child to be detained in the police station in the night for any reason.' Statements 1, 3, and 4 are explicitly mandated child-friendly procedures under the Act.",
-      "explanation_hindi": "कथन 2 गलत है क्योंकि अधिनियम स्पष्ट रूप से यह प्रावधान करता है कि किसी भी बच्चे को किसी भी कारण से रात में पुलिस स्टेशन में नहीं रखा जाएगा ('No child to be detained in the police station in the night for any reason')। कथन 1, 3 और 4 अधिनियम के तहत स्पष्ट बाल-अनुकूल प्रक्रियाएं हैं।",
-      "topic": "POCSO",
-      "difficulty": "medium",
-      "key_facts": [
-        "No child to be detained in the police station in the night for any reason."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-09-28T17:48:49.157370"
-    },
-    {
-      "id": "e98e6361-9e28-4f0c-a1da-b3fdb69b89f8",
-      "created_at": "2026-09-28T17:48:49.157370",
-      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (POCSO) अधिनियम, 2012 की धाराओं के विन्यास में, निम्नलिखित युग्मों पर विचार कीजिए:\n1. धारा 21 : मामले की रिपोर्ट करने या अभिलिखित करने में विफलता के लिए दंड\n2. धारा 22 : झूठी शिकायत या झूठी जानकारी के लिए दंड\n3. धारा 36 : साक्ष्य देते समय बालक का अभियुक्त को न देखना\n4. धारा 37 : बंद कमरे (in camera) में विचारण का संचालन\nउपर्युक्त में से कितने युग्म सही सुमेलित हैं?",
-      "options_hindi": [
-        "सभी चारों युग्म",
-        "केवल दो युग्म",
-        "केवल तीन युग्म",
-        "केवल एक युग्म"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "In the arrangement of sections under the Protection of Children from Sexual Offences (POCSO) Act, 2012, consider the following pairs:\n1. Section 21 : Punishment for failure to report or record a case\n2. Section 22 : Punishment for false complaint or false information\n3. Section 36 : Child not to see accused at the time of testifying\n4. Section 37 : Trials to be conducted in camera\nHow many of the pairs given above are correctly matched?",
-      "options_english": [
-        "All four pairs",
-        "Only two pairs",
-        "Only three pairs",
-        "Only one pair"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "All four pairs are correctly matched according to the arrangement of sections of the POCSO Act: Section 21 deals with failure to report/record, Section 22 with false complaint/information, Section 36 ensures child does not see the accused during testifying, and Section 37 requires trials to be held in camera.",
-      "explanation_hindi": "POCSO अधिनियम की धाराओं के विन्यास के अनुसार सभी चारों युग्म सही सुमेलित हैं: धारा 21 रिपोर्ट दर्ज न करने के दंड से, धारा 22 झूठी शिकायत/जानकारी के दंड से, धारा 36 गवाही के समय बालक द्वारा अभियुक्त को न देखने से तथा धारा 37 बंद कमरे में विचारण (इन-कैमरा) से संबंधित है।",
-      "topic": "POCSO",
-      "difficulty": "medium",
-      "key_facts": [
-        "21. Punishment for failure to report or record a case. \n22. Punishment for false complaint or false information."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-09-28T17:48:49.157370"
-    },
-    {
-      "id": "8e95f7b5-ca4c-41df-bb55-385571bca95e",
-      "created_at": "2026-09-28T17:55:24.892171",
-      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (POCSO) अधिनियम, 2012 की धारा 37 के अनुसार, मुकदमों (परीक्षण) को किस प्रकार संचालित किया जाना अनिवार्य है?",
-      "options_hindi": [
-        "सार्वजनिक मध्यस्थता के माध्यम से",
-        "खुली अदालत में (In open court)",
-        "केवल कार्यपालक मजिस्ट्रेटों के माध्यम से",
-        "कैमरे के समक्ष (बंद कमरे में / In camera)"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "According to Section 37 of the Protection of Children from Sexual Offences (POCSO) Act, 2012, how are trials mandated to be conducted?",
-      "options_english": [
-        "Via public arbitration",
-        "In open court",
-        "Through executive magistrates only",
-        "In camera"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "Under Chapter VIII of the POCSO Act, Section 37 specifically specifies: '37. Trials to be conducted in camera.'",
-      "explanation_hindi": "POCSO अधिनियम के अध्याय VIII के तहत, धारा 37 स्पष्ट रूप से विनिर्दिष्ट करती है: '37. विचारण बंद कमरे में (in camera) किया जाना'।",
-      "topic": "POCSO",
-      "difficulty": "easy",
-      "key_facts": [
-        "37. Trials to be conducted in camera."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-09-28T17:55:24.892171"
-    },
-    {
-      "id": "a4df414f-2ca8-4c48-98f9-b37c8d0ba6cf",
-      "created_at": "2026-09-28T17:55:24.892171",
-      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (POCSO) अधिनियम, 2012 के तहत धाराओं के विन्यास के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. धारा 23 मीडिया के लिए प्रक्रिया को नियंत्रित करती है।\n2. धारा 36 यह उपबंध करती है कि साक्ष्य देते समय बालक का अभियुक्त को न देखना सुनिश्चित किया जाए।\n3. धारा 44 अधिनियम के कार्यान्वयन की निगरानी का उपबंध करती है।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "1, 2 और 3",
-        "केवल 2 और 3",
-        "केवल 1 और 3",
-        "केवल 1 और 2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the arrangement of sections under the Protection of Children from Sexual Offences (POCSO) Act, 2012:\n1. Section 23 governs the procedure for media.\n2. Section 36 provides that a child is not to see the accused at the time of testifying.\n3. Section 44 provides for the monitoring of the implementation of the Act.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1, 2 and 3",
-        "2 and 3 only",
-        "1 and 3 only",
-        "1 and 2 only"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "All three statements are correct according to the Arrangement of Sections of the POCSO Act: Section 23 is 'Procedure for media', Section 36 is 'Child not to see accused at the time of testifying', and Section 44 is 'Monitoring of implementation of Act'.",
-      "explanation_hindi": "POCSO अधिनियम की धाराओं की अनुसूची के अनुसार तीनों कथन सही हैं: धारा 23 'मीडिया के लिए प्रक्रिया', धारा 36 'साक्ष्य देते समय बालक का अभियुक्त को न देखना', और धारा 44 'अधिनियम के कार्यान्वयन का अनुवीक्षण' से संबंधित है।",
-      "topic": "POCSO",
-      "difficulty": "hard",
-      "key_facts": [
-        "23. Procedure for media. \n\nCHAPTER VI \n... \n36. Child not to see accused at the time of testifying. \n... \n44. Monitoring of implementation of Act."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-09-28T17:55:24.892171"
-    },
-    {
-      "id": "f0f0dcd8-473d-4123-9a1e-5b8f129385b4",
-      "created_at": "2026-10-03T06:14:40.480983",
-      "question_hindi": "पॉक्सो अधिनियम के ढांचे के तहत रिपोर्टिंग, जांच और बयान दर्ज करने की बाल-अनुकूल प्रक्रियाओं के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. बालक का बयान उसके निवास स्थान पर या उसकी पसंद के स्थान पर, अधिमानतः उप-निरीक्षक (सब-इंस्पेक्टर) के पद से नीचे की न होने वाली महिला पुलिस अधिकारी द्वारा दर्ज किया जाना चाहिए।\n2. आधिकारिक अधिकार स्थापित करने के लिए बयान दर्ज करने वाले पुलिस अधिकारी को अपनी निर्धारित वर्दी पहननी चाहिए।\n3. यदि पीड़िता बालिका है, तो डॉक्टरी परीक्षण एक महिला चिकित्सक द्वारा किया जाना अनिवार्य है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 2 और 3",
-        "केवल 1 और 2",
-        "1, 2 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the child-friendly procedures for reporting, investigation, and recording of statements under the POCSO Act framework:\n\n1. The statement of the child is to be recorded at the residence of the child or at the place of their choice, preferably by a woman police officer not below the rank of sub-inspector.\n2. The police officer recording the statement must wear their designated uniform to establish official authority.\n3. In case the victim is a girl child, the medical examination must be conducted by a woman doctor.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1 and 3 only",
-        "2 and 3 only",
-        "1 and 2 only",
-        "1, 2 and 3"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Statements 1 and 3 are correct. Statement 2 is incorrect because the guidelines specifically mandate that the police officer must NOT be in uniform while recording the statement of the child.",
-      "explanation_hindi": "कथन 1 और 3 सही हैं। कथन 2 गलत है क्योंकि दिशानिर्देशों में विशेष रूप से यह अनिवार्य किया गया है कि बच्चे का बयान दर्ज करते समय पुलिस अधिकारी को वर्दी में नहीं होना चाहिए।",
-      "topic": "POCSO",
-      "difficulty": "medium",
-      "key_facts": [
-        "• Recording the statement of the child at the residence of the child or at the place of his choice, preferably by a woman police officer not below the rank of sub-inspector \n• No child to be detained in the police station in the night for any reason. \n• Police officer to not be in uniform while recording the statement of the child ... • In case the victim is a girl child, the medical examination shall be conducted by a woman doctor."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-03T06:14:40.480983"
-    },
-    {
-      "id": "726478c1-99eb-469c-9fb3-bf43eb676914",
-      "created_at": "2026-09-28T17:51:18.827696",
-      "question_hindi": "वैवाहिक विवादों में पॉक्सो मामलों के संबंध में सर्वोच्च न्यायालय द्वारा निर्धारित सुरक्षा उपायों के तहत, किस विशिष्ट परिस्थिति में जांच अधिकारी गिरफ्तारी से पहले अनिवार्य विशेषज्ञ मनोवैज्ञानिक मूल्यांकन को समाप्त/छूट दे सकता है?",
-      "options_hindi": [
-        "जब शिकायतकर्ता न्यायिक मजिस्ट्रेट के समक्ष शपथ पत्र दाखिल करता है",
-        "जब वैवाहिक विवाद तीन वर्ष से अधिक समय से चल रहा हो",
-        "जब आरोपी समन के 24 घंटे के भीतर पूछताछ के लिए उपस्थित होने में विफल रहता है",
-        "जब उपलब्ध सामग्री 'प्रत्यक्ष/स्पष्ट' (palpable) हो, बशर्ते मूल्यांकन न कराने के कारणों को लिखित रूप में दर्ज किया जाए"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Under the safeguards laid down by the Supreme Court regarding POCSO cases in matrimonial disputes, under what specific circumstance can the investigating officer dispense with the mandated expert psychological evaluation before arrest?",
-      "options_english": [
-        "When the complainant files a sworn affidavit before a Judicial Magistrate",
-        "When the matrimonial dispute has been ongoing for more than three years",
-        "When the accused fails to appear for interrogation within 24 hours of summons",
-        "When the available material is 'palpable', provided reasons for dispensing with it are recorded in writing"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "The Supreme Court stated that an exception could be made in cases where the material available is 'palpable', allowing the investigating officer to dispense with an expert evaluation, provided that reasons for doing so are recorded in writing.",
-      "explanation_hindi": "सर्वोच्च न्यायालय ने कहा कि उन मामलों में अपवाद बनाया जा सकता है जहां उपलब्ध सामग्री 'प्रत्यक्ष/स्पष्ट' (palpable) हो, जिससे जांच अधिकारी को विशेषज्ञ मूल्यांकन से छूट मिल सकती है, लेकिन ऐसा करने के कारणों को लिखित रूप में दर्ज किया जाना अनिवार्य है।",
-      "topic": "POCSO",
-      "difficulty": "medium",
-      "key_facts": [
-        "The court said an exception could be made in cases where the material available is \"palpable\", allowing the investigating officer to dispense with an expert evaluation, but reasons for doing so must be recorded in writing."
+        "The Court referred to earlier decisions, including Geddam Jhansi v State of Telangana, Achin Gupta v State of Haryana, Ishwar Chand Sharma v State of Uttar Pradesh and Kerala High Court’s decision in Suhara v Muhammed Jaleel, which had recognised instances of criminal proceedings being invoked during matrimonial disputes."
       ],
       "ai_processed": true,
       "processed_at": "2026-09-28T17:51:18.827696"
-    },
-    {
-      "id": "88aad32f-e624-422f-941a-4d06a72e00a1",
-      "created_at": "2026-10-03T06:17:42.744831",
-      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (पॉक्सो) अधिनियम, 2012 की धारा 2(d) के तहत, 'बालक' (child) को किस आयु से कम उम्र के व्यक्ति के रूप में परिभाषित किया गया है?",
-      "options_hindi": [
-        "सोलह वर्ष से कम आयु",
-        "इक्कीस वर्ष से कम आयु",
-        "अठारह वर्ष से कम आयु",
-        "चौदह वर्ष से कम आयु"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Under Section 2(d) of the Protection of Children from Sexual Offences (POCSO) Act, 2012, a 'child' is defined as any person who is below what age?",
-      "options_english": [
-        "Below sixteen years of age",
-        "Below twenty-one years of age",
-        "Below eighteen years of age",
-        "Below fourteen years of age"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "Under Section 2(d) of the POCSO Act, 2012, a 'child' is defined as any person who is below eighteen years of age. The Act applies neutrally irrespective of the gender of the child.",
-      "explanation_hindi": "पॉक्सो अधिनियम, 2012 की धारा 2(d) के अनुसार, 'बालक' का अर्थ ऐसा कोई भी व्यक्ति है जिसकी आयु अठारह वर्ष से कम है। यह अधिनियम बच्चे के लिंग से परे तटस्थ रूप से लागू होता है।",
-      "topic": "POCSO",
-      "difficulty": "easy",
-      "key_facts": [
-        "As per section 2(d) of POCSO Act, a child is any person who is below eighteen years of age."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-03T06:17:42.744831"
     },
     {
       "id": "6e82d4ea-3b88-42c0-a1f8-4d4ebd775dc4",
@@ -487,14 +191,14 @@
       "processed_at": "2026-10-03T06:17:42.744831"
     },
     {
-      "id": "c1df9047-994b-4ac7-86cb-f4a065c2c9a3",
-      "created_at": "2026-10-03T06:20:14.864251",
-      "question_hindi": "पॉक्सो नियमावली (POCSO Rules), 2020 के प्रावधानों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. नियम 3 यह अधिदेशित करता है कि बच्चों को आश्रय देने वाले या बच्चों के नियमित संपर्क में आने वाले किसी भी संस्थान को अपने प्रत्येक स्टाफ सदस्य का आवधिक आधार पर पुलिस सत्यापन और पृष्ठभूमि की जांच सुनिश्चित करनी होगी।\n2. नियम 9 के तहत, विशेष न्यायालय प्रथम सूचना रिपोर्ट (FIR) दर्ज होने के बाद किसी भी चरण में बच्चे की राहत या पुनर्वास की जरूरतों को पूरा करने के लिए अंतरिम मुआवजे का आदेश दे सकता है।\n3. जब बाल कल्याण समिति (CWC) द्वारा भोजन, कपड़े और परिवहन जैसी आकस्मिक आवश्यकताओं हेतु विशेष राहत की सिफारिश की जाती है, तो ऐसी सिफारिश प्राप्त होने के तीस दिनों के भीतर तत्काल भुगतान किया जाना अनिवार्य है।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "id": "1372d60f-dcd3-427d-a011-2c21404670c7",
+      "created_at": "2026-10-03T06:15:29.776429",
+      "question_hindi": "सूची I (पॉक्सो अधिनियम, 2012 की धाराएं) को सूची II (वैधानिक शीर्षक/प्रावधान) के साथ सुमेलित कीजिए और नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:\n\nसूची I (धारा)\nA. धारा 20\nB. धारा 22\nC. धारा 29\nD. धारा 30\n\nसूची II (वैधानिक शीर्षक/प्रावधान)\n1. कतिपय अपराधों के संबंध में उपधारणा\n2. आपराधिक मानसिक स्थिति की उपधारणा\n3. मामलों की रिपोर्ट करने के लिए मीडिया, स्टूडियो और फोटोग्राफिक सुविधाओं की बाध्यता\n4. झूठी शिकायत या झूठी सूचना के लिए दंड",
       "options_hindi": [
-        "1, 2 और 3",
-        "केवल 2 और 3",
-        "केवल 1 और 3",
-        "केवल 1 और 2"
+        "A-3, B-4, C-1, D-2",
+        "A-1, B-2, C-3, D-4",
+        "A-3, B-1, C-4, D-2",
+        "A-4, B-3, C-2, D-1"
       ],
       "option_labels": [
         "A",
@@ -505,33 +209,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the provisions of the POCSO Rules, 2020:\n\n1. Rule 3 mandates that any institution housing children or coming in regular contact with children must ensure police verification and background checks on a periodic basis of every staff member.\n2. Under Rule 9, the Special Court may pass an order for interim compensation to meet the needs of the child at any stage after the registration of the First Information Report (FIR).\n3. When special relief contingencies such as food, clothes, and transport are recommended by the Child Welfare Committee (CWC), immediate payment must be made within thirty days of receipt of the recommendation.\n\nWhich of the statements given above is/are correct?",
+      "question_english": "Match List I (Sections of the POCSO Act, 2012) with List II (Statutory Title/Provision) and select the correct answer using the code given below:\n\nList I (Section)\nA. Section 20\nB. Section 22\nC. Section 29\nD. Section 30\n\nList II (Statutory Title/Provision)\n1. Presumption as to certain offences\n2. Presumption of culpable mental state\n3. Obligation of media, studio and photographic facilities to report cases\n4. Punishment for false complaint or false information",
       "options_english": [
-        "1, 2 and 3",
-        "2 and 3 only",
-        "1 and 3 only",
-        "1 and 2 only"
+        "A-3, B-4, C-1, D-2",
+        "A-1, B-2, C-3, D-4",
+        "A-3, B-1, C-4, D-2",
+        "A-4, B-3, C-2, D-1"
       ],
-      "correct_answer": "d",
-      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because, under the POCSO Rules, immediate payment for special relief recommended by the Child Welfare Committee (CWC) must be made within a week (not 30 days) of the receipt of the recommendation.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि पॉक्सो नियमों के अनुसार, बाल कल्याण समिति (CWC) द्वारा अनुशंसित आकस्मिक विशेष राहत का तत्काल भुगतान सिफारिश प्राप्त होने के एक सप्ताह (7 दिन) के भीतर किया जाना अनिवार्य है, न कि 30 दिनों में।",
+      "correct_answer": "a",
+      "explanation_english": "According to the statutory arrangement of sections of the POCSO Act, 2012: Section 20 deals with 'Obligation of media, studio and photographic facilities to report cases'; Section 22 deals with 'Punishment for false complaint or false information'; Section 29 deals with 'Presumption as to certain offences'; and Section 30 deals with 'Presumption of culpable mental state'.",
+      "explanation_hindi": "पॉक्सो अधिनियम, 2012 की धाराओं की वैधानिक व्यवस्था के अनुसार: धारा 20 'मामलों की रिपोर्ट करने के लिए मीडिया, स्टूडियो और फोटोग्राफिक सुविधाओं की बाध्यता' से संबंधित है; धारा 22 'झूठी शिकायत या झूठी सूचना के लिए दंड' से संबंधित है; धारा 29 'कतिपय अपराधों के संबंध में उपधारणा' से संबंधित है; और धारा 30 'आपराधिक मानसिक स्थिति की उपधारणा' से संबंधित है।",
       "topic": "POCSO",
       "difficulty": "medium",
       "key_facts": [
-        "Rule 3 provides that any institution housing children or coming in regular contact with children including schools, creches, sports academies or any other facility for Children must ensure police verification and background check on periodic basis, of every staff, teaching or non-teaching, regular or contractual, or any other person being an employee of such Institution coming in contact with the child. Such Institution shall also ensure that periodic training is organized for sensitizing them on child safety and protection. Rule-9 of the POCSO Rules provides that the Special Court may, in appropriate cases, on its own or on an application filed by or on behalf of the child, pass an order for interim compensation to meet the needs of the child for relief or rehabilitation at any stage after registration of the First Information Report (FIR)... Further, the POCSO Rules also provide that for special relief, if any, to be provided for contingencies such as food, clothes, transport and other essential needs, Child Welfare Committee may recommend immediate payment of such amount. Such immediate payment shall be made within a week of receipt of recommendation from the CWC."
+        "20. Obligation of media, studio and photographic facilities to report cases. \n21. Punishment for failure to report or record a case. \n22. Punishment for false complaint or false information. \n23. Procedure for media. \n\nCHAPTER VI\n\nPROCEDURES FOR RECORDING STATEMENT OF THE CHILD\n\n24. Recording of statement of a child. \n25. Recording of statement of a child by Magistrate. \n26. Additional provisions regarding statement to be recorded. \n27. Medical examination of a child. \n\nCHAPTER VII\n\nSPECIAL COURTS\n\n28. Designation of Special Courts. \n29. Presumption as to certain offences. \n30. Presumption of culpable mental state."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-03T06:20:14.864251"
+      "processed_at": "2026-10-03T06:15:29.776429"
     },
     {
-      "id": "ccf58db0-c4ea-4e18-acdd-5cdc285722b3",
-      "created_at": "2026-10-03T06:16:28.995154",
-      "question_hindi": "विधि सेंटर फॉर लीगल पॉलिसी की रिपोर्ट 'ए डिकेड ऑफ पॉक्सो' में दी गई सूची I (चित्र संख्या) को सूची II (चित्र का विषय / शीर्षक) के साथ सुमेलित कीजिए और नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:\n\nसूची I (चित्र संख्या)\nA. Fig. 2.1\nB. Fig. 5.1\nC. Fig. 5.4\nD. Fig. 5.8\n\nसूची II (विषय / शीर्षक)\n1. वर्षों के दौरान कुल, लंबित और निस्तारित मामले\n2. प्रति राज्य विश्लेषित निर्णयों की संख्या\n3. वर्षों के दौरान स्थानांतरण (Transfers over the years)\n4. राज्य और दायर वर्ष के अनुसार ई-कोर्ट्स पर पॉक्सो मामलों की रिपोर्टिंग",
+      "id": "cb48e592-db39-44df-9579-9e1b962cf511",
+      "created_at": "2026-09-28T17:53:42.850628",
+      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (POCSO) अधिनियम भारत में निम्नलिखित में से किस तिथि को लागू हुआ?",
       "options_hindi": [
-        "A-3, B-4, C-1, D-2",
-        "A-2, B-4, C-1, D-3",
-        "A-4, B-2, C-3, D-1",
-        "A-2, B-1, C-4, D-3"
+        "19 जून, 2012",
+        "1 जनवरी, 2013",
+        "20 जून, 2012",
+        "14 नवंबर, 2012"
       ],
       "option_labels": [
         "A",
@@ -542,23 +246,319 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Match List I (Figure Number in 'A Decade of POCSO' Report, Vidhi Centre for Legal Policy) with List II (Figure Subject / Title) and select the correct answer using the code given below:\n\nList I (Figure Number)\nA. Fig. 2.1\nB. Fig. 5.1\nC. Fig. 5.4\nD. Fig. 5.8\n\nList II (Figure Subject / Title)\n1. Total, pending and disposed cases across years\n2. Number of judgments analysed per state\n3. Transfers over the years\n4. Reporting of POCSO cases on eCourts by state and filing year",
+      "question_english": "On which of the following dates did the Protection of Children from Sexual Offences (POCSO) Act come into force in India?",
       "options_english": [
-        "A-3, B-4, C-1, D-2",
-        "A-2, B-4, C-1, D-3",
-        "A-4, B-2, C-3, D-1",
-        "A-2, B-1, C-4, D-3"
+        "19th June, 2012",
+        "1st January, 2013",
+        "20th June, 2012",
+        "14th November, 2012"
       ],
-      "correct_answer": "b",
-      "explanation_english": "As per the List of Figures in the report 'A Decade of POCSO': Fig. 2.1 corresponds to 'Number of judgments analysed per state'; Fig. 5.1 corresponds to 'Reporting of POCSO cases on eCourts by state and filing year'; Fig. 5.4 corresponds to 'Total, pending and disposed cases across years'; and Fig. 5.8 corresponds to 'Transfers over the years'. Therefore, the correct match is A-2, B-4, C-1, D-3.",
-      "explanation_hindi": "'ए डिकेड ऑफ पॉक्सो' रिपोर्ट की चित्रों की सूची के अनुसार: Fig. 2.1 'Number of judgments analysed per state' से संबंधित है; Fig. 5.1 'Reporting of POCSO cases on eCourts by state and filing year' से संबंधित है; Fig. 5.4 'Total, pending and disposed cases across years' से संबंधित है; तथा Fig. 5.8 'Transfers over the years' से संबंधित है। अत: सही सुमेलन A-2, B-4, C-1, D-3 है।",
+      "correct_answer": "c",
+      "explanation_english": "The Protection of Children from Sexual Offences Bill, 2011 was passed by the Parliament of India and came into force on 20th June, 2012.",
+      "explanation_hindi": "भारत की संसद द्वारा लैंगिक अपराधों से बालकों का संरक्षण विधेयक, 2011 पारित किया गया था, जो 20 जून, 2012 को लागू हुआ।",
       "topic": "POCSO",
-      "difficulty": "hard",
+      "difficulty": "easy",
       "key_facts": [
-        "13 Fig. 2.1: Number of judgments analysed per state ... 60 Fig. 5.1: Reporting of POCSO cases on eCourts by state and filing year ... 65 Fig. 5.4: Total, pending and disposed cases across years ... 72 Fig. 5.8: Transfers over the years"
+        "The Parliament of India passed the Protection of Children from Sexual Offences Bill, 2011 which came into force on 20th June, 2012."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-03T06:16:28.995154"
+      "processed_at": "2026-09-28T17:53:42.850628"
+    },
+    {
+      "id": "88aad32f-e624-422f-941a-4d06a72e00a1",
+      "created_at": "2026-10-03T06:17:42.744831",
+      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (पॉक्सो) अधिनियम, 2012 की धारा 2(d) के तहत, 'बालक' (child) को किस आयु से कम उम्र के व्यक्ति के रूप में परिभाषित किया गया है?",
+      "options_hindi": [
+        "सोलह वर्ष से कम आयु",
+        "इक्कीस वर्ष से कम आयु",
+        "अठारह वर्ष से कम आयु",
+        "चौदह वर्ष से कम आयु"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under Section 2(d) of the Protection of Children from Sexual Offences (POCSO) Act, 2012, a 'child' is defined as any person who is below what age?",
+      "options_english": [
+        "Below sixteen years of age",
+        "Below twenty-one years of age",
+        "Below eighteen years of age",
+        "Below fourteen years of age"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under Section 2(d) of the POCSO Act, 2012, a 'child' is defined as any person who is below eighteen years of age. The Act applies neutrally irrespective of the gender of the child.",
+      "explanation_hindi": "पॉक्सो अधिनियम, 2012 की धारा 2(d) के अनुसार, 'बालक' का अर्थ ऐसा कोई भी व्यक्ति है जिसकी आयु अठारह वर्ष से कम है। यह अधिनियम बच्चे के लिंग से परे तटस्थ रूप से लागू होता है।",
+      "topic": "POCSO",
+      "difficulty": "easy",
+      "key_facts": [
+        "As per section 2(d) of POCSO Act, a child is any person who is below eighteen years of age."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-03T06:17:42.744831"
+    },
+    {
+      "id": "74008307-21bc-49aa-bac5-b0e6d21bfcf4",
+      "created_at": "2026-09-28T17:48:49.157370",
+      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (POCSO) अधिनियम, 2012 के तहत अधिदेशित बाल-अनुकूल प्रक्रियाओं के संदर्भ में, निम्नलिखित कथनों पर विचार कीजिए:\n1. बालक का बयान अधिमानतः उप-निरीक्षक (सब-इंस्पेक्टर) से अनिम्न रैंक की महिला पुलिस अधिकारी द्वारा दर्ज किया जाता है।\n2. असाधारण परिस्थितियों में और मजिस्ट्रेट की अनुमति से, किसी बच्चे को रात में पुलिस स्टेशन में रोका जा सकता है।\n3. बालक का बयान दर्ज करते समय पुलिस अधिकारी को वर्दी में नहीं होना चाहिए।\n4. यदि पीड़िता एक बालिका है, तो चिकित्सा परीक्षण एक महिला चिकित्सक द्वारा किया जाना चाहिए।\nउपर्युक्त में से कौन-से कथन सही हैं?",
+      "options_hindi": [
+        "केवल 1, 3 और 4",
+        "केवल 1, 2 और 3",
+        "केवल 2 और 4",
+        "1, 2, 3 और 4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "With reference to the child-friendly procedures mandated under the Protection of Children from Sexual Offences (POCSO) Act, 2012, consider the following statements:\n1. The statement of the child is preferably recorded by a woman police officer not below the rank of sub-inspector.\n2. Under exceptional circumstances and with the permission of a magistrate, a child may be detained in the police station during the night.\n3. The police officer must not be in uniform while recording the statement of the child.\n4. If the victim is a girl child, the medical examination must be conducted by a woman doctor.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "1, 3 and 4 only",
+        "1, 2 and 3 only",
+        "2 and 4 only",
+        "1, 2, 3 and 4"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Statement 2 is incorrect because the Act strictly provides that 'No child to be detained in the police station in the night for any reason.' Statements 1, 3, and 4 are explicitly mandated child-friendly procedures under the Act.",
+      "explanation_hindi": "कथन 2 गलत है क्योंकि अधिनियम स्पष्ट रूप से यह प्रावधान करता है कि किसी भी बच्चे को किसी भी कारण से रात में पुलिस स्टेशन में नहीं रखा जाएगा ('No child to be detained in the police station in the night for any reason')। कथन 1, 3 और 4 अधिनियम के तहत स्पष्ट बाल-अनुकूल प्रक्रियाएं हैं।",
+      "topic": "POCSO",
+      "difficulty": "medium",
+      "key_facts": [
+        "No child to be detained in the police station in the night for any reason."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-09-28T17:48:49.157370"
+    },
+    {
+      "id": "9dfd897f-8d38-4964-90e2-5db94024bd62",
+      "created_at": "2026-09-28T17:53:42.850628",
+      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (POCSO) अधिनियम, 2012 की धारा 15 के प्रावधानों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. यह अधिनियम बच्चों से संबंधित अश्लील (पोर्नोग्राफिक) सामग्री देखने या एकत्र करने को भी अपराध घोषित करता है।\n2. इस अपराध के लिए निर्धारित सजा किसी एक अवधि के लिए कारावास जिसे तीन वर्ष तक बढ़ाया जा सकता है, या जुर्माना, या दोनों हो सकती है।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "options_hindi": [
+        "केवल 2",
+        "केवल 1",
+        "न तो 1, न ही 2",
+        "1 और 2 दोनों"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the provisions of Section 15 under the Protection of Children from Sexual Offences (POCSO) Act, 2012:\n1. The Act criminalizes even watching or collecting pornographic content involving children.\n2. The punishment prescribed for this offence may extend to imprisonment of either description for three years, or with fine, or with both.\n\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "2 only",
+        "1 only",
+        "Neither 1 nor 2",
+        "Both 1 and 2"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under Section 15 of the POCSO Act, the law criminalizes watching or collecting pornographic content involving children, prescribing punishment with imprisonment of either description which may extend to three years or with fine or both.",
+      "explanation_hindi": "POCSO अधिनियम की धारा 15 के तहत, कानून बच्चों से संबंधित अश्लील सामग्री देखने या एकत्र करने को अपराध मानता है, जिसके लिए किसी एक अवधि के कारावास की सजा जो तीन वर्ष तक बढ़ाई जा सकती है, या जुर्माना अथवा दोनों का प्रावधान है।",
+      "topic": "POCSO",
+      "difficulty": "medium",
+      "key_facts": [
+        "With respect to pornography, this act criminalizes even watching or collecting pornographic content involving children under Sec 15 of the Act and shall be punished with imprisonment of either description which may extend to three years or with fine or both."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-09-28T17:53:42.850628"
+    },
+    {
+      "id": "82dab772-5556-4d1f-9554-e23c26fb4f5c",
+      "created_at": "2026-10-03T06:19:29.820206",
+      "question_hindi": "बाल संरक्षण शोध अध्ययन 'ए डिकेड ऑफ पोक्सो' में सूचीबद्ध निम्नलिखित संक्षिप्त रूपों (abbreviations) और उनके पूर्ण रूपों में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "options_hindi": [
+        "SCPCR : सुप्रीम कोर्ट प्रोटेक्शन ऑफ चिल्ड्रन रजिस्ट्री",
+        "CRC-OP-SC : ऑप्शनल प्रोटोकॉल टू द कन्वेंशन ऑन द राइट्स ऑफ द चाइल्ड ऑन द सेल ऑफ चिल्ड्रन, चाइल्ड प्रॉस्टिट्यूशन एंड चाइल्ड पोर्नोग्राफी",
+        "CCL-NLSIU : सेंटर फॉर चाइल्ड एंड द लॉ, नेशनल लॉ स्कूल ऑफ इंडिया यूनिवर्सिटी, बैंगलोर",
+        "ICESCR : इंटरनेशनल कॉवेनेंट ऑन इकोनॉमिक, सोशल एंड कल्चरल राइट्स"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following pairs of abbreviations and their full expanded titles listed in the child protection research study 'A Decade of POCSO' is NOT correctly matched?",
+      "options_english": [
+        "SCPCR : Supreme Court Protection of Children Registry",
+        "CRC-OP-SC : Optional Protocol to the Convention on the Rights of the Child on the Sale of Children, Child Prostitution and Child Pornography",
+        "CCL-NLSIU : Centre for Child and the Law, National Law School of India University, Bangalore",
+        "ICESCR : International Covenant on Economic, Social and Cultural Rights"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "In the List of Abbreviations in 'A Decade of POCSO', SCPCR stands for 'State Commission for Protection of Child Rights', not 'Supreme Court Protection of Children Registry'. All other pairs are accurately matched.",
+      "explanation_hindi": "'ए डिकेड ऑफ पोक्सो' की संक्षिप्ताक्षरों की सूची (List of Abbreviations) में SCPCR का अर्थ 'State Commission for Protection of Child Rights' (राज्य बाल अधिकार संरक्षण आयोग) है, न कि 'Supreme Court Protection of Children Registry'। अन्य सभी युग्म सही सुमेलित हैं।",
+      "topic": "POCSO",
+      "difficulty": "medium",
+      "key_facts": [
+        "SCPCR State Commission for Protection of Child Rights"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-03T06:19:29.820206"
+    },
+    {
+      "id": "93079128-2294-47bc-a849-0f2dc43dd6c5",
+      "created_at": "2026-09-28T17:50:35.542569",
+      "question_hindi": "भारत के विधि आयोग की रिपोर्ट संख्या 283 के संदर्भ में, निम्नलिखित में से किन उच्च न्यायालय पीठों ने औपचारिक संदर्भ भेजे थे, जिसके कारण आयोग को पॉक्सो अधिनियम, 2012 के तहत सहमति की आयु और वास्तविक सहमति (de facto consent) के मुद्दे की जांच करनी पड़ी?",
+      "options_hindi": [
+        "राजस्थान उच्च न्यायालय की जयपुर पीठ और उड़ीसा उच्च न्यायालय की कटक पीठ",
+        "कर्नाटक उच्च न्यायालय की धारवाड़ पीठ और मध्य प्रदेश उच्च न्यायालय की ग्वालियर पीठ",
+        "मद्रास उच्च न्यायालय की मदुरै पीठ और बॉम्बे उच्च न्यायालय की नागपुर पीठ",
+        "बॉम्बे उच्च न्यायालय की मुख्य पीठ और इलाहाबाद उच्च न्यायालय की लखनऊ पीठ"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "With reference to Report No. 283 of the Law Commission of India, which of the following High Court benches made formal references prompting the Commission to examine the issue of age of consent and de facto consent under the POCSO Act, 2012?",
+      "options_english": [
+        "Jaipur Bench of the Rajasthan High Court and Cuttack Bench of the Orissa High Court",
+        "Dharwad Bench of the High Court of Karnataka and Gwalior Bench of the High Court of Madhya Pradesh",
+        "Madurai Bench of the Madras High Court and Nagpur Bench of the Bombay High Court",
+        "Principal Bench of the High Court of Bombay and Lucknow Bench of the High Court of Judicature at Allahabad"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "As noted in Report No. 283, the Law Commission received references from the High Court of Karnataka (Dharwad Bench) vide letter dated 9th November, 2022, and the High Court of Madhya Pradesh (Gwalior Bench) vide letter dated 18th April, 2023 regarding issues surrounding the age of consent and statutory rape cases where de facto consent is apparent.",
+      "explanation_hindi": "विधि आयोग की रिपोर्ट संख्या 283 के अनुसार, आयोग को कर्नाटक उच्च न्यायालय (धारवाड़ पीठ) से 9 नवंबर 2022 के पत्र द्वारा और मध्य प्रदेश उच्च न्यायालय (ग्वालियर पीठ) से 18 अप्रैल 2023 के पत्र द्वारा सहमति की आयु तथा ऐसे मामलों में जहां वास्तविक सहमति दिखाई देती है, संदर्भ प्राप्त हुए थे।",
+      "topic": "POCSO",
+      "difficulty": "medium",
+      "key_facts": [
+        "The Law Commission received a reference from the Hon'ble High Court of Kamataka (Dharwad Bench), uide letter dated 9th November, 2022, asking the Commission to rethink on the age criteria for consent... The Commission is also in receipt of a reference from the Hon'ble High Court of Madhya Pradesh (Gwalior Bench), vide letter dated l gth April, 2023"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-09-28T17:50:35.542569"
+    },
+    {
+      "id": "85ee4281-cefa-4d59-acc6-221ad4a3be94",
+      "created_at": "2026-10-03T06:18:33.758020",
+      "question_hindi": "भारत में लैंगिक अपराधों से बालकों का संरक्षण (POCSO) अधिनियम किस तिथि को लागू हुआ था?",
+      "options_hindi": [
+        "15 अगस्त, 2012",
+        "2 अक्टूबर, 2011",
+        "14 नवंबर, 2012",
+        "26 जनवरी, 2013"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "On which date did the Protection of Children from Sexual Offences (POCSO) Act come into force in India?",
+      "options_english": [
+        "15 August, 2012",
+        "2 October, 2011",
+        "14 November, 2012",
+        "26 January, 2013"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The POCSO Act came into force on Children's Day – 14 November, 2012, after being prepared and revised by the Ministry of Women and Child Development.",
+      "explanation_hindi": "महिला एवं बाल विकास मंत्रालय द्वारा तैयार किए जाने के बाद पोक्सो अधिनियम बाल दिवस यानी 14 नवंबर, 2012 को लागू हुआ था।",
+      "topic": "POCSO",
+      "difficulty": "easy",
+      "key_facts": [
+        "In September 2010, the Ministry of Women and Child Development prepared a draft Protection of Children from Sexual Offences Bill, 2010 which after several rounds of revisions came into force as the POCSO Act on Children’s Day – 14 November, 2012."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-03T06:18:33.758020"
+    },
+    {
+      "id": "52b22c4d-bdcd-4d05-8a70-6513a6ae2a4c",
+      "created_at": "2026-10-03T06:15:29.776429",
+      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (पॉक्सो) अधिनियम, 2012 के विधायी इतिहास और पृष्ठभूमि के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. यह विधेयक महिला एवं बाल विकास राज्य मंत्री (स्वतंत्र प्रभार) कृष्णा तीरथ द्वारा राज्य सभा में पेश किया गया था।\n2. इस अधिनियम को 19 जून 2012 को राष्ट्रपति प्रतिभा पाटिल की स्वीकृति प्राप्त हुई तथा यह 14 नवंबर 2012 को लागू हुआ।\n3. पॉक्सो अधिनियम के लागू होने से पूर्व, गोवा बाल अधिनियम, 2003 भारत में बाल शोषण रोकथाम का एकमात्र विशिष्ट कानून था।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 1 और 2",
+        "केवल 1 और 3",
+        "1, 2 और 3",
+        "केवल 2 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the legislative history and background of the Protection of Children from Sexual Offences (POCSO) Act, 2012:\n\n1. The Bill was introduced in the Rajya Sabha by Krishna Tirath, Minister of State (Independent Charge) for Women and Child Development.\n2. The Act received the assent of President Pratibha Patil on 19 June 2012 and commenced on 14 November 2012.\n3. Prior to the enactment of the POCSO Act, the Goa Children's Act, 2003 was the only specific piece of child abuse prevention legislation in India.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "1, 2 and 3",
+        "2 and 3 only"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "All three statements are correct. The Protection of Children from Sexual Offences Bill was introduced in the Rajya Sabha on 23 March 2011 by Krishna Tirath, MoS(IC) Women and Child Development. It received presidential assent from President Pratibha Patil on 19 June 2012 and commenced on 14 November 2012. Before POCSO, the Goa Children's Act, 2003 was the only specific child abuse prevention legislation in India.",
+      "explanation_hindi": "तीनों कथन सही हैं। बाल लैंगिक अपराध संरक्षण विधेयक 23 मार्च 2011 को राज्य सभा में महिला एवं बाल विकास राज्य मंत्री (स्वतंत्र प्रभार) कृष्णा तीरथ द्वारा पेश किया गया था। इसे 19 जून 2012 को राष्ट्रपति प्रतिभा पाटिल से स्वीकृति मिली तथा यह 14 नवंबर 2012 को लागू हुआ। पॉक्सो से पहले, गोवा बाल अधिनियम, 2003 भारत में बाल शोषण रोकथाम का एकमात्र विशिष्ट कानून था।",
+      "topic": "POCSO",
+      "difficulty": "medium",
+      "key_facts": [
+        "Introduced by | Krishna Tirath, MoS(IC) Women and Child Development | \n| Introduced | 23 March 2011 | ... | Assented to by | President Pratibha Patil | \n| Assented to | 19 June 2012 | \n| Commenced | 14 November 2012 | ... Goa Children's Act, 2003, [11] was the only specific piece of child abuse prevention legislation before the 2012 Act."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-03T06:15:29.776429"
+    },
+    {
+      "id": "f1e33544-fc9a-49a5-93bc-9549d154e59a",
+      "created_at": "2026-09-28T17:50:35.542569",
+      "question_hindi": "22वें विधि आयोग द्वारा सितंबर 2023 में प्रस्तुत रिपोर्ट संख्या 283 पॉक्सो (POCSO) अधिनियम, 2012 के तहत विशेष रूप से निम्नलिखित में से किस विषय पर केंद्रित थी?",
+      "options_hindi": [
+        "पॉक्सो अधिनियम के तहत विशेष लोक अभियोजकों की संस्थागत कार्यप्रणाली",
+        "गंभीर प्रवेशन लैंगिक हमले के लिए अनिवार्य मृत्युदंड",
+        "पॉक्सो (लैंगिक अपराधों से बालकों का संरक्षण) अधिनियम, 2012 के तहत सहमति की आयु (Age of Consent)",
+        "पॉक्सो अधिनियम के तहत किशोर पीड़ितों के लिए आयु निर्धारण दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Report No. 283 submitted in September 2023 by the 22nd Law Commission of India specifically focused on which of the following subjects under the POCSO Act, 2012?",
+      "options_english": [
+        "Institutional Mechanism of Special Public Prosecutors under POCSO Act",
+        "Mandatory Death Penalty for Aggravated Penetrative Sexual Assault",
+        "Age of Consent under the Protection of Children from Sexual Offences Act, 2012",
+        "Age Determination Guidelines for Juvenile Victims under POCSO Act"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Report No. 283 of the 22nd Law Commission of India, submitted in September 2023 under the Chairmanship of Justice Ritu Raj Awasthi, is titled 'Age of Consent under the Protection of Children from Sexual Offences Act, 2012'.",
+      "explanation_hindi": "न्यायमूर्ति ऋतु राज अवस्थी की अध्यक्षता में सितंबर 2023 में प्रस्तुत 22वें विधि आयोग की रिपोर्ट संख्या 283 का शीर्षक 'पॉक्सो (लैंगिक अपराधों से बालकों का संरक्षण) अधिनियम, 2012 के तहत सहमति की आयु' (Age of Consent under the Protection of Children from Sexual Offences Act, 2012) है।",
+      "topic": "POCSO",
+      "difficulty": "easy",
+      "key_facts": [
+        "I am pleased to forward you Report No. 283 of the Law Commission of India on \"Age of Consent under the Protection of Children from Sexual Offences Act.2012\"."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-09-28T17:50:35.542569"
     },
     {
       "id": "b8324bc3-077c-4773-9169-f538b883d41d",
@@ -598,51 +598,14 @@
       "processed_at": "2026-10-03T06:16:28.995154"
     },
     {
-      "id": "9f8905d7-b6c6-4cb8-9572-1b91e65f409b",
-      "created_at": "2026-10-03T06:14:40.480983",
-      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (पॉक्सो) अधिनियम के तहत अपराधों और उनके लिए निर्धारित दंडों का निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "गुरुतर लैंगिक हमला (धारा 9) — कम से कम पांच वर्ष जो सात वर्ष तक बढ़ाई जा सकती है, और जुर्माना (धारा 10)",
-        "बालक का लैंगिक उत्पीड़न (धारा 11) — तीन वर्ष और जुर्माना (धारा 12)",
-        "लैंगिक हमला (धारा 7) — कम से कम तीन वर्ष जो पांच वर्ष तक बढ़ाई जा सकती है, और जुर्माना (धारा 8)",
-        "प्रवेशन लैंगिक हमला (धारा 3) — कम से कम दस वर्ष जो आजीवन कारावास तक बढ़ाई जा सकती है, और जुर्माना (धारा 4)"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs of offences and their prescribed punishments under the Protection of Children from Sexual Offences (POCSO) Act is NOT correctly matched?",
-      "options_english": [
-        "Aggravated Sexual Assault (Section 9) — Not less than five years which may extend to seven years, and fine (Section 10)",
-        "Sexual Harassment of the Child (Section 11) — Three years and fine (Section 12)",
-        "Sexual Assault (Section 7) — Not less than three years which may extend to five years, and fine (Section 8)",
-        "Penetrative Sexual Assault (Section 3) — Not less than ten years which may extend to imprisonment for life, and fine (Section 4)"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "Pair C is NOT correctly matched. Under Section 4, the punishment for Penetrative Sexual Assault (Section 3) is not less than seven years (not ten years) which may extend to imprisonment for life, and fine. Punishment of not less than ten years applies to Aggravated Penetrative Sexual Assault under Section 6.",
-      "explanation_hindi": "युग्म C सही सुमेलित नहीं है। धारा 4 के तहत प्रवेशन लैंगिक हमले (धारा 3) के लिए दंड कम से कम सात वर्ष (दस वर्ष नहीं) है जिसे आजीवन कारावास तक बढ़ाया जा सकता है, और जुर्माना। कम से कम दस वर्ष का दंड धारा 6 के तहत गुरुतर प्रवेशन लैंगिक हमले पर लागू होता है।",
-      "topic": "POCSO",
-      "difficulty": "medium",
-      "key_facts": [
-        "• Penetrative Sexual Assault (Section 3)on a child – Not less than seven years which may extend to imprisonment for life, and fine (Section 4) \n• Aggravated Penetrative Sexual Assault (Section 5) – Not less than ten years which may extend to imprisonment for life, and fine (Section 6)"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-03T06:14:40.480983"
-    },
-    {
-      "id": "7de97e29-e1a0-47a3-8d1c-49a6daf68086",
-      "created_at": "2026-10-03T06:16:28.995154",
-      "question_hindi": "भारत के विधि आयोग की रिपोर्ट संख्या 283 ('प्रोटेक्शन ऑफ चिल्ड्रेन फ्रॉम सेक्सुअल ऑफेंसेज एक्ट, 2012 के तहत सहमति की आयु') को प्रेरित करने वाले न्यायिक संदर्भों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. कर्नाटक उच्च न्यायालय (धारवाड़ पीठ) ने स्टेट ऑफ कर्नाटक बनाम बसवराज पिता येल्लप्पा मदार मामले के निर्णय के संदर्भ में सहमति की आयु सीमा पर पुनर्विचार का आग्रह किया था।\n2. मध्य प्रदेश उच्च न्यायालय (ग्वालियर पीठ) ने विकेश कलावत बनाम मध्य प्रदेश राज्य व अन्य मामले में संदर्भ भेजकर विशेष न्यायाधीशों को वास्तविक (de facto) सहमति के मामलों में विवेकाधिकार देने का अनुरोध किया था।\n3. इन संदर्भों में 16 वर्ष से अधिक आयु के किशोरों के प्रेम संबंध, पलायन और वैधानिक बलात्कार के मामलों में चिंता व्यक्त की गई थी जहाँ संबंध विवाह में परिणत हुए हों।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "ca78b056-ece4-40d7-bdec-2041482e4b2c",
+      "created_at": "2026-09-28T17:57:35.575310",
+      "question_hindi": "विधि सेंटर फॉर लीगल पॉलिसी द्वारा प्रकाशित शोध अध्ययन 'ए डिकेड ऑफ पोक्सो: डेवलपमेंट्स, चैलेंजेस एंड इनसाइट्स फ्रॉम ज्यूडिशियल डेटा' (नवंबर 2022) के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. रिपोर्ट के अध्याय I का शीर्षक 'Making of the POCSO Act: Tracing Legislative History' है।\n2. रिपोर्ट के अध्याय V का शीर्षक 'POCSO in Numbers: Analysing POCSO through the Lens of Judicial Data' है।\n3. इस अध्ययन के लेखकों में अपूर्वा, आदित्य रंजन, संदीप भूपतिराजू, शरीन जोशी और डैनियल एल. चेन शामिल हैं।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
       "options_hindi": [
         "1, 2 और 3",
+        "केवल 2 और 3",
         "केवल 1 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3"
+        "केवल 1 और 2"
       ],
       "option_labels": [
         "A",
@@ -653,65 +616,65 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the judicial references that led to Report No. 283 of the Law Commission of India ('Age of Consent under the Protection of Children from Sexual Offences Act, 2012'):\n\n1. The High Court of Karnataka (Dharwad Bench) referred the matter in connection with the judgment in State of Karnataka v. Basavraj S/o Yellappa Madar, asking to rethink the age criteria for consent.\n2. The High Court of Madhya Pradesh (Gwalior Bench) referred the matter in Veekesh Kalawat v. State of Madhya Pradesh & Ors., requesting discretionary power for Special Judges where de facto consent is apparent.\n3. The references highlighted rising concerns regarding adolescents falling in love, eloping, and statutory rape convictions where relationships may have culminated in marriage.\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the research study titled 'A Decade of POCSO: Developments, Challenges and Insights from Judicial Data' (November 2022) published by the Vidhi Centre for Legal Policy:\n1. Chapter I of the report is titled 'Making of the POCSO Act: Tracing Legislative History'.\n2. Chapter V of the report is titled 'POCSO in Numbers: Analysing POCSO through the Lens of Judicial Data'.\n3. The authorship of the study includes Apoorva, Aditya Ranjan, Sandeep Bhupatiraju, Shareen Joshi, and Daniel L. Chen.\n\nWhich of the statements given above are correct?",
       "options_english": [
         "1, 2 and 3",
+        "2 and 3 only",
         "1 and 3 only",
-        "1 and 2 only",
-        "2 and 3 only"
+        "1 and 2 only"
       ],
       "correct_answer": "a",
-      "explanation_english": "All three statements are correct. The Commission received references from the High Court of Karnataka (Dharwad Bench) arising out of State of Karnataka v. Basavraj S/o Yellappa Madar and the High Court of Madhya Pradesh (Gwalior Bench) in Veekesh Kalawat v. State of Madhya Pradesh & Ors., dealing with cases where girls above 16 years eloped or where de facto consent was present, prompting suggestions to give discretionary sentencing powers to Special Judges.",
-      "explanation_hindi": "तीनों कथन सही हैं। विधि आयोग को कर्नाटक उच्च न्यायालय (धारवाड़ पीठ) से 'स्टेट ऑफ कर्नाटक बनाम बसवराज' तथा मध्य प्रदेश उच्च न्यायालय (ग्वालियर पीठ) से 'विकेश कलावत बनाम मध्य प्रदेश राज्य' के संदर्भ प्राप्त हुए थे, जिनमें 16 वर्ष से अधिक आयु की किशोरियों के प्रेम प्रसंग, वास्तविक सहमति तथा विवाह से जुड़े मामलों में विशेष न्यायाधीशों को वैधानिक न्यूनतम सजा से छूट हेतु विवेकाधिकार देने का सुझाव दिया गया था।",
+      "explanation_english": "All three statements are correct. The research report 'A Decade of POCSO' (November 2022) is authored by Apoorva, Aditya Ranjan, Sandeep Bhupatiraju, Shareen Joshi, and Daniel L. Chen. Its Chapter I is 'Making of the POCSO Act: Tracing Legislative History' and Chapter V is 'POCSO in Numbers: Analysing POCSO through the Lens of Judicial Data'.",
+      "explanation_hindi": "तीनों कथन सही हैं। शोध रिपोर्ट 'ए डिकेड ऑफ पोक्सो' (नवंबर 2022) अपूर्वा, आदित्य रंजन, संदीप भूपतिराजू, शरीन जोशी और डैनियल एल. चेन द्वारा लिखी गई है। इसका अध्याय I 'Making of the POCSO Act: Tracing Legislative History' और अध्याय V 'POCSO in Numbers: Analysing POCSO through the Lens of Judicial Data' है।",
+      "topic": "POCSO",
+      "difficulty": "hard",
+      "key_facts": [
+        "A Decade of \nPOCSO\nDevelopments, \nChallenges and \nInsights from \nJudicial Data\nApoorva\nAditya Ranjan\nSandeep Bhupatiraju\nShareen Joshi\nDaniel L. Chen\nNovember 2022"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-09-28T17:57:35.575310"
+    },
+    {
+      "id": "39ea763f-5dc3-4822-b0b2-c139a3d43ecb",
+      "created_at": "2026-09-28T17:56:18.119830",
+      "question_hindi": "सेंटर फॉर चाइल्ड एंड द लॉ (CCL), नेशनल लॉ स्कूल ऑफ इंडिया यूनिवर्सिटी (NLSIU) द्वारा प्रकाशित 'इम्प्लीमेंटेशन ऑफ द पॉक्सो एक्ट, 2012 बाई स्पेशल कोर्ट्स: चैलेंजेस एंड इश्यूज' के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. इस प्रकाशन के निष्कर्ष और व्यावहारिक दृष्टिकोण पांच भारतीय राज्यों में विशेष न्यायालयों के कामकाज पर अनुभवजन्य (empirical) अध्ययनों पर आधारित हैं।\n2. यह प्रकाशन पीड़ितों के आयु-निर्धारण से संबंधित चुनौतियों और पॉक्सो मामलों में चिकित्सीय साक्ष्य के मूल्यांकन जैसे विशिष्ट तकनीकी क्षेत्रों पर अध्यायों को समर्पित करता है।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "options_hindi": [
+        "न तो 1, न ही 2",
+        "केवल 1",
+        "केवल 2",
+        "1 और 2 दोनों"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the publication 'Implementation of the POCSO Act, 2012 by Special Courts: Challenges and Issues' brought out by the Centre for Child and the Law (CCL), National Law School of India University (NLSIU):\n1. The findings and practical perspectives in the publication are based on empirical studies on the working of Special Courts across five Indian states.\n2. The publication devotes specific chapters to technical areas such as challenges related to age-determination of victims and appreciation of medical evidence in POCSO cases.\n\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "Neither 1 nor 2",
+        "1 only",
+        "2 only",
+        "Both 1 and 2"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Both statements are correct. The publication states on its cover that it is 'Based on CCL-NLSIU’s Studies on the Working of Special Courts in Five States' and contains Chapter 6 on 'Challenges related to Age-Determination of Victims under the POCSO Act, 2012' and Chapter 7 on 'Appreciation of Medical Evidence by Special Courts in POCSO cases'.",
+      "explanation_hindi": "दोनों कथन सही हैं। प्रकाशन के मुखपृष्ठ पर स्पष्ट रूप से उल्लेख है कि यह 'पाँच राज्यों में विशेष न्यायालयों के कामकाज पर CCL-NLSIU के अध्ययनों पर आधारित' है और इसमें अध्याय 6 'पॉक्सो अधिनियम, 2012 के तहत पीड़ितों के आयु-निर्धारण से संबंधित चुनौतियाँ' तथा अध्याय 7 'पॉक्सो मामलों में विशेष न्यायालयों द्वारा चिकित्सीय साक्ष्य का मूल्यांकन' शामिल हैं।",
       "topic": "POCSO",
       "difficulty": "medium",
       "key_facts": [
-        "The Law Commission received a reference from the Hon'ble High Court of Kamataka (Dharwad Bench), uide letter dated 9th November, 2022, asking the Commission to rethink on the age criteria for consent, taking into consideration the rising number ofcases relating to minor girls above the age of 16 years falling in love, eloping and having sexual intercourse with the boy, thereby attracting the provisions ofthe Protection ofChildren lrom Sexual OffencesAct,20l2 (\"POCSO) and/or the Indian Penal Code, 1860. The Commission is also in receipt of a reference from the Hon'ble High Court of Madhya Pradesh (Gwalior Bench), vide letter dated l gth April, 2023, wherein the Cou( has drawn the Commission's attention on how the enforcement of the POCSOAct, in its present form, causes gross injustice in cases of statutory rape where de facro consent is present. The Court further requested the Commission to suggest amendment to the POCSO Act, vesting discretionary power in the Special Judge to not impose the statutory minimum sentence in cases where de.facto consent is apparent on part ofthe girl child or where such a relationship has culminated in marriage, with or without children. The Commission thoroughly examined the judgments rendered by High Court of Kamataka in Slate of Kornataka u Basavraj S/o Yellappa Madar (2023) I AIR Kant R 231 and the High Court of Madhya Pradesh in Veekesh Kalawat v. State of Madhya Pradesh & Ors. [Misc. Criminal Case No. 4521 of 20231"
+        "Based on CCL-NLSIU’s Studies on the Working of Special Courts in Five States ... Chapter 6 Challenges related to Age-Determination of Victims under the POCSO Act, 2012 Swagata Raha ... Chapter 7 Appreciation of Medical Evidence by Special Courts in POCSO cases Dr. Jagadeesh. N"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-03T06:16:28.995154"
+      "processed_at": "2026-09-28T17:56:18.119830"
     },
     {
-      "id": "ea408b3c-a80c-4442-b020-48e6c46c9260",
-      "created_at": "2026-09-28T17:58:29.228957",
-      "question_hindi": "बच्चों और महिलाओं के संरक्षण के कानूनी ढांचे के तुलनात्मक विश्लेषण के अनुसार, 2013 की किस समिति की रिपोर्ट ने—बाल अधिकार संगठनों के अध्ययनों के साथ—भारतीय दंड संहिता की सीमाओं के कारण एक अलग, बाल-केंद्रित कानूनी ढांचे की तत्काल आवश्यकता को रेखांकित किया था?",
-      "options_hindi": [
-        "न्यायमूर्ति आनंद समिति रिपोर्ट",
-        "न्यायमूर्ति सरकारिया आयोग रिपोर्ट",
-        "न्यायमूर्ति वर्मा समिति रिपोर्ट",
-        "न्यायमूर्ति मलिमथ समिति रिपोर्ट"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "According to the comparative legal analysis of child and women protection frameworks, which committee's 2013 report—along with studies by child rights organizations—highlighted the urgent necessity for a separate, child-centric legal framework due to the limitations of the Indian Penal Code?",
-      "options_english": [
-        "Justice Anand Committee Report",
-        "Justice Sarkaria Commission Report",
-        "Justice Verma Committee Report",
-        "Justice Malimath Committee Report"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "As noted in the comparative legal analysis, sexual offences against minors were previously prosecuted under the Indian Penal Code, which lacked child-centric provisions and consideration of vulnerabilities. The Justice Verma Committee Report (2013), alongside studies by child rights organizations, highlighted the necessity of a dedicated legal framework, leading to comprehensive protections.",
-      "explanation_hindi": "तुलनात्मक कानूनी विश्लेषण के अनुसार, नाबालिगों के खिलाफ यौन अपराधों पर पहले भारतीय दंड संहिता के तहत मुकदमा चलाया जाता था, जिसमें बाल-केंद्रित प्रावधानों और संवेदनशीलताओं का अभाव था। न्यायमूर्ति वर्मा समिति रिपोर्ट (2013) और बाल अधिकार संगठनों के अध्ययनों ने एक समर्पित कानूनी ढांचे की आवश्यकता पर बल दिया।",
-      "topic": "POCSO",
-      "difficulty": "easy",
-      "key_facts": [
-        "The Justice Verma Committee Report (2013) and various studies by child rights organizations highlighted the need for a separate legal framework. The POCSO Act was enacted in 2012 as an absolute, gender-neutral law criminalizing a wide range of sexual offenses and prescribing child-friendly investigation and trial procedures."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-09-28T17:58:29.228957"
-    },
-    {
-      "id": "93d6dd7b-9517-4fff-ac7b-194cce19c494",
-      "created_at": "2026-09-28T17:50:35.542569",
-      "question_hindi": "'बालकों का लैंगिक शोषण से संरक्षण: पॉक्सो अधिनियम, 2012 का क्रियान्वयन और उससे आगे' (फरवरी 2018 में आयोजित) पर राष्ट्रीय परामर्श के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. इसका संयुक्त आयोजन 'हक (HAQ): सेंटर फॉर चाइल्ड राइट्स' और 'सेंटर फॉर चाइल्ड एंड द लॉ, NLSIU, बैंगलोर' द्वारा किया गया था।\n2. वर्ष 2015 से, हक (HAQ) ने दिल्ली में पॉक्सो अधिनियम के तहत दर्ज 700 से अधिक मामलों में हस्तक्षेप कर कानूनी और मनोसामाजिक सहायता प्रदान की है।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "id": "cfda8d8c-dd55-45ac-85d4-fc146fab453f",
+      "created_at": "2026-10-03T06:15:29.776429",
+      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (पॉक्सो) अधिनियम, 2012 के अध्याय VII ('विशेष न्यायालय') के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. धारा 28 विशेष न्यायालयों के पदाभिधान का प्रावधान करती है।\n2. धारा 32 विशेष लोक अभियोजकों की नियुक्ति का प्रावधान करती है।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
       "options_hindi": [
         "केवल 1",
         "1 और 2 दोनों",
@@ -727,7 +690,7 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the national consultation on 'Protecting Children from Sexual Abuse: Implementation of POCSO Act, 2012 and Beyond' (organized in February 2018):\n1. It was jointly organised by HAQ: Centre for Child Rights and the Centre for Child and the Law, NLSIU, Bangalore.\n2. Since 2015, HAQ has intervened in over 700 cases registered in Delhi under the POCSO Act, providing legal and psychosocial support.\n\nWhich of the statements given above is/are correct?",
+      "question_english": "Consider the following statements regarding Chapter VII ('Special Courts') of the Protection of Children from Sexual Offences (POCSO) Act, 2012:\n\n1. Section 28 provides for the Designation of Special Courts.\n2. Section 32 provides for the appointment of Special Public Prosecutors.\n\nWhich of the statements given above is/are correct?",
       "options_english": [
         "1 only",
         "Both 1 and 2",
@@ -735,15 +698,52 @@
         "2 only"
       ],
       "correct_answer": "b",
-      "explanation_english": "Both statements are correct. The national consultation held on 24-25 February 2018 in New Delhi was jointly organised by HAQ: Centre for Child Rights and the Centre for Child and the Law, NLSIU Bangalore. Furthermore, HAQ documented that since 2015, it had intervened in over 700 POCSO cases registered in Delhi, providing legal and psychosocial support.",
-      "explanation_hindi": "दोनों कथन सही हैं। 24-25 फरवरी 2018 को नई दिल्ली में आयोजित राष्ट्रीय परामर्श का संयुक्त आयोजन 'हक (HAQ): सेंटर फॉर चाइल्ड राइट्स' और 'सेंटर फॉर चाइल्ड एंड द लॉ, NLSIU बैंगलोर' द्वारा किया गया था। इसके अतिरिक्त, हक ने उल्लेख किया है कि 2015 से उसने कानूनी और मनोसामाजिक सहायता प्रदान करते हुए दिल्ली में पॉक्सो के 700 से अधिक मामलों में हस्तक्षेप किया है।",
+      "explanation_english": "Both statements are correct. In Chapter VII ('Special Courts') of the POCSO Act, 2012, Section 28 specifies the 'Designation of Special Courts', while Section 32 provides for 'Special Public Prosecutors'.",
+      "explanation_hindi": "दोनों कथन सही हैं। पॉक्सो अधिनियम, 2012 के अध्याय VII ('विशेष न्यायालय') में, धारा 28 'विशेष न्यायालयों के पदाभिधान' का प्रावधान करती है, जबकि धारा 32 'विशेष लोक अभियोजकों' का प्रावधान करती है।",
       "topic": "POCSO",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "key_facts": [
-        "The National Consultation titled “Protecting Children from Sexual Abuse: Implementation of the POCSO Act and Beyond” has been an effort in this direction. Jointly organised by HAQ: Centre for Child Rights and the Centre for Child and the Law, NLSIU, Bangalore with support from Tata Trusts, UNICEF and the Human Dignity Foundation... Since 2015, HAQ has intervened in over 700 cases registered in Delhi under the Protection of Children from Sexual Offences (POCSO) Act, 2012, providing legal and psychosocial support."
+        "CHAPTER VII\n\nSPECIAL COURTS\n\n28. Designation of Special Courts. \n29. Presumption as to certain offences. \n30. Presumption of culpable mental state. \n31. Application of Code of Criminal Procedure, 1973 to proceedings before a Special Court. \n32. Special Public Prosecutors."
       ],
       "ai_processed": true,
-      "processed_at": "2026-09-28T17:50:35.542569"
+      "processed_at": "2026-10-03T06:15:29.776429"
+    },
+    {
+      "id": "5906627b-c875-4479-9e66-b9829fd3d40a",
+      "created_at": "2026-09-28T17:49:46.034697",
+      "question_hindi": "लैंगिक अपराधों से बालकों का संरक्षण (POCSO) अधिनियम, 2012 के अंतर्गत, धाराओं की व्यवस्था के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. धारा 29 और धारा 30 क्रमशः कतिपय अपराधों के संबंध में उपधारणा और आपराधिक मनःस्थिति की उपधारणा से संबंधित हैं।\n2. धारा 35 बच्चे के साक्ष्य दर्ज करने और मामले के निपटारे की समय-सीमा का प्रावधान करती है।\n3. धारा 44 अधिनियम के कार्यान्वयन की निगरानी का प्रावधान करती है।\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 1 और 2",
+        "केवल 1 और 3",
+        "1, 2 और 3",
+        "केवल 2 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under the Protection of Children from Sexual Offences (POCSO) Act, 2012, consider the following statements regarding the arrangement of sections:\n1. Section 29 and Section 30 deal with statutory presumptions regarding certain offences and culpable mental state, respectively.\n2. Section 35 provides for the period for recording of evidence of the child and disposal of the case.\n3. Section 44 provides for the monitoring of the implementation of the Act.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "1, 2 and 3",
+        "2 and 3 only"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "As per the Arrangement of Sections of the POCSO Act, 2012: Section 29 deals with 'Presumption as to certain offences', Section 30 deals with 'Presumption of culpable mental state', Section 35 deals with 'Period for recording of evidence of child and disposal of case', and Section 44 deals with 'Monitoring of implementation of Act'. All three statements are correct.",
+      "explanation_hindi": "POCSO अधिनियम, 2012 की धाराओं की व्यवस्था के अनुसार: धारा 29 'कतिपय अपराधों के संबंध में उपधारणा' से, धारा 30 'आपराधिक मनःस्थिति की उपधारणा' से, धारा 35 'बालक के साक्ष्य को अभिलिखित करने की अवधि और मामले का निपटारा' से, और धारा 44 'अधिनियम के कार्यान्वयन का अनुवीक्षण' से संबंधित है। अतः तीनों कथन सही हैं।",
+      "topic": "POCSO",
+      "difficulty": "hard",
+      "key_facts": [
+        "29. Presumption as to certain offences. \n30. Presumption of culpable mental state."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-09-28T17:49:46.034697"
     }
   ]
 }

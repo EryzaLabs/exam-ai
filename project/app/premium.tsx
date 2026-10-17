@@ -8,8 +8,9 @@ import {
   ActivityIndicator,
   Platform,
   useWindowDimensions,
-  Image,
   ImageBackground,
+  Modal,
+  TextInput,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -31,28 +32,30 @@ import {
   ChevronDown,
   ChevronUp,
   Lock,
-  Star,
-  Users,
-  CheckCircle2,
+  Target,
   FileText,
-  TrendingUp,
+  CheckCircle2,
   AlertCircle,
-  PhoneCall,
+  TrendingUp,
+  Scale,
+  Brain,
   MessageCircle,
-  ExternalLink,
+  Phone,
 } from 'lucide-react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useAuth } from '@/context/auth-context';
 import userService from '@/services/user-service';
-import { initiatePayment } from '@/utils/razorpay';
+import { initiatePayment } from '@/utils/cashfree';
+import DesktopDashboard from '@/components/DesktopDashboard';
 
 export default function PremiumScreen() {
   const { width } = useWindowDimensions();
-  const isDesktop = width >= 900;
-  const isTablet = width >= 600 && width < 900;
-  const { user } = useAuth();
+  const isDesktop = width >= 1024;
+  const { user, isSubscribed: authSubscribed, isSubscriptionLoading, refreshSubscription } = useAuth();
 
   const [loading, setLoading] = useState(false);
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [localSubscribed, setLocalSubscribed] = useState<boolean | null>(null);
+  const isSubscribed = localSubscribed !== null ? localSubscribed : authSubscribed;
   const [checkingStatus, setCheckingStatus] = useState(true);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
@@ -61,6 +64,10 @@ export default function PremiumScreen() {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
 
+  const [showPhoneModal, setShowPhoneModal] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [phoneError, setPhoneError] = useState('');
+
   useEffect(() => {
     checkSubscriptionStatus();
   }, [user]);
@@ -68,8 +75,16 @@ export default function PremiumScreen() {
   const checkSubscriptionStatus = async () => {
     setCheckingStatus(true);
     try {
-      const profile = await userService.getUserProfile(user?.uid);
-      setIsSubscribed(!!profile?.isSubscribed);
+      if (user?.uid) {
+        const profile = await userService.getUserProfile(user.uid);
+        setLocalSubscribed(profile?.isSubscribed === true);
+        const savedPhone = profile?.phoneNumber || user?.phoneNumber || (await AsyncStorage.getItem('@user_phone_number')) || '';
+        if (savedPhone) {
+          setPhoneNumber(savedPhone.replace(/\D/g, '').slice(-10));
+        }
+      } else {
+        setLocalSubscribed(false);
+      }
     } catch (e) {
       console.error('Error checking subscription:', e);
     } finally {
@@ -78,12 +93,24 @@ export default function PremiumScreen() {
   };
 
   const handlePurchase = () => {
+    setPhoneError('');
+    setShowPhoneModal(true);
+  };
+
+  const proceedWithPayment = async (phone: string) => {
+    setShowPhoneModal(false);
     setLoading(true);
+
+    await AsyncStorage.setItem('@user_phone_number', phone).catch(() => {});
+    if (user?.uid) {
+      userService.updateUserProfile({ phoneNumber: phone }).catch(() => {});
+    }
+
     initiatePayment(
       async () => {
         try {
-          await userService.setSubscriptionStatus(true);
-          setIsSubscribed(true);
+          await refreshSubscription();
+          setLocalSubscribed(true);
           setLoading(false);
           const successMsg = '🎉 Congratulations! You now have full unrestricted access to all UPSC Principal Mock Tests and AI Analytics.';
           if (Platform.OS === 'web') {
@@ -92,7 +119,7 @@ export default function PremiumScreen() {
             alert(successMsg);
           }
         } catch (e) {
-          console.error('Error saving subscription:', e);
+          console.error('Error in subscription callback:', e);
         }
       },
       (error) => {
@@ -107,50 +134,41 @@ export default function PremiumScreen() {
         }
       },
       {
-        userName: user?.displayName || 'Aspirant',
+        userName: user?.displayName || (user?.email ? user.email.split('@')[0] : 'Aspirant'),
         userEmail: user?.email || '',
+        userPhone: phone,
         amountInPaise: 49900,
       }
     );
   };
 
-  const handleDevReset = async () => {
-    await userService.setSubscriptionStatus(false);
-    setIsSubscribed(false);
-    if (Platform.OS === 'web') {
-      window.alert('Subscription reset to Free Tier for testing.');
-    } else {
-      alert('Subscription reset to Free Tier for testing.');
-    }
-  };
-
   const sampleQuestion = {
     en: {
       question:
-        'Under Rule 3(1) of the Central Civil Services (Conduct) Rules 1964, which of the following duties is specifically mandated for a Government servant holding supervisory or administrative charge in an educational institution?',
+        'Under Rule 3(1) of the Central Civil Services (Conduct) Rules 1964, which of the following is specifically mandated for a Government servant holding supervisory or administrative charge in an educational institution?',
       options: [
-        'To ensure the integrity and devotion to duty of all government servants under his control and authority.',
+        'To take all possible steps to ensure the integrity and devotion to duty of all government servants under his control and authority.',
         'To submit annual confidential reports directly to the Ministry of Education without review.',
         'To permit staff members to engage in private commercial coaching after school hours.',
         'To waive disciplinary proceedings for non-gazetted teaching staff upon written apology.',
       ],
       correctIndex: 0,
       explanation:
-        'Correct Answer: (A). Rule 3(2)(i) and Rule 3(1) of CCS (Conduct) Rules explicitly mandate that every Government servant holding a supervisory post shall take all possible steps to ensure the integrity and devotion to duty of all government servants for the time being under his control and authority.',
+        'Correct Answer: (A). Rule 3(2)(i) of the CCS (Conduct) Rules 1964 explicitly mandates: "Every Government servant holding a supervisory post shall take all possible steps to ensure the integrity and devotion to duty of all government servants for the time being under his control and authority."',
       topic: 'Service Rules & CCS Conduct Rules 1964',
     },
     hi: {
       question:
-        'केंद्रीय सिविल सेवा (आचरण) नियम 1964 के नियम 3(1) के अंतर्गत, एक शैक्षणिक संस्थान में पर्यवेक्षी या प्रशासनिक प्रभार संभालने वाले सरकारी कर्मचारी के लिए निम्नलिखित में से कौन सा कर्तव्य अनिवार्य है?',
+        'केंद्रीय सिविल सेवा (आचरण) नियम 1964 के नियम 3(1) के अंतर्गत, एक शैक्षणिक संस्थान में पर्यवेक्षी या प्रशासनिक प्रभार संभालने वाले सरकारी कर्मचारी के लिए निम्नलिखित में से क्या अनिवार्य है?',
       options: [
-        'अपने नियंत्रण और प्राधिकार में कार्यरत सभी कर्मचारियों की सत्यनिष्ठा और कर्तव्यपरायणता सुनिश्चित करना।',
+        'अपने नियंत्रण और प्राधिकार में कार्यरत सभी सरकारी कर्मचारियों की सत्यनिष्ठा और कर्तव्यपरायणता सुनिश्चित करने के लिए सभी संभव कदम उठाना।',
         'बिना समीक्षा के सीधे शिक्षा मंत्रालय को वार्षिक गोपनीय रिपोर्ट प्रस्तुत करना।',
         'स्कूल समय के बाद कर्मचारियों को निजी व्यावसायिक कोचिंग में संलग्न होने की अनुमति देना।',
         'लिखित क्षमायाचना पर गैर-राजपत्रित शिक्षण कर्मचारियों के विरुद्ध अनुशासनात्मक कार्यवाही रद्द करना।',
       ],
       correctIndex: 0,
       explanation:
-        'सही उत्तर: (A)। सीसीएस (आचरण) नियम के नियम 3(2)(i) और नियम 3(1) में स्पष्ट रूप से कहा गया है कि पर्यवेक्षी पद धारण करने वाले प्रत्येक सरकारी कर्मचारी का दायित्व है कि वह अपने नियंत्रण में कार्यरत सभी कर्मचारियों की सत्यनिष्ठा और कर्तव्य के प्रति निष्ठा सुनिश्चित करने के लिए सभी संभव कदम उठाए।',
+        'सही उत्तर: (A)। सीसीएस (आचरण) नियम 1964 के नियम 3(2)(i) में स्पष्ट रूप से प्रावधान है कि पर्यवेक्षी पद धारण करने वाले प्रत्येक सरकारी कर्मचारी का यह कर्तव्य है कि वह अपने नियंत्रण में कार्यरत सभी कर्मचारियों की सत्यनिष्ठा और कर्तव्यनिष्ठा सुनिश्चित करने हेतु सभी आवश्यक कदम उठाए।',
       topic: 'सेवा नियम और सीसीएस आचरण नियम 1964',
     },
   };
@@ -159,41 +177,54 @@ export default function PremiumScreen() {
     {
       title: 'Educational Administration & School Leadership',
       tests: '15 Full Mocks',
-      highlights: 'NEP 2020, NCF-SE 2023, School Development Plans, Pedagogical Leadership, CBSE Bye-laws',
+      highlights: 'NEP 2020, NCF-SE 2023, School Development Plans, Pedagogical Leadership, CBSE Affiliation Bye-laws',
       icon: BookOpen,
-      color: '#3B82F6',
+      iconBg: '#DBEAFE',
+      iconColor: '#2563EB',
     },
     {
       title: 'Service & Conduct Rules (Swamy’s Handbook)',
       tests: '12 Topic Tests',
       highlights: 'CCS (Conduct) Rules 1964, CCS (CCA) Rules 1965, Leave Rules, LTC, Medical Attendance Rules',
-      icon: Award,
-      color: '#10B981',
+      icon: Scale,
+      iconBg: '#D1FAE5',
+      iconColor: '#059669',
     },
     {
       title: 'Financial Administration & Accounts',
       tests: '10 Topic Tests',
       highlights: 'General Financial Rules (GFR 2017), GeM Procurement, VPF/GPF, Contingency Grants, Audit & Budget',
       icon: BarChart2,
-      color: '#F59E0B',
+      iconBg: '#FFEDD5',
+      iconColor: '#EA580C',
     },
     {
       title: 'Child Rights, Protection & Acts',
       tests: '8 Topic Tests',
       highlights: 'POCSO Act 2012 (Mandatory Reporting), RTE Act 2009 (PTR, Section 12), RPwD Act 2016',
       icon: ShieldCheck,
-      color: '#8B5CF6',
+      iconBg: '#EDE9FE',
+      iconColor: '#7C3AED',
     },
     {
       title: 'General Studies & Government Initiatives',
       tests: '10 Full Mocks',
       highlights: 'PM SHRI Schools, Samagra Shiksha, DIKSHA, Vidyanjali, Current Educational Schemes & Policies',
       icon: Globe,
-      color: '#EC4899',
+      iconBg: '#FCE7F3',
+      iconColor: '#DB2777',
     },
   ];
 
   const faqs = [
+    {
+      q: 'Do you add new tests every day?',
+      a: 'Yes! We actively research, create, and upload new mock tests and topic-wise practice papers every single day. As a Premium Pass holder, every newly released test is added to your account immediately with zero extra cost.',
+    },
+    {
+      q: 'How does this compare to apps like Testbook or Adda247?',
+      a: 'Generic test apps focus on mass exams (SSC, Railways, Clerk) with recycled question banks. Our platform is 100% purpose-built for the UPSC Principal & Vice-Principal exam. All questions are crafted at the gazetted officer level with verified Swamy’s Handbook service rule citations (CCS Rules, GFR 2017, POCSO, RTE, FR-SR) and fresh tests built every day.',
+    },
     {
       q: 'How long is the Premium subscription valid?',
       a: 'Your subscription is valid for the complete 2026 UPSC Principal & Vice-Principal examination cycle until the exam is conducted. There are no recurring monthly charges or hidden renewal fees.',
@@ -216,650 +247,961 @@ export default function PremiumScreen() {
     },
     {
       q: 'What payment methods are supported?',
-      a: 'We support all secure payment methods via Razorpay: UPI (Google Pay, PhonePe, Paytm, BHIM, CRED), Credit/Debit Cards (Visa, Mastercard, RuPay), NetBanking from 50+ banks, and Wallets.',
+      a: 'We support all secure payment methods via Cashfree: UPI (Google Pay, PhonePe, Paytm, BHIM, CRED), Credit/Debit Cards (Visa, Mastercard, RuPay), NetBanking from 50+ banks, and Wallets.',
     },
   ];
 
   const activeQuestion = sampleQuestion[sampleLang];
 
+  // The main page content that renders inside both DesktopDashboard (on web/desktop) and Native container (on mobile)
+  const pageContent = (
+    <View style={styles.pageWrapper}>
+      {/* ================= HERO BANNER (MATCHES DASHBOARD HERO VIBE) ================= */}
+      {/* ================= COMPACT HERO BANNER ================= */}
+      <ImageBackground
+        source={require('@/assets/images/upsc-bg.png')}
+        style={[styles.heroBanner, { backgroundColor: '#1E40AF' }]}
+        imageStyle={{ borderRadius: 24, opacity: 0.35, width: '100%', height: '100%' }}
+        resizeMode="cover"
+      >
+        <LinearGradient
+          colors={['rgba(30,64,175,0.88)', 'rgba(59,130,246,0.72)']}
+          style={[StyleSheet.absoluteFillObject, { borderRadius: 24 }]}
+        />
+        <View style={styles.heroContent}>
+          <View style={styles.heroTagsRow}>
+            <View style={styles.heroTagBadge}>
+              <Crown size={12} color="#F59E0B" />
+              <Text style={styles.heroTagText}>ALL-ACCESS PASS • 2026 EDITION</Text>
+            </View>
+            <View style={styles.heroVerifiedBadge}>
+              <CheckCircle2 size={12} color="#34D399" />
+              <Text style={styles.heroVerifiedText}>UPSC PRINCIPAL & VICE-PRINCIPAL</Text>
+            </View>
+          </View>
+
+          <Text style={styles.heroTitle}>Prepare with a Complete Mock-Test System.</Text>
+          <Text style={styles.heroDesc}>
+            Full-length simulations, topic-wise practice, Swamy's Handbook legal explanations, and bilingual questions in one unified pass. Built strictly on the official GNCTD & KVS CBT pattern.
+          </Text>
+
+          {/* Compact Quick Metrics Bar */}
+          <View style={styles.heroMetricsGrid}>
+            <View style={styles.heroMetricItem}>
+              <View style={[styles.statIconBox, { backgroundColor: '#DBEAFE' }]}>
+                <FileText size={16} color="#2563EB" />
+              </View>
+              <View>
+                <Text style={styles.metricVal}>26</Text>
+                <Text style={styles.metricLbl}>Full Mocks</Text>
+              </View>
+            </View>
+
+            <View style={styles.heroMetricItem}>
+              <View style={[styles.statIconBox, { backgroundColor: '#EDE9FE' }]}>
+                <BookOpen size={16} color="#7C3AED" />
+              </View>
+              <View>
+                <Text style={styles.metricVal}>158</Text>
+                <Text style={styles.metricLbl}>Topic Tests</Text>
+              </View>
+            </View>
+
+            <View style={styles.heroMetricItem}>
+              <View style={[styles.statIconBox, { backgroundColor: '#D1FAE5' }]}>
+                <Target size={16} color="#059669" />
+              </View>
+              <View>
+                <Text style={styles.metricVal}>3,145+</Text>
+                <Text style={styles.metricLbl}>Questions</Text>
+              </View>
+            </View>
+
+            <View style={styles.heroMetricItem}>
+              <View style={[styles.statIconBox, { backgroundColor: '#FEF3C7' }]}>
+                <Zap size={16} color="#D97706" />
+              </View>
+              <View>
+                <Text style={styles.metricVal}>Daily</Text>
+                <Text style={styles.metricLbl}>New Tests</Text>
+              </View>
+            </View>
+
+            <View style={styles.heroMetricItem}>
+              <View style={[styles.statIconBox, { backgroundColor: '#FFEDD5' }]}>
+                <Globe size={16} color="#EA580C" />
+              </View>
+              <View>
+                <Text style={styles.metricVal}>100%</Text>
+                <Text style={styles.metricLbl}>English & हिन्दी</Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </ImageBackground>
+
+      {/* ================= ACTIVE SUBSCRIBER STATE (IF ALREADY UNLOCKED) ================= */}
+      {isSubscribed ? (
+        <View style={styles.activePlanCard}>
+          <View style={styles.activePlanHeader}>
+            <View style={styles.activeCheckCircle}>
+              <Check size={24} color="#FFFFFF" />
+            </View>
+            <View style={{ flex: 1, marginLeft: 16 }}>
+              <Text style={styles.activePlanTitle}>You are a Premium Member!</Text>
+              <Text style={styles.activePlanSub}>
+                All 26 Full Mocks and 158 Topic-wise Tests are completely unlocked on your account.
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.activePlanActions}>
+            <TouchableOpacity
+              style={styles.exploreTestsBtn}
+              onPress={() => router.push('/test-list')}
+            >
+              <Text style={styles.exploreTestsBtnText}>Start Practicing Tests →</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      ) : (
+        /* ================= HIGH-CONVERTING PURCHASING CARD ================= */
+        <View style={styles.pricingSectionCard}>
+          <View style={[styles.pricingLayout, isDesktop && styles.pricingLayoutDesktop]}>
+            {/* Left Column: Outcome & Concrete Value Bundle */}
+            <View style={styles.pricingLeftCol}>
+              <View style={styles.launchOfferTag}>
+                <Crown size={13} color="#B45309" />
+                <Text style={styles.launchOfferTagText}>ALL-ACCESS PASS • 2026 EDITION</Text>
+              </View>
+
+              <Text style={styles.pricingPlanName}>Prepare with a Complete Mock-Test System.</Text>
+              <Text style={styles.pricingPlanSub}>
+                Full-length simulations, topic-wise practice, legal explanations, and bilingual questions in one pass.
+              </Text>
+
+              {/* Concrete Value Inclusions */}
+              <View style={styles.checklist}>
+                <View style={styles.checkItem}>
+                  <CheckCircle2 size={18} color="#10B981" />
+                  <Text style={styles.checkText}>
+                    <Text style={styles.boldText}>26 full-length mocks</Text> — 120 questions per mock (300 marks, CBT mode)
+                  </Text>
+                </View>
+
+                <View style={styles.checkItem}>
+                  <CheckCircle2 size={18} color="#10B981" />
+                  <Text style={styles.checkText}>
+                    <Text style={styles.boldText}>158 topic-wise tests</Text> — Practice specific subjects and concepts
+                  </Text>
+                </View>
+
+                <View style={styles.checkItem}>
+                  <CheckCircle2 size={18} color="#10B981" />
+                  <Text style={styles.checkText}>
+                    <Text style={styles.boldText}>Fresh tests added daily</Text> — Continuous new mocks & topic tests published daily
+                  </Text>
+                </View>
+
+                <View style={styles.checkItem}>
+                  <CheckCircle2 size={18} color="#10B981" />
+                  <Text style={styles.checkText}>
+                    <Text style={styles.boldText}>3,145 bilingual questions</Text> — 1-tap switch between English and Hindi
+                  </Text>
+                </View>
+
+                <View style={styles.checkItem}>
+                  <CheckCircle2 size={18} color="#10B981" />
+                  <Text style={styles.checkText}>
+                    <Text style={styles.boldText}>Exact legal citations</Text> — Rule-by-rule backing from Swamy’s Handbook (CCS/GFR)
+                  </Text>
+                </View>
+
+                <View style={styles.checkItem}>
+                  <CheckCircle2 size={18} color="#10B981" />
+                  <Text style={styles.checkText}>
+                    <Text style={styles.boldText}>Performance analytics</Text> — Identify weak areas and track All-India rank
+                  </Text>
+                </View>
+
+                <View style={styles.checkItem}>
+                  <CheckCircle2 size={18} color="#10B981" />
+                  <Text style={styles.checkText}>
+                    <Text style={styles.boldText}>Unlimited re-attempts</Text> — Lifetime test history and progress tracking
+                  </Text>
+                </View>
+              </View>
+            </View>
+
+            {/* Right Column: Visual Price Anchor & Action Box */}
+            <View style={styles.pricingRightCol}>
+              <View style={styles.checkoutActionBox}>
+                <View style={styles.trustShieldPill}>
+                  <ShieldCheck size={14} color="#059669" />
+                  <Text style={styles.trustShieldText}>Official GNCTD & KVS Pattern</Text>
+                </View>
+
+                {/* Massive ₹499 Price Anchor */}
+                <View style={styles.anchorPriceBlock}>
+                  <View style={styles.anchorPriceRow}>
+                    <Text style={styles.anchorCurrency}>₹</Text>
+                    <Text style={styles.anchorAmount}>499</Text>
+                  </View>
+                  <View style={styles.anchorDiscountRow}>
+                    <Text style={styles.anchorOriginalPrice}>₹1,499</Text>
+                    <View style={styles.anchorSavePill}>
+                      <Text style={styles.anchorSavePillText}>Save ₹1,000 (67% OFF)</Text>
+                    </View>
+                  </View>
+                  <Text style={styles.anchorTermsText}>
+                    One-time payment · No recurring charges
+                  </Text>
+                </View>
+
+                {/* Primary Action Button */}
+                <TouchableOpacity
+                  style={[styles.payNowBtn, loading && styles.payNowBtnDisabled]}
+                  onPress={handlePurchase}
+                  disabled={loading}
+                  activeOpacity={0.9}
+                >
+                  <LinearGradient
+                    colors={['#2563EB', '#1D4ED8']}
+                    start={{ x: 0, y: 0 }}
+                    end={{ x: 1, y: 1 }}
+                    style={styles.payNowGradient}
+                  >
+                    {loading ? (
+                      <ActivityIndicator size="small" color="#FFFFFF" />
+                    ) : (
+                      <>
+                        <Lock size={18} color="#FFFFFF" />
+                        <Text style={styles.payNowBtnText}>Get Full Test Access · ₹499</Text>
+                      </>
+                    )}
+                  </LinearGradient>
+                </TouchableOpacity>
+
+                {/* Clear Post-Click Clarity */}
+                <View style={styles.clarityPointsList}>
+                  <View style={styles.clarityPoint}>
+                    <Zap size={14} color="#2563EB" />
+                    <Text style={styles.clarityPointText}>Instant access activated immediately upon payment</Text>
+                  </View>
+                  <View style={styles.clarityPoint}>
+                    <Clock size={14} color="#059669" />
+                    <Text style={styles.clarityPointText}>Unlimited access until UPSC Principal 2026 exam day</Text>
+                  </View>
+                  <View style={styles.clarityPoint}>
+                    <ShieldCheck size={14} color="#64748B" />
+                    <Text style={styles.clarityPointText}>Zero recurring renewals · No auto-debit</Text>
+                  </View>
+                </View>
+
+                {/* Readable Trust Row */}
+                <View style={styles.cleanTrustRow}>
+                  <Text style={styles.cleanTrustText}>Secure 256-Bit SSL Checkout via Cashfree</Text>
+                  <View style={styles.cleanPayBadges}>
+                    <Text style={styles.cleanPayBadge}>UPI (GPay / PhonePe / Paytm)</Text>
+                    <Text style={styles.cleanPayBadge}>Cards</Text>
+                    <Text style={styles.cleanPayBadge}>NetBanking</Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      )}
+
+      {/* ================= BEFORE PURCHASING: REMOVE REASONS TO HESITATE ================= */}
+      <View style={styles.sectionBlock}>
+        <View style={styles.sectionHeader}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+            <HelpCircle size={20} color="#2563EB" />
+            <Text style={styles.sectionTitle}>Before Purchasing: Key Information</Text>
+          </View>
+        </View>
+
+        <View style={[styles.beforePurchasingGrid, isDesktop && styles.beforePurchasingGridDesktop]}>
+          <View style={styles.beforePurchasingCard}>
+            <View style={[styles.statIconBox, { backgroundColor: '#EFF6FF', marginBottom: 10 }]}>
+              <BookOpen size={18} color="#2563EB" />
+            </View>
+            <Text style={styles.bpCardQuestion}>What is included in the pass?</Text>
+            <Text style={styles.bpCardAnswer}>
+              Immediate unrestricted access to all 26 Full-Length Mocks (120 Qs each), 158 Topic-wise Tests, all new tests added daily, verified Swamy's Handbook legal rationales, and AI diagnostic reports.
+            </Text>
+          </View>
+
+          <View style={styles.beforePurchasingCard}>
+            <View style={[styles.statIconBox, { backgroundColor: '#ECFDF5', marginBottom: 10 }]}>
+              <Target size={18} color="#059669" />
+            </View>
+            <Text style={styles.bpCardQuestion}>Are tests mapped to the official syllabus?</Text>
+            <Text style={styles.bpCardAnswer}>
+              100% strictly aligned with the official UPSC GNCTD & KVS Principal / Vice-Principal CBT pattern (NEP 2020, NCF-SE 2023, CCS Rules, GFR 2017, POCSO Act, RTE 2009).
+            </Text>
+          </View>
+
+          <View style={styles.beforePurchasingCard}>
+            <View style={[styles.statIconBox, { backgroundColor: '#EDE9FE', marginBottom: 10 }]}>
+              <Scale size={18} color="#7C3AED" />
+            </View>
+            <Text style={styles.bpCardQuestion}>How are legal answers verified?</Text>
+            <Text style={styles.bpCardAnswer}>
+              Every administrative and service rule question cites the exact rule number, order, and section from the authoritative Swamy’s Handbook and official government gazette notifications.
+            </Text>
+          </View>
+
+          <View style={styles.beforePurchasingCard}>
+            <View style={[styles.statIconBox, { backgroundColor: '#FEF3C7', marginBottom: 10 }]}>
+              <Clock size={18} color="#D97706" />
+            </View>
+            <Text style={styles.bpCardQuestion}>When does access expire?</Text>
+            <Text style={styles.bpCardAnswer}>
+              Valid for the complete 2026 examination cycle until the exam is conducted. There are zero monthly renewals and no recurring auto-debits.
+            </Text>
+          </View>
+        </View>
+      </View>
+
+      {/* ================= INTERACTIVE LIVE QUESTION PREVIEW ================= */}
+      <View style={styles.sectionBlock}>
+        <View style={styles.interactiveHeaderRow}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+            <FileText size={20} color="#2563EB" />
+            <Text style={styles.sectionTitle}>Test Question Quality Yourself</Text>
+          </View>
+
+          {/* Bilingual Switch */}
+          <View style={styles.bilingualToggle}>
+            <TouchableOpacity
+              style={[styles.toggleBtn, sampleLang === 'en' && styles.toggleBtnActive]}
+              onPress={() => setSampleLang('en')}
+            >
+              <Text style={[styles.toggleBtnText, sampleLang === 'en' && styles.toggleBtnTextActive]}>English</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.toggleBtn, sampleLang === 'hi' && styles.toggleBtnActive]}
+              onPress={() => setSampleLang('hi')}
+            >
+              <Text style={[styles.toggleBtnText, sampleLang === 'hi' && styles.toggleBtnTextActive]}>हिन्दी</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <View style={styles.sampleQuestionCard}>
+          <View style={styles.sampleCardTop}>
+            <View style={styles.topicBadge}>
+              <Text style={styles.topicBadgeText}>{activeQuestion.topic}</Text>
+            </View>
+            <Text style={styles.marksBadgeText}>+2.5 Marks • -0.83 Negative</Text>
+          </View>
+
+          <Text style={styles.sampleQuestionText}>{activeQuestion.question}</Text>
+
+          <View style={styles.optionsList}>
+            {activeQuestion.options.map((opt, idx) => {
+              const letter = String.fromCharCode(65 + idx);
+              const isSelected = selectedOption === idx;
+              const isCorrect = idx === activeQuestion.correctIndex;
+              const showResult = showExplanation;
+
+              let itemStyle = styles.optionItem;
+              let circleStyle = styles.optionLetterCircle;
+
+              if (showResult && isCorrect) {
+                itemStyle = { ...styles.optionItem, ...styles.optionItemCorrect };
+                circleStyle = { ...styles.optionLetterCircle, ...styles.optionLetterCircleCorrect };
+              } else if (showResult && isSelected && !isCorrect) {
+                itemStyle = { ...styles.optionItem, ...styles.optionItemWrong };
+                circleStyle = { ...styles.optionLetterCircle, ...styles.optionLetterCircleWrong };
+              } else if (isSelected) {
+                itemStyle = { ...styles.optionItem, ...styles.optionItemSelected };
+                circleStyle = { ...styles.optionLetterCircle, ...styles.optionLetterCircleSelected };
+              }
+
+              return (
+                <TouchableOpacity
+                  key={idx}
+                  style={itemStyle}
+                  onPress={() => {
+                    setSelectedOption(idx);
+                    setShowExplanation(true);
+                  }}
+                  activeOpacity={0.8}
+                >
+                  <View style={circleStyle}>
+                    <Text style={styles.optionLetterText}>{letter}</Text>
+                  </View>
+                  <Text style={styles.optionContentText}>{opt}</Text>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+
+          {showExplanation ? (
+            <View style={styles.explanationBox}>
+              <View style={styles.explanationTitleRow}>
+                <CheckCircle2 size={16} color="#059669" />
+                <Text style={styles.explanationTitle}>Official Rule & Section Citation</Text>
+              </View>
+              <Text style={styles.explanationText}>{activeQuestion.explanation}</Text>
+            </View>
+          ) : (
+            <TouchableOpacity
+              style={styles.revealHintBtn}
+              onPress={() => setShowExplanation(true)}
+            >
+              <Text style={styles.revealHintText}>Tap any option above to test your answer and view official rule citation →</Text>
+            </TouchableOpacity>
+          )}
+        </View>
+      </View>
+
+      {/* ================= SAMPLE AI DIAGNOSTIC REPORT PREVIEW ================= */}
+      <View style={styles.sectionBlock}>
+        <View style={styles.sectionHeader}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+            <BarChart2 size={20} color="#2563EB" />
+            <Text style={styles.sectionTitle}>Sample AI Diagnostic Report Preview</Text>
+          </View>
+          <View style={styles.reportTag}>
+            <Sparkles size={13} color="#2563EB" />
+            <Text style={styles.reportTagText}>Generated on Test Completion</Text>
+          </View>
+        </View>
+
+        <View style={styles.sampleReportCard}>
+          {/* Top header of mock result */}
+          <View style={styles.reportCardHeader}>
+            <View>
+              <Text style={styles.reportExamName}>Full Mock Test 04 • CBT Result Simulation</Text>
+              <Text style={styles.reportScoreText}>
+                Score: <Text style={styles.reportScoreHighlight}>218.5</Text> / 300 Marks
+              </Text>
+            </View>
+            <View style={styles.percentileBadge}>
+              <Award size={14} color="#059669" />
+              <Text style={styles.percentileBadgeText}>Top 4.2% Percentile</Text>
+            </View>
+          </View>
+
+          {/* Quick Metrics */}
+          <View style={styles.reportMetricsRow}>
+            <View style={styles.reportMetricBox}>
+              <Text style={styles.reportMetricLabel}>Accuracy</Text>
+              <Text style={[styles.reportMetricVal, { color: '#059669' }]}>78.4%</Text>
+              <Text style={styles.reportMetricSub}>94/120 Correct</Text>
+            </View>
+            <View style={styles.reportMetricBox}>
+              <Text style={styles.reportMetricLabel}>Predicted Rank</Text>
+              <Text style={[styles.reportMetricVal, { color: '#2563EB' }]}>#42</Text>
+              <Text style={styles.reportMetricSub}>Among 1,280 Aspirants</Text>
+            </View>
+            <View style={styles.reportMetricBox}>
+              <Text style={styles.reportMetricLabel}>Time Taken</Text>
+              <Text style={[styles.reportMetricVal, { color: '#475569' }]}>104m</Text>
+              <Text style={styles.reportMetricSub}>Out of 120 mins</Text>
+            </View>
+            <View style={styles.reportMetricBox}>
+              <Text style={styles.reportMetricLabel}>Negative Loss</Text>
+              <Text style={[styles.reportMetricVal, { color: '#DC2626' }]}>-14.9</Text>
+              <Text style={styles.reportMetricSub}>18 Incorrect</Text>
+            </View>
+          </View>
+
+          {/* Topic-Wise Diagnostic Breakdown */}
+          <Text style={styles.reportSectionTitle}>Syllabus Topic Breakdown & Weak Area Diagnosis</Text>
+          <View style={styles.reportBarsList}>
+            {/* Topic 1 */}
+            <View style={styles.reportBarItem}>
+              <View style={styles.reportBarLabelRow}>
+                <Text style={styles.reportBarTopic}>Educational Administration & NEP 2020</Text>
+                <Text style={[styles.reportBarPct, { color: '#059669' }]}>88% (Strong)</Text>
+              </View>
+              <View style={styles.progressBarTrack}>
+                <View style={[styles.progressBarFill, { width: '88%', backgroundColor: '#10B981' }]} />
+              </View>
+            </View>
+
+            {/* Topic 2 */}
+            <View style={styles.reportBarItem}>
+              <View style={styles.reportBarLabelRow}>
+                <Text style={styles.reportBarTopic}>Service Rules: CCS (Conduct & CCA) Rules</Text>
+                <Text style={[styles.reportBarPct, { color: '#059669' }]}>82% (Strong)</Text>
+              </View>
+              <View style={styles.progressBarTrack}>
+                <View style={[styles.progressBarFill, { width: '82%', backgroundColor: '#10B981' }]} />
+              </View>
+            </View>
+
+            {/* Topic 3 */}
+            <View style={styles.reportBarItem}>
+              <View style={styles.reportBarLabelRow}>
+                <Text style={styles.reportBarTopic}>Child Rights & Acts: POCSO 2012 & RTE 2009</Text>
+                <Text style={[styles.reportBarPct, { color: '#059669' }]}>90% (Mastered)</Text>
+              </View>
+              <View style={styles.progressBarTrack}>
+                <View style={[styles.progressBarFill, { width: '90%', backgroundColor: '#059669' }]} />
+              </View>
+            </View>
+
+            {/* Topic 4 - WEAK AREA */}
+            <View style={styles.reportBarItem}>
+              <View style={styles.reportBarLabelRow}>
+                <Text style={styles.reportBarTopic}>Financial Administration: GFR 2017 & GeM</Text>
+                <Text style={[styles.reportBarPct, { color: '#D97706' }]}>54% (Action Needed)</Text>
+              </View>
+              <View style={styles.progressBarTrack}>
+                <View style={[styles.progressBarFill, { width: '54%', backgroundColor: '#F59E0B' }]} />
+              </View>
+            </View>
+          </View>
+
+          {/* AI Targeted Action Recommendation */}
+          <View style={styles.aiAlertBox}>
+            <View style={styles.aiAlertHeader}>
+              <AlertCircle size={16} color="#D97706" />
+              <Text style={styles.aiAlertTitle}>AI Diagnostic Action Item for this Test</Text>
+            </View>
+            <Text style={styles.aiAlertText}>
+              You lost 7.5 marks on GFR Rule 149 (Direct Purchase limits on GeM) and Rule 155. We recommend attempting the 15-question topic test <Text style={{ fontWeight: '700', color: '#B45309' }}>"Financial Administration: GFR & GeM Procurement"</Text> to recover these marks before your next full mock.
+            </Text>
+          </View>
+        </View>
+      </View>
+
+      {/* ================= SYLLABUS MODULES BREAKDOWN ================= */}
+      <View style={styles.sectionBlock}>
+        <View style={styles.sectionHeader}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+            <BookOpen size={20} color="#059669" />
+            <Text style={styles.sectionTitle}>Curriculum Mapped 100% to UPSC 2026</Text>
+          </View>
+        </View>
+
+        <View style={[styles.modulesGrid, isDesktop && styles.modulesGridDesktop]}>
+          {syllabusModules.map((module, i) => {
+            const IconComponent = module.icon;
+            return (
+              <View key={i} style={[styles.moduleCard, isDesktop && styles.moduleCardDesktop]}>
+                <View style={styles.moduleCardHeader}>
+                  <View style={[styles.statIconBox, { backgroundColor: module.iconBg }]}>
+                    <IconComponent size={20} color={module.iconColor} />
+                  </View>
+                  <View style={styles.moduleCountBadge}>
+                    <Text style={[styles.moduleCountText, { color: module.iconColor }]}>{module.tests}</Text>
+                  </View>
+                </View>
+                <Text style={styles.moduleTitle}>{module.title}</Text>
+                <Text style={styles.moduleHighlights}>{module.highlights}</Text>
+              </View>
+            );
+          })}
+        </View>
+      </View>
+
+      {/* ================= FREE VS PREMIUM COMPARISON ================= */}
+      <View style={styles.sectionBlock}>
+        <View style={styles.sectionHeader}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+            <Crown size={20} color="#F59E0B" />
+            <Text style={styles.sectionTitle}>Free Tier vs Premium Pass</Text>
+          </View>
+        </View>
+
+        <View style={styles.comparisonTable}>
+          {/* Header */}
+          <View style={styles.compTableHeader}>
+            <Text style={[styles.compColFeature, styles.compHeaderTitle]}>Features</Text>
+            <Text style={[styles.compColFree, styles.compHeaderTitle]}>Free Tier</Text>
+            <View style={[styles.compColPremium, styles.compHeaderHighlight]}>
+              <Crown size={14} color="#F59E0B" />
+              <Text style={[styles.compHeaderTitle, { color: '#1E40AF' }]}>Premium Pass</Text>
+            </View>
+          </View>
+
+          {/* Rows */}
+          <View style={styles.compTableRow}>
+            <Text style={styles.compColFeature}>Daily New Tests Added</Text>
+            <Text style={styles.compColFree}>❌ None</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>⚡ New Tests Everyday</Text>
+          </View>
+
+          <View style={styles.compTableRow}>
+            <Text style={styles.compColFeature}>Full Mock Tests (120 Qs)</Text>
+            <Text style={styles.compColFree}>1 Sample Test</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>All 26 Full Mocks</Text>
+          </View>
+
+          <View style={styles.compTableRow}>
+            <Text style={styles.compColFeature}>Topic-Wise Practice Tests</Text>
+            <Text style={styles.compColFree}>1 Topic</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>All 158 Topic Packs</Text>
+          </View>
+
+          <View style={styles.compTableRow}>
+            <Text style={styles.compColFeature}>Bilingual English / Hindi</Text>
+            <Text style={styles.compColFree}>Basic</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>100% Full Bilingual</Text>
+          </View>
+
+          <View style={styles.compTableRow}>
+            <Text style={styles.compColFeature}>Swamy's Handbook Rule Citations</Text>
+            <Text style={styles.compColFree}>Key only</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>Full Legal Rationale</Text>
+          </View>
+
+          <View style={styles.compTableRow}>
+            <Text style={styles.compColFeature}>AI Weak Area Diagnostics</Text>
+            <Text style={styles.compColFree}>❌ Not included</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>Full Diagnostic Engine</Text>
+          </View>
+
+          <View style={styles.compTableRow}>
+            <Text style={styles.compColFeature}>Test Re-attempts</Text>
+            <Text style={styles.compColFree}>1 Attempt</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>Unlimited Re-attempts</Text>
+          </View>
+        </View>
+      </View>
+
+      {/* ================= HOW WE COMPARE WITH OTHER APPS ================= */}
+      <View style={styles.sectionBlock}>
+        <View style={styles.sectionHeader}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+            <Scale size={20} color="#2563EB" />
+            <Text style={styles.sectionTitle}>Why Aspirants Choose Us Over Generic Test Apps</Text>
+          </View>
+        </View>
+
+        <View style={styles.comparisonTable}>
+          {/* Header */}
+          <View style={styles.compTableHeader}>
+            <Text style={[styles.compColFeature, styles.compHeaderTitle]}>What Matters for UPSC</Text>
+            <Text style={[styles.compColFree, styles.compHeaderTitle]}>Generic Apps (Testbook / Adda247)</Text>
+            <View style={[styles.compColPremium, styles.compHeaderHighlight]}>
+              <Crown size={14} color="#F59E0B" />
+              <Text style={[styles.compHeaderTitle, { color: '#1E40AF' }]}>Our Exam AI Pass</Text>
+            </View>
+          </View>
+
+          {/* Rows */}
+          <View style={styles.compTableRow}>
+            <Text style={styles.compColFeature}>Exam Focus & Pedagogy</Text>
+            <Text style={styles.compColFree}>Generic recycled banks from SSC/Railways/Clerk</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>100% Dedicated to UPSC Principal & Vice-Principal</Text>
+          </View>
+
+          <View style={styles.compTableRow}>
+            <Text style={styles.compColFeature}>Test Updates & Freshness</Text>
+            <Text style={styles.compColFree}>Static question banks created years ago</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>🚀 New Tests Built & Added Everyday</Text>
+          </View>
+
+          <View style={styles.compTableRow}>
+            <Text style={styles.compColFeature}>Service Rules Legal Accuracy</Text>
+            <Text style={styles.compColFree}>Basic answer keys with no rule or order references</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>Authentic Swamy's Handbook legal rationales (CCS/GFR)</Text>
+          </View>
+
+          <View style={styles.compTableRow}>
+            <Text style={styles.compColFeature}>Real Administrative Scenarios</Text>
+            <Text style={styles.compColFree}>Superficial rote theory; misses real school situations</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>Real-world leadership dilemmas (POCSO, RTE, GeM limits)</Text>
+          </View>
+
+          <View style={styles.compTableRow}>
+            <Text style={styles.compColFeature}>Bilingual Quality</Text>
+            <Text style={styles.compColFree}>Clunky machine translations with awkward phrasing</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>100% Native English & Devanagari Hindi translation</Text>
+          </View>
+
+          <View style={styles.compTableRow}>
+            <Text style={styles.compColFeature}>Pricing & Commitments</Text>
+            <Text style={styles.compColFree}>₹1,500 – ₹3,000/yr recurring auto-renew subscriptions</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>₹499 one-time • Zero renewals • Valid till exam day</Text>
+          </View>
+        </View>
+      </View>
+
+      {/* ================= FREQUENTLY ASKED QUESTIONS ================= */}
+      <View style={styles.sectionBlock}>
+        <View style={styles.sectionHeader}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+            <HelpCircle size={20} color="#64748B" />
+            <Text style={styles.sectionTitle}>Frequently Asked Questions</Text>
+          </View>
+        </View>
+
+        <View style={styles.faqList}>
+          {faqs.map((faq, index) => {
+            const isExpanded = expandedFaq === index;
+            return (
+              <TouchableOpacity
+                key={index}
+                style={styles.faqCard}
+                onPress={() => setExpandedFaq(isExpanded ? null : index)}
+                activeOpacity={0.7}
+              >
+                <View style={styles.faqHeader}>
+                  <Text style={styles.faqQuestion}>{faq.q}</Text>
+                  {isExpanded ? (
+                    <ChevronUp size={20} color="#64748B" />
+                  ) : (
+                    <ChevronDown size={20} color="#64748B" />
+                  )}
+                </View>
+                {isExpanded && <Text style={styles.faqAnswer}>{faq.a}</Text>}
+              </TouchableOpacity>
+            );
+          })}
+        </View>
+      </View>
+
+      {/* ================= BOTTOM CONVERSION CTA BANNER ================= */}
+      {!isSubscribed && (
+        <ImageBackground
+          source={require('@/assets/images/upsc-bg.png')}
+          style={[styles.bottomCtaBanner, { backgroundColor: '#1E40AF' }]}
+          imageStyle={{ borderRadius: 24, opacity: 0.35, width: '100%', height: '100%' }}
+          resizeMode="cover"
+        >
+          <LinearGradient
+            colors={['rgba(30,64,175,0.9)', 'rgba(59,130,246,0.75)']}
+            style={[StyleSheet.absoluteFillObject, { borderRadius: 24 }]}
+          />
+          <View style={styles.bottomCtaContent}>
+            <View style={styles.bottomTag}>
+              <Crown size={14} color="#F59E0B" />
+              <Text style={styles.bottomTagText}>ALL-ACCESS PASS • 2026 EDITION</Text>
+            </View>
+
+            <Text style={styles.bottomTitle}>Prepare with a Complete Mock-Test System.</Text>
+            <Text style={styles.bottomSub}>
+              Unlock all 26 full-length mocks, 158 topic tests, daily fresh papers, and Swamy's Handbook legal rationales. Instant activation for ₹499.
+            </Text>
+
+            <TouchableOpacity
+              style={styles.bottomBtn}
+              onPress={handlePurchase}
+              disabled={loading}
+              activeOpacity={0.9}
+            >
+              <Text style={styles.bottomBtnText}>
+                {loading ? 'Processing...' : 'Get Full Test Access · ₹499'}
+              </Text>
+            </TouchableOpacity>
+
+            <Text style={styles.bottomFootnote}>
+              One-time payment · No recurring charges · Valid until UPSC 2026 exam day
+            </Text>
+          </View>
+        </ImageBackground>
+      )}
+
+      {/* Help Support Card */}
+      <View style={styles.supportBox}>
+        <View style={[styles.statIconBox, { backgroundColor: '#E0F2FE' }]}>
+          <MessageCircle size={20} color="#0284C7" />
+        </View>
+        <View style={{ flex: 1, marginLeft: 14 }}>
+          <Text style={styles.supportTitle}>Need Help or Have a Question?</Text>
+          <Text style={styles.supportDesc}>
+            Our educator support desk is active Mon–Sat (9 AM to 8 PM). Reach us at <Text style={{ fontWeight: '700', color: '#0369A1' }}>support@exam-ai.com</Text>.
+          </Text>
+        </View>
+      </View>
+
+      <View style={{ height: 40 }} />
+    </View>
+  );
+
+  const renderPhoneModal = () => {
+    const isCleanPhoneValid = phoneNumber.replace(/\D/g, '').length === 10;
+    return (
+      <Modal
+        visible={showPhoneModal}
+        transparent
+        animationType="fade"
+        onRequestClose={() => {
+          if (!loading) setShowPhoneModal(false);
+        }}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
+            {/* Modal Header Icon */}
+            <View style={styles.modalHeaderIcon}>
+              <Phone size={24} color="#2563EB" />
+            </View>
+            <Text style={styles.modalTitle}>Enter Mobile Number</Text>
+            <Text style={styles.modalSubtitle}>
+              Cashfree requires your 10-digit mobile number for transaction receipts and payment verification.
+            </Text>
+
+            {/* Input Box */}
+            <View style={[styles.phoneInputContainer, phoneError ? styles.phoneInputContainerError : null]}>
+              <View style={styles.phoneCountryPrefix}>
+                <Text style={styles.phoneCountryFlag}>🇮🇳</Text>
+                <Text style={styles.phoneCountryCode}>+91</Text>
+              </View>
+              <TextInput
+                style={styles.phoneTextInput}
+                placeholder="Enter 10-digit number"
+                placeholderTextColor="#94A3B8"
+                keyboardType="phone-pad"
+                maxLength={10}
+                value={phoneNumber}
+                onChangeText={(text) => {
+                  const cleaned = text.replace(/\D/g, '');
+                  setPhoneNumber(cleaned);
+                  if (cleaned.length === 10) {
+                    setPhoneError('');
+                  }
+                }}
+                autoFocus
+              />
+            </View>
+
+            {phoneError ? (
+              <Text style={styles.phoneErrorText}>{phoneError}</Text>
+            ) : null}
+
+            {/* Modal Actions */}
+            <TouchableOpacity
+              style={[
+                styles.modalSubmitBtn,
+                !isCleanPhoneValid && styles.modalSubmitBtnDisabled,
+              ]}
+              onPress={() => {
+                const clean = phoneNumber.replace(/\D/g, '').slice(-10);
+                if (clean.length !== 10) {
+                  setPhoneError('Please enter a valid 10-digit mobile number');
+                  return;
+                }
+                proceedWithPayment(clean);
+              }}
+              disabled={loading || !isCleanPhoneValid}
+              activeOpacity={0.88}
+            >
+              {loading ? (
+                <ActivityIndicator size="small" color="#FFFFFF" />
+              ) : (
+                <Text style={styles.modalSubmitBtnText}>Proceed to Payment · ₹499</Text>
+              )}
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.modalCancelBtn}
+              onPress={() => setShowPhoneModal(false)}
+              disabled={loading}
+              activeOpacity={0.7}
+            >
+              <Text style={styles.modalCancelBtnText}>Cancel</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
+    );
+  };
+
+  const isPageLoading = isSubscriptionLoading || (user && localSubscribed === null && checkingStatus);
+
+  if (isPageLoading) {
+    const loadingView = (
+      <View style={{ flex: 1, minHeight: 450, justifyContent: 'center', alignItems: 'center', padding: 32 }}>
+        <ActivityIndicator size="large" color="#2563EB" />
+        <Text style={{ marginTop: 16, fontSize: 16, fontWeight: '600', color: '#1E293B' }}>
+          Verifying All-Access Pass...
+        </Text>
+        <Text style={{ marginTop: 6, fontSize: 14, color: '#64748B', textAlign: 'center' }}>
+          Checking your subscription status with first priority
+        </Text>
+      </View>
+    );
+
+    if (isDesktop) {
+      return (
+        <DesktopDashboard disableScroll={true}>
+          {loadingView}
+        </DesktopDashboard>
+      );
+    }
+
+    return (
+      <SafeAreaView style={styles.mobileSafeArea} edges={['top', 'bottom']}>
+        <StatusBar style="light" />
+        <View style={styles.mobileTopBar}>
+          <TouchableOpacity
+            style={styles.mobileBackBtn}
+            onPress={() => router.back()}
+            accessibilityLabel="Go back"
+          >
+            <ArrowLeft size={20} color="#FFFFFF" />
+          </TouchableOpacity>
+          <View style={styles.mobileHeaderCenter}>
+            <Text style={styles.mobileHeaderTitle}>Premium Pass</Text>
+          </View>
+          <View style={{ width: 36 }} />
+        </View>
+        {loadingView}
+      </SafeAreaView>
+    );
+  }
+
+  // If on large screen / desktop, wrap inside the app's standard DesktopDashboard layout!
+  if (isDesktop) {
+    return (
+      <>
+        <DesktopDashboard disableScroll={false}>
+          {pageContent}
+        </DesktopDashboard>
+        {renderPhoneModal()}
+      </>
+    );
+  }
+
+  // On Mobile: Render clean native mobile layout with top header & sticky bottom purchase bar
   return (
-    <SafeAreaView style={styles.safeArea} edges={['top', 'bottom']}>
+    <SafeAreaView style={styles.mobileSafeArea} edges={['top', 'bottom']}>
       <StatusBar style="light" />
 
-      {/* TOP NAVIGATION BAR */}
-      <View style={styles.topHeader}>
+      {/* MOBILE TOP BAR (MATCHES MOBILE DASHBOARD HEADER TONE) */}
+      <View style={styles.mobileTopBar}>
         <TouchableOpacity
-          style={styles.backBtn}
+          style={styles.mobileBackBtn}
           onPress={() => router.back()}
           accessibilityLabel="Go back"
         >
           <ArrowLeft size={20} color="#FFFFFF" />
         </TouchableOpacity>
-        <View style={styles.headerBrand}>
-          <Crown size={20} color="#F59E0B" />
-          <Text style={styles.headerTitle}>UPSC Principal 2026</Text>
-          <View style={styles.headerBadge}>
-            <Text style={styles.headerBadgeText}>PREMIUM</Text>
-          </View>
+        <View style={styles.mobileHeaderCenter}>
+          <Crown size={18} color="#F59E0B" />
+          <Text style={styles.mobileHeaderTitle}>All-Access Pass (2026)</Text>
         </View>
         <TouchableOpacity
-          style={styles.helpHeaderBtn}
+          style={styles.mobileHelpBtn}
           onPress={() => {
-            const msg = 'Contact Support:\nEmail: support@exam-ai.com\nHelpline: +91 98765 43210';
+            const msg = 'Contact Support: support@exam-ai.com';
             if (Platform.OS === 'web') window.alert(msg);
             else alert(msg);
           }}
         >
-          <MessageCircle size={18} color="#94A3B8" />
-          <Text style={styles.helpHeaderText}>Help</Text>
+          <Text style={styles.mobileHelpText}>Help</Text>
         </TouchableOpacity>
       </View>
 
       <ScrollView
-        style={styles.scroll}
-        contentContainerStyle={[styles.scrollContent, isDesktop && styles.scrollContentDesktop]}
+        style={styles.mobileScrollView}
+        contentContainerStyle={{ paddingBottom: isSubscribed ? 30 : 90 }}
         showsVerticalScrollIndicator={false}
       >
-        {/* ================= HERO SECTION ================= */}
-        <ImageBackground
-          source={require('@/assets/images/upsc-bg.png')}
-          style={styles.heroBackground}
-          imageStyle={styles.heroBackgroundImage}
-          resizeMode="cover"
-        >
-          <LinearGradient
-            colors={['rgba(15, 23, 42, 0.95)', 'rgba(30, 58, 138, 0.92)', 'rgba(15, 23, 42, 0.98)']}
-            style={styles.heroOverlay}
-          >
-            <View style={[styles.heroContent, isDesktop && styles.heroContentDesktop]}>
-              {/* Trust Tag */}
-              <View style={styles.trustBadgeRow}>
-                <View style={styles.heroTag}>
-                  <ShieldCheck size={13} color="#10B981" />
-                  <Text style={styles.heroTagText}>UPSC GNCTD & KVS 2026 PATTERN</Text>
-                </View>
-                <View style={styles.verifiedTag}>
-                  <CheckCircle2 size={13} color="#38BDF8" />
-                  <Text style={styles.verifiedTagText}>3,145 QUESTIONS • 100% BILINGUAL</Text>
-                </View>
-              </View>
-
-              <Text style={styles.heroMainTitle}>
-                Comprehensive UPSC Principal & Vice-Principal Test Series
-              </Text>
-
-              <Text style={styles.heroDescription}>
-                Built for educators, Vice-Principals, and PGTs. Includes 26 full-length mocks (120 questions each), 158 topic-wise tests, authentic Swamy’s Handbook rule references, 100% bilingual papers, and AI-powered performance diagnostics.
-              </Text>
-
-              {/* Key Highlights Pill Row */}
-              <View style={styles.pillStatsGrid}>
-                <View style={styles.statPill}>
-                  <FileText size={16} color="#60A5FA" />
-                  <Text style={styles.statPillNum}>26</Text>
-                  <Text style={styles.statPillLabel}>Full Mocks</Text>
-                </View>
-                <View style={styles.statPill}>
-                  <BookOpen size={16} color="#A78BFA" />
-                  <Text style={styles.statPillNum}>158</Text>
-                  <Text style={styles.statPillLabel}>Topic Tests</Text>
-                </View>
-                <View style={styles.statPill}>
-                  <Award size={16} color="#FBBF24" />
-                  <Text style={styles.statPillNum}>3,145</Text>
-                  <Text style={styles.statPillLabel}>Questions with Rationale</Text>
-                </View>
-                <View style={styles.statPill}>
-                  <Globe size={16} color="#34D399" />
-                  <Text style={styles.statPillNum}>100%</Text>
-                  <Text style={styles.statPillLabel}>Bilingual (Eng/हिन्दी)</Text>
-                </View>
-              </View>
-            </View>
-          </LinearGradient>
-        </ImageBackground>
-
-        {/* ================= MAIN BODY CONTAINER ================= */}
-        <View style={[styles.mainContainer, isDesktop && styles.mainContainerDesktop]}>
-          {/* Active Subscriber State */}
-          {isSubscribed ? (
-            <View style={styles.activeSubscriberCard}>
-              <View style={styles.activeSubscriberHeader}>
-                <View style={styles.activeIconCircle}>
-                  <Crown size={28} color="#FFFFFF" />
-                </View>
-                <View style={{ flex: 1, marginLeft: 16 }}>
-                  <Text style={styles.activeSubscriberTitle}>You are a Premium Member!</Text>
-                  <Text style={styles.activeSubscriberSubtitle}>
-                    All 50+ Full Mock Tests, Topic Wise Packs & AI Analytics are fully unlocked.
-                  </Text>
-                </View>
-              </View>
-
-              <View style={styles.activeActionsRow}>
-                <TouchableOpacity
-                  style={styles.activePrimaryBtn}
-                  onPress={() => router.push('/test-list')}
-                >
-                  <Text style={styles.activePrimaryBtnText}>Go to All Tests →</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                  style={styles.activeResetBtn}
-                  onPress={handleDevReset}
-                >
-                  <Text style={styles.activeResetBtnText}>Reset to Free (Dev Test)</Text>
-                </TouchableOpacity>
-              </View>
-            </View>
-          ) : (
-            /* ================= PRICING HERO CARD ================= */
-            <View style={[styles.pricingSection, isDesktop && styles.pricingSectionDesktop]}>
-              <View style={styles.pricingLeftCol}>
-                <View style={styles.urgencyBar}>
-                  <Sparkles size={14} color="#D97706" />
-                  <Text style={styles.urgencyText}>SPECIAL LAUNCH OFFER • SAVE ₹1,000</Text>
-                </View>
-
-                <Text style={styles.pricingCardTitle}>All-Inclusive UPSC Principal Pass</Text>
-                <Text style={styles.pricingCardSubtitle}>
-                  One-time payment. Instant full access to every existing and newly released test until your exam day in 2026.
-                </Text>
-
-                {/* Price Display */}
-                <View style={styles.priceContainer}>
-                  <View style={styles.priceRow}>
-                    <Text style={styles.priceCurrency}>₹</Text>
-                    <Text style={styles.priceMain}>499</Text>
-                    <View style={styles.priceCutCol}>
-                      <Text style={styles.priceOriginal}>₹1,499</Text>
-                      <View style={styles.priceSaveBadge}>
-                        <Text style={styles.priceSaveText}>67% OFF</Text>
-                      </View>
-                    </View>
-                  </View>
-                  <Text style={styles.priceNote}>
-                    Only <Text style={{ fontWeight: '700', color: '#0F172A' }}>₹9.90</Text> per full test paper. No monthly subscriptions.
-                  </Text>
-                </View>
-
-                {/* Checklist */}
-                <View style={styles.checklist}>
-                  <View style={styles.checkItem}>
-                    <CheckCircle2 size={18} color="#10B981" />
-                    <Text style={styles.checkText}>
-                      <Text style={styles.boldText}>26 Full-Length Mocks & 158 Topic Tests</Text> (3,145 total questions)
-                    </Text>
-                  </View>
-                  <View style={styles.checkItem}>
-                    <CheckCircle2 size={18} color="#10B981" />
-                    <Text style={styles.checkText}>
-                      <Text style={styles.boldText}>100% Bilingual Interface</Text> with instant English & Hindi toggling
-                    </Text>
-                  </View>
-                  <View style={styles.checkItem}>
-                    <CheckCircle2 size={18} color="#10B981" />
-                    <Text style={styles.checkText}>
-                      <Text style={styles.boldText}>In-Depth Explanations</Text> citing exact Swamy’s Rule numbers, Sections & Acts
-                    </Text>
-                  </View>
-                  <View style={styles.checkItem}>
-                    <CheckCircle2 size={18} color="#10B981" />
-                    <Text style={styles.checkText}>
-                      <Text style={styles.boldText}>All-India Rank & AI Diagnostics</Text> to identify weak syllabus chapters
-                    </Text>
-                  </View>
-                  <View style={styles.checkItem}>
-                    <CheckCircle2 size={18} color="#10B981" />
-                    <Text style={styles.checkText}>
-                      <Text style={styles.boldText}>Unlimited Test Re-attempts</Text> with full score progression tracking
-                    </Text>
-                  </View>
-                  <View style={styles.checkItem}>
-                    <CheckCircle2 size={18} color="#10B981" />
-                    <Text style={styles.checkText}>
-                      <Text style={styles.boldText}>Web + Mobile Access</Text> synced on all your devices
-                    </Text>
-                  </View>
-                </View>
-              </View>
-
-              <View style={styles.pricingRightCol}>
-                {/* Buy Button Card */}
-                <View style={styles.checkoutActionBox}>
-                  <View style={styles.guaranteePill}>
-                    <ShieldCheck size={14} color="#059669" />
-                    <Text style={styles.guaranteePillText}>100% Satisfaction Guarantee</Text>
-                  </View>
-
-                  <TouchableOpacity
-                    style={[styles.checkoutBtn, loading && styles.checkoutBtnDisabled]}
-                    onPress={handlePurchase}
-                    disabled={loading}
-                    activeOpacity={0.9}
-                  >
-                    <LinearGradient
-                      colors={['#2563EB', '#1D4ED8', '#1E40AF']}
-                      start={{ x: 0, y: 0 }}
-                      end={{ x: 1, y: 0 }}
-                      style={styles.checkoutBtnGradient}
-                    >
-                      {loading ? (
-                        <ActivityIndicator size="small" color="#FFFFFF" />
-                      ) : (
-                        <>
-                          <Lock size={18} color="#FFFFFF" />
-                          <Text style={styles.checkoutBtnText}>Unlock Full Access • ₹499</Text>
-                        </>
-                      )}
-                    </LinearGradient>
-                  </TouchableOpacity>
-
-                  <Text style={styles.checkoutSubtext}>
-                    Instant access activated automatically upon payment.
-                  </Text>
-
-                  {/* Payment Methods Badges */}
-                  <View style={styles.paymentMethodsContainer}>
-                    <Text style={styles.paymentMethodsHeader}>ACCEPTED PAYMENT METHODS</Text>
-                    <View style={styles.paymentBadgesRow}>
-                      <View style={styles.payBadge}>
-                        <Text style={styles.payBadgeText}>UPI</Text>
-                      </View>
-                      <View style={styles.payBadge}>
-                        <Text style={styles.payBadgeText}>GPay</Text>
-                      </View>
-                      <View style={styles.payBadge}>
-                        <Text style={styles.payBadgeText}>PhonePe</Text>
-                      </View>
-                      <View style={styles.payBadge}>
-                        <Text style={styles.payBadgeText}>Paytm</Text>
-                      </View>
-                      <View style={styles.payBadge}>
-                        <Text style={styles.payBadgeText}>RuPay</Text>
-                      </View>
-                      <View style={styles.payBadge}>
-                        <Text style={styles.payBadgeText}>Cards / NetBanking</Text>
-                      </View>
-                    </View>
-                    <View style={styles.secureBadgeRow}>
-                      <ShieldCheck size={13} color="#64748B" />
-                      <Text style={styles.secureText}>Powered by Razorpay • 256-Bit SSL Encrypted</Text>
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </View>
-          )}
-
-          {/* ================= INTERACTIVE QUESTION PREVIEW (PROOF OF QUALITY) ================= */}
-          <View style={styles.interactivePreviewSection}>
-            <View style={styles.sectionHeaderRow}>
-              <View>
-                <View style={styles.sectionTag}>
-                  <Text style={styles.sectionTagText}>LIVE EXAM PREVIEW</Text>
-                </View>
-                <Text style={styles.sectionTitle}>Experience Real Question Quality</Text>
-                <Text style={styles.sectionSubtitle}>
-                  Try this sample question from our CCS Conduct Rules module. Notice the authentic Swamy handbook rule citations.
-                </Text>
-              </View>
-
-              {/* Language Switcher */}
-              <View style={styles.langSwitchWrapper}>
-                <TouchableOpacity
-                  style={[styles.langBtn, sampleLang === 'en' && styles.langBtnActive]}
-                  onPress={() => setSampleLang('en')}
-                >
-                  <Text style={[styles.langBtnText, sampleLang === 'en' && styles.langBtnTextActive]}>English</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={[styles.langBtn, sampleLang === 'hi' && styles.langBtnActive]}
-                  onPress={() => setSampleLang('hi')}
-                >
-                  <Text style={[styles.langBtnText, sampleLang === 'hi' && styles.langBtnTextActive]}>हिन्दी</Text>
-                </TouchableOpacity>
-              </View>
-            </View>
-
-            <View style={styles.previewCard}>
-              <View style={styles.previewCardHeader}>
-                <View style={styles.questionTopicBadge}>
-                  <BookOpen size={12} color="#1E40AF" />
-                  <Text style={styles.questionTopicText}>{activeQuestion.topic}</Text>
-                </View>
-                <View style={styles.marksBadge}>
-                  <Text style={styles.marksBadgeText}>+2.5 Marks • -0.83 Negative</Text>
-                </View>
-              </View>
-
-              <Text style={styles.previewQuestionText}>{activeQuestion.question}</Text>
-
-              {/* Options */}
-              <View style={styles.optionsList}>
-                {activeQuestion.options.map((opt, idx) => {
-                  const letter = String.fromCharCode(65 + idx);
-                  const isSelected = selectedOption === idx;
-                  const isCorrect = idx === activeQuestion.correctIndex;
-                  const showResult = showExplanation;
-
-                  let optStyle = styles.optionItem;
-                  let circleStyle = styles.optionLetterCircle;
-
-                  if (showResult && isCorrect) {
-                    optStyle = { ...styles.optionItem, ...styles.optionItemCorrect };
-                    circleStyle = { ...styles.optionLetterCircle, ...styles.optionLetterCircleCorrect };
-                  } else if (showResult && isSelected && !isCorrect) {
-                    optStyle = { ...styles.optionItem, ...styles.optionItemWrong };
-                    circleStyle = { ...styles.optionLetterCircle, ...styles.optionLetterCircleWrong };
-                  } else if (isSelected) {
-                    optStyle = { ...styles.optionItem, ...styles.optionItemSelected };
-                    circleStyle = { ...styles.optionLetterCircle, ...styles.optionLetterCircleSelected };
-                  }
-
-                  return (
-                    <TouchableOpacity
-                      key={idx}
-                      style={optStyle}
-                      onPress={() => {
-                        setSelectedOption(idx);
-                        setShowExplanation(true);
-                      }}
-                      activeOpacity={0.8}
-                    >
-                      <View style={circleStyle}>
-                        <Text style={styles.optionLetterText}>{letter}</Text>
-                      </View>
-                      <Text style={styles.optionText}>{opt}</Text>
-                    </TouchableOpacity>
-                  );
-                })}
-              </View>
-
-              {/* Explanation Box */}
-              {showExplanation ? (
-                <View style={styles.explanationBox}>
-                  <View style={styles.explanationHeader}>
-                    <CheckCircle2 size={16} color="#059669" />
-                    <Text style={styles.explanationTitle}>Detailed Legal & Pedagogical Rationale</Text>
-                  </View>
-                  <Text style={styles.explanationContent}>{activeQuestion.explanation}</Text>
-                </View>
-              ) : (
-                <TouchableOpacity
-                  style={styles.revealExplanationBtn}
-                  onPress={() => setShowExplanation(true)}
-                >
-                  <Text style={styles.revealExplanationText}>Tap any option above to reveal detailed rationale →</Text>
-                </TouchableOpacity>
-              )}
-            </View>
-          </View>
-
-          {/* ================= SYLLABUS MODULES BREAKDOWN ================= */}
-          <View style={styles.modulesSection}>
-            <View style={styles.sectionTag}>
-              <Text style={styles.sectionTagText}>COMPREHENSIVE COVERAGE</Text>
-            </View>
-            <Text style={styles.sectionTitle}>Mapped 100% to UPSC Principal 2026 Syllabus</Text>
-            <Text style={styles.sectionSubtitle}>
-              Every module is designed around official recruitment guidelines with verified rule citations.
-            </Text>
-
-            <View style={[styles.modulesGrid, isDesktop && styles.modulesGridDesktop]}>
-              {syllabusModules.map((module, i) => {
-                const IconComponent = module.icon;
-                return (
-                  <View key={i} style={[styles.moduleCard, isDesktop && styles.moduleCardDesktop]}>
-                    <View style={styles.moduleHeader}>
-                      <View style={[styles.moduleIconBox, { backgroundColor: `${module.color}15` }]}>
-                        <IconComponent size={22} color={module.color} />
-                      </View>
-                      <View style={styles.moduleBadge}>
-                        <Text style={[styles.moduleBadgeText, { color: module.color }]}>{module.tests}</Text>
-                      </View>
-                    </View>
-                    <Text style={styles.moduleTitle}>{module.title}</Text>
-                    <Text style={styles.moduleHighlights}>{module.highlights}</Text>
-                  </View>
-                );
-              })}
-            </View>
-          </View>
-
-          {/* ================= AI DIAGNOSTICS PREVIEW ================= */}
-          <View style={styles.diagnosticsPreviewCard}>
-            <View style={[styles.diagInner, isDesktop && styles.diagInnerDesktop]}>
-              <View style={styles.diagLeft}>
-                <View style={styles.diagTag}>
-                  <Zap size={13} color="#7C3AED" />
-                  <Text style={styles.diagTagText}>AI DIAGNOSTICS & AIR PREDICTOR</Text>
-                </View>
-                <Text style={styles.diagTitle}>Know Exactly Where You Stand Before the Real Exam</Text>
-                <Text style={styles.diagDesc}>
-                  Our diagnostic engine evaluates your test attempts to identify your specific negative-mark traps and syllabus blind spots.
-                </Text>
-                <View style={styles.diagBulletList}>
-                  <View style={styles.diagBulletItem}>
-                    <Check size={16} color="#7C3AED" />
-                    <Text style={styles.diagBulletText}>All-India Rank (AIR) and percentile calculation</Text>
-                  </View>
-                  <View style={styles.diagBulletItem}>
-                    <Check size={16} color="#7C3AED" />
-                    <Text style={styles.diagBulletText}>Negative marking impact analysis (Score vs Accuracy)</Text>
-                  </View>
-                  <View style={styles.diagBulletItem}>
-                    <Check size={16} color="#7C3AED" />
-                    <Text style={styles.diagBulletText}>Topic-by-topic readiness scores (Safe, Moderate, Danger)</Text>
-                  </View>
-                </View>
-              </View>
-
-              {/* Visual Diagnostic Mock Card */}
-              <View style={styles.diagRight}>
-                <View style={styles.mockReportCard}>
-                  <View style={styles.mockReportHeader}>
-                    <Text style={styles.mockReportTitle}>Aspirant Performance Diagnostic</Text>
-                    <View style={styles.mockStatusLive}>
-                      <View style={styles.liveDot} />
-                      <Text style={styles.liveText}>SAMPLE</Text>
-                    </View>
-                  </View>
-
-                  <View style={styles.mockScoreRow}>
-                    <View style={styles.mockMetricBox}>
-                      <Text style={styles.mockMetricVal}>192.5</Text>
-                      <Text style={styles.mockMetricLabel}>Predicted Score (/300)</Text>
-                    </View>
-                    <View style={styles.mockMetricBox}>
-                      <Text style={[styles.mockMetricVal, { color: '#059669' }]}>AIR #28</Text>
-                      <Text style={styles.mockMetricLabel}>Top 1.2% Percentile</Text>
-                    </View>
-                    <View style={styles.mockMetricBox}>
-                      <Text style={[styles.mockMetricVal, { color: '#2563EB' }]}>84.8%</Text>
-                      <Text style={styles.mockMetricLabel}>Accuracy Rate</Text>
-                    </View>
-                  </View>
-
-                  <View style={styles.mockTopicBars}>
-                    <View style={styles.mockBarItem}>
-                      <View style={styles.mockBarHeader}>
-                        <Text style={styles.mockBarName}>School Leadership & NEP</Text>
-                        <Text style={styles.mockBarScore}>88% (Mastered)</Text>
-                      </View>
-                      <View style={styles.mockBarTrack}>
-                        <View style={[styles.mockBarFill, { width: '88%', backgroundColor: '#10B981' }]} />
-                      </View>
-                    </View>
-
-                    <View style={styles.mockBarItem}>
-                      <View style={styles.mockBarHeader}>
-                        <Text style={styles.mockBarName}>CCS (Conduct & CCA) Rules</Text>
-                        <Text style={styles.mockBarScore}>76% (Good)</Text>
-                      </View>
-                      <View style={styles.mockBarTrack}>
-                        <View style={[styles.mockBarFill, { width: '76%', backgroundColor: '#3B82F6' }]} />
-                      </View>
-                    </View>
-
-                    <View style={styles.mockBarItem}>
-                      <View style={styles.mockBarHeader}>
-                        <Text style={styles.mockBarName}>Financial Rules (GFR 2017 & GeM)</Text>
-                        <Text style={[styles.mockBarScore, { color: '#EF4444' }]}>52% (Focus Area)</Text>
-                      </View>
-                      <View style={styles.mockBarTrack}>
-                        <View style={[styles.mockBarFill, { width: '52%', backgroundColor: '#EF4444' }]} />
-                      </View>
-                    </View>
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-
-          {/* ================= FREE VS PREMIUM COMPARISON ================= */}
-          <View style={styles.comparisonSection}>
-            <View style={styles.sectionTag}>
-              <Text style={styles.sectionTagText}>SIDE-BY-SIDE</Text>
-            </View>
-            <Text style={styles.sectionTitle}>Free Tier vs Premium Pass</Text>
-
-            <View style={styles.comparisonTable}>
-              {/* Header */}
-              <View style={styles.compTableHeader}>
-                <Text style={[styles.compColFeature, styles.compHeaderTitle]}>Feature</Text>
-                <Text style={[styles.compColFree, styles.compHeaderTitle]}>Free Tier</Text>
-                <View style={[styles.compColPremium, styles.compHeaderPremiumHighlight]}>
-                  <Crown size={14} color="#F59E0B" />
-                  <Text style={[styles.compHeaderTitle, { color: '#1E40AF' }]}>Premium Pass</Text>
-                </View>
-              </View>
-
-              {/* Rows */}
-              <View style={styles.compTableRow}>
-                <Text style={styles.compColFeature}>Full Mock Tests (120 Qs)</Text>
-                <Text style={styles.compColFree}>1 Sample Test</Text>
-                <Text style={[styles.compColPremium, styles.compPremiumBold]}>All 26 Full Mocks</Text>
-              </View>
-
-              <View style={styles.compTableRow}>
-                <Text style={styles.compColFeature}>Topic-Wise Test Packs</Text>
-                <Text style={styles.compColFree}>1 Pack</Text>
-                <Text style={[styles.compColPremium, styles.compPremiumBold]}>All 158 Topic Packs</Text>
-              </View>
-
-              <View style={styles.compTableRow}>
-                <Text style={styles.compColFeature}>Bilingual English / Hindi</Text>
-                <Text style={styles.compColFree}>Basic</Text>
-                <Text style={[styles.compColPremium, styles.compPremiumBold]}>100% Full Bilingual</Text>
-              </View>
-
-              <View style={styles.compTableRow}>
-                <Text style={styles.compColFeature}>Detailed Swamy's Rule Citations</Text>
-                <Text style={styles.compColFree}>Answer key only</Text>
-                <Text style={[styles.compColPremium, styles.compPremiumBold]}>Full Legal Rationale</Text>
-              </View>
-
-              <View style={styles.compTableRow}>
-                <Text style={styles.compColFeature}>AI Weak Area Diagnostics & AIR</Text>
-                <Text style={styles.compColFree}>❌ Not included</Text>
-                <Text style={[styles.compColPremium, styles.compPremiumBold]}>Full Diagnostic Engine</Text>
-              </View>
-
-              <View style={styles.compTableRow}>
-                <Text style={styles.compColFeature}>Test Re-attempts</Text>
-                <Text style={styles.compColFree}>1 Attempt</Text>
-                <Text style={[styles.compColPremium, styles.compPremiumBold]}>Unlimited Re-attempts</Text>
-              </View>
-            </View>
-          </View>
-
-          {/* ================= FREQUENTLY ASKED QUESTIONS ================= */}
-          <View style={styles.faqSection}>
-            <View style={styles.sectionTag}>
-              <Text style={styles.sectionTagText}>GOT QUESTIONS?</Text>
-            </View>
-            <Text style={styles.sectionTitle}>Frequently Asked Questions</Text>
-
-            <View style={styles.faqList}>
-              {faqs.map((faq, index) => {
-                const isExpanded = expandedFaq === index;
-                return (
-                  <TouchableOpacity
-                    key={index}
-                    style={styles.faqCard}
-                    onPress={() => setExpandedFaq(isExpanded ? null : index)}
-                    activeOpacity={0.7}
-                  >
-                    <View style={styles.faqHeader}>
-                      <Text style={styles.faqQuestion}>{faq.q}</Text>
-                      {isExpanded ? (
-                        <ChevronUp size={20} color="#64748B" />
-                      ) : (
-                        <ChevronDown size={20} color="#64748B" />
-                      )}
-                    </View>
-                    {isExpanded && <Text style={styles.faqAnswer}>{faq.a}</Text>}
-                  </TouchableOpacity>
-                );
-              })}
-            </View>
-          </View>
-
-          {/* ================= BOTTOM CTA BOX ================= */}
-          {!isSubscribed && (
-            <LinearGradient
-              colors={['#1E1B4B', '#312E81', '#1E40AF']}
-              start={{ x: 0, y: 0 }}
-              end={{ x: 1, y: 1 }}
-              style={styles.bottomCtaBox}
-            >
-              <View style={styles.bottomCtaTag}>
-                <Crown size={14} color="#F59E0B" />
-                <Text style={styles.bottomCtaTagText}>LIMITED TIME INAUGURAL PRICING</Text>
-              </View>
-
-              <Text style={styles.bottomCtaTitle}>Ready to Prepare with Authentic UPSC Mock Papers?</Text>
-              <Text style={styles.bottomCtaSubtitle}>
-                Get full access to all 26 full mocks, 158 topic tests, and detailed bilingual solutions. Immediate access for just ₹499.
-              </Text>
-
-              <TouchableOpacity
-                style={styles.bottomCtaBtn}
-                onPress={handlePurchase}
-                disabled={loading}
-                activeOpacity={0.9}
-              >
-                <Text style={styles.bottomCtaBtnText}>
-                  {loading ? 'Processing...' : 'Unlock Everything for ₹499 →'}
-                </Text>
-              </TouchableOpacity>
-
-              <Text style={styles.bottomCtaFooterNote}>
-                One-time payment • No recurring deductions • 100% Secure via Razorpay
-              </Text>
-            </LinearGradient>
-          )}
-
-          {/* Support Helpline Card */}
-          <View style={styles.supportCard}>
-            <View style={styles.supportIconBox}>
-              <HelpCircle size={22} color="#0284C7" />
-            </View>
-            <View style={{ flex: 1, marginLeft: 14 }}>
-              <Text style={styles.supportTitle}>Need Help or Have a Question?</Text>
-              <Text style={styles.supportText}>
-                Our educator support team is available Mon-Sat (9 AM - 8 PM). Reach us at <Text style={{ fontWeight: '700' }}>support@exam-ai.com</Text>.
-              </Text>
-            </View>
-          </View>
-
-          <View style={{ height: 60 }} />
-        </View>
+        {pageContent}
       </ScrollView>
 
-      {/* STICKY BOTTOM BAR ON MOBILE FOR INSTANT CONVERSION */}
-      {!isDesktop && !isSubscribed && (
+      {/* STICKY BOTTOM BUY BAR ON MOBILE */}
+      {!isSubscribed && (
         <View style={styles.stickyMobileBar}>
           <View>
             <View style={styles.stickyPriceRow}>
@@ -877,272 +1219,235 @@ export default function PremiumScreen() {
             {loading ? (
               <ActivityIndicator size="small" color="#FFFFFF" />
             ) : (
-              <Text style={styles.stickyBuyBtnText}>Unlock All Tests</Text>
+              <Text style={styles.stickyBuyBtnText}>Get Full Test Access · ₹499</Text>
             )}
           </TouchableOpacity>
         </View>
       )}
+
+      {renderPhoneModal()}
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    backgroundColor: '#0F172A',
+  pageWrapper: {
+    padding: 16,
+    maxWidth: 1140,
+    alignSelf: 'center',
+    width: '100%',
   },
-  topHeader: {
-    height: 56,
+  mobileSafeArea: {
+    flex: 1,
+    backgroundColor: '#3B82F6',
+  },
+  mobileTopBar: {
+    height: 52,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 16,
-    backgroundColor: '#0F172A',
-    borderBottomWidth: 1,
-    borderBottomColor: '#1E293B',
+    backgroundColor: '#3B82F6',
   },
-  backBtn: {
+  mobileBackBtn: {
     width: 36,
     height: 36,
     borderRadius: 18,
-    backgroundColor: '#1E293B',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  headerBrand: {
+  mobileHeaderCenter: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    gap: 6,
   },
-  headerTitle: {
+  mobileHeaderTitle: {
     color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '800',
-    letterSpacing: -0.2,
   },
-  headerBadge: {
-    backgroundColor: 'rgba(245, 158, 11, 0.15)',
-    paddingHorizontal: 6,
-    paddingVertical: 2,
-    borderRadius: 6,
-    borderWidth: 1,
-    borderColor: 'rgba(245, 158, 11, 0.4)',
-  },
-  headerBadgeText: {
-    color: '#FBBF24',
-    fontSize: 9,
-    fontWeight: '800',
-    letterSpacing: 0.5,
-  },
-  helpHeaderBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
+  mobileHelpBtn: {
     paddingHorizontal: 8,
     paddingVertical: 4,
   },
-  helpHeaderText: {
-    color: '#94A3B8',
+  mobileHelpText: {
+    color: 'rgba(255, 255, 255, 0.85)',
     fontSize: 13,
     fontWeight: '600',
   },
-  scroll: {
+  mobileScrollView: {
     flex: 1,
     backgroundColor: '#F8FAFC',
   },
-  scrollContent: {
-    paddingBottom: 40,
-  },
-  scrollContentDesktop: {
-    paddingBottom: 60,
-  },
-  heroBackground: {
-    backgroundColor: '#0F172A',
-  },
-  heroBackgroundImage: {
-    opacity: 0.22,
-  },
-  heroOverlay: {
-    paddingVertical: 36,
-    paddingHorizontal: 20,
+  heroBanner: {
+    borderRadius: 24,
+    padding: 24,
+    marginBottom: 24,
+    overflow: 'hidden',
   },
   heroContent: {
-    maxWidth: 1100,
-    alignSelf: 'center',
-    width: '100%',
+    zIndex: 2,
   },
-  heroContentDesktop: {
-    paddingVertical: 20,
-  },
-  trustBadgeRow: {
+  heroTagsRow: {
     flexDirection: 'row',
     alignItems: 'center',
     flexWrap: 'wrap',
-    gap: 10,
-    marginBottom: 16,
+    gap: 8,
+    marginBottom: 12,
   },
-  heroTag: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    backgroundColor: 'rgba(16, 185, 129, 0.18)',
-    borderWidth: 1,
-    borderColor: 'rgba(16, 185, 129, 0.4)',
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    borderRadius: 20,
-  },
-  heroTagText: {
-    color: '#34D399',
-    fontSize: 11,
-    fontWeight: '800',
-    letterSpacing: 0.5,
-  },
-  verifiedTag: {
+  heroTagBadge: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 5,
-    backgroundColor: 'rgba(56, 189, 248, 0.15)',
-    borderWidth: 1,
-    borderColor: 'rgba(56, 189, 248, 0.4)',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
     paddingHorizontal: 10,
     paddingVertical: 5,
-    borderRadius: 20,
+    borderRadius: 12,
   },
-  verifiedTagText: {
-    color: '#38BDF8',
+  heroTagText: {
+    color: '#FFFFFF',
     fontSize: 11,
     fontWeight: '800',
     letterSpacing: 0.5,
   },
-  heroMainTitle: {
-    color: '#FFFFFF',
-    fontSize: 28,
-    fontWeight: '900',
-    lineHeight: 36,
-    marginBottom: 14,
-    letterSpacing: -0.5,
-  },
-  heroDescription: {
-    color: 'rgba(255, 255, 255, 0.85)',
-    fontSize: 15,
-    lineHeight: 22,
-    marginBottom: 24,
-    maxWidth: 780,
-  },
-  pillStatsGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 10,
-  },
-  statPill: {
+  heroVerifiedBadge: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 6,
-    backgroundColor: 'rgba(255, 255, 255, 0.12)',
-    paddingHorizontal: 12,
-    paddingVertical: 7,
+    gap: 5,
+    backgroundColor: 'rgba(52, 211, 153, 0.25)',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
     borderRadius: 12,
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.16)',
   },
-  statPillNum: {
-    color: '#FFFFFF',
-    fontSize: 13,
+  heroVerifiedText: {
+    color: '#34D399',
+    fontSize: 11,
     fontWeight: '800',
   },
-  statPillLabel: {
-    color: 'rgba(255, 255, 255, 0.8)',
-    fontSize: 12,
-    fontWeight: '600',
-  },
-  mainContainer: {
-    paddingHorizontal: 16,
-    paddingTop: 24,
-    maxWidth: 1120,
-    width: '100%',
-    alignSelf: 'center',
-  },
-  mainContainerDesktop: {
-    paddingHorizontal: 24,
-    paddingTop: 32,
-  },
-  activeSubscriberCard: {
-    backgroundColor: '#1E1B4B',
-    borderRadius: 20,
-    padding: 24,
-    marginBottom: 32,
-    borderWidth: 1,
-    borderColor: '#4338CA',
-  },
-  activeSubscriberHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  activeIconCircle: {
-    width: 52,
-    height: 52,
-    borderRadius: 26,
-    backgroundColor: '#4338CA',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  activeSubscriberTitle: {
+  heroTitle: {
+    fontSize: 26,
+    fontWeight: '900',
     color: '#FFFFFF',
-    fontSize: 20,
-    fontWeight: '800',
-    marginBottom: 4,
+    lineHeight: 34,
+    marginBottom: 8,
   },
-  activeSubscriberSubtitle: {
-    color: 'rgba(255, 255, 255, 0.8)',
-    fontSize: 13,
-    lineHeight: 18,
+  heroDesc: {
+    fontSize: 14,
+    color: 'rgba(255, 255, 255, 0.9)',
+    lineHeight: 20,
+    marginBottom: 20,
+    maxWidth: 720,
   },
-  activeActionsRow: {
+  heroMetricsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 12,
-    marginTop: 20,
   },
-  activePrimaryBtn: {
-    backgroundColor: '#3B82F6',
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    borderRadius: 12,
+  heroMetricItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    backgroundColor: '#FFFFFF',
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 16,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.05,
+    shadowRadius: 6,
+    elevation: 2,
+    minWidth: 130,
   },
-  activePrimaryBtnText: {
-    color: '#FFFFFF',
-    fontSize: 14,
+  statIconBox: {
+    width: 36,
+    height: 36,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  metricVal: {
+    fontSize: 15,
     fontWeight: '800',
+    color: '#0F172A',
   },
-  activeResetBtn: {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    paddingHorizontal: 16,
-    paddingVertical: 12,
+  metricLbl: {
+    fontSize: 11,
+    color: '#64748B',
+    fontWeight: '600',
+  },
+  activePlanCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 20,
+    padding: 24,
+    marginBottom: 24,
+    borderWidth: 1,
+    borderColor: '#34D399',
+    shadowColor: '#059669',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.08,
+    shadowRadius: 12,
+    elevation: 3,
+  },
+  activePlanHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  activeCheckCircle: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: '#10B981',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  activePlanTitle: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#0F172A',
+    marginBottom: 2,
+  },
+  activePlanSub: {
+    fontSize: 13,
+    color: '#475569',
+    lineHeight: 18,
+  },
+  activePlanActions: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 12,
+    marginTop: 18,
+  },
+  exploreTestsBtn: {
+    backgroundColor: '#3B82F6',
+    paddingHorizontal: 18,
+    paddingVertical: 10,
     borderRadius: 12,
   },
-  activeResetBtnText: {
-    color: '#F87171',
+  exploreTestsBtnText: {
+    color: '#FFFFFF',
     fontSize: 13,
     fontWeight: '700',
   },
-  pricingSection: {
+  pricingSectionCard: {
     backgroundColor: '#FFFFFF',
     borderRadius: 24,
     padding: 24,
-    marginBottom: 40,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.06,
-    shadowRadius: 16,
-    elevation: 3,
+    marginBottom: 28,
     borderWidth: 1,
     borderColor: '#E2E8F0',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.04,
+    shadowRadius: 10,
+    elevation: 2,
   },
-  pricingSectionDesktop: {
+  pricingLayout: {
+    gap: 24,
+  },
+  pricingLayoutDesktop: {
     flexDirection: 'row',
     gap: 36,
-    padding: 36,
   },
   pricingLeftCol: {
     flex: 1.2,
@@ -1151,7 +1456,7 @@ const styles = StyleSheet.create({
     flex: 0.9,
     justifyContent: 'center',
   },
-  urgencyBar: {
+  launchOfferTag: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
@@ -1160,79 +1465,81 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
     borderRadius: 8,
     alignSelf: 'flex-start',
-    marginBottom: 12,
+    marginBottom: 10,
   },
-  urgencyText: {
+  launchOfferTagText: {
     color: '#B45309',
     fontSize: 11,
     fontWeight: '800',
-    letterSpacing: 0.5,
   },
-  pricingCardTitle: {
-    fontSize: 24,
+  pricingPlanName: {
+    fontSize: 22,
     fontWeight: '900',
     color: '#0F172A',
-    marginBottom: 6,
-  },
-  pricingCardSubtitle: {
-    fontSize: 14,
-    color: '#64748B',
-    lineHeight: 20,
-    marginBottom: 20,
-  },
-  priceContainer: {
-    backgroundColor: '#F8FAFC',
-    borderRadius: 16,
-    padding: 16,
-    marginBottom: 20,
-    borderWidth: 1,
-    borderColor: '#E2E8F0',
-  },
-  priceRow: {
-    flexDirection: 'row',
-    alignItems: 'baseline',
-    gap: 4,
     marginBottom: 4,
   },
-  priceCurrency: {
-    fontSize: 24,
+  pricingPlanSub: {
+    fontSize: 13,
+    color: '#64748B',
+    lineHeight: 18,
+    marginBottom: 16,
+  },
+  anchorPriceBlock: {
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  anchorPriceRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+  },
+  anchorCurrency: {
+    fontSize: 28,
     fontWeight: '800',
     color: '#0F172A',
+    marginTop: 4,
   },
-  priceMain: {
-    fontSize: 44,
+  anchorAmount: {
+    fontSize: 54,
     fontWeight: '900',
     color: '#0F172A',
+    lineHeight: 58,
+    letterSpacing: -1,
   },
-  priceCutCol: {
+  anchorDiscountRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
-    marginLeft: 8,
+    marginTop: 4,
+    marginBottom: 6,
   },
-  priceOriginal: {
+  anchorOriginalPrice: {
     fontSize: 18,
     color: '#94A3B8',
     textDecorationLine: 'line-through',
-    fontWeight: '600',
+    fontWeight: '700',
   },
-  priceSaveBadge: {
+  anchorSavePill: {
     backgroundColor: '#DCFCE7',
     paddingHorizontal: 8,
     paddingVertical: 3,
-    borderRadius: 6,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#BBF7D0',
   },
-  priceSaveText: {
+  anchorSavePillText: {
     color: '#15803D',
-    fontSize: 11,
+    fontSize: 12,
     fontWeight: '800',
   },
-  priceNote: {
+  anchorTermsText: {
     fontSize: 12,
     color: '#64748B',
+    fontWeight: '600',
+    marginTop: 2,
   },
   checklist: {
-    gap: 12,
+    gap: 10,
   },
   checkItem: {
     flexDirection: 'row',
@@ -1243,7 +1550,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 13,
     color: '#334155',
-    lineHeight: 19,
+    lineHeight: 18,
   },
   boldText: {
     fontWeight: '800',
@@ -1252,155 +1559,330 @@ const styles = StyleSheet.create({
   checkoutActionBox: {
     backgroundColor: '#F8FAFC',
     borderRadius: 20,
-    padding: 24,
+    padding: 20,
     borderWidth: 1,
     borderColor: '#E2E8F0',
     alignItems: 'center',
   },
-  guaranteePill: {
+  trustShieldPill: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
     backgroundColor: '#ECFDF5',
     paddingHorizontal: 12,
-    paddingVertical: 5,
+    paddingVertical: 4,
     borderRadius: 16,
     marginBottom: 16,
     borderWidth: 1,
     borderColor: '#A7F3D0',
   },
-  guaranteePillText: {
+  trustShieldText: {
     color: '#047857',
     fontSize: 11,
     fontWeight: '700',
   },
-  checkoutBtn: {
+  payNowBtn: {
     width: '100%',
     borderRadius: 14,
     overflow: 'hidden',
-    shadowColor: '#1D4ED8',
+    shadowColor: '#2563EB',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
-    shadowRadius: 10,
-    elevation: 4,
-    marginBottom: 10,
+    shadowRadius: 8,
+    elevation: 3,
+    marginBottom: 8,
   },
-  checkoutBtnDisabled: {
+  payNowBtnDisabled: {
     opacity: 0.6,
   },
-  checkoutBtnGradient: {
+  payNowGradient: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 16,
-    paddingHorizontal: 20,
-    gap: 10,
+    paddingVertical: 14,
+    paddingHorizontal: 18,
+    gap: 8,
   },
-  checkoutBtnText: {
+  payNowBtnText: {
     color: '#FFFFFF',
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: '800',
-    letterSpacing: 0.2,
   },
-  checkoutSubtext: {
-    fontSize: 11,
-    color: '#64748B',
-    textAlign: 'center',
-    marginBottom: 18,
-  },
-  paymentMethodsContainer: {
+  clarityPointsList: {
     width: '100%',
-    paddingTop: 16,
+    gap: 8,
+    marginTop: 8,
+    marginBottom: 16,
+  },
+  clarityPoint: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  clarityPointText: {
+    fontSize: 11,
+    color: '#475569',
+    fontWeight: '600',
+    flex: 1,
+  },
+  cleanTrustRow: {
+    width: '100%',
+    paddingTop: 12,
     borderTopWidth: 1,
     borderTopColor: '#E2E8F0',
     alignItems: 'center',
   },
-  paymentMethodsHeader: {
-    fontSize: 10,
-    fontWeight: '800',
-    color: '#94A3B8',
-    letterSpacing: 0.8,
-    marginBottom: 8,
+  cleanTrustText: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: '#64748B',
+    marginBottom: 6,
   },
-  paymentBadgesRow: {
+  cleanPayBadges: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: 6,
-    marginBottom: 10,
   },
-  payBadge: {
-    backgroundColor: '#FFFFFF',
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 6,
-    borderWidth: 1,
-    borderColor: '#CBD5E1',
-  },
-  payBadgeText: {
-    fontSize: 11,
-    fontWeight: '700',
-    color: '#334155',
-  },
-  secureBadgeRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-  },
-  secureText: {
+  cleanPayBadge: {
     fontSize: 10,
-    color: '#64748B',
-    fontWeight: '600',
-  },
-  interactivePreviewSection: {
-    marginBottom: 44,
-  },
-  sectionHeaderRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    flexWrap: 'wrap',
-    gap: 12,
-    marginBottom: 16,
-  },
-  sectionTag: {
-    alignSelf: 'flex-start',
-    backgroundColor: '#EFF6FF',
+    fontWeight: '700',
+    color: '#475569',
+    backgroundColor: '#FFFFFF',
     paddingHorizontal: 8,
     paddingVertical: 3,
     borderRadius: 6,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+  },
+  beforePurchasingGrid: {
+    gap: 12,
+  },
+  beforePurchasingGridDesktop: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  beforePurchasingCard: {
+    flex: 1,
+    minWidth: 240,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 18,
+    padding: 18,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.02,
+    shadowRadius: 4,
+    elevation: 1,
+  },
+  bpCardQuestion: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#0F172A',
     marginBottom: 6,
   },
-  sectionTagText: {
-    color: '#2563EB',
-    fontSize: 10,
-    fontWeight: '800',
-    letterSpacing: 0.6,
+  bpCardAnswer: {
+    fontSize: 12,
+    color: '#64748B',
+    lineHeight: 18,
   },
-  sectionTitle: {
-    fontSize: 22,
-    fontWeight: '900',
+  reportTag: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    backgroundColor: '#EFF6FF',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#BFDBFE',
+  },
+  reportTagText: {
+    color: '#1E40AF',
+    fontSize: 11,
+    fontWeight: '700',
+  },
+  sampleReportCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 20,
+    padding: 20,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.03,
+    shadowRadius: 8,
+    elevation: 2,
+  },
+  reportCardHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: 8,
+    paddingBottom: 14,
+    borderBottomWidth: 1,
+    borderBottomColor: '#F1F5F9',
+    marginBottom: 16,
+  },
+  reportExamName: {
+    fontSize: 15,
+    fontWeight: '800',
     color: '#0F172A',
+    marginBottom: 2,
+  },
+  reportScoreText: {
+    fontSize: 13,
+    color: '#64748B',
+    fontWeight: '600',
+  },
+  reportScoreHighlight: {
+    fontSize: 16,
+    fontWeight: '900',
+    color: '#2563EB',
+  },
+  percentileBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: '#ECFDF5',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#A7F3D0',
+  },
+  percentileBadgeText: {
+    color: '#047857',
+    fontSize: 12,
+    fontWeight: '800',
+  },
+  reportMetricsRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 10,
+    marginBottom: 20,
+  },
+  reportMetricBox: {
+    flex: 1,
+    minWidth: 110,
+    backgroundColor: '#F8FAFC',
+    borderRadius: 14,
+    padding: 12,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+  },
+  reportMetricLabel: {
+    fontSize: 11,
+    color: '#64748B',
+    fontWeight: '600',
+    marginBottom: 2,
+  },
+  reportMetricVal: {
+    fontSize: 20,
+    fontWeight: '900',
+    marginBottom: 2,
+  },
+  reportMetricSub: {
+    fontSize: 10,
+    color: '#94A3B8',
+    fontWeight: '600',
+  },
+  reportSectionTitle: {
+    fontSize: 13,
+    fontWeight: '800',
+    color: '#0F172A',
+    marginBottom: 12,
+  },
+  reportBarsList: {
+    gap: 12,
+    marginBottom: 18,
+  },
+  reportBarItem: {
+    gap: 4,
+  },
+  reportBarLabelRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  reportBarTopic: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: '#334155',
+  },
+  reportBarPct: {
+    fontSize: 11,
+    fontWeight: '800',
+  },
+  progressBarTrack: {
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#F1F5F9',
+    overflow: 'hidden',
+  },
+  progressBarFill: {
+    height: '100%',
+    borderRadius: 4,
+  },
+  aiAlertBox: {
+    backgroundColor: '#FFFBEB',
+    borderRadius: 14,
+    padding: 14,
+    borderWidth: 1,
+    borderColor: '#FDE68A',
+  },
+  aiAlertHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
     marginBottom: 4,
   },
-  sectionSubtitle: {
-    fontSize: 14,
-    color: '#64748B',
-    maxWidth: 620,
-    lineHeight: 20,
+  aiAlertTitle: {
+    fontSize: 12,
+    fontWeight: '800',
+    color: '#92400E',
   },
-  langSwitchWrapper: {
+  aiAlertText: {
+    fontSize: 12,
+    color: '#78350F',
+    lineHeight: 18,
+  },
+  sectionBlock: {
+    marginBottom: 28,
+  },
+  sectionHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 14,
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#0F172A',
+  },
+  interactiveHeaderRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: 10,
+    marginBottom: 14,
+  },
+  bilingualToggle: {
     flexDirection: 'row',
     backgroundColor: '#E2E8F0',
     borderRadius: 10,
     padding: 3,
   },
-  langBtn: {
+  toggleBtn: {
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 8,
   },
-  langBtnActive: {
+  toggleBtnActive: {
     backgroundColor: '#FFFFFF',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },
@@ -1408,75 +1890,64 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     elevation: 2,
   },
-  langBtnText: {
+  toggleBtnText: {
     fontSize: 12,
     fontWeight: '600',
     color: '#64748B',
   },
-  langBtnTextActive: {
+  toggleBtnTextActive: {
     color: '#1E40AF',
     fontWeight: '800',
   },
-  previewCard: {
+  sampleQuestionCard: {
     backgroundColor: '#FFFFFF',
     borderRadius: 20,
-    padding: 22,
+    padding: 20,
     borderWidth: 1,
     borderColor: '#E2E8F0',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.04,
-    shadowRadius: 10,
+    shadowOpacity: 0.03,
+    shadowRadius: 8,
     elevation: 2,
   },
-  previewCardHeader: {
+  sampleCardTop: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 14,
+    marginBottom: 12,
   },
-  questionTopicBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
+  topicBadge: {
     backgroundColor: '#EFF6FF',
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 8,
   },
-  questionTopicText: {
+  topicBadgeText: {
     color: '#1E40AF',
     fontSize: 11,
     fontWeight: '700',
   },
-  marksBadge: {
-    backgroundColor: '#F8FAFC',
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 6,
-    borderWidth: 1,
-    borderColor: '#E2E8F0',
-  },
   marksBadgeText: {
     fontSize: 11,
-    fontWeight: '600',
     color: '#64748B',
+    fontWeight: '600',
   },
-  previewQuestionText: {
-    fontSize: 15,
+  sampleQuestionText: {
+    fontSize: 14,
     fontWeight: '700',
     color: '#1E293B',
-    lineHeight: 24,
-    marginBottom: 18,
+    lineHeight: 22,
+    marginBottom: 16,
   },
   optionsList: {
-    gap: 10,
-    marginBottom: 16,
+    gap: 8,
+    marginBottom: 14,
   },
   optionItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
+    gap: 10,
     padding: 12,
     borderRadius: 12,
     borderWidth: 1,
@@ -1496,9 +1967,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#FEF2F2',
   },
   optionLetterCircle: {
-    width: 26,
-    height: 26,
-    borderRadius: 13,
+    width: 24,
+    height: 24,
+    borderRadius: 12,
     backgroundColor: '#F1F5F9',
     alignItems: 'center',
     justifyContent: 'center',
@@ -1513,54 +1984,50 @@ const styles = StyleSheet.create({
     backgroundColor: '#EF4444',
   },
   optionLetterText: {
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: '800',
     color: '#475569',
   },
-  optionText: {
+  optionContentText: {
     flex: 1,
-    fontSize: 13,
+    fontSize: 12,
     color: '#334155',
-    lineHeight: 18,
+    lineHeight: 17,
   },
   explanationBox: {
     backgroundColor: '#F0FDF4',
     borderRadius: 12,
-    padding: 16,
+    padding: 14,
     borderLeftWidth: 4,
     borderLeftColor: '#10B981',
   },
-  explanationHeader: {
+  explanationTitleRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
-    marginBottom: 6,
+    gap: 6,
+    marginBottom: 4,
   },
   explanationTitle: {
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: '800',
     color: '#065F46',
   },
-  explanationContent: {
-    fontSize: 13,
+  explanationText: {
+    fontSize: 12,
     color: '#047857',
-    lineHeight: 19,
+    lineHeight: 18,
   },
-  revealExplanationBtn: {
+  revealHintBtn: {
     alignItems: 'center',
-    paddingVertical: 10,
+    paddingVertical: 8,
   },
-  revealExplanationText: {
+  revealHintText: {
     fontSize: 12,
     fontWeight: '700',
     color: '#2563EB',
   },
-  modulesSection: {
-    marginBottom: 44,
-  },
   modulesGrid: {
-    gap: 16,
-    marginTop: 16,
+    gap: 12,
   },
   modulesGridDesktop: {
     flexDirection: 'row',
@@ -1569,216 +2036,41 @@ const styles = StyleSheet.create({
   moduleCard: {
     backgroundColor: '#FFFFFF',
     borderRadius: 18,
-    padding: 20,
+    padding: 18,
     borderWidth: 1,
     borderColor: '#E2E8F0',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.03,
-    shadowRadius: 8,
-    elevation: 2,
   },
   moduleCardDesktop: {
-    width: '48.5%',
+    width: '48.8%',
   },
-  moduleHeader: {
+  moduleCardHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 12,
+    marginBottom: 10,
   },
-  moduleIconBox: {
-    width: 44,
-    height: 44,
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  moduleBadge: {
+  moduleCountBadge: {
     backgroundColor: '#F8FAFC',
     paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 8,
+    paddingVertical: 3,
+    borderRadius: 6,
     borderWidth: 1,
     borderColor: '#E2E8F0',
   },
-  moduleBadgeText: {
+  moduleCountText: {
     fontSize: 11,
     fontWeight: '800',
   },
   moduleTitle: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: '800',
     color: '#0F172A',
-    marginBottom: 6,
+    marginBottom: 4,
   },
   moduleHighlights: {
     fontSize: 12,
     color: '#64748B',
     lineHeight: 17,
-  },
-  diagnosticsPreviewCard: {
-    backgroundColor: '#1E1B4B',
-    borderRadius: 24,
-    padding: 24,
-    marginBottom: 44,
-    shadowColor: '#1E1B4B',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.25,
-    shadowRadius: 16,
-    elevation: 5,
-  },
-  diagInner: {
-    gap: 24,
-  },
-  diagInnerDesktop: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 36,
-  },
-  diagLeft: {
-    flex: 1,
-  },
-  diagRight: {
-    flex: 1,
-  },
-  diagTag: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    backgroundColor: 'rgba(124, 58, 237, 0.25)',
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderRadius: 20,
-    alignSelf: 'flex-start',
-    marginBottom: 12,
-    borderWidth: 1,
-    borderColor: 'rgba(124, 58, 237, 0.5)',
-  },
-  diagTagText: {
-    color: '#C4B5FD',
-    fontSize: 11,
-    fontWeight: '800',
-    letterSpacing: 0.5,
-  },
-  diagTitle: {
-    color: '#FFFFFF',
-    fontSize: 22,
-    fontWeight: '900',
-    lineHeight: 28,
-    marginBottom: 10,
-  },
-  diagDesc: {
-    color: 'rgba(255, 255, 255, 0.8)',
-    fontSize: 13,
-    lineHeight: 19,
-    marginBottom: 18,
-  },
-  diagBulletList: {
-    gap: 10,
-  },
-  diagBulletItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 10,
-  },
-  diagBulletText: {
-    color: 'rgba(255, 255, 255, 0.9)',
-    fontSize: 13,
-    fontWeight: '600',
-  },
-  mockReportCard: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 18,
-    padding: 18,
-  },
-  mockReportHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 14,
-    paddingBottom: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: '#F1F5F9',
-  },
-  mockReportTitle: {
-    fontSize: 13,
-    fontWeight: '800',
-    color: '#0F172A',
-  },
-  mockStatusLive: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-    backgroundColor: '#ECFDF5',
-    paddingHorizontal: 6,
-    paddingVertical: 2,
-    borderRadius: 6,
-  },
-  liveDot: {
-    width: 6,
-    height: 6,
-    borderRadius: 3,
-    backgroundColor: '#10B981',
-  },
-  liveText: {
-    fontSize: 9,
-    fontWeight: '800',
-    color: '#047857',
-  },
-  mockScoreRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 16,
-    backgroundColor: '#F8FAFC',
-    padding: 10,
-    borderRadius: 12,
-  },
-  mockMetricBox: {
-    alignItems: 'center',
-  },
-  mockMetricVal: {
-    fontSize: 18,
-    fontWeight: '900',
-    color: '#0F172A',
-  },
-  mockMetricLabel: {
-    fontSize: 10,
-    color: '#64748B',
-    fontWeight: '600',
-    marginTop: 2,
-  },
-  mockTopicBars: {
-    gap: 10,
-  },
-  mockBarItem: {},
-  mockBarHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 4,
-  },
-  mockBarName: {
-    fontSize: 11,
-    fontWeight: '700',
-    color: '#334155',
-  },
-  mockBarScore: {
-    fontSize: 10,
-    fontWeight: '800',
-    color: '#10B981',
-  },
-  mockBarTrack: {
-    height: 6,
-    backgroundColor: '#F1F5F9',
-    borderRadius: 3,
-    overflow: 'hidden',
-  },
-  mockBarFill: {
-    height: '100%',
-    borderRadius: 3,
-  },
-  comparisonSection: {
-    marginBottom: 44,
   },
   comparisonTable: {
     backgroundColor: '#FFFFFF',
@@ -1786,7 +2078,6 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderWidth: 1,
     borderColor: '#E2E8F0',
-    marginTop: 16,
   },
   compTableHeader: {
     flexDirection: 'row',
@@ -1800,7 +2091,7 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     color: '#475569',
   },
-  compHeaderPremiumHighlight: {
+  compHeaderHighlight: {
     backgroundColor: '#EFF6FF',
     flexDirection: 'row',
     alignItems: 'center',
@@ -1817,7 +2108,7 @@ const styles = StyleSheet.create({
   compColFeature: {
     flex: 1.4,
     paddingHorizontal: 16,
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: '600',
     color: '#1E293B',
   },
@@ -1835,15 +2126,11 @@ const styles = StyleSheet.create({
     color: '#1E40AF',
     textAlign: 'center',
   },
-  compPremiumBold: {
+  compBold: {
     fontWeight: '800',
   },
-  faqSection: {
-    marginBottom: 44,
-  },
   faqList: {
-    gap: 12,
-    marginTop: 16,
+    gap: 10,
   },
   faqCard: {
     backgroundColor: '#FFFFFF',
@@ -1865,104 +2152,94 @@ const styles = StyleSheet.create({
     paddingRight: 8,
   },
   faqAnswer: {
-    fontSize: 13,
+    fontSize: 12,
     color: '#475569',
-    lineHeight: 19,
-    marginTop: 10,
-    paddingTop: 10,
+    lineHeight: 18,
+    marginTop: 8,
+    paddingTop: 8,
     borderTopWidth: 1,
     borderTopColor: '#F1F5F9',
   },
-  bottomCtaBox: {
+  bottomCtaBanner: {
     borderRadius: 24,
-    padding: 28,
+    padding: 24,
     alignItems: 'center',
-    textAlign: 'center',
-    marginBottom: 24,
-    shadowColor: '#1E1B4B',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.2,
-    shadowRadius: 16,
-    elevation: 4,
+    overflow: 'hidden',
+    marginBottom: 20,
   },
-  bottomCtaTag: {
+  bottomCtaContent: {
+    alignItems: 'center',
+    zIndex: 2,
+  },
+  bottomTag: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    backgroundColor: 'rgba(245, 158, 11, 0.2)',
-    paddingHorizontal: 12,
-    paddingVertical: 5,
-    borderRadius: 20,
-    marginBottom: 12,
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+    marginBottom: 10,
   },
-  bottomCtaTagText: {
-    color: '#FBBF24',
+  bottomTagText: {
+    color: '#FFFFFF',
     fontSize: 11,
     fontWeight: '800',
-    letterSpacing: 0.6,
   },
-  bottomCtaTitle: {
-    color: '#FFFFFF',
-    fontSize: 24,
+  bottomTitle: {
+    fontSize: 22,
     fontWeight: '900',
+    color: '#FFFFFF',
     textAlign: 'center',
+    marginBottom: 6,
+  },
+  bottomSub: {
+    fontSize: 13,
+    color: 'rgba(255, 255, 255, 0.9)',
+    textAlign: 'center',
+    maxWidth: 560,
+    lineHeight: 19,
+    marginBottom: 18,
+  },
+  bottomBtn: {
+    backgroundColor: '#FFFFFF',
+    paddingHorizontal: 24,
+    paddingVertical: 14,
+    borderRadius: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 3,
     marginBottom: 8,
   },
-  bottomCtaSubtitle: {
-    color: 'rgba(255, 255, 255, 0.85)',
-    fontSize: 14,
-    textAlign: 'center',
-    maxWidth: 580,
-    lineHeight: 20,
-    marginBottom: 20,
-  },
-  bottomCtaBtn: {
-    backgroundColor: '#FFFFFF',
-    paddingHorizontal: 28,
-    paddingVertical: 16,
-    borderRadius: 14,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.15,
-    shadowRadius: 8,
-    elevation: 3,
-    marginBottom: 12,
-  },
-  bottomCtaBtnText: {
-    color: '#1E1B4B',
-    fontSize: 16,
+  bottomBtnText: {
+    color: '#1E40AF',
+    fontSize: 15,
     fontWeight: '900',
   },
-  bottomCtaFooterNote: {
-    color: 'rgba(255, 255, 255, 0.7)',
-    fontSize: 11,
+  bottomFootnote: {
+    fontSize: 10,
+    color: 'rgba(255, 255, 255, 0.75)',
   },
-  supportCard: {
-    backgroundColor: '#F0F9FF',
-    borderRadius: 16,
-    padding: 18,
+  supportBox: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 18,
+    padding: 16,
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#BAE6FD',
-  },
-  supportIconBox: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    backgroundColor: '#E0F2FE',
-    alignItems: 'center',
-    justifyContent: 'center',
+    borderColor: '#E2E8F0',
   },
   supportTitle: {
     fontSize: 14,
     fontWeight: '800',
-    color: '#0369A1',
+    color: '#0F172A',
     marginBottom: 2,
   },
-  supportText: {
+  supportDesc: {
     fontSize: 12,
-    color: '#0284C7',
+    color: '#64748B',
     lineHeight: 17,
   },
   stickyMobileBar: {
@@ -2020,5 +2297,128 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 14,
     fontWeight: '800',
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(15, 23, 42, 0.65)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  modalContent: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 20,
+    padding: 28,
+    width: '100%',
+    maxWidth: 440,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.2,
+    shadowRadius: 25,
+    elevation: 10,
+  },
+  modalHeaderIcon: {
+    width: 52,
+    height: 52,
+    borderRadius: 26,
+    backgroundColor: '#EFF6FF',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 16,
+  },
+  modalTitle: {
+    fontSize: 20,
+    fontWeight: '800',
+    color: '#0F172A',
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  modalSubtitle: {
+    fontSize: 13,
+    color: '#64748B',
+    textAlign: 'center',
+    lineHeight: 19,
+    marginBottom: 20,
+  },
+  phoneInputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1.5,
+    borderColor: '#E2E8F0',
+    borderRadius: 12,
+    width: '100%',
+    height: 52,
+    backgroundColor: '#F8FAFC',
+    overflow: 'hidden',
+  },
+  phoneInputContainerError: {
+    borderColor: '#EF4444',
+  },
+  phoneCountryPrefix: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#F1F5F9',
+    paddingHorizontal: 12,
+    height: '100%',
+    borderRightWidth: 1,
+    borderRightColor: '#E2E8F0',
+    gap: 6,
+  },
+  phoneCountryFlag: {
+    fontSize: 16,
+  },
+  phoneCountryCode: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#334155',
+  },
+  phoneTextInput: {
+    flex: 1,
+    paddingHorizontal: 14,
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#0F172A',
+    height: '100%',
+  },
+  phoneErrorText: {
+    fontSize: 12,
+    color: '#EF4444',
+    marginTop: 6,
+    alignSelf: 'flex-start',
+    fontWeight: '500',
+  },
+  modalSubmitBtn: {
+    backgroundColor: '#2563EB',
+    width: '100%',
+    height: 48,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 20,
+    shadowColor: '#2563EB',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.25,
+    shadowRadius: 6,
+    elevation: 3,
+  },
+  modalSubmitBtnDisabled: {
+    backgroundColor: '#94A3B8',
+    shadowOpacity: 0,
+    elevation: 0,
+  },
+  modalSubmitBtnText: {
+    color: '#FFFFFF',
+    fontSize: 15,
+    fontWeight: '800',
+  },
+  modalCancelBtn: {
+    marginTop: 12,
+    paddingVertical: 8,
+  },
+  modalCancelBtnText: {
+    color: '#64748B',
+    fontSize: 14,
+    fontWeight: '600',
   },
 });

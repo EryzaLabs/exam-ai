@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import UserService from '@/services/user-service';
 import { TestProgressService } from '@/services/test-progress-service';
+import SSCCGLService from '@/services/ssc-cgl-service';
 import { useAuth } from '@/context/auth-context';
 
 export interface DashboardStats {
@@ -13,6 +14,10 @@ export interface DashboardStats {
   totalTopics: number;
   masteredTopics: number;
   userName?: string;
+  photoURL?: string | null;
+  email?: string;
+  isSubscribed?: boolean;
+  totalAvailableTests?: number;
 }
 
 export function useDashboardData() {
@@ -24,7 +29,29 @@ export function useDashboardData() {
   const loadData = async () => {
     try {
       setLoading(true);
+
+      let papersCount = 184;
+      try {
+        const papers = await SSCCGLService.fetchPapersList();
+        if (papers && papers.length > 0) {
+          papersCount = papers.length;
+        }
+      } catch (err) {
+        console.error('Failed to fetch available tests count:', err);
+      }
+
       if (!user) {
+         setDashboardStats({
+           questionsAttempted: 0,
+           accuracy: 0,
+           timeSpent: 0,
+           streak: 0,
+           rank: 'Beginner',
+           weeklyImprovement: 0,
+           totalTopics: 0,
+           masteredTopics: 0,
+           totalAvailableTests: papersCount,
+         });
          setLoading(false);
          return;
       }
@@ -129,7 +156,11 @@ export function useDashboardData() {
           weeklyImprovement: 0,
           totalTopics: Object.keys(topics).length,
           masteredTopics,
-          userName: profile?.displayName || user.displayName || undefined,
+          userName: profile?.displayName || user.displayName || (user.email ? user.email.split('@')[0] : undefined),
+          photoURL: profile?.photoURL || user.photoURL || null,
+          email: profile?.email || user.email || undefined,
+          isSubscribed: !!profile?.isSubscribed,
+          totalAvailableTests: papersCount,
       });
 
       setPerformance({

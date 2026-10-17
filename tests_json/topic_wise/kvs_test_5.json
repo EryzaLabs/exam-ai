@@ -1,10 +1,158 @@
 {
-  "test_id": "b3cb59d4-4c5e-48ba-887d-a629d2bc5ee0",
+  "test_id": "0b91cce7-d7d6-457c-be0d-3f603f0512bb",
   "test_name": "Topic Test: KVS - Part 5",
   "type": "topic_wise",
   "topic": "kvs",
-  "created_at": "2026-10-16T20:04:02.661942",
+  "created_at": "2026-10-17T08:33:52.241757",
   "questions": [
+    {
+      "id": "7ab5fb0b-b4e2-4746-a46a-95639ef9d979",
+      "created_at": "2026-10-10T08:12:48.698065",
+      "question_hindi": "केन्द्रीय विद्यालय संगठन (KVS) के बोर्ड और स्थायी समितियों की शक्तियों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. सभी अवशिष्ट शक्तियां जो विशेष रूप से किसी भी अधिकारी को नहीं सौंपी गई हैं, बोर्ड में निहित होंगी।\n2. उपाध्यक्ष (वाइस-चेयरपर्सन) संगठन की तीनों स्थायी समितियों अर्थात वित्त समिति, शैक्षणिक सलाहकार समिति और निर्माण (वर्क्स) समिति के अध्यक्ष के रूप में कार्य करते हैं।\n3. यद्यपि बोर्ड विद्यालयों के लिए सलाहकार बोर्ड या स्थानीय प्रबंधन समितियां नियुक्त कर सकता है, लेकिन उसके पास एक बार नियुक्त की गई किसी भी सलाहकार निकाय या समिति को भंग करने की शक्ति नहीं होती है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 1 और 3",
+        "केवल 1 और 2",
+        "केवल 2 और 3",
+        "1, 2 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the powers of the Board and the Standing Committees of Kendriya Vidyalaya Sangathan (KVS):\n\n1. All residual powers which are not specifically assigned to any of the officers vest in the Board.\n2. The Vice-Chairperson functions as the Chairperson of all three Standing Committees of the Sangathan, namely the Finance Committee, Academic Advisory Committee, and Works Committee.\n3. While the Board can appoint Advisory Boards or Local Management Committees for schools, it does not possess the power to dissolve any advisory body or committee once appointed.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "1 and 3 only",
+        "1 and 2 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because the official rules explicitly state that the Board may, by resolution, appoint Advisory Boards or other committees or bodies including Local Management Committees for schools with such powers as it may think fit, and also dissolve any of the committees and advisory bodies set up by it.",
+      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि आधिकारिक नियमों में स्पष्ट रूप से कहा गया है कि बोर्ड संकल्प द्वारा सलाहकार बोर्डों या अन्य समितियों/निकायों (स्कूलों के लिए स्थानीय प्रबंधन समितियों सहित) को नियुक्त कर सकता है और उसके द्वारा स्थापित किसी भी समिति और सलाहकार निकाय को भंग भी कर सकता है।",
+      "topic": "KVS",
+      "difficulty": "hard",
+      "key_facts": [
+        "The Board may, by resolution, appoint Advisory Boards or other committees or bodies including Local Management Committees for schools with such powers as it may think fit, and also dissolve any of the committees and advisory bodies set up by it."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:12:48.698065"
+    },
+    {
+      "id": "e9909a13-5455-46ee-94ab-335c78d93bb9",
+      "created_at": "2026-10-10T08:05:44.437716",
+      "question_hindi": "केवीएस में प्राचार्य पाठ्यक्रम के अनुभाग 'शिक्षा में परिप्रेक्ष्य' (Perspectives in Education) के अंतर्गत सूचीबद्ध विषयों के संबंध में सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (पाठ्यचर्या / नीतिगत पहल)\nA. राष्ट्रीय शिक्षा नीति\nB. राष्ट्रीय पाठ्यचर्या रूपरेखा बुनियादी चरण\nC. राष्ट्रीय पाठ्यचर्या रूपरेखा विद्यालयी शिक्षा\nD. निपुण (NIPUN)\n\nसूची-II (पाठ्यक्रम में संबद्ध वर्ष / पद)\n1. भारत मिशन\n2. 2022\n3. 2023\n4. 2020\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-4, B-2, C-3, D-1",
+        "A-2, B-4, C-1, D-3",
+        "A-4, B-3, C-2, D-1",
+        "A-3, B-1, C-4, D-2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List-I with List-II regarding the topics listed under the Principal syllabus section 'Perspectives in Education' in KVS:\n\nList-I (Curricular / Policy Initiative)\nA. National Education Policy\nB. National Curriculum Framework Foundational Stage\nC. National Curriculum Framework School Education\nD. NIPUN\n\nList-II (Associated Year / Term in Syllabus)\n1. Bharat Mission\n2. 2022\n3. 2023\n4. 2020\n\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "A-4, B-2, C-3, D-1",
+        "A-2, B-4, C-1, D-3",
+        "A-4, B-3, C-2, D-1",
+        "A-3, B-1, C-4, D-2"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "According to the official Tier-I syllabus under Section F 'Perspectives in Education': National Education Policy-2020 (A-4), National Curriculum Framework Foundational Stage-2022 (B-2), National Curriculum Framework School Education-2023 (C-3), and NIPUN Bharat Mission (D-1).",
+      "explanation_hindi": "अनुभाग F 'शिक्षा में परिप्रेक्ष्य' के आधिकारिक टियर-I पाठ्यक्रम के अनुसार: राष्ट्रीय शिक्षा नीति-2020 (A-4), राष्ट्रीय पाठ्यचर्या रूपरेखा बुनियादी चरण-2022 (B-2), राष्ट्रीय पाठ्यचर्या रूपरेखा विद्यालयी शिक्षा-2023 (C-3), और निपुण भारत मिशन (D-1)।",
+      "topic": "KVS",
+      "difficulty": "hard",
+      "key_facts": [
+        "National Education Policy-2020 National Curriculum Framework Foundational Stage-2022 National Curriculum Framework School Education-2023 NIPUN Bharat Mission"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:05:44.437716"
+    },
+    {
+      "id": "20f9ba39-1ddc-45f9-b32a-169485473e50",
+      "created_at": "2026-10-10T08:15:44.521405",
+      "question_hindi": "केवीएस में टियर-I एलडीई प्रधानाचार्य हेतु 'शिक्षा और नेतृत्व पर परिप्रेक्ष्य' के पाठ्यक्रम घटकों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. 'शिक्षा में परिप्रेक्ष्य' के अंतर्गत, पाठ्यक्रम में विशेष रूप से राष्ट्रीय पाठ्यचर्या रूपरेखा बुनियादी चरण-2022 और राष्ट्रीय पाठ्यचर्या रूपरेखा विद्यालयी शिक्षा-2023 दोनों शामिल हैं।\n2. 'अनुकूल शिक्षण वातावरण का निर्माण' के अंतर्गत, सभी छात्रों और कर्मचारियों के लिए विद्यालयी मानसिक स्वास्थ्य के उपचारात्मक, निवारक और संवर्धनात्मक आयामों का समाधान शामिल है।\n3. 'विद्यालय संगठन और नेतृत्व' के अंतर्गत, दृष्टिकोण निर्माण, लक्ष्य निर्धारण, विद्यालय विकास योजना तैयार करना और विद्यालय प्रत्यायन (School Accreditation) शामिल हैं।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "1, 2 और 3",
+        "केवल 1 और 3",
+        "केवल 1 और 2",
+        "केवल 2 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the syllabus units under 'Perspectives on Education and Leadership' for Tier-I LDE Principal in KVS:\n\n1. Under 'Perspectives in Education', the syllabus specifically incorporates both the National Curriculum Framework Foundational Stage-2022 and the National Curriculum Framework School Education-2023.\n2. Under 'Creating Conducive Learning Environment', it requires addressing curative, preventive, and promotive dimensions of school mental health for all students and staff.\n3. Under 'School Organization and Leadership', it covers vision building, goal setting, creating a School Development Plan, and School Accreditation.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "1, 2 and 3",
+        "1 and 3 only",
+        "1 and 2 only",
+        "2 and 3 only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "All three statements are correct as per the official Tier-I LDE syllabus for the post of Principal:\n1. Unit F (Perspectives in Education) includes National Curriculum Framework Foundational Stage-2022 and National Curriculum Framework School Education-2023.\n2. Unit D (Creating Conducive Learning Environment) covers addressing the curative, preventive and promotive dimensions of mental health for all students and staff.\n3. Unit E (School Organization and Leadership) covers vision building, goal setting, creating a School development Plan, and Higher Education Institutes – School Accreditation.",
+      "explanation_hindi": "प्रधानाचार्य पद हेतु आधिकारिक टियर-I एलडीई पाठ्यक्रम के अनुसार तीनों कथन सही हैं:\n1. इकाई F (शिक्षा में परिप्रेक्ष्य) में राष्ट्रीय पाठ्यचर्या रूपरेखा बुनियादी चरण-2022 और राष्ट्रीय पाठ्यचर्या रूपरेखा विद्यालयी शिक्षा-2023 शामिल हैं।\n2. इकाई D (अनुकूल शिक्षण वातावरण का निर्माण) में सभी छात्रों और कर्मचारियों के लिए मानसिक स्वास्थ्य के उपचारात्मक, निवारक और संवर्धनात्मक आयाम शामिल हैं।\n3. इकाई E (विद्यालय संगठन और नेतृत्व) में दृष्टिकोण निर्माण, लक्ष्य निर्धारण, विद्यालय विकास योजना बनाना और विद्यालय प्रत्यायन शामिल हैं।",
+      "topic": "KVS",
+      "difficulty": "hard",
+      "key_facts": [
+        "National Curriculum Framework Foundational Stage-2022 National Curriculum Framework School Education-2023 NIPUN Bharat Mission"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:15:44.521405"
+    },
+    {
+      "id": "3b94d4db-994d-4bbb-a507-ea66ddd1a2de",
+      "created_at": "2026-10-10T08:10:42.882054",
+      "question_hindi": "केंद्रीय विद्यालय संगठन (KVS) के संस्थागत विकास और मील के पत्थरों के संबंध में सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (जयंती / विकास का मील का पत्थर)\nA. स्थापना वर्ष (1963)\nB. रजत जयंती वर्ष (1988)\nC. स्वर्ण जयंती वर्ष (2013)\nD. हीरक जयंती वर्ष (2023)\n\nसूची-II (दर्ज केंद्रीय विद्यालयों की संख्या)\n1. 20 सेंट्रल स्कूल\n2. 687 केंद्रीय विद्यालय\n3. 1092 केंद्रीय विद्यालय\n4. 1255 केंद्रीय विद्यालय\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-4, B-2, C-3, D-1",
+        "A-1, B-2, C-3, D-4",
+        "A-1, B-3, C-2, D-4",
+        "A-2, B-1, C-4, D-3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List-I with List-II regarding the institutional growth and milestones of Kendriya Vidyalaya Sangathan (KVS):\n\nList-I (Jubilee / Growth Milestone)\nA. Inception Year (1963)\nB. Silver Jubilee Year (1988)\nC. Golden Jubilee Year (2013)\nD. Diamond Jubilee Year (2023)\n\nList-II (Number of Kendriya Vidyalayas Recorded)\n1. 20 Central Schools\n2. 687 Kendriya Vidyalayas\n3. 1092 Kendriya Vidyalayas\n4. 1255 Kendriya Vidyalayas\n\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "A-4, B-2, C-3, D-1",
+        "A-1, B-2, C-3, D-4",
+        "A-1, B-3, C-2, D-4",
+        "A-2, B-1, C-4, D-3"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "According to the historical genesis of KVS: In 1963, it began with 20 Central Schools; in 1988 (Silver Jubilee Year), there were 687 Kendriya Vidyalayas; in 2013 (Golden Jubilee Year), there were 1092 Kendriya Vidyalayas; and in 2023 (Diamond Jubilee Year), the number reached 1255 Kendriya Vidyalayas.",
+      "explanation_hindi": "KVS के ऐतिहासिक उद्भव के अनुसार: 1963 में इसकी शुरुआत 20 सेंट्रल स्कूलों के साथ हुई थी; 1988 (रजत जयंती वर्ष) में 687 केंद्रीय विद्यालय थे; 2013 (स्वर्ण जयंती वर्ष) में 1092 केंद्रीय विद्यालय थे; और 2023 (हीरक जयंती वर्ष) में यह संख्या 1255 केंद्रीय विद्यालयों तक पहुँच गई।",
+      "topic": "KVS",
+      "difficulty": "medium",
+      "key_facts": [
+        "From 20 Central Schools in 1963 to 687 Kendriya Vidyalayas, 4.77 lakh students and staff of nearly 32 thousand in 1988 (Silver Jubilee Year) to 1092 Kendriya Vidyalayas, 11.2 lakh students and staff of about 58 thousand in 2013 (Golden Jubilee Year) to 1255 Kendriya Vidyalayas, 14 lakh students and staff of nearly 57 thousand in 2023 (Diamond Jubilee Year)."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:10:42.882054"
+    },
     {
       "id": "77d63c85-b32d-4433-ad25-83503c69b0fe",
       "created_at": "2026-10-10T08:04:30.057397",
@@ -43,14 +191,14 @@
       "processed_at": "2026-10-10T08:04:30.057397"
     },
     {
-      "id": "9a2e0693-8818-4b7b-9c01-b21412aaeeaa",
-      "created_at": "2026-10-10T08:08:34.587612",
-      "question_hindi": "प्राचार्य पद हेतु टियर-I पाठ्यक्रम के अंतर्गत 'शिक्षार्थी को समझना' (Understanding the Learner) और 'अनुकूल अधिगम वातावरण का निर्माण' (Creating Conducive Learning Environment) विषयों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. 'शिक्षार्थी को समझना' के अंतर्गत विकासात्मक कार्यों और चुनौतियों का अध्ययन बुनियादी (foundational), प्रारंभिक (preparatory), मध्य (middle) और माध्यमिक (secondary) विद्यालयी बच्चों के विशेष संदर्भ में किया जाता है।\n2. 'अनुकूल अधिगम वातावरण का निर्माण' के अंतर्गत विद्यालयी मानसिक स्वास्थ्य और कल्याण की अवधारणा में सभी छात्रों और कर्मचारियों के लिए मानसिक स्वास्थ्य के उपचारात्मक (curative), निवारक (preventive) और संवर्धनात्मक (promotive) आयामों को संबोधित करना स्पष्ट रूप से शामिल है।\n3. 'प्राथमिक और द्वितीयक समाजीकरण एजेंसियों की भूमिका' तथा 'घर और विद्यालय की निरंतरता सुनिश्चित करने के कदम' को 'अनुकूल अधिगम वातावरण का निर्माण' मॉड्यूल के तहत निर्दिष्ट किया गया है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "e7b6b0fc-4c2b-4918-bf23-40df05b675d1",
+      "created_at": "2026-10-10T08:09:16.863550",
+      "question_hindi": "केन्द्रीय विद्यालय संगठन से संबंधित स्कूल शिक्षा और साक्षरता विभाग के आधिकारिक अभिलेखों में 'शगुन' (Shagun) शब्द निम्नलिखित में से किन दो शब्दों से मिलकर बना है?",
       "options_hindi": [
-        "1, 2 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3",
-        "केवल 1 और 3"
+        "'शासन' (अर्थात गवर्नेंस) और 'उन्नति' (अर्थात प्रगति)",
+        "'शिक्षा' (अर्थात एजुकेशन) और 'गुणगान' (अर्थात प्रशंसा)",
+        "'शिक्षक' (अर्थात अध्यापक) और 'निर्माण' (अर्थात रचना)",
+        "'शाला' (अर्थात स्कूल) और 'गुणवत्ता' (अर्थात क्वालिटी)"
       ],
       "option_labels": [
         "A",
@@ -61,290 +209,31 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the topics 'Understanding the Learner' and 'Creating Conducive Learning Environment' under the Tier-I syllabus for the post of Principal:\n\n1. Under 'Understanding the Learner', developmental tasks and challenges are studied with special reference to foundational, preparatory, middle, and secondary school children.\n2. Under 'Creating Conducive Learning Environment', the concept of School Mental Health & Well Being explicitly requires addressing the curative, preventive, and promotive dimensions of mental health for all students and staff.\n3. 'Role of Primary and Secondary Socialization agencies' and 'Steps to ensure Home school continuity' are specified under the module 'Creating Conducive Learning Environment'.\n\nWhich of the statements given above are correct?",
+      "question_english": "In official Department of School Education and Literacy records concerning the Kendriya Vidyalaya Sangathan, the portal/initiative name 'Shagun' is derived from which of the following two words?",
       "options_english": [
-        "1, 2 and 3",
-        "1 and 2 only",
-        "2 and 3 only",
-        "1 and 3 only"
+        "'Shashan' (meaning Governance) and 'Unnati' (meaning Progress)",
+        "'Shiksha' (meaning Education) and 'Gungaan' (meaning Praise)",
+        "'Shikshak' (meaning Teacher) and 'Nirman' (meaning Construction)",
+        "'Shala' (meaning Schools) and 'Gunvatta' (meaning Quality)"
       ],
-      "correct_answer": "b",
-      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because 'Role of Primary and Secondary Socialization agencies' and 'Steps to ensure Home school continuity' are explicitly placed under section A ('Understanding the Learner'), not under section D ('Creating Conducive Learning Environment').",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि 'प्राथमिक और द्वितीयक समाजीकरण एजेंसियों की भूमिका' तथा 'घर और विद्यालय की निरंतरता सुनिश्चित करने के कदम' को खंड D ('अनुकूल अधिगम वातावरण का निर्माण') के तहत नहीं, बल्कि स्पष्ट रूप से खंड A ('शिक्षार्थी को समझना') के तहत रखा गया है।",
-      "topic": "KVS",
-      "difficulty": "hard",
-      "key_facts": [
-        "Development tasks and challenges with special reference to the foundational, preparatory, middle and secondary school children Domains of Development: Physical, Cognitive, Socio-emotional, Moral etc., deviations in development and its implications. Role of Primary and Secondary Socialization agencies. Steps to ensure Home school continuity. Mental Health and Well Being. ... Concept of School Mental Health & Well Being. Addressing the curative, preventive and promotive dimensions of mental health for all students and staff."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:08:34.587612"
-    },
-    {
-      "id": "1f07df34-515a-4051-a9ff-cb6c1f6914d1",
-      "created_at": "2026-10-10T08:13:30.347577",
-      "question_hindi": "भारत में कुल केंद्रीय विद्यालयों में से लगभग कितने विद्यालयों को 'ग्रेड 2' विद्यालयों के रूप में वर्गीकृत किया गया है, जिनमें प्राचार्य की आवश्यकता नहीं होती है और वे उप-प्राचार्य के नेतृत्व में संचालित होते हैं?",
-      "options_hindi": [
-        "लगभग 250",
-        "लगभग 70",
-        "लगभग 420",
-        "लगभग 600"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Out of the total Kendriya Vidyalayas in India, approximately how many are categorized as 'Grade 2' schools which do not require a principal and are headed by a vice-principal?",
-      "options_english": [
-        "Approximately 250",
-        "Approximately 70",
-        "Approximately 420",
-        "Approximately 600"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Out of the total 1,247 Kendriya Vidyalaya schools in the country, approximately 250 schools are grade 2 schools which do not require a principal and are headed instead by a vice-principal.",
-      "explanation_hindi": "देश के कुल 1,247 केंद्रीय विद्यालयों में से लगभग 250 विद्यालय ग्रेड 2 के विद्यालय हैं, जिनमें प्राचार्य की आवश्यकता नहीं होती है और उनका नेतृत्व उप-प्राचार्य द्वारा किया जाता है।",
+      "correct_answer": "d",
+      "explanation_english": "As documented by the Ministry of Education (DSEL), the word 'Shagun' is coined from two different words: 'Shala', meaning Schools, and 'Gunvatta', meaning Quality.",
+      "explanation_hindi": "शिक्षा मंत्रालय (DSEL) के प्रलेखन के अनुसार, 'शगुन' शब्द दो अलग-अलग शब्दों 'शाला' (जिसका अर्थ स्कूल है) और 'गुणवत्ता' (जिसका अर्थ क्वालिटी है) से मिलकर बना है।",
       "topic": "KVS",
       "difficulty": "easy",
       "key_facts": [
-        "Out of the total 1,247 KV schools in the country, approximately 250 schools are grade 2 schools which don't require a principal, and are instead headed by a vice-principal."
+        "The word 'Shagun' is coined from two different words 'Shala', meaning Schools and 'Gunvatta' meaning Quality."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T08:13:30.347577"
+      "processed_at": "2026-10-10T08:09:16.863550"
     },
     {
-      "id": "c87bba73-8fc5-44ca-93a6-d706ee1b81d0",
-      "created_at": "2026-10-10T08:07:31.512754",
-      "question_hindi": "केंद्रीय विद्यालयों / प्रशासनिक इकाइयों में गणमान्य व्यक्तियों के ऐतिहासिक दौरों के संदर्भ में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "id": "30a1e7ea-1dfc-4043-a7b5-4ca2eb3127c3",
+      "created_at": "2026-10-10T08:05:20.367175",
+      "question_hindi": "केंद्रीय विद्यालय संगठन (KVS) के संस्था-ज्ञापन के अंतर्गत वित्तीय प्रावधानों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. केंद्र सरकार द्वारा प्रदान की गई सभी धनराशि, प्राप्त सभी शुल्क, और सभी अनुदान या दान संगठन द्वारा बनाए रखे गए कोष में जमा किए जाते हैं।\n2. संगठन के पास अपनी संपत्तियों पर बंधक, प्रभार, दृष्टिबंधक या गिरवी की सुरक्षा पर धन उधार लेने या जुटाने की स्पष्ट शक्ति है।\n3. संगठन को किसी भी जमा धनराशि को बैंकों में निवेश करने या जमा करने से वैधानिक रूप से प्रतिबंधित किया गया है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
       "options_hindi": [
-        "श्री भक्तदर्शन (तत्कालीन शिक्षा राज्य मंत्री) : केवी एएमसी लखनऊ",
-        "डॉ. एपीजे अब्दुल कलाम (तत्कालीन राष्ट्रपति) : केवी काठमांडू",
-        "श्री मोरारजी देसाई (तत्कालीन प्रधानमंत्री) : केवी नंबर 2 एएफएस पुणे",
-        "डॉ. एपीजे अब्दुल कलाम (पूर्व राष्ट्रपति) : क्षेत्रीय कार्यालय चेन्नई का स्वर्ण जयंती समारोह"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding historical visits of dignitaries to Kendriya Vidyalayas / administrative units is NOT correctly matched?",
-      "options_english": [
-        "Sh. Bhaktdarshan (then MoS for Education) : KV AMC Lucknow",
-        "Dr. APJ Abdul Kalam (then President) : KV Kathmandu",
-        "Sh. Morarji Desai (then Prime Minister) : KV No. 2 AFS Pune",
-        "Dr. APJ Abdul Kalam (Former President) : Golden Jubilee Celebrations of RO Chennai"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Sh. Bhaktdarshan (then Minister of State for Education) inaugurated the building of KV GCF Jabalpur on September 17, 1970, whereas KV AMC Lucknow was visited by Field Marshall Sam Manekshaw. Hence, pair (b) is incorrectly matched.",
-      "explanation_hindi": "श्री भक्तदर्शन (तत्कालीन शिक्षा राज्य मंत्री) ने 17 सितंबर 1970 को केवी जीसीएफ जबलपुर भवन का उद्घाटन किया था, जबकि केवी एएमसी लखनऊ का दौरा फील्ड मार्शल सैम मानेकशॉ ने किया था। अतः युग्म (b) गलत सुमेलित है।",
-      "topic": "KVS",
-      "difficulty": "medium",
-      "key_facts": [
-        "Inauguration of KV GCF Jabalpur building by the then Minister of State for Education Sh. Bhaktdarshan (September 17, 1970)\n\nSh. Morar ji Desai, then Prime Minister of India visits KV No. 2 AFS Pune\n\nField Marshall Sam Manekshaw visits KV AMC Lucknow"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:07:31.512754"
-    },
-    {
-      "id": "59d1f47a-027c-428e-8da9-9f47d8b031a1",
-      "created_at": "2026-10-10T08:14:10.947473",
-      "question_hindi": "केंद्रीय विद्यालय संगठन (KVS) से संबंधित हाल की घटनाओं, उपलब्धियों और कर्मियों के संदर्भ में सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (व्यक्ति / संस्था / कार्यक्रम)\nA. श्री तरुण कुमार दाश\nB. सुश्री अर्चना जायसवाल\nC. केवीएस मुख्यालय\nD. 13वां केवीएस उपायुक्त सम्मेलन\n\nसूची-II (उपलब्धि / स्थल / भूमिका)\n1. पीएम श्री केवी कोरापुट से राष्ट्रीय शिक्षक पुरस्कार 2025 प्राप्तकर्ता\n2. भारत बोधन एआई कॉन्क्लेव 2026 में प्रश्नोत्तरी प्रतियोगिता जीती\n3. राजभाषा कीर्ति पुरस्कार 2025-26 (द्वितीय स्थान) से सम्मानित\n4. भारत मंडपम, नई दिल्ली में आयोजित\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
-      "options_hindi": [
-        "A-1, B-2, C-3, D-4",
-        "A-1, B-3, C-2, D-4",
-        "A-4, B-2, C-3, D-1",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List-I with List-II regarding recent events, achievements, and personnel associated with Kendriya Vidyalaya Sangathan (KVS):\n\nList-I (Person / Institution / Event)\nA. Sh. Tarun Kumar Dash\nB. Ms. Archana Jaiswal\nC. KVS Headquarters\nD. 13th KVS Deputy Commissioners’ Conference\n\nList-II (Achievement / Venue / Role)\n1. Recipient of National Teacher’s Award 2025 from PM SHRI KV Koraput\n2. Won quiz competition at Bharat Bodhan AI conclave 2026\n3. Conferred with Rajbhasha Kirti Puraskar 2025-26 (Second Position)\n4. Organized at Bharat Mandapam, New Delhi\n\nSelect the correct answer using the code given below:",
-      "options_english": [
-        "A-1, B-2, C-3, D-4",
-        "A-1, B-3, C-2, D-4",
-        "A-4, B-2, C-3, D-1",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "As per official KVS announcements: Sh. Tarun Kumar Dash of PM SHRI KV Koraput received the National Teacher’s Award 2025. Ms. Archana Jaiswal, Assistant Commissioner, KVS RO Lucknow, won the quiz competition at Bharat Bodhan AI conclave 2026. KVS Headquarters was conferred with Rajbhasha Kirti Puraskar 2025-26 (Second Position). The 13th KVS Deputy Commissioners’ Conference was organized at Bharat Mandapam, New Delhi.",
-      "explanation_hindi": "केवीएस की आधिकारिक घोषणाओं के अनुसार: पीएम श्री केवी कोरापुट के श्री तरुण कुमार दाश को राष्ट्रीय शिक्षक पुरस्कार 2025 प्राप्त हुआ। केवीएस आरओ लखनऊ की सहायक आयुक्त सुश्री अर्चना जायसवाल ने भारत बोधन एआई कॉन्क्लेव 2026 में प्रश्नोत्तरी प्रतियोगिता जीती। केवीएस मुख्यालय को राजभाषा कीर्ति पुरस्कार 2025-26 (द्वितीय स्थान) से सम्मानित किया गया। 13वां केवीएस उपायुक्त सम्मेलन भारत मंडपम, नई दिल्ली में आयोजित किया गया था।",
-      "topic": "KVS",
-      "difficulty": "medium",
-      "key_facts": [
-        "Sh. Tarun Kumar Dash of PM SHRI KV Koraput received the prestigious National Teacher’s Award 2025 from Hon’ble President of India, Smt. Droupadi Murmu on the occasion of Teachers' Day 2025."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:14:10.947473"
-    },
-    {
-      "id": "480b737a-7712-442d-91b1-b9a06d6fe2ae",
-      "created_at": "2026-10-10T08:10:09.135541",
-      "question_hindi": "प्रधानाचार्य पद (टियर-I) के लिए पाठ्यक्रम घटकों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "शिक्षण अधिगम की समझ : व्यवहारवाद, संज्ञानवाद और रचनावाद पर सैद्धांतिक दृष्टिकोण",
-        "शिक्षण-अधिगम का नियोजन और संगठन : योग्यता-आधारित पाठ योजना और आकलन",
-        "शिक्षा में परिप्रेक्ष्य : निपुण भारत मिशन और बुनियादी चरण हेतु राष्ट्रीय पाठ्यचर्या रूपरेखा-2022",
-        "अनुकूल शिक्षण परिवेश का निर्माण : विद्यालय की समय-सारणी तैयार करना और प्रारंभिक बाल्यावस्था देखभाल एवं शिक्षा"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding the syllabus components for the post of Principal (Tier-I) is NOT correctly matched?",
-      "options_english": [
-        "Understanding Teaching Learning : Theoretical perspectives on Behaviorism, Cognitivism and Constructivism",
-        "Planning and Organization of Teaching-Learning : Competency Based Lesson Planning and Assessment",
-        "Perspectives in Education : NIPUN Bharat Mission and National Curriculum Framework Foundational Stage-2022",
-        "Creating Conducive Learning Environment : Preparation of School Time-table and Early Childhood Care and Education"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "In the official Tier-I syllabus for Principal, 'Preparation of School Time-table' and 'Early Childhood Care and Education' are explicitly placed under Section C: 'Planning and Organization of Teaching-Learning', not under Section D: 'Creating Conducive Learning Environment'. Therefore, pair 4 is NOT correctly matched.",
-      "explanation_hindi": "प्रधानाचार्य हेतु आधिकारिक टियर-I पाठ्यक्रम में, 'विद्यालय की समय-सारणी तैयार करना' (Preparation of School Time-table) और 'प्रारंभिक बाल्यावस्था देखभाल एवं शिक्षा' (Early Childhood Care and Education) स्पष्ट रूप से खंड C: 'शिक्षण-अधिगम का नियोजन और संगठन' के अंतर्गत रखे गए हैं, न कि खंड D: 'अनुकूल शिक्षण परिवेश का निर्माण' के अंतर्गत। अतः युग्म 4 सही सुमेलित नहीं है।",
-      "topic": "KVS",
-      "difficulty": "medium",
-      "key_facts": [
-        "Preparation of School Time-table Foundational Literacy and Numeracy, Early Childhood Care and Education Competency Based Lesson Planning."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:10:09.135541"
-    },
-    {
-      "id": "86d513b7-f097-4e65-9b2c-1e256ef23668",
-      "created_at": "2026-10-10T08:04:30.057397",
-      "question_hindi": "केंद्रीय विद्यालय संगठन (KVS) में प्राचार्य (Principal) पद के लिए परीक्षा और चयन प्रक्रिया के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. टियर-1 एक ओएमआर-आधारित अर्हक (qualifying) वस्तुनिष्ठ स्क्रीनिंग परीक्षा है, जिसमें 300 अंकों के 100 प्रश्न होते हैं।\n2. टियर-2 विषय ज्ञान परीक्षा (Subject Knowledge Examination) में 60 वस्तुनिष्ठ प्रश्न (60 अंक) और 10 वर्णनात्मक प्रश्न (40 अंक) शामिल हैं, जिसकी कुल अवधि 2.5 घंटे है।\n3. अंतिम मेरिट सूची टियर-2 के अंकों को 75% वेटेज और साक्षात्कार को 25% वेटेज देकर तैयार की जाती है।\n4. अभ्यर्थियों को टियर-2 से टियर-3 साक्षात्कार दौर के लिए 1:3 के अनुपात में शॉर्टलिस्ट किया जाता है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 1, 2 और 4",
-        "केवल 1, 2 और 3",
-        "केवल 2, 3 और 4",
-        "केवल 1, 3 और 4"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the examination and selection pattern for the post of Principal in Kendriya Vidyalaya Sangathan (KVS):\n\n1. Tier-1 is an OMR-based qualifying objective screening test consisting of 100 questions carrying 300 marks.\n2. Tier-2 Subject Knowledge Examination comprises 60 objective questions (60 marks) and 10 descriptive questions (40 marks) with a total duration of 2.5 hours.\n3. The final merit list is prepared by assigning 75% weightage to Tier-2 scores and 25% weightage to the Interview.\n4. Candidates are shortlisted from Tier-2 for the Tier-3 Interview round in a 1:3 ratio.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1, 2 and 4 only",
-        "1, 2 and 3 only",
-        "2, 3 and 4 only",
-        "1, 3 and 4 only"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Statements 1, 2, and 4 are correct. Statement 3 is incorrect because the final merit list is prepared by giving 85% weightage to Tier-2 scores and 15% to the interview, not 75:25.",
-      "explanation_hindi": "कथन 1, 2 और 4 सही हैं। कथन 3 गलत है क्योंकि अंतिम मेरिट सूची टियर-2 के अंकों को 85% तथा साक्षात्कार को 15% वेटेज देकर तैयार की जाती है, न कि 75:25।",
-      "topic": "KVS",
-      "difficulty": "hard",
-      "key_facts": [
-        "The final merit list is prepared by giving 85% weightage to Tier 2 scores and 15% to the interview. Aspirants aiming for the Principal post under the KVS Recruitment 2026 should review the complete KVS Principal Syllabus 2026 to plan their preparation effectively."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:04:30.057397"
-    },
-    {
-      "id": "e7b1dbac-a7f0-44bb-8652-a50bda7bfd0f",
-      "created_at": "2026-10-10T08:12:48.698065",
-      "question_hindi": "केन्द्रीय विद्यालय संगठन (KVS) के मेमोरेंडम ऑफ एसोसिएशन के खंड 3 के तहत उल्लिखित वैधानिक उद्देश्यों के संबंध में सूची-I को सूची-II के साथ सुमेलित कीजिए:\n\nसूची-I (MoA खंड)\nA. खंड 3(c)\nB. खंड 3(d)\nC. खंड 3(i)\nD. खंड 3(l)\n\nसूची-II (वैधानिक उद्देश्य / प्रावधान)\n1. विद्यार्थियों के आवास हेतु छात्रावासों की स्थापना, विकास, रखरखाव और प्रबंधन करना\n2. केन्द्रीय महाविद्यालयों सहित अन्य संस्थानों की सहायता करना, उन्हें स्थापित करना और संचालित करना\n3. संगठन के प्रयोजनों हेतु भवनों का निर्माण, सुधार, परिवर्तन, विध्वंस, मरम्मत और रखरखाव करना\n4. एक निधि का रखरखाव करना जिसमें केंद्र सरकार का धन, शुल्क, अनुदान और दान जमा किया जाएगा\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
-      "options_hindi": [
-        "A-3, B-4, C-1, D-2",
-        "A-1, B-2, C-4, D-3",
-        "A-1, B-2, C-3, D-4",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List-I with List-II regarding the statutory objects specified under Clause 3 of the Memorandum of Association of Kendriya Vidyalaya Sangathan (KVS):\n\nList-I (MoA Clause)\nA. Clause 3(c)\nB. Clause 3(d)\nC. Clause 3(i)\nD. Clause 3(l)\n\nList-II (Statutory Object / Provision)\n1. Establish, develop, maintain and manage hostels for the residence of students\n2. Aid, establish and conduct other institutions, including Kendriya Mahavidyalayas\n3. Construct, improve, alter, demolish, repair and maintain buildings for the Sangathan\n4. Maintain a fund to credit Central Government moneys, fees, grants, and donations\n\nSelect the correct answer using the code given below:",
-      "options_english": [
-        "A-3, B-4, C-1, D-2",
-        "A-1, B-2, C-4, D-3",
-        "A-1, B-2, C-3, D-4",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "According to the Memorandum of Association of KVS: Clause 3(c) provides for establishing and managing hostels for students; Clause 3(d) provides for aiding/establishing other institutions including Kendriya Mahavidyalayas; Clause 3(i) provides for constructing, altering, demolishing, and maintaining buildings; Clause 3(l) provides for maintaining a fund credited with government moneys, fees, and grants. Thus, A-1, B-2, C-3, D-4 is the correct matching.",
-      "explanation_hindi": "केवीएस के मेमोरेंडम ऑफ एसोसिएशन के अनुसार: खंड 3(c) विद्यार्थियों के लिए छात्रावासों की स्थापना और प्रबंधन का प्रावधान करता है; खंड 3(d) केन्द्रीय महाविद्यालयों सहित अन्य संस्थानों की स्थापना/सहायता करने का प्रावधान करता है; खंड 3(i) भवनों के निर्माण, परिवर्तन, विध्वंस और रखरखाव का प्रावधान करता है; खंड 3(l) एक निधि के रखरखाव का प्रावधान करता है जिसमें सरकारी धन, शुल्क और अनुदान जमा किए जाएंगे। अतः सही सुमेलन A-1, B-2, C-3, D-4 है।",
-      "topic": "KVS",
-      "difficulty": "medium",
-      "key_facts": [
-        "(c) To establish, develop, maintain and manage hostels for the resi dence of students of the Kendriya Vidyalayas. (d) To aid, establish and conduct other institutions, including Kendriya Mahavidyalayas, as may be required for the furtherance of the Sangathan’s object in any part of India ;"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:12:48.698065"
-    },
-    {
-      "id": "04bf01a9-58b7-411a-b8e1-f97f692dec41",
-      "created_at": "2026-10-10T08:04:30.057397",
-      "question_hindi": "नवस्थापित केंद्रीय विद्यालयों और उनके स्थानों/जिलों के संबंध में सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (केंद्रीय विद्यालय)\nA. केवी कटरा\nB. केवी पूर्णिया\nC. केवी बरवाडीह (रेलवे)\nD. केवी द्रुगमुल्ला\n\nसूची-II (जिला / राज्य या केंद्र शासित प्रदेश)\n1. जिला कुपवाड़ा, जम्मू और कश्मीर\n2. जिला रियासी, जम्मू और कश्मीर\n3. जिला पूर्णिया, बिहार\n4. जिला लातेहार, झारखंड\n\nनीचे दिए गए कूट का उपयोग करके सही उत्तर चुनिए:",
-      "options_hindi": [
-        "A-1, B-3, C-4, D-2",
-        "A-2, B-4, C-3, D-1",
-        "A-2, B-3, C-4, D-1",
-        "A-3, B-2, C-1, D-4"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List-I with List-II regarding the newly established Kendriya Vidyalayas and their locations/districts:\n\nList-I (Kendriya Vidyalaya)\nA. KV Katra\nB. KV Purnea\nC. KV Barwadih (Railway)\nD. KV Drugmulla\n\nList-II (District / State or UT)\n1. District Kupwara, Jammu & Kashmir\n2. District Reasi, Jammu and Kashmir\n3. District Purnea, Bihar\n4. District Latehar, Jharkhand\n\nSelect the correct answer using the code given below:",
-      "options_english": [
-        "A-1, B-3, C-4, D-2",
-        "A-2, B-4, C-3, D-1",
-        "A-2, B-3, C-4, D-1",
-        "A-3, B-2, C-1, D-4"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "According to official KVS notifications: KV Katra is situated in District Reasi, Jammu and Kashmir; KV Purnea is in District Purnea, Bihar; KV Barwadih (Railway) is in District Latehar, Jharkhand; and KV Drugmulla is located in District Kupwara, Jammu & Kashmir.",
-      "explanation_hindi": "आधिकारिक केवीएस अधिसूचनाओं के अनुसार: केवी कटरा जिला रियासी, जम्मू और कश्मीर में स्थित है; केवी पूर्णिया जिला पूर्णिया, बिहार में है; केवी बरवाडीह (रेलवे) जिला लातेहार, झारखंड में है; तथा केवी द्रुगमुल्ला जिला कुपवाड़ा, जम्मू और कश्मीर में स्थित है।",
-      "topic": "KVS",
-      "difficulty": "medium",
-      "key_facts": [
-        "Opening of the new Kendriya Vidyalaya Katra, District Reasi, Jammu and Kashmir.-Reg. Opening of the new Kendriya Vidyalaya Purnea, District Purnea, Bihar-Reg. Opening of the new Kendriya Vidyalaya Barwadih (Railway), District Latehar, Jharkhand-Reg. Opening of the new Kendriya Vidyalaya Drugmulla, District Kupwara, Jammu & Kashmir-Reg."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:04:30.057397"
-    },
-    {
-      "id": "eb89248d-5678-46f5-a00e-60cc65491d20",
-      "created_at": "2026-10-10T08:15:44.521405",
-      "question_hindi": "प्रत्यक्ष / एलडीसीई (Direct / LDCE) के माध्यम से केवीएस में प्रधानाचार्य / उप-प्रधानाचार्य / पीजीटी / टीजीटी / एचएम / पीआरटी की भर्ती परीक्षा संरचना के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. भाग I में सामान्य जागरूकता, तार्किक क्षमता और भाषाओं में दक्षता (General awareness, Reasoning & Proficiency in Languages) शामिल है।\n2. भाग-II शिक्षा और नेतृत्व पर परिप्रेक्ष्य (Perspectives on Education and Leadership) के लिए समर्पित है।\n3. भाग III विद्यालय प्रशासन और वित्त (School Administration & Finance) को कवर करता है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 2 और 3",
         "केवल 1 और 3",
+        "केवल 2 और 3",
         "1, 2 और 3",
         "केवल 1 और 2"
       ],
@@ -357,208 +246,23 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the scheme of exam structure for the recruitment of Principal / Vice Principal / PGT / TGT / HM / PRT in KVS through Direct / LDCE:\n\n1. Part I comprises General awareness, Reasoning & Proficiency in Languages.\n2. Part-II is dedicated to Perspectives on Education and Leadership.\n3. Part III covers School Administration & Finance.\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider the following statements regarding the financial provisions under the Memorandum of Association of Kendriya Vidyalaya Sangathan (KVS):\n\n1. All moneys provided by the Central Government, all fees received, and all grants or donations are credited to the Fund maintained by the Sangathan.\n2. The Sangathan has the explicit power to borrow or raise moneys on the security of a mortgage, charge, hypothecation, or pledge over its properties.\n3. The Sangathan is statutorily prohibited from investing or depositing any credited moneys into banks.\n\nWhich of the statements given above are correct?",
       "options_english": [
-        "2 and 3 only",
         "1 and 3 only",
+        "2 and 3 only",
         "1, 2 and 3",
         "1 and 2 only"
       ],
-      "correct_answer": "c",
-      "explanation_english": "As per the Scheme of Exam for Recruitment of KVS Principal/Vice Principal/PGT/TGT/HM/PRT through Direct/LDCE:\n- Part I: General awareness, Reasoning & Proficiency in Languages\n- Part-II: Perspectives on Education and Leadership\n- Part III: School Administration & Finance\nAll three statements are correct.",
-      "explanation_hindi": "प्रत्यक्ष/एलडीसीई के माध्यम से केवीएस प्रधानाचार्य/उप-प्रधानाचार्य/पीजीटी/टीजीटी/एचएम/पीआरटी की भर्ती परीक्षा योजना के अनुसार:\n- भाग I: सामान्य जागरूकता, रीजनिंग और भाषाओं में प्रवीणता\n- भाग-II: शिक्षा और नेतृत्व पर परिप्रेक्ष्य\n- भाग III: विद्यालय प्रशासन और वित्त\nतीनों कथन सही हैं।",
+      "correct_answer": "d",
+      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because clause (o) of the objects explicitly empowers the Sangathan 'To deposit all moneys credited to the Fund in such banks or to invest in such a manner as the Sangathan may decide'.",
+      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि उद्देश्यों का खंड (o) संगठन को स्पष्ट रूप से 'कोष में जमा सभी राशियों को ऐसे बैंकों में जमा करने या ऐसे तरीके से निवेश करने का अधिकार देता है जैसा कि संगठन तय करे'।",
       "topic": "KVS",
       "difficulty": "medium",
       "key_facts": [
-        "Scheme of Exam for Recruitment of KVS Principal/Vice Principal/PGT/TGT/HM/PRT through Direct/LDCE\n\n- Part I - General awareness, Reasoning & Proficiency in Languages\n\n- Part III -School Administration & Finance\n\n- Part-II: Perspectives on Education and Leadership"
+        "To deposit all moneys credited to the Fund in such banks or to invest in such a manner as the Sangathan may decide ; (p) To borrow or raise moneys with or without securities or on the security of a mortgage, charge, hypothecation or pledge, over all or any of the immovable or movable properties belonging to the Sangathan or in any other manner whatsoever ;"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T08:15:44.521405"
-    },
-    {
-      "id": "fa56b992-ec29-4c10-96f2-78108c754124",
-      "created_at": "2026-10-10T08:02:13.668556",
-      "question_hindi": "केंद्रीय विद्यालय संगठन (KVS) के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "'शगुन' में व्युत्पत्तिगत मूल शब्द 'गुणवत्ता' : गुणवत्ता (Quality)",
-        "'शगुन' में व्युत्पत्तिगत मूल शब्द 'शाला' : स्कूल",
-        "संबद्धता : केंद्रीय माध्यमिक शिक्षा बोर्ड (CBSE)",
-        "शिक्षा का माध्यम : सभी केंद्रीय विद्यालयों के लिए विशेष रूप से केवल अंग्रेजी"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding Kendriya Vidyalaya Sangathan (KVS) is NOT correctly matched?",
-      "options_english": [
-        "Etymological root 'Gunvatta' in 'Shagun' : Quality",
-        "Etymological root 'Shala' in 'Shagun' : Schools",
-        "Affiliation : Central Board of Secondary Education (CBSE)",
-        "Medium of instruction : Exclusively English for all Kendriya Vidyalayas"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "The medium of instruction is not exclusively English. As per KVS salient features, it has common textbooks and a bilingual (English & Hindi) medium of instruction for all Kendriya Vidyalayas.",
-      "explanation_hindi": "शिक्षा का माध्यम केवल अंग्रेजी नहीं है। KVS की मुख्य विशेषताओं के अनुसार, सभी केंद्रीय विद्यालयों के लिए सामान्य पाठ्यपुस्तकें और द्विभाषी (अंग्रेजी और हिंदी) शिक्षण माध्यम है।",
-      "topic": "KVS",
-      "difficulty": "medium",
-      "key_facts": [
-        "Common textbooks and bilingual (English & Hindi) medium of instruction for all Kendriya Vidyalayas."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:02:13.668556"
-    },
-    {
-      "id": "bc45b5aa-fffa-48e5-88a3-88c9399e9295",
-      "created_at": "2026-10-10T08:11:57.729866",
-      "question_hindi": "केवीएस भर्ती 2026 के अंतर्गत प्राचार्य पद हेतु टियर-1 प्रारंभिक स्क्रीनिंग परीक्षा की योजना और संरचना के संदर्भ में, निम्नलिखित कथनों पर विचार कीजिए:\n\n1. टियर-1 एक अर्हकारी (qualifying), ओएमआर-आधारित वस्तुनिष्ठ परीक्षा है जिसमें 2 घंटे की अवधि में 300 अंकों के लिए कुल 100 प्रश्न होते हैं।\n2. सामान्य तर्कशक्ति (General Reasoning), संख्यात्मक योग्यता (Numeric Ability), और बुनियादी कंप्यूटर साक्षरता (Basic Computer Literacy) प्रत्येक में 60 अंकों के 20 प्रश्न शामिल हैं।\n3. भाषा प्रवीणता अनुभाग में अंग्रेजी के लिए 30 अंकों के 10 प्रश्न और आधुनिक भारतीय भाषा के लिए 30 अंकों के 10 प्रश्न शामिल हैं।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3",
-        "1, 2 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "With reference to the scheme and structure of the Tier-1 Preliminary Screening Examination for the post of Principal under KVS Recruitment 2026, consider the following statements:\n\n1. Tier-1 is a qualifying, OMR-based objective test carrying a total of 100 questions for 300 marks with a duration of 2 hours.\n2. General Reasoning, Numeric Ability, and Basic Computer Literacy each consist of 20 questions carrying 60 marks.\n3. The Language Competency section consists of 10 questions carrying 30 marks for English and 10 questions carrying 30 marks for Modern Indian Language.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1 and 3 only",
-        "1 and 2 only",
-        "2 and 3 only",
-        "1, 2 and 3"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "All statements are correct according to the KVS Principal Exam Pattern 2026: Tier-1 is a qualifying, OMR-based objective test of 2 hours with 100 questions (3 marks each, total 300 marks). Part I (General Reasoning), Part II (Numeric Ability), and Part III (Basic Computer Literacy) each have 20 questions carrying 60 marks. Part V (Language Competency - English) and Part VI (Language Competency - Modern Indian Language) each have 10 questions carrying 30 marks.",
-      "explanation_hindi": "केवीएस प्राचार्य परीक्षा पैटर्न 2026 के अनुसार सभी कथन सही हैं: टियर-1 2 घंटे की अवधि वाला एक अर्हकारी, ओएमआर-आधारित वस्तुनिष्ठ परीक्षण है जिसमें 100 प्रश्न (प्रत्येक 3 अंक, कुल 300 अंक) होते हैं। भाग I (सामान्य तर्कशक्ति), भाग II (संख्यात्मक योग्यता) और भाग III (बुनियादी कंप्यूटर साक्षरता) प्रत्येक में 60 अंकों के 20 प्रश्न होते हैं। भाग V (भाषा प्रवीणता - अंग्रेजी) और भाग VI (भाषा प्रवीणता - आधुनिक भारतीय भाषा) प्रत्येक में 30 अंकों के 10 प्रश्न होते हैं।",
-      "topic": "KVS",
-      "difficulty": "hard",
-      "key_facts": [
-        "Tier -1 is a qualifying, OMR-based objective test conducted for all applicants. The exam carries 100 questions, each worth 3 marks, making the total 300 marks."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:11:57.729866"
-    },
-    {
-      "id": "42c7abbf-58a2-477a-ab95-e0ee44cae218",
-      "created_at": "2026-10-10T08:02:13.668556",
-      "question_hindi": "केंद्रीय विद्यालयों के चार-आयामी मिशन के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. शिक्षा का एक साझा कार्यक्रम प्रदान करके रक्षा और अर्ध-सैन्य कर्मियों सहित स्थानांतरणीय केंद्र सरकार के कर्मचारियों के बच्चों की शैक्षिक आवश्यकताओं को पूरा करना।\n2. स्कूली शिक्षा के क्षेत्र में उत्कृष्टता प्राप्त करना और गति निर्धारित करना।\n3. सीबीएसई (CBSE) और एनसीईआरटी (NCERT) जैसे अन्य निकायों के सहयोग से शिक्षा में प्रयोगों और नवाचारों को शुरू करना और बढ़ावा देना।\n4. बच्चों के बीच राष्ट्रीय एकता की भावना विकसित करना और \"भारतीयता\" की भावना पैदा करना।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 2, 3 और 4",
-        "केवल 1, 3 और 4",
-        "केवल 1, 2 और 3",
-        "1, 2, 3 और 4"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the four-fold mission of Kendriya Vidyalayas:\n1. To cater to the educational needs of the children of transferable Central Government employees including Defence and Para-military personnel by providing a common programme of education.\n2. To pursue excellence and set the pace in the field of school education.\n3. To initiate and promote experimentation and innovations in education in collaboration with other Bodies like CBSE and NCERT.\n4. To develop the spirit of national integration and create a sense of \"Indianness\" among children.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "2, 3 and 4 only",
-        "1, 3 and 4 only",
-        "1, 2 and 3 only",
-        "1, 2, 3 and 4"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "All four statements represent the four-fold mission outlined for Kendriya Vidyalayas.",
-      "explanation_hindi": "सभी चारों कथन केंद्रीय विद्यालयों के लिए उल्लिखित चार-आयामी मिशन का प्रतिनिधित्व करते हैं।",
-      "topic": "KVS",
-      "difficulty": "medium",
-      "key_facts": [
-        "The Kendriya Vidyalayas have a four-fold mission, viz, - Kendriya Vidyalaya Sangathan (KVS) - To cater to the educational needs of the children of transferable Central Government employees including Defence and Para-military personnel by providing a common programme of education; - To pursue excellence and set the pace in the field of school education; - To initiate and promote experimentation and innovations in education in collaboration with other Bodies like the Central Board of Secondary Education (CBSE) and the National Council of Educational Research and Training (NCERT) etc. - To develop the spirit of national integration and create a sense of \"Indianness\" among children."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:02:13.668556"
-    },
-    {
-      "id": "d4b772c7-b73a-40d0-8bbe-071db5cbf86c",
-      "created_at": "2026-10-10T08:07:31.512754",
-      "question_hindi": "केवीएस (KVS) अभिलेखों में उल्लिखित विभिन्न केंद्रीय विद्यालयों में प्रख्यात विभूतियों के ऐतिहासिक दौरों और उद्घाटनों के संदर्भ में सूची-I को सूची-II के साथ सुमेलित कीजिए:\n\nसूची-I (विभूति / नेता)\nA. श्री भक्तदर्शन (तत्कालीन शिक्षा राज्य मंत्री)\nB. श्री अटल बिहारी वाजपेयी (तत्कालीन विदेश मंत्री)\nC. फील्ड मार्शल सैम मानेकशॉ\nD. श्री के. आर. नारायणन (तत्कालीन भारत के राष्ट्रपति)\n\nसूची-II (केंद्रीय विद्यालय / संबंधित घटना)\n1. केवी काठमांडू के नए भवन का उद्घाटन (1977)\n2. केवी जीसीएफ जबलपुर भवन का उद्घाटन (1970)\n3. केवी ओट्टापलम, केरल का दौरा\n4. केवी एएमसी लखनऊ का दौरा\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
-      "options_hindi": [
-        "A-4, B-3, C-2, D-1",
-        "A-1, B-2, C-4, D-3",
-        "A-2, B-1, C-3, D-4",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List-I with List-II regarding the historical visits and inaugurations by eminent dignitaries across Kendriya Vidyalayas as commemorated in KVS records:\n\nList-I (Dignitary / Leader)\nA. Sh. Bhaktdarshan (then MoS for Education)\nB. Sh. Atal Bihari Vajpayee (then Foreign Minister)\nC. Field Marshall Sam Manekshaw\nD. Sh. K.R. Narayanan (then President of India)\n\nList-II (Kendriya Vidyalaya / Associated Event)\n1. Inauguration of new building of KV Kathmandu (1977)\n2. Inauguration of building of KV GCF Jabalpur (1970)\n3. Visit to KV Ottapalam, Kerala\n4. Visit to KV AMC Lucknow\n\nSelect the correct answer using the code given below:",
-      "options_english": [
-        "A-4, B-3, C-2, D-1",
-        "A-1, B-2, C-4, D-3",
-        "A-2, B-1, C-3, D-4",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "According to the historical records of KVS ('A Glorious Journey of 60 Years'): Sh. Bhaktdarshan inaugurated the KV GCF Jabalpur building on September 17, 1970 (A-2); Sh. Atal Bihari Vajpayee inaugurated the new building of KV Kathmandu on July 16, 1977 (B-1); Field Marshall Sam Manekshaw visited KV AMC Lucknow (C-4); and Sh. K.R. Narayanan visited KV Ottapalam, Kerala (D-3).",
-      "explanation_hindi": "केवीएस के ऐतिहासिक रिकॉर्ड ('60 वर्षों की गौरवशाली यात्रा') के अनुसार: श्री भक्तदर्शन ने 17 सितंबर 1970 को केवी जीसीएफ जबलपुर भवन का उद्घाटन किया (A-2); श्री अटल बिहारी वाजपेयी ने 16 जुलाई 1977 को केवी काठमांडू के नए भवन का उद्घाटन किया (B-1); फील्ड मार्शल सैम मानेकशॉ ने केवी एएमसी लखनऊ का दौरा किया (C-4); तथा तत्कालीन राष्ट्रपति श्री के. आर. नारायणन ने केवी ओट्टापलम, केरल का दौरा किया (D-3)।",
-      "topic": "KVS",
-      "difficulty": "hard",
-      "key_facts": [
-        "Inauguration of KV GCF Jabalpur building by the then Minister of State for Education Sh. Bhaktdarshan (September 17, 1970)\n\nSh. Morar ji Desai, then Prime Minister of India visits KV No. 2 AFS Pune\n\nField Marshall Sam Manekshaw visits KV AMC Lucknow\n\nInauguration of new building of KV Kathmandu by the then Foreign Minister of India Sh. Atal Bihari Vajpayee (July 16, 1977)\n\nSh. K.R. Narayanan, then President of India at KV Ottapalam, Kerala"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:07:31.512754"
-    },
-    {
-      "id": "80900be1-90cd-430b-bb06-a50dd050984c",
-      "created_at": "2026-10-10T08:03:48.725799",
-      "question_hindi": "केन्द्रीय विद्यालय संगठन (KVS) में सीमित विभागीय परीक्षा (LDE) के माध्यम से प्राचार्य (Principal) के पद हेतु टियर-I परीक्षा योजना के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. टियर-I विषय ज्ञान परीक्षा पेन-पेपर और ओएमआर (OMR) आधारित परीक्षण के संयोजन के रूप में आयोजित की जाती है।\n2. परीक्षा में 60 अंकों के 60 वस्तुनिष्ठ (ऑब्जेक्टिव) प्रश्न और 40 अंकों के 10 वर्णनात्मक (डिस्क्रिप्टिव) प्रश्न शामिल हैं।\n3. टियर-I परीक्षा की कुल अवधि 2 ½ घंटे है।\n\nउपर्युक्त में से कौन-से कथन सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 2",
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the scheme of Tier-I examination for the post of Principal through Limited Departmental Examination in Kendriya Vidyalaya Sangathan (KVS):\n\n1. The Tier-I Subject Knowledge Examination is conducted as a combination of Pen-paper and OMR Based test.\n2. The examination comprises 60 objective questions carrying 60 marks and 10 descriptive questions carrying 40 marks.\n3. The total duration of the Tier-I examination is 2 ½ hours.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1 and 2 only",
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 3 only"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "All three statements are correct as specified in the KVS syllabus notification for Tier-I Principal examination: Pen-paper and OMR based, 60 objective questions (60 marks), 10 descriptive questions (40 marks), and duration of 2 ½ hours.",
-      "explanation_hindi": "टियर-I प्राचार्य परीक्षा हेतु KVS पाठ्यक्रम अधिसूचना के अनुसार तीनों कथन सही हैं: यह पेन-पेपर और ओएमआर आधारित परीक्षा है, जिसमें 60 वस्तुनिष्ठ प्रश्न (60 अंक), 10 वर्णनात्मक प्रश्न (40 अंक) और 2 ½ घंटे की अवधि निर्धारित है।",
-      "topic": "KVS",
-      "difficulty": "medium",
-      "key_facts": [
-        "Tier –I Subject Knowledge Examination ( Combination of Pen-paper and OMR Based ) Component of the Test\n\nNo. of questions Total Marks Duration of the Test Objective Descriptive Objective Descriptive 2 ½ Detailed hours syllabus given below\n\n60 10 60 40"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:03:48.725799"
+      "processed_at": "2026-10-10T08:05:20.367175"
     },
     {
       "id": "7e05b078-8f59-442c-9446-431015ec2810",
@@ -598,14 +302,14 @@
       "processed_at": "2026-10-10T08:02:58.764370"
     },
     {
-      "id": "804d881d-6238-4605-b984-554b90486854",
+      "id": "e6a09207-ea76-43a6-a0dc-1c6bfc6c9998",
       "created_at": "2026-10-10T08:05:20.367175",
-      "question_hindi": "केंद्रीय विद्यालय संगठन (KVS) में प्राधिकारियों की शक्तियों और भूमिकाओं के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "question_hindi": "केंद्रीय विद्यालय संगठन (KVS) के अधिकारियों और सांविधिक प्राधिकरणों तथा उनकी संबंधित शक्तियों/कार्यों के संबंध में सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (अधिकारी / प्राधिकरण)\nA. संगठन के अध्यक्ष (Chairperson)\nB. संगठन के उपाध्यक्ष (Vice-Chairperson)\nC. शासी निकाय (Board of Governors)\nD. आयुक्त (Commissioner)\n\nसूची-II (शक्तियाँ / कार्य)\n1. वे सभी अवशिष्ट शक्तियाँ निहित हैं जो विशेष रूप से किसी अधिकारी को नहीं सौंपी गई हैं\n2. भारत सरकार के एक मंत्री द्वारा प्रयोग की जाने वाली शक्तियों के समान शक्तियाँ प्राप्त हैं\n3. संयुक्त आयुक्तों और उपायुक्तों के लिए नियुक्ति प्राधिकारी के रूप में कार्य करते हैं\n4. संगठन के प्रधान कार्यकारी अधिकारी के रूप में कार्य करते हैं\n\nनीचे दिए गए कूट का उपयोग करके सही उत्तर चुनिए:",
       "options_hindi": [
-        "उपाध्यक्ष (Vice-Chairperson) : तीनों स्थायी समितियों (वित्त, शैक्षणिक सलाहकार, और निर्माण) के अध्यक्ष",
-        "उप-अध्यक्ष (Deputy Chairperson) : भारत सरकार के एक मंत्री द्वारा प्रयोग की जाने वाली शक्तियों के समान शक्तियाँ प्राप्त होना",
-        "शासी निकाय (Board of Governors) : विद्यालयों के लिए स्थानीय प्रबंधन समितियों की नियुक्ति और उन्हें भंग करना",
-        "आयुक्त (Commissioner) : संगठन के प्रधान कार्यकारी अधिकारी"
+        "A-2, B-3, C-1, D-4",
+        "A-3, B-2, C-4, D-1",
+        "A-4, B-3, C-1, D-2",
+        "A-2, B-1, C-3, D-4"
       ],
       "option_labels": [
         "A",
@@ -616,32 +320,291 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which of the following pairs regarding the powers and roles of authorities in Kendriya Vidyalaya Sangathan (KVS) is NOT correctly matched?",
+      "question_english": "Match List-I with List-II regarding the officers and statutory authorities of Kendriya Vidyalaya Sangathan (KVS) and their respective powers/functions:\n\nList-I (Officer / Authority)\nA. Chairperson of the Sangathan\nB. Vice-Chairperson of the Sangathan\nC. Board of Governors\nD. Commissioner\n\nList-II (Powers / Functions)\n1. Vested with all residual powers not specifically assigned to any officer\n2. Vested with powers equal to those exercised by a Minister of the Government of India\n3. Acts as the appointing authority for Joint Commissioners and Deputy Commissioners\n4. Functions as the Principal Executive Officer of the Sangathan\n\nSelect the correct answer using the code given below:",
       "options_english": [
-        "Vice-Chairperson : Chairperson of the three Standing Committees (Finance, Academic Advisory, and Works)",
-        "Deputy Chairperson : Exercises powers equal to those exercised by a Minister of the Government of India",
-        "Board of Governors : Appoints and dissolves Local Management Committees for schools",
-        "Commissioner : Principal Executive Officer of the Sangathan"
+        "A-2, B-3, C-1, D-4",
+        "A-3, B-2, C-4, D-1",
+        "A-4, B-3, C-1, D-2",
+        "A-2, B-1, C-3, D-4"
       ],
-      "correct_answer": "b",
-      "explanation_english": "Pair 3 is NOT correctly matched. The Chairperson/Chairman (and not the Deputy Chairperson) has powers equal to those exercised by a Minister of the Government of India. The Deputy Chairperson chairs the meetings in the absence of the Chairperson and exercises powers specifically delegated in writing by the Chairperson.",
-      "explanation_hindi": "युग्म 3 सही सुमेलित नहीं है। संगठन के अध्यक्ष (न कि उप-अध्यक्ष) के पास भारत सरकार के एक मंत्री द्वारा प्रयोग की जाने वाली शक्तियों के बराबर शक्तियाँ होती हैं। उप-अध्यक्ष केवल अध्यक्ष की अनुपस्थिति में बैठकों की अध्यक्षता करते हैं तथा लिखित रूप से सौंपी गई शक्तियों का प्रयोग करते हैं।",
+      "correct_answer": "a",
+      "explanation_english": "As per the rules of KVS: The Chairperson exercises powers equal to those of a Minister of the GoI (A-2). The Vice-Chairperson is the appointing authority for Joint Commissioners and Deputy Commissioners (B-3). All residual powers not specifically assigned to any officer vest in the Board (C-1). The Commissioner is the Principal Executive Officer of the Sangathan (D-4).",
+      "explanation_hindi": "KVS के नियमों के अनुसार: अध्यक्ष के पास भारत सरकार के मंत्री के समान शक्तियाँ होती हैं (A-2)। उपाध्यक्ष संयुक्त आयुक्तों और उपायुक्तों के नियुक्ति प्राधिकारी होते हैं (B-3)। किसी अधिकारी को विशेष रूप से न सौंपी गई सभी अवशिष्ट शक्तियाँ बोर्ड में निहित होती हैं (C-1)। आयुक्त संगठन के प्रधान कार्यकारी अधिकारी होते हैं (D-4)।",
       "topic": "KVS",
-      "difficulty": "medium",
+      "difficulty": "hard",
       "key_facts": [
-        "The Chairperson/Chairman shall have powers equal to those exercised by a Minister of the Government of India."
+        "All residual powers which are not specifically assigned to any of the officers shall vest in the Board. The powers shall be exercised by the respective officers in accordance with the rules and regulations in force from time to time."
       ],
       "ai_processed": true,
       "processed_at": "2026-10-10T08:05:20.367175"
     },
     {
-      "id": "57e97665-e509-4035-90f1-22ab597c019d",
-      "created_at": "2026-10-10T08:09:16.863550",
-      "question_hindi": "केन्द्रीय विद्यालय प्रणाली के संस्थागत ढांचे और मुख्य विशेषताओं के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. भारत सरकार केन्द्रीय विद्यालय संगठन को पूर्ण रूप से वित्तपोषित (wholly finances) करती है।\n2. सभी केन्द्रीय विद्यालय सामान्य पाठ्यपुस्तकों और द्विभाषी (अंग्रेजी और हिंदी) शिक्षण माध्यम का पालन करते हैं।\n3. केन्द्रीय विद्यालयों को माध्यमिक स्तर पर विशेष रूप से अलग-अलग एकल-लिंग (single-gender) संस्थानों के रूप में संरचित किया गया है।\n\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "id": "6bd7d571-2dcb-4523-88c2-d24154553290",
+      "created_at": "2026-10-10T08:03:48.725799",
+      "question_hindi": "केन्द्रीय विद्यालय संगठन के पदेन शासन संरचना के संदर्भ में सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (अधिकारी / मंत्रालय पद)\nA. मानव संसाधन विकास मंत्री\nB. मानव संसाधन विकास मंत्रालय में राज्य मंत्री\nC. सचिव, स्कूल शिक्षा और साक्षरता विभाग (SE&L), मानव संसाधन विकास मंत्रालय\nD. अपर आयुक्त (प्रशासन), KVS\n\nसूची-II (संगठन में भूमिका)\n1. उपाध्यक्ष (Deputy Chairman)\n2. संयुक्त अध्यक्ष (Joint Chairman)\n3. पदेन सचिव (ex-officio Secretary)\n4. पदेन अध्यक्ष (ex-officio Chairman)\n\nनीचे दिए गए कूट का उपयोग करके सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-2, B-4, C-3, D-1",
+        "A-3, B-2, C-1, D-4",
+        "A-4, B-1, C-2, D-3",
+        "A-4, B-2, C-1, D-3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List-I with List-II regarding the ex-officio governance structure of Kendriya Vidyalaya Sangathan:\n\nList-I (Officer / Ministry Post)\nA. Minister of Human Resource Development\nB. Minister of State in the Ministry of HRD\nC. Secretary, Department of SE&L, MHRD\nD. Additional Commissioner (Admn.), KVS\n\nList-II (Role in the Sangathan)\n1. Deputy Chairman\n2. Joint Chairman\n3. ex-officio Secretary\n4. ex-officio Chairman\n\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "A-2, B-4, C-3, D-1",
+        "A-3, B-2, C-1, D-4",
+        "A-4, B-1, C-2, D-3",
+        "A-4, B-2, C-1, D-3"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "As per Article 2 of the KVS Organisational Set-up: The Minister of Human Resource Development is the ex-officio Chairman; Minister of State, HRD is the Joint Chairman; Secretary, Department of SE&L MHRD is the Deputy Chairman; and Additional Commissioner (Admn.) is the ex-officio Secretary.",
+      "explanation_hindi": "KVS संगठनात्मक ढांचे के अनुच्छेद 2 के अनुसार: मानव संसाधन विकास मंत्री पदेन अध्यक्ष (ex-officio Chairman) होते हैं; मानव संसाधन विकास राज्य मंत्री संयुक्त अध्यक्ष (Joint Chairman) होते हैं; सचिव, स्कूल शिक्षा एवं साक्षरता विभाग उपाध्यक्ष (Deputy Chairman) होते हैं; तथा अपर आयुक्त (प्रशासन) पदेन सचिव (ex-officio Secretary) होते हैं।",
+      "topic": "KVS",
+      "difficulty": "medium",
+      "key_facts": [
+        "The Minister of Human Resource Development, in-charge of the Kendriya Vidyalaya Sangathan, shall be the ex-officio Chairman of the Sangathan. The Minister of state ,HRD in charge of Kendriya Vidyalaya Sangathan shall be the Joint Chairman. Secretary, Department of SE&L MHRD shall be the Deputy Chairman and an officer of the Ministry of Human Resource Development notified by the Government of India for this purpose shall be the Vice-Chairman... Additional Commissioner (Admn.) shall be the ex-officio Secretary of the Sangathan."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:03:48.725799"
+    },
+    {
+      "id": "de3fab2e-cc85-457c-a345-ad3a8bbd3480",
+      "created_at": "2026-10-10T08:08:34.587612",
+      "question_hindi": "प्राचार्य पद हेतु निर्धारित पाठ्यक्रम उप-इकाई 'विद्यालय संगठन एवं नेतृत्व' (School Organization and Leadership) के संदर्भ में सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (संकल्पनात्मक आयाम)\nA. विद्यालय नेतृत्व पर दृष्टिकोण (Perspectives on School Leadership)\nB. विद्यालय नेता की भूमिका अपेक्षाएं\nC. शिक्षण-अधिगम को सुदृढ़ करने हेतु विद्यालय प्रक्रियाएं\nD. सामुदायिक एवं संस्थागत संपर्क\n\nसूची-II (निर्धारित विषयवस्तु)\n1. चिंतनशील अभ्यासी, टीम निर्माता, प्रवर्तक, कोच और संरक्षक\n2. निर्देशात्मक, संवितरित और परिवर्तनकारी (Instructional, distributed and transformative)\n3. वार्षिक कैलेंडर, अभिभावक-शिक्षक मंच, विद्यालय प्रार्थना सभा, और उपलब्धि डेटा\n4. उच्च शिक्षण संस्थान - विद्यालय प्रत्यायन और अधिगम समुदाय\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-2, B-1, C-3, D-4",
+        "A-2, B-1, C-4, D-3",
+        "A-3, B-4, C-1, D-2",
+        "A-1, B-2, C-3, D-4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List-I with List-II regarding the syllabus sub-unit 'School Organization and Leadership' prescribed for the post of Principal:\n\nList-I (Conceptual Dimension)\nA. Perspectives on School Leadership\nB. Role expectations of the School Leader\nC. School processes for strengthening teaching-learning\nD. Community and Institutional Linkages\n\nList-II (Prescribed Content)\n1. Reflective practitioner, team builder, initiator, coach and mentor\n2. Instructional, distributed and transformative\n3. Annual Calendar, parent teacher forums, school assembly, and achievement data\n4. Higher Education Institutes – School Accreditation and learning communities\n\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "A-2, B-1, C-3, D-4",
+        "A-2, B-1, C-4, D-3",
+        "A-3, B-4, C-1, D-2",
+        "A-1, B-2, C-3, D-4"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "As per Section E (School Organization and Leadership) of the syllabus: Perspectives on School Leadership covers instructional, distributed and transformative (A-2); Leader's roles include reflective practitioner, team builder, initiator, coach and mentor (B-1); School processes include Annual Calendar, parent teacher forums, school assembly, achievement data, etc. (C-3); and External linkages cover Higher Education Institutes – School Accreditation, partnerships with community, industry, and neighboring schools (D-4).",
+      "explanation_hindi": "पाठ्यक्रम के खंड E (विद्यालय संगठन एवं नेतृत्व) के अनुसार: विद्यालय नेतृत्व पर दृष्टिकोण में निर्देशात्मक, संवितरित और परिवर्तनकारी नेतृत्व शामिल हैं (A-2); नेता की भूमिकाओं में चिंतनशील अभ्यासी, टीम निर्माता, प्रवर्तक, कोच और संरक्षक शामिल हैं (B-1); विद्यालय प्रक्रियाओं में वार्षिक कैलेंडर, अभिभावक-शिक्षक मंच, विद्यालय प्रार्थना सभा, उपलब्धि डेटा शामिल हैं (C-3); और संस्थागत संपर्कों में उच्च शिक्षण संस्थान - विद्यालय प्रत्यायन तथा समुदाय एवं उद्योग के साथ साझेदारी शामिल हैं (D-4)।",
+      "topic": "KVS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Leader as reflective practitioner, team builder, initiator, coach and mentor. Perspectives on School Leadership: instructional, distributed and transformative Vision building, goal setting and creating a School development Plan Using School Processes and forums for strengthening teaching learning-Annual Calendar, time-tabling, parent teacher forums, school assembly, teacher development forums, using achievement data for improving teaching –learning, School Self Assessment and Improvement Creating Higher Education Institutes – School Accreditation. partnerships with community, industry and other neighboring schools and forming learning communities,"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:08:34.587612"
+    },
+    {
+      "id": "273e7036-b0bf-44ea-be40-59a551681c00",
+      "created_at": "2026-10-10T08:14:10.947473",
+      "question_hindi": "केंद्रीय विद्यालय संगठन (KVS) द्वारा जारी प्रशासनिक अपडेट और अधिसूचनाओं के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "options_hindi": [
+        "नया केंद्रीय विद्यालय कटरा : जिला रियासी, जम्मू और कश्मीर",
+        "विज्ञापन संख्या 05/2026 : सीधी भर्ती के माध्यम से उपायुक्त के पद को भरना",
+        "विज्ञापन संख्या 04/2026 : प्रतिनियुक्ति के आधार पर अधीक्षण अभियंता के पद को भरना",
+        "नया केंद्रीय विद्यालय पूर्णिया : जिला कटिहार, बिहार"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following pairs regarding administrative updates and notifications issued by Kendriya Vidyalaya Sangathan (KVS) is NOT correctly matched?",
+      "options_english": [
+        "New Kendriya Vidyalaya Katra : District Reasi, Jammu and Kashmir",
+        "Advertisement No. 05/2026 : Filling up the post of Deputy Commissioner through Direct Recruitment",
+        "Advertisement No. 04/2026 : Filling up the post of Superintending Engineer on deputation basis",
+        "New Kendriya Vidyalaya Purnea : District Katihar, Bihar"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The notification issued on 28 Sep, 2026 is for the opening of the new Kendriya Vidyalaya Purnea in District Purnea, Bihar, not District Katihar.",
+      "explanation_hindi": "28 सितंबर 2026 को जारी अधिसूचना नए केंद्रीय विद्यालय पूर्णिया की स्थापना के लिए है, जो जिला पूर्णिया, बिहार में स्थित है, न कि कटिहार जिले में।",
+      "topic": "KVS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Opening of the new Kendriya Vidyalaya Purnea, District Purnea, Bihar-Reg."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:14:10.947473"
+    },
+    {
+      "id": "c6baef37-f38f-4761-8468-b8e000986ea9",
+      "created_at": "2026-10-10T08:11:57.729866",
+      "question_hindi": "केवीएस प्राचार्य परीक्षा पैटर्न 2026 के अनुसार, अर्हकारी टियर-1 परीक्षा के लिए निर्धारित परीक्षा अवधि और कुल अंक कितने हैं?",
+      "options_hindi": [
+        "2 घंटे और 300 अंक",
+        "2.5 घंटे और 300 अंक",
+        "3 घंटे और 150 अंक",
+        "2.5 घंटे और 100 अंक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "As per the KVS Principal Exam Pattern 2026, what is the prescribed test duration and total marks for the qualifying Tier-1 examination?",
+      "options_english": [
+        "2 Hours and 300 marks",
+        "2.5 Hours and 300 marks",
+        "3 Hours and 150 marks",
+        "2.5 Hours and 100 marks"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "As per the official KVS Principal Tier-1 Exam Pattern 2026, Tier-1 is an objective, OMR-based test comprising 100 questions of 3 marks each, making a total of 300 marks, with a total test duration of 2 Hours.",
+      "explanation_hindi": "केवीएस प्राचार्य टियर-1 परीक्षा पैटर्न 2026 के अनुसार, टियर-1 एक वस्तुनिष्ठ, ओएमआर-आधारित परीक्षा है जिसमें प्रत्येक 3 अंक के 100 प्रश्न होते हैं, जिससे कुल 300 अंक बनते हैं, और इसकी कुल परीक्षा अवधि 2 घंटे है।",
+      "topic": "KVS",
+      "difficulty": "easy",
+      "key_facts": [
+        "Tier -1 is a qualifying, OMR-based objective test conducted for all applicants. The exam carries 100 questions, each worth 3 marks, making the total 300 marks."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:11:57.729866"
+    },
+    {
+      "id": "6e5cf239-b403-4eb5-bb68-9c96131e4d95",
+      "created_at": "2026-10-10T08:13:30.347577",
+      "question_hindi": "केंद्रीय विद्यालयों के शैक्षणिक बोर्ड परिणामों और परिचालन व्यवस्थाओं के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. वर्ष 2022 के 12वीं कक्षा के बोर्ड परिणामों में, केवी ने 97.04% उत्तीर्ण प्रतिशत के साथ जवाहर नवोदय विद्यालयों (JNV) और केंद्रीय तिब्बती स्कूल प्रशासन (CTSA) स्कूलों के बाद तीसरा स्थान हासिल किया।\n2. वर्ष 2022 के 10वीं कक्षा के बोर्ड परिणामों में, केवी जेएनवी और स्वतंत्र (निजी) स्कूलों के बाद तीसरे स्थान पर रहे।\n3. दोहरी पाली वाले केंद्रीय विद्यालयों में, एक ही प्राचार्य के तहत समान शिक्षण और प्रशासनिक कर्मचारियों को ही दोनों पालियों का प्रबंधन करना होता है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
       "options_hindi": [
         "केवल 1 और 3",
-        "केवल 1 और 2",
+        "केवल 2 और 3",
         "1, 2 और 3",
+        "केवल 1 और 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the academic board results and operational arrangements of Kendriya Vidyalayas:\n\n1. In the Class XII Board results of 2022, KVs secured the third position behind Jawahar Navodaya Vidyalayas (JNVs) and Central Tibetan School Administration (CTSA) schools with a pass percentage of 97.04%.\n2. In the Class X Board results of 2022, KVs stood at the third spot behind JNVs and Independent (private) schools.\n3. In double-shift Kendriya Vidyalayas, the same common teaching and administrative staff must manage both shifts under a single principal.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3",
+        "1 and 2 only"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because in double-shift KVs, there are distinct sets of teaching staff and administrative staff (including vice-principals) for each shift, though the single principal works across both shifts for extra compensation.",
+      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि दोहरी पाली वाले केवी में प्रत्येक पाली के लिए शिक्षण कर्मचारियों और प्रशासनिक कर्मचारियों (उप-प्राचार्यों सहित) के अलग-अलग सेट होते हैं, यद्यपि एक ही प्राचार्य अतिरिक्त मुआवजे के लिए दोनों पालियों में काम करता है।",
+      "topic": "KVS",
+      "difficulty": "medium",
+      "key_facts": [
+        "In the Class XII Board results announced recently, KVs stood at the third position with a pass percentage of 97.04% after Jawahar Navodaya Vidyalayas (JNVs) and Central Tibetan School Administration (CTSA) schools as compared to the first position it held in 2019 with a pass percentage of 98.54%. Similarly, in Class X too its position dropped from number one spot in 2019 to the third spot in 2022 behind JNV and Independent (private) schools... Though there are different sets of teaching staff and administrative staff including vice-principals for such schools, the same principal has to work in both the shifts for which they get a compensation of ₹10,000"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:13:30.347577"
+    },
+    {
+      "id": "aab605ea-cb91-4f10-bf0c-d75e5ee14189",
+      "created_at": "2026-10-10T08:14:10.947473",
+      "question_hindi": "केंद्रीय विद्यालय संगठन (KVS) का आधिकारिक ध्येयवाक्य (Motto) क्या है?",
+      "options_hindi": [
+        "बहुजन हिताय बहुजन सुखाय",
+        "सत्यमेव जयते",
+        "विद्या ददाति विनयं",
+        "तत्त्वं पूषन् अपावृणु (Tattvaṁ pūṣaṇa apāvr̥ṇu)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What is the official motto of Kendriya Vidyalaya Sangathan (KVS)?",
+      "options_english": [
+        "Bahujana Hitāya Bahujana Sukhāya",
+        "Satyameva Jayate",
+        "Vidyā dadāti vinayam",
+        "Tattvaṁ pūṣaṇa apāvr̥ṇu"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The official motto of Kendriya Vidyalaya Sangathan is 'Tattvaṁ pūṣaṇa apāvr̥ṇu' ('O Sun, Please Uncover That Truth').",
+      "explanation_hindi": "केंद्रीय विद्यालय संगठन का आधिकारिक ध्येयवाक्य 'तत्त्वं पूषन् अपावृणु' (\"हे सूर्य, कृपया उस सत्य को अनावृत करें\") है।",
+      "topic": "KVS",
+      "difficulty": "easy",
+      "key_facts": [
+        "Motto | Tattvaṁ pūṣaṇa apāvr̥ṇu (\"O Sun, Please Uncover That Truth\")"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:14:10.947473"
+    },
+    {
+      "id": "eb89248d-5678-46f5-a00e-60cc65491d20",
+      "created_at": "2026-10-10T08:15:44.521405",
+      "question_hindi": "प्रत्यक्ष / एलडीसीई (Direct / LDCE) के माध्यम से केवीएस में प्रधानाचार्य / उप-प्रधानाचार्य / पीजीटी / टीजीटी / एचएम / पीआरटी की भर्ती परीक्षा संरचना के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. भाग I में सामान्य जागरूकता, तार्किक क्षमता और भाषाओं में दक्षता (General awareness, Reasoning & Proficiency in Languages) शामिल है।\n2. भाग-II शिक्षा और नेतृत्व पर परिप्रेक्ष्य (Perspectives on Education and Leadership) के लिए समर्पित है।\n3. भाग III विद्यालय प्रशासन और वित्त (School Administration & Finance) को कवर करता है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 2 और 3",
+        "केवल 1 और 3",
+        "1, 2 और 3",
+        "केवल 1 और 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the scheme of exam structure for the recruitment of Principal / Vice Principal / PGT / TGT / HM / PRT in KVS through Direct / LDCE:\n\n1. Part I comprises General awareness, Reasoning & Proficiency in Languages.\n2. Part-II is dedicated to Perspectives on Education and Leadership.\n3. Part III covers School Administration & Finance.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3",
+        "1 and 2 only"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "As per the Scheme of Exam for Recruitment of KVS Principal/Vice Principal/PGT/TGT/HM/PRT through Direct/LDCE:\n- Part I: General awareness, Reasoning & Proficiency in Languages\n- Part-II: Perspectives on Education and Leadership\n- Part III: School Administration & Finance\nAll three statements are correct.",
+      "explanation_hindi": "प्रत्यक्ष/एलडीसीई के माध्यम से केवीएस प्रधानाचार्य/उप-प्रधानाचार्य/पीजीटी/टीजीटी/एचएम/पीआरटी की भर्ती परीक्षा योजना के अनुसार:\n- भाग I: सामान्य जागरूकता, रीजनिंग और भाषाओं में प्रवीणता\n- भाग-II: शिक्षा और नेतृत्व पर परिप्रेक्ष्य\n- भाग III: विद्यालय प्रशासन और वित्त\nतीनों कथन सही हैं।",
+      "topic": "KVS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Scheme of Exam for Recruitment of KVS Principal/Vice Principal/PGT/TGT/HM/PRT through Direct/LDCE\n\n- Part I - General awareness, Reasoning & Proficiency in Languages\n\n- Part III -School Administration & Finance\n\n- Part-II: Perspectives on Education and Leadership"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:15:44.521405"
+    },
+    {
+      "id": "f38543dd-a700-4d7c-a379-f49477e1a08a",
+      "created_at": "2026-10-10T08:02:13.668556",
+      "question_hindi": "केंद्रीय विद्यालय संगठन (KVS) की उत्पत्ति और स्थापना के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. केंद्रीय विद्यालयों की योजना को द्वितीय केंद्रीय वेतन आयोग की सिफारिशों पर नवंबर 1962 में अनुमोदित किया गया था।\n2. केंद्रीय विद्यालय संगठन को 15 दिसंबर 1965 को सोसायटी पंजीकरण अधिनियम (1860 का XXI) के तहत एक सोसायटी के रूप में पंजीकृत किया गया था।\n3. प्रारंभ में, शैक्षणिक वर्ष 1963-64 के दौरान 50 रेजिमेंटल स्कूलों को केंद्रीय विद्यालयों के रूप में अधिग्रहित किया गया था।\n4. भारत सरकार संगठन को पूर्णतः वित्तपोषित करती है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 1, 3 और 4",
+        "केवल 1, 2 और 4",
+        "1, 2, 3 और 4",
         "केवल 2 और 3"
       ],
       "option_labels": [
@@ -653,97 +616,134 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the institutional framework and salient features of the Kendriya Vidyalaya system:\n\n1. The Government of India wholly finances the Kendriya Vidyalaya Sangathan.\n2. All Kendriya Vidyalayas adhere to common textbooks and a bilingual (English & Hindi) medium of instruction.\n3. Kendriya Vidyalayas are structured exclusively as separate single-gender institutions at the secondary stage.\n\nWhich of the statements given above is/are correct?",
+      "question_english": "Consider the following statements regarding the origin and establishment of Kendriya Vidyalaya Sangathan (KVS):\n1. The Scheme of Kendriya Vidyalayas was approved in November 1962 on the recommendations of the Second Central Pay Commission.\n2. The Kendriya Vidyalaya Sangathan was registered as a society under the Societies Registration Act (XXI of 1860) on 15th December 1965.\n3. Initially, 50 Regimental Schools were taken over as Central Schools during the academic year 1963-64.\n4. The Government of India wholly finances the Sangathan.\n\nWhich of the statements given above are correct?",
       "options_english": [
-        "1 and 3 only",
-        "1 and 2 only",
-        "1, 2 and 3",
+        "1, 3 and 4 only",
+        "1, 2 and 4 only",
+        "1, 2, 3 and 4",
         "2 and 3 only"
       ],
       "correct_answer": "b",
-      "explanation_english": "Statements 1 and 2 are correct as KVS is wholly financed by the Government of India and features common textbooks and bilingual instruction. Statement 3 is incorrect because, as per official salient features, all Kendriya Vidyalayas are co-educational, composite schools.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं क्योंकि केवीएस भारत सरकार द्वारा पूर्णतः वित्तपोषित है और इसमें सामान्य पाठ्यपुस्तकें और द्विभाषी शिक्षा शामिल है। कथन 3 गलत है क्योंकि आधिकारिक विशेषताओं के अनुसार सभी केन्द्रीय विद्यालय सह-शिक्षा (co-educational), समग्र विद्यालय हैं।",
-      "topic": "KVS",
-      "difficulty": "medium",
-      "key_facts": [
-        "The Government of India wholly finances the Sangathan... Common textbooks and bilingual (English & Hindi) medium of instruction for all Kendriya Vidyalayas... All Kendriya Vidyalayas are co-educational, composite schools."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:09:16.863550"
-    },
-    {
-      "id": "2df9d5f5-8fe2-4ed5-9d93-15876171b7ea",
-      "created_at": "2026-10-10T08:08:34.587612",
-      "question_hindi": "सीमित विभागीय परीक्षा (LDE) के माध्यम से प्राचार्य (Principal) पद हेतु टियर-I विषय ज्ञान परीक्षा योजना के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. यह पेन-पेपर और ओएमआर (OMR) आधारित परीक्षा के संयोजन के रूप में आयोजित की जाती है।\n2. इस परीक्षा में 60 अंकों के 60 वस्तुनिष्ठ प्रश्न और 40 अंकों के 10 वर्णनात्मक प्रश्न शामिल हैं।\n3. परीक्षा की अवधि 2 ½ घंटे है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 2 और 3",
-        "केवल 1 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the Tier-I Subject Knowledge Examination scheme for the post of Principal through the Limited Departmental Examination:\n\n1. It is conducted as a combination of Pen-paper and OMR based test.\n2. The examination comprises 60 objective questions carrying 60 marks and 10 descriptive questions carrying 40 marks.\n3. The duration of the examination is 2 ½ hours.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "2 and 3 only",
-        "1 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "According to the official scheme of examination for Tier-I Subject Knowledge Examination for the post of Principal, it is a combination of Pen-paper and OMR based test, consisting of 60 objective questions (60 marks) and 10 descriptive questions (40 marks), with a test duration of 2 ½ hours. Therefore, all three statements are correct.",
-      "explanation_hindi": "प्राचार्य पद हेतु टियर-I विषय ज्ञान परीक्षा की आधिकारिक परीक्षा योजना के अनुसार, यह पेन-पेपर और ओएमआर आधारित परीक्षा का संयोजन है, जिसमें 60 वस्तुनिष्ठ प्रश्न (60 अंक) तथा 10 वर्णनात्मक प्रश्न (40 अंक) शामिल हैं, और परीक्षा की कुल अवधि 2 ½ घंटे है। अतः तीनों कथन सही हैं।",
-      "topic": "KVS",
-      "difficulty": "easy",
-      "key_facts": [
-        "Tier –I Subject Knowledge Examination ( Combination of Pen-paper and OMR Based ) Component of the Test No. of questions Total Marks Duration of the Test Objective Descriptive Objective Descriptive 2 ½ Detailed hours syllabus given below 60 10 60 40"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T08:08:34.587612"
-    },
-    {
-      "id": "8734d239-e233-4274-907d-e2a3d6390f80",
-      "created_at": "2026-10-10T08:14:50.863243",
-      "question_hindi": "केंद्रीय विद्यालय संगठन (KVS) के संस्थागत इतिहास और नीतिगत निर्णयों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. अप्रैल 2022 में, केंद्र सरकार ने केंद्रीय विद्यालयों में प्रवेश के लिए सांसदों (MP) के विवेकाधीन कोटे को समाप्त कर दिया।\n2. चुक्खा पनबिजली परियोजना (Chukhha Hydal Power Project) के पूरा होने के निकट आने के बाद, 1989 में सिमालाखा, भूटान में स्थित इंडो-भूटान सेंट्रल स्कूल (IBCS) को भूटान सरकार को हस्तांतरित कर दिया गया था।\n3. यह प्रणाली मूल रूप से 1963 में पूरे भारत में 100 सेंट्रल स्कूलों के प्रारंभिक बैच के साथ शुरू हुई थी।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 3",
-        "केवल 1 और 2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the institutional history and policy decisions of Kendriya Vidyalaya Sangathan (KVS):\n\n1. In April 2022, the Central Government abolished the discretionary MP quota for admissions in Kendriya Vidyalayas.\n2. The Indo-Bhutan Central School (IBCS) located at Tsimalakha, Bhutan, was transferred to the Bhutanese Government in 1989 following the near completion of the Chukhha Hydal Power Project.\n3. The system originally commenced operations in 1963 with an initial batch of 100 Central Schools across India.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 3 only",
-        "1 and 2 only"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "Statements 1 and 2 are correct. In April 2022, the Centre decided to remove the MP quota for KV students. The Tsimalakha school in Bhutan was transferred to the Bhutanese government in 1989 after the Chukhha Hydal Power Project was near completion. Statement 3 is incorrect because the system started with only 20 schools in the year 1963, not 100.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। अप्रैल 2022 में, केंद्र ने केवी के छात्रों के लिए एमपी कोटा समाप्त करने का निर्णय लिया। चुक्खा पनबिजली परियोजना के लगभग पूर्ण होने के बाद 1989 में भूटान के सिमालाखा स्थित स्कूल को भूटान सरकार को सौंप दिया गया था। कथन 3 गलत है क्योंकि यह प्रणाली वर्ष 1963 में केवल 20 स्कूलों के साथ शुरू हुई थी, न कि 100 स्कूलों के साथ।",
+      "explanation_english": "Statements 1, 2, and 4 are correct. Statement 3 is incorrect because initially, 20 Regimental Schools (not 50) were taken over as Central Schools during the academic year 1963-64.",
+      "explanation_hindi": "कथन 1, 2 और 4 सही हैं। कथन 3 गलत है क्योंकि प्रारंभ में शैक्षणिक वर्ष 1963-64 के दौरान 20 रेजिमेंटल स्कूलों (न कि 50) को केंद्रीय विद्यालयों के रूप में अधिग्रहित किया गया था।",
       "topic": "KVS",
       "difficulty": "hard",
       "key_facts": [
-        "In April-2022, the Centre decided to remove an MP quota for KV students, invalidating parliamentarians' recommendations for admission to the schools. [4]\n\nAs of February 2025, there were 1,256 schools named Kendriya Vidyalayas, [9] having started with only 20 schools in the year 1963. [7]\n\nOne school in Tsimalakha, Bhutan, was transferred to the Bhutanese Government, thus ceasing to be a Central School (then known as Indo-Bhutan Central School (IBCS)) in 1989, after one of the major Indo-Bhutan projects (the Chukhha Hydal Power Project) was near completion."
+        "Initially, 20 Regimental Schools, then functioning at places having large concentration of defence personnel, were taken over as Central Schools during the academic year 1963-64."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T08:14:50.863243"
+      "processed_at": "2026-10-10T08:02:13.668556"
+    },
+    {
+      "id": "c84e2c11-f81c-4120-863c-bb5fe30524aa",
+      "created_at": "2026-10-10T08:13:30.347577",
+      "question_hindi": "केवीएस में प्राचार्य (Principal) पद हेतु एलडीई (LDE) टियर-I के 'शिक्षा और नेतृत्व पर परिप्रेक्ष्य' (Perspectives on Education and Leadership) के पाठ्यक्रम अनुभागों के संबंध में सूची-I को सूची-II से सुमेलित कीजिए:\n\nसूची-I (पाठ्यक्रम अनुभाग)\nA. शिक्षण अधिगम की समझ (Understanding Teaching Learning)\nB. शिक्षण-अधिगम का नियोजन और संगठन (Planning and Organization of Teaching-Learning)\nC. अनुकूल अधिगम वातावरण का निर्माण (Creating Conducive Learning Environment)\nD. विद्यालय संगठन और नेतृत्व (School Organization and Leadership)\n\nसूची-II (प्रमुख विषय / केंद्र क्षेत्र)\n1. योग्यता आधारित पाठ योजना, प्रत्यक्ष और प्रच्छन्न पाठ्यचर्या\n2. व्यवहारवाद, संज्ञानवाद और रचनावाद पर सैद्धांतिक दृष्टिकोण\n3. निर्देशात्मक, वितरित और परिवर्तनकारी नेतृत्व पर परिप्रेक्ष्य\n4. दिव्यांगजन अधिकार अधिनियम-2016 के तहत प्रावधान\n\nनीचे दिए गए कूट का उपयोग करके सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-3, B-1, C-4, D-2",
+        "A-1, B-2, C-3, D-4",
+        "A-2, B-1, C-4, D-3",
+        "A-2, B-4, C-1, D-3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List-I with List-II regarding the prescribed syllabus sections under 'Perspectives on Education and Leadership' for Tier-I LDE for the post of Principal in KVS:\n\nList-I (Syllabus Section)\nA. Understanding Teaching Learning\nB. Planning and Organization of Teaching-Learning\nC. Creating Conducive Learning Environment\nD. School Organization and Leadership\n\nList-II (Focus Topic / Key Area)\n1. Competency Based Lesson Planning, Overt and Hidden Curriculum\n2. Theoretical perspectives on Behaviorism, Cognitivism and Constructivism\n3. Perspectives on instructional, distributed and transformative leadership\n4. Provisions under the Right of Persons with Disabilities Act-2016\n\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "A-3, B-1, C-4, D-2",
+        "A-1, B-2, C-3, D-4",
+        "A-2, B-1, C-4, D-3",
+        "A-2, B-4, C-1, D-3"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "As per the Tier-I syllabus for the post of Principal under 'Perspectives on Education and Leadership': Understanding Teaching Learning includes 'Theoretical perspectives on Learning - Behaviorism, Cognitivism and Constructivism' (A-2); Planning and Organization of Teaching-Learning includes 'Concept of Syllabus and Curriculum, Overt and Hidden Curriculum, Competency Based Lesson Planning' (B-1); Creating Conducive Learning Environment includes 'Right of Person with Disability Act-2016' (C-4); and School Organization and Leadership covers 'Perspectives on School Leadership: instructional, distributed and transformative' (D-3).",
+      "explanation_hindi": "प्राचार्य पद के टियर-I पाठ्यक्रम के अनुसार: शिक्षण अधिगम की समझ में 'व्यवहारवाद, संज्ञानवाद और रचनावाद पर सैद्धांतिक दृष्टिकोण' शामिल है (A-2); शिक्षण-अधिगम के नियोजन और संगठन में 'प्रत्यक्ष और प्रच्छन्न पाठ्यचर्या, योग्यता आधारित पाठ योजना' शामिल है (B-1); अनुकूल अधिगम वातावरण के निर्माण में 'दिव्यांगजन अधिकार अधिनियम-2016' शामिल है (C-4); तथा विद्यालय संगठन और नेतृत्व में 'निर्देशात्मक, वितरित और परिवर्तनकारी नेतृत्व परिप्रेक्ष्य' शामिल है (D-3)।",
+      "topic": "KVS",
+      "difficulty": "hard",
+      "key_facts": [
+        "Theoretical perspectives on Learning -Behaviorism, Cognitivism and Constructivism with special reference to their implications for: The role of Principal... Concept of Syllabus and Curriculum, Overt and Hidden Curriculum Preparation of School Time-table Foundational Literacy and Numeracy... Right of Person with Disability Act-2016 as amended from time to time... Perspectives on School Leadership: instructional, distributed and transformative"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:13:30.347577"
+    },
+    {
+      "id": "d4b772c7-b73a-40d0-8bbe-071db5cbf86c",
+      "created_at": "2026-10-10T08:07:31.512754",
+      "question_hindi": "केवीएस (KVS) अभिलेखों में उल्लिखित विभिन्न केंद्रीय विद्यालयों में प्रख्यात विभूतियों के ऐतिहासिक दौरों और उद्घाटनों के संदर्भ में सूची-I को सूची-II के साथ सुमेलित कीजिए:\n\nसूची-I (विभूति / नेता)\nA. श्री भक्तदर्शन (तत्कालीन शिक्षा राज्य मंत्री)\nB. श्री अटल बिहारी वाजपेयी (तत्कालीन विदेश मंत्री)\nC. फील्ड मार्शल सैम मानेकशॉ\nD. श्री के. आर. नारायणन (तत्कालीन भारत के राष्ट्रपति)\n\nसूची-II (केंद्रीय विद्यालय / संबंधित घटना)\n1. केवी काठमांडू के नए भवन का उद्घाटन (1977)\n2. केवी जीसीएफ जबलपुर भवन का उद्घाटन (1970)\n3. केवी ओट्टापलम, केरल का दौरा\n4. केवी एएमसी लखनऊ का दौरा\n\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:",
+      "options_hindi": [
+        "A-4, B-3, C-2, D-1",
+        "A-1, B-2, C-4, D-3",
+        "A-2, B-1, C-3, D-4",
+        "A-2, B-1, C-4, D-3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match List-I with List-II regarding the historical visits and inaugurations by eminent dignitaries across Kendriya Vidyalayas as commemorated in KVS records:\n\nList-I (Dignitary / Leader)\nA. Sh. Bhaktdarshan (then MoS for Education)\nB. Sh. Atal Bihari Vajpayee (then Foreign Minister)\nC. Field Marshall Sam Manekshaw\nD. Sh. K.R. Narayanan (then President of India)\n\nList-II (Kendriya Vidyalaya / Associated Event)\n1. Inauguration of new building of KV Kathmandu (1977)\n2. Inauguration of building of KV GCF Jabalpur (1970)\n3. Visit to KV Ottapalam, Kerala\n4. Visit to KV AMC Lucknow\n\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "A-4, B-3, C-2, D-1",
+        "A-1, B-2, C-4, D-3",
+        "A-2, B-1, C-3, D-4",
+        "A-2, B-1, C-4, D-3"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "According to the historical records of KVS ('A Glorious Journey of 60 Years'): Sh. Bhaktdarshan inaugurated the KV GCF Jabalpur building on September 17, 1970 (A-2); Sh. Atal Bihari Vajpayee inaugurated the new building of KV Kathmandu on July 16, 1977 (B-1); Field Marshall Sam Manekshaw visited KV AMC Lucknow (C-4); and Sh. K.R. Narayanan visited KV Ottapalam, Kerala (D-3).",
+      "explanation_hindi": "केवीएस के ऐतिहासिक रिकॉर्ड ('60 वर्षों की गौरवशाली यात्रा') के अनुसार: श्री भक्तदर्शन ने 17 सितंबर 1970 को केवी जीसीएफ जबलपुर भवन का उद्घाटन किया (A-2); श्री अटल बिहारी वाजपेयी ने 16 जुलाई 1977 को केवी काठमांडू के नए भवन का उद्घाटन किया (B-1); फील्ड मार्शल सैम मानेकशॉ ने केवी एएमसी लखनऊ का दौरा किया (C-4); तथा तत्कालीन राष्ट्रपति श्री के. आर. नारायणन ने केवी ओट्टापलम, केरल का दौरा किया (D-3)।",
+      "topic": "KVS",
+      "difficulty": "hard",
+      "key_facts": [
+        "Inauguration of KV GCF Jabalpur building by the then Minister of State for Education Sh. Bhaktdarshan (September 17, 1970)\n\nSh. Morar ji Desai, then Prime Minister of India visits KV No. 2 AFS Pune\n\nField Marshall Sam Manekshaw visits KV AMC Lucknow\n\nInauguration of new building of KV Kathmandu by the then Foreign Minister of India Sh. Atal Bihari Vajpayee (July 16, 1977)\n\nSh. K.R. Narayanan, then President of India at KV Ottapalam, Kerala"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:07:31.512754"
+    },
+    {
+      "id": "0f11ff73-fc1e-4090-a174-c24284c45e1c",
+      "created_at": "2026-10-10T08:13:30.347577",
+      "question_hindi": "केंद्रीय विद्यालयों के संस्थागत डेटा और कार्यप्रणाली के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "options_hindi": [
+        "वर्ष 2021 में केंद्रीय विद्यालयों में कुल छात्र नामांकन : 13.8 लाख",
+        "रिक्तियों को भरने के लिए नियुक्त किए गए संविदा शिक्षकों की संख्या (जून 2022 तक) : 15,562",
+        "दोहरी पाली वाले केवी में दोनों पालियों का नेतृत्व करने वाले प्राचार्य को देय मासिक मुआवजा : ₹10,000",
+        "दोहरी पाली (डबल शिफ्ट) में संचालित होने वाले केंद्रीय विद्यालयों की संख्या : लगभग 70"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following pairs regarding the institutional data and functioning of Kendriya Vidyalayas is NOT correctly matched?",
+      "options_english": [
+        "Total student enrolment in Kendriya Vidyalayas in 2021 : 13.8 lakh",
+        "Number of contractual teachers engaged to bridge vacancies (as of June 2022) : 15,562",
+        "Monthly compensation paid to a principal heading both shifts in a double-shift KV : ₹10,000",
+        "Number of Kendriya Vidyalayas operating double shifts : Nearly 70"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Pair 4 is NOT correctly matched. As reported in Parliament by MoS Education, a total of 9,161 contractual teachers were engaged to fill the gap (not 15,562). The figure 5,562 was the total number of vacant teaching positions in 2019.",
+      "explanation_hindi": "युग्म 4 सही सुमेलित नहीं है। संसद में शिक्षा राज्य मंत्री द्वारा दी गई जानकारी के अनुसार, रिक्तियों को भरने के लिए कुल 9,161 संविदा शिक्षकों को लगाया गया था (न कि 15,562)। 5,562 की संख्या 2019 में रिक्त शिक्षण पदों की संख्या थी।",
+      "topic": "KVS",
+      "difficulty": "medium",
+      "key_facts": [
+        "A total of 9,161 contractual teachers have been engaged to fill the gap. According to the KVS Annual Report 2020-2021, there were a total 46,335 sanctioned posts for teachers."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-10T08:13:30.347577"
     }
   ]
 }

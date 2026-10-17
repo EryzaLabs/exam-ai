@@ -27,7 +27,7 @@ router.get('/', (req: Request, res: Response) => {
     const skip = (page - 1) * limit;
 
     const testSeriesFolders = fs.readdirSync(TESTSERIES_DIR, { withFileTypes: true })
-      .filter(dirent => dirent.isDirectory())
+      .filter(dirent => dirent.isDirectory() && dirent.name.toLowerCase().includes('principal'))
       .map(dirent => dirent.name);
 
     const testSeriesList: any[] = [];

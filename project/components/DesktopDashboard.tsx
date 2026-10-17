@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, TextInput, ImageBackground, Alert, Platform } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, TextInput, Image, ImageBackground, Alert, Platform } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import {
   BookOpen,
@@ -23,24 +23,31 @@ import {
   ChevronDown,
   Star,
   LogOut,
-  ArrowRight
+  ArrowRight,
+  ShieldCheck
 } from 'lucide-react-native';
-import { router, usePathname } from 'expo-router';
+import { router, usePathname, useLocalSearchParams } from 'expo-router';
 import { useAuth } from '@/context/auth-context';
 import { useDashboardData } from '@/hooks/useDashboardData';
 import { signOut } from 'firebase/auth';
 import { auth } from '@/services/firebaseConfig';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import UserService from '@/services/user-service';
 import Svg, { Circle } from 'react-native-svg';
 
 export default function DesktopDashboard({ performance: propPerformance, dashboardStats: propDashboardStats, children, disableScroll }: any) {
-  const { user } = useAuth();
+  const { user, isSubscribed: authSubscribed, isSubscriptionLoading } = useAuth();
   const [searchQuery, setSearchQuery] = React.useState('');
   const pathname = usePathname();
+  const searchParams = useLocalSearchParams<{ category?: string }>();
+  const activeCategory = searchParams?.category;
   
   // Use hook data if props aren't explicitly provided
   const { performance: hookPerformance, dashboardStats: hookDashboardStats, loading } = useDashboardData();
   const performance = propPerformance || hookPerformance;
   const dashboardStats = propDashboardStats || hookDashboardStats;
+
+  const isSubscribed = authSubscribed || dashboardStats?.isSubscribed === true;
 
   const handleLogout = () => {
     const doSignOut = async () => {
@@ -92,17 +99,26 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
             <Home size={20} color={pathname === '/' ? '#fff' : '#64748B'} />
             <Text style={[styles.navText, pathname === '/' && styles.navTextActive]}>Home</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.navItem, pathname === '/test-list' && styles.navItemActive]} onPress={() => router.push('/test-list')}>
-            <FileText size={20} color={pathname === '/test-list' ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, pathname === '/test-list' && styles.navTextActive]}>Tests</Text>
+          <TouchableOpacity 
+            style={[styles.navItem, pathname === '/test-list' && (!activeCategory || activeCategory === 'all') && styles.navItemActive]} 
+            onPress={() => router.push({ pathname: '/test-list', params: { category: 'all' } })}
+          >
+            <FileText size={20} color={pathname === '/test-list' && (!activeCategory || activeCategory === 'all') ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, pathname === '/test-list' && (!activeCategory || activeCategory === 'all') && styles.navTextActive]}>Tests</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.navItem, pathname === '/testseries-browse' && styles.navItemActive]} onPress={() => router.push('/testseries-browse')}>
-            <Clock size={20} color={pathname === '/testseries-browse' ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, pathname === '/testseries-browse' && styles.navTextActive]}>Full Mocks</Text>
+          <TouchableOpacity 
+            style={[styles.navItem, pathname === '/test-list' && activeCategory === 'full' && styles.navItemActive]} 
+            onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}
+          >
+            <Clock size={20} color={pathname === '/test-list' && activeCategory === 'full' ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, pathname === '/test-list' && activeCategory === 'full' && styles.navTextActive]}>Full Mocks</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.navItem, false && styles.navItemActive]} onPress={() => router.push({ pathname: '/test-list', params: { category: 'topic' } })}>
-            <Grid size={20} color="#64748B" />
-            <Text style={[styles.navText, false && styles.navTextActive]}>Topic Wise</Text>
+          <TouchableOpacity 
+            style={[styles.navItem, pathname === '/test-list' && activeCategory === 'topic' && styles.navItemActive]} 
+            onPress={() => router.push({ pathname: '/test-list', params: { category: 'topic' } })}
+          >
+            <Grid size={20} color={pathname === '/test-list' && activeCategory === 'topic' ? '#fff' : '#64748B'} />
+            <Text style={[styles.navText, pathname === '/test-list' && activeCategory === 'topic' && styles.navTextActive]}>Topic Wise</Text>
           </TouchableOpacity>
           <TouchableOpacity style={[styles.navItem, pathname === '/practice' && styles.navItemActive]} onPress={() => router.push('/practice')}>
             <Zap size={20} color={pathname === '/practice' ? '#fff' : '#64748B'} />
@@ -130,18 +146,20 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           </TouchableOpacity>
         </ScrollView>
 
-        <TouchableOpacity 
-          style={styles.premiumCard}
-          onPress={() => router.push('/premium')}
-          activeOpacity={0.85}
-        >
-          <Crown size={24} color="#F59E0B" style={{ marginBottom: 12 }} />
-          <Text style={styles.premiumTitle}>Go Premium</Text>
-          <Text style={styles.premiumDesc}>Unlock all 50+ mocks, detailed analytics & more.</Text>
-          <View style={styles.premiumBtn}>
-            <ArrowRight size={16} color="#475569" />
-          </View>
-        </TouchableOpacity>
+        {pathname !== '/premium' && !isSubscriptionLoading && !isSubscribed && (
+          <TouchableOpacity 
+            style={styles.premiumCard}
+            onPress={() => router.push('/premium')}
+            activeOpacity={0.85}
+          >
+            <Crown size={24} color="#F59E0B" style={{ marginBottom: 12 }} />
+            <Text style={styles.premiumTitle}>Go Premium</Text>
+            <Text style={styles.premiumDesc}>Unlock 26 full mocks, 158 topic tests + new tests added daily.</Text>
+            <View style={styles.premiumBtn}>
+              <ArrowRight size={16} color="#475569" />
+            </View>
+          </TouchableOpacity>
+        )}
       </View>
 
       {/* CENTER CONTENT */}
@@ -171,11 +189,26 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
             </TouchableOpacity>
             <TouchableOpacity style={styles.userProfile} onPress={() => router.push('/profile')} activeOpacity={0.7}>
               <View style={styles.avatar}>
-                <Text style={styles.avatarText}>{(dashboardStats?.userName || user?.displayName)?.[0]?.toUpperCase() || 'U'}</Text>
+                {(user?.photoURL || dashboardStats?.photoURL) ? (
+                  <Image
+                    source={{ uri: (user?.photoURL || dashboardStats?.photoURL) as string }}
+                    style={styles.avatarImage}
+                    resizeMode="cover"
+                  />
+                ) : (
+                  <Text style={styles.avatarText}>{(dashboardStats?.userName || user?.displayName || user?.email)?.[0]?.toUpperCase() || 'U'}</Text>
+                )}
               </View>
               <View style={{ marginLeft: 12 }}>
-                <Text style={styles.userName}>{dashboardStats?.userName || user?.displayName || 'User'}</Text>
-                <Text style={styles.userRole}>{dashboardStats?.rank || 'Beginner'}</Text>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                  <Text style={styles.userName}>{dashboardStats?.userName || user?.displayName || (user?.email ? user.email.split('@')[0] : 'User')}</Text>
+                  {isSubscribed && (
+                    <Crown size={15} color="#F59E0B" fill="#F59E0B" />
+                  )}
+                </View>
+                <Text style={[styles.userRole, isSubscribed && { color: '#D97706', fontWeight: '700' }]}>
+                  {isSubscribed ? '👑 Premium Member' : (dashboardStats?.rank || 'Beginner')}
+                </Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity 
@@ -214,7 +247,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                     <FileText size={16} color="#2563EB" />
                   </View>
                   <View>
-                    <Text style={styles.statVal}>28</Text>
+                    <Text style={styles.statVal}>{dashboardStats?.totalAvailableTests ?? 184}</Text>
                     <Text style={styles.statLbl}>Tests Available</Text>
                   </View>
                 </View>
@@ -258,7 +291,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                <BookOpen size={20} color="#F97316" />
                <Text style={styles.sectionTitle}>UPSC Principal Mock Tests</Text>
             </View>
-            <TouchableOpacity onPress={() => router.push('/testseries-browse')}>
+            <TouchableOpacity onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}>
               <Text style={styles.viewAll}>View All →</Text>
             </TouchableOpacity>
           </View>
@@ -287,7 +320,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                    <View style={styles.perk}><Brain size={14} color="#fff" /><Text style={styles.perkText}>Detailed Solutions</Text></View>
                 </View>
              </View>
-             <TouchableOpacity style={styles.browseBtn} onPress={() => router.push('/testseries-browse')}>
+             <TouchableOpacity style={styles.browseBtn} onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}>
                 <Text style={styles.browseBtnText}>Browse Tests →</Text>
              </TouchableOpacity>
           </ImageBackground>
@@ -384,6 +417,81 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
 
       {/* RIGHT SIDEBAR */}
       <View style={styles.rightSidebar}>
+        {pathname === '/premium' ? (
+          <>
+            {/* Exam Blueprint Widget */}
+            <View style={styles.widgetCard}>
+              <View style={styles.widgetHeader}>
+                <Award size={20} color="#2563EB" />
+                <Text style={styles.widgetTitle}>Exam Blueprint</Text>
+              </View>
+              <View style={{ gap: 10, marginTop: 12 }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: '#F1F5F9' }}>
+                  <Text style={{ fontSize: 12, color: '#64748B' }}>Target Exam</Text>
+                  <Text style={{ fontSize: 12, fontWeight: '700', color: '#0F172A' }}>UPSC Principal / VP</Text>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: '#F1F5F9' }}>
+                  <Text style={{ fontSize: 12, color: '#64748B' }}>Questions / Marks</Text>
+                  <Text style={{ fontSize: 12, fontWeight: '700', color: '#0F172A' }}>120 Qs • 300 Marks</Text>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: '#F1F5F9' }}>
+                  <Text style={{ fontSize: 12, color: '#64748B' }}>Duration</Text>
+                  <Text style={{ fontSize: 12, fontWeight: '700', color: '#0F172A' }}>2 Hours (120 Mins)</Text>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: '#F1F5F9' }}>
+                  <Text style={{ fontSize: 12, color: '#64748B' }}>Marking Scheme</Text>
+                  <Text style={{ fontSize: 12, fontWeight: '700', color: '#DC2626' }}>+2.5  •  -0.83 Negative</Text>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                  <Text style={{ fontSize: 12, color: '#64748B' }}>Language</Text>
+                  <Text style={{ fontSize: 12, fontWeight: '700', color: '#059669' }}>Bilingual (Eng & हिन्दी)</Text>
+                </View>
+              </View>
+            </View>
+
+            {/* Inclusions Summary Widget */}
+            <View style={styles.widgetCard}>
+              <View style={styles.widgetHeader}>
+                <Target size={20} color="#10B981" />
+                <Text style={styles.widgetTitle}>2026 Pass Inclusions</Text>
+              </View>
+              <View style={{ gap: 8, marginTop: 12 }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                  <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#2563EB' }} />
+                  <Text style={{ fontSize: 12, color: '#334155' }}><Text style={{ fontWeight: '700' }}>26 Full-Length Mocks</Text> (CBT mode)</Text>
+                </View>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                  <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#7C3AED' }} />
+                  <Text style={{ fontSize: 12, color: '#334155' }}><Text style={{ fontWeight: '700' }}>158 Topic-wise Tests</Text> (All subjects)</Text>
+                </View>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                  <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#D97706' }} />
+                  <Text style={{ fontSize: 12, color: '#334155' }}><Text style={{ fontWeight: '700' }}>Daily Fresh Tests</Text> added daily</Text>
+                </View>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                  <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#059669' }} />
+                  <Text style={{ fontSize: 12, color: '#334155' }}><Text style={{ fontWeight: '700' }}>Swamy’s Citations</Text> on all rules</Text>
+                </View>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                  <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#EA580C' }} />
+                  <Text style={{ fontSize: 12, color: '#334155' }}><Text style={{ fontWeight: '700' }}>Valid till 2026</Text> Exam Day</Text>
+                </View>
+              </View>
+            </View>
+
+            {/* Verified Security Widget */}
+            <View style={styles.widgetCard}>
+              <View style={styles.widgetHeader}>
+                <ShieldCheck size={20} color="#059669" />
+                <Text style={styles.widgetTitle}>Guaranteed Security</Text>
+              </View>
+              <Text style={{ fontSize: 12, color: '#64748B', lineHeight: 18, marginTop: 8 }}>
+                256-Bit SSL Encrypted checkout powered by Cashfree. All cards, UPI (GPay, PhonePe, Paytm), and NetBanking supported.
+              </Text>
+            </View>
+          </>
+        ) : (
+          <>
         {/* Your Progress */}
         <View style={styles.widgetCard}>
           <View style={styles.widgetHeader}>
@@ -514,6 +622,8 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
              )}
           </View>
         </View>
+        </>
+        )}
       </View>
     </View>
   );
@@ -666,6 +776,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#475569',
     alignItems: 'center',
     justifyContent: 'center',
+    overflow: 'hidden',
+  },
+  avatarImage: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 22,
   },
   avatarText: {
     color: '#fff',
