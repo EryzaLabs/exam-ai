@@ -10,6 +10,7 @@ import {
   RefreshControl,
   TextInput,
   useWindowDimensions,
+  Platform,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router, useLocalSearchParams } from 'expo-router';
@@ -505,13 +506,32 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     return loadingView;
   }
 
+  const handleBack = () => {
+    if (category === 'topic' && selectedTopic) {
+      setSelectedTopic(null);
+      return;
+    }
+    if (router.canGoBack()) {
+      router.back();
+    } else {
+      router.replace('/');
+    }
+  };
+
   const content = (
     <SafeAreaView style={[styles.container, isLargeScreen && { flex: undefined, minHeight: 600 }]} edges={['top']}>
       {/* Header */}
       <LinearGradient colors={['#4A90E2', '#357ABD']} style={styles.headerNew}>
         <View style={styles.headerTopNew}>
             {!isTab && (
-              <TouchableOpacity onPress={() => router.back()} style={{marginRight: 16, marginTop: 6}}>
+              <TouchableOpacity
+                onPress={handleBack}
+                style={styles.backButtonTop}
+                hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+                activeOpacity={0.7}
+                accessibilityLabel="Go back"
+                accessibilityRole="button"
+              >
                 <ArrowLeft size={24} color="#fff" />
               </TouchableOpacity>
             )}
@@ -965,6 +985,18 @@ const styles = StyleSheet.create({
   },
   headerTopNew: {
     flexDirection: 'row',
+    alignItems: 'flex-start',
+  },
+  backButtonTop: {
+    marginRight: 16,
+    marginTop: 4,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    ...(Platform.OS === 'web' ? ({ cursor: 'pointer' } as any) : {}),
   },
   headerTitleNew: {
     fontSize: 28,

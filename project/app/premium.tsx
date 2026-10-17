@@ -1135,7 +1135,13 @@ export default function PremiumScreen() {
         <View style={styles.mobileTopBar}>
           <TouchableOpacity
             style={styles.mobileBackBtn}
-            onPress={() => router.back()}
+            onPress={() => {
+              if (router.canGoBack()) {
+                router.back();
+              } else {
+                router.replace('/');
+              }
+            }}
             accessibilityLabel="Go back"
           >
             <ArrowLeft size={20} color="#FFFFFF" />
@@ -1171,7 +1177,13 @@ export default function PremiumScreen() {
       <View style={styles.mobileTopBar}>
         <TouchableOpacity
           style={styles.mobileBackBtn}
-          onPress={() => router.back()}
+          onPress={() => {
+            if (router.canGoBack()) {
+              router.back();
+            } else {
+              router.replace('/');
+            }
+          }}
           accessibilityLabel="Go back"
         >
           <ArrowLeft size={20} color="#FFFFFF" />
