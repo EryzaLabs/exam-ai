@@ -48,6 +48,64 @@ import userService from '@/services/user-service';
 import { initiatePayment } from '@/utils/cashfree';
 import DesktopDashboard from '@/components/DesktopDashboard';
 
+export interface PlanTier {
+  id: 'daily' | 'weekly' | 'monthly' | 'lifetime';
+  name: string;
+  durationLabel: string;
+  periodDays: number;
+  price: number;
+  originalPrice: number;
+  badge?: string;
+  popular?: boolean;
+  bestValue?: boolean;
+  description: string;
+}
+
+export const PLANS: PlanTier[] = [
+  {
+    id: 'daily',
+    name: 'Daily Pass',
+    durationLabel: '24 Hours',
+    periodDays: 1,
+    price: 9,
+    originalPrice: 49,
+    badge: 'Quick Revision',
+    description: '1 day full access to all mock tests & AI analytics',
+  },
+  {
+    id: 'weekly',
+    name: 'Weekly Pass',
+    durationLabel: '7 Days',
+    periodDays: 7,
+    price: 49,
+    originalPrice: 149,
+    badge: 'Sprint Week',
+    description: '7 days complete access to all full mocks & topic tests',
+  },
+  {
+    id: 'monthly',
+    name: 'Monthly Pass',
+    durationLabel: '30 Days',
+    periodDays: 30,
+    price: 199,
+    originalPrice: 399,
+    badge: 'Most Popular',
+    popular: true,
+    description: '30 days intensive preparation with full explanations',
+  },
+  {
+    id: 'lifetime',
+    name: 'Lifetime Pass',
+    durationLabel: 'Forever',
+    periodDays: 36500,
+    price: 499,
+    originalPrice: 1499,
+    badge: 'Best Value',
+    bestValue: true,
+    description: 'Unlimited lifetime access to all tests & new daily additions',
+  },
+];
+
 const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000/api';
 
 export default function PremiumScreen() {
@@ -60,6 +118,10 @@ export default function PremiumScreen() {
   const isSubscribed = localSubscribed !== null ? localSubscribed : authSubscribed;
   const [checkingStatus, setCheckingStatus] = useState(true);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+
+  // Plan Selection State
+  const [selectedPlanId, setSelectedPlanId] = useState<'daily' | 'weekly' | 'monthly' | 'lifetime'>('lifetime');
+  const selectedPlan = PLANS.find((p) => p.id === selectedPlanId) || PLANS[3];
 
   // Interactive Live Preview State
   const [sampleLang, setSampleLang] = useState<'en' | 'hi'>('en');
@@ -84,6 +146,31 @@ export default function PremiumScreen() {
   const [couponError, setCouponError] = useState('');
   const [couponSuccess, setCouponSuccess] = useState('');
 
+  const revalidateCouponForPlan = async (code: string, planId: string, basePrice: number) => {
+    try {
+      const res = await fetch(`${API_BASE_URL}/payment/validate-coupon`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code, plan_id: planId, amount: basePrice }),
+      });
+      const data = await res.json();
+      if (data.valid) {
+        setAppliedCoupon(data);
+        setCouponSuccess(data.description || `Coupon ${data.code} applied!`);
+      }
+    } catch (e) {
+      console.error('Coupon revalidation error:', e);
+    }
+  };
+
+  const handleSelectPlan = (planId: 'daily' | 'weekly' | 'monthly' | 'lifetime') => {
+    setSelectedPlanId(planId);
+    const plan = PLANS.find((p) => p.id === planId) || PLANS[3];
+    if (appliedCoupon?.code) {
+      revalidateCouponForPlan(appliedCoupon.code, planId, plan.price);
+    }
+  };
+
   const handleApplyCoupon = async () => {
     const code = couponInput.trim();
     if (!code) {
@@ -98,7 +185,11 @@ export default function PremiumScreen() {
       const res = await fetch(`${API_BASE_URL}/payment/validate-coupon`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code }),
+        body: JSON.stringify({
+          code,
+          plan_id: selectedPlan.id,
+          amount: selectedPlan.price,
+        }),
       });
       const data = await res.json();
       if (data.valid) {
@@ -185,6 +276,7 @@ export default function PremiumScreen() {
             uid: user.uid,
             customer_email: user.email || '',
             customer_phone: phoneNumber || '',
+            plan_id: selectedPlan.id,
           }),
         });
         const data = await res.json();
@@ -194,7 +286,7 @@ export default function PremiumScreen() {
           }
           await refreshSubscription();
           setLocalSubscribed(true);
-          const msg = data.message || `🎉 Coupon '${appliedCoupon.code}' applied! 100% Lifetime Premium Access activated.`;
+          const msg = data.message || `🎉 Coupon '${appliedCoupon.code}' applied! ${selectedPlan.name} activated.`;
           if (Platform.OS === 'web') {
             window.alert(msg);
           } else {
@@ -225,13 +317,15 @@ export default function PremiumScreen() {
       userService.updateUserProfile({ phoneNumber: phone }).catch(() => {});
     }
 
+    const finalAmount = appliedCoupon ? appliedCoupon.finalAmount : selectedPlan.price;
+
     initiatePayment(
       async () => {
         try {
           await refreshSubscription();
           setLocalSubscribed(true);
           setLoading(false);
-          const successMsg = '🎉 Congratulations! You now have full unrestricted access to all UPSC Principal Mock Tests and AI Analytics.';
+          const successMsg = `🎉 Congratulations! Your ${selectedPlan.name} is now active. All UPSC Principal Mock Tests and AI Analytics are unlocked!`;
           if (Platform.OS === 'web') {
             window.alert(successMsg);
           } else {
@@ -256,8 +350,9 @@ export default function PremiumScreen() {
         userName: user?.displayName || (user?.email ? user.email.split('@')[0] : 'Aspirant'),
         userEmail: user?.email || '',
         userPhone: phone,
-        amountInRupees: appliedCoupon ? appliedCoupon.finalAmount : 499,
+        amountInRupees: finalAmount,
         couponCode: appliedCoupon?.code,
+        planId: selectedPlan.id,
       }
     );
   };
@@ -347,7 +442,7 @@ export default function PremiumScreen() {
     },
     {
       q: 'How long is the Premium subscription valid?',
-      a: 'Your subscription is valid for the complete 2026 UPSC Principal & Vice-Principal examination cycle until the exam is conducted. There are no recurring monthly charges or hidden renewal fees.',
+      a: 'We offer 4 flexible passes tailored to your needs: Daily Pass (₹9 for 24 hours), Weekly Pass (₹49 for 7 days), Monthly Pass (₹199 for 30 days), and Lifetime Pass (₹499 for unlimited lifetime access through the entire 2026 UPSC exam cycle and beyond). All passes are one-time payments with zero auto-debit renewals.',
     },
     {
       q: 'Are all test papers available in both Hindi & English?',
@@ -561,12 +656,61 @@ export default function PremiumScreen() {
                   <Text style={styles.trustShieldText}>Official GNCTD & KVS Pattern</Text>
                 </View>
 
-                {/* Massive Price Anchor */}
+                {/* Interactive Multi-Tier Plan Selector */}
+                <View style={styles.planSelectorHeader}>
+                  <Text style={styles.planSelectorTitle}>Choose Your Access Pass</Text>
+                  <Text style={styles.planSelectorSubtitle}>Select the duration that matches your study plan</Text>
+                </View>
+
+                <View style={styles.planSelectorGrid}>
+                  {PLANS.map((plan) => {
+                    const isSelected = selectedPlanId === plan.id;
+                    return (
+                      <TouchableOpacity
+                        key={plan.id}
+                        style={[styles.planCard, isSelected && styles.planCardSelected]}
+                        onPress={() => handleSelectPlan(plan.id)}
+                        activeOpacity={0.85}
+                      >
+                        {plan.badge && (
+                          <View style={[styles.planBadge, isSelected && styles.planBadgeSelected]}>
+                            <Text style={[styles.planBadgeText, isSelected && styles.planBadgeTextSelected]}>
+                              {plan.badge}
+                            </Text>
+                          </View>
+                        )}
+                        <View style={styles.planCardTopRow}>
+                          <View style={styles.planCardLeft}>
+                            <View style={[styles.planRadio, isSelected && styles.planRadioSelected]}>
+                              {isSelected && <View style={styles.planRadioInner} />}
+                            </View>
+                            <View>
+                              <Text style={[styles.planName, isSelected && styles.planNameSelected]}>
+                                {plan.name}
+                              </Text>
+                              <Text style={styles.planDuration}>{plan.durationLabel}</Text>
+                            </View>
+                          </View>
+                          <View style={styles.planPriceCol}>
+                            <View style={styles.planPriceRow}>
+                              <Text style={[styles.planPrice, isSelected && styles.planPriceSelected]}>
+                                ₹{plan.price}
+                              </Text>
+                              <Text style={styles.planOriginalPrice}>₹{plan.originalPrice}</Text>
+                            </View>
+                          </View>
+                        </View>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+
+                {/* Massive Price Anchor for Selected Plan */}
                 <View style={styles.anchorPriceBlock}>
                   <View style={styles.anchorPriceRow}>
                     <Text style={styles.anchorCurrency}>₹</Text>
                     <Text style={styles.anchorAmount}>
-                      {appliedCoupon ? (appliedCoupon.isFree ? '0' : appliedCoupon.finalAmount) : '499'}
+                      {appliedCoupon ? (appliedCoupon.isFree ? '0' : appliedCoupon.finalAmount) : selectedPlan.price}
                     </Text>
                     {appliedCoupon?.isFree && (
                       <View style={{ marginLeft: 8, backgroundColor: '#DCFCE7', paddingHorizontal: 8, paddingVertical: 2, borderRadius: 6, alignSelf: 'center' }}>
@@ -575,17 +719,19 @@ export default function PremiumScreen() {
                     )}
                   </View>
                   <View style={styles.anchorDiscountRow}>
-                    <Text style={styles.anchorOriginalPrice}>₹1,499</Text>
+                    <Text style={styles.anchorOriginalPrice}>₹{selectedPlan.originalPrice}</Text>
                     <View style={[styles.anchorSavePill, appliedCoupon && { backgroundColor: '#DCFCE7' }]}>
                       <Text style={[styles.anchorSavePillText, appliedCoupon && { color: '#15803D' }]}>
                         {appliedCoupon
-                          ? (appliedCoupon.isFree ? `🎉 100% OFF with '${appliedCoupon.code}'` : `Save ₹${1499 - appliedCoupon.finalAmount}`)
-                          : 'Save ₹1,000 (67% OFF)'}
+                          ? (appliedCoupon.isFree
+                              ? `🎉 100% OFF with '${appliedCoupon.code}'`
+                              : `Save ₹${selectedPlan.originalPrice - appliedCoupon.finalAmount}`)
+                          : `Save ₹${selectedPlan.originalPrice - selectedPlan.price} (${Math.round(((selectedPlan.originalPrice - selectedPlan.price) / selectedPlan.originalPrice) * 100)}% OFF)`}
                       </Text>
                     </View>
                   </View>
                   <Text style={styles.anchorTermsText}>
-                    One-time payment · No recurring charges
+                    {selectedPlan.name} · Valid for {selectedPlan.durationLabel} · No auto-renew
                   </Text>
                 </View>
 
@@ -665,10 +811,10 @@ export default function PremiumScreen() {
                         <Lock size={18} color="#FFFFFF" />
                         <Text style={styles.payNowBtnText}>
                           {appliedCoupon?.isFree
-                            ? '✨ Unlock Lifetime Access · Free'
+                            ? `✨ Unlock ${selectedPlan.name} · Free`
                             : appliedCoupon
-                            ? `Get Full Test Access · ₹${appliedCoupon.finalAmount}`
-                            : 'Get Full Test Access · ₹499'}
+                            ? `Get ${selectedPlan.name} · ₹${appliedCoupon.finalAmount}`
+                            : `Get ${selectedPlan.name} · ₹${selectedPlan.price}`}
                         </Text>
                       </>
                     )}
@@ -683,7 +829,7 @@ export default function PremiumScreen() {
                   </View>
                   <View style={styles.clarityPoint}>
                     <Clock size={14} color="#059669" />
-                    <Text style={styles.clarityPointText}>Unlimited access until UPSC Principal 2026 exam day</Text>
+                    <Text style={styles.clarityPointText}>Full access for {selectedPlan.durationLabel} (unlimited re-attempts)</Text>
                   </View>
                   <View style={styles.clarityPoint}>
                     <ShieldCheck size={14} color="#64748B" />
@@ -1114,7 +1260,7 @@ export default function PremiumScreen() {
           <View style={styles.compTableRow}>
             <Text style={styles.compColFeature}>Pricing & Commitments</Text>
             <Text style={styles.compColFree}>₹1,500 – ₹3,000/yr recurring auto-renew subscriptions</Text>
-            <Text style={[styles.compColPremium, styles.compBold]}>₹499 one-time • Zero renewals • Valid till exam day</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>Passes from ₹9 (or ₹499 Lifetime) • Zero auto-renew</Text>
           </View>
         </View>
       </View>
@@ -1173,7 +1319,7 @@ export default function PremiumScreen() {
 
             <Text style={styles.bottomTitle}>Prepare with a Complete Mock-Test System.</Text>
             <Text style={styles.bottomSub}>
-              Unlock all 26 full-length mocks, 158 topic tests, daily fresh papers, and Swamy's Handbook legal rationales. Instant activation for ₹499.
+              Unlock all 26 full-length mocks, 158 topic tests, daily fresh papers, and Swamy's Handbook legal rationales. Plans starting at just ₹9.
             </Text>
 
             <TouchableOpacity
@@ -1183,12 +1329,18 @@ export default function PremiumScreen() {
               activeOpacity={0.9}
             >
               <Text style={styles.bottomBtnText}>
-                {loading ? 'Processing...' : appliedCoupon?.isFree ? '✨ Unlock Lifetime Access · Free' : appliedCoupon ? `Get Full Test Access · ₹${appliedCoupon.finalAmount}` : 'Get Full Test Access · ₹499'}
+                {loading
+                  ? 'Processing...'
+                  : appliedCoupon?.isFree
+                  ? `✨ Unlock ${selectedPlan.name} · Free`
+                  : appliedCoupon
+                  ? `Get ${selectedPlan.name} · ₹${appliedCoupon.finalAmount}`
+                  : `Get ${selectedPlan.name} · ₹${selectedPlan.price}`}
               </Text>
             </TouchableOpacity>
 
             <Text style={styles.bottomFootnote}>
-              One-time payment · No recurring charges · Valid until UPSC 2026 exam day
+              Flexible passes from ₹9 · One-time payment · Zero auto-debit renewals
             </Text>
           </View>
         </ImageBackground>
@@ -1281,7 +1433,7 @@ export default function PremiumScreen() {
               {loading ? (
                 <ActivityIndicator size="small" color="#FFFFFF" />
               ) : (
-                <Text style={styles.modalSubmitBtnText}>Proceed to Payment · ₹{appliedCoupon ? appliedCoupon.finalAmount : 499}</Text>
+                <Text style={styles.modalSubmitBtnText}>Proceed to Payment · ₹{appliedCoupon ? (appliedCoupon.isFree ? 0 : appliedCoupon.finalAmount) : selectedPlan.price}</Text>
               )}
             </TouchableOpacity>
 
@@ -1410,10 +1562,12 @@ export default function PremiumScreen() {
         <View style={styles.stickyMobileBar}>
           <View>
             <View style={styles.stickyPriceRow}>
-              <Text style={styles.stickyPrice}>{appliedCoupon ? (appliedCoupon.isFree ? '₹0' : `₹${appliedCoupon.finalAmount}`) : '₹499'}</Text>
-              <Text style={styles.stickyPriceCut}>₹1,499</Text>
+              <Text style={styles.stickyPrice}>
+                {appliedCoupon ? (appliedCoupon.isFree ? '₹0' : `₹${appliedCoupon.finalAmount}`) : `₹${selectedPlan.price}`}
+              </Text>
+              <Text style={styles.stickyPriceCut}>₹{selectedPlan.originalPrice}</Text>
             </View>
-            <Text style={styles.stickyPeriod}>Full 2026 Exam Cycle</Text>
+            <Text style={styles.stickyPeriod}>{selectedPlan.name} ({selectedPlan.durationLabel})</Text>
           </View>
           <TouchableOpacity
             style={styles.stickyBuyBtn}
@@ -1424,7 +1578,13 @@ export default function PremiumScreen() {
             {loading ? (
               <ActivityIndicator size="small" color="#FFFFFF" />
             ) : (
-              <Text style={styles.stickyBuyBtnText}>{appliedCoupon?.isFree ? '✨ Unlock Free' : appliedCoupon ? `Pay ₹${appliedCoupon.finalAmount}` : 'Get Full Test Access · ₹499'}</Text>
+              <Text style={styles.stickyBuyBtnText}>
+                {appliedCoupon?.isFree
+                  ? '✨ Unlock Free'
+                  : appliedCoupon
+                  ? `Pay ₹${appliedCoupon.finalAmount}`
+                  : `Get ${selectedPlan.name} · ₹${selectedPlan.price}`}
+              </Text>
             )}
           </TouchableOpacity>
         </View>
@@ -1886,6 +2046,134 @@ const styles = StyleSheet.create({
     color: '#047857',
     fontSize: 11,
     fontWeight: '700',
+  },
+  planSelectorHeader: {
+    width: '100%',
+    marginBottom: 12,
+  },
+  planSelectorTitle: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#0F172A',
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+    marginBottom: 2,
+  },
+  planSelectorSubtitle: {
+    fontSize: 12,
+    color: '#64748B',
+    fontWeight: '500',
+  },
+  planSelectorGrid: {
+    width: '100%',
+    gap: 8,
+    marginBottom: 18,
+  },
+  planCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 14,
+    paddingVertical: 12,
+    paddingHorizontal: 14,
+    borderWidth: 1.5,
+    borderColor: '#E2E8F0',
+    position: 'relative',
+  },
+  planCardSelected: {
+    borderColor: '#2563EB',
+    backgroundColor: '#EFF6FF',
+    shadowColor: '#2563EB',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 2,
+  },
+  planBadge: {
+    position: 'absolute',
+    top: -9,
+    right: 12,
+    backgroundColor: '#64748B',
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 10,
+    zIndex: 1,
+  },
+  planBadgeSelected: {
+    backgroundColor: '#2563EB',
+  },
+  planBadgeText: {
+    color: '#FFFFFF',
+    fontSize: 9,
+    fontWeight: '800',
+    letterSpacing: 0.3,
+  },
+  planBadgeTextSelected: {
+    color: '#FFFFFF',
+  },
+  planCardTopRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  planCardLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    flex: 1,
+  },
+  planRadio: {
+    width: 18,
+    height: 18,
+    borderRadius: 9,
+    borderWidth: 2,
+    borderColor: '#CBD5E1',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  planRadioSelected: {
+    borderColor: '#2563EB',
+  },
+  planRadioInner: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#2563EB',
+  },
+  planName: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#1E293B',
+  },
+  planNameSelected: {
+    color: '#1D4ED8',
+    fontWeight: '800',
+  },
+  planDuration: {
+    fontSize: 11,
+    color: '#64748B',
+    fontWeight: '500',
+    marginTop: 1,
+  },
+  planPriceCol: {
+    alignItems: 'flex-end',
+  },
+  planPriceRow: {
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    gap: 6,
+  },
+  planPrice: {
+    fontSize: 16,
+    fontWeight: '900',
+    color: '#0F172A',
+  },
+  planPriceSelected: {
+    color: '#1D4ED8',
+  },
+  planOriginalPrice: {
+    fontSize: 12,
+    color: '#94A3B8',
+    textDecorationLine: 'line-through',
+    fontWeight: '500',
   },
   payNowBtn: {
     width: '100%',

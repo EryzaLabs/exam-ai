@@ -34,6 +34,83 @@ const getCashfreeConfig = () => {
 };
 
 // ==============================================================================
+// SUBSCRIPTION PLANS CONFIGURATION
+// ==============================================================================
+export interface SubscriptionPlan {
+  id: 'daily' | 'weekly' | 'monthly' | 'lifetime';
+  name: string;
+  tagline: string;
+  price: number;
+  originalPrice: number;
+  durationLabel: string;
+  periodDays: number;
+  badge?: string;
+  popular?: boolean;
+  bestValue?: boolean;
+}
+
+export const SUBSCRIPTION_PLANS: Record<string, SubscriptionPlan> = {
+  daily: {
+    id: 'daily',
+    name: 'Daily Pass',
+    tagline: '24 Hours Full Access',
+    price: 9,
+    originalPrice: 49,
+    durationLabel: '1 Day',
+    periodDays: 1,
+    badge: 'Quick Revision',
+  },
+  weekly: {
+    id: 'weekly',
+    name: 'Weekly Pass',
+    tagline: '7 Days Intensive Prep',
+    price: 49,
+    originalPrice: 149,
+    durationLabel: '7 Days',
+    periodDays: 7,
+    badge: 'Sprint Week',
+  },
+  monthly: {
+    id: 'monthly',
+    name: 'Monthly Pass',
+    tagline: '30 Days Complete Access',
+    price: 199,
+    originalPrice: 399,
+    durationLabel: '30 Days',
+    periodDays: 30,
+    badge: 'Most Popular',
+    popular: true,
+  },
+  lifetime: {
+    id: 'lifetime',
+    name: 'Lifetime Pass',
+    tagline: 'Forever Access · Never Pay Again',
+    price: 499,
+    originalPrice: 1999,
+    durationLabel: 'Forever',
+    periodDays: 36500,
+    badge: 'Best Value',
+    bestValue: true,
+  },
+};
+
+export function resolvePlanAndPeriod(planId?: string, amount?: number): { plan: SubscriptionPlan; periodDays: number } {
+  if (planId && SUBSCRIPTION_PLANS[planId.toLowerCase()]) {
+    const plan = SUBSCRIPTION_PLANS[planId.toLowerCase()];
+    return { plan, periodDays: plan.periodDays };
+  }
+  const amt = Math.round(Number(amount) || 0);
+  if (amt === 9) return { plan: SUBSCRIPTION_PLANS.daily, periodDays: 1 };
+  if (amt === 49) return { plan: SUBSCRIPTION_PLANS.weekly, periodDays: 7 };
+  if (amt === 199) return { plan: SUBSCRIPTION_PLANS.monthly, periodDays: 30 };
+  if (amt === 499) return { plan: SUBSCRIPTION_PLANS.lifetime, periodDays: 36500 };
+  return { plan: SUBSCRIPTION_PLANS.lifetime, periodDays: 36500 };
+}
+
+// In-memory cache for recent order plan metadata
+export const orderPlansCache: Record<string, { plan: SubscriptionPlan; periodDays: number; uid?: string }> = {};
+
+// ==============================================================================
 // COUPON CODES CONFIGURATION
 // ==============================================================================
 export interface CouponDefinition {
@@ -128,6 +205,18 @@ export const calculateDiscount = (coupon: CouponDefinition, basePrice: number = 
  * POST /api/payment/create-order
  * Creates an order on Cashfree Payment Gateway and returns the payment_session_id
  */
+
+/**
+ * GET /api/payment/plans
+ * Returns available subscription plans
+ */
+router.get('/plans', (_req: Request, res: Response) => {
+  res.json({
+    success: true,
+    plans: Object.values(SUBSCRIPTION_PLANS),
+  });
+});
+
 router.post('/create-order', async (req: Request, res: Response) => {
   try {
     const {
@@ -140,15 +229,18 @@ router.post('/create-order', async (req: Request, res: Response) => {
       customer_phone = '9999999999',
       return_url,
       coupon_code,
+      plan_id = 'lifetime',
     } = req.body;
 
-    if (!amount || amount <= 0) {
+    const { plan, periodDays } = resolvePlanAndPeriod(plan_id, amount);
+    let finalAmount = Number(amount) || plan.price;
+
+    if (finalAmount <= 0) {
       return res.status(400).json({ error: 'Valid order amount is required' });
     }
 
     // Amount normalization:
     // If frontend sends in paise (>= 10000, e.g. 49900), convert to rupees (499.00)
-    let finalAmount = Number(amount);
     if (finalAmount >= 10000) {
       finalAmount = Math.round((finalAmount / 100) * 100) / 100;
     }
@@ -157,7 +249,7 @@ router.post('/create-order', async (req: Request, res: Response) => {
       const cleanCoupon = String(coupon_code).trim().toUpperCase();
       const coupon = COUPONS[cleanCoupon];
       if (coupon && coupon.active) {
-        const { finalAmount: calcAmount } = calculateDiscount(coupon, finalAmount || 499);
+        const { finalAmount: calcAmount } = calculateDiscount(coupon, finalAmount || plan.price);
         finalAmount = calcAmount;
       }
     }
@@ -169,6 +261,12 @@ router.post('/create-order', async (req: Request, res: Response) => {
     const orderId = `order_${timestamp}_${randomSuffix}`;
     const customerId =
       uid || customer_id || `cust_${timestamp}_${Math.random().toString(36).substring(2, 6)}`;
+
+    orderPlansCache[orderId] = {
+      plan,
+      periodDays: plan.periodDays,
+      uid: customerId,
+    };
 
     const cleanPhone = (customer_phone || '').toString().replace(/\D/g, '').slice(-10);
     const validPhone = cleanPhone.length === 10 ? cleanPhone : '9999999999';
@@ -192,7 +290,7 @@ router.post('/create-order', async (req: Request, res: Response) => {
             ? 'https://exambc.alaotach.com/premium?order_id={order_id}'
             : 'https://payments-test.cashfree.com/return?order_id={order_id}',
       },
-      order_note: 'UPSC Principal 2026 - Premium All-Access Pass',
+      order_note: `${plan.name} - Astra Exam AI Premium Pass`,
     };
 
     console.log(`[Cashfree] Creating order ${orderId} for ₹${finalAmount} on ${baseUrl}`);
@@ -291,10 +389,15 @@ router.post('/verify', async (req: Request, res: Response) => {
       if (data?.type === 'authentication_error' && env !== 'PRODUCTION') {
         console.log(`[Cashfree] Sandbox verification simulated for ${order_id}`);
         if (uid) {
+          const cachedPlan = orderPlansCache[order_id];
+          const { plan, periodDays } = cachedPlan || resolvePlanAndPeriod(req.body.plan_id, 499);
           await recordBackendSubscription({
             uid,
             orderId: order_id,
-            amount: 499,
+            amount: plan.price,
+            periodDays,
+            planId: plan.id,
+            planName: plan.name,
           });
         }
         return res.json({
@@ -319,6 +422,9 @@ router.post('/verify', async (req: Request, res: Response) => {
     if (isPaid) {
       const targetUid = uid || data.customer_details?.customer_id;
       if (targetUid) {
+        const cachedPlan = orderPlansCache[data.order_id];
+        const { plan, periodDays } = cachedPlan || resolvePlanAndPeriod(req.body.plan_id, data.order_amount);
+
         await recordBackendSubscription({
           uid: targetUid,
           orderId: data.order_id,
@@ -326,6 +432,9 @@ router.post('/verify', async (req: Request, res: Response) => {
           currency: data.order_currency,
           customerEmail: data.customer_details?.customer_email,
           customerPhone: data.customer_details?.customer_phone,
+          periodDays,
+          planId: plan.id,
+          planName: plan.name,
         });
       }
     }
@@ -410,7 +519,13 @@ router.post('/validate-coupon', (req: Request, res: Response) => {
       return res.status(404).json({ valid: false, error: 'Invalid or expired coupon code' });
     }
 
-    const { discountAmount, finalAmount, isFree } = calculateDiscount(coupon, 499);
+    const { amount, plan_id } = req.body;
+    let basePrice = 499;
+    if (amount) basePrice = Number(amount);
+    else if (plan_id && SUBSCRIPTION_PLANS[String(plan_id).toLowerCase()]) {
+      basePrice = SUBSCRIPTION_PLANS[String(plan_id).toLowerCase()].price;
+    }
+    const { discountAmount, finalAmount, isFree } = calculateDiscount(coupon, basePrice);
 
     return res.json({
       valid: true,
@@ -434,7 +549,7 @@ router.post('/validate-coupon', (req: Request, res: Response) => {
  */
 router.post('/redeem-coupon', async (req: Request, res: Response) => {
   try {
-    const { code, uid, customer_email, customer_phone } = req.body;
+    const { code, uid, customer_email, customer_phone, plan_id } = req.body;
 
     if (!uid) {
       return res.status(400).json({ success: false, error: 'Please log in to redeem your coupon code' });
@@ -451,7 +566,8 @@ router.post('/redeem-coupon', async (req: Request, res: Response) => {
       return res.status(404).json({ success: false, error: 'Invalid or expired coupon code' });
     }
 
-    const { discountAmount, finalAmount, isFree } = calculateDiscount(coupon, 499);
+    const { plan, periodDays } = resolvePlanAndPeriod(plan_id, 499);
+    const { discountAmount, finalAmount, isFree } = calculateDiscount(coupon, plan.price);
 
     if (isFree) {
       // 100% Free VIP activation directly in Firestore via Admin SDK
@@ -463,7 +579,9 @@ router.post('/redeem-coupon', async (req: Request, res: Response) => {
         currency: 'INR',
         customerEmail: customer_email || '',
         customerPhone: customer_phone || '',
-        periodDays: 3650, // 10 years / Lifetime
+        periodDays: plan.id === 'lifetime' ? 36500 : periodDays,
+        planId: plan.id,
+        planName: plan.name,
       });
 
       if (!activated) {
@@ -542,12 +660,18 @@ router.post('/webhook', async (req: Request, res: Response) => {
       const amount = orderData?.order_amount || paymentData?.payment_amount || 499;
 
       if (targetUid && orderId) {
+        const cachedPlan = orderPlansCache[orderId];
+        const { plan, periodDays } = cachedPlan || resolvePlanAndPeriod(undefined, amount);
+
         await recordBackendSubscription({
           uid: targetUid,
           orderId,
           amount,
           customerEmail: req.body?.data?.customer_details?.customer_email,
           customerPhone: req.body?.data?.customer_details?.customer_phone,
+          periodDays,
+          planId: plan.id,
+          planName: plan.name,
         });
       }
     }

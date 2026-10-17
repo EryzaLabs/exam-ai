@@ -8,7 +8,7 @@ export declare function saveLocalSubscription(uid: string, data: any): void;
  * Backend function to write subscription status using Firebase Admin SDK.
  * Bypasses Firestore Security Rules completely.
  */
-export declare function recordBackendSubscription({ uid, orderId, amount, currency, customerEmail, customerPhone, periodDays, }: {
+export declare function recordBackendSubscription({ uid, orderId, amount, currency, customerEmail, customerPhone, periodDays, planId, planName, }: {
     uid: string;
     orderId: string;
     amount: number;
@@ -16,5 +16,7 @@ export declare function recordBackendSubscription({ uid, orderId, amount, curren
     customerEmail?: string;
     customerPhone?: string;
     periodDays?: number;
+    planId?: string;
+    planName?: string;
 }): Promise<boolean>;
 //# sourceMappingURL=firebase-admin.d.ts.map

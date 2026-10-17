@@ -308,8 +308,8 @@ export default function MobileDashboard({
                     <Text style={styles.premiumBadgeText}>PREMIUM PASS</Text>
                   </View>
                   <View style={styles.premiumPriceTag}>
-                    <Text style={styles.premiumPriceDiscount}>67% OFF</Text>
-                    <Text style={styles.premiumPriceText}>₹499</Text>
+                    <Text style={styles.premiumPriceDiscount}>FROM</Text>
+                    <Text style={styles.premiumPriceText}>₹9</Text>
                   </View>
                 </View>
 

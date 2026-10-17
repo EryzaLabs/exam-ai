@@ -124,6 +124,8 @@ export async function recordBackendSubscription({
   customerEmail,
   customerPhone,
   periodDays = 365,
+  planId = 'lifetime',
+  planName = 'Lifetime Pass',
 }: {
   uid: string;
   orderId: string;
@@ -132,8 +134,14 @@ export async function recordBackendSubscription({
   customerEmail?: string;
   customerPhone?: string;
   periodDays?: number;
+  planId?: string;
+  planName?: string;
 }): Promise<boolean> {
   try {
+    const now = Date.now();
+    const periodEnd = now + periodDays * 24 * 60 * 60 * 1000;
+    const expiresAt = new Date(periodEnd).toISOString();
+
     // 0. Always save immediately to local persistent disk registry
     saveLocalSubscription(uid, {
       orderId,
@@ -142,7 +150,9 @@ export async function recordBackendSubscription({
       customerEmail,
       customerPhone,
       periodDays,
-      expiresAt: new Date(Date.now() + periodDays * 24 * 60 * 60 * 1000).toISOString(),
+      planId,
+      planName,
+      expiresAt,
     });
 
     console.log(`[Subscription Registry] Active subscription recorded for UID: ${uid}, Order: ${orderId}`);
@@ -163,6 +173,9 @@ export async function recordBackendSubscription({
             orderId,
             amount,
             currency,
+            planId,
+            planName,
+            periodDays,
             currentPeriodEnd: periodEndTimestamp,
             customerEmail: customerEmail || '',
             customerPhone: customerPhone || '',
@@ -177,6 +190,8 @@ export async function recordBackendSubscription({
           {
             isSubscribed: true,
             subscriptionStatus: 'active',
+            subscriptionPlanId: planId,
+            subscriptionPlanName: planName,
             subscriptionOrderId: orderId,
             subscriptionPeriodEnd: periodEndTimestamp,
             updatedAt: FieldValue.serverTimestamp(),

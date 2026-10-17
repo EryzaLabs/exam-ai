@@ -471,7 +471,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                   {loadingTestId === test.id
                     ? 'Loading'
                     : isLocked
-                    ? 'Unlock @ ₹499'
+                    ? 'Unlock from ₹9'
                     : isFirstTest && !isSubscribed
                     ? 'Start Free Demo'
                     : 'Start Test'}
@@ -798,7 +798,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             >
               <View style={{ flex: 1, marginRight: 12 }}>
                 <View style={styles.premiumListBannerTag}>
-                  <Text style={styles.premiumListBannerTagText}>⚡ SPECIAL LAUNCH OFFER • ₹499</Text>
+                  <Text style={styles.premiumListBannerTagText}>⚡ PASSES FROM ₹9 • UPSC 2026</Text>
                 </View>
                 <Text style={styles.premiumListBannerTitle}>UPSC Principal 2026 Test Pass</Text>
                 <Text style={styles.premiumListBannerSub}>
