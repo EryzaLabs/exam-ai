@@ -46,12 +46,30 @@ dirs.forEach((dir) => {
     }
 });
 // Middleware
-app.use((0, helmet_1.default)());
-const corsOrigin = process.env.CORS_ORIGIN
-    ? process.env.CORS_ORIGIN.split(',').map(origin => origin.trim())
-    : '*';
+app.use((0, helmet_1.default)({
+    crossOriginResourcePolicy: false,
+    crossOriginEmbedderPolicy: false,
+}));
+// Robust CORS Middleware - Reflects requesting origin & handles OPTIONS preflight
+app.use((req, res, next) => {
+    const origin = req.headers.origin;
+    if (origin) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+    }
+    else {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+    }
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept, Origin, Range');
+    res.setHeader('Access-Control-Expose-Headers', 'Content-Range, X-Content-Range');
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(204);
+    }
+    next();
+});
 app.use((0, cors_1.default)({
-    origin: corsOrigin,
+    origin: true,
     credentials: true,
 }));
 app.use((0, compression_1.default)());
