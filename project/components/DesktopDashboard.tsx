@@ -27,9 +27,12 @@ import {
   ArrowRight,
   ShieldCheck,
   SlidersHorizontal,
+  Sun,
+  Moon,
 } from 'lucide-react-native';
 import { router, usePathname, useLocalSearchParams } from 'expo-router';
 import { useAuth } from '@/context/auth-context';
+import { useTheme } from '@/context/theme-context';
 import { useDashboardData } from '@/hooks/useDashboardData';
 import { signOut } from 'firebase/auth';
 import { auth } from '@/services/firebaseConfig';
@@ -38,6 +41,7 @@ import UserService from '@/services/user-service';
 import Svg, { Circle } from 'react-native-svg';
 
 export default function DesktopDashboard({ performance: propPerformance, dashboardStats: propDashboardStats, children, disableScroll }: any) {
+  const { isDark, colors, toggleTheme } = useTheme();
   const { user, isSubscribed: authSubscribed, isSubscriptionLoading, requireAuth } = useAuth();
   const [searchQuery, setSearchQuery] = React.useState('');
   const pathname = usePathname();
@@ -91,16 +95,16 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
     );
   };
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: colors.background }]}>
       {/* LEFT SIDEBAR */}
-      <View style={styles.sidebar}>
+      <View style={[styles.sidebar, { backgroundColor: colors.sidebarBg, borderColor: colors.sidebarBorder }]}>
         <View style={styles.logoContainer}>
           <View style={styles.logoIcon}>
             <BookOpen size={24} color="#fff" />
           </View>
           <View>
-            <Text style={styles.logoText}>Astra</Text>
-            <Text style={styles.logoSubtext}>Exam AI</Text>
+            <Text style={[styles.logoText, { color: colors.textPrimary }]}>Astra</Text>
+            <Text style={[styles.logoSubtext, { color: colors.textSecondary }]}>Exam AI</Text>
           </View>
         </View>
 
@@ -109,80 +113,80 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
             style={[styles.navItem, (pathname === '/' || pathname === '/index') && styles.navItemActive]} 
             onPress={() => router.push('/')}
           >
-            <Home size={20} color={(pathname === '/' || pathname === '/index') ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, (pathname === '/' || pathname === '/index') && styles.navTextActive]}>Home</Text>
+            <Home size={20} color={(pathname === '/' || pathname === '/index') ? '#fff' : colors.textSecondary} />
+            <Text style={[styles.navText, { color: colors.textSecondary }, (pathname === '/' || pathname === '/index') && styles.navTextActive]}>Home</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
             style={[styles.navItem, (pathname === '/test-list' || pathname?.includes('test-list')) && (!activeCategory || activeCategory === 'all') && styles.navItemActive]} 
             onPress={() => navigateToCategory('all')}
           >
-            <FileText size={20} color={(pathname === '/test-list' || pathname?.includes('test-list')) && (!activeCategory || activeCategory === 'all') ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, (pathname === '/test-list' || pathname?.includes('test-list')) && (!activeCategory || activeCategory === 'all') && styles.navTextActive]}>Tests</Text>
+            <FileText size={20} color={(pathname === '/test-list' || pathname?.includes('test-list')) && (!activeCategory || activeCategory === 'all') ? '#fff' : colors.textSecondary} />
+            <Text style={[styles.navText, { color: colors.textSecondary }, (pathname === '/test-list' || pathname?.includes('test-list')) && (!activeCategory || activeCategory === 'all') && styles.navTextActive]}>Tests</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
             style={[styles.navItem, (pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'full' && styles.navItemActive]} 
             onPress={() => navigateToCategory('full')}
           >
-            <Clock size={20} color={(pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'full' ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, (pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'full' && styles.navTextActive]}>Full Mocks</Text>
+            <Clock size={20} color={(pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'full' ? '#fff' : colors.textSecondary} />
+            <Text style={[styles.navText, { color: colors.textSecondary }, (pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'full' && styles.navTextActive]}>Full Mocks</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
             style={[styles.navItem, (pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'topic' && styles.navItemActive]} 
             onPress={() => navigateToCategory('topic')}
           >
-            <Grid size={20} color={(pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'topic' ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, (pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'topic' && styles.navTextActive]}>Topic Wise</Text>
+            <Grid size={20} color={(pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'topic' ? '#fff' : colors.textSecondary} />
+            <Text style={[styles.navText, { color: colors.textSecondary }, (pathname === '/test-list' || pathname?.includes('test-list')) && activeCategory === 'topic' && styles.navTextActive]}>Topic Wise</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
             style={[styles.navItem, (pathname === '/custom-test' || pathname?.includes('custom-test')) && styles.navItemActive]} 
             onPress={() => router.push(isSubscribed ? '/custom-test' : '/premium')}
           >
-            <SlidersHorizontal size={20} color={(pathname === '/custom-test' || pathname?.includes('custom-test')) ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, (pathname === '/custom-test' || pathname?.includes('custom-test')) && styles.navTextActive]}>Custom Test 👑</Text>
+            <SlidersHorizontal size={20} color={(pathname === '/custom-test' || pathname?.includes('custom-test')) ? '#fff' : colors.textSecondary} />
+            <Text style={[styles.navText, { color: colors.textSecondary }, (pathname === '/custom-test' || pathname?.includes('custom-test')) && styles.navTextActive]}>Custom Test 👑</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
             style={[styles.navItem, (pathname === '/practice' || pathname?.includes('practice')) && styles.navItemActive]} 
             onPress={() => router.push('/practice')}
           >
-            <Zap size={20} color={(pathname === '/practice' || pathname?.includes('practice')) ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, (pathname === '/practice' || pathname?.includes('practice')) && styles.navTextActive]}>Practice</Text>
+            <Zap size={20} color={(pathname === '/practice' || pathname?.includes('practice')) ? '#fff' : colors.textSecondary} />
+            <Text style={[styles.navText, { color: colors.textSecondary }, (pathname === '/practice' || pathname?.includes('practice')) && styles.navTextActive]}>Practice</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
             style={[styles.navItem, (pathname === '/progress' || pathname === '/test-history' || pathname?.includes('progress') || pathname?.includes('test-history')) && styles.navItemActive]} 
             onPress={() => requireAuth(() => router.push('/progress'), { title: 'Sign In to View Analytics', feature: 'Performance Analytics' })}
           >
-            <BarChart2 size={20} color={(pathname === '/progress' || pathname === '/test-history' || pathname?.includes('progress') || pathname?.includes('test-history')) ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, (pathname === '/progress' || pathname === '/test-history') && styles.navTextActive]}>Analytics</Text>
+            <BarChart2 size={20} color={(pathname === '/progress' || pathname === '/test-history' || pathname?.includes('progress') || pathname?.includes('test-history')) ? '#fff' : colors.textSecondary} />
+            <Text style={[styles.navText, { color: colors.textSecondary }, (pathname === '/progress' || pathname === '/test-history') && styles.navTextActive]}>Analytics</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
             style={[styles.navItem, (pathname === '/assistant' || pathname?.includes('assistant')) && styles.navItemActive]} 
             onPress={() => router.push('/assistant')}
           >
-            <MessageSquare size={20} color={(pathname === '/assistant' || pathname?.includes('assistant')) ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, (pathname === '/assistant' || pathname?.includes('assistant')) && styles.navTextActive]}>AI Assistant</Text>
+            <MessageSquare size={20} color={(pathname === '/assistant' || pathname?.includes('assistant')) ? '#fff' : colors.textSecondary} />
+            <Text style={[styles.navText, { color: colors.textSecondary }, (pathname === '/assistant' || pathname?.includes('assistant')) && styles.navTextActive]}>AI Assistant</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
             style={[styles.navItem, (pathname === '/bookmarks' || pathname?.includes('bookmarks')) && styles.navItemActive]} 
             onPress={() => router.push('/bookmarks')}
           >
-            <Bookmark size={20} color={(pathname === '/bookmarks' || pathname?.includes('bookmarks')) ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, (pathname === '/bookmarks' || pathname?.includes('bookmarks')) && styles.navTextActive]}>Bookmarks</Text>
+            <Bookmark size={20} color={(pathname === '/bookmarks' || pathname?.includes('bookmarks')) ? '#fff' : colors.textSecondary} />
+            <Text style={[styles.navText, { color: colors.textSecondary }, (pathname === '/bookmarks' || pathname?.includes('bookmarks')) && styles.navTextActive]}>Bookmarks</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
             style={[styles.navItem, (pathname === '/profile' || pathname?.includes('profile')) && styles.navItemActive]} 
             onPress={() => router.push('/profile')}
           >
-            <User size={20} color={(pathname === '/profile' || pathname?.includes('profile')) ? '#fff' : '#64748B'} />
-            <Text style={[styles.navText, (pathname === '/profile' || pathname?.includes('profile')) && styles.navTextActive]}>Profile</Text>
+            <User size={20} color={(pathname === '/profile' || pathname?.includes('profile')) ? '#fff' : colors.textSecondary} />
+            <Text style={[styles.navText, { color: colors.textSecondary }, (pathname === '/profile' || pathname?.includes('profile')) && styles.navTextActive]}>Profile</Text>
           </TouchableOpacity>
 
           {user ? (
@@ -192,41 +196,41 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
             </TouchableOpacity>
           ) : (
             <TouchableOpacity 
-              style={[styles.navItem, { backgroundColor: '#EFF6FF', borderWidth: 1, borderColor: '#DBEAFE' }]} 
+              style={[styles.navItem, { backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF', borderWidth: 1, borderColor: isDark ? '#3B82F6' : '#DBEAFE' }]} 
               onPress={() => router.push('/(auth)/login')}
             >
-              <LogIn size={20} color="#2563EB" />
-              <Text style={[styles.navText, { color: '#2563EB', fontWeight: '700' }]}>Sign In / Register</Text>
+              <LogIn size={20} color={colors.accent} />
+              <Text style={[styles.navText, { color: colors.accent, fontWeight: '700' }]}>Sign In / Register</Text>
             </TouchableOpacity>
           )}
         </ScrollView>
 
         {pathname !== '/premium' && !isSubscriptionLoading && !isSubscribed && (
           <TouchableOpacity 
-            style={styles.premiumCard}
+            style={[styles.premiumCard, { backgroundColor: colors.premiumBg }]}
             onPress={() => router.push('/premium')}
             activeOpacity={0.85}
           >
             <Crown size={24} color="#F59E0B" style={{ marginBottom: 12 }} />
-            <Text style={styles.premiumTitle}>Go Premium</Text>
-            <Text style={styles.premiumDesc}>Unlock 26 full mocks, 158 topic tests + new tests added daily.</Text>
+            <Text style={[styles.premiumTitle, { color: colors.premiumTitle }]}>Go Premium</Text>
+            <Text style={[styles.premiumDesc, { color: colors.premiumDesc }]}>Unlock 26 full mocks, 158 topic tests + new tests added daily.</Text>
             <View style={styles.premiumBtn}>
-              <ArrowRight size={16} color="#475569" />
+              <ArrowRight size={16} color={colors.textSecondary} />
             </View>
           </TouchableOpacity>
         )}
       </View>
 
       {/* CENTER CONTENT */}
-      <View style={styles.mainContent}>
+      <View style={[styles.mainContent, { backgroundColor: colors.background }]}>
         {/* TOP BAR */}
-        <View style={styles.topBar}>
-          <View style={styles.searchContainer}>
-            <Search size={18} color="#94A3B8" />
+        <View style={[styles.topBar, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+          <View style={[styles.searchContainer, { backgroundColor: colors.surfaceInput, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+            <Search size={18} color={colors.textTertiary} />
             <TextInput 
-              style={styles.searchInput}
+              style={[styles.searchInput, { color: colors.textPrimary }]}
               placeholder="Search tests, topics, or keywords..."
-              placeholderTextColor="#94A3B8"
+              placeholderTextColor={colors.textTertiary}
               value={searchQuery}
               onChangeText={setSearchQuery}
               onSubmitEditing={() => {
@@ -242,8 +246,15 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
             />
           </View>
           <View style={styles.topBarRight}>
-            <TouchableOpacity style={styles.bellBtn} onPress={() => Alert.alert('Notifications', 'No new notifications at the moment.')}>
-              <Bell size={20} color="#64748B" />
+            <TouchableOpacity 
+              style={[styles.bellBtn, { borderColor: colors.border, backgroundColor: colors.surface, marginRight: 12 }]} 
+              onPress={toggleTheme}
+              accessibilityLabel="Toggle Dark Mode"
+            >
+              {isDark ? <Sun size={20} color="#F59E0B" /> : <Moon size={20} color={colors.textSecondary} />}
+            </TouchableOpacity>
+            <TouchableOpacity style={[styles.bellBtn, { borderColor: colors.border, backgroundColor: colors.surface }]} onPress={() => Alert.alert('Notifications', 'No new notifications at the moment.')}>
+              <Bell size={20} color={colors.textSecondary} />
               <View style={styles.notificationDot} />
             </TouchableOpacity>
             {user ? (
@@ -262,18 +273,18 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                   </View>
                   <View style={{ marginLeft: 12 }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                      <Text style={styles.userName}>{dashboardStats?.userName || user?.displayName || (user?.email ? user.email.split('@')[0] : 'User')}</Text>
+                      <Text style={[styles.userName, { color: colors.textPrimary }]}>{dashboardStats?.userName || user?.displayName || (user?.email ? user.email.split('@')[0] : 'User')}</Text>
                       {isSubscribed && (
                         <Crown size={15} color="#F59E0B" fill="#F59E0B" />
                       )}
                     </View>
-                    <Text style={[styles.userRole, isSubscribed && { color: '#D97706', fontWeight: '700' }]}>
+                    <Text style={[styles.userRole, { color: colors.textSecondary }, isSubscribed && { color: '#D97706', fontWeight: '700' }]}>
                       {isSubscribed ? '👑 Premium Member' : (dashboardStats?.rank || 'Beginner')}
                     </Text>
                   </View>
                 </TouchableOpacity>
                 <TouchableOpacity 
-                  style={styles.logoutIconBtn} 
+                  style={[styles.logoutIconBtn, isDark && { backgroundColor: '#450A0A', borderColor: '#7F1D1D' }]} 
                   onPress={handleLogout}
                   accessibilityLabel="Log Out"
                 >
@@ -283,11 +294,11 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
             ) : (
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
                 <TouchableOpacity
-                  style={styles.desktopSignInBtn}
+                  style={[styles.desktopSignInBtn, { backgroundColor: colors.surface, borderColor: colors.border }]}
                   onPress={() => router.push('/(auth)/login')}
                   activeOpacity={0.8}
                 >
-                  <Text style={styles.desktopSignInBtnText}>Sign In</Text>
+                  <Text style={[styles.desktopSignInBtnText, { color: colors.textPrimary }]}>Sign In</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   style={styles.desktopSignUpBtn}
@@ -322,43 +333,43 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
               <Text style={styles.heroDesc}>Practice. Analyze. Improve. Repeat.</Text>
               
               <View style={styles.heroStatsRow}>
-                <View style={styles.heroStatBadge}>
-                  <View style={[styles.statIconBox, { backgroundColor: '#DBEAFE' }]}>
+                <View style={[styles.heroStatBadge, { backgroundColor: colors.surface }]}>
+                  <View style={[styles.statIconBox, { backgroundColor: isDark ? '#1E3A5F' : '#DBEAFE' }]}>
                     <FileText size={16} color="#2563EB" />
                   </View>
                   <View>
-                    <Text style={styles.statVal}>{dashboardStats?.totalAvailableTests ?? 184}</Text>
-                    <Text style={styles.statLbl}>Tests Available</Text>
+                    <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.totalAvailableTests ?? 184}</Text>
+                    <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Tests Available</Text>
                   </View>
                 </View>
 
-                <View style={styles.heroStatBadge}>
-                  <View style={[styles.statIconBox, { backgroundColor: '#D1FAE5' }]}>
+                <View style={[styles.heroStatBadge, { backgroundColor: colors.surface }]}>
+                  <View style={[styles.statIconBox, { backgroundColor: isDark ? '#064E3B' : '#D1FAE5' }]}>
                     <Target size={16} color="#059669" />
                   </View>
                   <View>
-                    <Text style={styles.statVal}>{dashboardStats?.accuracy?.toFixed(1) || '0'}%</Text>
-                    <Text style={styles.statLbl}>Avg. Accuracy</Text>
+                    <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.accuracy?.toFixed(1) || '0'}%</Text>
+                    <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Avg. Accuracy</Text>
                   </View>
                 </View>
 
-                <View style={styles.heroStatBadge}>
-                  <View style={[styles.statIconBox, { backgroundColor: '#EDE9FE' }]}>
+                <View style={[styles.heroStatBadge, { backgroundColor: colors.surface }]}>
+                  <View style={[styles.statIconBox, { backgroundColor: isDark ? '#2D1B69' : '#EDE9FE' }]}>
                     <Clock size={16} color="#7C3AED" />
                   </View>
                   <View>
-                    <Text style={styles.statVal}>{Math.floor((dashboardStats?.timeSpent || 0) / 60)}h {(dashboardStats?.timeSpent || 0) % 60}m</Text>
-                    <Text style={styles.statLbl}>Practice Time</Text>
+                    <Text style={[styles.statVal, { color: colors.textPrimary }]}>{Math.floor((dashboardStats?.timeSpent || 0) / 60)}h {(dashboardStats?.timeSpent || 0) % 60}m</Text>
+                    <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Practice Time</Text>
                   </View>
                 </View>
 
-                <View style={styles.heroStatBadge}>
-                  <View style={[styles.statIconBox, { backgroundColor: '#FFEDD5' }]}>
+                <View style={[styles.heroStatBadge, { backgroundColor: colors.surface }]}>
+                  <View style={[styles.statIconBox, { backgroundColor: isDark ? '#431407' : '#FFEDD5' }]}>
                     <BarChart2 size={16} color="#EA580C" />
                   </View>
                   <View>
-                    <Text style={styles.statVal}>{dashboardStats?.totalTopics || 0}</Text>
-                    <Text style={styles.statLbl}>Topics Covered</Text>
+                    <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.totalTopics || 0}</Text>
+                    <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Topics Covered</Text>
                   </View>
                 </View>
               </View>
@@ -369,7 +380,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           <View style={styles.sectionHeader}>
             <View style={{flexDirection: 'row', alignItems: 'center', gap: 8}}>
                <BookOpen size={20} color="#F97316" />
-               <Text style={styles.sectionTitle}>UPSC Principal Mock Tests</Text>
+               <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>UPSC Principal Mock Tests</Text>
             </View>
             <TouchableOpacity onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}>
               <Text style={styles.viewAll}>View All →</Text>
@@ -409,7 +420,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           <View style={styles.sectionHeader}>
             <View style={{flexDirection: 'row', alignItems: 'center', gap: 8}}>
                <Zap size={20} color="#8B5CF6" />
-               <Text style={styles.sectionTitle}>Choose Your Practice Mode</Text>
+               <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Choose Your Practice Mode</Text>
             </View>
           </View>
 
@@ -469,7 +480,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           <View style={styles.sectionHeader}>
             <View style={{flexDirection: 'row', alignItems: 'center', gap: 8}}>
                <Clock size={20} color="#3B82F6" />
-               <Text style={styles.sectionTitle}>Recent Tests</Text>
+               <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Recent Tests</Text>
             </View>
             <TouchableOpacity onPress={() => router.push('/test-list')}>
               <Text style={styles.viewAll}>View All →</Text>
@@ -478,17 +489,17 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
 
           <View style={styles.recentTestsRow}>
              {(!performance?.recentTests || performance.recentTests.length === 0) ? (
-               <View style={{ padding: 24, backgroundColor: '#fff', borderRadius: 16, width: '100%', alignItems: 'center' }}>
-                 <Text style={{ color: '#64748B' }}>No recent tests found. Start practicing!</Text>
+               <View style={{ padding: 24, backgroundColor: colors.surface, borderRadius: 16, width: '100%', alignItems: 'center', borderWidth: isDark ? 1 : 0, borderColor: colors.border }}>
+                 <Text style={{ color: colors.textSecondary }}>No recent tests found. Start practicing!</Text>
                </View>
              ) : (
                performance.recentTests.slice(0, 3).map((test: any, i: number) => (
-                 <View key={i} style={styles.recentTestCard}>
+                 <View key={i} style={[styles.recentTestCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
                     <View style={styles.rtcHeader}>
-                       <View style={styles.rtcIcon}><FileText size={18} color="#3B82F6" /></View>
+                       <View style={[styles.rtcIcon, { backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF' }]}><FileText size={18} color="#3B82F6" /></View>
                        <View style={{ flex: 1 }}>
-                          <Text style={styles.rtcTitle}>{test.title || `Test ${i+1}`}</Text>
-                          <Text style={styles.rtcDate}>{test.date || 'Recently'} • {test.type || 'Practice'}</Text>
+                          <Text style={[styles.rtcTitle, { color: colors.textPrimary }]}>{test.title || `Test ${i+1}`}</Text>
+                          <Text style={[styles.rtcDate, { color: colors.textSecondary }]}>{test.date || 'Recently'} • {test.type || 'Practice'}</Text>
                        </View>
                        <View style={[styles.rtcStatus, test.status === 'in-progress' && styles.rtcStatusProgress]}>
                           <Text style={[styles.rtcStatusText, test.status === 'in-progress' && styles.rtcStatusTextProgress]}>
@@ -496,11 +507,11 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                           </Text>
                        </View>
                     </View>
-                    <View style={styles.rtcMetrics}>
-                       <View style={styles.rtcMetric}><FileText size={14} color="#64748B" /><Text style={styles.rtcMetricTxt}>{test.questions || 0} Questions</Text></View>
-                       <View style={styles.rtcMetric}><Clock size={14} color="#64748B" /><Text style={styles.rtcMetricTxt}>{test.duration || '0m'} Duration</Text></View>
-                       <View style={styles.rtcMetric}><Star size={14} color="#64748B" /><Text style={styles.rtcMetricTxt}>{test.score || 0}% Score</Text></View>
-                       <ArrowRight size={16} color="#94A3B8" style={{ marginLeft: 'auto' }} />
+                    <View style={[styles.rtcMetrics, { borderColor: colors.borderLight }]}>
+                       <View style={styles.rtcMetric}><FileText size={14} color={colors.textSecondary} /><Text style={[styles.rtcMetricTxt, { color: colors.textSecondary }]}>{test.questions || 0} Questions</Text></View>
+                       <View style={styles.rtcMetric}><Clock size={14} color={colors.textSecondary} /><Text style={[styles.rtcMetricTxt, { color: colors.textSecondary }]}>{test.duration || '0m'} Duration</Text></View>
+                       <View style={styles.rtcMetric}><Star size={14} color={colors.textSecondary} /><Text style={[styles.rtcMetricTxt, { color: colors.textSecondary }]}>{test.score || 0}% Score</Text></View>
+                       <ArrowRight size={16} color={colors.textTertiary} style={{ marginLeft: 'auto' }} />
                     </View>
                  </View>
                ))
@@ -513,76 +524,76 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
       </View>
 
       {/* RIGHT SIDEBAR */}
-      <View style={styles.rightSidebar}>
+      <View style={[styles.rightSidebar, { backgroundColor: colors.surface, borderColor: colors.border }]}>
         {pathname === '/premium' ? (
           <>
             {/* Exam Blueprint Widget */}
-            <View style={styles.widgetCard}>
+            <View style={[styles.widgetCard, { backgroundColor: colors.surfaceElevated, borderColor: colors.borderLight }]}>
               <View style={styles.widgetHeader}>
                 <Award size={20} color="#2563EB" />
-                <Text style={styles.widgetTitle}>Exam Blueprint</Text>
+                <Text style={[styles.widgetTitle, { color: colors.textPrimary }]}>Exam Blueprint</Text>
               </View>
               <View style={{ gap: 10, marginTop: 12 }}>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: '#F1F5F9' }}>
-                  <Text style={{ fontSize: 12, color: '#64748B' }}>Target Exam</Text>
-                  <Text style={{ fontSize: 12, fontWeight: '700', color: '#0F172A' }}>UPSC Principal / VP</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: colors.borderLight }}>
+                  <Text style={{ fontSize: 12, color: colors.textSecondary }}>Target Exam</Text>
+                  <Text style={{ fontSize: 12, fontWeight: '700', color: colors.textPrimary }}>UPSC Principal / VP</Text>
                 </View>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: '#F1F5F9' }}>
-                  <Text style={{ fontSize: 12, color: '#64748B' }}>Questions / Marks</Text>
-                  <Text style={{ fontSize: 12, fontWeight: '700', color: '#0F172A' }}>120 Qs • 300 Marks</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: colors.borderLight }}>
+                  <Text style={{ fontSize: 12, color: colors.textSecondary }}>Questions / Marks</Text>
+                  <Text style={{ fontSize: 12, fontWeight: '700', color: colors.textPrimary }}>120 Qs • 300 Marks</Text>
                 </View>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: '#F1F5F9' }}>
-                  <Text style={{ fontSize: 12, color: '#64748B' }}>Duration</Text>
-                  <Text style={{ fontSize: 12, fontWeight: '700', color: '#0F172A' }}>2 Hours (120 Mins)</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: colors.borderLight }}>
+                  <Text style={{ fontSize: 12, color: colors.textSecondary }}>Duration</Text>
+                  <Text style={{ fontSize: 12, fontWeight: '700', color: colors.textPrimary }}>2 Hours (120 Mins)</Text>
                 </View>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: '#F1F5F9' }}>
-                  <Text style={{ fontSize: 12, color: '#64748B' }}>Marking Scheme</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: colors.borderLight }}>
+                  <Text style={{ fontSize: 12, color: colors.textSecondary }}>Marking Scheme</Text>
                   <Text style={{ fontSize: 12, fontWeight: '700', color: '#DC2626' }}>+2.5  •  -0.83 Negative</Text>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Text style={{ fontSize: 12, color: '#64748B' }}>Language</Text>
+                  <Text style={{ fontSize: 12, color: colors.textSecondary }}>Language</Text>
                   <Text style={{ fontSize: 12, fontWeight: '700', color: '#059669' }}>Bilingual (Eng & हिन्दी)</Text>
                 </View>
               </View>
             </View>
 
             {/* Inclusions Summary Widget */}
-            <View style={styles.widgetCard}>
+            <View style={[styles.widgetCard, { backgroundColor: colors.surfaceElevated, borderColor: colors.borderLight }]}>
               <View style={styles.widgetHeader}>
                 <Target size={20} color="#10B981" />
-                <Text style={styles.widgetTitle}>2026 Pass Inclusions</Text>
+                <Text style={[styles.widgetTitle, { color: colors.textPrimary }]}>2026 Pass Inclusions</Text>
               </View>
               <View style={{ gap: 8, marginTop: 12 }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
                   <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#2563EB' }} />
-                  <Text style={{ fontSize: 12, color: '#334155' }}><Text style={{ fontWeight: '700' }}>26 Full-Length Mocks</Text> (CBT mode)</Text>
+                  <Text style={{ fontSize: 12, color: colors.textPrimary }}><Text style={{ fontWeight: '700' }}>26 Full-Length Mocks</Text> (CBT mode)</Text>
                 </View>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
                   <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#7C3AED' }} />
-                  <Text style={{ fontSize: 12, color: '#334155' }}><Text style={{ fontWeight: '700' }}>158 Topic-wise Tests</Text> (All subjects)</Text>
+                  <Text style={{ fontSize: 12, color: colors.textPrimary }}><Text style={{ fontWeight: '700' }}>158 Topic-wise Tests</Text> (All subjects)</Text>
                 </View>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
                   <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#D97706' }} />
-                  <Text style={{ fontSize: 12, color: '#334155' }}><Text style={{ fontWeight: '700' }}>Daily Fresh Tests</Text> added daily</Text>
+                  <Text style={{ fontSize: 12, color: colors.textPrimary }}><Text style={{ fontWeight: '700' }}>Daily Fresh Tests</Text> added daily</Text>
                 </View>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
                   <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#059669' }} />
-                  <Text style={{ fontSize: 12, color: '#334155' }}><Text style={{ fontWeight: '700' }}>Swamy’s Citations</Text> on all rules</Text>
+                  <Text style={{ fontSize: 12, color: colors.textPrimary }}><Text style={{ fontWeight: '700' }}>Swamy’s Citations</Text> on all rules</Text>
                 </View>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
                   <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#EA580C' }} />
-                  <Text style={{ fontSize: 12, color: '#334155' }}><Text style={{ fontWeight: '700' }}>Valid till 2026</Text> Exam Day</Text>
+                  <Text style={{ fontSize: 12, color: colors.textPrimary }}><Text style={{ fontWeight: '700' }}>Valid till 2026</Text> Exam Day</Text>
                 </View>
               </View>
             </View>
 
             {/* Verified Security Widget */}
-            <View style={styles.widgetCard}>
+            <View style={[styles.widgetCard, { backgroundColor: colors.surfaceElevated, borderColor: colors.borderLight }]}>
               <View style={styles.widgetHeader}>
                 <ShieldCheck size={20} color="#059669" />
-                <Text style={styles.widgetTitle}>Guaranteed Security</Text>
+                <Text style={[styles.widgetTitle, { color: colors.textPrimary }]}>Guaranteed Security</Text>
               </View>
-              <Text style={{ fontSize: 12, color: '#64748B', lineHeight: 18, marginTop: 8 }}>
+              <Text style={{ fontSize: 12, color: colors.textSecondary, lineHeight: 18, marginTop: 8 }}>
                 256-Bit SSL Encrypted checkout powered by Cashfree. All cards, UPI (GPay, PhonePe, Paytm), and NetBanking supported.
               </Text>
             </View>
@@ -590,10 +601,10 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
         ) : (
           <>
         {/* Your Progress */}
-        <View style={styles.widgetCard}>
+        <View style={[styles.widgetCard, { backgroundColor: colors.surfaceElevated, borderColor: colors.borderLight }]}>
           <View style={styles.widgetHeader}>
              <Target size={20} color="#059669" />
-             <Text style={styles.widgetTitle}>Your Progress</Text>
+             <Text style={[styles.widgetTitle, { color: colors.textPrimary }]}>Your Progress</Text>
              <TouchableOpacity style={{marginLeft: 'auto'}} onPress={() => router.push('/progress')}>
                <Text style={styles.viewAll}>View Analytics →</Text>
              </TouchableOpacity>
@@ -615,7 +626,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                         cx={50}
                         cy={50}
                         r={ringRadius}
-                        stroke="#E2E8F0"
+                        stroke={colors.border}
                         strokeWidth={8}
                         fill="transparent"
                       />
@@ -637,22 +648,22 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                       )}
                     </Svg>
                     <View style={styles.donutInner}>
-                       <Text style={styles.donutVal}>{accuracyVal.toFixed(1)}%</Text>
-                       <Text style={styles.donutLbl}>Accuracy</Text>
+                       <Text style={[styles.donutVal, { color: colors.textPrimary }]}>{accuracyVal.toFixed(1)}%</Text>
+                       <Text style={[styles.donutLbl, { color: colors.textSecondary }]}>Accuracy</Text>
                     </View>
                  </View>
                  <View style={styles.progressStats}>
                     <View style={styles.pStatItem}>
-                       <View style={styles.pStatIconB}><FileText size={16} color="#3B82F6" /></View>
-                       <View><Text style={styles.pStatVal}>{dashboardStats?.questionsAttempted || 0}</Text><Text style={styles.pStatLbl}>Questions Attempted</Text></View>
+                       <View style={[styles.pStatIconB, { backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF' }]}><FileText size={16} color="#3B82F6" /></View>
+                       <View><Text style={[styles.pStatVal, { color: colors.textPrimary }]}>{dashboardStats?.questionsAttempted || 0}</Text><Text style={[styles.pStatLbl, { color: colors.textSecondary }]}>Questions Attempted</Text></View>
                     </View>
                     <View style={styles.pStatItem}>
-                       <View style={styles.pStatIconP}><Clock size={16} color="#7C3AED" /></View>
-                       <View><Text style={styles.pStatVal}>{Math.floor((dashboardStats?.timeSpent || 0) / 60)}h {(dashboardStats?.timeSpent || 0) % 60}m</Text><Text style={styles.pStatLbl}>Total Study Time</Text></View>
+                       <View style={[styles.pStatIconP, { backgroundColor: isDark ? '#2D1B69' : '#F3E8FF' }]}><Clock size={16} color="#7C3AED" /></View>
+                       <View><Text style={[styles.pStatVal, { color: colors.textPrimary }]}>{Math.floor((dashboardStats?.timeSpent || 0) / 60)}h {(dashboardStats?.timeSpent || 0) % 60}m</Text><Text style={[styles.pStatLbl, { color: colors.textSecondary }]}>Total Study Time</Text></View>
                     </View>
                     <View style={styles.pStatItem}>
-                       <View style={styles.pStatIconO}><BarChart2 size={16} color="#EA580C" /></View>
-                       <View><Text style={styles.pStatVal}>{dashboardStats?.totalTopics || 0}</Text><Text style={styles.pStatLbl}>Topics Covered</Text></View>
+                       <View style={[styles.pStatIconO, { backgroundColor: isDark ? '#431407' : '#FFF7ED' }]}><BarChart2 size={16} color="#EA580C" /></View>
+                       <View><Text style={[styles.pStatVal, { color: colors.textPrimary }]}>{dashboardStats?.totalTopics || 0}</Text><Text style={[styles.pStatLbl, { color: colors.textSecondary }]}>Topics Covered</Text></View>
                     </View>
                  </View>
               </View>
@@ -661,14 +672,14 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
         </View>
 
         {/* Current Streak */}
-        <TouchableOpacity style={styles.widgetCard} onPress={() => router.push('/progress')} activeOpacity={0.7}>
+        <TouchableOpacity style={[styles.widgetCard, { backgroundColor: colors.surfaceElevated, borderColor: colors.borderLight }]} onPress={() => router.push('/progress')} activeOpacity={0.7}>
           <View style={styles.widgetHeader}>
              <View style={styles.streakIcon}><Zap size={20} color="#F59E0B" fill="#F59E0B" /></View>
              <View>
-                <Text style={styles.widgetLbl}>Current Streak</Text>
-                <Text style={styles.widgetTitleLarge}>{dashboardStats?.streak || 0} days</Text>
+                <Text style={[styles.widgetLbl, { color: colors.textSecondary }]}>Current Streak</Text>
+                <Text style={[styles.widgetTitleLarge, { color: colors.textPrimary }]}>{dashboardStats?.streak || 0} days</Text>
              </View>
-             <ChevronRight size={20} color="#94A3B8" style={{marginLeft: 'auto'}} />
+             <ChevronRight size={20} color={colors.textTertiary} style={{marginLeft: 'auto'}} />
           </View>
           <View style={styles.calendarRow}>
              {['S','M','T','W','T','F','S'].map((d, i) => {
@@ -677,10 +688,10 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                  const isActive = streak > 0 && ((currentDay - i >= 0 && currentDay - i < streak) || (currentDay - i < 0 && (7 - (i - currentDay)) < streak));
                  return (
                     <View key={i} style={styles.calDay}>
-                       <View style={[styles.calCheck, isActive ? styles.calCheckActive : null]}>
+                       <View style={[styles.calCheck, { backgroundColor: colors.calDayBg }, isActive ? styles.calCheckActive : null]}>
                           <Check size={12} color={isActive ? '#fff' : 'transparent'} />
                        </View>
-                       <Text style={styles.calText}>{d}</Text>
+                       <Text style={[styles.calText, { color: colors.calDayText }]}>{d}</Text>
                     </View>
                  );
              })}
@@ -688,10 +699,10 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
         </TouchableOpacity>
 
         {/* Topic Performance */}
-        <View style={styles.widgetCard}>
+        <View style={[styles.widgetCard, { backgroundColor: colors.surfaceElevated, borderColor: colors.borderLight }]}>
           <View style={styles.widgetHeader}>
              <BarChart2 size={20} color="#3B82F6" />
-             <Text style={styles.widgetTitle}>Topic Performance</Text>
+             <Text style={[styles.widgetTitle, { color: colors.textPrimary }]}>Topic Performance</Text>
              <TouchableOpacity style={{marginLeft: 'auto'}} onPress={() => router.push('/progress')}>
                <Text style={styles.viewAll}>View Details →</Text>
              </TouchableOpacity>
@@ -699,20 +710,20 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           
           <View style={styles.topicsList}>
              {(!performance?.subjectWisePerformance || Object.keys(performance.subjectWisePerformance).length === 0) ? (
-               <Text style={{ color: '#64748B', textAlign: 'center', marginVertical: 16 }}>Play some tests to see your topic performance!</Text>
+               <Text style={{ color: colors.textSecondary, textAlign: 'center', marginVertical: 16 }}>Play some tests to see your topic performance!</Text>
              ) : (
                Object.values(performance.subjectWisePerformance)
                  .slice(0, 5)
                  .map((topic: any, i) => {
-                   const colors = ['#10B981', '#3B82F6', '#F59E0B', '#7C3AED', '#EF4444'];
+                   const colorsArr = ['#10B981', '#3B82F6', '#F59E0B', '#7C3AED', '#EF4444'];
                    return (
                      <View key={i} style={styles.topicRow}>
-                        <View style={[styles.topicIconB, { backgroundColor: `${colors[i % 5]}15` }]}><Library size={18} color={colors[i % 5]} /></View>
-                        <Text style={styles.topicName} numberOfLines={2}>{topic.subject || 'Subject'}</Text>
-                        <View style={styles.topicBarBg}>
-                           <View style={[styles.topicBarFill, { width: `${topic.accuracy || 0}%`, backgroundColor: colors[i % 5] }]} />
+                        <View style={[styles.topicIconB, { backgroundColor: `${colorsArr[i % 5]}15` }]}><Library size={18} color={colorsArr[i % 5]} /></View>
+                        <Text style={[styles.topicName, { color: colors.textSecondary }]} numberOfLines={2}>{topic.subject || 'Subject'}</Text>
+                        <View style={[styles.topicBarBg, { backgroundColor: colors.progressBarBg }]}>
+                           <View style={[styles.topicBarFill, { width: `${topic.accuracy || 0}%`, backgroundColor: colorsArr[i % 5] }]} />
                         </View>
-                        <Text style={styles.topicPct}>{Math.round(topic.accuracy || 0)}%</Text>
+                        <Text style={[styles.topicPct, { color: colors.textPrimary }]}>{Math.round(topic.accuracy || 0)}%</Text>
                      </View>
                    );
                  })

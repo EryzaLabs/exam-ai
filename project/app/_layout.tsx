@@ -17,6 +17,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { AuthProvider } from '@/context/auth-context';
 import { SubscriptionProvider } from '@/context/subscription-context';
+import { ThemeProvider } from '@/context/theme-context';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -70,6 +71,7 @@ export default function RootLayout() {
   }
 
   return (
+    <ThemeProvider>
     <SafeAreaProvider>
       <AuthProvider>
       <SubscriptionProvider>
@@ -79,10 +81,11 @@ export default function RootLayout() {
             <Stack.Screen name="(auth)" options={{ headerShown: false }} />
             <Stack.Screen name="+not-found" />
           </Stack>
-          <StatusBar style="light" backgroundColor="#667eea" translucent={true} />
+          <StatusBar style="auto" backgroundColor="transparent" translucent={true} />
         </ResponsiveContainer>
       </SubscriptionProvider>
     </AuthProvider>
     </SafeAreaProvider>
+    </ThemeProvider>
   );
 }

@@ -44,6 +44,7 @@ import { TestProgressService, SavedTestState, TestResult } from '@/services/test
 import userService from '@/services/user-service';
 import { initiatePayment } from '@/utils/cashfree';
 import { useAuth } from '@/context/auth-context';
+import { useTheme } from '@/context/theme-context';
 
 const { width } = Dimensions.get('window');
 
@@ -56,6 +57,7 @@ interface ServerPaper {
 }
 
 export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
+  const { isDark, colors } = useTheme();
   const [tests, setTests] = useState<ServerPaper[]>([]);
   const [filteredTests, setFilteredTests] = useState<ServerPaper[]>([]);
   const [loading, setLoading] = useState(true);
@@ -359,13 +361,17 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
     return (
       <TouchableOpacity
-        style={[styles.newTestCard, isLocked && styles.newTestCardLocked]}
+        style={[
+          styles.newTestCard,
+          { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 },
+          isLocked && styles.newTestCardLocked
+        ]}
         onPress={() => handleTestSelect(test)}
         activeOpacity={0.7}
         disabled={!!loadingTestId}
       >
         <View style={styles.testCardHeaderNew}>
-          <View style={[styles.testCardIconNew, isLocked ? { backgroundColor: '#FEF3C7' } : isAttempted ? { backgroundColor: '#DCFCE7' } : undefined]}>
+          <View style={[styles.testCardIconNew, isLocked ? { backgroundColor: isDark ? '#422006' : '#FEF3C7' } : isAttempted ? { backgroundColor: isDark ? '#064E3B' : '#DCFCE7' } : { backgroundColor: isDark ? '#1E3A5F' : '#E3F2FD' }]}>
              {isLocked ? (
                <Text style={{ fontSize: 18 }}>🔒</Text>
              ) : isAttempted ? (
@@ -376,14 +382,14 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           </View>
           <View style={styles.testCardBadgesNew}>
             {isAttempted ? (
-              <View style={styles.testCardBadgeAttempted}>
+              <View style={[styles.testCardBadgeAttempted, isDark && { backgroundColor: '#064E3B' }]}>
                 <CheckCircle2 size={12} color="#15803D" style={{marginRight: 4}} />
-                <Text style={styles.testCardBadgeTextAttempted}>Attempted • {Math.round(attempt.accuracy || 0)}%</Text>
+                <Text style={[styles.testCardBadgeTextAttempted, isDark && { color: '#34D399' }]}>Attempted • {Math.round(attempt.accuracy || 0)}%</Text>
               </View>
             ) : (
-              <View style={styles.testCardBadgeUnattempted}>
-                <Circle size={10} color="#64748B" style={{marginRight: 4}} />
-                <Text style={styles.testCardBadgeTextUnattempted}>Not Attempted</Text>
+              <View style={[styles.testCardBadgeUnattempted, isDark && { backgroundColor: colors.surfaceHighlight }]}>
+                <Circle size={10} color={colors.textSecondary} style={{marginRight: 4}} />
+                <Text style={[styles.testCardBadgeTextUnattempted, { color: colors.textSecondary }]}>Not Attempted</Text>
               </View>
             )}
 
@@ -396,44 +402,44 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                 <Text style={styles.testCardBadgeTextFree}>✨ Free Demo</Text>
               </View>
             ) : (
-              <View style={styles.testCardBadgePrimary}>
-                <Text style={styles.testCardBadgeTextPrimary}>UPSC Principal</Text>
+              <View style={[styles.testCardBadgePrimary, isDark && { backgroundColor: '#1E3A5F' }]}>
+                <Text style={[styles.testCardBadgeTextPrimary, isDark && { color: '#60A5FA' }]}>UPSC Principal</Text>
               </View>
             )}
             {test.hasAnswers && (
-              <View style={styles.testCardBadgeSuccess}>
+              <View style={[styles.testCardBadgeSuccess, isDark && { backgroundColor: '#064E3B' }]}>
                 <BookOpen size={12} color="#4CAF50" style={{marginRight: 4}} />
-                <Text style={styles.testCardBadgeTextSuccess}>With Solutions</Text>
+                <Text style={[styles.testCardBadgeTextSuccess, isDark && { color: '#34D399' }]}>With Solutions</Text>
               </View>
             )}
           </View>
         </View>
 
-        <Text style={styles.testCardTitleNew} numberOfLines={2}>
+        <Text style={[styles.testCardTitleNew, { color: colors.textPrimary }]} numberOfLines={2}>
           {test.title}
         </Text>
 
-        <View style={styles.testCardBottomNew}>
+        <View style={[styles.testCardBottomNew, { borderTopColor: colors.borderLight }]}>
            <View style={styles.testCardStatsRowNew}>
              <View style={styles.testCardStatNew}>
-                <HelpCircle size={18} color="#666" style={{marginBottom: 4}} />
+                <HelpCircle size={18} color={colors.textSecondary} style={{marginBottom: 4}} />
                 <View style={styles.statTextGroupNew}>
-                  <Text style={styles.statValueNew}>{totalQuestions}</Text>
-                  <Text style={styles.statLabelNew}>Questions</Text>
+                  <Text style={[styles.statValueNew, { color: colors.textPrimary }]}>{totalQuestions}</Text>
+                  <Text style={[styles.statLabelNew, { color: colors.textSecondary }]}>Questions</Text>
                 </View>
              </View>
              <View style={styles.testCardStatNew}>
-                <Clock size={18} color="#666" style={{marginBottom: 4}} />
+                <Clock size={18} color={colors.textSecondary} style={{marginBottom: 4}} />
                 <View style={styles.statTextGroupNew}>
-                  <Text style={styles.statValueNew}>{formatDuration(duration)}</Text>
-                  <Text style={styles.statLabelNew}>Duration</Text>
+                  <Text style={[styles.statValueNew, { color: colors.textPrimary }]}>{formatDuration(duration)}</Text>
+                  <Text style={[styles.statLabelNew, { color: colors.textSecondary }]}>Duration</Text>
                 </View>
              </View>
              <View style={styles.testCardStatNew}>
-                <Award size={18} color="#666" style={{marginBottom: 4}} />
+                <Award size={18} color={colors.textSecondary} style={{marginBottom: 4}} />
                 <View style={styles.statTextGroupNew}>
-                  <Text style={styles.statValueNew}>{totalMarks}</Text>
-                  <Text style={styles.statLabelNew}>Marks</Text>
+                  <Text style={[styles.statValueNew, { color: colors.textPrimary }]}>{totalMarks}</Text>
+                  <Text style={[styles.statLabelNew, { color: colors.textSecondary }]}>Marks</Text>
                 </View>
              </View>
            </View>
@@ -549,60 +555,60 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        style={styles.categoryTabs}
+        style={[styles.categoryTabs, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}
         contentContainerStyle={styles.categoryTabsContent}
       >
         <TouchableOpacity
-          style={[styles.categoryTab, category === 'all' && styles.categoryTabActive]}
+          style={[styles.categoryTab, { backgroundColor: colors.surfaceHighlight }, category === 'all' && styles.categoryTabActive]}
           onPress={() => { setCategory('all'); setSelectedTopic(null); }}
         >
-          <LayoutGrid size={16} color={category === 'all' ? '#fff' : '#666'} style={{marginRight: 6}} />
-          <Text style={[styles.categoryTabText, category === 'all' && styles.categoryTabTextActive]}>All Tests</Text>
+          <LayoutGrid size={16} color={category === 'all' ? '#fff' : colors.textSecondary} style={{marginRight: 6}} />
+          <Text style={[styles.categoryTabText, { color: colors.textSecondary }, category === 'all' && styles.categoryTabTextActive]}>All Tests</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.categoryTab, category === 'full' && styles.categoryTabActive]}
+          style={[styles.categoryTab, { backgroundColor: colors.surfaceHighlight }, category === 'full' && styles.categoryTabActive]}
           onPress={() => { setCategory('full'); setSelectedTopic(null); }}
         >
-          <FileText size={16} color={category === 'full' ? '#fff' : '#666'} style={{marginRight: 6}} />
-          <Text style={[styles.categoryTabText, category === 'full' && styles.categoryTabTextActive]}>Full Mocks</Text>
+          <FileText size={16} color={category === 'full' ? '#fff' : colors.textSecondary} style={{marginRight: 6}} />
+          <Text style={[styles.categoryTabText, { color: colors.textSecondary }, category === 'full' && styles.categoryTabTextActive]}>Full Mocks</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.categoryTab, category === 'topic' && styles.categoryTabActive]}
+          style={[styles.categoryTab, { backgroundColor: colors.surfaceHighlight }, category === 'topic' && styles.categoryTabActive]}
           onPress={() => setCategory('topic')}
         >
-          <BookOpen size={16} color={category === 'topic' ? '#fff' : '#666'} style={{marginRight: 6}} />
-          <Text style={[styles.categoryTabText, category === 'topic' && styles.categoryTabTextActive]}>Topic Wise</Text>
+          <BookOpen size={16} color={category === 'topic' ? '#fff' : colors.textSecondary} style={{marginRight: 6}} />
+          <Text style={[styles.categoryTabText, { color: colors.textSecondary }, category === 'topic' && styles.categoryTabTextActive]}>Topic Wise</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.categoryTab, { backgroundColor: '#EEF2FF', borderColor: '#C7D2FE', borderWidth: 1 }]}
+          style={[styles.categoryTab, { backgroundColor: isDark ? '#1E3A5F' : '#EEF2FF', borderColor: isDark ? '#3B82F6' : '#C7D2FE', borderWidth: 1 }]}
           onPress={() => router.push(isSubscribed ? '/custom-test' : '/premium')}
         >
-          <SlidersHorizontal size={16} color="#4F46E5" style={{marginRight: 6}} />
-          <Text style={[styles.categoryTabText, { color: '#4F46E5', fontWeight: '700' }]}>Custom Test 👑</Text>
+          <SlidersHorizontal size={16} color={colors.accent} style={{marginRight: 6}} />
+          <Text style={[styles.categoryTabText, { color: colors.accent, fontWeight: '700' }]}>Custom Test 👑</Text>
         </TouchableOpacity>
       </ScrollView>
     );
   };
 
   const getTopicColor = (index: number) => {
-    const colors = [
-      { bg: '#E3F2FD', icon: '#1976D2' },
-      { bg: '#E8F5E9', icon: '#388E3C' },
-      { bg: '#F3E5F5', icon: '#7B1FA2' },
-      { bg: '#FFEBEE', icon: '#D32F2F' },
-      { bg: '#FFF3E0', icon: '#F57C00' },
+    const colorsArr = [
+      { bg: isDark ? '#1E3A5F' : '#E3F2FD', icon: '#3B82F6' },
+      { bg: isDark ? '#064E3B' : '#E8F5E9', icon: '#10B981' },
+      { bg: isDark ? '#2D1B69' : '#F3E5F5', icon: '#8B5CF6' },
+      { bg: isDark ? '#450A0A' : '#FFEBEE', icon: '#EF4444' },
+      { bg: isDark ? '#431407' : '#FFF3E0', icon: '#F97316' },
     ];
-    return colors[index % colors.length];
+    return colorsArr[index % colorsArr.length];
   };
 
   const renderTopicGrid = () => {
     return (
       <View style={styles.topicGrid}>
         <View style={styles.topicGridHeader}>
-          <Text style={styles.topicGridTitle}>Topics</Text>
+          <Text style={[styles.topicGridTitle, { color: colors.textPrimary }]}>Topics</Text>
           <View style={styles.topicGridSort}>
-             <Text style={styles.topicGridSortText}>Sort: Default</Text>
-             <ChevronRight size={16} color="#666" style={{transform: [{rotate: '90deg'}]}} />
+             <Text style={[styles.topicGridSortText, { color: colors.textSecondary }]}>Sort: Default</Text>
+             <ChevronRight size={16} color={colors.textTertiary} style={{transform: [{rotate: '90deg'}]}} />
           </View>
         </View>
 
@@ -617,7 +623,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           return (
             <TouchableOpacity
               key={topic}
-              style={styles.topicCardNew}
+              style={[styles.topicCardNew, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}
               onPress={() => setSelectedTopic(topic)}
               activeOpacity={0.7}
             >
@@ -630,17 +636,17 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
               
               <View style={styles.topicContentNew}>
                 <View style={styles.topicCardHeaderNewContainer}>
-                  <Text style={styles.topicCardTitleNew}>{topic}</Text>
-                  <Text style={styles.topicCardAttemptedNew}>{attempted}/{count} attempted</Text>
+                  <Text style={[styles.topicCardTitleNew, { color: colors.textPrimary }]}>{topic}</Text>
+                  <Text style={[styles.topicCardAttemptedNew, { color: colors.textSecondary }]}>{attempted}/{count} attempted</Text>
                 </View>
-                <Text style={styles.topicCardSubtitleNew}>{count} Tests</Text>
+                <Text style={[styles.topicCardSubtitleNew, { color: colors.textSecondary }]}>{count} Tests</Text>
                 
-                <View style={styles.topicProgressBarContainer}>
+                <View style={[styles.topicProgressBarContainer, { backgroundColor: colors.progressBarBg }]}>
                    <View style={[styles.topicProgressBarFill, { width: `${progress}%`, backgroundColor: theme.icon }]} />
                 </View>
               </View>
               
-              <ChevronRight size={20} color="#ccc" style={{marginLeft: 12}} />
+              <ChevronRight size={20} color={colors.textTertiary} style={{marginLeft: 12}} />
             </TouchableOpacity>
           );
         })}
@@ -677,7 +683,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   };
 
   const content = (
-    <SafeAreaView style={[styles.container, isLargeScreen && { flex: undefined, minHeight: 600 }]} edges={['top']}>
+    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }, isLargeScreen && { flex: undefined, minHeight: 600 }]} edges={['top']}>
       {/* Header */}
       <LinearGradient colors={['#4A90E2', '#357ABD']} style={styles.headerNew}>
         <View style={styles.headerTopNew}>
@@ -704,18 +710,18 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
       {/* Search Bar */}
       <View style={styles.searchContainerNew}>
-        <View style={styles.searchBarNew}>
-          <Search size={20} color="#666" />
+        <View style={[styles.searchBarNew, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+          <Search size={20} color={colors.textTertiary} />
           <TextInput
-            style={styles.searchInputNew}
+            style={[styles.searchInputNew, { color: colors.textPrimary }]}
             placeholder="Search tests, topics..."
             value={searchQuery}
             onChangeText={setSearchQuery}
-            placeholderTextColor="#999"
+            placeholderTextColor={colors.textTertiary}
           />
         </View>
         <TouchableOpacity 
-          style={[styles.filterButtonNew, attemptFilter !== 'all' && styles.filterButtonNewActive]}
+          style={[styles.filterButtonNew, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }, attemptFilter !== 'all' && styles.filterButtonNewActive]}
           onPress={() => {
             if (attemptFilter === 'all') setAttemptFilter('attempted');
             else if (attemptFilter === 'attempted') setAttemptFilter('unattempted');
@@ -723,7 +729,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           }}
           activeOpacity={0.7}
         >
-           <SlidersHorizontal size={20} color={attemptFilter !== 'all' ? '#4A90E2' : '#666'} />
+           <SlidersHorizontal size={20} color={attemptFilter !== 'all' ? '#4A90E2' : colors.textSecondary} />
         </TouchableOpacity>
       </View>
 
@@ -733,33 +739,33 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
       {/* Attempted / Unattempted Filter Pills */}
       <View style={styles.statusFilterRow}>
         <TouchableOpacity
-          style={[styles.statusFilterChip, attemptFilter === 'all' && styles.statusFilterChipActive]}
+          style={[styles.statusFilterChip, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }, attemptFilter === 'all' && styles.statusFilterChipActive]}
           onPress={() => setAttemptFilter('all')}
           activeOpacity={0.7}
         >
-          <Text style={[styles.statusFilterText, attemptFilter === 'all' && styles.statusFilterTextActive]}>
+          <Text style={[styles.statusFilterText, { color: colors.textSecondary }, attemptFilter === 'all' && styles.statusFilterTextActive]}>
             All ({tests.length})
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.statusFilterChip, attemptFilter === 'attempted' && styles.statusFilterChipActive]}
+          style={[styles.statusFilterChip, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }, attemptFilter === 'attempted' && styles.statusFilterChipActive]}
           onPress={() => setAttemptFilter('attempted')}
           activeOpacity={0.7}
         >
           <CheckCircle2 size={13} color={attemptFilter === 'attempted' ? '#fff' : '#16A34A'} style={{marginRight: 4}} />
-          <Text style={[styles.statusFilterText, attemptFilter === 'attempted' && styles.statusFilterTextActive]}>
+          <Text style={[styles.statusFilterText, { color: colors.textSecondary }, attemptFilter === 'attempted' && styles.statusFilterTextActive]}>
             Attempted ({attemptedCount})
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.statusFilterChip, attemptFilter === 'unattempted' && styles.statusFilterChipActive]}
+          style={[styles.statusFilterChip, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }, attemptFilter === 'unattempted' && styles.statusFilterChipActive]}
           onPress={() => setAttemptFilter('unattempted')}
           activeOpacity={0.7}
         >
-          <Circle size={11} color={attemptFilter === 'unattempted' ? '#fff' : '#64748B'} style={{marginRight: 4}} />
-          <Text style={[styles.statusFilterText, attemptFilter === 'unattempted' && styles.statusFilterTextActive]}>
+          <Circle size={11} color={attemptFilter === 'unattempted' ? '#fff' : colors.textSecondary} style={{marginRight: 4}} />
+          <Text style={[styles.statusFilterText, { color: colors.textSecondary }, attemptFilter === 'unattempted' && styles.statusFilterTextActive]}>
             Unattempted ({unattemptedCount})
           </Text>
         </TouchableOpacity>
@@ -767,18 +773,18 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
       {/* Selected Topic Header */}
       {category === 'topic' && selectedTopic && (
-        <View style={styles.selectedTopicHeader}>
+        <View style={[styles.selectedTopicHeader, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
           <TouchableOpacity onPress={() => setSelectedTopic(null)} style={styles.backButton}>
             <ArrowLeft size={20} color="#4A90E2" />
             <Text style={styles.backButtonText}>All Topics</Text>
           </TouchableOpacity>
-          <Text style={styles.selectedTopicTitle}>{selectedTopic}</Text>
+          <Text style={[styles.selectedTopicTitle, { color: colors.textPrimary }]}>{selectedTopic}</Text>
         </View>
       )}
 
       {/* Test List */}
       <ScrollView
-        style={styles.content}
+        style={[styles.content, { backgroundColor: colors.background }]}
         contentContainerStyle={styles.contentContainer}
         refreshControl={
           <RefreshControl refreshing={loading} onRefresh={handleRefresh} colors={['#4A90E2']} />
@@ -819,9 +825,9 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           renderTopicGrid()
         ) : filteredTests.length === 0 ? (
           <View style={styles.emptyState}>
-            <FileText size={64} color="#ccc" />
-            <Text style={styles.emptyStateTitle}>No tests found</Text>
-            <Text style={styles.emptyStateText}>
+            <FileText size={64} color={colors.textTertiary} />
+            <Text style={[styles.emptyStateTitle, { color: colors.textPrimary }]}>No tests found</Text>
+            <Text style={[styles.emptyStateText, { color: colors.textSecondary }]}>
               {searchQuery
                 ? 'Try adjusting your search'
                 : 'No tests available at the moment'}

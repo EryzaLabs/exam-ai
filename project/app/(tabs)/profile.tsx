@@ -14,8 +14,9 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Bell, LogOut, Target, ChevronRight, Award, BookOpen, TrendingUp, Shield, HelpCircle, FileText, History, Trash2, CalendarDays, Globe, Crown } from 'lucide-react-native';
+import { Bell, LogOut, Target, ChevronRight, Award, BookOpen, TrendingUp, Shield, HelpCircle, FileText, History, Trash2, CalendarDays, Globe, Crown, Sun, Moon } from 'lucide-react-native';
 import { useAuth } from '@/context/auth-context';
+import { useTheme } from '@/context/theme-context';
 import { signOut, deleteUser } from 'firebase/auth';
 import { auth } from '@/services/firebaseConfig';
 import UserService, { UserProfile, UserStats } from '@/services/user-service';
@@ -28,6 +29,7 @@ import { useWindowDimensions } from 'react-native';
 const WEEK_DAYS = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
 export default function ProfileScreen() {
+  const { isDark, colors, toggleTheme } = useTheme();
   const { width } = useWindowDimensions();
   const isLargeScreen = width >= 1024;
   
@@ -416,14 +418,27 @@ export default function ProfileScreen() {
         </View>
 
         {/* Settings */}
-        <View style={styles.sectionCard}>
-          <Text style={styles.sectionTitle}>Settings</Text>
+        <View style={[styles.sectionCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+          <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Settings</Text>
 
           <View style={styles.menuItem}>
-            <View style={[styles.menuIconCircle, { backgroundColor: '#FFF5EB' }]}>
+            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF' }]}>
+              {isDark ? <Moon size={20} color="#60A5FA" /> : <Sun size={20} color="#F59E0B" />}
+            </View>
+            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Dark Mode</Text>
+            <Switch
+              value={isDark}
+              onValueChange={toggleTheme}
+              trackColor={{ false: '#E2E8F0', true: '#3B82F6' }}
+              thumbColor="#FFFFFF"
+            />
+          </View>
+
+          <View style={styles.menuItem}>
+            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#422006' : '#FFF5EB' }]}>
               <Bell size={20} color="#ED8936" />
             </View>
-            <Text style={styles.menuLabel}>Practice Reminders</Text>
+            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Practice Reminders</Text>
             <Switch
               value={notificationsEnabled}
               onValueChange={handleToggleNotifications}
@@ -433,27 +448,27 @@ export default function ProfileScreen() {
           </View>
 
           <TouchableOpacity style={styles.menuItem} onPress={() => openLink('https://hackclub.com/privacy/')}>
-            <View style={[styles.menuIconCircle, { backgroundColor: '#F7FAFC' }]}>
-              <Shield size={20} color="#718096" />
+            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#273549' : '#F7FAFC' }]}>
+              <Shield size={20} color={colors.textSecondary} />
             </View>
-            <Text style={styles.menuLabel}>Privacy Policy</Text>
-            <ChevronRight size={20} color="#CBD5E0" />
+            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Privacy Policy</Text>
+            <ChevronRight size={20} color={colors.textTertiary} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.menuItem} onPress={() => openLink('https://hackclub.com/terms/')}>
-            <View style={[styles.menuIconCircle, { backgroundColor: '#F7FAFC' }]}>
-              <FileText size={20} color="#718096" />
+            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#273549' : '#F7FAFC' }]}>
+              <FileText size={20} color={colors.textSecondary} />
             </View>
-            <Text style={styles.menuLabel}>Terms of Service</Text>
-            <ChevronRight size={20} color="#CBD5E0" />
+            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Terms of Service</Text>
+            <ChevronRight size={20} color={colors.textTertiary} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.menuItem} onPress={() => openLink('mailto:support@exam-ai.com')}>
-            <View style={[styles.menuIconCircle, { backgroundColor: '#EBF8FF' }]}>
+            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#1E3A5F' : '#EBF8FF' }]}>
               <HelpCircle size={20} color="#4299E1" />
             </View>
-            <Text style={styles.menuLabel}>Help & Support</Text>
-            <ChevronRight size={20} color="#CBD5E0" />
+            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Help & Support</Text>
+            <ChevronRight size={20} color={colors.textTertiary} />
           </TouchableOpacity>
         </View>
 

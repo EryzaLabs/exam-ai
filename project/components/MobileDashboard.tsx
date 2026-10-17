@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTheme } from '@/context/theme-context';
 import {
   View,
   Text,
@@ -33,6 +34,8 @@ import {
   Sparkles,
   Lock,
   SlidersHorizontal,
+  Sun,
+  Moon,
 } from 'lucide-react-native';
 import { useAuth } from '@/context/auth-context';
 import { TestProgressService, SavedTestState } from '@/services/test-progress-service';
@@ -43,6 +46,7 @@ export default function MobileDashboard({
   refreshing,
   onRefresh,
 }: any) {
+  const { isDark, colors, toggleTheme } = useTheme();
   const [searchQuery, setSearchQuery] = React.useState('');
   const [activeTest, setActiveTest] = React.useState<SavedTestState | null>(null);
   const { user, isSubscribed: authSubscribed, isSubscriptionLoading } = useAuth();
@@ -89,7 +93,7 @@ export default function MobileDashboard({
     });
   };
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: colors.background }]}>
       <StatusBar style="light" />
       <ScrollView
         style={styles.scrollView}
@@ -120,23 +124,32 @@ export default function MobileDashboard({
                   {isSubscribed ? '👑 Premium Member • All Tests Unlocked' : user ? 'Practice. Analyze. Improve.' : 'Explore 184+ AI Tests & Analytics'}
                 </Text>
               </View>
-              {user ? (
-                <TouchableOpacity style={styles.bellBtn} onPress={() => {
-                  const { Alert } = require('react-native');
-                  Alert.alert('Notifications', 'No new notifications at the moment.');
-                }}>
-                  <Bell size={24} color="#3B82F6" />
-                  <View style={styles.notificationDot} />
-                </TouchableOpacity>
-              ) : (
-                <TouchableOpacity 
-                  style={styles.headerAuthPill} 
-                  onPress={() => router.push('/(auth)/login')}
-                  activeOpacity={0.8}
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <TouchableOpacity
+                  style={[styles.bellBtn, { backgroundColor: isDark ? '#1E293B' : '#FFFFFF' }]}
+                  onPress={toggleTheme}
+                  accessibilityLabel="Toggle Dark Mode"
                 >
-                  <Text style={styles.headerAuthPillText}>Sign In</Text>
+                  {isDark ? <Sun size={20} color="#F59E0B" /> : <Moon size={20} color="#3B82F6" />}
                 </TouchableOpacity>
-              )}
+                {user ? (
+                  <TouchableOpacity style={styles.bellBtn} onPress={() => {
+                    const { Alert } = require('react-native');
+                    Alert.alert('Notifications', 'No new notifications at the moment.');
+                  }}>
+                    <Bell size={24} color="#3B82F6" />
+                    <View style={styles.notificationDot} />
+                  </TouchableOpacity>
+                ) : (
+                  <TouchableOpacity 
+                    style={styles.headerAuthPill} 
+                    onPress={() => router.push('/(auth)/login')}
+                    activeOpacity={0.8}
+                  >
+                    <Text style={styles.headerAuthPillText}>Sign In</Text>
+                  </TouchableOpacity>
+                )}
+              </View>
             </View>
 
             <View style={styles.headerSpacer} />
@@ -148,12 +161,12 @@ export default function MobileDashboard({
 
           {/* FLOATING SEARCH BAR */}
           <View style={styles.searchWrapper}>
-            <View style={styles.searchContainer}>
-              <Search size={20} color="#94A3B8" />
+            <View style={[styles.searchContainer, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+              <Search size={20} color={colors.textTertiary} />
               <TextInput
-                style={styles.searchInput}
+                style={[styles.searchInput, { color: colors.textPrimary }]}
                 placeholder="Search tests, topics, or keywords..."
-                placeholderTextColor="#94A3B8"
+                placeholderTextColor={colors.textTertiary}
                 value={searchQuery}
                 onChangeText={setSearchQuery}
                 onSubmitEditing={() => {
@@ -168,13 +181,13 @@ export default function MobileDashboard({
 
           {/* GUEST BANNER */}
           {!user && (
-            <View style={styles.guestBanner}>
+            <View style={[styles.guestBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}>
               <View style={styles.guestBannerContent}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 4 }}>
                   <Sparkles size={16} color="#4F46E5" />
-                  <Text style={styles.guestBannerTitle}>Welcome to Astra Exam AI</Text>
+                  <Text style={[styles.guestBannerTitle, { color: colors.textPrimary }]}>Welcome to Astra Exam AI</Text>
                 </View>
-                <Text style={styles.guestBannerText}>
+                <Text style={[styles.guestBannerText, { color: colors.textSecondary }]}>
                   Create a free account to save test scores, track study streaks & get AI weakness analysis.
                 </Text>
               </View>
@@ -190,40 +203,40 @@ export default function MobileDashboard({
 
           {/* STATS GRID */}
           <View style={styles.statsGrid}>
-            <View style={styles.statCard}>
-              <View style={[styles.statIconBox, { backgroundColor: '#EFF6FF' }]}>
+            <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+              <View style={[styles.statIconBox, { backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF' }]}>
                 <FileText size={18} color="#3B82F6" />
               </View>
               <View>
-                <Text style={styles.statVal}>{dashboardStats?.totalAvailableTests ?? 184}</Text>
-                <Text style={styles.statLbl}>Tests Available</Text>
+                <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.totalAvailableTests ?? 184}</Text>
+                <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Tests Available</Text>
               </View>
             </View>
-            <View style={styles.statCard}>
-              <View style={[styles.statIconBox, { backgroundColor: '#ECFDF5' }]}>
+            <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+              <View style={[styles.statIconBox, { backgroundColor: isDark ? '#064E3B' : '#ECFDF5' }]}>
                 <Target size={18} color="#10B981" />
               </View>
               <View>
-                <Text style={styles.statVal}>{dashboardStats?.accuracy?.toFixed(1) || '0'}%</Text>
-                <Text style={styles.statLbl}>Avg. Accuracy</Text>
+                <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.accuracy?.toFixed(1) || '0'}%</Text>
+                <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Avg. Accuracy</Text>
               </View>
             </View>
-            <View style={styles.statCard}>
-              <View style={[styles.statIconBox, { backgroundColor: '#F5F3FF' }]}>
+            <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+              <View style={[styles.statIconBox, { backgroundColor: isDark ? '#2D1B69' : '#F5F3FF' }]}>
                 <Clock size={18} color="#8B5CF6" />
               </View>
               <View>
-                <Text style={styles.statVal}>{Math.floor((dashboardStats?.timeSpent || 0) / 60)}h {(dashboardStats?.timeSpent || 0) % 60}m</Text>
-                <Text style={styles.statLbl}>Practice Time</Text>
+                <Text style={[styles.statVal, { color: colors.textPrimary }]}>{Math.floor((dashboardStats?.timeSpent || 0) / 60)}h {(dashboardStats?.timeSpent || 0) % 60}m</Text>
+                <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Practice Time</Text>
               </View>
             </View>
-            <View style={styles.statCard}>
-              <View style={[styles.statIconBox, { backgroundColor: '#FFF7ED' }]}>
+            <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+              <View style={[styles.statIconBox, { backgroundColor: isDark ? '#431407' : '#FFF7ED' }]}>
                 <BarChart2 size={18} color="#F97316" />
               </View>
               <View>
-                <Text style={styles.statVal}>{dashboardStats?.questionsAttempted || 0}</Text>
-                <Text style={styles.statLbl}>Questions Solved</Text>
+                <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.questionsAttempted || 0}</Text>
+                <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Questions Solved</Text>
               </View>
             </View>
           </View>
@@ -279,13 +292,13 @@ export default function MobileDashboard({
               <Grid size={16} color="#fff" />
               <Text style={[styles.pillTxt, styles.pillTxtActive]}>All Tests</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.pill} onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}>
-              <FileText size={16} color="#475569" />
-              <Text style={styles.pillTxt}>Full Mocks</Text>
+            <TouchableOpacity style={[styles.pill, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]} onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}>
+              <FileText size={16} color={colors.textSecondary} />
+              <Text style={[styles.pillTxt, { color: colors.textSecondary }]}>Full Mocks</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.pill} onPress={() => router.push({ pathname: '/test-list', params: { category: 'topic' } })}>
-              <BookOpen size={16} color="#475569" />
-              <Text style={styles.pillTxt}>Topic Wise</Text>
+            <TouchableOpacity style={[styles.pill, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]} onPress={() => router.push({ pathname: '/test-list', params: { category: 'topic' } })}>
+              <BookOpen size={16} color={colors.textSecondary} />
+              <Text style={[styles.pillTxt, { color: colors.textSecondary }]}>Topic Wise</Text>
             </TouchableOpacity>
           </View>
 
@@ -336,7 +349,7 @@ export default function MobileDashboard({
           <View style={styles.sectionHeader}>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
               <Star size={20} color="#F59E0B" fill="#F59E0B" />
-              <Text style={styles.sectionTitle}>Featured</Text>
+              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Featured</Text>
             </View>
             <TouchableOpacity onPress={() => router.push(isSubscribed ? { pathname: '/test-list', params: { category: 'full' } } : '/premium')}>
               <Text style={styles.viewAll}>{isSubscribed ? 'View All →' : 'Go Premium →'}</Text>
@@ -386,7 +399,7 @@ export default function MobileDashboard({
           <View style={styles.sectionHeader}>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
               <Zap size={20} color="#8B5CF6" fill="#8B5CF6" />
-              <Text style={styles.sectionTitle}>Practice Mode</Text>
+              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Practice Mode</Text>
             </View>
           </View>
 
@@ -453,8 +466,8 @@ export default function MobileDashboard({
           {/* RECENT TESTS */}
           <View style={styles.sectionHeader}>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-              <Clock size={20} color="#475569" />
-              <Text style={styles.sectionTitle}>Recent Tests</Text>
+              <Clock size={20} color={colors.textSecondary} />
+              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Recent Tests</Text>
             </View>
             <TouchableOpacity onPress={() => router.push('/test-history')} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
               <Text style={styles.viewAll}>View All →</Text>
@@ -463,14 +476,14 @@ export default function MobileDashboard({
 
           <View style={styles.recentTestsList}>
             {(!performance?.recentTests || performance.recentTests.length === 0) ? (
-              <View style={{ padding: 24, backgroundColor: '#fff', borderRadius: 16, width: '100%', alignItems: 'center' }}>
-                <Text style={{ color: '#64748B' }}>No recent tests found. Start practicing!</Text>
+              <View style={{ padding: 24, backgroundColor: colors.surface, borderRadius: 16, width: '100%', alignItems: 'center', borderWidth: isDark ? 1 : 0, borderColor: colors.border }}>
+                <Text style={{ color: colors.textSecondary }}>No recent tests found. Start practicing!</Text>
               </View>
             ) : (
               performance.recentTests.slice(0, 3).map((test: any, i: number) => (
                 <TouchableOpacity 
                   key={i} 
-                  style={styles.recentTestCard}
+                  style={[styles.recentTestCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}
                   activeOpacity={0.8}
                   onPress={() => {
                     if (test.id) {
@@ -481,20 +494,20 @@ export default function MobileDashboard({
                   }}
                 >
                   <View style={styles.rtcHeader}>
-                    <View style={styles.rtcIcon}><FileText size={20} color="#3B82F6" /></View>
+                    <View style={[styles.rtcIcon, { backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF' }]}><FileText size={20} color="#3B82F6" /></View>
                     <View style={{ flex: 1 }}>
-                      <Text style={styles.rtcTitle}>{test.title || `Test ${i + 1}`}</Text>
-                      <Text style={styles.rtcDate}>{test.date || 'Recently'} • {test.type || 'Practice'}</Text>
+                      <Text style={[styles.rtcTitle, { color: colors.textPrimary }]}>{test.title || `Test ${i + 1}`}</Text>
+                      <Text style={[styles.rtcDate, { color: colors.textSecondary }]}>{test.date || 'Recently'} • {test.type || 'Practice'}</Text>
                     </View>
                     <View style={styles.rtcStatus}>
                       <Text style={styles.rtcStatusText}>{test.status === 'in-progress' ? 'In Progress' : 'Completed'}</Text>
                     </View>
                   </View>
-                  <View style={styles.rtcMetrics}>
-                    <View style={styles.rtcMetric}><FileText size={16} color="#94A3B8" /><View><Text style={styles.rtcMetricVal}>{test.questions || 0}</Text><Text style={styles.rtcMetricTxt}>Questions</Text></View></View>
-                    <View style={styles.rtcMetric}><Clock size={16} color="#94A3B8" /><View><Text style={styles.rtcMetricVal}>{test.duration || '0m'}</Text><Text style={styles.rtcMetricTxt}>Duration</Text></View></View>
-                    <View style={styles.rtcMetric}><Star size={16} color="#94A3B8" /><View><Text style={styles.rtcMetricVal}>{test.score || 0}%</Text><Text style={styles.rtcMetricTxt}>Score</Text></View></View>
-                    <ChevronRight size={20} color="#CBD5E1" style={{ marginLeft: 'auto' }} />
+                  <View style={[styles.rtcMetrics, { borderColor: colors.borderLight }]}>
+                    <View style={styles.rtcMetric}><FileText size={16} color={colors.textSecondary} /><View><Text style={[styles.rtcMetricVal, { color: colors.textPrimary }]}>{test.questions || 0}</Text><Text style={[styles.rtcMetricTxt, { color: colors.textSecondary }]}>Questions</Text></View></View>
+                    <View style={styles.rtcMetric}><Clock size={16} color={colors.textSecondary} /><View><Text style={[styles.rtcMetricVal, { color: colors.textPrimary }]}>{test.duration || '0m'}</Text><Text style={[styles.rtcMetricTxt, { color: colors.textSecondary }]}>Duration</Text></View></View>
+                    <View style={styles.rtcMetric}><Star size={16} color={colors.textSecondary} /><View><Text style={[styles.rtcMetricVal, { color: colors.textPrimary }]}>{test.score || 0}%</Text><Text style={[styles.rtcMetricTxt, { color: colors.textSecondary }]}>Score</Text></View></View>
+                    <ChevronRight size={20} color={colors.textTertiary} style={{ marginLeft: 'auto' }} />
                   </View>
                 </TouchableOpacity>
               ))

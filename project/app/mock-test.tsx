@@ -28,6 +28,8 @@ import {
   Send,
   Save,
   Bookmark,
+  Sun,
+  Moon,
 } from 'lucide-react-native';
 import RenderHtml from 'react-native-render-html';
 import SSCCGLService, {
@@ -40,6 +42,7 @@ import { TestProgressService, SavedTestState, TestResult } from '@/services/test
 import TestSeriesService from '@/services/testseries-service';
 import { addBookmark } from '@/services/bookmark-service';
 import { useAuth } from '@/context/auth-context';
+import { useTheme } from '@/context/theme-context';
 
 const { width } = Dimensions.get('window');
 
@@ -80,6 +83,7 @@ export default function MockTestScreen() {
   const seriesFolder = params.seriesFolder as string;
   const sectionFolder = params.sectionFolder as string;
   const initialLang = (params.lang as string) || 'english';
+  const { isDark, colors, toggleTheme } = useTheme();
 
   const [test, setTest] = useState<ParsedMockTest | null>(null);
   const [language, setLanguage] = useState<'english' | 'hindi'>(initialLang as any);
@@ -635,14 +639,14 @@ export default function MockTestScreen() {
         onRequestClose={() => setShowQuestionPalette(false)}
       >
         <ResponsiveContainer>
-          <SafeAreaView style={styles.paletteContainer}>
-            <View style={styles.paletteHeader}>
-              <Text style={styles.paletteTitle}>Question Palette</Text>
+          <SafeAreaView style={[styles.paletteContainer, { backgroundColor: colors.surface }]}>
+            <View style={[styles.paletteHeader, { borderBottomColor: colors.border }]}>
+              <Text style={[styles.paletteTitle, { color: colors.textPrimary }]}>Question Palette</Text>
               <TouchableOpacity
                 style={styles.paletteCloseButton}
                 onPress={() => setShowQuestionPalette(false)}
               >
-                <X size={24} color="#333" />
+                <X size={24} color={colors.textPrimary} />
               </TouchableOpacity>
             </View>
 
@@ -875,6 +879,19 @@ export default function MockTestScreen() {
             <TouchableOpacity
               style={{
                 backgroundColor: 'rgba(255,255,255,0.2)',
+                paddingHorizontal: 10,
+                paddingVertical: 6,
+                borderRadius: 16,
+                marginRight: 8
+              }}
+              onPress={toggleTheme}
+              accessibilityLabel="Toggle Dark Mode"
+            >
+              {isDark ? <Sun size={18} color="#FBBF24" /> : <Moon size={18} color="#fff" />}
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.2)',
                 paddingHorizontal: 12,
                 paddingVertical: 6,
                 borderRadius: 16,
@@ -914,30 +931,30 @@ export default function MockTestScreen() {
       </LinearGradient>
 
       {/* Question Content */}
-      <ScrollView style={styles.content} contentContainerStyle={styles.contentContainer}>
+      <ScrollView style={[styles.content, { backgroundColor: colors.background }]} contentContainerStyle={styles.contentContainer}>
         {currentQuestion && (
           <>
             <View style={styles.questionHeader}>
-              <Text style={styles.questionNumber}>
+              <Text style={[styles.questionNumber, { color: colors.textSecondary }]}>
                 Question {currentQuestionIndex + 1} of {questions.length}
               </Text>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
                 <TouchableOpacity onPress={handleBookmark} style={{ padding: 4 }}>
                   <Bookmark size={20} color="#3B82F6" />
                 </TouchableOpacity>
-                <View style={styles.questionMarks}>
-                  <Text style={styles.questionMarksText}>
+                <View style={[styles.questionMarks, isDark && { backgroundColor: '#064E3B' }]}>
+                  <Text style={[styles.questionMarksText, isDark && { color: '#34D399' }]}>
                     +{currentQuestion.marks.positive} / -{currentQuestion.marks.negative}
                   </Text>
                 </View>
               </View>
             </View>
 
-            <View style={styles.questionContainer}>
+            <View style={[styles.questionContainer, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
               <RenderHtml
                 contentWidth={width - 48}
                 source={{ html: (language === 'hindi' && currentQuestion.questionTextHindi ? currentQuestion.questionTextHindi : currentQuestion.questionText).replace(/\n/g, '<br />') }}
-                baseStyle={styles.questionText}
+                baseStyle={{ ...styles.questionText, color: colors.textPrimary }}
                 tagsStyles={{ img: { maxWidth: '100%' } }}
               />
             </View>
@@ -949,17 +966,21 @@ export default function MockTestScreen() {
                 return (
                   <TouchableOpacity
                     key={index}
-                    style={[styles.optionButton, isSelected && styles.optionButtonSelected]}
+                    style={[
+                      styles.optionButton,
+                      { backgroundColor: colors.surface, borderColor: isDark ? colors.border : '#e0e0e0' },
+                      isSelected && { backgroundColor: isDark ? '#1E3A5F' : '#E3F2FD', borderColor: '#4A90E2' }
+                    ]}
                     onPress={() => handleOptionSelect(index)}
                     activeOpacity={0.7}
                   >
-                    <View style={[styles.optionRadio, isSelected && styles.optionRadioSelected]}>
+                    <View style={[styles.optionRadio, { borderColor: isDark ? colors.border : '#ccc' }, isSelected && styles.optionRadioSelected]}>
                       {isSelected && <View style={styles.optionRadioInner} />}
                     </View>
                     <RenderHtml
                       contentWidth={width - 120}
                       source={{ html: option.replace(/\n/g, '<br />') }}
-                      baseStyle={styles.optionText}
+                      baseStyle={{ ...styles.optionText, color: colors.textPrimary }}
                       tagsStyles={{ img: { maxWidth: '100%' } }}
                     />
                   </TouchableOpacity>
@@ -971,19 +992,19 @@ export default function MockTestScreen() {
       </ScrollView>
 
       {/* Navigation Footer */}
-      <View style={styles.footer}>
+      <View style={[styles.footer, { backgroundColor: colors.surface, borderTopColor: colors.border }]}>
         <View style={styles.footerButtons}>
           <TouchableOpacity
-            style={[styles.markButton]}
+            style={[styles.markButton, { backgroundColor: colors.surfaceHighlight }]}
             onPress={handleMarkForReview}
             disabled={!currentQuestion}
           >
             <Flag
               size={20}
-              color={currentState?.marked ? '#FF6B35' : '#666'}
+              color={currentState?.marked ? '#FF6B35' : colors.textSecondary}
               fill={currentState?.marked ? '#FF6B35' : 'none'}
             />
-            <Text style={styles.markButtonText}>
+            <Text style={[styles.markButtonText, { color: colors.textSecondary }]}>
               {currentState?.marked ? 'Unmark' : 'Mark for Review'}
             </Text>
           </TouchableOpacity>
@@ -991,13 +1012,21 @@ export default function MockTestScreen() {
 
         <View style={styles.navigationButtons}>
           <TouchableOpacity
-            style={[styles.navButton, currentQuestionIndex === 0 && styles.navButtonDisabled]}
+            style={[
+              styles.navButton,
+              { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 },
+              currentQuestionIndex === 0 && styles.navButtonDisabled
+            ]}
             onPress={handlePrevious}
             disabled={currentQuestionIndex === 0}
           >
-            <ChevronLeft size={24} color={currentQuestionIndex === 0 ? '#ccc' : '#4A90E2'} />
+            <ChevronLeft size={24} color={currentQuestionIndex === 0 ? (isDark ? '#475569' : '#ccc') : '#4A90E2'} />
             <Text
-              style={[styles.navButtonText, currentQuestionIndex === 0 && styles.navButtonTextDisabled]}
+              style={[
+                styles.navButtonText,
+                { color: '#4A90E2' },
+                currentQuestionIndex === 0 && styles.navButtonTextDisabled
+              ]}
             >
               Previous
             </Text>
@@ -1014,6 +1043,7 @@ export default function MockTestScreen() {
             <TouchableOpacity
               style={[
                 styles.navButton,
+                { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 },
                 currentQuestionIndex === questions.length - 1 && styles.navButtonDisabled,
               ]}
               onPress={handleNext}
@@ -1022,6 +1052,7 @@ export default function MockTestScreen() {
               <Text
                 style={[
                   styles.navButtonText,
+                  { color: '#4A90E2' },
                   currentQuestionIndex === questions.length - 1 && styles.navButtonTextDisabled,
                 ]}
               >
@@ -1029,7 +1060,7 @@ export default function MockTestScreen() {
               </Text>
               <ChevronRight
                 size={24}
-                color={currentQuestionIndex === questions.length - 1 ? '#ccc' : '#4A90E2'}
+                color={currentQuestionIndex === questions.length - 1 ? (isDark ? '#475569' : '#ccc') : '#4A90E2'}
               />
             </TouchableOpacity>
           )}

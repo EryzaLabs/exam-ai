@@ -2,8 +2,10 @@ import { Tabs } from 'expo-router';
 import { Home, Brain, MessageSquare, TrendingUp as TrendUp, Trophy, User, Bookmark, Swords } from 'lucide-react-native';
 import { Platform, useWindowDimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useTheme } from '@/context/theme-context';
 
 export default function TabLayout() {
+  const { colors } = useTheme();
   const { width } = useWindowDimensions();
   const insets = useSafeAreaInsets();
   const isLargeScreen = width > 1024;
@@ -19,12 +21,12 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: '#007AFF',
-        tabBarInactiveTintColor: '#8E8E93',
+        tabBarActiveTintColor: colors.accent,
+        tabBarInactiveTintColor: colors.textSecondary,
         tabBarStyle: {
-          backgroundColor: '#FFFFFF',
+          backgroundColor: colors.surface,
           borderTopWidth: 1,
-          borderTopColor: '#E5E5EA',
+          borderTopColor: colors.border,
           paddingBottom: bottomPadding,
           paddingTop: 8,
           height: tabHeight,

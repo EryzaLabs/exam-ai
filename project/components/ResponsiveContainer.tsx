@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, ViewStyle, StyleSheet, Platform, useWindowDimensions } from 'react-native';
+import { useTheme } from '@/context/theme-context';
 
 interface ResponsiveContainerProps {
   children: React.ReactNode;
@@ -12,14 +13,16 @@ export default function ResponsiveContainer({
   style,
   maxWidth = '100%', // Fully responsive for web
 }: ResponsiveContainerProps) {
+  const { colors } = useTheme();
   const { width } = useWindowDimensions();
   const isWideScreen = width > maxWidth;
   
   return (
-    <View style={[styles.outerContainer, isWideScreen && styles.webBackground]}>
+    <View style={[styles.outerContainer, { backgroundColor: colors.background }, isWideScreen && { backgroundColor: colors.background }]}>
       <View
         style={[
           styles.innerContainer,
+          { backgroundColor: colors.background },
           isWideScreen && { 
             maxWidth, 
             width: '100%', 
@@ -38,15 +41,10 @@ const styles = StyleSheet.create({
   outerContainer: {
     flex: 1,
     width: '100%',
-    backgroundColor: '#fff',
-  },
-  webBackground: {
-    backgroundColor: '#fff', // Keep it white
   },
   innerContainer: {
     flex: 1,
     width: '100%',
-    backgroundColor: '#fff', // Keep the app background white
-    overflow: 'hidden', // Contain the app nicely
+    overflow: 'hidden',
   },
 });
