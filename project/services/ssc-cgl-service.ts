@@ -459,7 +459,7 @@ class SSCCGLService {
     }
     const endTime = attempt.endTime || new Date();
 
-    const paper = this.papers.get(attempt.testId);
+    const paper = this.papers.get(attempt.testId) || this.parsedTests.get(attempt.testId);
     if (!paper) return null;
 
     // Calculate overall score

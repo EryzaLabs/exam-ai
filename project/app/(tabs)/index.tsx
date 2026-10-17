@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import {
   View,
   Text,
@@ -6,12 +6,13 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { router } from 'expo-router';
+import { router, useFocusEffect } from 'expo-router';
 import DesktopDashboard from '@/components/DesktopDashboard';
 import MobileDashboard from '@/components/MobileDashboard';
 import UserService from '@/services/user-service';
 import { TestProgressService } from '@/services/test-progress-service';
 import { auth } from '@/services/firebaseConfig';
+import { useAuth } from '@/context/auth-context';
 
 interface DashboardStats {
   questionsAttempted: number;
@@ -34,12 +35,11 @@ export default function EnhancedHomeScreen() {
   const [questionStats, setQuestionStats] = useState<any>(null);
   const [refreshing, setRefreshing] = useState(false);
   const [loading, setLoading] = useState(true);
+  const { user: authUser } = useAuth();
 
-  const loadDashboardData = async () => {
+  const loadDashboardData = useCallback(async () => {
     try {
-      setLoading(true);
-      
-      const user = auth.currentUser;
+      const user = authUser || auth.currentUser;
       if (!user) {
          setLoading(false);
          return;
@@ -186,7 +186,13 @@ export default function EnhancedHomeScreen() {
 
   useEffect(() => {
     loadDashboardData();
-  }, []);
+  }, [loadDashboardData, authUser]);
+
+  useFocusEffect(
+    useCallback(() => {
+      loadDashboardData();
+    }, [loadDashboardData])
+  );
 
   const { width: windowWidth } = useWindowDimensions();
   const isLargeScreen = windowWidth > 1024;

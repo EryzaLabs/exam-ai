@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import {
   View,
   Text,
@@ -13,7 +13,7 @@ import {
   Platform,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { router, useLocalSearchParams } from 'expo-router';
+import { router, useLocalSearchParams, useFocusEffect } from 'expo-router';
 import DesktopDashboard from '@/components/DesktopDashboard';
 import { LinearGradient } from 'expo-linear-gradient';
 import {
@@ -141,21 +141,63 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     return Array.from(topics).sort();
   }, [tests]);
 
-  const attemptedMap = useMemo(() => {
-    const map = new Map<string, TestResult>();
+  const attemptedMaps = useMemo(() => {
+    const byId = new Map<string, TestResult>();
+    const byFilename = new Map<string, TestResult>();
+    const byTitle = new Map<string, TestResult>();
+
     history.forEach(h => {
-      if (!h.testId) return;
-      const existing = map.get(h.testId);
-      if (!existing || new Date(h.date).getTime() > new Date(existing.date).getTime()) {
-        map.set(h.testId, h);
+      const hDate = new Date(h.date).getTime();
+
+      if (h.testId) {
+        const existing = byId.get(h.testId);
+        if (!existing || hDate > new Date(existing.date).getTime()) {
+          byId.set(h.testId, h);
+        }
+      }
+
+      if (h.filename) {
+        const existing = byFilename.get(h.filename);
+        if (!existing || hDate > new Date(existing.date).getTime()) {
+          byFilename.set(h.filename, h);
+        }
+      }
+
+      if (h.testTitle) {
+        const cleanTitle = h.testTitle.toLowerCase().trim().replace(/\s+/g, ' ');
+        const existing = byTitle.get(cleanTitle);
+        if (!existing || hDate > new Date(existing.date).getTime()) {
+          byTitle.set(cleanTitle, h);
+        }
       }
     });
-    return map;
+
+    return { byId, byFilename, byTitle };
   }, [history]);
 
+  const getAttemptForTest = useCallback((test: ServerPaper): TestResult | undefined => {
+    if (!test) return undefined;
+    if (attemptedMaps.byId.has(test.id)) {
+      return attemptedMaps.byId.get(test.id);
+    }
+    if (test.filename && attemptedMaps.byFilename.has(test.filename)) {
+      return attemptedMaps.byFilename.get(test.filename);
+    }
+    if (test.filename && attemptedMaps.byId.has(test.filename)) {
+      return attemptedMaps.byId.get(test.filename);
+    }
+    if (test.title) {
+      const cleanTitle = test.title.toLowerCase().trim().replace(/\s+/g, ' ');
+      if (attemptedMaps.byTitle.has(cleanTitle)) {
+        return attemptedMaps.byTitle.get(cleanTitle);
+      }
+    }
+    return undefined;
+  }, [attemptedMaps]);
+
   const attemptedCount = useMemo(() => {
-    return tests.filter(t => attemptedMap.has(t.id)).length;
-  }, [tests, attemptedMap]);
+    return tests.filter(t => !!getAttemptForTest(t)).length;
+  }, [tests, getAttemptForTest]);
 
   const unattemptedCount = useMemo(() => {
     return Math.max(0, tests.length - attemptedCount);
@@ -163,7 +205,14 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
   useEffect(() => {
     filterTests();
-  }, [searchQuery, category, selectedTopic, tests, attemptFilter, attemptedMap]);
+  }, [searchQuery, category, selectedTopic, tests, attemptFilter, getAttemptForTest]);
+
+  useFocusEffect(
+    useCallback(() => {
+      loadHistory();
+      loadActiveTest();
+    }, [])
+  );
 
   const loadActiveTest = async () => {
     const saved = await TestProgressService.getSavedTests();
@@ -227,9 +276,9 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
     // Filter by attempted / unattempted status
     if (attemptFilter === 'attempted') {
-      filtered = filtered.filter(t => attemptedMap.has(t.id));
+      filtered = filtered.filter(t => !!getAttemptForTest(t));
     } else if (attemptFilter === 'unattempted') {
-      filtered = filtered.filter(t => !attemptedMap.has(t.id));
+      filtered = filtered.filter(t => !getAttemptForTest(t));
     }
 
     if (searchQuery.trim()) {
@@ -305,7 +354,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     const totalMarks = totalQuestions * 2.5; // 2.5 marks per question
     const isFirstTest = tests.length > 0 && tests[0].id === test.id;
     const isLocked = !isSubscribed && !isFirstTest;
-    const attempt = attemptedMap.get(test.id);
+    const attempt = getAttemptForTest(test);
     const isAttempted = !!attempt;
 
     return (

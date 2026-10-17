@@ -415,6 +415,7 @@ export default function MockTestScreen() {
               ...partialAnalytics,
               date: new Date().toISOString(),
               testTitle: test?.title,
+              filename: (params.filename as string) || (test as any)?.filename || undefined,
               answerGenerationStatus: answersStatus.status === 'not-found' ? 'pending' : answersStatus.status as any,
               evaluationStatus: 'pending',
               questionOrder: currentQuestionOrder
@@ -444,6 +445,7 @@ export default function MockTestScreen() {
             ...analytics,
             date: new Date().toISOString(),
             testTitle: test?.title,
+            filename: (params.filename as string) || (test as any)?.filename || undefined,
             answerGenerationStatus: source === 'testseries' ? 'completed' : 'not-needed',
             evaluationStatus: 'completed',
             questionOrder: currentQuestionOrder

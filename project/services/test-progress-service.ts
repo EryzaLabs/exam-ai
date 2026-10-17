@@ -170,29 +170,38 @@ export const TestProgressService = {
 
   async saveTestResult(result: TestResult): Promise<void> {
     try {
-      const user = auth.currentUser;
-      if (!user) {
-        console.log('No user logged in, skipping test result save');
-        return;
+      const cleanResult = JSON.parse(JSON.stringify(result));
+
+      // 1. Always cache in local AsyncStorage for instant loading
+      try {
+        await AsyncStorage.setItem(`@test_result_${result.attemptId}`, JSON.stringify(cleanResult));
+        const rawIds = await AsyncStorage.getItem('@test_history_ids');
+        const ids: string[] = rawIds ? JSON.parse(rawIds) : [];
+        if (!ids.includes(result.attemptId)) {
+          await AsyncStorage.setItem('@test_history_ids', JSON.stringify([result.attemptId, ...ids]));
+        }
+      } catch (storageErr) {
+        console.warn('AsyncStorage save error for test result:', storageErr);
       }
 
-      console.log('Saving test result to Firestore...');
-      // Use attemptId as the document ID to ensure uniqueness
-      const docRef = doc(db, 'users', user.uid, 'history', result.attemptId);
-      await setDoc(docRef, result);
-      console.log('Test result saved to Firestore');
+      // 2. Save to Firestore if authenticated
+      const user = auth.currentUser;
+      if (user) {
+        console.log('Saving test result to Firestore...');
+        const docRef = doc(db, 'users', user.uid, 'history', result.attemptId);
+        await setDoc(docRef, cleanResult);
+        console.log('Test result saved to Firestore');
 
-      // Calculate total attempted from section analytics
-      const totalAttempted = result.sectionAnalytics ? result.sectionAnalytics.reduce((sum, section) => sum + section.attempted, 0) : 0;
+        // Calculate total attempted from section analytics
+        const totalAttempted = result.sectionAnalytics ? result.sectionAnalytics.reduce((sum, section) => sum + section.attempted, 0) : 0;
 
-      // Update user statistics in background (non-blocking)
-      console.log('Triggering user statistics update...');
-      UserService.updateUserStats({
-        questionsAttempted: totalAttempted,
-        accuracy: result.accuracy,
-        totalTests: 1, // increment handled in service
-      }).catch(err => console.error('Failed to update user stats:', err));
-      
+        // Update user statistics in background
+        UserService.updateUserStats({
+          questionsAttempted: totalAttempted,
+          accuracy: result.accuracy,
+          totalTests: 1,
+        }).catch(err => console.error('Failed to update user stats:', err));
+      }
     } catch (e) {
       console.error('Failed to save test result', e);
       throw e;
@@ -200,39 +209,65 @@ export const TestProgressService = {
   },
 
   async getTestHistory(): Promise<TestResult[]> {
+    const historyMap = new Map<string, TestResult>();
+
+    // 1. Load from AsyncStorage first
+    try {
+      const rawIds = await AsyncStorage.getItem('@test_history_ids');
+      if (rawIds) {
+        const ids: string[] = JSON.parse(rawIds);
+        for (const id of ids) {
+          const item = await AsyncStorage.getItem(`@test_result_${id}`);
+          if (item) {
+            const parsed = JSON.parse(item) as TestResult;
+            historyMap.set(parsed.attemptId, parsed);
+          }
+        }
+      }
+    } catch (storageErr) {
+      console.warn('AsyncStorage getTestHistory error:', storageErr);
+    }
+
+    // 2. Fetch from Firestore
     try {
       const user = auth.currentUser;
-      if (!user) return [];
-
-      const historyRef = collection(db, 'users', user.uid, 'history');
-      const q = query(historyRef, orderBy('date', 'desc'));
-      const querySnapshot = await getDocs(q);
-
-      const history: TestResult[] = [];
-      querySnapshot.forEach((doc) => {
-        history.push(doc.data() as TestResult);
-      });
-
-      return history;
+      if (user) {
+        const historyRef = collection(db, 'users', user.uid, 'history');
+        const q = query(historyRef, orderBy('date', 'desc'));
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((d) => {
+          const data = d.data() as TestResult;
+          historyMap.set(data.attemptId, data);
+        });
+      }
     } catch (e) {
-      console.error('Failed to get history', e);
-      return [];
+      console.error('Failed to get history from Firestore', e);
     }
+
+    return Array.from(historyMap.values()).sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
   },
   
   async getTestResult(attemptId: string): Promise<TestResult | undefined> {
     try {
-      const user = auth.currentUser;
-      if (!user) return undefined;
-
-      const docRef = doc(db, 'users', user.uid, 'history', attemptId);
-      const docSnap = await getDoc(docRef);
-
-      if (docSnap.exists()) {
-        return docSnap.data() as TestResult;
-      } else {
-        return undefined;
+      // 1. Check local AsyncStorage
+      const cached = await AsyncStorage.getItem(`@test_result_${attemptId}`);
+      if (cached) {
+        return JSON.parse(cached) as TestResult;
       }
+
+      // 2. Check Firestore
+      const user = auth.currentUser;
+      if (user) {
+        const docRef = doc(db, 'users', user.uid, 'history', attemptId);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          return docSnap.data() as TestResult;
+        }
+      }
+
+      return undefined;
     } catch (e) {
       console.error('Failed to get test result', e);
       return undefined;
