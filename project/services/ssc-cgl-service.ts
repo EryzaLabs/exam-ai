@@ -505,7 +505,7 @@ class SSCCGLService {
     const correctAnswers = attempt.answers.filter((a) => a.isCorrect).length;
     const attemptedQuestions = attempt.answers.length;
     const accuracy = attemptedQuestions > 0 ? (correctAnswers / attemptedQuestions) * 100 : 0;
-    const timeTaken = (endTime.getTime() - attempt.startTime.getTime()) / 1000;
+    const timeTaken = Math.round((endTime.getTime() - attempt.startTime.getTime()) / 1000);
 
     attempt.score = score;
     attempt.totalMarks = paper.totalMarks;

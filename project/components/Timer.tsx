@@ -32,8 +32,9 @@ export default function Timer({ duration, onTimeUp, isRunning = true }: TimerPro
   }, [timeLeft, isRunning, onTimeUp]);
 
   const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
+    const totalSecs = Math.max(0, Math.floor(seconds || 0));
+    const mins = Math.floor(totalSecs / 60);
+    const secs = totalSecs % 60;
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 

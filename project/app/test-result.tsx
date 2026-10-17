@@ -177,9 +177,10 @@ export default function TestResultScreen() {
   };
 
   const formatTime = (seconds: number): string => {
-    const hrs = Math.floor(seconds / 3600);
-    const mins = Math.floor((seconds % 3600) / 60);
-    const secs = seconds % 60;
+    const totalSecs = Math.max(0, Math.round(seconds || 0));
+    const hrs = Math.floor(totalSecs / 3600);
+    const mins = Math.floor((totalSecs % 3600) / 60);
+    const secs = totalSecs % 60;
     
     if (hrs > 0) {
       return `${hrs}h ${mins}m ${secs}s`;
