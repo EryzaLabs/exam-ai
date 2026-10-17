@@ -77,8 +77,14 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const [paymentLoading, setPaymentLoading] = useState(false);
   const [checkingSubscription, setCheckingSubscription] = useState(true);
 
-  const { width: windowWidth } = useWindowDimensions();
-  const isLargeScreen = windowWidth >= 1024;
+  const { width } = useWindowDimensions();
+  const isLargeScreen = width >= 1024;
+
+  useEffect(() => {
+    if (typeof params.q === 'string') {
+      setSearchQuery(params.q);
+    }
+  }, [params.q]);
 
   useEffect(() => {
     if (params.category === 'full' || params.category === 'topic' || params.category === 'all') {
@@ -551,29 +557,24 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   };
 
   const renderCategoryTabs = () => {
-    return (
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={[styles.categoryTabs, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}
-        contentContainerStyle={styles.categoryTabsContent}
-      >
+    const tabs = (
+      <>
         <TouchableOpacity
-          style={[styles.categoryTab, { backgroundColor: colors.surfaceHighlight }, category === 'all' && styles.categoryTabActive]}
+          style={[styles.categoryTab, { backgroundColor: colors.surfaceHighlight, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }, category === 'all' && styles.categoryTabActive]}
           onPress={() => { setCategory('all'); setSelectedTopic(null); }}
         >
           <LayoutGrid size={16} color={category === 'all' ? '#fff' : colors.textSecondary} style={{marginRight: 6}} />
           <Text style={[styles.categoryTabText, { color: colors.textSecondary }, category === 'all' && styles.categoryTabTextActive]}>All Tests</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.categoryTab, { backgroundColor: colors.surfaceHighlight }, category === 'full' && styles.categoryTabActive]}
+          style={[styles.categoryTab, { backgroundColor: colors.surfaceHighlight, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }, category === 'full' && styles.categoryTabActive]}
           onPress={() => { setCategory('full'); setSelectedTopic(null); }}
         >
-          <FileText size={16} color={category === 'full' ? '#fff' : colors.textSecondary} style={{marginRight: 6}} />
+          <Clock size={16} color={category === 'full' ? '#fff' : colors.textSecondary} style={{marginRight: 6}} />
           <Text style={[styles.categoryTabText, { color: colors.textSecondary }, category === 'full' && styles.categoryTabTextActive]}>Full Mocks</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.categoryTab, { backgroundColor: colors.surfaceHighlight }, category === 'topic' && styles.categoryTabActive]}
+          style={[styles.categoryTab, { backgroundColor: colors.surfaceHighlight, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }, category === 'topic' && styles.categoryTabActive]}
           onPress={() => setCategory('topic')}
         >
           <BookOpen size={16} color={category === 'topic' ? '#fff' : colors.textSecondary} style={{marginRight: 6}} />
@@ -586,6 +587,25 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           <SlidersHorizontal size={16} color={colors.accent} style={{marginRight: 6}} />
           <Text style={[styles.categoryTabText, { color: colors.accent, fontWeight: '700' }]}>Custom Test 👑</Text>
         </TouchableOpacity>
+      </>
+    );
+
+    if (isLargeScreen) {
+      return (
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+          {tabs}
+        </View>
+      );
+    }
+
+    return (
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={[styles.categoryTabs, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}
+        contentContainerStyle={styles.categoryTabsContent}
+      >
+        {tabs}
       </ScrollView>
     );
   };
@@ -606,7 +626,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
       <View style={styles.topicGrid}>
         <View style={styles.topicGridHeader}>
           <Text style={[styles.topicGridTitle, { color: colors.textPrimary }]}>Topics</Text>
-          <View style={styles.topicGridSort}>
+          <View style={[styles.topicGridSort, { backgroundColor: colors.surfaceHighlight, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
              <Text style={[styles.topicGridSortText, { color: colors.textSecondary }]}>Sort: Default</Text>
              <ChevronRight size={16} color={colors.textTertiary} style={{transform: [{rotate: '90deg'}]}} />
           </View>
@@ -682,64 +702,92 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     }
   };
 
+  const ContainerComponent = isLargeScreen ? View : SafeAreaView;
+
   const content = (
-    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }, isLargeScreen && { flex: undefined, minHeight: 600 }]} edges={['top']}>
-      {/* Header */}
-      <LinearGradient colors={['#4A90E2', '#357ABD']} style={styles.headerNew}>
-        <View style={styles.headerTopNew}>
-            {!isTab && (
-              <TouchableOpacity
-                onPress={handleBack}
-                style={styles.backButtonTop}
-                hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
-                activeOpacity={0.7}
-                accessibilityLabel="Go back"
-                accessibilityRole="button"
-              >
-                <ArrowLeft size={24} color="#fff" />
-              </TouchableOpacity>
-            )}
-            <View style={{flex: 1}}>
-                <Text style={styles.headerTitleNew}>UPSC Principal{'\n'}Mock Tests</Text>
-                <Text style={styles.headerSubtitleNew}>
-                {filteredTests.length} tests available  •  {category === 'full' ? '26 Full Mock Tests (120 Qs each)' : category === 'topic' ? '158 Topic-wise Tests' : '26 Full Mocks & 158 Topic Tests'}
-                </Text>
+    <ContainerComponent style={[styles.container, { backgroundColor: colors.background, flex: 1 }]} edges={isLargeScreen ? [] : ['top']}>
+      {isLargeScreen ? (
+        <View style={[styles.desktopHeaderRow, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
+          <View style={{ flex: 1 }}>
+            <Text style={[styles.desktopHeaderTitle, { color: colors.textPrimary }]}>
+              {category === 'full' ? 'Full Mock Tests' : category === 'topic' ? (selectedTopic || 'Topic-wise Tests') : 'All Mock Tests'}
+            </Text>
+            <Text style={[styles.desktopHeaderSubtitle, { color: colors.textSecondary }]}>
+              {filteredTests.length} tests available • {category === 'full' ? '120 Questions (300 Marks, 2 Hours CBT)' : category === 'topic' ? '20 Questions (50 Marks, 20 Mins)' : '26 Full Mocks & 158 Topic Tests'}
+            </Text>
+          </View>
+          <View style={styles.desktopControlsRow}>
+            {renderCategoryTabs()}
+          </View>
+        </View>
+      ) : (
+        <>
+          {/* Mobile Header */}
+          <LinearGradient colors={['#4A90E2', '#357ABD']} style={styles.headerNew}>
+            <View style={styles.headerTopNew}>
+                {!isTab && (
+                  <TouchableOpacity
+                    onPress={handleBack}
+                    style={styles.backButtonTop}
+                    hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+                    activeOpacity={0.7}
+                    accessibilityLabel="Go back"
+                    accessibilityRole="button"
+                  >
+                    <ArrowLeft size={24} color="#fff" />
+                  </TouchableOpacity>
+                )}
+                <View style={{flex: 1}}>
+                    <Text style={styles.headerTitleNew}>UPSC Principal{'\n'}Mock Tests</Text>
+                    <Text style={styles.headerSubtitleNew}>
+                    {filteredTests.length} tests available  •  {category === 'full' ? '26 Full Mock Tests (120 Qs each)' : category === 'topic' ? '158 Topic-wise Tests' : '26 Full Mocks & 158 Topic Tests'}
+                    </Text>
+                </View>
             </View>
-        </View>
-      </LinearGradient>
+          </LinearGradient>
 
-      {/* Search Bar */}
-      <View style={styles.searchContainerNew}>
-        <View style={[styles.searchBarNew, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
-          <Search size={20} color={colors.textTertiary} />
-          <TextInput
-            style={[styles.searchInputNew, { color: colors.textPrimary }]}
-            placeholder="Search tests, topics..."
-            value={searchQuery}
-            onChangeText={setSearchQuery}
-            placeholderTextColor={colors.textTertiary}
-          />
-        </View>
-        <TouchableOpacity 
-          style={[styles.filterButtonNew, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }, attemptFilter !== 'all' && styles.filterButtonNewActive]}
-          onPress={() => {
-            if (attemptFilter === 'all') setAttemptFilter('attempted');
-            else if (attemptFilter === 'attempted') setAttemptFilter('unattempted');
-            else setAttemptFilter('all');
-          }}
-          activeOpacity={0.7}
-        >
-           <SlidersHorizontal size={20} color={attemptFilter !== 'all' ? '#4A90E2' : colors.textSecondary} />
-        </TouchableOpacity>
-      </View>
+          {/* Mobile Search Bar */}
+          <View style={styles.searchContainerNew}>
+            <View style={[styles.searchBarNew, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+              <Search size={20} color={colors.textTertiary} />
+              <TextInput
+                style={[styles.searchInputNew, { color: colors.textPrimary }]}
+                placeholder="Search tests, topics..."
+                value={searchQuery}
+                onChangeText={setSearchQuery}
+                placeholderTextColor={colors.textTertiary}
+              />
+            </View>
+            <TouchableOpacity 
+              style={[styles.filterButtonNew, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }, attemptFilter !== 'all' && styles.filterButtonNewActive]}
+              onPress={() => {
+                if (attemptFilter === 'all') setAttemptFilter('attempted');
+                else if (attemptFilter === 'attempted') setAttemptFilter('unattempted');
+                else setAttemptFilter('all');
+              }}
+              activeOpacity={0.7}
+            >
+               <SlidersHorizontal size={20} color={attemptFilter !== 'all' ? '#4A90E2' : colors.textSecondary} />
+            </TouchableOpacity>
+          </View>
 
-      {/* Category Tabs */}
-      {renderCategoryTabs()}
+          {/* Mobile Category Tabs */}
+          {renderCategoryTabs()}
+        </>
+      )}
 
       {/* Attempted / Unattempted Filter Pills */}
-      <View style={styles.statusFilterRow}>
+      <View style={[
+        styles.statusFilterRow,
+        { backgroundColor: colors.surface, borderBottomColor: colors.border },
+        isLargeScreen && { paddingHorizontal: 24, paddingVertical: 12 }
+      ]}>
         <TouchableOpacity
-          style={[styles.statusFilterChip, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }, attemptFilter === 'all' && styles.statusFilterChipActive]}
+          style={[
+            styles.statusFilterChip,
+            { backgroundColor: colors.surfaceHighlight, borderColor: colors.border, borderWidth: isDark ? 1 : 0 },
+            attemptFilter === 'all' && styles.statusFilterChipActive
+          ]}
           onPress={() => setAttemptFilter('all')}
           activeOpacity={0.7}
         >
@@ -749,7 +797,11 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.statusFilterChip, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }, attemptFilter === 'attempted' && styles.statusFilterChipActive]}
+          style={[
+            styles.statusFilterChip,
+            { backgroundColor: colors.surfaceHighlight, borderColor: colors.border, borderWidth: isDark ? 1 : 0 },
+            attemptFilter === 'attempted' && styles.statusFilterChipActive
+          ]}
           onPress={() => setAttemptFilter('attempted')}
           activeOpacity={0.7}
         >
@@ -760,7 +812,11 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.statusFilterChip, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }, attemptFilter === 'unattempted' && styles.statusFilterChipActive]}
+          style={[
+            styles.statusFilterChip,
+            { backgroundColor: colors.surfaceHighlight, borderColor: colors.border, borderWidth: isDark ? 1 : 0 },
+            attemptFilter === 'unattempted' && styles.statusFilterChipActive
+          ]}
           onPress={() => setAttemptFilter('unattempted')}
           activeOpacity={0.7}
         >
@@ -785,7 +841,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
       {/* Test List */}
       <ScrollView
         style={[styles.content, { backgroundColor: colors.background }]}
-        contentContainerStyle={styles.contentContainer}
+        contentContainerStyle={[styles.contentContainer, isLargeScreen && { padding: 24, paddingBottom: 64 }]}
         refreshControl={
           <RefreshControl refreshing={loading} onRefresh={handleRefresh} colors={['#4A90E2']} />
         }
@@ -843,11 +899,11 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           </View>
         )}
       </ScrollView>
-    </SafeAreaView>
+    </ContainerComponent>
   );
 
   if (isLargeScreen) {
-    return <DesktopDashboard>{content}</DesktopDashboard>;
+    return <DesktopDashboard disableScroll={true}>{content}</DesktopDashboard>;
   }
 
   return content;
@@ -1601,11 +1657,34 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     color: '#3730A3',
   },
+  desktopHeaderRow: {
+    paddingHorizontal: 24,
+    paddingVertical: 18,
+    borderBottomWidth: 1,
+    borderBottomColor: '#E2E8F0',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 16,
+  },
+  desktopHeaderTitle: {
+    fontSize: 22,
+    fontWeight: '800',
+    color: '#0F172A',
+    marginBottom: 4,
+  },
+  desktopHeaderSubtitle: {
+    fontSize: 13,
+    color: '#64748B',
+  },
+  desktopControlsRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   statusFilterRow: {
     flexDirection: 'row',
     paddingHorizontal: 16,
     paddingVertical: 10,
-    backgroundColor: '#fff',
     borderBottomWidth: 1,
     borderBottomColor: '#f0f0f0',
     gap: 8,
