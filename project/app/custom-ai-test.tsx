@@ -294,7 +294,7 @@ export default function CustomAiTestScreen() {
             <View style={styles.couponTipBox}>
               <Zap size={16} color="#34D399" />
               <Text style={styles.couponTipText}>
-                Use promo code <Text style={styles.couponCodeHighlight}>Atrocious2512</Text> on the Premium page for 100% free VIP access!
+                Have a promo or coupon code? Enter it on the Premium page to unlock immediate access!
               </Text>
             </View>
 

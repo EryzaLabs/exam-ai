@@ -38,7 +38,7 @@ const getCashfreeConfig = () => {
 // ==============================================================================
 export interface CouponDefinition {
   code: string;
-  discountType: 'free' | 'percent' | 'flat';
+  discountType: 'free' | 'percent' | 'flat' | 'fixed_price';
   value: number; // 100 for 100%, or flat amount in INR
   description: string;
   active: boolean;
@@ -50,6 +50,27 @@ export const COUPONS: Record<string, CouponDefinition> = {
     discountType: 'free',
     value: 100,
     description: '100% OFF • VIP Lifetime Full Premium Access',
+    active: true,
+  },
+  'ATROCIOUS1': {
+    code: 'Atrocious1',
+    discountType: 'fixed_price',
+    value: 1,
+    description: 'Special ₹1 Access Pass • Pay ₹1 to Unlock Full Access',
+    active: true,
+  },
+  'TEST1RS': {
+    code: 'TEST1RS',
+    discountType: 'fixed_price',
+    value: 1,
+    description: 'Special ₹1 Access Pass • Pay ₹1 to Unlock Full Access',
+    active: true,
+  },
+  'RUPEE1': {
+    code: 'RUPEE1',
+    discountType: 'fixed_price',
+    value: 1,
+    description: 'Special ₹1 Access Pass • Pay ₹1 to Unlock Full Access',
     active: true,
   },
   'EXAMAI50': {
@@ -74,6 +95,14 @@ export const calculateDiscount = (coupon: CouponDefinition, basePrice: number = 
       discountAmount: basePrice,
       finalAmount: 0,
       isFree: true,
+    };
+  }
+  if (coupon.discountType === 'fixed_price') {
+    const finalAmount = Math.max(1, coupon.value);
+    return {
+      discountAmount: Math.max(0, basePrice - finalAmount),
+      finalAmount,
+      isFree: false,
     };
   }
   if (coupon.discountType === 'percent') {

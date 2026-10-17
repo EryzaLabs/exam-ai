@@ -617,7 +617,7 @@ export default function PremiumScreen() {
                       <View style={styles.couponInputRow}>
                         <TextInput
                           style={styles.couponInput}
-                          placeholder="Enter coupon (e.g. Atrocious2512)"
+                          placeholder="Enter coupon code"
                           placeholderTextColor="#94A3B8"
                           value={couponInput}
                           onChangeText={(t) => {

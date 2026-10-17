@@ -1,7 +1,7 @@
 declare const router: import("express-serve-static-core").Router;
 export interface CouponDefinition {
     code: string;
-    discountType: 'free' | 'percent' | 'flat';
+    discountType: 'free' | 'percent' | 'flat' | 'fixed_price';
     value: number;
     description: string;
     active: boolean;
