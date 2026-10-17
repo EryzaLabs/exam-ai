@@ -155,7 +155,7 @@ export default function EnhancedHomeScreen() {
               date: h.date ? new Date(h.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) : 'Recently',
               type: 'Practice',
               status: 'completed',
-              questions: h.sectionAnalytics?.reduce((sum: number, s: any) => sum + s.attempted, 0) || 0,
+              questions: h.sectionAnalytics?.reduce((sum: number, s: any) => sum + (s.attempted || ((s.correct || 0) + (s.incorrect || 0))), 0) || (h as any).totalQuestions || 0,
               duration: Math.round((h.timeTaken || 0)/60) + 'm',
               score: Math.round(h.accuracy || 0),
           }))
@@ -166,7 +166,7 @@ export default function EnhancedHomeScreen() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [authUser]);
 
   const onRefresh = async () => {
     setRefreshing(true);
