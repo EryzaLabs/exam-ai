@@ -190,8 +190,8 @@ export default function MobileDashboard({
             </View>
           </View>
 
-          {/* CONTINUE / START TEST CARD */}
-          {activeTest ? (
+          {/* CONTINUE TEST CARD (ONLY SHOWN IF THERE IS AN UNFINISHED TEST) */}
+          {activeTest && (
             <TouchableOpacity 
               style={styles.resumeCard} 
               activeOpacity={0.9}
@@ -232,35 +232,6 @@ export default function MobileDashboard({
                   </>
                 );
               })()}
-            </TouchableOpacity>
-          ) : (
-            <TouchableOpacity 
-              style={styles.resumeCard} 
-              activeOpacity={0.9}
-              onPress={handleResumeTest}
-            >
-              <View style={styles.resumeTop}>
-                <View style={styles.playBtnContainer}>
-                  <View style={styles.playBtnOuter}>
-                    <View style={styles.playBtnInner}>
-                      <Play size={20} color="#fff" fill="#fff" />
-                    </View>
-                  </View>
-                </View>
-                <View style={styles.resumeInfo}>
-                  <Text style={styles.resumeTag}>START PRACTICE</Text>
-                  <Text style={styles.resumeTitle}>Full Mock Test 1</Text>
-                  <Text style={styles.resumeDesc}>120 questions • 120m duration</Text>
-                </View>
-                <TouchableOpacity style={styles.resumeBtn} onPress={handleResumeTest}>
-                  <Text style={styles.resumeBtnTxt}>Start</Text>
-                  <ArrowRight size={16} color="#fff" />
-                </TouchableOpacity>
-              </View>
-              <View style={styles.progressBarBg}>
-                <View style={[styles.progressBarFill, { width: '0%' }]} />
-              </View>
-              <Text style={styles.progressText}>0%</Text>
             </TouchableOpacity>
           )}
 
@@ -411,7 +382,9 @@ export default function MobileDashboard({
               <Clock size={20} color="#475569" />
               <Text style={styles.sectionTitle}>Recent Tests</Text>
             </View>
-            <TouchableOpacity><Text style={styles.viewAll}>View All →</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => router.push('/test-history')} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+              <Text style={styles.viewAll}>View All →</Text>
+            </TouchableOpacity>
           </View>
 
           <View style={styles.recentTestsList}>
@@ -421,7 +394,18 @@ export default function MobileDashboard({
               </View>
             ) : (
               performance.recentTests.slice(0, 3).map((test: any, i: number) => (
-                <View key={i} style={styles.recentTestCard}>
+                <TouchableOpacity 
+                  key={i} 
+                  style={styles.recentTestCard}
+                  activeOpacity={0.8}
+                  onPress={() => {
+                    if (test.id) {
+                      router.push({ pathname: '/test-result', params: { attemptId: test.id } });
+                    } else {
+                      router.push('/test-history');
+                    }
+                  }}
+                >
                   <View style={styles.rtcHeader}>
                     <View style={styles.rtcIcon}><FileText size={20} color="#3B82F6" /></View>
                     <View style={{ flex: 1 }}>
@@ -438,7 +422,7 @@ export default function MobileDashboard({
                     <View style={styles.rtcMetric}><Star size={16} color="#94A3B8" /><View><Text style={styles.rtcMetricVal}>{test.score || 0}%</Text><Text style={styles.rtcMetricTxt}>Score</Text></View></View>
                     <ChevronRight size={20} color="#CBD5E1" style={{ marginLeft: 'auto' }} />
                   </View>
-                </View>
+                </TouchableOpacity>
               ))
             )}
           </View>
