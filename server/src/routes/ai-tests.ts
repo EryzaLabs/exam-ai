@@ -265,7 +265,7 @@ async function processAiTestGeneration(job: AiTestJob): Promise<void> {
     '';
 
   const apiUrl = 'https://ai.hackclub.com/proxy/v1/chat/completions';
-  const model = 'google/gemini-2.5-flash';
+  const model = process.env.AI_TEST_MODEL || 'google/gemini-3.8-flash';
 
   // Progress update helper
   const updateProgress = (pct: number, stepText: string, eta: number) => {
@@ -353,6 +353,12 @@ CRITICAL REQUIREMENTS:
     }
 
     response = await fetchRes.json();
+    if (response && response.error) {
+      console.warn('[AI Generator] Service returned API error:', response.error);
+      job.status = 'failed';
+      job.error = 'AI generator service is currently busy or out of credits. Please try again later.';
+      return;
+    }
   } catch (error: any) {
     console.warn('[AI Generator] Request failed:', error.message);
     job.status = 'failed';
