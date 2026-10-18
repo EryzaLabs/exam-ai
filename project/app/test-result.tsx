@@ -83,11 +83,26 @@ export default function TestResultScreen() {
         const memoryAttempt = SSCCGLService.getAttempt(attemptId);
         if (memoryAttempt) {
             result = SSCCGLService.submitTest(attemptId);
+            if (result && !result.answers && memoryAttempt.answers) {
+                result.answers = memoryAttempt.answers;
+            }
         }
         
         // 2. Try History (Persistent Storage)
+        const historyResult = await TestProgressService.getTestResult(attemptId);
         if (!result) {
-            result = await TestProgressService.getTestResult(attemptId);
+            result = historyResult;
+        } else if (historyResult) {
+            // Merge in answers and question order from history if missing in memory result
+            if ((!result.answers || result.answers.length === 0) && historyResult.answers && historyResult.answers.length > 0) {
+                result.answers = historyResult.answers;
+            }
+            if ((!result.questionOrder || result.questionOrder.length === 0) && historyResult.questionOrder && historyResult.questionOrder.length > 0) {
+                result.questionOrder = historyResult.questionOrder;
+            }
+            if (!result.testTitle && historyResult.testTitle) {
+                result.testTitle = historyResult.testTitle;
+            }
         }
         
         if (result) {
@@ -187,8 +202,69 @@ export default function TestResultScreen() {
 
   const answers = useMemo(() => {
     const memoryAttempt = SSCCGLService.getAttempt(attemptId);
-    return memoryAttempt?.answers || (analytics as any)?.answers || [];
+    const ansList = (analytics as any)?.answers || memoryAttempt?.answers;
+    if (ansList) return ansList;
+    return [];
   }, [attemptId, analytics]);
+
+  const resolveUserAnswer = (q: ParsedQuestion, index: number) => {
+    if (!answers) return undefined;
+
+    // 1. If answers is an Array
+    if (Array.isArray(answers)) {
+      // 1a. Match by questionId / question_id / id
+      const found = answers.find(
+        (a: any) =>
+          a &&
+          (a.questionId === q.id ||
+            a.question_id === q.id ||
+            a.id === q.id ||
+            String(a.questionId) === String(q.id) ||
+            String(a.question_id) === String(q.id) ||
+            String(a.id) === String(q.id))
+      );
+      if (found) return found;
+
+      // 1b. If answers is an array of selected option numbers or index-based answers
+      if (typeof answers[index] === 'number') {
+        return {
+          questionId: q.id,
+          selectedOption: answers[index],
+          isCorrect: answers[index] === q.correctAnswerIndex,
+        };
+      }
+      if (answers[index] && typeof answers[index] === 'object' && !answers[index].questionId && !answers[index].question_id) {
+        return {
+          questionId: q.id,
+          ...answers[index],
+          isCorrect: answers[index].selectedOption === q.correctAnswerIndex,
+        };
+      }
+    }
+
+    // 2. If answers is a Record/Object: { [questionId]: selectedOption }
+    if (typeof answers === 'object' && answers !== null) {
+      const val = (answers as any)[q.id];
+      if (val !== undefined && val !== null) {
+        if (typeof val === 'number') {
+          return {
+            questionId: q.id,
+            selectedOption: val,
+            isCorrect: val === q.correctAnswerIndex,
+          };
+        }
+        if (typeof val === 'object') {
+          return {
+            questionId: q.id,
+            selectedOption: val.selectedOption ?? val.selected_option,
+            isCorrect: val.isCorrect ?? (val.selectedOption === q.correctAnswerIndex),
+          };
+        }
+      }
+    }
+
+    return undefined;
+  };
 
   const questionsMeta = useMemo(() => {
     if (!test) return [];
@@ -196,16 +272,25 @@ export default function TestResultScreen() {
     return test.sections.flatMap((section) =>
       section.questions.map((q) => {
         counter += 1;
-        const userAnswer = answers.find((a: any) => a.questionId === q.id || String(a.questionId) === String(q.id));
+        const userAnswer = resolveUserAnswer(q, counter - 1);
+        const selectedOpt =
+          userAnswer?.selectedOption ??
+          userAnswer?.selected_option ??
+          userAnswer?.userAnswer ??
+          (typeof userAnswer === 'number' ? userAnswer : undefined);
+
         const isAttempted =
           userAnswer !== undefined &&
-          userAnswer?.selectedOption !== undefined &&
-          userAnswer?.selectedOption !== null &&
-          userAnswer?.selectedOption !== -1;
+          selectedOpt !== undefined &&
+          selectedOpt !== null &&
+          selectedOpt !== -1;
+
         const isCorrect =
           isAttempted &&
           (userAnswer?.isCorrect === true ||
-            userAnswer?.selectedOption === q.correctAnswerIndex);
+            userAnswer?.is_correct === true ||
+            selectedOpt === q.correctAnswerIndex);
+
         const isIncorrect = isAttempted && !isCorrect;
         const isSkipped = !isAttempted;
 
@@ -224,10 +309,29 @@ export default function TestResultScreen() {
     );
   }, [test, answers]);
 
-  const totalQuestionsCount = questionsMeta.length;
-  const correctCount = questionsMeta.filter((q) => q.isCorrect).length;
-  const incorrectCount = questionsMeta.filter((q) => q.isIncorrect).length;
-  const skippedCount = questionsMeta.filter((q) => q.isSkipped).length;
+  // Section analytics aggregates from the official calculated analytics
+  const sectionCorrect = analytics?.sectionAnalytics?.reduce((sum, s) => sum + (s.correct || 0), 0) ?? 0;
+  const sectionIncorrect = analytics?.sectionAnalytics?.reduce((sum, s) => sum + (s.incorrect || 0), 0) ?? 0;
+  const sectionSkipped = analytics?.sectionAnalytics?.reduce((sum, s) => sum + (s.skipped || 0), 0) ?? 0;
+  const sectionAttempted = analytics?.sectionAnalytics?.reduce((sum, s) => sum + (s.attempted || 0), 0) ?? 0;
+
+  const metaAttempted = questionsMeta.filter((q) => q.isAttempted).length;
+  const metaCorrect = questionsMeta.filter((q) => q.isCorrect).length;
+  const metaIncorrect = questionsMeta.filter((q) => q.isIncorrect).length;
+  const metaSkipped = questionsMeta.filter((q) => q.isSkipped).length;
+
+  // Use question meta if available; fallback to sectionAnalytics totals
+  const correctCount = metaAttempted > 0 ? metaCorrect : sectionCorrect;
+  const incorrectCount = metaAttempted > 0 ? metaIncorrect : sectionIncorrect;
+  const skippedCount = metaAttempted > 0 ? metaSkipped : (sectionAttempted > 0 ? sectionSkipped : questionsMeta.length);
+  const totalQuestionsCount = questionsMeta.length || (analytics?.totalMarks ? Math.round(analytics.totalMarks / 2.5) : 0);
+
+  useEffect(() => {
+    // If no incorrect questions exist, show all questions by default
+    if (incorrectCount === 0 && correctCount > 0 && questionFilter === 'incorrect') {
+      setQuestionFilter('all');
+    }
+  }, [incorrectCount, correctCount]);
 
   const formatTime = (seconds: number): string => {
     const totalSecs = Math.max(0, Math.round(seconds || 0));
