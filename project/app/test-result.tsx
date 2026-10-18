@@ -93,9 +93,15 @@ export default function TestResultScreen() {
         if (!result) {
             result = historyResult;
         } else if (historyResult) {
-            // Merge in answers and question order from history if missing in memory result
-            if ((!result.answers || result.answers.length === 0) && historyResult.answers && historyResult.answers.length > 0) {
-                result.answers = historyResult.answers;
+            // Merge in answers, questionStates, and question order from history if missing in memory result
+            if (!result.answers || (Array.isArray(result.answers) && result.answers.length === 0)) {
+                if (historyResult.answers && (Array.isArray(historyResult.answers) ? historyResult.answers.length > 0 : Object.keys(historyResult.answers).length > 0)) {
+                    result.answers = historyResult.answers;
+                } else if ((historyResult as any).questionStates) {
+                    (result as any).questionStates = (historyResult as any).questionStates;
+                } else if ((historyResult as any).userAnswers) {
+                    (result as any).userAnswers = (historyResult as any).userAnswers;
+                }
             }
             if ((!result.questionOrder || result.questionOrder.length === 0) && historyResult.questionOrder && historyResult.questionOrder.length > 0) {
                 result.questionOrder = historyResult.questionOrder;
@@ -106,9 +112,26 @@ export default function TestResultScreen() {
         }
         
         if (result) {
+            const targetTestId = result.testId || (params.testId as string);
+
+            // Fallback: If answers still missing, check if active test state remains in local storage
+            if ((!result.answers || (Array.isArray(result.answers) && result.answers.length === 0)) && !(result as any).questionStates && !(result as any).userAnswers && targetTestId) {
+                try {
+                    const activeProgress = await TestProgressService.getTestProgress(targetTestId);
+                    if (activeProgress) {
+                        if (activeProgress.answers && Object.keys(activeProgress.answers).length > 0) {
+                            (result as any).answers = activeProgress.answers;
+                        } else if (activeProgress.questionStates && Object.keys(activeProgress.questionStates).length > 0) {
+                            (result as any).questionStates = activeProgress.questionStates;
+                        }
+                    }
+                } catch (storageErr) {
+                    console.warn('Fallback checking active test failed:', storageErr);
+                }
+            }
+
             setAnalytics(result);
             
-            const targetTestId = result.testId || (params.testId as string);
             const targetFilename = (result as any).filename || (params.filename as string);
             
             // Ensure Paper is Loaded
@@ -202,49 +225,73 @@ export default function TestResultScreen() {
 
   const answers = useMemo(() => {
     const memoryAttempt = SSCCGLService.getAttempt(attemptId);
-    const ansList = (analytics as any)?.answers || memoryAttempt?.answers;
+    const a = analytics as any;
+    const ansList =
+      a?.answers ||
+      a?.questionStates ||
+      a?.userAnswers ||
+      a?.user_answers ||
+      a?.attempt?.answers ||
+      memoryAttempt?.answers;
     if (ansList) return ansList;
     return [];
   }, [attemptId, analytics]);
 
-  const resolveUserAnswer = (q: ParsedQuestion, index: number) => {
+  const resolveUserAnswer = (q: ParsedQuestion, index: number, anyIdMatched: boolean) => {
     if (!answers) return undefined;
 
     // 1. If answers is an Array
     if (Array.isArray(answers)) {
-      // 1a. Match by questionId / question_id / id
-      const found = answers.find(
-        (a: any) =>
-          a &&
-          (a.questionId === q.id ||
-            a.question_id === q.id ||
-            a.id === q.id ||
-            String(a.questionId) === String(q.id) ||
-            String(a.question_id) === String(q.id) ||
-            String(a.id) === String(q.id))
-      );
-      if (found) return found;
+      if (answers.length === 0) return undefined;
 
-      // 1b. If answers is an array of selected option numbers or index-based answers
-      if (typeof answers[index] === 'number') {
-        return {
-          questionId: q.id,
-          selectedOption: answers[index],
-          isCorrect: answers[index] === q.correctAnswerIndex,
-        };
+      // 1a. If any question matched by ID across the paper, prioritize ID matching
+      if (anyIdMatched) {
+        const found = answers.find(
+          (a: any) =>
+            a &&
+            (a.questionId === q.id ||
+              a.question_id === q.id ||
+              a.id === q.id ||
+              (a.questionId && String(a.questionId).trim() === String(q.id).trim()) ||
+              (a.question_id && String(a.question_id).trim() === String(q.id).trim()) ||
+              (a.id && String(a.id).trim() === String(q.id).trim()))
+        );
+        if (found) return found;
       }
-      if (answers[index] && typeof answers[index] === 'object' && !answers[index].questionId && !answers[index].question_id) {
-        return {
-          questionId: q.id,
-          ...answers[index],
-          isCorrect: answers[index].selectedOption === q.correctAnswerIndex,
-        };
+
+      // 1b. If ID matching didn't find anything or ID didn't match, match by index
+      if (!anyIdMatched || typeof answers[index] === 'number') {
+        if (typeof answers[index] === 'number') {
+          return {
+            questionId: q.id,
+            selectedOption: answers[index],
+            isCorrect: answers[index] === q.correctAnswerIndex,
+          };
+        }
+        if (answers[index] && typeof answers[index] === 'object') {
+          const item = answers[index];
+          const opt = item.selectedOption ?? item.selected_option ?? item.userAnswer;
+          if (opt !== undefined && opt !== null) {
+            return {
+              questionId: q.id,
+              ...item,
+              selectedOption: opt,
+              isCorrect: item.isCorrect ?? (opt === q.correctAnswerIndex),
+            };
+          }
+        }
       }
     }
 
-    // 2. If answers is a Record/Object: { [questionId]: selectedOption }
-    if (typeof answers === 'object' && answers !== null) {
-      const val = (answers as any)[q.id];
+    // 2. If answers is a Record/Object: { [questionId]: selectedOption } or { [questionId]: stateObj }
+    if (typeof answers === 'object' && answers !== null && !Array.isArray(answers)) {
+      // 2a. Match by exact question id
+      let val = (answers as any)[q.id];
+      // 2b. Match by index if not matched by ID
+      if (val === undefined || val === null) {
+        val = (answers as any)[index] ?? (answers as any)[String(index)] ?? (answers as any)[`q_${index}`];
+      }
+
       if (val !== undefined && val !== null) {
         if (typeof val === 'number') {
           return {
@@ -254,11 +301,16 @@ export default function TestResultScreen() {
           };
         }
         if (typeof val === 'object') {
-          return {
-            questionId: q.id,
-            selectedOption: val.selectedOption ?? val.selected_option,
-            isCorrect: val.isCorrect ?? (val.selectedOption === q.correctAnswerIndex),
-          };
+          const opt = val.selectedOption ?? val.selected_option ?? val.userAnswer;
+          if (opt !== undefined && opt !== null) {
+            return {
+              questionId: q.id,
+              selectedOption: opt,
+              isCorrect: val.isCorrect ?? (opt === q.correctAnswerIndex),
+              marked: val.marked,
+              timeTaken: val.timeTaken,
+            };
+          }
         }
       }
     }
@@ -268,11 +320,34 @@ export default function TestResultScreen() {
 
   const questionsMeta = useMemo(() => {
     if (!test) return [];
+
+    const allQuestions = test.sections.flatMap((s) => s.questions);
+
+    // Check if ID-based matching matches any question
+    let anyIdMatched = false;
+    if (answers) {
+      if (Array.isArray(answers)) {
+        anyIdMatched = allQuestions.some((q) =>
+          answers.some(
+            (a: any) =>
+              a &&
+              (a.questionId === q.id ||
+                a.question_id === q.id ||
+                a.id === q.id ||
+                (a.questionId && String(a.questionId).trim() === String(q.id).trim()))
+          )
+        );
+      } else if (typeof answers === 'object') {
+        anyIdMatched = allQuestions.some((q) => (answers as any)[q.id] !== undefined);
+      }
+    }
+
     let counter = 0;
     return test.sections.flatMap((section) =>
       section.questions.map((q) => {
+        const index = counter;
         counter += 1;
-        const userAnswer = resolveUserAnswer(q, counter - 1);
+        const userAnswer = resolveUserAnswer(q, index, anyIdMatched);
         const selectedOpt =
           userAnswer?.selectedOption ??
           userAnswer?.selected_option ??
@@ -320,18 +395,25 @@ export default function TestResultScreen() {
   const metaIncorrect = questionsMeta.filter((q) => q.isIncorrect).length;
   const metaSkipped = questionsMeta.filter((q) => q.isSkipped).length;
 
+  const hasDetailedAnswers = metaAttempted > 0;
+
   // Use question meta if available; fallback to sectionAnalytics totals
-  const correctCount = metaAttempted > 0 ? metaCorrect : sectionCorrect;
-  const incorrectCount = metaAttempted > 0 ? metaIncorrect : sectionIncorrect;
-  const skippedCount = metaAttempted > 0 ? metaSkipped : (sectionAttempted > 0 ? sectionSkipped : questionsMeta.length);
+  const correctCount = hasDetailedAnswers ? metaCorrect : sectionCorrect;
+  const incorrectCount = hasDetailedAnswers ? metaIncorrect : sectionIncorrect;
+  const skippedCount = hasDetailedAnswers ? metaSkipped : (sectionAttempted > 0 ? sectionSkipped : questionsMeta.length);
   const totalQuestionsCount = questionsMeta.length || (analytics?.totalMarks ? Math.round(analytics.totalMarks / 2.5) : 0);
 
   useEffect(() => {
-    // If no incorrect questions exist, show all questions by default
-    if (incorrectCount === 0 && correctCount > 0 && questionFilter === 'incorrect') {
+    // If no individual answer selections are available for this attempt, default to 'all' so all solutions are immediately shown
+    if (!hasDetailedAnswers) {
+      if (questionFilter !== 'all') {
+        setQuestionFilter('all');
+      }
+    } else if (incorrectCount === 0 && correctCount > 0 && questionFilter === 'incorrect') {
+      // If no incorrect questions exist, show all questions by default
       setQuestionFilter('all');
     }
-  }, [incorrectCount, correctCount]);
+  }, [hasDetailedAnswers, incorrectCount, correctCount]);
 
   const formatTime = (seconds: number): string => {
     const totalSecs = Math.max(0, Math.round(seconds || 0));
@@ -476,7 +558,7 @@ export default function TestResultScreen() {
               },
             ]}
             onPress={() => {
-              setQuestionFilter('incorrect');
+              setQuestionFilter(hasDetailedAnswers ? 'incorrect' : 'all');
               setSelectedTab('solutions');
             }}
             activeOpacity={0.8}
@@ -530,7 +612,7 @@ export default function TestResultScreen() {
               { backgroundColor: colors.surface, borderColor: colors.border },
             ]}
             onPress={() => {
-              setQuestionFilter('correct');
+              setQuestionFilter(hasDetailedAnswers ? 'correct' : 'all');
               setSelectedTab('solutions');
             }}
             activeOpacity={0.7}
@@ -549,7 +631,7 @@ export default function TestResultScreen() {
               { backgroundColor: colors.surface, borderColor: colors.border },
             ]}
             onPress={() => {
-              setQuestionFilter('incorrect');
+              setQuestionFilter(hasDetailedAnswers ? 'incorrect' : 'all');
               setSelectedTab('solutions');
             }}
             activeOpacity={0.7}
@@ -568,7 +650,7 @@ export default function TestResultScreen() {
               { backgroundColor: colors.surface, borderColor: colors.border },
             ]}
             onPress={() => {
-              setQuestionFilter('skipped');
+              setQuestionFilter(hasDetailedAnswers ? 'skipped' : 'all');
               setSelectedTab('solutions');
             }}
             activeOpacity={0.7}
@@ -717,6 +799,7 @@ export default function TestResultScreen() {
     if (!test || !analytics) return null;
 
     const filteredQuestions = questionsMeta.filter((item) => {
+      if (!hasDetailedAnswers) return true; // Show all solutions if individual options weren't recorded
       if (questionFilter === 'incorrect') return item.isIncorrect;
       if (questionFilter === 'correct') return item.isCorrect;
       if (questionFilter === 'skipped') return item.isSkipped;
@@ -735,6 +818,31 @@ export default function TestResultScreen() {
 
     return (
       <View style={styles.tabContent}>
+        {/* Info banner when detailed answers could not be reconstructed */}
+        {!hasDetailedAnswers && (
+          <View
+            style={[
+              styles.infoBannerCard,
+              {
+                backgroundColor: isDark ? 'rgba(59, 130, 246, 0.12)' : '#EFF6FF',
+                borderColor: isDark ? 'rgba(59, 130, 246, 0.3)' : '#BFDBFE',
+              },
+            ]}
+          >
+            <View style={[styles.infoBannerIconWrap, { backgroundColor: isDark ? 'rgba(59, 130, 246, 0.25)' : '#DBEAFE' }]}>
+              <BookOpen size={20} color="#3B82F6" />
+            </View>
+            <View style={{ flex: 1 }}>
+              <Text style={[styles.infoBannerTitle, { color: isDark ? '#93C5FD' : '#1E40AF' }]}>
+                Showing all {totalQuestionsCount} verified solutions
+              </Text>
+              <Text style={[styles.infoBannerSub, { color: isDark ? '#BFDBFE' : '#3B82F6' }]}>
+                Detailed option selections were not saved in this earlier session. Review the correct answers and in-depth explanations below.
+              </Text>
+            </View>
+          </View>
+        )}
+
         {/* Question Filter Bar */}
         <View style={[styles.filterBarCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.filterBarHeader}>
@@ -858,16 +966,20 @@ export default function TestResultScreen() {
             </View>
             <Text style={[styles.emptyFilterTitle, { color: colors.textPrimary }]}>
               {questionFilter === 'incorrect'
-                ? 'No Incorrect Questions!'
+                ? (incorrectCount === 0 ? 'No Incorrect Questions!' : 'No Questions to Display')
                 : questionFilter === 'correct'
-                ? 'No Correct Questions'
+                ? (correctCount === 0 ? 'No Correct Questions' : 'No Questions to Display')
                 : 'No Skipped Questions'}
             </Text>
             <Text style={[styles.emptyFilterSub, { color: colors.textSecondary }]}>
               {questionFilter === 'incorrect'
-                ? 'Congratulations! You answered all your attempted questions correctly.'
+                ? (incorrectCount === 0
+                    ? 'Congratulations! You answered all your attempted questions correctly.'
+                    : 'Unable to isolate specific incorrect questions for this session. View all solutions below.')
                 : questionFilter === 'correct'
-                ? 'Review the questions and explanations below to improve.'
+                ? (correctCount === 0
+                    ? 'Review the questions and explanations below to improve.'
+                    : 'Unable to isolate specific correct questions for this session. View all solutions below.')
                 : 'You attempted every single question in this paper.'}
             </Text>
             <TouchableOpacity
@@ -920,14 +1032,18 @@ export default function TestResultScreen() {
                       <View
                         style={[
                           styles.solutionStatusBadge,
-                          isCorrect
+                          !hasDetailedAnswers
+                            ? styles.solutionNeutralBadge
+                            : isCorrect
                             ? styles.solutionCorrectBadge
                             : isAttempted
                             ? styles.solutionIncorrectBadge
                             : styles.solutionSkippedBadge,
                         ]}
                       >
-                        {isCorrect ? (
+                        {!hasDetailedAnswers ? (
+                          <BookOpen size={16} color="#fff" />
+                        ) : isCorrect ? (
                           <CheckCircle size={16} color="#fff" />
                         ) : isAttempted ? (
                           <XCircle size={16} color="#fff" />
@@ -935,7 +1051,7 @@ export default function TestResultScreen() {
                           <AlertCircle size={16} color="#fff" />
                         )}
                         <Text style={styles.solutionStatusText}>
-                          {isCorrect ? 'Correct' : isAttempted ? 'Incorrect' : 'Skipped'}
+                          {!hasDetailedAnswers ? 'Solution' : isCorrect ? 'Correct' : isAttempted ? 'Incorrect' : 'Skipped'}
                         </Text>
                       </View>
                     </View>
@@ -2093,5 +2209,33 @@ const styles = StyleSheet.create({
   solutionOptionWrongDark: {
     backgroundColor: 'rgba(239, 68, 68, 0.15)',
     borderColor: '#EF4444',
+  },
+  solutionNeutralBadge: {
+    backgroundColor: '#3B82F6',
+  },
+  infoBannerCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    borderRadius: 16,
+    padding: 16,
+    borderWidth: 1,
+    marginBottom: 16,
+  },
+  infoBannerIconWrap: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  infoBannerTitle: {
+    fontSize: 14,
+    fontWeight: '700',
+    marginBottom: 2,
+  },
+  infoBannerSub: {
+    fontSize: 12,
+    lineHeight: 16,
   },
 });

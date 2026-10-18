@@ -460,8 +460,16 @@ export default function MockTestScreen() {
           const partialAnalytics = SSCCGLService.submitTest(attemptId);
           if (partialAnalytics) {
             const currentQuestionOrder = test?.sections.flatMap(section => section.questions.map(q => q.id));
+            const questionStatesObj: Record<string, any> = {};
+            questionStates.forEach((val, key) => {
+              questionStatesObj[key] = val;
+            });
+            const effectiveAnswers = (attempt.answers && attempt.answers.length > 0) ? attempt.answers : syncedAnswers;
             await TestProgressService.saveTestResult({
               ...partialAnalytics,
+              answers: effectiveAnswers,
+              userAnswers: effectiveAnswers.map((a: any) => a.selectedOption),
+              questionStates: questionStatesObj,
               date: new Date().toISOString(),
               testTitle: test?.title,
               filename: (params.filename as string) || (test as any)?.filename || undefined,
@@ -490,9 +498,16 @@ export default function MockTestScreen() {
         console.log('Analytics calculated, saving to history...');
         // Save to history
         const currentQuestionOrder = test?.sections.flatMap(section => section.questions.map(q => q.id));
+        const questionStatesObj: Record<string, any> = {};
+        questionStates.forEach((val, key) => {
+          questionStatesObj[key] = val;
+        });
+        const effectiveAnswers = (attempt.answers && attempt.answers.length > 0) ? attempt.answers : syncedAnswers;
         await TestProgressService.saveTestResult({
             ...analytics,
-            answers: attempt.answers,
+            answers: effectiveAnswers,
+            userAnswers: effectiveAnswers.map((a: any) => a.selectedOption),
+            questionStates: questionStatesObj,
             date: new Date().toISOString(),
             testTitle: test?.title,
             filename: (params.filename as string) || (test as any)?.filename || undefined,
