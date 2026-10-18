@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import {
   View,
   Text,
@@ -34,6 +34,9 @@ import {
   RefreshCw,
   X as CloseIcon,
   ArrowLeft,
+  ChevronRight,
+  HelpCircle,
+  Filter,
 } from 'lucide-react-native';
 import RenderHtml from 'react-native-render-html';
 import SSCCGLService, {
@@ -45,16 +48,22 @@ import SSCCGLService, {
 } from '@/services/ssc-cgl-service';
 import { TestProgressService } from '@/services/test-progress-service';
 import ReportService, { ReportType } from '@/services/report-service';
+import { useTheme } from '@/context/theme-context';
 
 const { width } = Dimensions.get('window');
 
 export default function TestResultScreen() {
+  const { isDark, colors } = useTheme();
   const params = useLocalSearchParams();
   const attemptId = params.attemptId as string;
 
   const [analytics, setAnalytics] = useState<TestAnalytics | null>(null);
   const [test, setTest] = useState<ParsedMockTest | null>(null);
-  const [selectedTab, setSelectedTab] = useState<'overview' | 'sections' | 'solutions'>('overview');
+  const [selectedTab, setSelectedTab] = useState<'overview' | 'sections' | 'solutions'>(
+    params.tab === 'solutions' ? 'solutions' : 'overview'
+  );
+  // Filter questions: defaults to 'incorrect' as requested by the user
+  const [questionFilter, setQuestionFilter] = useState<'incorrect' | 'correct' | 'all' | 'skipped'>('incorrect');
   const [language, setLanguage] = useState<'english' | 'hindi'>('english');
   const [showReportModal, setShowReportModal] = useState(false);
   const [reportingQuestion, setReportingQuestion] = useState<ParsedQuestion | null>(null);
@@ -175,6 +184,50 @@ export default function TestResultScreen() {
         console.error("Error loading results:", error);
     }
   };
+
+  const answers = useMemo(() => {
+    const memoryAttempt = SSCCGLService.getAttempt(attemptId);
+    return memoryAttempt?.answers || (analytics as any)?.answers || [];
+  }, [attemptId, analytics]);
+
+  const questionsMeta = useMemo(() => {
+    if (!test) return [];
+    let counter = 0;
+    return test.sections.flatMap((section) =>
+      section.questions.map((q) => {
+        counter += 1;
+        const userAnswer = answers.find((a: any) => a.questionId === q.id);
+        const isAttempted =
+          userAnswer !== undefined &&
+          userAnswer?.selectedOption !== undefined &&
+          userAnswer?.selectedOption !== null &&
+          userAnswer?.selectedOption !== -1;
+        const isCorrect =
+          isAttempted &&
+          (userAnswer?.isCorrect === true ||
+            userAnswer?.selectedOption === q.correctAnswerIndex);
+        const isIncorrect = isAttempted && !isCorrect;
+        const isSkipped = !isAttempted;
+
+        return {
+          question: q,
+          sectionTitle: section.title,
+          sectionId: section.id,
+          questionNumber: counter,
+          userAnswer,
+          isAttempted,
+          isCorrect,
+          isIncorrect,
+          isSkipped,
+        };
+      })
+    );
+  }, [test, answers]);
+
+  const totalQuestionsCount = questionsMeta.length;
+  const correctCount = questionsMeta.filter((q) => q.isCorrect).length;
+  const incorrectCount = questionsMeta.filter((q) => q.isIncorrect).length;
+  const skippedCount = questionsMeta.filter((q) => q.isSkipped).length;
 
   const formatTime = (seconds: number): string => {
     const totalSecs = Math.max(0, Math.round(seconds || 0));
@@ -308,37 +361,121 @@ export default function TestResultScreen() {
           </View>
         </LinearGradient>
 
-        {/* Quick Stats */}
-        <View style={styles.quickStats}>
-          {analytics.sectionAnalytics.map((section) => {
-            const totalAttempted = section.attempted;
-            const correct = section.correct;
-            const incorrect = section.incorrect;
-            const skipped = section.skipped;
-
-            return (
-              <View key={section.sectionId} style={styles.quickStatRow}>
-                <View style={styles.quickStatItem}>
-                  <CheckCircle size={20} color="#4CAF50" />
-                  <Text style={styles.quickStatValue}>{correct}</Text>
-                  <Text style={styles.quickStatLabel}>Correct</Text>
-                </View>
-                <View style={styles.quickStatItem}>
-                  <XCircle size={20} color="#F44336" />
-                  <Text style={styles.quickStatValue}>{incorrect}</Text>
-                  <Text style={styles.quickStatLabel}>Incorrect</Text>
-                </View>
-                <View style={styles.quickStatItem}>
-                  <AlertCircle size={20} color="#FF9800" />
-                  <Text style={styles.quickStatValue}>{skipped}</Text>
-                  <Text style={styles.quickStatLabel}>Skipped</Text>
-                </View>
+        {/* Quick Review Banner for Incorrect Questions */}
+        {incorrectCount > 0 ? (
+          <TouchableOpacity
+            style={[
+              styles.reviewIncorrectBanner,
+              {
+                backgroundColor: isDark ? 'rgba(239, 68, 68, 0.12)' : '#FEF2F2',
+                borderColor: isDark ? 'rgba(239, 68, 68, 0.35)' : '#FECACA',
+              },
+            ]}
+            onPress={() => {
+              setQuestionFilter('incorrect');
+              setSelectedTab('solutions');
+            }}
+            activeOpacity={0.8}
+          >
+            <View style={styles.reviewIncorrectLeft}>
+              <View style={[styles.reviewIncorrectIcon, { backgroundColor: isDark ? 'rgba(239, 68, 68, 0.25)' : '#FEE2E2' }]}>
+                <XCircle size={22} color="#EF4444" />
               </View>
-            );
-          }).reduce((total, current) => {
-            // Sum up all sections for overall stats
-            return total;
-          })}
+              <View style={styles.reviewIncorrectTexts}>
+                <Text style={[styles.reviewIncorrectTitle, { color: isDark ? '#FCA5A5' : '#991B1B' }]}>
+                  Review {incorrectCount} Incorrect {incorrectCount === 1 ? 'Question' : 'Questions'}
+                </Text>
+                <Text style={[styles.reviewIncorrectSub, { color: isDark ? '#F87171' : '#B91C1C' }]}>
+                  Tap to view detailed solutions & correct answers
+                </Text>
+              </View>
+            </View>
+            <ChevronRight size={20} color={isDark ? '#FCA5A5' : '#EF4444'} />
+          </TouchableOpacity>
+        ) : (
+          <View
+            style={[
+              styles.reviewIncorrectBanner,
+              {
+                backgroundColor: isDark ? 'rgba(16, 185, 129, 0.12)' : '#ECFDF5',
+                borderColor: isDark ? 'rgba(16, 185, 129, 0.35)' : '#A7F3D0',
+              },
+            ]}
+          >
+            <View style={styles.reviewIncorrectLeft}>
+              <View style={[styles.reviewIncorrectIcon, { backgroundColor: isDark ? 'rgba(16, 185, 129, 0.25)' : '#D1FAE5' }]}>
+                <CheckCircle size={22} color="#10B981" />
+              </View>
+              <View style={styles.reviewIncorrectTexts}>
+                <Text style={[styles.reviewIncorrectTitle, { color: isDark ? '#6EE7B7' : '#065F46' }]}>
+                  All Attempted Questions Correct!
+                </Text>
+                <Text style={[styles.reviewIncorrectSub, { color: isDark ? '#A7F3D0' : '#047857' }]}>
+                  Outstanding score! Zero incorrect questions.
+                </Text>
+              </View>
+            </View>
+          </View>
+        )}
+
+        {/* Interactive Breakdown / Quick Stats Cards */}
+        <View style={styles.quickStatsRow}>
+          <TouchableOpacity
+            style={[
+              styles.quickStatCard,
+              { backgroundColor: colors.surface, borderColor: colors.border },
+            ]}
+            onPress={() => {
+              setQuestionFilter('correct');
+              setSelectedTab('solutions');
+            }}
+            activeOpacity={0.7}
+          >
+            <View style={[styles.quickStatIconWrap, { backgroundColor: isDark ? 'rgba(16, 185, 129, 0.15)' : '#ECFDF5' }]}>
+              <CheckCircle size={20} color="#10B981" />
+            </View>
+            <Text style={[styles.quickStatValue, { color: colors.textPrimary }]}>{correctCount}</Text>
+            <Text style={[styles.quickStatLabel, { color: colors.textSecondary }]}>Correct</Text>
+            <Text style={[styles.quickStatHint, { color: '#10B981' }]}>Review →</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[
+              styles.quickStatCard,
+              { backgroundColor: colors.surface, borderColor: colors.border },
+            ]}
+            onPress={() => {
+              setQuestionFilter('incorrect');
+              setSelectedTab('solutions');
+            }}
+            activeOpacity={0.7}
+          >
+            <View style={[styles.quickStatIconWrap, { backgroundColor: isDark ? 'rgba(239, 68, 68, 0.15)' : '#FEF2F2' }]}>
+              <XCircle size={20} color="#EF4444" />
+            </View>
+            <Text style={[styles.quickStatValue, { color: colors.textPrimary }]}>{incorrectCount}</Text>
+            <Text style={[styles.quickStatLabel, { color: colors.textSecondary }]}>Incorrect</Text>
+            <Text style={[styles.quickStatHint, { color: '#EF4444' }]}>Review →</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[
+              styles.quickStatCard,
+              { backgroundColor: colors.surface, borderColor: colors.border },
+            ]}
+            onPress={() => {
+              setQuestionFilter('skipped');
+              setSelectedTab('solutions');
+            }}
+            activeOpacity={0.7}
+          >
+            <View style={[styles.quickStatIconWrap, { backgroundColor: isDark ? 'rgba(245, 158, 11, 0.15)' : '#FFFBEB' }]}>
+              <AlertCircle size={20} color="#F59E0B" />
+            </View>
+            <Text style={[styles.quickStatValue, { color: colors.textPrimary }]}>{skippedCount}</Text>
+            <Text style={[styles.quickStatLabel, { color: colors.textSecondary }]}>Skipped</Text>
+            <Text style={[styles.quickStatHint, { color: '#F59E0B' }]}>Review →</Text>
+          </TouchableOpacity>
         </View>
 
         {/* Strengths & Weaknesses */}
@@ -475,148 +612,364 @@ export default function TestResultScreen() {
   const renderSolutionsTab = () => {
     if (!test || !analytics) return null;
 
-    const memoryAttempt = SSCCGLService.getAttempt(attemptId);
-    const answers = memoryAttempt?.answers || (analytics as any)?.answers || [];
+    const filteredQuestions = questionsMeta.filter((item) => {
+      if (questionFilter === 'incorrect') return item.isIncorrect;
+      if (questionFilter === 'correct') return item.isCorrect;
+      if (questionFilter === 'skipped') return item.isSkipped;
+      return true; // 'all'
+    });
 
-    const allQuestions = test.sections.flatMap((s) => s.questions);
-    let globalQuestionCounter = 0;
+    const sectionsWithQuestions = test.sections
+      .map((section) => {
+        const matchingItems = filteredQuestions.filter((item) => item.sectionId === section.id);
+        return {
+          ...section,
+          matchingItems,
+        };
+      })
+      .filter((s) => s.matchingItems.length > 0);
 
     return (
       <View style={styles.tabContent}>
-        {test.sections.map((section) => (
-          <View key={section.id} style={styles.solutionsSection}>
-            <Text style={styles.solutionsSectionTitle}>{section.title}</Text>
-            {section.questions.map((question) => {
-              globalQuestionCounter += 1;
-              const currentNum = globalQuestionCounter;
-              const userAnswer = answers.find((a: any) => a.questionId === question.id);
-              const isCorrect = userAnswer?.isCorrect;
-              const isAttempted = userAnswer !== undefined;
+        {/* Question Filter Bar */}
+        <View style={[styles.filterBarCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+          <View style={styles.filterBarHeader}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+              <Filter size={16} color={colors.accent || '#3B82F6'} />
+              <Text style={[styles.filterBarTitle, { color: colors.textPrimary }]}>Filter Questions</Text>
+            </View>
+            <Text style={[styles.filterBarCount, { color: colors.textSecondary }]}>
+              Showing {filteredQuestions.length} of {totalQuestionsCount}
+            </Text>
+          </View>
 
-              return (
-                <View key={question.id} style={styles.solutionCard}>
-                  <View style={styles.solutionHeader}>
-                    <Text style={styles.solutionQuestionNumber}>
-                      Question {currentNum}
-                    </Text>
+          <View style={styles.filterPillsRow}>
+            <TouchableOpacity
+              style={[
+                styles.filterPill,
+                { borderColor: colors.border, backgroundColor: isDark ? colors.surfaceElevated : '#F8FAFC' },
+                questionFilter === 'incorrect' && styles.filterPillIncorrectActive,
+              ]}
+              onPress={() => setQuestionFilter('incorrect')}
+              activeOpacity={0.7}
+            >
+              <XCircle size={15} color={questionFilter === 'incorrect' ? '#fff' : '#EF4444'} />
+              <Text
+                style={[
+                  styles.filterPillText,
+                  { color: colors.textSecondary },
+                  questionFilter === 'incorrect' && styles.filterPillTextActive,
+                ]}
+              >
+                Incorrect ({incorrectCount})
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={[
+                styles.filterPill,
+                { borderColor: colors.border, backgroundColor: isDark ? colors.surfaceElevated : '#F8FAFC' },
+                questionFilter === 'correct' && styles.filterPillCorrectActive,
+              ]}
+              onPress={() => setQuestionFilter('correct')}
+              activeOpacity={0.7}
+            >
+              <CheckCircle size={15} color={questionFilter === 'correct' ? '#fff' : '#10B981'} />
+              <Text
+                style={[
+                  styles.filterPillText,
+                  { color: colors.textSecondary },
+                  questionFilter === 'correct' && styles.filterPillTextActive,
+                ]}
+              >
+                Correct ({correctCount})
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={[
+                styles.filterPill,
+                { borderColor: colors.border, backgroundColor: isDark ? colors.surfaceElevated : '#F8FAFC' },
+                questionFilter === 'skipped' && styles.filterPillSkippedActive,
+              ]}
+              onPress={() => setQuestionFilter('skipped')}
+              activeOpacity={0.7}
+            >
+              <AlertCircle size={15} color={questionFilter === 'skipped' ? '#fff' : '#F59E0B'} />
+              <Text
+                style={[
+                  styles.filterPillText,
+                  { color: colors.textSecondary },
+                  questionFilter === 'skipped' && styles.filterPillTextActive,
+                ]}
+              >
+                Skipped ({skippedCount})
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={[
+                styles.filterPill,
+                { borderColor: colors.border, backgroundColor: isDark ? colors.surfaceElevated : '#F8FAFC' },
+                questionFilter === 'all' && styles.filterPillAllActive,
+              ]}
+              onPress={() => setQuestionFilter('all')}
+              activeOpacity={0.7}
+            >
+              <HelpCircle size={15} color={questionFilter === 'all' ? '#fff' : colors.textSecondary} />
+              <Text
+                style={[
+                  styles.filterPillText,
+                  { color: colors.textSecondary },
+                  questionFilter === 'all' && styles.filterPillTextActive,
+                ]}
+              >
+                All ({totalQuestionsCount})
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* Empty State when no questions match filter */}
+        {filteredQuestions.length === 0 ? (
+          <View style={[styles.emptyFilterCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+            <View
+              style={[
+                styles.emptyFilterIconWrap,
+                {
+                  backgroundColor:
+                    questionFilter === 'incorrect'
+                      ? isDark ? 'rgba(16, 185, 129, 0.15)' : '#ECFDF5'
+                      : isDark ? 'rgba(59, 130, 246, 0.15)' : '#EFF6FF',
+                },
+              ]}
+            >
+              {questionFilter === 'incorrect' ? (
+                <CheckCircle size={40} color="#10B981" />
+              ) : questionFilter === 'correct' ? (
+                <XCircle size={40} color="#EF4444" />
+              ) : (
+                <AlertCircle size={40} color="#F59E0B" />
+              )}
+            </View>
+            <Text style={[styles.emptyFilterTitle, { color: colors.textPrimary }]}>
+              {questionFilter === 'incorrect'
+                ? 'No Incorrect Questions!'
+                : questionFilter === 'correct'
+                ? 'No Correct Questions'
+                : 'No Skipped Questions'}
+            </Text>
+            <Text style={[styles.emptyFilterSub, { color: colors.textSecondary }]}>
+              {questionFilter === 'incorrect'
+                ? 'Congratulations! You answered all your attempted questions correctly.'
+                : questionFilter === 'correct'
+                ? 'Review the questions and explanations below to improve.'
+                : 'You attempted every single question in this paper.'}
+            </Text>
+            <TouchableOpacity
+              style={[styles.emptyFilterActionBtn, { backgroundColor: colors.accent || '#3B82F6' }]}
+              onPress={() => setQuestionFilter('all')}
+              activeOpacity={0.8}
+            >
+              <Text style={styles.emptyFilterActionBtnText}>
+                View All Questions ({totalQuestionsCount})
+              </Text>
+            </TouchableOpacity>
+          </View>
+        ) : (
+          sectionsWithQuestions.map((section) => (
+            <View key={section.id} style={styles.solutionsSection}>
+              <View style={styles.sectionHeaderRow}>
+                <Text style={[styles.solutionsSectionTitle, { color: colors.textPrimary }]}>
+                  {section.title}
+                </Text>
+                <View
+                  style={[
+                    styles.sectionCountBadge,
+                    {
+                      backgroundColor: isDark ? colors.surfaceElevated : '#F1F5F9',
+                      borderColor: colors.border,
+                    },
+                  ]}
+                >
+                  <Text style={[styles.sectionCountBadgeText, { color: colors.textSecondary }]}>
+                    {section.matchingItems.length} {section.matchingItems.length === 1 ? 'question' : 'questions'}
+                  </Text>
+                </View>
+              </View>
+
+              {section.matchingItems.map((item) => {
+                const { question, questionNumber, userAnswer, isAttempted, isCorrect } = item;
+
+                return (
+                  <View
+                    key={question.id}
+                    style={[
+                      styles.solutionCard,
+                      { backgroundColor: colors.surface, borderColor: colors.border },
+                    ]}
+                  >
+                    <View style={styles.solutionHeader}>
+                      <Text style={[styles.solutionQuestionNumber, { color: colors.textSecondary }]}>
+                        Question {questionNumber}
+                      </Text>
+                      <View
+                        style={[
+                          styles.solutionStatusBadge,
+                          isCorrect
+                            ? styles.solutionCorrectBadge
+                            : isAttempted
+                            ? styles.solutionIncorrectBadge
+                            : styles.solutionSkippedBadge,
+                        ]}
+                      >
+                        {isCorrect ? (
+                          <CheckCircle size={16} color="#fff" />
+                        ) : isAttempted ? (
+                          <XCircle size={16} color="#fff" />
+                        ) : (
+                          <AlertCircle size={16} color="#fff" />
+                        )}
+                        <Text style={styles.solutionStatusText}>
+                          {isCorrect ? 'Correct' : isAttempted ? 'Incorrect' : 'Skipped'}
+                        </Text>
+                      </View>
+                    </View>
+
+                    <View style={styles.solutionQuestion}>
+                      <RenderHtml
+                        contentWidth={width - 64}
+                        source={{
+                          html: (language === 'hindi' && question.questionTextHindi
+                            ? question.questionTextHindi
+                            : question.questionText
+                          ).replace(/\n/g, '<br />'),
+                        }}
+                        baseStyle={{
+                          ...styles.solutionQuestionText,
+                          color: colors.textPrimary,
+                        }}
+                      />
+                    </View>
+
+                    <View style={styles.solutionOptions}>
+                      {(language === 'hindi' && question.optionsHindi && question.optionsHindi.length > 0
+                        ? question.optionsHindi
+                        : question.options
+                      ).map((option, optIndex) => {
+                        const isCorrectAnswer = optIndex === question.correctAnswerIndex;
+                        const isUserAnswer = optIndex === userAnswer?.selectedOption;
+
+                        return (
+                          <View
+                            key={optIndex}
+                            style={[
+                              styles.solutionOption,
+                              {
+                                backgroundColor: isDark ? colors.surfaceElevated : '#f9f9f9',
+                                borderColor: colors.border,
+                              },
+                              isCorrectAnswer && (isDark ? styles.solutionOptionCorrectDark : styles.solutionOptionCorrect),
+                              isUserAnswer && !isCorrect && (isDark ? styles.solutionOptionWrongDark : styles.solutionOptionWrong),
+                            ]}
+                          >
+                            <View style={styles.solutionOptionHeader}>
+                              <Text style={[styles.solutionOptionLabel, { color: colors.textSecondary }]}>
+                                Option {optIndex + 1}
+                              </Text>
+                              {isCorrectAnswer && (
+                                <View style={styles.correctAnswerBadge}>
+                                  <CheckCircle size={14} color="#10B981" />
+                                  <Text style={styles.correctAnswerText}>Correct Answer</Text>
+                                </View>
+                              )}
+                              {isUserAnswer && !isCorrect && (
+                                <View style={styles.yourAnswerBadge}>
+                                  <Text style={styles.yourAnswerText}>Your Answer</Text>
+                                </View>
+                              )}
+                            </View>
+                            <RenderHtml
+                              contentWidth={width - 96}
+                              source={{ html: option.replace(/\n/g, '<br />') }}
+                              baseStyle={{
+                                ...styles.solutionOptionText,
+                                color: colors.textPrimary,
+                              }}
+                            />
+                          </View>
+                        );
+                      })}
+                    </View>
+
                     <View
                       style={[
-                        styles.solutionStatusBadge,
-                        isCorrect
-                          ? styles.solutionCorrectBadge
-                          : isAttempted
-                          ? styles.solutionIncorrectBadge
-                          : styles.solutionSkippedBadge,
+                        styles.solutionExplanation,
+                        {
+                          backgroundColor: isDark ? 'rgba(245, 158, 11, 0.08)' : '#FFF9E6',
+                          borderLeftColor: '#F59E0B',
+                        },
                       ]}
                     >
-                      {isCorrect ? (
-                        <CheckCircle size={16} color="#fff" />
-                      ) : isAttempted ? (
-                        <XCircle size={16} color="#fff" />
-                      ) : (
-                        <AlertCircle size={16} color="#fff" />
-                      )}
-                      <Text style={styles.solutionStatusText}>
-                        {isCorrect ? 'Correct' : isAttempted ? 'Incorrect' : 'Skipped'}
-                      </Text>
-                    </View>
-                  </View>
-
-                  <View style={styles.solutionQuestion}>
-                    <RenderHtml
-                      contentWidth={width - 64}
-                      source={{ html: (language === 'hindi' && question.questionTextHindi ? question.questionTextHindi : question.questionText).replace(/\n/g, '<br />') }}
-                      baseStyle={styles.solutionQuestionText}
-                    />
-                  </View>
-
-                  <View style={styles.solutionOptions}>
-                    {(language === 'hindi' && question.optionsHindi && question.optionsHindi.length > 0 ? question.optionsHindi : question.options).map((option, optIndex) => {
-                      const isCorrectAnswer = optIndex === question.correctAnswerIndex;
-                      const isUserAnswer = optIndex === userAnswer?.selectedOption;
-
-                      return (
-                        <View
-                          key={optIndex}
-                          style={[
-                            styles.solutionOption,
-                            isCorrectAnswer && styles.solutionOptionCorrect,
-                            isUserAnswer && !isCorrect && styles.solutionOptionWrong,
-                          ]}
-                        >
-                          <View style={styles.solutionOptionHeader}>
-                            <Text style={styles.solutionOptionLabel}>
-                              Option {optIndex + 1}
+                      <View style={styles.solutionExplanationHeader}>
+                        <Text style={[styles.solutionExplanationTitle, { color: colors.textPrimary }]}>
+                          Explanation
+                        </Text>
+                        <View style={{ flexDirection: 'row', gap: 8 }}>
+                          <TouchableOpacity
+                            style={[
+                              styles.reportButton,
+                              {
+                                borderColor: colors.accent || '#3B82F6',
+                                backgroundColor: isDark ? 'rgba(59, 130, 246, 0.15)' : '#F0F7FF',
+                              },
+                            ]}
+                            onPress={() => {
+                              const prompt = 'Can you explain this question in detail?\n\nQuestion: ' + question.questionText + '\n\nCorrect Answer: Option ' + (question.correctAnswerIndex + 1);
+                              router.push({ pathname: '/assistant', params: { prompt } });
+                            }}
+                          >
+                            <Lightbulb size={16} color={colors.accent || '#3B82F6'} />
+                            <Text style={[styles.reportButtonText, { color: colors.accent || '#3B82F6' }]}>
+                              Ask AI
                             </Text>
-                            {isCorrectAnswer && (
-                              <View style={styles.correctAnswerBadge}>
-                                <CheckCircle size={14} color="#4CAF50" />
-                                <Text style={styles.correctAnswerText}>Correct Answer</Text>
-                              </View>
-                            )}
-                            {isUserAnswer && !isCorrect && (
-                              <View style={styles.yourAnswerBadge}>
-                                <Text style={styles.yourAnswerText}>Your Answer</Text>
-                              </View>
-                            )}
-                          </View>
-                          <RenderHtml
-                            contentWidth={width - 96}
-                            source={{ html: option.replace(/\n/g, '<br />') }}
-                            baseStyle={styles.solutionOptionText}
-                          />
-                        </View>
-                      );
-                    })}
-                  </View>
+                          </TouchableOpacity>
 
-                  <View style={styles.solutionExplanation}>
-                    <View style={styles.solutionExplanationHeader}>
-                      <Text style={styles.solutionExplanationTitle}>Explanation</Text>
-                      <View style={{flexDirection: 'row', gap: 8}}>
-                        <TouchableOpacity
-                          style={[styles.reportButton, {borderColor: '#4A90E2', backgroundColor: '#F0F7FF'}]}
-                          onPress={() => {
-                            const prompt = `Can you explain this question in detail?\n\nQuestion: ${question.questionText}\n\nCorrect Answer: Option ${question.correctAnswerIndex + 1}`;
-                            router.push({ pathname: '/assistant', params: { prompt } });
-                          }}
-                        >
-                          <Lightbulb size={16} color="#4A90E2" />
-                          <Text style={[styles.reportButtonText, {color: '#4A90E2'}]}>Ask AI</Text>
-                        </TouchableOpacity>
-                        
-                        <TouchableOpacity
-                          style={styles.reportButton}
-                          onPress={() => handleReportQuestion(question)}
-                        >
-                          <Flag size={16} color="#FF9500" />
-                          <Text style={styles.reportButtonText}>Report</Text>
-                        </TouchableOpacity>
-                      </View>
-                    </View>
-                    <Text style={styles.solutionExplanationText}>
-                      {language === 'hindi' && question.explanation.hindi 
-                        ? question.explanation.hindi 
-                        : question.explanation.english}
-                    </Text>
-                    {question.keyConcepts.length > 0 && (
-                      <View style={styles.solutionKeyConcepts}>
-                        <Text style={styles.solutionKeyConceptsTitle}>Key Concepts:</Text>
-                        <View style={styles.solutionKeyConceptsList}>
-                          {question.keyConcepts.map((concept, i) => (
-                            <View key={i} style={styles.keyConceptBadge}>
-                              <Text style={styles.keyConceptText}>{concept}</Text>
-                            </View>
-                          ))}
+                          <TouchableOpacity
+                            style={styles.reportButton}
+                            onPress={() => handleReportQuestion(question)}
+                          >
+                            <Flag size={16} color="#FF9500" />
+                            <Text style={styles.reportButtonText}>Report</Text>
+                          </TouchableOpacity>
                         </View>
                       </View>
-                    )}
+                      <Text style={[styles.solutionExplanationText, { color: colors.textSecondary }]}>
+                        {language === 'hindi' && question.explanation.hindi
+                          ? question.explanation.hindi
+                          : question.explanation.english}
+                      </Text>
+                      {question.keyConcepts.length > 0 && (
+                        <View style={styles.solutionKeyConcepts}>
+                          <Text style={[styles.solutionKeyConceptsTitle, { color: colors.textSecondary }]}>
+                            Key Concepts:
+                          </Text>
+                          <View style={styles.solutionKeyConceptsList}>
+                            {question.keyConcepts.map((concept, i) => (
+                              <View key={i} style={styles.keyConceptBadge}>
+                                <Text style={styles.keyConceptText}>{concept}</Text>
+                              </View>
+                            ))}
+                          </View>
+                        </View>
+                      )}
+                    </View>
                   </View>
-                </View>
-              );
-            })}
-          </View>
-        ))}
+                );
+              })}
+            </View>
+          ))
+        )}
       </View>
     );
   };
@@ -630,7 +983,7 @@ export default function TestResultScreen() {
   }
 
   return (
-    <SafeAreaView style={styles.container} edges={['top']}>
+    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]} edges={['top']}>
       {/* Header */}
       <LinearGradient
         colors={['#4A90E2', '#357ABD']}
@@ -661,17 +1014,21 @@ export default function TestResultScreen() {
       </LinearGradient>
 
       {/* Tabs */}
-      <View style={styles.tabs}>
+      <View style={[styles.tabs, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
         <TouchableOpacity
-          style={[styles.tab, selectedTab === 'overview' && styles.tabActive]}
+          style={[styles.tab, selectedTab === 'overview' && { borderBottomColor: colors.accent || '#3B82F6' }]}
           onPress={() => setSelectedTab('overview')}
         >
           <BarChart3
             size={20}
-            color={selectedTab === 'overview' ? '#4A90E2' : '#666'}
+            color={selectedTab === 'overview' ? (colors.accent || '#3B82F6') : colors.textSecondary}
           />
           <Text
-            style={[styles.tabText, selectedTab === 'overview' && styles.tabTextActive]}
+            style={[
+              styles.tabText,
+              { color: selectedTab === 'overview' ? (colors.accent || '#3B82F6') : colors.textSecondary },
+              selectedTab === 'overview' && styles.tabTextActive,
+            ]}
           >
             Overview
           </Text>
@@ -681,9 +1038,16 @@ export default function TestResultScreen() {
           style={[styles.tab, selectedTab === 'sections' && styles.tabActive]}
           onPress={() => setSelectedTab('sections')}
         >
-          <Target size={20} color={selectedTab === 'sections' ? '#4A90E2' : '#666'} />
+          <Target
+            size={20}
+            color={selectedTab === 'sections' ? (colors.accent || '#3B82F6') : colors.textSecondary}
+          />
           <Text
-            style={[styles.tabText, selectedTab === 'sections' && styles.tabTextActive]}
+            style={[
+              styles.tabText,
+              { color: selectedTab === 'sections' ? (colors.accent || '#3B82F6') : colors.textSecondary },
+              selectedTab === 'sections' && styles.tabTextActive,
+            ]}
           >
             Sections
           </Text>
@@ -695,10 +1059,14 @@ export default function TestResultScreen() {
         >
           <BookOpen
             size={20}
-            color={selectedTab === 'solutions' ? '#4A90E2' : '#666'}
+            color={selectedTab === 'solutions' ? (colors.accent || '#3B82F6') : colors.textSecondary}
           />
           <Text
-            style={[styles.tabText, selectedTab === 'solutions' && styles.tabTextActive]}
+            style={[
+              styles.tabText,
+              { color: selectedTab === 'solutions' ? (colors.accent || '#3B82F6') : colors.textSecondary },
+              selectedTab === 'solutions' && styles.tabTextActive,
+            ]}
           >
             Solutions
           </Text>
@@ -713,7 +1081,7 @@ export default function TestResultScreen() {
       </ScrollView>
 
       {/* Footer Actions */}
-      <View style={styles.footer}>
+      <View style={[styles.footer, { backgroundColor: colors.surface, borderTopColor: colors.border }]}>
         <TouchableOpacity
           style={styles.footerButton}
           onPress={() => { if (router.canGoBack()) { router.back(); } else { router.replace('/test-list'); } }}
@@ -1434,5 +1802,192 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     color: '#fff',
+  },
+  reviewIncorrectBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 16,
+    borderRadius: 16,
+    borderWidth: 1,
+  },
+  reviewIncorrectLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    flex: 1,
+  },
+  reviewIncorrectIcon: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  reviewIncorrectTexts: {
+    flex: 1,
+  },
+  reviewIncorrectTitle: {
+    fontSize: 15,
+    fontWeight: '700',
+    marginBottom: 2,
+  },
+  reviewIncorrectSub: {
+    fontSize: 12,
+  },
+  quickStatsRow: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+  quickStatCard: {
+    flex: 1,
+    borderRadius: 14,
+    paddingVertical: 14,
+    paddingHorizontal: 10,
+    alignItems: 'center',
+    borderWidth: 1,
+    elevation: 1,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.05,
+    shadowRadius: 2,
+  },
+  quickStatIconWrap: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 6,
+  },
+  quickStatHint: {
+    fontSize: 11,
+    fontWeight: '600',
+    marginTop: 4,
+  },
+  filterBarCard: {
+    borderRadius: 16,
+    padding: 16,
+    borderWidth: 1,
+    marginBottom: 4,
+    elevation: 1,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.05,
+    shadowRadius: 2,
+  },
+  filterBarHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  filterBarTitle: {
+    fontSize: 15,
+    fontWeight: '700',
+  },
+  filterBarCount: {
+    fontSize: 12,
+    fontWeight: '500',
+  },
+  filterPillsRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  filterPill: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    borderRadius: 20,
+    borderWidth: 1,
+  },
+  filterPillText: {
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  filterPillTextActive: {
+    color: '#FFFFFF',
+    fontWeight: '700',
+  },
+  filterPillIncorrectActive: {
+    backgroundColor: '#EF4444',
+    borderColor: '#EF4444',
+  },
+  filterPillCorrectActive: {
+    backgroundColor: '#10B981',
+    borderColor: '#10B981',
+  },
+  filterPillSkippedActive: {
+    backgroundColor: '#F59E0B',
+    borderColor: '#F59E0B',
+  },
+  filterPillAllActive: {
+    backgroundColor: '#3B82F6',
+    borderColor: '#3B82F6',
+  },
+  emptyFilterCard: {
+    borderRadius: 16,
+    padding: 32,
+    alignItems: 'center',
+    borderWidth: 1,
+    marginVertical: 12,
+  },
+  emptyFilterIconWrap: {
+    width: 72,
+    height: 72,
+    borderRadius: 36,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 16,
+  },
+  emptyFilterTitle: {
+    fontSize: 18,
+    fontWeight: '700',
+    marginBottom: 6,
+    textAlign: 'center',
+  },
+  emptyFilterSub: {
+    fontSize: 13,
+    textAlign: 'center',
+    lineHeight: 18,
+    marginBottom: 20,
+    maxWidth: 280,
+  },
+  emptyFilterActionBtn: {
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 20,
+  },
+  emptyFilterActionBtnText: {
+    color: '#FFFFFF',
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  sectionHeaderRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 12,
+  },
+  sectionCountBadge: {
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+    borderWidth: 1,
+  },
+  sectionCountBadgeText: {
+    fontSize: 11,
+    fontWeight: '600',
+  },
+  solutionOptionCorrectDark: {
+    backgroundColor: 'rgba(16, 185, 129, 0.15)',
+    borderColor: '#10B981',
+  },
+  solutionOptionWrongDark: {
+    backgroundColor: 'rgba(239, 68, 68, 0.15)',
+    borderColor: '#EF4444',
   },
 });
