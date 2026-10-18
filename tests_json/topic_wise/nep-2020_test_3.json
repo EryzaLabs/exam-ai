@@ -1,19 +1,19 @@
 {
-  "test_id": "f8f5af23-a16a-400c-a196-c803e24a3839",
+  "test_id": "1c0bfa3d-57f7-4ccd-964b-4ea92e6168b7",
   "test_name": "Topic Test: NEP 2020 - Part 3",
   "type": "topic_wise",
   "topic": "nep-2020",
-  "created_at": "2026-10-17T08:33:52.496485",
+  "created_at": "2026-10-18T11:57:07.864103",
   "questions": [
     {
-      "id": "837314e2-abee-421f-af27-ac211a5131b3",
-      "created_at": "2026-10-10T07:33:43.131037",
-      "question_hindi": "राष्ट्रीय शिक्षा नीति (एनईपी) 2020 के प्रमुख लक्ष्यों और मूलभूत स्तंभों के संदर्भ में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. एनईपी 2020 का लक्ष्य 2030 तक स्कूली शिक्षा में 100% सकल नामांकन अनुपात (GER) के साथ पूर्व-प्राथमिक से माध्यमिक स्तर तक शिक्षा का सार्वभौमीकरण करना है।\n2. इस नीति का लक्ष्य 2 करोड़ स्कूल से बाहर के बच्चों को मुख्यधारा में वापस लाना है।\n3. यह नीति पहुँच (Access), समानता (Equity), गुणवत्ता (Quality), वहनीयता (Affordability) और जवाबदेही (Accountability) के मूलभूत स्तंभों पर आधारित है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "62ff2dc0-7136-430d-9bbd-df57025133f5",
+      "created_at": "2026-10-18T16:30:18.000000",
+      "question_hindi": "मध्य और माध्यमिक चरण के बीच सबसे सटीक अंतर कौन-सा है?",
       "options_hindi": [
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 3",
-        "केवल 1 और 2"
+        "मध्य चरण पूरी तरह खेल-आधारित है; माध्यमिक केवल व्यावसायिक है।",
+        "मध्य चरण में विषय-शिक्षक और अधिक अमूर्त अवधारणाएँ आती हैं; माध्यमिक चरण गहराई, आलोचनात्मक चिंतन, लचीलापन और विषय-चयन बढ़ाता है।",
+        "माध्यमिक चरण विषय-चयन समाप्त कर एक धारा पर लौटता है।",
+        "विषय-शिक्षक आने पर मध्य चरण अनुभवात्मक अधिगम समाप्त करता है।"
       ],
       "option_labels": [
         "A",
@@ -24,33 +24,70 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the key targets and foundational principles of the National Education Policy (NEP) 2020:\n\n1. NEP 2020 aims for the universalization of education from pre-school to secondary level with 100% Gross Enrolment Ratio (GER) in school education by 2030.\n2. The policy targets bringing 2 crore out-of-school children back into the mainstream.\n3. It is built on the foundational pillars of Access, Equity, Quality, Affordability, and Accountability.\n\nWhich of the statements given above are correct?",
+      "question_english": "Which is the most accurate distinction between the Middle and Secondary Stages?",
       "options_english": [
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 3 only",
-        "1 and 2 only"
+        "Middle is entirely play-based; Secondary is only vocational.",
+        "Middle introduces subject teachers and more abstract concepts; Secondary adds depth, critical thinking, flexibility and subject choice.",
+        "Secondary removes subject choice and returns to one stream.",
+        "Middle excludes experiential learning when subject teachers start."
       ],
       "correct_answer": "b",
-      "explanation_english": "All three statements are correct as per the official release of the Union Cabinet approval of NEP 2020: It aims for universalization of education from pre-school to secondary level with 100% GER in school education by 2030; it aims to bring 2 crore out of school children back into the mainstream; and it is built on the foundational pillars of Access, Equity, Quality, Affordability, and Accountability.",
-      "explanation_hindi": "एनईपी 2020 की कैबिनेट स्वीकृति की आधिकारिक विज्ञप्ति के अनुसार तीनों कथन सही हैं: इसका उद्देश्य 2030 तक स्कूली शिक्षा में 100% जीईआर के साथ प्री-स्कूल से माध्यमिक स्तर तक शिक्षा का सार्वभौमीकरण करना है; यह 2 करोड़ स्कूल से बाहर के बच्चों को मुख्यधारा में वापस लाएगा; और यह पहुँच, समानता, गुणवत्ता, वहनीयता और जवाबदेही के मूलभूत स्तंभों पर निर्मित है।",
+      "explanation_english": "The policy describes subject teachers in the Middle Stage and greater depth and flexibility in the Secondary Stage.",
+      "explanation_hindi": "नीति मध्य चरण में विषय-शिक्षकों तथा माध्यमिक चरण में अधिक गहराई और लचीलेपन का वर्णन करती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "with the introduction of subject teachers for learning and discussion of the more abstract concepts"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:18.010000"
+    },
+    {
+      "id": "b54bb24e-c909-47ac-978f-63d49968d1eb",
+      "created_at": "2026-10-18T16:31:25.000000",
+      "question_hindi": "NEP 2020 शिक्षा क्षेत्र के लिए सार्वजनिक निवेश का कौन-सा लक्ष्य स्वीकार करती है?",
+      "options_hindi": [
+        "केंद्र और राज्यों के सहयोग से यथाशीघ्र GDP का 6%।",
+        "केवल केंद्र सरकार द्वारा GDP का 4%।",
+        "केवल उच्च शिक्षा के लिए GDP का 10%।",
+        "केवल निजी दान से GDP का 6%।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What public-investment target does NEP 2020 endorse for the education sector?",
+      "options_english": [
+        "6% of GDP at the earliest, through cooperation between the Centre and States.",
+        "4% of GDP only by the Central Government.",
+        "10% of GDP exclusively for higher education.",
+        "6% of GDP from private donations alone."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The policy calls for Central and State Governments to work together to reach 6% of GDP in public education investment.",
+      "explanation_hindi": "नीति सार्वजनिक शिक्षा निवेश को GDP के 6% तक पहुँचाने के लिए केंद्र और राज्यों के संयुक्त प्रयास की बात करती है।",
       "topic": "NEP 2020",
       "difficulty": "easy",
       "key_facts": [
-        "New Policy aims for Universalization of Education from pre-school to secondary level with 100 % GER in school education by 2030 \n\nNEP 2020 will bring 2 crore out of school children back into the main stream \n\nNew 5+3+3+4 school curriculum with 12 years of schooling and 3 years of Anganwadi/ Pre-schooling \n\nEmphasis on Foundational Literacy and Numeracy, no rigid separation between academic streams, extracurricular, vocational streams in schools ; Vocational Education to start from Class 6 with Internships\n\nTeaching upto at least Grade 5 to be in mother tongue/ regional language\n\nAssessment reforms with 360 degree Holistic Progress Card, tracking Student Progress for achieving Learning Outcomes\n\nGER in higher education to be raised to 50 % by 2035 ; 3.5 crore seats to be added in higher education\n\nHigher Education curriculum to have Flexibility of Subjects\n\n Multiple Entry / Exit to be allowed with appropriate certification\n\nAcademic Bank of Credits to be established to facilitate Transfer of Credits\n\nNational Research Foundation to be established to foster a strong research culture \n\nLight but Tight Regulation of Higher Education, single regulator with four separate verticals for different functions\n\nAffiliation System to be phased out in 15 years with graded autonomy to colleges\n\nNEP 2020 advocates increased use of technology with equity; National Educational Technology Forum to be created\n\nNEP 2020 emphasizes setting up of Gender Inclusion Fund, Special Education Zones for disadvantaged regions and groups\n\nNew Policy promotes Multilingualism in both schools and HEs; National Institute for Pali, Persian and Prakrit , Indian Institute of Translation and Interpretation to be set up\n\nThe Union Cabinet chaired by the Prime Minister Shri Narendra Modi approved the National Education Policy 2020 today, making way for large scale, transformational reforms in both school and higher education sectors. This is the first education policy of the 21 st century and replaces the thirty-four year old National Policy on Education (NPE), 1986. B uilt on the foundational pillars of Access, Equity, Quality, Affordability and Accountability, this policy is aligned to the 2030 Agenda for Sustainable Development and aims to transform India into a vibrant knowledge society and global knowledge superpower by making both school and college education more holistic, flexible, multidisciplinary, suited to 21 st century needs and aimed at bringing out the unique capabilities of each student."
+        "The Centre and the States will work together to increase the public investment in Education sector to reach 6% of GDP at the earliest."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:33:43.131037"
+      "processed_at": "2026-10-18T16:31:25.010000"
     },
     {
-      "id": "2e1915e3-b615-4158-b057-0ee13e0b33f0",
-      "created_at": "2026-10-10T07:24:12.465068",
-      "question_hindi": "राष्ट्रीय शिक्षा नीति 2020 रिपोर्ट सारांश में विस्तृत प्रारंभिक बाल्यावस्था देखभाल और शिक्षा (ECCE) एवं बुनियादी साक्षरता के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. सीनियर सेकेंडरी और उससे अधिक योग्यता वाले आंगनवाड़ी कार्यकर्ताओं को ईसीसीई (ECCE) में छह महीने का प्रमाणन कार्यक्रम दिया जाएगा।\n2. समिति ने पाया कि वर्तमान में प्रारंभिक विद्यालय में नामांकित पांच करोड़ से अधिक विद्यार्थियों ने बुनियादी साक्षरता और संख्या ज्ञान प्राप्त नहीं किया है।\n3. नीति अनुशंसा करती है कि प्रत्येक विद्यार्थी को कक्षा पांच तक बुनियादी साक्षरता और संख्यात्मकता प्राप्त कर लेनी चाहिए।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "id": "d7308107-5bcc-4202-88ff-2d5bdcf979de",
+      "created_at": "2026-10-18T16:31:16.000000",
+      "question_hindi": "NEP 2020 के अनुसार 2025 तक विद्यालयी और उच्च शिक्षा प्रणाली के कितने प्रतिशत शिक्षार्थियों को व्यावसायिक शिक्षा का अनुभव होना चाहिए?",
       "options_hindi": [
-        "1, 2 और 3",
-        "केवल 2 और 3",
-        "केवल 1 और 2",
-        "केवल 1 और 3"
+        "कम-से-कम 25%।",
+        "ठीक 33%।",
+        "कम-से-कम 75%।",
+        "कम-से-कम 50%।"
       ],
       "option_labels": [
         "A",
@@ -61,33 +98,70 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding Early Childhood Care and Education (ECCE) and Foundational Literacy as detailed in the National Education Policy 2020 report summary:\n1. Aanganwadi workers with senior secondary qualifications and above will be given a six-month certification programme in ECCE.\n2. The Committee observed that over five crore students currently enrolled in elementary school have not attained foundational literacy and numeracy.\n3. The policy recommends that every student should attain foundational literacy and numeracy by grade five.\n\nWhich of the statements given above are correct?",
+      "question_english": "By 2025, what proportion of learners across school and higher education should have exposure to vocational education under NEP 2020?",
       "options_english": [
-        "1, 2 and 3",
-        "2 and 3 only",
-        "1 and 2 only",
-        "1 and 3 only"
+        "At least 25%.",
+        "Exactly 33%.",
+        "At least 75%.",
+        "At least 50%."
       ],
-      "correct_answer": "c",
-      "explanation_english": "Statements 1 and 2 are correct. Statement 3 is incorrect because the policy recommends that every student should attain foundational literacy and numeracy by grade three, not grade five.",
-      "explanation_hindi": "कथन 1 और 2 सही हैं। कथन 3 गलत है क्योंकि नीति अनुशंसा करती है कि प्रत्येक विद्यार्थी को कक्षा तीन तक (न कि कक्षा पांच तक) बुनियादी साक्षरता और संख्या ज्ञान प्राप्त कर लेना चाहिए।",
+      "correct_answer": "d",
+      "explanation_english": "The policy gives a target of at least 50% exposure to vocational education by 2025.",
+      "explanation_hindi": "नीति 2025 तक कम-से-कम 50% शिक्षार्थियों को व्यावसायिक शिक्षा से परिचित कराने का लक्ष्य देती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "By 2025, at least 50% of learners through the school and higher education system shall have exposure to vocational education"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:16.010000"
+    },
+    {
+      "id": "8d882e7e-da92-4b9c-903f-d99a6ab145c9",
+      "created_at": "2026-10-18T16:30:54.000000",
+      "question_hindi": "NEP 2020 संबद्ध महाविद्यालय प्रणाली को किस प्रकार चरणबद्ध ढंग से समाप्त करने की कल्पना करती है?",
+      "options_hindi": [
+        "तुरंत, प्रत्येक महाविद्यालय को केंद्र सरकार को स्थानांतरित करके।",
+        "पंद्रह वर्षों में श्रेणीबद्ध स्वायत्तता और चुनौती पद्धति के माध्यम से, जिसमें विश्वविद्यालय संबद्ध महाविद्यालयों का मार्गदर्शन करेंगे।",
+        "दो वर्षों में प्रत्यायन समाप्त करके।",
+        "केवल तब, जब महाविद्यालय स्वेच्छा से स्नातक डिग्री देना बंद कर दें।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "How does NEP 2020 envisage phasing out the affiliated-college system?",
+      "options_english": [
+        "Immediately, by transferring every college to the Central Government.",
+        "Over fifteen years, through graded autonomy and a challenge mode, with universities mentoring affiliated colleges.",
+        "Within two years by abolishing accreditation.",
+        "Only when colleges voluntarily stop offering undergraduate degrees."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The policy envisages a fifteen-year phased transition supported by graded autonomy and mentoring.",
+      "explanation_hindi": "नीति श्रेणीबद्ध स्वायत्तता और मार्गदर्शन के सहारे पंद्रह वर्षों का चरणबद्ध परिवर्तन प्रस्तावित करती है।",
       "topic": "NEP 2020",
       "difficulty": "hard",
       "key_facts": [
-        "Aanganwadi workers with senior secondary qualifications and above, will be given a six-month certification programme in ECCE.  Achieving foundational literacy and numeracy: The Committee observed that a large proportion of the students currently enrolled in elementary school (over five crore) have not attained foundational literacy and numeracy (the ability to read and understand basic text, and carry out basic addition and subtraction). It recommends that every student should attain foundational literacy and numeracy by grade three."
+        "gradually phasing out the system of ‘affiliated colleges’ over a period of fifteen years through a system of graded autonomy"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:24:12.465068"
+      "processed_at": "2026-10-18T16:30:54.010000"
     },
     {
-      "id": "81182a9f-734b-433e-9e43-1f76d3ee95b5",
-      "created_at": "2026-10-10T07:26:03.928415",
-      "question_hindi": "राष्ट्रीय शिक्षा नीति 2020 के भाग I (स्कूली शिक्षा) और भाग II (उच्चतर शिक्षा) के अंतर्गत अध्याय संख्याओं और उनके संबंधित आधिकारिक शीर्षकों के संदर्भ में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (अध्याय संख्या)\nA. अध्याय 3\nB. अध्याय 10\nC. अध्याय 12\nD. अध्याय 18\n\nसूची II (आधिकारिक अध्याय शीर्षक)\n1. सभी स्तरों पर ड्रॉपआउट दरों को कम करना और शिक्षा तक सार्वभौमिक पहुँच सुनिश्चित करना (Curtailing Dropout Rates and Ensuring Universal Access to Education at All Levels)\n2. संस्थागत पुनर्गठन और सुदृढ़ीकरण (Institutional Restructuring and Consolidation)\n3. छात्रों के लिए अनुकूल शिक्षण वातावरण और सहयोग (Optimal Learning Environments and Support for Students)\n4. उच्चतर शिक्षा की नियामक प्रणाली का कायाकल्प (Transforming the Regulatory System of Higher Education)\n\nसही कूट का चयन कीजिए:",
+      "id": "2dfd78dc-e29e-4ac0-afce-afe30d41d634",
+      "created_at": "2026-10-18T16:31:09.000000",
+      "question_hindi": "NEP 2020 के अंतर्गत NHERC के प्रस्तावित एकल-बिंदु विनियमन से कौन-से क्षेत्र बाहर रखे गए हैं?",
       "options_hindi": [
-        "A-2, B-1, C-4, D-3",
-        "A-1, B-3, C-2, D-4",
-        "A-1, B-2, C-3, D-4",
-        "A-4, B-2, C-3, D-1"
+        "चिकित्सा और विधि शिक्षा।",
+        "शिक्षक शिक्षा और व्यावसायिक शिक्षा।",
+        "सभी सार्वजनिक और सभी निजी विश्वविद्यालय।",
+        "सभी ऑनलाइन और मुक्त-दूरस्थ अधिगम कार्यक्रम।"
       ],
       "option_labels": [
         "A",
@@ -98,33 +172,107 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Match List I with List II regarding the chapter numbers and their corresponding official titles under Part I (School Education) and Part II (Higher Education) of the National Education Policy 2020:\n\nList I (Chapter Number)\nA. Chapter 3\nB. Chapter 10\nC. Chapter 12\nD. Chapter 18\n\nList II (Official Chapter Title)\n1. Curtailing Dropout Rates and Ensuring Universal Access to Education at All Levels\n2. Institutional Restructuring and Consolidation\n3. Optimal Learning Environments and Support for Students\n4. Transforming the Regulatory System of Higher Education\n\nSelect the correct code:",
+      "question_english": "Which sectors are excluded from the proposed NHERC's common single-point regulation under NEP 2020?",
       "options_english": [
-        "A-2, B-1, C-4, D-3",
-        "A-1, B-3, C-2, D-4",
-        "A-1, B-2, C-3, D-4",
-        "A-4, B-2, C-3, D-1"
+        "Medical and legal education.",
+        "Teacher education and vocational education.",
+        "All public universities and all private universities.",
+        "All online and Open Distance Learning programmes."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The policy calls NHERC the common regulator for higher education including teacher education, while excluding medical and legal education.",
+      "explanation_hindi": "नीति NHERC को शिक्षक शिक्षा सहित उच्च शिक्षा का सामान्य नियामक बताती है, जबकि चिकित्सा और विधि शिक्षा को बाहर रखती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "including teacher education and excluding medical and legal education"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:09.010000"
+    },
+    {
+      "id": "7a27b28e-0335-4f94-81a3-9b46842c0940",
+      "created_at": "2026-10-18T16:31:00.000000",
+      "question_hindi": "NEP 2020 स्नातक डिग्री कार्यक्रमों में बहु-प्रवेश और बहु-निकास की कल्पना कैसे करती है?",
+      "options_hindi": [
+        "केवल चार-वर्षीय डिग्री की अनुमति है और बीच में निकास नहीं है।",
+        "एक वर्ष के बाद डिप्लोमा और तीन वर्ष के बाद प्रमाणपत्र मिलता है।",
+        "निकास विकल्प केवल व्यावसायिक कार्यक्रमों तक सीमित हैं और स्नातक डिग्री को शामिल नहीं करते।",
+        "एक वर्ष के बाद प्रमाणपत्र, दो वर्ष के बाद डिप्लोमा और तीन वर्ष के बाद स्नातक डिग्री मिल सकती है; चार-वर्षीय बहुविषयी कार्यक्रम को प्राथमिकता दी गई है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "How does NEP 2020 envisage multiple entry and exit in undergraduate degree programmes?",
+      "options_english": [
+        "Only a four-year degree is permitted, with no exit before completion.",
+        "A diploma is awarded after one year and a certificate after three years.",
+        "Exit options are limited to vocational programmes and exclude undergraduate degrees.",
+        "A certificate may follow one year, a diploma two years, and a Bachelor's degree three years; the four-year multidisciplinary programme is preferred."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The policy allows staged certifications during a three- or four-year undergraduate degree, while preferring the four-year multidisciplinary option.",
+      "explanation_hindi": "नीति तीन या चार वर्ष के स्नातक कार्यक्रम में चरणबद्ध प्रमाणन की अनुमति देती है और चार-वर्षीय बहुविषयी विकल्प को प्राथमिकता देती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "with multiple exit options within this period, with appropriate certifications, e.g., a certificate after completing 1 year in a discipline or field including vocational and professional areas, or a diploma after 2 years of study, or a Bachelor’s degree after a 3-year programme."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:00.010000"
+    },
+    {
+      "id": "acf97920-d82c-4e3f-8436-4987c4fa84c3",
+      "created_at": "2026-10-18T16:30:39.000000",
+      "question_hindi": "NEP 2020 शिक्षक-शिक्षा कार्यक्रमों के लिए 2030 तक कौन-सी अपेक्षा रखती है?",
+      "options_hindi": [
+        "सभी पृथक TEI अनिश्चितकाल तक एक-विषयी रहें।",
+        "शिक्षक-शिक्षा को बहुविषयी संस्थानों से अलग करें।",
+        "केवल शैक्षिक रूप से सुदृढ़, बहुविषयी और एकीकृत कार्यक्रम लागू रहने चाहिए।",
+        "B.Ed. में विद्यालय-आधारित व्यवहारिक प्रशिक्षण पर प्रतिबंध हो।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which expectation does NEP 2020 set for teacher-education programmes by 2030?",
+      "options_english": [
+        "All stand-alone TEIs should remain single-disciplinary indefinitely.",
+        "Teacher education should be separated from multidisciplinary institutions.",
+        "Only educationally sound, multidisciplinary and integrated programmes should remain in force.",
+        "School-based practicum should be prohibited in B.Ed. programmes."
       ],
       "correct_answer": "c",
-      "explanation_english": "According to the table of contents of the National Education Policy 2020: Chapter 3 is titled 'Curtailing Dropout Rates and Ensuring Universal Access to Education at All Levels', Chapter 10 is 'Institutional Restructuring and Consolidation', Chapter 12 is 'Optimal Learning Environments and Support for Students', and Chapter 18 is 'Transforming the Regulatory System of Higher Education'. Therefore, the correct match is A-1, B-2, C-3, D-4.",
-      "explanation_hindi": "राष्ट्रीय शिक्षा नीति 2020 की विषय-सूची के अनुसार: अध्याय 3 'Curtailing Dropout Rates and Ensuring Universal Access to Education at All Levels', अध्याय 10 'Institutional Restructuring and Consolidation', अध्याय 12 'Optimal Learning Environments and Support for Students', और अध्याय 18 'Transforming the Regulatory System of Higher Education' है। अतः सही मिलान A-1, B-2, C-3, D-4 है।",
+      "explanation_english": "The policy calls for stringent action against substandard institutions and expects sound, multidisciplinary and integrated programmes by 2030.",
+      "explanation_hindi": "नीति निम्न-गुणवत्ता संस्थानों के विरुद्ध कठोर कार्रवाई और 2030 तक सुदृढ़, बहुविषयी तथा एकीकृत कार्यक्रमों की अपेक्षा करती है।",
       "topic": "NEP 2020",
       "difficulty": "medium",
       "key_facts": [
-        "3 Curtailing Dropout Rates and Ensuring Universal Access to Education at All Levels 10 | 10 Institutional Restructuring and Consolidation 34 | 12 Optimal Learning Environments and Support for Students 38 | 18 Transforming the Regulatory System of Higher Education 46"
+        "By 2030, only educationally sound, multidisciplinary, and integrated teacher education programmes shall be in force."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:26:03.928415"
+      "processed_at": "2026-10-18T16:30:39.010000"
     },
     {
-      "id": "1fb57f46-9b77-49fc-bd73-0917f6e2ec81",
-      "created_at": "2026-10-10T07:29:12.112155",
-      "question_hindi": "एनईपी 2020 पर पीआईबी फैक्टशीट में उल्लिखित लक्ष्यों और आंकड़ों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. राष्ट्रीय शिक्षा नीति 2020 100 प्रतिशत सकल नामांकन अनुपात (जीईआर) के साथ 2030 तक स्कूली शिक्षा की सार्वभौमिक पहुंच पर केंद्रित है।\n2. व्यावसायिक शिक्षा सहित उच्च शिक्षा में सकल नामांकन अनुपात 2035 तक बढ़ाकर 50 प्रतिशत करने का लक्ष्य रखा गया है।\n3. यह नीति 15.5 लाख स्कूलों, लगभग 50,000 उच्च शिक्षण संस्थानों, 28.53 करोड़ छात्रों और 108 लाख शिक्षकों वाली शिक्षा प्रणाली को संबोधित करती है।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "id": "e613ac67-8ec8-4e6a-94d9-98597f58e78a",
+      "created_at": "2026-10-18T16:30:48.000000",
+      "question_hindi": "शिक्षा में वास्तविक परोपकारी भागीदारी पर NEP 2020 का दृष्टिकोण क्या है?",
       "options_hindi": [
-        "1, 2 और 3",
-        "केवल 1 और 3",
-        "केवल 2 और 3",
-        "केवल 1 और 2"
+        "सार्वजनिक शिक्षा वित्तपोषण को पूरी तरह बदलना।",
+        "सभी परोपकारी भागीदारी पर प्रतिबंध लगाना।",
+        "सार्वजनिक खुलासे की आवश्यकताएँ हटाना।",
+        "पर्याप्त सार्वजनिक निवेश, पारदर्शिता और सुशासन के साथ इसे प्रोत्साहित करना।"
       ],
       "option_labels": [
         "A",
@@ -135,33 +283,70 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the targets and statistics mentioned in the PIB Factsheet on NEP 2020:\n\n1. The National Education Policy 2020 focuses on universal reach of school education by 2030 with 100 per cent Gross Enrollment Ratio (GER).\n2. Gross Enrolment ratio in higher education including vocational education is targeted to be increased to 50 per cent by 2035.\n3. The policy addresses an education system encompassing 15.5 lakh schools, about 50,000 higher educational institutions, 28.53 crore students, and 108 lakh teachers.\n\nWhich of the statements given above are correct?",
+      "question_english": "What is NEP 2020's position on genuine philanthropic participation in education?",
       "options_english": [
-        "1, 2 and 3",
-        "1 and 3 only",
-        "2 and 3 only",
-        "1 and 2 only"
+        "Replace public education funding completely.",
+        "Prohibit all philanthropic participation.",
+        "Remove public disclosure requirements.",
+        "Encourage it alongside substantial public investment, transparency and good governance."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The policy supports a strong public system and encourages genuine philanthropic private and community participation.",
+      "explanation_hindi": "नीति मजबूत सार्वजनिक व्यवस्था का समर्थन करती है और वास्तविक परोपकारी निजी तथा सामुदायिक भागीदारी को प्रोत्साहित करती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "substantial investment in a strong, vibrant public education system as well as the encouragement and facilitation of true philanthropic private and community participation"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:48.010000"
+    },
+    {
+      "id": "fe431379-2b69-45e5-8126-03eb07398779",
+      "created_at": "2026-10-18T16:31:29.000000",
+      "question_hindi": "NEP 2020 के कार्यान्वयन के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. कार्यान्वयन चरणबद्ध होना चाहिए क्योंकि बाद के चरण पहले चरणों पर निर्भर हो सकते हैं।\n2. नीति के खंडों को अलग-अलग लागू करना पर्याप्त है क्योंकि नीति मॉड्यूलर है।\n3. मानव, आधारभूत संरचना और वित्तीय संसाधनों का समय पर उपलब्ध होना महत्त्वपूर्ण है।\nसही कथन कौन-से हैं?",
+      "options_hindi": [
+        "केवल 1 और 3।",
+        "केवल 1 और 2।",
+        "केवल 2 और 3।",
+        "1, 2 और 3।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements about NEP 2020 implementation:\n1. Implementation should occur in phases because later steps may depend on earlier steps.\n2. A piecemeal approach is sufficient because the policy is modular.\n3. Timely human, infrastructural and financial resources are critical.\nWhich statements are correct?",
+      "options_english": [
+        "1 and 3 only.",
+        "1 and 2 only.",
+        "2 and 3 only.",
+        "1, 2 and 3."
       ],
       "correct_answer": "a",
-      "explanation_english": "All three statements are correct as per the official PIB Factsheet on NEP 2020.",
-      "explanation_hindi": "एनईपी 2020 पर आधिकारिक पीआईबी फैक्टशीट के अनुसार तीनों कथन सही हैं।",
+      "explanation_english": "NEP calls for phased and comprehensive implementation and rejects a piecemeal approach; it also highlights timely resources.",
+      "explanation_hindi": "NEP चरणबद्ध और व्यापक कार्यान्वयन की माँग करती है, खंडित दृष्टिकोण को अस्वीकार करती है और समय पर संसाधनों पर बल देती है।",
       "topic": "NEP 2020",
-      "difficulty": "medium",
+      "difficulty": "hard",
       "key_facts": [
-        "It can give a new direction to India’s vast education system of 15.5 lakh schools, about 50,000 higher educational institutions, 28.53 crore students and 108 lakh teachers.\n\n4. Key Features of NEP 2020 [1]: School Education\n\n- Focuses on universal reach of school education by 2030 with 100 per cent Gross Enrollment Ratio (GER).\n\n5. Key Features of NEP 2020: Higher Education\n\n- Gross Enrolment ratio in higher education including vocational education to be increased to 50 per cent by 2035."
+        "only a full-fledged implementation, and not a piecemeal one, will ensure that the desired objectives are achieved."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:29:12.112155"
+      "processed_at": "2026-10-18T16:31:29.010000"
     },
     {
-      "id": "f0a23e1c-2f7d-4000-9188-fd966e45b8cb",
-      "created_at": "2026-10-10T07:26:51.341650",
-      "question_hindi": "राष्ट्रीय शिक्षा नीति 2020 के तहत निर्दिष्ट लक्ष्यों और समय-सीमाओं के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. प्री-स्कूल से माध्यमिक स्तर तक शिक्षा के सार्वभौमीकरण का लक्ष्य 2030 तक स्कूली शिक्षा में 100% सकल नामांकन अनुपात (GER) प्राप्त करना है।\n2. उच्च शिक्षा में GER को 2035 तक बढ़ाकर 50% करने का लक्ष्य रखा गया है।\n3. कॉलेजों की संबद्धता प्रणाली को श्रेणीबद्ध स्वायत्तता के साथ 15 वर्षों में समाप्त करने का प्रस्ताव है।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
+      "id": "ab47320e-8bc7-4160-aadc-819eade3fc55",
+      "created_at": "2026-10-18T16:31:34.000000",
+      "question_hindi": "NEP 2020 में कक्षा 3, 5 और 8 में विद्यालयी परीक्षाओं की परिकल्पना क्यों की गई है?",
       "options_hindi": [
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2",
-        "केवल 1 और 3"
+        "उच्च-दाँव परीक्षा के आधार पर विद्यार्थियों की रैंकिंग और निष्कासन करना।",
+        "प्रगति पर नज़र रखने तथा परिणामों का उपयोग विकासात्मक उद्देश्यों, अधिगम परिणामों की निगरानी और विद्यालय व्यवस्था सुधार के लिए करना।",
+        "सभी कक्षा-मूल्यांकन को एक राष्ट्रीय प्रवेश परीक्षा से बदलना।",
+        "अनुप्रयोग के बजाय केवल रटने का मूल्यांकन करना।"
       ],
       "option_labels": [
         "A",
@@ -172,33 +357,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the targets and timelines specified under the National Education Policy 2020:\n\n1. Universalization of education from pre-school to secondary level aims to achieve 100% GER in school education by 2030.\n2. The GER in higher education is targeted to be raised to 50% by 2035.\n3. The college affiliation system is proposed to be phased out in 15 years with graded autonomy.\n\nWhich of the statements given above are correct?",
+      "question_english": "Why are school examinations in Grades 3, 5 and 8 envisaged in NEP 2020?",
       "options_english": [
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only",
-        "1 and 3 only"
+        "To rank and expel students based on high-stakes examinations.",
+        "To track progress and use results for developmental purposes, including monitoring learning outcomes and improving the school system.",
+        "To replace all classroom assessment with a single national entrance test.",
+        "To assess only rote memorization rather than application."
       ],
       "correct_answer": "b",
-      "explanation_english": "All three statements are correct according to the official PIB release on NEP 2020:\n1. Universalization of Education from pre-school to secondary level targets 100% GER in school education by 2030.\n2. GER in higher education is to be raised to 50% by 2035.\n3. The affiliation system is to be phased out in 15 years with graded autonomy to colleges.",
-      "explanation_hindi": "एनईपी 2020 पर पीआईबी की आधिकारिक विज्ञप्ति के अनुसार तीनों कथन सही हैं:\n1. प्री-स्कूल से माध्यमिक स्तर तक शिक्षा के सार्वभौमीकरण का लक्ष्य 2030 तक स्कूली शिक्षा में 100% GER प्राप्त करना है।\n2. उच्च शिक्षा में GER को 2035 तक बढ़ाकर 50% किया जाना है।\n3. कॉलेजों को श्रेणीबद्ध स्वायत्तता देकर संबद्धता प्रणाली को 15 वर्षों में समाप्त किया जाना है।",
+      "explanation_english": "These school examinations are intended to track progress and test basic outcomes, concepts and real-life application; results are for developmental purposes.",
+      "explanation_hindi": "ये परीक्षाएँ प्रगति और बुनियादी परिणामों, अवधारणाओं तथा वास्तविक जीवन में अनुप्रयोग को मापने के लिए हैं; परिणाम विकासात्मक उद्देश्यों हेतु हैं।",
       "topic": "NEP 2020",
       "difficulty": "medium",
       "key_facts": [
-        "New Policy aims for Universalization of Education from pre-school to secondary level with 100 % GER in school education by 2030 ... GER in higher education to be raised to 50 % by 2035 ; 3.5 crore seats to be added in higher education ... Affiliation System to be phased out in 15 years with graded autonomy to colleges"
+        "all students will take school examinations in Grades 3, 5, and 8"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:26:51.341650"
+      "processed_at": "2026-10-18T16:31:34.010000"
     },
     {
-      "id": "8a8c6084-5c7b-4bbe-b559-2a0407d1723b",
-      "created_at": "2026-10-10T07:31:17.521694",
-      "question_hindi": "राष्ट्रीय शिक्षा नीति (NEP) 2020 के तहत उल्लिखित कार्यान्वयन और संरचनात्मक सुधारों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. पूरे भारत में राज्यों और केंद्र शासित प्रदेशों ने कक्षा 1 में प्रवेश के लिए न्यूनतम आयु पहले के पाँच वर्ष की तुलना में छह वर्ष कर दी है।\n2. समझ के साथ पढ़ने और संख्यात्मकता में प्रवीणता के लिए राष्ट्रीय पहल (निपुण भारत - NIPUN Bharat) 2021 में बुनियादी साक्षरता स्तर में सुधार के लिए शुरू की गई थी।\n3. प्रस्तावित एकल उच्च शिक्षा नियामक को विश्वविद्यालय अनुदान आयोग (UGC), अखिल भारतीय तकनीकी शिक्षा परिषद (AICTE) और राष्ट्रीय शिक्षक शिक्षा परिषद (NCTE) के स्थान पर लाने के लिए डिज़ाइन किया गया है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "01a2fc58-2351-493e-98fd-8009eacbe1f9",
+      "created_at": "2026-10-18T16:30:42.000000",
+      "question_hindi": "शिक्षकों के राष्ट्रीय व्यावसायिक मानकों (NPST) के बारे में कथनों पर विचार कीजिए:\n1. NEP NPST का साझा मार्गदर्शक समूह प्रस्तावित करती है।\n2. NPST शिक्षक के करियर के विभिन्न चरणों की अपेक्षाओं से संबंधित है।\n3. NPST विद्यार्थियों की विश्वविद्यालय प्रवेश परीक्षा है।\nसही कथन कौन-से हैं?",
       "options_hindi": [
-        "1, 2 और 3",
-        "केवल 1 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3"
+        "केवल 1।",
+        "केवल 1 और 2।",
+        "केवल 2 और 3।",
+        "1, 2 और 3।"
       ],
       "option_labels": [
         "A",
@@ -209,70 +394,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the implementation and structural reforms outlined under the National Education Policy (NEP) 2020:\n\n1. States and Union territories across India have moved to six years as the minimum age for Class 1 enrollment, compared to five years previously.\n2. The National Initiative for Proficiency in Reading with Understanding and Numeracy (NIPUN) Bharat was launched in 2021 to improve foundational literacy levels.\n3. The proposed single higher education regulator is designed to replace the University Grants Commission (UGC), All India Council for Technical Education (AICTE), and National Council for Teacher Education (NCTE).\n\nWhich of the statements given above are correct?",
+      "question_english": "Consider statements about National Professional Standards for Teachers (NPST):\n1. NEP proposes a common guiding set of NPST.\n2. NPST relate to expectations for teachers at different career stages.\n3. NPST is a university entrance examination for students.\nWhich statements are correct?",
       "options_english": [
-        "1, 2 and 3",
-        "1 and 3 only",
-        "1 and 2 only",
-        "2 and 3 only"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "All three statements are correct based on the implementation status of NEP 2020: (1) States and UTs moved to 6 years as the minimum age for Class 1 enrollment; (2) NIPUN Bharat was launched in 2021 for foundational literacy; (3) The envisioned higher education umbrella regulator is meant to replace UGC, AICTE, and NCTE.",
-      "explanation_hindi": "NEP 2020 की कार्यान्वयन स्थिति के अनुसार तीनों कथन सही हैं: (1) राज्यों और केंद्र शासित प्रदेशों ने कक्षा 1 में प्रवेश के लिए न्यूनतम आयु 6 वर्ष कर दी है; (2) बुनियादी साक्षरता में सुधार हेतु 2021 में निपुण भारत शुरू किया गया था; (3) परिकल्पित उच्च शिक्षा नियामक UGC, AICTE और NCTE को प्रतिस्थापित करने के लिए है।",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "Across the country, states and Union territories have moved to six years as the minimum age for Class 1 enrollment, compared to five before. ... The National Initiative for Proficiency in Reading with Understanding and Numeracy (NIPUN) Bharat initiative was launched in 2021 to improve foundational literacy levels. ... But the higher education regulator meant to replace the University Grants Commission (UGC), All India Council for Technical Education (AICTE) and the National Council for Teachers Education (NCTE) has been pushed back again."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:31:17.521694"
-    },
-    {
-      "id": "df5b5b08-1272-4739-88cd-2b8a95f89b25",
-      "created_at": "2026-10-10T07:33:43.131037",
-      "question_hindi": "राष्ट्रीय शिक्षा नीति 2020 के दस्तावेज़ में अध्याय संख्या और उनके आधिकारिक शीर्षक के संबंध में निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "अध्याय 13 – Motivated, Energized and Capable Faculty",
-        "अध्याय 24 – Technology Use and Integration",
-        "अध्याय 5 – Teachers",
-        "अध्याय 19 – Effective Governance and Leadership for Higher Education Institutions"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding Chapter Numbers and their Official Titles in the National Education Policy 2020 document is NOT correctly matched?",
-      "options_english": [
-        "Chapter 13 – Motivated, Energized and Capable Faculty",
-        "Chapter 24 – Technology Use and Integration",
-        "Chapter 5 – Teachers",
-        "Chapter 19 – Effective Governance and Leadership for Higher Education Institutions"
+        "1 only.",
+        "1 and 2 only.",
+        "2 and 3 only.",
+        "1, 2 and 3."
       ],
       "correct_answer": "b",
-      "explanation_english": "In the official NEP 2020 document, Chapter 24 is titled 'Online and Digital Education: Ensuring Equitable Use of Technology'. Chapter 23 is titled 'Technology Use and Integration'. Therefore, pair (d) is NOT correctly matched.",
-      "explanation_hindi": "एनईपी 2020 के आधिकारिक दस्तावेज़ में, अध्याय 24 का शीर्षक 'Online and Digital Education: Ensuring Equitable Use of Technology' है। जबकि अध्याय 23 का शीर्षक 'Technology Use and Integration' है। अतः युग्म (d) सही सुमेलित नहीं है।",
+      "explanation_english": "NPST concerns teachers' professional standards, not student admissions.",
+      "explanation_hindi": "NPST शिक्षकों के व्यावसायिक मानकों से संबंधित है, विद्यार्थी प्रवेश से नहीं।",
       "topic": "NEP 2020",
-      "difficulty": "medium",
+      "difficulty": "hard",
       "key_facts": [
-        "23 Technology Use and Integration 56\n24 Online and Digital Education: Ensuring Equitable Use of Technology 58"
+        "A common guiding set of National Professional Standards for Teachers (NPST)"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:33:43.131037"
+      "processed_at": "2026-10-18T16:30:42.010000"
     },
     {
-      "id": "1483c326-4e45-47d6-8891-3286450811b5",
-      "created_at": "2026-10-10T07:24:58.077434",
-      "question_hindi": "स्कूली शिक्षा मानकों और एनईपी कार्यान्वयन के हालिया अद्यतनों के संबंध में निम्नलिखित में से कौन-सा युग्म सही सुमेलित नहीं है?",
+      "id": "dc6a5466-ea59-429b-a835-95eec81fab34",
+      "created_at": "2026-10-18T16:31:39.000000",
+      "question_hindi": "NEP 2020 के कार्यान्वयन का नेतृत्व करने वाले निकायों में स्पष्ट रूप से कौन-सा समूह शामिल है?",
       "options_hindi": [
-        "परख 2024 सर्वेक्षण में कक्षा 3 का औसत गणित स्कोर: 60%",
-        "राज्यों/केंद्र शासित प्रदेशों में कक्षा 1 में नामांकन हेतु न्यूनतम आयु: छह वर्ष",
-        "अपार (APAAR - ऑटोमेटेड परमानेंट एकेडमिक अकाउंट रजिस्ट्री) आईडी: विद्यार्थियों के लिए 16-अंकीय विशिष्ट कोड",
-        "जादुई पिटारा शिक्षण कार्यक्रम का लक्षित आयु वर्ग: 3 से 8 वर्ष के बच्चे"
+        "केवल वित्त मंत्रालय और निजी प्रकाशक।",
+        "केवल विद्यालय प्रधानाचार्य, सरकारों या बोर्डों की भूमिका के बिना।",
+        "MHRD, CABE, केंद्र और राज्य सरकारें, शिक्षा-संबंधी मंत्रालय, बोर्ड, NTA, NCERT, SCERT, विद्यालय और HEI।",
+        "केवल NTA और विश्वविद्यालय प्रत्यायन एजेंसियाँ।"
       ],
       "option_labels": [
         "A",
@@ -283,33 +431,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which of the following pairs regarding school education parameters and recent NEP implementation updates is NOT correctly matched?",
+      "question_english": "Which group is explicitly listed among the bodies involved in leading NEP 2020 implementation?",
       "options_english": [
-        "Average mathematics score of Class 3 in PARAKH 2024 survey: 60%",
-        "Minimum age for Class 1 enrollment across states/UTs: Six years",
-        "APAAR (Automated Permanent Academic Account Registry) ID: Unique 16-digit code for students",
-        "Target age group for Jaadui Pitara learning programme: Children aged 3 to 8 years"
+        "Only the Ministry of Finance and private publishers.",
+        "Only school principals, with no role for governments or boards.",
+        "MHRD, CABE, Union and State Governments, education-related Ministries, Boards, NTA, NCERT, SCERTs, schools and HEIs.",
+        "Only NTA and the university accreditation agencies."
       ],
       "correct_answer": "c",
-      "explanation_english": "Pair 4 is NOT correctly matched because APAAR (Automated Permanent Academic Account Registry) is a unique 12-digit code for students, not a 16-digit code.",
-      "explanation_hindi": "युग्म 4 सही सुमेलित नहीं है क्योंकि अपार (APAAR - ऑटोमेटेड परमानेंट एकेडमिक अकाउंट रजिस्ट्री) विद्यार्थियों के लिए एक विशिष्ट 12-अंकीय कोड है, 16-अंकीय कोड नहीं।",
+      "explanation_english": "NEP lists multiple bodies and institutions for synchronized implementation with timelines and reviews.",
+      "explanation_hindi": "NEP समय-सीमा और समीक्षा सहित समन्वित कार्यान्वयन के लिए अनेक निकायों और संस्थानों को सूचीबद्ध करती है।",
       "topic": "NEP 2020",
       "difficulty": "medium",
       "key_facts": [
-        "More than 20 crore APAAR (Automated Permanent Academic Account Registry) IDs, a unique 12-digit code for students, were issued though the rollout drew criticism over privacy concerns."
+        "implementation of this Policy will be led by various bodies including MHRD, CABE, Union and State Governments, education-related Ministries, State Departments of Education, Boards, NTA, the regulatory bodies of school and higher education, NCERT, SCERTs, schools, and HEIs"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:24:58.077434"
+      "processed_at": "2026-10-18T16:31:39.010000"
     },
     {
-      "id": "3b01110d-f77b-4e35-866c-07e5913d4e74",
-      "created_at": "2026-10-10T07:25:36.650039",
-      "question_hindi": "सरकार द्वारा घोषित NEP 2020 के प्रमुख लक्ष्यों और सुधारों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. NEP 2020 का उद्देश्य स्कूल से बाहर (आउट ऑफ स्कूल) 2 करोड़ बच्चों को मुख्यधारा में वापस लाना है।\n2. यह 34 वर्ष पुरानी राष्ट्रीय शिक्षा नीति (NPE), 1986 का स्थान लेती है।\n3. उच्च शिक्षा संस्थानों में 3.5 करोड़ नई सीटें जोड़ी जाएंगी।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "7edc1c71-c244-489f-95be-442f5c8fc039",
+      "created_at": "2026-10-18T16:30:41.000000",
+      "question_hindi": "शिक्षक भर्ती में कक्षा-प्रदर्शन या साक्षात्कार का उद्देश्य क्या है?",
       "options_hindi": [
-        "1, 2 और 3",
-        "केवल 1 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3"
+        "शिक्षण-प्रेरणा और जहाँ प्रासंगिक हो, स्थानीय भाषाओं में सहजता तथा दक्षता का आकलन करना।",
+        "सभी शैक्षणिक योग्यताओं का स्थान लेना।",
+        "केवल उत्तर-कुंजियों से परिचितता जाँचना।",
+        "निजी विद्यालयों के शिक्षकों को योग्यता-जाँच से छूट देना।"
       ],
       "option_labels": [
         "A",
@@ -320,33 +468,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the key targets and reforms of NEP 2020 as announced by the Government:\n\n1. NEP 2020 aims to bring 2 crore out-of-school children back into the mainstream.\n2. It replaces the thirty-four-year-old National Policy on Education (NPE), 1986.\n3. An additional 3.5 crore seats will be added in higher education institutions.\n\nWhich of the statements given above are correct?",
+      "question_english": "What is the purpose of a classroom demonstration or interview in teacher hiring?",
       "options_english": [
-        "1, 2 and 3",
-        "1 and 3 only",
-        "1 and 2 only",
-        "2 and 3 only"
+        "To gauge teaching motivation and, where relevant, comfort and proficiency in local languages.",
+        "To replace all academic qualifications.",
+        "To assess only familiarity with answer keys.",
+        "To exempt private-school teachers from qualification checks."
       ],
       "correct_answer": "a",
-      "explanation_english": "All three statements are correct based on the official Cabinet approval release. NEP 2020 aims to bring 2 crore out-of-school children back into mainstream education, replaces the 34-year-old NPE 1986, and plans to add 3.5 crore seats in higher education to raise GER to 50% by 2035.",
-      "explanation_hindi": "कैबिनेट अनुमोदन की आधिकारिक विज्ञप्ति के अनुसार तीनों कथन सही हैं। NEP 2020 का लक्ष्य 2 करोड़ स्कूल से बाहर बच्चों को मुख्यधारा में लाना है, यह 34 वर्ष पुरानी NPE 1986 की जगह लेती है, तथा वर्ष 2035 तक उच्च शिक्षा में सकल नामांकन अनुपात (GER) 50% करने हेतु 3.5 करोड़ सीटें जोड़ने का लक्ष्य रखा गया है।",
+      "explanation_english": "The policy makes demonstration/interview integral to hiring and links it to motivation and local-language proficiency.",
+      "explanation_hindi": "नीति प्रदर्शन/साक्षात्कार को भर्ती का अभिन्न अंग बनाती है और इसे प्रेरणा तथा स्थानीय भाषा-दक्षता से जोड़ती है।",
       "topic": "NEP 2020",
       "difficulty": "medium",
       "key_facts": [
-        "NEP 2020 will bring 2 crore out of school children back into the main stream\n...\nThis is the first education policy of the 21 st century and replaces the thirty-four year old National Policy on Education (NPE), 1986.\n...\nGER in higher education to be raised to 50 % by 2035 ; 3.5 crore seats to be added in higher education"
+        "a classroom demonstration or interview will become an integral part of teacher hiring at schools and school complexes"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:25:36.650039"
+      "processed_at": "2026-10-18T16:30:41.010000"
     },
     {
-      "id": "63722f54-7e8b-48a6-b573-52aebd9c9bfb",
-      "created_at": "2026-10-10T07:31:38.052864",
-      "question_hindi": "राष्ट्रीय शिक्षा नीति (NEP) 2020 के तहत प्रस्तावित संस्थागत और शासन तंत्र के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. इसमें एक 'इंडियन इंस्टीट्यूट ऑफ ट्रांसलेशन एंड इंटरप्रिटेशन' (IITI) स्थापित करने का प्रस्ताव है।\n2. इसमें कॉलेजों की संबद्धता प्रणाली को क्रमिक स्वायत्तता के साथ 15 वर्षों में समाप्त करने की परिकल्पना की गई है।\n3. चार अलग-अलग कार्यक्षेत्रों (verticals) वाले एकल नियामक के माध्यम से उच्च शिक्षा के 'हल्के लेकिन सख्त' (light but tight) नियमन की परिकल्पना की गई है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "03955f65-4840-4cbc-af2b-c9fffec6f378",
+      "created_at": "2026-10-18T16:31:15.000000",
+      "question_hindi": "प्रौढ़ शिक्षा तक पहुँच बढ़ाने के लिए कौन-सी सुविधा-उपयोग व्यवस्था विशेष रूप से प्रस्तावित है?",
       "options_hindi": [
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 3",
-        "केवल 1 और 2"
+        "केवल नियमित कक्षा समय में विश्वविद्यालय प्रयोगशालाओं का उपयोग करना।",
+        "सार्वजनिक पुस्तकालयों को गैर-विद्यार्थियों के लिए बंद करना।",
+        "विद्यालय समय के बाद और सप्ताहांत में विद्यालयों/विद्यालय परिसरों तथा सार्वजनिक पुस्तकालयों का उपयोग करना।",
+        "प्रत्येक प्रौढ़ शिक्षार्थी के लिए अलग आवासीय परिसर बनाना।"
       ],
       "option_labels": [
         "A",
@@ -357,33 +505,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the institutional and governance mechanisms proposed under the National Education Policy (NEP) 2020:\n\n1. It proposes an Indian Institute of Translation and Interpretation to be set up.\n2. It envisions the affiliation system of colleges to be phased out in 15 years with graded autonomy.\n3. The regulation of higher education is envisioned as 'light but tight' through a single regulator with four separate verticals.\n\nWhich of the statements given above are correct?",
+      "question_english": "Which facility-use arrangement is specifically proposed to expand adult education access?",
       "options_english": [
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 3 only",
-        "1 and 2 only"
+        "Use only university laboratories during regular class hours.",
+        "Close public libraries to non-students.",
+        "Use schools or school complexes after school hours and on weekends, as well as public libraries.",
+        "Build a separate residential campus for every adult learner."
       ],
-      "correct_answer": "b",
-      "explanation_english": "All three statements are correct as per the official PIB release on NEP 2020: (1) An Indian Institute of Translation and Interpretation is to be set up, (2) The affiliation system is to be phased out in 15 years with graded autonomy to colleges, and (3) Light but tight regulation of higher education with a single regulator comprising four separate verticals is proposed.",
-      "explanation_hindi": "NEP 2020 पर आधिकारिक PIB प्रेस विज्ञप्ति के अनुसार तीनों कथन सही हैं: (1) इंडियन इंस्टीट्यूट ऑफ ट्रांसलेशन एंड इंटरप्रिटेशन स्थापित किया जाएगा, (2) कॉलेजों को श्रेणीबद्ध स्वायत्तता देकर संबद्धता प्रणाली को 15 वर्षों में समाप्त किया जाएगा, और (3) चार अलग-अलग कार्यक्षेत्रों (verticals) वाले एकल नियामक के माध्यम से उच्च शिक्षा के 'हल्के लेकिन सख्त' (light but tight) नियमन का प्रस्ताव है।",
+      "correct_answer": "c",
+      "explanation_english": "The policy recommends using existing public learning spaces after hours to make infrastructure sharing efficient.",
+      "explanation_hindi": "नीति उपलब्ध सार्वजनिक अधिगम स्थलों का समय के बाद उपयोग सुझाती है ताकि संसाधन साझा करना दक्ष हो।",
       "topic": "NEP 2020",
       "difficulty": "medium",
       "key_facts": [
-        "Light but Tight Regulation of Higher Education, single regulator with four separate verticals for different functions\n\nAffiliation System to be phased out in 15 years with graded autonomy to colleges\n\nNew Policy promotes Multilingualism in both schools and HEs; National Institute for Pali, Persian and Prakrit , Indian Institute of Translation and Interpretation to be set up"
+        "use schools/ school complexes after school hours and on weekends and public library spaces for adult education courses"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:31:38.052864"
+      "processed_at": "2026-10-18T16:31:15.010000"
     },
     {
-      "id": "6bb3236b-86cb-4f19-81ee-19dd8b378f64",
-      "created_at": "2026-10-10T07:25:36.650039",
-      "question_hindi": "NEP 2020 की नई 5+3+3+4 स्कूली पाठ्यचर्या संरचना के तहत, किस पूर्ववर्ती रूप से अनावरित (uncovered) आयु वर्ग को सीधे स्कूली पाठ्यचर्या के दायरे में लाया गया है?",
+      "id": "0841dff1-2acd-4b5e-988d-5e9d22640dd0",
+      "created_at": "2026-10-18T16:30:13.000000",
+      "question_hindi": "FLN के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n1. पढ़ना, लिखना और बुनियादी अंकगणित आगे की स्कूली शिक्षा तथा आजीवन अधिगम की पूर्व-आवश्यकताएँ हैं।\n2. सार्वभौमिक FLN शिक्षा-व्यवस्था की सर्वोच्च प्राथमिकताओं में है।\n3. FLN केवल कक्षा 1 में पढ़ाया जाए और बाद की कक्षाओं में न दोहराया जाए।\nसही कथन कौन-से हैं?",
       "options_hindi": [
-        "0 से 3 वर्ष",
-        "3 से 6 वर्ष",
-        "6 से 8 वर्ष",
-        "8 से 11 वर्ष"
+        "केवल 1 और 2।",
+        "केवल 1 और 3।",
+        "केवल 2 और 3।",
+        "1, 2 और 3।"
       ],
       "option_labels": [
         "A",
@@ -394,33 +542,70 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Under the new 5+3+3+4 school curricular structure of NEP 2020, which previously uncovered age group has been brought directly under the domain of the school curriculum?",
+      "question_english": "Consider the following statements about FLN:\n1. Reading, writing and basic arithmetic are prerequisites for future schooling and lifelong learning.\n2. Universal FLN is a top priority of the education system.\n3. FLN should be addressed only in Grade 1 and not in later grades.\nWhich statements are correct?",
       "options_english": [
-        "0 to 3 years",
-        "3 to 6 years",
-        "6 to 8 years",
-        "8 to 11 years"
+        "1 and 2 only.",
+        "1 and 3 only.",
+        "2 and 3 only.",
+        "1, 2 and 3."
       ],
-      "correct_answer": "b",
-      "explanation_english": "The new 5+3+3+4 structure includes 3 years of Anganwadi/pre-schooling, thereby bringing the hitherto uncovered age group of 3-6 years under the school curriculum framework.",
-      "explanation_hindi": "नई 5+3+3+4 संरचना में 3 वर्ष की आंगनवाड़ी/प्री-स्कूल शिक्षा शामिल है, जिससे 3-6 वर्ष का पूर्ववर्ती अप्रयुक्त आयु वर्ग सीधे स्कूली पाठ्यचर्या के अंतर्गत आ गया है।",
+      "correct_answer": "a",
+      "explanation_english": "The policy calls FLN an indispensable prerequisite and continues its emphasis beyond the initial grades.",
+      "explanation_hindi": "नीति FLN को अपरिहार्य पूर्व-आवश्यकता कहती है और प्रारंभिक कक्षाओं से आगे भी इस पर बल देती है।",
+      "topic": "NEP 2020",
+      "difficulty": "hard",
+      "key_facts": [
+        "The ability to read and write, and perform basic operations with numbers, is a necessary foundation and an indispensable prerequisite for all future schooling and lifelong learning."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:13.010000"
+    },
+    {
+      "id": "e88fe69f-eefd-46e2-970c-7982af2210ea",
+      "created_at": "2026-10-18T16:30:09.000000",
+      "question_hindi": "नीति के अनुसार प्राथमिक विद्यालय में सार्वभौमिक आधारभूत साक्षरता और संख्यात्मक दक्षता कब तक प्राप्त की जानी चाहिए?",
+      "options_hindi": [
+        "2025 तक।",
+        "2030 तक।",
+        "2035 तक।",
+        "2040 तक।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "By when should universal foundational literacy and numeracy be achieved in primary school, according to the policy?",
+      "options_english": [
+        "By 2025.",
+        "By 2030.",
+        "By 2035.",
+        "By 2040."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "NEP makes FLN the most urgent learning priority and sets 2025 as the target in this text.",
+      "explanation_hindi": "NEP FLN को सर्वोच्च तात्कालिक अधिगम प्राथमिकता बनाती है और इस पाठ में 2025 का लक्ष्य देती है।",
       "topic": "NEP 2020",
       "difficulty": "easy",
       "key_facts": [
-        "With emphasis on Early Childhood Care and Education, the 10+2 structure of school curricula is to be replaced by a 5+3+3+4 curricular structure corresponding to ages 3-8, 8-11, 11-14, and 14-18 years respectively. This will bring the hitherto uncovered age group of 3-6 years under school curriculum"
+        "The highest priority of the education system will be to achieve universal foundational literacy and numeracy in primary school by 2025."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:25:36.650039"
+      "processed_at": "2026-10-18T16:30:09.010000"
     },
     {
-      "id": "05826d0c-513f-4fdf-95d5-91e9eb4d644d",
-      "created_at": "2026-10-10T07:31:17.521694",
-      "question_hindi": "राष्ट्रीय शिक्षा नीति (NEP) 2020 के तहत रिपोर्ट किए गए सर्वेक्षण निष्कर्षों और डिजिटल रजिस्ट्री पहलों के आधार पर निम्नलिखित कथनों पर विचार कीजिए:\n\n1. राष्ट्रव्यापी परख राष्ट्रीय सर्वेक्षण (PARAKH Rashtriya Sarvekshan) 2024 में, कक्षा 3 के छात्रों ने भाषा कौशल में औसतन 64% और गणित में 60% अंक प्राप्त किए।\n2. कक्षा 3 के लिए परख राष्ट्रीय सर्वेक्षण 2024 के स्कोर 2021 की तुलना में सुधार दर्शाते हैं, लेकिन महामारी से पूर्व के 2017 के स्तर से नीचे रहे।\n3. ऑटोमेटेड परमानेंट एकेडमिक अकाउंट रजिस्ट्री (APAAR) छात्रों के लिए एक विशिष्ट 12-अंकीय कोड है, जिसके तहत 20 करोड़ से अधिक आईडी जारी की गईं।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "346ab4ba-4a64-476f-8206-9b56c8b6ea4b",
+      "created_at": "2026-10-18T16:31:01.000000",
+      "question_hindi": "प्रौढ़ शिक्षा के किस कार्यक्रम-प्रकार में वित्तीय साक्षरता, डिजिटल साक्षरता, स्वास्थ्य-जागरूकता, बाल-देखभाल और परिवार कल्याण शामिल हैं?",
       "options_hindi": [
-        "केवल 2 और 3",
-        "केवल 1 और 2",
-        "केवल 1 और 3",
-        "1, 2 और 3"
+        "महत्त्वपूर्ण जीवन-कौशल।",
+        "केवल आधारभूत साक्षरता और संख्यात्मक दक्षता।",
+        "केवल व्यावसायिक कौशल विकास।",
+        "केवल सतत शिक्षा।"
       ],
       "option_labels": [
         "A",
@@ -431,181 +616,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements based on the survey findings and digital registry initiatives reported under the National Education Policy (NEP) 2020:\n\n1. In the nationwide PARAKH Rashtriya Sarvekshan 2024, Class 3 students scored an average of 64% in language skills and 60% in mathematics.\n2. The PARAKH Rashtriya Sarvekshan 2024 scores for Class 3 marked an improvement over 2021, but remained below the pre-pandemic 2017 levels.\n3. The Automated Permanent Academic Account Registry (APAAR) is a unique 12-digit code for students, under which more than 20 crore IDs were issued.\n\nWhich of the statements given above are correct?",
+      "question_english": "Which adult-education programme type includes financial literacy, digital literacy, health awareness, child care and family welfare?",
       "options_english": [
-        "2 and 3 only",
-        "1 and 2 only",
-        "1 and 3 only",
-        "1, 2 and 3"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "According to the report card on NEP 2020, PARAKH Rashtriya Sarvekshan 2024 tested 2.1 million students across India and found that Class 3 students scored an average of 64% in language skills and 60% in mathematics. While this marked an improvement over 2021 (62% and 57%), it remained below pre-pandemic 2017 levels (66.7% in language and 63% in mathematics). Furthermore, APAAR (Automated Permanent Academic Account Registry) is a unique 12-digit code for students, and more than 20 crore IDs have been issued. Hence, all statements 1, 2, and 3 are correct.",
-      "explanation_hindi": "एनईपी 2020 के रिपोर्ट कार्ड के अनुसार, परख राष्ट्रीय सर्वेक्षण 2024 में पूरे भारत में 2.1 मिलियन छात्रों का परीक्षण किया गया और पाया गया कि कक्षा 3 के छात्रों ने भाषा कौशल में औसतन 64% और गणित में 60% अंक प्राप्त किए। यद्यपि यह 2021 (62% और 57%) की तुलना में सुधार था, फिर भी यह महामारी-पूर्व 2017 के स्तर (भाषा में 66.7% और गणित में 63%) से नीचे रहा। इसके अतिरिक्त, APAAR (ऑटोमेटेड परमानेंट एकेडमिक अकाउंट रजिस्ट्री) छात्रों के लिए एक विशिष्ट 12-अंकीय कोड है, और इसके तहत 20 करोड़ से अधिक आईडी जारी की गई हैं। अतः कथन 1, 2 और 3 सभी सही हैं।",
-      "topic": "NEP 2020",
-      "difficulty": "hard",
-      "key_facts": [
-        "It found that Class 3 students scored an average of 64% in language skills, and 60% in mathematics. This marked an improvement over 2021, when the corresponding scores were 62% and 57%, but remained below the pre-pandemic 2017 levels of 66.7% in language and 63% in mathematics. Digital records scaled faster than almost any other parameter. More than 20 crore APAAR (Automated Permanent Academic Account Registry) IDs, a unique 12-digit code for students, were issued"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:31:17.521694"
-    },
-    {
-      "id": "7f3ca19c-d6d4-4b41-9bf4-7663458ebbf4",
-      "created_at": "2026-10-10T07:29:12.112155",
-      "question_hindi": "राष्ट्रीय शिक्षा नीति 2020 दस्तावेज़ में अध्याय संख्या और उनके आधिकारिक शीर्षकों के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (अध्याय संख्या)\nA. अध्याय 8\nB. अध्याय 10\nC. अध्याय 18\nD. अध्याय 24\n\nसूची II (आधिकारिक अध्याय शीर्षक)\n1. संस्थागत पुनर्गठन और समेकन\n2. स्कूली शिक्षा के लिए मानक-निर्धारण और प्रत्यायन\n3. ऑनलाइन और डिजिटल शिक्षा: प्रौद्योगिकी का न्यायसंगत उपयोग सुनिश्चित करना\n4. उच्चतर शिक्षा की नियामक प्रणाली का कायाकल्प\n\nसही कूट का चयन कीजिए:",
-      "options_hindi": [
-        "A-2, B-4, C-1, D-3",
-        "A-1, B-2, C-3, D-4",
-        "A-4, B-1, C-2, D-3",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List I with List II regarding the Chapter Numbers and their official titles in the National Education Policy 2020 document:\n\nList I (Chapter Number)\nA. Chapter 8\nB. Chapter 10\nC. Chapter 18\nD. Chapter 24\n\nList II (Official Chapter Title)\n1. Institutional Restructuring and Consolidation\n2. Standard-setting and Accreditation for School Education\n3. Online and Digital Education: Ensuring Equitable Use of Technology\n4. Transforming the Regulatory System of Higher Education\n\nSelect the correct code:",
-      "options_english": [
-        "A-2, B-4, C-1, D-3",
-        "A-1, B-2, C-3, D-4",
-        "A-4, B-1, C-2, D-3",
-        "A-2, B-1, C-4, D-3"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "As per the Table of Contents of NEP 2020:\n- Chapter 8: Standard-setting and Accreditation for School Education\n- Chapter 10: Institutional Restructuring and Consolidation\n- Chapter 18: Transforming the Regulatory System of Higher Education\n- Chapter 24: Online and Digital Education: Ensuring Equitable Use of Technology.",
-      "explanation_hindi": "एनईपी 2020 की विषय-सूची के अनुसार:\n- अध्याय 8: Standard-setting and Accreditation for School Education\n- अध्याय 10: Institutional Restructuring and Consolidation\n- अध्याय 18: Transforming the Regulatory System of Higher Education\n- अध्याय 24: Online and Digital Education: Ensuring Equitable Use of Technology.",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "8 Standard-setting and Accreditation for School Education 30\nPART II. HIGHER EDUCATION\n9 Quality Universities and Colleges: A New and Forward-looking Vision\nfor India’s Higher Education System\n33\n10 Institutional Restructuring and Consolidation 34\n11 Towards a More Holistic and Multidisciplinary Education 36\n12 Optimal Learning Environments and Support for Students 38\n13 Motivated, Energized and Capable Faculty 40\n14 Equity and Inclusion in Higher Education 41\n15 Teacher Education 42\n16 Re-imagining Vocational Education 43\n17 Catalyzing Quality Academic Research in all Fields through a New\nNational Research Foundation\n45\n18 Transforming the Regulatory System of Higher Education 46\nNational Education Policy 2020\n2\n19 Effective Governance and Leadership for Higher Education Institutions 49\nPART III. OTHER KEY AREAS OF FOCUS\n20 Professional Education 50\n21 Adult Education and Life Long Learning 51\n22 Promotion of Indian Languages, Arts and Culture 53\n23 Technology Use and Integration 56\n24 Online and Digital Education: Ensuring Equitable Use of Technology 58"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:29:12.112155"
-    },
-    {
-      "id": "6177c21d-d50b-4d8c-86e9-e2e4f9724aac",
-      "created_at": "2026-10-10T07:26:51.341650",
-      "question_hindi": "राष्ट्रीय शिक्षा नीति 2020 दस्तावेज़ में अध्याय संख्या और उनके आधिकारिक शीर्षकों के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (अध्याय संख्या)\nA. अध्याय 1\nB. अध्याय 4\nC. अध्याय 14\nD. अध्याय 24\n\nसूची II (आधिकारिक अध्याय शीर्षक)\n1. प्रारंभिक बाल्यावस्था देखभाल और शिक्षा: सीखने की आधारशिला\n2. स्कूलों में पाठ्यक्रम और शिक्षाशास्त्र: अधिगम समग्र, एकीकृत, आनंदप्रद और रुचिकर होना चाहिए\n3. उच्चतर शिक्षा में समता और समावेशन\n4. ऑनलाइन और डिजिटल शिक्षा: प्रौद्योगिकी का न्यायसंगत उपयोग सुनिश्चित करना\n\nसही कूट का चयन कीजिए:",
-      "options_hindi": [
-        "A-1, B-2, C-3, D-4",
-        "A-1, B-4, C-3, D-2",
-        "A-2, B-1, C-4, D-3",
-        "A-3, B-2, C-1, D-4"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List I with List II regarding the chapter numbers and their official titles in the National Education Policy 2020 document:\n\nList I (Chapter Number)\nA. Chapter 1\nB. Chapter 4\nC. Chapter 14\nD. Chapter 24\n\nList II (Official Chapter Title)\n1. Early Childhood Care and Education: The Foundation of Learning\n2. Curriculum and Pedagogy in Schools: Learning Should be Holistic, Integrated, Enjoyable and Engaging\n3. Equity and Inclusion in Higher Education\n4. Online and Digital Education: Ensuring Equitable Use of Technology\n\nSelect the correct code:",
-      "options_english": [
-        "A-1, B-2, C-3, D-4",
-        "A-1, B-4, C-3, D-2",
-        "A-2, B-1, C-4, D-3",
-        "A-3, B-2, C-1, D-4"
+        "Critical life skills.",
+        "Foundational literacy and numeracy only.",
+        "Vocational skills development only.",
+        "Continuing education only."
       ],
       "correct_answer": "a",
-      "explanation_english": "According to the official Table of Contents of NEP 2020:\n- Chapter 1 is 'Early Childhood Care and Education: The Foundation of Learning'\n- Chapter 4 is 'Curriculum and Pedagogy in Schools: Learning Should be Holistic, Integrated, Enjoyable and Engaging'\n- Chapter 14 is 'Equity and Inclusion in Higher Education'\n- Chapter 24 is 'Online and Digital Education: Ensuring Equitable Use of Technology'.",
-      "explanation_hindi": "एनईपी 2020 की आधिकारिक विषय-सूची के अनुसार:\n- अध्याय 1 'Early Childhood Care and Education: The Foundation of Learning' है।\n- अध्याय 4 'Curriculum and Pedagogy in Schools: Learning Should be Holistic, Integrated, Enjoyable and Engaging' है।\n- अध्याय 14 'Equity and Inclusion in Higher Education' है।\n- अध्याय 24 'Online and Digital Education: Ensuring Equitable Use of Technology' है।",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "1 Early Childhood Care and Education: The Foundation of Learning 7\n...\n4 Curriculum and Pedagogy in Schools: Learning Should be Holistic, Integrated, Enjoyable and Engaging 11\n...\n14 Equity and Inclusion in Higher Education 41\n...\n24 Online and Digital Education: Ensuring Equitable Use of Technology 58"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:26:51.341650"
-    },
-    {
-      "id": "6fd25870-f758-4521-ba80-23c89e38e8f6",
-      "created_at": "2026-10-10T07:34:05.326604",
-      "question_hindi": "NEP 2020 की कैबिनेट स्वीकृति में उल्लिखित मूल्यांकन और उच्च शिक्षा में लचीलेपन के सुधारों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. मूल्यांकन सुधारों में सीखने के परिणामों को प्राप्त करने के लिए छात्र की प्रगति को ट्रैक करने हेतु 360 डिग्री समग्र प्रगति कार्ड (360 degree Holistic Progress Card) शामिल है।\n2. उच्च शिक्षा पाठ्यक्रम में विषयों का लचीलापन होगा और उपयुक्त प्रमाणीकरण के साथ बहु-प्रवेश/निकास (Multiple Entry / Exit) की अनुमति होगी।\n3. एक मजबूत अनुसंधान संस्कृति को बढ़ावा देने के लिए नेशनल रिसर्च फाउंडेशन (National Research Foundation) की स्थापना की जानी है।\n\nऊपर दिए गए कथनों में से कौन-से सही हैं?",
-      "options_hindi": [
-        "केवल 1 और 2",
-        "केवल 1 और 3",
-        "1, 2 और 3",
-        "केवल 2 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements regarding the assessment and higher education flexibility reforms highlighted in the Cabinet approval of NEP 2020:\n\n1. Assessment reforms include tracking student progress for achieving learning outcomes with a 360-degree Holistic Progress Card.\n2. Higher education curriculum will feature flexibility of subjects along with multiple entry/exit options allowed with appropriate certification.\n3. A National Research Foundation is to be established to foster a strong research culture.\n\nWhich of the statements given above are correct?",
-      "options_english": [
-        "1 and 2 only",
-        "1 and 3 only",
-        "1, 2 and 3",
-        "2 and 3 only"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "All three statements represent official reform points in the NEP 2020 PIB summary: assessment reforms include a 360 degree Holistic Progress Card; higher education curriculum allows flexibility of subjects with multiple entry and exit; and the National Research Foundation is to be established to foster a research culture.",
-      "explanation_hindi": "तीनों कथन NEP 2020 PIB सारांश के आधिकारिक सुधार बिंदु हैं: मूल्यांकन सुधारों में 360 डिग्री समग्र प्रगति कार्ड शामिल है; उच्च शिक्षा पाठ्यक्रम विषयों के लचीलेपन और बहु-प्रवेश/निकास की अनुमति देता है; और अनुसंधान संस्कृति को बढ़ावा देने के लिए नेशनल रिसर्च फाउंडेशन की स्थापना की जानी है।",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "Assessment reforms with 360 degree Holistic Progress Card, tracking Student Progress for achieving Learning Outcomes\n\nGER in higher education to be raised to 50 % by 2035 ; 3.5 crore seats to be added in higher education\n\nHigher Education curriculum to have Flexibility of Subjects\n\n Multiple Entry / Exit to be allowed with appropriate certification\n\nAcademic Bank of Credits to be established to facilitate Transfer of Credits\n\nNational Research Foundation to be established to foster a strong research culture"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:34:05.326604"
-    },
-    {
-      "id": "b60a6532-1b11-47b6-bf09-415e90e37e2e",
-      "created_at": "2026-10-10T07:24:58.077434",
-      "question_hindi": "आधिकारिक राष्ट्रीय शिक्षा नीति 2020 दस्तावेज में अध्यायों और उनके शीर्षकों के संबंध में सूची I को सूची II से सुमेलित कीजिए:\n\nसूची I (अध्याय संख्या)\nA. अध्याय 7\nB. अध्याय 17\nC. अध्याय 21\nD. अध्याय 25\n\nसूची II (आधिकारिक अध्याय का शीर्षक)\n1. प्रौढ़ शिक्षा और जीवन पर्यंत सीखना (Adult Education and Life Long Learning)\n2. स्कूल कॉम्प्लेक्स/क्लस्टर के माध्यम से कुशल संसाधन और प्रभावी शासन\n3. केंद्रीय शिक्षा सलाहकार बोर्ड (CABE) को सुदृढ़ बनाना\n4. एक नए राष्ट्रीय अनुसंधान फाउंडेशन के माध्यम से सभी क्षेत्रों में गुणवत्तापूर्ण अकादमिक अनुसंधान को उत्प्रेरित करना\n\nसही कूट का चयन कीजिए:",
-      "options_hindi": [
-        "A-2, B-4, C-1, D-3",
-        "A-4, B-2, C-1, D-3",
-        "A-2, B-1, C-4, D-3",
-        "A-3, B-4, C-1, D-2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Match List I with List II regarding the Chapters and their titles in the official National Education Policy 2020 document:\n\nList I (Chapter Number)\nA. Chapter 7\nB. Chapter 17\nC. Chapter 21\nD. Chapter 25\n\nList II (Official Chapter Title)\n1. Adult Education and Life Long Learning\n2. Efficient Resourcing and Effective Governance through School Complexes/Clusters\n3. Strengthening the Central Advisory Board of Education\n4. Catalyzing Quality Academic Research in all Fields through a New National Research Foundation\n\nSelect the correct code:",
-      "options_english": [
-        "A-2, B-4, C-1, D-3",
-        "A-4, B-2, C-1, D-3",
-        "A-2, B-1, C-4, D-3",
-        "A-3, B-4, C-1, D-2"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "According to the official National Education Policy 2020 table of contents: Chapter 7 is titled 'Efficient Resourcing and Effective Governance through School Complexes/Clusters'; Chapter 17 is titled 'Catalyzing Quality Academic Research in all Fields through a New National Research Foundation'; Chapter 21 is titled 'Adult Education and Life Long Learning'; and Chapter 25 is titled 'Strengthening the Central Advisory Board of Education'.",
-      "explanation_hindi": "राष्ट्रीय शिक्षा नीति 2020 के आधिकारिक अनुक्रमणिका के अनुसार: अध्याय 7 का शीर्षक 'Efficient Resourcing and Effective Governance through School Complexes/Clusters' है; अध्याय 17 का शीर्षक 'Catalyzing Quality Academic Research in all Fields through a New National Research Foundation' है; अध्याय 21 का शीर्षक 'Adult Education and Life Long Learning' है; और अध्याय 25 का शीर्षक 'Strengthening the Central Advisory Board of Education' है।",
+      "explanation_english": "The Adult Education Curriculum Framework places financial and digital literacy, health awareness, child care and family welfare under critical life skills.",
+      "explanation_hindi": "प्रौढ़ शिक्षा पाठ्यचर्या रूपरेखा वित्तीय व डिजिटल साक्षरता, स्वास्थ्य-जागरूकता, बाल-देखभाल और परिवार कल्याण को महत्त्वपूर्ण जीवन-कौशल में रखती है।",
       "topic": "NEP 2020",
       "difficulty": "hard",
       "key_facts": [
-        "7 Efficient Resourcing and Effective Governance through School Complexes/Clusters 28 ... 17 Catalyzing Quality Academic Research in all Fields through a New National Research Foundation 45 ... 21 Adult Education and Life Long Learning 51 ... 25 Strengthening the Central Advisory Board of Education 60"
+        "critical life skills (including financial literacy, digital literacy, commercial skills, health care and awareness, child care and education, and family welfare)"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:24:58.077434"
+      "processed_at": "2026-10-18T16:31:01.010000"
     },
     {
-      "id": "e616cd69-c105-43ce-b04e-76c211aa5e2c",
-      "created_at": "2026-10-10T07:32:19.144207",
-      "question_hindi": "राष्ट्रीय शिक्षा नीति 2020 दस्तावेज़ के अध्याय शीर्षकों और संरचना के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. नीति का अध्याय 16 'व्यावसायिक शिक्षा की पुनर्कल्पना' (Re-imagining Vocational Education) को समर्पित है।\n2. भाग III (फोकस के अन्य प्रमुख क्षेत्र) के तहत अध्याय 20 का शीर्षक 'व्यावसायिक शिक्षा' (Professional Education) है।\n3. भाग IV (इसे संभव बनाना) के तहत अध्याय 26 'वित्तपोषण: सभी के लिए सस्ती और गुणवत्तापूर्ण शिक्षा' (Financing: Affordable and Quality Education for All) से संबंधित है।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "5330467f-2c71-46d6-a5f2-15f41593d86b",
+      "created_at": "2026-10-18T16:30:28.000000",
+      "question_hindi": "संस्कृत और शास्त्रीय भाषाओं के संबंध में कौन-सा कथन NEP 2020 से मेल खाता है?",
       "options_hindi": [
-        "केवल 1 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 3"
+        "केवल संस्कृत, वह भी केवल माध्यमिक स्तर पर पढ़ाई जा सकती है।",
+        "शास्त्रीय भाषाएँ केवल विश्वविद्यालयी शोध तक सीमित हैं।",
+        "सभी विद्यार्थियों को तीन शास्त्रीय भाषाओं में विशेषज्ञता अनिवार्य है।",
+        "संस्कृत सभी स्तरों पर एक समृद्धकारी विकल्प है; विद्यार्थी कक्षा 6–12 में कम-से-कम दो वर्ष किसी भारतीय शास्त्रीय भाषा का अध्ययन कर सकते हैं।"
       ],
       "option_labels": [
         "A",
@@ -616,107 +653,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the chapter titles and structure of the National Education Policy 2020 document:\n\n1. Chapter 16 of the policy is dedicated to 'Re-imagining Vocational Education'.\n2. Chapter 20 is titled 'Professional Education' under Part III (Other Key Areas of Focus).\n3. Chapter 26 addresses 'Financing: Affordable and Quality Education for All' under Part IV (Making It Happen).\n\nWhich of the statements given above are correct?",
+      "question_english": "Which statement about Sanskrit and classical languages best matches NEP 2020?",
       "options_english": [
-        "1 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only",
-        "2 and 3 only"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "As per the official Table of Contents of NEP 2020: Chapter 16 is 'Re-imagining Vocational Education' (under Part II), Chapter 20 is 'Professional Education' (under Part III), and Chapter 26 is 'Financing: Affordable and Quality Education for All' (under Part IV). Hence, all three statements are correct.",
-      "explanation_hindi": "एनईपी 2020 की आधिकारिक विषय-सूची के अनुसार: अध्याय 16 'Re-imagining Vocational Education' (भाग II के तहत) है, अध्याय 20 'Professional Education' (भाग III के तहत) है, और अध्याय 26 'Financing: Affordable and Quality Education for All' (भाग IV के तहत) है। अतः तीनों कथन सही हैं।",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "16 | Re-imagining | | Vocational | Education | | | | | 43 |\n| 17 | Catalyzing National | Quality Research | Foundation | Academic | Research | in all | Fields through | a New | 45 |\n| 18 | Transforming | | the Regulatory | | System | of Higher Education | | | 46 |\n\n19 Effective Governance and Leadership for Higher Education Institutions 49\n\n| | | PART III. OTHER KEY AREAS | OF FOCUS |\n| --- | --- | --- | --- |\n| 20 | Professional | Education | 50 |\n| 21 | Adult Education | and Life Long Learning | 51 |\n| 22 | Promotion | of Indian Languages, Arts and Culture | 53 |\n| 23 | Technology | Use and Integration | 56 |\n| 24 | Online and | Digital Education: Ensuring Equitable | Use of Technology 58 |\n| | | PART IV. MAKING IT HAPPEN | |\n| 25 | Strengthening | the Central Advisory Board of Education | 60 |\n| 26 | Financing: | Affordable and Quality Education for | All 60 |"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:32:19.144207"
-    },
-    {
-      "id": "3d1a31c5-322d-4269-9e58-8d0fe61e20a5",
-      "created_at": "2026-10-10T07:29:43.693920",
-      "question_hindi": "शिक्षा मंत्रालय द्वारा प्रकाशित राष्ट्रीय शिक्षा नीति 2020 के आधिकारिक अवलोकन के अनुसार, शिक्षा के साथ प्रौद्योगिकी का एकीकरण निम्नलिखित में से किन पहलों के माध्यम से किया जाएगा?\n\n1. एनर्जाइज्ड पाठ्यपुस्तकें (Energized text books)\n2. शिक्षकों और शिक्षार्थियों के क्षमता निर्माण के लिए उच्च गुणवत्ता वाली ई-सामग्री\n3. सीखने के परिणामों (लर्निंग आउटकम) पर आधारित प्रश्न बैंक\n\nनीचे दिए गए कूट का उपयोग करके सही उत्तर चुनिए:",
-      "options_hindi": [
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2",
-        "केवल 1 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "According to the official overview on National Education Policy 2020 published by the Ministry of Education, through which of the following initiatives will technology be integrated with education?\n\n1. Energized text books\n2. High quality e-content for capacity building of teachers and learners\n3. Question banks based on learning outcomes\n\nSelect the correct answer using the code given below:",
-      "options_english": [
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only",
-        "1 and 3 only"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "All three initiatives are explicitly mentioned in the text: 'Technology will be integrated with education through several existing as well as proposed initiatives, including energized text books, high quality e-content for capacity building of teachers and learners, question banks based on learning outcomes, etc.'",
-      "explanation_hindi": "तीनों पहलों का पाठ में स्पष्ट उल्लेख है: 'शिक्षा के साथ प्रौद्योगिकी को कई मौजूदा और प्रस्तावित पहलों के माध्यम से एकीकृत किया जाएगा, जिसमें एनर्जाइज्ड पाठ्यपुस्तकें, शिक्षकों और शिक्षार्थियों के क्षमता निर्माण के लिए उच्च गुणवत्ता वाली ई-सामग्री, सीखने के परिणामों पर आधारित प्रश्न बैंक आदि शामिल हैं।'",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "Technology will be integrated with education through several existing as well as proposed initiatives, including energized text books, high quality e-content for capacity building of teachers and learners, question banks based on learning outcomes, etc."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-10T07:29:43.693920"
-    },
-    {
-      "id": "c9efc2b8-780a-4961-adac-d7b37385d4ef",
-      "created_at": "2026-10-10T07:30:24.729742",
-      "question_hindi": "एनईपी 2020 पर आधिकारिक पीआईबी प्रेस विज्ञप्ति में उल्लिखित लक्ष्यों और संरचनात्मक प्रावधानों के संबंध में निम्नलिखित में से कौन सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "कॉलेजों की संबद्धता प्रणाली को समाप्त करना — कॉलेजों को क्रमिक स्वायत्तता देकर 15 वर्षों में",
-        "स्कूल से बाहर के बच्चों को मुख्यधारा में वापस लाना — लगभग 2 करोड़",
-        "उच्च शिक्षा में जोड़े जाने वाले नए स्थान (सीटें) — 3.5 करोड़",
-        "एनआईओएस और राज्य मुक्त विद्यालयों के माध्यम से मुक्त अधिगम — कक्षा 1, 4 और 7 के लिए"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which of the following pairs regarding targets and structural provisions stated in the official PIB Press Release on NEP 2020 is NOT correctly matched?",
-      "options_english": [
-        "Phasing out of college affiliation system — In 15 years with graded autonomy to colleges",
-        "Out-of-school children to be brought back into mainstream — About 2 crore",
-        "Additional seats to be created in higher education — 3.5 crore",
-        "Open learning through NIOS and State Open Schools — For classes 1, 4 and 7"
+        "Only Sanskrit may be taught, and only in secondary school.",
+        "Classical languages are restricted to university research.",
+        "All students must specialize in three classical languages.",
+        "Sanskrit is an enriching option at all levels; students have the option of studying at least two years of an Indian classical language in Grades 6–12."
       ],
       "correct_answer": "d",
-      "explanation_english": "Option D is NOT correctly matched. The policy provides for open learning for classes 3, 5, and 8 through NIOS and State Open Schools, not for classes 1, 4, and 7.",
-      "explanation_hindi": "विकल्प D सही सुमेलित नहीं है। नीति में एनआईओएस (NIOS) और राज्य मुक्त विद्यालयों के माध्यम से कक्षा 3, 5 और 8 के लिए मुक्त अधिगम की व्यवस्था की गई है, न कि कक्षा 1, 4 और 7 के लिए।",
+      "explanation_english": "The policy offers Sanskrit as an option at all levels and allows at least two years of a classical Indian language in Grades 6–12.",
+      "explanation_hindi": "नीति संस्कृत को सभी स्तरों पर विकल्प बनाती है और कक्षा 6–12 में किसी भारतीय शास्त्रीय भाषा के कम-से-कम दो वर्ष पढ़ने का विकल्प देती है।",
       "topic": "NEP 2020",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "key_facts": [
-        "open learning for classes3,5 and 8 through NIOS and State Open Schools, secondary education programs equivalent to Grades 10 and 12"
+        "Sanskrit will thus be offered at all levels of school and higher education as an important, enriching option for students"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:30:24.729742"
+      "processed_at": "2026-10-18T16:30:28.010000"
     },
     {
-      "id": "cfe91565-5606-4275-b77d-d8d221207c19",
-      "created_at": "2026-10-10T07:26:03.928415",
-      "question_hindi": "राष्ट्रीय शिक्षा नीति 2020 दस्तावेज़ की संरचनात्मक अध्याय विषय-वस्तु के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n\n1. नीति के भाग III का शीर्षक 'Other Key Areas of Focus' है और इसमें 'Technology Use and Integration' पर अध्याय 23 शामिल है।\n2. अध्याय 19 का शीर्षक 'Effective Governance and Leadership for Higher Education Institutions' है।\n3. भाग IV को 'Making It Happen' नामित किया गया है और इसमें अध्याय 25, 26 और 27 शामिल हैं।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "id": "1eb4bf3c-1bde-4add-a118-531df47a0fd4",
+      "created_at": "2026-10-18T16:30:51.000000",
+      "question_hindi": "NEP 2020 के अंतर्गत सभी HEI को किस वर्ष तक बहुविषयी बनने का लक्ष्य रखना चाहिए?",
       "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 2 और 3",
-        "1, 2 और 3",
-        "केवल 1 और 2"
+        "2025 तक, बिना आगे परिवर्तन के।",
+        "2030 तक, जिसके बाद विद्यार्थी संख्या स्थिर कर देनी है।",
+        "2040 तक, जबकि 2030 तक बहुविषयी बनने की योजना बनानी है।",
+        "2050 तक, बिना किसी अंतरिम योजना लक्ष्य के।"
       ],
       "option_labels": [
         "A",
@@ -727,23 +690,60 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding the structural chapter contents of the National Education Policy 2020 document:\n\n1. Part III of the policy is entitled 'Other Key Areas of Focus' and includes Chapter 23 on 'Technology Use and Integration'.\n2. Chapter 19 is titled 'Effective Governance and Leadership for Higher Education Institutions'.\n3. Part IV is designated as 'Making It Happen' and comprises Chapters 25, 26, and 27.\n\nWhich of the statements given above are correct?",
+      "question_english": "By which year should all HEIs aim to become multidisciplinary under NEP 2020?",
       "options_english": [
-        "1 and 3 only",
-        "2 and 3 only",
-        "1, 2 and 3",
-        "1 and 2 only"
+        "2025, with no later transition.",
+        "2030, after which student strength must be frozen.",
+        "2040, with planning towards multidisciplinary status by 2030.",
+        "2050, with no interim planning milestone."
       ],
       "correct_answer": "c",
-      "explanation_english": "All three statements are correct according to the official Table of Contents of NEP 2020. Part III is titled 'OTHER KEY AREAS OF FOCUS' and includes Chapter 23 'Technology Use and Integration' (p. 56). Chapter 19 is 'Effective Governance and Leadership for Higher Education Institutions' (p. 49). Part IV is titled 'MAKING IT HAPPEN' and contains Chapter 25 (Strengthening the CABE), Chapter 26 (Financing), and Chapter 27 (Implementation).",
-      "explanation_hindi": "एनईपी 2020 की आधिकारिक विषय-सूची के अनुसार तीनों कथन सही हैं। भाग III का शीर्षक 'OTHER KEY AREAS OF FOCUS' है और इसमें अध्याय 23 'Technology Use and Integration' शामिल है। अध्याय 19 'Effective Governance and Leadership for Higher Education Institutions' है। भाग IV का शीर्षक 'MAKING IT HAPPEN' है और इसमें अध्याय 25 (CABE का सुदृढ़ीकरण), अध्याय 26 (वित्तपोषण), और अध्याय 27 (कार्यान्वयन) शामिल हैं।",
+      "explanation_english": "The policy sets 2040 as the overall aim and says HEIs should first plan to become multidisciplinary by 2030.",
+      "explanation_hindi": "नीति 2040 को समग्र लक्ष्य बताती है और HEI को पहले 2030 तक बहुविषयी बनने की योजना बनाने को कहती है।",
       "topic": "NEP 2020",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "key_facts": [
-        "19 Effective Governance and Leadership for Higher Education Institutions 49 | PART III. OTHER KEY AREAS OF FOCUS | 23 Technology Use and Integration 56 | PART IV. MAKING IT HAPPEN | 25 Strengthening the Central Advisory Board of Education 60 | 26 Financing: Affordable and Quality Education for All 60 | 27 Implementation 61"
+        "By 2040, all higher education institutions (HEIs) shall aim to become multidisciplinary institutions"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-10T07:26:03.928415"
+      "processed_at": "2026-10-18T16:30:51.010000"
+    },
+    {
+      "id": "6869ad7d-b227-4cac-abc9-3105723093e4",
+      "created_at": "2026-10-18T16:31:03.000000",
+      "question_hindi": "बहुविषयी उच्च शिक्षा के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n1. बहुविषयी संस्थान शिक्षण, अनुसंधान और सामुदायिक सहभागिता को जोड़ सकते हैं।\n2. प्रत्येक संस्थान में विषयों के बिल्कुल समान संयोजन अनिवार्य हैं।\n3. संस्थागत श्रेणियों को कठोर अपवर्जक खानों के बजाय निरंतरता के रूप में वर्णित किया गया है।\nसही कथन कौन-से हैं?",
+      "options_hindi": [
+        "केवल 1 और 2।",
+        "केवल 2 और 3।",
+        "केवल 1 और 3।",
+        "1, 2 और 3।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements about multidisciplinary higher education:\n1. Multidisciplinary institutions may connect teaching, research and community engagement.\n2. HEIs are expected to provide identical combinations of subjects in every institution.\n3. Institutional categories are described as a continuum rather than rigid, exclusionary boxes.\nWhich statements are correct?",
+      "options_english": [
+        "1 and 2 only.",
+        "2 and 3 only.",
+        "1 and 3 only.",
+        "1, 2 and 3."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The policy encourages multidisciplinary teaching, research and community engagement, while preserving institutional flexibility across a continuum.",
+      "explanation_hindi": "नीति बहुविषयी शिक्षण, अनुसंधान और सामुदायिक सहभागिता को प्रोत्साहित करती है तथा निरंतरता में संस्थागत लचीलापन रखती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "HEIs will have the autonomy and freedom to move gradually from one category to another, based on their plans, actions, and effectiveness."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:03.010000"
     }
   ]
 }
