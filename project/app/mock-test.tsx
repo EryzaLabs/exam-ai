@@ -402,6 +402,35 @@ export default function MockTestScreen() {
       // Use attempt.id since we ensure it is populated
       const attemptId = attempt.id!;
       console.log('Submitting test with attemptId:', attemptId);
+
+      // CRITICAL: Synchronize all answered questions from React questionStates into attempt.answers
+      const questionsMap = new Map<string, ParsedQuestion>();
+      test?.sections.forEach(s => s.questions.forEach(q => questionsMap.set(q.id, q)));
+
+      const syncedAnswers: UserAnswer[] = [];
+      questionStates.forEach((state, qId) => {
+        if (state.answered && state.selectedOption !== null && state.selectedOption !== undefined && state.selectedOption !== -1) {
+          const q = questionsMap.get(qId);
+          if (q) {
+            const isCorrect = state.selectedOption === q.correctAnswerIndex;
+            syncedAnswers.push({
+              questionId: qId,
+              selectedOption: state.selectedOption,
+              timeTaken: state.timeTaken || 0,
+              isCorrect,
+              marksAwarded: isCorrect ? q.marks.positive : -q.marks.negative,
+            });
+          }
+        }
+      });
+
+      if (syncedAnswers.length > 0) {
+        attempt.answers = syncedAnswers;
+        const memoryAttempt = SSCCGLService.getAttempt(attemptId);
+        if (memoryAttempt) {
+          memoryAttempt.answers = syncedAnswers;
+        }
+      }
       
       // Check if this is a testseries test and if answers are ready
       if (source === 'testseries') {
@@ -529,8 +558,9 @@ export default function MockTestScreen() {
 
     // Record answer
     if (attempt) {
+      const targetAttemptId = attempt.id || `${attempt.testId}_${attempt.userId}_${attempt.startTime.getTime()}`;
       SSCCGLService.recordAnswer(
-        `${attempt.testId}_${attempt.userId}_${attempt.startTime.getTime()}`,
+        targetAttemptId,
         question.id,
         optionIndex,
         state.timeTaken,

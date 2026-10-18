@@ -196,7 +196,7 @@ export default function TestResultScreen() {
     return test.sections.flatMap((section) =>
       section.questions.map((q) => {
         counter += 1;
-        const userAnswer = answers.find((a: any) => a.questionId === q.id);
+        const userAnswer = answers.find((a: any) => a.questionId === q.id || String(a.questionId) === String(q.id));
         const isAttempted =
           userAnswer !== undefined &&
           userAnswer?.selectedOption !== undefined &&

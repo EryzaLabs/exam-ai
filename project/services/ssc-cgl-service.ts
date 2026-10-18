@@ -155,6 +155,7 @@ export interface TestAnalytics {
   weaknessAreas: string[];
   recommendations: string[];
   percentile?: number;
+  answers?: UserAnswer[];
 }
 
 export interface SectionAnalytics {
@@ -419,11 +420,14 @@ class SSCCGLService {
   /**
    * Start a new test attempt
    */
-  startTestAttempt(testId: string, userId: string): TestAttempt {
-    const attempt: TestAttempt = {
+  startTestAttempt(testId: string, userId: string): TestAttempt & { id: string } {
+    const now = Date.now();
+    const attemptId = `${testId}_${userId}_${now}`;
+    const attempt: TestAttempt & { id: string } = {
+      id: attemptId,
       testId,
       userId,
-      startTime: new Date(),
+      startTime: new Date(now),
       answers: [],
       currentQuestionIndex: 0,
       status: 'in_progress',
@@ -432,20 +436,8 @@ class SSCCGLService {
       accuracy: 0,
     };
 
-    const attemptId = `${testId}_${userId}_${Date.now()}`;
-    // Store attempt with the ID we will return attached to it, although interface doesn't have ID field yet.
-    // The map key is the ID.
     this.attempts.set(attemptId, attempt);
-    
-    // We strictly need to return the ID so the caller can refer to it
-    // But the interface TestAttempt doesn't have 'id'. We should probably add it or cast it.
-    // Looking at usage in mock-test.tsx: const newAttempt = SSCCGLService.startTestAttempt(...); 
-    // It expects an object with .id property? 
-    // In mock-test.tsx: setAttempt(newAttempt); 
-    // And usage: attempt.id
-    
-    // Let's patch the return to include ID just in case it's not in the interface but used at runtime
-    return { ...attempt, id: attemptId } as TestAttempt & { id: string };
+    return attempt;
   }
 
   /**
@@ -465,8 +457,20 @@ class SSCCGLService {
     timeTaken: number,
     question: ParsedQuestion
   ): void {
-    const attempt = this.attempts.get(attemptId);
-    if (!attempt) return;
+    let attempt = this.attempts.get(attemptId);
+    if (!attempt) {
+      // Fallback matching: match key exactly or by testId prefix
+      for (const [id, a] of this.attempts.entries()) {
+        if (id === attemptId || (a.testId && attemptId.startsWith(a.testId))) {
+          attempt = a;
+          break;
+        }
+      }
+    }
+    if (!attempt) {
+      console.warn('[SSCCGLService] recordAnswer: attempt not found for id', attemptId);
+      return;
+    }
 
     const isCorrect = selectedOption === question.correctAnswerIndex;
     const marksAwarded = isCorrect ? question.marks.positive : -question.marks.negative;
@@ -531,6 +535,7 @@ class SSCCGLService {
       strengthAreas,
       weaknessAreas,
       recommendations,
+      answers: attempt.answers,
     };
   }
 
