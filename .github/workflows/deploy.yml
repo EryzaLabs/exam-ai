@@ -18,31 +18,66 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Configure SSH
+      - name: Configure SSH agent
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          SSH_PASSPHRASE: ${{ secrets.EC2_SSH_PASSPHRASE }}
+          EC2_HOST: ${{ secrets.EC2_HOST }}
         run: |
+          set -e
+
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
+
+          eval "$(ssh-agent -s)"
+          echo "SSH_AUTH_SOCK=$SSH_AUTH_SOCK" >> "$GITHUB_ENV"
+          echo "SSH_AGENT_PID=$SSH_AGENT_PID" >> "$GITHUB_ENV"
+
           printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
+
+          cat > ~/.ssh/askpass.sh <<'EOF'
+          #!/bin/sh
+          printf '%s\n' "$SSH_PASSPHRASE"
+          EOF
+          chmod 700 ~/.ssh/askpass.sh
+
+          DISPLAY=:0 \
+          SSH_ASKPASS="$HOME/.ssh/askpass.sh" \
+          SSH_ASKPASS_REQUIRE=force \
+          setsid ssh-add ~/.ssh/deploy_key </dev/null
+
+          rm -f ~/.ssh/askpass.sh
+          rm -f ~/.ssh/deploy_key
 
       - name: Trust EC2 host
         env:
           EC2_HOST: ${{ secrets.EC2_HOST }}
         run: |
+          set -e
           ssh-keyscan -H "$EC2_HOST" >> ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
 
       - name: Deploy application
         env:
           EC2_HOST: ${{ secrets.EC2_HOST }}
           EC2_USER: ${{ secrets.EC2_USER }}
         run: |
-          ssh -i ~/.ssh/deploy_key \
+          set -e
+
+          ssh \
             -o BatchMode=yes \
+            -o IdentitiesOnly=no \
             "$EC2_USER@$EC2_HOST" \
             'set -e
              cd /home/aloo/exam-ai
              git pull --ff-only origin main
              sudo /usr/bin/systemctl restart exam-ai.service
              sudo /usr/bin/systemctl is-active --quiet exam-ai.service'
+
+      - name: Stop SSH agent
+        if: always()
+        run: |
+          if [ -n "${SSH_AGENT_PID:-}" ]; then
+            kill "$SSH_AGENT_PID" 2>/dev/null || true
+          fi
