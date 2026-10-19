@@ -5,12 +5,10 @@
 
 import { Platform } from 'react-native';
 
-const BASE_URL = 'https://ai.hackclub.com/proxy/v1/chat/completions';
-const HACKCLUB_API_URL = Platform.OS === 'web' 
-  ? `https://corsproxy.io/?${encodeURIComponent(BASE_URL)}` 
-  : BASE_URL;
+const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000/api';
+const DIRECT_HACKCLUB_URL = 'https://ai.hackclub.com/proxy/v1/chat/completions';
 const HACKCLUB_API_KEY = process.env.EXPO_PUBLIC_VLM_API_KEY || '';
-const MODEL = 'gpt-4o-mini';
+const MODEL = 'openai/gpt-4o-mini';
 
 export interface ChatMessage {
   role: 'user' | 'assistant' | 'system';
@@ -33,39 +31,83 @@ export async function sendChatMessage(
   messages: ChatMessage[],
   temperature: number = 0.7
 ): Promise<AIResponse> {
-  try {
-    const response = await fetch(HACKCLUB_API_URL, {
-      method: 'POST',
+  const payload = {
+    model: MODEL,
+    messages,
+    temperature,
+    max_tokens: 2000,
+  };
+
+  // Determine call strategies based on platform:
+  // - On Native (iOS/Android): direct call to Hack Club works without CORS restrictions.
+  // - On Web: browsers block direct cross-origin calls; route via backend /api/ai-chat or Netlify proxy.
+  const endpointsToTry: Array<{ url: string; headers: Record<string, string> }> = [];
+
+  if (Platform.OS === 'web') {
+    // 1. App backend proxy (local or production)
+    endpointsToTry.push({
+      url: `${API_BASE_URL}/ai-chat`,
+      headers: { 'Content-Type': 'application/json' },
+    });
+    // 2. Relative Netlify / reverse proxy rewrite
+    endpointsToTry.push({
+      url: '/api/hackclub/chat/completions',
       headers: {
         'Authorization': `Bearer ${HACKCLUB_API_KEY}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        model: MODEL,
-        messages,
-        temperature,
-        max_tokens: 2000,
-      }),
     });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      if (response.status === 401 || errorText.includes('Authentication failed')) {
-        throw new Error('API Key Expired or Invalid. Please update HACKCLUB_API_KEY in ai-assistant-service.ts');
-      }
-      throw new Error(`AI API Error: ${response.status} - ${errorText}`);
-    }
-
-    const data = await response.json();
-    
-    return {
-      message: data.choices[0].message.content,
-      usage: data.usage,
-    };
-  } catch (error) {
-    console.error('Error calling AI assistant:', error);
-    throw error;
+  } else {
+    // Native mobile: direct connection
+    endpointsToTry.push({
+      url: DIRECT_HACKCLUB_URL,
+      headers: {
+        'Authorization': `Bearer ${HACKCLUB_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+    });
+    // Fallback to backend proxy
+    endpointsToTry.push({
+      url: `${API_BASE_URL}/ai-chat`,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
+
+  let lastError: Error | null = null;
+
+  for (const endpoint of endpointsToTry) {
+    try {
+      const response = await fetch(endpoint.url, {
+        method: 'POST',
+        headers: endpoint.headers,
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        if (response.status === 401 || errorText.includes('Authentication failed')) {
+          throw new Error('API Key Expired or Invalid. Please verify your AI API key.');
+        }
+        throw new Error(`AI API Error (${response.status}): ${errorText}`);
+      }
+
+      const data = await response.json();
+      if (!data?.choices?.[0]?.message?.content) {
+        throw new Error('Invalid response structure from AI model');
+      }
+
+      return {
+        message: data.choices[0].message.content,
+        usage: data.usage,
+      };
+    } catch (err: any) {
+      lastError = err;
+      console.warn(`[Vidya AI] Attempt at ${endpoint.url} failed:`, err.message || err);
+    }
+  }
+
+  console.error('[Vidya AI] All endpoints failed:', lastError);
+  throw lastError || new Error('Failed to connect to AI service. Please ensure the backend server is running.');
 }
 
 /**

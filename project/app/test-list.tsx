@@ -48,9 +48,9 @@ import { useTheme } from '@/context/theme-context';
 
 const { width } = Dimensions.get('window');
 
-// Interface matching the server response for list items
 interface ServerPaper {
-    id: string; // filename
+    id: string; // filename or identifier
+    testId?: string; // unique UUID of test content
     title: string;
     filename: string;
     hasAnswers: boolean;
@@ -151,45 +151,29 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
   const attemptedMaps = useMemo(() => {
     const byId = new Map<string, TestResult>();
-    const byFilename = new Map<string, TestResult>();
 
     history.forEach(h => {
       const hDate = new Date(h.date).getTime();
 
-      if (h.testId) {
+      // Only index attempts by unique testId UUID (never by filename path)
+      if (h.testId && !h.testId.includes('/') && !h.testId.endsWith('.json')) {
         const existing = byId.get(h.testId);
         if (!existing || hDate > new Date(existing.date).getTime()) {
           byId.set(h.testId, h);
         }
       }
-
-      if (h.filename) {
-        const existing = byFilename.get(h.filename);
-        if (!existing || hDate > new Date(existing.date).getTime()) {
-          byFilename.set(h.filename, h);
-        }
-      }
     });
 
-    return { byId, byFilename };
+    return { byId };
   }, [history]);
 
   const getAttemptForTest = useCallback((test: ServerPaper): TestResult | undefined => {
     if (!test) return undefined;
-    // 1. Match by test.id (which can be filename or UUID)
-    if (test.id && attemptedMaps.byId.has(test.id)) {
-      return attemptedMaps.byId.get(test.id);
-    }
-    // 2. Match by test.testId (UUID)
-    if ((test as any).testId && attemptedMaps.byId.has((test as any).testId)) {
-      return attemptedMaps.byId.get((test as any).testId);
-    }
-    // 3. Match by test.filename
-    if (test.filename && attemptedMaps.byFilename.has(test.filename)) {
-      return attemptedMaps.byFilename.get(test.filename);
-    }
-    if (test.filename && attemptedMaps.byId.has(test.filename)) {
-      return attemptedMaps.byId.get(test.filename);
+    // Strictly match by unique test content UUID
+    // Never fall back to filename or title so regenerated tests with same name/file slot won't falsely appear attempted
+    const testUUID = test.testId || (!test.id?.includes('/') && !test.id?.endsWith('.json') ? test.id : undefined);
+    if (testUUID && attemptedMaps.byId.has(testUUID)) {
+      return attemptedMaps.byId.get(testUUID);
     }
     return undefined;
   }, [attemptedMaps]);

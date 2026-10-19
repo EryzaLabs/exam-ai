@@ -27,6 +27,7 @@ import answerGenerationRoutes from './routes/answer-generation';
 import reportsRoutes from './routes/reports';
 import paymentRoutes from './routes/payment';
 import aiTestRoutes from './routes/ai-tests';
+import aiChatRoutes from './routes/ai-chat';
 
 // Initialize Express app
 const app: Express = express();
@@ -101,6 +102,8 @@ app.use('/api/answers', answerGenerationRoutes);
 app.use('/api/reports', reportsRoutes);
 app.use('/api/payment', paymentRoutes);
 app.use('/api/ai-tests', aiTestRoutes);
+app.use('/api/ai-chat', aiChatRoutes);
+app.use('/api/ai', aiChatRoutes);
 
 // Health check
 app.get('/health', (req, res) => {

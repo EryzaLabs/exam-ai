@@ -28,6 +28,7 @@ const answer_generation_1 = __importDefault(require("./routes/answer-generation"
 const reports_1 = __importDefault(require("./routes/reports"));
 const payment_1 = __importDefault(require("./routes/payment"));
 const ai_tests_1 = __importDefault(require("./routes/ai-tests"));
+const ai_chat_1 = __importDefault(require("./routes/ai-chat"));
 // Initialize Express app
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 5670;
@@ -93,6 +94,8 @@ app.use('/api/answers', answer_generation_1.default);
 app.use('/api/reports', reports_1.default);
 app.use('/api/payment', payment_1.default);
 app.use('/api/ai-tests', ai_tests_1.default);
+app.use('/api/ai-chat', ai_chat_1.default);
+app.use('/api/ai', ai_chat_1.default);
 // Health check
 app.get('/health', (req, res) => {
     res.json({
