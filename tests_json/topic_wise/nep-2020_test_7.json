@@ -1,0 +1,763 @@
+{
+  "test_id": "8cc2458c-b74e-4a3f-a9a1-203d2e08e6bb",
+  "test_name": "Topic Test: NEP 2020 - Part 7",
+  "type": "topic_wise",
+  "topic": "nep-2020",
+  "created_at": "2026-10-19T07:49:29.138071",
+  "questions": [
+    {
+      "id": "6869ad7d-b227-4cac-abc9-3105723093e4",
+      "created_at": "2026-10-18T16:31:03.000000",
+      "question_hindi": "बहुविषयी उच्च शिक्षा के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n1. बहुविषयी संस्थान शिक्षण, अनुसंधान और सामुदायिक सहभागिता को जोड़ सकते हैं।\n2. प्रत्येक संस्थान में विषयों के बिल्कुल समान संयोजन अनिवार्य हैं।\n3. संस्थागत श्रेणियों को कठोर अपवर्जक खानों के बजाय निरंतरता के रूप में वर्णित किया गया है।\nसही कथन कौन-से हैं?",
+      "options_hindi": [
+        "केवल 1 और 2।",
+        "केवल 2 और 3।",
+        "केवल 1 और 3।",
+        "1, 2 और 3।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements about multidisciplinary higher education:\n1. Multidisciplinary institutions may connect teaching, research and community engagement.\n2. HEIs are expected to provide identical combinations of subjects in every institution.\n3. Institutional categories are described as a continuum rather than rigid, exclusionary boxes.\nWhich statements are correct?",
+      "options_english": [
+        "1 and 2 only.",
+        "2 and 3 only.",
+        "1 and 3 only.",
+        "1, 2 and 3."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The policy encourages multidisciplinary teaching, research and community engagement, while preserving institutional flexibility across a continuum.",
+      "explanation_hindi": "नीति बहुविषयी शिक्षण, अनुसंधान और सामुदायिक सहभागिता को प्रोत्साहित करती है तथा निरंतरता में संस्थागत लचीलापन रखती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "HEIs will have the autonomy and freedom to move gradually from one category to another, based on their plans, actions, and effectiveness."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:03.010000"
+    },
+    {
+      "id": "2493f9a3-d39e-45dd-8c80-00696bf45555",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "पाठ्यक्रम और अपेक्षित संज्ञानात्मक उद्देश्यों का पर्याप्त प्रतिनिधित्व परीक्षा-प्रश्नों में है या नहीं, इसकी जाँच करके कौन-सी वैधता निर्धारित की जाती है?",
+      "options_hindi": [
+        "पूर्वानुमान वैधता",
+        "विषयवस्तु वैधता",
+        "समकालीन वैधता",
+        "संरचना वैधता"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 194; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Which type of validity is determined by checking whether the test items adequately cover the syllabus and the cognitive objectives intended?",
+      "options_english": [
+        "Predictive Validity",
+        "Content Validity",
+        "Concurrent Validity",
+        "Construct Validity"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Content Validity Content validity evaluates whether test items adequately represent the intended curriculum content and targeted learning objectives. Establishing high content validity requires systematic mapping of test items against a detailed Table of Specifications or subject blueprint during test development.",
+      "explanation_hindi": "विषयवस्तु वैधता यह जाँचती है कि प्रश्न किसी विषय के अपेक्षित पाठ्यक्रम और अधिगम उद्देश्यों का पर्याप्त प्रतिनिधित्व करते हैं या नहीं। इसे मजबूत करने के लिए प्रश्नों को परीक्षा-ब्लूप्रिंट या विशिष्टताओं की सारणी से मिलाया जाता है। इससे यह सुनिश्चित होता है कि परीक्षा केवल कुछ चुने हुए विषयों तक सीमित न रह जाए।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Content Validity",
+        "Content Validity Content validity evaluates whether test items adequately represent the intended curriculum content and targeted learning objectives. Establishing high content validity requires systematic mapping of test items against a detailed Table of Specifications or subject blueprint during test development."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "fe1b5fe9-c580-4416-a609-8d1f5bc1fc12",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "विद्यालय शिक्षा अधिनियमों और नियमों के सामान्य प्रावधानों के अंतर्गत, कोई मान्यता-प्राप्त निजी विद्यालय अपनी ट्यूशन फीस किसकी पूर्व स्वीकृति के बिना नहीं बढ़ा सकता?",
+      "options_hindi": [
+        "अभिभावक-शिक्षक संघ (PTA)",
+        "शिक्षा निदेशक",
+        "केंद्रीय माध्यमिक शिक्षा बोर्ड (CBSE)",
+        "स्थानीय विधायक (MLA)"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 204; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Under standard School Education Acts and Rules, a recognized private school cannot increase its tuition fee without the prior approval of:",
+      "options_english": [
+        "The Parent-Teacher Association (PTA)",
+        "The Director of Education",
+        "The Central Board of Secondary Education (CBSE)",
+        "The local Member of Legislative Assembly (MLA)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Director of Education Under standard state school education acts and regulatory rules, recognized private schools are prohibited from arbitrarily increasing student tuition fees. Proposed fee hikes must be submitted for prior review and formal approval to the state Director of Education to prevent commercial exploitation and ensure public accountability.",
+      "explanation_hindi": "स्रोत के अनुसार, मान्यता-प्राप्त निजी विद्यालय द्वारा फीस में प्रस्तावित वृद्धि के लिए शिक्षा निदेशक की पूर्व समीक्षा और औपचारिक स्वीकृति अपेक्षित है। इसका उद्देश्य फीस में मनमानी वृद्धि रोकना, विद्यार्थियों के परिवारों को अनुचित आर्थिक बोझ से बचाना और नियामकीय जवाबदेही सुनिश्चित करना है। यह प्रश्न स्रोत में सामान्य विद्यालयी अधिनियमों और नियमों के संदर्भ में दिया गया है; किसी विशिष्ट राज्य के वर्तमान नियमों की जाँच अलग से की जानी चाहिए।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "The Director of Education",
+        "The Director of Education Under standard state school education acts and regulatory rules, recognized private schools are prohibited from arbitrarily increasing student tuition fees. Proposed fee hikes must be submitted for prior review and formal approval to the state Director of Education to prevent commercial exploitation and ensure public accountability."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "309d6f29-1549-4996-a09a-017cb429438a",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "NEP 2020 के अंतर्गत सामाजिक-आर्थिक रूप से वंचित समूहों (SEDGs) की बड़ी आबादी वाले क्षेत्र में एक विद्यालय प्रमुख को विशेष वित्तपोषण दिया जाता है। ऐसे क्षेत्र को, जिसे विशेष शैक्षिक ध्यान के लिए चिह्नित किया जाता है, क्या कहा जाता है?",
+      "options_hindi": [
+        "विशेष आर्थिक क्षेत्र (SEZ)",
+        "प्राथमिकता वाला विद्यालय जिला (PSD)",
+        "शैक्षिक रूप से पिछड़ा ब्लॉक (EBB)",
+        "विशेष शिक्षा क्षेत्र (SEZ)"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 81; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "A Head of School in an area with a large population of SEDGs is allocated special funding under NEP 2020 guidelines. This geographical area, targeted for special educational focus, is termed as a:",
+      "options_english": [
+        "Special Economic Zone (SEZ)",
+        "Priority School District (PSD)",
+        "Educationally Backward Block (EBB)",
+        "Special Education Zone (SEZ)"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Special Education Zone (SEZ) Regions containing high concentrations of socio- economically disadvantaged populations are designated as Special Education Zones. These targeted geographic areas receive prioritized administrative support, enhanced financial grants, infrastructure upgrades, and specialized educational schemes to bridge deep historical educational gaps and promote equitable regional development.",
+      "explanation_hindi": "स्रोत-पुस्तक की उत्तर-कुंजी के अनुसार सही विकल्प (D) ‘विशेष शिक्षा क्षेत्र’ (Special Education Zone—SEZ) है। इस अवधारणा का उद्देश्य उन भौगोलिक क्षेत्रों पर विशेष ध्यान देना है जहाँ सामाजिक-आर्थिक रूप से वंचित समूहों की बड़ी आबादी रहती है और जहाँ ऐतिहासिक कारणों से शिक्षा तक पहुँच, संसाधन या अधिगम के अवसर कम रहे हैं। लक्षित क्षेत्रीय सहायता के माध्यम से प्रशासनिक सहयोग, वित्तीय संसाधन, आधारभूत सुविधाएँ और उपयुक्त शैक्षिक योजनाएँ प्राथमिकता से उपलब्ध कराई जा सकती हैं। विकल्प A का ‘विशेष आर्थिक क्षेत्र’ व्यापार और औद्योगिक विकास से संबंधित अलग अवधारणा है; विकल्प B और C इस प्रश्न में प्रयुक्त पद नहीं हैं। इसलिए यहाँ सामान्य आर्थिक क्षेत्र या पिछड़े ब्लॉक के बजाय नीति में उल्लिखित विशेष शिक्षा क्षेत्र पहचानना है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Special Education Zone (SEZ)",
+        "Special Education Zone (SEZ) Regions containing high concentrations of socio- economically disadvantaged populations are designated as Special Education Zones. These targeted geographic areas receive prioritized administrative support, enhanced financial grants, infrastructure upgrades, and specialized educational schemes to bridge deep historical educational gaps and promote equitable regional development."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "8a07edbb-a357-4639-9d68-aee53b27a9df",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "राष्ट्रीय शिक्षा नीति (NPE) 1968 का प्रमुख उद्देश्य निम्नलिखित में से कौन-सा नहीं था?",
+      "options_hindi": [
+        "जिला शिक्षा एवं प्रशिक्षण संस्थानों (DIETs) की स्थापना",
+        "14 वर्ष की आयु तक सभी बच्चों के लिए निःशुल्क और अनिवार्य शिक्षा",
+        "विभिन्न सामाजिक और आर्थिक वर्गों के बीच शैक्षिक अवसरों की समानता",
+        "साझा सांस्कृतिक और मूल पाठ्यचर्या मूल्यों के माध्यम से राष्ट्रीय एकता को बढ़ावा देना"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 11; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Which of the following was NOT a key objective of the National Policy on Education (NPE), 1968?",
+      "options_english": [
+        "Establishment of District Institutes of Education and Training",
+        "Free and compulsory education for all children until they reach the age of 14 years",
+        "Equalization of educational opportunity across diverse social and economic sections",
+        "Promotion of national integration through shared cultural and core curricular values"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Establishment of District Institutes of Education and Training Universal elementary schooling, social opportunity equalization, and national integration were fundamental core objectives outlined in the 1968 policy. In contrast, establishing District Institutes of Education and Training was a structural intervention introduced later under the National Policy on Education of 1986 to decentralize elementary teacher professional training and administrative support.",
+      "explanation_hindi": "NPE 1968 के प्रमुख उद्देश्यों में सार्वभौमिक प्राथमिक शिक्षा, शैक्षिक अवसरों की समानता और राष्ट्रीय एकता को बढ़ावा देना शामिल था। जिला शिक्षा एवं प्रशिक्षण संस्थानों (DIETs) की स्थापना बाद की पहल थी, जिसे विशेष रूप से NPE 1986 के अंतर्गत प्राथमिक शिक्षक-प्रशिक्षण और स्थानीय शैक्षणिक सहायता को विकेंद्रीकृत करने के लिए आगे बढ़ाया गया। इसलिए DIETs की स्थापना 1968 नीति का प्रमुख उद्देश्य नहीं थी।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "easy",
+      "key_facts": [
+        "Establishment of District Institutes of Education and Training",
+        "Establishment of District Institutes of Education and Training Universal elementary schooling, social opportunity equalization, and national integration were fundamental core objectives outlined in the 1968 policy. In contrast, establishing District Institutes of Education and Training was a structural intervention introduced later under the National Policy on Education of 1986 to decentralize elementary teacher professional training and administrative support."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "7b92adca-5801-46c1-9b89-65d3f9ba7e25",
+      "created_at": "2026-10-18T16:31:21.000000",
+      "question_hindi": "भारतीय अनुवाद एवं निर्वचन संस्थान (IITI) की भूमिका के रूप में कौन-सी कार्रवाई वर्णित है?",
+      "options_hindi": [
+        "अनुवाद और निर्वचन का विस्तार करना ताकि उच्च-गुणवत्ता की शैक्षिक तथा अन्य महत्त्वपूर्ण सामग्री भारतीय और विदेशी भाषाओं में उपलब्ध हो।",
+        "शिक्षकों की राष्ट्रीय पात्रता परीक्षा आयोजित करना।",
+        "सभी HEI का प्रत्यायन और अनुदान वितरण करना।",
+        "केवल विद्यालयी बोर्ड परीक्षाओं का मानकीकरण करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which action is described as the role of the Indian Institute of Translation and Interpretation (IITI)?",
+      "options_english": [
+        "Expand translation and interpretation so high-quality learning and other important materials become available across Indian and foreign languages.",
+        "Administering the National Eligibility Test for teachers.",
+        "Accrediting all HEIs and distributing grants.",
+        "Standardizing only school board examinations."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "IITI is proposed to help produce and disseminate translations and interpretation across languages, with extensive use of technology.",
+      "explanation_hindi": "IITI का उद्देश्य विभिन्न भाषाओं में अनुवाद/निर्वचन उपलब्ध कराना है और इसमें प्रौद्योगिकी का व्यापक उपयोग होगा।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "an Indian Institute of Translation and Interpretation (IITI) will be established"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:21.010000"
+    },
+    {
+      "id": "3433d2d9-1e5b-43b3-bb26-12eb6c1e1211",
+      "created_at": "2026-10-18T16:31:32.000000",
+      "question_hindi": "NTA प्रवेश परीक्षाओं के प्रति NEP 2020 का दृष्टिकोण किस विकल्प से मेल खाता है?",
+      "options_hindi": [
+        "सभी कार्यक्रमों के लिए हर पाँच वर्ष में एक अनिवार्य परीक्षा।",
+        "अभिरुचि या विषय परीक्षाओं के बिना केवल साक्षात्कार।",
+        "मुख्यतः रटकर याद करने और कोचिंग को बढ़ावा देने के लिए बनी परीक्षाएँ।",
+        "उच्च-गुणवत्ता वाली साझा अभिरुचि परीक्षा तथा विशिष्ट विषय परीक्षाएँ वर्ष में कम-से-कम दो बार आयोजित करने की व्यवस्था।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following is consistent with NEP 2020's approach to NTA entrance examinations?",
+      "options_english": [
+        "One mandatory examination every five years for all programmes.",
+        "Only interviews, with no aptitude or subject examinations.",
+        "Examinations designed primarily to test rote recall and encourage coaching.",
+        "A high-quality common aptitude test and specialized subject examinations are to be offered at least twice every year."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "NEP assigns NTA common aptitude and specialized subject exams at least twice annually and stresses conceptual understanding and application.",
+      "explanation_hindi": "NEP NTA को साझा अभिरुचि तथा विशिष्ट विषय परीक्षाएँ वर्ष में कम-से-कम दो बार कराने का कार्य देती है और अवधारणात्मक समझ पर बल देती है।",
+      "topic": "NEP 2020",
+      "difficulty": "hard",
+      "key_facts": [
+        "The National Testing Agency (NTA) will work to offer a high-quality common aptitude test, as well as specialized common subject exams in the sciences, humanities, languages, arts, and vocational subjects, at least twice every year."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:32.010000"
+    },
+    {
+      "id": "e74b516c-7638-4f67-bfb7-8db83e29f350",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "एक अशासकीय सहायता-रहित निजी विद्यालय यह कहते हुए EWS कोटे के अंतर्गत बच्चे को प्रवेश देने से मना करता है कि सरकार से प्रतिपूर्ति राशि अभी प्राप्त नहीं हुई है। RTE अधिनियम, 2009 और उससे संबंधित नियमों के अनुसार सही कानूनी स्थिति क्या है?",
+      "options_hindi": [
+        "राज्य सरकार से अग्रिम प्रतिपूर्ति न मिलने पर निजी विद्यालय को प्रवेश अस्वीकार करने का पूर्ण वैधानिक अधिकार है।",
+        "विद्यालय को 25% कोटे के अंतर्गत बच्चे को प्रवेश देना चाहिए; सरकार की प्रतिपूर्ति राज्य के प्रति-बच्चा व्यय संबंधी नियमों के अनुसार होगी।",
+        "EWS प्रवेश कोटा केवल सरकारी सहायता प्राप्त संस्थानों पर लागू होता है, निजी सहायता-रहित विद्यालयों पर नहीं।",
+        "EWS श्रेणी के बच्चे केवल सरकारी या स्थानीय निकाय के विद्यालयों में ही निःशुल्क प्रवेश ले सकते हैं।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 146; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "A private unaided school denies admission to a child under the Economically Weaker Section (EWS) quota citing lack of government reimbursement. Under the provisions of the RTE Act, 2009, and associated rules, what is the correct legal position?",
+      "options_english": [
+        "Unaided private schools retain full statutory rights to deny admission if state government reimbursement funds are not received in advance",
+        "The school must admit the child up to 25% quota, with government reimbursement based on state per-child expenditure rules.",
+        "EWS admission quotas apply exclusively to government-aided institutions and do not apply to independent private unaided schools",
+        "EWS category children can only seek free statutory admission in government-run or local authority schools within their district"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The school must admit the child up to 25% quota, with government reimbursement based on state per-child expenditure rules. Unaided private institutions cannot refuse admission under the 25 percent reservation quota citing delay in state fund disbursement.",
+      "explanation_hindi": "सहायता-रहित निजी विद्यालय राज्य सरकार से प्रतिपूर्ति राशि मिलने में देरी का हवाला देकर 25 प्रतिशत प्रवेश-कोटे के अंतर्गत प्रवेश से इनकार नहीं कर सकते। पात्र बच्चे का प्रवेश वैधानिक दायित्व है; सरकारी प्रतिपूर्ति की गणना संबंधित राज्य के प्रति-बच्चा व्यय नियमों के आधार पर की जाती है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "The school must admit the child up to 25% quota, with government reimbursement based on state per-child expenditure rules.",
+        "The school must admit the child up to 25% quota, with government reimbursement based on state per-child expenditure rules. Unaided private institutions cannot refuse admission under the 25 percent reservation quota citing delay in state fund disbursement."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "babfeb7d-758e-43fb-b112-db2b6b263815",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "कौन-सा ऐतिहासिक संकल्प कोठारी आयोग की नियुक्ति और उसके बाद NPE 1968 के निर्माण का प्रत्यक्ष पूर्ववर्ती माना जाता है?",
+      "options_hindi": [
+        "जुलाई 1964 का भारत सरकार का संकल्प",
+        "वर्धा बुनियादी शिक्षा योजना संबंधी संकल्प",
+        "सार्जेंट योजना को अपनाने का आदेश",
+        "भारतीय शिक्षा पर मैकॉले का मिनट"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 3; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Which historical resolution is considered the direct legislative precursor to the appointment of the Kothari Commission and subsequently the NPE 1968?",
+      "options_english": [
+        "The Government of India Resolution of July 1964",
+        "The Wardha Scheme of Basic Education Resolution",
+        "The Sargent Plan adoption decree",
+        "The Macaulay Minute on Indian Education"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Government of India Resolution of July 1964 The Government of India issued a milestone resolution in July 1964 that formally constituted the Education Commission under the chairmanship of Dr. D.S. Kothari. This policy directive charged the commission with advising the Union government on general principles for developing education at all stages. The recommendations directly shaped national educational policy principles in 1968.",
+      "explanation_hindi": "जुलाई 1964 में भारत सरकार ने एक महत्त्वपूर्ण संकल्प जारी करके डॉ. डी. एस. कोठारी की अध्यक्षता में शिक्षा आयोग का गठन किया। आयोग को शिक्षा के सभी स्तरों के विकास के लिए व्यापक सिद्धांतों और दिशा-निर्देशों पर सरकार को सलाह देने का दायित्व दिया गया था। उसकी सिफारिशों ने 1968 की राष्ट्रीय शिक्षा नीति के निर्माण को सीधे प्रभावित किया।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "The Government of India Resolution of July 1964",
+        "The Government of India Resolution of July 1964 The Government of India issued a milestone resolution in July 1964 that formally constituted the Education Commission under the chairmanship of Dr. D.S. Kothari. This policy directive charged the commission with advising the Union government on general principles for developing education at all stages. The recommendations directly shaped national educational policy principles in 1968."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "aa48e43f-e198-491c-8c74-eb188c5dbff7",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "नीचे दो कथन दिए गए हैं—एक अभिकथन (A) और दूसरा कारण (R)।\nअभिकथन (A): NPE 1968 और NEP 2020, दोनों त्रि-भाषा सूत्र के महत्त्व पर बल देते हैं।\nकारण (R): NEP 2020 दक्षिणी राज्यों में हिंदी को कठोरता से अनिवार्य करती है, जबकि NPE 1968 ऐसा नहीं करती थी।\nउपर्युक्त के संबंध में सही विकल्प चुनिए।",
+      "options_hindi": [
+        "A और R दोनों सही हैं तथा R, A की सही व्याख्या है",
+        "A और R दोनों सही हैं, किंतु R, A की सही व्याख्या नहीं है",
+        "A सही है, किंतु R गलत है",
+        "A गलत है, किंतु R सही है"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 85; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A): Both NPE 1968 and NEP 2020 emphasize the critical importance of the Three- Language Formula.\nReason (R): NEP 2020 rigidly enforces Hindi as a compulsory language in all Southern states, unlike the NPE 1968.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A is true but R is false Both the 1968 and 2020 policies endorse the Three-Language Formula to foster multilingual competence and national integration. However, the 2020 framework provides greater implementation flexibility and explicitly prohibits forcing Hindi or any other specific language on any state, contradicting claims of rigid compulsory enforcement.",
+      "explanation_hindi": "सही उत्तर (C) है: अभिकथन सही है, कारण गलत है। NPE 1968 और NEP 2020, दोनों त्रि-भाषा सूत्र का समर्थन करती हैं, यद्यपि इनके कार्यान्वयन का संदर्भ और भाषा-नीति की रूपरेखा समान नहीं है। NEP 2020 अधिक लचीलापन देने तथा किसी राज्य पर कोई भाषा थोपने से बचने की बात करती है। इसलिए यह कहना कि नीति दक्षिणी राज्यों में हिंदी को कठोरता से अनिवार्य करती है, कथन का गलत निरूपण है। अभिकथन की सत्यता कारण की सत्यता पर निर्भर नहीं करती; कारण में ही मुख्य जाल है। ऐसे प्रश्नों में दोनों कथनों को अलग-अलग परखना चाहिए और यह भी देखना चाहिए कि कारण वास्तव में अभिकथन की व्याख्या करता है या नहीं।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "hard",
+      "key_facts": [
+        "A is true but R is false",
+        "A is true but R is false Both the 1968 and 2020 policies endorse the Three-Language Formula to foster multilingual competence and national integration. However, the 2020 framework provides greater implementation flexibility and explicitly prohibits forcing Hindi or any other specific language on any state, contradicting claims of rigid compulsory enforcement."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "9d5050ca-29ff-4677-ad61-0e9659677ce1",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "NEP 2020 के अनुसार उच्च गुणवत्ता वाली प्रारंभिक बाल्यावस्था देखभाल और शिक्षा (ECCE) के लिए सेवा-प्रदान की एक विस्तारित और सुदृढ़ व्यवस्था में निम्नलिखित में से कौन-से माध्यम शामिल हैं?\nI. स्वतंत्र आँगनवाड़ियाँ\nII. प्राथमिक विद्यालयों के साथ स्थित आँगनवाड़ियाँ\nIII. मौजूदा प्राथमिक विद्यालयों के साथ स्थित, कम-से-कम 5–6 वर्ष आयु को कवर करने वाले पूर्व-प्राथमिक विद्यालय/खंड\nIV. स्वतंत्र पूर्व-विद्यालय",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल I, II और III",
+        "केवल II, III और IV",
+        "I, II, III और IV"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 162; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "According to NEP 2020, to ensure high-quality ECCE, the pedagogical framework will be delivered through a significantly expanded and strengthened system of:\nI. Standalone Anganwadis\nII. Anganwadis co-located with primary schools\nIII. Pre-primary schools/sections covering at least age 5 to 6 years co-located with existing primary schools\nIV. Stand-alone pre-schools Which of the above are correct delivery mechanisms recognized by the policy?",
+      "options_english": [
+        "I and II only",
+        "I, II, and III only",
+        "II, III, and IV only",
+        "I, II, III, and IV"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "I, II, III, and IV Expanding quality early childhood education under current policy frameworks utilizes multiple delivery systems: standalone Anganwadis, Anganwadis co-located with primary schools, pre-primary sections within existing primary campuses, and standalone pre-schools, ensuring comprehensive coverage across diverse demographic settings.",
+      "explanation_hindi": "नीति ECCE तक व्यापक पहुँच के लिए अनेक प्रकार की संस्थागत व्यवस्थाओं को सुदृढ़ करने की परिकल्पना करती है। इनमें स्वतंत्र आँगनवाड़ियाँ, प्राथमिक विद्यालयों के साथ स्थित आँगनवाड़ियाँ, प्राथमिक विद्यालयों के साथ संचालित पूर्व-प्राथमिक खंड और स्वतंत्र पूर्व-विद्यालय शामिल हैं। इन विभिन्न माध्यमों का उद्देश्य विविध स्थानीय और जनसांख्यिकीय परिस्थितियों में छोटे बच्चों तक गुणवत्तापूर्ण देखभाल और शिक्षा पहुँचाना है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "hard",
+      "key_facts": [
+        "I, II, III, and IV",
+        "I, II, III, and IV Expanding quality early childhood education under current policy frameworks utilizes multiple delivery systems: standalone Anganwadis, Anganwadis co-located with primary schools, pre-primary sections within existing primary campuses, and standalone pre-schools, ensuring comprehensive coverage across diverse demographic settings."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "29e1452c-2502-4574-a595-ffa94da6198d",
+      "created_at": "2026-10-18T16:31:18.000000",
+      "question_hindi": "व्यावसायिक/पेशेवर शिक्षा के बारे में कौन-सा कथन NEP 2020 के अनुरूप है?",
+      "options_hindi": [
+        "पेशेवर शिक्षा को अनुसंधान और उदार शिक्षा से अलग रखना चाहिए।",
+        "पेशेवर शिक्षा को संकीर्ण विशेषज्ञताओं में अलग रखने के बजाय व्यापक उच्च-शिक्षा तंत्र में एकीकृत होना चाहिए।",
+        "इसे केवल गैर-डिग्री लघु पाठ्यक्रमों के रूप में देना चाहिए।",
+        "पेशेवर संस्थानों को बहुविषयी सहयोग से बचना चाहिए।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which statement about professional education is most consistent with NEP 2020?",
+      "options_english": [
+        "Professional education must be separated from research and liberal learning.",
+        "Professional education should be integrated with the broader higher-education ecosystem rather than isolated in narrow specialties.",
+        "It should be offered only through non-degree short courses.",
+        "Professional institutions should avoid multidisciplinary collaboration."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The policy emphasizes integration and warns against professional education occurring in isolation from its broader context.",
+      "explanation_hindi": "नीति एकीकरण पर बल देती है और पेशेवर शिक्षा को व्यापक संदर्भ से अलग रखने से सावधान करती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "professional education should not take place in the isolation of one's specialty."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:18.010000"
+    },
+    {
+      "id": "d95c2d8b-6e08-4a89-9c85-345c1f434c73",
+      "created_at": "2026-10-18T16:30:16.000000",
+      "question_hindi": "मुक्त विद्यालयी स्तरों का औपचारिक कक्षा-समानता से मिलान कीजिए।\nसूची I\nA. स्तर A\nB. स्तर B\nC. स्तर C\n\nसूची II\n1. कक्षा 8\n2. कक्षा 3\n3. कक्षा 5",
+      "options_hindi": [
+        "A-1, B-2, C-3।",
+        "A-3, B-1, C-2।",
+        "A-2, B-1, C-3।",
+        "A-2, B-3, C-1।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match the Open Schooling level with its formal-grade equivalence.\nList I\nA. Level A\nB. Level B\nC. Level C\n\nList II\n1. Grade 8\n2. Grade 3\n3. Grade 5",
+      "options_english": [
+        "A-1, B-2, C-3.",
+        "A-3, B-1, C-2.",
+        "A-2, B-1, C-3.",
+        "A-2, B-3, C-1."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The policy equates Open Schooling A, B and C levels to Grades 3, 5 and 8 respectively.",
+      "explanation_hindi": "नीति मुक्त विद्यालयी A, B और C स्तरों को क्रमशः कक्षा 3, 5 और 8 के समकक्ष बताती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "A, B and C levels that are equivalent to Grades 3, 5, and 8 of the formal school system"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:16.010000"
+    },
+    {
+      "id": "7e1b9b97-dfb0-432a-8bae-67c97317fd99",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "POA 1992 में किए गए निम्नलिखित संशोधनों पर विचार कीजिए।\nI. ऑपरेशन ब्लैकबोर्ड का उच्च प्राथमिक विद्यालयों तक विस्तार।\nII. प्राथमिक विद्यालयों में तीन शिक्षक और तीन कमरे उपलब्ध कराने का लक्ष्य।\nIII. नवोदय विद्यालय योजना को वापस लेना।\nIV. वयस्क निरक्षरता दूर करने के लिए राष्ट्रीय साक्षरता मिशन का शुभारंभ।\nउपर्युक्त में से कौन-से कथन POA 1992 के अद्यतन या निरंतरता को सही रूप में दर्शाते हैं?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल I, II और IV",
+        "केवल II, III और IV",
+        "केवल I, III और IV"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 43; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Consider the following modifications made in the POA 1992:\nI. Expansion of Operation Blackboard to upper primary schools.\nII. Target to provide three teachers and three rooms in primary schools.\nIII. Reversal of the Navodaya Vidyalaya scheme.\nIV. Launch of the National Literacy Mission to eradicate adult illiteracy. Which of the statements accurately reflect the POA 1992 updates/continuations?",
+      "options_english": [
+        "I and II only",
+        "I, II, and IV only",
+        "II, III, and IV only",
+        "I, III, and IV only"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "I, II, and IV only Updates in the 1992 Programme of Action expanded Operation Blackboard to upper primary schools, set targets for three teachers in primary schools, and reaffirmed the National Literacy Mission. The Navodaya Vidyalaya scheme was not reversed; instead, it was reaffirmed as an effective model for expanding quality rural secondary education.",
+      "explanation_hindi": "POA 1992 ने ऑपरेशन ब्लैकबोर्ड को उच्च प्राथमिक स्तर तक विस्तारित किया, प्राथमिक विद्यालयों में तीन शिक्षकों के लक्ष्य को आगे बढ़ाया और राष्ट्रीय साक्षरता मिशन को समर्थन दिया। नवोदय विद्यालय योजना को समाप्त नहीं किया गया था; उसे ग्रामीण क्षेत्रों में गुणवत्तापूर्ण माध्यमिक शिक्षा के विस्तार के उपयोगी मॉडल के रूप में जारी रखा गया। इसलिए I, II और IV सही हैं।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "I, II, and IV only",
+        "I, II, and IV only Updates in the 1992 Programme of Action expanded Operation Blackboard to upper primary schools, set targets for three teachers in primary schools, and reaffirmed the National Literacy Mission. The Navodaya Vidyalaya scheme was not reversed; instead, it was reaffirmed as an effective model for expanding quality rural secondary education."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "bde2aea0-d2c9-4754-91a0-7ad55b4f0e7f",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "निम्नलिखित अभिकथन (A) और कारण (R) पर विचार कीजिए।\nअभिकथन (A): शैक्षिक प्रशासन नीति-निर्माण पर केंद्रित होता है, जबकि शैक्षिक प्रबंधन उन नीतियों के क्रियान्वयन और कार्यान्वयन से संबंधित होता है।\nकारण (R): प्रधानाचार्य केवल प्रशासक की भूमिका निभाता है और विद्यालय में उसकी कोई प्रबंधकीय जिम्मेदारी नहीं होती।",
+      "options_hindi": [
+        "A और R दोनों सही हैं तथा R, A की सही व्याख्या करता है।",
+        "A और R दोनों सही हैं, किंतु R, A की सही व्याख्या नहीं करता है।",
+        "A सही है, किंतु R गलत है।",
+        "A गलत है, किंतु R सही है।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 164; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A is true but R is false Educational administration establishes policy goals, governance structures, and regulatory rules, while management handles operational implementation and resource execution. A school Principal performs both functions, serving simultaneously as an educational leader, operational manager, and administrative authority within the institution.",
+      "explanation_hindi": "अभिकथन सही है: प्रशासन सामान्यतः नीतियों, शासन संरचनाओं और नियामक व्यवस्था के निर्धारण से जुड़ा होता है, जबकि प्रबंधन उनका दैनिक संचालन और संसाधनों के माध्यम से क्रियान्वयन करता है। कारण गलत है, क्योंकि प्रधानाचार्य प्रशासन और प्रबंधन दोनों कार्य करता है। वह नीति और संस्थागत जवाबदेही से भी जुड़ा होता है तथा मानव संसाधन, समय-सारणी, बजट और शिक्षण की गुणवत्ता का प्रबंधन भी करता है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "hard",
+      "key_facts": [
+        "A is true but R is false",
+        "A is true but R is false Educational administration establishes policy goals, governance structures, and regulatory rules, while management handles operational implementation and resource execution. A school Principal performs both functions, serving simultaneously as an educational leader, operational manager, and administrative authority within the institution."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "91e1c398-af40-4308-a30b-14946b3f9298",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "NCF-FS में सम्मिलित “पंचकोश” विकास अवधारणा के निम्नलिखित घटकों पर विचार कीजिए:\nI. अन्नमय कोश (शारीरिक स्तर)\nII. प्राणमय कोश (जीवन-ऊर्जा स्तर)\nIII. मनोमय कोश (मन का स्तर)\nIV. विज्ञानमय कोश (बौद्धिक स्तर)\nV. आनंदमय कोश (अंतरात्मा/आनंद का स्तर)\nइस अवधारणा को शामिल करने का उद्देश्य क्या है?",
+      "options_hindi": [
+        "पाठ्यचर्या का पूर्ण पश्चिमीकरण करना।",
+        "भारतीय परंपरा में निहित समग्र विकास को बढ़ावा देना।",
+        "केवल भाषाई विकास पर आधारित रूपरेखा बनाना।",
+        "बोर्ड परीक्षाओं के लिए कठोर मूल्यांकन मानदंड तैयार करना।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 161; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Consider the following components of 'Panchakosha' development concept integrated into the NCFFS:\nI. Annamaya Kosha (Physical layer)\nII. Pranamaya Kosha (Life energy layer)\nIII. Manomaya Kosha (Mind layer)\nIV. Vijnanamaya Kosha (Intellectual layer)\nV. Anandamaya Kosha (Inner self/bliss layer) The incorporation of this concept aims to achieve:",
+      "options_english": [
+        "Complete westernization of the curriculum",
+        "Holistic development rooted in Indian tradition",
+        "A purely linguistic framework",
+        "A rigid assessment rubric for board exams"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Holistic development rooted in Indian tradition Integrating the Panchakosha framework into foundational curriculum design reflects an approach rooted in traditional Indian thought. Addressing physical, vital energy, mental, intellectual, and inner emotional dimensions aims to achieve integrated, multi-dimensional child development across all aspects of personality and capability.",
+      "explanation_hindi": "पंचकोश अवधारणा भारतीय परंपरा में निहित मानव-विकास की समग्र दृष्टि को दर्शाती है। इसमें शारीरिक, प्राण-ऊर्जा, मानसिक, बौद्धिक और आंतरिक/आनंद संबंधी आयामों को एक-दूसरे से जुड़ा हुआ माना जाता है। इसे आधारभूत पाठ्यचर्या में शामिल करने का उद्देश्य बच्चे के व्यक्तित्व, क्षमताओं और विकास को अनेक आयामों में पोषित करना है, न कि केवल भाषा या परीक्षा-केंद्रित कौशल विकसित करना।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "hard",
+      "key_facts": [
+        "Holistic development rooted in Indian tradition",
+        "Holistic development rooted in Indian tradition Integrating the Panchakosha framework into foundational curriculum design reflects an approach rooted in traditional Indian thought. Addressing physical, vital energy, mental, intellectual, and inner emotional dimensions aims to achieve integrated, multi-dimensional child development across all aspects of personality and capability."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "d6056b96-8e1d-49f2-919d-71add5c70ee0",
+      "created_at": "2026-10-18T16:31:08.000000",
+      "question_hindi": "HECI के प्रस्तावित कार्यक्षेत्र का उसके मुख्य कार्य से मिलान कीजिए।\nसूची I\nA. NHERC\nB. NAC\nC. HEGC\nD. GEC\n\nसूची II\n1. वित्तपोषण\n2. शैक्षणिक अधिगम परिणाम/स्नातक विशेषताएँ\n3. सामान्य उच्च शिक्षा विनियमन\n4. प्रत्यायन की शीर्ष व्यवस्था",
+      "options_hindi": [
+        "A-4, B-3, C-2, D-1।",
+        "A-1, B-2, C-3, D-4।",
+        "A-3, B-1, C-4, D-2।",
+        "A-3, B-4, C-1, D-2।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match the proposed HECI vertical with its principal function.\nList I\nA. NHERC\nB. NAC\nC. HEGC\nD. GEC\n\nList II\n1. Funding and financing\n2. Academic learning outcomes/graduate attributes\n3. Common higher-education regulation\n4. Meta-accreditation",
+      "options_english": [
+        "A-4, B-3, C-2, D-1.",
+        "A-1, B-2, C-3, D-4.",
+        "A-3, B-1, C-4, D-2.",
+        "A-3, B-4, C-1, D-2."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "NHERC regulates, NAC is the meta-accrediting body, HEGC funds, and GEC frames learning outcomes and graduate attributes.",
+      "explanation_hindi": "NHERC विनियमन करता है, NAC प्रत्यायन की शीर्ष संस्था है, HEGC वित्तपोषण करता है और GEC अधिगम परिणाम तथा स्नातक विशेषताएँ तय करता है।",
+      "topic": "NEP 2020",
+      "difficulty": "hard",
+      "key_facts": [
+        "The first vertical of HECI will be the National Higher Education Regulatory Council (NHERC)."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:08.010000"
+    },
+    {
+      "id": "1378e260-b362-470d-a19a-756c70c8c4b8",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "सतत एवं व्यापक मूल्यांकन (CCE) को प्रमुख शिक्षण-संबंधी बदलाव के रूप में किस रूपरेखा के आधार पर शुरू किया गया था?",
+      "options_hindi": [
+        "राष्ट्रीय पाठ्यचर्या रूपरेखा (NCF) 2005 और शिक्षा का अधिकार अधिनियम (RTE Act)।",
+        "राष्ट्रीय शिक्षा नीति 1968 की रूपरेखा।",
+        "1992 के कार्ययोजना कार्यक्रम (Programme of Action) के दिशानिर्देश।",
+        "केवल आधारभूत चरण से संबंधित NCF-SE 2023 की रूपरेखा।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 111; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Continuous and Comprehensive Evaluation (CCE) was introduced as a major pedagogical shift based on which framework?",
+      "options_english": [
+        "NCF 2005 and RTE Act",
+        "National Policy on Education 1968 framework",
+        "Programme of Action 1992 guidelines",
+        "NCF-SE 2023 foundational framework exclusively"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "NCF 2005 and RTE Act Continuous and Comprehensive Evaluation was operationalized as a core assessment strategy following guidelines in NCF 2005 and statutory provisions of the RTE Act 2009. It sought to replace stress-inducing end-of-year examinations with ongoing evaluation encompassing scholastic, co-scholastic, and personal development throughout the academic year.",
+      "explanation_hindi": "CCE को NCF 2005 के दिशानिर्देशों और RTE अधिनियम 2009 के प्रावधानों के आधार पर मुख्य मूल्यांकन रणनीति के रूप में लागू किया गया। इसका उद्देश्य पूरे शैक्षणिक वर्ष में विद्यार्थी की प्रगति का आकलन करना था, न कि केवल वर्षांत की तनावपूर्ण परीक्षा पर निर्भर रहना। इसमें शैक्षिक, सह-शैक्षिक और व्यक्तिगत विकास के पहलुओं को शामिल करने पर बल दिया गया।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "NCF 2005 and RTE Act",
+        "NCF 2005 and RTE Act Continuous and Comprehensive Evaluation was operationalized as a core assessment strategy following guidelines in NCF 2005 and statutory provisions of the RTE Act 2009. It sought to replace stress-inducing end-of-year examinations with ongoing evaluation encompassing scholastic, co-scholastic, and personal development throughout the academic year."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "4beb945d-8170-4b21-aac0-900dc59492fa",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "निम्नलिखित दो कथनों पर विचार कीजिए। एक को अभिकथन (A) और दूसरे को कारण (R) कहा गया है।\nअभिकथन (A): NPE 1968 एक क्रांतिकारी और पूर्णतः बाध्यकारी विधायी अधिनियम थी, जिसने सभी राज्यों को तुरंत 10+2+3 शैक्षिक संरचना अपनाने के लिए बाध्य किया।\nकारण (R): 1968 में शिक्षा राज्य सूची का विषय थी, इसलिए यह नीति राज्यों पर वैधानिक रूप से बाध्यकारी कानून के बजाय सलाहकारी प्रकृति की थी।\nउपर्युक्त के संबंध में सही विकल्प चुनिए।",
+      "options_hindi": [
+        "A और R दोनों सही हैं तथा R, A की सही व्याख्या करता है।",
+        "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं करता।",
+        "A सही है, लेकिन R गलत है।",
+        "A गलत है, लेकिन R सही है।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 4; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A): The NPE 1968 was a radical and fully binding legislative act that forced all states to immediately adopt the 10+2+3 educational structure.\nReason (R): Education was a State subject in 1968, making the policy advisory in nature rather than statutorily binding on state governments.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "A is false but R is true During the implementation of the 1968 national policy, education remained listed strictly under the State List of the Seventh Schedule of the Constitution. Consequently, Union policy declarations functioned as advisory guidelines rather than legally binding statutory mandates. State governments possessed final authority to",
+      "explanation_hindi": "1968 में शिक्षा संविधान की सातवीं अनुसूची की राज्य सूची में थी। इसलिए केंद्र द्वारा घोषित राष्ट्रीय शिक्षा नीति अपने आप में ऐसा बाध्यकारी कानून नहीं थी जो सभी राज्यों को तुरंत एक निश्चित संरचना अपनाने के लिए मजबूर कर सके। राज्य सरकारों के पास सुधारों को अपनाने, उनमें बदलाव करने या उनके कार्यान्वयन में विलंब करने का अधिकार बना रहा। अतः अभिकथन गलत और कारण सही है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "hard",
+      "key_facts": [
+        "A is false but R is true",
+        "A is false but R is true During the implementation of the 1968 national policy, education remained listed strictly under the State List of the Seventh Schedule of the Constitution. Consequently, Union policy declarations functioned as advisory guidelines rather than legally binding statutory mandates. State governments possessed final authority to"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "58616efa-b03a-448a-8736-6a6085c439b7",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "सामान्य वित्तीय नियमों (GFR) के अनुसार विद्यालय में ‘इन्वेंटरी रजिस्टर’ किसका अभिलेख रखने के लिए आवश्यक है?",
+      "options_hindi": [
+        "खरीदे गए गैर-उपभोज्य उपकरणों का विवरण।",
+        "नामांकित विद्यार्थियों की दैनिक उपस्थिति और अनुपस्थिति का पूरा विवरण।",
+        "विद्यालय के सभी शिक्षकों के अर्जित अवकाश और आकस्मिक अवकाश खाते।",
+        "विद्यालय प्रबंधन समिति की प्रत्येक मासिक बैठक के आधिकारिक कार्यवृत्त।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 218; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "According to the General Financial Rules (GFR), an \"Inventory Register\" in a school must be maintained to record:",
+      "options_english": [
+        "Purchased non-consumable equipment details",
+        "Complete daily attendance records and absence logs of enrolled students",
+        "Earned leave and casual leave accounts of all employed school teachers",
+        "Detailed official recorded minutes of all monthly SMC committee meetings"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Purchased non-consumable equipment details Under General Financial Rules, public institutions must maintain an Inventory Register to log all non-consumable equipment, furniture, laboratory apparatus, and capital assets purchased with institutional funds, ensuring proper asset tracking, financial accountability, and statutory audit compliance.",
+      "explanation_hindi": "इन्वेंटरी रजिस्टर में संस्थान द्वारा खरीदी गई गैर-उपभोज्य संपत्तियों, जैसे उपकरण, फर्नीचर, प्रयोगशाला सामग्री और अन्य स्थायी वस्तुओं का विवरण दर्ज किया जाता है। इससे संपत्ति का पता रखना, वित्तीय जवाबदेही सुनिश्चित करना और लेखा-परीक्षा के समय अभिलेखों का सत्यापन संभव होता है। विद्यार्थियों की उपस्थिति, अवकाश खाते और समिति के कार्यवृत्त अलग-अलग अभिलेखों में रखे जाते हैं।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Purchased non-consumable equipment details",
+        "Purchased non-consumable equipment details Under General Financial Rules, public institutions must maintain an Inventory Register to log all non-consumable equipment, furniture, laboratory apparatus, and capital assets purchased with institutional funds, ensuring proper asset tracking, financial accountability, and statutory audit compliance."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    }
+  ]
+}

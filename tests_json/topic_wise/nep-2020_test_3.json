@@ -1,426 +1,660 @@
 {
-  "test_id": "1c0bfa3d-57f7-4ccd-964b-4ea92e6168b7",
+  "test_id": "9ecbf4b1-8549-44da-ace5-e2d68e90a997",
   "test_name": "Topic Test: NEP 2020 - Part 3",
   "type": "topic_wise",
   "topic": "nep-2020",
-  "created_at": "2026-10-18T11:57:07.864103",
+  "created_at": "2026-10-19T07:49:29.131164",
   "questions": [
     {
-      "id": "62ff2dc0-7136-430d-9bbd-df57025133f5",
-      "created_at": "2026-10-18T16:30:18.000000",
-      "question_hindi": "मध्य और माध्यमिक चरण के बीच सबसे सटीक अंतर कौन-सा है?",
+      "id": "98a04ce9-543b-4b68-ba3c-3a525cf80f85",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "NEP 2020 के अनुसार राष्ट्रीय शिक्षक व्यावसायिक मानकों (NPST) के संबंध में निम्नलिखित कथनों पर विचार कीजिए।\nI. NPST का विकास राष्ट्रीय अध्यापक शिक्षा परिषद (NCTE) करेगी।\nII. NPST शिक्षक की भूमिका से संबंधित अपेक्षाएँ और विभिन्न दक्षता-स्तरों को परिभाषित करेगा।\nIII. NPST दिशा-निर्देश राज्य की सिविल सेवा के शिक्षक-स्थानांतरण नियमों को पूरी तरह प्रतिस्थापित करेंगे।\nकौन-से कथन सही हैं?",
       "options_hindi": [
-        "मध्य चरण पूरी तरह खेल-आधारित है; माध्यमिक केवल व्यावसायिक है।",
-        "मध्य चरण में विषय-शिक्षक और अधिक अमूर्त अवधारणाएँ आती हैं; माध्यमिक चरण गहराई, आलोचनात्मक चिंतन, लचीलापन और विषय-चयन बढ़ाता है।",
-        "माध्यमिक चरण विषय-चयन समाप्त कर एक धारा पर लौटता है।",
-        "विषय-शिक्षक आने पर मध्य चरण अनुभवात्मक अधिगम समाप्त करता है।"
+        "केवल I",
+        "केवल I और II",
+        "केवल II और III",
+        "I, II और III सभी"
       ],
       "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
+        "a",
+        "b",
+        "c",
+        "d"
       ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 79; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
       "language": "bilingual",
-      "question_english": "Which is the most accurate distinction between the Middle and Secondary Stages?",
+      "question_english": "Consider the following statements regarding the National Professional Standards for Teachers (NPST) as per NEP 2020:\nI. NPST will be developed by the National Council for Teacher Education (NCTE).\nII. NPST will define the expectations for the role of a teacher at different levels of expertise.\nIII. NPST guidelines will completely replace the state civil service rules for teacher transfers. Which of the above is/are correct?",
       "options_english": [
-        "Middle is entirely play-based; Secondary is only vocational.",
-        "Middle introduces subject teachers and more abstract concepts; Secondary adds depth, critical thinking, flexibility and subject choice.",
-        "Secondary removes subject choice and returns to one stream.",
-        "Middle excludes experiential learning when subject teachers start."
+        "I only",
+        "I and II only",
+        "II and III only",
+        "I, II, and III"
       ],
       "correct_answer": "b",
-      "explanation_english": "The policy describes subject teachers in the Middle Stage and greater depth and flexibility in the Secondary Stage.",
-      "explanation_hindi": "नीति मध्य चरण में विषय-शिक्षकों तथा माध्यमिक चरण में अधिक गहराई और लचीलेपन का वर्णन करती है।",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "with the introduction of subject teachers for learning and discussion of the more abstract concepts"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T16:30:18.010000"
-    },
-    {
-      "id": "b54bb24e-c909-47ac-978f-63d49968d1eb",
-      "created_at": "2026-10-18T16:31:25.000000",
-      "question_hindi": "NEP 2020 शिक्षा क्षेत्र के लिए सार्वजनिक निवेश का कौन-सा लक्ष्य स्वीकार करती है?",
-      "options_hindi": [
-        "केंद्र और राज्यों के सहयोग से यथाशीघ्र GDP का 6%।",
-        "केवल केंद्र सरकार द्वारा GDP का 4%।",
-        "केवल उच्च शिक्षा के लिए GDP का 10%।",
-        "केवल निजी दान से GDP का 6%।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "What public-investment target does NEP 2020 endorse for the education sector?",
-      "options_english": [
-        "6% of GDP at the earliest, through cooperation between the Centre and States.",
-        "4% of GDP only by the Central Government.",
-        "10% of GDP exclusively for higher education.",
-        "6% of GDP from private donations alone."
-      ],
-      "correct_answer": "a",
-      "explanation_english": "The policy calls for Central and State Governments to work together to reach 6% of GDP in public education investment.",
-      "explanation_hindi": "नीति सार्वजनिक शिक्षा निवेश को GDP के 6% तक पहुँचाने के लिए केंद्र और राज्यों के संयुक्त प्रयास की बात करती है।",
-      "topic": "NEP 2020",
-      "difficulty": "easy",
-      "key_facts": [
-        "The Centre and the States will work together to increase the public investment in Education sector to reach 6% of GDP at the earliest."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T16:31:25.010000"
-    },
-    {
-      "id": "d7308107-5bcc-4202-88ff-2d5bdcf979de",
-      "created_at": "2026-10-18T16:31:16.000000",
-      "question_hindi": "NEP 2020 के अनुसार 2025 तक विद्यालयी और उच्च शिक्षा प्रणाली के कितने प्रतिशत शिक्षार्थियों को व्यावसायिक शिक्षा का अनुभव होना चाहिए?",
-      "options_hindi": [
-        "कम-से-कम 25%।",
-        "ठीक 33%।",
-        "कम-से-कम 75%।",
-        "कम-से-कम 50%।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "By 2025, what proportion of learners across school and higher education should have exposure to vocational education under NEP 2020?",
-      "options_english": [
-        "At least 25%.",
-        "Exactly 33%.",
-        "At least 75%.",
-        "At least 50%."
-      ],
-      "correct_answer": "d",
-      "explanation_english": "The policy gives a target of at least 50% exposure to vocational education by 2025.",
-      "explanation_hindi": "नीति 2025 तक कम-से-कम 50% शिक्षार्थियों को व्यावसायिक शिक्षा से परिचित कराने का लक्ष्य देती है।",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "By 2025, at least 50% of learners through the school and higher education system shall have exposure to vocational education"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T16:31:16.010000"
-    },
-    {
-      "id": "8d882e7e-da92-4b9c-903f-d99a6ab145c9",
-      "created_at": "2026-10-18T16:30:54.000000",
-      "question_hindi": "NEP 2020 संबद्ध महाविद्यालय प्रणाली को किस प्रकार चरणबद्ध ढंग से समाप्त करने की कल्पना करती है?",
-      "options_hindi": [
-        "तुरंत, प्रत्येक महाविद्यालय को केंद्र सरकार को स्थानांतरित करके।",
-        "पंद्रह वर्षों में श्रेणीबद्ध स्वायत्तता और चुनौती पद्धति के माध्यम से, जिसमें विश्वविद्यालय संबद्ध महाविद्यालयों का मार्गदर्शन करेंगे।",
-        "दो वर्षों में प्रत्यायन समाप्त करके।",
-        "केवल तब, जब महाविद्यालय स्वेच्छा से स्नातक डिग्री देना बंद कर दें।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "How does NEP 2020 envisage phasing out the affiliated-college system?",
-      "options_english": [
-        "Immediately, by transferring every college to the Central Government.",
-        "Over fifteen years, through graded autonomy and a challenge mode, with universities mentoring affiliated colleges.",
-        "Within two years by abolishing accreditation.",
-        "Only when colleges voluntarily stop offering undergraduate degrees."
-      ],
-      "correct_answer": "b",
-      "explanation_english": "The policy envisages a fifteen-year phased transition supported by graded autonomy and mentoring.",
-      "explanation_hindi": "नीति श्रेणीबद्ध स्वायत्तता और मार्गदर्शन के सहारे पंद्रह वर्षों का चरणबद्ध परिवर्तन प्रस्तावित करती है।",
-      "topic": "NEP 2020",
+      "explanation_english": "I and II only The National Council for Teacher Education is tasked with formulating National Professional Standards for Teachers, defining career stages, professional competencies, and performance expectations. However, these academic standards do not override state administrative civil service rules governing statutory service conditions or teacher transfer procedures in government institutions.",
+      "explanation_hindi": "राष्ट्रीय अध्यापक शिक्षा परिषद को राष्ट्रीय शिक्षक व्यावसायिक मानक विकसित करने का दायित्व दिया गया है। ये मानक शिक्षक की पेशेवर दक्षताओं, करियर के विभिन्न चरणों और अपेक्षित प्रदर्शन को स्पष्ट करने के लिए हैं। हालांकि, वे राज्य सरकारों के वैधानिक सेवा-नियमों या शिक्षक-स्थानांतरण की प्रशासनिक प्रक्रियाओं को पूरी तरह प्रतिस्थापित नहीं करते। इसलिए केवल I और II सही हैं।",
+      "topic": "National Education Policy and related educational-policy questions",
       "difficulty": "hard",
       "key_facts": [
-        "gradually phasing out the system of ‘affiliated colleges’ over a period of fifteen years through a system of graded autonomy"
+        "I and II only",
+        "I and II only The National Council for Teacher Education is tasked with formulating National Professional Standards for Teachers, defining career stages, professional competencies, and performance expectations. However, these academic standards do not override state administrative civil service rules governing statutory service conditions or teacher transfer procedures in government institutions."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T16:30:54.010000"
+      "processed_at": "2026-10-18T16:30:05Z"
     },
     {
-      "id": "2dfd78dc-e29e-4ac0-afce-afe30d41d634",
-      "created_at": "2026-10-18T16:31:09.000000",
-      "question_hindi": "NEP 2020 के अंतर्गत NHERC के प्रस्तावित एकल-बिंदु विनियमन से कौन-से क्षेत्र बाहर रखे गए हैं?",
+      "id": "102766f9-7ff6-45c8-baf5-fc4e1aa397aa",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "संस्थागत नियोजन के क्रमिक चरणों पर विचार कीजिए:\n1. वर्तमान आवश्यकताओं और उपलब्ध संसाधनों का आकलन\n2. योजना का मूल्यांकन\n3. योजना का क्रियान्वयन\n4. उद्देश्यों और कार्य-योजना का निर्माण\nसही तार्किक क्रम कौन-सा है?",
       "options_hindi": [
-        "चिकित्सा और विधि शिक्षा।",
-        "शिक्षक शिक्षा और व्यावसायिक शिक्षा।",
-        "सभी सार्वजनिक और सभी निजी विश्वविद्यालय।",
-        "सभी ऑनलाइन और मुक्त-दूरस्थ अधिगम कार्यक्रम।"
+        "1, 4, 3, 2",
+        "4, 1, 3, 2",
+        "1, 3, 4, 2",
+        "4, 3, 1, 2"
       ],
       "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
+        "a",
+        "b",
+        "c",
+        "d"
       ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 170; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
       "language": "bilingual",
-      "question_english": "Which sectors are excluded from the proposed NHERC's common single-point regulation under NEP 2020?",
+      "question_english": "Consider the sequential steps of Institutional Planning:\n1. Assessment of current needs and existing resources\n2. Evaluation of the plan\n3. Implementation of the plan\n4. Formulation of objectives and action plan What is the correct logical order?",
       "options_english": [
-        "Medical and legal education.",
-        "Teacher education and vocational education.",
-        "All public universities and all private universities.",
-        "All online and Open Distance Learning programmes."
+        "1, 4, 3, 2",
+        "4, 1, 3, 2",
+        "1, 3, 4, 2",
+        "4, 3, 1, 2"
       ],
       "correct_answer": "a",
-      "explanation_english": "The policy calls NHERC the common regulator for higher education including teacher education, while excluding medical and legal education.",
-      "explanation_hindi": "नीति NHERC को शिक्षक शिक्षा सहित उच्च शिक्षा का सामान्य नियामक बताती है, जबकि चिकित्सा और विधि शिक्षा को बाहर रखती है।",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
+      "explanation_english": "1, 4, 3, 2 Developing an institutional plan follows a logical sequence: assessing existing needs and institutional resources first, formulating clear operational objectives and action strategies second, executing the planned interventions third, and conducting systematic evaluations fourth to measure overall outcomes and inform future planning cycles.",
+      "explanation_hindi": "संस्थागत नियोजन की शुरुआत मौजूदा आवश्यकताओं और संसाधनों का आकलन करने से होती है। इसके बाद स्पष्ट उद्देश्य और कार्य-योजना बनाई जाती है, फिर योजना लागू की जाती है और अंत में उसके परिणामों का मूल्यांकन किया जाता है। इस क्रम से विद्यालय अपनी वास्तविक स्थिति के आधार पर योजना बनाता है और भविष्य की योजना के लिए उपयोगी प्रतिक्रिया प्राप्त करता है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "hard",
       "key_facts": [
-        "including teacher education and excluding medical and legal education"
+        "1, 4, 3, 2",
+        "1, 4, 3, 2 Developing an institutional plan follows a logical sequence: assessing existing needs and institutional resources first, formulating clear operational objectives and action strategies second, executing the planned interventions third, and conducting systematic evaluations fourth to measure overall outcomes and inform future planning cycles."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T16:31:09.010000"
+      "processed_at": "2026-10-18T16:30:05Z"
     },
     {
-      "id": "7a27b28e-0335-4f94-81a3-9b46842c0940",
-      "created_at": "2026-10-18T16:31:00.000000",
-      "question_hindi": "NEP 2020 स्नातक डिग्री कार्यक्रमों में बहु-प्रवेश और बहु-निकास की कल्पना कैसे करती है?",
+      "id": "aaed1557-2ec1-4ac4-bbb0-978e752591ab",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "प्रसरण के निम्नलिखित मापों—परास, माध्य विचलन, मानक विचलन और विचरण—में से कौन-से माध्य से विचलनों के बीजीय चिह्नों को ध्यान में रखते हुए उनका वर्ग करते हैं, ताकि ऋणात्मक चिह्न समाप्त हो जाएँ?",
       "options_hindi": [
-        "केवल चार-वर्षीय डिग्री की अनुमति है और बीच में निकास नहीं है।",
-        "एक वर्ष के बाद डिप्लोमा और तीन वर्ष के बाद प्रमाणपत्र मिलता है।",
-        "निकास विकल्प केवल व्यावसायिक कार्यक्रमों तक सीमित हैं और स्नातक डिग्री को शामिल नहीं करते।",
-        "एक वर्ष के बाद प्रमाणपत्र, दो वर्ष के बाद डिप्लोमा और तीन वर्ष के बाद स्नातक डिग्री मिल सकती है; चार-वर्षीय बहुविषयी कार्यक्रम को प्राथमिकता दी गई है।"
+        "परास",
+        "माध्य विचलन",
+        "मानक विचलन और विचरण",
+        "चतुर्थक विचलन"
       ],
       "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
+        "a",
+        "b",
+        "c",
+        "d"
       ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 191; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
       "language": "bilingual",
-      "question_english": "How does NEP 2020 envisage multiple entry and exit in undergraduate degree programmes?",
+      "question_english": "Consider the following measures of dispersion: Range, Mean Deviation, Standard Deviation, and Variance. Which of these takes into account the algebraic signs of the deviations from the mean (i.e., squares them to eliminate negative signs)?",
       "options_english": [
-        "Only a four-year degree is permitted, with no exit before completion.",
-        "A diploma is awarded after one year and a certificate after three years.",
-        "Exit options are limited to vocational programmes and exclude undergraduate degrees.",
-        "A certificate may follow one year, a diploma two years, and a Bachelor's degree three years; the four-year multidisciplinary programme is preferred."
-      ],
-      "correct_answer": "d",
-      "explanation_english": "The policy allows staged certifications during a three- or four-year undergraduate degree, while preferring the four-year multidisciplinary option.",
-      "explanation_hindi": "नीति तीन या चार वर्ष के स्नातक कार्यक्रम में चरणबद्ध प्रमाणन की अनुमति देती है और चार-वर्षीय बहुविषयी विकल्प को प्राथमिकता देती है।",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "with multiple exit options within this period, with appropriate certifications, e.g., a certificate after completing 1 year in a discipline or field including vocational and professional areas, or a diploma after 2 years of study, or a Bachelor’s degree after a 3-year programme."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T16:31:00.010000"
-    },
-    {
-      "id": "acf97920-d82c-4e3f-8436-4987c4fa84c3",
-      "created_at": "2026-10-18T16:30:39.000000",
-      "question_hindi": "NEP 2020 शिक्षक-शिक्षा कार्यक्रमों के लिए 2030 तक कौन-सी अपेक्षा रखती है?",
-      "options_hindi": [
-        "सभी पृथक TEI अनिश्चितकाल तक एक-विषयी रहें।",
-        "शिक्षक-शिक्षा को बहुविषयी संस्थानों से अलग करें।",
-        "केवल शैक्षिक रूप से सुदृढ़, बहुविषयी और एकीकृत कार्यक्रम लागू रहने चाहिए।",
-        "B.Ed. में विद्यालय-आधारित व्यवहारिक प्रशिक्षण पर प्रतिबंध हो।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which expectation does NEP 2020 set for teacher-education programmes by 2030?",
-      "options_english": [
-        "All stand-alone TEIs should remain single-disciplinary indefinitely.",
-        "Teacher education should be separated from multidisciplinary institutions.",
-        "Only educationally sound, multidisciplinary and integrated programmes should remain in force.",
-        "School-based practicum should be prohibited in B.Ed. programmes."
+        "Range",
+        "Mean Deviation",
+        "Standard Deviation and Variance",
+        "Quartile Deviation"
       ],
       "correct_answer": "c",
-      "explanation_english": "The policy calls for stringent action against substandard institutions and expects sound, multidisciplinary and integrated programmes by 2030.",
-      "explanation_hindi": "नीति निम्न-गुणवत्ता संस्थानों के विरुद्ध कठोर कार्रवाई और 2030 तक सुदृढ़, बहुविषयी तथा एकीकृत कार्यक्रमों की अपेक्षा करती है।",
-      "topic": "NEP 2020",
+      "explanation_english": "Standard Deviation and Variance Standard Deviation and Variance account for algebraic signs by squaring individual score deviations from the mean. Squaring converts all negative values into positive values, enabling precise mathematical analysis of overall score variability within a statistical distribution.",
+      "explanation_hindi": "विचरण और मानक विचलन की गणना में प्रत्येक अंक के माध्य से विचलन का वर्ग किया जाता है। वर्ग करने से ऋणात्मक विचलन भी धनात्मक हो जाते हैं, जिससे पूरे वितरण में अंकों के फैलाव का गणितीय विश्लेषण संभव होता है। परास केवल सबसे बड़े और सबसे छोटे मान का अंतर है, जबकि माध्य विचलन और चतुर्थक विचलन अलग तरीके से फैलाव मापते हैं।",
+      "topic": "National Education Policy and related educational-policy questions",
       "difficulty": "medium",
       "key_facts": [
-        "By 2030, only educationally sound, multidisciplinary, and integrated teacher education programmes shall be in force."
+        "Standard Deviation and Variance",
+        "Standard Deviation and Variance Standard Deviation and Variance account for algebraic signs by squaring individual score deviations from the mean. Squaring converts all negative values into positive values, enabling precise mathematical analysis of overall score variability within a statistical distribution."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T16:30:39.010000"
+      "processed_at": "2026-10-18T16:30:05Z"
     },
     {
-      "id": "e613ac67-8ec8-4e6a-94d9-98597f58e78a",
-      "created_at": "2026-10-18T16:30:48.000000",
-      "question_hindi": "शिक्षा में वास्तविक परोपकारी भागीदारी पर NEP 2020 का दृष्टिकोण क्या है?",
+      "id": "9dfbe197-3d2b-4037-8cff-9a29eae123c9",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "एक अच्छी परीक्षा की निम्नलिखित विशेषताओं पर विचार कीजिए:\nI. विश्वसनीयता (Reliability)\nII. वैधता (Validity)\nIII. वस्तुनिष्ठता (Objectivity)\nIV. उपयोगिता (Usability)\nकौन-सी विशेषता यह बताती है कि परीक्षा वास्तव में उसी चीज़ को मापती है, जिसे मापने के लिए उसे बनाया गया है?",
       "options_hindi": [
-        "सार्वजनिक शिक्षा वित्तपोषण को पूरी तरह बदलना।",
-        "सभी परोपकारी भागीदारी पर प्रतिबंध लगाना।",
-        "सार्वजनिक खुलासे की आवश्यकताएँ हटाना।",
-        "पर्याप्त सार्वजनिक निवेश, पारदर्शिता और सुशासन के साथ इसे प्रोत्साहित करना।"
+        "I",
+        "II",
+        "III",
+        "IV"
       ],
       "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
+        "a",
+        "b",
+        "c",
+        "d"
       ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 100; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
       "language": "bilingual",
-      "question_english": "What is NEP 2020's position on genuine philanthropic participation in education?",
+      "question_english": "Consider the following characteristics of a good test:\nI. Reliability\nII. Validity\nIII. Objectivity\nIV. Usability Which characteristic indicates that a test measures exactly what it claims to measure?",
       "options_english": [
-        "Replace public education funding completely.",
-        "Prohibit all philanthropic participation.",
-        "Remove public disclosure requirements.",
-        "Encourage it alongside substantial public investment, transparency and good governance."
-      ],
-      "correct_answer": "d",
-      "explanation_english": "The policy supports a strong public system and encourages genuine philanthropic private and community participation.",
-      "explanation_hindi": "नीति मजबूत सार्वजनिक व्यवस्था का समर्थन करती है और वास्तविक परोपकारी निजी तथा सामुदायिक भागीदारी को प्रोत्साहित करती है।",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "substantial investment in a strong, vibrant public education system as well as the encouragement and facilitation of true philanthropic private and community participation"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T16:30:48.010000"
-    },
-    {
-      "id": "fe431379-2b69-45e5-8126-03eb07398779",
-      "created_at": "2026-10-18T16:31:29.000000",
-      "question_hindi": "NEP 2020 के कार्यान्वयन के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\n1. कार्यान्वयन चरणबद्ध होना चाहिए क्योंकि बाद के चरण पहले चरणों पर निर्भर हो सकते हैं।\n2. नीति के खंडों को अलग-अलग लागू करना पर्याप्त है क्योंकि नीति मॉड्यूलर है।\n3. मानव, आधारभूत संरचना और वित्तीय संसाधनों का समय पर उपलब्ध होना महत्त्वपूर्ण है।\nसही कथन कौन-से हैं?",
-      "options_hindi": [
-        "केवल 1 और 3।",
-        "केवल 1 और 2।",
-        "केवल 2 और 3।",
-        "1, 2 और 3।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements about NEP 2020 implementation:\n1. Implementation should occur in phases because later steps may depend on earlier steps.\n2. A piecemeal approach is sufficient because the policy is modular.\n3. Timely human, infrastructural and financial resources are critical.\nWhich statements are correct?",
-      "options_english": [
-        "1 and 3 only.",
-        "1 and 2 only.",
-        "2 and 3 only.",
-        "1, 2 and 3."
-      ],
-      "correct_answer": "a",
-      "explanation_english": "NEP calls for phased and comprehensive implementation and rejects a piecemeal approach; it also highlights timely resources.",
-      "explanation_hindi": "NEP चरणबद्ध और व्यापक कार्यान्वयन की माँग करती है, खंडित दृष्टिकोण को अस्वीकार करती है और समय पर संसाधनों पर बल देती है।",
-      "topic": "NEP 2020",
-      "difficulty": "hard",
-      "key_facts": [
-        "only a full-fledged implementation, and not a piecemeal one, will ensure that the desired objectives are achieved."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T16:31:29.010000"
-    },
-    {
-      "id": "ab47320e-8bc7-4160-aadc-819eade3fc55",
-      "created_at": "2026-10-18T16:31:34.000000",
-      "question_hindi": "NEP 2020 में कक्षा 3, 5 और 8 में विद्यालयी परीक्षाओं की परिकल्पना क्यों की गई है?",
-      "options_hindi": [
-        "उच्च-दाँव परीक्षा के आधार पर विद्यार्थियों की रैंकिंग और निष्कासन करना।",
-        "प्रगति पर नज़र रखने तथा परिणामों का उपयोग विकासात्मक उद्देश्यों, अधिगम परिणामों की निगरानी और विद्यालय व्यवस्था सुधार के लिए करना।",
-        "सभी कक्षा-मूल्यांकन को एक राष्ट्रीय प्रवेश परीक्षा से बदलना।",
-        "अनुप्रयोग के बजाय केवल रटने का मूल्यांकन करना।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Why are school examinations in Grades 3, 5 and 8 envisaged in NEP 2020?",
-      "options_english": [
-        "To rank and expel students based on high-stakes examinations.",
-        "To track progress and use results for developmental purposes, including monitoring learning outcomes and improving the school system.",
-        "To replace all classroom assessment with a single national entrance test.",
-        "To assess only rote memorization rather than application."
+        "I",
+        "II",
+        "III",
+        "IV"
       ],
       "correct_answer": "b",
-      "explanation_english": "These school examinations are intended to track progress and test basic outcomes, concepts and real-life application; results are for developmental purposes.",
-      "explanation_hindi": "ये परीक्षाएँ प्रगति और बुनियादी परिणामों, अवधारणाओं तथा वास्तविक जीवन में अनुप्रयोग को मापने के लिए हैं; परिणाम विकासात्मक उद्देश्यों हेतु हैं।",
+      "explanation_english": "II Validity is the paramount technical quality of an assessment tool, indicating the extent to which a test accurately measures the specific construct, skill, or learning objective it intends to evaluate. A valid test ensures that interpretations and decisions derived from test results are scientifically sound and instructionally appropriate.",
+      "explanation_hindi": "वैधता परीक्षा की वह विशेषता है जो बताती है कि वह निर्धारित कौशल, अवधारणा या अधिगम उद्देश्य को सही ढंग से मापती है या नहीं। वैधता होने पर परीक्षा के परिणामों से निकाली गई व्याख्याएँ और निर्णय उसके उद्देश्य के अनुरूप होते हैं। विश्वसनीयता परिणामों की स्थिरता से संबंधित है, जबकि वस्तुनिष्ठता अंकन में व्यक्तिगत पक्षपात को कम करती है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "II",
+        "II Validity is the paramount technical quality of an assessment tool, indicating the extent to which a test accurately measures the specific construct, skill, or learning objective it intends to evaluate. A valid test ensures that interpretations and decisions derived from test results are scientifically sound and instructionally appropriate."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "7724a0a7-27fc-4d8e-a629-8cf72cdaf04d",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "यदि दो क्रमबद्ध चरों—जैसे वाद-विवाद प्रतियोगिता में रैंक और कविता-पाठ प्रतियोगिता में रैंक—के बीच संबंध ज्ञात करना हो, तो कौन-सी सहसंबंध विधि सबसे उपयुक्त है?",
+      "options_hindi": [
+        "पियर्सन का गुणनफल-आघूर्ण सहसंबंध गुणांक",
+        "स्पीयरमैन का रैंक सहसंबंध",
+        "पॉइंट-बाइसीरियल सहसंबंध गुणांक",
+        "फाई सहसंबंध गुणांक"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 201; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Which statistical correlation method is most appropriate to find the relationship between two variables that are ranked (e.g., rank in a debate competition and rank in a poetry competition)?",
+      "options_english": [
+        "Pearson's Product-Moment Correlation Coefficient",
+        "Spearman's Rank Correlation",
+        "Point-Biserial Correlation Coefficient",
+        "Phi Coefficient of Association"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Spearman's Rank Correlation Spearman's Rank Correlation is the appropriate non-parametric statistical method for analyzing the relationship between two ordinal variables expressed as ranks. It evaluates the strength and direction of association between two ranked",
+      "explanation_hindi": "स्पीयरमैन का रैंक सहसंबंध दो क्रमसूचक चरों, जिन्हें रैंक के रूप में व्यक्त किया गया हो, के बीच संबंध का विश्लेषण करने के लिए उपयुक्त अप्राचलिक विधि है। यह बताता है कि दोनों रैंक-सूचियों के बीच संबंध किस दिशा में है और कितना मजबूत है। पियर्सन सहसंबंध आमतौर पर मात्रात्मक अंतराल/अनुपात डेटा के रैखिक संबंध के लिए उपयोग किया जाता है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Spearman's Rank Correlation",
+        "Spearman's Rank Correlation Spearman's Rank Correlation is the appropriate non-parametric statistical method for analyzing the relationship between two ordinal variables expressed as ranks. It evaluates the strength and direction of association between two ranked"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "0bda7059-591a-41e9-ba83-a5d2d38bb2fb",
+      "created_at": "2026-10-18T16:31:04.000000",
+      "question_hindi": "NEP 2020 बड़े बहुविषयी HEI या क्लस्टरों की सिफारिश क्यों करती है?",
+      "options_hindi": [
+        "छोटे विषयों में अनुसंधान स्थायी रूप से समाप्त करने के लिए।",
+        "सभी शिक्षण को एक राष्ट्रीय परिसर में केंद्रीकृत करने के लिए।",
+        "विश्वविद्यालयों की सामुदायिक सहभागिता रोकने के लिए।",
+        "विखंडन कम करने, विषयगत अलगाव तोड़ने, विद्वतापूर्ण समुदाय बनाने और संसाधनों का बेहतर उपयोग करने के लिए।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Why does NEP 2020 recommend larger multidisciplinary HEIs or clusters?",
+      "options_english": [
+        "To eliminate research in smaller disciplines permanently.",
+        "To centralize all teaching in one national campus.",
+        "To prevent community engagement by universities.",
+        "To reduce fragmentation, break disciplinary silos, build scholarly communities and improve use of resources."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The policy links scale and multidisciplinarity to vibrant scholarly communities, cross-disciplinary research and resource efficiency.",
+      "explanation_hindi": "नीति आकार और बहुविषयकता को सजीव विद्वतापूर्ण समुदायों, अंतर्विषयी अनुसंधान और संसाधन दक्षता से जोड़ती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "This would help build vibrant communities of scholars and peers, break down harmful silos"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:04.010000"
+    },
+    {
+      "id": "030b6ac1-6275-41a3-8586-95b0450835b5",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "पूर्ववर्ती शिक्षा नीतियों में परिकल्पित ‘साझा विद्यालय प्रणाली’ (Common School System) को लागू करने में प्रमुख चुनौतियों में से एक क्या रही है?",
+      "options_hindi": [
+        "शुल्क लेने वाले निजी विद्यालयों का तीव्र विस्तार, जिससे सामाजिक-आर्थिक अलगाव बढ़ा",
+        "राज्य विद्यालय बोर्डों में मानकीकृत राष्ट्रीय पाठ्यचर्या रूपरेखा का पूर्ण अभाव",
+        "केंद्रीय परीक्षा बोर्डों द्वारा राज्य-संचालित विद्यालयों को संबद्धता देने से इनकार",
+        "सभी शहरी विद्यालयों में आधारभूत भौतिक सुविधाओं का पूर्ण अभाव"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 89; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "One of the major challenges in the implementation of the \"Common School System\" as envisioned by past policies has been:",
+      "options_english": [
+        "Rapid growth of private schools causing socio-economic segregation",
+        "Total absence of a standardized national curriculum framework across state school boards",
+        "The refusal of central examination boards to affiliate state-run government schools",
+        "Severe and complete lack of fundamental physical infrastructure across all urban schools"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Rapid growth of private schools causing socio-economic segregation Realizing a Common School System faced major hurdles due to the proliferation of fee-charging private institutions alongside underfunded public schools. This dual track fostered socio- economic segregation, where affluent families selected private schooling while marginalized communities relied on under-resourced state schools, undermining the goal of unified neighborhood public education.",
+      "explanation_hindi": "सही उत्तर (A) है। साझा विद्यालय प्रणाली का आदर्श यह था कि विभिन्न सामाजिक और आर्थिक पृष्ठभूमियों के बच्चे समान या निकटवर्ती सार्वजनिक विद्यालय व्यवस्था में गुणवत्तापूर्ण शिक्षा प्राप्त कर सकें। व्यवहार में शुल्क-आधारित निजी विद्यालयों और संसाधन-अभाव वाले सार्वजनिक विद्यालयों के समानांतर विस्तार ने विद्यार्थियों को सामाजिक-आर्थिक आधार पर अलग-अलग शैक्षिक अनुभवों में बाँट दिया। अपेक्षाकृत संपन्न परिवार निजी विद्यालय चुन सकते हैं, जबकि वंचित परिवार अक्सर कम संसाधन वाले सरकारी विद्यालयों पर निर्भर रहते हैं। यह विभाजन साझा विद्यालय प्रणाली के समानता और सामाजिक एकीकरण संबंधी उद्देश्य को कमजोर करता है। अन्य विकल्प या तो अत्यधिक निरपेक्ष दावे करते हैं या इस अवधारणा की केंद्रीय कार्यान्वयन चुनौती नहीं बताते।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Rapid growth of private schools causing socio-economic segregation",
+        "Rapid growth of private schools causing socio-economic segregation Realizing a Common School System faced major hurdles due to the proliferation of fee-charging private institutions alongside underfunded public schools. This dual track fostered socio- economic segregation, where affluent families selected private schooling while marginalized communities relied on under-resourced state schools, undermining the goal of unified neighborhood public education."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "36f0181a-4dc7-447b-987b-f5e07ec9549c",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "बालक की प्रगति के कालक्रम के अनुसार 5+3+3+4 विद्यालयी संरचना के घटकों को व्यवस्थित कीजिए:\nI. मध्य चरण\nII. प्रारंभिक चरण\nIII. आधारभूत चरण\nIV. माध्यमिक चरण",
+      "options_hindi": [
+        "III, II, I, IV",
+        "II, III, I, IV",
+        "III, I, II, IV",
+        "I, II, III, IV"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 6 (Types of Tests), Question 121; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Arrange the components of the 5+3+3+4 school structure in chronological order of a child's progression:\nI. Middle Stage\nII. Preparatory Stage\nIII. Foundational Stage\nIV. Secondary Stage",
+      "options_english": [
+        "III, II, I, IV",
+        "II, III, I, IV",
+        "III, I, II, IV",
+        "I, II, III, IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "III, II, I, IV The structural framework for school education outlines a progressive four-stage developmental pathway. A child begins in the Foundational Stage (ages 3–8), advances to the Preparatory Stage (ages 8–11), moves into the Middle Stage (ages 11–14), and culminates in the Secondary Stage (ages 14–18), ensuring aligned developmental learning across schooling.",
+      "explanation_hindi": "सही क्रम आधारभूत, प्रारंभिक, मध्य और माध्यमिक चरण है। आधारभूत चरण सामान्यतः 3–8 वर्ष, प्रारंभिक चरण 8–11 वर्ष, मध्य चरण 11–14 वर्ष और माध्यमिक चरण 14–18 वर्ष की आयु को समाहित करता है। यह क्रम विद्यार्थियों की विकासात्मक आवश्यकताओं के अनुसार अधिगम-अनुभवों को व्यवस्थित करने के लिए बनाया गया है।",
+      "topic": "Types of Tests",
+      "difficulty": "medium",
+      "key_facts": [
+        "III, II, I, IV",
+        "III, II, I, IV The structural framework for school education outlines a progressive four-stage developmental pathway. A child begins in the Foundational Stage (ages 3–8), advances to the Preparatory Stage (ages 8–11), moves into the Middle Stage (ages 11–14), and culminates in the Secondary Stage (ages 14–18), ensuring aligned developmental learning across schooling."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "571488c6-b82e-4eed-b8bc-f5378846f067",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "राष्ट्रीय पाठ्यचर्या रूपरेखा (NCF) 2005 किस संस्था ने विकसित की थी?",
+      "options_hindi": [
+        "केंद्रीय माध्यमिक शिक्षा बोर्ड (CBSE)",
+        "राष्ट्रीय शैक्षिक अनुसंधान और प्रशिक्षण परिषद (NCERT)",
+        "राष्ट्रीय अध्यापक शिक्षा परिषद (NCTE)",
+        "राष्ट्रीय शैक्षिक योजना एवं प्रशासन संस्थान (NIEPA)"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 155; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "The National Curriculum Framework (NCF) 2005 was developed by:",
+      "options_english": [
+        "CBSE",
+        "NCERT",
+        "NCTE",
+        "NIEPA"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "NCERT The National Curriculum Framework 2005 was drafted by the National Council of Educational Research and Training following broad consultations. NCERT designed the framework to provide pedagogical directives, learning goals, syllabus guidelines, and evaluation reforms for school education across India.",
+      "explanation_hindi": "NCF 2005 को राष्ट्रीय शैक्षिक अनुसंधान और प्रशिक्षण परिषद (NCERT) ने व्यापक परामर्श के बाद तैयार किया था। इस रूपरेखा ने विद्यालयी शिक्षा के लिए शिक्षण-दिशानिर्देश, अधिगम लक्ष्य, पाठ्यक्रम संबंधी दिशा और मूल्यांकन सुधारों का आधार प्रदान किया।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "NCERT",
+        "NCERT The National Curriculum Framework 2005 was drafted by the National Council of Educational Research and Training following broad consultations. NCERT designed the framework to provide pedagogical directives, learning goals, syllabus guidelines, and evaluation reforms for school education across India."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "ebd5e2f0-ebb5-4f85-9846-22ce57fde54d",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "राष्ट्रीय उपलब्धि सर्वेक्षण (NAS) शिक्षा व्यवस्था की स्थिति के बारे में जानकारी प्राप्त करने के लिए किया जाने वाला एक बड़े पैमाने का मूल्यांकन है। NEP 2020 के अनुसार ऐसे राष्ट्रीय मूल्यांकनों को दिशा देने के लिए मुख्य रूप से कौन-सा निकाय उत्तरदायी है?",
+      "options_hindi": [
+        "विश्वविद्यालय अनुदान आयोग (UGC)",
+        "परख (PARAKH)",
+        "अखिल भारतीय तकनीकी शिक्षा परिषद (AICTE)",
+        "राष्ट्रीय अध्यापक शिक्षा परिषद (NCTE)"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 97; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "The National Achievement Survey (NAS) is a large-scale assessment conducted to obtain information about the health of the educational system. Under NEP 2020 guidelines, which body is primarily responsible for guiding such national assessments?",
+      "options_english": [
+        "UGC",
+        "PARAKH",
+        "AICTE",
+        "NCTE"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "PARAKH As the national assessment center created under NCERT, PARAKH is responsible for providing technical guidance, design frameworks, and standard-setting methodologies for large-scale evaluation studies, including the National Achievement Survey, ensuring robust monitoring of educational quality across Indian schools.",
+      "explanation_hindi": "सही उत्तर (B) परख (PARAKH) है। NEP 2020 में परख को राष्ट्रीय मूल्यांकन केंद्र के रूप में परिकल्पित किया गया है। इसका उद्देश्य मूल्यांकन के लिए मानक और दिशानिर्देश विकसित करना, आकलन-पद्धतियों में संगति बढ़ाना तथा विद्यालयी उपलब्धि के बड़े स्तर के सर्वेक्षणों को अकादमिक और तकनीकी दिशा प्रदान करना है। राष्ट्रीय उपलब्धि सर्वेक्षण जैसे प्रयासों से शिक्षा व्यवस्था के स्तर पर अधिगम की स्थिति समझने में मदद मिलती है; ये किसी एक विद्यार्थी की केवल व्यक्तिगत परीक्षा नहीं हैं। UGC उच्च शिक्षा, AICTE तकनीकी शिक्षा तथा NCTE शिक्षक शिक्षा से संबंधित निकाय हैं, इसलिए वे इस प्रश्न में राष्ट्रीय विद्यालयी आकलन के लिए सही विकल्प नहीं हैं। प्रश्न में ‘राष्ट्रीय आकलन’ और ‘नियामक/शिक्षक-शिक्षा निकाय’ के बीच अंतर पहचानना आवश्यक है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "PARAKH",
+        "PARAKH As the national assessment center created under NCERT, PARAKH is responsible for providing technical guidance, design frameworks, and standard-setting methodologies for large-scale evaluation studies, including the National Achievement Survey, ensuring robust monitoring of educational quality across Indian schools."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "20f6380b-2977-418e-abdf-ebcfb5d6ee54",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "NPE 1968 के अंतर्गत कृषि शिक्षा की स्थिति को कौन-सा कथन सही रूप से दर्शाता है?",
+      "options_hindi": [
+        "इसे सामान्य शिक्षा से पूरी तरह अलग करके केवल विशिष्ट संस्थानों में स्थानांतरित कर दिया गया था।",
+        "प्रत्येक राज्य में कम-से-कम एक कृषि विश्वविद्यालय स्थापित करने की सिफारिश की गई थी।",
+        "कक्षा 10 तक सभी विद्यार्थियों के लिए इसे अनिवार्य विषय बनाया गया था।",
+        "भारी उद्योगों के प्रशिक्षण को प्राथमिकता देने के लिए इसे हतोत्साहित किया गया था।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 23; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Which of the following statements correctly identifies the status of agricultural education under NPE 1968?",
+      "options_english": [
+        "It was completely separated from general education and moved to specialized institutes only.",
+        "It was recommended that at least one agricultural university be established in every state.",
+        "It was made a compulsory subject for all students up to Class X.",
+        "It was discouraged in favor of heavy industrial training."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "It was recommended that at least one agricultural university be established in every state. To support rural economies and agricultural modernization, the policy recommended establishing at least one dedicated agricultural university in every state. These institutions were tasked with advancing agricultural research, technological innovation, extension activities, and professional training to improve crop productivity and modernize agrarian practice across various agro-climatic regions of India.",
+      "explanation_hindi": "ग्रामीण अर्थव्यवस्था को समर्थन और कृषि के आधुनिकीकरण के लिए प्रत्येक राज्य में कम-से-कम एक समर्पित कृषि विश्वविद्यालय स्थापित करने की सिफारिश की गई थी। ऐसे विश्वविद्यालयों से कृषि अनुसंधान, तकनीकी नवाचार, विस्तार सेवाओं और व्यावसायिक प्रशिक्षण को आगे बढ़ाने की अपेक्षा थी। उनका व्यापक उद्देश्य विभिन्न कृषि-जलवायु क्षेत्रों में उत्पादकता और आधुनिक कृषि पद्धतियों में सुधार करना था।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "It was recommended that at least one agricultural university be established in every state.",
+        "It was recommended that at least one agricultural university be established in every state. To support rural economies and agricultural modernization, the policy recommended establishing at least one dedicated agricultural university in every state. These institutions were tasked with advancing agricultural research, technological innovation, extension activities, and professional training to improve crop productivity and modernize agrarian practice across various agro-climatic regions of India."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "b95a0cbd-9527-4987-9af4-1de1cd079c53",
+      "created_at": "2026-10-18T16:31:14.000000",
+      "question_hindi": "प्रस्तावित प्रौढ़ शिक्षा पाठ्यचर्या रूपरेखा में कार्यक्रमों के पाँच प्रकारों का सही क्रम कौन-सा है?",
+      "options_hindi": [
+        "विद्यालय प्रवेश; शिक्षक भर्ती; बोर्ड परीक्षा; अनुसंधान अनुदान; विश्वविद्यालय प्रत्यायन।",
+        "आधारभूत साक्षरता एवं संख्यात्मक दक्षता; महत्त्वपूर्ण जीवन-कौशल; व्यावसायिक कौशल विकास; बुनियादी शिक्षा; सतत शिक्षा।",
+        "केवल साक्षरता, संख्यात्मक दक्षता और व्यावसायिक प्रशिक्षण।",
+        "प्राथमिक, तैयारी, मध्य, माध्यमिक और डॉक्टरेट शिक्षा।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which sequence correctly identifies the five programme types in the proposed Adult Education Curriculum Framework?",
+      "options_english": [
+        "School admissions; teacher recruitment; board exams; research grants; university accreditation.",
+        "Foundational literacy and numeracy; critical life skills; vocational skills development; basic education; continuing education.",
+        "Only literacy, numeracy and vocational training.",
+        "Primary, preparatory, middle, secondary and doctoral education."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The policy lists five types, including critical life skills and continuing education as distinct categories.",
+      "explanation_hindi": "नीति पाँच प्रकार गिनाती है, जिनमें जीवन-कौशल और सतत शिक्षा अलग श्रेणियाँ हैं।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "The curriculum framework for adult education will include at least five types of programmes, each with clearly defined outcomes:"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:14.010000"
+    },
+    {
+      "id": "5cb5d3bf-7f22-44e0-b330-430bd28e4081",
+      "created_at": "2026-10-18T16:31:37.000000",
+      "question_hindi": "NEP 2020 में वर्णित वैश्विक शिक्षा एजेंडे से स्पष्ट रूप से कौन-सा सतत विकास लक्ष्य जुड़ा है?",
+      "options_hindi": [
+        "SDG 4: सभी के लिए समावेशी और समान गुणवत्तापूर्ण शिक्षा तथा आजीवन अधिगम के अवसर।",
+        "SDG 2: केवल शून्य भूख।",
+        "SDG 8: शिक्षा लक्ष्यों के बिना केवल आर्थिक विकास।",
+        "SDG 16: केवल सार्वजनिक संस्थान।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which Sustainable Development Goal is explicitly connected with the global education agenda described in NEP 2020?",
+      "options_english": [
+        "SDG 4: inclusive and equitable quality education and lifelong learning opportunities for all.",
+        "SDG 2: zero hunger only.",
+        "SDG 8: economic growth only, without education targets.",
+        "SDG 16: public institutions only."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The policy quotes the Goal 4 agenda for inclusive and equitable quality education and lifelong learning by 2030.",
+      "explanation_hindi": "नीति 2030 तक समावेशी, समान गुणवत्तापूर्ण शिक्षा और आजीवन अधिगम के लिए लक्ष्य 4 का उल्लेख करती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "ensure inclusive and equitable quality education and promote lifelong learning opportunities for all"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:37.010000"
+    },
+    {
+      "id": "0c0efdf0-a9ed-4df1-9f96-396b1573fc3c",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "निम्नलिखित दो कथनों पर विचार कीजिए। एक को अभिकथन (A) और दूसरे को कारण (R) कहा गया है।\nअभिकथन (A): DIETs की स्थापना प्राथमिक शिक्षा और वयस्क शिक्षा को सफल बनाने के लिए जमीनी स्तर पर अकादमिक तथा संसाधन-सहयोग देने हेतु की गई थी।\nकारण (R): 1986 से पहले प्राथमिक शिक्षा को सहयोग देने वाले पर्याप्त संख्या में उच्च-गुणवत्ता वाले जिला-स्तरीय शिक्षक-प्रशिक्षण और संसाधन संस्थान मौजूद थे।\nसही विकल्प चुनिए।",
+      "options_hindi": [
+        "A और R दोनों सही हैं तथा R, A की सही व्याख्या करता है।",
+        "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं करता।",
+        "A सही है, लेकिन R गलत है।",
+        "A गलत है, लेकिन R सही है।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 46; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A): DIETs were established to provide academic and resource support at the grassroots level for the success of elementary education and adult education.\nReason (R): Prior to 1986, there was an adequate number of high-quality, district-level teacher training and resource institutes supporting primary education.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A is true but R is false District Institutes of Education and Training were created precisely because existing teacher training facilities prior to 1986 were quantitatively inadequate and academically isolated from primary school realities. Establishing these institutes filled a critical institutional void by delivering decentralized training, resource development, and pedagogical support at the district level for elementary education.",
+      "explanation_hindi": "DIETs की स्थापना की आवश्यकता इसलिए पड़ी क्योंकि 1986 से पहले प्राथमिक शिक्षा के लिए जिला स्तर पर शिक्षक-प्रशिक्षण संस्थान संख्या और गुणवत्ता दोनों की दृष्टि से अपर्याप्त थे। नए संस्थानों ने इस कमी को दूर करने के लिए विकेंद्रीकृत प्रशिक्षण, शिक्षण-संसाधनों का विकास और स्थानीय स्तर पर अकादमिक सहयोग उपलब्ध कराया। अतः अभिकथन सही है, जबकि कारण गलत है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "hard",
+      "key_facts": [
+        "A is true but R is false",
+        "A is true but R is false District Institutes of Education and Training were created precisely because existing teacher training facilities prior to 1986 were quantitatively inadequate and academically isolated from primary school realities. Establishing these institutes filled a critical institutional void by delivering decentralized training, resource development, and pedagogical support at the district level for elementary education."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "2d300713-f80b-4a8d-b704-d9acc0af49b4",
+      "created_at": "2026-10-18T16:30:32.000000",
+      "question_hindi": "कक्षा 3, 5 और 8 की विद्यालयी परीक्षाओं के बारे में कौन-सा कथन सही है?",
+      "options_hindi": [
+        "वे सभी बोर्ड परीक्षाओं का स्थान लेकर विश्वविद्यालय प्रवेश तय करती हैं।",
+        "वे केवल व्यक्तिगत विद्यार्थियों की सार्वजनिक रैंकिंग के लिए हैं।",
+        "वे केवल पाठ्यपुस्तक की परिभाषाएँ जाँचती हैं और अनुप्रयोग नहीं।",
+        "वे रटने के बजाय मूल अधिगम परिणामों और वास्तविक जीवन में अनुप्रयोग की जाँच करती हैं; परिणाम विकासात्मक उद्देश्यों के लिए हैं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which statement about school examinations in Grades 3, 5 and 8 is correct?",
+      "options_english": [
+        "They replace all Board exams and determine university admission.",
+        "They are exclusively for public ranking of individual students.",
+        "They test textbook definitions only and exclude application.",
+        "They test core learning outcomes and real-life application rather than rote recall, and results are for developmental purposes."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The policy names Grades 3, 5 and 8 and says results will be used for developmental purposes of the school system.",
+      "explanation_hindi": "नीति कक्षा 3, 5 और 8 की परीक्षाएँ बताती है और परिणामों को विद्यालयी व्यवस्था के विकासात्मक उद्देश्यों के लिए उपयोग करती है।",
       "topic": "NEP 2020",
       "difficulty": "medium",
       "key_facts": [
         "all students will take school examinations in Grades 3, 5, and 8"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T16:31:34.010000"
+      "processed_at": "2026-10-18T16:30:32.010000"
     },
     {
-      "id": "01a2fc58-2351-493e-98fd-8009eacbe1f9",
-      "created_at": "2026-10-18T16:30:42.000000",
-      "question_hindi": "शिक्षकों के राष्ट्रीय व्यावसायिक मानकों (NPST) के बारे में कथनों पर विचार कीजिए:\n1. NEP NPST का साझा मार्गदर्शक समूह प्रस्तावित करती है।\n2. NPST शिक्षक के करियर के विभिन्न चरणों की अपेक्षाओं से संबंधित है।\n3. NPST विद्यार्थियों की विश्वविद्यालय प्रवेश परीक्षा है।\nसही कथन कौन-से हैं?",
+      "id": "ce881857-7b99-4ca2-bd98-4272c4978f14",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "मूल प्रतिशत-अंकों के आधार पर अंकन (Marking) की तुलना में ग्रेडिंग को मूल्यांकन-प्रणाली के रूप में प्राथमिकता क्यों दी जाती है?",
       "options_hindi": [
-        "केवल 1।",
-        "केवल 1 और 2।",
-        "केवल 2 और 3।",
-        "1, 2 और 3।"
+        "क्योंकि यह कई दशमलव स्थानों तक अत्यंत सूक्ष्म रैंक की गणना करता है।",
+        "क्योंकि यह अंकों को व्यापक श्रेणियों में रखकर विद्यार्थी पर दबाव और मापन-त्रुटियों के प्रभाव को कम करता है।",
+        "क्योंकि इससे शिक्षकों के लिए कम अंक पाने वाले विद्यार्थियों को अनुत्तीर्ण करना आसान हो जाता है।",
+        "क्योंकि यह पुरानी प्रणाली है जो सभी विद्यार्थियों के अंकों को कृत्रिम रूप से औसत की ओर खींचती है।"
       ],
       "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
+        "a",
+        "b",
+        "c",
+        "d"
       ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 232; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
       "language": "bilingual",
-      "question_english": "Consider statements about National Professional Standards for Teachers (NPST):\n1. NEP proposes a common guiding set of NPST.\n2. NPST relate to expectations for teachers at different career stages.\n3. NPST is a university entrance examination for students.\nWhich statements are correct?",
+      "question_english": "\"Grading\" as a system of assessment is preferred over \"Marking\" (raw percentages) because:",
       "options_english": [
-        "1 only.",
-        "1 and 2 only.",
-        "2 and 3 only.",
-        "1, 2 and 3."
+        "It provides hyper-precise mathematical rank calculations down to multiple decimal points for fine comparison",
+        "It reduces student pressure and measurement errors by grouping scores into broader bands.",
+        "It simplifies administrative procedures making it significantly easier for teachers to fail low achievers",
+        "It is an obsolete traditional evaluation system that artificially forces all student scores toward the mean"
       ],
       "correct_answer": "b",
-      "explanation_english": "NPST concerns teachers' professional standards, not student admissions.",
-      "explanation_hindi": "NPST शिक्षकों के व्यावसायिक मानकों से संबंधित है, विद्यार्थी प्रवेश से नहीं।",
+      "explanation_english": "It reduces student pressure and measurement errors by grouping scores into broader bands. Letter grading is preferred over raw percentage marking because it groups performance into broad achievement bands. Grading minimizes artificial student misclassification caused by small numerical mark variations, reduces unhealthy competitive stress, and presents a realistic representation of learning attainment.",
+      "explanation_hindi": "ग्रेडिंग में विद्यार्थियों के प्रदर्शन को व्यापक उपलब्धि-श्रेणियों में रखा जाता है, जिससे दो बहुत निकट प्रतिशत-अंकों के आधार पर अत्यधिक अंतर बताने की प्रवृत्ति घट सकती है। इससे छोटे अंक-अंतर के कारण होने वाली कृत्रिम श्रेणी-भिन्नता और अस्वस्थ प्रतिस्पर्धात्मक दबाव कम हो सकते हैं। ग्रेडिंग का उद्देश्य सूक्ष्म रैंक निकालना या कम उपलब्धि वाले विद्यार्थियों को अनुत्तीर्ण करना सरल बनाना नहीं है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "hard",
+      "key_facts": [
+        "It reduces student pressure and measurement errors by grouping scores into broader bands.",
+        "It reduces student pressure and measurement errors by grouping scores into broader bands. Letter grading is preferred over raw percentage marking because it groups performance into broad achievement bands. Grading minimizes artificial student misclassification caused by small numerical mark variations, reduces unhealthy competitive stress, and presents a realistic representation of learning attainment."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "e72fe28c-6d25-4816-a462-a8d8e45c74ee",
+      "created_at": "2026-10-18T16:30:34.000000",
+      "question_hindi": "NTA की साझा प्रवेश परीक्षाओं के बारे में कौन-सा कथन सही है?",
+      "options_hindi": [
+        "NTA केवल कक्षा 3, 5 और 8 की परीक्षाएँ कराती है।",
+        "NTA को वर्ष में कम-से-कम दो बार साझा अभिक्षमता और विशिष्ट विषय परीक्षाएँ देनी हैं; HEI तय कर सकते हैं कि प्रवेश में इनका उपयोग करें या नहीं।",
+        "हर विश्वविद्यालय को एक ही अंक लेना और विषय-चयन अनदेखा करना अनिवार्य है।",
+        "परीक्षाएँ रटने को पुरस्कृत करने और कोचिंग अनिवार्य करने हेतु हैं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which statement about NTA common entrance tests is accurate?",
+      "options_english": [
+        "NTA conducts only Grade 3, 5 and 8 school exams.",
+        "NTA is to offer a common aptitude test and specialized subject tests at least twice yearly; HEIs may decide whether to use them for admissions.",
+        "Every university must use only one score and ignore subject choices.",
+        "The tests are designed to reward memorization and require coaching."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The policy proposes at-least-twice-yearly common tests but leaves their use for admissions to individual institutions.",
+      "explanation_hindi": "नीति वर्ष में कम-से-कम दो बार साझा परीक्षाएँ प्रस्तावित करती है, लेकिन प्रवेश में इनके उपयोग का निर्णय संस्थानों पर छोड़ती है।",
       "topic": "NEP 2020",
       "difficulty": "hard",
       "key_facts": [
-        "A common guiding set of National Professional Standards for Teachers (NPST)"
+        "The National Testing Agency (NTA) will work to offer a high-quality common aptitude test"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T16:30:42.010000"
+      "processed_at": "2026-10-18T16:30:34.010000"
     },
     {
-      "id": "dc6a5466-ea59-429b-a835-95eec81fab34",
-      "created_at": "2026-10-18T16:31:39.000000",
-      "question_hindi": "NEP 2020 के कार्यान्वयन का नेतृत्व करने वाले निकायों में स्पष्ट रूप से कौन-सा समूह शामिल है?",
+      "id": "44d7c6c7-7349-49e8-9ee9-bcb32bb7ce19",
+      "created_at": "2026-10-18T16:30:35.000000",
+      "question_hindi": "प्रत्येक शिक्षक से प्रति वर्ष कितने घंटे सतत व्यावसायिक विकास (CPD) की अपेक्षा है?",
       "options_hindi": [
-        "केवल वित्त मंत्रालय और निजी प्रकाशक।",
-        "केवल विद्यालय प्रधानाचार्य, सरकारों या बोर्डों की भूमिका के बिना।",
-        "MHRD, CABE, केंद्र और राज्य सरकारें, शिक्षा-संबंधी मंत्रालय, बोर्ड, NTA, NCERT, SCERT, विद्यालय और HEI।",
-        "केवल NTA और विश्वविद्यालय प्रत्यायन एजेंसियाँ।"
+        "10 घंटे।",
+        "25 घंटे।",
+        "कम-से-कम 50 घंटे।",
+        "100 घंटे।"
       ],
       "option_labels": [
         "A",
@@ -431,181 +665,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which group is explicitly listed among the bodies involved in leading NEP 2020 implementation?",
+      "question_english": "How many hours of annual Continuous Professional Development (CPD) is each teacher expected to undertake?",
       "options_english": [
-        "Only the Ministry of Finance and private publishers.",
-        "Only school principals, with no role for governments or boards.",
-        "MHRD, CABE, Union and State Governments, education-related Ministries, Boards, NTA, NCERT, SCERTs, schools and HEIs.",
-        "Only NTA and the university accreditation agencies."
+        "10 hours.",
+        "25 hours.",
+        "At least 50 hours.",
+        "100 hours."
       ],
       "correct_answer": "c",
-      "explanation_english": "NEP lists multiple bodies and institutions for synchronized implementation with timelines and reviews.",
-      "explanation_hindi": "NEP समय-सीमा और समीक्षा सहित समन्वित कार्यान्वयन के लिए अनेक निकायों और संस्थानों को सूचीबद्ध करती है।",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "implementation of this Policy will be led by various bodies including MHRD, CABE, Union and State Governments, education-related Ministries, State Departments of Education, Boards, NTA, the regulatory bodies of school and higher education, NCERT, SCERTs, schools, and HEIs"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T16:31:39.010000"
-    },
-    {
-      "id": "7edc1c71-c244-489f-95be-442f5c8fc039",
-      "created_at": "2026-10-18T16:30:41.000000",
-      "question_hindi": "शिक्षक भर्ती में कक्षा-प्रदर्शन या साक्षात्कार का उद्देश्य क्या है?",
-      "options_hindi": [
-        "शिक्षण-प्रेरणा और जहाँ प्रासंगिक हो, स्थानीय भाषाओं में सहजता तथा दक्षता का आकलन करना।",
-        "सभी शैक्षणिक योग्यताओं का स्थान लेना।",
-        "केवल उत्तर-कुंजियों से परिचितता जाँचना।",
-        "निजी विद्यालयों के शिक्षकों को योग्यता-जाँच से छूट देना।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "What is the purpose of a classroom demonstration or interview in teacher hiring?",
-      "options_english": [
-        "To gauge teaching motivation and, where relevant, comfort and proficiency in local languages.",
-        "To replace all academic qualifications.",
-        "To assess only familiarity with answer keys.",
-        "To exempt private-school teachers from qualification checks."
-      ],
-      "correct_answer": "a",
-      "explanation_english": "The policy makes demonstration/interview integral to hiring and links it to motivation and local-language proficiency.",
-      "explanation_hindi": "नीति प्रदर्शन/साक्षात्कार को भर्ती का अभिन्न अंग बनाती है और इसे प्रेरणा तथा स्थानीय भाषा-दक्षता से जोड़ती है।",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "a classroom demonstration or interview will become an integral part of teacher hiring at schools and school complexes"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T16:30:41.010000"
-    },
-    {
-      "id": "03955f65-4840-4cbc-af2b-c9fffec6f378",
-      "created_at": "2026-10-18T16:31:15.000000",
-      "question_hindi": "प्रौढ़ शिक्षा तक पहुँच बढ़ाने के लिए कौन-सी सुविधा-उपयोग व्यवस्था विशेष रूप से प्रस्तावित है?",
-      "options_hindi": [
-        "केवल नियमित कक्षा समय में विश्वविद्यालय प्रयोगशालाओं का उपयोग करना।",
-        "सार्वजनिक पुस्तकालयों को गैर-विद्यार्थियों के लिए बंद करना।",
-        "विद्यालय समय के बाद और सप्ताहांत में विद्यालयों/विद्यालय परिसरों तथा सार्वजनिक पुस्तकालयों का उपयोग करना।",
-        "प्रत्येक प्रौढ़ शिक्षार्थी के लिए अलग आवासीय परिसर बनाना।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which facility-use arrangement is specifically proposed to expand adult education access?",
-      "options_english": [
-        "Use only university laboratories during regular class hours.",
-        "Close public libraries to non-students.",
-        "Use schools or school complexes after school hours and on weekends, as well as public libraries.",
-        "Build a separate residential campus for every adult learner."
-      ],
-      "correct_answer": "c",
-      "explanation_english": "The policy recommends using existing public learning spaces after hours to make infrastructure sharing efficient.",
-      "explanation_hindi": "नीति उपलब्ध सार्वजनिक अधिगम स्थलों का समय के बाद उपयोग सुझाती है ताकि संसाधन साझा करना दक्ष हो।",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "use schools/ school complexes after school hours and on weekends and public library spaces for adult education courses"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T16:31:15.010000"
-    },
-    {
-      "id": "0841dff1-2acd-4b5e-988d-5e9d22640dd0",
-      "created_at": "2026-10-18T16:30:13.000000",
-      "question_hindi": "FLN के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n1. पढ़ना, लिखना और बुनियादी अंकगणित आगे की स्कूली शिक्षा तथा आजीवन अधिगम की पूर्व-आवश्यकताएँ हैं।\n2. सार्वभौमिक FLN शिक्षा-व्यवस्था की सर्वोच्च प्राथमिकताओं में है।\n3. FLN केवल कक्षा 1 में पढ़ाया जाए और बाद की कक्षाओं में न दोहराया जाए।\nसही कथन कौन-से हैं?",
-      "options_hindi": [
-        "केवल 1 और 2।",
-        "केवल 1 और 3।",
-        "केवल 2 और 3।",
-        "1, 2 और 3।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements about FLN:\n1. Reading, writing and basic arithmetic are prerequisites for future schooling and lifelong learning.\n2. Universal FLN is a top priority of the education system.\n3. FLN should be addressed only in Grade 1 and not in later grades.\nWhich statements are correct?",
-      "options_english": [
-        "1 and 2 only.",
-        "1 and 3 only.",
-        "2 and 3 only.",
-        "1, 2 and 3."
-      ],
-      "correct_answer": "a",
-      "explanation_english": "The policy calls FLN an indispensable prerequisite and continues its emphasis beyond the initial grades.",
-      "explanation_hindi": "नीति FLN को अपरिहार्य पूर्व-आवश्यकता कहती है और प्रारंभिक कक्षाओं से आगे भी इस पर बल देती है।",
-      "topic": "NEP 2020",
-      "difficulty": "hard",
-      "key_facts": [
-        "The ability to read and write, and perform basic operations with numbers, is a necessary foundation and an indispensable prerequisite for all future schooling and lifelong learning."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T16:30:13.010000"
-    },
-    {
-      "id": "e88fe69f-eefd-46e2-970c-7982af2210ea",
-      "created_at": "2026-10-18T16:30:09.000000",
-      "question_hindi": "नीति के अनुसार प्राथमिक विद्यालय में सार्वभौमिक आधारभूत साक्षरता और संख्यात्मक दक्षता कब तक प्राप्त की जानी चाहिए?",
-      "options_hindi": [
-        "2025 तक।",
-        "2030 तक।",
-        "2035 तक।",
-        "2040 तक।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "By when should universal foundational literacy and numeracy be achieved in primary school, according to the policy?",
-      "options_english": [
-        "By 2025.",
-        "By 2030.",
-        "By 2035.",
-        "By 2040."
-      ],
-      "correct_answer": "a",
-      "explanation_english": "NEP makes FLN the most urgent learning priority and sets 2025 as the target in this text.",
-      "explanation_hindi": "NEP FLN को सर्वोच्च तात्कालिक अधिगम प्राथमिकता बनाती है और इस पाठ में 2025 का लक्ष्य देती है।",
+      "explanation_english": "The policy sets at least 50 hours of CPD opportunities every year for each teacher.",
+      "explanation_hindi": "नीति प्रत्येक शिक्षक के लिए प्रतिवर्ष कम-से-कम 50 घंटे CPD अवसर निर्धारित करती है।",
       "topic": "NEP 2020",
       "difficulty": "easy",
       "key_facts": [
-        "The highest priority of the education system will be to achieve universal foundational literacy and numeracy in primary school by 2025."
+        "Each teacher will be expected to participate in at least 50 hours of CPD opportunities every year"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T16:30:09.010000"
+      "processed_at": "2026-10-18T16:30:35.010000"
     },
     {
-      "id": "346ab4ba-4a64-476f-8206-9b56c8b6ea4b",
-      "created_at": "2026-10-18T16:31:01.000000",
-      "question_hindi": "प्रौढ़ शिक्षा के किस कार्यक्रम-प्रकार में वित्तीय साक्षरता, डिजिटल साक्षरता, स्वास्थ्य-जागरूकता, बाल-देखभाल और परिवार कल्याण शामिल हैं?",
+      "id": "908d89b7-0009-4b35-a3f1-c8c342750637",
+      "created_at": "2026-10-18T16:31:07.000000",
+      "question_hindi": "NEP 2020 उच्च शिक्षा आयोग (HECI) के अंतर्गत किन चार कार्यों को अलग-अलग करने का प्रस्ताव करती है?",
       "options_hindi": [
-        "महत्त्वपूर्ण जीवन-कौशल।",
-        "केवल आधारभूत साक्षरता और संख्यात्मक दक्षता।",
-        "केवल व्यावसायिक कौशल विकास।",
-        "केवल सतत शिक्षा।"
+        "प्रवेश, भर्ती, विद्यालय निरीक्षण और बोर्ड परीक्षाएँ।",
+        "अनुसंधान, खेल, विद्यालयी भोजन और शिक्षक स्थानांतरण।",
+        "विनियमन, प्रत्यायन, वित्तपोषण और शैक्षणिक मानक-निर्धारण।",
+        "पाठ्यचर्या लेखन, विश्वविद्यालय प्रवेश, छात्रवृत्ति और विद्यार्थी अनुशासन।"
       ],
       "option_labels": [
         "A",
@@ -616,134 +702,61 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which adult-education programme type includes financial literacy, digital literacy, health awareness, child care and family welfare?",
+      "question_english": "Which four functions does NEP 2020 propose to separate within the Higher Education Commission of India (HECI)?",
       "options_english": [
-        "Critical life skills.",
-        "Foundational literacy and numeracy only.",
-        "Vocational skills development only.",
-        "Continuing education only."
+        "Admissions, recruitment, school inspections, and board examinations.",
+        "Research, sports, school meals, and teacher transfers.",
+        "Regulation, accreditation, funding, and academic standard-setting.",
+        "Curriculum writing, university admissions, scholarships, and student discipline."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "HECI is designed with four independent verticals for the distinct functions of regulation, accreditation, funding and academic standard-setting.",
+      "explanation_hindi": "HECI में विनियमन, प्रत्यायन, वित्तपोषण और शैक्षणिक मानक-निर्धारण के लिए चार स्वतंत्र कार्यक्षेत्र प्रस्तावित हैं।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "These four structures will be set up as four independent verticals within one umbrella institution, the Higher Education Commission of India (HECI)."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:07.010000"
+    },
+    {
+      "id": "a5e7934a-8fde-495d-95a2-bc7cba18add1",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "NEP 2020 शिक्षा में प्रौद्योगिकी के एकीकरण पर बल देती है। आधारभूत साक्षरता और संख्यात्मकता के उच्च-गुणवत्ता वाले संसाधनों के राष्ट्रीय भंडार के रूप में विशेष रूप से कौन-सा राष्ट्रीय मंच निर्धारित है?",
+      "options_hindi": [
+        "दीक्षा (DIKSHA)",
+        "स्वयं (SWAYAM)",
+        "ई-पीजी पाठशाला (e-PG Pathshala)",
+        "एनपीटीईएल (NPTEL)"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 82; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "NEP 2020 emphasizes the integration of technology in education. Which national platform is specifically designated to serve as the national repository of high-quality resources on foundational literacy and numeracy?",
+      "options_english": [
+        "DIKSHA",
+        "SWAYAM",
+        "e-PG Pathshala",
+        "NPTEL"
       ],
       "correct_answer": "a",
-      "explanation_english": "The Adult Education Curriculum Framework places financial and digital literacy, health awareness, child care and family welfare under critical life skills.",
-      "explanation_hindi": "प्रौढ़ शिक्षा पाठ्यचर्या रूपरेखा वित्तीय व डिजिटल साक्षरता, स्वास्थ्य-जागरूकता, बाल-देखभाल और परिवार कल्याण को महत्त्वपूर्ण जीवन-कौशल में रखती है।",
-      "topic": "NEP 2020",
-      "difficulty": "hard",
-      "key_facts": [
-        "critical life skills (including financial literacy, digital literacy, commercial skills, health care and awareness, child care and education, and family welfare)"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T16:31:01.010000"
-    },
-    {
-      "id": "5330467f-2c71-46d6-a5f2-15f41593d86b",
-      "created_at": "2026-10-18T16:30:28.000000",
-      "question_hindi": "संस्कृत और शास्त्रीय भाषाओं के संबंध में कौन-सा कथन NEP 2020 से मेल खाता है?",
-      "options_hindi": [
-        "केवल संस्कृत, वह भी केवल माध्यमिक स्तर पर पढ़ाई जा सकती है।",
-        "शास्त्रीय भाषाएँ केवल विश्वविद्यालयी शोध तक सीमित हैं।",
-        "सभी विद्यार्थियों को तीन शास्त्रीय भाषाओं में विशेषज्ञता अनिवार्य है।",
-        "संस्कृत सभी स्तरों पर एक समृद्धकारी विकल्प है; विद्यार्थी कक्षा 6–12 में कम-से-कम दो वर्ष किसी भारतीय शास्त्रीय भाषा का अध्ययन कर सकते हैं।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which statement about Sanskrit and classical languages best matches NEP 2020?",
-      "options_english": [
-        "Only Sanskrit may be taught, and only in secondary school.",
-        "Classical languages are restricted to university research.",
-        "All students must specialize in three classical languages.",
-        "Sanskrit is an enriching option at all levels; students have the option of studying at least two years of an Indian classical language in Grades 6–12."
-      ],
-      "correct_answer": "d",
-      "explanation_english": "The policy offers Sanskrit as an option at all levels and allows at least two years of a classical Indian language in Grades 6–12.",
-      "explanation_hindi": "नीति संस्कृत को सभी स्तरों पर विकल्प बनाती है और कक्षा 6–12 में किसी भारतीय शास्त्रीय भाषा के कम-से-कम दो वर्ष पढ़ने का विकल्प देती है।",
-      "topic": "NEP 2020",
-      "difficulty": "easy",
-      "key_facts": [
-        "Sanskrit will thus be offered at all levels of school and higher education as an important, enriching option for students"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T16:30:28.010000"
-    },
-    {
-      "id": "1eb4bf3c-1bde-4add-a118-531df47a0fd4",
-      "created_at": "2026-10-18T16:30:51.000000",
-      "question_hindi": "NEP 2020 के अंतर्गत सभी HEI को किस वर्ष तक बहुविषयी बनने का लक्ष्य रखना चाहिए?",
-      "options_hindi": [
-        "2025 तक, बिना आगे परिवर्तन के।",
-        "2030 तक, जिसके बाद विद्यार्थी संख्या स्थिर कर देनी है।",
-        "2040 तक, जबकि 2030 तक बहुविषयी बनने की योजना बनानी है।",
-        "2050 तक, बिना किसी अंतरिम योजना लक्ष्य के।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "By which year should all HEIs aim to become multidisciplinary under NEP 2020?",
-      "options_english": [
-        "2025, with no later transition.",
-        "2030, after which student strength must be frozen.",
-        "2040, with planning towards multidisciplinary status by 2030.",
-        "2050, with no interim planning milestone."
-      ],
-      "correct_answer": "c",
-      "explanation_english": "The policy sets 2040 as the overall aim and says HEIs should first plan to become multidisciplinary by 2030.",
-      "explanation_hindi": "नीति 2040 को समग्र लक्ष्य बताती है और HEI को पहले 2030 तक बहुविषयी बनने की योजना बनाने को कहती है।",
-      "topic": "NEP 2020",
+      "explanation_english": "DIKSHA DIKSHA serves as the central national digital platform for school education, acting as a high- quality repository for foundational literacy, numeracy, open educational resources, interactive teaching tools, and continuous professional development courses accessible to teachers, students, and parents nationwide.",
+      "explanation_hindi": "सही उत्तर (A) दीक्षा (DIKSHA) है। यह विद्यालयी शिक्षा के लिए डिजिटल अवसंरचना और संसाधन उपलब्ध कराने वाला राष्ट्रीय मंच है। इसमें शिक्षकों, विद्यार्थियों और अभिभावकों के लिए पाठ्य-संसाधन, डिजिटल सामग्री, इंटरैक्टिव शिक्षण साधन और शिक्षक व्यावसायिक विकास से जुड़ी सामग्री उपलब्ध कराई जाती है। प्रश्न विशेष रूप से आधारभूत साक्षरता एवं संख्यात्मकता (FLN) के गुणवत्तापूर्ण संसाधनों के राष्ट्रीय भंडार की बात करता है, इसलिए DIKSHA सबसे उपयुक्त विकल्प है। SWAYAM मुख्यतः ऑनलाइन पाठ्यक्रमों से जुड़ा है, ई-पीजी पाठशाला स्नातकोत्तर स्तर की सामग्री पर केंद्रित है और NPTEL विशेष रूप से इंजीनियरिंग, विज्ञान और संबंधित उच्च शिक्षा के ऑनलाइन पाठ्यक्रमों के लिए जाना जाता है। इन निकटवर्ती विकल्पों के कारण प्रश्न मंच के विशिष्ट उद्देश्य को पहचानने की जाँच करता है।",
+      "topic": "National Education Policy and related educational-policy questions",
       "difficulty": "medium",
       "key_facts": [
-        "By 2040, all higher education institutions (HEIs) shall aim to become multidisciplinary institutions"
+        "DIKSHA",
+        "DIKSHA DIKSHA serves as the central national digital platform for school education, acting as a high- quality repository for foundational literacy, numeracy, open educational resources, interactive teaching tools, and continuous professional development courses accessible to teachers, students, and parents nationwide."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T16:30:51.010000"
-    },
-    {
-      "id": "6869ad7d-b227-4cac-abc9-3105723093e4",
-      "created_at": "2026-10-18T16:31:03.000000",
-      "question_hindi": "बहुविषयी उच्च शिक्षा के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n1. बहुविषयी संस्थान शिक्षण, अनुसंधान और सामुदायिक सहभागिता को जोड़ सकते हैं।\n2. प्रत्येक संस्थान में विषयों के बिल्कुल समान संयोजन अनिवार्य हैं।\n3. संस्थागत श्रेणियों को कठोर अपवर्जक खानों के बजाय निरंतरता के रूप में वर्णित किया गया है।\nसही कथन कौन-से हैं?",
-      "options_hindi": [
-        "केवल 1 और 2।",
-        "केवल 2 और 3।",
-        "केवल 1 और 3।",
-        "1, 2 और 3।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements about multidisciplinary higher education:\n1. Multidisciplinary institutions may connect teaching, research and community engagement.\n2. HEIs are expected to provide identical combinations of subjects in every institution.\n3. Institutional categories are described as a continuum rather than rigid, exclusionary boxes.\nWhich statements are correct?",
-      "options_english": [
-        "1 and 2 only.",
-        "2 and 3 only.",
-        "1 and 3 only.",
-        "1, 2 and 3."
-      ],
-      "correct_answer": "c",
-      "explanation_english": "The policy encourages multidisciplinary teaching, research and community engagement, while preserving institutional flexibility across a continuum.",
-      "explanation_hindi": "नीति बहुविषयी शिक्षण, अनुसंधान और सामुदायिक सहभागिता को प्रोत्साहित करती है तथा निरंतरता में संस्थागत लचीलापन रखती है।",
-      "topic": "NEP 2020",
-      "difficulty": "medium",
-      "key_facts": [
-        "HEIs will have the autonomy and freedom to move gradually from one category to another, based on their plans, actions, and effectiveness."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T16:31:03.010000"
+      "processed_at": "2026-10-18T16:30:05Z"
     }
   ]
 }

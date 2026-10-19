@@ -1,19 +1,19 @@
 {
-  "test_id": "bc848ff1-56f0-4dae-a9b7-b7fbc4e893b4",
+  "test_id": "b4a9530f-ccad-44b1-a2f2-7ddcd64a7f53",
   "test_name": "Topic Test: RTE 2009 - Part 5",
   "type": "topic_wise",
   "topic": "rte-2009",
-  "created_at": "2026-10-18T11:57:07.882095",
+  "created_at": "2026-10-19T07:49:29.164932",
   "questions": [
     {
-      "id": "9cb1be1d-1afa-489b-9997-612d79801618",
-      "created_at": "2026-10-18T14:00:00.180000",
-      "question_hindi": "किस स्थिति में मॉडल नियमों में सुरक्षित परिवहन व्यवस्था का विशेष उल्लेख है?",
+      "id": "c68e2d70-5b84-4319-8a8b-77916a210186",
+      "created_at": "2026-10-18T14:00:00.390000",
+      "question_hindi": "मॉडल नियमों के अनुसार SMC की संरचना और संचालन में कौन-सा संयोजन सही है? 1. 75% सदस्य माता-पिता/संरक्षक\n2. अध्यक्ष और उपाध्यक्ष अभिभावक सदस्यों में से चुने जाते हैं\n3. प्रधानाध्यापक/वरिष्ठतम शिक्षक पदेन सदस्य-संयोजक\n4. बैठक कम-से-कम हर महीने।",
       "options_hindi": [
-        "जब दिव्यांगता के कारण बच्चा विद्यालय तक पहुँच नहीं सकता",
-        "जब बच्चा परीक्षा में अनुपस्थित हो",
-        "जब विद्यार्थी निजी ट्यूशन लेना चाहता है",
-        "जब पुस्तकालय की सदस्यता समाप्त हो"
+        "केवल 2, 3 और 4",
+        "केवल 1 और 2",
+        "1, 2, 3 और 4",
+        "केवल 1, 2 और 3"
       ],
       "option_labels": [
         "A",
@@ -24,33 +24,33 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "In which situation do the Model Rules specifically contemplate safe transportation?",
+      "question_english": "Which combination correctly reflects SMC composition/functioning under the Model Rules? 1. 75% parents/guardians\n2. Chair and Vice-Chair elected from parent members\n3. Head teacher/senior-most teacher is ex-officio Member-Convener\n4. Meetings at least monthly.",
       "options_english": [
-        "When a child’s disability prevents access to school",
-        "When a child misses an examination",
-        "When a student wants private tuition",
-        "When library membership expires"
+        "2, 3 and 4 only",
+        "1 and 2 only",
+        "1, 2, 3 and 4",
+        "1, 2 and 3 only"
       ],
-      "correct_answer": "a",
-      "explanation_english": "Rule 4(7) refers to appropriate and safe transport for children with disabilities who cannot access school.",
-      "explanation_hindi": "नियम 4(7) विद्यालय तक पहुँच न पाने वाले दिव्यांग बच्चों के लिए उपयुक्त और सुरक्षित परिवहन का उल्लेख करता है।",
+      "correct_answer": "c",
+      "explanation_english": "Rules 13(2), (4) and (5) specify these four features.",
+      "explanation_hindi": "नियम 13(2), (4) और (5) इन चारों विशेषताओं का प्रावधान करते हैं।",
       "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
+      "difficulty": "hard",
       "key_facts": [
-        "will endeavour to make appropriate and safe transportation arrangements for them to attend school and complete elementary education."
+        "The School Management Committee shall meet at least once a month and the minutes and decisions of the meetings shall be properly recorded and made available to the public."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.185000"
+      "processed_at": "2026-10-18T14:00:00.395000"
     },
     {
-      "id": "e8e418e2-366a-4b5c-b52e-acc92805ff11",
-      "created_at": "2026-10-18T14:00:00.480000",
-      "question_hindi": "अनुसूची के अनुसार कक्षा VI–VIII में सामान्यतः कितने बच्चों पर कम-से-कम एक शिक्षक होना चाहिए?",
+      "id": "b9514d45-e503-42fb-a292-78aab758f81c",
+      "created_at": "2026-10-18T14:00:00.730000",
+      "question_hindi": "अनुसूची के अनुसार कक्षा I–V में अधिकतम 60 नामांकित बच्चों के लिए कितने शिक्षक निर्दिष्ट हैं?",
       "options_hindi": [
-        "प्रत्येक 40 बच्चों पर एक",
-        "प्रत्येक 25 बच्चों पर एक",
-        "प्रत्येक 30 बच्चों पर एक",
-        "प्रत्येक 35 बच्चों पर एक"
+        "चार",
+        "एक",
+        "तीन",
+        "दो"
       ],
       "option_labels": [
         "A",
@@ -61,97 +61,97 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Under the Schedule, what is the minimum teacher provision for Classes VI–VIII?",
+      "question_english": "Under the Schedule, how many teachers are specified for up to 60 admitted children in Classes I–V?",
       "options_english": [
-        "One per 40 children",
-        "One per 25 children",
-        "One per 30 children",
-        "One per 35 children"
+        "Four",
+        "One",
+        "Three",
+        "Two"
       ],
       "correct_answer": "d",
-      "explanation_english": "The Schedule requires at least one teacher for every thirty-five children.",
-      "explanation_hindi": "अनुसूची प्रत्येक 35 बच्चों पर कम-से-कम एक शिक्षक की अपेक्षा करती है।",
+      "explanation_english": "The Schedule lists two teachers for enrolment up to sixty.",
+      "explanation_hindi": "अनुसूची अधिकतम 60 बच्चों के लिए दो शिक्षक निर्दिष्ट करती है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "easy",
+      "key_facts": [
+        "Up to Sixty Two"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.735000"
+    },
+    {
+      "id": "ec65d94b-3a82-4650-9e46-49602a97b9c0",
+      "created_at": "2026-10-18T14:00:00.230000",
+      "question_hindi": "किस स्थिति में धारा 12(2) के तहत विद्यालय को प्रतिपूर्ति उस सीमा तक नहीं मिलती जिस सीमा तक वह पहले से निःशुल्क शिक्षा देने के दायित्व में है?",
+      "options_hindi": [
+        "जब विद्यालय को भूमि/भवन/उपकरण आदि निःशुल्क या रियायती मिले हों और बदले में विशिष्ट बच्चों को निःशुल्क शिक्षा देना पहले से दायित्व हो",
+        "जब विद्यालय ने किसी बच्चे को प्रवेश दिया हो",
+        "जब विद्यालय में पुस्तकालय हो",
+        "जब राज्य ने स्कूल मैपिंग की हो"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "When is reimbursement under Section 12(2) unavailable to the extent of an existing obligation to provide free education?",
+      "options_english": [
+        "Where the school received land/building/equipment etc. free or at a concession in return for an existing obligation to provide free education to specified children",
+        "Whenever the school admits a child",
+        "Where the school has a library",
+        "Where the State has conducted school mapping"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The proviso denies reimbursement to the extent the school is already obligated to provide free education in return for concessions/facilities.",
+      "explanation_hindi": "परंतुक उस सीमा तक प्रतिपूर्ति रोकता है जहाँ रियायती सुविधाओं के बदले विद्यालय पहले से निःशुल्क शिक्षा देने को बाध्य है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "hard",
+      "key_facts": [
+        "such school shall not be entitled for reimbursement to the extent of such obligation."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.235000"
+    },
+    {
+      "id": "736d4c45-4387-469c-a233-2c55a9c04128",
+      "created_at": "2026-10-18T14:00:00.350000",
+      "question_hindi": "धारा 21 के तहत विद्यालय प्रबंधन समिति (SMC) की संरचना के बारे में कौन-सा कथन सही है?",
+      "options_hindi": [
+        "कम-से-कम आधे सदस्य शिक्षक होंगे।",
+        "कम-से-कम तीन-चौथाई सदस्य माता-पिता/संरक्षक होंगे और सदस्यों में 50% महिलाएँ होंगी।",
+        "गैर-सहायता-प्राप्त विद्यालयों को छोड़कर कोई विद्यालय SMC नहीं बनाएगा।",
+        "समिति में अभिभावक प्रतिनिधित्व निषिद्ध है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which statement about the SMC under Section 21 is correct?",
+      "options_english": [
+        "At least half the members must be teachers.",
+        "At least three-fourths must be parents/guardians and 50% of members must be women.",
+        "No school other than unaided schools will form an SMC.",
+        "Parent representation is prohibited."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Section 21 requires at least three-fourths parents/guardians and 50% women; specified unaided schools are excepted.",
+      "explanation_hindi": "धारा 21 कम-से-कम तीन-चौथाई माता-पिता/संरक्षक और 50% महिला सदस्य निर्धारित करती है; निर्दिष्ट गैर-सहायता-प्राप्त विद्यालय अपवाद हैं।",
       "topic": "Right to Education Act 2009",
       "difficulty": "medium",
       "key_facts": [
-        "At least one teacher for every thirty-five children."
+        "atleast three-fourth of members of such Committee shall be parents or guardians"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.485000"
-    },
-    {
-      "id": "ea1c519a-e40b-420b-b157-0880b743b2cc",
-      "created_at": "2026-10-18T14:00:00.880000",
-      "question_hindi": "मॉडल नियम 3 के अनुसार विशेष प्रशिक्षण की न्यूनतम अवधि कितनी है?",
-      "options_hindi": [
-        "एक वर्ष",
-        "तीन महीने",
-        "छह महीने",
-        "एक महीना"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Under Model Rule 3, what is the minimum duration of special training?",
-      "options_english": [
-        "One year",
-        "Three months",
-        "Six months",
-        "One month"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "The Model Rules set a minimum of three months, with possible extension based on periodic assessment.",
-      "explanation_hindi": "मॉडल नियम न्यूनतम तीन महीने बताते हैं; आवधिक आकलन के आधार पर अवधि बढ़ सकती है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "easy",
-      "key_facts": [
-        "The duration shall be for a minimum period of three months which may be extended, based on periodical assessment of learning progress, for a maximum period not exceeding two years."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.885000"
-    },
-    {
-      "id": "5ff34b23-8517-413a-babd-bd4840ff5614",
-      "created_at": "2026-10-18T14:00:00.670000",
-      "question_hindi": "धारा 33 के अनुसार राष्ट्रीय सलाहकार परिषद में अधिकतम कितने सदस्य हो सकते हैं?",
-      "options_hindi": [
-        "15",
-        "20",
-        "10",
-        "12"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "What is the maximum membership of the National Advisory Council under Section 33?",
-      "options_english": [
-        "15",
-        "20",
-        "10",
-        "12"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Section 33(1) specifies a maximum of fifteen members.",
-      "explanation_hindi": "धारा 33(1) अधिकतम पंद्रह सदस्यों का प्रावधान करती है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "easy",
-      "key_facts": [
-        "consisting of such number of Members, not exceeding fifteen"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.675000"
+      "processed_at": "2026-10-18T14:00:00.355000"
     },
     {
       "id": "69137b8e-e8e0-45fd-a51e-5a3304fc81cc",
@@ -191,117 +191,6 @@
       "processed_at": "2026-10-18T14:00:00.295000"
     },
     {
-      "id": "1ec354bc-c8ba-4fe9-be61-0249f3dde0fc",
-      "created_at": "2026-10-18T14:00:00.010000",
-      "question_hindi": "अधिनियम में “प्रारंभिक शिक्षा” (elementary education) का अर्थ क्या है?",
-      "options_hindi": [
-        "कक्षा 1 से 5 तक",
-        "कक्षा 1 से 8 तक",
-        "पूर्व-प्राथमिक से कक्षा 5 तक",
-        "कक्षा 6 से 10 तक"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "What does “elementary education” mean under the Act?",
-      "options_english": [
-        "Classes I to V",
-        "Classes I to VIII",
-        "Pre-primary to Class V",
-        "Classes VI to X"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Section 2 defines elementary education as education from first class to eighth class.",
-      "explanation_hindi": "धारा 2 प्रारंभिक शिक्षा को पहली से आठवीं कक्षा तक की शिक्षा के रूप में परिभाषित करती है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "easy",
-      "key_facts": [
-        "“elementary education” means the education from first class to eighth class."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.015000"
-    },
-    {
-      "id": "4f22213f-8aae-465f-bd9d-0f583ba9a7c8",
-      "created_at": "2026-10-18T14:00:00.980000",
-      "question_hindi": "मॉडल नियम 24 के अंतर्गत REPA की संरचना के बारे में कौन-सा कथन सही है?",
-      "options_hindi": [
-        "15 निर्वाचित अभिभावक सदस्य",
-        "एक अध्यक्ष तथा दो सदस्य, जिनमें कम-से-कम एक महिला हो; सदस्य निर्दिष्ट विशेषज्ञता क्षेत्रों से हों",
-        "एक अध्यक्ष और बिना सदस्यों वाला निकाय",
-        "केवल विद्यालय प्रधानाचार्यों की समिति"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which statement correctly describes REPA composition under Model Rule 24?",
-      "options_english": [
-        "15 elected parent members",
-        "A chairperson and two members, at least one a woman, drawn from specified fields of expertise",
-        "A chairperson and no members",
-        "A committee of school principals only"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Model Rule 24(3) sets a chairperson and two members, at least one woman, with relevant fields of experience.",
-      "explanation_hindi": "मॉडल नियम 24(3) एक अध्यक्ष और दो सदस्य, जिनमें कम-से-कम एक महिला हो, तथा संबंधित विशेषज्ञता क्षेत्रों का प्रावधान करता है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "hard",
-      "key_facts": [
-        "Two Members, of whom at least one shall be a woman"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.985000"
-    },
-    {
-      "id": "08ae16e5-f5bd-4b79-9294-c09278b31d14",
-      "created_at": "2026-10-18T14:00:00.920000",
-      "question_hindi": "मॉडल नियम 25 के अनुसार बाल शिकायत हेल्पलाइन किन माध्यमों से सुलभ होनी चाहिए?",
-      "options_hindi": [
-        "केवल मोबाइल ऐप",
-        "SMS, टेलीफोन और पत्र",
-        "केवल ईमेल",
-        "केवल व्यक्तिगत आवेदन"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Through which channels should the child complaint helpline be accessible under Model Rule 25?",
-      "options_english": [
-        "Mobile app only",
-        "SMS, telephone and letter",
-        "Email only",
-        "In-person application only"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Model Rule 25(1) lists SMS, telephone and letter; the child’s identity is recorded but not disclosed.",
-      "explanation_hindi": "मॉडल नियम 25(1) SMS, टेलीफोन और पत्र बताता है; बच्चे की पहचान दर्ज होती है पर प्रकट नहीं की जाती।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "easy",
-      "key_facts": [
-        "shall set up a child help line, accessible by SMS, telephone and letter, which would act as the forum for aggrieved child/guardian to register complaint regarding violation of rights under the Act, in a manner that records her identity but does not disclose it;"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.925000"
-    },
-    {
       "id": "6f681810-81d9-4a34-8d21-fbf051e1efb6",
       "created_at": "2026-10-18T14:00:00.330000",
       "question_hindi": "मान्यता के बिना विद्यालय चलाने या मान्यता वापस होने के बाद भी चलाने पर धारा 18(5) के अनुसार अधिकतम सामान्य जुर्माना कितना हो सकता है और लगातार उल्लंघन पर क्या दंड है?",
@@ -339,14 +228,14 @@
       "processed_at": "2026-10-18T14:00:00.335000"
     },
     {
-      "id": "e9346cc7-82cf-4a30-812e-e3c58b695703",
-      "created_at": "2026-10-18T14:00:00.710000",
-      "question_hindi": "धारा 37 में सद्भावपूर्वक किए गए कार्यों के संबंध में क्या संरक्षण है?",
+      "id": "a19ff193-22b9-4961-a461-4af3c0f0aa02",
+      "created_at": "2026-10-18T14:00:00.200000",
+      "question_hindi": "धारा 12(1)(c) के अनुसार निर्दिष्ट श्रेणी और गैर-सहायता-प्राप्त विद्यालयों में कक्षा 1 की कितनी न्यूनतम सीटें पड़ोस के कमजोर वर्ग/वंचित समूह के बच्चों के लिए हैं?",
       "options_hindi": [
-        "सभी सरकारी निर्णय न्यायिक समीक्षा से बाहर",
-        "विद्यालयों को मान्यता नियमों से छूट",
-        "अधिनियम/नियम/आदेश के अनुपालन में सद्भावपूर्वक किए गए कार्यों के संबंध में मुकदमे/कानूनी कार्यवाही से संरक्षण",
-        "दुर्भावनापूर्ण कार्यों को भी संरक्षण"
+        "10 प्रतिशत",
+        "15 प्रतिशत",
+        "कम-से-कम 25 प्रतिशत",
+        "20 प्रतिशत"
       ],
       "option_labels": [
         "A",
@@ -357,33 +246,33 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "What protection does Section 37 provide for acts done in good faith?",
+      "question_english": "Under Section 12(1)(c), what minimum proportion of Class I strength in specified-category and unaided schools is for neighbourhood children from weaker sections/disadvantaged groups?",
       "options_english": [
-        "All government decisions excluded from judicial review",
-        "Schools exempted from recognition rules",
-        "Protection from suit/legal proceeding for acts done or intended in good faith under the Act/rules/orders",
-        "Protection for malicious acts too"
+        "10 per cent",
+        "15 per cent",
+        "At least 25 per cent",
+        "20 per cent"
       ],
       "correct_answer": "c",
-      "explanation_english": "Section 37 provides protection for acts done or intended in good faith pursuant to the Act, rules or orders.",
-      "explanation_hindi": "धारा 37 अधिनियम, नियम या आदेश के तहत सद्भावपूर्वक किए गए कार्यों को संरक्षण देती है।",
+      "explanation_english": "Section 12(1)(c) specifies at least 25% of Class I strength for eligible neighbourhood children.",
+      "explanation_hindi": "धारा 12(1)(c) पात्र पड़ोसी बच्चों के लिए कक्षा 1 की कम-से-कम 25% सीटें निर्धारित करती है।",
       "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "key_facts": [
-        "in respect of anything which is in good faith done or intended to be done, in pursuance of this Act, or any rules or order made thereunder"
+        "shall admit in class I, to the extent of at least twenty-five per cent. of the strength of that class, children belonging to weaker section and disadvantaged group in the neighbourhood"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.715000"
+      "processed_at": "2026-10-18T14:00:00.205000"
     },
     {
-      "id": "74558398-5a72-4aee-8788-cd09e7e2f985",
-      "created_at": "2026-10-18T14:00:00.140000",
-      "question_hindi": "धारा 5 के अंतर्गत स्थानांतरण प्रमाणपत्र के संबंध में कौन-सा विकल्प सही है?",
+      "id": "c661bd0c-ec4c-4e17-ac5f-4c8b3057521f",
+      "created_at": "2026-10-18T14:00:00.750000",
+      "question_hindi": "अनुसूची में कक्षा I–V के लिए शैक्षणिक वर्ष में न्यूनतम कार्य-दिवस कितने हैं?",
       "options_hindi": [
-        "केवल जिला शिक्षा अधिकारी प्रमाणपत्र जारी कर सकता है।",
-        "बच्चा राज्य से बाहर स्थानांतरण का अधिकार नहीं रखता।",
-        "प्रमाणपत्र में देरी हो तो नया विद्यालय प्रवेश रोक सकता है।",
-        "प्रमाणपत्र तुरंत जारी होना चाहिए; उसे प्रस्तुत करने में देरी प्रवेश रोकने/टालने का आधार नहीं है।"
+        "240",
+        "220",
+        "200",
+        "180"
       ],
       "option_labels": [
         "A",
@@ -394,33 +283,144 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which option correctly states the transfer-certificate rule under Section 5?",
+      "question_english": "How many minimum working days per academic year are specified for Classes I–V?",
       "options_english": [
-        "Only the District Education Officer may issue it.",
-        "A child has no right to transfer outside the State.",
-        "The new school may withhold admission if the certificate is delayed.",
-        "The certificate should be issued immediately; delay in producing it cannot delay or deny admission."
+        "240",
+        "220",
+        "200",
+        "180"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Schedule specifies two hundred working days for Classes I–V.",
+      "explanation_hindi": "अनुसूची कक्षा I–V के लिए 200 कार्य-दिवस निर्दिष्ट करती है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "medium",
+      "key_facts": [
+        "two hundred working days for first class to fifth class;"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.755000"
+    },
+    {
+      "id": "2dd14fa5-4150-44cd-9679-95004522aa9a",
+      "created_at": "2026-10-18T14:00:00.990000",
+      "question_hindi": "मॉडल नियम 26 के अनुसार राज्य सलाहकार परिषद के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n1. अध्यक्ष और 14 सदस्य होते हैं।\n2. राज्य के स्कूल शिक्षा मंत्री पदेन अध्यक्ष होते हैं।\n3. कम-से-कम 50% सदस्य महिलाएँ होती हैं।\n4. कोरम के लिए कम-से-कम 50% सदस्य उपस्थित हों।\nकौन-से सही हैं?",
+      "options_hindi": [
+        "केवल 2, 3 और 4",
+        "1, 2, 3 और 4",
+        "केवल 1, 2 और 3",
+        "केवल 1 और 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements about the State Advisory Council under Model Rule 26:\n1. It has a Chairperson and 14 members.\n2. The State Minister in charge of School Education is ex-officio Chairperson.\n3. At least 50% of members are women.\n4. At least 50% of members constitute quorum.\nWhich are correct?",
+      "options_english": [
+        "2, 3 and 4 only",
+        "1, 2, 3 and 4",
+        "1, 2 and 3 only",
+        "1 and 2 only"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Rule 26 specifies all four features of the State Advisory Council.",
+      "explanation_hindi": "नियम 26 राज्य सलाहकार परिषद की इन चारों विशेषताओं को निर्धारित करता है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "hard",
+      "key_facts": [
+        "The State Advisory Council shall consist of a Chairperson and fourteen Members."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.995000"
+    },
+    {
+      "id": "ac148e0f-eda0-4879-ac6d-7ef0e97155d5",
+      "created_at": "2026-10-18T14:00:00.300000",
+      "question_hindi": "धारा 15 में विस्तारित अवधि के बाद प्रवेश माँगने वाले बच्चे के बारे में क्या प्रावधान है?",
+      "options_hindi": [
+        "पहले बोर्ड परीक्षा पास करना आवश्यक है।",
+        "प्रवेश से इनकार नहीं किया जा सकता; पढ़ाई पूरी करने की निर्धारित व्यवस्था लागू होगी।",
+        "केवल निजी विद्यालय प्रवेश दे सकता है।",
+        "प्रवेश पूरी तरह प्रतिबंधित है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What does Section 15 provide for a child seeking admission after the extended period?",
+      "options_english": [
+        "The child must first pass a Board examination.",
+        "Admission cannot be denied; prescribed arrangements apply to completion of studies.",
+        "Only a private school may admit the child.",
+        "Admission is absolutely barred."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Section 15 prohibits denial of admission after the extended period.",
+      "explanation_hindi": "धारा 15 विस्तारित अवधि के बाद भी प्रवेश से इनकार करने पर रोक लगाती है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "medium",
+      "key_facts": [
+        "no child shall be denied admission if such admission is sought subsequent to the extended period"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.305000"
+    },
+    {
+      "id": "ba820e91-38fa-4999-94d1-806178c7f70a",
+      "created_at": "2026-10-18T14:00:00.190000",
+      "question_hindi": "निम्नलिखित कथनों पर विचार कीजिए:\n1. विद्यालय तक पहुँच सामाजिक और सांस्कृतिक कारणों से बाधित नहीं होनी चाहिए।\n2. स्कूल मैपिंग केवल शहरी क्षेत्रों में होती है।\n3. स्कूल मैपिंग में दूरस्थ क्षेत्रों और दिव्यांग बच्चों की पहचान भी शामिल है।\nसही विकल्प चुनिए।",
+      "options_hindi": [
+        "केवल 2 और 3",
+        "केवल 1",
+        "1, 2 और 3",
+        "केवल 1 और 3"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider:\n1. Access to school must not be hindered by social and cultural factors.\n2. School mapping is carried out only in urban areas.\n3. It includes identifying children in remote areas and children with disabilities.\nChoose the correct option.",
+      "options_english": [
+        "2 and 3 only",
+        "1 only",
+        "1, 2 and 3",
+        "1 and 3 only"
       ],
       "correct_answer": "d",
-      "explanation_english": "Section 5 requires immediate issuance by the head-teacher/in-charge and bars delay in producing the certificate as a reason to deny or delay admission.",
-      "explanation_hindi": "धारा 5 प्रधानाध्यापक/प्रभारी से प्रमाणपत्र तुरंत जारी करने को कहती है और इसकी देरी को प्रवेश रोकने का आधार नहीं मानती।",
+      "explanation_english": "The Rules prohibit social/cultural barriers and include remote-area children and children with disabilities in school mapping.",
+      "explanation_hindi": "नियम सामाजिक-सांस्कृतिक बाधाओं को रोकते हैं तथा स्कूल मैपिंग में दूरस्थ व दिव्यांग बच्चों को शामिल करते हैं।",
       "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
+      "difficulty": "hard",
       "key_facts": [
-        "delay in producing transfer certificate shall not be a ground for either delaying or denying admission in such other school"
+        "The State Government/Local Authority shall ensure that access of children to the school is not hindered on account of social and cultural factors."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.145000"
+      "processed_at": "2026-10-18T14:00:00.195000"
     },
     {
-      "id": "7b91e2a9-64bd-4969-ac73-e3d2cfbc5a41",
-      "created_at": "2026-10-18T14:00:00.020000",
-      "question_hindi": "निम्नलिखित युग्मों पर विचार कीजिए:\n1. कमजोर वर्ग—अधिसूचित न्यूनतम सीमा से कम वार्षिक आय वाले अभिभावक/संरक्षक का बच्चा\n2. वंचित समूह—केवल आर्थिक रूप से गरीब परिवार का बच्चा\n3. स्क्रीनिंग प्रक्रिया—यादृच्छिक चयन के अतिरिक्त किसी बच्चे को दूसरे पर वरीयता देने की चयन-विधि।\nसही युग्म कौन-से हैं?",
+      "id": "92dea979-4d5f-4961-8aa4-8a11f13187a5",
+      "created_at": "2026-10-18T14:00:00.130000",
+      "question_hindi": "निम्नलिखित कथनों पर विचार कीजिए:\n1. स्थानीय प्राधिकारी घरेलू सर्वेक्षण से जन्म से 14 वर्ष तक सभी बच्चों का रिकॉर्ड रखता है।\n2. रिकॉर्ड हर वर्ष अद्यतन होता है।\n3. रिकॉर्ड में केवल वर्तमान में नामांकित बच्चों का विवरण होता है।\nकौन-से कथन सही हैं?",
       "options_hindi": [
         "केवल 1 और 3",
-        "केवल 1 और 2",
+        "केवल 2 और 3",
         "1, 2 और 3",
-        "केवल 2 और 3"
+        "केवल 1 और 2"
       ],
       "option_labels": [
         "A",
@@ -431,23 +431,23 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider these pairs:\n1. Weaker section—child of a parent/guardian whose annual income is below the notified minimum limit\n2. Disadvantaged group—only a child from an economically poor family\n3. Screening procedure—a selection method preferring one child over another, other than random selection.\nWhich pairs are correctly matched?",
+      "question_english": "Consider:\n1. The local authority maintains a household-survey record of all children from birth until age 14.\n2. It is updated every year.\n3. It contains details only of currently enrolled children.\nWhich statements are correct?",
       "options_english": [
         "1 and 3 only",
-        "1 and 2 only",
+        "2 and 3 only",
         "1, 2 and 3",
-        "2 and 3 only"
+        "1 and 2 only"
       ],
-      "correct_answer": "a",
-      "explanation_english": "The income threshold defines weaker section; disadvantaged group is broader than economic poverty alone.",
-      "explanation_hindi": "कमजोर वर्ग आय-सीमा से परिभाषित है; वंचित समूह केवल आर्थिक गरीबी तक सीमित नहीं है।",
+      "correct_answer": "d",
+      "explanation_english": "Rules require records from birth until age 14 and annual updating; the details go beyond currently enrolled children.",
+      "explanation_hindi": "नियम जन्म से 14 वर्ष तक रिकॉर्ड और वार्षिक अद्यतन अनिवार्य करते हैं; रिकॉर्ड में केवल नामांकित बच्चे ही नहीं आते।",
       "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
+      "difficulty": "hard",
       "key_facts": [
-        "“child belonging to weaker section” means a child belonging to such parent or guardian whose annual income is lower than the minimum limit specified by the appropriate Government, by notification."
+        "The Local Authority shall maintain a record of all children, in its jurisdiction, through a household survey, from their birth till they attain 14 years."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.025000"
+      "processed_at": "2026-10-18T14:00:00.135000"
     },
     {
       "id": "0883b193-8dbd-4aba-909a-38f93d00b99d",
@@ -487,14 +487,14 @@
       "processed_at": "2026-10-18T14:00:00.325000"
     },
     {
-      "id": "d1c16dd9-d6e2-4e36-a611-d82195c048e8",
-      "created_at": "2026-10-18T14:00:00.100000",
-      "question_hindi": "निम्नलिखित युग्मों पर विचार कीजिए:\n1. कक्षा I–V—1 किमी पैदल दूरी\n2. कक्षा VI–VIII—3 किमी पैदल दूरी\n3. कठिन भूभाग—दूरी की सीमा बढ़ाना अनिवार्य।\nसही युग्म कौन-से हैं?",
+      "id": "16f307b8-c0c6-401e-95d6-6e874dc23aa9",
+      "created_at": "2026-10-18T14:00:00.080000",
+      "question_hindi": "आयु के अनुरूप कक्षा में सीधे प्रवेश पाने वाले बच्चे को विशेष प्रशिक्षण देने का प्रमुख उद्देश्य क्या है?",
       "options_hindi": [
-        "केवल 1 और 2",
-        "केवल 1 और 3",
-        "केवल 2 और 3",
-        "1, 2 और 3"
+        "बच्चे को अन्य बच्चों के शैक्षणिक स्तर के समकक्ष लाना",
+        "बच्चे को पुनः कक्षा 1 में भेजना",
+        "बोर्ड परीक्षा से छूट देना",
+        "बच्चे को स्थायी रूप से अलग रखना"
       ],
       "option_labels": [
         "A",
@@ -505,97 +505,23 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the pairs:\n1. Classes I–V—1 km walking distance\n2. Classes VI–VIII—3 km walking distance\n3. Difficult terrain—the distance limit must be increased.\nWhich pairs are correct?",
+      "question_english": "What is the principal purpose of special training for a child directly admitted to an age-appropriate class?",
       "options_english": [
-        "1 and 2 only",
-        "1 and 3 only",
-        "2 and 3 only",
-        "1, 2 and 3"
+        "To bring the child at par with other children",
+        "To send the child back to Class I",
+        "To exempt the child from Board examinations",
+        "To keep the child permanently separate"
       ],
       "correct_answer": "a",
-      "explanation_english": "The Model Rules prescribe 1 km and 3 km respectively; dangerous terrain requires reducing these limits.",
-      "explanation_hindi": "मॉडल नियम क्रमशः 1 किमी और 3 किमी बताते हैं; जोखिमपूर्ण भूभाग में सीमा घटानी होती है।",
+      "explanation_english": "Special training aims to bring the child at par with peers; the Rules also provide for academic and emotional integration.",
+      "explanation_hindi": "विशेष प्रशिक्षण बच्चे को अन्य बच्चों के समकक्ष लाने के लिए है; नियम आगे शैक्षणिक और भावनात्मक समेकन भी चाहते हैं।",
       "topic": "Right to Education Act 2009",
       "difficulty": "medium",
       "key_facts": [
-        "In respect of children in classes I - V, a school shall be established within a walking distance of one km of the neighbourhood."
+        "then, he or she shall, in order to be at par with others, have a right to receive special training"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.105000"
-    },
-    {
-      "id": "3381e88a-6d4a-407e-9e2b-978a2c79b72f",
-      "created_at": "2026-10-18T14:00:00.830000",
-      "question_hindi": "कक्षा VI–VIII की शिक्षक-व्यवस्था पर विचार कीजिए:\n1. प्रत्येक 35 बच्चों पर कम-से-कम एक शिक्षक\n2. विज्ञान-गणित, सामाजिक अध्ययन और भाषाओं के शिक्षक\n3. 100 से अधिक प्रवेश पर पूर्णकालिक प्रधानाध्यापक तथा निर्दिष्ट अंशकालिक प्रशिक्षक।\nकौन-से सही हैं?",
-      "options_hindi": [
-        "1, 2 और 3",
-        "केवल 2 और 3",
-        "केवल 1 और 3",
-        "केवल 1 और 2"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider staffing for Classes VI–VIII:\n1. At least one teacher per 35 children\n2. Teachers for Science/Mathematics, Social Studies and Languages\n3. Above 100 admissions, a full-time head teacher and specified part-time instructors.\nWhich are correct?",
-      "options_english": [
-        "1, 2 and 3",
-        "2 and 3 only",
-        "1 and 3 only",
-        "1 and 2 only"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "All three staffing provisions are listed in the Schedule.",
-      "explanation_hindi": "ये तीनों शिक्षक-संबंधी प्रावधान अनुसूची में सूचीबद्ध हैं।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "hard",
-      "key_facts": [
-        "At least one teacher for every thirty-five children."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.835000"
-    },
-    {
-      "id": "f175aa20-a2ca-45ca-8fd4-4ef0a53fe94d",
-      "created_at": "2026-10-18T14:00:00.030000",
-      "question_hindi": "“स्कूल” की वैधानिक परिभाषा के संबंध में कौन-सा कथन सही है?",
-      "options_hindi": [
-        "इसमें केवल कक्षा 1–5 के विद्यालय शामिल हैं।",
-        "निजी विद्यालय तभी आते हैं जब वे पूर्ण सरकारी अनुदान लेते हों।",
-        "इसमें सरकारी, सहायता-प्राप्त, निर्दिष्ट श्रेणी और गैर-सहायता-प्राप्त मान्यता प्राप्त विद्यालय शामिल हैं।",
-        "इसमें केवल सरकारी विद्यालय शामिल हैं।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which statement correctly describes the statutory definition of “school”?",
-      "options_english": [
-        "It includes only Classes I–V schools.",
-        "Private schools are included only if they receive full government grants.",
-        "It includes recognised government, aided, specified-category and unaided schools.",
-        "It includes only government schools."
-      ],
-      "correct_answer": "c",
-      "explanation_english": "Section 2(n) lists four categories, including aided, specified-category and unaided schools.",
-      "explanation_hindi": "धारा 2(n) सहायता-प्राप्त, निर्दिष्ट श्रेणी और गैर-सहायता-प्राप्त विद्यालयों सहित चार श्रेणियाँ बताती है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
-      "key_facts": [
-        "“school” means any recognised school imparting elementary education and includes—"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.035000"
+      "processed_at": "2026-10-18T14:00:00.085000"
     },
     {
       "id": "e3442bd4-2be4-4def-813f-7751ff02afd0",
@@ -635,14 +561,14 @@
       "processed_at": "2026-10-18T14:00:00.405000"
     },
     {
-      "id": "ede22437-b870-4a74-93d1-e125234870ad",
-      "created_at": "2026-10-18T14:00:00.940000",
-      "question_hindi": "मॉडल नियम 5(4) के अनुसार कमजोर वर्ग/वंचित समूह के बच्चे को किन स्थानों/गतिविधियों में भेदभाव से बचाया जाना चाहिए?",
+      "id": "00c40603-7567-434c-92bc-aaf347b2f6a5",
+      "created_at": "2026-10-18T14:00:00.720000",
+      "question_hindi": "धारा 38(3) के अनुसार केंद्र सरकार के नियम/निर्दिष्ट अधिसूचना संसद के समक्ष कुल कितने दिनों के लिए रखे जाते हैं?",
       "options_hindi": [
-        "केवल प्रवेश कक्ष में",
-        "केवल पुस्तकालय में",
-        "कक्षा, मध्याह्न भोजन, खेल मैदान, साझा पेयजल/शौचालय तथा शौचालय/कक्षा की सफाई में",
-        "केवल वार्षिक परीक्षा में"
+        "30 दिन",
+        "45 दिन",
+        "90 दिन",
+        "15 दिन"
       ],
       "option_labels": [
         "A",
@@ -653,33 +579,33 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Under Model Rule 5(4), in which settings must children of weaker sections/disadvantaged groups be protected from discrimination?",
+      "question_english": "Under Section 38(3), for how many total days must Central Government rules/specified notifications be laid before Parliament?",
       "options_english": [
-        "Only in the admission office",
-        "Only in the library",
-        "Classroom, mid-day meals, playground, common water/toilet facilities and toilet/classroom cleaning",
-        "Only in annual examinations"
+        "30 days",
+        "45 days",
+        "90 days",
+        "15 days"
       ],
-      "correct_answer": "c",
-      "explanation_english": "Model Rule 5(4) expressly lists these contexts where segregation or discrimination must not occur.",
-      "explanation_hindi": "मॉडल नियम 5(4) इन सभी परिस्थितियों में पृथक्करण या भेदभाव रोकता है।",
+      "correct_answer": "a",
+      "explanation_english": "Section 38(3) specifies a total period of thirty days, across one or more sessions.",
+      "explanation_hindi": "धारा 38(3) एक या अधिक सत्रों में कुल तीस दिन की अवधि निर्धारित करती है।",
       "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
+      "difficulty": "hard",
       "key_facts": [
-        "is not segregated or discriminated against in the classroom, during mid day meals, in the play grounds, in the use of common drinking water and toilet facilities, and in the cleaning of toilets or classrooms."
+        "for a total period of thirty days which may be comprised in one session or in two or more successive sessions"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.945000"
+      "processed_at": "2026-10-18T14:00:00.725000"
     },
     {
-      "id": "0b4b128b-58e7-4c6d-9c96-9bd0e4d51558",
-      "created_at": "2026-10-18T14:00:00.060000",
-      "question_hindi": "धारा 3 के अंतर्गत “निःशुल्क” शिक्षा का व्यावहारिक आशय क्या है?",
+      "id": "c71851f3-0df3-4d83-b339-3461858abbfc",
+      "created_at": "2026-10-18T14:00:00.860000",
+      "question_hindi": "अनुसूची में कक्षा I–V के लिए वार्षिक न्यूनतम शिक्षण-घंटे कितने हैं?",
       "options_hindi": [
-        "यह केवल सरकारी विद्यालयों पर लागू है।",
-        "विद्यालय कोई भी छोटा शुल्क ले सकता है।",
-        "यह केवल परीक्षा शुल्क माफ करती है।",
-        "बच्चे से ऐसा शुल्क/खर्च नहीं लिया जा सकता जो शिक्षा जारी रखने या पूरी करने में बाधा बने।"
+        "800 घंटे",
+        "1,200 घंटे",
+        "600 घंटे",
+        "1,000 घंटे"
       ],
       "option_labels": [
         "A",
@@ -690,60 +616,134 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "What is the practical meaning of “free” education under Section 3?",
+      "question_english": "What is the minimum annual instructional time for Classes I–V?",
       "options_english": [
-        "It applies only to government schools.",
-        "A school may charge any small fee.",
-        "It waives only examination fees.",
-        "No fee or expense may be imposed that prevents the child from pursuing or completing elementary education."
+        "800 hours",
+        "1,200 hours",
+        "600 hours",
+        "1,000 hours"
       ],
-      "correct_answer": "d",
-      "explanation_english": "Section 3(2) bars fees, charges or expenses that may prevent pursuit or completion of elementary education.",
-      "explanation_hindi": "धारा 3(2) ऐसे शुल्क या खर्च पर रोक लगाती है जो प्रारंभिक शिक्षा जारी रखने या पूरी करने में बाधा बने।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
-      "key_facts": [
-        "no child shall be liable to pay any kind of fee or charges or expenses which may prevent him or her from pursuing and completing the elementary education"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.065000"
-    },
-    {
-      "id": "c59bc4e2-bc41-47de-80e6-0966a5a25795",
-      "created_at": "2026-10-18T14:00:00.000000",
-      "question_hindi": "प्रदत्त RTE अधिनियम, 2009 के अनुसार किस आयु-वर्ग के प्रत्येक बच्चे को प्रारंभिक शिक्षा का अधिकार दिया गया है?",
-      "options_hindi": [
-        "3 से 6 वर्ष",
-        "6 से 14 वर्ष",
-        "6 से 18 वर्ष",
-        "8 से 14 वर्ष"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Under the supplied RTE Act, 2009, every child in which age group is given the right to elementary education?",
-      "options_english": [
-        "3 to 6 years",
-        "6 to 14 years",
-        "6 to 18 years",
-        "8 to 14 years"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Section 3 covers every child aged six to fourteen years until elementary education is completed.",
-      "explanation_hindi": "धारा 3 छह से चौदह वर्ष के प्रत्येक बच्चे को प्रारंभिक शिक्षा पूरी होने तक अधिकार देती है।",
+      "correct_answer": "a",
+      "explanation_english": "The Schedule specifies 800 instructional hours per academic year for Classes I–V.",
+      "explanation_hindi": "अनुसूची कक्षा I–V के लिए प्रति वर्ष 800 शिक्षण-घंटे बताती है।",
       "topic": "Right to Education Act 2009",
       "difficulty": "easy",
       "key_facts": [
-        "Every child of the age of six to fourteen years shall have a right to free and compulsory education in a neighbourhood school till completion of elementary education."
+        "eight hundred instructional hours per academic year for first class to fifth class;"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.005000"
+      "processed_at": "2026-10-18T14:00:00.865000"
+    },
+    {
+      "id": "a39b1f2c-e56b-49f6-8c1c-fca34fcf0b55",
+      "created_at": "2026-10-18T14:00:00.120000",
+      "question_hindi": "छोटी बस्ती में निर्धारित पड़ोस-सीमा के भीतर कोई विद्यालय नहीं है। मॉडल नियमों के अनुसार उपयुक्त व्यवस्था कौन-सी है?",
+      "options_hindi": [
+        "दूरी-सीमा के कारण शिक्षा का अधिकार समाप्त करना",
+        "प्रवेश अगले वर्ष तक रोकना",
+        "निःशुल्क परिवहन, आवासीय सुविधा या अन्य पर्याप्त व्यवस्था करना",
+        "परिवारों को स्वयं विद्यालय खोलने का निर्देश देना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "A small hamlet has no school within prescribed neighbourhood limits. Which arrangement is contemplated by the Model Rules?",
+      "options_english": [
+        "Terminate the right to education because of distance",
+        "Defer admission until next year",
+        "Arrange free transport, residential facilities or other adequate facilities",
+        "Direct families to open a school themselves"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Model Rule 4(4) contemplates free transport, residential facilities and other arrangements for identified small hamlets.",
+      "explanation_hindi": "मॉडल नियम 4(4) चिन्हित छोटी बस्तियों के लिए निःशुल्क परिवहन, आवासीय सुविधा और अन्य व्यवस्थाओं का प्रावधान करता है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "medium",
+      "key_facts": [
+        "make adequate arrangements, such as free transportation, residential facilities and other facilities"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.125000"
+    },
+    {
+      "id": "bb37017c-1e75-417b-9ece-aad95c03bc94",
+      "created_at": "2026-10-18T14:00:00.520000",
+      "question_hindi": "धारा 9 के अनुसार स्थानीय प्राधिकारी का कौन-सा विशिष्ट दायित्व है?",
+      "options_hindi": [
+        "सभी केंद्रीय विद्यालयों के शिक्षक नियुक्त करना",
+        "राष्ट्रीय पाठ्यचर्या रूपरेखा बनाना",
+        "विद्यालय का शैक्षणिक कैलेंडर तय करना",
+        "बोर्ड परीक्षा का प्रश्नपत्र बनाना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which specific duty does Section 9 place on the local authority?",
+      "options_english": [
+        "Appointing teachers for all Kendriya Vidyalayas",
+        "Preparing the national curriculum framework",
+        "Deciding the academic calendar",
+        "Preparing Board examination papers"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Section 9 lists deciding the academic calendar among local authority duties.",
+      "explanation_hindi": "धारा 9 स्थानीय प्राधिकारी के दायित्वों में शैक्षणिक कैलेंडर तय करना शामिल करती है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "medium",
+      "key_facts": [
+        "decide the academic calendar,"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.525000"
+    },
+    {
+      "id": "85ccdaea-79c2-4f50-b1ca-039e8980318e",
+      "created_at": "2026-10-18T14:00:00.570000",
+      "question_hindi": "धारा 12(3) के अनुसार प्रत्येक विद्यालय को उचित सरकार या स्थानीय प्राधिकारी को क्या देना होगा?",
+      "options_hindi": [
+        "ऐसी जानकारी जो उचित सरकार या स्थानीय प्राधिकारी माँगे",
+        "केवल निजी खातों की जानकारी",
+        "केवल शिक्षक उपस्थिति की मौखिक सूचना",
+        "केवल वार्षिक उत्सव का कार्यक्रम"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What must every school provide under Section 12(3)?",
+      "options_english": [
+        "Information required by the appropriate Government or local authority",
+        "Only private account information",
+        "Only oral information on teacher attendance",
+        "Only the annual function programme"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Section 12(3) requires every school to provide information as may be required by the appropriate Government or local authority.",
+      "explanation_hindi": "धारा 12(3) प्रत्येक विद्यालय को माँगी गई जानकारी उपलब्ध कराने को कहती है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "medium",
+      "key_facts": [
+        "Every school shall provide such information as may be required by the appropriate Government or the local authority, as the case may be."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.575000"
     }
   ]
 }

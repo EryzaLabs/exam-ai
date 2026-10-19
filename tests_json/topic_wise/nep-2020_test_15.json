@@ -1,0 +1,764 @@
+{
+  "test_id": "f9ed29e5-324c-49c7-a1e9-2303002e78de",
+  "test_name": "Topic Test: NEP 2020 - Part 15",
+  "type": "topic_wise",
+  "topic": "nep-2020",
+  "created_at": "2026-10-19T07:49:29.150669",
+  "questions": [
+    {
+      "id": "d362736e-9f4c-4936-83ac-0541f35ebf54",
+      "created_at": "2026-10-18T16:30:27.000000",
+      "question_hindi": "NEP 2020 मध्य चरण में किस कौशल को विशेष रूप से शुरू करने का प्रस्ताव करती है?",
+      "options_hindi": [
+        "अनिवार्य पीएच.डी.-स्तरीय शोध।",
+        "हर विद्यार्थी के लिए औपचारिक शिक्षक प्रमाणन।",
+        "कोडिंग गतिविधियाँ।",
+        "अनिवार्य विदेशी-भाषा इंटर्नशिप।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which skill does NEP 2020 specifically propose to introduce during the Middle Stage?",
+      "options_english": [
+        "Mandatory Ph.D.-level research.",
+        "Formal teacher certification for every student.",
+        "Coding activities.",
+        "A compulsory foreign-language internship."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The policy gives greater emphasis to computational thinking and says coding activities will be introduced in the Middle Stage.",
+      "explanation_hindi": "नीति संगणनात्मक चिंतन पर अधिक बल देती है और मध्य चरण में कोडिंग गतिविधियाँ शुरू करने की बात करती है।",
+      "topic": "NEP 2020",
+      "difficulty": "easy",
+      "key_facts": [
+        "Activities involving coding will be introduced in Middle Stage."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:27.010000"
+    },
+    {
+      "id": "74a754da-6702-4ebe-abcb-c298123b57a9",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "निम्नलिखित में से कौन-सा संकलनात्मक मूल्यांकन (Summative Assessment) का सर्वोत्तम उदाहरण है?",
+      "options_hindi": [
+        "पाठ के दौरान शिक्षक द्वारा अनौपचारिक निदानात्मक प्रश्न पूछना।",
+        "साप्ताहिक, कम-दाँव वाली कक्षा की वर्तनी-परीक्षा।",
+        "कक्षा 10 की वार्षिक बोर्ड परीक्षा।",
+        "निबंध के प्रारूप पर सहपाठियों की प्रतिक्रिया और टिप्पणियाँ।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 115; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Which of the following is the best example of a Summative Assessment?",
+      "options_english": [
+        "A teacher asking informal diagnostic questions during a lesson",
+        "A weekly low-stakes classroom spelling quiz",
+        "Annual Class X Board Examination",
+        "Peer feedback and commentary provided on a draft essay"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Annual Class X Board Examination Annual Class X Board Examinations represent a classic example of summative assessment. Conducted at the conclusion of an instructional cycle, these formal, high-stakes evaluations assign final scores and certifications to measure cumulative learning achievement against established standard benchmarks across defined subject curricula.",
+      "explanation_hindi": "कक्षा 10 की वार्षिक बोर्ड परीक्षा संकलनात्मक मूल्यांकन का उदाहरण है, क्योंकि यह शिक्षण-अधिगम चक्र के अंत में आयोजित होती है और संचयी उपलब्धि का औपचारिक आकलन करती है। इसके परिणाम अंतिम अंक, प्रमाणन या मानक के सापेक्ष उपलब्धि दर्शाते हैं। इसके विपरीत, पाठ के दौरान पूछे गए प्रश्न और प्रारूप पर दी गई प्रतिक्रिया अधिगम में सुधार के लिए प्रयुक्त होते हैं।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Annual Class X Board Examination",
+        "Annual Class X Board Examination Annual Class X Board Examinations represent a classic example of summative assessment. Conducted at the conclusion of an instructional cycle, these formal, high-stakes evaluations assign final scores and certifications to measure cumulative learning achievement against established standard benchmarks across defined subject curricula."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "78552739-d724-44ef-9abf-b2c31ab34b70",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "परीक्षण-निर्माण के ‘प्रारंभिक प्रयोग’ (Try-out) चरण का मुख्य उद्देश्य क्या है?",
+      "options_hindi": [
+        "प्रारंभिक परीक्षण में भाग लेने वाले विद्यार्थियों को अंतिम आधिकारिक अंक और ग्रेड देना।",
+        "सांख्यिकीय विश्लेषण के माध्यम से कमजोर या दोषपूर्ण प्रश्न-मदों की पहचान करना।",
+        "प्रारंभिक नैदानिक परीक्षण में कम प्रदर्शन करने वाले विद्यार्थियों को दंडित करना।",
+        "प्रश्नपत्र छापने के लिए विद्यालय का प्रशासनिक बजट अंतिम रूप से स्वीकृत करना।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 230; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "During the \"try-out\" phase of test construction, what is the primary goal?",
+      "options_english": [
+        "To assign final official academic grades and marks to participating trial students",
+        "To identify weak or defective items using statistical analysis",
+        "To identify and penalize students who perform poorly on preliminary diagnostic tests",
+        "To finalize and approve the administrative school budget required for paper printing"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "To identify weak or defective items using statistical analysis The try-out phase in test development involves administering preliminary item sets to a representative student sample. Analyzing try- out results helps identify ambiguous, flawed, or non-discriminating test items using statistical difficulty and discrimination indices, enabling necessary item revisions prior to final test standardization.",
+      "explanation_hindi": "प्रारंभिक प्रयोग में प्रश्नों के प्रारूप को विद्यार्थियों के उपयुक्त नमूने पर आजमाया जाता है। प्राप्त प्रतिक्रियाओं और अंकों के विश्लेषण से अस्पष्ट, त्रुटिपूर्ण, अत्यधिक आसान/कठिन या कमजोर विभेदन-क्षमता वाले प्रश्नों की पहचान की जा सकती है। इसके बाद प्रश्नों में संशोधन किया जाता है ताकि अंतिम परीक्षण अधिक उपयोगी और विश्वसनीय हो। इस चरण का उद्देश्य न तो अंतिम अंक देना है और न ही विद्यार्थियों को दंडित करना।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "To identify weak or defective items using statistical analysis",
+        "To identify weak or defective items using statistical analysis The try-out phase in test development involves administering preliminary item sets to a representative student sample. Analyzing try- out results helps identify ambiguous, flawed, or non-discriminating test items using statistical difficulty and discrimination indices, enabling necessary item revisions prior to final test standardization."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "3be121a7-1251-4134-9171-129e629315d8",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "भाषाई अल्पसंख्यक क्षेत्रों में NIPUN भारत मिशन लागू करने की एक प्रमुख चुनौती क्या है?",
+      "options_hindi": [
+        "ग्रामीण प्राथमिक विद्यालयों में डेस्कटॉप कंप्यूटर और इंटरनेट का अत्यधिक अभाव।",
+        "स्थानीय बोलियों में आधारभूत पठन-सामग्री की कमी।",
+        "माध्यमिक विज्ञान के वरिष्ठ शिक्षकों का प्रबल पेशेवर विरोध।",
+        "डिजिटल सॉफ्टवेयर संसाधनों की अत्यधिक उपलब्धता से कक्षा में ध्यान भटकना।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 245; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "A major challenge in implementing the NIPUN Bharat mission across linguistic minority regions is:",
+      "options_english": [
+        "Acute lack of desktop computers and internet facilities across rural primary schools",
+        "Scarcity of foundational reading materials in local dialects",
+        "Strong professional opposition from senior secondary science teaching faculty",
+        "The excessive availability of digital software resources causing classroom distraction"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Scarcity of foundational reading materials in local dialects Implementing the NIPUN Bharat mission in linguistic minority areas faces operational hurdles due to a scarcity of foundational reading and teaching materials published in local dialects. Effective early literacy requires developing contextualized, mother-tongue learning resources tailored to diverse regional language groups.",
+      "explanation_hindi": "आधारभूत साक्षरता के लिए ऐसी पठन और शिक्षण-सामग्री चाहिए जिसे बच्चे समझते हों और जिससे वे जुड़ाव महसूस करें। भाषाई अल्पसंख्यक क्षेत्रों में स्थानीय बोलियों और परिचित भाषाओं में सामग्री का अभाव प्रभावी आरंभिक पठन को कठिन बना सकता है। इसलिए स्थानीय संदर्भ और भाषा के अनुसार सामग्री तैयार करना NIPUN भारत के प्रभावी कार्यान्वयन का महत्त्वपूर्ण पहलू है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Scarcity of foundational reading materials in local dialects",
+        "Scarcity of foundational reading materials in local dialects Implementing the NIPUN Bharat mission in linguistic minority areas faces operational hurdles due to a scarcity of foundational reading and teaching materials published in local dialects. Effective early literacy requires developing contextualized, mother-tongue learning resources tailored to diverse regional language groups."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "06855835-b0e7-419f-920e-38472b4facab",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "मान्यता-प्राप्त निजी विद्यालय के कर्मचारी के विरुद्ध अनुशासनात्मक कार्रवाई के लिए अनुशासन समिति की संरचना क्या होती है?",
+      "options_hindi": [
+        "केवल विद्यालय का प्रबंधक और संस्था-प्रमुख संयुक्त रूप से।",
+        "प्रबंध समिति का अध्यक्ष, प्रबंधक, शिक्षा निदेशक का नामित प्रतिनिधि और विद्यालय-प्रमुख (यदि वह स्वयं आरोपी न हो)।",
+        "विद्यालय के कर्मचारी-परिषद से चुने गए पाँच वरिष्ठ शिक्षक।",
+        "क्षेत्रीय जिला शिक्षा अधिकारी अकेले अनुशासनात्मक प्राधिकारी के रूप में।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 168; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "According to standard School Education Rules, what is the composition of the Disciplinary Committee for an employee of a recognized private school?",
+      "options_english": [
+        "Exclusively the Manager of the school and the Head of the Institution acting jointly",
+        "The Management Chairman, Manager, Director nominee, and Head of school (unless accused)",
+        "A panel comprising five senior elected representative teachers of the school staff council",
+        "The Zonal District Education Officer acting as the sole disciplinary authority"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Management Chairman, Manager, Director nominee, and Head of school (unless accused) Regulatory rules for recognized private schools dictate that employee disciplinary committees consist of designated organizational representatives: the Chairman of the Managing Committee, the School Manager, a nominee from the Director of Education, and the Head of School, provided the Head is not the party facing charges.",
+      "explanation_hindi": "प्रश्न में संदर्भित नियमों के अनुसार मान्यता-प्राप्त निजी विद्यालय के कर्मचारी की अनुशासनात्मक समिति में प्रबंध समिति का अध्यक्ष, प्रबंधक, शिक्षा निदेशक का नामित प्रतिनिधि और विद्यालय-प्रमुख शामिल होते हैं, बशर्ते विद्यालय-प्रमुख स्वयं आरोप का सामना न कर रहा हो। इस संरचना का उद्देश्य अनुशासनात्मक प्रक्रिया में निर्धारित संस्थागत प्रतिनिधित्व और निगरानी सुनिश्चित करना है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "The Management Chairman, Manager, Director nominee, and Head of school (unless accused)",
+        "The Management Chairman, Manager, Director nominee, and Head of school (unless accused) Regulatory rules for recognized private schools dictate that employee disciplinary committees consist of designated organizational representatives: the Chairman of the Managing Committee, the School Manager, a nominee from the Director of Education, and the Head of School, provided the Head is not the party facing charges."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "78f89572-4c53-494b-8509-65fafd40c84f",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "राष्ट्रीय शिक्षा नीति (NEP) 2020 की दृष्टि और तर्क को प्रभावित करने वाला प्रमुख वैश्विक ढाँचा कौन-सा था?",
+      "options_hindi": [
+        "सतत विकास लक्ष्य 4 (SDG 4)",
+        "संयुक्त राष्ट्र सहस्राब्दि विकास लक्ष्य ढाँचा",
+        "क्योटो प्रोटोकॉल की वैश्विक जलवायु प्रतिबद्धताएँ",
+        "ब्रेटन वुड्स की अंतरराष्ट्रीय मौद्रिक व्यवस्थाएँ"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 49; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Which of the following global frameworks strongly influenced the rationale and vision of the National Education Policy (NEP) 2020?",
+      "options_english": [
+        "Sustainable Development Goal 4 (SDG 4)",
+        "The United Nations Millennium Development Goals framework",
+        "The global climate commitments of the Kyoto Protocol",
+        "The international monetary principles of Bretton Woods"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Sustainable Development Goal 4 (SDG 4) The National Education Policy 2020 is aligned with Sustainable Development Goal 4 of the United Nations 2030 Agenda. This global target aims to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all, driving reforms across early childhood care, foundational literacy, school education, higher education, and skill development.",
+      "explanation_hindi": "NEP 2020 संयुक्त राष्ट्र के 2030 सतत विकास एजेंडा के लक्ष्य 4 के अनुरूप है। SDG 4 का उद्देश्य समावेशी और समान गुणवत्तापूर्ण शिक्षा सुनिश्चित करना तथा सभी के लिए आजीवन अधिगम के अवसर बढ़ाना है। इसी दृष्टिकोण के अनुरूप नीति प्रारंभिक बाल्यावस्था देखभाल, आधारभूत साक्षरता, विद्यालयी और उच्च शिक्षा तथा कौशल विकास में सुधारों पर बल देती है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Sustainable Development Goal 4 (SDG 4)",
+        "Sustainable Development Goal 4 (SDG 4) The National Education Policy 2020 is aligned with Sustainable Development Goal 4 of the United Nations 2030 Agenda. This global target aims to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all, driving reforms across early childhood care, foundational literacy, school education, higher education, and skill development."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "fc46d59a-e4e4-49be-ae20-e3d9dec1190b",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "किस समिति की रिपोर्ट ने सर्व शिक्षा अभियान (अब समग्र शिक्षा) को RTE अधिनियम के साथ समन्वित करने, ताकि वित्तीय और संरचनात्मक प्रावधानों में तालमेल हो, पर विशेष प्रभाव डाला?",
+      "options_hindi": [
+        "अनिल बोरडिया समिति",
+        "कोठारी आयोग",
+        "टी. एस. आर. सुब्रमण्यम समिति",
+        "कस्तूरीरंगन समिति"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 3 (RTE Act), Question 143; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Which committee's report heavily influenced the harmonization of the Sarva Shiksha Abhiyan (now Samagra Shiksha) with the RTE Act to ensure financial and structural alignment?",
+      "options_english": [
+        "Anil Bordia Committee",
+        "Kothari Commission",
+        "TSR Subramanian Committee",
+        "Kasturirangan Committee"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Anil Bordia Committee The Anil Bordia Committee (2010) was constituted to formulate guidelines for harmonizing the Sarva Shiksha Abhiyan (SSA) framework with the statutory provisions of the Right to Education Act, leading to aligned financial norms, structural strategies, and administrative implementation across all states.",
+      "explanation_hindi": "अनिल बोरडिया समिति (2010) को सर्व शिक्षा अभियान के ढाँचे और RTE अधिनियम के वैधानिक प्रावधानों के बीच समन्वय के लिए दिशानिर्देश तैयार करने हेतु गठित किया गया था। इसका संबंध वित्तीय मानदंडों, संरचनात्मक रणनीतियों और राज्यों में प्रशासनिक कार्यान्वयन को कानून के अनुरूप बनाने से था। इसलिए प्रश्न की विशिष्ट पहचान SSA और RTE के समन्वय पर है, न कि अन्य शिक्षा नीति समितियों के व्यापक कार्यों पर।",
+      "topic": "RTE Act",
+      "difficulty": "medium",
+      "key_facts": [
+        "Anil Bordia Committee",
+        "Anil Bordia Committee The Anil Bordia Committee (2010) was constituted to formulate guidelines for harmonizing the Sarva Shiksha Abhiyan (SSA) framework with the statutory provisions of the Right to Education Act, leading to aligned financial norms, structural strategies, and administrative implementation across all states."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "b4484de0-6185-4c22-af3c-4064be613c35",
+      "created_at": "2026-10-18T16:30:06.000000",
+      "question_hindi": "सूची I के विद्यालयी चरणों का सूची II की कक्षाओं/आयु से मिलान कीजिए।\nसूची I\nA. आधारभूत चरण\nB. प्रारंभिक चरण\nC. मध्य चरण\nD. माध्यमिक चरण\n\nसूची II\n1. कक्षा 6–8; आयु 11–14 वर्ष\n2. आयु 3–8 वर्ष; आंगनवाड़ी/पूर्व-विद्यालय तथा कक्षा 1–2\n3. कक्षा 9–12; आयु 14–18 वर्ष\n4. कक्षा 3–5; आयु 8–11 वर्ष",
+      "options_hindi": [
+        "A-4, B-2, C-3, D-1",
+        "A-2, B-4, C-1, D-3",
+        "A-2, B-1, C-4, D-3",
+        "A-3, B-4, C-1, D-2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match the school stage in List I with the grades/ages in List II.\nList I\nA. Foundational Stage\nB. Preparatory Stage\nC. Middle Stage\nD. Secondary Stage\n\nList II\n1. Grades 6–8; ages 11–14\n2. Ages 3–8; Anganwadi/pre-school plus Grades 1–2\n3. Grades 9–12; ages 14–18\n4. Grades 3–5; ages 8–11",
+      "options_english": [
+        "A-4, B-2, C-3, D-1",
+        "A-2, B-4, C-1, D-3",
+        "A-2, B-1, C-4, D-3",
+        "A-3, B-4, C-1, D-2"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The stages correspond respectively to ages 3–8, 8–11, 11–14 and 14–18.",
+      "explanation_hindi": "चार चरण क्रमशः 3–8, 8–11, 11–14 और 14–18 वर्ष से संबंधित हैं।",
+      "topic": "NEP 2020",
+      "difficulty": "hard",
+      "key_facts": [
+        "Foundational Stage (in two parts, that is, 3 years of Anganwadi/pre-school + 2 years in primary school in Grades 1-2; both together covering ages 3-8), Preparatory Stage (Grades 3-5, covering ages 8-11), Middle Stage (Grades 6-8, covering ages 11-14), and Secondary Stage (Grades 9-12"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:06.010000"
+    },
+    {
+      "id": "efb75489-f51d-426b-9563-8fe6d223348e",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "‘आकलन’ (Assessment) और ‘मूल्यांकन’ (Evaluation) के बीच मूलभूत अंतर क्या है?",
+      "options_hindi": [
+        "आकलन अधिगम सुधारने के लिए जानकारी एकत्र करता है; मूल्यांकन अधिगम को मानकों के आधार पर परखता है।",
+        "शैक्षिक आकलन पूरी तरह मात्रात्मक होता है, जबकि मूल्यांकन केवल गुणात्मक होता है।",
+        "आकलन केवल अभिभावक करते हैं, जबकि औपचारिक मूल्यांकन केवल शिक्षक करते हैं।",
+        "शैक्षिक साहित्य में दोनों शब्दों का कार्यात्मक अंतर नहीं है और वे पूर्ण समानार्थी हैं।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 238; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "What is the fundamental difference between \"Assessment\" and \"Evaluation\"?",
+      "options_english": [
+        "Assessment gathers data to improve learning; Evaluation judges learning against standards.",
+        "Educational assessment is strictly quantitative, whereas educational evaluation is purely qualitative in nature",
+        "Assessment is conducted exclusively by parents, whereas formal evaluation is performed solely by teachers",
+        "There is no functional difference as both terms are exact synonyms within standard pedagogical literature"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Assessment gathers data to improve learning; Evaluation judges learning against standards. Assessment is an ongoing, diagnostic process focused on gathering information about student learning to guide instructional adjustments. Evaluation represents a periodic, outcome-",
+      "explanation_hindi": "आकलन एक सतत और निदानात्मक प्रक्रिया है, जिसमें विद्यार्थी के अधिगम के बारे में प्रमाण एकत्र करके शिक्षण में सुधार किया जाता है। मूल्यांकन उस अधिगम या उपलब्धि के मूल्य, स्तर अथवा मानक के अनुरूप होने पर निर्णय देने से अधिक जुड़ा है। दोनों प्रक्रियाएँ संबंधित हैं, लेकिन समानार्थी नहीं हैं; न ही इन्हें केवल मात्रात्मक बनाम गुणात्मक विभाजन तक सीमित किया जा सकता है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Assessment gathers data to improve learning; Evaluation judges learning against standards.",
+        "Assessment gathers data to improve learning; Evaluation judges learning against standards. Assessment is an ongoing, diagnostic process focused on gathering information about student learning to guide instructional adjustments. Evaluation represents a periodic, outcome-"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "e1fa54ca-440a-4278-bf1f-0f1d742cf620",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "एक संस्था-प्रमुख देखता है कि माध्यमिक कक्षाओं में विद्यार्थियों की उपस्थिति अचानक घट गई है। विद्यालय नेतृत्व की सर्वोत्तम प्रशासनिक पद्धति कौन-सी होगी?",
+      "options_hindi": [
+        "मूल कारणों की पहचान करने के लिए शिक्षकों और अभिभावकों के साथ क्रियात्मक अनुसंधान करना।",
+        "जाँच किए बिना सभी अनुपस्थित विद्यार्थियों के निलंबन के तत्काल आदेश जारी करना।",
+        "सभी कक्षा-शिक्षकों को जिम्मेदार ठहराते हुए औपचारिक कारण-बताओ नोटिस जारी करना।",
+        "उपस्थिति में गिरावट को पूरी तरह अनदेखा करना और इसे केवल अभिभावकों का दायित्व मानना।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 203; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "A Head of Institution notes a sudden drop in student attendance in secondary classes. Which administrative approach reflects best practice in school leadership?",
+      "options_english": [
+        "Conduct action research with teachers and parents to address root causes.",
+        "Issue immediate administrative suspension orders to all absent students without conducting an inquiry",
+        "Formally issue official show-cause administrative notices to all class teachers holding them responsible",
+        "Disregard the attendance drop completely, maintaining that daily attendance is solely a parental duty"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Conduct action research with teachers and parents to address root causes. Addressing sudden drops in student attendance requires a proactive administrative leadership approach. Conducting action research in collaboration with teachers, parents, and community members helps identify underlying socio-economic, health, or institutional causes, enabling the formulation of effective strategies to improve regular student attendance.",
+      "explanation_hindi": "विद्यार्थियों की उपस्थिति में अचानक गिरावट के पीछे सामाजिक-आर्थिक कठिनाइयाँ, स्वास्थ्य संबंधी समस्याएँ, विद्यालय का वातावरण या अन्य संस्थागत कारण हो सकते हैं। शिक्षकों, अभिभावकों और समुदाय के साथ मिलकर क्रियात्मक अनुसंधान करने से वास्तविक कारण सामने आते हैं और उसके आधार पर लक्षित समाधान बनाए जा सकते हैं। बिना जाँच दंड देना या समस्या को अभिभावकों पर छोड़ देना प्रभावी विद्यालय नेतृत्व नहीं है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Conduct action research with teachers and parents to address root causes.",
+        "Conduct action research with teachers and parents to address root causes. Addressing sudden drops in student attendance requires a proactive administrative leadership approach. Conducting action research in collaboration with teachers, parents, and community members helps identify underlying socio-economic, health, or institutional causes, enabling the formulation of effective strategies to improve regular student attendance."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "67a17e5d-d2fc-492c-84d6-c7b422e6eb77",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "शिक्षक नियुक्ति के लिए आवश्यक न्यूनतम योग्यताएँ केंद्र सरकार द्वारा अधिकृत शैक्षणिक प्राधिकरण निर्धारित करता है। वर्तमान में इस प्राधिकरण के रूप में किस निकाय को नामित किया गया है?",
+      "options_hindi": [
+        "राष्ट्रीय शिक्षक शिक्षा परिषद (NCTE)",
+        "राष्ट्रीय शैक्षिक अनुसंधान और प्रशिक्षण परिषद (NCERT)",
+        "केंद्रीय माध्यमिक शिक्षा बोर्ड (CBSE)",
+        "राष्ट्रीय शैक्षिक योजना एवं प्रशासन संस्थान (NIEPA)"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 3 (RTE Act), Question 83; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "The minimum qualifications for a person to be eligible for appointment as a teacher are laid down by an academic authority authorized by the Central Government. Which body is currently designated as this authority?",
+      "options_english": [
+        "National Council for Teacher Education (NCTE)",
+        "National Council of Educational Research and Training (NCERT)",
+        "Central Board of Secondary Education (CBSE)",
+        "National Institute of Educational Planning and Administration (NIEPA)"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "National Council for Teacher Education (NCTE) Section 23(1) states that any person possessing minimum qualifications prescribed by an academic authority authorized by the Central Government is eligible for appointment as a teacher. The Central Government formally designated the National Council for Teacher Education (NCTE) as this statutory academic",
+      "explanation_hindi": "स्रोत के अनुसार राष्ट्रीय शिक्षक शिक्षा परिषद (NCTE) को शिक्षक नियुक्ति हेतु न्यूनतम योग्यताएँ निर्धारित करने वाले अधिकृत शैक्षणिक प्राधिकरण के रूप में नामित किया गया है। RTE अधिनियम की धारा 23(1) इस प्राधिकरण द्वारा निर्धारित न्यूनतम योग्यताओं को शिक्षक-पात्रता से जोड़ती है। NCERT पाठ्यचर्या और शैक्षिक अनुसंधान से, CBSE परीक्षा और संबद्धता से तथा NIEPA शैक्षिक योजना एवं प्रशासन से संबंधित है।",
+      "topic": "RTE Act",
+      "difficulty": "medium",
+      "key_facts": [
+        "National Council for Teacher Education (NCTE)",
+        "National Council for Teacher Education (NCTE) Section 23(1) states that any person possessing minimum qualifications prescribed by an academic authority authorized by the Central Government is eligible for appointment as a teacher. The Central Government formally designated the National Council for Teacher Education (NCTE) as this statutory academic"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "8d882e7e-da92-4b9c-903f-d99a6ab145c9",
+      "created_at": "2026-10-18T16:30:54.000000",
+      "question_hindi": "NEP 2020 संबद्ध महाविद्यालय प्रणाली को किस प्रकार चरणबद्ध ढंग से समाप्त करने की कल्पना करती है?",
+      "options_hindi": [
+        "तुरंत, प्रत्येक महाविद्यालय को केंद्र सरकार को स्थानांतरित करके।",
+        "पंद्रह वर्षों में श्रेणीबद्ध स्वायत्तता और चुनौती पद्धति के माध्यम से, जिसमें विश्वविद्यालय संबद्ध महाविद्यालयों का मार्गदर्शन करेंगे।",
+        "दो वर्षों में प्रत्यायन समाप्त करके।",
+        "केवल तब, जब महाविद्यालय स्वेच्छा से स्नातक डिग्री देना बंद कर दें।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "How does NEP 2020 envisage phasing out the affiliated-college system?",
+      "options_english": [
+        "Immediately, by transferring every college to the Central Government.",
+        "Over fifteen years, through graded autonomy and a challenge mode, with universities mentoring affiliated colleges.",
+        "Within two years by abolishing accreditation.",
+        "Only when colleges voluntarily stop offering undergraduate degrees."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The policy envisages a fifteen-year phased transition supported by graded autonomy and mentoring.",
+      "explanation_hindi": "नीति श्रेणीबद्ध स्वायत्तता और मार्गदर्शन के सहारे पंद्रह वर्षों का चरणबद्ध परिवर्तन प्रस्तावित करती है।",
+      "topic": "NEP 2020",
+      "difficulty": "hard",
+      "key_facts": [
+        "gradually phasing out the system of ‘affiliated colleges’ over a period of fifteen years through a system of graded autonomy"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:54.010000"
+    },
+    {
+      "id": "01992194-2f3e-46f0-b0a9-d15ccdb2ebaf",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "साझा विद्यालय प्रणाली की अवधारणा के अनुसार, किन विद्यालयों को इतना उत्कृष्ट बनाया जाना था कि अभिभावकों को अपने बच्चों को महँगे निजी विद्यालयों में भेजने की आवश्यकता न महसूस हो?",
+      "options_hindi": [
+        "केंद्रीय विद्यालय",
+        "सैनिक विद्यालय",
+        "पड़ोस के सार्वजनिक विद्यालय",
+        "अंतरराष्ट्रीय बैकलॉरिएट विद्यालय"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 18; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "According to the Common School System philosophy, which type of schools should be developed to such an excellent standard that parents would not feel the need to send their children to expensive private schools?",
+      "options_english": [
+        "Kendriya Vidyalayas",
+        "Sainik Schools",
+        "Neighborhood public schools",
+        "International Baccalaureate schools"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Neighborhood public schools Philosophy surrounding the Common School System emphasized upgrading neighborhood public schools into institutions of high pedagogical quality. Raising standards in state- supported local schools ensured that high quality education became accessible to every resident child nearby, eliminating the need for parents to seek costly private institutional alternatives to secure strong academic foundations.",
+      "explanation_hindi": "साझा विद्यालय प्रणाली का उद्देश्य पड़ोस के सार्वजनिक विद्यालयों को उच्च शैक्षणिक गुणवत्ता वाले संस्थानों के रूप में विकसित करना था। यदि स्थानीय सरकारी विद्यालय अच्छी शिक्षा उपलब्ध कराएँ, तो अभिभावकों को बेहतर शिक्षा के लिए महँगे निजी विकल्पों पर निर्भर नहीं रहना पड़ेगा। इससे गुणवत्तापूर्ण शिक्षा तक समान पहुँच और सामाजिक पृष्ठभूमि के आधार पर होने वाले शैक्षिक विभाजन को कम करने में मदद मिलती।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Neighborhood public schools",
+        "Neighborhood public schools Philosophy surrounding the Common School System emphasized upgrading neighborhood public schools into institutions of high pedagogical quality. Raising standards in state- supported local schools ensured that high quality education became accessible to every resident child nearby, eliminating the need for parents to seek costly private institutional alternatives to secure strong academic foundations."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "6d59c1ec-af91-4974-a3e6-91de21b189b7",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "‘SAFAL’ (Structured Assessment for Analyzing Learning) पहल NEP 2020 की अनुशंसाओं के अनुसार किन कक्षाओं के लिए शुरू की गई है?",
+      "options_hindi": [
+        "आधारभूत चरण की कक्षा 1, 2 और 3",
+        "कक्षा 3, 5 और 8",
+        "कक्षा 9 और 10",
+        "कक्षा 11 और 12"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 7 (Formative/Summative Evaluation), Question 94; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "The initiative 'SAFAL' stands for Structured Assessment for Analyzing Learning. It is introduced for which grades as per NEP 2020 recommendations?",
+      "options_english": [
+        "Grades 1, 2, and 3 foundational",
+        "Grades 3, 5, and 8",
+        "Grades 9 and 10",
+        "Grades 11 and 12"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Grades 3, 5, and 8 The SAFAL (Structured Assessment for Analyzing Learning) framework, introduced under NEP 2020, targets students in Grades 3, 5, and 8. SAFAL conducts large-scale, competency- based assessments to track school system performance and monitor learning progress in core developmental milestones without imposing high-stakes pass/fail stress on individual students.",
+      "explanation_hindi": "SAFAL का पूरा नाम Structured Assessment for Analyzing Learning है और स्रोत के अनुसार यह कक्षा 3, 5 और 8 के विद्यार्थियों के लिए है। इसका उद्देश्य दक्षता-आधारित आकलन के माध्यम से अधिगम-प्रगति को समझना और विद्यालयी प्रणाली के प्रदर्शन की निगरानी करना है। इसका उद्देश्य छोटे बच्चों पर उच्च-दाँव वाला उत्तीर्ण/अनुत्तीर्ण दबाव बनाना नहीं, बल्कि मुख्य अधिगम क्षेत्रों में प्रगति की जानकारी प्राप्त करना है।",
+      "topic": "Formative/Summative Evaluation",
+      "difficulty": "medium",
+      "key_facts": [
+        "Grades 3, 5, and 8",
+        "Grades 3, 5, and 8 The SAFAL (Structured Assessment for Analyzing Learning) framework, introduced under NEP 2020, targets students in Grades 3, 5, and 8. SAFAL conducts large-scale, competency- based assessments to track school system performance and monitor learning progress in core developmental milestones without imposing high-stakes pass/fail stress on individual students."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "3315e10a-5eca-4e9a-89f5-7deebe84bc4f",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "आधारभूत साक्षरता और संख्यात्मकता कार्यक्रमों में मानदंड-संदर्भित परीक्षण (CRT) का प्राथमिक उपयोग क्या है?",
+      "options_hindi": [
+        "उन्नत विशेष कार्यक्रम के लिए शीर्ष 10 प्रतिशत उच्च प्रदर्शन करने वाले विद्यार्थियों का चयन करना।",
+        "औसत परीक्षा-अंकों के आधार पर सरकारी और निजी विद्यालयों की रैंकिंग करना।",
+        "राज्यों में बुद्धिलब्धि (IQ) परीक्षण प्रक्रिया को मानकीकृत करना।",
+        "यह सुनिश्चित करना कि प्रत्येक बच्चा विशिष्ट विकासात्मक उपलब्धियाँ और अधिगम परिणाम प्राप्त करे।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 6 (Types of Tests), Question 50; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "What is the primary use of a Criterion- Referenced Test in foundational literacy and numeracy assessment programs?",
+      "options_english": [
+        "To select the top 10% of high-performing students for an advanced special track program",
+        "To rank public and private schools against each other based on overall average test scores",
+        "To systematically standardize intelligence quotient testing procedures across states",
+        "To ensure every child achieves specific developmental milestones and learning outcomes"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "To ensure every child achieves specific developmental milestones and learning outcomes In foundational literacy and numeracy programs, criterion-referenced tests serve to confirm that every child masters critical developmental milestones and basic learning competencies. Rather than ranking young learners competitively, sorting students into percentile distributions, or institutional comparison, CRT provides targeted feedback that ensures foundational skill mastery before children advance to higher learning levels.",
+      "explanation_hindi": "आधारभूत साक्षरता और संख्यात्मकता में मानदंड-संदर्भित परीक्षण का उद्देश्य यह जाँचना है कि प्रत्येक बच्चा आवश्यक कौशल और विकासात्मक उपलब्धियाँ प्राप्त कर रहा है या नहीं। इसका लक्ष्य छोटे बच्चों को पर्सेंटाइल या सहपाठी-रैंकिंग के आधार पर क्रमबद्ध करना नहीं है। ऐसे परीक्षण शिक्षक को निर्धारित कौशलों में महारत की स्थिति पहचानने और उपयुक्त सहायता देने में मदद करते हैं।",
+      "topic": "Types of Tests",
+      "difficulty": "medium",
+      "key_facts": [
+        "To ensure every child achieves specific developmental milestones and learning outcomes",
+        "To ensure every child achieves specific developmental milestones and learning outcomes In foundational literacy and numeracy programs, criterion-referenced tests serve to confirm that every child masters critical developmental milestones and basic learning competencies. Rather than ranking young learners competitively, sorting students into percentile distributions, or institutional comparison, CRT provides targeted feedback that ensures foundational skill mastery before children advance to higher learning levels."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "1c79a111-6ebe-4e2d-a41d-e9bd9b9b0f49",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "NEP 2020 के अनुसार आठ से ग्यारह वर्ष आयु-वर्ग वाले ‘प्रारंभिक चरण’ में कौन-सी कक्षाएँ आती हैं?\nI. कक्षा 3\nII. कक्षा 4\nIII. कक्षा 5\nIV. कक्षा 6\nसही विकल्प चुनिए।",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल I, II और III",
+        "केवल II, III और IV",
+        "केवल I, III और IV"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 58; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Consider the following grades included in the \"Preparatory Stage\" (ages 8-11) as per NEP 2020:\nI. Class 3\nII. Class 4\nIII. Class 5\nIV. Class 6 Which of the above are correct?",
+      "options_english": [
+        "I and II only",
+        "I, II, and III only",
+        "II, III, and IV only",
+        "I, III, and IV only"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "I, II, and III only The Preparatory Stage covers three years of schooling, spanning Classes 3, 4, and 5 for children aged eight to eleven. Class 6 is not included in this stage, as it marks the beginning of the Middle Stage, which transitions students toward subject-focused learning and experiential academic disciplines.",
+      "explanation_hindi": "प्रारंभिक चरण तीन वर्ष का है और इसमें कक्षा 3, 4 और 5 शामिल हैं; यह सामान्यतः आठ से ग्यारह वर्ष की आयु का चरण है। कक्षा 6 मध्य चरण की शुरुआत करती है, जहाँ अधिक स्पष्ट विषय-आधारित शिक्षण और अमूर्त अवधारणाओं का अध्ययन शुरू होता है। इसलिए कक्षा 6 को प्रारंभिक चरण में गिनना गलत है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "I, II, and III only",
+        "I, II, and III only The Preparatory Stage covers three years of schooling, spanning Classes 3, 4, and 5 for children aged eight to eleven. Class 6 is not included in this stage, as it marks the beginning of the Middle Stage, which transitions students toward subject-focused learning and experiential academic disciplines."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "af96bd9f-7c5b-4048-afb6-bd96e789a232",
+      "created_at": "2026-10-18T16:30:59.000000",
+      "question_hindi": "राष्ट्रीय अनुसंधान फाउंडेशन (NRF) स्थापित करने का नीति में मुख्य उद्देश्य क्या है?",
+      "options_hindi": [
+        "सभी संस्थागत अनुसंधान कार्यालयों को एक परीक्षा बोर्ड से बदलना।",
+        "केवल इंजीनियरिंग और तकनीक के अनुसंधान को वित्त देना।",
+        "उत्कृष्ट सहकर्मी-समीक्षित अनुसंधान को वित्त देना तथा विश्वविद्यालयों और महाविद्यालयों में अनुसंधान को सक्रिय रूप से प्रोत्साहित करना।",
+        "विद्यालयी पाठ्यपुस्तकों का प्रत्यायन और पाठ्यचर्या तय करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which is the policy's central purpose for establishing the National Research Foundation (NRF)?",
+      "options_english": [
+        "Replace all institutional research offices with one examination board.",
+        "Fund only research in engineering and technology.",
+        "Fund outstanding peer-reviewed research and actively seed research in universities and colleges.",
+        "Accredit school textbooks and set school curriculum."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The NRF is described as a funder of peer-reviewed research and a means to seed research across HEIs.",
+      "explanation_hindi": "NRF को सहकर्मी-समीक्षित अनुसंधान के वित्तपोषण और HEI में अनुसंधान प्रोत्साहन के साधन के रूप में वर्णित किया गया है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "establishment of a National Research Foundation to fund outstanding peer-reviewed research and to actively seed research in universities and colleges"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:59.010000"
+    },
+    {
+      "id": "ee0eb2ae-1e57-4366-af58-a83e4a752d5c",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "1986 में नई राष्ट्रीय शिक्षा नीति के निर्माण को प्रेरित करने वाला प्रमुख संवैधानिक और प्रशासनिक विकास कौन-सा था?",
+      "options_hindi": [
+        "शिक्षा को समवर्ती सूची से हटाकर पूरी तरह राज्य सूची में स्थानांतरित करना",
+        "42वें संविधान संशोधन द्वारा शिक्षा को समवर्ती सूची में रखना",
+        "उच्च शिक्षा पर यशपाल समिति की व्यापक संरचनात्मक सिफारिशें",
+        "संसद द्वारा निःशुल्क और अनिवार्य शिक्षा का अधिकार अधिनियम पारित करना"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 25; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "What was the primary political and administrative development that prompted the formulation of a new National Policy on Education in 1986?",
+      "options_english": [
+        "The constitutional transfer of education from the Concurrent List exclusively to the State List",
+        "The 42nd Constitutional Amendment placing Education in the Concurrent List",
+        "The comprehensive structural recommendations submitted by the Yashpal Committee on higher education",
+        "The statutory mandate of the Right to Free and Compulsory Education Act passed by Parliament"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The 42nd Constitutional Amendment placing Education in the Concurrent List The Forty-Second Constitutional Amendment Act of 1976 transferred education from the State List to the Concurrent List, empowering Parliament to legislate directly on educational matters. This constitutional change enabled the Union Government to establish national educational standards, coordinate policy execution across states, and formulate the comprehensive National Policy on Education in 1986.",
+      "explanation_hindi": "42वें संविधान संशोधन अधिनियम, 1976 द्वारा शिक्षा को राज्य सूची से समवर्ती सूची में स्थानांतरित किया गया। इससे संसद को भी शिक्षा के विषय में कानून बनाने की शक्ति मिली और केंद्र को राज्यों के साथ समन्वय करके राष्ट्रीय मानक तथा साझा नीतियाँ विकसित करने का अधिक स्पष्ट संवैधानिक आधार मिला। यह बदलाव 1986 की राष्ट्रीय शिक्षा नीति के व्यापक दायरे और राष्ट्रीय समन्वय के लिए महत्त्वपूर्ण था।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "The 42nd Constitutional Amendment placing Education in the Concurrent List",
+        "The 42nd Constitutional Amendment placing Education in the Concurrent List The Forty-Second Constitutional Amendment Act of 1976 transferred education from the State List to the Concurrent List, empowering Parliament to legislate directly on educational matters. This constitutional change enabled the Union Government to establish national educational standards, coordinate policy execution across states, and formulate the comprehensive National Policy on Education in 1986."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "b1be9fd8-2348-4c87-baf1-13f1c31eeb2c",
+      "created_at": "2026-10-18T16:31:02.000000",
+      "question_hindi": "NEP 2020 के अनुसार HEI को सशक्त बोर्ड ऑफ गवर्नर्स के साथ स्वायत्त बनने का लक्ष्य किस वर्ष तक रखना चाहिए?",
+      "options_hindi": [
+        "2025।",
+        "2035।",
+        "2030।",
+        "केवल 2040, बिना किसी मध्यवर्ती लक्ष्य के।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "By what year should HEIs aim to have an empowered Board of Governors and become autonomous under NEP 2020?",
+      "options_english": [
+        "2025.",
+        "2035.",
+        "2030.",
+        "2040 only, with no intermediate target."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The policy envisages HEIs aiming to become autonomous and have an empowered Board of Governors by 2035, supported by graded accreditation and mentoring.",
+      "explanation_hindi": "नीति श्रेणीबद्ध प्रत्यायन और मार्गदर्शन के सहारे HEI को 2035 तक स्वायत्तता तथा सशक्त बोर्ड ऑफ गवर्नर्स का लक्ष्य रखने को कहती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "shall aim to become autonomous and have such an empowered BoG by 2035."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:02.010000"
+    },
+    {
+      "id": "9429cb90-74c3-47ac-ba36-ffe594b1d391",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "भारतीय संविधान का कौन-सा भाग उन मूल्यों का आधार है जिन्हें राष्ट्रीय पाठ्यचर्या रूपरेखाओं में विद्यालयी पाठ्यचर्या के माध्यम से विद्यार्थियों में विकसित करने पर स्पष्ट बल दिया गया है?",
+      "options_hindi": [
+        "प्रस्तावना",
+        "भाग I — संघ और उसका राज्यक्षेत्र",
+        "भाग II — नागरिकता",
+        "दसवीं अनुसूची"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 4 (Constitutional Provisions), Question 200; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Which part of the Constitution forms the bedrock of the values that are expected to be inculcated in students through the school curriculum, as explicitly emphasized in the National Curriculum Frameworks?",
+      "options_english": [
+        "The Preamble",
+        "Part I (The Union and its Territory)",
+        "Part II (Citizenship)",
+        "The Tenth Schedule"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Preamble The Preamble outlines core constitutional values—Justice, Liberty, Equality, and Fraternity—which form the bedrock of value education in India. The National Curriculum Frameworks explicitly emphasize embedding these preamble values within school curricula to nurture democratic citizenship and social harmony among students.",
+      "explanation_hindi": "संविधान की प्रस्तावना न्याय, स्वतंत्रता, समानता और बंधुता जैसे मूल्यों को व्यक्त करती है। राष्ट्रीय पाठ्यचर्या रूपरेखाएँ इन संवैधानिक मूल्यों को विद्यालयी शिक्षा में समाहित करने पर बल देती हैं, ताकि विद्यार्थियों में लोकतांत्रिक नागरिकता, सामाजिक सद्भाव और सार्वजनिक जीवन के प्रति जिम्मेदारी विकसित हो। अन्य विकल्प संविधान के अलग विषयों से संबंधित हैं और इन मूल्यों का मूल आधार नहीं हैं।",
+      "topic": "Constitutional Provisions",
+      "difficulty": "medium",
+      "key_facts": [
+        "The Preamble",
+        "The Preamble The Preamble outlines core constitutional values—Justice, Liberty, Equality, and Fraternity—which form the bedrock of value education in India. The National Curriculum Frameworks explicitly emphasize embedding these preamble values within school curricula to nurture democratic citizenship and social harmony among students."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    }
+  ]
+}

@@ -1,19 +1,19 @@
 {
-  "test_id": "d517b8d1-8d55-47c9-a56a-3a71917da87b",
+  "test_id": "fc8a981f-a0c2-41ca-8f9a-dbce35c12e51",
   "test_name": "Topic Test: RTE 2009 - Part 2",
   "type": "topic_wise",
   "topic": "rte-2009",
-  "created_at": "2026-10-18T11:57:07.876233",
+  "created_at": "2026-10-19T07:49:29.160295",
   "questions": [
     {
-      "id": "43297041-bdd8-4c99-99c2-d541af903584",
-      "created_at": "2026-10-18T14:00:00.770000",
-      "question_hindi": "अनुसूची के अनुसार शिक्षक के प्रति सप्ताह न्यूनतम कार्य-घंटों में शिक्षण के साथ तैयारी के घंटे भी शामिल हैं। कुल कितने घंटे हैं?",
+      "id": "c59bc4e2-bc41-47de-80e6-0966a5a25795",
+      "created_at": "2026-10-18T14:00:00.000000",
+      "question_hindi": "प्रदत्त RTE अधिनियम, 2009 के अनुसार किस आयु-वर्ग के प्रत्येक बच्चे को प्रारंभिक शिक्षा का अधिकार दिया गया है?",
       "options_hindi": [
-        "50 घंटे",
-        "40 घंटे",
-        "35 घंटे",
-        "45 घंटे"
+        "3 से 6 वर्ष",
+        "6 से 14 वर्ष",
+        "6 से 18 वर्ष",
+        "8 से 14 वर्ष"
       ],
       "option_labels": [
         "A",
@@ -24,32 +24,69 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "The Schedule’s minimum weekly teacher hours include teaching and preparation. What is the total?",
+      "question_english": "Under the supplied RTE Act, 2009, every child in which age group is given the right to elementary education?",
       "options_english": [
-        "50 hours",
-        "40 hours",
-        "35 hours",
-        "45 hours"
+        "3 to 6 years",
+        "6 to 14 years",
+        "6 to 18 years",
+        "8 to 14 years"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Section 3 covers every child aged six to fourteen years until elementary education is completed.",
+      "explanation_hindi": "धारा 3 छह से चौदह वर्ष के प्रत्येक बच्चे को प्रारंभिक शिक्षा पूरी होने तक अधिकार देती है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "easy",
+      "key_facts": [
+        "Every child of the age of six to fourteen years shall have a right to free and compulsory education in a neighbourhood school till completion of elementary education."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.005000"
+    },
+    {
+      "id": "dd9dd124-1d3b-4887-840c-5f474c2522a8",
+      "created_at": "2026-10-18T14:00:00.430000",
+      "question_hindi": "धारा 24 के अनुसार नियमित अभिभावक बैठकों में कौन-सी जानकारी साझा की जानी चाहिए?",
+      "options_hindi": [
+        "केवल अन्य विद्यार्थियों के अंक",
+        "केवल शिक्षक की छुट्टियाँ",
+        "केवल विद्यालय के वित्तीय खाते",
+        "उपस्थिति, सीखने की क्षमता, अधिगम प्रगति और अन्य प्रासंगिक जानकारी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What information should be shared in regular parent/guardian meetings under Section 24?",
+      "options_english": [
+        "Only other students’ marks",
+        "Only teacher leave",
+        "Only school financial accounts",
+        "Attendance, learning ability, learning progress and other relevant information"
       ],
       "correct_answer": "d",
-      "explanation_english": "The Schedule specifies forty-five hours including preparation.",
-      "explanation_hindi": "अनुसूची तैयारी सहित 45 घंटे निर्दिष्ट करती है।",
+      "explanation_english": "Section 24(1)(e) states these are to be shared with parents/guardians.",
+      "explanation_hindi": "धारा 24(1)(e) अभिभावकों के साथ ये जानकारियाँ साझा करने को कहती है।",
       "topic": "Right to Education Act 2009",
       "difficulty": "medium",
       "key_facts": [
-        "forty-five teaching including preparation hours."
+        "hold regular meetings with parents and guardians and apprise them about the regularity in attendance, ability to learn, progress made in learning"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.775000"
+      "processed_at": "2026-10-18T14:00:00.435000"
     },
     {
-      "id": "d5b50c86-2d3b-4965-a22b-38d59ac296e6",
-      "created_at": "2026-10-18T14:00:00.740000",
-      "question_hindi": "अनुसूची के अनुसार कक्षा I–V में 91 से 120 बच्चों के लिए कितने शिक्षक निर्धारित हैं?",
+      "id": "a919de1e-c68d-41b3-ab2a-cdb356f00811",
+      "created_at": "2026-10-18T14:00:00.820000",
+      "question_hindi": "कक्षा I–V में 61 से 90 बच्चों के नामांकन पर कितने शिक्षक होने चाहिए?",
       "options_hindi": [
-        "छह",
-        "पाँच",
+        "दो",
         "तीन",
+        "पाँच",
         "चार"
       ],
       "option_labels": [
@@ -61,33 +98,33 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Under the Schedule, how many teachers are specified for 91 to 120 children in Classes I–V?",
+      "question_english": "How many teachers should be provided for 61–90 children in Classes I–V?",
       "options_english": [
-        "Six",
-        "Five",
+        "Two",
         "Three",
+        "Five",
         "Four"
       ],
-      "correct_answer": "d",
-      "explanation_english": "The Schedule specifies four teachers for 91–120 children in Classes I–V.",
-      "explanation_hindi": "अनुसूची कक्षा I–V में 91–120 बच्चों के लिए चार शिक्षक बताती है।",
+      "correct_answer": "b",
+      "explanation_english": "The Schedule lists three teachers for 61–90 children.",
+      "explanation_hindi": "अनुसूची 61–90 बच्चों के लिए तीन शिक्षक बताती है।",
       "topic": "Right to Education Act 2009",
       "difficulty": "medium",
       "key_facts": [
-        "Between Ninety-one to one hundred and twenty Four"
+        "Between sixty-one to ninety Three"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.745000"
+      "processed_at": "2026-10-18T14:00:00.825000"
     },
     {
-      "id": "ec65d94b-3a82-4650-9e46-49602a97b9c0",
-      "created_at": "2026-10-18T14:00:00.230000",
-      "question_hindi": "किस स्थिति में धारा 12(2) के तहत विद्यालय को प्रतिपूर्ति उस सीमा तक नहीं मिलती जिस सीमा तक वह पहले से निःशुल्क शिक्षा देने के दायित्व में है?",
+      "id": "c519f390-ace7-4c9f-bd19-50a3a967b53b",
+      "created_at": "2026-10-18T14:00:00.700000",
+      "question_hindi": "धारा 36 के अनुसार धारा 13, 18 और 19 के निर्दिष्ट अपराधों का अभियोजन कब शुरू किया जा सकता है?",
       "options_hindi": [
-        "जब विद्यालय को भूमि/भवन/उपकरण आदि निःशुल्क या रियायती मिले हों और बदले में विशिष्ट बच्चों को निःशुल्क शिक्षा देना पहले से दायित्व हो",
-        "जब विद्यालय ने किसी बच्चे को प्रवेश दिया हो",
-        "जब विद्यालय में पुस्तकालय हो",
-        "जब राज्य ने स्कूल मैपिंग की हो"
+        "उचित सरकार द्वारा अधिसूचना से अधिकृत अधिकारी की पूर्व स्वीकृति से",
+        "केवल संसद की अनुमति से",
+        "किसी भी मौखिक शिकायत पर स्वतः",
+        "केवल SMC मतदान से"
       ],
       "option_labels": [
         "A",
@@ -98,70 +135,33 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "When is reimbursement under Section 12(2) unavailable to the extent of an existing obligation to provide free education?",
+      "question_english": "Under Section 36, when may prosecution for the specified offences under Sections 13, 18 and 19 be instituted?",
       "options_english": [
-        "Where the school received land/building/equipment etc. free or at a concession in return for an existing obligation to provide free education to specified children",
-        "Whenever the school admits a child",
-        "Where the school has a library",
-        "Where the State has conducted school mapping"
+        "With previous sanction of an officer authorised by the appropriate Government by notification",
+        "Only with Parliament’s permission",
+        "Automatically on any oral complaint",
+        "Only by an SMC vote"
       ],
       "correct_answer": "a",
-      "explanation_english": "The proviso denies reimbursement to the extent the school is already obligated to provide free education in return for concessions/facilities.",
-      "explanation_hindi": "परंतुक उस सीमा तक प्रतिपूर्ति रोकता है जहाँ रियायती सुविधाओं के बदले विद्यालय पहले से निःशुल्क शिक्षा देने को बाध्य है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "hard",
-      "key_facts": [
-        "such school shall not be entitled for reimbursement to the extent of such obligation."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.235000"
-    },
-    {
-      "id": "2b3079d8-9d1d-4570-8643-d2b013ec1fe0",
-      "created_at": "2026-10-18T14:00:00.070000",
-      "question_hindi": "छह वर्ष से अधिक आयु का ऐसा बच्चा जिसने कभी विद्यालय में प्रवेश नहीं लिया, धारा 4 के अनुसार किस कक्षा में प्रवेश पाने का अधिकारी है?",
-      "options_hindi": [
-        "आयु के अनुरूप कक्षा में",
-        "केवल कक्षा 1 में",
-        "केवल कक्षा 1 में विशेष प्रशिक्षण के बाद",
-        "विद्यालय द्वारा चुनी गई किसी भी कक्षा में, बिना सहायता"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Under Section 4, to which class is a child above six who has never been admitted entitled to admission?",
-      "options_english": [
-        "A class appropriate to the child’s age",
-        "Only Class I",
-        "Only Class I after special training",
-        "Any class selected by the school without support"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Section 4 provides admission to an age-appropriate class and special training to bring the child at par with peers.",
-      "explanation_hindi": "धारा 4 आयु के अनुरूप कक्षा में प्रवेश और अन्य बच्चों के समकक्ष लाने हेतु विशेष प्रशिक्षण का प्रावधान करती है।",
+      "explanation_english": "Section 36 requires prior sanction for prosecution of the specified offences.",
+      "explanation_hindi": "धारा 36 निर्दिष्ट अपराधों के अभियोजन से पहले स्वीकृति आवश्यक करती है।",
       "topic": "Right to Education Act 2009",
       "difficulty": "medium",
       "key_facts": [
-        "then, he or she shall be admitted in a class appropriate to his or her age;"
+        "shall be instituted except with the previous sanction of an officer authorised in this behalf, by the appropriate Government, by notification."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.075000"
+      "processed_at": "2026-10-18T14:00:00.705000"
     },
     {
-      "id": "d89c49e8-0c19-42f9-bb51-a634fb6fdc39",
-      "created_at": "2026-10-18T14:00:00.550000",
-      "question_hindi": "धारा 12(1) के तहत सरकारी/स्थानीय प्राधिकारी द्वारा स्थापित विद्यालय की जिम्मेदारी क्या है?",
+      "id": "e9346cc7-82cf-4a30-812e-e3c58b695703",
+      "created_at": "2026-10-18T14:00:00.710000",
+      "question_hindi": "धारा 37 में सद्भावपूर्वक किए गए कार्यों के संबंध में क्या संरक्षण है?",
       "options_hindi": [
-        "प्रतिपूर्ति मिलने पर ही शिक्षा देना",
-        "उसमें प्रवेशित सभी बच्चों को निःशुल्क और अनिवार्य प्रारंभिक शिक्षा देना",
-        "केवल पड़ोस के 25% बच्चों को निःशुल्क शिक्षा देना",
-        "केवल सहायता-प्राप्त बच्चों को शिक्षा देना"
+        "सभी सरकारी निर्णय न्यायिक समीक्षा से बाहर",
+        "विद्यालयों को मान्यता नियमों से छूट",
+        "अधिनियम/नियम/आदेश के अनुपालन में सद्भावपूर्वक किए गए कार्यों के संबंध में मुकदमे/कानूनी कार्यवाही से संरक्षण",
+        "दुर्भावनापूर्ण कार्यों को भी संरक्षण"
       ],
       "option_labels": [
         "A",
@@ -172,393 +172,23 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "What is the responsibility of a school established by the Government/local authority under Section 12(1)?",
+      "question_english": "What protection does Section 37 provide for acts done in good faith?",
       "options_english": [
-        "Provide education only after reimbursement",
-        "Provide free and compulsory elementary education to all children admitted therein",
-        "Provide free education only to 25% neighbourhood children",
-        "Educate only aided children"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Section 12(1)(a) applies to all children admitted in schools in the specified government/local-authority category.",
-      "explanation_hindi": "धारा 12(1)(a) निर्दिष्ट सरकारी/स्थानीय प्राधिकारी विद्यालय में प्रवेशित सभी बच्चों पर लागू होती है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
-      "key_facts": [
-        "shall provide free and compulsory elementary education to all children admitted therein;"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.555000"
-    },
-    {
-      "id": "b8f154d7-32c7-489e-a756-1219b1fdbacd",
-      "created_at": "2026-10-18T14:00:00.090000",
-      "question_hindi": "अधिनियम के अनुसार प्रत्येक माता-पिता या संरक्षक का स्पष्ट दायित्व क्या है?",
-      "options_hindi": [
-        "बच्चे को केवल निजी विद्यालय में भेजना",
-        "बच्चे को घर पर ही पढ़ाना",
-        "बच्चे को पड़ोस के विद्यालय में प्रारंभिक शिक्षा हेतु प्रवेश दिलाना",
-        "कक्षा 8 से पहले बोर्ड परीक्षा दिलाना"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "What express duty does the Act place on every parent or guardian?",
-      "options_english": [
-        "To enrol the child only in a private school",
-        "To educate the child only at home",
-        "To admit or cause the child to be admitted to elementary education in the neighbourhood school",
-        "To make the child take a Board examination before Class VIII"
+        "All government decisions excluded from judicial review",
+        "Schools exempted from recognition rules",
+        "Protection from suit/legal proceeding for acts done or intended in good faith under the Act/rules/orders",
+        "Protection for malicious acts too"
       ],
       "correct_answer": "c",
-      "explanation_english": "Section 10 places the duty of admission in a neighbourhood school on every parent or guardian.",
-      "explanation_hindi": "धारा 10 प्रत्येक माता-पिता/संरक्षक पर पड़ोस के विद्यालय में प्रवेश दिलाने का दायित्व रखती है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "easy",
-      "key_facts": [
-        "It shall be the duty of every parent or guardian to admit or cause to be admitted his or her child or ward, as the case may be, to an elementary education in the neighbourhood school."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.095000"
-    },
-    {
-      "id": "e94c12a9-4b81-4477-ab33-e487ed1c7b1c",
-      "created_at": "2026-10-18T14:00:00.310000",
-      "question_hindi": "किस विद्यालय को धारा 18 के तहत मान्यता प्रमाणपत्र की सामान्य बाध्यता से स्पष्ट रूप से अपवाद दिया गया है?",
-      "options_hindi": [
-        "उचित सरकार या स्थानीय प्राधिकारी द्वारा स्थापित, स्वामित्व वाले या नियंत्रित विद्यालय",
-        "हर निर्दिष्ट श्रेणी विद्यालय",
-        "हर गैर-सहायता-प्राप्त विद्यालय",
-        "हर सहायता-प्राप्त विद्यालय"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which schools are excepted from the general recognition-certificate requirement under Section 18?",
-      "options_english": [
-        "Schools established, owned or controlled by the appropriate Government or local authority",
-        "Every specified-category school",
-        "Every unaided school",
-        "Every aided school"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Section 18(1) places the recognition-certificate requirement on schools other than government/local-authority schools of the stated kind.",
-      "explanation_hindi": "धारा 18(1) मान्यता प्रमाणपत्र की बाध्यता को बताए गए सरकारी/स्थानीय प्राधिकारी के विद्यालयों के अलावा अन्य विद्यालयों पर लागू करती है।",
+      "explanation_english": "Section 37 provides protection for acts done or intended in good faith pursuant to the Act, rules or orders.",
+      "explanation_hindi": "धारा 37 अधिनियम, नियम या आदेश के तहत सद्भावपूर्वक किए गए कार्यों को संरक्षण देती है।",
       "topic": "Right to Education Act 2009",
       "difficulty": "medium",
       "key_facts": [
-        "No school, other than a school established, owned or controlled by the appropriate Government or the local authority, shall, after the commencement of this Act, be established or function, without obtaining a certificate of recognition"
+        "in respect of anything which is in good faith done or intended to be done, in pursuance of this Act, or any rules or order made thereunder"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.315000"
-    },
-    {
-      "id": "04deddf4-85e2-4cdd-80af-5d73074732fb",
-      "created_at": "2026-10-18T14:00:00.500000",
-      "question_hindi": "धारा 7(2) के अनुसार अधिनियम के कार्यान्वयन के लिए पूँजीगत और आवर्ती व्यय का अनुमान कौन तैयार करता है?",
-      "options_hindi": [
-        "जिला शिक्षा अधिकारी",
-        "केंद्र सरकार",
-        "विद्यालय प्रबंधन समिति",
-        "राज्य सलाहकार परिषद"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Who prepares estimates of capital and recurring expenditure for implementation under Section 7(2)?",
-      "options_english": [
-        "District Education Officer",
-        "Central Government",
-        "School Management Committee",
-        "State Advisory Council"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Section 7(2) assigns preparation of the estimates to the Central Government.",
-      "explanation_hindi": "धारा 7(2) व्यय का अनुमान तैयार करने का कार्य केंद्र सरकार को देती है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
-      "key_facts": [
-        "The Central Government shall prepare the estimates of capital and recurring expenditure for the implementation of the provisions of the Act."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.505000"
-    },
-    {
-      "id": "ba820e91-38fa-4999-94d1-806178c7f70a",
-      "created_at": "2026-10-18T14:00:00.190000",
-      "question_hindi": "निम्नलिखित कथनों पर विचार कीजिए:\n1. विद्यालय तक पहुँच सामाजिक और सांस्कृतिक कारणों से बाधित नहीं होनी चाहिए।\n2. स्कूल मैपिंग केवल शहरी क्षेत्रों में होती है।\n3. स्कूल मैपिंग में दूरस्थ क्षेत्रों और दिव्यांग बच्चों की पहचान भी शामिल है।\nसही विकल्प चुनिए।",
-      "options_hindi": [
-        "केवल 2 और 3",
-        "केवल 1",
-        "1, 2 और 3",
-        "केवल 1 और 3"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider:\n1. Access to school must not be hindered by social and cultural factors.\n2. School mapping is carried out only in urban areas.\n3. It includes identifying children in remote areas and children with disabilities.\nChoose the correct option.",
-      "options_english": [
-        "2 and 3 only",
-        "1 only",
-        "1, 2 and 3",
-        "1 and 3 only"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "The Rules prohibit social/cultural barriers and include remote-area children and children with disabilities in school mapping.",
-      "explanation_hindi": "नियम सामाजिक-सांस्कृतिक बाधाओं को रोकते हैं तथा स्कूल मैपिंग में दूरस्थ व दिव्यांग बच्चों को शामिल करते हैं।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "hard",
-      "key_facts": [
-        "The State Government/Local Authority shall ensure that access of children to the school is not hindered on account of social and cultural factors."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.195000"
-    },
-    {
-      "id": "7599370a-10d3-4218-bd68-14346c7aa7cf",
-      "created_at": "2026-10-18T14:00:00.560000",
-      "question_hindi": "यदि धारा 12(1)(c) के अंतर्गत 25% प्रवेश देने वाला विद्यालय पूर्व-प्राथमिक शिक्षा भी देता है, तो क्या प्रावधान लागू होता है?",
-      "options_hindi": [
-        "प्रावधान केवल कक्षा 8 के बाद लागू होते हैं",
-        "पूर्व-प्राथमिक शिक्षा में सभी आरक्षण निषिद्ध हैं",
-        "प्रावधान केवल सरकारी विद्यालयों पर लागू होते हैं",
-        "25% प्रावधान पूर्व-प्राथमिक प्रवेश पर भी लागू होते हैं"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "If a school covered by Section 12(1)(c) also provides pre-school education, what applies?",
-      "options_english": [
-        "The provisions apply only after Class VIII",
-        "All reservation provisions are prohibited in pre-school education",
-        "The provisions apply only to government schools",
-        "The 25% provisions also apply to admission to that pre-school education"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "The proviso to Section 12(1) applies clauses (a) to (c) to admission to pre-school education where the school imparts it.",
-      "explanation_hindi": "धारा 12(1) का परंतुक ऐसे विद्यालय की पूर्व-प्राथमिक शिक्षा में प्रवेश पर खंड (a) से (c) लागू करता है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
-      "key_facts": [
-        "the provisions of clauses (a) to (c) shall apply for admission to such pre-school education."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.565000"
-    },
-    {
-      "id": "4efdc6ef-6055-4a03-9e83-707eb09c67f8",
-      "created_at": "2026-10-18T14:00:00.470000",
-      "question_hindi": "अनुसूची के अनुसार कक्षा VI–VIII के लिए कम-से-कम एक शिक्षक किन विषय-समूहों के लिए उपलब्ध होना चाहिए?",
-      "options_hindi": [
-        "केवल विज्ञान और गणित",
-        "विज्ञान और गणित; सामाजिक अध्ययन; भाषाएँ",
-        "विज्ञान, कला और कार्य शिक्षा",
-        "केवल भाषा और कला"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Under the Schedule, teachers must be available in Classes VI–VIII for which subject groups?",
-      "options_english": [
-        "Only Science and Mathematics",
-        "Science and Mathematics; Social Studies; Languages",
-        "Science, Art and Work Education",
-        "Only Language and Art"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "The Schedule names Science and Mathematics, Social Studies, and Languages.",
-      "explanation_hindi": "अनुसूची विज्ञान और गणित, सामाजिक अध्ययन तथा भाषाओं का उल्लेख करती है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
-      "key_facts": [
-        "there shall be at least one teacher each for— (i) Science and Mathematics; (ii) Social Studies; (iii) Languages."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.475000"
-    },
-    {
-      "id": "60066b66-7bcb-4349-b4b3-b2be5bf61b10",
-      "created_at": "2026-10-18T14:00:00.420000",
-      "question_hindi": "धारा 24 के अनुसार शिक्षक के दायित्वों में कौन-सा कार्य स्पष्ट रूप से शामिल है?",
-      "options_hindi": [
-        "विद्यालय विकास योजना अकेले अनुमोदित करना",
-        "बिना सीमा निजी ट्यूशन देना",
-        "प्रत्येक बच्चे की सीखने की क्षमता का आकलन कर आवश्यक अतिरिक्त निर्देश देना",
-        "बच्चे की प्रगति अभिभावकों से छिपाना"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which duty is expressly included among a teacher’s duties under Section 24?",
-      "options_english": [
-        "Approving the School Development Plan alone",
-        "Giving private tuition without restriction",
-        "Assessing each child’s learning ability and providing extra instruction as required",
-        "Withholding a child’s progress from parents"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "Section 24(1)(d) requires assessment of each child’s learning ability and additional instruction as needed.",
-      "explanation_hindi": "धारा 24(1)(d) प्रत्येक बच्चे की सीखने की क्षमता का आकलन और जरूरत पर अतिरिक्त निर्देश देने की अपेक्षा करती है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
-      "key_facts": [
-        "assess the learning ability of each child and accordingly supplement additional instructions, if any, as required"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.425000"
-    },
-    {
-      "id": "73e06000-8c44-4fe0-8106-81ecdf2de1b2",
-      "created_at": "2026-10-18T14:00:00.950000",
-      "question_hindi": "मॉडल नियम 11 के अंतर्गत मान्यता प्रक्रिया का सही क्रम चुनिए।",
-      "options_hindi": [
-        "पहले मान्यता वापस, फिर नया आवेदन",
-        "स्व-घोषणा के बाद तुरन्त मान्यता, फिर निरीक्षण",
-        "तीन माह में स्व-घोषणा; 15 दिन में सार्वजनिक प्रकटीकरण; तीन माह में स्थल निरीक्षण; निरीक्षण के 15 दिन में निर्णय",
-        "केवल ऑनलाइन आवेदन; कोई निरीक्षण नहीं"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Choose the correct sequence of the recognition process under Model Rule 11.",
-      "options_english": [
-        "Withdraw recognition first, then apply anew",
-        "Immediate recognition after self-declaration, then inspection",
-        "Self-declaration within 3 months; public disclosure within 15 days; on-site inspection within 3 months; decision within 15 days after inspection",
-        "Online application only; no inspection"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "Model Rule 11 sets these staged requirements and time limits for the specified existing schools.",
-      "explanation_hindi": "मॉडल नियम 11 संबंधित पहले से स्थापित विद्यालयों के लिए इन चरणों और समय-सीमाओं को निर्धारित करता है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "hard",
-      "key_facts": [
-        "The District Education Officer shall conduct on-site inspection of such schools which claim in Form No. 1 to fulfill the norms and standards and the conditions mentioned in sub-Rule (1) within three months of the receipt of the self declaration."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.955000"
-    },
-    {
-      "id": "bb37017c-1e75-417b-9ece-aad95c03bc94",
-      "created_at": "2026-10-18T14:00:00.520000",
-      "question_hindi": "धारा 9 के अनुसार स्थानीय प्राधिकारी का कौन-सा विशिष्ट दायित्व है?",
-      "options_hindi": [
-        "सभी केंद्रीय विद्यालयों के शिक्षक नियुक्त करना",
-        "राष्ट्रीय पाठ्यचर्या रूपरेखा बनाना",
-        "विद्यालय का शैक्षणिक कैलेंडर तय करना",
-        "बोर्ड परीक्षा का प्रश्नपत्र बनाना"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which specific duty does Section 9 place on the local authority?",
-      "options_english": [
-        "Appointing teachers for all Kendriya Vidyalayas",
-        "Preparing the national curriculum framework",
-        "Deciding the academic calendar",
-        "Preparing Board examination papers"
-      ],
-      "correct_answer": "c",
-      "explanation_english": "Section 9 lists deciding the academic calendar among local authority duties.",
-      "explanation_hindi": "धारा 9 स्थानीय प्राधिकारी के दायित्वों में शैक्षणिक कैलेंडर तय करना शामिल करती है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
-      "key_facts": [
-        "decide the academic calendar,"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.525000"
-    },
-    {
-      "id": "a8a9e45c-2fac-4978-88b6-52be586a94d7",
-      "created_at": "2026-10-18T14:00:00.370000",
-      "question_hindi": "अधिनियम के अनुसार विद्यालय विकास योजना किसके द्वारा तैयार की जाती है?",
-      "options_hindi": [
-        "जिला मजिस्ट्रेट",
-        "विद्यालय प्रबंधन समिति",
-        "राष्ट्रीय सलाहकार परिषद",
-        "केवल प्रधानाचार्य अकेले"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Who prepares the School Development Plan under the Act?",
-      "options_english": [
-        "District Magistrate",
-        "School Management Committee",
-        "National Advisory Council",
-        "Principal alone"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "Section 22 requires every SMC to prepare the School Development Plan.",
-      "explanation_hindi": "धारा 22 प्रत्येक SMC को विद्यालय विकास योजना तैयार करने का दायित्व देती है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "easy",
-      "key_facts": [
-        "Every School Management Committee, constituted under sub-section (1) of section 21, shall prepare a School Development Plan"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.375000"
+      "processed_at": "2026-10-18T14:00:00.715000"
     },
     {
       "id": "bf48816a-a7e5-4aa8-8d2b-0ff555759f7b",
@@ -598,14 +228,14 @@
       "processed_at": "2026-10-18T14:00:00.165000"
     },
     {
-      "id": "8c9b0349-d321-485d-b81d-4acd6e54d4da",
-      "created_at": "2026-10-18T14:00:00.780000",
-      "question_hindi": "अनुसूची के अनुसार विद्यालय की पुस्तकालय व्यवस्था के बारे में कौन-सा विकल्प सही है?",
+      "id": "53d9d98d-43b8-4693-8c96-56f5cae713b3",
+      "created_at": "2026-10-18T14:00:00.850000",
+      "question_hindi": "अनुसूची में कक्षा VI–VIII के लिए न्यूनतम कार्य-दिवस कितने हैं?",
       "options_hindi": [
-        "केवल पाठ्यपुस्तकें रखी जा सकती हैं।",
-        "डिजिटल बोर्ड हो तो पुस्तकालय वैकल्पिक है।",
-        "केवल कक्षा 8 के विद्यालय में पुस्तकालय होना चाहिए।",
-        "प्रत्येक विद्यालय में सभी विषयों की पुस्तकें, समाचारपत्र, पत्रिकाएँ और कहानी-पुस्तकें वाला पुस्तकालय हो।"
+        "240",
+        "210",
+        "200",
+        "220"
       ],
       "option_labels": [
         "A",
@@ -616,33 +246,33 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which option correctly describes the library requirement under the Schedule?",
+      "question_english": "How many minimum working days are specified for Classes VI–VIII?",
       "options_english": [
-        "Only textbooks may be kept.",
-        "A library is optional if there is a digital board.",
-        "Only schools with Class VIII need a library.",
-        "Every school should have a library with books on all subjects, newspapers, magazines and story-books."
+        "240",
+        "210",
+        "200",
+        "220"
       ],
       "correct_answer": "d",
-      "explanation_english": "The Schedule requires a library in each school, including books on all subjects and story-books.",
-      "explanation_hindi": "अनुसूची हर विद्यालय में सभी विषयों की पुस्तकों और कहानी-पुस्तकों सहित पुस्तकालय की अपेक्षा करती है।",
+      "explanation_english": "The Schedule specifies 220 working days for Classes VI–VIII.",
+      "explanation_hindi": "अनुसूची कक्षा VI–VIII के लिए 220 कार्य-दिवस बताती है।",
       "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "key_facts": [
-        "There shall be a library in each school providing newspaper, magazines and books on all subjects, including story-books."
+        "two hundred and twenty working days for sixth class to eighth class;"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.785000"
+      "processed_at": "2026-10-18T14:00:00.855000"
     },
     {
-      "id": "2bf9167a-5d7d-4493-8e6a-ae47128ad742",
-      "created_at": "2026-10-18T14:00:00.620000",
-      "question_hindi": "धारा 30(2) के अनुसार प्रारंभिक शिक्षा पूरी करने वाले प्रत्येक बच्चे को क्या दिया जाना चाहिए?",
+      "id": "ac2c853a-5982-44d6-ae33-26c72302dcdc",
+      "created_at": "2026-10-18T14:00:00.440000",
+      "question_hindi": "धारा 27 में शिक्षक को गैर-शैक्षणिक उद्देश्यों के लिए लगाने के अपवाद कौन-से हैं? 1. दशकीय जनगणना\n2. आपदा राहत\n3. स्थानीय प्राधिकरण/विधानमंडल/संसद के चुनाव संबंधी कर्तव्य\n4. नियमित कार्यालयी क्लेरिकल कार्य।",
       "options_hindi": [
-        "केवल उपस्थिति कार्ड",
-        "निर्धारित रूप और तरीके में पूर्णता प्रमाणपत्र",
-        "अनिवार्य बोर्ड अंकपत्र",
-        "विद्यालय छोड़ने का प्रमाणपत्र ही"
+        "1, 2, 3 और 4",
+        "केवल 2, 3 और 4",
+        "केवल 1 और 4",
+        "केवल 1, 2 और 3"
       ],
       "option_labels": [
         "A",
@@ -653,60 +283,430 @@
       "source": "uploaded-pdf",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "What must be awarded to every child completing elementary education under Section 30(2)?",
+      "question_english": "Which are the exceptions under Section 27 to deploying teachers for non-educational purposes? 1. Decennial census\n2. Disaster relief\n3. Election-related duties\n4. Routine clerical work.",
       "options_english": [
-        "Only an attendance card",
-        "A completion certificate in the prescribed form and manner",
-        "A compulsory Board marksheet",
-        "Only a school-leaving certificate"
+        "1, 2, 3 and 4",
+        "2, 3 and 4 only",
+        "1 and 4 only",
+        "1, 2 and 3 only"
       ],
-      "correct_answer": "b",
-      "explanation_english": "Section 30(2) requires a completion certificate in the prescribed form and manner.",
-      "explanation_hindi": "धारा 30(2) निर्धारित रूप और तरीके में पूर्णता प्रमाणपत्र देने की अपेक्षा करती है।",
-      "topic": "Right to Education Act 2009",
-      "difficulty": "medium",
-      "key_facts": [
-        "Every child completing his elementary education shall be awarded a certificate, in such form and in such manner, as may be prescribed."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.625000"
-    },
-    {
-      "id": "d9528207-0dbf-4ef9-96ad-d92264f5914d",
-      "created_at": "2026-10-18T14:00:00.970000",
-      "question_hindi": "मॉडल नियम 20 के अनुसार शिक्षक शिकायत-निवारण व्यवस्था के बारे में कौन-सा विकल्प सही है?",
-      "options_hindi": [
-        "SMC प्रथम स्तर है; राज्य, जिला और ब्लॉक स्तर पर School Tribunals भी गठित किए जाने हैं।",
-        "केवल प्रधानाचार्य अंतिम अपीलीय अधिकारी है।",
-        "शिक्षकों को शिकायत दर्ज करने का अधिकार नहीं है।",
-        "केवल राष्ट्रीय आयोग ही प्रथम स्तर है।"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "uploaded-pdf",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which option correctly describes teacher grievance redressal under Model Rule 20?",
-      "options_english": [
-        "The SMC is the first level; School Tribunals are to be constituted at State, District and Block levels.",
-        "Only the Principal is the final appellate authority.",
-        "Teachers have no right to file grievances.",
-        "Only the National Commission is the first level."
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Rule 20(1) identifies the SMC as the first level and Rule 20(2) provides School Tribunals at three administrative levels.",
-      "explanation_hindi": "नियम 20(1) SMC को प्रथम स्तर बनाता है और नियम 20(2) राज्य, जिला और ब्लॉक स्तर पर स्कूल ट्रिब्यूनल का प्रावधान करता है।",
+      "correct_answer": "d",
+      "explanation_english": "Section 27 lists census, disaster relief and election duties; routine clerical work is not listed.",
+      "explanation_hindi": "धारा 27 जनगणना, आपदा राहत और चुनाव संबंधी कर्तव्य सूचीबद्ध करती है; नियमित क्लेरिकल कार्य अपवाद नहीं है।",
       "topic": "Right to Education Act 2009",
       "difficulty": "hard",
       "key_facts": [
-        "The State Government shall constitute School Tribunals at the State, District and Block levels which would act as the grievance redressal mechanism for the teachers."
+        "other than the decennial population census, disaster relief duties or duties relating to elections"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:00:00.975000"
+      "processed_at": "2026-10-18T14:00:00.445000"
+    },
+    {
+      "id": "ea075082-c2ee-4eb3-815d-22cc47e982c4",
+      "created_at": "2026-10-18T14:00:00.210000",
+      "question_hindi": "धारा 12(1)(b) के तहत सहायता-प्राप्त विद्यालय की निःशुल्क शिक्षा की जिम्मेदारी किस आधार पर तय होती है?",
+      "options_hindi": [
+        "केवल SMC की राय",
+        "केवल राज्य की प्रति-बच्चा लागत",
+        "वार्षिक आवर्ती सहायता/अनुदान का वार्षिक आवर्ती व्यय से अनुपात, न्यूनतम 25%",
+        "कुल नामांकन का हमेशा 100%"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "On what basis is an aided school’s responsibility for free education determined under Section 12(1)(b)?",
+      "options_english": [
+        "Only the SMC’s opinion",
+        "Only the State’s per-child expenditure",
+        "The ratio of annual recurring aid/grants to annual recurring expenses, subject to a minimum of 25%",
+        "Always 100% of total enrolment"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Section 12(1)(b) links the proportion to aid/grants as a share of recurring expenses, subject to a 25% minimum.",
+      "explanation_hindi": "धारा 12(1)(b) अनुपात को आवर्ती सहायता/अनुदान और आवर्ती व्यय से जोड़ती है, पर न्यूनतम 25% रखती है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "medium",
+      "key_facts": [
+        "subject to a minimum of twenty-five per cent."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.215000"
+    },
+    {
+      "id": "73e06000-8c44-4fe0-8106-81ecdf2de1b2",
+      "created_at": "2026-10-18T14:00:00.950000",
+      "question_hindi": "मॉडल नियम 11 के अंतर्गत मान्यता प्रक्रिया का सही क्रम चुनिए।",
+      "options_hindi": [
+        "पहले मान्यता वापस, फिर नया आवेदन",
+        "स्व-घोषणा के बाद तुरन्त मान्यता, फिर निरीक्षण",
+        "तीन माह में स्व-घोषणा; 15 दिन में सार्वजनिक प्रकटीकरण; तीन माह में स्थल निरीक्षण; निरीक्षण के 15 दिन में निर्णय",
+        "केवल ऑनलाइन आवेदन; कोई निरीक्षण नहीं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Choose the correct sequence of the recognition process under Model Rule 11.",
+      "options_english": [
+        "Withdraw recognition first, then apply anew",
+        "Immediate recognition after self-declaration, then inspection",
+        "Self-declaration within 3 months; public disclosure within 15 days; on-site inspection within 3 months; decision within 15 days after inspection",
+        "Online application only; no inspection"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Model Rule 11 sets these staged requirements and time limits for the specified existing schools.",
+      "explanation_hindi": "मॉडल नियम 11 संबंधित पहले से स्थापित विद्यालयों के लिए इन चरणों और समय-सीमाओं को निर्धारित करता है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "hard",
+      "key_facts": [
+        "The District Education Officer shall conduct on-site inspection of such schools which claim in Form No. 1 to fulfill the norms and standards and the conditions mentioned in sub-Rule (1) within three months of the receipt of the self declaration."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.955000"
+    },
+    {
+      "id": "74558398-5a72-4aee-8788-cd09e7e2f985",
+      "created_at": "2026-10-18T14:00:00.140000",
+      "question_hindi": "धारा 5 के अंतर्गत स्थानांतरण प्रमाणपत्र के संबंध में कौन-सा विकल्प सही है?",
+      "options_hindi": [
+        "केवल जिला शिक्षा अधिकारी प्रमाणपत्र जारी कर सकता है।",
+        "बच्चा राज्य से बाहर स्थानांतरण का अधिकार नहीं रखता।",
+        "प्रमाणपत्र में देरी हो तो नया विद्यालय प्रवेश रोक सकता है।",
+        "प्रमाणपत्र तुरंत जारी होना चाहिए; उसे प्रस्तुत करने में देरी प्रवेश रोकने/टालने का आधार नहीं है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which option correctly states the transfer-certificate rule under Section 5?",
+      "options_english": [
+        "Only the District Education Officer may issue it.",
+        "A child has no right to transfer outside the State.",
+        "The new school may withhold admission if the certificate is delayed.",
+        "The certificate should be issued immediately; delay in producing it cannot delay or deny admission."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Section 5 requires immediate issuance by the head-teacher/in-charge and bars delay in producing the certificate as a reason to deny or delay admission.",
+      "explanation_hindi": "धारा 5 प्रधानाध्यापक/प्रभारी से प्रमाणपत्र तुरंत जारी करने को कहती है और इसकी देरी को प्रवेश रोकने का आधार नहीं मानती।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "medium",
+      "key_facts": [
+        "delay in producing transfer certificate shall not be a ground for either delaying or denying admission in such other school"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.145000"
+    },
+    {
+      "id": "0155800c-3ef6-4603-98c7-de6cc092b733",
+      "created_at": "2026-10-18T14:00:00.960000",
+      "question_hindi": "मॉडल नियम 14 के अनुसार विद्यालय विकास योजना तैयार करने और जमा करने के बारे में कौन-सा कथन सही है?",
+      "options_hindi": [
+        "यह केवल एक वर्ष की योजना है और शिक्षक हस्ताक्षर करते हैं।",
+        "इसे राज्य सलाहकार परिषद बनाती है।",
+        "यह तीन वर्ष की योजना है; निर्धारित पदाधिकारी हस्ताक्षर करते हैं और इसे संबंधित वित्तीय वर्ष के अंत से पहले स्थानीय प्राधिकारी को देना होता है।",
+        "इसमें शिक्षक या अवसंरचना की आवश्यकता शामिल नहीं होती।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which statement is correct about preparation and submission of the School Development Plan under Model Rule 14?",
+      "options_english": [
+        "It is a one-year plan signed by teachers.",
+        "It is prepared by the State Advisory Council.",
+        "It is a three-year plan; specified office-bearers sign it and it must be submitted to the local authority before the end of the relevant financial year.",
+        "It excludes teacher and infrastructure needs."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Model Rule 14 provides for a three-year plan, signatures of the SMC Chair/Vice-Chair and Convenor, and timely submission to the local authority.",
+      "explanation_hindi": "मॉडल नियम 14 तीन-वर्षीय योजना, SMC अध्यक्ष/उपाध्यक्ष और संयोजक के हस्ताक्षर तथा स्थानीय प्राधिकारी को समय पर प्रस्तुत करना निर्धारित करता है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "hard",
+      "key_facts": [
+        "The School Development Plan should be signed by the Chairperson/Vice-Chairperson and Convenor of the School Management Committee and submitted to the local authority before the end of the financial year in which it is to be prepared."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.965000"
+    },
+    {
+      "id": "77734810-5431-4832-b37f-6c82080b8935",
+      "created_at": "2026-10-18T14:00:00.530000",
+      "question_hindi": "धारा 9 के अंतर्गत स्थानीय प्राधिकारी को बच्चों का रिकॉर्ड किस आयु तक बनाए रखना है?",
+      "options_hindi": [
+        "10 वर्ष",
+        "6 वर्ष",
+        "18 वर्ष",
+        "14 वर्ष"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Until what age must the local authority maintain children’s records under Section 9?",
+      "options_english": [
+        "10 years",
+        "6 years",
+        "18 years",
+        "14 years"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Section 9(d) refers to maintaining records of children up to fourteen years, as prescribed.",
+      "explanation_hindi": "धारा 9(d) निर्धारित तरीके से चौदह वर्ष तक के बच्चों का रिकॉर्ड रखने को कहती है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "medium",
+      "key_facts": [
+        "maintain records of children up to the age of fourteen years, in such manner as may be prescribed;"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.535000"
+    },
+    {
+      "id": "45a45793-89cf-43b0-ad20-dd0cb3af6fea",
+      "created_at": "2026-10-18T14:00:00.410000",
+      "question_hindi": "धारा 23 के अनुसार शिक्षक नियुक्ति की न्यूनतम योग्यता कौन निर्धारित करता है?",
+      "options_hindi": [
+        "हर विद्यालय का प्रधानाचार्य स्वतंत्र रूप से",
+        "राष्ट्रीय सलाहकार परिषद",
+        "केंद्र सरकार द्वारा अधिसूचना से अधिकृत शैक्षणिक प्राधिकारी",
+        "विद्यालय प्रबंधन समिति"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Who lays down minimum qualifications for teacher appointment under Section 23?",
+      "options_english": [
+        "Each Principal independently",
+        "National Advisory Council",
+        "An academic authority authorised by Central Government notification",
+        "SMC"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Section 23(1) refers to an academic authority authorised by Central Government notification.",
+      "explanation_hindi": "धारा 23(1) केंद्र सरकार की अधिसूचना से अधिकृत शैक्षणिक प्राधिकारी का उल्लेख करती है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "medium",
+      "key_facts": [
+        "such minimum qualifications, as laid down by an academic authority, authorised by the Central Government, by notification"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.415000"
+    },
+    {
+      "id": "4efdc6ef-6055-4a03-9e83-707eb09c67f8",
+      "created_at": "2026-10-18T14:00:00.470000",
+      "question_hindi": "अनुसूची के अनुसार कक्षा VI–VIII के लिए कम-से-कम एक शिक्षक किन विषय-समूहों के लिए उपलब्ध होना चाहिए?",
+      "options_hindi": [
+        "केवल विज्ञान और गणित",
+        "विज्ञान और गणित; सामाजिक अध्ययन; भाषाएँ",
+        "विज्ञान, कला और कार्य शिक्षा",
+        "केवल भाषा और कला"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under the Schedule, teachers must be available in Classes VI–VIII for which subject groups?",
+      "options_english": [
+        "Only Science and Mathematics",
+        "Science and Mathematics; Social Studies; Languages",
+        "Science, Art and Work Education",
+        "Only Language and Art"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Schedule names Science and Mathematics, Social Studies, and Languages.",
+      "explanation_hindi": "अनुसूची विज्ञान और गणित, सामाजिक अध्ययन तथा भाषाओं का उल्लेख करती है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "medium",
+      "key_facts": [
+        "there shall be at least one teacher each for— (i) Science and Mathematics; (ii) Social Studies; (iii) Languages."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.475000"
+    },
+    {
+      "id": "2b80fdba-9505-4523-b95c-0739d00bf3dc",
+      "created_at": "2026-10-18T14:00:00.540000",
+      "question_hindi": "धारा 8 की व्याख्या में “अनिवार्य शिक्षा” का कौन-सा हिस्सा सरकार के दायित्व के रूप में स्पष्ट किया गया है?",
+      "options_hindi": [
+        "हर 6–14 वर्ष के बच्चे के लिए प्रवेश, उपस्थिति और प्रारंभिक शिक्षा पूरी करना सुनिश्चित करना",
+        "हर बच्चे को कक्षा 10 तक पहुँचाना",
+        "हर बच्चे से निजी ट्यूशन करवाना",
+        "हर बच्चे को बोर्ड परीक्षा में उत्तीर्ण कराना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which element of “compulsory education” is expressly stated as a Government obligation in the explanation to Section 8?",
+      "options_english": [
+        "Ensure admission, attendance and completion of elementary education for every child aged 6–14",
+        "Ensure every child reaches Class X",
+        "Require private tuition for every child",
+        "Ensure every child passes a Board examination"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The statutory explanation includes ensuring compulsory admission, attendance and completion.",
+      "explanation_hindi": "वैधानिक व्याख्या अनिवार्य प्रवेश, उपस्थिति और शिक्षा-पूर्णता सुनिश्चित करने को शामिल करती है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "medium",
+      "key_facts": [
+        "ensure compulsory admission, attendance and completion of elementary education by every child of the age of six to fourteen years;"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.545000"
+    },
+    {
+      "id": "3ba7e158-0e1b-422a-92bd-cc455fe92886",
+      "created_at": "2026-10-18T14:00:00.240000",
+      "question_hindi": "धारा 13 के तहत कैपिटेशन फीस वसूलने पर अधिकतम जुर्माना किस अनुपात में हो सकता है?",
+      "options_hindi": [
+        "वसूली गई फीस के बराबर",
+        "निश्चित ₹25,000",
+        "पाँच गुना",
+        "वसूली गई कैपिटेशन फीस का दस गुना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What is the maximum fine for collecting capitation fee under Section 13?",
+      "options_english": [
+        "Equal to the fee collected",
+        "A fixed ₹25,000",
+        "Five times",
+        "Ten times the capitation fee charged"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Section 13(2)(a) permits a fine up to ten times the capitation fee charged.",
+      "explanation_hindi": "धारा 13(2)(a) वसूली गई कैपिटेशन फीस के दस गुने तक जुर्माने की अनुमति देती है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "easy",
+      "key_facts": [
+        "shall be punishable with fine which may extend to ten times the capitation fee charged;"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.245000"
+    },
+    {
+      "id": "04deddf4-85e2-4cdd-80af-5d73074732fb",
+      "created_at": "2026-10-18T14:00:00.500000",
+      "question_hindi": "धारा 7(2) के अनुसार अधिनियम के कार्यान्वयन के लिए पूँजीगत और आवर्ती व्यय का अनुमान कौन तैयार करता है?",
+      "options_hindi": [
+        "जिला शिक्षा अधिकारी",
+        "केंद्र सरकार",
+        "विद्यालय प्रबंधन समिति",
+        "राज्य सलाहकार परिषद"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Who prepares estimates of capital and recurring expenditure for implementation under Section 7(2)?",
+      "options_english": [
+        "District Education Officer",
+        "Central Government",
+        "School Management Committee",
+        "State Advisory Council"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Section 7(2) assigns preparation of the estimates to the Central Government.",
+      "explanation_hindi": "धारा 7(2) व्यय का अनुमान तैयार करने का कार्य केंद्र सरकार को देती है।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "medium",
+      "key_facts": [
+        "The Central Government shall prepare the estimates of capital and recurring expenditure for the implementation of the provisions of the Act."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.505000"
+    },
+    {
+      "id": "47b672cd-ccbd-4fb8-a47b-e872c091c904",
+      "created_at": "2026-10-18T14:00:00.610000",
+      "question_hindi": "धारा 30 के अनुसार प्रारंभिक शिक्षा पूरी होने तक बच्चे से किस परीक्षा को पास करने की अपेक्षा नहीं की जा सकती?",
+      "options_hindi": [
+        "पुस्तकालय गतिविधि",
+        "कक्षा-कक्ष की कोई भी गतिविधि",
+        "बोर्ड परीक्षा",
+        "मौखिक अभ्यास"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "uploaded-pdf",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under Section 30, what examination may not be required to be passed before completion of elementary education?",
+      "options_english": [
+        "Library activity",
+        "Any classroom activity",
+        "Board examination",
+        "Oral practice"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Section 30(1) says no child shall be required to pass a Board examination until elementary education is completed.",
+      "explanation_hindi": "धारा 30(1) कहती है कि प्रारंभिक शिक्षा पूरी होने तक बच्चे को बोर्ड परीक्षा पास करने के लिए बाध्य नहीं किया जाएगा।",
+      "topic": "Right to Education Act 2009",
+      "difficulty": "medium",
+      "key_facts": [
+        "No child shall be required to pass any Board examination till completion of elementary education."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:00:00.615000"
     },
     {
       "id": "1554ff7c-e2d4-47a7-9cc6-84d8f2e32b82",

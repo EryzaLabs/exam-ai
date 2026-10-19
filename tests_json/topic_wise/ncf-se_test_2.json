@@ -1,10 +1,232 @@
 {
-  "test_id": "17a1255f-0fc8-4011-87bc-ff821ff3ff17",
+  "test_id": "41778d74-7755-4626-957d-581c00a6573f",
   "test_name": "Topic Test: NCF SE - Part 2",
   "type": "topic_wise",
   "topic": "ncf-se",
-  "created_at": "2026-10-18T11:57:07.844835",
+  "created_at": "2026-10-19T07:49:29.111088",
   "questions": [
+    {
+      "id": "c247cedd-581e-4e17-9101-6cca1ce5802c",
+      "created_at": "2026-10-18T14:11:04.907881",
+      "question_hindi": "भाषाई रूप से विविध क्षेत्र में विद्यार्थियों की मातृभाषाओं को व्यावहारिक कारणों से R1 नहीं बनाया जा सकता, लेकिन कोई अन्य स्थानीय भाषा उनसे सबसे अधिक परिचित है। NCF-SE में कौन-सा विकल्प स्पष्ट रूप से विचारित है?",
+      "options_hindi": [
+        "हर ऐसे मामले में R1 अंग्रेज़ी ही होना चाहिए",
+        "सबसे परिचित स्थानीय भाषा को R1 बनाया जा सकता है",
+        "जब तक सभी मातृभाषाओं में लिखित सामग्री न हो R1 छोड़ देना चाहिए",
+        "सबसे कम परिचित भाषा को R1 चुनना चाहिए"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In a linguistically diverse region, students’ mother tongues cannot practically be R1, but another local language is most familiar to them. Which option is explicitly contemplated by NCF-SE?",
+      "options_english": [
+        "R1 must be English in every such case",
+        "The most familiar local language may be used as R1",
+        "R1 must be abandoned until written materials exist in all mother tongues",
+        "Only the least familiar language should be selected as R1"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The framework acknowledges practical linguistic considerations and permits a familiar local language as R1 in the stated circumstance.",
+      "explanation_hindi": "रूपरेखा व्यावहारिक भाषाई परिस्थितियों को स्वीकार करती है और बताई गई स्थिति में परिचित स्थानीय भाषा को R1 बनाने की अनुमति देती है।",
+      "topic": "NCF 2023",
+      "difficulty": "hard",
+      "key_facts": [
+        "the most familiar local language may be used as R1."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:04.917881"
+    },
+    {
+      "id": "bf485c0d-0ddc-4b0c-8eed-2e35bbe123dc",
+      "created_at": "2026-10-18T14:11:07.607881",
+      "question_hindi": "NCF-SE में वर्णित ग्राफिक आयोजकों के संबंध में कथनों पर विचार कीजिए:\n1. वे विचारों और अवधारणाओं का दृश्य रूप प्रस्तुत करते हैं।\n2. वे विद्यार्थियों को जानकारी व्यवस्थित करने और संबंध बनाने में मदद करते हैं।\n3. वे उन विविध कक्षाओं में विशेष रूप से उपयोगी हैं जहाँ सभी विद्यार्थियों की लेखन-कौशल में समान मजबूती नहीं होती।\n4. उनका उपयोग केवल कला शिक्षा तक सीमित है।\nसही कथन कौन-से हैं?",
+      "options_hindi": [
+        "केवल 1 और 2",
+        "केवल 1, 2 और 3",
+        "केवल 2 और 4",
+        "1, 2, 3 और 4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements about graphic organisers as described in NCF-SE:\n1. They visually represent ideas and concepts.\n2. They help students sort information and make connections.\n3. They are particularly useful where writing skills may not be a strength for all students.\n4. They are restricted to Art Education.\nWhich statements are correct?",
+      "options_english": [
+        "1 and 2 only",
+        "1, 2 and 3 only",
+        "2 and 4 only",
+        "1, 2, 3 and 4"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Graphic organisers help students sort information and make connections, are particularly useful in diverse classrooms, and can be used across subjects.",
+      "explanation_hindi": "ग्राफिक आयोजक जानकारी व्यवस्थित करने और संबंध बनाने में मदद करते हैं, विविध कक्षाओं में विशेष रूप से उपयोगी हैं और विभिन्न विषयों में इस्तेमाल किए जा सकते हैं।",
+      "topic": "NCF 2023",
+      "difficulty": "medium",
+      "key_facts": [
+        "These organisers are particularly useful in diverse classrooms where writing skills may not be a strength for all students."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:07.617881"
+    },
+    {
+      "id": "66103ff8-fc69-4a2a-acfb-f12143921f9e",
+      "created_at": "2026-10-18T14:11:08.507881",
+      "question_hindi": "NCF-SE के कार्यान्वयन हेतु व्यवस्थित क्षमता-विकास में किन लोगों को स्पष्ट रूप से शामिल किया गया है?",
+      "options_hindi": [
+        "केवल विद्यार्थी",
+        "शिक्षक, प्रधान शिक्षक, प्रधानाचार्य, पाठ्यक्रम/शिक्षण-सामग्री निर्माता, शिक्षक-प्रशिक्षक और अन्य पदाधिकारी",
+        "केवल पाठ्यपुस्तक मुद्रक",
+        "केवल अभिभावक और समुदाय के सदस्य"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which group of people is explicitly included in systematic capacity building for NCF-SE implementation?",
+      "options_english": [
+        "Only students",
+        "Teachers, head teachers, principals, syllabus/TLM developers, teacher educators and other functionaries",
+        "Only textbook printers",
+        "Only parents and community members"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The framework names a broad set of educational stakeholders and also says parents and community members must be familiarised with NCF-SE.",
+      "explanation_hindi": "रूपरेखा शिक्षा के अनेक हितधारकों को शामिल करती है और अभिभावकों तथा समुदाय को भी NCF-SE से परिचित कराने की बात करती है।",
+      "topic": "NCF 2023",
+      "difficulty": "easy",
+      "key_facts": [
+        "Speedy and systematic capacity development of all stakeholders must occur to enable implementation of this NCF."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:08.517881"
+    },
+    {
+      "id": "1c464883-2fdd-47be-a1c8-b4936c20293c",
+      "created_at": "2026-10-18T14:11:03.307881",
+      "question_hindi": "समावेशन के संबंध में NCF-SE प्रधानाचार्य को कौन-सी भूमिका देता है?",
+      "options_hindi": [
+        "केवल पाठ्यपुस्तकें खरीदना",
+        "समावेशन की दृष्टि और संस्कृति तय करना तथा उसे व्यवहार में उतारना सुनिश्चित करना",
+        "विद्यालयी व्यवस्थाएँ बदले बिना दिव्यांगताओं की पहचान करना",
+        "समावेशन की पूरी जिम्मेदारी परिवारों को सौंपना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which role does NCF-SE assign to the School Principal in inclusion?",
+      "options_english": [
+        "Only procurement of textbooks",
+        "Setting the vision and culture for inclusion and ensuring translation into practice",
+        "Identifying disabilities without changing school arrangements",
+        "Delegating inclusion wholly to families"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The framework explicitly places the Principal at the centre of setting an inclusive vision and ensuring practice reflects it.",
+      "explanation_hindi": "रूपरेखा प्रधानाचार्य को समावेशी दृष्टि और संस्कृति निर्धारित करने तथा उसके व्यावहारिक रूपांतरण की केंद्रीय भूमिका देती है।",
+      "topic": "NCF 2023",
+      "difficulty": "medium",
+      "key_facts": [
+        "The School Principal is critical for setting the vision and culture, and ensuring its translation into practice."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:03.317881"
+    },
+    {
+      "id": "a34cd0fe-d627-4008-b8f3-4f535668abbd",
+      "created_at": "2026-10-18T14:11:05.607881",
+      "question_hindi": "सामाजिक विज्ञान के वर्णन को चरण से मिलाइए:\n(A) प्रारंभिक चरण\n(B) मध्य चरण\n(C) कक्षा 9–10\n(D) कक्षा 11–12।\n(1) विभिन्न अनुशासनों में विकल्प-आधारित गहन अध्ययन\n(2) “हमारे आसपास की दुनिया” में स्थानीय समाज\n(3) इतिहास, भूगोल, राजनीति विज्ञान और अर्थशास्त्र अलग विषय, साथ में एकीकृत दृष्टिकोण\n(4) अलग विषय, विषयगत संगठन और अनेक अनुशासनात्मक दृष्टिकोण।",
+      "options_hindi": [
+        "A-2, B-4, C-3, D-1",
+        "A-4, B-2, C-1, D-3",
+        "A-2, B-3, C-4, D-1",
+        "A-1, B-4, C-3, D-2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Match the stage with the treatment of Social Science described by NCF-SE:\n(A) Preparatory Stage\n(B) Middle Stage\n(C) Grades 9–10\n(D) Grades 11–12.\n(1) Choice-based in-depth study across a range of disciplines\n(2) Local society within The World Around Us\n(3) Separate History, Geography, Political Science and Economics subjects, with integrated lenses\n(4) Separate subject with thematic organisation and multiple disciplinary lenses.",
+      "options_english": [
+        "A-2, B-4, C-3, D-1",
+        "A-4, B-2, C-1, D-3",
+        "A-2, B-3, C-4, D-1",
+        "A-1, B-4, C-3, D-2"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "NCF-SE describes a progression from local interdisciplinary study to a separate thematic subject, then distinct disciplines and later choice-based depth.",
+      "explanation_hindi": "NCF-SE स्थानीय अंतर्विषयी अध्ययन से अलग विषय, फिर अलग अनुशासनों और अंततः विकल्प-आधारित गहन अध्ययन तक प्रगति बताता है।",
+      "topic": "NCF 2023",
+      "difficulty": "medium",
+      "key_facts": [
+        "In the Preparatory Stage, the students study society as part of their local environment through the interdisciplinary subject of The World Around Us."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:05.617881"
+    },
+    {
+      "id": "284d9126-597f-476b-9029-e737ba3a5b02",
+      "created_at": "2026-10-18T14:11:10.207881",
+      "question_hindi": "NCF-SE में सामाजिक विज्ञान की अन्वेषण-प्रक्रिया के उद्देश्य पर कथनों पर विचार कीजिए:\n1. विद्यार्थियों को अन्वेषण-पद्धतियों का उपयोग कर सूचित मत बनाना चाहिए।\n2. विद्यार्थियों से समाज की समकालीन चिंताओं के लिए सार्थक प्रतिक्रियाएँ प्रस्तावित करने की अपेक्षा की जा सकती है।\n3. समकालीन सामाजिक चिंताओं को सामाजिक विज्ञान के अधिगम से बाहर रखना चाहिए।\n4. केवल एक व्याख्या याद कर लेना अन्वेषण का पर्याप्त प्रमाण है।\nसही कथन कौन-से हैं?",
+      "options_hindi": [
+        "केवल 1 और 2",
+        "केवल 1 और 3",
+        "केवल 2 और 4",
+        "1, 2, 3 और 4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements about the purpose of Social Science inquiry in NCF-SE:\n1. Students should form informed opinions using inquiry methods.\n2. Students may be expected to propose meaningful responses to contemporary concerns of society.\n3. Contemporary social concerns should be excluded from Social Science learning.\n4. Memorising a single explanation is sufficient evidence of inquiry.\nWhich statements are correct?",
+      "options_english": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 4 only",
+        "1, 2, 3 and 4"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The framework expects students to use inquiry methods to form informed views and propose meaningful responses to contemporary concerns.",
+      "explanation_hindi": "रूपरेखा विद्यार्थियों से अन्वेषण-पद्धतियों द्वारा सूचित मत बनाने और समकालीन चिंताओं के लिए सार्थक प्रतिक्रियाएँ प्रस्तावित करने की अपेक्षा करती है।",
+      "topic": "NCF 2023",
+      "difficulty": "medium",
+      "key_facts": [
+        "forming informed opinions and demonstrating logical thinking; and proposing meaningful responses to contemporary concerns of society based on these methods of inquiry."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:10.217881"
+    },
     {
       "id": "416f0180-d7c5-4cba-816b-f6e2a8e0a2d3",
       "created_at": "2026-10-18T14:11:09.607881",
@@ -43,14 +265,14 @@
       "processed_at": "2026-10-18T14:11:09.617881"
     },
     {
-      "id": "f7e73777-d2db-4f4b-9d6f-daeadd7b3fc3",
-      "created_at": "2026-10-18T14:11:02.107881",
-      "question_hindi": "मूल्यांकन के रूप और उससे मिलने वाले विशेष प्रमाण का मिलान कीजिए।\n(A) प्रयोग\n(B) पोर्टफोलियो\n(C) वाद-विवाद/चर्चा\n(D) ओपन-बुक परीक्षा।\n(1) उपलब्ध जानकारी का प्रसंस्करण और अनुप्रयोग\n(2) वैज्ञानिक अवधारणाएँ और विधि\n(3) समय के साथ प्रगति दर्शाने वाला कार्य-संग्रह\n(4) तर्कपूर्ण विचार और विभिन्न दृष्टिकोणों पर विचार।",
+      "id": "6071a975-6a41-457a-8c18-36d095ca8d10",
+      "created_at": "2026-10-18T14:11:01.607881",
+      "question_hindi": "6–8 वर्ष के बच्चों की उदाहरणात्मक दिनचर्या में R1, R2 और गणित/संख्यात्मक कौशल के लिए NCF-SE कितना दैनिक समय बताता है?",
       "options_hindi": [
-        "A-2, B-3, C-4, D-1",
-        "A-3, B-2, C-1, D-4",
-        "A-2, B-4, C-3, D-1",
-        "A-1, B-3, C-2, D-4"
+        "R1 60 मिनट, R2 90 मिनट, गणित 30 मिनट",
+        "R1 90 मिनट, R2 60 मिनट, गणित/संख्यात्मक कौशल 60 मिनट",
+        "तीनों को 45 मिनट",
+        "केवल R1 के लिए दैनिक समय निर्धारित है"
       ],
       "option_labels": [
         "A",
@@ -61,512 +283,327 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Match the assessment form with the evidence it is particularly suited to gather.\n(A) Experiment\n(B) Portfolio\n(C) Debate/discussion\n(D) Open-book test.\n(1) Ability to process and apply available information\n(2) Scientific concepts and method\n(3) Progress over time from a purposeful collection of work\n(4) Reasoned arguments and consideration of viewpoints.",
+      "question_english": "In an illustrative routine for children aged 6–8, which allocation does NCF-SE specify for R1, R2 and Mathematics/numeracy?",
       "options_english": [
-        "A-2, B-3, C-4, D-1",
-        "A-3, B-2, C-1, D-4",
-        "A-2, B-4, C-3, D-1",
-        "A-1, B-3, C-2, D-4"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "Experiments assess doing science; portfolios show progress; debate assesses argumentation; open-book tests assess application and synthesis.",
-      "explanation_hindi": "प्रयोग से विज्ञान करने की क्षमता, पोर्टफोलियो से प्रगति, वाद-विवाद से तर्क-कौशल और ओपन-बुक परीक्षा से अनुप्रयोग/संश्लेषण का प्रमाण मिलता है।",
-      "topic": "NCF 2023",
-      "difficulty": "medium",
-      "key_facts": [
-        "These tests assess the ability to process or use available information and apply the same in various contexts."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:02.117881"
-    },
-    {
-      "id": "69793cdb-d2db-4dd5-a9aa-c0fdbf9a51a6",
-      "created_at": "2026-10-18T14:11:03.607881",
-      "question_hindi": "समावेशन के सिद्धांतों के साथ कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "समावेशी संस्कृति — सम्मानजनक संबंध और सुलभ संसाधन",
-        "प्रधानाचार्य — दृष्टि निर्धारित करने और समावेशन को व्यवहार में लाने में सहायता",
-        "कक्षा — प्रश्न पूछने, गलती करने और विचार आजमाने के लिए सुरक्षित",
-        "दिव्यांग समावेशन — पहुँच कठिन होने पर विद्यार्थियों को व्यावहारिक अधिगम से बाहर रखना चाहिए"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which pair is NOT correctly matched with the principles of inclusion?",
-      "options_english": [
-        "Inclusive culture — respectful relationships and accessible resources",
-        "Principal — helps set the vision and translate inclusion into practice",
-        "Classroom — safe for asking questions, making mistakes and trying ideas",
-        "Disability inclusion — students should be excluded from practical learning when access is difficult"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "NCF-SE calls for removing accessibility barriers and ensuring every student has full opportunity to learn; exclusion is contrary to this principle.",
-      "explanation_hindi": "NCF-SE सुलभता की बाधाएँ दूर कर हर विद्यार्थी के लिए सीखने के पूर्ण अवसर सुनिश्चित करने को कहता है; बहिष्करण इसके विपरीत है।",
-      "topic": "NCF 2023",
-      "difficulty": "medium",
-      "key_facts": [
-        "Schools must ensure that every student gets full opportunity and access to learn, and experience a sense of belonging."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:03.617881"
-    },
-    {
-      "id": "0caf6fd0-8d4a-45b6-9b51-4d2ce50909d6",
-      "created_at": "2026-10-18T14:11:05.007881",
-      "question_hindi": "NCF-SE गणित शिक्षा के साथ किन क्षमताओं को स्पष्ट रूप से जोड़ता है?",
-      "options_hindi": [
-        "तार्किक चिंतन, प्रतिरूप पहचानना, अनुमान और प्रमाण, समस्या-समाधान तथा सटीक संचार",
-        "केवल तेज गणना और याद की गई प्रक्रियाएँ",
-        "केवल ज्यामितीय चित्र बनाना",
-        "केवल प्रतियोगी परीक्षाओं की तैयारी"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which capabilities does NCF-SE explicitly associate with Mathematics Education?",
-      "options_english": [
-        "Logical thinking, pattern-finding, conjecture and proof, problem solving and precise communication",
-        "Only fast calculation and memorised procedures",
-        "Only geometric drawing",
-        "Only preparing for competitive examinations"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "The Mathematics chapter identifies reasoning, patterns, conjectures, proof, problem solving and communication as central capacities.",
-      "explanation_hindi": "गणित अध्याय तर्क, प्रतिरूप, अनुमान, प्रमाण, समस्या-समाधान और संचार को केंद्रीय क्षमताएँ बताता है।",
-      "topic": "NCF 2023",
-      "difficulty": "easy",
-      "key_facts": [
-        "Mathematics Education aims to develop capacities of logical thinking, finding patterns, explaining patterns, making, refuting, and proving conjectures"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:05.017881"
-    },
-    {
-      "id": "881f0be7-b1ee-48c4-974a-95456d94071d",
-      "created_at": "2026-10-18T14:11:07.807881",
-      "question_hindi": "विद्यार्थी पोर्टफोलियो के संबंध में कथनों पर विचार कीजिए:\n1. यह विद्यार्थी के कार्यों का उद्देश्यपूर्ण संग्रह होता है।\n2. यह समय के साथ प्रयास, प्रगति और उपलब्धि दिखा सकता है।\n3. इसमें केवल अंतिम परीक्षा का अंक दर्ज होता है।\n4. इसका उपयोग केवल सहपाठियों के विरुद्ध रैंक देने के लिए होना चाहिए।\nसही कथन कौन-से हैं?",
-      "options_hindi": [
-        "केवल 1 और 2",
-        "केवल 1 और 3",
-        "केवल 2 और 4",
-        "1, 2, 3 और 4"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements about a student portfolio:\n1. It is a purposeful collection of student work.\n2. It can show efforts, progress and achievement over time.\n3. It records only the final examination mark.\n4. It must be used solely to rank students against classmates.\nWhich statements are correct?",
-      "options_english": [
-        "1 and 2 only",
-        "1 and 3 only",
-        "2 and 4 only",
-        "1, 2, 3 and 4"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "A portfolio is a purposeful collection that tells a story of the student’s efforts, progress and achievement; it is not just a final score.",
-      "explanation_hindi": "पोर्टफोलियो विद्यार्थी के प्रयास, प्रगति और उपलब्धि की कहानी बताने वाला उद्देश्यपूर्ण संग्रह है; यह केवल अंतिम अंक नहीं है।",
-      "topic": "NCF 2023",
-      "difficulty": "medium",
-      "key_facts": [
-        "A student portfolio is a purposeful collection of student work that tells a story about a student’s efforts, progress, and achievement"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:07.817881"
-    },
-    {
-      "id": "bd39142c-51e5-468d-ad38-197a647376be",
-      "created_at": "2026-10-18T14:11:06.807881",
-      "question_hindi": "कक्षा 11–12 के बारे में कौन-सा कथन NCF-SE की एक सूक्ष्म लेकिन महत्त्वपूर्ण सीमा बताता है?",
-      "options_hindi": [
-        "NCF-SE कक्षा 11–12 के प्रत्येक विषय के सभी विस्तृत चरणीय अधिगम मानक और अधिगम परिणाम देता है",
-        "NCF-SE व्यापक पाठ्यचर्या उद्देश्य बताता है, लेकिन कक्षा 11–12 के विषय-विशिष्ट दक्षता और अधिगम परिणाम पाठ्यक्रम-निर्माताओं पर छोड़ता है",
-        "NCF-SE कक्षा 11–12 को पाठ्यचर्या से बाहर रखता है",
-        "कक्षा 11–12 के सभी विषयों के मानक समान हैं"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which statement about Grades 11 and 12 is a subtle but important limitation of NCF-SE itself?",
-      "options_english": [
-        "NCF-SE provides every subject’s fully specified stage Learning Standards and all LOs for Grades 11–12",
-        "NCF-SE states broad curricular aims but leaves subject-specific competencies and Learning Outcomes for Grades 11–12 to syllabus developers",
-        "NCF-SE excludes Grades 11–12 from the curriculum",
-        "All Grade 11–12 subject standards are identical across disciplines"
+        "R1 60 minutes, R2 90 minutes, Mathematics 30 minutes",
+        "R1 90 minutes, R2 60 minutes, Mathematics/numeracy 60 minutes",
+        "All three receive 45 minutes",
+        "Only R1 receives a dedicated daily block"
       ],
       "correct_answer": "b",
-      "explanation_english": "The framework does not specify all Grade 11–12 Learning Standards subject by subject; syllabus developers must articulate competencies and outcomes.",
-      "explanation_hindi": "रूपरेखा कक्षा 11–12 के सभी विषय-विशिष्ट अधिगम मानक निर्धारित नहीं करती; दक्षताएँ और परिणाम पाठ्यक्रम-निर्माताओं को स्पष्ट करने हैं।",
-      "topic": "NCF 2023",
-      "difficulty": "hard",
-      "key_facts": [
-        "This NCF states the broad aims for the Curricular Areas and does not specify the Learning Standards for Grades 11 and 12 that must be achieved in each subject."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:06.817881"
-    },
-    {
-      "id": "99063d94-b1be-42e1-b21c-4fcd9da12289",
-      "created_at": "2026-10-18T14:11:07.007881",
-      "question_hindi": "कक्षा 9–10 और 11–12 के बीच सामग्री-संग्रह में NCF-SE कौन-सा बदलाव बताता है?",
-      "options_hindi": [
-        "कक्षा 9–10 में पाठ्यपुस्तकें महत्त्वपूर्ण हैं; कक्षा 11–12 में अनेक स्रोतों से सामग्री लेने को प्रोत्साहन और पाठ्य-संकलनों का उपयोग हो सकता है",
-        "कक्षा 9–10 में पाठ्यपुस्तकें निषिद्ध हैं",
-        "कक्षा 11–12 में केवल शिक्षक का श्रुतलेख अनुमत है",
-        "हर चरण में सामग्री का स्रोत एक जैसा और निश्चित है"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "What shift in content sourcing does NCF-SE describe between Grades 9–10 and Grades 11–12?",
-      "options_english": [
-        "Textbooks are central in Grades 9–10; in Grades 11–12 students should be encouraged to use multiple channels and course compendiums may be used",
-        "Textbooks are prohibited in Grades 9–10",
-        "Only teacher dictation is permitted in Grades 11–12",
-        "The source of content is identical and fixed at every stage"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "The framework gives textbooks a significant organising role in Grades 9–10 and supports multiple channels and compendiums later.",
-      "explanation_hindi": "रूपरेखा कक्षा 9–10 में पाठ्यपुस्तकों की महत्त्वपूर्ण भूमिका बताती है और बाद में अनेक स्रोतों तथा पाठ्य-संकलनों का समर्थन करती है।",
+      "explanation_english": "The text assigns 90 minutes daily to R1 and 60 minutes each to R2 and Mathematics/numeracy for ages 6–8.",
+      "explanation_hindi": "पाठ में 6–8 वर्ष के बच्चों के लिए R1 को 90 मिनट तथा R2 और गणित/संख्यात्मक कौशल को 60-60 मिनट प्रतिदिन दिए गए हैं।",
       "topic": "NCF 2023",
       "difficulty": "medium",
       "key_facts": [
-        "In Grades 11 and 12, students should be encouraged to source content from multiple channels."
+        "R1 would need 90 minutes every day and R2 would need 60 minutes. Mathematics and numeracy would require 60 minutes a day."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:07.017881"
+      "processed_at": "2026-10-18T14:11:01.617881"
     },
     {
-      "id": "9f883c2d-b84e-4237-baca-a1351d8f7651",
-      "created_at": "2026-10-18T14:11:09.407881",
-      "question_hindi": "NCF-SE के व्यावहारिक डिज़ाइन सिद्धांत पर कथनों पर विचार कीजिए:\n1. यह वास्तविक विद्यालयों में उपलब्ध समय, संसाधनों और शिक्षकों की उपलब्धता पर विचार करता है।\n2. यह क्षमता की परवाह किए बिना आदर्श मॉडल को तुरंत अपनाने की माँग करता है।\n3. यह वर्तमान परिस्थितियों से आदर्श स्थिति तक पहुँचने का यथार्थवादी, चरणबद्ध रास्ता चाहता है।\n4. यह बहु-कक्षा और बहु-स्तरीय शिक्षण को अप्रासंगिक मानता है।\nसही कथन कौन-से हैं?",
-      "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 4",
-        "1, 2, 3 और 4"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements about the pragmatic design principle in NCF-SE:\n1. It considers the time, resources and teacher availability of real school contexts.\n2. It demands immediate adoption of an ideal model without regard to capacity.\n3. It seeks a realistic, stepwise pathway from current conditions towards the ideal.\n4. It treats multigrade and multilevel teaching as irrelevant.\nWhich statements are correct?",
-      "options_english": [
-        "1 and 3 only",
-        "1 and 2 only",
-        "2 and 4 only",
-        "1, 2, 3 and 4"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "The framework balances idealism and pragmatism, recognises constraints such as multigrade teaching and resources, and proposes stepwise movement towards the ideal.",
-      "explanation_hindi": "रूपरेखा आदर्शवाद और व्यावहारिकता में संतुलन रखती है, बहु-कक्षा शिक्षण और संसाधनों जैसी सीमाओं को पहचानती है तथा आदर्श की ओर चरणबद्ध प्रगति का प्रस्ताव करती है।",
-      "topic": "NCF 2023",
-      "difficulty": "hard",
-      "key_facts": [
-        "provide a realistic pathway to the ideal from the current reality, in steps, taking into account the resources available to the teacher"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:09.417881"
-    },
-    {
-      "id": "ff271af9-7a25-4d53-a8e5-ba6654ba6fab",
-      "created_at": "2026-10-18T14:11:09.807881",
-      "question_hindi": "शिक्षकों को सक्षम बनाने संबंधी NCF-SE प्रावधानों के साथ कौन-सा युग्म सही सुमेलित नहीं है?",
-      "options_hindi": [
-        "शिक्षक स्वायत्तता — शैक्षिक उद्देश्यों के लिए कक्षा की वास्तविकताओं के अनुरूप प्रतिक्रिया देना",
-        "शिक्षक व्यावसायिक विकास — निरंतर सुधार में सहायता",
-        "प्रधान शिक्षक और प्रधानाचार्य — विद्यालयी ethos और शैक्षिक अभ्यासों में केंद्रीय भूमिका",
-        "उपयुक्त विद्यार्थी–शिक्षक अनुपात — सहभागिता और उपलब्धि से अप्रासंगिक"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which pair is NOT correctly matched with the NCF-SE provisions for enabling teachers?",
-      "options_english": [
-        "Teacher autonomy — respond to classroom realities to achieve educational aims",
-        "Teacher Professional Development — supports continuous improvement",
-        "Head teachers and Principals — central role in ethos and educational practices",
-        "Appropriate pupil–teacher ratio — irrelevant to engagement and achievement"
-      ],
-      "correct_answer": "d",
-      "explanation_english": "NCF-SE says an appropriate pupil–teacher ratio must be maintained to enable student engagement and achievement.",
-      "explanation_hindi": "NCF-SE कहता है कि विद्यार्थी सहभागिता और उपलब्धि के लिए उपयुक्त विद्यार्थी–शिक्षक अनुपात बनाए रखना चाहिए.",
-      "topic": "NCF 2023",
-      "difficulty": "medium",
-      "key_facts": [
-        "Appropriate PTR must be maintained to enable student engagement and achievement."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:09.817881"
-    },
-    {
-      "id": "f74e53a0-7e54-45f1-87e6-99ecbafe2409",
-      "created_at": "2026-10-18T14:11:01.007881",
-      "question_hindi": "सकारात्मक अधिगम आदतों के मानक निर्धारित करने के अतिरिक्त, आधारभूत चरण में अधिगम मानकों को व्यवस्थित करने के लिए विकास के किन क्षेत्रों का उपयोग किया गया है?",
-      "options_hindi": [
-        "शारीरिक; सामाजिक-भावनात्मक एवं नैतिक; संज्ञानात्मक; सौंदर्यात्मक एवं सांस्कृतिक; तथा भाषा एवं साक्षरता विकास",
-        "केवल भाषा, साक्षरता और संख्यात्मकता",
-        "केवल शारीरिक और संज्ञानात्मक विकास",
-        "पूरे विद्यालयी पाठ्यक्रम के सात पाठ्यचर्या क्षेत्र"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Besides setting standards for positive learning habits, which set of developmental domains is used to organise Learning Standards in the Foundational Stage?",
-      "options_english": [
-        "Physical; socio-emotional and ethical; cognitive; aesthetic and cultural; and language and literacy development",
-        "Only language, literacy and numeracy",
-        "Only physical and cognitive development",
-        "The seven curricular areas used across the full school curriculum"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "The Foundational Stage uses five developmental domains—physical; socio-emotional and ethical; cognitive; aesthetic and cultural; and language and literacy—along with standards for positive learning habits.",
-      "explanation_hindi": "आधारभूत चरण में पाँच विकासात्मक क्षेत्रों—शारीरिक; सामाजिक-भावनात्मक एवं नैतिक; संज्ञानात्मक; सौंदर्यात्मक एवं सांस्कृतिक; तथा भाषा एवं साक्षरता—के साथ सकारात्मक अधिगम आदतों के मानक भी हैं।",
-      "topic": "NCF 2023",
-      "difficulty": "easy",
-      "key_facts": [
-        "Physical Development, Socio-emotional and Ethical Development, Cognitive Development, Aesthetic and Cultural Development, and Language and Literacy Development."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:01.017881"
-    },
-    {
-      "id": "09036182-9b9b-4528-9437-732810979d1c",
-      "created_at": "2026-10-18T14:11:05.407881",
-      "question_hindi": "वैज्ञानिक जाँच-पड़ताल और विषयवस्तु के भार के प्रति NCF-SE के दृष्टिकोण को कौन-सा कथन सही रूप में व्यक्त करता है?",
-      "options_hindi": [
-        "विषयों का तथ्यात्मक कवरेज प्राथमिक होना चाहिए, भले विद्यार्थी घटनाओं की जाँच न कर सकें",
-        "विज्ञान वैज्ञानिक जाँच की क्षमताओं को समान महत्त्व देता है और अनावश्यक भार से बचने के लिए सामग्री को मूल आवश्यक तत्वों तक सीमित करता है",
-        "विज्ञान केवल माध्यमिक चरण में शुरू होता है",
-        "विज्ञान मूल्यांकन में जाँच-पड़ताल के बजाय परिभाषाएँ जाँची जानी चाहिए"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which statement best captures the NCF-SE approach to scientific inquiry and content load?",
-      "options_english": [
-        "Science should prioritise factual coverage even if students cannot investigate phenomena",
-        "Science gives equal emphasis to acquiring capacities for scientific inquiry and limits content to core essentials to avoid undue burden",
-        "Science is introduced only in the Secondary Stage",
-        "Science assessment should test definitions rather than inquiry capacities"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "The framework emphasizes both scientific inquiry capacities and selection of content limited to core essentials.",
-      "explanation_hindi": "रूपरेखा वैज्ञानिक जाँच की क्षमताओं और विषयवस्तु को मूल आवश्यक तत्वों तक सीमित रखने, दोनों पर बल देती है।",
-      "topic": "NCF 2023",
-      "difficulty": "hard",
-      "key_facts": [
-        "Science Education gives equal emphasis to acquiring capacities for scientific inquiry"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:05.417881"
-    },
-    {
-      "id": "7485b58c-3875-4649-81ce-5a813fd61868",
-      "created_at": "2026-10-18T14:11:09.907881",
-      "question_hindi": "एक डिजिटल मंच सिमुलेशन उपलब्ध कराता है, लेकिन विद्यालय में कनेक्टिविटी कमजोर है, वैकल्पिक पहुँच नहीं और शिक्षक तैयारी भी नहीं। NCF-SE के आधार पर सबसे उचित निष्कर्ष क्या है?",
-      "options_hindi": [
-        "डिजिटल सामग्री की उपलब्धता मात्र से समान अधिगम सुनिश्चित हो जाता है",
-        "ICT पर निर्भर होने से पहले डिजिटल विभाजन, संदर्भानुकूल उपयोग और शिक्षक तैयारी पर विचार करना चाहिए",
-        "विज्ञान या गणित में अंतःक्रियात्मक सामग्री कभी उपयोगी नहीं होती",
-        "डिजिटल सामग्री लेने के बाद सभी भौतिक संसाधन हटा देने चाहिए"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "A digital platform makes simulations available but a school has poor connectivity, no access alternatives and no teacher preparation. Which inference is best supported by NCF-SE?",
-      "options_english": [
-        "Availability of digital content alone guarantees equitable learning",
-        "The school must consider the digital divide, context-appropriate use and teacher preparation before relying on ICT",
-        "Interactive content is never useful in Science or Mathematics",
-        "All physical resources should be removed once digital content is acquired"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "NCF-SE identifies digital inequality, says no technology method fits all and stresses teacher preparation for effective ICT use.",
-      "explanation_hindi": "NCF-SE डिजिटल असमानता को पहचानता है, कहता है कि कोई तकनीकी पद्धति सब पर लागू नहीं होती और ICT के लिए शिक्षक तैयारी पर बल देता है।",
-      "topic": "NCF 2023",
-      "difficulty": "hard",
-      "key_facts": [
-        "The digital divide is real. Not everyone can have access to the same technology."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:09.917881"
-    },
-    {
-      "id": "2fbc2c09-62f7-4336-b031-0bbd7a6d50a9",
-      "created_at": "2026-10-18T14:11:02.907881",
-      "question_hindi": "एक विद्यालय साप्ताहिक व्याख्यान में संवैधानिक और नैतिक मूल्यों की सूची पढ़ाता है, लेकिन दैनिक व्यवहार में धमकाने और भेदभाव को सहन करता है। NCF-SE से कौन-सा निष्कर्ष सबसे मजबूत है?",
-      "options_hindi": [
-        "व्याख्यान पर्याप्त है क्योंकि मूल्य केवल विषयवस्तु हैं",
-        "विद्यालयी संस्कृति और व्यवहार पढ़ाए गए मूल्यों का खंडन भी कर सकते हैं या उन्हें मजबूत भी कर सकते हैं",
-        "धमकाने का पाठ्यचर्या से कोई संबंध नहीं है",
-        "मूल्यों का मूल्यांकन केवल MCQ परीक्षा से होना चाहिए"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "A school teaches a list of constitutional and ethical values in a weekly lecture but its daily practices tolerate bullying and discrimination. Which NCF-SE inference is strongest?",
-      "options_english": [
-        "The lecture is sufficient because values are content only",
-        "School culture and practices may contradict or reinforce the values taught explicitly",
-        "Bullying is unrelated to the curriculum",
-        "Values should be assessed only through an MCQ test"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "NCF-SE treats culture and practices as integral to value development; content alone may be insufficient.",
-      "explanation_hindi": "NCF-SE मूल्य-विकास में संस्कृति और व्यवहार को अभिन्न मानता है; केवल पाठ्य सामग्री पर्याप्त नहीं हो सकती।",
-      "topic": "NCF 2023",
-      "difficulty": "hard",
-      "key_facts": [
-        "that may not be developed as effectively through ‘curriculum content’ alone."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:02.917881"
-    },
-    {
-      "id": "ddaadf09-9136-415d-ba7d-c1c2c2f8232b",
-      "created_at": "2026-10-18T14:11:04.107881",
-      "question_hindi": "डिजिटल विभाजन और विद्यालयों में ICT के उपयोग के संबंध में कथनों पर विचार कीजिए:\n1. सभी विद्यार्थियों की तकनीक तक समान पहुँच नहीं है।\n2. किसी संसाधन को ऑनलाइन उपलब्ध करा देना अपने आप यह सिद्ध करता है कि हर विद्यार्थी उसका उपयोग कर सकता है।\n3. तकनीकी योजना में पहुँच के विभिन्न स्तरों और रूपों पर विचार करना चाहिए।\n4. इसलिए NCF-SE सभी शैक्षिक तकनीक पर प्रतिबंध लगाने की माँग करता है।\nसही कथन कौन-से हैं?",
-      "options_hindi": [
-        "केवल 1 और 3",
-        "केवल 1 और 2",
-        "केवल 2 और 4",
-        "1, 2, 3 और 4"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Consider the following statements about the digital divide and school ICT use:\n1. Not all learners have access to the same technology.\n2. Making a resource available online, by itself, proves that every student can use it.\n3. Technology plans should consider different levels and forms of access.\n4. NCF-SE therefore requires banning all educational technology.\nWhich statements are correct?",
-      "options_english": [
-        "1 and 3 only",
-        "1 and 2 only",
-        "2 and 4 only",
-        "1, 2, 3 and 4"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "The framework acknowledges unequal access and calls for context-sensitive use; it does not require a universal ban on ICT.",
-      "explanation_hindi": "रूपरेखा तकनीक तक असमान पहुँच को स्वीकार करती है और संदर्भानुकूल उपयोग की बात करती है; यह ICT पर सार्वभौमिक प्रतिबंध नहीं लगाती।",
-      "topic": "NCF 2023",
-      "difficulty": "medium",
-      "key_facts": [
-        "Not everyone can have access to the same technology."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:04.117881"
-    },
-    {
-      "id": "425ccec2-0a99-4084-aacc-1c66b289f9be",
-      "created_at": "2026-10-18T14:11:10.007881",
-      "question_hindi": "विज्ञान और गणित में अवधारणात्मक समझ सुधारने की संभावित क्षमता किस डिजिटल उपयोग में बताई गई है?",
-      "options_hindi": [
-        "सभी शिक्षकों को स्वचालित अंकन से बदलना",
-        "डिजिटल सिमुलेशन जो अवधारणाओं के साथ जुड़ाव को अधिक व्यावहारिक और गतिशील बनाते हैं",
-        "पाठ्यचर्या से सभी व्यावहारिक प्रदर्शन हटाना",
-        "उपकरणों का उपयोग केवल अंक दिखाने के लिए करना"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which use of digital tools is specifically identified as potentially improving conceptual understanding in Science and Mathematics?",
-      "options_english": [
-        "Replacing all teachers with automated scoring",
-        "Digital simulations that make engagement with concepts more hands-on and dynamic",
-        "Removing practical demonstrations from the curriculum",
-        "Using devices only to display marks"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "The ICT chapter notes that digital simulations can make Science and Mathematics concepts more hands-on and dynamic.",
-      "explanation_hindi": "ICT अध्याय कहता है कि डिजिटल सिमुलेशन विज्ञान और गणित की अवधारणाओं को अधिक व्यावहारिक और गतिशील बना सकते हैं।",
-      "topic": "NCF 2023",
-      "difficulty": "easy",
-      "key_facts": [
-        "In Curricular Areas, such as, Science and Mathematics, digital simulations can make engagement with concepts more hands-on and dynamic"
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:10.017881"
-    },
-    {
-      "id": "2fc8e18f-61fa-46d2-b964-ac1a7c844f36",
-      "created_at": "2026-10-18T14:11:04.807881",
-      "question_hindi": "NCF-SE के भाषा अध्याय में शिक्षण-माध्यम (MoI) के संबंध में कथनों पर विचार कीजिए:\n1. कक्षा 12 तक शिक्षण-माध्यम के विकल्प के रूप में एक भारतीय भाषा उपलब्ध होनी चाहिए।\n2. कक्षा 5 के बाद केवल अंग्रेज़ी ही अनुमत शिक्षण-माध्यम है।\n3. कक्षा 8 के बाद भाषा का विकल्प समाप्त हो जाना चाहिए।\n4. रूपरेखा उच्चतर माध्यमिक शिक्षा में भारतीय भाषाओं को विकल्प के रूप में निषिद्ध करती है।\nसही कथन कौन-सा है?",
+      "id": "a57ce5af-edb3-4f10-aa93-8dafd2567528",
+      "created_at": "2026-10-18T14:11:04.707881",
+      "question_hindi": "“भाषा” और “बोली” के संबंध में NCF-SE के दृष्टिकोण पर कथनों पर विचार कीजिए:\n1. संबंधित संदर्भ में रूपरेखा इनके बीच कठोर भेद नहीं करती।\n2. केवल व्यापक लिखित संसाधनों वाली भाषाएँ ही संचार या साहित्य का माध्यम बन सकती हैं।\n3. संचार या साहित्य में प्रयुक्त क्षेत्रीय रूपों को स्वतः अधिगम से बाहर रखा जाता है।\n4. मौखिक भाषा भाषा-शिक्षा के दायरे से बाहर है।\nसही कथन कौन-सा है?",
       "options_hindi": [
         "केवल 1",
         "केवल 1 और 2",
+        "केवल 2 और 3",
+        "1, 2 और 4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements about how NCF-SE treats “languages” and “dialects”:\n1. It does not impose a distinction between them in the context described.\n2. Only languages with extensive written resources can support communication or literature.\n3. Regional forms used for communication or literature are automatically excluded from learning.\n4. Oral language is outside the scope of language education.\nWhich statement is correct?",
+      "options_english": [
+        "1 only",
+        "1 and 2 only",
+        "2 and 3 only",
+        "1, 2 and 4"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "NCF-SE explicitly states that it does not make distinctions between “languages” and “dialects” in the described context.",
+      "explanation_hindi": "NCF-SE स्पष्ट रूप से कहता है कि वर्णित संदर्भ में “भाषा” और “बोली” के बीच भेद नहीं किया जाता।",
+      "topic": "NCF 2023",
+      "difficulty": "medium",
+      "key_facts": [
+        "In this NCF, we do not make any distinctions between ‘languages’ and ‘dialects’"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:04.717881"
+    },
+    {
+      "id": "66eb5783-13e8-4c27-9aa8-4f4ce805087a",
+      "created_at": "2026-10-18T14:11:06.607881",
+      "question_hindi": "कक्षा 11–12 में विषय-चयन के संबंध में कथनों पर विचार कीजिए:\n1. विकल्प-आधारित पाठ्यक्रम लचीलापन बढ़ाने और विषयों के कठोर विभाजन हटाने के लिए हैं।\n2. विद्यार्थियों को अनिवार्य रूप से कला, वाणिज्य या विज्ञान की निश्चित धारा चुननी होगी।\n3. पाठ्यक्रम-निर्माताओं को यह नहीं मानना चाहिए कि विद्यार्थी पारंपरिक रूप से पूरक विषय ही चुनेंगे।\n4. प्रत्येक स्थिति में विद्यार्थियों को तीनों गैर-भाषा समूहों से विषय लेने ही होंगे।\nसही कथन कौन-से हैं?",
+      "options_hindi": [
+        "केवल 1 और 3",
+        "केवल 1 और 2",
+        "केवल 2 और 4",
+        "1, 2, 3 और 4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements about subject choice in Grades 11–12:\n1. Choice-based courses aim to increase flexibility and remove hard separations between disciplines.\n2. Students must choose a fixed Arts, Commerce or Science stream.\n3. Course designers should not assume that students will choose traditionally complementary subjects.\n4. Students must choose subjects from all three non-language groups in every case.\nWhich statements are correct?",
+      "options_english": [
+        "1 and 3 only",
+        "1 and 2 only",
+        "2 and 4 only",
+        "1, 2, 3 and 4"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "NCF-SE promotes flexibility and warns designers not to assume students will choose complementary subjects; its stated minimum is subjects from at least two of the three groups, not necessarily all three.",
+      "explanation_hindi": "NCF-SE लचीलेपन को बढ़ावा देता है और पूरक विषयों की पूर्वधारणा से सावधान करता है; न्यूनतम अपेक्षा तीन समूहों में से कम-से-कम दो समूहों से विषय चुनना है, तीनों से अनिवार्य रूप से नहीं।",
+      "topic": "NCF 2023",
+      "difficulty": "medium",
+      "key_facts": [
+        "Choice-based courses are to be offered to enable flexibility and choice for students and to remove hard separations between disciplines and academic areas."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:06.617881"
+    },
+    {
+      "id": "3fe36377-1515-4543-9f41-e30320c65682",
+      "created_at": "2026-10-18T14:11:04.207881",
+      "question_hindi": "NCF-SE में उल्लिखित डिजिटल शिक्षण-पद्धतियों के बारे में कथनों पर विचार कीजिए:\n1. फ्लिप्ड, ब्लेंडेड, वैयक्तिकृत और गेम-आधारित अधिगम कुछ संदर्भों में प्रभावी हो सकते हैं।\n2. एक ही विधि या तकनीक प्रत्येक संदर्भ के लिए उपयुक्त होती है।\n3. विद्यार्थियों और विद्यालयों के लिए उचित विकल्प चुनने हेतु शिक्षकों की तैयारी आवश्यक है।\n4. डिजिटल साधन शिक्षक के विवेक की आवश्यकता समाप्त कर देते हैं।\nसही कथन कौन-से हैं?",
+      "options_hindi": [
+        "केवल 1 और 3",
+        "केवल 1 और 2",
+        "केवल 2 और 4",
+        "1, 2, 3 और 4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements about digital pedagogical practices mentioned in NCF-SE:\n1. Flipped, blended, personalised and game-based learning may each be effective in some contexts.\n2. One method or use of technology fits every context.\n3. Teachers need preparation to make suitable choices for their students and schools.\n4. Digital tools remove the need for teacher judgement.\nWhich statements are correct?",
+      "options_english": [
+        "1 and 3 only",
+        "1 and 2 only",
+        "2 and 4 only",
+        "1, 2, 3 and 4"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "NCF-SE notes that technology-enabled approaches differ in effectiveness by context and that teacher preparation is critical for good choices.",
+      "explanation_hindi": "NCF-SE के अनुसार तकनीक-सक्षम पद्धतियों की प्रभावशीलता संदर्भ के अनुसार बदलती है और सही विकल्प चुनने के लिए शिक्षक-तैयारी आवश्यक है।",
+      "topic": "NCF 2023",
+      "difficulty": "medium",
+      "key_facts": [
+        "There is no method or use of technology that fits all."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:04.217881"
+    },
+    {
+      "id": "4315ab09-a82a-4f02-b54e-e35850e1e5cf",
+      "created_at": "2026-10-18T14:11:08.707881",
+      "question_hindi": "कार्यान्वयन हेतु क्षमता-विकास के कार्यक्रम बनाने और लागू करने के लिए किस संस्था का विशेष उल्लेख है?",
+      "options_hindi": [
+        "SCERTs",
+        "केवल स्वतंत्र रूप से कार्य करने वाले विद्यालय",
+        "केवल विद्यालय प्रबंधन समिति",
+        "केवल निजी प्रकाशक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which institution is specifically mentioned as able to design and implement relevant programmes for implementation capacity building?",
+      "options_english": [
+        "SCERTs",
+        "Only individual schools acting independently",
+        "Only the school management committee",
+        "Private publishers exclusively"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The implementation chapter points to institutions such as SCERTs for relevant programmes.",
+      "explanation_hindi": "कार्यान्वयन अध्याय उपयुक्त कार्यक्रमों के लिए SCERT जैसी संस्थाओं का उल्लेख करता है।",
+      "topic": "NCF 2023",
+      "difficulty": "medium",
+      "key_facts": [
+        "Relevant programmes must be designed and implemented by institutions, such as, the SCERTs."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:08.717881"
+    },
+    {
+      "id": "1a962d0c-d300-4625-a7a2-5c14f50b9710",
+      "created_at": "2026-10-18T14:11:03.707881",
+      "question_hindi": "मार्गदर्शन और परामर्श अध्याय में “मार्गदर्शन” की सबसे उपयुक्त परिभाषा कौन-सी है?",
+      "options_hindi": [
+        "विद्यार्थी की जगह निर्णय करना ताकि उसे निर्णय न लेना पड़े",
+        "व्यक्ति को स्वयं सक्षम बनाने और अपने निर्णय लेने में सहायता करना",
+        "केवल अनुशासनात्मक चेतावनी देना",
+        "हर कक्षा में पढ़ाया जाने वाला अलग अनिवार्य विषय"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which definition best captures “guidance” in the NCF-SE chapter on Guidance and Counselling?",
+      "options_english": [
+        "Making decisions for a learner so they need not decide themselves",
+        "Assisting individuals to enable themselves and make their own decisions",
+        "Providing only disciplinary warnings",
+        "A separate compulsory subject taught to every class"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Guidance is supportive engagement enabling individuals to find direction for their own decisions and actions.",
+      "explanation_hindi": "मार्गदर्शन सहयोगात्मक प्रक्रिया है जो व्यक्ति को अपने निर्णय और कार्रवाई के लिए दिशा खोजने में सक्षम बनाती है।",
+      "topic": "NCF 2023",
+      "difficulty": "medium",
+      "key_facts": [
+        "Guidance can be broadly defined as the process of assisting individuals to enable themselves."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:03.717881"
+    },
+    {
+      "id": "0349e250-2f2d-4e2f-a871-d876a0e64f04",
+      "created_at": "2026-10-18T14:11:08.307881",
+      "question_hindi": "समय-सारणी, प्रार्थना-सभा, पुस्तकालय गतिविधियाँ, विद्यार्थी मंच और उत्सव किस विद्यालयी प्रक्रिया-श्रेणी में आते हैं?",
+      "options_hindi": [
+        "संगठनात्मक प्रक्रियाएँ",
+        "पाठ्यचर्या-संबद्ध प्रक्रियाएँ",
+        "पाठ्यचर्या प्रक्रियाएँ",
+        "बाहरी प्रत्यायन प्रक्रियाएँ"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which category of school process includes a timetable, assembly, library-related activities, student forums and celebrations?",
+      "options_english": [
+        "Organisational processes",
+        "Curriculum-associated processes",
+        "Curricular processes",
+        "External accreditation processes"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The framework places timetable, assembly, library, forums, events and celebrations under curricular processes.",
+      "explanation_hindi": "रूपरेखा समय-सारणी, सभा, पुस्तकालय, मंच, आयोजन और उत्सव को पाठ्यचर्या प्रक्रियाओं में रखती है।",
+      "topic": "NCF 2023",
+      "difficulty": "medium",
+      "key_facts": [
+        "Curricular processes, which includes school timetable, assembly, library related, student committees, forums, events and celebrations."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:08.317881"
+    },
+    {
+      "id": "e9f41a32-7de8-4467-9359-0927292bb65f",
+      "created_at": "2026-10-18T14:11:03.507881",
+      "question_hindi": "समावेशन के प्रति NCF-SE के दृष्टिकोण का मूल सिद्धांत कौन-सा है?",
+      "options_hindi": [
+        "प्रत्येक बच्चा सीखने में सक्षम है",
+        "केवल उच्च अंक वाले विद्यार्थियों को सहायता मिलनी चाहिए",
+        "दिव्यांग विद्यार्थियों को पाठ्यचर्या संसाधनों से अलग रखना चाहिए",
+        "विद्यालयी संस्कृति का विद्यार्थी परिणामों पर कोई प्रभाव नहीं होता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which principle is fundamental to NCF-SE’s approach to inclusion?",
+      "options_english": [
+        "Every child is capable of learning",
+        "Only students with high marks should receive support",
+        "Students with disabilities should be separated from curricular resources",
+        "School culture has no effect on student outcomes"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The framework begins inclusion from the belief that every child can learn and is helped by being respected and involved.",
+      "explanation_hindi": "रूपरेखा इस विश्वास से समावेशन शुरू करती है कि प्रत्येक बच्चा सीख सकता है और सम्मान तथा सहभागिता से बेहतर सीखता है।",
+      "topic": "NCF 2023",
+      "difficulty": "easy",
+      "key_facts": [
+        "All education begins with the foundational principle that every child is capable of learning."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:03.517881"
+    },
+    {
+      "id": "3a4a4f94-f4c2-40b7-af54-cdafbbcaf9f5",
+      "created_at": "2026-10-18T14:11:06.207881",
+      "question_hindi": "कौन-सा विद्यालयी अभ्यास शारीरिक शिक्षा और कल्याण को समग्र अधिगम से सबसे स्पष्ट रूप से जोड़ता है?",
+      "options_hindi": [
+        "केवल प्रतियोगी खिलाड़ियों को शारीरिक गतिविधि देना",
+        "शारीरिक गतिविधि, स्वास्थ्य और कल्याण को सभी विद्यार्थियों के लिए महत्त्वपूर्ण पाठ्यचर्या विषय मानना",
+        "खेल को केवल उच्च अंक का पुरस्कार बनाना",
+        "विद्यालयी योजना से कल्याण को बाहर रखना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which school practice most clearly aligns Physical Education and Well-being with holistic learning?",
+      "options_english": [
+        "Provide physical activity only to competitive athletes",
+        "Treat physical activity, health and well-being as meaningful curricular concerns for all students",
+        "Use sports only as a reward for high marks",
+        "Exclude well-being from school planning"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The framework identifies physical education, health and well-being as critical to holistic development.",
+      "explanation_hindi": "रूपरेखा शारीरिक शिक्षा, स्वास्थ्य और कल्याण को समग्र विकास के लिए महत्त्वपूर्ण मानती है।",
+      "topic": "NCF 2023",
+      "difficulty": "medium",
+      "key_facts": [
+        "Education across all subject areas, as well as in physical education, health, and well-being, is also critical for the holistic development of the individual."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:06.217881"
+    },
+    {
+      "id": "0d0bdb9d-93f1-4574-b0f0-20ccf4018091",
+      "created_at": "2026-10-18T14:11:01.707881",
+      "question_hindi": "मध्य चरण की शिक्षण-पद्धति पर कथनों पर विचार कीजिए:\n1. प्रत्यक्ष शिक्षण और जाँच-पड़ताल में विवेकपूर्ण संतुलन होना चाहिए।\n2. विद्यार्थियों को गलतियों से सीखने के अवसर मिलने चाहिए।\n3. औपचारिक मूल्यांकन का ध्यान फिर से केवल विषयवस्तु याद रखने पर होना चाहिए।\n4. चरणांत योगात्मक मूल्यांकन दक्षताओं पर आधारित होना चाहिए।\nसही कथन कौन-से हैं?",
+      "options_hindi": [
+        "केवल 1 और 2",
+        "केवल 1, 2 और 4",
         "केवल 2 और 3",
         "1, 2, 3 और 4"
       ],
@@ -579,33 +616,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Consider the following statements regarding medium of instruction (MoI) in the NCF-SE language chapter:\n1. An Indian language must be available as an MoI option through Grade 12.\n2. English is the only permissible MoI after Grade 5.\n3. Language choice must end after Grade 8.\n4. The framework rules out Indian languages as an option in senior secondary education.\nWhich statement is correct?",
+      "question_english": "Consider the following statements about pedagogy in the Middle Stage:\n1. Direct instruction and inquiry should be balanced judiciously.\n2. Students should have opportunities to learn from errors.\n3. Formal assessment should shift focus back to content retention.\n4. Summative assessment at the end of the stage should be based on competencies.\nWhich statements are correct?",
       "options_english": [
-        "1 only",
         "1 and 2 only",
+        "1, 2 and 4 only",
         "2 and 3 only",
         "1, 2, 3 and 4"
       ],
-      "correct_answer": "a",
-      "explanation_english": "The language chapter says that an Indian language must remain available as an option for the medium of instruction up to Grade 12.",
-      "explanation_hindi": "भाषा अध्याय कहता है कि कक्षा 12 तक शिक्षण-माध्यम के विकल्प के रूप में एक भारतीय भाषा उपलब्ध होनी चाहिए।",
+      "correct_answer": "b",
+      "explanation_english": "NCF-SE balances instruction with inquiry, values learning from errors, and bases stage-end summative assessment on competencies.",
+      "explanation_hindi": "NCF-SE प्रत्यक्ष शिक्षण और जाँच-पड़ताल का संतुलन, गलतियों से सीखने और चरणांत मूल्यांकन को दक्षताओं पर आधारित रखने की बात करता है।",
       "topic": "NCF 2023",
       "difficulty": "medium",
       "key_facts": [
-        "An Indian language must be available for students as an option for the MoI through school education all the way up to Grade 12."
+        "Building on prior knowledge and opportunities to learn from errors become important considerations for instructional strategies."
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:04.817881"
+      "processed_at": "2026-10-18T14:11:01.717881"
     },
     {
-      "id": "3d2de1b7-c49f-4a64-a82c-5a9978baac12",
-      "created_at": "2026-10-18T14:11:09.107881",
-      "question_hindi": "विद्यालयी प्रक्रियाओं की तीन श्रेणियों के साथ कौन-सा युग्म सही सुमेलित नहीं है?",
+      "id": "6f9990b3-21f8-436e-9255-e07dae4abcf7",
+      "created_at": "2026-10-18T14:11:02.607881",
+      "question_hindi": "NCF-SE में उल्लिखित भारतीय ज्ञान-संबंधी अवधारणाओं के साथ कौन-सा युग्म सही सुमेलित नहीं है?",
       "options_hindi": [
-        "पाठ्यचर्या प्रक्रियाएँ — समय-सारणी, सभा और पुस्तकालय-संबंधी गतिविधियाँ",
-        "पाठ्यचर्या-संबद्ध प्रक्रियाएँ — शिक्षक सहयोग, परिवार सहभागिता, स्वास्थ्य और स्वच्छता",
-        "संगठनात्मक प्रक्रियाएँ — विद्यालय विकास योजना, सुरक्षा और डेटा प्रबंधन",
-        "संगठनात्मक प्रक्रियाएँ — केवल उत्सव और विद्यार्थी मंच"
+        "ज्ञान (Jnana) — ज्ञान/बोध",
+        "प्रज्ञा (Prajna) — विवेक/प्रज्ञा",
+        "सत्य (Satya) — सत्य",
+        "पंचकोश — परीक्षा के पाँच चरण"
       ],
       "option_labels": [
         "A",
@@ -616,70 +653,33 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Which pair is NOT correctly matched with the three categories of school processes?",
+      "question_english": "Which pair is NOT correctly matched with the Indian knowledge concepts mentioned in NCF-SE?",
       "options_english": [
-        "Curricular processes — timetable, assembly and library-related activities",
-        "Curriculum-associated processes — teacher collaboration, family engagement, health and hygiene",
-        "Organisational processes — school development plans, safety and data management",
-        "Organisational processes — only celebrations and student forums"
+        "Jnana — knowledge",
+        "Prajna — wisdom",
+        "Satya — truth",
+        "Panchakosha — five examination stages"
       ],
       "correct_answer": "d",
-      "explanation_english": "Celebrations and student forums are listed under curricular processes, not as the sole content of organisational processes.",
-      "explanation_hindi": "उत्सव और विद्यार्थी मंच पाठ्यचर्या प्रक्रियाओं में आते हैं; वे संगठनात्मक प्रक्रियाओं की पूरी परिभाषा नहीं हैं।",
-      "topic": "NCF 2023",
-      "difficulty": "easy",
-      "key_facts": [
-        "Organisational processes, which includes school development plans, time and resource allocation, student safety, resolving differences and disciplinary issues, and data management and reporting."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:09.117881"
-    },
-    {
-      "id": "06864c8a-bc3a-43ff-aab6-b4aab573ddd9",
-      "created_at": "2026-10-18T14:11:05.207881",
-      "question_hindi": "NCF-SE के अनुसार गणितीय अंतर्ज्ञान विकसित करने के लिए कौन-सी कक्षा-पद्धति सर्वोत्तम है?",
-      "options_hindi": [
-        "किसी अनौपचारिक अनुमान से पहले औपचारिक प्रमाण अनिवार्य करना",
-        "सटीक गणना से पहले परिमाण का अनुमान लगवाना और अनौपचारिक तर्क पर चर्चा करना",
-        "अंतिम कक्षा तक अनुमान लगाने से बचना",
-        "केवल सबसे तेज सटीक उत्तर को पुरस्कृत करना"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "Which classroom practice best develops mathematical intuition as described in NCF-SE?",
-      "options_english": [
-        "Require a formal proof before any informal prediction",
-        "Ask students to estimate the order of magnitude before calculating precisely and discuss informal reasoning",
-        "Avoid conjectures until the final grade",
-        "Reward only the fastest exact answer"
-      ],
-      "correct_answer": "b",
-      "explanation_english": "NCF-SE mentions estimating correct answers by order of magnitude and informal argumentation as ways to develop mathematical intuition.",
-      "explanation_hindi": "NCF-SE परिमाण का अनुमान और अनौपचारिक तर्क को गणितीय अंतर्ज्ञान विकसित करने के उपाय बताता है।",
+      "explanation_english": "NCF-SE uses Jnana, Prajna and Satya for knowledge, wisdom and truth; Panchakosha refers to five levels or parts of our being.",
+      "explanation_hindi": "NCF-SE ज्ञान, प्रज्ञा और सत्य को ज्ञान, विवेक और सत्य के अर्थ में रखता है; पंचकोश हमारे अस्तित्व के पाँच स्तरों/भागों की अवधारणा है।",
       "topic": "NCF 2023",
       "difficulty": "medium",
       "key_facts": [
-        "guessing correct answers (in terms of, e.g., ‘order of magnitude’) before working out precise answers"
+        "The pursuit of knowledge (Jnana), wisdom (Prajna), and truth (Satya)"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:05.217881"
+      "processed_at": "2026-10-18T14:11:02.617881"
     },
     {
-      "id": "a3b4ead7-8ef0-441d-b702-1a79b6312b86",
-      "created_at": "2026-10-18T14:11:02.807881",
-      "question_hindi": "सूची I का सूची II में दिए गए विवरणों से मिलान कीजिए।\nसूची I:\n(A) मूल्य\n(B) अभिवृत्तियाँ\n(C) क्षमताएँ\n(D) ज्ञान।\nसूची II:\n(1) कार्य-नैतिकता, जिज्ञासा, विस्मय, भारत के प्रति गौरव और जड़ाव\n(2) भारतीय विरासत के पारंपरिक मूल्य, नैतिक मूल्य, लोकतांत्रिक मूल्य और ज्ञान-संबंधी मूल्य\n(3) अन्वेषण, संचार, समस्या-समाधान, तार्किक तर्क, रचनात्मकता और प्रभावी सामाजिक सहभागिता\n(4) पाठ्यचर्या क्षेत्रों में व्यापकता और गहराई।\nसही विकल्प चुनिए।",
+      "id": "0fecf1ce-2689-4d59-acaf-2b0867abe8cb",
+      "created_at": "2026-10-18T14:11:09.507881",
+      "question_hindi": "समग्र विकास के NCF-SE दृष्टिकोण से कौन-सा विकल्प मेल खाता है?",
       "options_hindi": [
-        "A-2, B-1, C-3, D-4",
-        "A-1, B-2, C-3, D-4",
-        "A-2, B-3, C-1, D-4",
-        "A-4, B-1, C-3, D-2"
+        "केवल बौद्धिक क्षमताएँ विकसित करना",
+        "शारीरिक, सामाजिक-भावनात्मक, नैतिक, संज्ञानात्मक, सौंदर्यात्मक और सांस्कृतिक आयामों का साथ-साथ विकास करना",
+        "शारीरिक कल्याण को शिक्षा से अलग करना",
+        "विद्यालय के बाद आजीवन अधिगम को अनावश्यक मानना"
       ],
       "option_labels": [
         "A",
@@ -690,60 +690,60 @@
       "source": "exa-ai-pipeline",
       "subject": "UPSC Principal Paper",
       "language": "bilingual",
-      "question_english": "Match List I with the descriptions in List II.\nList I:\n(A) Values\n(B) Dispositions\n(C) Capacities\n(D) Knowledge.\nList II:\n(1) Work ethic, curiosity, wonder, pride and rootedness in India\n(2) Traditional Indian heritage values, ethical and moral values, democratic values and epistemic values\n(3) Inquiry, communication, problem solving, logical reasoning, creativity and effective social engagement\n(4) Breadth and depth across curricular areas.\nWhich option is correct?",
+      "question_english": "Which option is consistent with the NCF-SE view of holistic development?",
       "options_english": [
-        "A-2, B-1, C-3, D-4",
-        "A-1, B-2, C-3, D-4",
-        "A-2, B-3, C-1, D-4",
-        "A-4, B-1, C-3, D-2"
-      ],
-      "correct_answer": "a",
-      "explanation_english": "NCF-SE distinguishes values, dispositions, capacities and knowledge using the descriptors shown in List II.",
-      "explanation_hindi": "NCF-SE सूची II में दिए गए विवरणों के अनुसार मूल्यों, अभिवृत्तियों, क्षमताओं और ज्ञान को अलग-अलग पहचानता है।",
-      "topic": "NCF 2023",
-      "difficulty": "medium",
-      "key_facts": [
-        "Developing appropriate values including traditional values of Indian heritage; ethical and moral values, democratic values and epistemic values. || Acquiring positive dispositions; positive work ethic, curiosity and wonder, and pride and rootedness in India. || Developing capacities; for inquiry, effective communication, problem solving and logical reasoning, creativity and aesthetic expression, maintaining health, productive work, and effective social engagement. || Acquiring knowledge in breadth and depth."
-      ],
-      "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:02.817881"
-    },
-    {
-      "id": "baeffb38-209c-4f8a-85d8-3b09186dbe42",
-      "created_at": "2026-10-18T14:11:07.707881",
-      "question_hindi": "NCF-SE में व्यावहारिक परीक्षण विशेष रूप से किसके आकलन के लिए उपयुक्त हैं?",
-      "options_hindi": [
-        "पाठ्यपुस्तक का अनुच्छेद दोहराने की क्षमता",
-        "नए अधिगम के विशिष्ट कौशल और अनुप्रयोग",
-        "केवल उपस्थिति",
-        "केवल याद की गई शब्दावली"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "source": "exa-ai-pipeline",
-      "subject": "UPSC Principal Paper",
-      "language": "bilingual",
-      "question_english": "In NCF-SE, practical tests are especially suited to assessing what?",
-      "options_english": [
-        "Students’ ability to reproduce a textbook paragraph",
-        "Specific skills and applications of new learning",
-        "Attendance alone",
-        "Only memorised terminology"
+        "Develop only intellectual abilities",
+        "Develop physical, socio-emotional, ethical, cognitive, aesthetic and cultural dimensions together",
+        "Separate physical well-being from education",
+        "Treat lifelong learning as unnecessary after school"
       ],
       "correct_answer": "b",
-      "explanation_english": "Practical tests require students to demonstrate specific skills and applications of what they have learned.",
-      "explanation_hindi": "व्यावहारिक परीक्षण विद्यार्थियों से सीखे हुए ज्ञान के विशिष्ट कौशल और अनुप्रयोग प्रदर्शित करने को कहते हैं।",
+      "explanation_english": "The framework describes education as holistic growth across multiple dimensions, including the Panchakosha perspective.",
+      "explanation_hindi": "रूपरेखा पंचकोश दृष्टिकोण सहित कई आयामों में समग्र विकास को शिक्षा का हिस्सा मानती है।",
       "topic": "NCF 2023",
       "difficulty": "easy",
       "key_facts": [
-        "These require students to demonstrate specific skills and applications of their new learning."
+        "education was seen as the integral growth of Panchakosha"
       ],
       "ai_processed": true,
-      "processed_at": "2026-10-18T14:11:07.717881"
+      "processed_at": "2026-10-18T14:11:09.517881"
+    },
+    {
+      "id": "47918510-f805-43f1-a17d-9e7c17ab2844",
+      "created_at": "2026-10-18T14:11:08.907881",
+      "question_hindi": "NCF-SE विद्यालयी संस्कृति को असंबंधित प्रशासनिक विषय के बजाय पाठ्यचर्या का हिस्सा क्यों मानता है?",
+      "options_hindi": [
+        "क्योंकि संस्कृति का अधिगम पर प्रभाव नहीं होता और केवल कक्षा की सामग्री मायने रखती है",
+        "क्योंकि विद्यालय का वातावरण और व्यवहार औपचारिक शिक्षण के साथ अधिगम, मूल्यों और अभिवृत्तियों को प्रभावित करते हैं",
+        "क्योंकि विद्यालयी संस्कृति पाठ्यक्रम-सूची का स्थान लेती है",
+        "क्योंकि मूल्यों का विकास केवल परिवार से होता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Why does NCF-SE treat school culture as part of curriculum rather than as an unrelated administrative matter?",
+      "options_english": [
+        "Because culture has no effect on learning and only classroom content matters",
+        "Because school ethos and practices influence learning, values and dispositions alongside formal teaching",
+        "Because school culture replaces the syllabus",
+        "Because values are shaped only by families"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The framework states that school culture and ethos deeply influence values and dispositions and form an integral part of curriculum.",
+      "explanation_hindi": "रूपरेखा कहती है कि विद्यालयी संस्कृति और ethos मूल्यों तथा अभिवृत्तियों को गहराई से प्रभावित करते हैं और पाठ्यचर्या का अभिन्न भाग हैं।",
+      "topic": "NCF 2023",
+      "difficulty": "hard",
+      "key_facts": [
+        "Values and dispositions, in particular, are deeply influenced by immersion in the school ethos and culture"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T14:11:08.917881"
     }
   ]
 }

@@ -1,0 +1,761 @@
+{
+  "test_id": "3783d29a-2901-432d-9c33-2bc66e20458e",
+  "test_name": "Topic Test: NEP 2020 - Part 12",
+  "type": "topic_wise",
+  "topic": "nep-2020",
+  "created_at": "2026-10-19T07:49:29.145968",
+  "questions": [
+    {
+      "id": "c3dbdbfd-3a59-4af7-b235-5895d3f41620",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "प्रश्न-विश्लेषण (Item Analysis) में किसी प्रश्न का “कठिनाई सूचकांक” (Difficulty Index या p-value) क्या दर्शाता है?",
+      "options_hindi": [
+        "किसी प्रश्न और कुल परीक्षा-अंक के बीच point-biserial सहसंबंध।",
+        "उस प्रश्न का सही उत्तर देने वाले विद्यार्थियों का प्रतिशत।",
+        "किसी अस्पष्ट प्रश्न से उच्च उपलब्धि वाले विद्यार्थियों में उत्पन्न भ्रम की मात्रा।",
+        "बहुविकल्पीय प्रश्न में दिए गए संभावित भटकाने वाले विकल्पों की कुल संख्या।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 106; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "In item analysis, the \"Difficulty Index\" (p-value) of a test item indicates:",
+      "options_english": [
+        "The point-biserial correlation between an individual item and the total overall test score",
+        "The percentage of students answering the item correctly",
+        "The degree to which a poorly phrased item unnecessarily confuses top academic achievers",
+        "The total number of plausible distractors incorporated into a multiple-choice question item"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The percentage of students answering the item correctly In item analysis, the Difficulty Index represents the proportion of examinees who answered a given test item correctly. Expressed mathematically as a decimal or percentage, a higher difficulty index indicates that a larger proportion of students solved the item, meaning the question was relatively easy.",
+      "explanation_hindi": "कठिनाई सूचकांक उस अनुपात या प्रतिशत को दर्शाता है जितने परीक्षार्थियों ने प्रश्न का सही उत्तर दिया। इसका मान अधिक होने पर प्रश्न को अधिक विद्यार्थियों ने सही हल किया और वह तुलनात्मक रूप से आसान था। नाम के बावजूद p-value का ऊँचा मान आसान प्रश्न की ओर संकेत करता है, न कि अधिक कठिन प्रश्न की ओर।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "The percentage of students answering the item correctly",
+        "The percentage of students answering the item correctly In item analysis, the Difficulty Index represents the proportion of examinees who answered a given test item correctly. Expressed mathematically as a decimal or percentage, a higher difficulty index indicates that a larger proportion of students solved the item, meaning the question was relatively easy."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "1aba1ce1-0389-471e-ad77-c010eb685f98",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "शिक्षा मंत्रालय द्वारा शुरू किए गए ‘शगुन’ पोर्टल का मुख्य उद्देश्य क्या है?",
+      "options_hindi": [
+        "सरकारी विद्यालय शिक्षकों के अंतरराज्यीय स्थानांतरण और तैनाती को सुगम बनाना।",
+        "विद्यालयी शिक्षा पोर्टलों को जोड़ना और सर्वोत्तम प्रथाओं को साझा करने का भंडार उपलब्ध कराना।",
+        "माध्यमिक विद्यार्थियों के लिए अनिवार्य ऑनलाइन मानकीकृत मूल्यांकन और बोर्ड परीक्षाएँ आयोजित करना।",
+        "प्राथमिक विद्यार्थियों की दैनिक शारीरिक फिटनेस और स्वास्थ्य-संबंधी आँकड़ों की निगरानी करना।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 223; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "What is the main objective of the \"Shagun\" portal launched by the Ministry of Education?",
+      "options_english": [
+        "To facilitate inter-state administrative transfers and deployments of public school teachers",
+        "Repository linking school education portals and sharing best practices",
+        "To conduct mandatory online standardized assessments and board examinations for secondary students",
+        "To track and monitor the daily physical fitness and health metrics of primary school students"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Repository linking school education portals and sharing best practices The Shagun portal was launched by the Ministry of Education as a comprehensive digital platform connecting school education portals across states. It functions as an online repository for sharing educational innovations, monitoring Centrally Sponsored Schemes, tracking institutional performance, and disseminating best pedagogical practices nationwide.",
+      "explanation_hindi": "शगुन पोर्टल विद्यालयी शिक्षा से संबंधित पोर्टलों और सूचनाओं को जोड़ने तथा राज्यों के बीच शैक्षिक नवाचारों और अच्छी प्रथाओं को साझा करने के लिए बनाया गया था। स्रोत में इसे योजनाओं की निगरानी और संस्थागत प्रदर्शन-संबंधी जानकारी प्रसारित करने वाले मंच के रूप में भी वर्णित किया गया है। यह मुख्यतः शिक्षक स्थानांतरण या विद्यार्थियों की दैनिक स्वास्थ्य निगरानी का पोर्टल नहीं है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Repository linking school education portals and sharing best practices",
+        "Repository linking school education portals and sharing best practices The Shagun portal was launched by the Ministry of Education as a comprehensive digital platform connecting school education portals across states. It functions as an online repository for sharing educational innovations, monitoring Centrally Sponsored Schemes, tracking institutional performance, and disseminating best pedagogical practices nationwide."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "020fd7c8-194e-4193-9cfb-a8e4e699c0f7",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "कक्षा 2 में आधारभूत संख्यात्मक कौशल का आकलन करने के लिए एक शिक्षक लंबी लिखित अंकगणितीय परीक्षाओं पर बहुत अधिक निर्भर करता है। प्रधानाचार्य इस पर आपत्ति करते हुए मौखिक और ठोस सामग्री-आधारित आकलन सुझाते हैं। क्यों?",
+      "options_hindi": [
+        "लिखित प्रश्नपत्रों में कागज और छपाई पर अत्यधिक खर्च होता है।",
+        "विद्यार्थी में संख्यात्मक कौशल हो सकता है, लेकिन लिखित उत्तर देने के लिए आवश्यक पठन-कौशल अभी विकसित न हुआ हो।",
+        "प्रशासनिक नियम आधारभूत कक्षाओं में लिखित परीक्षणों पर पूर्ण प्रतिबंध लगाते हैं।",
+        "मौखिक परीक्षण शिक्षक के लिए अधिक आसान और शीघ्र अंकित करने योग्य होते हैं।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 6 (Types of Tests), Question 164; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "To assess foundational numeracy skills in Grade 2, a teacher relies heavily on long written arithmetic tests. The Principal objects and suggests oral and manipulative-based assessments. Why?",
+      "options_english": [
+        "Written paper tests cost far too much institutional paper and printing resources",
+        "Learners may have numeracy skills but lack reading skills to show it in writing",
+        "Written tests in foundational classes are explicitly banned by administrative rules",
+        "Oral tests are significantly easier and faster for the classroom teacher to grade"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Learners may have numeracy skills but lack reading skills to show it in writing In early foundational grades, young learners often possess well-developed mathematical concepts but lack the advanced reading comprehension or written expression skills required for formal paper tests. Using manipulative-based and oral assessments prevents language barriers from confounding numerical evaluation, ensuring teachers measure genuine numeracy skills accurately.",
+      "explanation_hindi": "आरंभिक कक्षाओं में कोई बच्चा गणितीय अवधारणा समझ सकता है, लेकिन पढ़ने या लिखित अभिव्यक्ति में अभी उतना दक्ष न हो कि लंबा प्रश्नपत्र हल कर सके। ठोस सामग्री, मौखिक प्रश्न और गतिविधि-आधारित आकलन भाषा संबंधी बाधा को संख्यात्मक कौशल के आकलन को प्रभावित करने से रोक सकते हैं। इस प्रकार शिक्षक वास्तविक गणितीय समझ का अधिक सटीक आकलन कर सकता है।",
+      "topic": "Types of Tests",
+      "difficulty": "medium",
+      "key_facts": [
+        "Learners may have numeracy skills but lack reading skills to show it in writing",
+        "Learners may have numeracy skills but lack reading skills to show it in writing In early foundational grades, young learners often possess well-developed mathematical concepts but lack the advanced reading comprehension or written expression skills required for formal paper tests. Using manipulative-based and oral assessments prevents language barriers from confounding numerical evaluation, ensuring teachers measure genuine numeracy skills accurately."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "73c65302-6bdf-4b22-b11c-e6011f1da25a",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "एक प्रधानाचार्य को PM POSHAN योजना लागू करने संबंधी परिपत्र प्राप्त होता है। यह योजना किस पूर्ववर्ती कार्यक्रम का परिवर्तित रूप है?",
+      "options_hindi": [
+        "ऑपरेशन ब्लैकबोर्ड",
+        "मध्याह्न भोजन योजना (Mid-Day Meal Scheme)",
+        "सर्व शिक्षा अभियान",
+        "बेटी बचाओ, बेटी पढ़ाओ"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 237; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "A Principal receives a circular regarding the implementation of the PM POSHAN scheme. This scheme is the revamped version of which erstwhile program?",
+      "options_english": [
+        "Operation Blackboard",
+        "Mid-Day Meal Scheme",
+        "Sarva Shiksha Abhiyan",
+        "Beti Bachao Beti Padhao"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Mid-Day Meal Scheme PM POSHAN represents the updated and expanded version of the long-standing Mid- Day Meal Scheme. Implemented in government and aided schools, PM POSHAN provides hot cooked meals to primary and upper primary students, improving child nutrition, boosting school attendance, and supporting classroom concentration.",
+      "explanation_hindi": "PM POSHAN मध्याह्न भोजन योजना का नया और विस्तारित रूप है। इसका उद्देश्य सरकारी तथा सहायता-प्राप्त विद्यालयों के पात्र विद्यार्थियों को पका हुआ भोजन उपलब्ध कराकर पोषण में सुधार करना है। बेहतर पोषण उपस्थिति, सहभागिता और कक्षा में ध्यान केंद्रित करने में भी मदद कर सकता है। ऑपरेशन ब्लैकबोर्ड विद्यालयी आधारभूत सुविधाओं से संबंधित अलग पहल थी।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Mid-Day Meal Scheme",
+        "Mid-Day Meal Scheme PM POSHAN represents the updated and expanded version of the long-standing Mid- Day Meal Scheme. Implemented in government and aided schools, PM POSHAN provides hot cooked meals to primary and upper primary students, improving child nutrition, boosting school attendance, and supporting classroom concentration."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "b17376be-1fee-40b5-bbd0-b99880948477",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "अनुसूचित जातियों, अनुसूचित जनजातियों और अल्पसंख्यकों के संबंध में NPE 1986 के प्रावधानों पर विचार कीजिए।\nI. गरीब परिवारों को 14 वर्ष की आयु तक बच्चों को नियमित रूप से विद्यालय भेजने के लिए प्रोत्साहन देना।\nII. मैला ढोने या खाल उतारने जैसे कार्यों में लगे परिवारों के बच्चों के लिए पूर्व-मैट्रिक छात्रवृत्ति योजना।\nIII. अल्पसंख्यकों द्वारा संचालित सभी शैक्षणिक संस्थानों को पूरी तरह समाप्त करना।\nउपर्युक्त में से कौन-से कथन सही हैं?",
+      "options_hindi": [
+        "केवल I",
+        "केवल I और II",
+        "केवल II और III",
+        "I, II और III सभी"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 38; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding NPE 1986 provisions for SC/ST and minorities:\nI. Provision of incentives to indigent families to send their children to school regularly till they reach the age of\n14.\nII. Pre-matric scholarships scheme for children of families engaged in occupations such as scavenging and flaying.\nIII. Complete abolition of all minority-managed educational institutions. Which of the above statements is/are correct?",
+      "options_english": [
+        "I only",
+        "I and II only",
+        "II and III only",
+        "I, II, and III"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "I and II only Educational provisions in 1986 prioritized social equity by providing financial incentives to indigent families and pre-matric scholarships for children whose parents engaged in vulnerable occupations. Rather than abolishing minority- managed educational institutions, the policy explicitly protected and supported constitutional rights of linguistic and religious minorities to establish and administer their own institutions.",
+      "explanation_hindi": "NPE 1986 में सामाजिक समानता के लिए गरीब परिवारों को प्रोत्साहन देने और वंचित व्यवसायों से जुड़े परिवारों के बच्चों के लिए छात्रवृत्ति जैसी सहायता का उल्लेख था। इसके विपरीत, नीति ने अल्पसंख्यक-प्रबंधित संस्थानों को समाप्त करने की बात नहीं कही। भाषाई और धार्मिक अल्पसंख्यकों के संस्थान स्थापित करने तथा उनका प्रशासन करने के संवैधानिक अधिकारों को संरक्षण देना नीति की व्यापक दिशा के अनुरूप था।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "hard",
+      "key_facts": [
+        "I and II only",
+        "I and II only Educational provisions in 1986 prioritized social equity by providing financial incentives to indigent families and pre-matric scholarships for children whose parents engaged in vulnerable occupations. Rather than abolishing minority- managed educational institutions, the policy explicitly protected and supported constitutional rights of linguistic and religious minorities to establish and administer their own institutions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "60220b2f-2f9d-481a-809e-716f6281db81",
+      "created_at": "2026-10-18T16:30:30.000000",
+      "question_hindi": "360-डिग्री समग्र प्रगति-पत्र में कौन-से प्रमाण शामिल करने का उद्देश्य है?",
+      "options_hindi": [
+        "केवल अंतिम वार्षिक परीक्षा के अंक।",
+        "स्व-मूल्यांकन, सहपाठी और शिक्षक मूल्यांकन तथा परियोजना, जिज्ञासा-आधारित कार्य, प्रश्नोत्तरी, भूमिका-अभिनय, समूह कार्य और पोर्टफोलियो में प्रगति।",
+        "केवल उपस्थिति और समयपालन।",
+        "शिक्षार्थी और सहपाठी योगदान को छोड़कर केवल शिक्षक की रैंकिंग।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "The 360-degree Holistic Progress Card is intended to include which evidence?",
+      "options_english": [
+        "Only final annual-exam marks.",
+        "Self- and peer assessment, teacher assessment, and progress in projects, inquiry, quizzes, role plays, group work and portfolios.",
+        "Only attendance and punctuality.",
+        "Only teacher ranking, excluding learner and peer input."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The card is multidimensional and combines learner, peer, teacher and varied classroom evidence.",
+      "explanation_hindi": "प्रगति-पत्र बहुआयामी है और शिक्षार्थी, सहपाठी, शिक्षक तथा विभिन्न कक्षा गतिविधियों के प्रमाण जोड़ता है।",
+      "topic": "NEP 2020",
+      "difficulty": "hard",
+      "key_facts": [
+        "It will include self-assessment and peer assessment, and progress of the child in project-based and inquiry-based learning, quizzes, role plays, group work, portfolios, etc., along with teacher assessment."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:30.010000"
+    },
+    {
+      "id": "632f217c-f4c4-45fb-891f-642d13cc06a6",
+      "created_at": "2026-10-18T16:30:10.000000",
+      "question_hindi": "ECCE की प्रस्तावित पाठ्यचर्या-शिक्षाशास्त्रीय उप-रूपरेखाओं के दो आयु-वर्ग कौन-से हैं?",
+      "options_hindi": [
+        "0–5 और 5–10 वर्ष।",
+        "0–3 वर्ष और 3–8 वर्ष।",
+        "0–6 और 6–14 वर्ष।",
+        "3–6 और 6–12 वर्ष।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which pair identifies the two age bands of the proposed ECCE curricular-pedagogical sub-frameworks?",
+      "options_english": [
+        "0–5 and 5–10 years.",
+        "0–3 years and 3–8 years.",
+        "0–6 and 6–14 years.",
+        "3–6 and 6–12 years."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The policy proposes one sub-framework for ages 0–3 and another for ages 3–8.",
+      "explanation_hindi": "नीति 0–3 और 3–8 वर्ष के लिए अलग उप-रूपरेखाएँ प्रस्तावित करती है।",
+      "topic": "NEP 2020",
+      "difficulty": "easy",
+      "key_facts": [
+        "a sub-framework for 0-3 year-olds, and a sub-framework for 3-8 year-olds"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:10.010000"
+    },
+    {
+      "id": "ac45a41a-c911-424e-9548-6580eee5c81b",
+      "created_at": "2026-10-18T16:31:13.000000",
+      "question_hindi": "व्यावसायिक मानक-निर्धारण निकायों (PSSBs) के बारे में निम्नलिखित कथनों पर विचार कीजिए:\n1. वे विशिष्ट क्षेत्रों में अधिगम और अभ्यास के मानक या अपेक्षाएँ निर्धारित कर सकते हैं।\n2. वे HEI पर विनियामक भूमिका बनाए रखेंगे।\n3. वे GEC के सदस्य के रूप में पाठ्यचर्या रूपरेखा में योगदान दे सकते हैं।\nसही कथन कौन-से हैं?",
+      "options_hindi": [
+        "केवल 1 और 3।",
+        "केवल 1 और 2।",
+        "केवल 2 और 3।",
+        "1, 2 और 3।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements about Professional Standard Setting Bodies (PSSBs):\n1. They may set standards or expectations for particular fields of learning and practice.\n2. They will continue to have a regulatory role over HEIs.\n3. They may contribute to curriculum frameworks as members of GEC.\nWhich statements are correct?",
+      "options_english": [
+        "1 and 3 only.",
+        "1 and 2 only.",
+        "2 and 3 only.",
+        "1, 2 and 3."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "PSSBs contribute domain standards and curriculum frameworks but expressly have no regulatory role.",
+      "explanation_hindi": "PSSB क्षेत्रीय मानकों और पाठ्यचर्या रूपरेखाओं में योगदान देते हैं, लेकिन उनकी स्पष्ट रूप से कोई विनियामक भूमिका नहीं है।",
+      "topic": "NEP 2020",
+      "difficulty": "hard",
+      "key_facts": [
+        "PSSBs would also set the standards or expectations in particular fields of learning and practice while having no regulatory role."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:13.010000"
+    },
+    {
+      "id": "bb66a6a9-e8a0-4a31-b477-8cccd5202fc3",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "शिक्षा से संबंधित निम्नलिखित संवैधानिक प्रावधानों पर विचार कीजिए:\nI. अनुच्छेद 15(4)—सामाजिक और शैक्षिक रूप से पिछड़े वर्गों की उन्नति के लिए विशेष प्रावधान।\nII. अनुच्छेद 28—कुछ शैक्षिक संस्थानों में धार्मिक शिक्षा या धार्मिक उपासना में भाग लेने की स्वतंत्रता।\nIII. अनुच्छेद 29—राज्य द्वारा संचालित शैक्षिक संस्थानों में प्रवेश के संबंध में अल्पसंख्यकों के हितों की रक्षा।\nIV. अनुच्छेद 30—अल्पसंख्यकों को शैक्षिक संस्थान स्थापित करने और उनका प्रशासन करने का अधिकार।\nउपर्युक्त में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल I और IV",
+        "केवल II और III",
+        "केवल I, II और IV",
+        "I, II, III और IV"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 143; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Consider the following Constitutional provisions related to education:\nI. Article 15(4) - Special provision for the advancement of any socially and educationally backward classes of citizens.\nII. Article 28 - Freedom as to attendance at religious instruction or religious worship in certain educational institutions.\nIII. Article 29 - Protection of interests of minorities regarding admission into state- maintained educational institutions.\nIV. Article 30 - Right of minorities to establish and administer educational institutions. Which of the above are correct?",
+      "options_english": [
+        "I and IV only",
+        "II and III only",
+        "I, II, and IV only",
+        "I, II, III, and IV"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "I, II, III, and IV The Constitution contains several rights protecting equity in education: Article 15(4) permits affirmative action for backward classes, Article 28 regulates religious instruction, Article 29 protects minority admissions, and Article 30 guarantees minorities the right to establish and administer educational institutions.",
+      "explanation_hindi": "चारों कथन सही हैं। अनुच्छेद 15(4) सामाजिक और शैक्षिक रूप से पिछड़े वर्गों के लिए विशेष प्रावधानों की अनुमति देता है। अनुच्छेद 28 कुछ शैक्षिक संस्थानों में धार्मिक शिक्षा और उपासना से जुड़े नियम बताता है; अनुच्छेद 29 प्रवेश के संदर्भ में अल्पसंख्यकों के हितों की रक्षा करता है; और अनुच्छेद 30 अल्पसंख्यकों को अपनी पसंद के शैक्षिक संस्थान स्थापित करने तथा उनका प्रशासन करने का अधिकार देता है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "hard",
+      "key_facts": [
+        "I, II, III, and IV",
+        "I, II, III, and IV The Constitution contains several rights protecting equity in education: Article 15(4) permits affirmative action for backward classes, Article 28 regulates religious instruction, Article 29 protects minority admissions, and Article 30 guarantees minorities the right to establish and administer educational institutions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "a1915db9-269d-46cb-840f-9d5d58775d58",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "निम्नलिखित अभिकथन (A) और कारण (R) पर विचार कीजिए।\nअभिकथन (A): सरकारी कर्मचारी अवकाश को अपना पूर्ण अधिकार मानकर दावा नहीं कर सकता।\nकारण (R): CCS (Leave) Rules, 1972 के अंतर्गत सार्वजनिक सेवा की आवश्यकता होने पर अवकाश स्वीकृत करने वाला प्राधिकारी किसी भी प्रकार के अवकाश को अस्वीकार या वापस ले सकता है।",
+      "options_hindi": [
+        "A और R दोनों सही हैं तथा R, A की सही व्याख्या करता है।",
+        "A और R दोनों सही हैं, किंतु R, A की सही व्याख्या नहीं करता है।",
+        "A सही है, किंतु R गलत है।",
+        "A गलत है, किंतु R सही है।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 184; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A): Leave cannot be claimed as a matter of right by a government employee.\nReason (R): Under the CCS (Leave) Rules, 1972, the leave sanctioning authority has the discretion to refuse or revoke leave of any kind when the exigencies of public service so require.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Both A and R are true and R is the correct explanation of A Under CCS (Leave) Rules 1972, leave cannot be claimed as an absolute legal right. The sanctioning authority retains explicit discretion to refuse, alter, or revoke applied leave when the exigencies of public service require employee presence for organizational needs.",
+      "explanation_hindi": "दोनों कथन सही हैं और कारण अभिकथन की व्याख्या करता है। CCS (Leave) Rules, 1972 के अनुसार अवकाश को पूर्ण और निरपेक्ष अधिकार के रूप में दावा नहीं किया जा सकता। सार्वजनिक सेवा की आवश्यकताओं के कारण सक्षम प्राधिकारी अवकाश अस्वीकार या वापस ले सकता है। इसका अर्थ यह नहीं कि प्राधिकारी नियमों की अन्य आवश्यकताओं की अनदेखी कर सकता है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "hard",
+      "key_facts": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A Under CCS (Leave) Rules 1972, leave cannot be claimed as an absolute legal right. The sanctioning authority retains explicit discretion to refuse, alter, or revoke applied leave when the exigencies of public service require employee presence for organizational needs."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "b54bb24e-c909-47ac-978f-63d49968d1eb",
+      "created_at": "2026-10-18T16:31:25.000000",
+      "question_hindi": "NEP 2020 शिक्षा क्षेत्र के लिए सार्वजनिक निवेश का कौन-सा लक्ष्य स्वीकार करती है?",
+      "options_hindi": [
+        "केंद्र और राज्यों के सहयोग से यथाशीघ्र GDP का 6%।",
+        "केवल केंद्र सरकार द्वारा GDP का 4%।",
+        "केवल उच्च शिक्षा के लिए GDP का 10%।",
+        "केवल निजी दान से GDP का 6%।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What public-investment target does NEP 2020 endorse for the education sector?",
+      "options_english": [
+        "6% of GDP at the earliest, through cooperation between the Centre and States.",
+        "4% of GDP only by the Central Government.",
+        "10% of GDP exclusively for higher education.",
+        "6% of GDP from private donations alone."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The policy calls for Central and State Governments to work together to reach 6% of GDP in public education investment.",
+      "explanation_hindi": "नीति सार्वजनिक शिक्षा निवेश को GDP के 6% तक पहुँचाने के लिए केंद्र और राज्यों के संयुक्त प्रयास की बात करती है।",
+      "topic": "NEP 2020",
+      "difficulty": "easy",
+      "key_facts": [
+        "The Centre and the States will work together to increase the public investment in Education sector to reach 6% of GDP at the earliest."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:25.010000"
+    },
+    {
+      "id": "0a31cf74-2968-4500-9a11-28b5af241703",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "एक सरकारी विद्यालय में वित्तीय प्रबंधन के लिए किन नियमों का कठोरता से पालन करना आवश्यक है?",
+      "options_hindi": [
+        "कॉर्पोरेट लेखांकन मानक",
+        "सामान्य वित्तीय नियम (General Financial Rules—GFR)",
+        "बैंकिंग विनियमन अधिनियम",
+        "भारतीय कंपनी अधिनियम"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 165; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Financial management in a public school requires strict adherence to:",
+      "options_english": [
+        "Corporate accounting standards",
+        "General Financial Rules (GFR)",
+        "Banking Regulation Act",
+        "The Indian Companies Act"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "General Financial Rules (GFR) Financial management within government and public educational institutions requires strict adherence to the General Financial Rules issued by the Ministry of Finance. GFR provisions regulate budgeting, procurement protocols, tendering limits, inventory management, and financial propriety to ensure transparency and compliance.",
+      "explanation_hindi": "सरकारी और सार्वजनिक शैक्षिक संस्थानों का वित्तीय प्रबंधन वित्त मंत्रालय द्वारा जारी सामान्य वित्तीय नियमों (GFR) के अनुरूप होना चाहिए। ये नियम बजट, खरीद-प्रक्रिया, निविदा, भंडार प्रबंधन और वित्तीय औचित्य को नियंत्रित करते हैं। इनका उद्देश्य सार्वजनिक धन के उपयोग में पारदर्शिता, जवाबदेही और नियमों का पालन सुनिश्चित करना है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "General Financial Rules (GFR)",
+        "General Financial Rules (GFR) Financial management within government and public educational institutions requires strict adherence to the General Financial Rules issued by the Ministry of Finance. GFR provisions regulate budgeting, procurement protocols, tendering limits, inventory management, and financial propriety to ensure transparency and compliance."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "10c58a44-b1b1-4815-8484-7532714a0266",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "एक प्रधानाचार्य विद्यालय प्रबंधन समिति को त्रि-भाषा सूत्र समझा रहा है। NPE 1968 के ढाँचे के अनुसार, हिंदी-भाषी क्षेत्रों के लिए कौन-सा विकल्प इस सूत्र को सर्वोत्तम रूप से दर्शाता है?",
+      "options_hindi": [
+        "हिंदी, अंग्रेज़ी और एक आधुनिक भारतीय भाषा, अधिमानतः दक्षिण भारत की",
+        "हिंदी, अंग्रेज़ी और शास्त्रीय संस्कृत, साथ में राज्य की क्षेत्रीय बोलियाँ",
+        "हिंदी, अंग्रेज़ी और फ्रेंच या जर्मन जैसी कोई अंतरराष्ट्रीय विदेशी भाषा",
+        "हिंदी, स्थानीय क्षेत्रीय बोली और शास्त्रीय भाषाएँ, जिनमें संस्कृत भी शामिल हो"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 19; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "A Principal in a school is explaining the Three- Language Formula to the School Management Committee. Based on the NPE 1968 framework, which of the following best represents the formula for Hindi-speaking areas?",
+      "options_english": [
+        "Hindi, English, and a modern Indian language (preferably Southern)",
+        "Hindi, English, and classical Sanskrit language along with state regional dialects",
+        "Hindi, English, and an international foreign language such as French or German",
+        "Hindi, local regional dialect, and classical languages including Sanskrit"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Hindi, English, and a modern Indian language (preferably Southern) Formulated for language harmony, the Three- Language Formula in Hindi-speaking states prescribed studying Hindi, English, and one additional modern Indian language, preferably from Southern India. This arrangement aimed to foster inter-state linguistic reciprocity, promote national integration, and ensure that students developed proficiency in multiple languages during their secondary school education.",
+      "explanation_hindi": "हिंदी-भाषी राज्यों के लिए त्रि-भाषा सूत्र में हिंदी, अंग्रेज़ी और एक अन्य आधुनिक भारतीय भाषा, अधिमानतः दक्षिण भारत की भाषा, का अध्ययन शामिल था। इस व्यवस्था का उद्देश्य भाषाई पारस्परिकता और राष्ट्रीय एकता को प्रोत्साहित करना था। इससे विद्यार्थियों को एक से अधिक भाषाओं में दक्षता विकसित करने और देश के विभिन्न क्षेत्रों के लोगों से संवाद करने में मदद मिलनी थी।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Hindi, English, and a modern Indian language (preferably Southern)",
+        "Hindi, English, and a modern Indian language (preferably Southern) Formulated for language harmony, the Three- Language Formula in Hindi-speaking states prescribed studying Hindi, English, and one additional modern Indian language, preferably from Southern India. This arrangement aimed to foster inter-state linguistic reciprocity, promote national integration, and ensure that students developed proficiency in multiple languages during their secondary school education."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "2b820966-3949-4e54-b634-ad8a5d3b35f4",
+      "created_at": "2026-10-18T16:31:17.000000",
+      "question_hindi": "व्यावसायिक शिक्षा के प्रति NEP 2020 के दृष्टिकोण को कौन-सा कथन सर्वोत्तम रूप से दर्शाता है?",
+      "options_hindi": [
+        "व्यावसायिक कार्यक्रमों को मुख्यधारा की शिक्षा में जोड़ना तथा प्रत्येक बच्चे को कम-से-कम एक व्यवसाय सीखने और कई अन्य से परिचित होने का अवसर देना।",
+        "व्यावसायिक शिक्षा केवल उन विद्यार्थियों के लिए रखना जो शैक्षणिक विषय नहीं संभाल सकते।",
+        "व्यावसायिक अधिगम को उच्च शिक्षा से पूरी तरह अलग रखना।",
+        "व्यावसायिक शिक्षा को केवल कक्षा 12 के बाद की गतिविधि मानना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which statement best captures NEP 2020's approach to vocational education?",
+      "options_english": [
+        "Integrate vocational programmes into mainstream education and ensure every child learns at least one vocation and is exposed to others.",
+        "Reserve vocational education only for students unable to manage academic subjects.",
+        "Separate vocational learning completely from higher education.",
+        "Treat vocational education as an activity only after Grade 12."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The policy intends to overcome vocational education's status hierarchy and integrate it into mainstream education.",
+      "explanation_hindi": "नीति व्यावसायिक शिक्षा से जुड़ी सामाजिक हैसियत की पदानुक्रमिता दूर कर इसे मुख्यधारा में एकीकृत करना चाहती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "It will ensure that every child learns at least one vocation and is exposed to several more."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:17.010000"
+    },
+    {
+      "id": "af507d7b-07e4-49ef-88e6-b134e2abe186",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "मानदंड-संदर्भित परीक्षण (Criterion-Referenced Test—CRT) विशेष रूप से किस उद्देश्य से बनाया जाता है?",
+      "options_hindi": [
+        "सहपाठियों के प्रदर्शन की परवाह किए बिना कौशल में महारत का निर्धारण करना।",
+        "किसी विद्यार्थी के परीक्षा-प्रदर्शन की उसके सहपाठियों से प्रत्यक्ष तुलना करना।",
+        "परीक्षण के अंकों का पूर्णतः घंटी-आकार का सामान्य वितरण प्राप्त करना।",
+        "केवल बौद्धिक लब्धि (IQ) और सामान्य मानसिक क्षमता को मापना।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 215; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "A Criterion-Referenced Test (CRT) is specifically designed to:",
+      "options_english": [
+        "Determine skill mastery regardless of peer performance",
+        "Compare an individual student's examination performance directly against their classroom peers",
+        "Systematically yield a perfectly bell-shaped normal distribution of overall student scores",
+        "Measure cognitive intelligence quotient (IQ) and general mental capacity exclusively"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Determine skill mastery regardless of peer performance A Criterion-Referenced Test measures an examinee's performance against pre-determined learning standards, specific skills, or absolute content mastery benchmarks. Criterion- referenced evaluation determines whether a student has mastered defined learning objectives regardless of performance achieved by peer examinees.",
+      "explanation_hindi": "मानदंड-संदर्भित परीक्षण विद्यार्थी के प्रदर्शन की तुलना पहले से निर्धारित अधिगम मानकों, विशिष्ट कौशलों या विषय-वस्तु में महारत से करता है। इसमें सफलता का निर्णय इस आधार पर होता है कि निर्धारित मानदंड प्राप्त हुआ या नहीं, न कि दूसरे विद्यार्थी ने उससे अधिक या कम अंक पाए। इसलिए सहपाठी-आधारित रैंकिंग मानदंड-संदर्भित परीक्षण का मुख्य उद्देश्य नहीं है।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Determine skill mastery regardless of peer performance",
+        "Determine skill mastery regardless of peer performance A Criterion-Referenced Test measures an examinee's performance against pre-determined learning standards, specific skills, or absolute content mastery benchmarks. Criterion- referenced evaluation determines whether a student has mastered defined learning objectives regardless of performance achieved by peer examinees."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "45ed1347-b0e7-41f0-98c2-0b5b3c1380a9",
+      "created_at": "2026-10-18T16:30:17.000000",
+      "question_hindi": "NEP 2020 पूर्व-विद्यालय से माध्यमिक स्तर तक 100% स्कूली GER किस वर्ष तक चाहती है?",
+      "options_hindi": [
+        "2030।",
+        "2025।",
+        "2035।",
+        "2040।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "By which year does NEP 2020 aim for 100% school-education GER from pre-school to secondary level?",
+      "options_english": [
+        "2030.",
+        "2025.",
+        "2035.",
+        "2040."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The policy sets the target of 100% GER from pre-school to secondary level by 2030.",
+      "explanation_hindi": "नीति पूर्व-विद्यालय से माध्यमिक स्तर तक 100% GER का लक्ष्य 2030 रखती है।",
+      "topic": "NEP 2020",
+      "difficulty": "easy",
+      "key_facts": [
+        "a goal to achieve 100% Gross Enrolment Ratio in preschool to secondary level by 2030."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:17.010000"
+    },
+    {
+      "id": "2038d965-7336-469d-820d-b817002db447",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "NPE 1968 द्वारा सुझाई गई ‘साझा विद्यालय प्रणाली’ (Common School System) का प्रमुख उद्देश्य क्या था?",
+      "options_hindi": [
+        "सभी सरकारी और निजी संस्थानों में बिल्कुल समान केंद्रीय पाठ्यपुस्तकें और पाठ योजनाएँ लागू करना",
+        "सभी सामाजिक वर्गों के बच्चों को साथ पढ़ाकर सामाजिक एकता बढ़ाना",
+        "दस वर्ष की निश्चित अवधि में सभी शुल्क लेने वाले निजी विद्यालयों को समाप्त करना",
+        "हर विद्यार्थी के लिए केवल एक अनिवार्य तकनीकी एवं व्यावसायिक धारा लागू करना"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 16; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "The concept of the \"Common School System\" recommended by the NPE 1968 primarily aimed to:",
+      "options_english": [
+        "Ensure all public and private educational institutions adopt identical centralized textbooks and lesson plans",
+        "Promote social cohesion by educating children of all social strata together",
+        "Eradicate all fee-charging private educational institutions completely within a strict ten- year timeframe",
+        "Provide a mandatory single stream of technical and vocational education for every enrolled student"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Promote social cohesion by educating children of all social strata together The Common School System aimed to eliminate socio-economic segregation in schooling by providing access to quality public education for all children regardless of caste, creed, or background. Educating diverse social groups together in neighborhood schools fostered mutual understanding, equalized foundational learning opportunities, and strengthened democratic social cohesion across local communities.",
+      "explanation_hindi": "साझा विद्यालय प्रणाली का उद्देश्य जाति, धर्म, आर्थिक स्थिति या सामाजिक पृष्ठभूमि के आधार पर विद्यालयी पृथक्करण को कम करना था। पड़ोस के विद्यालयों में विभिन्न सामाजिक समूहों के बच्चों को साथ पढ़ाने से परस्पर समझ और सामाजिक एकता को बढ़ावा मिलना था। साथ ही, प्रत्येक बच्चे को गुणवत्तापूर्ण सार्वजनिक शिक्षा की पहुँच उपलब्ध कराना इसका एक केंद्रीय लक्ष्य था।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Promote social cohesion by educating children of all social strata together",
+        "Promote social cohesion by educating children of all social strata together The Common School System aimed to eliminate socio-economic segregation in schooling by providing access to quality public education for all children regardless of caste, creed, or background. Educating diverse social groups together in neighborhood schools fostered mutual understanding, equalized foundational learning opportunities, and strengthened democratic social cohesion across local communities."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    },
+    {
+      "id": "81b48332-04cd-4a1f-a917-cb77a4e098ef",
+      "created_at": "2026-10-18T16:30:37.000000",
+      "question_hindi": "शिक्षक स्थानांतरण पर नीति का सही रुख क्या है?",
+      "options_hindi": [
+        "अत्यधिक स्थानांतरण रोके जाएँ; स्थानांतरण केवल विशेष परिस्थितियों में पारदर्शी ऑनलाइन कम्प्यूटरीकृत प्रणाली से हों।",
+        "शिक्षक हर शैक्षणिक वर्ष विद्यालय बदलें।",
+        "समुदाय बिना अभिलेख के अनौपचारिक निर्णय ले।",
+        "हर परिस्थिति में सभी स्थानांतरण प्रतिबंधित हैं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which policy position on teacher transfers is correct?",
+      "options_english": [
+        "Excessive transfers should be halted; transfers should occur only in special circumstances through a transparent online computerized system.",
+        "Teachers should rotate schools every academic year.",
+        "The community should decide informally without records.",
+        "All transfers are prohibited in every circumstance."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The policy rejects excessive transfers but does not establish an absolute ban; it calls for special circumstances and transparent online processing.",
+      "explanation_hindi": "नीति अत्यधिक स्थानांतरण का विरोध करती है, पूर्ण प्रतिबंध नहीं लगाती; वह विशेष परिस्थितियों और पारदर्शी ऑनलाइन प्रक्रिया की बात करती है।",
+      "topic": "NEP 2020",
+      "difficulty": "easy",
+      "key_facts": [
+        "The harmful practice of excessive teacher transfers will be halted"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:37.010000"
+    },
+    {
+      "id": "40c3457a-4310-4adf-ac74-43c46e8e5898",
+      "created_at": "2026-10-18T16:31:27.000000",
+      "question_hindi": "बिना खर्च की सार्वजनिक निधियों को निष्क्रिय रखने की समस्या कम करने के लिए कौन-सा वित्तीय प्रबंधन दृष्टिकोण प्रस्तावित है?",
+      "options_hindi": [
+        "आवश्यकता की परवाह किए बिना वित्त-वर्ष के अंत में ही सारी निधि जारी करना।",
+        "कार्यान्वयन एजेंसियों को रिपोर्टिंग के बिना निधि रखने देना।",
+        "GFR, PFMS और ‘जस्ट इन टाइम’ जारीकरण तंत्र के माध्यम से धन का सुचारु और समयबद्ध प्रवाह।",
+        "सभी प्रदर्शन-आधारित वित्तपोषण तंत्र रोक देना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "exa-ai-pipeline",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which financial-management approach is proposed to reduce the parking of unspent public funds?",
+      "options_english": [
+        "Release all funds at the end of the financial year regardless of need.",
+        "Allow implementing agencies to retain funds without reporting.",
+        "Smooth, timely fund flow using GFR, PFMS and ‘Just in Time’ release mechanisms.",
+        "Stop all performance-based funding mechanisms."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The policy names GFR, PFMS and Just in Time releases as means for efficient resource use and avoiding parking of funds.",
+      "explanation_hindi": "नीति संसाधनों के कुशल उपयोग और धन को निष्क्रिय रखने से बचने के लिए GFR, PFMS और Just in Time जारीकरण बताती है।",
+      "topic": "NEP 2020",
+      "difficulty": "medium",
+      "key_facts": [
+        "The provisions of GFR, PFMS and ‘Just in Time’ release to implementing agencies will be followed for efficient use of government resources and avoiding parking of funds."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:31:27.010000"
+    },
+    {
+      "id": "bcd37154-7fdf-45d0-b0e4-fc550e0d46e1",
+      "created_at": "2026-10-18T16:30:05Z",
+      "question_hindi": "CCS (CCA) Rules, 1965 के अंतर्गत निम्नलिखित में से किसे “प्रमुख दंड” (Major Penalty) के रूप में वर्गीकृत किया गया है?",
+      "options_hindi": [
+        "वेतनमान, ग्रेड, पद या सेवा में निचले स्तर पर घटा देना।",
+        "निंदा (Censure)।",
+        "एक वर्ष के लिए बिना संचयी प्रभाव के एक वेतन-वृद्धि रोकना।",
+        "लापरवाही से हुई आर्थिक हानि की पूरी या आंशिक वसूली वेतन से करना।"
+      ],
+      "option_labels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "source": "Pinepage, UPSC Principal & Vice Principal Volume 4, Chapter 1 (National Education Policy), Question 175; answer/explanation section in same chapter",
+      "subject": "Educational Policies and Educational Measurement and Evaluation",
+      "language": "bilingual",
+      "question_english": "Which of the following is classified as a \"Major Penalty\" under the CCS (CCA) Rules, 1965?",
+      "options_english": [
+        "Reduction to a lower time-scale of pay, grade, post, or service",
+        "Censure",
+        "Withholding of one increment for a period of one year without cumulative effect",
+        "Recovery from pay of the whole or part of any pecuniary loss caused by negligence"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Reduction to a lower time-scale of pay, grade, post, or service Under CCS (CCA) Rules 1965, disciplinary penalties are classified into minor and major categories. Reducing an employee to a lower pay scale, grade, post, or service rank represents a major penalty that requires conducting a comprehensive formal disciplinary inquiry prior to imposition.",
+      "explanation_hindi": "CCS (CCA) Rules, 1965 में अनुशासनात्मक दंडों को लघु और प्रमुख श्रेणियों में बाँटा गया है। कर्मचारी को निम्न वेतनमान, ग्रेड, पद या सेवा-स्तर पर घटाना प्रमुख दंड है। ऐसे दंड को लगाने से पहले नियमों के अनुसार औपचारिक अनुशासनात्मक जाँच आवश्यक होती है; निंदा और कुछ प्रकार की वेतन-वृद्धि रोकना लघु दंडों की श्रेणी में आते हैं।",
+      "topic": "National Education Policy and related educational-policy questions",
+      "difficulty": "medium",
+      "key_facts": [
+        "Reduction to a lower time-scale of pay, grade, post, or service",
+        "Reduction to a lower time-scale of pay, grade, post, or service Under CCS (CCA) Rules 1965, disciplinary penalties are classified into minor and major categories. Reducing an employee to a lower pay scale, grade, post, or service rank represents a major penalty that requires conducting a comprehensive formal disciplinary inquiry prior to imposition."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-18T16:30:05Z"
+    }
+  ]
+}
