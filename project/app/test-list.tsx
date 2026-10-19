@@ -152,7 +152,6 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const attemptedMaps = useMemo(() => {
     const byId = new Map<string, TestResult>();
     const byFilename = new Map<string, TestResult>();
-    const byTitle = new Map<string, TestResult>();
 
     history.forEach(h => {
       const hDate = new Date(h.date).getTime();
@@ -170,35 +169,27 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           byFilename.set(h.filename, h);
         }
       }
-
-      if (h.testTitle) {
-        const cleanTitle = h.testTitle.toLowerCase().trim().replace(/\s+/g, ' ');
-        const existing = byTitle.get(cleanTitle);
-        if (!existing || hDate > new Date(existing.date).getTime()) {
-          byTitle.set(cleanTitle, h);
-        }
-      }
     });
 
-    return { byId, byFilename, byTitle };
+    return { byId, byFilename };
   }, [history]);
 
   const getAttemptForTest = useCallback((test: ServerPaper): TestResult | undefined => {
     if (!test) return undefined;
-    if (attemptedMaps.byId.has(test.id)) {
+    // 1. Match by test.id (which can be filename or UUID)
+    if (test.id && attemptedMaps.byId.has(test.id)) {
       return attemptedMaps.byId.get(test.id);
     }
+    // 2. Match by test.testId (UUID)
+    if ((test as any).testId && attemptedMaps.byId.has((test as any).testId)) {
+      return attemptedMaps.byId.get((test as any).testId);
+    }
+    // 3. Match by test.filename
     if (test.filename && attemptedMaps.byFilename.has(test.filename)) {
       return attemptedMaps.byFilename.get(test.filename);
     }
     if (test.filename && attemptedMaps.byId.has(test.filename)) {
       return attemptedMaps.byId.get(test.filename);
-    }
-    if (test.title) {
-      const cleanTitle = test.title.toLowerCase().trim().replace(/\s+/g, ' ');
-      if (attemptedMaps.byTitle.has(cleanTitle)) {
-        return attemptedMaps.byTitle.get(cleanTitle);
-      }
     }
     return undefined;
   }, [attemptedMaps]);
