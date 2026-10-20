@@ -9,6 +9,7 @@ import {
   Platform,
   Alert,
   Modal,
+  Share,
   TextInput,
   ActivityIndicator,
 } from 'react-native';
@@ -455,6 +456,25 @@ export default function TestResultScreen() {
     }
   };
 
+  const handleShare = async () => {
+    if (!analytics) return;
+    try {
+      await Share.share({
+        message: [
+          `Test: ${test?.title || 'Test Results'}`,
+          `Score: ${analytics.overallScore.toFixed(1)}/${analytics.totalMarks}`,
+          `Percentage: ${analytics.totalMarks > 0
+            ? ((analytics.overallScore / analytics.totalMarks) * 100).toFixed(1)
+            : '0.0'}%`,
+          `Accuracy: ${analytics.accuracy.toFixed(1)}%`,
+          `Time taken: ${formatTime(analytics.timeTaken)}`,
+        ].join('\n'),
+      });
+    } catch (error) {
+      console.error('Share result failed:', error);
+    }
+  };
+
   const handleReportQuestion = (question: ParsedQuestion) => {
     setReportingQuestion(question);
     setReportType('wrong_answer');
@@ -516,57 +536,56 @@ export default function TestResultScreen() {
     return (
       <View style={styles.tabContent}>
         {/* Score Card */}
-        <LinearGradient
-          colors={isDark
-            ? [scoreColor, '#172033']
-            : [scoreColor, scoreColor === '#F44336' ? '#9F1239' : `${scoreColor}E8`]}
-          style={styles.scoreCard}
-        >
-          <View style={styles.scoreCardHeader}>
-            <View style={styles.scoreCardIcon}>
-              <Trophy size={24} color="#fff" />
+        <View style={[styles.scoreCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+          <View style={styles.scoreTopRow}>
+            <View style={styles.scoreIdentity}>
+              <View style={[styles.scoreIconWrap, { backgroundColor: `${colors.accent}18` }]}>
+                <Trophy size={25} color={colors.accent} />
+              </View>
+              <View style={styles.scoreIdentityText}>
+                <Text style={[styles.eyebrow, { color: colors.textSecondary }]}>TEST PERFORMANCE</Text>
+                <View style={styles.scoreValueRow}>
+                  <Text style={[styles.scoreValue, { color: colors.textPrimary }]}>
+                    {analytics.overallScore.toFixed(1)}
+                  </Text>
+                  <Text style={[styles.scoreMax, { color: colors.textSecondary }]}>/ {analytics.totalMarks}</Text>
+                </View>
+                <Text style={[styles.scoreSubtitle, { color: colors.textSecondary }]}>
+                  Overall score · {scorePercentage.toFixed(1)}%
+                </Text>
+              </View>
             </View>
-            <Text style={styles.scoreCardEyebrow}>FINAL SCORE</Text>
-            <Text style={styles.scoreCardTitle}>Your Score</Text>
-          </View>
-
-          <View style={styles.scoreCardMain}>
-            <Text style={styles.scoreCardScore}>
-              {analytics.overallScore.toFixed(1)}
-            </Text>
-            <Text style={styles.scoreCardMaxScore}>/ {analytics.totalMarks}</Text>
-          </View>
-
-          <View style={styles.scoreCardProgress}>
-            <View style={styles.progressBar}>
-              <View
-                style={[
-                  styles.progressFill,
-                  { width: `${Math.min(scorePercentage, 100)}%` },
-                ]}
-              />
-            </View>
-            <View style={styles.scoreCardPercentageRow}>
-              <Text style={styles.scoreCardPercentage}>{scorePercentage.toFixed(1)}%</Text>
-              <Text style={styles.scoreCardPercentageLabel}>overall</Text>
+            <View style={[styles.scoreBadge, { backgroundColor: `${scoreColor}18` }]}>
+              <Text style={[styles.scoreBadgeValue, { color: scoreColor }]}>{scorePercentage.toFixed(0)}%</Text>
+              <Text style={[styles.scoreBadgeLabel, { color: scoreColor }]}>SCORE</Text>
             </View>
           </View>
-
-          <View style={styles.scoreCardMeta}>
-            <View style={styles.scoreCardMetaItem}>
-              <Target size={20} color="#fff" />
-              <Text style={styles.scoreCardMetaText}>
-                Accuracy: {analytics.accuracy.toFixed(1)}%
-              </Text>
+          <View style={[styles.progressTrack, { backgroundColor: isDark ? '#29364B' : '#E8EEF7' }]}>
+            <View style={[styles.progressFill, { width: `${Math.max(0, Math.min(scorePercentage, 100))}%`, backgroundColor: scoreColor }]} />
+          </View>
+          <View style={[styles.hairline, { backgroundColor: colors.border }]} />
+          <View style={styles.scoreMetaRow}>
+            <View style={styles.metaItem}>
+              <View style={[styles.metaIcon, { backgroundColor: 'rgba(16,185,129,0.12)' }]}>
+                <Target size={18} color="#10B981" />
+              </View>
+              <View>
+                <Text style={[styles.metaLabel, { color: colors.textSecondary }]}>Accuracy</Text>
+                <Text style={[styles.metaValue, { color: colors.textPrimary }]}>{analytics.accuracy.toFixed(1)}%</Text>
+              </View>
             </View>
-            <View style={styles.scoreCardMetaItem}>
-              <Clock size={20} color="#fff" />
-              <Text style={styles.scoreCardMetaText}>
-                Time: {formatTime(analytics.timeTaken)}
-              </Text>
+            <View style={[styles.metaSeparator, { backgroundColor: colors.border }]} />
+            <View style={styles.metaItem}>
+              <View style={[styles.metaIcon, { backgroundColor: 'rgba(129,140,248,0.12)' }]}>
+                <Clock size={18} color="#818CF8" />
+              </View>
+              <View>
+                <Text style={[styles.metaLabel, { color: colors.textSecondary }]}>Time taken</Text>
+                <Text style={[styles.metaValue, { color: colors.textPrimary }]}>{formatTime(analytics.timeTaken)}</Text>
+              </View>
             </View>
           </View>
-        </LinearGradient>
+        </View>
 
         {/* Quick Review Banner for Incorrect Questions */}
         {incorrectCount > 0 ? (
@@ -643,7 +662,9 @@ export default function TestResultScreen() {
             </View>
             <Text style={[styles.quickStatValue, { color: colors.textPrimary }]}>{correctCount}</Text>
             <Text style={[styles.quickStatLabel, { color: colors.textSecondary }]}>Correct</Text>
-            <Text style={[styles.quickStatHint, { color: '#10B981' }]}>Review →</Text>
+            <Text style={[styles.quickStatHint, { color: '#10B981' }]}>
+              {totalQuestionsCount ? `${Math.round(correctCount / totalQuestionsCount * 100)}% of total` : ''}
+            </Text>
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -662,7 +683,9 @@ export default function TestResultScreen() {
             </View>
             <Text style={[styles.quickStatValue, { color: colors.textPrimary }]}>{incorrectCount}</Text>
             <Text style={[styles.quickStatLabel, { color: colors.textSecondary }]}>Incorrect</Text>
-            <Text style={[styles.quickStatHint, { color: '#EF4444' }]}>Review →</Text>
+            <Text style={[styles.quickStatHint, { color: '#EF4444' }]}>
+              {totalQuestionsCount ? `${Math.round(incorrectCount / totalQuestionsCount * 100)}% of total` : ''}
+            </Text>
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -681,60 +704,56 @@ export default function TestResultScreen() {
             </View>
             <Text style={[styles.quickStatValue, { color: colors.textPrimary }]}>{skippedCount}</Text>
             <Text style={[styles.quickStatLabel, { color: colors.textSecondary }]}>Skipped</Text>
-            <Text style={[styles.quickStatHint, { color: '#F59E0B' }]}>Review →</Text>
+            <Text style={[styles.quickStatHint, { color: '#F59E0B' }]}>
+              {totalQuestionsCount ? `${Math.round(skippedCount / totalQuestionsCount * 100)}% of total` : ''}
+            </Text>
           </TouchableOpacity>
         </View>
 
-        {/* Strengths & Weaknesses */}
-        <View style={styles.strengthsWeaknesses}>
-          {analytics.strengthAreas.length > 0 && (
-            <View style={styles.strengthsSection}>
-              <View style={styles.sectionHeader}>
-                <TrendingUp size={24} color="#4CAF50" />
-                <Text style={styles.sectionTitle}>Strengths</Text>
-              </View>
-              <View style={styles.topicsList}>
-                {analytics.strengthAreas.map((area, index) => (
-                  <View key={index} style={[styles.topicBadge, styles.strengthBadge]}>
-                    <Text style={styles.strengthBadgeText}>{area}</Text>
-                  </View>
-                ))}
-              </View>
+        {/* Performance Insights */}
+        <View style={[styles.insightsCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+          <View style={styles.insightsHeader}>
+            <View style={[styles.insightsIcon, { backgroundColor: `${colors.accent}18` }]}>
+              <BarChart3 size={20} color={colors.accent} />
             </View>
-          )}
-
-          {analytics.weaknessAreas.length > 0 && (
-            <View style={styles.weaknessSection}>
-              <View style={styles.sectionHeader}>
-                <TrendingDown size={24} color="#F44336" />
-                <Text style={styles.sectionTitle}>Areas to Improve</Text>
-              </View>
-              <View style={styles.topicsList}>
-                {analytics.weaknessAreas.map((area, index) => (
-                  <View key={index} style={[styles.topicBadge, styles.weaknessBadge]}>
-                    <Text style={styles.weaknessBadgeText}>{area}</Text>
-                  </View>
+            <View style={styles.insightsHeaderText}>
+              <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>Performance insights</Text>
+              <Text style={[styles.cardSubtitle, { color: colors.textSecondary }]}>A quick summary of this attempt.</Text>
+            </View>
+          </View>
+          <View style={styles.insightsColumns}>
+            {analytics.strengthAreas.length > 0 && (
+              <View style={[styles.insightPanel, { backgroundColor: isDark ? 'rgba(16,185,129,0.09)' : '#F0FDF4' }]}>
+                <View style={styles.insightPanelHeader}>
+                  <TrendingUp size={17} color="#10B981" />
+                  <Text style={[styles.insightPanelTitle, { color: isDark ? '#6EE7B7' : '#047857' }]}>Strengths</Text>
+                </View>
+                {analytics.strengthAreas.map((area, index) => (
+                  <Text key={index} style={[styles.insightItem, { color: colors.textSecondary }]}>• {area}</Text>
                 ))}
               </View>
+            )}
+            {analytics.weaknessAreas.length > 0 && (
+              <View style={[styles.insightPanel, { backgroundColor: isDark ? 'rgba(240,82,82,0.09)' : '#FFF5F5' }]}>
+                <View style={styles.insightPanelHeader}>
+                  <TrendingDown size={17} color="#F05252" />
+                  <Text style={[styles.insightPanelTitle, { color: isDark ? '#FCA5A5' : '#B91C1C' }]}>Areas to improve</Text>
+                </View>
+                {analytics.weaknessAreas.map((area, index) => (
+                  <Text key={index} style={[styles.insightItem, { color: colors.textSecondary }]}>• {area}</Text>
+                ))}
+              </View>
+            )}
+          </View>
+          {analytics.recommendations.length > 0 && (
+            <View style={[styles.recommendationStrip, { borderTopColor: colors.border }]}>
+              <Lightbulb size={17} color="#F59E0B" />
+              <Text style={[styles.recommendationStripText, { color: colors.textSecondary }]}>
+                {analytics.recommendations[0]}
+              </Text>
             </View>
           )}
         </View>
-
-        {/* Recommendations */}
-        {analytics.recommendations.length > 0 && (
-          <View style={styles.recommendations}>
-            <View style={styles.sectionHeader}>
-              <Lightbulb size={24} color="#FF9800" />
-              <Text style={styles.sectionTitle}>Recommendations</Text>
-            </View>
-            {analytics.recommendations.map((rec, index) => (
-              <View key={index} style={styles.recommendationItem}>
-                <View style={styles.recommendationBullet} />
-                <Text style={styles.recommendationText}>{rec}</Text>
-              </View>
-            ))}
-          </View>
-        )}
       </View>
     );
   };
@@ -1375,7 +1394,10 @@ export default function TestResultScreen() {
           <Text style={[styles.footerButtonText, { color: colors.accent }]}>Re-evaluate</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.footerButton, { backgroundColor: colors.accentLight }]}>
+        <TouchableOpacity
+          style={[styles.footerButton, { backgroundColor: colors.accentLight }]}
+          onPress={handleShare}
+        >
           <Share2 size={19} color={colors.accent} />
           <Text style={[styles.footerButtonText, { color: colors.accent }]}>Share Result</Text>
         </TouchableOpacity>
@@ -1571,104 +1593,122 @@ const styles = StyleSheet.create({
     gap: 14,
   },
   scoreCard: {
-    borderRadius: 24,
-    padding: 22,
-    minHeight: 292,
+    borderRadius: 20,
+    padding: 18,
+    borderWidth: 1,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.16,
-    shadowRadius: 12,
-    elevation: 5,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.06,
+    shadowRadius: 7,
+    elevation: 2,
   },
-  scoreCardHeader: {
+  scoreTopRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+  },
+  scoreIdentity: {
+    flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 12,
+    flex: 1,
   },
-  scoreCardIcon: {
-    width: 48,
-    height: 48,
-    borderRadius: 16,
-    backgroundColor: 'rgba(255,255,255,0.18)',
+  scoreIconWrap: {
+    width: 50,
+    height: 50,
+    borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 10,
+    marginRight: 12,
   },
-  scoreCardEyebrow: {
+  scoreIdentityText: {
+    flex: 1,
+  },
+  eyebrow: {
     fontSize: 10,
     fontWeight: '800',
-    letterSpacing: 1.5,
-    color: 'rgba(255,255,255,0.72)',
-    marginBottom: 3,
+    letterSpacing: 1,
+    marginBottom: 4,
   },
-  scoreCardTitle: {
-    fontSize: 16,
-    fontWeight: '700',
-    color: '#fff',
-  },
-  scoreCardMain: {
+  scoreValueRow: {
     flexDirection: 'row',
     alignItems: 'baseline',
-    justifyContent: 'center',
-    marginBottom: 20,
   },
-  scoreCardScore: {
-    fontSize: 58,
+  scoreValue: {
+    fontSize: 36,
     fontWeight: '800',
-    color: '#fff',
     letterSpacing: -1,
   },
-  scoreCardMaxScore: {
-    fontSize: 22,
+  scoreMax: {
+    fontSize: 17,
     fontWeight: '600',
-    color: 'rgba(255,255,255,0.8)',
-    marginLeft: 8,
+    marginLeft: 5,
   },
-  scoreCardProgress: {
-    marginBottom: 18,
+  scoreSubtitle: {
+    fontSize: 12,
+    marginTop: 2,
   },
-  progressBar: {
-    height: 9,
-    backgroundColor: 'rgba(255,255,255,0.3)',
+  scoreBadge: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    minWidth: 62,
+    paddingVertical: 9,
+    paddingHorizontal: 8,
+    borderRadius: 13,
+  },
+  scoreBadgeValue: {
+    fontSize: 17,
+    fontWeight: '800',
+  },
+  scoreBadgeLabel: {
+    fontSize: 9,
+    fontWeight: '800',
+    letterSpacing: 0.8,
+    marginTop: 1,
+  },
+  progressTrack: {
+    height: 8,
     borderRadius: 4,
     overflow: 'hidden',
-    marginBottom: 9,
+    marginTop: 18,
+    marginBottom: 17,
   },
   progressFill: {
     height: '100%',
-    backgroundColor: '#fff',
     borderRadius: 4,
   },
-  scoreCardPercentage: {
-    fontSize: 15,
+  hairline: {
+    height: 1,
+  },
+  scoreMetaRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingTop: 15,
+  },
+  metaItem: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  metaIcon: {
+    width: 34,
+    height: 34,
+    borderRadius: 11,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 9,
+  },
+  metaLabel: {
+    fontSize: 11,
+    marginBottom: 2,
+  },
+  metaValue: {
+    fontSize: 13,
     fontWeight: '700',
-    color: '#fff',
   },
-  scoreCardPercentageRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    gap: 5,
-  },
-  scoreCardPercentageLabel: {
-    fontSize: 12,
-    color: 'rgba(255,255,255,0.7)',
-  },
-  scoreCardMeta: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingTop: 16,
-    borderTopWidth: 1,
-    borderTopColor: 'rgba(255,255,255,0.3)',
-  },
-  scoreCardMetaItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  scoreCardMetaText: {
-    fontSize: 12,
-    fontWeight: '600',
-    color: '#fff',
+  metaSeparator: {
+    width: 1,
+    height: 32,
+    marginHorizontal: 10,
   },
   quickStats: {
     backgroundColor: '#fff',
@@ -2201,9 +2241,76 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   quickStatHint: {
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: '600',
     marginTop: 4,
+    textAlign: 'center',
+  },
+  insightsCard: {
+    borderRadius: 18,
+    borderWidth: 1,
+    padding: 16,
+  },
+  insightsHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 14,
+  },
+  insightsIcon: {
+    width: 38,
+    height: 38,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 10,
+  },
+  insightsHeaderText: {
+    flex: 1,
+  },
+  cardTitle: {
+    fontSize: 16,
+    fontWeight: '800',
+  },
+  cardSubtitle: {
+    fontSize: 12,
+    marginTop: 2,
+  },
+  insightsColumns: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+  insightPanel: {
+    flex: 1,
+    borderRadius: 13,
+    padding: 12,
+    minHeight: 92,
+  },
+  insightPanelHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+    gap: 6,
+  },
+  insightPanelTitle: {
+    fontSize: 12,
+    fontWeight: '800',
+  },
+  insightItem: {
+    fontSize: 12,
+    lineHeight: 19,
+  },
+  recommendationStrip: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: 8,
+    borderTopWidth: 1,
+    marginTop: 14,
+    paddingTop: 13,
+  },
+  recommendationStripText: {
+    flex: 1,
+    fontSize: 12,
+    lineHeight: 18,
   },
   filterBarCard: {
     borderRadius: 16,
