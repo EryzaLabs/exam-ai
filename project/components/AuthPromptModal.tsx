@@ -85,7 +85,7 @@ export default function AuthPromptModal({
                 <View style={styles.perkItem}>
                   <CheckCircle2 size={18} color="#10B981" style={styles.perkIcon} />
                   <Text style={styles.perkText}>
-                    <Text style={styles.perkBold}>184+ Mock Tests: </Text>
+                    <Text style={styles.perkBold}>190+ Mock Tests: </Text>
                     Practice full-length papers & topic tests
                   </Text>
                 </View>

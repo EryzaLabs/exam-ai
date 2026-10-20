@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import UserService from '@/services/user-service';
 import { TestProgressService } from '@/services/test-progress-service';
-import SSCCGLService from '@/services/ssc-cgl-service';
+import PaperService from '@/services/paper-service';
+import TestSeriesService from '@/services/testseries-service';
 import { useAuth } from '@/context/auth-context';
 
 export interface DashboardStats {
@@ -30,11 +31,16 @@ export function useDashboardData() {
     try {
       setLoading(true);
 
-      let papersCount = 184;
+      let papersCount = 0;
       try {
-        const papers = await SSCCGLService.fetchPapersList();
+        const papers = await PaperService.fetchPapersList();
         if (papers && papers.length > 0) {
           papersCount = papers.length;
+        } else {
+          const altPapers = await TestSeriesService.fetchPapersList();
+          if (altPapers && altPapers.length > 0) {
+            papersCount = altPapers.length;
+          }
         }
       } catch (err) {
         console.error('Failed to fetch available tests count:', err);

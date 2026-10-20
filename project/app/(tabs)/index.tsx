@@ -11,6 +11,7 @@ import DesktopDashboard from '@/components/DesktopDashboard';
 import MobileDashboard from '@/components/MobileDashboard';
 import UserService from '@/services/user-service';
 import { TestProgressService } from '@/services/test-progress-service';
+import PaperService from '@/services/paper-service';
 import { auth } from '@/services/firebaseConfig';
 import { useAuth } from '@/context/auth-context';
 
@@ -27,6 +28,7 @@ interface DashboardStats {
   photoURL?: string | null;
   email?: string;
   isSubscribed?: boolean;
+  totalAvailableTests?: number;
 }
 
 export default function EnhancedHomeScreen() {
@@ -39,6 +41,16 @@ export default function EnhancedHomeScreen() {
 
   const loadDashboardData = useCallback(async () => {
     try {
+      let papersCount = 0;
+      try {
+        const papers = await PaperService.fetchPapersList();
+        if (papers && papers.length > 0) {
+          papersCount = papers.length;
+        }
+      } catch (err) {
+        console.error('Failed to fetch available tests count in index:', err);
+      }
+
       const user = authUser || auth.currentUser;
       if (!user) {
          setDashboardStats({
@@ -50,7 +62,7 @@ export default function EnhancedHomeScreen() {
            weeklyImprovement: 0,
            totalTopics: 0,
            masteredTopics: 0,
-           totalAvailableTests: 184,
+           totalAvailableTests: papersCount,
            userName: 'Guest Explorer',
            isSubscribed: false,
          });
@@ -162,6 +174,7 @@ export default function EnhancedHomeScreen() {
           photoURL: profile?.photoURL || user.photoURL || null,
           email: profile?.email || user.email || undefined,
           isSubscribed: !!profile?.isSubscribed,
+          totalAvailableTests: papersCount,
       });
 
       setPerformance({

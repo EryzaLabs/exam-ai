@@ -121,7 +121,7 @@ export default function MobileDashboard({
                   )}
                 </View>
                 <Text style={styles.headerSubtitle}>
-                  {isSubscribed ? '👑 Premium Member • All Tests Unlocked' : user ? 'Practice. Analyze. Improve.' : 'Explore 184+ AI Tests & Analytics'}
+                  {isSubscribed ? '👑 Premium Member • All Tests Unlocked' : user ? 'Practice. Analyze. Improve.' : `Explore ${dashboardStats?.totalAvailableTests || 190}+ AI Tests & Analytics`}
                 </Text>
               </View>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
@@ -208,7 +208,7 @@ export default function MobileDashboard({
                 <FileText size={18} color="#3B82F6" />
               </View>
               <View>
-                <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.totalAvailableTests ?? 184}</Text>
+                <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.totalAvailableTests ?? 0}</Text>
                 <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Tests Available</Text>
               </View>
             </View>

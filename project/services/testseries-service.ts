@@ -77,6 +77,34 @@ const TestSeriesService = {
   },
 
   /**
+   * Fetch available papers list (full mocks and topic-wise tests)
+   */
+  async fetchPapersList(): Promise<any[]> {
+    try {
+      const response = await fetch(`${API_URL}/papers`);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch papers list: ${response.statusText}`);
+      }
+      return await response.json();
+    } catch (error) {
+      console.error('Error fetching papers list:', error);
+      return [];
+    }
+  },
+
+  /**
+   * Get total count of available tests
+   */
+  async getAvailableTestsCount(): Promise<number> {
+    try {
+      const papers = await this.fetchPapersList();
+      return papers && papers.length > 0 ? papers.length : 0;
+    } catch {
+      return 0;
+    }
+  },
+
+  /**
    * Fetch all test series (for backward compatibility)
    */
   async fetchAllTestSeries(): Promise<TestSeries[]> {

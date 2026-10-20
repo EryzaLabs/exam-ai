@@ -186,6 +186,9 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     return Math.max(0, tests.length - attemptedCount);
   }, [tests, attemptedCount]);
 
+  const fullMockCount = useMemo(() => tests.filter(t => t.filename.includes('full_mocks/')).length, [tests]);
+  const topicTestCount = useMemo(() => tests.filter(t => t.filename.includes('topic_wise/')).length, [tests]);
+
   useEffect(() => {
     filterTests();
   }, [searchQuery, category, selectedTopic, tests, attemptFilter, getAttemptForTest]);
@@ -684,7 +687,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
               {category === 'full' ? 'Full Mock Tests' : category === 'topic' ? (selectedTopic || 'Topic-wise Tests') : 'All Mock Tests'}
             </Text>
             <Text style={[styles.desktopHeaderSubtitle, { color: colors.textSecondary }]}>
-              {filteredTests.length} tests available • {category === 'full' ? '120 Questions (300 Marks, 2 Hours CBT)' : category === 'topic' ? '20 Questions (50 Marks, 20 Mins)' : '26 Full Mocks & 158 Topic Tests'}
+              {filteredTests.length} tests available • {category === 'full' ? '120 Questions (300 Marks, 2 Hours CBT)' : category === 'topic' ? '20 Questions (50 Marks, 20 Mins)' : `${fullMockCount} Full Mocks & ${topicTestCount} Topic Tests`}
             </Text>
           </View>
           <View style={styles.desktopControlsRow}>
@@ -711,7 +714,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                 <View style={{flex: 1}}>
                     <Text style={styles.headerTitleNew}>UPSC Principal{'\n'}Mock Tests</Text>
                     <Text style={styles.headerSubtitleNew}>
-                    {filteredTests.length} tests available  •  {category === 'full' ? '26 Full Mock Tests (120 Qs each)' : category === 'topic' ? '158 Topic-wise Tests' : '26 Full Mocks & 158 Topic Tests'}
+                    {filteredTests.length} tests available  •  {category === 'full' ? `${fullMockCount} Full Mock Tests (120 Qs each)` : category === 'topic' ? `${topicTestCount} Topic-wise Tests` : `${fullMockCount} Full Mocks & ${topicTestCount} Topic Tests`}
                     </Text>
                 </View>
             </View>
