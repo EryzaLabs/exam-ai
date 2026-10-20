@@ -1,0 +1,769 @@
+{
+  "test_id": "bfa501fe-742e-4264-a8d0-a47bb2ebaa32",
+  "test_name": "Topic Test: INCOME TAX GST - Part 5",
+  "type": "topic_wise",
+  "topic": "income-tax-gst",
+  "created_at": "2026-10-20T13:32:21.608414",
+  "questions": [
+    {
+      "id": "038d20a7-00bc-4218-bdd8-93c0b5ef9732",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "किसी कर्मचारी को जारी किए जाने वाले फॉर्म 16 के भाग A (Part A) में मुख्य रूप से निम्नलिखित में से कौन-सा विवरण शामिल होता है?",
+      "options_hindi": [
+        "अध्याय VI-A के तहत दावा की गई कटौतियों (जैसे धारा 80C, 80D, 80E) का विस्तृत विवरण",
+        "ट्रेसेस (TRACES) पोर्टल से डाउनलोड किया गया, केंद्र सरकार के खाते में काटे गए और जमा किए गए कर का सिस्टम-जनरेटेड सारांश",
+        "मूल वेतन, डीए, एचआरए छूट गणना और मानक कटौती सहित वेतन घटकों का विस्तृत विवरण",
+        "फॉर्म 12B में प्रस्तुत पिछले रोजगार के वेतन और कर का विवरण"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Part A of Form 16 issued to an employee primarily contains which of the following details?",
+      "options_english": [
+        "Detailed breakdown of deductions claimed under Chapter VI-A (such as Section 80C, 80D, 80E)",
+        "System-generated summary of tax deducted and deposited into the Central Government account, downloaded from TRACES",
+        "Breakup of salary components including Basic Pay, DA, HRA exemption calculations, and Standard Deduction",
+        "Previous employment salary and tax details submitted in Form 12B"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Form 16 consists of two distinct parts:\n\n1. Part A: It is a standardized, digitally signed document downloaded directly by the employer from the TRACES (TDS Reconciliation Analysis and Correction Enabling System) portal of the Income Tax Department. It contains:\n   - Name, address, PAN, and TAN of the employer/deductor.\n   - Name, address, and PAN of the employee.\n   - Summary of quarterly tax deducted (from Form 24Q filings) and actual date and challan identification details (BSR code, challan serial number) of tax deposited into the Central Government account.\n\n2. Part B: Prepared by the employer (annexed to Part A), detailing gross salary, exempt allowances under Section 10 (e.g. HRA, conveyance), standard deduction under Section 16(ia), deductions under Chapter VI-A (80C, 80D, etc.), net taxable income, and final tax computation.",
+      "explanation_hindi": "फॉर्म 16 के दो अलग-अलग भाग होते हैं:\n\n1. भाग A (Part A): यह आयकर विभाग के ट्रेसेस (TRACES) पोर्टल से नियोक्ता द्वारा सीधे डाउनलोड किया जाने वाला एक मानकीकृत दस्तावेज़ है। इसमें शामिल हैं:\n   - नियोक्ता/कटौतीकर्ता का नाम, पता, पैन (PAN) और टैन (TAN)।\n   - कर्मचारी का नाम, पता और पैन (PAN)।\n   - त्रैमासिक टीडीएस कटौती का सारांश और सरकारी खाते में कर जमा करने का विवरण (चालान पहचान संख्या, BSR कोड, जमा की तारीख आदि)।\n\n2. भाग B (Part B): नियोक्ता द्वारा तैयार किया जाता है जिसमें सकल वेतन, धारा 10 के तहत छूट प्राप्त भत्ते (उदा. HRA), धारा 16 के तहत मानक कटौती, अध्याय VI-A के तहत कटौतियाँ (80C, 80D), शुद्ध कर योग्य आय और अंतिम कर गणना का ब्यौरा होता है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) Summary of tax deducted and deposited from TRACES portal",
+        "Answer explanation extracted from supplied reference material: from TRACES portal Part A of Form 16 is a system-generated statement downloaded directly from the TRACES portal. It contains official details regarding the employer and employee, including Permanent Account Numbers, Tax Deduction Account Number, quarterly summary of tax deducted at source, and verification details of tax deposited into the government treasury account."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "7689ddd0-e586-42c2-960b-7b237425ab4b",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "वेतन पर आयकर की गणना करने हेतु निम्नलिखित चरणों पर विचार कीजिए:\nI. सकल वेतन (Gross Salary) की गणना करना।\nII. शुद्ध वेतन प्राप्त करने हेतु मानक कटौती (Standard Deduction), व्यावसायिक कर (Professional Tax) और मनोरंजन भत्ता (यदि लागू हो) घटाना।\nIII. अन्य शीर्षों से आय जोड़ना तथा कुल कर योग्य आय ज्ञात करने हेतु अध्याय VI-A की कटौतियाँ लागू करना।\nIV. कर स्लैब दरें लागू करना तथा अधिभार / स्वास्थ्य एवं शिक्षा उपकर जोड़ना।\nउपर्युक्त चरणों का सही क्रमिक क्रम कौन-सा है?",
+      "options_hindi": [
+        "I, III, II, IV",
+        "I, II, III, IV",
+        "II, I, III, IV",
+        "I, IV, II, III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following steps for computing Income Tax on Salary:\nI. Compute Gross Salary.\nII. Deduct Standard Deduction, Professional Tax, and Entertainment Allowance (if applicable) to get Net Salary.\nIII. Add Income from other heads and apply Chapter VI-A deductions to find Total Taxable Income.\nIV. Apply tax slab rates and add Surcharge / Health and Education Cess.\nWhat is the correct sequential order of the above steps?",
+      "options_english": [
+        "I, III, II, IV",
+        "I, II, III, IV",
+        "II, I, III, IV",
+        "I, IV, II, III"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The computation of taxable income and tax liability on salary follows a strict statutory hierarchy under the Income Tax Act, 1961: (1) Compute Gross Salary under Section 17; (2) Deduct statutory deductions under Section 16 (Standard Deduction up to ₹50,000, Entertainment Allowance under Section 16(ii), and Professional Tax under Section 16(iii)) to arrive at 'Income under the Head Salaries'; (3) Aggregate with permissible income/losses from other heads (such as House Property or Other Sources) and subtract eligible deductions under Chapter VI-A (Sections 80C to 80U) to arrive at Total Taxable Income; (4) Apply the applicable slab rates under the chosen tax regime, deduct rebates under Section 87A, and finally add 4% Health and Education Cess plus any applicable surcharge.",
+      "explanation_hindi": "सही उत्तर B (I, II, III, IV) है। आयकर अधिनियम, 1961 के तहत वेतन पर आयकर की गणना एक निर्धारित वैधानिक क्रम में होती है: सर्वप्रथम धारा 17 के तहत सकल वेतन की गणना की जाती है; दूसरे चरण में धारा 16 के तहत अनुमन्य कटौतियाँ (₹50,000 की मानक कटौती, व्यावसायिक कर आदि) घटाकर वेतन शीर्ष से शुद्ध आय ज्ञात की जाती है; तीसरे चरण में अन्य शीर्षों की आय जोड़कर तथा अध्याय VI-A (धारा 80C से 80U) की कटौतियाँ घटाकर कुल कर योग्य आय निकाली जाती है; और चौथे चरण में लागू कर स्लैब दरें लगाकर 4% स्वास्थ्य एवं शिक्षा उपकर तथा अधिभार जोड़कर अंतिम कर देयता निर्धारित की जाती है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) I, II, III, IV",
+        "Answer explanation extracted from supplied reference material: Computing income tax on salary follows a logical legal sequence: calculating gross salary first, subtracting standard deduction and professional tax to derive net salary second, aggregating income from other sources while deducting Chapter VI-A claims third, and applying tax slab rates with applicable cess fourth."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "75a72c65-a340-4dcf-b2f2-1921f3a09b43",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_english": "Consider the following statements regarding the Standard Deduction available under Section 16(ia) for salaried taxpayers:\nI. It is available uniformly as a flat deduction regardless of the actual expenses incurred by the employee.\nII. It was reintroduced in lieu of the earlier tax exemptions for transport allowance and medical reimbursement.\nIII. Pensioners drawing pension taxable under the head 'Salaries' are also entitled to this deduction.\nIV. The allowable deduction amount is prorated based on the number of months the employee worked in that financial year.\nWhich of the statements given above are correct?",
+      "question_hindi": "वेतनभोगी करदाताओं के लिए धारा 16(ia) के तहत उपलब्ध मानक कटौती (Standard Deduction) के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\nI. यह कर्मचारी द्वारा किए गए वास्तविक खर्चों की परवाह किए बिना एकमुश्त कटौती के रूप में समान रूप से उपलब्ध है।\nII. इसे परिवहन भत्ता और चिकित्सा प्रतिपूर्ति पर मिलने वाली पूर्ववर्ती कर छूटों के स्थान पर पुनः लागू किया गया था।\nIII. 'वेतन' शीर्षक के तहत कर-योग्य पेंशन प्राप्त करने वाले पेंशनभोगी भी इस कटौती के पात्र हैं।\nIV. अनुमत कटौती की राशि कर्मचारी द्वारा उस वित्तीय वर्ष में काम किए गए महीनों की संख्या के अनुपात में निर्धारित की जाती है।\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_english": [
+        "I, II, and III only",
+        "II, III, and IV only",
+        "I and III only",
+        "I, II, III, and IV"
+      ],
+      "options_hindi": [
+        "केवल I, II और III",
+        "केवल II, III और IV",
+        "केवल I और III",
+        "I, II, III और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Statement I is correct: Standard deduction under Section 16(ia) is a statutory flat deduction available to all salaried taxpayers without requiring proof of any actual expenditure.\nStatement II is correct: Finance Act 2018 reintroduced standard deduction to simplify tax compliance, replacing the earlier annual exemptions of ₹19,200 for transport allowance and ₹15,000 for medical reimbursement.\nStatement III is correct: Pension received from a former employer is treated as salary under Section 17(1)(ii) of the Income Tax Act; hence, pensioners drawing such taxable pension are fully entitled to claim standard deduction up to ₹50,000.\nStatement IV is incorrect: The standard deduction is an absolute statutory ceiling (₹50,000 or salary income, whichever is less) and is NOT prorated or calculated proportionally according to the number of months worked during the financial year. Even if an employee works for only a few months or days in the financial year, the full deduction up to their salary amount (subject to ₹50,000) is allowed.\nTherefore, Statements I, II, and III only are correct.",
+      "explanation_hindi": "कथन I सही है: धारा 16(ia) के तहत मानक कटौती एक वैधानिक एकमुश्त कटौती है जो कर्मचारी द्वारा किए गए किसी भी वास्तविक खर्च के प्रमाण के बिना सभी वेतनभोगियों को मिलती है।\nकथन II सही है: वित्त अधिनियम 2018 द्वारा अनुपालन को सरल बनाने के लिए पूर्व में मिलने वाली ₹19,200 की परिवहन भत्ता छूट तथा ₹15,000 की चिकित्सा प्रतिपूर्ति छूट को समाप्त करके उसके स्थान पर मानक कटौती को पुनः लाया गया था।\nकथन III सही है: पूर्व नियोक्ता से प्राप्त पेंशन को धारा 17(1)(ii) के तहत वेतन माना जाता है, इसलिए 'वेतन' शीर्षक में पेंशन दर्शाने वाले पेंशनभोगी भी ₹50,000 तक की मानक कटौती के पूर्ण पात्र हैं।\nकथन IV गलत है: मानक कटौती की राशि वित्तीय वर्ष में काम किए गए महीनों के अनुपात (pro-rata) में निर्धारित नहीं होती। यदि किसी कर्मचारी ने वर्ष में कुछ महीने या दिन भी कार्य किया है, तब भी उसे उसके वेतन की सीमा तक पूरी ₹50,000 की कटौती की पात्रता होती है।\nअतः केवल कथन I, II और III सही हैं।",
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "language": "bilingual",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) I, II, and III only",
+        "Answer explanation extracted from supplied reference material: Standard deduction under Section 16(ia) is available as a flat deduction irrespective of actual expenditure incurred. It was introduced to replace exemptions for transport allowance and medical reimbursements. Pensioners drawing salary pension are also eligible. However, the deduction amount is fixed flat and is not prorated based on months worked in a year."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "4f417ecc-c18a-43a7-810f-2603ed4a17d2",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R):\nAssertion (A): The issuance of Form 16 by the employer is a statutory obligation, and failure to issue it attracts a penalty under Section 272A(2)(g) of the Income Tax Act.\nReason (R): Form 16 is essential for salaried employees to verify tax deductions at source and file their income tax returns accurately.\nIn the context of the statements above, which of the following is correct?",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को अभिकथन (A) और दूसरे को कारण (R) कहा गया है:\nअभिकथन (A): नियोक्ता द्वारा फॉर्म 16 जारी करना एक वैधानिक दायित्व है और इसे निर्धारित समय में जारी न करने पर आयकर अधिनियम की धारा 272A(2)(g) के तहत शास्ति (जुर्माना) देय होती है।\nकारण (R): फॉर्म 16 वेतनभोगी कर्मचारियों के लिए स्रोत पर कर कटौती (TDS) को सत्यापित करने और अपने आयकर रिटर्न को सही ढंग से दाखिल करने के लिए अनिवार्य दस्तावेज है।\nउपर्युक्त कथनों के संदर्भ में, निम्नलिखित में से कौन-सा सही है?",
+      "options_english": [
+        "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+        "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
+        "(A) is true, but (R) is false.",
+        "(A) is false, but (R) is true."
+      ],
+      "options_hindi": [
+        "(A) और (R) दोनों सही हैं और (R), (A) की सही व्याख्या है।",
+        "(A) और (R) दोनों सही हैं, लेकिन (R), (A) की सही व्याख्या नहीं है।",
+        "(A) सही है, लेकिन (R) गलत है।",
+        "(A) गलत है, लेकिन (R) सही है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Section 203 of the Income Tax Act, 1961 read with Rule 31 of the Income Tax Rules, every Drawing and Disbursing Officer (DDO) or employer deducting tax at source under Section 192 is statutorily mandated to furnish a certificate of tax deduction in Form 16 to the employee by 15th June of the relevant Assessment Year. Failure to issue Form 16 within the prescribed statutory due date attracts a penalty under Section 272A(2)(g) of the Act (₹500 for every day during which the failure continues). Reason (R) correctly explains why this statutory compulsion exists: Form 16 consists of Part A (TRACES-generated TDS deposit details) and Part B (salary breakdown, exemptions, and Chapter VI-A deductions), which serve as conclusive proof of TDS and enable salaried employees to verify tax credits against Form 26AS/AIS and accurately prepare and file their annual Income Tax Return under Section 139(1). Thus, both (A) and (R) are true, and (R) is the correct explanation of (A).",
+      "explanation_hindi": "आयकर अधिनियम, 1961 की धारा 203 और आयकर नियमावली के नियम 31 के तहत, धारा 192 के अधीन वेतन से स्रोत पर कर कटौती (TDS) करने वाले प्रत्येक आहरण एवं संवितरण अधिकारी (DDO)/नियोक्ता का यह वैधानिक दायित्व है कि वह संबंधित कर निर्धारण वर्ष की 15 जून तक कर्मचारी को फॉर्म 16 जारी करे। निर्धारित तिथि तक फॉर्म 16 जारी करने में विफल रहने पर धारा 272A(2)(g) के तहत प्रतिदिन ₹500 का जुर्माना लगाया जाता है। कारण (R) इसकी बिल्कुल सही व्याख्या करता है: फॉर्म 16 (भाग क एवं भाग ख) में कर्मचारी के वेतन, कटौतियों एवं सरकारी खाते में जमा किए गए TDS का प्रामाणिक विवरण होता है, जिसके बिना कर्मचारी 26AS/AIS से मिलान करके धारा 139(1) के तहत अपना आयकर रिटर्न सही-सही दाखिल नहीं कर सकता। अतः (A) और (R) दोनों सही हैं और (R), (A) की सही व्याख्या है।",
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "language": "bilingual",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A",
+        "Answer explanation extracted from supplied reference material: explanation of A Employers are legally mandated under Section 203 to issue Form 16 to employees from whose salary tax has been deducted. Failure to issue this certificate within the statutory timeline attracts a daily penalty under Section 272A(2) (g), as employees require this document to verify tax credits and file their annual tax returns."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "5589c974-1835-44b5-aef7-17c235d736cf",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "यदि कोई सरकारी विद्यालय शिक्षक किसी निर्दिष्ट दूरस्थ उच्च-पर्वतीय क्षेत्र में पदस्थापित है और उसे विशेष प्रतिपूरक (पर्वतीय क्षेत्र) भत्ता [Special Compensatory (Hill Areas) Allowance] प्राप्त होता है, तो आयकर अधिनियम, 1961 की किस धारा के तहत यह भत्ता आंशिक कर-मुक्ति के लिए पात्र है?",
+      "options_hindi": [
+        "धारा 10(10)",
+        "धारा 10(14)",
+        "धारा 10(5)",
+        "धारा 16(ii)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "If a government school teacher is posted in a remote hilly area and receives a Special Compensatory (Hill Areas) Allowance, under which section of the Income Tax Act, 1961, is it eligible for partial tax exemption?",
+      "options_english": [
+        "Section 10(10)",
+        "Section 10(14)",
+        "Section 10(5)",
+        "Section 16(ii)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under Section 10(14)(ii) of the Income Tax Act, 1961 read with Rule 2BB(2) (Item 1 in the Table) of the Income-tax Rules, 1962:\n1. Special compensatory allowances granted to employees posted in designated high-altitude, difficult, or remote hilly areas (such as the Special Compensatory Hill Areas Allowance) are eligible for partial tax exemption.\n2. The statutory exemption limit ranges from ₹300 to ₹7,000 per month depending on the altitude and designated composite area/category.\nOther provisions:\n- Section 10(10) governs exemptions on gratuity.\n- Section 10(5) governs Leave Travel Concession (LTC).\n- Section 16(ii) provides statutory deductions for entertainment allowance for government employees.\nThus, Section 10(14) is the correct section.",
+      "explanation_hindi": "आयकर अधिनियम, 1961 की धारा 10(14)(ii) तथा आयकर नियम के नियम 2BB(2) के अंतर्गत:\n1. विशिष्ट दूरस्थ, उच्च-पर्वतीय या कठिन परिस्थितियों वाले क्षेत्रों में सेवा करने के कारण दिए जाने वाले विशेष प्रतिपूरक भत्ते (जैसे Hill Areas Allowance / High Altitude Allowance) आंशिक आयकर छूट के लिए पात्र हैं।\n2. यह छूट ऊंचाई और निर्दिष्ट भौगोलिक क्षेत्र के आधार पर ₹300 प्रति माह से लेकर ₹7,000 प्रति माह तक निर्धारित सीमाओं के अधीन होती है।\nअन्य विकल्पों में:\n- धारा 10(10) उपदान (ग्रेच्युटी) से संबंधित है।\n- धारा 10(5) अवकाश यात्रा रियायत (LTC) से संबंधित है।\n- धारा 16(ii) सरकारी कर्मचारियों के लिए मनोरंजन भत्ते की कटौती से संबंधित है।\nअतः सही उत्तर धारा 10(14) (विकल्प B) है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) Section 10(14)",
+        "Answer explanation extracted from supplied reference material: Special allowances granted to employees working in specified remote, high-altitude, or hilly areas, such as the Special Compensatory (Hill Areas) Allowance, are eligible for partial tax exemption under Section 10(14) of the Income Tax Act, subject to monetary limits prescribed in Rule 2BB of Income Tax Rules."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "b0cb24bd-f2ea-4224-b8a7-bb6e3a881d5b",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "फॉर्म 15G और फॉर्म 15H के तहत सांविधिक स्व-घोषणाओं के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\nI. फॉर्म 15G एक व्यक्ति (60 वर्ष से कम आयु) अथवा एचयूएफ द्वारा टीडीएस न काटने के लिए प्रस्तुत किया जाता है, बशर्ते उसकी अनुमानित कुल आय अधिकतम कर-मुक्त सीमा से कम हो।\nII. फॉर्म 15H केवल निवासी वरिष्ठ नागरिकों (60 वर्ष या उससे अधिक आयु) के लिए उपलब्ध एक घोषणा पत्र है।\nIII. वेतनभोगी शिक्षक अपने वेतन आय पर टीडीएस कटौती को पूरी तरह रोकने के लिए DDO को फॉर्म 15G या फॉर्म 15H प्रस्तुत कर सकते हैं।\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल II और III",
+        "केवल I और III",
+        "I, II और III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding statutory declarations in Form 15G and Form 15H:\nI. Form 15G is submitted by an individual (below 60 years of age) or HUF for non-deduction of TDS, provided their estimated total income is below the maximum taxable limit.\nII. Form 15H is a declaration available exclusively to resident senior citizens (aged 60 years or above).\nIII. Salaried school teachers can submit Form 15G or Form 15H to the DDO to completely stop TDS deduction on their salary income.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "I and II only",
+        "II and III only",
+        "I and III only",
+        "I, II, and III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Statements I and II are correct, while Statement III is incorrect. Under Section 197A of the Income Tax Act, 1961, Form 15G (for individuals below 60 years and HUFs) and Form 15H (for resident senior citizens aged 60 and above) are statutory self-declaration forms for non-deduction of TDS on specified non-salary payments (such as interest on fixed deposits under Section 194A, dividends under Section 194, premature EPF withdrawals under Section 192A, etc.) when the individual's estimated total income does not exceed the basic exemption limit. Crucially, Form 15G and Form 15H CANNOT be submitted to an employer/DDO to stop or prevent TDS deduction on salary under Section 192. Lower or nil deduction on salary income can only be authorized by the Assessing Officer issuing a certificate under Section 197.",
+      "explanation_hindi": "कथन I और II सही हैं, जबकि कथन III गलत है। आयकर अधिनियम, 1961 की धारा 197A के अंतर्गत, फॉर्म 15G (60 वर्ष से कम आयु के व्यक्तियों और HUF के लिए) तथा फॉर्म 15H (60 वर्ष या उससे अधिक आयु के वरिष्ठ नागरिकों के लिए) स्व-घोषणा पत्र हैं, जिनका उपयोग गैर-वेतन भुगतानों (जैसे बैंक सावधि जमा पर ब्याज - धारा 194A, लाभांश - धारा 194 आदि) पर टीडीएस न काटने के लिए किया जाता है, बशर्ते व्यक्ति की कुल आय कर-मुक्त सीमा के भीतर हो। वेतन आय पर धारा 192 के तहत होने वाली टीडीएस कटौती को रोकने के लिए फॉर्म 15G या फॉर्म 15H प्रस्तुत नहीं किया जा सकता। वेतन पर कम या शून्य कटौती के लिए कर्मचारी को धारा 197 के अंतर्गत संबंधित आयकर निर्धारण अधिकारी से सांविधिक प्रमाण-पत्र प्राप्त करना होता है। अतः केवल कथन I और II सही हैं।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) I and II only",
+        "Answer explanation extracted from supplied reference material: Form 15G and Form 15H are self-declarations for non-deduction of TDS on non-salary incomes when total income is below taxable limits, applicable to non-senior and senior citizens respectively. Salaried employees cannot submit Form 15G or 15H to their employers to prevent tax deduction on salary governed under Section 192."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "9e8c63c5-7111-454d-81ef-0d1921b9b9f0",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "आयकर अधिनियम की धारा 203 के तहत भुगतान किए गए वेतन और स्रोत पर काटे गए कर को प्रमाणित करते हुए नियोक्ता द्वारा कर्मचारी को वार्षिक रूप से जारी किया जाने वाला वैधानिक टीडीएस प्रमाण पत्र निम्नलिखित में से कौन-सा है?",
+      "options_hindi": [
+        "फॉर्म 16",
+        "फॉर्म 16A",
+        "फॉर्म 26AS",
+        "फॉर्म 24Q"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following forms is the statutory TDS certificate issued annually by an employer to an employee, certifying salary paid and the tax deducted at source under Section 203 of the Income Tax Act?",
+      "options_english": [
+        "Form 16",
+        "Form 16A",
+        "Form 26AS",
+        "Form 24Q"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Form 16 is the statutory certificate of deduction of tax at source issued under Section 203 of the Income Tax Act, 1961 read with Rule 31(1)(a) specifically for salary income (Section 192).\n\nDistinction among related income tax forms:\n- Form 16: Annual TDS certificate for salary payments issued by employer to employee.\n- Form 16A: Quarterly TDS certificate issued for non-salary payments (such as payments under Section 194C for contractors, Section 194J for professional fees, Section 194I for rent).\n- Form 26AS: Consolidated annual tax statement maintained by the Income Tax Department showing all tax credits (TDS, TCS, advance tax) against the taxpayer's PAN.\n- Form 24Q: Quarterly TDS return filed by the employer/deductor with the Income Tax Department for salary payments.",
+      "explanation_hindi": "फॉर्म 16 आयकर अधिनियम, 1961 की धारा 203 और नियम 31(1)(a) के तहत विशेष रूप से वेतन आय (धारा 192) के लिए नियोक्ता द्वारा कर्मचारी को जारी किया जाने वाला स्रोत पर कर कटौती का वैधानिक प्रमाण पत्र है।\n\nसंबंधित आयकर फॉर्मों में अंतर:\n- फॉर्म 16: वेतन भुगतान के लिए नियोक्ता द्वारा कर्मचारी को जारी किया जाने वाला वार्षिक टीडीएस प्रमाण पत्र।\n- फॉर्म 16A: गैर-वेतन भुगतानों (जैसे धारा 194C के तहत ठेकेदारों को भुगतान, धारा 194J के तहत पेशेवर शुल्क, धारा 194I के तहत किराया) के लिए जारी किया जाने वाला त्रैमासिक टीडीएस प्रमाण पत्र।\n- फॉर्म 26AS: आयकर विभाग द्वारा संधारित समेकित वार्षिक कर विवरण जो करदाता के पैन पर सभी कर जमा (TDS, TCS, अग्रिम कर) को दर्शाता है।\n- फॉर्म 24Q: वेतन भुगतानों के लिए नियोक्ता/DDO द्वारा आयकर विभाग को दाखिल किया जाने वाला त्रैमासिक टीडीएस रिटर्न।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (A) Form 16",
+        "Answer explanation extracted from supplied reference material: Form 16 is the statutory certificate issued annually by an employer to an employee under Section 203 of the Income Tax Act. It provides comprehensive details of the total salary paid, exemptions allowed, tax-saving deductions under Chapter VI-A, and the total tax deducted at source and deposited into the central treasury."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "30140121-e8e9-41e6-a95b-15c65743bfc7",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_english": "Under the statutory provisions of the Income Tax Act, 1961 applicable with effect from Assessment Year 2024-25, which tax regime has been designated as the \"default\" tax regime for individual taxpayers?",
+      "question_hindi": "कर निर्धारण वर्ष 2024-25 से प्रभावी आयकर अधिनियम, 1961 के वैधानिक प्रावधानों के अंतर्गत, व्यक्तिगत करदाताओं के लिए किस कर व्यवस्था को \"डिफ़ॉल्ट\" (default) कर व्यवस्था घोषित किया गया है?",
+      "options_english": [
+        "The Old Tax Regime featuring all Chapter VI-A itemized deductions and exemptions",
+        "The New Tax Regime under Section 115BAC with revised slab rates",
+        "A specialized regime based solely on capital gains taxation",
+        "There is no default regime; the taxpayer must compulsorily elect a regime every year"
+      ],
+      "options_hindi": [
+        "अध्याय VI-A की सभी मदवार कटौतियों और छूटों वाली पुरानी कर व्यवस्था",
+        "संशोधित स्लैब दरों वाली धारा 115BAC के तहत नई कर व्यवस्था",
+        "केवल पूंजीगत लाभ कराधान पर आधारित एक विशेष व्यवस्था",
+        "कोई डिफ़ॉल्ट व्यवस्था नहीं है; करदाता को प्रत्येक वर्ष अनिवार्य रूप से एक व्यवस्था का चयन करना होता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Finance Act 2023 significantly amended Section 115BAC of the Income Tax Act, 1961, making the New Tax Regime the statutory \"default tax regime\" for Individuals, Hindu Undivided Families (HUFs), Associations of Persons (AOPs), and Bodies of Individuals (BOIs) starting from Assessment Year 2024-25 (Financial Year 2023-24 onwards). Under this default system, the concessional slab rates under Section 115BAC(1A) apply automatically unless the taxpayer consciously opts out and exercises the option to be taxed under the Old Tax Regime in the prescribed manner (by intimating the DDO for TDS purposes and filing the income tax return within the due date under Section 139(1)).",
+      "explanation_hindi": "वित्त अधिनियम 2023 द्वारा आयकर अधिनियम, 1961 की धारा 115BAC में महत्वपूर्ण संशोधन करते हुए कर निर्धारण वर्ष 2024-25 (वित्तीय वर्ष 2023-24) से व्यक्तिगत करदाताओं, HUF और व्यक्तियों के संघ के लिए नई कर व्यवस्था (New Tax Regime) को वैधानिक रूप से \"डिफ़ॉल्ट कर व्यवस्था\" बना दिया गया है। इसका अर्थ यह है कि यदि कोई कर्मचारी/करदाता सक्रिय रूप से पुरानी कर व्यवस्था का विकल्प नहीं चुनता है, तो उसकी कर गणना धारा 115BAC की नई रियायती दरों के आधार पर ही स्वतः की जाएगी। पुरानी व्यवस्था चुनने के लिए करदाता को DDO को सूचना देनी होगी और धारा 139(1) की देय तिथि तक अपना ITR दाखिल करते समय स्पष्ट रूप से विकल्प चुनना होगा।",
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "language": "bilingual",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) The New Tax Regime under Section 115BAC",
+        "Answer explanation extracted from supplied reference material: Starting from Assessment Year 2024-25 (Financial Year 2023-24), the concessional tax regime under Section 115BAC has been made the statutory default tax regime for individual taxpayers. Taxpayers wishing to be assessed under the Old Tax Regime must explicitly exercise their option during return filing or intimate their employer for salary TDS purposes."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "e72c38aa-d3c5-451b-90e8-b65397db06a2",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_english": "Which of the following correctly describes the statutory \"carry-over\" provision for Leave Travel Concession (LTC) exemption under Rule 2B of the Income Tax Rules?",
+      "question_hindi": "आयकर नियमावली के नियम 2B के अंतर्गत अवकाश यात्रा रियायत (LTC) छूट के लिए वैधानिक \"कैरी-ओवर\" (अगले ब्लॉक में ले जाने) के नियम का सही वर्णन निम्नलिखित में से कौन-सा करता है?",
+      "options_english": [
+        "Unutilized LTC journeys can be carried forward indefinitely and used anytime prior to retirement.",
+        "Unutilized LTC is automatically encashed at the end of the 4-year block without any income tax liability.",
+        "One unutilized journey can be carried forward and availed in the first calendar year of the immediately succeeding block.",
+        "LTC exemption lapses completely at the end of the block and cannot be carried forward under any circumstances."
+      ],
+      "options_hindi": [
+        "उपयोग न की गई LTC यात्राओं को अनिश्चित काल के लिए आगे बढ़ाया जा सकता है और सेवानिवृत्ति से पहले कभी भी उपयोग किया जा सकता है।",
+        "4-वर्षीय ब्लॉक के अंत में बिना किसी आयकर देनदारी के अप्रयुक्त LTC का स्वतः नकदीकरण हो जाता है।",
+        "एक अप्रयुक्त यात्रा को अगले ब्लॉक में ले जाया जा सकता है और तुरंत अगले ब्लॉक के पहले कैलेंडर वर्ष में इसका लाभ उठाया जा सकता है।",
+        "ब्लॉक समाप्त होने पर LTC छूट पूरी तरह समाप्त हो जाती है और इसे किसी भी परिस्थिति में आगे नहीं ले जाया जा सकता।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under Rule 2B(2) of the Income Tax Rules, 1962, if an employee has not availed the Leave Travel Concession (LTC/LTA) exemption in respect of one or both of the two journeys permitted during a four-calendar-year block, they are entitled to carry over ONE unutilized journey to the immediately succeeding four-year block.\nHowever, to claim tax exemption for this carried-over journey, the employee MUST perform that journey in the FIRST calendar year of the immediately succeeding block. If availed in that first calendar year, it does not count against the regular quota of two journeys permitted for that new block, effectively allowing three exempt journeys in that block.",
+      "explanation_hindi": "आयकर नियमावली, 1962 के नियम 2B(2) के अनुसार, यदि कोई कर्मचारी चार कैलेंडर वर्षों के ब्लॉक के दौरान अनुमत दो यात्राओं में से एक या दोनों यात्राओं पर LTC छूट का लाभ नहीं उठा पाता है, तो वह केवल एक अप्रयुक्त यात्रा को ठीक अगले ब्लॉक में ले जा (carry forward कर) सकता है।\nइस कैरी-ओवर यात्रा पर कर छूट का दावा करने के लिए यह अनिवार्य शर्त है कि यात्रा तुरंत अगले ब्लॉक के प्रथम कैलेंडर वर्ष के भीतर ही की जानी चाहिए। यदि प्रथम वर्ष में इसका उपयोग कर लिया जाता है, तो उस नए ब्लॉक की नियमित दो यात्राओं की पात्रता अप्रभावित रहती है (अर्थात उस ब्लॉक में कुल तीन यात्राओं पर छूट मिल सकती है)।",
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "language": "bilingual",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (C) One unutilized journey can be carried forward to the first year of the next block.",
+        "Answer explanation extracted from supplied reference material: forward to the first year of the next block. If an employee does not avail Leave Travel Concession exemption for one or both journeys during a four-year block, one unutilized journey can be carried forward. This carried-forward journey must be utilized in the first calendar year of the immediately succeeding block to qualify for tax exemption under Income Tax Rules."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "bb181d31-2cb1-4753-bd6c-22b580589760",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "केंद्रीय माल और सेवा कर (CGST) अधिनियम, 2017 की धारा 2(30) के अंतर्गत \"संयुक्त आपूर्ति\" (Composite Supply) को निम्नलिखित में से किस रूप में सही परिभाषित किया गया है, जो विशेष रूप से तब प्रासंगिक होती है जब विद्यालय शैक्षणिक और सहायक सेवाओं को बंडल करते हैं?",
+      "options_hindi": [
+        "एक साथ बंडल की गई दो या दो से अधिक स्वतंत्र वस्तुओं या सेवाओं की ऐसी आपूर्ति जिसमें सभी वस्तुओं पर उच्चतम लागू स्लैब दर से कर लगाया जाता है",
+        "खुले बाजार में एक ही समग्र मूल्य पर एक साथ बेची जाने वाली असंबंधित वस्तुओं का पैकेज",
+        "विशेष रूप से गैर-करयोग्य निर्यात वस्तुओं और अपतटीय डिजिटल शैक्षणिक सामग्री से युक्त आपूर्ति",
+        "वस्तुओं या सेवाओं की दो या दो से अधिक ऐसी आपूर्ति जो सामान्य व्यावसायिक व्यवहार में स्वाभाविक रूप से बंडल (naturally bundled) हैं और एक साथ प्रदान की जाती हैं, जिनमें से एक मुख्य आपूर्ति (principal supply) होती है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following correctly defines a \"Composite Supply\" under Section 2(30) of the CGST Act, 2017, which is particularly relevant when schools bundle educational and ancillary services?",
+      "options_english": [
+        "A supply of two or more independent goods or services bundled together where all items are taxed at the highest applicable slab rate",
+        "A package of unrelated goods sold together at a single composite price in the open market",
+        "A supply involving exclusively non-taxable export goods and offshore digital educational content",
+        "A supply comprising two or more taxable supplies of goods or services which are naturally bundled and supplied in conjunction with each other in the ordinary course of business, one of which is a principal supply"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under Section 2(30) of the CGST Act, 2017, a 'Composite Supply' means a supply made by a taxable person to a recipient consisting of two or more taxable supplies of goods or services or both, or any combination thereof, which are naturally bundled and supplied in conjunction with each other in the ordinary course of business, one of which is a principal supply. Under Section 8(a), the tax liability on a composite supply is determined entirely by the tax rate applicable to the principal supply. For instance, in a residential school providing education along with lodging and boarding, the principal supply is education; since schooling up to higher secondary level is exempt from GST under Entry 66 of Notification No. 12/2017-Central Tax (Rate), the entire composite package enjoys exemption. In contrast, artificially bundled supplies sold for a single price are 'Mixed Supplies' under Section 2(74) and taxed at the highest rate under Section 8(b).",
+      "explanation_hindi": "CGST अधिनियम, 2017 की धारा 2(30) के अनुसार, 'संयुक्त आपूर्ति' (Composite Supply) से तात्पर्य किसी करदाता द्वारा प्राप्तकर्ता को की गई वस्तुओं या सेवाओं की दो या दो से अधिक ऐसी आपूर्तियों से है जो सामान्य व्यावसायिक व्यवहार में स्वाभाविक रूप से एक साथ जुड़ी (naturally bundled) होती हैं, जिनमें से एक 'मुख्य आपूर्ति' (Principal Supply) होती है। धारा 8(a) के प्रावधानों के अनुसार, ऐसी संपूर्ण संयुक्त आपूर्ति पर मुख्य आपूर्ति की दर से ही कर लगाया जाता है। उदाहरण के लिए, किसी आवासीय (बोर्डिंग) स्कूल द्वारा विद्यार्थियों को शिक्षा के साथ-साथ छात्रावास और भोजन प्रदान करना एक स्वाभाविक रूप से बंडल संयुक्त आपूर्ति है, जिसमें मुख्य आपूर्ति 'शिक्षा' है। चूंकि विद्यालयी शिक्षा अधिसूचना सं. 12/2017 के तहत कर-मुक्त है, इसलिए पूरे पैकेज को छूट मिलती है। इसके विपरीत, अस्वाभाविक रूप से बंडल की गई आपूर्ति धारा 2(74) के तहत 'मिश्रित आपूर्ति' (Mixed Supply) कहलाती है और धारा 8(b) के तहत उन पर उच्चतम दर से कर लगता है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) Naturally bundled goods/services supplied together with one principal supply.",
+        "Answer explanation extracted from supplied reference material: together with one principal supply. Under Section 2(30) of the CGST Act, a Composite Supply comprises two or more naturally bundled taxable supplies of goods or services provided together in the ordinary course of business, where one supply acts as the principal supply and determines the applicable GST rate for the entire bundled transaction."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "3adb0f4a-4ede-4fdb-8acb-2a8e030f306f",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "निम्नलिखित लेन-देन पर विचार कीजिए:\nI. एक बुनियादी बचत बैंक जमा खाता (BSBDA) खोलना।\nII. किसी बैंकिंग कंपनी में एक ही दिन के दौरान ₹50,000 से अधिक नकद जमा करना।\nIII. दोपहिया वाहन के अलावा किसी अन्य मोटर वाहन की बिक्री या खरीद।\nआयकर नियम, 1962 के नियम 114B के अनुसार, उपर्युक्त में से किन लेन-देन के लिए स्थायी खाता संख्या (PAN) उद्धृत करना अनिवार्य है?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल II और III",
+        "केवल I और III",
+        "I, II और III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following transactions:\nI. Opening a Basic Savings Bank Deposit Account (BSBDA)\nII. Depositing cash exceeding ₹50,000 with a banking company during any one single day\nIII. Sale or purchase of a motor vehicle other than a two-wheeler\nAccording to Rule 114B of the Income Tax Rules, 1962, quoting of Permanent Account Number (PAN) is mandatory for which of the transactions listed above?",
+      "options_english": [
+        "I and II only",
+        "II and III only",
+        "I and III only",
+        "I, II, and III"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Rule 114B of the Income Tax Rules, 1962 mandates quoting of PAN for specified financial transactions:\n1. Opening a bank account: While opening an account with a banking company or cooperative bank generally requires PAN, Rule 114B explicitly carves out an exception for a Basic Savings Bank Deposit Account (BSBDA / Jan Dhan account). Therefore, quoting PAN is NOT mandatory for opening a BSBDA (Statement I is incorrect).\n2. Cash deposits: Quoting PAN is mandatory for deposit of cash exceeding ₹50,000 during any one single day with a banking company or cooperative bank (Statement II is correct).\n3. Motor vehicles: Quoting PAN is mandatory for the sale or purchase of any motor vehicle or vehicle, other than two-wheeled vehicles (Statement III is correct).\nTherefore, quoting PAN is mandatory for transactions II and III only.",
+      "explanation_hindi": "आयकर नियम, 1962 का नियम 114B विनिर्दिष्ट वित्तीय लेन-देन के लिए पैन (PAN) उद्धृत करना अनिवार्य बनाता है:\n1. बैंक खाता खोलना: सामान्यतः बैंकिंग कंपनी या सहकारी बैंक में खाता खोलने के लिए पैन अनिवार्य है, परंतु नियम 114B स्पष्ट रूप से 'बुनियादी बचत बैंक जमा खाते' (BSBDA / जन-धन खाता) को इससे छूट प्रदान करता है। अतः BSBDA खाता खोलने के लिए पैन अनिवार्य नहीं है (कथन I गलत है)।\n2. नकद जमा: किसी बैंकिंग कंपनी या सहकारी बैंक में एक ही दिन के दौरान ₹50,000 से अधिक नकद जमा करने के लिए पैन उद्धृत करना अनिवार्य है (कथन II सही है)।\n3. मोटर वाहन: दोपहिया वाहनों को छोड़कर, किसी भी अन्य मोटर वाहन की बिक्री या खरीद के लिए पैन उद्धृत करना अनिवार्य है (कथन III सही है)।\nअतः सही उत्तर केवल II और III है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "hard",
+      "key_facts": [
+        "Printed answer key: (B) II and III only",
+        "Answer explanation extracted from supplied reference material: Under Rule 114B of the Income Tax Rules 1962, quoting Permanent Account Number is mandatory for specified financial transactions. These include depositing cash exceeding fifty thousand rupees with a banking company in a single day and purchasing or selling motor vehicles other than two-wheeled vehicles. Basic savings accounts do not mandate PAN."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "650d1a5d-fa06-4bb9-9599-a601079cd22d",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "एक सरकारी कर्मचारी को ₹80,000 का अवकाश यात्रा रियायत (LTC) अग्रिम प्राप्त होता है, लेकिन वह निर्धारित समय-सीमा के भीतर यात्रा टिकट प्रस्तुत करने या यात्रा करने में विफल रहता है। DDO को कौन-सी प्रशासनिक एवं कर संबंधी कार्रवाई करनी चाहिए?",
+      "options_hindi": [
+        "कर्मचारी को कोई ब्याज या कर लगाए बिना अगले वित्तीय वर्ष में शेष राशि लौटाने की अनुमति देना",
+        "पूरी राशि को कर्मचारी के वेतन में जोड़ना और धारा 10(5) के तहत कर छूट देना",
+        "अग्रिम की पूरी राशि को दंडात्मक ब्याज सहित वसूल करना तथा यदि समायोजित न हो तो इसे कर योग्य वेतन मानना",
+        "यात्रा वाउचर के सत्यापन के बिना ही राशि को पूर्णतः व्यय मानकर बट्टे खाते में डालना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "A government employee receives a Leave Travel Concession (LTC) advance of ₹80,000 but fails to produce travel tickets or undertake the journey within the stipulated period. What administrative and taxation action should the DDO take?",
+      "options_english": [
+        "Permit the employee to refund the balance in the next financial year without interest or tax",
+        "Add the entire amount to the employee's salary and grant tax exemption under Section 10(5)",
+        "Recover the entire advance amount with penal interest and treat it as taxable salary if not adjusted",
+        "Write off the entire amount as administrative expenditure without verifying travel vouchers"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under Central Civil Services (LTC) Rules read with the Income Tax Act, 1961, LTC tax exemption under Section 10(5) and Rule 2B is admissible strictly upon actual travel undertaken and supported by valid proof of expenditure (tickets/boarding passes). If an employee draws an LTC advance but fails to undertake the journey within the prescribed time limit or fails to submit final adjustment bills, the entire advance must be recovered in a single lump sum along with penal interest (typically 2% over GPF interest rate). In taxation terms, any unadjusted advance cannot claim Section 10(5) exemption and forms part of taxable salary for TDS calculation under Section 192.",
+      "explanation_hindi": "सही उत्तर C है। सीसीएस (एलटीसी) नियमावली तथा आयकर अधिनियम, 1961 की धारा 10(5) व नियम 2B के अंतर्गत एलटीसी पर कर छूट केवल वास्तविक यात्रा और वैध यात्रा प्रमाणक प्रस्तुत करने पर ही प्राप्त होती है। यदि कोई कर्मचारी अग्रिम लेकर निर्धारित अवधि में यात्रा नहीं करता या समायोजन बिल प्रस्तुत नहीं करता, तो आहरण एवं संवितरण अधिकारी (DDO) द्वारा अग्रिम की संपूर्ण राशि दंडात्मक ब्याज सहित एकमुश्त वसूल की जाती है। कर की दृष्टि से, असमायोजित अग्रिम पर धारा 10(5) की छूट नहीं मिलती और इसे टीडीएस गणना हेतु वेतन में जोड़कर कर योग्य माना जाता है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (C) Recover the advance in lump sum with penal interest, and treat the unadjusted amount as taxable salary",
+        "Answer explanation extracted from supplied reference material: Under LTC rules and Income Tax provisions, LTC advances must be backed by actual travel and proof within the stipulated time. If an employee fails to utilize the advance, it must be refunded in full immediately along with penal interest. Furthermore, no tax exemption under Section 10(5) can be claimed, and any default is treated as taxable salary."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "917666bf-f649-4b02-a415-8a997f5c6425",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "यदि कोई आहरण एवं संवितरण अधिकारी (DDO) टीडीएस (TDS) की कटौती करने में विफल रहता है, या टीडीएस काटने के बाद भी निर्धारित समय सीमा के भीतर उसे केंद्र सरकार के खाते में जमा करने में विफल रहता है, तो निम्नलिखित में से कौन-सा वैधानिक परिणाम लागू होता है?",
+      "options_hindi": [
+        "DDO का व्यक्तिगत स्थायी खाता संख्या (PAN) स्थायी रूप से रद्द कर दिया जाता है।",
+        "DDO अनिवार्य ब्याज, वित्तीय शास्ति (जुर्माना) तथा धारा 276B के तहत अभियोजन के लिए उत्तरदायी होता है।",
+        "शिक्षा निदेशालय द्वारा विद्यालय की वित्तीय मान्यता स्थायी रूप से समाप्त कर दी जाती है।",
+        "नियोक्ता और कर्मचारी दोनों के लिए कर देयता पूरी तरह से माफ कर दी जाती है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following legal consequences applies if a Drawing and Disbursing Officer (DDO) fails to deduct TDS, or deducts TDS but fails to deposit it into the Central Government account within the prescribed time limit?",
+      "options_english": [
+        "The DDO's personal Permanent Account Number (PAN) is permanently cancelled.",
+        "The DDO is liable for mandatory interest, monetary penalty, and prosecution under Section 276B.",
+        "The school's financial recognition is permanently withdrawn by the Directorate of Education.",
+        "The tax liability is entirely waived off for both the employer and employee."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under the Income Tax Act, 1961, failure by a Drawing and Disbursing Officer (DDO) to deduct or deposit TDS attracts severe statutory liabilities:\n1. Interest under Section 201(1A): Mandatory interest is levied at 1% per month (or part of a month) for delay in deducting tax, and at 1.5% per month (or part of a month) for delay in depositing deducted tax into the government account.\n2. Penalty under Section 271C: A penalty equal to the amount of tax failed to be deducted may be imposed.\n3. Prosecution under Section 276B: If a person fails to pay to the credit of the Central Government the tax deducted at source, they shall be punishable with rigorous imprisonment for a term which shall not be less than three months but which may extend to seven years, along with a fine.\n\nPersonal PAN cancellation or withdrawal of school recognition are not statutory penalties under the Income Tax Act.",
+      "explanation_hindi": "आयकर अधिनियम, 1961 के तहत, आहरण एवं संवितरण अधिकारी (DDO) द्वारा टीडीएस (TDS) की कटौती न करने या उसे सरकारी खाते में जमा न करने पर गंभीर वैधानिक परिणाम लागू होते हैं:\n1. धारा 201(1A) के तहत ब्याज: कर कटौती में देरी के लिए 1% प्रति माह (या माह का भाग) और काटे गए कर को सरकारी खाते में जमा करने में देरी के लिए 1.5% प्रति माह (या माह का भाग) की दर से अनिवार्य ब्याज देय होता है।\n2. धारा 271C के तहत शास्ति: न काटे गए कर की राशि के बराबर जुर्माना लगाया जा सकता है।\n3. धारा 276B के तहत अभियोजन: यदि कोई व्यक्ति स्रोत पर काटे गए कर को केंद्र सरकार के खाते में जमा करने में विफल रहता है, तो वह कठोर कारावास (न्यूनतम 3 माह से लेकर अधिकतम 7 वर्ष तक) और जुर्माने से दंडनीय होगा।\n\nव्यक्तिगत पैन को रद्द करना या स्कूल की मान्यता रद्द करना आयकर अधिनियम के तहत निर्धारित दंड नहीं हैं।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) The DDO is liable for interest, penalty, and prosecution under Section 276B.",
+        "Answer explanation extracted from supplied reference material: prosecution under Section 276B. Failure by a Drawing and Disbursing Officer to deduct tax at source or to deposit deducted tax into the government treasury attracts mandatory interest penalties under Section 201(1A). Additionally, persistent failure without reasonable cause can result in financial penalties and criminal prosecution under Section 276B of the Income Tax Act 1961."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "5c7ea9e9-2e84-476d-beca-9f5c30fbec25",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_english": "A senior Post Graduate Teacher (PGT) informs the DDO in the month of April that they wish to be taxed under the Old Tax Regime for monthly salary TDS purposes. At the time of filing their annual Income Tax Return in July, can the teacher legally modify their choice and switch to the New Tax Regime?",
+      "question_hindi": "एक वरिष्ठ स्नातकोत्तर शिक्षक (PGT) अप्रैल माह में DDO को सूचित करते हैं कि वे मासिक वेतन TDS के प्रयोजन हेतु पुरानी कर व्यवस्था के तहत कर कटौती कराना चाहते हैं। जुलाई में अपना वार्षिक आयकर रिटर्न (ITR) दाखिल करते समय, क्या शिक्षक कानूनी रूप से अपना विकल्प बदलकर नई कर व्यवस्था में जा सकते हैं?",
+      "options_english": [
+        "Yes, individuals having only salary income are fully entitled to switch tax regimes at the time of filing their ITR under Section 139(1).",
+        "No, an employee who has declared their option to the DDO is legally bound by it and cannot alter it during ITR filing.",
+        "Yes, but only after obtaining formal written approval from the jurisdictional Income Tax Assessing Officer.",
+        "No, the choice between the Old and New Tax Regimes is a once-in-a-lifetime irrevocable election for all taxpayers."
+      ],
+      "options_hindi": [
+        "हाँ, केवल वेतन आय वाले व्यक्ति धारा 139(1) के तहत अपना ITR दाखिल करते समय कर व्यवस्था बदलने के पूर्ण हकदार हैं।",
+        "नहीं, जिस कर्मचारी ने DDO को अपने विकल्प की घोषणा कर दी है, वह उससे बाध्य है और ITR फाइलिंग के समय इसे बदल नहीं सकता।",
+        "हाँ, लेकिन केवल क्षेत्राधिकार वाले आयकर निर्धारण अधिकारी (AO) से औपचारिक लिखित अनुमति प्राप्त करने के बाद।",
+        "नहीं, पुरानी और नई कर व्यवस्था के बीच चयन सभी करदाताओं के लिए जीवनकाल में केवल एक बार किया जाने वाला अपरिवर्तनीय विकल्प है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "According to CBDT Circular No. 04/2023 (clarifying TDS under Section 192 read with Section 115BAC), the intimation made by an employee to their employer/DDO regarding their intended tax regime at the beginning of the financial year is purely for the purpose of monthly tax deduction at source (TDS). This initial intimation to the DDO does not amount to exercising the statutory option before the Income Tax Department.\nAn individual who derives income only from salary (and does not have business or professional income under Section 44AB) has the complete statutory freedom to switch between the Old Tax Regime and the New Tax Regime at the time of filing their annual return of income under Section 139(1). If excess tax was deducted by the DDO due to the April intimation, the employee can claim a tax refund while filing the return under their newly chosen regime.",
+      "explanation_hindi": "सीबीडीटी (CBDT) के परिपत्र सं. 04/2023 (धारा 115BAC के तहत वेतन पर TDS स्पष्टीकरण) के अनुसार, वित्तीय वर्ष के प्रारंभ में कर्मचारी द्वारा अपने नियोक्ता/DDO को दी गई कर व्यवस्था की सूचना केवल मासिक वेतन से स्रोत पर कर कटौती (TDS) की गणना के लिए होती है। DDO को दी गई यह सूचना आयकर विभाग के समक्ष अंतिम वैधानिक विकल्प नहीं मानी जाती।\nएक वेतनभोगी व्यक्ति (जिसके पास व्यापार या पेशे से आय नहीं है) धारा 139(1) के तहत अपना वार्षिक आयकर रिटर्न दाखिल करते समय पुरानी और नई कर व्यवस्था के बीच बदलाव करने के लिए पूरी तरह स्वतंत्र होता है। यदि DDO द्वारा पुरानी व्यवस्था के अनुसार अधिक कर काट लिया गया था और रिटर्न में नई व्यवस्था फायदेमंद रहती है, तो कर्मचारी रिटर्न दाखिल करते समय नई व्यवस्था चुनकर अतिरिक्त कर का रिफंड प्राप्त कर सकता है।",
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "language": "bilingual",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) Yes, salaried individuals can switch regimes when filing ITR under Section 139(1).",
+        "Answer explanation extracted from supplied reference material: when filing ITR under Section 139(1). An individual having income strictly from salary can choose their preferred tax regime with the employer for monthly TDS, but this choice is not binding for final tax filing. Such taxpayers retain full legal entitlement to modify their tax regime choice at the time of filing their annual Income Tax Return under Section 139(1)."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "065fe3b6-9bc3-48c2-ac44-e4e4e9467041",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "यदि किसी विद्यालय को सूचना का अधिकार (RTI) अधिनियम, 2005 के तहत किसी विशिष्ट शिक्षक के वेतन से काटे गए सटीक आयकर (TDS) और जमा किए गए कर के विवरण की मांग करने वाला आवेदन प्राप्त होता है, तो प्राचार्य (जन सूचना अधिकारी - PIO के रूप में) को क्या वैधानिक कार्यवाही करनी चाहिए?",
+      "options_hindi": [
+        "विस्तृत कर जानकारी तुरंत उपलब्ध कराएं क्योंकि इस कटौती का संबंध सरकारी खजाने में जमा होने वाली राशि से है",
+        "आरटीआई अधिनियम की धारा 8(1)(j) के तहत सूचना देने से मना करें क्योंकि यह व्यक्तिगत जानकारी है जिसका किसी लोक क्रियाकलाप या जनहित से कोई संबंध नहीं है",
+        "आरटीआई अधिनियम की धारा 8(1)(a) के तहत यह कहते हुए सूचना देने से मना करें कि कर मामले देश की आर्थिक संप्रभुता को प्रभावित करते हैं",
+        "आवेदक को निर्देश दें कि वह संबंधित शिक्षक से व्यक्तिगत संपर्क करके उसके निजी आयकर अभिलेखों का निरीक्षण करे"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "If a school receives an application under the Right to Information (RTI) Act, 2005 seeking specific personal details regarding the exact amount of income tax (TDS) deducted and deposited for an individual teacher, how should the Principal (functioning as the Public Information Officer - PIO) legally respond?",
+      "options_english": [
+        "Provide the detailed tax information immediately because the deduction involves public treasury remittances",
+        "Deny the request under Section 8(1)(j) of the RTI Act as it constitutes personal information having no relationship to any public activity or interest",
+        "Deny the information under Section 8(1)(a) of the RTI Act stating that tax matters impact the economic sovereignty of the nation",
+        "Direct the applicant to personally contact the concerned teacher to inspect their private income tax records"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under Section 8(1)(j) of the Right to Information Act, 2005, personal information the disclosure of which has no relationship to any public activity or interest, or which would cause unwarranted invasion of the privacy of an individual, is exempt from disclosure unless the PIO or appellate authority is satisfied that the larger public interest justifies it. The Supreme Court of India in the landmark ruling of Girish Ramchandra Deshpande v. Central Information Commissioner (2012) categorically held that details of an employee's salary deductions, income tax returns, TDS statements, and personal assets qualify as personal information protected under Section 8(1)(j). Therefore, the Principal/PIO must deny disclosure unless a substantiated larger public interest is established by the applicant.",
+      "explanation_hindi": "सूचना का अधिकार (RTI) अधिनियम, 2005 की धारा 8(1)(j) के अनुसार, ऐसी व्यक्तिगत सूचना जिसके प्रकटीकरण का किसी लोक क्रियाकलाप या लोक हित से कोई संबंध नहीं है, अथवा जिससे व्यक्ति की निजता पर अकारण अतिक्रमण होता हो, प्रकट किए जाने से मुक्त है; जब तक कि लोक सूचना अधिकारी का यह समाधान न हो जाए कि व्यापक लोक हित ऐसे प्रकटीकरण का औचित्य सिद्ध करता है। भारत के सर्वोच्च न्यायालय ने 'गिरीश रामचंद्र देशपांडे बनाम केंद्रीय सूचना आयुक्त (2012)' के ऐतिहासिक निर्णय में यह स्पष्ट रूप से निर्धारित किया कि किसी कर्मचारी के वेतन से कटौतियों, आयकर रिटर्न, टीडीएस विवरण तथा व्यक्तिगत वित्तीय आंकड़े धारा 8(1)(j) के तहत संरक्षित व्यक्तिगत सूचना हैं। अतः किसी स्पष्ट जनहित के अभाव में प्राचार्य (PIO) को धारा 8(1)(j) के अंतर्गत यह जानकारी देने से मना करना चाहिए।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) Deny under Section 8(1)(j) of RTI Act as personal information without public interest.",
+        "Answer explanation extracted from supplied reference material: personal information without public interest. Details regarding income tax deductions and personal financial records of an employee constitute personal information under the Right to Information Act. Unless a larger public interest is demonstrated, a Public Information Officer must deny such information under Section 8(1) (j) of the RTI Act to protect individual privacy rights."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "2f404e2f-b3a5-4542-9e75-ea5279ec5716",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "आयकर अधिनियम, 1961 की धारा 194C (ठेकेदारों/संविदाकारों को भुगतान) के तहत, किसी एकल संविदा या बिल के लिए टीडीएस कटौती की सीमा ₹30,000 है। एक वित्तीय वर्ष के दौरान एकल संविदाकार को किए गए या जमा किए गए कुल भुगतानों की समग्र मौद्रिक सीमा (aggregate limit) क्या है, जिसके पार होते ही टीडीएस काटना अनिवार्य हो जाता है?",
+      "options_hindi": [
+        "₹50,000",
+        "₹75,000",
+        "₹1,00,000",
+        "₹2,50,000"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under Section 194C of the Income Tax Act, 1961 (Payments to Contractors), the threshold limit for deducting TDS for a single contract is ₹30,000. What is the aggregate monetary limit for payments credited or paid to a single contractor during a financial year beyond which TDS deduction becomes mandatory?",
+      "options_english": [
+        "₹50,000",
+        "₹75,000",
+        "₹1,00,000",
+        "₹2,50,000"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under Section 194C of the Income Tax Act, 1961, any specified person (including a school DDO/principal) responsible for paying any sum to a resident contractor for carrying out any work (including transport, maintenance, catering, housekeeping, security, etc.) must deduct tax at source. The statutory thresholds are dual: (1) TDS is attracted if a single sum credited or paid exceeds ₹30,000; OR (2) where the aggregate of sums credited or paid to that contractor during the financial year exceeds ₹1,00,000 (even if each individual payment was less than ₹30,000). Once the aggregate crosses ₹1,00,000, TDS is applicable on the entire cumulative amount at 1% for individual/HUF contractors and 2% for corporate/firm contractors.",
+      "explanation_hindi": "आयकर अधिनियम, 1961 की धारा 194C के अंतर्गत, किसी निवासी ठेकेदार/संविदाकार (जैसे विद्यालय में रखरखाव, परिवहन, कैटरिंग, सुरक्षा आदि कार्य करने वाले) को भुगतान करते समय DDO को टीडीएस काटना होता है। इसके लिए दोहरी सीमा निर्धारित है: (1) यदि किसी एकल संविदा या बिल के भुगतान की राशि ₹30,000 से अधिक हो; अथवा (2) यदि वित्तीय वर्ष के दौरान उस एकल संविदाकार को किए गए या देय कुल भुगतानों की संचयी राशि ₹1,00,000 से अधिक हो जाती है (भले ही प्रत्येक व्यक्तिगत बिल ₹30,000 से कम का क्यों न रहा हो)। ₹1,00,000 की कुल सीमा पार होते ही पूरी संचयी राशि पर टीडीएस (व्यक्ति/HUF के लिए 1% तथा कंपनी/फर्म के लिए 2%) काटना अनिवार्य हो जाता है। अतः सही उत्तर विकल्प C (₹1,00,000) है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (C) ₹1,00,000",
+        "Answer explanation extracted from supplied reference material: Under Section 194C of the Income Tax Act, tax deduction at source is triggered if an individual contract payment exceeds thirty thousand rupees. Additionally, if the aggregate total of payments made or credited to a single contractor during a financial year exceeds one lakh rupees, TDS mandatory deduction rules apply."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "82159afa-3218-495e-a7fb-a3570c3ccf7f",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "आयकर अधिनियम, 1961 की धारा 201(1A) के तहत टीडीएस (TDS) जमा करने में देरी (अर्थात जहाँ कर की कटौती कर ली गई है परंतु उसे सरकारी खाते में जमा नहीं किया गया है) के लिए ब्याज की वैधानिक दर क्या है?",
+      "options_hindi": [
+        "प्रत्येक माह या माह के किसी भाग के लिए 1.0%",
+        "प्रत्येक माह या माह के किसी भाग के लिए 1.5%",
+        "प्रत्येक माह या माह के किसी भाग के लिए 2.0%",
+        "दैनिक आधार पर परिकलित 12.0% प्रति वर्ष"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What is the statutory rate of interest charged under Section 201(1A) of the Income Tax Act, 1961 for delayed deposit of TDS (i.e., where tax has been deducted but not paid to the government account)?",
+      "options_english": [
+        "1.0% for every month or part of a month",
+        "1.5% for every month or part of a month",
+        "2.0% for every month or part of a month",
+        "12.0% per annum, calculated on a daily basis"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under Section 201(1A) of the Income Tax Act, 1961, if a deductor fails to deduct or pay TDS, mandatory simple interest is levied as follows:\n\n1. For failure/delay in deducting tax: Simple interest at 1.0% per month or part of a month, from the date on which tax was deductible to the date on which tax is actually deducted.\n2. For failure/delay in depositing tax after deduction: Simple interest at 1.5% per month or part of a month, from the date on which tax was deducted to the date on which such tax is actually paid/deposited into the government treasury.\n\nSince this question specifically asks about delayed deposit (tax deducted but not deposited), the applicable rate is 1.5% per month or part of a month. This interest cannot be waived and must be paid before filing the quarterly return.",
+      "explanation_hindi": "आयकर अधिनियम, 1961 की धारा 201(1A) के तहत, यदि कोई कर कटौतीकर्ता (DDO/नियोक्ता) टीडीएस काटने या जमा करने में विफल रहता है, तो निम्नलिखित रूप से अनिवार्य साधारण ब्याज लगाया जाता है:\n\n1. कर की कटौती में विफलता/देरी के लिए: जिस तारीख को कर काटा जाना था उस तारीख से लेकर वास्तविक कटौती की तारीख तक 1.0% प्रति माह या माह के किसी भाग के लिए।\n2. कटौती के बाद कर जमा करने में विफलता/देरी के लिए: कटौती की तारीख से लेकर सरकारी खजाने में वास्तविक भुगतान/जमा करने की तारीख तक 1.5% प्रति माह या माह के किसी भाग के लिए।\n\nचूँकि प्रश्न में विशेष रूप से टीडीएस जमा करने में देरी (कर काटा गया परंतु जमा नहीं किया गया) के बारे में पूछा गया है, अतः लागू दर 1.5% प्रति माह या माह का भाग है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) 1.5% for every month or part of a month",
+        "Answer explanation extracted from supplied reference material: Under Section 201(1A) of the Income Tax Act, if tax has been deducted at source but is not deposited into the central government account within the prescribed statutory period, interest is charged at the rate of one point five percent for every month or part of a month from deduction to deposit date."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "1882fa0b-35be-4349-95a5-c242b80d0798",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को अभिकथन (A) और दूसरे को कारण (R) के रूप में अंकित किया गया है:\nअभिकथन (A): यदि कोई कर्मचारी नई कर व्यवस्था (New Tax Regime) का विकल्प चुनता है, तो भी वह किराए पर दी गई (Let-out) संपत्ति हेतु धारा 24(b) के तहत गृह ऋण ब्याज की कटौती का दावा कर सकता है।\nकारण (R): धारा 115BAC के तहत धारा 24(b) के संबंध में लगाया गया प्रतिबंध केवल स्व-अधिकृत (Self-occupied) संपत्तियों पर लागू होता है।\nउपर्युक्त कथनों के संदर्भ में, निम्नलिखित में से कौन-सा सही है?",
+      "options_hindi": [
+        "A और R दोनों सही हैं और R, A की सही व्याख्या है",
+        "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है",
+        "A सही है लेकिन R गलत है",
+        "A गलत है लेकिन R सही है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R):\nAssertion (A): If an employee opts for the New Tax Regime, they can still claim the deduction for interest on a home loan under Section 24(b) for a let-out (rented) property.\nReason (R): The restriction under Section 115BAC for Section 24(b) applies only to self-occupied properties.\nIn the context of the above statements, which of the following is correct?",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Both Assertion (A) and Reason (R) are correct, and Reason (R) is the accurate statutory explanation for Assertion (A). Under the New Tax Regime governed by Section 115BAC of the Income Tax Act, 1961, deductions for housing loan interest under Section 24(b) are expressly disallowed for 'self-occupied' house properties (where loss cannot be set off against salaries). However, for 'let-out' or rented properties, Section 24(b) interest deduction is fully allowable against the rental income to compute net income from house property. It is important to note that while interest is deductible against rent, any net loss under the head House Property cannot be set off against Salary income under Section 115BAC.",
+      "explanation_hindi": "सही उत्तर A है। अभिकथन (A) और कारण (R) दोनों सही हैं तथा कारण (R), अभिकथन (A) की सही व्याख्या प्रस्तुत करता है। धारा 115BAC (नई कर व्यवस्था) के अंतर्गत, धारा 24(b) के तहत गृह ऋण पर ब्याज की कटौती पर रोक केवल स्व-अधिकृत (Self-occupied) मकानों पर लागू होती है। यदि कोई संपत्ति किराए पर दी गई (Let-out) है, तो उस संपत्ति से प्राप्त किराए के विरुद्ध गृह ऋण का ब्याज धारा 24(b) के तहत घटाया जा सकता है। हालाँकि, नई व्यवस्था में गृह संपत्ति शीर्ष की किसी भी शुद्ध हानि को वेतन शीर्ष से समायोजित (Set-off) नहीं किया जा सकता।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "hard",
+      "key_facts": [
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A",
+        "Answer explanation extracted from supplied reference material: explanation of A Under the New Tax Regime (Section 115BAC), interest deduction under Section 24(b) is disallowed specifically for self-occupied properties. However, for rented or let-out properties, interest on housing loans remains deductible under Section 24(b) against rental income, though net house property losses cannot offset salary income."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "0f242283-7c04-4cf4-b0b8-900f2789da77",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को अभिकथन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है:\nअभिकथन (A): पैन धारक व्यक्तियों के लिए इसे अपने आधार नंबर से जोड़ना (लिंक करना) अनिवार्य है, ऐसा न करने पर पैन निष्क्रिय (inoperative) हो जाता है।\nकारण (R): आयकर अधिनियम, 1961 की धारा 139AA डुप्लीकेट और फर्जी पैन को समाप्त करने तथा कर चोरी पर अंकुश लगाने के लिए आधार-पैन लिंकिंग को अनिवार्य बनाती है।\nउपर्युक्त कथनों के आलोक में, नीचे दिए गए विकल्पों में से सही उत्तर चुनिए:",
+      "options_hindi": [
+        "(A) और (R) दोनों सत्य हैं और (R), (A) की सही व्याख्या है",
+        "(A) और (R) दोनों सत्य हैं, लेकिन (R), (A) की सही व्याख्या नहीं है",
+        "(A) सत्य है, लेकिन (R) असत्य है",
+        "(A) असत्य है, लेकिन (R) सत्य है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R):\nAssertion (A): It is mandatory for individuals holding a PAN to link it with their Aadhaar number, failing which the PAN becomes inoperative.\nReason (R): Section 139AA of the Income Tax Act, 1961 mandates Aadhaar-PAN linking to eliminate duplicate and bogus PANs and curb tax evasion.\nIn light of the above statements, choose the most appropriate answer from the options given below:",
+      "options_english": [
+        "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "Both (A) and (R) are true, but (R) is not the correct explanation of (A)",
+        "(A) is true, but (R) is false",
+        "(A) is false, but (R) is true"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Assertion (A) is true: Under Section 139AA(2) of the Income Tax Act, 1961 read with Rule 114AAA of the Income Tax Rules, every person who has been allotted a PAN as on 1st July 2017 and who is eligible to obtain Aadhaar is required to link PAN with Aadhaar. If a taxpayer fails to link them within the notified deadline (30th June 2023), the PAN becomes 'inoperative'.\nReason (R) is true: Section 139AA was inserted by the Finance Act, 2017 with the specific legislative objective of tackling the menace of multiple PAN cards obtained by a single individual using fictitious identities, thereby curbing tax evasion and circulation of unaccounted money (as also upheld by the Supreme Court in Binoy Viswam v. Union of India).\nSince Reason (R) directly explains why the mandatory linking and inoperative consequence were enacted, both (A) and (R) are true and (R) is the correct explanation of (A).",
+      "explanation_hindi": "अभिकथन (A) सत्य है: आयकर अधिनियम, 1961 की धारा 139AA(2) और आयकर नियम के नियम 114AAA के तहत, जिन व्यक्तियों को 1 जुलाई 2017 तक पैन आवंटित किया गया था और जो आधार प्राप्त करने के पात्र हैं, उनके लिए पैन को आधार से लिंक करना अनिवार्य किया गया है। निर्धारित अंतिम तिथि (30 जून 2023) तक लिंक न करने पर पैन 'निष्क्रिय' (inoperative) हो जाता है।\nकारण (R) सत्य है: धारा 139AA को वित्त अधिनियम 2017 द्वारा शामिल किया गया था जिसका मुख्य उद्देश्य एक ही व्यक्ति द्वारा फर्जी पहचान के आधार पर कई पैन कार्ड रखने की समस्या को जड़ से समाप्त करना और कर चोरी पर प्रभावी अंकुश लगाना था (माननीय उच्चतम न्यायालय ने भी बिनॉय विश्वम बनाम भारत संघ मामले में इसे वैध ठहराया था)।\nचूंकि कारण (R) अभिकथन (A) के वैधानिक उद्देश्य की सटीक व्याख्या करता है, अतः (A) और (R) दोनों सत्य हैं तथा (R), (A) की सही व्याख्या है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A",
+        "Answer explanation extracted from supplied reference material: explanation of A Under Section 139AA of the Income Tax Act, linking Permanent Account Number with Aadhaar is mandatory for all eligible individuals in India. Failure to link these identifiers within specified timelines renders the PAN inoperative, a step introduced by tax authorities to eliminate duplicate PAN cards and effectively curb tax evasion."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "03f806aa-fa17-4dfb-9dfe-70883f077fd6",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "एक शिक्षक DDO को सूचित करता है कि उसे बैंक सावधि जमा (FD) से ₹50,000 की अतिरिक्त आय प्राप्त हुई है और वह चाहता है कि इस पर टीडीएस वेतन से ही काट लिया जाए। आयकर अधिनियम के तहत DDO को क्या कदम उठाना चाहिए?",
+      "options_hindi": [
+        "अनुरोध को अस्वीकार करना क्योंकि बैंक ब्याज पर टीडीएस केवल संबंधित बैंक द्वारा ही काटा जा सकता है",
+        "कर्मचारी को पहले आयकर विभाग से अनापत्ति प्रमाण पत्र (NOC) प्राप्त करने का निर्देश देना",
+        "कर्मचारी को टीडीएस में शामिल करने के बजाय स्वयं अग्रिम कर (Advance Tax) जमा करने के लिए कहना",
+        "इस ₹50,000 को अन्य स्रोतों से आय के रूप में कुल आय में शामिल करना और तदनुसार वेतन से टीडीएस काटना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "A teacher informs the DDO that they have an additional income of ₹50,000 from Bank Fixed Deposits and requests that tax on it be deducted at source from their salary. What should the DDO do under the Income Tax Act?",
+      "options_english": [
+        "Reject the request as bank interest TDS must be deducted exclusively by the concerned commercial bank",
+        "Direct the employee to obtain a formal No Objection Certificate (NOC) from the Income Tax Department",
+        "Advise the employee to deposit Advance Tax independently instead of adjusting through salary TDS",
+        "Include this ₹50,000 under 'Income from Other Sources' in the tax computation and deduct TDS accordingly"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under Section 192(2B) of the Income Tax Act, 1961, a salaried employee is statutorily entitled to declare to the DDO any income chargeable under any other head of income (such as 'Income from Other Sources', including bank interest or dividend income). Upon receiving such a written declaration from the employee, the DDO is legally required to take this additional income into account while computing total taxable income and deduct the appropriate higher TDS from the monthly salary. However, the DDO cannot take into account any loss under other heads except under the head 'Income from House Property'.",
+      "explanation_hindi": "सही उत्तर D है। आयकर अधिनियम, 1961 की धारा 192(2B) के प्रावधानों के तहत, एक वेतनभोगी कर्मचारी को यह अधिकार प्राप्त है कि वह अन्य शीर्षों (जैसे बैंक ब्याज, लाभांश आदि) से होने वाली किसी भी आय का विवरण अपने DDO को दे सकता है। ऐसी घोषणा प्राप्त होने पर, DDO उस ₹50,000 को कर्मचारी की कुल कर योग्य आय में 'अन्य स्रोतों से आय' के रूप में जोड़ेगा और वित्तीय वर्ष के शेष महीनों के वेतन से तदनुसार टीडीएस की उच्चतर राशि काटेगा।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) Include this ₹50,000 under Income from Other Sources and adjust the monthly salary TDS accordingly",
+        "Answer explanation extracted from supplied reference material: Section 192(2B) enables an employee to declare income from other heads, including interest from bank deposits under Income from Other Sources, to the DDO. Upon receipt of such declaration, the DDO is legally obliged to include that income in the employee's total computation and deduct higher salary TDS, preventing advance tax interest penalties for the employee."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    }
+  ]
+}

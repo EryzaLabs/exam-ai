@@ -1,0 +1,769 @@
+{
+  "test_id": "a4815799-e2b0-4c44-b8b6-8b870cce2057",
+  "test_name": "Topic Test: INCOME TAX GST - Part 4",
+  "type": "topic_wise",
+  "topic": "income-tax-gst",
+  "created_at": "2026-10-20T13:32:21.606403",
+  "questions": [
+    {
+      "id": "cae12b05-bdb9-4f81-a11f-4475dc6ec4f3",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "यदि आधार से लिंक न होने के कारण किसी कर्मचारी का स्थायी खाता संख्या (PAN) 'निष्क्रिय' (inoperative) हो जाता है, तो नियोक्ता (DDO) द्वारा उसके वेतन पर टीडीएस (TDS) कटौती के संबंध में तत्काल विधिक परिणाम क्या होता है?",
+      "options_hindi": [
+        "जब तक पैन लिंक नहीं हो जाता, तब तक टीडीएस बिल्कुल नहीं काटा जाएगा",
+        "कर्मचारी को पैन प्रस्तुत न करने वाला माना जाएगा और धारा 206AA के तहत 20% की उच्च टीडीएस दर लागू होगी",
+        "टीडीएस सामान्य दरों पर काटा जाएगा, लेकिन कर्मचारी आयकर रिफंड का दावा करने से वंचित रहेगा",
+        "कर्मचारी को आचरण नियमों के तहत तत्काल सेवा से स्वतः निलंबित मान लिया जाएगा"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "If an employee's Permanent Account Number (PAN) becomes 'inoperative' due to non-linking with Aadhaar, what is the immediate legal consequence regarding TDS deduction on their salary by the employer (DDO)?",
+      "options_english": [
+        "TDS will not be deducted at all until the PAN is linked",
+        "The employee is deemed to have failed to furnish a PAN, attracting a higher TDS rate of 20% under Section 206AA",
+        "TDS is deducted at normal rates, but the employee is barred from claiming an income tax refund",
+        "The employee faces immediate deemed suspension from service under Conduct Rules"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under Rule 114AAA(3) of the Income Tax Rules, 1962 and CBDT Circular No. 03/2023 dated March 28, 2023, where a person's PAN has become inoperative due to failure to link it with Aadhaar:\n1. The PAN holder is treated as if they have not furnished or quoted the PAN for all provisions of the Act.\n2. Consequently, under Section 206AA, tax must be deducted at source at a higher rate (i.e. at 20% or the applicable rate, whichever is higher).\n3. Furthermore, no tax refunds will be issued for inoperative PANs, and no interest is payable on refunds under Section 244A for the inoperative period.\nTherefore, the DDO is legally obligated to deduct TDS at the higher rate of 20% under Section 206AA.",
+      "explanation_hindi": "आयकर नियम, 1962 के नियम 114AAA(3) और सीबीडीटी (CBDT) परिपत्र संख्या 03/2023 (दिनांक 28 मार्च 2023) के अनुसार, यदि आधार से लिंक न होने के कारण किसी व्यक्ति का पैन 'निष्क्रिय' हो जाता है:\n1. उस व्यक्ति को आयकर अधिनियम के समस्त प्रावधानों के लिए पैन प्रस्तुत न करने वाला (Non-furnishing of PAN) माना जाता है।\n2. परिणामस्वरूप, धारा 206AA के तहत DDO/नियोक्ता द्वारा उसके वेतन पर 20% (या लागू दर, जो भी अधिक हो) की उच्च दंडात्मक दर से टीडीएस काटना अनिवार्य हो जाता है।\n3. इसके अतिरिक्त, निष्क्रिय पैन होने पर आयकर रिफंड जारी नहीं किया जाता और निष्क्रिय अवधि के लिए रिफंड पर ब्याज भी देय नहीं होता है।\nअतः कर्मचारी को पैन न रखने वाला मानकर 20% की उच्च दर से टीडीएस काटा जाएगा।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) The employee is deemed to have no PAN, attracting higher TDS (20%).",
+        "Answer explanation extracted from supplied reference material: attracting higher TDS (20%). When an employee's Permanent Account Number becomes inoperative due to non-linking with Aadhaar, tax law treats the individual as if they failed to furnish a PAN. Consequently, the employer is legally required under Section 206AA to deduct Tax Deducted at Source at the higher statutory penalty rate of twenty percent."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "3828dc4f-9846-43db-ac03-e40061ea136b",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_english": "Consider the following tax deductions and exemptions:\nI. House Rent Allowance (HRA) exemption under Section 10(13A)\nII. Leave Travel Concession (LTC) exemption under Section 10(5)\nIII. Deductions under Chapter VI-A such as Section 80C (PPF, GPF, ELSS, Life Insurance)\nIV. Standard Deduction of ₹50,000 under Section 16(ia)\nWhich of the above are NOT permissible for a salaried employee who is assessed under the New Tax Regime (Section 115BAC) for FY 2023-24?",
+      "question_hindi": "निम्नलिखित कर कटौतियों और छूटों पर विचार कीजिए:\nI. धारा 10(13A) के तहत मकान किराया भत्ता (HRA) छूट\nII. धारा 10(5) के तहत अवकाश यात्रा रियायत (LTC) छूट\nIII. अध्याय VI-A के तहत धारा 80C की कटौतियां (PPF, GPF, ELSS, जीवन बीमा)\nIV. धारा 16(ia) के तहत ₹50,000 की मानक कटौती (Standard Deduction)\nवित्तीय वर्ष 2023-24 के लिए नई कर व्यवस्था (धारा 115BAC) के अंतर्गत कर निर्धारण कराने वाले वेतनभोगी कर्मचारी के लिए उपर्युक्त में से कौन-सी अनुमेय (allowed) नहीं हैं?",
+      "options_english": [
+        "I, II, and III only",
+        "I and III only",
+        "III and IV only",
+        "I, II, III, and IV"
+      ],
+      "options_hindi": [
+        "केवल I, II और III",
+        "केवल I और III",
+        "केवल III और IV",
+        "I, II, III और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Section 115BAC(2) of the Income Tax Act, an individual opting for (or being assessed under) the New Tax Regime foregoes most itemized deductions and exemptions. Specifically:\n- Item I: HRA exemption under Section 10(13A) is NOT allowed;\n- Item II: LTC exemption under Section 10(5) is NOT allowed;\n- Item III: Chapter VI-A deductions (including Section 80C, 80D, 80E, etc., except employer's contribution to NPS under Section 80CCD(2)) are NOT allowed;\n- Item IV: However, the Finance Act 2023 explicitly amended Section 16(ia) to EXTEND the standard deduction of ₹50,000 to salaried employees and pensioners under the New Tax Regime with effect from FY 2023-24 (AY 2024-25).\nThus, items I, II, and III are NOT permissible, while item IV is permissible.",
+      "explanation_hindi": "आयकर अधिनियम की धारा 115BAC(2) के अनुसार, नई कर व्यवस्था चुनने वाले वेतनभोगी कर्मचारी अधिकांश विशिष्ट कटौतियों और छूटों का दावा नहीं कर सकते:\n- मद I: धारा 10(13A) के तहत HRA छूट अनुमेय नहीं है;\n- मद II: धारा 10(5) के तहत LTC छूट अनुमेय नहीं है;\n- मद III: अध्याय VI-A की अधिकांश कटौतियां (जैसे धारा 80C, 80D आदि, धारा 80CCD(2) में नियोक्ता के NPS अंशदान को छोड़कर) अनुमेय नहीं हैं;\n- मद IV: हालांकि, वित्त अधिनियम 2023 द्वारा वित्तीय वर्ष 2023-24 से नई कर व्यवस्था में भी वेतनभोगियों और पेंशनभोगियों के लिए धारा 16(ia) के तहत ₹50,000 की मानक कटौती स्पष्ट रूप से अनुमेय कर दी गई है।\nअतः मद I, II और III अनुमेय नहीं हैं, जबकि मद IV अनुमेय है।",
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "language": "bilingual",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) I, II, and III only",
+        "Answer explanation extracted from supplied reference material: An employee opting for the New Tax Regime under Section 115BAC for Financial Year 2023- 24 cannot claim exemptions for House Rent Allowance, Leave Travel Allowance, or deductions under Chapter VI-A like Section 80C. However, the standard deduction of fifty thousand rupees under Section 16(ia) was explicitly extended to the new regime."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "8cb9360d-43c2-4973-abb0-0df10842e0cf",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "आयकर विभाग द्वारा जारी एक वैध कर कटौती एवं संग्रहण खाता संख्या (TAN) की संरचना निम्नलिखित में से किस प्रकार होती है?",
+      "options_hindi": [
+        "5 अक्षर (Alphabets), 4 अंक (Numerals), 1 अक्षर (Alphabet)",
+        "4 अक्षर (Alphabets), 5 अंक (Numerals), 1 अक्षर (Alphabet)",
+        "3 अक्षर (Alphabets), 4 अंक (Numerals), 3 अक्षर (Alphabets)",
+        "10 पूर्णतः संख्यात्मक अंक (Numerals)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What is the structural alphanumeric composition of a valid Tax Deduction and Collection Account Number (TAN)?",
+      "options_english": [
+        "5 Alphabets, 4 Numerals, 1 Alphabet",
+        "4 Alphabets, 5 Numerals, 1 Alphabet",
+        "3 Alphabets, 4 Numerals, 3 Alphabets",
+        "10 purely numerical digits"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "A valid Tax Deduction and Collection Account Number (TAN) is a unique 10-digit alphanumeric identifier structured strictly as: 4 Alphabets, followed by 5 Numerals, and ending with 1 Alphabet (e.g., DELA12345B). Specifically: (i) the first 3 alphabets represent the jurisdiction/city code of the issuing authority (e.g., DEL for Delhi); (ii) the 4th alphabet denotes the initial letter of the deductor's name or office; (iii) the subsequent 5 numeric characters are unique sequential numbers; and (iv) the final character is a check digit. In contrast, a PAN is structured as 5 Alphabets, 4 Numerals, 1 Alphabet.",
+      "explanation_hindi": "आयकर विभाग द्वारा जारी टैन (TAN - Tax Deduction and Collection Account Number) 10 अंकों का एक विशिष्ट अल्फ़ान्यूमेरिक कोड होता है। इसकी संरचना '4 अक्षर (Alphabets), 5 अंक (Numerals), 1 अक्षर (Alphabet)' के प्रारूप में होती है (उदा. DELA12345B)। इसमें प्रथम तीन अक्षर क्षेत्राधिकार/शहर कोड दर्शाते हैं, चौथा अक्षर कटौतीकर्ता के नाम का पहला अक्षर होता है, अगले पांच संख्यात्मक अंक अद्वितीय क्रम संख्या होते हैं तथा अंतिम अक्षर एक चेक कैरेक्टर होता है। इसके विपरीत, पैन (PAN) की संरचना 5 अक्षर + 4 अंक + 1 अक्षर होती है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) 4 Alphabets, 5 Numerals, 1 Alphabet",
+        "Answer explanation extracted from supplied reference material: A valid Tax Deduction and Collection Account Number is a ten-character alphanumeric code. Its structural composition strictly consists of four initial alphabetic characters, followed by five numerical digits, and concludes with a single alphabetic check character, maintaining a standard format defined by the Central Board of Direct Taxes."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "3a5bbd3f-dd74-4a8d-8531-494b64912dc7",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "वेतनभोगी व्यक्ति के कराधान की मूल अवधारणाओं के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\nI. सकल कुल आय (Gross Total Income) में से अध्याय VI-A के अंतर्गत कटौतियां घटाने के पश्चात कुल आय (Total Income) की गणना की जाती है।\nII. वेतन आय देय होने (accrual) अथवा प्राप्त होने (receipt), जो भी पहले हो, के आधार पर कर-योग्य होती है।\nIII. यदि किसी व्यक्ति की वित्तीय वर्ष के लिए अनुमानित कर देयता ₹10,000 या उससे अधिक है, तो वह अग्रिम कर (Advance Tax) का भुगतान करने के लिए दायी होता है।\nउपर्युक्त कथनों में से कौन-सा/से सही है/हैं?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल II और III",
+        "केवल I और III",
+        "I, II और III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the fundamentals of taxation for a salaried individual:\nI. Total Income is calculated after allowing deductions under Chapter VI-A from the Gross Total Income.\nII. Salary income is taxed on a due basis or receipt basis, whichever is earlier.\nIII. An individual is liable to pay Advance Tax if their estimated tax liability for the financial year is ₹10,000 or more.\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "I and II only",
+        "II and III only",
+        "I and III only",
+        "I, II, and III"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "All three statements are correct under the Income Tax Act, 1961:\n1. Statement I is correct: Total Income (taxable income) under Section 2(45) and Section 80A is derived by deducting allowable deductions under Chapter VI-A (Sections 80C, 80D, etc.) from the Gross Total Income (aggregate of all heads).\n2. Statement II is correct: Under Section 15, income under the head 'Salaries' is chargeable to tax on a due basis (accrual) or receipt basis, whichever occurs earlier.\n3. Statement III is correct: Under Section 208, advance tax is mandatory for any assessee whose estimated tax liability for the financial year (after accounting for TDS/TCS) is ₹10,000 or more.",
+      "explanation_hindi": "आयकर अधिनियम, 1961 के अनुसार तीनों कथन सही हैं:\n1. कथन I सही है: सकल कुल आय (GTI) में से अध्याय VI-A (धारा 80C से 80U) के तहत अनुमत कटौतियां घटाने के बाद ही कुल कर-योग्य आय (Total Income) प्राप्त होती है।\n2. कथन II सही है: धारा 15 के अनुसार, वेतन आय देय होने की तिथि अथवा प्राप्त होने की तिथि, जो भी पहले घटित हो, पर कर-योग्य होती है।\n3. कथन III सही है: धारा 208 के अंतर्गत, यदि किसी निर्धारिती की संबंधित वित्तीय वर्ष में टीडीएस कटौती के पश्चात शुद्ध कर देनदारी ₹10,000 या उससे अधिक बनती है, तो उसे अग्रिम कर (एडवांस टैक्स) देना अनिवार्य होता है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) I, II, and III",
+        "Answer explanation extracted from supplied reference material: Total income is determined after subtracting Chapter VI-A deductions from gross total income. Income under salaries is taxable on due or receipt basis, whichever occurs earlier. Furthermore, advance tax provisions mandate that any individual whose estimated tax liability equals or exceeds ten thousand rupees in a financial year must pay tax in advance."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "24b25e1e-c864-4c28-ba3a-07772a5ffc7d",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_english": "Which of the following statements INCORRECTLY compares the standard deduction available under 'Salaries' with the statutory deduction available under 'Family Pension'?",
+      "question_hindi": "निम्नलिखित में से कौन-सा कथन 'वेतन' (Salaries) के तहत मिलने वाली मानक कटौती और 'पारिवारिक पेंशन' (Family Pension) के तहत मिलने वाली वैधानिक कटौती की गलत तुलना करता है?",
+      "options_english": [
+        "Standard deduction under the head 'Salaries' is a flat amount of up to ₹50,000.",
+        "Family Pension received by legal heirs is assessed under the head 'Income from Other Sources'.",
+        "The statutory deduction for Family Pension under Section 57(iia) is 33.33% of the pension or ₹15,000, whichever is less (under the old tax regime).",
+        "The standard deduction for Family Pension is ₹50,000, exactly identical to the deduction under regular salary."
+      ],
+      "options_hindi": [
+        "'वेतन' शीर्षक के तहत मानक कटौती ₹50,000 तक की एकमुश्त राशि है।",
+        "कानूनी वारिसों द्वारा प्राप्त पारिवारिक पेंशन का निर्धारण 'अन्य स्रोतों से आय' शीर्षक के तहत किया जाता है।",
+        "धारा 57(iia) के तहत पारिवारिक पेंशन के लिए वैधानिक कटौती पेंशन का 33.33% या ₹15,000 (जो भी कम हो) है (पुरानी व्यवस्था में)।",
+        "पारिवारिक पेंशन के लिए मानक कटौती ₹50,000 है, जो नियमित वेतन कटौती के बिल्कुल समान है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Statement D is incorrect and hence the correct answer.\n- Regular pension is received by the employee themselves from their former employer and is taxed under the head 'Salaries' (Section 17(1)). Salaried pensioners receive a flat standard deduction under Section 16(ia) of up to ₹50,000.\n- In contrast, 'Family Pension' is received by the spouse or legal dependents after the death of the employee/pensioner. Since there is no employer-employee relationship between the recipient and the government/employer, family pension is taxable under the head 'Income from Other Sources' (Section 56).\n- The deduction for family pension is governed by Section 57(iia), which restricts the deduction to 33.33% (one-third) of the family pension or ₹15,000, whichever is less (under the traditional provisions; enhanced to ₹25,000 under the New Regime by Finance Act 2024). It is definitely NOT ₹50,000 identical to regular salary.",
+      "explanation_hindi": "कथन D गलत है और इसलिए यही सही उत्तर है।\n- नियमित पेंशन सेवानिवृत्त कर्मचारी को स्वयं प्राप्त होती है और इसे आयकर अधिनियम की धारा 17(1) के तहत 'वेतन' (Salaries) माना जाता है, जिस पर धारा 16(ia) के तहत ₹50,000 तक की मानक कटौती मिलती है।\n- इसके विपरीत, 'पारिवारिक पेंशन' कर्मचारी/पेंशनभोगी की मृत्यु के बाद उसके आश्रित परिजनों (पति/पत्नी आदि) को मिलती है। आश्रितों और नियोक्ता के बीच कोई सेवा-संबंध न होने के कारण पारिवारिक पेंशन पर 'अन्य स्रोतों से आय' (धारा 56) के तहत कर लगता है।\n- धारा 57(iia) के अंतर्गत पारिवारिक पेंशन पर कटौती की सीमा पेंशन राशि का 33.33% (1/3 भाग) या ₹15,000 (जो भी कम हो) निर्धारित है। पारिवारिक पेंशन पर ₹50,000 की सामान्य वेतन मानक कटौती लागू नहीं होती।",
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "language": "bilingual",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) The standard deduction for Family Pension is ₹50,000, identical to regular salary.",
+        "Answer explanation extracted from supplied reference material: is ₹50,000, identical to regular salary. Salary pension drawn by a retired employee is assessed under Salaries and gets a standard deduction of fifty thousand rupees under Section 16(ia). Family pension paid to legal heirs is taxed under Income from Other Sources, where deduction under Section 57(iia) is limited to thirty-three and one-third percent or fifteen thousand rupees, whichever is less."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "feba6520-7fe7-4176-b43e-8009c721ebed",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "एक उप-प्रधानाचार्य (Vice-Principal) को वेतन आयोग की सिफारिशों के क्रियान्वयन के कारण पूर्व अवधि के ₹2,50,000 का बकाया वेतन (एरियर) प्राप्त होता है। इस बकाए पर कर कटौती के संबंध में DDO के लिए सबसे उपयुक्त विधिक कार्रवाई क्या है?",
+      "options_hindi": [
+        "DDO प्राप्ति के वर्ष में कर की गणना करता है और फॉर्म 10E के माध्यम से धारा 89(1) के तहत राहत प्रदान करता है।",
+        "DDO को कर गणना से पूरे बकाए को पूर्णतः मुक्त करना होगा क्योंकि यह पिछले वर्षों से संबंधित है।",
+        "DDO को बकाए को सेवा के शेष वर्षों में समान रूप से विभाजित करना होगा और आनुपातिक रूप से कर काटना होगा।",
+        "DDO को कर्मचारी को बिना TDS काटे सीधे आयकर विभाग में कर जमा करने का निर्देश देना चाहिए।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "A Vice-Principal receives arrears of salary amounting to ₹2,50,000 for a past period due to the implementation of a Pay Commission report. What is the most appropriate course of action for the DDO regarding the tax deduction on these arrears?",
+      "options_english": [
+        "The DDO computes tax in the year of receipt and grants tax relief under Section 89(1) upon submission of Form 10E.",
+        "The DDO must fully exempt the entire arrears amount from tax computation since it strictly pertains to earlier financial years.",
+        "The DDO must divide the arrears equally over the remaining years of service and deduct tax proportionately.",
+        "The DDO should instruct the employee to pay the tax directly to the Income Tax Department without making any TDS."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Section 15(c) of the Income Tax Act, 1961, arrears of salary not taxed in earlier years are chargeable to tax in the financial year in which they are received. However, because receiving past arrears in a single lump sum may push the employee into a higher tax bracket, Section 89(1) read with Rule 21A provides tax relief. Under Section 192(2A), a government Drawing and Disbursing Officer (DDO) is legally empowered to compute and grant this relief under Section 89(1) directly while deducting TDS at source, provided the employee files Form 10E electronically on the income tax portal and furnishes the verification/particulars to the DDO.",
+      "explanation_hindi": "आयकर अधिनियम, 1961 की धारा 15(c) के अनुसार, यदि वेतन बकाए पर पूर्व में कर नहीं लगा है, तो वह प्राप्ति के वित्तीय वर्ष में कर-योग्य होता है। एकमुश्त बकाया मिलने से कर्मचारी उच्च कर स्लैब में आ सकता है, जिसके समाधान हेतु धारा 89(1) व नियम 21A के तहत कर राहत (टैक्स रिलीफ) का प्रावधान है। धारा 192(2A) के तहत सरकारी DDO को यह अधिकार है कि वह कर्मचारी द्वारा आयकर पोर्टल पर फॉर्म 10E (Form 10E) ऑनलाइन दाखिल करने और विवरण प्रस्तुत करने पर टीडीएस की गणना करते समय सीधे धारा 89(1) की कर राहत प्रदान कर सकता है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) The DDO calculates tax in the year of receipt and allows relief under Section 89(1) via Form 10E.",
+        "Answer explanation extracted from supplied reference material: receipt and allows relief under Section 89(1) via Form 10E. When arrears of salary are received, tax must be computed in the financial year of receipt. The Drawing and Disbursing Officer can compute and grant tax relief under Section 89(1) after the employee submits Form 10E. This mechanism ensures that the additional tax burden due to higher slab rates in the current year is minimized."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "028ea500-e7b7-4d7e-88d6-6f9191175ada",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "वेतनभोगी कर्मचारी द्वारा टीडीएस (TDS) गणना हेतु अपने आहरण एवं संवितरण अधिकारी (DDO) को निवेशों एवं व्ययों के साक्ष्य प्रस्तुत करने के लिए कौन-सा निर्धारित विधिक प्रपत्र (फॉर्म) प्राथमिक घोषणा-पत्र का कार्य करता है?",
+      "options_hindi": [
+        "फॉर्म 16 (Form 16)",
+        "फॉर्म 26AS (Form 26AS)",
+        "फॉर्म 10E (Form 10E)",
+        "फॉर्म 12BB (Form 12BB)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which prescribed statutory document serves as the primary declaration of claims and proof of investments/expenses submitted by a salaried employee to their Drawing and Disbursing Officer (DDO) for TDS estimation?",
+      "options_english": [
+        "Form 16",
+        "Form 26AS",
+        "Form 10E",
+        "Form 12BB"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under Rule 26C of the Income Tax Rules, 1962, Form 12BB is the prescribed statutory statement of claims by an employee for deduction of tax under Section 192. Every salaried employee must submit Form 12BB to their employer/DDO along with documentary evidence to claim deductions for House Rent Allowance (HRA), Leave Travel Concession (LTC), interest on home loans (under Section 24(b)), and Chapter VI-A deductions (such as Sections 80C, 80D, 80CCD). In contrast, Form 16 is the TDS certificate issued by the DDO, Form 26AS is the annual tax credit statement generated from the TRACES portal, and Form 10E is filed for claiming tax relief on salary arrears under Section 89(1).",
+      "explanation_hindi": "आयकर नियम, 1962 के नियम 26C के तहत 'फॉर्म 12BB' वेतनभोगी कर्मचारी द्वारा अपने नियोक्ता/DDO को प्रस्तुत किया जाने वाला अनिवार्य वैधानिक घोषणा-पत्र है। इसी फॉर्म में कर्मचारी मकान किराया भत्ता (HRA), अवकाश यात्रा रियायत (LTC), गृह ऋण पर ब्याज (धारा 24b) और अध्याय VI-A की कटौतियों (धारा 80C, 80D आदि) का विवरण और साक्ष्य संलग्न करता है ताकि DDO धारा 192 के तहत सटीक TDS काट सके। फॉर्म 16 नियोक्ता द्वारा जारी टीडीएस प्रमाण पत्र है, 26AS टैक्स क्रेडिट विवरण है, तथा फॉर्म 10E धारा 89(1) के तहत एरियर पर राहत हेतु भरा जाता है। अतः विकल्प D सही उत्तर है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) Form 12BB",
+        "Answer explanation extracted from supplied reference material: Form 12BB is the prescribed statutory declaration form under Rule 26C of Income Tax Rules. Salaried employees must submit Form 12BB to their employer to declare details and present documentary proof of tax-saving investments, house rent paid, home loan interest, and eligible allowances to claim tax deductions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "f1f21067-690c-408d-9e52-e53f304f878e",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "विद्यालय के वित्तीय प्रशासन में प्रयुक्त होने वाले विभिन्न सांविधिक कर दस्तावेजों और उनके दाखिल करने अथवा जारी करने की आवृत्ति के संदर्भ में, निम्नलिखित में से कौन-सा युग्म गलत सुमेलित है?",
+      "options_hindi": [
+        "फॉर्म 24Q – वेतन पर टीडीएस का त्रैमासिक विवरण",
+        "फॉर्म 26Q – वेतन के अतिरिक्त अन्य भुगतानों पर टीडीएस का त्रैमासिक विवरण",
+        "फॉर्म 16 – वेतन से स्रोत पर काटे गए कर का वार्षिक प्रमाण-पत्र",
+        "फॉर्म 26AS – कटौतीकर्ताओं द्वारा दाखिल किया जाने वाला मासिक रिटर्न"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "With reference to statutory tax documents and their periodicity of filing or issuance in school administration, which of the following pairs is INCORRECTLY matched?",
+      "options_english": [
+        "Form 24Q – Quarterly statement of TDS on salaries",
+        "Form 26Q – Quarterly statement of TDS on payments other than salaries",
+        "Form 16 – Annual certificate of tax deducted at source from salary",
+        "Form 26AS – Monthly return filed by deductors"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Form 26AS is NOT a monthly return filed by deductors; rather, it is an annual consolidated tax credit statement generated dynamically by the Income Tax Department's TRACES portal against an individual's PAN. It reflects all TDS deducted, TCS collected, advance tax, self-assessment tax, and specified financial transactions across the entire financial year. In contrast, Form 24Q and Form 26Q are quarterly statements of TDS required to be filed by deductors (such as DDOs) under Section 200(3), and Form 16 is an annual tax deduction certificate issued to salaried employees under Section 203 by 15th June of the following financial year. Thus, pair D is incorrectly matched.",
+      "explanation_hindi": "फॉर्म 26AS कटौतीकर्ताओं (DDO) द्वारा मासिक रूप से दाखिल किया जाने वाला कोई रिटर्न नहीं है, बल्कि यह आयकर विभाग के TRACES पोर्टल द्वारा किसी व्यक्ति के पैन (PAN) पर गतिशील रूप से तैयार किया जाने वाला एक समेकित वार्षिक कर क्रेडिट विवरण (Annual Tax Statement) है। इसमें संबंधित वित्तीय वर्ष के दौरान काटे गए टीडीएस (TDS), टीसीएस (TCS), अग्रिम कर एवं स्व-निर्धारण कर का पूरा ब्योरा स्वतः दर्ज होता रहता है। इसके विपरीत, फॉर्म 24Q (वेतन टीडीएस) एवं फॉर्म 26Q (गैर-वेतन टीडीएस) DDO द्वारा धारा 200(3) के तहत दाखिल की जाने वाली त्रैमासिक विवरणियां हैं, तथा फॉर्म 16 धारा 203 के तहत 15 जून तक जारी किया जाने वाला वार्षिक वेतन टीडीएस प्रमाण-पत्र है। अतः युग्म D गलत है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) Form 26AS - Monthly",
+        "Answer explanation extracted from supplied reference material: Form 24Q and Form 26Q are filed quarterly by deductors to report salary and non-salary TDS respectively. Form 16 is issued annually as a salary tax certificate. Conversely, Form 26AS is an annual consolidated tax credit statement generated continuously by the tax system rather than being filed monthly by deductors."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "40576e59-6177-4301-af77-160e79919c51",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "दिल्ली में स्थित एक सरकारी विद्यालय हरियाणा में पंजीकृत एक अधिकृत विक्रेता से प्रयोगशाला उपकरण का क्रय (आदेश) करता है। आपूर्तिकर्ता/विक्रेता द्वारा टैक्स इनवॉइस पर किस प्रकार का वस्तु एवं सेवा कर (GST) लगाया जाना चाहिए?",
+      "options_hindi": [
+        "CGST + SGST (दिल्ली)",
+        "एकीकृत जीएसटी (IGST)",
+        "CGST + SGST (हरियाणा)",
+        "शून्य जीएसटी, क्योंकि शैक्षणिक संस्थानों को वस्तुओं की खरीद पर पूर्ण छूट प्राप्त है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "A government school located in Delhi places an order and procures laboratory equipment from an authorized vendor whose registered place of business is in Haryana. Which type of Goods and Services Tax (GST) must be charged by the supplier on the tax invoice?",
+      "options_english": [
+        "CGST + SGST (Delhi)",
+        "Integrated GST (IGST)",
+        "CGST + SGST (Haryana)",
+        "Nil GST, as educational institutions enjoy blanket exemption on procurement of goods"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under Section 7(1) of the Integrated Goods and Services Tax (IGST) Act, 2017:\n1. Where the location of the supplier (Haryana) and the place of supply (Delhi, where goods are delivered to the recipient school) are in two different States/Union Territories, the transaction constitutes an 'Inter-State supply'.\n2. Under Section 5(1) of the IGST Act, 2017, Integrated Goods and Services Tax (IGST) is levied on all inter-state supplies of goods or services.\n3. Note on exemptions: While certain educational services provided by or to educational institutions are exempt under Notification No. 12/2017-Central Tax (Rate), procurement of taxable goods (such as science apparatus/laboratory equipment) does NOT enjoy any blanket exemption. The supplier must charge IGST on the tax invoice.\nTherefore, the correct tax is IGST.",
+      "explanation_hindi": "एकीकृत वस्तु एवं सेवा कर (IGST) अधिनियम, 2017 की धारा 7(1) के अनुसार:\n1. जब आपूर्तिकर्ता का स्थान (हरियाणा) और आपूर्ति का स्थान (दिल्ली, जहाँ स्कूल को सामान प्राप्त हुआ) दो भिन्न राज्यों या केंद्र शासित प्रदेशों में हों, तो यह आपूर्ति 'अंतर-राज्यीय आपूर्ति' (Inter-State Supply) कहलाती है।\n2. IGST अधिनियम की धारा 5(1) के तहत, सभी अंतर-राज्यीय आपूर्ति पर केंद्र सरकार द्वारा एकीकृत जीएसटी (IGST) लगाया जाता है।\n3. छूट संबंधी नियम: अधिसूचना संख्या 12/2017-सेंट्रल टैक्स (रेट) के तहत शैक्षणिक संस्थानों द्वारा या उनको दी जाने वाली कुछ विशिष्ट सेवाओं को तो छूट दी गई है, परंतु प्रयोगशाला उपकरण जैसी वस्तुओं की खरीद पर कोई सामान्य छूट नहीं है। अतः विक्रेता को टैक्स इनवॉइस पर आईजीएसटी (IGST) ही लगाना होगा।\nअतः सही उत्तर IGST है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) IGST",
+        "Answer explanation extracted from supplied reference material: Supply of laboratory equipment from a seller in Haryana to a recipient school located in Delhi constitutes an inter-state supply under GST law. Under Section 5 of the Integrated Goods and Services Tax Act, all inter-state supplies of goods or services attract Integrated GST, which is collected by the Central Government."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "65f4a99e-7df1-4bff-8edd-162c5496127b",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "आयकर अधिनियम, 1961 की धारा 192 के अंतर्गत विद्यालय के कर्मचारियों के वेतन से आयकर कटौती के संबंध में आहरण एवं संवितरण अधिकारी (DDO/प्राचार्य) की प्राथमिक सांविधिक जिम्मेदारी एवं मार्गदर्शक सिद्धांत क्या है?",
+      "options_hindi": [
+        "वेतन भत्तों में हेरफेर और कृत्रिम पुनर्गठन करके विद्यालय के कर्मचारियों की कर देयता को अवांछित रूप से कम करना",
+        "कर्मचारियों द्वारा दावा की गई सभी वैध छूटों और कटौतियों को अस्वीकार करके मनमाने ढंग से सरकारी कर संग्रह को अधिकतम करना",
+        "कर कटौती की सभी जिम्मेदारियों से पल्ला झाड़ लेना और कर्मचारियों को अपने कर दायित्वों को केवल निजी चार्टर्ड अकाउंटेंटों के माध्यम से हल करने का निर्देश देना",
+        "सरकार के एक निष्पक्ष सांविधिक प्रतिनिधि के रूप में कार्य करना, जो कर-योग्य आय का सटीक आकलन, कानून सम्मत टीडीएस कटौती, राजकोष में समय पर प्रेषण तथा पारदर्शी रिपोर्टिंग सुनिश्चित करता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What is the primary statutory responsibility and overarching guiding principle of a Drawing and Disbursing Officer (DDO / Principal) regarding the deduction of income tax from the salaries of school staff under Section 192 of the Income Tax Act, 1961?",
+      "options_english": [
+        "To artificially minimize the tax liability of school staff by creatively restructuring and manipulating salary allowances",
+        "To maximize government tax collection arbitrarily by disallowing all lawful exemptions and deductions claimed by employees",
+        "To abdicate all tax deduction responsibilities and instruct employees to resolve their tax obligations solely through private chartered accountants",
+        "To act as an impartial statutory agent of the government, ensuring accurate estimation of taxable income, lawful deduction of TDS, timely remittance into the treasury, and transparent reporting"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under Section 192, Section 200, and Section 204 of the Income Tax Act, 1961, the Drawing and Disbursing Officer (Principal) is designated as the person responsible for paying salary and withholding tax, functioning as a statutory fiduciary agent of the Central Government. The DDO's duty is neither to act as a tax avoidance advisor for employees nor as an overzealous tax collector ignoring lawful exemptions. The guiding principle is absolute statutory compliance: providing an opportunity to employees to declare their tax regime and submit proof of valid investments, objectively evaluating deduction claims within the framework of the law, deducting the exact monthly TDS at average rates, remitting collections to the treasury by the statutory due dates, filing quarterly statements (Form 24Q), and issuing Form 16 certificates.",
+      "explanation_hindi": "आयकर अधिनियम, 1961 की धारा 192, 200 और 204 के तहत, आहरण एवं संवितरण अधिकारी (DDO/प्राचार्य) वेतन भुगतान और कर कटौती के लिए उत्तरदायी व्यक्ति होता है, जो केंद्र सरकार के एक सांविधिक प्रतिनिधि (Statutory Agent) के रूप में कार्य करता है। DDO का कर्तव्य न तो कर चोरी या कृत्रिम रूप से कर घटाने में कर्मचारियों की मदद करना है और न ही वैध छूटों को नजरअंदाज करके अत्यधिक कर वसूलना है। इसका मार्गदर्शक सिद्धांत पूर्णतः विधि सम्मत और निष्पक्ष कार्यप्रणाली है: कर्मचारियों से उनकी चुनी गई कर व्यवस्था और वैध निवेशों के प्रमाण प्राप्त करना, कानूनी दायरे में कटौतियों का निष्पक्ष सत्यापन करना, औसत दर से प्रतिमाह सटीक टीडीएस काटना, काटी गई राशि को समय पर सरकारी राजकोष में जमा करना, त्रैमासिक विवरण (फॉर्म 24Q) दाखिल करना तथा कर्मचारियों को फॉर्म 16 जारी करना। अतः विकल्प D सही उत्तर है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) Act as a statutory agent ensuring accurate estimation, deduction, and remittance of tax.",
+        "Answer explanation extracted from supplied reference material: estimation, deduction, and remittance of tax. The overarching responsibility of a Drawing and Disbursing Officer is to act as a statutory agent for the government under tax laws. A DDO must ensure impartial and accurate estimation of taxable salary, properly evaluate eligible tax exemptions, deduct correct TDS monthly, and remit collected taxes to the central treasury."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "5d706d30-9586-463a-9b74-c9e612f82460",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "किसी कटौतीकर्ता (Deductor) द्वारा स्रोत पर कर कटौती (TDS) और स्रोत पर कर संग्रह (TCS) की राशि को केंद्र सरकार के खाते में जमा करने हेतु आयकर विभाग द्वारा कौन-सा चालान विशेष रूप से निर्धारित किया गया है?",
+      "options_hindi": [
+        "आईटीएनएस 280 (ITNS 280)",
+        "आईटीएनएस 282 (ITNS 282)",
+        "आईटीएनएस 283 (ITNS 283)",
+        "आईटीएनएस 281 (ITNS 281)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which payment challan is specifically designated by the Income Tax Department for the remittance of Tax Deducted at Source (TDS) and Tax Collected at Source (TCS) into the government account?",
+      "options_english": [
+        "ITNS 280",
+        "ITNS 282",
+        "ITNS 283",
+        "ITNS 281"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Challan ITNS 281 is the designated single-copy tax payment voucher under the Online Tax Accounting System (OLTAS) used exclusively for depositing Tax Deducted at Source (TDS) and Tax Collected at Source (TCS) by corporate and non-corporate deductors/DDOs. When making a payment via ITNS 281, the DDO specifies Major Head 0020 (Company Deductees) or 0021 (Non-Company Deductees), the nature of payment (Minor Head 200 for regular deduction, 400 for regular assessment demand), and the relevant section code (e.g., 92B for salary, 94C for contractors). In comparison, Challan ITNS 280 is used for Advance Tax, Self-Assessment Tax, and Regular Assessment Tax paid by taxpayers on their own taxable income.",
+      "explanation_hindi": "आयकर विभाग के ओल्टास (OLTAS) प्रणाली के अंतर्गत, 'चालान ITNS 281' विशेष रूप से कटौतीकर्ता द्वारा काटे गए टीडीएस (TDS) और टीसीएस (TCS) की राशि को सरकारी खाते में जमा करने हेतु निर्धारित है। डीडीओ चाहे वेतन (धारा 192) का टीडीएस जमा कर रहे हों या ठेकेदारों (धारा 194C) का, उन्हें चालान ITNS 281 का उपयोग करना होता है। इसमें मेजर हेड 0020 (कंपनियां) या 0021 (गैर-कंपनी), माइनर हेड 200 (नियमित टीडीएस) और कटौती की धारा का चयन किया जाता है। इसके विपरीत, ITNS 280 का उपयोग करदाताओं द्वारा स्वयं के अग्रिम कर (Advance Tax) या स्व-मूल्यांकन कर (Self-Assessment Tax) के भुगतान हेतु किया जाता है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) ITNS 281",
+        "Answer explanation extracted from supplied reference material: Challan ITNS 281 is the designated tax payment voucher used for depositing Tax Deducted at Source and Tax Collected at Source into the central government account. Deductors use this challan for both corporate and non-corporate TDS remittances, whether making payments online or through authorized bank branches."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "a47efa31-d771-4263-bd5b-79622baa83e9",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "भारत द्वारा अपनाए गए दोहरे जीएसटी (Dual GST) मॉडल के तहत, कर योग्य वस्तुओं या सेवाओं की 'अंतः-राज्य' (Intra-State) आपूर्ति पर कौन सा कर संयोजन समवर्ती रूप से लगाया जाता है?",
+      "options_hindi": [
+        "केवल केंद्रीय जीएसटी (CGST)",
+        "केवल एकीकृत जीएसटी (IGST)",
+        "राज्य जीएसटी (SGST) और एकीकृत जीएसटी (IGST)",
+        "केंद्रीय जीएसटी (CGST) और राज्य जीएसटी (SGST) [या UTGST]"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under the dual GST model adopted by India, which combination of taxes is concurrently levied on an 'Intra-State' supply of taxable goods or services?",
+      "options_english": [
+        "Only Central GST (CGST)",
+        "Only Integrated GST (IGST)",
+        "State GST (SGST) and Integrated GST (IGST)",
+        "Central GST (CGST) and State GST (SGST) [or UTGST]"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "India adopted a dual GST architecture given its federal constitutional structure, where both the Central and State Governments concurrently levy indirect tax on a common taxable base:\n1. Intra-State Supply: When the location of the supplier and the place of supply are in the same State or Union Territory, the supply is termed intra-state. On such transactions, Central GST (CGST) is levied by the Central Government and State GST (SGST) is levied by the State Government [or Union Territory GST (UTGST) in Union Territories without a legislature], both at equal rates.\n2. Inter-State Supply: When the supplier and place of supply are in different States/UTs, Integrated GST (IGST) is levied by the Centre under the IGST Act, 2017.\nTherefore, on intra-state supplies, CGST and SGST/UTGST are levied simultaneously.",
+      "explanation_hindi": "भारत ने अपने संघीय ढांचे के अनुरूप दोहरा जीएसटी (Dual GST) मॉडल अपनाया है, जिसमें केंद्र और राज्य दोनों एक ही कर योग्य आधार पर समवर्ती रूप से कर लगाते हैं:\n1. अंतः-राज्य आपूर्ति (Intra-State Supply): जब आपूर्तिकर्ता का स्थान और आपूर्ति का स्थान एक ही राज्य या केंद्र शासित प्रदेश के भीतर हो, तो इसे अंतः-राज्य आपूर्ति कहते हैं। ऐसी आपूर्ति पर केंद्र सरकार द्वारा 'केंद्रीय जीएसटी' (CGST) और संबंधित राज्य सरकार द्वारा 'राज्य जीएसटी' (SGST) [विधानसभा रहित केंद्र शासित प्रदेशों में UTGST] दोनों समान अनुपात में लगाए जाते हैं।\n2. अंतर-राज्यीय आपूर्ति (Inter-State Supply): जब आपूर्तिकर्ता और आपूर्ति का स्थान अलग-अलग राज्यों में हों, तो केवल एकीकृत जीएसटी (IGST) लगाया जाता है।\nअतः अंतः-राज्य आपूर्ति पर CGST और SGST (या UTGST) का संयोजन लगाया जाता है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) Central GST (CGST) and State GST (SGST)",
+        "Answer explanation extracted from supplied reference material: (SGST) Under the dual Goods and Services Tax structure implemented in India, an intra-state supply of goods or services occurs within the boundaries of a single state or union territory. Such transactions attract both Central GST levied by the Union Government and State GST levied by the respective State Government in equal proportion."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "329c749e-3d63-46b7-83a3-93441faf3e9b",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "वित्तीय वर्ष 2023-24 (कर-निर्धारण वर्ष 2024-25) के लिए नई कर व्यवस्था (धारा 115BAC) के अंतर्गत, ₹6,00,001 से ₹9,00,000 के बीच की आय पर लागू कर की दर क्या है?",
+      "options_hindi": [
+        "5%",
+        "10%",
+        "15%",
+        "20%"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under the New Tax Regime (Section 115BAC) for FY 2023-24 (AY 2024-25), what is the tax rate applicable to income between ₹6,00,001 and ₹9,00,000?",
+      "options_english": [
+        "5%",
+        "10%",
+        "15%",
+        "20%"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under the revised New Tax Regime introduced by the Finance Act 2023 under Section 115BAC (applicable as the default regime from FY 2023-24 / AY 2024-25), the income tax slabs are: (1) Up to ₹3,00,000: Nil; (2) ₹3,00,001 to ₹6,00,000: 5%; (3) ₹6,00,001 to ₹9,00,000: 10%; (4) ₹9,00,001 to ₹12,00,000: 15%; (5) ₹12,00,001 to ₹15,00,000: 20%; (6) Above ₹15,00,000: 30%. Therefore, the income falling between ₹6,00,001 and ₹9,00,000 is taxed exactly at 10%.",
+      "explanation_hindi": "सही उत्तर B (10%) है। वित्त अधिनियम, 2023 द्वारा धारा 115BAC के तहत संशोधित नई कर व्यवस्था (FY 2023-24 / AY 2024-25) के अनुसार कर स्लैब इस प्रकार हैं: ₹3,00,000 तक शून्य; ₹3,00,001 से ₹6,00,000 तक 5%; ₹6,00,001 से ₹9,00,000 तक 10%; ₹9,00,001 से ₹12,00,000 तक 15%; ₹12,00,001 से ₹15,00,000 तक 20%; तथा ₹15,00,000 से अधिक पर 30%। अतः ₹6,00,001 से ₹9,00,000 के स्लैब पर 10% की दर से कर लगता है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) 10%",
+        "Answer explanation extracted from supplied reference material: Under the revamped New Tax Regime under Section 115BAC introduced in Finance Act 2023, the tax slabs for FY 2023-24 are: 0-3L (Nil), 3-6L (5%), 6-9L (10%), 9-12L (15%), 12-15L (20%), and above 15L (30%). Income between ?6,00,001 and ?9,00,000 is taxed at 10%."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "44006d4e-6d25-4360-a05f-c37cdacb5b55",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को अभिकथन (Assertion A) और दूसरे को कारण (Reason R) कहा गया है:\nअभिकथन (A): आवश्यक शैक्षणिक अध्ययन सामग्री जैसे मुद्रित पुस्तकें, समाचार पत्र और बच्चों की चित्रकला/ड्राइंग पुस्तकें शून्य (0%) जीएसटी दर को आकर्षित करती हैं।\nकारण (R): जीएसटी परिषद ने साक्षरता को प्रोत्साहित करने और शैक्षणिक लागत को कम करने के लिए आवश्यक शैक्षणिक वस्तुओं को अप्रत्यक्ष कर के दायरे से बाहर रखा है।\nउपरोक्त कथनों के आलोक में, नीचे दिए गए विकल्पों में से सही उत्तर का चयन कीजिए:",
+      "options_hindi": [
+        "(A) और (R) दोनों सही हैं, और (R), (A) की सही व्याख्या करता है।",
+        "(A) और (R) दोनों सही हैं, लेकिन (R), (A) की सही व्याख्या नहीं करता है।",
+        "(A) सही है, लेकिन (R) गलत है।",
+        "(A) गलत है, लेकिन (R) सही है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A): Essential educational reading materials such as printed books, newspapers, and children's picture/drawing books attract a Nil (0%) rate of GST.\nReason (R): The GST Council intentionally kept essential educational goods out of the indirect tax net to support literacy and reduce educational costs.\nIn the light of the above statements, choose the correct answer from the options given below:",
+      "options_english": [
+        "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+        "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
+        "(A) is true, but (R) is false.",
+        "(A) is false, but (R) is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Assertion (A) is correct: Under Notification No. 2/2017-Central Tax (Rate) covering HSN Chapter 49, printed books, brochures, leaflets, newspapers, journals, and children's picture, drawing, or coloring books attract a Nil (0%) rate of GST. Reason (R) is also correct: The policy rationale behind exempting these basic educational and reading goods was to encourage widespread literacy, foster a culture of reading, and ensure that basic learning resources remain affordable and free of indirect tax burdens for students, parents, and public institutions. Thus, Reason (R) correctly explains Assertion (A).",
+      "explanation_hindi": "अभिकथन (A) सही है: अधिसूचना संख्या 2/2017-केंद्रीय कर (दर) के अनुसार, मुद्रित पुस्तकें, समाचार पत्र, शोध पत्रिकाएँ और बच्चों की चित्रकला/ड्राइंग पुस्तकें शून्य (0%) जीएसटी दर पर आती हैं अर्थात पूर्णतः कर-मुक्त हैं। कारण (R) भी सही है: जीएसटी परिषद ने देश में साक्षरता के प्रसार, अध्ययन संस्कृति को बढ़ावा देने और छात्रों व शैक्षणिक संस्थानों पर अप्रत्यक्ष कर का बोझ न डालने के स्पष्ट उद्देश्य से इन पठन सामग्रियों को कर-मुक्त रखा है। अतः (R), (A) की सही और सटीक व्याख्या करता है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (a) Both A and R are true and R is the correct explanation of A",
+        "Answer explanation extracted from supplied reference material: explanation of A Essential educational reading material such as printed books, newspapers, journals, and children's picture or drawing books attract a Nil rate of GST under statutory exemption notifications. The GST Council deliberately exempted these items to promote literacy and reduce educational costs for students and institutions across the nation."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "2a2888e9-7039-4a79-9e9b-12a67f60f701",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "केंद्रीय वस्तु एवं सेवा कर (CGST) अधिनियम की धारा 51 के अंतर्गत स्रोत पर कर कटौती (TDS) करने के लिए अनिवार्य सरकारी विभाग अथवा संस्थान द्वारा कौन-सा निर्धारित वैधानिक रिटर्न मासिक आधार पर दाखिल किया जाना चाहिए?",
+      "options_hindi": [
+        "GSTR-1",
+        "GSTR-7",
+        "GSTR-3B",
+        "GSTR-9"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which prescribed statutory return must be filed monthly by a government department or educational institution that is required to deduct TDS under Section 51 of the Central Goods and Services Tax (CGST) Act?",
+      "options_english": [
+        "GSTR-1",
+        "GSTR-7",
+        "GSTR-3B",
+        "GSTR-9"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under Section 51 of the CGST Act, 2017 read with Rule 66 of the CGST Rules, 2017, every entity required to deduct tax at source (TDS deductors, including government departments and local authorities) must file a monthly return in Form GSTR-7 electronically on the common GST portal. Form GSTR-7 must be furnished on or before the 10th day of the month succeeding the calendar month in which the deduction was made. It reports details of TDS deducted, tax deposited, and supplier GSTINs, which auto-populates in the suppliers' electronic cash ledger. In contrast, GSTR-1 is for outward supplies, GSTR-3B is the monthly summary return, and GSTR-9 is the annual return.",
+      "explanation_hindi": "CGST अधिनियम, 2017 की धारा 51 और नियम 66 के तहत स्रोत पर कर कटौती (TDS) करने वाले सरकारी विभागों और संस्थानों को प्रत्येक माह 'फॉर्म GSTR-7' दाखिल करना अनिवार्य होता है। यह मासिक रिटर्न संबंधित माह के समाप्त होने के बाद आगामी माह की 10 तारीख तक GST पोर्टल पर ऑनलाइन प्रस्तुत किया जाना चाहिए। इसमें काटे गए टीडीएस, अनुबंध राशि और आपूर्तिकर्ता के विवरण शामिल होते हैं, जिससे विक्रेता के इलेक्ट्रॉनिक कैश लेजर में टीडीएस क्रेडिट पहुंच जाता है। GSTR-1 जावक आपूर्ति, GSTR-3B मासिक सारांश और GSTR-9 वार्षिक रिटर्न है। अतः विकल्प B सही उत्तर है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) GSTR-7",
+        "Answer explanation extracted from supplied reference material: GSTR-7 is the statutory monthly return required to be filed by entities mandated to deduct Tax Deducted at Source under Section 51 of the CGST Act. Government departments deducting GST TDS from supplier payments must submit GSTR-7 online to report details of tax withheld and remitted."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "4e906aba-f16a-4240-afc3-dc837787bcf4",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को अभिकथन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है:\nअभिकथन (A): मासिक टीडीएस की राशि बैंक/सरकारी खाते में जमा होते ही आहरण एवं संवितरण अधिकारी (DDO) का सांविधिक उत्तरदायित्व समाप्त हो जाता है।\nकारण (R): त्रैमासिक टीडीएस रिटर्न (फॉर्म 24Q/26Q) दाखिल करना तथा TRACES प्रमाणपत्र जनरेट करना अनिवार्य सांविधिक आवश्यकताएं हैं ताकि कटौतीकर्ता कर्मचारी को कर का क्रेडिट प्राप्त हो सके।\nउपर्युक्त कथनों के आलोक में, नीचे दिए गए विकल्पों में से सही उत्तर का चयन कीजिए:",
+      "options_hindi": [
+        "(A) और (R) दोनों सही हैं और (R), (A) की सही व्याख्या है",
+        "(A) और (R) दोनों सही हैं परंतु (R), (A) की सही व्याख्या नहीं है",
+        "(A) सही है परंतु (R) गलत है",
+        "(A) गलत है परंतु (R) सही है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A): The statutory responsibility of a Drawing and Disbursing Officer (DDO) ends as soon as the TDS amount is deposited into the government account/bank.\nReason (R): Filing of quarterly TDS returns (Form 24Q/26Q) and generating TRACES certificates is a statutory requirement to ensure the deductee receives proper tax credit in their Form 26AS/AIS.\nIn the light of the above statements, choose the correct answer from the options given below:",
+      "options_english": [
+        "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+        "(A) is true but (R) is false",
+        "(A) is false but (R) is true"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Assertion (A) is false: The statutory responsibilities of a DDO do not terminate upon remitting the tax into the government account under Section 200(1). Under Section 200(3), the DDO is legally mandated to prepare and file quarterly TDS returns (Form 24Q for salaries, Form 26Q for non-salary payments) within the prescribed due dates. Furthermore, under Section 203, the DDO must generate and deliver the TDS certificate (Form 16/16A) downloaded from the TRACES portal to the deductee.\nReason (R) is true: Mere payment of tax does not allocate tax credits to individual deductees. Only when quarterly statements are uploaded with valid PANs and processed by the Income Tax Department's TRACES system do the credits populate the deductee's Form 26AS and Annual Information Statement (AIS). Failure to file returns attracts late filing fees under Section 234E and penalties under Section 271H.\nHence, Assertion (A) is false but Reason (R) is true.",
+      "explanation_hindi": "अभिकथन (A) गलत है: केवल टीडीएस की कटौती कर सरकारी खजाने में जमा कर देने से DDO की सांविधिक जिम्मेदारियां समाप्त नहीं होतीं। धारा 200(3) के तहत DDO को निर्धारित समय-सीमा के भीतर त्रैमासिक रिटर्न (फॉर्म 24Q/26Q) दाखिल करना होता है तथा धारा 203 के तहत TRACES पोर्टल से फॉर्म 16/16A डाउनलोड कर कर्मचारी/कटौतीकर्ता को उपलब्ध कराना अनिवार्य होता है।\nकारण (R) सही है: जब तक DDO द्वारा कर्मचारियों के सही पैन (PAN) विवरण के साथ त्रैमासिक टीडीएस रिटर्न दाखिल नहीं किया जाता, तब तक जमा किया गया कर कर्मचारी के फॉर्म 26AS/AIS में क्रेडिट के रूप में परिलक्षित नहीं होगा और कर्मचारी अपना आईटीआर दाखिल करते समय कर क्रेडिट का दावा नहीं कर सकेगा।\nअतः (A) गलत है परंतु (R) सही है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) A is false but R is true",
+        "Answer explanation extracted from supplied reference material: Depositing deducted tax into the bank does not conclude a Drawing and Disbursing Officer's compliance obligations. The DDO must also file quarterly TDS returns in Form 24Q or 26Q and generate TRACES certificates like Form 16 to ensure that deductees receive proper tax credits on their central tax records."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "331e18ed-cf0e-4446-8639-f4246db2a7d1",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "एक महिला शिक्षिका 6 महीने के लिए प्राप्त मातृत्व अवकाश वेतन (मैटरनिटी लीव सैलरी) की कर-योग्यता के संबंध में प्रधानाचार्य से स्पष्टीकरण मांगती है। आयकर अधिनियम, 1961 के अंतर्गत इसकी सही विधिक स्थिति क्या है?",
+      "options_hindi": [
+        "मातृत्व अवकाश वेतन सामान्य वेतन आय के रूप में पूर्णतः कर-योग्य है।",
+        "मातृत्व अवकाश वेतन एक विशेष वैधानिक छूट के तहत पूर्णतः कर-मुक्त है।",
+        "मातृत्व अवकाश वेतन का केवल 50% भाग कर-योग्य है और 50% कर-मुक्त भत्ते के रूप में माना जाता है।",
+        "इस पर 'अन्य स्रोतों से आय' मद के अंतर्गत रियायती दर पर कर लगाया जाता है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "A female teacher seeks clarification from the Principal regarding the taxability of the maternity leave salary she received for 6 months. What is the correct legal position under the Income Tax Act, 1961?",
+      "options_english": [
+        "Maternity leave salary is fully taxable as normal salary income.",
+        "Maternity leave salary is completely tax-free under a special statutory exemption.",
+        "Only 50% of the maternity leave salary is taxable, while 50% is treated as an exempt allowance.",
+        "It is taxed under 'Income from Other Sources' at a concessional rate."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Section 15 and Section 17(1) of the Income Tax Act, 1961, salary paid to a female employee during her approved maternity leave period constitutes regular employment remuneration (leave salary) disbursed by the employer. The Income Tax Act does not provide any statutory exemption for maternity leave pay under Section 10 or any other provision. Consequently, maternity leave salary is fully chargeable to tax under the head 'Salaries' as normal salary income, and the DDO is legally required to deduct TDS under Section 192 on such payments.",
+      "explanation_hindi": "आयकर अधिनियम, 1961 की धारा 15 और धारा 17(1) के अनुसार, स्वीकृत मातृत्व अवकाश के दौरान महिला कर्मचारी को दिया जाने वाला वेतन नियोक्ता द्वारा देय नियमित सेवा पारिश्रमिक (अवकाश वेतन) का हिस्सा होता है। आयकर अधिनियम की धारा 10 या किसी अन्य प्रावधान के अंतर्गत मातृत्व अवकाश वेतन के लिए कोई कर छूट प्रदान नहीं की गई है। परिणामस्वरूप, यह सामान्य वेतन आय के रूप में पूर्णतः कर-योग्य है और DDO धारा 192 के तहत TDS कटौती की गणना करते समय इसे कुल वेतन में शामिल करने के लिए बाध्य है। अतः विकल्प A सही उत्तर है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) Maternity leave salary is fully taxable as normal salary income.",
+        "Answer explanation extracted from supplied reference material: normal salary income. Salary paid to a female employee during her approved maternity leave period represents regular employment remuneration paid by the employer. There is no specific tax exemption granted for maternity leave pay under the Income Tax Act, rendering it fully taxable as normal salary income under Section 15 of the Act."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "2b996b79-e8f0-46b4-bf04-1d926e3df118",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "आयकर अधिनियम की धारा 192 के अंतर्गत कर्मचारियों के वेतन से स्रोत पर कर कटौती (TDS) करने वाले नियोक्ता/डीडीओ को त्रैमासिक टीडीएस विवरणी (Return) दाखिल करनी होती है। वेतन पर टीडीएस हेतु कौन-सा वैधानिक फॉर्म निर्धारित है?",
+      "options_hindi": [
+        "फॉर्म 26Q (Form 26Q)",
+        "फॉर्म 27Q (Form 27Q)",
+        "फॉर्म 24Q (Form 24Q)",
+        "फॉर्म 27EQ (Form 27EQ)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "An employer deducting Tax Deducted at Source (TDS) on the salary of employees under Section 192 is required to submit a quarterly TDS return. Which statutory form is prescribed for filing this quarterly return on salaries?",
+      "options_english": [
+        "Form 26Q",
+        "Form 27Q",
+        "Form 24Q",
+        "Form 27EQ"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under Section 200(3) of the Income Tax Act, 1961 read with Rule 31A of the Income Tax Rules, every Drawing and Disbursing Officer (DDO) or employer deducting tax on salary under Section 192 must file a quarterly return in Form 24Q. Form 24Q contains Annexure I in all four quarters (providing deductee-wise quarterly TDS and challan details) and Annexure II exclusively in the fourth quarter (providing the complete annual salary breakdown, deductions claimed under Chapter VI-A, and final tax computation for each employee). By contrast, Form 26Q is for non-salary domestic payments, Form 27Q is for payments to non-residents, and Form 27EQ is for TCS.",
+      "explanation_hindi": "आयकर अधिनियम, 1961 की धारा 200(3) तथा आयकर नियम 31A के अनुसार, धारा 192 के तहत कर्मचारियों के वेतन से टीडीएस काटने वाले प्रत्येक आहरण एवं संवितरण अधिकारी (DDO) अथवा नियोक्ता को 'फॉर्म 24Q' (Form 24Q) में त्रैमासिक विवरणी दाखिल करनी होती है। फॉर्म 24Q में चारों तिमाहियों के लिए एनेक्सचर-I (त्रैमासिक चालान व कर्मचारी कटौती विवरण) तथा चौथी तिमाही में अनिवार्य रूप से एनेक्सचर-II (कर्मचारियों का वार्षिक वेतन विवरण, अध्याय VI-A की कटौतियां और कुल कर गणना) शामिल होता है। इसके विपरीत, फॉर्म 26Q गैर-वेतन भुगतानों के लिए, फॉर्म 27Q अनिवासी भुगतानों के लिए और फॉर्म 27EQ स्रोत पर कर संग्रह (TCS) के लिए होता है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (C) Form 24Q",
+        "Answer explanation extracted from supplied reference material: Form 24Q is the statutory form prescribed for preparing and submitting quarterly statements of Tax Deducted at Source in respect of salary payments under Section 192 of the Income Tax Act. Every employer deducting tax from employee salaries must file this return with tax authorities every quarter."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "99142c6a-b792-41a7-bfe7-c4a7e32dba52",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "आयकर अधिनियम, 1961 के तहत संक्षिप्त नाम \"TAN\" (टैन) का पूर्ण रूप क्या है?",
+      "options_hindi": [
+        "टैक्स डिडक्शन एंड कलेक्शन अकाउंट नंबर (कर कटौती एवं संग्रह खाता संख्या)",
+        "टैक्स असेसमेंट एंड रजिस्ट्रेशन नंबर",
+        "टैक्सपेयर आइडेंटिफिकेशन एंड एलोकेशन नंबर",
+        "टैक्स अलॉटमेंट नंबर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under the Income Tax Act, 1961, what does the acronym \"TAN\" stand for?",
+      "options_english": [
+        "Tax Deduction and Collection Account Number",
+        "Tax Assessment and Registration Number",
+        "Taxpayer Identification and Allocation Number",
+        "Tax Allotment Number"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Section 203A of the Income Tax Act, 1961, TAN stands for 'Tax Deduction and Collection Account Number'. It is a unique 10-digit alphanumeric identifier issued by the Income Tax Department to all persons and offices responsible for deducting tax at source (TDS) or collecting tax at source (TCS). Every Drawing and Disbursing Officer (DDO) in a school or government office must obtain a TAN and quote it mandatorily in all TDS challans, quarterly TDS statements (e.g., Form 24Q for salaries), and Form 16 certificates issued to employees.",
+      "explanation_hindi": "आयकर अधिनियम, 1961 की धारा 203A के तहत, TAN का पूर्ण रूप 'Tax Deduction and Collection Account Number' (कर कटौती और संग्रह खाता संख्या) है। यह 10 वर्णों (अक्षरों और अंकों) का एक विशिष्ट पहचान कोड है जो आयकर विभाग द्वारा उन सभी व्यक्तियों और कार्यालयों को जारी किया जाता है जो स्रोत पर कर कटौती (TDS) या संग्रह (TCS) के लिए उत्तरदायी हैं। प्रत्येक स्कूल या सरकारी कार्यालय के आहरण एवं संवितरण अधिकारी (DDO) के लिए TAN प्राप्त करना और इसे सभी टीडीएस चालान, त्रैमासिक रिटर्न (जैसे वेतन के लिए Form 24Q) और फॉर्म 16 प्रमाणपत्रों में लिखना अनिवार्य है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (a) Tax Deduction and Collection Account Number",
+        "Answer explanation extracted from supplied reference material: Number TAN stands for Tax Deduction and Collection Account Number. It is a mandatory ten-character alphanumeric identification number issued by the Income Tax Department to government offices, businesses, and entities that are legally required to deduct or collect tax at source on payments under the provisions of the Income Tax Act 1961."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    },
+    {
+      "id": "97d3c034-3781-4267-bdcc-dc0a80064c73",
+      "created_at": "2026-10-20T16:50:00.000+00:00",
+      "question_hindi": "एक नियमित शिक्षक नवंबर माह में शिक्षा निदेशालय के अधीन सेवा से त्यागपत्र (इस्तीफा) देता है। DDO को इस त्यागपत्र दे चुके कर्मचारी को कानूनी रूप से किस तिथि तक फॉर्म 16 जारी करना आवश्यक है?",
+      "options_hindi": [
+        "अगले वित्तीय वर्ष के 15 जून को या उससे पहले",
+        "त्यागपत्र और कार्यमुक्ति के आधिकारिक दिन ही तत्काल",
+        "त्यागपत्र की प्रभावी तिथि से ठीक तीस दिनों के भीतर",
+        "DDO को वर्ष के मध्य में त्यागपत्र देने वाले कर्मचारियों को फॉर्म 16 जारी करने से छूट प्राप्त है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Income Tax and GST Basics for School Administration",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "A regular teacher resigns from service under the Directorate of Education in November. By when is the DDO legally required to issue Form 16 to this resigned employee?",
+      "options_english": [
+        "On or before 15th June of the following financial year",
+        "Immediately on the official day of resignation and discharge",
+        "Within exactly thirty days from the effective date of resignation",
+        "The DDO is exempt from issuing Form 16 to employees who resign mid-year"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Rule 31 of the Income Tax Rules, 1962, the statutory due date for an employer/DDO to issue Form 16 is 15th June of the financial year immediately following the financial year in which tax was deducted.\n\nKey considerations:\n1. Even if an employee resigns, retires, or is discharged midway through the financial year (e.g., in November), the employer can only generate Part A and Part B of Form 16 from TRACES after filing the quarterly TDS statements (Form 24Q), including the annual final quarter return due on 31st May.\n2. Therefore, the legally enforceable statutory deadline for issuing Form 16 remains 15th June of the subsequent financial year.\n3. While the DDO may issue an provisional income and tax deduction statement to assist the employee with their subsequent employer (for Form 12B purposes), the official TRACES-generated Form 16 has the statutory deadline of 15th June.",
+      "explanation_hindi": "आयकर नियम, 1962 के नियम 31 के तहत, नियोक्ता/DDO द्वारा फॉर्म 16 जारी करने की वैधानिक अंतिम तिथि उस वित्तीय वर्ष के ठीक बाद आने वाले वित्तीय वर्ष की 15 जून होती है जिसमें कर की कटौती की गई थी।\n\nप्रमुख बिंदु:\n1. भले ही कोई कर्मचारी वित्तीय वर्ष के मध्य में (जैसे नवंबर में) त्यागपत्र दे दे या सेवानिवृत्त हो जाए, नियोक्ता ट्रेसेस (TRACES) पोर्टल से फॉर्म 16 केवल तभी जनरेट कर सकता है जब वह 31 मई तक चौथी तिमाही का टीडीएस रिटर्न (फॉर्म 24Q) दाखिल कर दे।\n2. इसलिए, फॉर्म 16 जारी करने की कानूनी रूप से बाध्यकारी वैधानिक समय सीमा अगले वित्तीय वर्ष की 15 जून ही रहती है।\n3. हालांकि DDO कर्मचारी को उसके नए नियोक्ता के पास फॉर्म 12B भरने के लिए एक अंतरिम आय और कर कटौती विवरण दे सकता है, लेकिन आधिकारिक फॉर्म 16 के लिए वैधानिक समय सीमा 15 जून ही लागू होती है।",
+      "topic": "Income Tax and GST Basics for School Administration",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) By 15th June of the following financial year",
+        "Answer explanation extracted from supplied reference material: Even if an employee resigns, retires, or leaves service during the financial year, the statutory due date for issuing Form 16 remains June fifteenth of the financial year immediately following the year in which tax was deducted. The employer is obligated to issue this certificate covering the period of service rendered."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T16:50:00.000+00:00"
+    }
+  ]
+}

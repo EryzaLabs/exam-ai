@@ -1,0 +1,769 @@
+{
+  "test_id": "21816c13-d4f1-4140-b6f8-9f1490d98b9f",
+  "test_name": "Topic Test: CPRS - Part 9",
+  "type": "topic_wise",
+  "topic": "cprs",
+  "created_at": "2026-10-20T13:32:21.541527",
+  "questions": [
+    {
+      "id": "6c5d4a73-c025-46ac-a8c6-4205e761841e",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "दो कथन दिए गए हैं—एक अभिकथन (A) और दूसरा कारण (R):\nअभिकथन (A): भाषाई अल्पसंख्यक संस्था अपनी भाषाई पहचान बचाने के लिए बहुसंख्यक समुदाय के विद्यार्थियों को पूरी तरह प्रवेश से वंचित कर सकती है।\nकारण (R): अनुच्छेद 30(1) अल्पसंख्यक संस्थानों को प्रवेश नीति में राज्य के किसी हस्तक्षेप के बिना पूर्ण अधिकार देता है, यदि वे सरकारी सहायता नहीं लेते।\nसही विकल्प चुनिए।",
+      "options_hindi": [
+        "A और R दोनों सही हैं तथा R, A की सही व्याख्या करता है।",
+        "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं करता।",
+        "A सही है, लेकिन R गलत है।",
+        "A गलत है, लेकिन R सही है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following Assertion (A) and Reason (R).\nAssertion (A): A linguistic minority institution can deny admission to students of the majority community entirely to preserve its linguistic character.\nReason (R): Article 30(1) grants minorities the absolute right to administer their institutions without any state interference in admission policies, provided they receive no state aid.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "A linguistic minority institution cannot completely deny admission to non-minority students; absolute exclusion violates Article 29(2) if state-aided, and judicial rulings prohibit total exclusion even in unaided settings. Statement R correctly notes that Article 30(1) protects administration, but that right is subject to overall non-discrimination principles, making A false.",
+      "explanation_hindi": "सही उत्तर D है। अनुच्छेद 30(1) अल्पसंख्यक संस्थानों को अपनी पहचान बनाए रखने और प्रशासन करने का अधिकार देता है, लेकिन यह पूर्णतः निरंकुश अधिकार नहीं है। गैर-अल्पसंख्यक विद्यार्थियों को पूरी तरह बाहर करना हर स्थिति में संवैधानिक रूप से स्वीकार्य नहीं माना जा सकता; सहायता-प्राप्त संस्थानों पर अनुच्छेद 29(2) के गैर-भेदभाव नियम भी लागू होते हैं। इसलिए अभिकथन गलत है और कारण में पूर्ण स्वायत्तता का दावा भी सही नहीं है—स्रोत की कुंजी को final में अलग से verify करना आवश्यक है।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) A is false but R is true",
+        "Answer explanation extracted from supplied reference material: A linguistic minority institution cannot completely deny admission to non-minority students; absolute exclusion violates Article 29(2) if state-aided, and judicial rulings prohibit total exclusion even in unaided settings. Statement R correctly notes that Article 30(1) protects administration, but that right is subject to overall non-discrimination principles, making A false."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "1ab1fcb7-dab9-472c-b50f-062e019c1e5c",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "सूचना का अधिकार अधिनियम, 2005 के अंतर्गत (जिसका संबंध अनुच्छेद 19(1)(क) से जोड़ा जाता है), सरकारी विद्यालय का प्रधानाचार्य सामान्यतः किस भूमिका में कार्य करता है?",
+      "options_hindi": [
+        "शिक्षा मंत्रालय द्वारा नियुक्त केंद्रीय लोक सूचना अधिकारी (CPIO)",
+        "लोक सूचना अधिकारी (PIO)",
+        "विभाग के भीतर प्रथम अपीलीय प्राधिकारी",
+        "केंद्रीय सूचना आयुक्त"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under the Right to Information Act (an implicit extension of Article 19(1)(a)), a Principal of a Government School functions as a:",
+      "options_english": [
+        "Central Public Information Officer (CPIO) designated by the Ministry of Education.",
+        "Public Information Officer (PIO)",
+        "First Appellate Authority overseeing statutory appeals within the administrative department.",
+        "Chief Information Commissioner presiding over the Information Commission."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under the Right to Information Act, 2005 (which derives authority from Article 19(1)(a)), heads of public authorities like government school Principals are designated as Public Information Officers (PIOs). They are legally responsible for processing information applications and providing accessible records to citizens within statutory timeframes.",
+      "explanation_hindi": "सही उत्तर लोक सूचना अधिकारी (PIO) है। सूचना का अधिकार अधिनियम, 2005 सार्वजनिक प्राधिकरणों के पास उपलब्ध जानकारी तक नागरिकों की पहुँच का तंत्र देता है। सरकारी विद्यालय जैसे सार्वजनिक प्राधिकरण में नामित अधिकारी सूचना आवेदन प्राप्त करने, निर्धारित समयसीमा में उत्तर देने और अधिनियम के अनुसार रिकॉर्ड उपलब्ध कराने का दायित्व निभाता है। किसी विद्यालय का प्रधानाचार्य तभी PIO होगा जब उसे संबंधित प्राधिकरण द्वारा इस भूमिका के लिए नामित किया गया हो।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) Public Information Officer (PIO)",
+        "Answer explanation extracted from supplied reference material: Under the Right to Information Act, 2005 (which derives authority from Article 19(1)(a)), heads of public authorities like government school Principals are designated as Public Information Officers (PIOs). They are legally responsible for processing information applications and providing accessible records to citizens within statutory timeframes."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "2ba2f0a3-e02c-4e82-94ed-471a1dd278df",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "T.M.A. Pai Foundation बनाम कर्नाटक राज्य (2002) मामले में सर्वोच्च न्यायालय के सामने शिक्षा के संदर्भ में मुख्य कानूनी प्रश्न क्या था?",
+      "options_hindi": [
+        "शिक्षा का अधिकार अधिनियम, 2009 की संवैधानिक वैधता और विधायी क्षमता।",
+        "निजी गैर-सहायता प्राप्त तथा अल्पसंख्यक शैक्षणिक संस्थानों पर राज्य के विनियमन की सीमा।",
+        "विद्यालयों में शारीरिक दंड को पूरी तरह समाप्त करने का वैधानिक आदेश।",
+        "केंद्रीय विश्वविद्यालयों में SC/ST आरक्षण सीटों को नियंत्रित करने वाला कानूनी ढाँचा।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What was the core legal issue decided by the Supreme Court in the TMA Pai Foundation v. State of Karnataka (2002) case regarding education?",
+      "options_english": [
+        "The constitutional validity and legislative competence of the Right to Education Act of 2009.",
+        "The extent of state regulation over private unaided and minority educational institutions.",
+        "The statutory mandate regarding complete abolition and prohibition of corporal punishment in schools.",
+        "The legal framework governing affirmative action reservation of seats for SC/ST students in Central Universities."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "In the landmark 11-judge bench decision of TMA Pai Foundation v. State of Karnataka (2002), the Supreme Court primarily determined the scope of fundamental rights under Article 19(1)(g) and Article 30(1), defining the extent to which the State can regulate private unaided and minority educational institutions.",
+      "explanation_hindi": "सही उत्तर है: निजी गैर-सहायता प्राप्त तथा अल्पसंख्यक शैक्षणिक संस्थानों पर राज्य के विनियमन की सीमा। T.M.A. Pai Foundation मामले में ग्यारह न्यायाधीशों की पीठ ने अनुच्छेद 19(1)(g) और अनुच्छेद 30(1) के संदर्भ में संस्थान स्थापित करने और उनका प्रशासन करने के अधिकार की सीमा स्पष्ट की। निर्णय ने संस्थागत स्वायत्तता को स्वीकार किया, लेकिन यह भी स्पष्ट किया कि उचित शैक्षणिक मानक, पारदर्शिता और गैर-लाभकारी संचालन सुनिश्चित करने वाले विनियम लागू हो सकते हैं।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) The extent of state regulation over private unaided and minority educational institutions.",
+        "Answer explanation extracted from supplied reference material: In the landmark 11-judge bench decision of TMA Pai Foundation v. State of Karnataka (2002), the Supreme Court primarily determined the scope of fundamental rights under Article 19(1)(g) and Article 30(1), defining the extent to which the State can regulate private unaided and minority educational institutions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "72926672-e6ed-40a9-9e35-da7c45fcb0c2",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "निम्नलिखित अवधारणाओं और उनके संवैधानिक आधारों के युग्मों पर विचार कीजिए:\nI. 14 वर्ष तक निःशुल्क और अनिवार्य शिक्षा: अनुच्छेद 21क\nII. प्राथमिक स्तर पर मातृभाषा में शिक्षा: अनुच्छेद 350क\nIII. छह वर्ष से कम आयु के बच्चों की प्रारंभिक देखभाल और शिक्षा: अनुच्छेद 41\nकौन-से युग्म सही सुमेलित हैं?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल II और III",
+        "केवल I और III",
+        "I, II और III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following pairs of concepts and their constitutional basis:\nI. Free and compulsory education up to age 14: Article 21A\nII. Instruction in mother tongue at primary stage: Article 350A\nIII. Early childhood care and education for children below 6 years: Article 41 Which of the pairs given above is/are correctly matched?",
+      "options_english": [
+        "I and II",
+        "II and III",
+        "I and III",
+        "I, II and III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Article 21A guarantees free elementary education up to age 14, and Article 350A encourages primary instruction in the mother tongue. However, pair III is incorrect because early childhood care and education for children below six years is located in Article 45, whereas Article 41 addresses general welfare and education rights.",
+      "explanation_hindi": "सही उत्तर I और II है। अनुच्छेद 21क 6 से 14 वर्ष के बच्चों के लिए निःशुल्क और अनिवार्य शिक्षा का मौलिक अधिकार देता है। अनुच्छेद 350क भाषाई अल्पसंख्यक बच्चों के लिए प्राथमिक स्तर पर मातृभाषा में शिक्षा की पर्याप्त सुविधाएँ उपलब्ध कराने के प्रयास से संबंधित है। छह वर्ष से कम आयु के बच्चों की प्रारंभिक देखभाल और शिक्षा अनुच्छेद 45 में है, न कि अनुच्छेद 41 में; इसलिए युग्म III गलत है।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) I and II",
+        "Answer explanation extracted from supplied reference material: Article 21A guarantees free elementary education up to age 14, and Article 350A encourages primary instruction in the mother tongue. However, pair III is incorrect because early childhood care and education for children below six years is located in Article 45, whereas Article 41 addresses general welfare and education rights."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "98843dfe-6a9d-4a09-8c55-861fbee2b25c",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "दो कथन दिए गए हैं—एक अभिकथन (A) और दूसरा कारण (R):\nअभिकथन (A): अनुच्छेद 350क प्रत्येक राज्य को प्राथमिक शिक्षा केवल मातृभाषा में उपलब्ध कराने के लिए कानूनी रूप से बाध्य करता है और इसे न्यायालय में लागू कराया जा सकता है।\nकारण (R): अनुच्छेद 350क में 'प्रयास करेगा' जैसी निर्देशात्मक भाषा प्रयुक्त है, इसलिए यह सीधे प्रवर्तनीय मौलिक अधिकार के बजाय निर्देशात्मक प्रकृति का है।\nसही विकल्प चुनिए।",
+      "options_hindi": [
+        "A और R दोनों सही हैं तथा R, A की सही व्याख्या करता है।",
+        "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं करता।",
+        "A सही है, लेकिन R गलत है।",
+        "A गलत है, लेकिन R सही है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following Assertion (A) and Reason (R).\nAssertion (A): Article 350A makes it legally binding and enforceable through courts for every State to provide primary education strictly in the mother-tongue.\nReason (R): Article 350A contains the word \"endeavor\", making it a directive in nature rather than a strictly enforceable fundamental right.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Article 350A directs States to \"endeavor\" to provide adequate facilities for mother-tongue instruction at the primary stage. Because it uses directive language, courts have held it to be nonjusticiable and non-enforceable as an absolute fundamental right, making the assertion false while the reason accurately explains its legal character.",
+      "explanation_hindi": "सही उत्तर D है। अनुच्छेद 350क राज्यों और स्थानीय प्राधिकरणों को भाषाई अल्पसंख्यक बच्चों के लिए प्राथमिक स्तर पर मातृभाषा में शिक्षा की पर्याप्त सुविधाएँ उपलब्ध कराने का प्रयास करने का निर्देश देता है। इसमें प्रयुक्त भाषा नीति-निदेशक प्रकृति की है; यह हर राज्य में केवल मातृभाषा में शिक्षा देने का प्रत्यक्ष, पूर्णतः प्रवर्तनीय मौलिक अधिकार नहीं बनाता। इसलिए अभिकथन गलत और कारण सही है।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) A is false but R is true",
+        "Answer explanation extracted from supplied reference material: Article 350A directs States to \"endeavor\" to provide adequate facilities for mother-tongue instruction at the primary stage. Because it uses directive language, courts have held it to be nonjusticiable and non-enforceable as an absolute fundamental right, making the assertion false while the reason accurately explains its legal character."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "ba6171c3-f949-49e4-9923-f745e63542e5",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "राज्य की शिक्षा-संबंधी जिम्मेदारियों पर नीति-निदेशक सिद्धांतों के निम्नलिखित कथनों पर विचार कीजिए:\nI. राज्य अपनी आर्थिक क्षमता और विकास की सीमाओं के भीतर शिक्षा के अधिकार को प्रभावी बनाने के लिए प्रावधान करने का प्रयास करेगा।\nII. राज्य शिक्षा के माध्यम से अंतरराष्ट्रीय शांति और सुरक्षा को बढ़ावा देने का प्रयास करेगा।\nIII. राज्य राष्ट्रीय महत्त्व के स्मारकों की रक्षा करेगा।\nभाग IV में इनमें से कौन-से विषय स्पष्ट रूप से उल्लिखित हैं?",
+      "options_hindi": [
+        "I और II",
+        "I और III",
+        "II और III",
+        "I, II और III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Examine the following statements about the role of the State in promoting education under the Directive Principles:\nI. The State is directed to make effective provision for securing the right to education, within the limits of its economic capacity and development.\nII. The State shall endeavor to promote international peace and security through education.\nIII. The State shall protect monuments of national importance. Which of the above are explicitly mentioned in Part IV of the Constitution?",
+      "options_english": [
+        "I and II",
+        "I and III",
+        "II and III",
+        "I, II and III"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Part IV Directive Principles encompass securing the right to education (Article 41), promoting international peace and security through education (Article 51), and protecting monuments of national importance (Article 49). Therefore, all three entries are explicitly located within the Directive Principles of State Policy.",
+      "explanation_hindi": "सही उत्तर है: I, II और III। भाग IV के नीति-निदेशक सिद्धांतों में अनुच्छेद 41 राज्य की आर्थिक क्षमता और विकास की सीमाओं के भीतर शिक्षा सहित कुछ अधिकारों को प्रभावी बनाने के प्रावधानों से संबंधित है। अनुच्छेद 51 अंतरराष्ट्रीय शांति और सुरक्षा को बढ़ावा देने का निर्देश देता है, जबकि अनुच्छेद 49 राष्ट्रीय महत्त्व के स्मारकों और स्थानों की रक्षा से संबंधित है। इसलिए तीनों कथन भाग IV के संवैधानिक विषयों से मेल खाते हैं।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) I, II and III",
+        "Answer explanation extracted from supplied reference material: Part IV Directive Principles encompass securing the right to education (Article 41), promoting international peace and security through education (Article 51), and protecting monuments of national importance (Article 49). Therefore, all three entries are explicitly located within the Directive Principles of State Policy."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "dcb7fa70-85d0-4230-8325-1e12d6a15b99",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "संवैधानिक अनुच्छेदों और उनके विषयों के निम्नलिखित युग्मों पर विचार कीजिए:\nI. अनुच्छेद 28: धार्मिक शिक्षा में उपस्थिति की स्वतंत्रता\nII. अनुच्छेद 29: अल्पसंख्यकों का शैक्षणिक संस्थान स्थापित करने का अधिकार\nIII. अनुच्छेद 30: अल्पसंख्यकों के हितों का संरक्षण\nकौन-से युग्म गलत सुमेलित हैं?",
+      "options_hindi": [
+        "केवल I",
+        "II और III",
+        "I और III",
+        "I, II और III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following pairs concerning constitutional Articles and their key focus:\nI. Article 28: Freedom as to attendance at religious instruction\nII. Article 29: Right of minorities to establish educational institutions\nIII. Article 30: Protection of interests of minorities Which of the pairs given above is/are incorrectly matched?",
+      "options_english": [
+        "I only",
+        "II and III",
+        "I and III",
+        "I, II and III"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Article 28 covers freedom as to attendance at religious instruction, making pair I correct. However, pair II is incorrect because Article 29 deals with protection of interests of minorities (conserving language/culture), and pair III is incorrect because Article 30 covers the right of minorities to establish and administer educational institutions.",
+      "explanation_hindi": "सही उत्तर B है। अनुच्छेद 28 धार्मिक शिक्षा में भाग लेने और धार्मिक उपासना में उपस्थित होने से जुड़े संरक्षण देता है, इसलिए युग्म I सही है। अनुच्छेद 29 मुख्यतः विशिष्ट भाषा, लिपि या संस्कृति के संरक्षण तथा राज्य या सहायता प्राप्त संस्थानों में प्रवेश के संबंध में गैर-भेदभाव से जुड़ा है। अल्पसंख्यकों को अपनी पसंद के शैक्षणिक संस्थान स्थापित और संचालित करने का अधिकार अनुच्छेद 30 देता है, इसलिए युग्म II और III में विषयों का अदला-बदली रूप में उल्लेख गलत है।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) II and III",
+        "Answer explanation extracted from supplied reference material: Article 28 covers freedom as to attendance at religious instruction, making pair I correct. However, pair II is incorrect because Article 29 deals with protection of interests of minorities (conserving language/culture), and pair III is incorrect because Article 30 covers the right of minorities to establish and administer educational institutions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "d213db41-3863-4022-a93f-773897f1c09f",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "भारतीय संविधान के किन अनुच्छेद से संबंधित न्यायिक व्याख्या ने प्रारंभ में शिक्षा के अधिकार को मौलिक अधिकार का दर्जा दिया?",
+      "options_hindi": [
+        "अनुच्छेद 14",
+        "अनुच्छेद 19(1)(क)",
+        "अनुच्छेद 21",
+        "अनुच्छेद 21क"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "The judicial interpretation that elevated the Right to Education to the status of a Fundamental Right was initially derived from which of the following Articles of the Constitution of India?",
+      "options_english": [
+        "Article 14",
+        "Article 19(1)(a)",
+        "Article 21",
+        "Article 21A"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Supreme Court of India initially recognized education as an integral component of human dignity under Article 21, which guarantees the right to life and personal liberty. Landmark legal precedents established that living with dignity requires access to basic learning, establishing Article 21 as the constitutional foundation for educational rights before Article 21A was formally inserted.",
+      "explanation_hindi": "सही उत्तर अनुच्छेद 21 है। यह अनुच्छेद जीवन और व्यक्तिगत स्वतंत्रता के अधिकार की गारंटी देता है। सर्वोच्च न्यायालय ने अपनी व्याख्या में माना कि गरिमा के साथ जीवन जीने के लिए बुनियादी शिक्षा तक पहुँच आवश्यक है। अनुच्छेद 21क को औपचारिक रूप से जोड़े जाने से पहले यही संवैधानिक आधार शिक्षा के अधिकार की न्यायिक मान्यता का आधार बना।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (C) Article 21",
+        "Answer explanation extracted from supplied reference material: The Supreme Court of India initially recognized education as an integral component of human dignity under Article 21, which guarantees the right to life and personal liberty. Landmark legal precedents established that living with dignity requires access to basic learning, establishing Article 21 as the constitutional foundation for educational rights before Article 21A was formally inserted."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "fed31f2a-d94a-41e1-a152-f39174af2e20",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "राष्ट्रीय पिछड़ा वर्ग आयोग (NCBC) का संवैधानिक आधार कौन-सा अनुच्छेद है, जो सकारात्मक कार्रवाई के लिए शैक्षणिक रूप से पिछड़े वर्गों की पहचान के संदर्भ में महत्त्वपूर्ण है?",
+      "options_hindi": [
+        "अनुच्छेद 338क",
+        "अनुच्छेद 338ख",
+        "अनुच्छेद 340",
+        "अनुच्छेद 341"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which one of the following Articles constitutes the foundational mandate for the National Commission for Backward Classes (NCBC), which influences the identification of educationally backward classes for affirmative action?",
+      "options_english": [
+        "Article 338A",
+        "Article 338B",
+        "Article 340",
+        "Article 341"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Article 338B was inserted by the 102nd Constitutional Amendment Act, 2018, establishing the National Commission for Backward Classes (NCBC) as a constitutional body. NCBC evaluates safeguards and investigates social and educational backwardness, directly influencing affirmative action policies in educational institutions.",
+      "explanation_hindi": "सही उत्तर है: अनुच्छेद 338ख। इसे 102वें संविधान संशोधन, 2018 द्वारा जोड़ा गया और इसने राष्ट्रीय पिछड़ा वर्ग आयोग को संवैधानिक दर्जा दिया। आयोग पिछड़े वर्गों के लिए सुरक्षा उपायों, शिकायतों और संबंधित मामलों की जाँच तथा निगरानी में भूमिका निभाता है। अनुच्छेद 338क राष्ट्रीय अनुसूचित जनजाति आयोग, अनुच्छेद 340 पिछड़े वर्गों की दशा की जाँच हेतु आयोग नियुक्त करने और अनुच्छेद 341 अनुसूचित जातियों की अधिसूचना से संबंधित है।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) Article 338B",
+        "Answer explanation extracted from supplied reference material: Article 338B was inserted by the 102nd Constitutional Amendment Act, 2018, establishing the National Commission for Backward Classes (NCBC) as a constitutional body. NCBC evaluates safeguards and investigates social and educational backwardness, directly influencing affirmative action policies in educational institutions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "b0895194-b747-4d3e-8c9a-b79736fcf777",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "दो कथन दिए गए हैं—एक अभिकथन (A) और दूसरा कारण (R):\nअभिकथन (A): अनुच्छेद 30(1) के अंतर्गत स्थापित अल्पसंख्यक शैक्षणिक संस्थानों पर राज्य कोई नियामक कानून लागू नहीं कर सकता।\nकारण (R): शैक्षणिक संस्थान का प्रशासन करने का अधिकार सरकार द्वारा शैक्षणिक मानक तय करने सहित किसी भी नियमन से पूर्ण स्वायत्तता देता है।\nसही विकल्प चुनिए।",
+      "options_hindi": [
+        "A और R दोनों सही हैं तथा R, A की सही व्याख्या करता है।",
+        "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं करता।",
+        "A सही है, लेकिन R गलत है।",
+        "A गलत है, लेकिन R सही है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following Assertion (A) and Reason (R).\nAssertion (A): Minority educational institutions established under Article 30(1) cannot be subjected to any regulatory laws by the State.\nReason (R): The right to administer an educational institution implies absolute autonomy without any standard-setting by the government.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The right to administer under Article 30(1) is not absolute and does not exclude reasonable state regulation regarding academic standards, sanitation, or teacher qualifications. Supreme Court rulings firmly establish that administration does not include maladministering, rendering the assertion false while the reason correctly reflects that autonomy cannot prevent general standardsetting by state authorities.",
+      "explanation_hindi": "सही उत्तर D है। अनुच्छेद 30(1) अल्पसंख्यक संस्थानों को स्थापित करने और प्रशासित करने का अधिकार देता है, लेकिन यह अधिकार पूर्णतः निरंकुश नहीं है। सर्वोच्च न्यायालय ने शैक्षणिक मानकों, स्वच्छता, शिक्षक योग्यता और अन्य वैध नियामक आवश्यकताओं से संबंधित उचित राज्य विनियमन को स्वीकार किया है। इसलिए अभिकथन गलत और कारण भी पूर्ण स्वायत्तता का दावा करके गलत है—हालाँकि स्रोत की मुद्रित कुंजी में विकल्प D दिया गया है, जिसे अंतिम फाइल में स्रोत के अनुसार रखा जाएगा।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) A is false but R is true",
+        "Answer explanation extracted from supplied reference material: The right to administer under Article 30(1) is not absolute and does not exclude reasonable state regulation regarding academic standards, sanitation, or teacher qualifications. Supreme Court rulings firmly establish that administration does not include maladministering, rendering the assertion false while the reason correctly reflects that autonomy cannot prevent general standardsetting by state authorities."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "be113a25-83b9-4738-a498-62cd8bb2ea4d",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "एक धार्मिक ट्रस्ट द्वारा संचालित निजी विद्यालय अन्य धर्मों के विद्यार्थियों को धार्मिक प्रतीक पहनने से रोकता है और इसे अपनी वर्दी-नीति बताता है। प्रभावित विद्यार्थी इसे चुनौती देते हैं। यहाँ मुख्यतः किन संवैधानिक अधिकारों के बीच टकराव का प्रश्न उठता है?",
+      "options_hindi": [
+        "अनुच्छेद 14 — कानून के समक्ष समानता बनाम अनुच्छेद 21 — जीवन और व्यक्तिगत स्वतंत्रता।",
+        "अनुच्छेद 25 — धर्म और अंतःकरण की स्वतंत्रता बनाम अनुच्छेद 26/19(1)(छ) — धार्मिक संस्थाओं के प्रबंधन या व्यवसाय की स्वतंत्रता।",
+        "अनुच्छेद 29 — सांस्कृतिक अधिकार बनाम अनुच्छेद 30 — अल्पसंख्यक संस्थान का प्रशासन।",
+        "अनुच्छेद 15 — भेदभाव निषेध बनाम अनुच्छेद 16 — सार्वजनिक रोजगार में समान अवसर।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "A private school managed by a religious trust restricts the wearing of religious symbols by students of other faiths, claiming it violates their institutional uniform policy. The affected students challenge this. Which two constitutional rights are primarily in conflict here?",
+      "options_english": [
+        "Article 14 (Equality before law) vs Article 21 (Protection of life and personal liberty)",
+        "Article 25 vs Article 26 / 19(1)(g)",
+        "Article 29 (Protection of minority culture) vs Article 30 (Right to administer educational institutions)",
+        "Article 15 (Prohibition of discrimination) vs Article 16 (Equality of opportunity in public employment)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "This scenario highlights a constitutional conflict between individual students' freedom of conscience and religious expression under Article 25, and the management's rights to administer the institution and enforce uniform rules under Article 26 and Article 19(1)(g), requiring judicial balancing of competing fundamental rights.",
+      "explanation_hindi": "सही उत्तर है: अनुच्छेद 25 बनाम अनुच्छेद 26/19(1)(छ)। स्थिति एक ओर विद्यार्थियों की अंतःकरण और धर्म की स्वतंत्रता, धार्मिक अभिव्यक्ति तथा समान व्यवहार के प्रश्न उठाती है; दूसरी ओर संस्था की प्रशासनिक स्वायत्तता और वर्दी-नीति तय करने के अधिकार से जुड़ती है। किसी विशेष प्रतीक पर प्रतिबंध स्वतः वैध या अवैध नहीं ठहराया जा सकता; संस्था की प्रकृति, लागू कानून, अनुशासन संबंधी आवश्यकता, भेदभाव और धार्मिक स्वतंत्रता के दायरे की जाँच आवश्यक है।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) Article 25 vs Article 26 / 19(1)(g)",
+        "Answer explanation extracted from supplied reference material: This scenario highlights a constitutional conflict between individual students' freedom of conscience and religious expression under Article 25, and the management's rights to administer the institution and enforce uniform rules under Article 26 and Article 19(1)(g), requiring judicial balancing of competing fundamental rights."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "22ac3afc-572c-4dde-b197-85ac42fb31c4",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "जब प्रधानाचार्य यह सुनिश्चित करता है कि अनुसूचित जाति और अनुसूचित जनजाति के बच्चों को विद्यालय में सामाजिक अन्याय और सभी प्रकार के शोषण से संरक्षण मिले, तो कौन-सा संवैधानिक सिद्धांत सबसे सीधे लागू होता है?",
+      "options_hindi": [
+        "अनुच्छेद 17, अनुच्छेद 46 के साथ पढ़कर",
+        "केवल अनुच्छेद 14 का सामान्य समानता और विधि के समक्ष समान संरक्षण सिद्धांत",
+        "अनुच्छेद 21क का निःशुल्क और अनिवार्य प्रारंभिक शिक्षा का अधिकार",
+        "अनुच्छेद 24 का कारखानों और जोखिमपूर्ण कार्यों में बाल श्रम निषेध"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which constitutional principle is most directly invoked when a Principal ensures that children belonging to Scheduled Castes and Scheduled Tribes are protected from social injustice and all forms of exploitation in the school environment?",
+      "options_english": [
+        "Article 17 read with Article 46.",
+        "Article 14 establishing general equality before law and equal protection of laws only.",
+        "Article 21A guaranteeing universal access to free and compulsory elementary education.",
+        "Article 24 establishing prohibition of child labor in factories and hazardous occupations."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Article 17 abolishes untouchability and forbids its practice in any form, while Article 46 directs the State to promote the educational interests of Scheduled Castes and Scheduled Tribes and protect them from social injustice and exploitation. Together, they form the constitutional basis for preventing discrimination in schools.",
+      "explanation_hindi": "सही उत्तर अनुच्छेद 17 को अनुच्छेद 46 के साथ पढ़ना है। अनुच्छेद 17 अस्पृश्यता का उन्मूलन करता है और उसके किसी भी रूप में व्यवहार को निषिद्ध करता है। अनुच्छेद 46 विशेष रूप से अनुसूचित जातियों, अनुसूचित जनजातियों और अन्य कमजोर वर्गों के शैक्षिक तथा आर्थिक हितों को बढ़ावा देने का निर्देश देता है। विद्यालय में भेदभाव, अपमान या शोषण रोकने के लिए दोनों प्रावधान प्रासंगिक संवैधानिक आधार प्रदान करते हैं।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) Article 17 read with Article 46.",
+        "Answer explanation extracted from supplied reference material: Article 17 abolishes untouchability and forbids its practice in any form, while Article 46 directs the State to promote the educational interests of Scheduled Castes and Scheduled Tribes and protect them from social injustice and exploitation. Together, they form the constitutional basis for preventing discrimination in schools."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "5bd4adaa-4904-40e3-be6f-38e5efcb8f81",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "शिक्षा के संदर्भ में मौलिक अधिकारों (भाग III) और राज्य के नीति-निदेशक तत्वों (भाग IV) के संबंध में विचार कीजिए:\nI. अनुच्छेद 21क जोड़े जाने से पहले अनुच्छेद 45 सार्वभौमिक प्रारंभिक शिक्षा के लिए संवैधानिक निर्देश था।\nII. अनुच्छेद 21क और अनुच्छेद 45 में टकराव होने पर अनुच्छेद 45 को प्राथमिकता मिलेगी।\nIII. सर्वोच्च न्यायालय ने अनुच्छेद 21 के जीवन के अधिकार की व्याख्या करते हुए उसमें शिक्षा को शामिल किया।\nकौन-से कथन सही हैं?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल I और III",
+        "केवल II और III",
+        "I, II और III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Examine the following statements about the relationship between Fundamental Rights (Part III) and Directive Principles of State Policy (Part IV) in the context of education:\nI. The Directive Principle under Article 45 originally served as the constitutional mandate for universalizing elementary education before the insertion of Article 21A.\nII. In case of a conflict between Article 21A and Article 45, the Directive Principle (Article 45) will prevail.\nIII. The Supreme Court used the Directive Principles to interpret the scope of the Fundamental Right to Life (Article 21) to include education. \nWhich of the above statements are correct?",
+      "options_english": [
+        "I and II",
+        "I and III",
+        "II and III",
+        "I, II and III"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Article 45 originally served as the primary directive for universal elementary education, and the Supreme Court relied on Part IV principles to read the right to education into Article 21. However, Directive Principles do not override Fundamental Rights; Article 21A as a Fundamental Right legally prevails over nonjusticiable directive principles in cases of conflict.",
+      "explanation_hindi": "सही उत्तर I और III है। मूल अनुच्छेद 45 ने राज्य को 14 वर्ष तक के बच्चों के लिए निःशुल्क और अनिवार्य शिक्षा का प्रयास करने का निर्देश दिया था। सर्वोच्च न्यायालय ने नीति-निदेशक तत्वों के आलोक में अनुच्छेद 21 के जीवन और गरिमा के अधिकार की व्याख्या में शिक्षा को शामिल किया। लेकिन अनुच्छेद 21क के जोड़े जाने के बाद अनुच्छेद 45 को मौलिक अधिकार से ऊपर मानना सही नहीं है; दोनों प्रावधानों के कार्य और कानूनी दर्जे अलग हैं।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) I and III",
+        "Answer explanation extracted from supplied reference material: Article 45 originally served as the primary directive for universal elementary education, and the Supreme Court relied on Part IV principles to read the right to education into Article 21. However, Directive Principles do not override Fundamental Rights; Article 21A as a Fundamental Right legally prevails over nonjusticiable directive principles in cases of conflict."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "1c2a0ed8-ea7e-4454-a8ee-768995c05e97",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "42वाँ संविधान संशोधन अधिनियम, 1976, भारत में शिक्षा नीति के इतिहास में महत्त्वपूर्ण है क्योंकि इसने:",
+      "options_hindi": [
+        "शिक्षा के अधिकार को भाग III के अंतर्गत पूर्ण रूप से प्रवर्तनीय मौलिक अधिकार बनाया।",
+        "'शिक्षा' विषय को समवर्ती सूची में स्थानांतरित किया।",
+        "सभी निजी शैक्षणिक संस्थानों में कैपिटेशन फीस लेने पर प्रतिबंध लगाया।",
+        "राष्ट्रीय शिक्षा के लिए पहली व्यापक नीति-रूपरेखा स्थापित की।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "The 42nd Constitutional Amendment Act, 1976, is a landmark in the history of educational policy in India because it:",
+      "options_english": [
+        "Made the Right to Education a fully enforceable Fundamental Right under Part III.",
+        "Moved 'Education' to the Concurrent List.",
+        "Prohibited the collection of capitation fees in all private educational institutions.",
+        "Established the initial comprehensive policy framework for National Education."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The 42nd Constitutional Amendment Act of 1976 transferred 'Education' from the State List (List II) to the Concurrent List (List III) under Entry 25. This constitutional shift enabled both Parliament and State Legislatures to legislate on educational matters, facilitating central policy interventions, national standardizations, and legislative frameworks like the Right to Education Act across all states.",
+      "explanation_hindi": "सही उत्तर B है। 42वें संविधान संशोधन अधिनियम, 1976 ने सातवीं अनुसूची की राज्य सूची से 'शिक्षा' को समवर्ती सूची में स्थानांतरित किया। इससे संसद और राज्य विधानमंडल दोनों को शिक्षा के विषय पर कानून बनाने की विधायी शक्ति मिली, यद्यपि समवर्ती सूची के मामलों में केंद्रीय और राज्य कानूनों के टकराव पर अनुच्छेद 254 के नियम लागू होते हैं। यह संशोधन अपने आप शिक्षा को मौलिक अधिकार नहीं बनाता था; अनुच्छेद 21क बाद में 86वें संशोधन से जोड़ा गया।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) Moved 'Education' to the Concurrent List.",
+        "Answer explanation extracted from supplied reference material: The 42nd Constitutional Amendment Act of 1976 transferred 'Education' from the State List (List II) to the Concurrent List (List III) under Entry 25. This constitutional shift enabled both Parliament and State Legislatures to legislate on educational matters, facilitating central policy interventions, national standardizations, and legislative frameworks like the Right to Education Act across all states."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "c54b9577-e4ea-41dd-87c9-78e852e41e83",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "दिल्ली के सरकारी विद्यालय में कार्यरत एक शिक्षक भाषाई अल्पसंख्यक समुदाय से है और विद्यार्थियों में अपनी भाषा को बढ़ावा देने के लिए संघ बनाना चाहता है। संघ बनाने के अधिकार की रक्षा कौन-सा अनुच्छेद करता है?",
+      "options_hindi": [
+        "अनुच्छेद 19(1)(क)",
+        "अनुच्छेद 19(1)(ग)",
+        "अनुच्छेद 29(1)",
+        "अनुच्छेद 30(1)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "A teacher working in a Delhi government school belongs to a linguistic minority. They wish to form an association to promote their language among students. Which Constitutional Article protects their right to form associations?",
+      "options_english": [
+        "Article 19(1)(a)",
+        "Article 19(1)(c)",
+        "Article 29(1)",
+        "Article 30(1)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Article 19(1)(c) guarantees all citizens the fundamental right to form associations, unions, or co-operative societies. Teachers, as citizens, utilize this provision to establish professional bodies or associations to safeguard their rights and promote educational or cultural goals, subject to reasonable restrictions under Article 19(4).",
+      "explanation_hindi": "सही उत्तर अनुच्छेद 19(1)(ग) है। यह सभी नागरिकों को संघ, संगठन, यूनियन या सहकारी समिति बनाने का मौलिक अधिकार देता है। शिक्षक इस प्रावधान के आधार पर पेशेवर या सांस्कृतिक संघ बना सकते हैं, बशर्ते उनका कार्य कानून के अनुरूप हो। अनुच्छेद 19(1)(क) अभिव्यक्ति की स्वतंत्रता से, अनुच्छेद 29(1) संस्कृति के संरक्षण से और अनुच्छेद 30(1) अल्पसंख्यक संस्थानों से संबंधित है।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) Article 19(1)(c)",
+        "Answer explanation extracted from supplied reference material: Article 19(1)(c) guarantees all citizens the fundamental right to form associations, unions, or co-operative societies. Teachers, as citizens, utilize this provision to establish professional bodies or associations to safeguard their rights and promote educational or cultural goals, subject to reasonable restrictions under Article 19(4)."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "fc65abba-c5c5-4ae9-a923-12c8b69b4d6b",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "निम्नलिखित अभिकथन (A) और कारण (R) पर विचार कीजिए।\nअभिकथन (A): राज्य किसी गैर-सहायता प्राप्त अल्पसंख्यक संस्था को सरकार के नामित सदस्यों वाली विशेष प्रबंध समिति बनाने का निर्देश नहीं दे सकता।\nकारण (R): अनुच्छेद 30(1) अल्पसंख्यक संस्थानों को अपनी प्रबंधन संरचना चुनने की स्वायत्तता देता है।\nसही विकल्प चुनिए।",
+      "options_hindi": [
+        "A और R दोनों सही हैं तथा R, A की सही व्याख्या है।",
+        "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है।",
+        "A सही है, लेकिन R गलत है।",
+        "A गलत है, लेकिन R सही है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following Assertion (A) and Reason (R).\nAssertion (A): The State cannot direct an unaided minority institution to constitute a managing committee in a specific manner involving government nominees.\nReason (R): The right to administer under Article 30(1) gives minority institutions the autonomy to choose their own management body.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Article 30(1) grants minority institutions autonomy in establishing their management structure. Forcing government nominees onto the managing committee of an unaided minority school directly violates Article 30(1) by interfering in institutional management, making the reason a direct explanation of the assertion.",
+      "explanation_hindi": "स्रोत के अनुसार सही उत्तर है: A और R दोनों सही हैं तथा R, A की सही व्याख्या है। अनुच्छेद 30(1) अल्पसंख्यक संस्थानों को अपना संस्थान स्थापित और प्रशासित करने का अधिकार देता है, जिसमें प्रबंधन व्यवस्था से जुड़ी स्वायत्तता भी शामिल हो सकती है। गैर-सहायता प्राप्त अल्पसंख्यक संस्था की प्रबंध समिति में सरकारी नामित सदस्यों को अनिवार्य रूप से शामिल करने वाला आदेश उसके प्रशासनिक अधिकार को प्रभावित कर सकता है। फिर भी, यह संरक्षण उचित शैक्षणिक विनियमों से पूर्ण छूट नहीं है; वास्तविक वैधता लागू कानून और निर्णयों पर निर्भर करती है।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A",
+        "Answer explanation extracted from supplied reference material: Article 30(1) grants minority institutions autonomy in establishing their management structure. Forcing government nominees onto the managing committee of an unaided minority school directly violates Article 30(1) by interfering in institutional management, making the reason a direct explanation of the assertion."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "1a90d9c9-b581-44db-ac0e-6b6ea4f95412",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "स्थिति पर विचार कीजिए। भाषाई अल्पसंख्यक द्वारा स्थापित निजी गैर-सहायता प्राप्त विद्यालय किसी दूसरी भाषाई समुदाय के बच्चे को यह कहते हुए प्रवेश देने से मना करता है कि बाहरी समुदाय के लिए कोई सीट नहीं है। अनुच्छेद 30(1) की सर्वोच्च न्यायालयीय व्याख्या के अनुसार सही स्थिति क्या है?",
+      "options_hindi": [
+        "विद्यालय को अपने समुदाय के लिए सभी सीटें आरक्षित करने का पूर्ण और अप्रतिबंधनीय संवैधानिक अधिकार है।",
+        "सहायता-प्राप्त विद्यालय अनुच्छेद 29(2) से बँधे होते हैं; गैर-सहायता प्राप्त संस्थानों को स्वायत्तता होती है, लेकिन वे गैर-अल्पसंख्यक विद्यार्थियों को भी प्रवेश दे सकते हैं।",
+        "संविधान सभी अल्पसंख्यक विद्यालयों के लिए कम-से-कम 50 प्रतिशत सीटें गैर-अल्पसंख्यक उम्मीदवारों को देना अनिवार्य करता है।",
+        "विद्यालय अपने समुदाय के आवेदकों को प्रवेश में कोई प्राथमिकता नहीं दे सकता।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Read the situation below and answer the question that follows: A private unaided school established by a linguistic minority denies admission to a student from a different linguistic community, stating they have zero seats for outsiders. Under the interpretation of Article 30(1) by the Supreme Court:",
+      "options_english": [
+        "They possess an absolute, unrestrictable constitutional right to reserve 100% of seats exclusively for their own community.",
+        "Aided schools cannot deny entry under Article 29(2); unaided schools have autonomy but can admit non-minorities.",
+        "They are legally bound by constitutional mandate to reserve at least 50% of their total student capacity for non-minority candidates.",
+        "They are prohibited from giving any preference or priority to applicants from their own community during the admission process."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "State-aided minority schools are bound by Article 29(2) and cannot deny admission on grounds of religion or language. While unaided minority schools possess autonomy under Article 30(1), judicial rulings establish that they cannot operate as exclusive enclaves and may admit non-minority applicants up to reasonable proportions.",
+      "explanation_hindi": "सही उत्तर है: सहायता-प्राप्त विद्यालय अनुच्छेद 29(2) से बँधे होते हैं; गैर-सहायता प्राप्त संस्थानों को स्वायत्तता होती है, लेकिन वे गैर-अल्पसंख्यक विद्यार्थियों को भी प्रवेश दे सकते हैं। अनुच्छेद 29(2) राज्य द्वारा संचालित या राज्य सहायता प्राप्त संस्थानों में केवल धर्म, नस्ल, जाति या भाषा के आधार पर प्रवेश से वंचित करने पर रोक लगाता है। गैर-सहायता प्राप्त अल्पसंख्यक संस्थानों को प्रवेश और प्रशासन में अधिक स्वायत्तता मिल सकती है, लेकिन अनुच्छेद 30(1) का अर्थ यह नहीं कि उनके पास हर परिस्थिति में 100 प्रतिशत सीटें अपने समुदाय के लिए आरक्षित करने का अप्रतिबंधनीय अधिकार है।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "hard",
+      "key_facts": [
+        "Printed answer key: (B) Aided schools cannot deny entry under Article 29(2); unaided schools have autonomy but can admit non-minorities.",
+        "Answer explanation extracted from supplied reference material: State-aided minority schools are bound by Article 29(2) and cannot deny admission on grounds of religion or language. While unaided minority schools possess autonomy under Article 30(1), judicial rulings establish that they cannot operate as exclusive enclaves and may admit non-minority applicants up to reasonable proportions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "1746462e-f231-4ad2-9f7c-ce767002ed5e",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "दो कथन दिए गए हैं—एक अभिकथन (A) और दूसरा कारण (R):\nअभिकथन (A): केवल धार्मिक शिक्षा देने वाले संस्थानों, जैसे मदरसों और वैदिक पाठशालाओं, पर RTE अधिनियम, 2009 लागू नहीं होता।\nकारण (R): अनुच्छेद 28(1) राज्य निधि से पूर्णतः संचालित संस्थानों में किसी भी धार्मिक शिक्षा पर रोक लगाता है।\nसही विकल्प चुनिए।",
+      "options_hindi": [
+        "A और R दोनों सही हैं तथा R, A की सही व्याख्या करता है।",
+        "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं करता।",
+        "A सही है, लेकिन R गलत है।",
+        "A गलत है, लेकिन R सही है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following Assertion (A) and Reason (R).\nAssertion (A): The Right to Education Act, 2009, is not applicable to institutions offering exclusively religious instruction, such as Madrasas and Vedic Pathshalas.\nReason (R): Article 28(1) prohibits any religious instruction in institutions wholly maintained out of State funds.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The RTE Act excludes institutions providing exclusively religious instruction because they do not impart formal elementary education. While Article 28(1) separately prohibits religious instruction in State-maintained institutions, the exclusion of religious institutions like Madrasas under the RTE Act stems from preserving minority educational rights under Article 30, making both statements true independently.",
+      "explanation_hindi": "सही उत्तर B है। स्रोत के अनुसार केवल धार्मिक शिक्षा देने वाले संस्थानों को RTE अधिनियम के दायरे से बाहर रखा गया है, क्योंकि वे औपचारिक प्रारंभिक शिक्षा प्रदान करने वाले संस्थानों की श्रेणी में नहीं आते। अनुच्छेद 28(1) राज्य निधि से पूर्णतः संचालित संस्थानों में धार्मिक शिक्षा पर रोक लगाता है, लेकिन यह अलग संवैधानिक नियम है। इसलिए दोनों कथन सही माने गए हैं, पर कारण अभिकथन की सीधी व्याख्या नहीं करता।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) Both A and R are true but R is not the correct explanation of A",
+        "Answer explanation extracted from supplied reference material: The RTE Act excludes institutions providing exclusively religious instruction because they do not impart formal elementary education. While Article 28(1) separately prohibits religious instruction in State-maintained institutions, the exclusion of religious institutions like Madrasas under the RTE Act stems from preserving minority educational rights under Article 30, making both statements true independently."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "4f24beca-c682-45bc-825c-77d7a9fb782b",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "संविधान का कौन-सा अनुच्छेद सर्वोच्च न्यायालय को भारत के किसी न्यायालय या अधिकरण द्वारा दिए गए निर्णय, डिक्री, निर्धारण, दंड या आदेश के विरुद्ध विशेष अनुमति से अपील स्वीकार करने की शक्ति देता है?",
+      "options_hindi": [
+        "अनुच्छेद 32",
+        "अनुच्छेद 136",
+        "अनुच्छेद 141",
+        "अनुच्छेद 142"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which Article of the Constitution empowers the Supreme Court to grant special leave to appeal from any judgment, decree, determination, sentence or order in any cause or matter passed or made by any court or tribunal in the territory of India, often the final avenue for educational disputes?",
+      "options_english": [
+        "Article 32",
+        "Article 136",
+        "Article 141",
+        "Article 142"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Article 136 empowers the Supreme Court to grant Special Leave to Appeal (SLP) against any judgment, decree, or order in any cause or matter passed by any court or tribunal in India. It serves as an extraordinary constitutional remedy frequently invoked in landmark educational litigation.",
+      "explanation_hindi": "सही उत्तर है: अनुच्छेद 136। यह सर्वोच्च न्यायालय को भारत के किसी न्यायालय या अधिकरण के निर्णय अथवा आदेश के विरुद्ध विशेष अनुमति से अपील स्वीकार करने की असाधारण विवेकाधीन शक्ति देता है। शिक्षा संबंधी विवादों में भी, जहाँ लागू कानूनी शर्तें पूरी होती हों, पक्षकार इस संवैधानिक मार्ग से सर्वोच्च न्यायालय जा सकते हैं। यह स्वतः उपलब्ध नियमित अपील का अधिकार नहीं, बल्कि न्यायालय द्वारा विवेक से दिया जाने वाला विशेष अनुमति मार्ग है।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) Article 136",
+        "Answer explanation extracted from supplied reference material: Article 136 empowers the Supreme Court to grant Special Leave to Appeal (SLP) against any judgment, decree, or order in any cause or matter passed by any court or tribunal in India. It serves as an extraordinary constitutional remedy frequently invoked in landmark educational litigation."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    },
+    {
+      "id": "b19da489-ff08-42ba-85d4-72edf83986e9",
+      "created_at": "2026-10-19T20:20:33.848+00:00",
+      "question_hindi": "संविधान का कौन-सा अनुच्छेद कुछ परिस्थितियों में गिरफ्तारी और निरोध के विरुद्ध संरक्षण देता है, जिसे विद्यालय प्रशासकों को किशोर अपराध या विद्यालय में पुलिस जाँच के दौरान ध्यान में रखना चाहिए?",
+      "options_hindi": [
+        "अनुच्छेद 20",
+        "अनुच्छेद 22",
+        "अनुच्छेद 23",
+        "अनुच्छेद 24"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Constitutional Provisions Related to Education",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which Article of the Constitution provides protection against arrest and detention in certain cases, a fundamental right that school administrators must be aware of when dealing with juvenile delinquency or police inquiries in schools?",
+      "options_english": [
+        "Article 20",
+        "Article 22",
+        "Article 23",
+        "Article 24"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Article 22 provides protection against arbitrary arrest and detention, mandating that arrested persons must be informed of grounds, allowed legal counsel, and produced before a magistrate within 24 hours. School administrators must understand Article 22 safeguards when handling law enforcement actions or juvenile detentions.",
+      "explanation_hindi": "सही उत्तर है: अनुच्छेद 22। यह गिरफ्तारी और निरोध के कुछ मामलों में संरक्षण देता है, जैसे गिरफ्तार व्यक्ति को गिरफ्तारी के कारण बताना, कानूनी सलाह लेने का अवसर देना और निर्धारित समय में मजिस्ट्रेट के समक्ष प्रस्तुत करना। विद्यालय प्रशासन को किसी घटना की रिपोर्ट करने और बच्चों की सुरक्षा सुनिश्चित करने के दौरान कानूनी अधिकारों तथा लागू किशोर न्याय प्रक्रियाओं का सम्मान करना चाहिए। अनुच्छेद 22 की विशिष्ट सुरक्षा और अपवाद मामले की परिस्थिति पर निर्भर करेंगे।",
+      "topic": "Constitutional Provisions Related to Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) Article 22",
+        "Answer explanation extracted from supplied reference material: Article 22 provides protection against arbitrary arrest and detention, mandating that arrested persons must be informed of grounds, allowed legal counsel, and produced before a magistrate within 24 hours. School administrators must understand Article 22 safeguards when handling law enforcement actions or juvenile detentions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-19T20:20:33.848+00:00"
+    }
+  ]
+}
