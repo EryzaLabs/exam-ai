@@ -338,7 +338,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                     <FileText size={16} color="#2563EB" />
                   </View>
                   <View>
-                    <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.totalAvailableTests ?? 184}</Text>
+                    <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats.totalAvailableTests}</Text>
                     <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Tests Available</Text>
                   </View>
                 </View>
