@@ -50,6 +50,19 @@ import { TestProgressService } from '@/services/test-progress-service';
 import ReportService, { ReportType } from '@/services/report-service';
 import { useTheme } from '@/context/theme-context';
 
+function stripHtml(html: string): string {
+  if (!html) return '';
+  return html
+    .replace(/<[^>]+>/g, '')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .trim();
+}
+
 const { width } = Dimensions.get('window');
 
 export default function TestResultScreen() {
@@ -1145,7 +1158,36 @@ export default function TestResultScreen() {
                               },
                             ]}
                             onPress={() => {
-                              const prompt = 'Can you explain this question in detail?\n\nQuestion: ' + question.questionText + '\n\nCorrect Answer: Option ' + (question.correctAnswerIndex + 1);
+                              const isHindi = language === 'hindi';
+                              const qText = isHindi && question.questionTextHindi
+                                ? stripHtml(question.questionTextHindi)
+                                : stripHtml(question.questionText);
+
+                              const currentOptions = isHindi && question.optionsHindi && question.optionsHindi.length > 0
+                                ? question.optionsHindi
+                                : question.options;
+
+                              const optionsText = currentOptions
+                                .map((opt, i) => `Option ${i + 1}: ${stripHtml(opt)}`)
+                                .join('\n');
+
+                              const correctOptNum = question.correctAnswerIndex + 1;
+                              const correctOptContent = currentOptions[question.correctAnswerIndex]
+                                ? stripHtml(currentOptions[question.correctAnswerIndex])
+                                : '';
+
+                              let prompt = `Can you explain this question and each option in detail?\n\nQuestion:\n${qText}\n\nOptions:\n${optionsText}\n\nCorrect Answer: Option ${correctOptNum}${correctOptContent ? ` - ${correctOptContent}` : ''}`;
+
+                              if (userAnswer && typeof userAnswer.selectedOption === 'number' && userAnswer.selectedOption >= 0) {
+                                const userOptNum = userAnswer.selectedOption + 1;
+                                const userOptContent = currentOptions[userAnswer.selectedOption]
+                                  ? stripHtml(currentOptions[userAnswer.selectedOption])
+                                  : '';
+                                prompt += `\nMy Selected Option: Option ${userOptNum}${userOptContent ? ` - ${userOptContent}` : ''}`;
+                              }
+
+                              prompt += `\n\nPlease explain why Option ${correctOptNum} is correct and why each of the other options is incorrect.`;
+
                               router.push({ pathname: '/assistant', params: { prompt } });
                             }}
                           >
