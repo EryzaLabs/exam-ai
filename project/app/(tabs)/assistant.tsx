@@ -24,6 +24,8 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useDashboardData } from '@/hooks/useDashboardData';
 import { useAuth } from '@/context/auth-context';
+import { useTheme } from '@/context/theme-context';
+import MarkdownText from '@/components/MarkdownText';
 
 const CHAT_HISTORY_KEY = '@vidya_chat_history_tab';
 
@@ -42,6 +44,7 @@ const QUICK_ACTIONS = [
 export default function AssistantScreen() {
   const { dashboardStats, performance } = useDashboardData();
   const { requireAuth } = useAuth();
+  const { isDark, colors } = useTheme();
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -206,14 +209,14 @@ export default function AssistantScreen() {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 20}
       >
-        <View style={styles.contentWrapper}>
-        <View style={styles.header}>
+        <View style={[styles.contentWrapper, { backgroundColor: colors.surface }]}>
+        <View style={[styles.header, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
           <View style={styles.headerLeft}>
             <View style={styles.botIcon}>
               <Bot size={24} color="#667eea" />
             </View>
             <View>
-              <Text style={styles.headerTitle}>Vidya (विद्या) AI</Text>
+              <Text style={[styles.headerTitle, { color: colors.textPrimary }]}>Vidya (विद्या) AI</Text>
               <View style={styles.statusContainer}>
                 <View style={styles.statusDot} />
                 <Text style={styles.statusText}>Online</Text>
@@ -226,17 +229,17 @@ export default function AssistantScreen() {
         </View>
 
         {messages.length <= 1 && (
-          <View style={styles.quickActionsContainer}>
+          <View style={[styles.quickActionsContainer, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
             <Text style={styles.quickActionsTitle}>Quick Actions</Text>
             <View style={styles.quickActions}>
               {QUICK_ACTIONS.map((action) => (
                 <TouchableOpacity
                   key={action.action}
-                  style={styles.quickActionButton}
+                  style={[styles.quickActionButton, { backgroundColor: colors.surfaceInput, borderColor: colors.border }]}
                   onPress={() => handleQuickAction(action.action)}
                 >
                   <View style={styles.quickActionIcon}>{action.icon}</View>
-                  <Text style={styles.quickActionLabel}>{action.label}</Text>
+                  <Text style={[styles.quickActionLabel, { color: colors.textPrimary }]}>{action.label}</Text>
                 </TouchableOpacity>
               ))}
             </View>
@@ -245,7 +248,7 @@ export default function AssistantScreen() {
 
         <ScrollView
           ref={scrollViewRef}
-          style={styles.messagesContainer}
+          style={[styles.messagesContainer, { backgroundColor: colors.background }]}
           contentContainerStyle={styles.messagesContent}
           showsVerticalScrollIndicator={false}
         >
@@ -265,17 +268,13 @@ export default function AssistantScreen() {
               <View
                 style={[
                   styles.messageBubble,
-                  message.role === 'user' ? styles.userBubble : styles.assistantBubble,
+                  message.role === 'user' ? styles.userBubble : [styles.assistantBubble, { backgroundColor: colors.surface, borderColor: colors.border }],
                 ]}
               >
-                <Text
-                  style={[
-                    styles.messageText,
-                    message.role === 'user' ? styles.userMessageText : styles.assistantMessageText,
-                  ]}
-                >
-                  {message.content}
-                </Text>
+                <MarkdownText
+                  content={message.content}
+                  role={message.role}
+                />
                 <Text
                   style={[
                     styles.messageTime,
@@ -297,18 +296,18 @@ export default function AssistantScreen() {
           ))}
           {isLoading && (
             <View style={styles.loadingContainer}>
-              <View style={styles.loadingBubble}>
+              <View style={[styles.loadingBubble, { backgroundColor: colors.surface, borderColor: colors.border }]}>
                 <ActivityIndicator size="small" color="#667eea" />
-                <Text style={styles.loadingText}>Thinking...</Text>
+                <Text style={[styles.loadingText, { color: colors.textSecondary }]}>Thinking...</Text>
               </View>
             </View>
           )}
         </ScrollView>
 
-        <View style={styles.inputContainer}>
+        <View style={[styles.inputContainer, { backgroundColor: colors.surface, borderTopColor: colors.border }]}>
           <View style={styles.inputWrapper}>
             <TextInput
-              style={styles.input}
+              style={[styles.input, { backgroundColor: colors.surfaceInput, borderColor: colors.border, color: colors.textPrimary }]}
               placeholder="Ask me anything..."
               placeholderTextColor="#9CA3AF"
               value={inputText}
