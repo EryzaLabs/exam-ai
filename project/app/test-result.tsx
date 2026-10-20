@@ -517,11 +517,16 @@ export default function TestResultScreen() {
       <View style={styles.tabContent}>
         {/* Score Card */}
         <LinearGradient
-          colors={[scoreColor, scoreColor + 'CC']}
+          colors={isDark
+            ? [scoreColor, '#172033']
+            : [scoreColor, scoreColor === '#F44336' ? '#9F1239' : `${scoreColor}E8`]}
           style={styles.scoreCard}
         >
           <View style={styles.scoreCardHeader}>
-            <Trophy size={48} color="#fff" />
+            <View style={styles.scoreCardIcon}>
+              <Trophy size={24} color="#fff" />
+            </View>
+            <Text style={styles.scoreCardEyebrow}>FINAL SCORE</Text>
             <Text style={styles.scoreCardTitle}>Your Score</Text>
           </View>
 
@@ -541,7 +546,10 @@ export default function TestResultScreen() {
                 ]}
               />
             </View>
-            <Text style={styles.scoreCardPercentage}>{scorePercentage.toFixed(1)}%</Text>
+            <View style={styles.scoreCardPercentageRow}>
+              <Text style={styles.scoreCardPercentage}>{scorePercentage.toFixed(1)}%</Text>
+              <Text style={styles.scoreCardPercentageLabel}>overall</Text>
+            </View>
           </View>
 
           <View style={styles.scoreCardMeta}>
@@ -1248,31 +1256,29 @@ export default function TestResultScreen() {
     <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]} edges={['top']}>
       {/* Header */}
       <LinearGradient
-        colors={['#4A90E2', '#357ABD']}
+        colors={isDark ? ['#172554', '#1E3A8A'] : ['#2563EB', '#1D4ED8']}
         style={styles.header}
       >
-        <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 4}}>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <TouchableOpacity onPress={() => router.back()} style={{marginRight: 12}}>
+        <View style={styles.headerTopRow}>
+          <View style={styles.headerIdentity}>
+            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
               <ArrowLeft size={24} color="#fff" />
             </TouchableOpacity>
-            <Text style={styles.headerTitle}>Test Results</Text>
+            <View>
+              <Text style={styles.headerKicker}>PERFORMANCE REPORT</Text>
+              <Text style={styles.headerTitle}>Test Results</Text>
+            </View>
           </View>
           <TouchableOpacity
-            style={{
-              backgroundColor: 'rgba(255,255,255,0.2)',
-              paddingHorizontal: 12,
-              paddingVertical: 6,
-              borderRadius: 16,
-            }}
+            style={styles.languageButton}
             onPress={() => setLanguage(l => l === 'english' ? 'hindi' : 'english')}
           >
-            <Text style={{color: '#fff', fontWeight: 'bold', fontSize: 13}}>
+            <Text style={styles.languageButtonText}>
               {language === 'english' ? 'A/अ' : 'अ/A'}
             </Text>
           </TouchableOpacity>
         </View>
-        <Text style={styles.headerSubtitle}>{test.title}</Text>
+        <Text style={styles.headerSubtitle} numberOfLines={1}>{test.title}</Text>
       </LinearGradient>
 
       {/* Tabs */}
@@ -1336,7 +1342,11 @@ export default function TestResultScreen() {
       </View>
 
       {/* Content */}
-      <ScrollView style={styles.content}>
+      <ScrollView
+        style={styles.content}
+        contentContainerStyle={styles.contentContainer}
+        showsVerticalScrollIndicator={false}
+      >
         {selectedTab === 'overview' && renderOverviewTab()}
         {selectedTab === 'sections' && renderSectionsTab()}
         {selectedTab === 'solutions' && renderSolutionsTab()}
@@ -1345,29 +1355,29 @@ export default function TestResultScreen() {
       {/* Footer Actions */}
       <View style={[styles.footer, { backgroundColor: colors.surface, borderTopColor: colors.border }]}>
         <TouchableOpacity
-          style={styles.footerButton}
+          style={[styles.footerButton, { backgroundColor: colors.accentLight }]}
           onPress={() => { if (router.canGoBack()) { router.back(); } else { router.replace('/test-list'); } }}
         >
-          <Home size={20} color="#4A90E2" />
-          <Text style={styles.footerButtonText}>Back to Tests</Text>
+          <Home size={19} color={colors.accent} />
+          <Text style={[styles.footerButtonText, { color: colors.accent }]}>Back to Tests</Text>
         </TouchableOpacity>
 
         <TouchableOpacity 
-          style={styles.footerButton}
+          style={[styles.footerButton, { backgroundColor: colors.accentLight }]}
           onPress={handleReevaluate}
           disabled={isReevaluating}
         >
           {isReevaluating ? (
-            <ActivityIndicator size="small" color="#4A90E2" />
+            <ActivityIndicator size="small" color={colors.accent} />
           ) : (
-            <RefreshCw size={20} color="#4A90E2" />
+            <RefreshCw size={19} color={colors.accent} />
           )}
-          <Text style={styles.footerButtonText}>Re-evaluate</Text>
+          <Text style={[styles.footerButtonText, { color: colors.accent }]}>Re-evaluate</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.footerButton}>
-          <Share2 size={20} color="#4A90E2" />
-          <Text style={styles.footerButtonText}>Share Result</Text>
+        <TouchableOpacity style={[styles.footerButton, { backgroundColor: colors.accentLight }]}>
+          <Share2 size={19} color={colors.accent} />
+          <Text style={[styles.footerButtonText, { color: colors.accent }]}>Share Result</Text>
         </TouchableOpacity>
       </View>
 
@@ -1470,40 +1480,80 @@ const styles = StyleSheet.create({
   },
   header: {
     paddingHorizontal: 20,
-    paddingVertical: 20,
+    paddingTop: 16,
+    paddingBottom: 18,
+  },
+  headerTopRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  headerIdentity: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1,
+  },
+  backButton: {
+    width: 38,
+    height: 38,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 10,
+    backgroundColor: 'rgba(255,255,255,0.14)',
+  },
+  headerKicker: {
+    fontSize: 10,
+    fontWeight: '700',
+    letterSpacing: 1.1,
+    color: 'rgba(255,255,255,0.7)',
+    marginBottom: 2,
   },
   headerTitle: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: '800',
     color: '#fff',
-    marginBottom: 4,
   },
   headerSubtitle: {
     fontSize: 14,
     color: 'rgba(255,255,255,0.9)',
+    marginTop: 14,
+    marginLeft: 48,
+  },
+  languageButton: {
+    backgroundColor: 'rgba(255,255,255,0.16)',
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.14)',
+  },
+  languageButtonText: {
+    color: '#fff',
+    fontWeight: '700',
+    fontSize: 13,
   },
   tabs: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
+    minHeight: 62,
     borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
   },
   tab: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 16,
-    gap: 6,
-    borderBottomWidth: 2,
+    paddingVertical: 12,
+    gap: 7,
+    borderBottomWidth: 3,
     borderBottomColor: 'transparent',
   },
   tabActive: {
     borderBottomColor: '#4A90E2',
   },
   tabText: {
-    fontSize: 14,
-    fontWeight: '600',
+    fontSize: 13,
+    fontWeight: '700',
     color: '#666',
   },
   tabTextActive: {
@@ -1512,55 +1562,76 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
   },
+  contentContainer: {
+    paddingBottom: 118,
+  },
   tabContent: {
     padding: 16,
-    gap: 16,
+    paddingTop: 18,
+    gap: 14,
   },
   scoreCard: {
-    borderRadius: 20,
-    padding: 24,
+    borderRadius: 24,
+    padding: 22,
+    minHeight: 292,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
-    shadowRadius: 8,
-    elevation: 6,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.16,
+    shadowRadius: 12,
+    elevation: 5,
   },
   scoreCardHeader: {
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 12,
+  },
+  scoreCardIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: 16,
+    backgroundColor: 'rgba(255,255,255,0.18)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 10,
+  },
+  scoreCardEyebrow: {
+    fontSize: 10,
+    fontWeight: '800',
+    letterSpacing: 1.5,
+    color: 'rgba(255,255,255,0.72)',
+    marginBottom: 3,
   },
   scoreCardTitle: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '700',
     color: '#fff',
-    marginTop: 8,
   },
   scoreCardMain: {
     flexDirection: 'row',
     alignItems: 'baseline',
     justifyContent: 'center',
-    marginBottom: 16,
+    marginBottom: 20,
   },
   scoreCardScore: {
-    fontSize: 56,
+    fontSize: 58,
     fontWeight: '800',
     color: '#fff',
+    letterSpacing: -1,
   },
   scoreCardMaxScore: {
-    fontSize: 28,
+    fontSize: 22,
     fontWeight: '600',
     color: 'rgba(255,255,255,0.8)',
     marginLeft: 8,
   },
   scoreCardProgress: {
-    marginBottom: 20,
+    marginBottom: 18,
   },
   progressBar: {
-    height: 8,
+    height: 9,
     backgroundColor: 'rgba(255,255,255,0.3)',
     borderRadius: 4,
     overflow: 'hidden',
-    marginBottom: 8,
+    marginBottom: 9,
   },
   progressFill: {
     height: '100%',
@@ -1568,14 +1639,23 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   scoreCardPercentage: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: '700',
     color: '#fff',
-    textAlign: 'right',
+  },
+  scoreCardPercentageRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    gap: 5,
+  },
+  scoreCardPercentageLabel: {
+    fontSize: 12,
+    color: 'rgba(255,255,255,0.7)',
   },
   scoreCardMeta: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     paddingTop: 16,
     borderTopWidth: 1,
     borderTopColor: 'rgba(255,255,255,0.3)',
@@ -1586,7 +1666,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   scoreCardMetaText: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: '600',
     color: '#fff',
   },
@@ -1942,27 +2022,25 @@ const styles = StyleSheet.create({
   },
   footer: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
     borderTopWidth: 1,
-    borderTopColor: '#e0e0e0',
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    gap: 12,
+    paddingHorizontal: 12,
+    paddingTop: 10,
+    paddingBottom: Platform.OS === 'ios' ? 20 : 12,
+    gap: 8,
   },
   footerButton: {
     flex: 1,
-    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 8,
-    paddingVertical: 12,
-    backgroundColor: '#E3F2FD',
+    paddingVertical: 8,
     borderRadius: 12,
+    backgroundColor: '#EFF6FF',
   },
   footerButtonText: {
-    fontSize: 14,
+    fontSize: 11,
     fontWeight: '600',
     color: '#4A90E2',
+    marginTop: 4,
   },
   modalOverlay: {
     flex: 1,
@@ -2069,8 +2147,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: 16,
-    borderRadius: 16,
+    padding: 14,
+    borderRadius: 18,
     borderWidth: 1,
   },
   reviewIncorrectLeft: {
@@ -2099,12 +2177,12 @@ const styles = StyleSheet.create({
   },
   quickStatsRow: {
     flexDirection: 'row',
-    gap: 10,
+    gap: 9,
   },
   quickStatCard: {
     flex: 1,
-    borderRadius: 14,
-    paddingVertical: 14,
+    borderRadius: 18,
+    paddingVertical: 16,
     paddingHorizontal: 10,
     alignItems: 'center',
     borderWidth: 1,
