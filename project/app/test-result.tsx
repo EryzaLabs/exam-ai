@@ -456,6 +456,14 @@ export default function TestResultScreen() {
     }
   };
 
+  const handleBackToTests = () => {
+    if (router.canGoBack()) {
+      router.back();
+    } else {
+      router.replace('/test-list');
+    }
+  };
+
   const handleShare = async () => {
     if (!analytics) return;
     try {
@@ -1280,7 +1288,13 @@ export default function TestResultScreen() {
       >
         <View style={styles.headerTopRow}>
           <View style={styles.headerIdentity}>
-            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+            <TouchableOpacity
+              onPress={handleBackToTests}
+              style={styles.backButton}
+              accessibilityRole="button"
+              accessibilityLabel="Back to tests"
+              activeOpacity={0.7}
+            >
               <ArrowLeft size={24} color="#fff" />
             </TouchableOpacity>
             <View>
@@ -1375,7 +1389,7 @@ export default function TestResultScreen() {
       <View style={[styles.footer, { backgroundColor: colors.surface, borderTopColor: colors.border }]}>
         <TouchableOpacity
           style={[styles.footerButton, { backgroundColor: colors.accentLight }]}
-          onPress={() => { if (router.canGoBack()) { router.back(); } else { router.replace('/test-list'); } }}
+          onPress={handleBackToTests}
         >
           <Home size={19} color={colors.accent} />
           <Text style={[styles.footerButtonText, { color: colors.accent }]}>Back to Tests</Text>
