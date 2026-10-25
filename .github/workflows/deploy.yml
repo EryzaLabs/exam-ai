@@ -71,7 +71,8 @@ jobs:
             "$EC2_USER@$EC2_HOST" \
             'set -e
              cd /home/aloo/exam-ai
-             git pull --ff-only origin main
+             git fetch origin main
+             git reset --hard origin/main
              sudo /usr/bin/systemctl restart exam-ai.service
              sudo /usr/bin/systemctl is-active --quiet exam-ai.service'
 
