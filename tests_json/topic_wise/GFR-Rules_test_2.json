@@ -1,0 +1,769 @@
+{
+  "test_id": "6f2cfd81-f46a-4dc8-baeb-6b0eaa9ef374",
+  "test_name": "Topic Test: GFR RULES - Part 2",
+  "type": "topic_wise",
+  "topic": "GFR-Rules",
+  "created_at": "2026-10-25T18:14:58.791200",
+  "questions": [
+    {
+      "id": "9cfd9465-183e-4eb9-b0b3-e4b2d002ec5f",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "GeM के माध्यम से खरीदी गई वस्तुओं की गुणवत्ता, तकनीकी विनिर्देशों और समय पर वितरण की जिम्मेदारी के संबंध में सही कथन की पहचान कीजिए:",
+      "options_hindi": [
+        "वस्तुओं की गुणवत्ता सत्यापित करने की संपूर्ण वित्तीय और तकनीकी जिम्मेदारी प्रधान लेखा कार्यालय की होती है।",
+        "वितरित वस्तुओं की भौतिक गुणवत्ता के लिए एकमात्र कानूनी और परिचालन जिम्मेदारी GeM प्रशासन की होती है।",
+        "राज्य सरकार का वित्त विभाग GeM पर सूचीबद्ध सभी वस्तुओं की गुणवत्ता और विनिर्देशों की गारंटी देता है।",
+        "गुणवत्ता, तकनीकी विनिर्देशों और समय पर वितरण की संपूर्ण जिम्मेदारी क्रेता (खरीदार) की होती है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Identify the correct statement regarding the responsibility for the quality of goods procured through GeM:",
+      "options_english": [
+        "The Principal Accounts Office holds sole financial and technical responsibility for verifying quality of goods.",
+        "GeM administration holds sole legal and operational responsibility for the physical quality of delivered goods.",
+        "The State Government Finance Department guarantees the quality and specification of all goods listed on GeM.",
+        "Responsibility for quality, specifications, and timely delivery lies with the buyer."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under Rule 149 of GFR 2017 and the GeM General Terms and Conditions (GTC), the Government e-Marketplace serves as a digital transaction platform connecting government buyers with registered sellers, but the ultimate responsibility for verifying the quality, conformity to technical specifications, and timely receipt of goods rests solely with the Buyer (the procuring department, school Principal, or DDO). Upon receiving consignments, the buyer/consignee is legally obligated to inspect the goods physically and generate a Consignee Receipt and Acceptance Certificate (CRAC) on the portal within the prescribed timeline (normally 10 days) before payment is released. Neither GeM administration nor the Accounts Office physically inspects or guarantees the delivered products.",
+      "explanation_hindi": "GFR 2017 के नियम 149 और GeM के सामान्य नियमों और शर्तों (GTC) के अनुसार, गवर्नमेंट ई-मार्केटप्लेस केवल एक ऑनलाइन तकनीकी मंच है जो सरकारी खरीदारों को विक्रेताओं से जोड़ता है। परंतु आपूर्ति की गई वस्तुओं के तकनीकी विनिर्देशों (specifications), भौतिक गुणवत्ता, मात्रा और समय पर वितरण की जांच करने की संपूर्ण जिम्मेदारी क्रेता (कार्यालय प्रमुख / विद्यालय प्राचार्य / DDO) की होती है। वस्तुओं की प्राप्ति पर, कंसाइनी/क्रेता को भौतिक निरीक्षण करना होता है और निर्धारित समय सीमा (सामान्यतः 10 कार्यदिवस) के भीतर GeM पोर्टल पर 'कंसाइनी प्राप्ति और स्वीकृति प्रमाण पत्र' (CRAC) जारी करना होता है, जिसके बाद ही विक्रेता को भुगतान किया जाता है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) Responsibility for quality, specifications, and timely delivery lies with the buyer.",
+        "Answer explanation extracted from supplied reference material: timely delivery lies with the buyer. Although the Government e-Marketplace platform provides an online catalog and registered seller directory, the ultimate responsibility for verifying product quality, ensuring technical specifications meet operational requirements, and confirming timely delivery rests entirely with the buyer. Receiving authorities must inspect all delivered goods and issue online acceptance certificates before releasing payment to vendors."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "37319b8e-c36f-4088-bab3-30e43ff5b103",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "किसी सरकारी विद्यालय का पुस्तकालयाध्यक्ष (लाइब्रेरियन) पुस्तकालय हेतु नई संदर्भ पुस्तकें खरीदता है। GFR के तहत, भंडार लेखांकन (Store Accounting) के प्रयोजन से इन पुस्तकों को किस प्रकार वर्गीकृत किया जाना चाहिए?",
+      "options_hindi": [
+        "पुस्तकालय की पुस्तकें और प्रकाशन, जो एक विशिष्ट परिग्रहण रजिस्टर (Accession Register) प्रक्रिया का पालन करते हैं।",
+        "सामान्य उपभोज्य भंडार वस्तुएं (Consumable items), जो खरीद के एक वर्ष के भीतर पूरी तरह समाप्त मानी जाती हैं।",
+        "मानक अचल परिसंपत्तियां जैसे भारी मशीनरी, भूमि और स्थायी भवन संरचनाएं।",
+        "अत्यधिक तरल वित्तीय परिसंपत्तियां जिन्हें सीधे परिचालन नकदी में परिवर्तित किया जा सकता है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "The Librarian of a government school acquires new reference books and periodicals for the library. Under GFR 2017, how should these books be classified and treated for store accounting purposes?",
+      "options_english": [
+        "As library books and publications, which are governed by dedicated accession register procedures.",
+        "As general consumable store items that are treated as completely exhausted within one year of procurement.",
+        "As standard heavy fixed assets alongside machinery, real estate, and permanent building structures.",
+        "As highly liquid financial assets readily convertible into direct operational cash."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Rule 215 of the General Financial Rules (GFR), 2017, library books and publications occupy a distinct category in government store accounting. They are neither treated as general consumable items (which are consumed/written off upon use) nor treated as standard dead-stock machinery/fixed assets. Instead, all purchased books and periodicals must be systematically recorded in an official Accession Register maintained by the library. GFR Rule 215 prescribes specialized procedures for the accessioning, custody, physical verification cycles (dependent on total holding volume), and write-off limits (allowing 5 volumes per 1,000 volumes issued/consulted in a year for ordinary wear and tear) for library collections.",
+      "explanation_hindi": "सामान्य वित्तीय नियम (GFR), 2017 के नियम 215 के तहत, पुस्तकालय की पुस्तकों और पत्र-पत्रिकाओं को भंडार लेखांकन में एक विशिष्ट दर्जा प्राप्त है। इन्हें न तो सामान्य उपभोज्य भंडार (Consumable Store) माना जाता है और न ही सामान्य संयंत्र/मशीनरी जैसी अचल संपत्ति। पुस्तकालय की प्रत्येक पुस्तक को एक विशिष्ट 'परिग्रहण रजिस्टर' (Accession Register) में दर्ज किया जाता है। नियम 215 के अंतर्गत पुस्तकालय संग्रह के लिए पृथक भौतिक सत्यापन चक्र (पुस्तकों की कुल संख्या के आधार पर) तथा सामान्य टूट-फूट/नुकसान के अपलेखन (प्रति वर्ष निर्गत/संदर्भित 1,000 पुस्तकों पर 5 पुस्तकों तक का स्वीकार्य नुकसान) के विशेष नियम निर्धारित किए गए हैं।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (A) Library books and publications, which follow distinct accession register procedures.",
+        "Answer explanation extracted from supplied reference material: distinct accession register procedures. Library books and publications are subject to distinct store accounting rules under financial regulations. Rather than being treated as immediate consumable items or standard machinery fixed assets, library collections are recorded in a dedicated Accession Register. Specific procedures govern their cataloging, physical verification frequencies, and write-off allowances for reasonable operational wear and tear."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "3fd6664a-0d15-4075-851c-2ddf184bc402",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "GFR 2017 के अनुसार, निम्नलिखित में से कौन-सा \"गैर-परामर्श सेवाओं\" (Non-consulting services) का एक उदाहरण है?",
+      "options_hindi": [
+        "प्रबंधन सलाहकार सेवाएं (Management advisory services)",
+        "एक वास्तुकार द्वारा विस्तृत परियोजना रिपोर्ट (DPR) तैयार करना",
+        "सफाई, सुरक्षा और खानपान सेवाओं की आउटसोर्सिंग",
+        "एक जटिल मुकदमे के लिए कानूनी परामर्शदाता (अधिवक्ता) की सेवाएं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following is an example of \"Non-consulting services\" as per GFR 2017?",
+      "options_english": [
+        "Management advisory services",
+        "Preparation of a detailed project report by an architect",
+        "Outsourcing of cleaning, security, and catering services",
+        "Legal counsel for a complex litigation"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "As defined in Rule 197 of GFR 2017, 'Non-consulting services' involve operational, physical, maintenance, or routine measurable activities where labor, equipment, physical inputs, or standard performance indicators dominate rather than customized intellectual or professional advice. Common examples include outsourcing office sanitation and housekeeping, physical security guarding, canteen/catering operations, hiring of motor vehicles, and courier services. Conversely, management advisory services, detailed architectural project reports (DPR), and specialized legal counsel are intellectual, professional, and advisory tasks classified as 'Consulting Services' under Rule 177 of GFR 2017.",
+      "explanation_hindi": "GFR 2017 के नियम 197 के अनुसार, 'गैर-परामर्श सेवाएं' (Non-consulting services) वे परिचालन, भौतिक या नियमित रखरखाव कार्य हैं जिनमें बौद्धिक या पेशेवर सलाह के स्थान पर शारीरिक श्रम, उपकरण या भौतिक कार्यप्रणाली की प्रधानता होती है और जिनके प्रदर्शन मानकों को वस्तुनिष्ठ रूप से मापा जा सकता है। उदाहरण के लिए, कार्यालय या विद्यालय परिसर की सफाई, सुरक्षा गार्डों की तैनाती, कैंटीन/कैटरिंग सेवाएं और वाहन किराया गैर-परामर्श सेवाएं हैं। इसके विपरीत, प्रबंधन सलाह, आर्किटेक्ट द्वारा विस्तृत परियोजना रिपोर्ट तैयार करना और कानूनी परामर्श बौद्धिक एवं सलाहकारी कार्य हैं, जिन्हें GFR के नियम 177 के तहत 'परामर्श सेवाओं' (Consulting Services) के अंतर्गत वर्गीकृत किया गया है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (C) Outsourcing of cleaning, security, and catering services",
+        "Answer explanation extracted from supplied reference material: catering services Non-consulting services involve operational, physical, or routine maintenance tasks where clear physical deliverables and performance standards can be objectively measured. Outsourcing office sanitation, building security personnel, catering, vehicle hiring, and equipment maintenance represents non-consulting services. Conversely, advisory functions, legal counsel, and detailed project report preparation fall under intellectual consulting services."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "61f1722e-83ea-46a2-b455-78014ef332fc",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "सामान्य वित्तीय नियमावली (GFR), 2017 सुरक्षित डिजिटल लेन-देन तथा एजेंसी बैंकों के कोर बैंकिंग समाधान (CBS) के साथ सार्वजनिक वित्तीय प्रबंधन प्रणाली (PFMS) के निर्बाध एकीकरण पर अत्यधिक बल क्यों देती है?",
+      "options_hindi": [
+        "एक वास्तविक समय (Real-time), विश्वसनीय लेखा प्रणाली स्थापित करने, कुशल नकदी प्रबंधन सुनिश्चित करने और बाहरी बैंक खातों में सरकारी धन के निष्क्रिय पड़े रहने (Parking of Funds) को रोकने के लिए।",
+        "प्रशासनिक सत्यापन प्रक्रिया को जानबूझकर लंबा खींचने और वाणिज्यिक विक्रेताओं को भुगतान में देरी करने के लिए।",
+        "आहरण एवं संवितरण अधिकारियों (DDO) के लिए लिपिकीय दस्तावेज़ीकरण और नियमित कागजी कार्रवाई के बोझ को बढ़ाने के लिए।",
+        "अनधिकृत निजी तृतीय पक्षों को सरकार के आंतरिक व्यय डेटा की निगरानी करने की अनुमति देने के लिए।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Why do the General Financial Rules (GFR) 2017 place strong emphasis on secure digital transactions and the seamless interface of the Public Financial Management System (PFMS) with the Core Banking Solutions (CBS) of agency banks?",
+      "options_english": [
+        "To establish a real-time, reliable accounting framework, optimize cash management, and prevent the idle parking of public funds in external bank accounts.",
+        "To deliberately prolong the administrative verification process and delay disbursements to commercial suppliers.",
+        "To multiply clerical documentation and manual ledger maintenance burdens for Drawing and Disbursing Officers.",
+        "To permit commercial third-party aggregators to access and exploit confidential government spending information."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Rule 86 of GFR 2017 emphasizes the integration of PFMS with the Core Banking Solution (CBS) of the Reserve Bank of India and authorized agency banks to establish a transparent, real-time public financial management network. The primary objectives are: (1) To provide end-to-end visibility and real-time tracking of scheme expenditures across all administrative tiers, (2) To eliminate the practice of 'parking of funds'—where public money was historically withdrawn from treasuries and held unspent in commercial bank accounts to avoid lapsing of budget grants, (3) To implement Just-in-Time (JIT) funding models, reducing borrowing costs for the Government of India, and (4) To enable prompt, automated accounting reconciliation. Therefore, option A is correct.",
+      "explanation_hindi": "GFR 2017 के नियम 86 में PFMS को भारतीय रिज़र्व बैंक तथा अधिकृत एजेंसी बैंकों के कोर बैंकिंग सॉल्यूशन (CBS) के साथ जोड़ने पर विशेष जोर दिया गया है। इसके प्रमुख उद्देश्य निम्नलिखित हैं: (i) सरकारी योजनाओं में जारी धन के वास्तविक प्रवाह और व्यय की रियल-टाइम (वास्तविक समय) निगरानी स्थापित करना, (ii) सरकारी निधियों की 'पार्किंग' (Parking of Funds) को समाप्त करना—जिसमें बजट व्यपगत (Lapse) होने से बचाने के लिए धन निकालकर बाहरी बैंक खातों में निष्क्रिय छोड़ दिया जाता था, (iii) 'जस्ट-इन-टाइम' (JIT) फंडिंग सुनिश्चित करना ताकि केंद्र सरकार की अनावश्यक बाजार उधारी लागत कम हो सके, तथा (iv) पारदर्शी नकदी प्रबंधन और त्वरित दैनिक लेखा समाधान सुनिश्चित करना। अतः विकल्प A सही उत्तर है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) To create a real-time, reliable accounting system and prevent parking of funds.",
+        "Answer explanation extracted from supplied reference material: system and prevent parking of funds. Integrating the Public Financial Management System with agency core banking systems creates a real-time, reliable accounting network across government entities. This integration ensures instant tracking of public expenditure, accelerates direct payments to beneficiaries, prevents unutilized parking of public funds in intermediary bank accounts, and provides transparent cash management reports."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "19095863-42a6-41a6-b843-5a9b921e4254",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से किस प्रकार की हानि के मामले में, उसमें शामिल वित्तीय सीमा पर विचार किए बिना, पुलिस को अनिवार्य रूप से रिपोर्ट (प्राथमिकी/FIR) दर्ज कराना आवश्यक है?",
+      "options_hindi": [
+        "किसी कर्मचारी द्वारा की गई संदिग्ध धोखाधड़ी, गबन अथवा जाली चेक/बिल का मामला।",
+        "विद्यार्थियों द्वारा निरंतर दीर्घकालिक उपयोग के कारण पुस्तकालय की पुस्तकों की सामान्य भौतिक टूट-फूट।",
+        "नियमित प्रायोगिक परीक्षणों के दौरान रसायन विज्ञान प्रयोगशाला में मानक कांच के बीकरों की आकस्मिक टूट-फूट।",
+        "विद्यालय के विज्ञान स्टोर रूम में निर्धारित शेल्फ-लाइफ समाप्त होने के कारण रासायनिक अभिकर्मकों का स्वाभाविक रूप से अनुपयोगी होना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following types of losses requires a mandatory report to the police (lodging of an FIR), regardless of the financial limit involved?",
+      "options_english": [
+        "Suspected fraud, embezzlement, or forged cheques/bills committed by an employee.",
+        "Normal physical wear and tear of library books occurring due to continuous long-term consultation by students.",
+        "Accidental breakage of standard glass beakers in a chemistry laboratory during routine practical experiments.",
+        "Natural expiration of chemical reagents stored beyond their shelf life in the school science store room."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Rule 34 of GFR 2017, whenever a financial loss involves a suspected cognizable criminal offense—such as fraud, embezzlement, forgery of government cheques/bills, defalcation, or theft—it is mandatory for the administrative authority to lodge an FIR with the police immediately, irrespective of the monetary amount involved. The monetary relaxation (loss below Rs. 50,000 not requiring police report) applies solely to ordinary non-criminal losses. Routine physical wear and tear of books, accidental breakage of glassware during experiments, and expiry of chemicals are normal administrative obsolescence/condemnation matters and carry no criminal element.",
+      "explanation_hindi": "जीएफआर 2017 के नियम 34 के अनुसार, जब भी किसी वित्तीय हानि में कोई संदिग्ध संज्ञेय आपराधिक कृत्य—जैसे कि कर्मचारियों द्वारा धोखाधड़ी, गबन, जाली सरकारी चेक या बिल तैयार करना, अथवा चोरी—शामिल हो, तो प्रशासनिक प्राधिकारी के लिए पुलिस में तत्काल प्राथमिकी (FIR) दर्ज कराना अनिवार्य है, चाहे उसमें शामिल राशि कितनी भी कम क्यों न हो। ₹50,000 से कम की हानि पर पुलिस रिपोर्ट न करने की छूट केवल सामान्य गैर-आपराधिक हानियों पर लागू होती है। पुस्तकालय की पुस्तकों की सामान्य घिसावट, प्रयोगशाला में कांच के बर्तनों का टूटना अथवा रसायनों का एक्सपायर होना नियमित स्टोर निस्तारण (Condemnation) का विषय है, जिनमें कोई आपराधिक तत्व नहीं होता।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (a) Suspected fraud, embezzlement, or forged cheques by an employee.",
+        "Answer explanation extracted from supplied reference material: cheques by an employee. Any financial loss involving suspected criminal offenses--such as embezzlement, forged signatures, fraudulent billing, or employee theft--requires mandatory reporting to police authorities via an FIR, regardless of the monetary value involved. Conversely, routine operational wear, accidental experimental breakage, or normal shelf-life expiration do not constitute criminal matters."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "09f5e912-3546-4d84-8b10-8425805862cc",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "जीएफआर (GFR) 2017 के अंतर्गत वित्तीय प्रबंधन के प्रशासनिक पदानुक्रम में, एक \"नियंत्रक अधिकारी\" (Controlling Officer) का प्राथमिक कार्य क्या होता है?",
+      "options_hindi": [
+        "केंद्र और राज्य सरकारों के सभी व्ययों का लेखापरीक्षण करने के लिए प्रधान संवैधानिक वैधानिक लेखापरीक्षक के रूप में कार्य करना।",
+        "अंतरराष्ट्रीय वित्तीय एजेंसियों के परामर्श से विदेशी मुद्रा भंडार का सीधे प्रबंधन और आवंटन करना।",
+        "यह निरंतर प्रशासनिक पर्यवेक्षण सुनिश्चित करना कि अधीनस्थ संवितरण अधिकारियों द्वारा किया गया व्यय स्वीकृत बजट अनुदान की सीमा के भीतर रहे और उचित रूप से न्यायोचित हो।",
+        "कानून में अधिनियमित करने के लिए संसद में प्रस्तुत सभी विधायी वित्तीय विधेयकों की औपचारिक समीक्षा और अनुमोदन करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In the administrative hierarchy of financial management under GFR 2017, what is the primary function of a \"Controlling Officer\"?",
+      "options_english": [
+        "To act as the principal constitutional statutory auditor for auditing all expenditures of the Union and State Governments.",
+        "To directly manage and allocate foreign exchange reserves in consultation with international financial agencies.",
+        "To exercise continuous administrative supervision ensuring that expenditures incurred by subordinate disbursing officers remain within the sanctioned budget grants and are properly justified.",
+        "To formally review and approve all legislative financial bills presented in Parliament for enactment into law."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under Rule 2(xii) and Rules 52 to 64 of GFR 2017 (Control of Expenditure), a \"Controlling Officer\" is an officer entrusted by a Ministry or Head of Department with the responsibility of controlling the incurring of expenditure and/or the collection of revenue by subordinate Drawing and Disbursing Officers (DDOs). The Controlling Officer's duties include: (1) ensuring that expenditure does not exceed the budget grant under each unit of appropriation; (2) verifying that expenditure is incurred in public interest and backed by proper sanctions and vouchers; (3) conducting monthly reconciliation of figures with the Pay and Accounts Office (PAO); and (4) surrendering anticipated savings in time to prevent budgetary lapses.",
+      "explanation_hindi": "जीएफआर 2017 के नियम 2(xii) और नियम 52 से 64 (व्यय का नियंत्रण) के अंतर्गत, \"नियंत्रक अधिकारी\" (Controlling Officer) वह अधिकारी होता है जिसे मंत्रालय या विभागाध्यक्ष द्वारा अधीनस्थ आहरण एवं संवितरण अधिकारियों (DDOs) द्वारा किए जाने वाले व्यय और राजस्व संग्रह के नियंत्रण की जिम्मेदारी सौंपी जाती है। नियंत्रक अधिकारी के प्राथमिक कर्तव्यों में यह सुनिश्चित करना शामिल है कि व्यय स्वीकृत बजट अनुदान से अधिक न हो, व्यय नियमों और औचित्य के अनुसार किया गया हो, वेतन एवं लेखा कार्यालय (PAO) के साथ मासिक आंकड़ों का मिलान (reconciliation) किया जाए, तथा संभावित बचतों को समय पर समर्पित किया जाए।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (C) To ensure expenditure of disbursing officers is kept within budget grant and properly justified.",
+        "Answer explanation extracted from supplied reference material: kept within budget grant and properly justified. A Controlling Officer is tasked with administrative supervision over drawing and disbursing officers within their administrative hierarchy. The controlling officer's primary function is to continuously monitor expenditure trends, verify bill justifications, ensure expenses remain strictly within allocated budget grants, and prevent unauthorized expenditure or budget overruns across subordinate offices."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "b051ce4d-ad8d-4ebb-9607-1bf9fafe101b",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "सामान्य वित्तीय नियमावली (GFR), 2017 के तहत सार्वजनिक वित्तीय प्रबंधन प्रणाली (PFMS) के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\nI. यह महालेखा नियंत्रक (CGA) द्वारा विकसित और प्रशासित एक वेब-आधारित ऑनलाइन वित्तीय सॉफ्टवेयर अनुप्रयोग है।\nII. यह सरकारी योजनाओं के तहत जारी धन की अंतिम क्रियान्वयन एजेंसी तक वास्तविक समय (Real-time) ट्रैकिंग की सुविधा प्रदान करता है।\nIII. यह लक्षित लाभार्थियों के बैंक खातों में प्रत्यक्ष लाभ अंतरण (DBT) को निर्बाध रूप से सक्षम बनाता है।\nIV. इसका उपयोग कड़ाई से केवल रक्षा मंत्रालय (Ministry of Defence) के खरीद कार्यों तक ही सीमित है।\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल I, II और III",
+        "केवल I, III और IV",
+        "केवल II, III और IV",
+        "I, II, III और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the Public Financial Management System (PFMS) under the General Financial Rules (GFR), 2017:\nI. It is an end-to-end web-based online financial application developed and administered by the Controller General of Accounts (CGA).\nII. It facilitates real-time tracking of funds released across various government schemes right down to the implementing agencies.\nIII. It provides an efficient platform for Direct Benefit Transfer (DBT) directly into the bank accounts of targeted beneficiaries.\nIV. Its application is strictly confined to the procurement operations of the Ministry of Defence only.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "I, II and III only",
+        "I, III and IV only",
+        "II, III and IV only",
+        "I, II, III and IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Rule 86 of GFR 2017, the Public Financial Management System (PFMS) is a comprehensive web-based online software application developed and implemented by the Controller General of Accounts (CGA), Department of Expenditure, Ministry of Finance. Key functions of PFMS include: (1) Tracking fund releases and expenditures across all Central Sector Schemes and Centrally Sponsored Schemes right up to the level of ultimate implementing agencies, (2) Enabling Direct Benefit Transfer (DBT) payments directly into the bank accounts of beneficiaries (e.g., student scholarships, social pensions), and (3) Serving as the centralized payment and accounting backbone across all Civil Ministries, States, and Union Territories. It is definitively NOT restricted to the Ministry of Defence; rather, it is a universal platform for all government departments. Hence, statements I, II, and III are correct, while statement IV is incorrect.",
+      "explanation_hindi": "GFR 2017 के नियम 86 के अनुसार, सार्वजनिक वित्तीय प्रबंधन प्रणाली (PFMS) वित्त मंत्रालय के व्यय विभाग के अंतर्गत महालेखा नियंत्रक (CGA) द्वारा विकसित और संचालित एक संपूर्ण वेब-आधारित ऑनलाइन वित्तीय सॉफ्टवेयर प्रणाली है। इसके मुख्य कार्यों में शामिल हैं: (i) केंद्रीय क्षेत्र की योजनाओं और केंद्र प्रायोजित योजनाओं के तहत जारी निधियों की अंतिम क्रियान्वयन एजेंसी तक रियल-टाइम ट्रैकिंग, (ii) लक्षित लाभार्थियों (जैसे छात्रवृत्ति प्राप्तकर्ता विद्यार्थी) के खातों में प्रत्यक्ष लाभ अंतरण (DBT) का सुरक्षित निष्पादन, और (iii) सभी सिविल मंत्रालयों व राज्य सरकारों के लिए एकीकृत वित्तीय प्रबंधन। PFMS का उपयोग केवल रक्षा मंत्रालय तक सीमित नहीं है, बल्कि यह केंद्र सरकार के सभी सिविल मंत्रालयों, विभागों, स्वायत्त निकायों और विद्यालयों पर समान रूप से लागू है। अतः कथन I, II और III सही हैं, जबकि कथन IV गलत है। सही विकल्प A है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (A) I, II and III",
+        "Answer explanation extracted from supplied reference material: The Public Financial Management System, developed by the Controller General of Accounts, is an integrated web-based application used across government departments. It tracks scheme fund releases, monitors expenditure, and facilitates Direct Benefit Transfers to recipient accounts. It is used across all civil ministries and central schemes, not restricted to Defence."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "71550318-b0fc-4a17-b0cc-f19dcb8bb012",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "किसी अनुपयोगी परिसंपत्ति को कंडम (अनुपयोगी घोषित) करने और उसका निपटान करने के निम्नलिखित चरणों को सही कालानुक्रमिक क्रम में व्यवस्थित कीजिए:\nI. सफल बोलीदाता को वस्तु सौंपना और उसे स्टॉक रजिस्टर से हटाना (हटाना/अपलेखित करना)\nII. कंडमनेशन बोर्ड/समिति (Condemnation Board/Committee) का गठन\nIII. निपटान हेतु बोलियां/नीलामी आमंत्रित करना\nIV. समिति द्वारा भौतिक निरीक्षण और वस्तु को अनुपयोगी घोषित करना",
+      "options_hindi": [
+        "II, IV, III, I",
+        "IV, II, III, I",
+        "II, III, IV, I",
+        "III, II, IV, I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Arrange the following stages of condemning and disposing of an unserviceable government asset in the correct logical and procedural sequence under GFR 2017:\nI. Handing over the item to the successful bidder and striking it off the stock ledger\nII. Constitution of a Condemnation Board / Survey Committee\nIII. Inviting competitive bids or conducting a public auction for disposal\nIV. Physical inspection and formal declaration of the item as unserviceable by the Committee",
+      "options_english": [
+        "II, IV, III, I",
+        "IV, II, III, I",
+        "II, III, IV, I",
+        "III, II, IV, I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under GFR 2017 (Rules 217 to 220), the procedural sequence for asset condemnation and disposal is strictly defined: \n1. First, the competent authority constitutes a Condemnation Board / Survey Committee (Step II).\n2. Second, the committee conducts physical inspection and submits its formal report declaring the asset unserviceable, obsolete, or beyond economic repair (Step IV).\n3. Third, after competent authority sanction, competitive bids/tenders are invited or a public auction is conducted with a reserve price (Step III).\n4. Fourth, upon receipt of full payment from the successful highest bidder, the item is physically released and officially struck off the stock register (Step I).\nTherefore, the correct chronological sequence is II -> IV -> III -> I.",
+      "explanation_hindi": "जीएफआर (GFR), 2017 (नियम 217 से 220) के अंतर्गत सरकारी परिसंपत्तियों के कंडमनेशन और निपटान की एक निश्चित तार्किक और विधिक प्रक्रिया होती है:\n1. सर्वप्रथम, सक्षम प्राधिकारी द्वारा कंडमनेशन बोर्ड या सर्वेक्षण समिति का गठन किया जाता है (चरण II)।\n2. इसके पश्चात समिति भौतिक निरीक्षण करके वस्तु को अनुपयोगी, अप्रचलित या मरम्मत योग्य न होने की औपचारिक रिपोर्ट देकर कंडम घोषित करती है (चरण IV)।\n3. सक्षम स्वीकृति मिलने के बाद निपटान हेतु निविदाएं या सार्वजनिक नीलामी आयोजित की जाती है (चरण III)।\n4. अंत में, उच्चतम बोलीदाता से पूर्ण धनराशि प्राप्त होने पर वस्तु उसे सौंपी जाती है तथा स्टॉक रजिस्टर से उसका अपलेखन कर दिया जाता है (चरण I)।\nअतः सही क्रम II, IV, III, I है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) II, IV, III, I",
+        "Answer explanation extracted from supplied reference material: Disposing of unserviceable assets follows a strict chronological sequence. First, the competent authority constitutes a Condemnation Board. The board physically inspects the items and formally declares them unserviceable. Next, the department invites public bids or conducts an auction. Finally, upon receiving payment, the asset is handed over to the buyer and struck off registers."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "afd0a6d7-22c9-4601-b1aa-c87c53f5bd1c",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "शिक्षा निदेशालय एक विद्यालय प्राचार्य को विद्यालय परिसर को सुरक्षित रखने के लिए निजी सुरक्षा गार्ड तैनात करने का निर्देश देता है। GFR के अंतर्गत इस गैर-परामर्श सेवा की खरीद के लिए प्राचार्य को कौन-सी प्रक्रिया अपनानी चाहिए?",
+      "options_hindi": [
+        "आस-पड़ोस से सीधे सुरक्षा कर्मियों को काम पर रखना और मासिक नकद रूप में उनका पारिश्रमिक देना।",
+        "विद्यालय में अनिश्चित काल के लिए निःशुल्क सुरक्षा गार्ड तैनात करने हेतु स्थानीय पुलिस स्टेशन को औपचारिक अनुरोध प्रस्तुत करना।",
+        "प्रतिस्पर्धी बोलियां आमंत्रित किए बिना सीधे SMC सदस्यों के किसी परिचित निजी सुरक्षा एजेंसी को नामांकित करना।",
+        "वित्तीय सीमाओं के अनुसार गैर-परामर्श सुरक्षा सेवाओं की आउटसोर्सिंग के लिए GeM का उपयोग करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "The Directorate of Education directs a school Principal to hire private security guards to secure the school premises. What process must the Principal follow under GFR for procuring this non-consulting service?",
+      "options_english": [
+        "Directly engage security personnel from the local neighborhood and pay monthly remuneration in physical cash.",
+        "Submit a formal request to the local police station to station free security guards at the school indefinitely.",
+        "Directly nominate a private security agency personally known to the SMC members without inviting competitive bids.",
+        "Use GeM for outsourcing non-consulting security services per financial limits."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under GFR 2017 (Rules 149 and 197 to 206), private watch-and-ward/security guard deployment is categorized as a 'Non-Consulting Service'. Because security services are standardized and readily available on the Government e-Marketplace (GeM), institutional heads (Principals / DDOs) must mandatorily procure them through GeM in compliance with prescribed financial thresholds, service-level agreements (SLAs), and statutory minimum wage compliance. Direct nomination of local acquaintances, cash disbursements, or bypassing competitive bidding violates Rule 144, Rule 149, and Central Vigilance Commission (CVC) guidelines governing public service contracts.",
+      "explanation_hindi": "GFR 2017 (नियम 149 तथा नियम 197 से 206) के तहत निजी सुरक्षा गार्डों की तैनाती एक 'गैर-परामर्श सेवा' (Non-Consulting Service) है। चूंकि GeM पोर्टल पर सुरक्षा सेवाएं मानकीकृत रूप से उपलब्ध हैं, इसलिए विद्यालय प्राचार्य (कार्यालय प्रमुख/DDO) को निर्धारित वित्तीय सीमाओं, सेवा स्तर समझौतों (SLA) और वैधानिक न्यूनतम वेतन नियमों का पालन करते हुए GeM के माध्यम से ही इस सेवा को आउटसोर्स करना अनिवार्य है। बिना निविदा के परिचितों को काम सौंपना, नकद भुगतान करना या खुली प्रतिस्पर्धा को दरकिनार करना GFR और केंद्रीय सतर्कता आयोग (CVC) के नियमों का प्रत्यक्ष उल्लंघन है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) Use GeM for outsourcing non-consulting security services per financial limits.",
+        "Answer explanation extracted from supplied reference material: security services per financial limits. Outsourcing security guard services represents a non-consulting service requirement. Institutional administrators must procure such services through the Government e-Marketplace, which offers dedicated service portals and competitive bidding mechanisms. Directly engaging local acquaintances, making unverified cash disbursements, or bypassing established procurement rules violates general financial regulations governing public service acquisitions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "d044e5a0-1a44-47e1-ad8b-dd3679d3688f",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "एक सलाहकार (कंसल्टेंट) को नियुक्त करने के लिए कार्य संदर्भ (Terms of Reference - ToR) तैयार करने के संबंध में निम्नलिखित में से कौन-सा कथन गलत है?",
+      "options_hindi": [
+        "इसे सौंपे गए कार्य के सटीक उद्देश्य, विस्तृत कार्यक्षेत्र और विशिष्ट कार्यों को स्पष्ट रूप से परिभाषित करना चाहिए।",
+        "इसे किसी वांछित फर्म का पहले से चयन कर लेना चाहिए और केवल उसी फर्म से मेल खाने के लिए आवश्यकताओं को तैयार करना चाहिए।",
+        "इसमें सभी अपेक्षित भौतिक और वित्तीय डिलिवरेबल्स तथा समय-सीमाओं का व्यापक विवरण होना चाहिए।",
+        "इसमें संगठन की पृष्ठभूमि, औचित्य और सौंपे गए कार्य के मूल उद्देश्य की रूपरेखा होनी चाहिए।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following is INCORRECT regarding the preparation of the Terms of Reference (ToR) for hiring a consultant?",
+      "options_english": [
+        "It should clearly define the precise objective, detailed scope, and specific tasks of the assignment.",
+        "It should pre-select the desired firm and tailor requirements to match only that firm.",
+        "It must comprehensively detail all the expected physical and financial deliverables and timelines.",
+        "It should outline the organizational background, rationale, and core purpose of the assignment."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Statement B is incorrect and describes a prohibited corrupt practice. Under Rule 185 of GFR 2017, the Terms of Reference (ToR) must provide an objective, transparent, and comprehensive description of the background, objectives, scope of work, tasks, training requirements, and expected deliverables with timeframes. Rule 144 (Fundamental Principles of Public Buying) strictly forbids formulating technical criteria or ToR in a manner that favors a particular bidder or restricts open competition. Tailoring requirements to pre-select a specific consulting firm undermines public procurement transparency, fair competition, and accountability.",
+      "explanation_hindi": "कथन B गलत है और यह एक निषिद्ध तथा भ्रष्ट आचरण को दर्शाता है। GFR 2017 के नियम 185 के अनुसार, कार्य संदर्भ (ToR) में परियोजना की पृष्ठभूमि, उद्देश्य, कार्य का दायरा, विशिष्ट कार्य, समय-सीमा और अपेक्षित डिलिवरेबल्स का निष्पक्ष और वस्तुनिष्ठ विवरण होना चाहिए। नियम 144 (सार्वजनिक खरीद के मौलिक सिद्धांत) के अनुसार निविदा या ToR की शर्तें कभी भी इस प्रकार नहीं बनाई जानी चाहिए जो किसी विशिष्ट फर्म या बोलीदाता के पक्ष में हों या खुली प्रतिस्पर्धा को सीमित करती हों। किसी विशेष फर्म को लाभ पहुंचाने के उद्देश्य से शर्तों को पक्षपातपूर्ण बनाना वित्तीय नियमों और CVC दिशानिर्देशों का गंभीर उल्लंघन है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) It should pre-select the desired firm and tailor requirements to match only that firm.",
+        "Answer explanation extracted from supplied reference material: tailor requirements to match only that firm. The Terms of Reference must outline the background, objectives, scope of work, technical parameters, timelines, and expected deliverables for a consulting engagement. Tailoring requirements to match or pre-select a specific firm is strictly prohibited, as it undermines fair competition and transparency. Specifications must remain objective to encourage broad participation from qualified consultants."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "c5577db1-05ec-4862-b94e-7f7db3b496fe",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "परामर्श सेवाओं (Consulting Services) की खरीद के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\nI. बौद्धिक या व्यावसायिक इनपुट की आवश्यकता वाली सेवाओं के लिए किसी विशेषज्ञ फर्म या विशेषज्ञ को नियुक्त किया जाता है।\nII. कार्य संदर्भ (Terms of Reference - ToR) तैयार करना एक अनिवार्य पहला कदम है।\nIII. परामर्श सेवाएं केवल तभी खरीदी जा सकती हैं जब आवश्यक विशेषज्ञता विभाग के भीतर ही प्रचुर मात्रा में उपलब्ध हो।\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल II और III",
+        "केवल I और III",
+        "I, II और III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the procurement of Consulting Services:\nI. A specialized firm or expert is engaged for services requiring intellectual or professional input.\nII. Preparation of Terms of Reference (ToR) is a mandatory first step.\nIII. Consulting services can only be procured if the required expertise is abundantly available within the department itself.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "I and II",
+        "II and III",
+        "I and III",
+        "I, II and III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Statements I and II are correct, while Statement III is incorrect:\n- Statement I is correct: Rule 177 of GFR 2017 defines consulting services as specialized intellectual, technical, or advisory services rendered by expert firms or individuals.\n- Statement II is correct: Under Rule 185 of GFR 2017, drafting a comprehensive Terms of Reference (ToR) is the mandatory starting point of consulting procurement. The ToR defines the assignment background, precise objectives, detailed scope of work, timelines, and deliverables.\n- Statement III is incorrect: Rule 178 of GFR 2017 clearly provides that consulting services should be engaged only when the required specialized expertise is NOT available in-house within the Ministry or Department, or when in-house resources are inadequate to complete the assignment within required timeframes. Engaging external consultants when expertise already exists in-house is financially unjustified and prohibited.",
+      "explanation_hindi": "कथन I और II सही हैं, जबकि कथन III गलत है:\n- कथन I सही है: GFR 2017 का नियम 177 परामर्श सेवाओं को उन विशिष्ट बौद्धिक, तकनीकी अथवा सलाहकारी सेवाओं के रूप में परिभाषित करता है जो योग्य सलाहकारों या विशेषज्ञ फर्मों द्वारा प्रदान की जाती हैं।\n- कथन II सही है: नियम 185 के तहत कार्य संदर्भ (Terms of Reference - ToR) तैयार करना परामर्श सेवाओं की खरीद का अनिवार्य प्रथम चरण है, जिसमें कार्य का दायरा, उद्देश्य, तकनीकी आवश्यकताएं और डिलिवरेबल्स स्पष्ट रूप से निर्धारित होते हैं।\n- कथन III गलत है: नियम 178 यह स्पष्ट रूप से रेखांकित करता है कि किसी विभाग को परामर्श सेवाएं केवल तभी लेनी चाहिए जब संबंधित तकनीकी या व्यावसायिक विशेषज्ञता विभाग के पास आंतरिक रूप से उपलब्ध न हो। यदि विशेषज्ञता विभाग के भीतर ही प्रचुर मात्रा में उपलब्ध है, तो बाहरी सलाहकारों पर सरकारी धन व्यय करना अनुचित और वित्तीय नियमों के विरुद्ध है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) I and II",
+        "Answer explanation extracted from supplied reference material: Engaging consulting services is appropriate when an organization requires specialized intellectual, technical, or professional expertise not available internally. Preparing comprehensive Terms of Reference is a mandatory initial step to define clear objectives and deliverables. If required expertise is already abundantly available within the department, engaging external private consultants is unnecessary and economically unjustified."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "74b49a3a-f382-4ad5-81a2-289918ea4839",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "सामान्य वित्तीय नियमों (GFR) और सरकारी अग्रिमों को विनियमित करने वाले नियमों के प्रावधानों के अंतर्गत, निम्नलिखित में से किस परिस्थिति में वेतन का अग्रिम देना पूर्णतः अस्वीकार्य (प्रतिबंधित) है?",
+      "options_hindi": [
+        "लोकहित में किसी कर्मचारी का नए स्टेशन पर स्थानांतरण होने पर।",
+        "सेवाकाल के दौरान दिवंगत सरकारी सेवक के परिवार को तात्कालिक राहत प्रदान करने हेतु।",
+        "लंबे आधिकारिक दौरे पर जाने के समय।",
+        "महीने के अंत में व्यक्तिगत घरेलू राशन और दैनिक जीवन-यापन के खर्चों को पूरा करने हेतु।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under the provisions of General Financial Rules (GFR) and rules regulating government advances, in which of the following circumstances is an advance of pay strictly NOT permitted?",
+      "options_english": [
+        "On transfer of an employee to a new station in the public interest.",
+        "As immediate relief to the family of a government servant who dies while in service.",
+        "On proceeding on a prolonged official tour of duty.",
+        "For meeting personal household groceries and domestic living costs at the end of the month."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under the Compendium of Rules on Advances and GFR 2017:\n1. Authorized Circumstances for Pay Advances: Advances of pay or immediate financial assistance are permissible strictly under statutory conditions, such as:\n   - On transfer to another station (historically permitted before 7th CPC revisions to assist in initial family relocation).\n   - Immediate relief to the family of a government servant who dies while in service (under Rule 79 of the Compendium of Rules on Advances, providing urgent subsistence relief pending final settlement of terminal benefits).\n   - Proceeding on a prolonged tour of official duty away from headquarters.\n2. Prohibited Uses: Granting advances of pay to meet private, domestic living expenses, monthly groceries, or personal financial shortfalls is completely unauthorized and strictly prohibited. Utilizing public money for such personal purposes violates Rule 21 of GFR 2017 (Standards of Financial Propriety) and amounts to unauthorized diversion of government funds.\nTherefore, Option D is strictly NOT permitted.",
+      "explanation_hindi": "अग्रिम नियमों के संग्रह और जीएफआर 2017 के तहत:\n1. वेतन अग्रिम हेतु अधिकृत परिस्थितियां: वेतन अग्रिम या तात्कालिक वित्तीय सहायता केवल विशिष्ट वैधानिक परिस्थितियों में ही अनुमन्य है, जैसे:\n   - दूसरे स्टेशन पर स्थानांतरण के समय (7वें वेतन आयोग से पूर्व नए स्थान पर बसने की शुरुआती लागत हेतु अनुमत)।\n   - सेवाकाल के दौरान मृत सरकारी सेवक के परिवार को तत्काल राहत (नियम 79 के तहत, अंतिम देयताओं के निपटारे तक तत्काल गुजारा सहायता हेतु)।\n   - मुख्यालय से दूर एक लंबे आधिकारिक दौरे पर जाने के समय।\n2. प्रतिबंधित उपयोग: निजी घरेलू खर्चों, मासिक राशन की खरीद या व्यक्तिगत वित्तीय तंगी को पूरा करने के लिए वेतन अग्रिम देना पूर्णतः अनधिकृत और सख्त वर्जित है। ऐसे व्यक्तिगत उद्देश्यों के लिए सरकारी धन का उपयोग करना जीएफआर 2017 के नियम 21 (वित्तीय औचित्य के मानक) का खुला उल्लंघन है और सरकारी धन का अनधिकृत विचलन माना जाता है।\nअतः विकल्प D पूर्णतः प्रतिबंधित है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) For meeting daily household groceries at the end of the month.",
+        "Answer explanation extracted from supplied reference material: end of the month. Pay advances are granted only under specific regulatory conditions, such as official transfers, prolonged tours, or compassionate relief for families of employees who die while in service. Granting advances of pay to cover routine personal living costs or domestic monthly grocery expenses is completely unauthorized and prohibited under government service rules."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "31f496aa-3cfd-42d9-b3a6-d1ab5045445a",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "GFR 2017 के नियम 171 के तहत \"परफॉर्मेंस सिक्योरिटी\" (निष्पादन सुरक्षा गारंटी) के संबंध में निम्नलिखित में से कौन-सा कथन गलत है?",
+      "options_hindi": [
+        "यह अनुबंध के उचित और निष्ठापूर्ण निष्पादन को सुनिश्चित करने के लिए सफल बोलीदाता से प्राप्त की जाती है।",
+        "यह सामान्यतः अनुबंध के कुल मूल्य के 5% से 10% के बीच की राशि के रूप में अपेक्षित होती है।",
+        "इसे अनिवार्य रूप से केवल संस्थागत कार्यालय में सीधे भौतिक नकदी (करेंसी नोट) के रूप में जमा किया जाना चाहिए।",
+        "यह वारंटी दायित्वों सहित सभी संविदात्मक दायित्वों के पूरा होने की तिथि से साठ (60) दिनों की अवधि के लिए वैध रहनी चाहिए।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following statements regarding \"Performance Security\" under Rule 171 of GFR 2017 is INCORRECT?",
+      "options_english": [
+        "It is obtained from the successful bidder to guarantee the due and faithful performance of the contract.",
+        "It is standardly required to be an amount between 5% and 10% of the total value of the contract.",
+        "It must be deposited exclusively in the form of physical currency notes handed directly over the institutional counter.",
+        "It must remain valid for a period of sixty (60) days beyond the date of completion of all contractual obligations, including warranty obligations."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under Rule 171 of GFR 2017, Performance Security is obtained from the successful contractor to ensure satisfactory completion of contractual commitments. The rule establishes that:\n1. Amount: Standardly 5% to 10% of the value of the contract (though temporarily adjusted during extraordinary fiscal periods by Ministry of Finance guidelines).\n2. Validity: It must remain valid for a period of sixty (60) days beyond the date of completion of all contractual obligations of the supplier, including warranty obligations.\n3. Form: It must be furnished in the form of an Account Payee Demand Draft, Fixed Deposit Receipt (FDR) pledged to the buyer, or a Bank Guarantee from a commercial bank (or online payment in an acceptable manner). Physical cash deposits in an institutional or school office are strictly prohibited under government accounting and treasury rules to ensure transparency and eliminate cash-handling risks.",
+      "explanation_hindi": "GFR 2017 के नियम 171 के अंतर्गत सफल आपूर्तिकर्ता से अनुबंध के संतोषजनक निष्पादन को सुनिश्चित करने हेतु 'परफॉर्मेंस सिक्योरिटी' ली जाती है। इसके मुख्य नियम निम्नलिखित हैं:\n1. राशि: सामान्यतः अनुबंध के कुल मूल्य के 5% से 10% तक।\n2. वैधता अवधि: आपूर्तिकर्ता के सभी संविदात्मक दायित्वों, जिसमें वारंटी अवधि भी शामिल है, के पूरा होने की तिथि के बाद 60 दिनों की अतिरिक्त अवधि तक वैध होनी चाहिए।\n3. जमा करने का रूप: इसे अकाउंट पेयी डिमांड ड्राफ्ट, क्रेता के पक्ष में बंधक सावधि जमा रसीद (FDR) या वाणिज्यिक बैंक गारंटी के रूप में लिया जाता है। विद्यालय कार्यालय या किसी सरकारी कार्यालय में भौतिक नकदी (Cash) के रूप में इसे जमा कराना सरकारी लेखा एवं कोषागार नियमों के तहत सर्वथा निषिद्ध है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (C) It must be submitted exclusively in the form of physical cash deposited in the school office.",
+        "Answer explanation extracted from supplied reference material: of physical cash deposited in the school office. Performance Security is collected from successful bidders to ensure satisfactory contract execution and warranty compliance. However, submitting performance security as physical cash deposited directly in an office is incorrect and prohibited under financial rules. Acceptable formats include account payee demand drafts, fixed deposit receipts, or bank guarantees, ensuring financial security through regulated banking channels."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "388e5b04-5230-4634-a368-eff0b7d3bac2",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "किसी सरकारी विभाग में आंतरिक लेखापरीक्षा (Internal Audit) के निम्नलिखित उद्देश्यों पर विचार कीजिए:\nI. आंतरिक लेखांकन और वित्तीय नियंत्रणों की पर्याप्तता तथा प्रभावशीलता का मूल्यांकन करना।\nII. लागू वित्तीय नियमों, विनियमों और कार्यकारी आदेशों के अनुपालन का सत्यापन करना।\nIII. भारत के नियंत्रक एवं महालेखापरीक्षक (CAG) द्वारा की जाने वाली बाह्य वैधानिक लेखापरीक्षा के पूर्ण विधिक विकल्प के रूप में कार्य करना।\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल II और III",
+        "केवल I और III",
+        "I, II और III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following objectives of an Internal Audit in a government department:\nI. To evaluate the adequacy and effectiveness of internal accounting and financial controls.\nII. To verify compliance with applicable financial rules, regulations, and executive orders.\nIII. To act as a complete legal substitute for the external statutory audit conducted by the Comptroller and Auditor General (CAG) of India.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "I and II only",
+        "II and III only",
+        "I and III only",
+        "I, II and III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under GFR 2017 Chapter 3 (Internal Audit):\n- Statement I is correct: A fundamental objective of internal audit is to appraise the soundness, adequacy, and application of internal accounting, financial, and operational controls.\n- Statement II is correct: Internal audit reviews and verifies whether departmental operations, sanctions, and procurements comply with applicable GFR rules, Treasury rules, and government instructions.\n- Statement III is incorrect: Internal audit is an internal managerial appraisal tool functioning under the Department's Chief Controller of Accounts. It can NEVER substitute the external statutory audit conducted independently by the Comptroller and Auditor General (CAG) under Articles 148, 149, and 151 of the Constitution of India. Both audits serve complementary functions, but external statutory audit by CAG is sovereign, independent, and constitutionally mandated.\nTherefore, Statements I and II only are correct.",
+      "explanation_hindi": "जीएफआर 2017 के अध्याय 3 (आंतरिक लेखापरीक्षा) के अनुसार:\n- कथन I सही है: आंतरिक लेखापरीक्षा का मूल उद्देश्य आंतरिक लेखांकन, वित्तीय और परिचालन नियंत्रणों की पर्याप्तता और प्रभावशीलता का मूल्यांकन करना है।\n- कथन II सही है: यह सत्यापित करता है कि कार्यालय के वित्तीय लेन-देन, स्वीकृतियां और खरीद प्रक्रियाएं स्थापित जीएफआर नियमों और सरकारी निर्देशों के अनुरूप हैं।\n- कथन III गलत है: आंतरिक लेखापरीक्षा विभाग का एक आंतरिक प्रबंधकीय तंत्र है जो मुख्य लेखा नियंत्रक के अधीन कार्य करता है। यह भारत के संविधान के अनुच्छेद 148, 149 और 151 के तहत भारत के नियंत्रक एवं महालेखापरीक्षक (CAG) द्वारा स्वतंत्र रूप से की जाने वाली बाह्य वैधानिक लेखापरीक्षा का विकल्प कभी नहीं हो सकता। सीएजी की लेखापरीक्षा एक संवैधानिक दायित्व है।\nअतः केवल कथन I और II सही हैं (विकल्प A सही है)।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) I and II",
+        "Answer explanation extracted from supplied reference material: Internal audit serves to assess the effectiveness of internal financial controls and verify compliance with established rules, procedures, and statutory guidelines. It operates as an internal managerial oversight mechanism and is not a substitute for external statutory audits conducted independently by the Comptroller and Auditor General of India."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "d88d3ce2-c660-49e1-bc7f-2fe8c1ab60d4",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "एक विद्यालय के प्रधानाचार्य खेल उपकरण (Sports Equipment) के वार्षिक भौतिक सत्यापन हेतु एक समिति का गठन करना चाहते हैं। GFR के नियमों का अनुपालन करने के लिए, प्रधानाचार्य को इस सत्यापन के संचालन हेतु किसे नियुक्त करना चाहिए?",
+      "options_hindi": [
+        "खेल भंडार के अभिरक्षक (कस्टोडियन) के अतिरिक्त कोई अन्य अधिकारी/शिक्षक, आदर्श रूप से एक स्वतंत्र समिति।",
+        "शारीरिक शिक्षा शिक्षक (PET), जो खेल भंडार का आधिकारिक अभिरक्षक और इन-चार्ज है।",
+        "अधिकृत स्थानीय खेल उपकरण विक्रेता, जिसने मूल रूप से विद्यालय को सामान की आपूर्ति की थी।",
+        "विशेष रूप से केवल विद्यालय के ग्रुप 'डी' सहायक कर्मचारियों की एक समिति।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "The Principal of a government school intends to constitute an annual physical verification committee for the school's sports equipment and gym stores. To strictly comply with GFR 2017, whom should the Principal appoint to conduct this verification?",
+      "options_english": [
+        "An independent officer or committee excluding the custodian of the sports store.",
+        "The Physical Education Teacher (PET) who holds official charge and custody of the sports store.",
+        "The commercial sports vendor who originally supplied the equipment to the school.",
+        "A committee composed exclusively of Group D support staff members of the institution."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Rule 213(2) of GFR 2017, physical verification of stores must be carried out by an independent officer or committee who is neither the custodian of the stores nor subordinate to the custodian. In a school setting, the Physical Education Teacher (PET) or sports in-charge is the custodian who indents, receives, maintains, and issues sports goods. Allowing the PET to verify their own store would create a direct conflict of interest and defeat the fundamental internal check required by public financial rules. External vendors have no official standing in internal government verification, and Group D employees cannot take administrative responsibility. Therefore, the Principal must appoint an independent committee of other teaching/administrative officers (e.g., Vice-Principal, PGTs) in whose presence the PET will present the inventory for physical counting.",
+      "explanation_hindi": "सामान्य वित्तीय नियम (GFR), 2017 के नियम 213(2) के अनुसार, भंडारों का भौतिक सत्यापन किसी ऐसे स्वतंत्र अधिकारी या समिति द्वारा किया जाना चाहिए जिसके पास उन भंडारों की अभिरक्षा (Custody) न हो। विद्यालय में शारीरिक शिक्षा शिक्षक (PET) खेल सामग्री के आधिकारिक अभिरक्षक होते हैं। यदि PET को ही अपने भंडार के सत्यापन का जिम्मा दिया जाए, तो यह 'हितों के टकराव' (Conflict of Interest) का स्पष्ट मामला होगा और वित्तीय नियंत्रण का उद्देश्य विफल हो जाएगा। बाहरी विक्रेता का सरकारी सत्यापन से कोई संबंध नहीं है और न ही केवल ग्रुप 'डी' कर्मचारियों को यह प्रशासनिक जिम्मेदारी दी जा सकती है। अतः प्रधानाचार्य को खेल भंडार के अभिरक्षक से भिन्न स्वतंत्र शिक्षकों/अधिकारियों की एक समिति गठित करनी चाहिए।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) An officer other than the custodian of the sports store, ideally a committee.",
+        "Answer explanation extracted from supplied reference material: sports store, ideally a committee. To ensure objectivity and prevent potential conflict of interest, financial rules require that physical verification of stores be conducted by an officer or committee independent of store custody. Appointing the store custodian or physical education teacher in charge of the Click Here to Buy book on Flipkart sports store to verify their own stock is strictly prohibited under verification rules."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "e9573656-1432-4021-bf72-96e5c30d271e",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "जीएफआर (GFR), 2017 के अनुसार, अनुदान प्राप्तकर्ता संस्था द्वारा अनावर्ती अनुदान (Non-recurring Grant) के संबंध में उपयोग प्रमाण पत्र (Utilization Certificate) किस समय सीमा के भीतर प्रस्तुत किया जाना अनिवार्य है?",
+      "options_hindi": [
+        "जिस वित्तीय वर्ष में धन प्राप्त हुआ था, उसकी आधिकारिक समाप्ति के 3 महीने के भीतर।",
+        "जिस वित्तीय वर्ष में अनुदान जारी किया गया था, उसकी समाप्ति के 12 महीने के भीतर।",
+        "औपचारिक अनुदान स्वीकृति आदेश की प्रारंभिक तिथि से ठीक 5 वर्ष की अवधि के भीतर।",
+        "अनावर्ती अनुदानों के लिए प्रमाण पत्र प्रस्तुत करने की कोई निर्धारित वैधानिक समय सीमा नहीं है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "According to Rule 238 of GFR 2017, within what statutory time frame must the Utilization Certificate in respect of a non-recurring grant be submitted by the grantee institution?",
+      "options_english": [
+        "Within 3 months following the official closure of the financial year in which funds were received.",
+        "Within 12 months of the closure of the financial year in which the grant was released.",
+        "Within a period of 5 years counted strictly from the initial date of the formal grant sanction order.",
+        "There is no prescribed statutory time limit for submitting utilization certificates for non-recurring grants."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "According to Rule 238(1) of GFR 2017, in respect of non-recurring grants (grants sanctioned for capital assets, construction, equipment procurement, etc.), the Utilization Certificate (UC) must be submitted by the grantee institution within 12 months of the closure of the financial year in which the grant was released. This statutory timeline allows the executing agency sufficient time to complete civil works or procurement and finalize audited financial statements, while ensuring government oversight and timely accounting of public expenditure.",
+      "explanation_hindi": "जीएफआर (GFR), 2017 के नियम 238(1) के अनुसार, अनावर्ती अनुदानों (Non-recurring grants - जैसे भवन निर्माण, प्रयोगशाला उपकरण खरीद आदि) के संबंध में अनुदान प्राप्तकर्ता संस्था द्वारा उपयोग प्रमाण पत्र (UC) उस वित्तीय वर्ष की समाप्ति के 12 महीने के भीतर प्रस्तुत किया जाना अनिवार्य है जिसमें अनुदान जारी किया गया था। यह समय-सीमा संस्था को निर्माण/क्रय कार्य पूरा करने और वार्षिक लेखापरीक्षा संपन्न कराने हेतु पर्याप्त समय प्रदान करती है तथा सार्वजनिक धन की समयबद्ध जवाबदेही सुनिश्चित करती है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) Within 12 months of closure of financial year in which grant was released.",
+        "Answer explanation extracted from supplied reference material: in which grant was released. General Financial Rules mandate that the Utilization Certificate for a non-recurring grant must be submitted within twelve months of the closure of the financial year in which the grant was released. Adhering to this statutory timeline ensures timely verification of project completion and proper accounting of public funds."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "0af0da42-b1cc-495b-b30d-6cc9efacebf1",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "यदि किसी राजकीय विद्यालय में कोई अप्रत्याशित परिचालन आपातकालीन स्थिति उत्पन्न होती है जिसके लिए 5 लाख रुपये के व्यय की आवश्यकता है (जो प्राचार्य की प्रत्यायोजित वित्तीय स्वीकृति सीमा से काफी अधिक है), तो अपनाई जाने वाली सही प्रशासनिक प्रक्रिया क्या है?",
+      "options_hindi": [
+        "प्राचार्य को उच्च अधिकारियों को सूचित किए बिना छात्र कल्याण अथवा विद्यालय कल्याण समिति (VKS) निधि से सीधे आवश्यक राशि खर्च कर देनी चाहिए।",
+        "प्राचार्य को विद्यालय के शिक्षण कर्मचारियों के व्यक्तिगत अंशदान से अस्थायी रूप से आवश्यक राशि उधार लेनी चाहिए और बाद में उनकी प्रतिपूर्ति करनी चाहिए।",
+        "प्राचार्य को कोई पूर्व प्रशासनिक स्वीकृति प्राप्त किए बिना तुरंत एक सार्वजनिक निविदा जारी करनी चाहिए और अनुबंध दे देना चाहिए।",
+        "प्राचार्य को आपात स्थिति का औचित्य सिद्ध करते हुए प्रारंभिक प्राक्कलन (estimates) सहित एक व्यापक प्रस्ताव प्रशासनिक एवं व्यय स्वीकृति हेतु उच्च सक्षम प्राधिकारी को प्रस्तुत करना चाहिए।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "If an unexpected operational emergency arises in a government school requiring an expenditure of Rs. 5 Lakhs (which is substantially beyond the Principal's delegated financial sanctioning power), what is the correct administrative procedure to be followed?",
+      "options_english": [
+        "The Principal should spend the required amount directly from student welfare or Vidyalaya Kalyan Samiti (VKS) funds without informing higher authorities.",
+        "The Principal should temporarily borrow the required money from personal contributions of the school teaching staff and reimburse them later.",
+        "The Principal should immediately issue a public tender and award the contract without obtaining any prior administrative sanction.",
+        "The Principal must submit a comprehensive proposal justifying the emergency along with preliminary estimates to the higher competent authority for administrative and expenditure sanction."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under DFPR and GFR 2017 Rules 22 and 62, a government officer or Drawing and Disbursing Officer (DDO), such as a school Principal, is bound strictly by the financial ceilings assigned to their post. Even in an emergency, an officer cannot exceed their financial powers, divert tied student welfare funds, borrow private money, or award contracts without prior administrative approval. The only legally valid administrative course of action is to prepare an urgent detailed proposal outlining the nature of the emergency, justification, scope of work, and estimated expenditure, and submit it immediately to the higher competent authority (such as the Directorate of Education / Deputy Director / District Education Officer) who possesses the requisite financial sanctioning powers.",
+      "explanation_hindi": "DFPR और GFR 2017 के नियम 22 तथा 62 के अनुसार, कोई भी सरकारी अधिकारी या DDO (जैसे विद्यालय प्राचार्य) अपने पद को प्रत्यायोजित वित्तीय सीमाओं से बंधा होता है। किसी आपात स्थिति में भी कोई अधिकारी अपनी शक्तियों का अतिक्रमण नहीं कर सकता, न ही छात्र कल्याण/वीकेएस निधि का अनधिकृत विचलन कर सकता है और न ही कर्मचारियों से निजी तौर पर धन उधार ले सकता है। सही और विधिक प्रशासनिक प्रक्रिया यह है कि प्राचार्य आपात स्थिति की प्रकृति, औचित्य और अनुमानित लागत का विस्तृत प्रस्ताव तैयार करें और उसे प्रशासनिक एवं वित्तीय स्वीकृति के लिए उच्च सक्षम प्राधिकारी (जैसे शिक्षा निदेशालय/उप शिक्षा निदेशक) को तत्काल अग्रेषित करें।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) The Principal must submit a proposal justifying emergency to higher competent authority for sanction.",
+        "Answer explanation extracted from supplied reference material: justifying emergency to higher competent authority for sanction. When an administrative requirement or emergency expenditure exceeds an officer's delegated financial sanction limit, the officer cannot approve the expense or bypass rules. The correct procedure requires preparing a comprehensive proposal detailing the emergency, justifying the scope of work, and submitting it to the higher competent authority possessing appropriate financial powers for sanction."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "c90d0182-bcea-44da-8ba5-e1be064db455",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "GFR के अनुसार पुस्तकालय की पुस्तकों के भौतिक सत्यापन और अपलेखन के संबंध में निम्नलिखित में से कौन-सा कथन गलत (INCORRECT) है?",
+      "options_hindi": [
+        "20,000 से अनधिक (तक) पुस्तकों वाले पुस्तकालयों के लिए, वर्ष में कम से कम एक बार पूर्ण भौतिक सत्यापन किया जाना चाहिए।",
+        "यदि कोई पुस्तक खो जाती है, तो बिना किसी जांच के उसकी कीमत तुरंत पुस्तकालयाध्यक्ष (लाइब्रेरियन) के वेतन से वसूल की जानी चाहिए।",
+        "20,000 से अधिक लेकिन 50,000 तक पुस्तकों वाले पुस्तकालयों के लिए, कम से कम तीन वर्ष में एक बार सत्यापन किया जाना चाहिए।",
+        "एक वर्ष में निर्गत/परामर्शित (इशू/कंसल्ट) की गई प्रति 1,000 पुस्तकों पर 5 पुस्तकों तक के नुकसान को उचित टूट-फूट माना जा सकता है और अपलेखित किया जा सकता है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following statements is INCORRECT regarding the physical verification and write-off of library books under GFR 2017?",
+      "options_english": [
+        "For libraries with not more than 20,000 volumes, complete physical verification must be conducted at least once a year.",
+        "Any loss of a book must be automatically recovered from the Librarian's monthly salary without conducting an inquiry.",
+        "For libraries having more than 20,000 but up to 50,000 volumes, verification should be done at least once in three years.",
+        "Loss of up to 5 volumes per 1,000 volumes of books issued or consulted in a year may be taken as reasonable wear and tear and written off."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under Rule 215 of GFR 2017, the rules acknowledge that in libraries with open access and frequent circulation, a minor loss of books is an inevitable operational reality. Rule 215(3) specifically provides: \"Loss of five volumes per one thousand volumes of books issued/consulted in a year may be taken as reasonable loss, but the loss of a book of a value exceeding the monetary limit... shall be reported to the competent authority for inquiry.\" Automatically deducting the cost of lost books from the Librarian's salary without holding a fact-finding inquiry or establishing willful dishonesty, gross negligence, or lack of reasonable care is illegal, arbitrary, and strictly contrary to GFR provisions and principles of natural justice. Hence, option (B) is the incorrect statement.",
+      "explanation_hindi": "सामान्य वित्तीय नियम (GFR), 2017 के नियम 215(3) के अनुसार, पुस्तकालयों में नियमित उपयोग और ओपन एक्सेस के कारण कुछ पुस्तकों का खो जाना स्वाभाविक माना जाता है। नियम के अनुसार, एक वर्ष में जारी अथवा परामर्शित (Issued/Consulted) प्रति 1,000 पुस्तकों पर 5 पुस्तकों तक के नुकसान को सामान्य टूट-फूट (Reasonable loss) मानकर सक्षम प्राधिकारी द्वारा बट्टे खाते में डाला (Write-off) जा सकता है। बिना किसी विभागीय जांच या जानबूझकर की गई लापरवाही/गबन सिद्ध हुए बिना, सीधे पुस्तकालयाध्यक्ष के वेतन से वसूली करना नियमों के सर्वथा विरुद्ध और मनमाना है। अतः कथन (B) गलत है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) Any loss of a book must be recovered from the Librarian's salary without inquiry.",
+        "Answer explanation extracted from supplied reference material: the Librarian's salary without inquiry. Financial rules recognize that minor book losses in public libraries occur naturally through routine consultation and circulation. Rules permit writing off up to five volumes per thousand issued or consulted books annually as normal wear and tear. Automatically recovering book values from a librarian's salary without conducting an inquiry is arbitrary and prohibited."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "0bba9652-cec6-4154-b1b6-50634b66b2a5",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को अभिकथन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअभिकथन (A): सामान्य वित्तीय नियम 2017 मंत्रालयों और विभागों को अपनी वित्तीय प्रक्रियाओं के लिए विभागीय निर्देश जारी करने की अनुमति देते हैं।\nकारण (R): विभागीय निर्देश मोटे तौर पर सामान्य वित्तीय नियमों के अनुरूप होने चाहिए और सार्वजनिक खरीद के मूल सिद्धांतों का उल्लंघन नहीं करने चाहिए।\nउपर्युक्त कथनों के आलोक में, नीचे दिए गए विकल्पों में से सही उत्तर चुनिए:",
+      "options_hindi": [
+        "(A) और (R) दोनों सही हैं और (R), (A) की सही व्याख्या है",
+        "(A) और (R) दोनों सही हैं लेकिन (R), (A) की सही व्याख्या नहीं है",
+        "(A) सही है लेकिन (R) गलत है",
+        "(A) गलत है लेकिन (R) सही है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A): The General Financial Rules, 2017 permit individual Ministries and Departments to issue departmental instructions governing their financial procedures.\nReason (R): Departmental instructions must broadly conform to the General Financial Rules and must not violate the core principles of public procurement.\nIn light of the above statements, choose the correct answer from the options given below:",
+      "options_english": [
+        "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+        "(A) is true but (R) is false",
+        "(A) is false but (R) is true"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Rule 7 and Rule 8 of GFR 2017, Ministries and Departments are authorized to issue departmental regulations, manuals, and instructions to meet their specialized functional and administrative needs. However, this flexibility is strictly conditional: such subsidiary instructions must not run contrary to or dilute the fundamental principles laid down in the GFR, particularly the standards of financial propriety, accountability, transparency, and public procurement. Thus, Assertion (A) and Reason (R) are both true, and (R) accurately explains why departmental instructions are permissible only within the bounded framework of the GFR.",
+      "explanation_hindi": "GFR 2017 के नियम 7 और 8 के अंतर्गत मंत्रालयों और विभागों को अपनी विशिष्ट प्रशासनिक आवश्यकताओं को पूरा करने के लिए विभागीय नियमावली या निर्देश जारी करने का अधिकार है (अभिकथन A सही है)। परंतु यह अधिकार इस अनिवार्य शर्त के अधीन है कि ऐसे विभागीय निर्देश GFR के प्रावधानों, वित्तीय औचित्य और सार्वजनिक खरीद के बुनियादी सिद्धांतों के विरुद्ध नहीं हो सकते (कारण R सही है)। कारण (R), अभिकथन (A) की पुष्टि करता है कि विभागीय निर्देशों की वैधता GFR की मूल भावना के अनुरूप होने पर ही निर्भर है। अतः (A) और (R) दोनों सही हैं और (R), (A) की सही व्याख्या है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "Answer explanation extracted from supplied reference material: correct explanation of (A) Individual ministries and departments possess the administrative authority to issue supplementary instructions to address their specialized operational needs. However, these localized instructions cannot override or contradict the overarching General Financial Rules. They must strictly align with core principles of public buying and financial management, ensuring that localized adaptations preserve essential standards of transparency, fairness, accountability, and public economy across operations."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "c22e812b-7467-44bb-b57f-f54edbfd30e7",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "भौतिक सत्यापन (Physical Verification) पूरा करने के बाद, सत्यापन अधिकारी को सत्यापन का प्रमाण पत्र (Certificate of Verification) कहाँ दर्ज करना चाहिए?",
+      "options_hindi": [
+        "संबंधित स्टॉक रजिस्टर में अपने दिनांकित हस्ताक्षर के साथ।",
+        "एक सादे सरकारी पत्र पर जिसे सीधे वित्त मंत्रालय के व्यय विभाग को प्रेषित किया जाए।",
+        "सार्वजनिक प्रदर्शन के लिए अमिट स्याही वाले मार्कर पेन का उपयोग करके सीधे परिसंपत्ति की सतह पर।",
+        "प्राचार्य की वार्षिक कार्य निष्पादन मूल्यांकन रिपोर्ट (APAR) की गोपनीय टिप्पणियों में।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "After completing the physical verification of stores or fixed assets, where must the verifying officer record the certificate of verification as per GFR rules?",
+      "options_english": [
+        "In the relevant stock register under their dated signature.",
+        "On a plain official sheet forwarded directly to the Department of Expenditure, Ministry of Finance.",
+        "Directly on the physical surface of the asset using an indelible permanent marker pen for public display.",
+        "As confidential notes recorded exclusively in the Principal's annual performance appraisal dossier."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under GFR 2017 Rule 213(2) (Fixed Assets) and Rule 214/215 (Consumable Goods and Materials), a certificate of verification stating the exact results and findings of the physical verification must be recorded directly in the relevant Stock Register or Fixed Asset Register under the dated signature of the inspecting officer or verification committee. This entry provides statutory audit proof that the physical verification was duly executed, discrepancies (if any) were officially noted on the ledger, and the balances shown in the stock ledger match ground reality at that specific point in time.",
+      "explanation_hindi": "सामान्य वित्तीय नियम (GFR), 2017 के नियम 213(2) (अचल परिसंपत्तियों) तथा नियम 214/215 (उपभोज्य एवं अन्य सामग्री) के अंतर्गत यह अनिवार्य है कि भौतिक सत्यापन पूर्ण होने पर सत्यापन अधिकारी या समिति द्वारा सत्यापन का परिणाम दर्शाते हुए एक औपचारिक प्रमाण पत्र संबंधित स्टॉक रजिस्टर या अचल परिसंपत्ति रजिस्टर में ही अपने दिनांकित हस्ताक्षर सहित दर्ज किया जाए। यह प्रविष्टि वैधानिक लेखापरीक्षा (Audit) के लिए यह पुख्ता प्रमाण प्रस्तुत करती है कि भौतिक सत्यापन वास्तविक रूप से संपन्न हुआ, शेष स्टॉक का मिलान किया गया तथा यदि कोई विसंगति थी तो उसे स्टॉक बही में विधिवत दर्ज किया गया।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (A) In the relevant stock register under their dated signature.",
+        "Answer explanation extracted from supplied reference material: dated signature. Upon completing physical verification of stores or fixed assets, the verifying officer or committee must record a formal verification certificate directly in the relevant stock register. The certificate must state the findings, note any discrepancies found, and be authenticated by the dated signature of the inspecting officer to maintain official audit records."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    }
+  ]
+}

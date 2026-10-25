@@ -119,7 +119,7 @@ def build_tests(force_rebuild=False):
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                questions = data.get("questions", [])
+                questions = data if isinstance(data, list) else data.get("questions", [])
         except Exception as e:
             print(f"Error reading {filepath}: {e}")
             continue

@@ -1,0 +1,769 @@
+{
+  "test_id": "240752bb-1299-42eb-9be1-328d8b03b83c",
+  "test_name": "Topic Test: CCS NPS - Part 6",
+  "type": "topic_wise",
+  "topic": "ccs-nps",
+  "created_at": "2026-10-25T18:14:58.831910",
+  "questions": [
+    {
+      "id": "052ab498-6a77-439f-b551-eaa992bd352b",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "यदि कोई कर्मचारी 'तकनीकी त्यागपत्र' (Technical Resignation) प्रस्तुत करता है, तो पुरानी पेंशन योजना (OPS) के तहत पेंशन के लिए उसकी अर्हक सेवा पर क्या प्रभाव पड़ता है?",
+      "options_hindi": [
+        "पिछले पद पर की गई सभी पूर्व सेवा पेंशन लाभों के लिए पूरी तरह जब्त हो जाती है।",
+        "पिछली सेवा पेंशन के लिए गिनी जाती है यदि दोनों पद पेंशन नियमों के अंतर्गत आते हैं।",
+        "पिछले पद पर की गई कुल पिछली सेवा का केवल 50% ही पेंशन के लिए गिना जाता है।",
+        "पिछली सेवा केवल सेवानिवृत्ति उपदान के लिए गिनी जाती है, मासिक पेंशन गणना के लिए नहीं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "If an employee submits a ‘Technical Resignation’, what is the impact on their qualifying service for pension under OPS?",
+      "options_english": [
+        "All past service rendered in the previous post is entirely forfeited for pensionary benefits.",
+        "Past service counts towards pension if both posts are covered under pension rules.",
+        "Strictly only 50% of the total past service rendered in the previous post is counted for pension.",
+        "Past service counts exclusively towards retirement gratuity, not for monthly pension calculations."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under Rule 26(2) of the CCS (Pension) Rules, 1972 / Rule 26 of the CCS (Pension) Rules, 2021, a Technical Resignation carries specific statutory immunities regarding qualifying service:\n\n1. No Forfeiture of Service: Unlike a standard resignation which completely extinguishes all past service, a technical resignation explicitly shields the employee from forfeiture of qualifying service.\n2. Continuity of Pensionable Service: The past service rendered in the previous department or ministry is counted towards qualifying service for both monthly pension and retirement/death gratuity, provided that both the earlier post and the subsequent post are covered under statutory pension rules (e.g., CCS Pension Rules or matching reciprocal arrangements).\n3. Administrative Requisites: The service book and pension records of the employee are transferred to the new department, ensuring unbroken service records, leave balance carries forward, and calculation of qualifying service remains continuous.",
+      "explanation_hindi": "केंद्रीय सिविल सेवा (पेंशन) नियम, 2021 के नियम 26 (तथा 1972 नियमों के नियम 26(2)) के अंतर्गत, तकनीकी त्यागपत्र (Technical Resignation) अर्हक सेवा के संबंध में पूर्ण सुरक्षा प्रदान करता है:\n\n1. सेवा की जब्ती नहीं: सामान्य त्यागपत्र के विपरीत जहाँ कर्मचारी की पुरानी सेवा समाप्त मानी जाती है, तकनीकी त्यागपत्र में पिछली अर्हक सेवा की कोई जब्ती (Forfeiture) नहीं होती।\n2. पेंशन हेतु निरंतरता: पुराने पद पर की गई सेवा नए पद पर मासिक पेंशन और सेवानिवृत्ति/मृत्यु उपदान दोनों के लिए अर्हक सेवा के रूप में गिनी जाती है, बशर्ते कि पूर्व पद और नवीन पद दोनों ही वैधानिक पेंशन नियमों (जैसे CCS पेंशन नियम या पारस्परिक पेंशन व्यवस्था) के अंतर्गत आते हों।\n3. सेवा पुस्तिका का स्थानांतरण: कर्मचारी की सेवा पुस्तिका और अवकाश खाते को नए कार्यालय में स्थानांतरित कर दिया जाता है, जिससे सेवा में व्यवधान नहीं माना जाता और पेंशन लाभों के लिए निरंतरता बनी रहती है।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) Past service counts towards pension if both posts are covered under pension rules.",
+        "Answer explanation extracted from supplied reference material: When a government servant submits a technical resignation to accept another approved government post, the resignation does not entail forfeiture of past service. The previous service counts toward qualifying service for pension and gratuity, provided both old and new posts are covered under applicable statutory pension regulations."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "0a7e474c-b694-4981-8378-a74daadd0a4b",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "एक सरकारी कर्मचारी दो वर्ष के अध्ययन अवकाश (Study Leave) पर रहता है। क्या पुरानी पेंशन योजना (OPS) के अंतर्गत यह अवधि पेंशन हेतु अर्हक सेवा (Qualifying Service) के रूप में गिनी जाती है?",
+      "options_hindi": [
+        "नहीं, अध्ययन अवकाश को कभी भी अर्हक सेवा के रूप में नहीं गिना जाता।",
+        "यह केवल तभी गिनी जाती है यदि कर्मचारी 10% का जुर्माना अदा करे।",
+        "यह केवल आधी अवधि (अर्थात एक वर्ष) के लिए ही गिनी जाती है।",
+        "हाँ, अध्ययन अवकाश अर्हक सेवा के रूप में गिना जाता है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "A government servant is on study leave for two years. Does this period count as qualifying service for pension under OPS?",
+      "options_english": [
+        "No, study leave never counts as qualifying service.",
+        "It counts only if the employee pays a 10% penalty.",
+        "It counts only for half the period (i.e., one year).",
+        "Yes, study leave counts as qualifying service."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under Rule 21 of the CCS (Pension) Rules, 2021 and Rule 59 of the Central Civil Services (Leave) Rules, 1972, all leave during service for which leave salary is payable counts as qualifying service. Specifically, study leave sanctioned to a government servant under CCS (Leave) Rules counts in full as active qualifying service for pension and retirement gratuity calculations, provided the employee successfully completes the approved course of study, returns to duty, and satisfies all service bond conditions required by the administration. No penalty or service reduction is applied. Hence, option D is correct.",
+      "explanation_hindi": "सीसीएस (पेंशन) नियम, 2021 के नियम 21 तथा सीसीएस (अवकाश) नियम, 1972 के नियम 59 के अनुसार, सेवाकाल के दौरान लिया गया वह सभी अवकाश जिसके लिए अवकाश वेतन (Leave Salary) देय होता है, अर्हक सेवा में गिना जाता है। विशेष रूप से, नियमों के अधीन विधिवत स्वीकृत अध्ययन अवकाश (Study Leave) पेंशन, सेवानिवृत्ति उपदान और वरिष्ठता के लिए पूर्ण रूप से अर्हक सेवा (Qualifying Service) माना जाता है, बशर्ते सरकारी सेवक अध्ययन सफलतापूर्वक पूरा करे और अध्ययन अवकाश से पूर्व निष्पादित सेवा बांड (Bond) की शर्तों का पालन करे। इसमें किसी कटौती या जुर्माने का कोई प्रावधान नहीं है। अतः सही विकल्प D है।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) Yes, study leave counts as qualifying service.",
+        "Answer explanation extracted from supplied reference material: Under the Central Civil Services (Pension) Rules, duly sanctioned study leave granted to a government servant counts as active qualifying service for pension and gratuity calculations, provided the employee successfully completes the approved course of study and fulfills all service bond conditions required by the administration."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "1acdc08b-1479-46e0-bac8-49af5f3612f5",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं, एक को अभिकथन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है:\nअभिकथन (A): नियमित नियुक्ति से पूर्व किसी सरकारी कर्मचारी द्वारा की गई तदर्थ सेवा (Ad-hoc service) सामान्यतः सीसीएस (पेंशन) नियमों के तहत पेंशन के लिए अर्हक सेवा के रूप में नहीं गिनी जाती है।\nकारण (R): तदर्थ नियुक्तियां नियमित भर्ती नियमों से इतर केवल अस्थायी व्यवस्था के रूप में की जाती हैं, और सांविधिक पेंशन नियमों के अनुसार केवल मूल क्षमता में की गई सेवा या बिना किसी व्यवधान के नियमित संपुष्टि द्वारा समर्थित निरंतर अस्थायी सेवा ही अर्हक मानी जाती है।\nउपर्युक्त कथनों के संदर्भ में, निम्नलिखित में से सही विकल्प का चयन कीजिए:",
+      "options_hindi": [
+        "A और R दोनों सही हैं और R, A की सही व्याख्या है",
+        "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है",
+        "A सही है लेकिन R गलत है",
+        "A गलत है लेकिन R सही है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Given below are two statements, one labeled as Assertion (A) and the other as Reason (R):\nAssertion (A): Ad-hoc service rendered by a government servant prior to regular appointment generally does not count as qualifying service for pension under the CCS (Pension) Rules.\nReason (R): Ad-hoc appointments are stop-gap arrangements made de hors regular recruitment rules, and statutory pension rules require service to be rendered in a substantive capacity or continuous temporary service followed by confirmation without interruption.\nIn the light of the above statements, choose the correct option:",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The counting of pre-regularization service for pensionary benefits is governed by Rules 13, 14, and 15 of the Central Civil Services (Pension) Rules, 2021 and established administrative law principles.\n\nLegal and Statutory Analysis:\n1. Assertion (A) is TRUE: As a general rule of civil service jurisprudence, ad-hoc service rendered prior to regular appointment does not count as qualifying service for pension. Ad-hoc appointees do not hold a civil post substantively, nor are they selected through the statutory recruitment process (such as UPSC or DSSSB).\n2. Reason (R) is TRUE: Under Rule 14 of the CCS (Pension) Rules, 2021, the service of a government servant does not qualify for pension unless it conforms to three statutory conditions:\n   (a) The service must be under the government;\n   (b) The employment must be in a substantive, temporary, or officiating capacity; and\n   (c) The service must be followed without interruption by substantive appointment or confirmation in the same or another post.\n   Ad-hoc appointments are purely stop-gap arrangements made de hors the statutory recruitment rules. They confer no seniority, promotion claims, or pensionary weightage.\n3. Relationship: Because ad-hoc appointments lack regular selection, statutory sanction, and substantive status, they fail the mandatory test of Rule 14. Therefore, Reason (R) directly and correctly explains why Assertion (A) is legally sound.",
+      "explanation_hindi": "पेंशन लाभों के लिए नियमितीकरण से पूर्व की सेवा की गणना सीसीएस (पेंशन) नियम, 2021 के नियम 13, 14 और 15 तथा प्रशासनिक कानून के सिद्धांतों द्वारा नियंत्रित होती है।\n\nविधिक एवं सांविधिक विश्लेषण:\n1. अभिकथन (A) सही है: प्रशासनिक विधि के सामान्य नियम के रूप में, नियमित नियुक्ति से पूर्व की गई तदर्थ (Ad-hoc) सेवा पेंशन के लिए अर्हक सेवा के रूप में नहीं गिनी जाती। तदर्थ कर्मचारी नियमित भर्ती नियमों (जैसे UPSC या DSSSB चयन) के तहत चयनित नहीं होते हैं और वे पद पर कोई स्थायी अधिकार नहीं रखते।\n2. कारण (R) सही है: सीसीएस (पेंशन) नियम, 2021 के नियम 14 के अनुसार, सरकारी सेवा केवल तभी पेंशन हेतु अर्हक होती है जब वह तीन शर्तों को पूरा करे:\n   (क) सेवा सरकार के अधीन की गई हो;\n   (ख) रोजगार मूल (Substantive), अस्थायी (Temporary), या स्थानापन्न (Officiating) क्षमता में हो; तथा\n   (ग) उस सेवा के बाद बिना किसी व्यवधान के उसी या किसी अन्य पद पर नियमित नियुक्ति या संपुष्टि (Confirmation) हुई हो।\n   चूंकि तदर्थ नियुक्तियां भर्ती नियमों से परे (de hors rules) केवल तदर्थ/कामचलाऊ व्यवस्था होती हैं, वे नियम 14 की शर्तों को पूरा नहीं करती हैं।\n3. व्याख्या का संबंध: चूंकि तदर्थ नियुक्तियां सांविधिक भर्ती नियमों के अनुसार नहीं की जाती हैं और उनमें सेवा की निरंतरता का नियमित विधिक दर्जा नहीं होता, इसलिए वे अर्हक सेवा में नहीं जुड़तीं। अतः कारण (R), अभिकथन (A) की बिल्कुल सही और तर्कसंगत व्याख्या करता है।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "hard",
+      "key_facts": [
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A",
+        "Answer explanation extracted from supplied reference material: Ad-hoc service rendered prior to regular appointment generally does not count as qualifying service for pension under the Old Pension Scheme. Statutory pension rules specify that service must be rendered in a substantive, temporary, or officiating capacity followed by regular confirmation without interruption to qualify for computing pensionary terminal benefits."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "7b14dbf3-9219-45fa-b71c-61678e94722e",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं, एक को अभिकथन (A) और दूसरे को कारण (R) के रूप में अंकित किया गया है:\nअभिकथन (A): 1 जनवरी, 2004 को या उसके बाद केंद्र सरकार की सेवा में शामिल होने वाले सभी नए कर्मचारियों (सशस्त्र बलों को छोड़कर) के लिए राष्ट्रीय पेंशन प्रणाली (NPS) अनिवार्य कर दी गई थी।\nकारण (R): भारत सरकार ने भविष्य की सभी नियुक्तियों के पेंशन दायित्वों का संपूर्ण वित्तीय बोझ राज्य सरकारों पर स्थानांतरित करने का निर्णय लिया था।\nउपर्युक्त कथनों के संदर्भ में निम्नलिखित में से कौन-सा सही है?",
+      "options_hindi": [
+        "A और R दोनों सही हैं और R, A की सही व्याख्या है।",
+        "A और R दोनों सही हैं लेकिन R, A की सही व्याख्या नहीं है।",
+        "A सही है लेकिन R गलत है।",
+        "A गलत है लेकिन R सही है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Given below are two statements, one labeled as Assertion (A) and the other as Reason (R):\nAssertion (A): The National Pension System (NPS) was made mandatory for all new recruits to the Central Government civil services and posts (except Armed Forces) joining on or after January 1, 2004.\nReason (R): The Government of India decided to transfer the entire financial burden and liability of central government pensions to state governments for future appointments.\nIn the context of the statements above, which of the following is correct?",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Assertion (A) is correct, but Reason (R) is completely false. Vide Ministry of Finance Notification No. 5/7/2003-ECB & PR dated December 22, 2003, the Government of India introduced the National Pension System (NPS) on a mandatory basis for all new entrants to Central Government service (except the Armed Forces) joining on or after January 1, 2004. The primary objective and rationale was fiscal sustainability: the unfunded, non-contributory defined-benefit Old Pension Scheme (OPS) was creating an unsustainable long-term burden on the Consolidated Fund of India. NPS transitioned government retirement benefits into a transparent, funded, market-linked defined-contribution system. The Central Government did NOT transfer its pension liabilities to state governments; rather, state governments independently enacted their own notifications to adopt NPS for their respective state employees.",
+      "explanation_hindi": "अभिकथन (A) सही है, किंतु कारण (R) असत्य है। वित्त मंत्रालय की अधिसूचना दिनांक 22 दिसंबर, 2003 के माध्यम से 1 जनवरी, 2004 से सशस्त्र बलों को छोड़कर केंद्र सरकार के सभी नए कर्मचारियों के लिए राष्ट्रीय पेंशन प्रणाली (NPS) अनिवार्य रूप से लागू की गई थी। एनपीएस लागू करने का वास्तविक कारण केंद्र सरकार के बढ़ते राजकोषीय घाटे को नियंत्रित करना और पुरानी अनिधिक (unfunded) परिभाषित लाभ पेंशन के स्थान पर एक वित्तीय रूप से संधारणीय (sustainable) परिभाषित अंशदान मॉडल अपनाना था। केंद्र सरकार ने अपने कर्मचारियों का पेंशन दायित्व राज्य सरकारों पर नहीं डाला; बल्कि राज्य सरकारों ने बाद में स्वेच्छा से अपने-अपने कर्मचारियों के लिए एनपीएस अपनाया। अतः A सही है परंतु R गलत है।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (C) A is true but R is false",
+        "Answer explanation extracted from supplied reference material: The National Pension System was made mandatory for all central government employees joining on or after January 1, 2004, excluding armed forces personnel. However, the reason for this implementation was to manage fiscal pension liabilities and move to a defined contribution model, not to transfer financial burdens of central appointments to state governments."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "35a5ae44-a73b-4fc5-94a1-49c8de498214",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "यदि किसी पेंशनभोगी को सेवानिवृत्ति के पश्चात किसी न्यायालय द्वारा किसी गंभीर अपराध का दोषी ठहराया जाता है, तो केंद्रीय सिविल सेवा (पेंशन) नियमों के अंतर्गत भारत के राष्ट्रपति क्या कार्रवाई कर सकते हैं?",
+      "options_hindi": [
+        "नियमों के तहत कोई प्रशासनिक कार्रवाई नहीं की जा सकती क्योंकि कर्मचारी पहले ही औपचारिक रूप से सेवानिवृत्त हो चुका है।",
+        "जेल की अवधि के दौरान पेंशन अस्थायी रूप से निलंबित रहती है और रिहाई पर पूर्ण बकाये के साथ बहाल कर दी जाती है।",
+        "पेंशन को पूर्णतः या आंशिक रूप से, स्थायी रूप से अथवा किसी निर्दिष्ट अवधि के लिए रोका या वापस लिया जा सकता है।",
+        "पेंशनभोगी के स्थान पर उसके जीवनसाथी को तत्काल मानक पारिवारिक पेंशन का भुगतान शुरू कर दिया जाता है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "If a pensioner is convicted of a serious crime by a court of law post-retirement, what action can the President of India take under the CCS (Pension) Rules, 2021?",
+      "options_english": [
+        "No administrative action can be taken under the rules since the employee has already formally retired.",
+        "The pension is temporarily suspended during the prison term and resumed with full arrears upon release.",
+        "Withhold or withdraw the pension in full or in part, either permanently or for a specified period.",
+        "The pensioner's spouse immediately starts receiving the standard family pension in their place."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under Rule 8 of the Central Civil Services (Pension) Rules, 2021 (Pension subject to future good conduct):\n1. **Implied Statutory Condition:** Future good conduct is an implied condition of every grant of pension and its continuance under the CCS Pension Rules.\n2. **Presidential Authority:** The President of India (or the appointing authority) has the absolute statutory right to withhold or withdraw a pension or gratuity, or any part thereof, whether permanently or for a specified period, if the pensioner is convicted of a serious crime or found guilty of grave misconduct.\n3. **Judicial Conviction:** When the order is based on a conviction by a competent court of law for a serious crime (involving moral turpitude, corruption, or offenses punishable with rigorous imprisonment), a formal departmental departmental inquiry under Rule 14 of CCS (CCA) Rules is not necessary; an administrative show-cause notice suffices.\n4. **Compassionate Allowance:** If the pension is wholly withdrawn, the authority competent to withdraw it may sanction a compassionate allowance not exceeding two-thirds of the admissible pension if the case warrants sympathetic consideration.",
+      "explanation_hindi": "केंद्रीय सिविल सेवा (पेंशन) नियम, 2021 के नियम 8 (भविष्य में अच्छा आचरण पेंशन की पूर्व शर्त) के अनुसार:\n1. **वैधानिक शर्त:** भविष्य में अच्छा आचरण बनाए रखना प्रत्येक पेंशन की स्वीकृति और उसके जारी रहने की एक अंतर्निहित शर्त है।\n2. **राष्ट्रपति का अधिकार:** यदि किसी पेंशनभोगी को न्यायालय द्वारा किसी गंभीर अपराध का दोषी ठहराया जाता है या वह गंभीर कदाचार का दोषी पाया जाता है, तो भारत के राष्ट्रपति को यह अधिकार है कि वे पेंशन अथवा उपदान को, पूर्णतः या उसके किसी अंश को, स्थायी रूप से अथवा किसी विनिर्दिष्ट अवधि के लिए रोक (withhold) सकते हैं या वापस (withdraw) ले सकते हैं।\n3. **न्यायालय द्वारा दोषसिद्धि:** जब कार्रवाई सक्षम न्यायालय की दोषसिद्धि पर आधारित होती है, तो अलग से पूर्ण विभागीय जांच की आवश्यकता नहीं होती; केवल एक कारण बताओ नोटिस देना पर्याप्त होता है।\n4. **अनुकंपा भत्ता (Compassionate Allowance):** यदि पेंशन पूर्णतः समाप्त कर दी जाती है, तो सक्षम प्राधिकारी विशेष दया के मामलों में देय पेंशन के दो-तिहाई से अनधिक अनुकंपा भत्ता स्वीकृत कर सकते हैं।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (C) Withhold or withdraw pension in full or part, permanently or for a specified period.",
+        "Answer explanation extracted from supplied reference material: If a pensioner is convicted of a serious crime by a court of law post-retirement, the President of India has statutory authority under CCS Pension Rules to order the withholding or withdrawal of pension, either in full or in part, and either permanently or for a specified fixed duration."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "2565578c-dd3a-46bd-a58a-71e3ed6bebf1",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "जब कोई पेंशनभोगी अपनी मासिक मूल पेंशन का एक अनुमेय भाग संराशीकृत (Commute) करवा लेता है, तो संराशीकृत भाग संराशीकरण की तिथि से कितने वर्षों की समाप्ति के बाद स्वतः बहाल (Restore) कर दिया जाता है?",
+      "options_hindi": [
+        "10 वर्ष",
+        "12 वर्ष",
+        "15 वर्ष",
+        "20 वर्ष"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "When a pensioner commutes a permissible fraction of their monthly basic pension, after how many years from the date of commutation is the commuted portion of the pension restored?",
+      "options_english": [
+        "10 years",
+        "12 years",
+        "15 years",
+        "20 years"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under Rule 10A of the Central Civil Services (Commutation of Pension) Rules, 1981, which was incorporated following the landmark judgment of the Hon'ble Supreme Court of India in the 'Common Cause' case (1986), the commuted portion of pension is restored automatically after the expiry of fifteen (15) years from the date of commutation. The 15-year period is reckoned from the date on which the commuted value of pension is credited to the pensioner's bank account (or from the date of retirement if commutation is paid concurrently with superannuation). After the completion of 15 years, the pensioner resumes receiving their full, unreduced 100% basic monthly pension, and no further recovery of the commuted amount is made by the Government. Pension disbursing authorities (such as banks and CPPC) are legally mandated to restore the full pension automatically without requiring a fresh application from the pensioner.",
+      "explanation_hindi": "केंद्रीय सिविल सेवा (पेंशन का संराशीकरण) नियम, 1981 के नियम 10A के अनुसार, जो माननीय सर्वोच्च न्यायालय के ऐतिहासिक 'कॉमन कॉज' वाद (1986) के निर्णय के बाद जोड़ा गया था, पेंशन का संराशीकृत भाग संराशीकरण की वास्तविक तिथि से 15 वर्ष (Fifteen years) पूर्ण होने पर स्वतः बहाल (Restore) हो जाता है। यह 15 वर्ष की अवधि उस तिथि से गिनी जाती है जिस दिन संराशीकृत राशि पेंशनभोगी के बैंक खाते में जमा होती है। 15 वर्ष पूरे होते ही पेंशनभोगी को उसकी पूरी (100%) मूल मासिक पेंशन पुनः मिलने लगती है और सरकार द्वारा मासिक कटौती बंद कर दी जाती है। पेंशन संवितरण प्राधिकारियों (बैंकों एवं CPPC) को यह निर्देश है कि 15 वर्ष पूर्ण होने पर बिना पेंशनर द्वारा कोई नया आवेदन दिए पूर्ण पेंशन स्वतः बहाल की जाए।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (C) 15 years",
+        "Answer explanation extracted from supplied reference material: When a pensioner commutes a portion of their basic pension, the commuted amount is restored automatically after fifteen years from the actual date of commutation. Once fifteen years elapse, the pensioner receives their full, uncommuted gross basic monthly pension, along with all applicable dearness relief calculated on the full pension amount."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "739dba03-4bc7-41aa-ac37-031a3258b70a",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "सामान्य भविष्य निधि (केंद्रीय सेवाएं) नियम, 1960 के अंतर्गत किसी पात्र अभिदाता द्वारा सामान्य भविष्य निधि (GPF) में देय न्यूनतम अनिवार्य मासिक अंशदान की दर क्या है?",
+      "options_hindi": [
+        "उनके मूल वेतन का 5%",
+        "उनकी परिलब्धियों (emoluments) का 6%",
+        "उनके मूल वेतन का 10%",
+        "उनकी परिलब्धियों का 12%"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What is the minimum mandatory monthly subscription rate payable to the General Provident Fund (GPF) by an eligible subscriber under the GPF (Central Services) Rules, 1960?",
+      "options_english": [
+        "5% of their basic pay",
+        "6% of their emoluments",
+        "10% of their basic pay",
+        "12% of their emoluments"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under Rule 8(1)(b) of the General Provident Fund (Central Services) Rules, 1960:\n1. Minimum Subscription Rate: The monthly subscription to the GPF shall not be less than 6% (six percent) of the subscriber's emoluments. Emoluments for this purpose mean basic pay drawn on the 31st March of the preceding financial year (or on the date of joining service if joined during the year).\n2. Maximum Limit: A subscriber may voluntarily choose to subscribe a higher amount up to 100% of their monthly emoluments. However, vide Department of Pension & Pensioners' Welfare (DoP&PW) OM dated 15.06.2022, an upper ceiling of ₹5 Lakh per financial year has been imposed on the total GPF subscription.\n3. Regularity: The subscription is deducted monthly from the pay bill by the DDO, except during periods of suspension (where it is optional) or during the last 3 months prior to retirement (where stoppage is mandatory).",
+      "explanation_hindi": "सामान्य भविष्य निधि (केंद्रीय सेवाएं) नियम, 1960 के नियम 8(1)(b) के अनुसार:\n1. न्यूनतम अंशदान दर: GPF में मासिक अंशदान की राशि अभिदाता की परिलब्धियों (emoluments) के 6% से कम नहीं होनी चाहिए। परिलब्धियों की गणना पूर्ववर्ती वित्तीय वर्ष के 31 मार्च को आहरित मूल वेतन के आधार पर की जाती है।\n2. अधिकतम सीमा: अभिदाता स्वेच्छा से अपनी परिलब्धियों के 100% तक कोई भी अधिक राशि अंशदान के रूप में दे सकता है। तथापि, पेंशन एवं पेंशनभोगी कल्याण विभाग (DoP&PW) के 15.06.2022 के कार्यालय ज्ञापन के अनुसार एक वित्तीय वर्ष में कुल GPF अंशदान की अधिकतम सीमा ₹5 लाख निर्धारित की गई है।\n3. नियमितता: DDO द्वारा प्रतिमाह वेतन बिल से यह कटौती की जाती है, केवल निलंबन अवधि (वैकल्पिक) और सेवानिवृत्ति से ठीक पहले के 3 महीनों (अनिवार्य रोक) को छोड़कर।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) 6% of their emoluments",
+        "Answer explanation extracted from supplied reference material: Under the General Provident Fund (Central Services) Rules, 1960, a subscriber must contribute a mandatory minimum monthly subscription rate of six percent of their basic pay and emoluments. Subscribers may voluntarily choose to subscribe a higher percentage, up to a maximum equal to their total monthly basic pay."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "8a501667-f410-42cb-a54c-a4c67fa18126",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "दिल्ली सरकार के एक सेवानिवृत्त विद्यालय शिक्षक की अनसुलझी पेंशन शिकायत के प्रशासनिक निवारण का सही पदानुक्रमित क्रम पहचानिए:",
+      "options_hindi": [
+        "कार्यालय प्रमुख (HOO) → वेतन एवं लेखा कार्यालय (PAO) → सीपीएनग्राम्स (CPENGRAMS)",
+        "सीपीएनग्राम्स → केंद्रीय प्रशासनिक अधिकरण (CAT) → कार्यालय प्रमुख → वेतन एवं लेखा कार्यालय",
+        "शिक्षा निदेशालय → भारत का सर्वोच्च न्यायालय → पेंशन अदालत → कार्यालय प्रमुख",
+        "पेंशन निधि विनियामक प्राधिकरण (PFRDA) → कार्यालय प्रमुख → प्रमुख सचिव (वित्त) → वेतन एवं लेखा कार्यालय"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Identify the correct sequential escalation for an unresolved pension grievance of a retired Delhi Government school teacher:",
+      "options_english": [
+        "Head of Office → Pay & Accounts Office → CPENGRAMS",
+        "CPENGRAMS → Central Administrative Tribunal → Head of Office → Pay & Accounts Office",
+        "Directorate of Education → Supreme Court of India → Pension Adalat → Head of Office",
+        "Pension Fund Regulatory Authority → Head of Office → Principal Secretary Finance → PAO"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "In government administrative procedure (including Delhi Government schools and Central Government establishments):\n1. Primary Level (Head of Office): The pension sanction process originates with the Head of Office (HOO / School Principal / DDO) where the teacher last served. Any discrepancy in service verification, qualifying service, or pension paperwork must first be addressed to the HOO.\n2. Accounting Level (Pay & Accounts Office): If the grievance pertains to pension authorization, computation checks, or issue of the Pension Payment Order (PPO), it escalates to the concerned Pay & Accounts Office (PAO).\n3. Centralized Escalation (CPENGRAMS): If the issue remains unresolved through direct administrative correspondence, the retiree lodges a formal grievance on CPENGRAMS (Centralized Pension Grievance Redress and Monitoring System, managed by DoPPW), which triggers monitored, time-bound escalation to administrative nodal officers.\nJudicial forums like the Central Administrative Tribunal (CAT) can only be approached after exhausting available administrative remedies.\nTherefore, option A is the correct sequential path.",
+      "explanation_hindi": "सरकारी प्रशासनिक प्रक्रिया (जिसमें दिल्ली सरकार के विद्यालय और केंद्र सरकार के कार्यालय शामिल हैं) के अनुसार:\n1. प्राथमिक स्तर (कार्यालय प्रमुख - HOO): पेंशन निर्धारण और सेवा सत्यापन का कार्य सर्वप्रथम संबंधित विद्यालय के कार्यालय प्रमुख (प्रधानाचार्य/HOO/DDO) द्वारा शुरू किया जाता है। अतः सेवा अभिलेख या प्रारंभिक कागजी कार्रवाई संबंधी शिकायत सर्वप्रथम HOO के समक्ष रखी जाती है।\n2. लेखा स्तर (वेतन एवं लेखा कार्यालय - PAO): यदि मामला पेंशन गणना, प्राधिकार या पेंशन भुगतान आदेश (PPO) जारी करने से संबंधित है, तो यह संबंधित वेतन एवं लेखा कार्यालय (PAO) को अग्रेषित/संबोधित किया जाता है।\n3. केंद्रीकृत निवारण पोर्टल (CPENGRAMS): यदि प्रशासनिक पत्राचार से शिकायत का निवारण नहीं होता है, तो पेंशनभोगी भारत सरकार के केंद्रीकृत पेंशन शिकायत निवारण और निगरानी प्रणाली (CPENGRAMS) पोर्टल पर ऑनलाइन शिकायत दर्ज करता है, जहां से उच्चाधिकारियों द्वारा समयबद्ध निगरानी की जाती है।\nकेंद्रीय प्रशासनिक अधिकरण (CAT) जैसे विधिक मंचों पर सभी विभागीय प्रशासनिक उपाय समाप्त होने के बाद ही जाया जा सकता है।\nअतः सही पदानुक्रम विकल्प A है।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) Head of Office → Pay & Accounts Office →",
+        "Answer explanation extracted from supplied reference material: CPENGRAMS The correct sequential escalation for an unresolved pension grievance begins with the Head of Office where the employee served. If unresolved, the matter progresses to the Pay and Accounts Office, and subsequently to the centralized online portal CPENGRAMS for formal administrative intervention and monitoring by central pension authorities."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "ebf251b9-18f4-4660-a049-44b5ca8c2dd6",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "राष्ट्रीय पेंशन प्रणाली (NPS) की संरचना में 'ट्रस्टी बैंक' (Trustee Bank) की क्या भूमिका है?",
+      "options_hindi": [
+        "यह अभिदाता निधियों को सीधे इक्विटी और सरकारी ऋण बाजारों में निवेश और प्रबंधित करता है।",
+        "यह सेवानिवृत्त सरकारी अभिदाताओं को सीधे मासिक वार्षिकी भुगतानों का वितरण करता है।",
+        "यह DDO/PAO से धनराशि प्राप्त करता है और CRA के निर्देशों के अनुसार उसे PFMs को हस्तांतरित करता है।",
+        "यह सभी सरकारी कर्मचारियों की भौतिक सेवा पुस्तिकाओं और आधिकारिक पेंशन फाइलों का रख-रखाव करता है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "What is the role of the ‘Trustee Bank’ in the NPS architecture?",
+      "options_english": [
+        "It directly invests and manages subscriber funds into equity and government debt markets.",
+        "It disburses monthly annuity payments directly to retired government subscribers.",
+        "Receives funds from DDOs/PAOs and transfers them to PFMs as per CRA directions.",
+        "It maintains physical service books and official pension files of all government servants."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "In the institutional architecture of the National Pension System (NPS) regulated by PFRDA, the Trustee Bank acts as the banking and clearing arm of the NPS Trust:\n\n1. Collection of Funds: The Trustee Bank receives the monthly NPS contribution funds uploaded and remitted online by Drawing and Disbursing Officers (DDOs), Pay and Accounts Offices (PAOs), and other nodal offices.\n2. Fund Settlement & Allocation: Based on daily fund reconciliation files and instructions generated by the Central Recordkeeping Agency (CRA), the Trustee Bank aggregates these remittances and transfers the money to the respective bank accounts of the registered Pension Fund Managers (PFMs) according to the investment allocations of the subscribers.\n3. Outflow Management: During withdrawals, partial withdrawals, or final exits, the Trustee Bank receives redemption funds from PFMs and routes them to subscribers' bank accounts or to Annuity Service Providers (ASPs).\n\nInvestment decisions are made by PFMs, records are kept by CRAs, and life annuities are managed by ASPs—the Trustee Bank is purely the financial conduit/clearing house.",
+      "explanation_hindi": "पेंशन निधि विनियामक और विकास प्राधिकरण (PFRDA) द्वारा विनियमित राष्ट्रीय पेंशन प्रणाली (NPS) के संस्थागत ढांचे में 'ट्रस्टी बैंक' (वर्तमान में एक्सिस बैंक, पूर्व में एसबीआई) एनपीएस ट्रस्ट के बैंकिंग और वित्तीय समाशोधन (Clearing House) विंग के रूप में कार्य करता है:\n\n1. अंशदान संग्रहण: आहरण एवं संवितरण अधिकारी (DDOs), वेतन एवं लेखा कार्यालय (PAOs) तथा अन्य नोडल कार्यालय कर्मचारियों के वेतन से काटी गई मासिक अंशदान राशि को ट्रस्टी बैंक के खाते में प्रेषित करते हैं।\n2. निधियों का हस्तांतरण: केंद्रीय अभिलेखपाल अभिकरण (CRA) द्वारा तैयार किए गए दैनिक मिलान और आवंटन निर्देशों के आधार पर, ट्रस्टी बैंक प्राप्त धनराशि को विभिन्न पंजीकृत पेंशन निधि प्रबंधकों (PFMs) के खातों में उनके निर्धारित आनुपातिक निवेश आवंटन के अनुसार हस्तांतरित करता है।\n3. निकासी प्रबंधन: सेवानिवृत्ति, आंशिक निकासी या निकास के समय ट्रस्टी बैंक PFMs से मोचित (Redeemed) धनराशि प्राप्त कर अभिदाताओं के बैंक खातों या वार्षिकी सेवा प्रदाताओं (ASPs) को अंतरित करता है।\n\nअतः ट्रस्टी बैंक की मुख्य भूमिका नोडल अधिकारियों से धन प्राप्त कर CRA के निर्देशानुसार PFMs को हस्तांतरित करने की है।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (C) Receives funds from DDOs/PAOs and transfers them to PFMs as per CRA directions.",
+        "Answer explanation extracted from supplied reference material: transfers them to PFMs as per CRA directions. In the National Pension System architecture, the designated Trustee Bank functions as the financial clearing house. It receives monthly contribution funds remitted by Drawing and Disbursing Officers or Pay and Accounts Offices, consolidating and transferring them to designated Pension Fund Managers according to instructions issued by the CRA."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "7ddf8980-c4d2-4315-818a-827749864fd8",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "एक सरकारी शिक्षक की सेवा पुस्तिका में दो अलग-अलग सरकारी नियुक्तियों के बीच 2 दिन का सेवा व्यवधान (gap) दर्ज है। यदि सक्षम प्राधिकारी पेंशन नियमों के तहत सेवा में इस व्यवधान को माफ (condone) कर देता है, तो कर्मचारी की अर्हक सेवा पर इसका क्या विधिक प्रभाव होगा?",
+      "options_hindi": [
+        "2 दिनों के इस अंतराल को स्वतः ड्यूटी मानकर पेंशन के लिए पूरी तरह अर्हक सेवा में गिना जाएगा",
+        "सेवा की निरंतरता बनाए रखने के लिए शिक्षक को 2 दिनों का सवेतन अर्जित अवकाश प्रदान किया जाएगा",
+        "इस सेवा व्यवधान के लिए कर्मचारी को पूर्ण वित्तीय लाभों के साथ विशेष सेवा विस्तार दिया जाएगा",
+        "व्यवधान से पूर्व की गई सेवा सुरक्षित रहती है और अर्हक सेवा में गिनी जाती है, किंतु स्वयं 2 दिन का व्यवधान काल अर्हक सेवा में नहीं गिना जाता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "A government teacher’s service book indicates an interruption of two days between two temporary appointments in different government schools. If the competent authority formally condones this break in service under the pension rules, what is the effect on qualifying service?",
+      "options_english": [
+        "The 2 days of service gap are automatically regularized and fully counted as active duty period",
+        "The teacher is granted extraordinary leave without pay for 2 days to maintain continuous duty status",
+        "The employee receives a special monetary bonus upon condonation of the service interruption gap",
+        "The past service is protected and counted for qualifying service, but the 2-day break itself does not count"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under Rule 28 of the Central Civil Services (Pension) Rules, 2021 (Condonation of interruption in service):\n1. In the absence of a specific indication to the contrary in the service book, an interruption between two spells of government service rendered by a government servant is treated as automatically condoned, and the pre-interruption service is treated as qualifying service (except where the interruption was caused by resignation, dismissal, or removal from service).\n2. However, the rule explicitly mandates that the period of interruption itself shall under no circumstances count as qualifying service.\nTherefore, the formal condonation of a break prevents the forfeiture of valuable past service, ensuring that all prior service counts towards the employee's pension and gratuity calculations, but the gap days themselves (here, 2 days) are omitted from the total qualifying service.",
+      "explanation_hindi": "केंद्रीय सिविल सेवा (पेंशन) नियम, 2021 के नियम 28 (सेवा में व्यवधान की माफी / Condonation of interruption in service) के अनुसार:\n1. सेवा पुस्तिका में इसके विपरीत कोई विशिष्ट प्रविष्टि न होने पर, दो सरकारी सेवाओं के बीच के अंतराल/व्यवधान को स्वतः माफ माना जाता है और व्यवधान से पूर्व की गई सेवा को पेंशन के लिए अर्हक सेवा (Qualifying Service) माना जाता है (बशर्ते व्यवधान त्यागपत्र, बर्खास्तगी या सेवा से हटाए जाने के कारण न हुआ हो)।\n2. नियम में यह स्पष्ट रूप से निर्धारित है कि व्यवधान की वह अवधि (जैसे यहां 2 दिन) किसी भी परिस्थिति में अर्हक सेवा के रूप में नहीं गिनी जाएगी।\nअतः व्यवधान की माफी पूर्व सेवा को जब्त (forfeit) होने से बचाती है, परंतु स्वयं व्यवधान के दिनों को सेवा काल में नहीं जोड़ा जाता।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) Past service is protected for qualifying service, but the 2-day break itself does not count.",
+        "Answer explanation extracted from supplied reference material: service, but the 2-day break itself does not count. When the competent authority condones an interruption or break between two periods of government service, the condonation prevents forfeiture of past service. The previous service counts toward total qualifying service for pension, although the actual days comprising the interruption gap itself do not count as active qualifying service."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "150ce746-931c-4141-bea0-f3dd1601d89c",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "पुरानी पेंशन योजना (OPS) और राष्ट्रीय पेंशन प्रणाली (NPS) के बीच अंतर करते समय, निम्नलिखित में से कौन-सी विशेषता केवल NPS पर लागू होती है?",
+      "options_hindi": [
+        "पेंशन राशि को वर्ष में दो बार महंगाई राहत (DR) संशोधन के माध्यम से मुद्रास्फीति के विरुद्ध स्पष्ट रूप से सुरक्षित किया जाता है।",
+        "कर्मचारी अपने मूल पेंशन कोष में अपने मासिक वेतन से कोई अंशदान नहीं करता है।",
+        "अंतिम सेवानिवृत्ति कोष और वार्षिकी चुने गए निवेश पैटर्न के आधार पर बाजार-आधारित प्रतिफल (Market-linked returns) के अधीन होती है।",
+        "यह योजना बिना किसी वसूली तंत्र के मकान निर्माण के लिए असीमित अग्रिम आहरण की अनुमति देती है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "When distinguishing between the Old Pension Scheme (OPS) and the National Pension System (NPS), which of the following features is exclusively characteristic of the NPS?",
+      "options_english": [
+        "The pension amount is explicitly indexed against inflation through biannual Dearness Relief revisions.",
+        "The employee makes zero monthly contribution from their salary towards their core pension corpus.",
+        "The final retirement corpus and annuity are determined by market-linked investment returns based on chosen asset allocations.",
+        "The scheme permits unlimited non-refundable advances for residential house construction without any recovery mechanism."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A defining structural feature distinguishing the National Pension System (NPS) from the Old Pension Scheme (OPS) is that retirement benefits in NPS are fundamentally market-linked.\n\nKey comparative dimensions under Central Civil Services Rules:\n1. Defined Benefit vs. Defined Contribution: OPS (governed by the CCS (Pension) Rules, 2021 / 1972) is a Defined Benefit (DB) pension scheme. The pensioner's entitlement is statutorily fixed at 50% of the last pay drawn or average emoluments of the preceding 10 months, backed fully by the Consolidated Fund of India with zero market volatility risk.\n2. Defined Contribution Architecture in NPS: NPS (governed by PFRDA Act, 2013 and CCS (Implementation of NPS) Rules, 2021) is a Defined Contribution (DC) system. The monthly contributions (10% employee + 14% government) are pooled into the subscriber's Permanent Retirement Account Number (PRAN) and invested by Pension Fund Managers across equities (Scheme E), corporate bonds (Scheme C), and government securities (Scheme G). The final accumulated corpus and resulting monthly annuity are entirely dependent on Net Asset Values (NAV) and market returns.\n3. Inflation Protection: Under OPS, Dearness Relief (DR) is automatically revised twice every year (in January and July) to insulate pensions from inflation. In contrast, standard annuities purchased under NPS do not automatically feature statutory dearness relief unless a specific increasing-rate commercial annuity product is contracted.\n4. Administrative Responsibility: The Head of Office (HoO) and Drawing and Disbursing Officer (DDO) under NPS are responsible for timely deduction and uploading of contributions to the Trustee Bank / CRA to prevent loss of compounding returns for employees.",
+      "explanation_hindi": "पुरानी पेंशन योजना (OPS) और राष्ट्रीय पेंशन प्रणाली (NPS) के बीच सबसे बुनियादी अंतर यह है कि NPS में सेवानिवृत्ति लाभ पूरी तरह बाजार-आधारित प्रतिफल (Market-linked returns) पर निर्भर करते हैं।\n\nकेंद्रीय सिविल सेवा नियमों के तहत प्रमुख तुलनात्मक बिंदु:\n1. परिभाषित लाभ (Defined Benefit) बनाम परिभाषित अंशदान (Defined Contribution): OPS (जो सीसीएस (पेंशन) नियम, 2021/1972 द्वारा शासित है) एक 'परिभाषित लाभ' योजना है। इसमें पेंशनभोगी की मासिक पेंशन अंतिम आहरित वेतन या अंतिम 10 महीनों की औसत उपलब्धियों के 50% पर संहिताबद्ध होती है और भारत की संचित निधि से प्रदान की जाती है। इसमें बाजार के उतार-चढ़ाव का कोई जोखिम नहीं होता।\n2. NPS की संरचना: NPS (PFRDA अधिनियम, 2013 और सीसीएस (NPS का क्रियान्वयन) नियम, 2021 द्वारा शासित) एक 'परिभाषित अंशदान' प्रणाली है। इसमें मासिक अंशदान (10% कर्मचारी + 14% सरकार) प्रान (PRAN) में जमा होता है और पेंशन फंड प्रबंधकों (PFMs) द्वारा इक्विटी (स्कीम E), कॉर्पोरेट बॉन्ड (स्कीम C) और सरकारी प्रतिभूतियों (स्कीम G) में निवेश किया जाता है। अंतिम संचित कोष और वार्षिकी पूरी तरह से बाजार के प्रतिफल (NAV) पर निर्भर करती है।\n3. महंगाई से सुरक्षा: OPS में वर्ष में दो बार (जनवरी और जुलाई) महंगाई राहत (DR) का लाभ मिलता है, जबकि NPS के तहत खरीदी गई वार्षिकी में यह स्वतः प्राप्त नहीं होता।\n4. कार्यालयाध्यक्ष (HoO) / DDO का दायित्व: NPS के तहत DDO का दायित्व है कि वह मासिक अंशदान समय पर ट्रस्टी बैंक को प्रेषित करे ताकि चक्रवृद्धि लाभ में कोई नुकसान न हो।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (C) The final retirement corpus is subject to market-linked returns based on chosen investment patterns.",
+        "Answer explanation extracted from supplied reference material: A distinct characteristic exclusive to the National Pension System is that accumulated retirement funds are invested in market instruments including government securities, corporate bonds, and equity. Consequently, the final accumulated corpus and post-retirement annuity values are directly determined by market-linked investment returns rather than guaranteed fixed returns or predefined statutory formulas."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "70e1de8a-a7df-4f30-9936-d17ba488e4db",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "यदि राष्ट्रीय पेंशन प्रणाली (NPS) के अंतर्गत आने वाले किसी सरकारी कर्मचारी की सेवाकाल के दौरान मृत्यु हो जाती है, तो सीसीएस (एनपीएस का कार्यान्वयन) नियम, 2021 के तहत मृतक के परिवार को कौन-सा महत्वपूर्ण विकल्प प्रदान किया जाता है?",
+      "options_hindi": [
+        "संचित सरकारी एनपीएस अंशदान तथा उस पर अर्जित प्रतिलाभ को सरकार को हस्तांतरित करके सीसीएस नियमों के तहत पारिवारिक पेंशन का विकल्प चुनना।",
+        "परिवार केवल संचित एनपीएस राशि (कॉर्पस) का दावा कर सकता है, तथा किसी भी परिस्थिति में मासिक पारिवारिक पेंशन पूरी तरह से वर्जित है।",
+        "परिवार को बिना किसी शर्त के पूर्ण संचित एनपीएस राशि तथा पूर्ण मासिक पारिवारिक पेंशन दोनों का दोहरा सेवांत लाभ प्रदान किया जाता है।",
+        "परिवार के लिए अनिवार्य है कि वह कॉर्पस के केवल 20% से वार्षिकी (annuity) खरीदे और शेष 80% तत्काल नकद भुगतान के रूप में प्राप्त करे।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "If a government servant covered under the National Pension System (NPS) dies while in service, which critical option is made available to the family under the Central Civil Services (Implementation of NPS) Rules, 2021?",
+      "options_english": [
+        "Opt for Family Pension under CCS rules by transferring the accumulated government NPS contribution and returns back to the government.",
+        "The family can strictly only claim the accumulated NPS corpus, and the grant of a monthly family pension is completely barred under all circumstances.",
+        "The family unconditionally receives both the full accumulated NPS corpus and a monthly Family Pension as a dual terminal benefit.",
+        "The family is mandated to purchase an annuity using strictly 20% of the corpus while receiving the remaining 80% as an immediate lump-sum cash payment."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Rule 10 of the Central Civil Services (Implementation of National Pension System) Rules, 2021 (notified by DoPPW) and relevant Department of Expenditure guidelines:\n1. Option for Benefit: Every Central Government employee appointed on or after 01.01.2004 covered under NPS must exercise an option in Form 1 at the time of joining service. In the event of death in service or discharge on invalidation/disability, benefits may be availed under the CCS (Pension) Rules or CCS (Extraordinary Pension) Rules, or as per the NPS regulations.\n2. Default/Family Right: If the government servant died without exercising the option, or if the option exercised was for CCS rules, the eligible family is given the right to opt for benefits under the CCS (Pension) Rules, 2021 (i.e., monthly Family Pension and Death Gratuity).\n3. Adjustment of Corpus: When Family Pension under CCS rules is sanctioned to the family, the accumulated pension wealth in the subscriber's Permanent Retirement Account Number (PRAN) corresponding to the government contribution and returns thereon is credited back to the Government account (Consolidated Fund of India). The employee's own contribution and returns thereon are refunded to the family/nominee in lump sum.\nTherefore, option A accurately describes this core statutory right.",
+      "explanation_hindi": "केंद्रीय सिविल सेवा (राष्ट्रीय पेंशन प्रणाली का कार्यान्वयन) नियम, 2021 के नियम 10 तथा पेंशन एवं पेंशनभोगी कल्याण विभाग (DoPPW) के दिशानिर्देशों के अनुसार:\n1. लाभ का विकल्प: 01.01.2004 को या उसके बाद नियुक्त प्रत्येक सरकारी कर्मचारी को सेवा में कार्यभार ग्रहण करते समय फॉर्म 1 में एक विकल्प देना होता है कि सेवाकाल में मृत्यु होने अथवा अमान्यता/दिव्यांगता के आधार पर सेवामुक्ति की स्थिति में क्या उसे सीसीएस (पेंशन) नियम/सीसीएस (ईओपी) नियम के तहत लाभ चाहिए या एनपीएस नियमों के तहत।\n2. परिवार का अधिकार: यदि कर्मचारी बिना विकल्प दिए सेवाकाल में दिवंगत हो जाता है, तो उसके पात्र परिवार को सीसीएस (पेंशन) नियम, 2021 के तहत पारिवारिक पेंशन और मृत्यु ग्रेच्युटी प्राप्त करने का वैधानिक विकल्प प्रदान किया जाता है।\n3. कॉर्पस का समायोजन: जब परिवार सीसीएस नियमों के तहत पारिवारिक पेंशन का विकल्प चुनता है, तो प्रान (PRAN) खाते में संचित सरकारी अंशदान और उस पर अर्जित ब्याज/प्रतिलाभ को सरकारी खाते (भारत की संचित निधि) में वापस जमा करा दिया जाता है, जबकि कर्मचारी के स्वयं के अंशदान और उस पर अर्जित प्रतिलाभ का एकमुश्त भुगतान परिवार/नामित को कर दिया जाता है।\nअतः विकल्प A पूर्णतः सही उत्तर है।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) Opt for Family Pension under CCS rules by",
+        "Answer explanation extracted from supplied reference material: transferring the government NPS share back to the government. If a government servant covered under NPS dies in harness, their family can opt to receive a monthly Family Pension under Central Civil Services rules. Upon choosing this option, the accumulated government contribution share along with investment returns in the PRAN is transferred back to the government treasury."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "a1a26aeb-34b5-4e88-aad0-ebaab35f2beb",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "राष्ट्रीय पेंशन प्रणाली (NPS) की संरचना के अंतर्गत, सभी अभिदाताओं के अभिलेखों के रख-रखाव, प्रशासन और ग्राहक सेवा प्रदान करने का कार्य किसके द्वारा किया जाता है?",
+      "options_hindi": [
+        "केंद्रीय अभिलेखपाल अभिकरण (Central Recordkeeping Agency - CRA)",
+        "पंजीकृत पेंशन निधि प्रबंधक (Registered Pension Fund Managers - PFMs)",
+        "नामित एनपीएस ट्रस्टी बैंक (Designated NPS Trustee Bank)",
+        "सूचीबद्ध वार्षिकी सेवा प्रदाता (Empanelled Annuity Service Providers - ASPs)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under the NPS architecture, the function of maintaining records, administration, and customer service for all subscribers is performed by the:",
+      "options_english": [
+        "Central Recordkeeping Agency",
+        "Registered Pension Fund Managers (PFMs)",
+        "Designated NPS Trustee Bank",
+        "Empanelled Annuity Service Providers"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under the National Pension System (NPS) operational architecture established by the Pension Fund Regulatory and Development Authority (PFRDA) Act, 2013, the Central Recordkeeping Agency (CRA) functions as the central operational backbone. CRAs (such as Protean e-Gov Technologies / formerly NSDL, KFin Technologies, and CAMS) are registered institutions responsible for:\n1. Subscriber onboarding, data administration, and centralized database maintenance.\n2. Generation and issuance of the unique 12-digit Permanent Retirement Account Number (PRAN) and PRAN cards.\n3. Processing transaction instructions (contributions, allocation choices, portfolio switches, withdrawals).\n4. Operating customer servicing channels, web portals, call centres, and the Central Grievance Management System (CGMS).\n\nIn contrast, Pension Fund Managers (PFMs) manage investment portfolios, the Trustee Bank oversees banking clearing operations, and Annuity Service Providers (ASPs) deliver monthly pensions after superannuation.",
+      "explanation_hindi": "पेंशन निधि विनियामक और विकास प्राधिकरण (PFRDA) अधिनियम, 2013 के तहत स्थापित राष्ट्रीय पेंशन प्रणाली (NPS) के संस्थागत ढांचे में, केंद्रीय अभिलेखपाल अभिकरण (CRA) केंद्रीय रीढ़ के रूप में कार्य करता है। वर्तमान में प्रोटियन (पूर्व में NSDL), केफिनटेक और कैम्स जैसी संस्थाएं CRA के रूप में कार्य करती हैं। CRA के प्रमुख दायित्व निम्नलिखित हैं:\n1. अभिदाता पंजीकरण, डेटाबेस का केंद्रीकृत रख-रखाव और खाता प्रशासन।\n2. प्रत्येक अभिदाता के लिए 12-अंकीय विशिष्ट स्थायी सेवानिवृत्ति खाता संख्या (PRAN) और प्रान कार्ड जारी करना।\n3. अंशदान, निवेश विकल्प चयन, योजना परिवर्तन और निकासी संबंधी लेनदेन के निर्देशों को संसाधित करना।\n4. वेब पोर्टल, मोबाइल ऐप और केंद्रीय शिकायत प्रबंधन प्रणाली (CGMS) के माध्यम से अभिदाताओं को ग्राहक सेवा प्रदान करना।\n\nइसके विपरीत, पेंशन निधि प्रबंधक (PFMs) निधियों के निवेश का कार्य करते हैं, ट्रस्टी बैंक बैंकिंग व फंड ट्रांसफर संभालता है, और वार्षिकी सेवा प्रदाता (ASPs) सेवानिवृत्ति के बाद मासिक पेंशन वितरित करते हैं।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (A) Central Recordkeeping Agency",
+        "Answer explanation extracted from supplied reference material: Within the National Pension System architecture, the Central Recordkeeping Agency is responsible for core administrative functions, including maintaining subscriber records, managing account details, issuing Permanent Retirement Account Numbers, processing transaction requests, and delivering customer service to subscribers across sectors regulated by the Pension Fund Regulatory Authority."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "9079d28a-9da7-4033-ab40-d4498141e6ca",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "पेंशन प्रसंस्करण के संदर्भ में, 'भविष्य' (Bhavishya) का क्या तात्पर्य है?",
+      "options_hindi": [
+        "भारत सरकार की ऑनलाइन पेंशन स्वीकृति एवं भुगतान ट्रैकिंग प्रणाली।",
+        "राष्ट्रीय पेंशन प्रणाली को बदलने के लिए शुरू की गई एक प्रस्तावित नई परिभाषित-लाभ पेंशन योजना।",
+        "सभी केंद्र सरकार के कर्मचारियों को कवर करने वाली एक अनिवार्य सरकारी जीवन बीमा योजना।",
+        "विशेष रूप से एनपीएस टियर-I अभिदाताओं के लिए बनाया गया आधिकारिक ऑनलाइन शिकायत निवारण पोर्टल।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In the context of pension processing, what does ‘Bhavishya’ refer to?",
+      "options_english": [
+        "Online pension sanction and payment tracking system of Government of India.",
+        "A proposed new defined-benefit pension scheme launched to replace the National Pension System.",
+        "A mandatory government life insurance scheme covering all central government employees.",
+        "The official online grievance redressal portal created specifically for NPS Tier I subscribers."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "‘Bhavishya’ is an end-to-end online Pension Sanction and Payment Tracking System designed, implemented, and managed by the Department of Pension and Pensioners' Welfare (DoP&PW), Ministry of Personnel, Public Grievances and Pensions, Government of India:\n\n1. Workflow Digitization: It automates the entire processing of pension cases, starting from the retiring employee who fills Forms 6, 7, and 8 online 8 months before superannuation, to the Head of Office (HoO), Pay and Accounts Office (PAO), and the Central Pension Accounting Office (CPAO).\n2. Real-time Transparency: It allows the retiring employee and administration to track the real-time status of the pension file, alerting stakeholders about upcoming deadlines to eliminate administrative delays.\n3. Electronic PPO & DigiLocker: Bhavishya generates an electronic Pension Payment Order (e-PPO) and integrates directly with DigiLocker, ensuring that pensioners receive their retirement gratuity and first pension on the very date of superannuation.\n4. Seamless Banking Integration: It interfaces with CPAO's PARAS portal and banks' CPPC systems for electronic pension disbursement.",
+      "explanation_hindi": "'भविष्य' (Bhavishya) भारत सरकार के कार्मिक, लोक शिकायत और पेंशन मंत्रालय के पेंशन एवं पेंशनभोगी कल्याण विभाग (DoP&PW) द्वारा विकसित और संचालित एक केंद्रीकृत ऑनलाइन पेंशन स्वीकृति एवं भुगतान ट्रैकिंग प्रणाली है:\n\n1. एंड-टू-एंड डिजिटलीकरण: यह सेवानिवृत्ति से 8 महीने पूर्व कर्मचारी द्वारा ऑनलाइन फॉर्म 6, 7 व 8 भरने से लेकर कार्यालयाध्यक्ष (HoO), वेतन एवं लेखा कार्यालय (PAO) और केंद्रीय पेंशन लेखा कार्यालय (CPAO) तक पूरी पेंशन प्रक्रिया को डिजिटल बनाता है।\n2. पारदर्शी ट्रैकिंग: यह कर्मचारी और विभाग दोनों को पेंशन आवेदन की वास्तविक स्थिति (Real-time tracking) देखने और समय-सीमा की निगरानी करने में सक्षम बनाता है, जिससे प्रक्रियात्मक विलंब समाप्त होता है।\n3. इलेक्ट्रॉनिक पीपीओ (e-PPO): यह प्रणाली इलेक्ट्रॉनिक पेंशन भुगतान आदेश (e-PPO) उत्पन्न करती है और डिजिलॉकर (DigiLocker) के साथ एकीकृत है, जिससे सेवानिवृत्ति के दिन ही पेंशनभोगी को पीपीओ और लाभ प्राप्त होना सुनिश्चित होता है।\n4. बैंकिंग समन्वय: यह निर्बाध पेंशन संवितरण के लिए CPAO के PARAS पोर्टल और बैंकों के केंद्रीकृत पेंशन प्रसंस्करण केंद्रों (CPPC) से सीधे जुड़ा हुआ है।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (A) Online pension sanction and payment tracking system of Government of India.",
+        "Answer explanation extracted from supplied reference material: ‘Bhavishya’ is the centralized online pension sanction and payment tracking system developed by the Department of Pension and Pensioners’ Welfare, Government of India. It digitizes pension processing, tracks files online from initial initiation to final PPO issue, and ensures transparency and timely disbursement of retirement benefits."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "eb5c802f-b405-4be4-822d-0494a15f6fe3",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "अधिवर्षिता पर छह महीने में सेवानिवृत्त होने वाले एक सरकारी कर्मचारी ने मकान खरीदने हेतु अपने जीपीएफ खाते की पूरी शेष राशि निकालने के लिए कार्यालय प्रमुख को आवेदन किया। सामान्य भविष्य निधि (GPF) नियमों के अनुसार, अनुमेय निकासी का क्या प्रावधान है?",
+      "options_hindi": [
+        "सेवा के अंतिम वर्ष के दौरान किसी भी समय संपूर्ण 100% जीपीएफ राशि की अंतिम निकासी की अनुमति है",
+        "सेवा के अंतिम 12 महीनों के दौरान आवास प्रयोजनों के लिए अप्रतिदेय जीपीएफ निकासी पर पूर्ण प्रतिबंध है",
+        "आवास निकासी निधि प्राप्त करने के लिए कर्मचारी को अपनी जीपीएफ राशि एनपीएस टियर-I में परिवर्तित करनी होगी",
+        "सेवानिवृत्ति से 12 महीने पूर्व बिना कोई कारण बताए खाते में जमा राशि का 90% तक निकालने की अनुमति है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "A Central Government employee due for retirement on superannuation in six months requests permission from the Head of Office to withdraw their GPF balance to finance a house purchase. According to the General Provident Fund rules, what is the maximum permissible withdrawal?",
+      "options_english": [
+        "100% full final withdrawal of the entire GPF balance is permitted at any time during the last year of service",
+        "Non-refundable GPF withdrawals for housing purposes are strictly prohibited during the last 12 months of service",
+        "The employee must convert the accumulated GPF balance into NPS Tier-I to access housing withdrawal funds",
+        "Withdrawal of up to 90% of the balance at credit is permitted within 12 months before retirement without assigning any reason"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under Rule 15(1)(C) of the General Provident Fund (Central Services) Rules, 1960 and the liberalized provisions issued vide Department of Pension & Pensioners' Welfare (DoP&PW) OM dated 07.03.2017, a subscriber is permitted to make a non-refundable GPF withdrawal of up to ninety percent (90%) of the accumulated balance standing at their credit at any time within twelve (12) months prior to the date of retirement on superannuation. Importantly, this 90% withdrawal is allowed without assigning any specific reason or requiring documentary justification. 100% final withdrawal and account closure occurs only upon actual retirement (Rule 34), and monthly subscriptions are compulsorily stopped three months prior to the superannuation date. Thus, six months before retirement, the employee can withdraw up to 90% of their balance.",
+      "explanation_hindi": "सामान्य भविष्य निधि (केंद्रीय सेवाएं) नियम, 1960 के नियम 15(1)(C) तथा कार्मिक, लोक शिकायत एवं पेंशन मंत्रालय (DoP&PW) के कार्यालय ज्ञापन दिनांक 07.03.2017 के अनुसार, किसी भी अभिदाता को अपनी अधिवर्षिता सेवानिवृत्ति की तिथि से 12 महीने के भीतर बिना कोई विशेष कारण बताए या बिना कोई दस्तावेज प्रस्तुत किए, अपने जीपीएफ खाते में जमा राशि का 90% तक अप्रतिदेय (non-refundable) रूप से निकालने की अनुमति है। संपूर्ण 100% शेष राशि का अंतिम निपटान एवं खाता बंद केवल सेवानिवृत्ति की वास्तविक तिथि पर या उसके बाद ही होता है (सेवानिवृत्ति से तीन माह पूर्व जीपीएफ कटौती अनिवार्यतः रोक दी जाती है)। अतः सेवानिवृत्ति से छह माह पूर्व कर्मचारी अपने जीपीएफ बैलेंस का अधिकतम 90% निकाल सकता है।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) Permitted up to 90% of balance within 12 months before retirement.",
+        "Answer explanation extracted from supplied reference material: months before retirement. Under General Provident Fund rules, a subscriber is permitted to make a non-refundable GPF withdrawal of up to ninety percent of their accumulated account balance at any time within twelve months prior to the date of superannuation, without requiring specific justification or purpose for the requested withdrawal."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "8a80dfaa-c64b-4dce-9608-24ec1bbe8092",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "पुरानी पेंशन योजना (OPS) की विशेषताओं के संदर्भ में, अधिवार्षिकी पर सेवानिवृत्त होने वाले सरकारी कर्मचारी के लिए न्यूनतम पेंशन किस प्रकार निर्धारित की जाती है?",
+      "options_hindi": [
+        "यह उनके संबंधित संवर्ग के प्रवेश स्तर के मूल वेतन के 50% पर निर्धारित की जाती है।",
+        "यह बिना किसी न्यूनतम सीमा के, पूरी तरह से सेवा के कुल वर्षों के अनुपात में होती है।",
+        "7वें केंद्रीय वेतन आयोग (CPC) की सिफारिशों के अनुसार इसे ₹9,000 प्रति माह पर निर्धारित किया गया है।",
+        "यह समूह 'घ' (Group D) कर्मचारियों के लिए ₹3,500 प्रति माह और अन्य के लिए ₹9,000 निर्धारित है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In the context of the Old Pension Scheme (OPS) provisions, how is the minimum monthly retirement pension fixed for a central government servant retiring on superannuation?",
+      "options_english": [
+        "It is fixed at 50% of the entry-level basic pay of their initial recruiting cadre.",
+        "It is strictly proportional to the total number of qualifying years served, with no floor limit.",
+        "It is fixed at ₹9,000 per month in accordance with the 7th Central Pay Commission recommendations.",
+        "It is fixed at ₹3,500 per month for Group D staff and ₹9,000 per month for all others."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under Rule 44 of the CCS (Pension) Rules, 2021, and following the acceptance of the recommendations of the 7th Central Pay Commission (effective January 1, 2016), the statutory minimum pension or family pension payable to any central government employee is fixed at ₹9,000 per month (upgraded from the 6th CPC minimum of ₹3,500 per month). This minimum represents exactly 50% of the minimum pay in the Pay Matrix (Level 1, which starts at ₹18,000 per month). No superannuated employee eligible for pension can receive an amount below this floor, irrespective of their pay scale or length of qualifying service.",
+      "explanation_hindi": "सीसीएस (पेंशन) नियम, 2021 के नियम 44 के अनुसार तथा 7वें केंद्रीय वेतन आयोग (7th CPC) की सिफारिशों के क्रियान्वयन के उपरांत, केंद्र सरकार के कर्मचारियों के लिए न्यूनतम पेंशन और पारिवारिक पेंशन की सीमा ₹9,000 प्रति माह निर्धारित की गई है (जो 6वें वेतन आयोग में ₹3,500 थी)। यह राशि पे मैट्रिक्स के न्यूनतम वेतन स्तर (Level 1, जो कि ₹18,000 है) के 50% के बराबर है। पेंशन पाने का पात्र कोई भी सेवानिवृत्त कर्मचारी इस न्यूनतम वैधानिक सीमा से कम पेंशन प्राप्त नहीं कर सकता।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (C) It is fixed at ₹9,000 per month as per 7th CPC recommendations.",
+        "Answer explanation extracted from supplied reference material: Following the implementation of the Seventh Central Pay Commission recommendations, the minimum limit of retirement pension under the Old Pension Scheme is set at nine thousand rupees per month. No superannuated government servant eligible for pension under these rules receives less than this statutory minimum threshold, regardless of their pay scale or length of service."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "951a5d4b-9626-42a3-89f6-5d28f99359c3",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "केंद्र सरकार के कर्मचारियों के लिए केंद्रीय मंत्रिमंडल द्वारा स्वीकृत एकीकृत पेंशन योजना (UPS) के अंतर्गत, 'सुनिश्चित पेंशन' (Assured Pension) से संबंधित मूल प्रावधान क्या है?",
+      "options_hindi": [
+        "अर्हक सेवा की कुल अवधि पर विचार किए बिना, आहरित अंतिम वेतन के 40% पर निर्धारित।",
+        "सेवानिवृत्ति के दिन आहरित मूल वेतन के 50% पर निर्धारित, जो सीधे बाजार निवेश प्रतिलाभ के अधीन है।",
+        "सेवानिवृत्त होने वाले सभी समूह 'क' और समूह 'ख' के अधिकारियों के लिए ₹25,000 प्रतिमाह की एकसमान दर पर निर्धारित।",
+        "25 वर्ष की न्यूनतम अर्हक सेवा के लिए सेवानिवृत्ति से पूर्व पिछले 12 महीनों के औसत मूल वेतन का 50%।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under the Unified Pension Scheme (UPS) structure approved by the Union Cabinet for Central Government employees, what is the core provision regarding the Assured Pension?",
+      "options_english": [
+        "Fixed at 40% of the last pay drawn irrespective of the total length of qualifying service rendered.",
+        "Fixed at 50% of the basic pay drawn on the date of superannuation, directly subject to market investment returns.",
+        "Fixed as a flat rate of ₹25,000 per month for all retiring Group A and Group B officers.",
+        "50% of average basic pay drawn over the last 12 months for a minimum qualifying service of 25 years."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "On August 24, 2024, the Union Cabinet approved the Unified Pension Scheme (UPS) for Central Government employees, which provides several assured pillars:\n1. Assured Pension: Under Pillar 1 of UPS, an employee who has completed a minimum qualifying service of 25 years is guaranteed an Assured Pension equal to 50% of the average basic pay drawn during the last 12 months prior to superannuation.\n2. Proportionate Pension: For employees with qualifying service between 10 years and 25 years, the assured pension is calculated on a proportionate basis.\n3. Dearness Relief Indexation: Like the Old Pension Scheme (OPS), the assured pension under UPS is indexed to inflation and Dearness Relief (DR) is provided as applicable to central government pensioners.\nTherefore, option D is the exact formulation approved under the UPS framework.",
+      "explanation_hindi": "24 अगस्त 2024 को केंद्रीय मंत्रिमंडल द्वारा केंद्र सरकार के कर्मचारियों के लिए एकीकृत पेंशन योजना (UPS) को स्वीकृति दी गई, जिसके मुख्य घटक निम्नलिखित हैं:\n1. सुनिश्चित पेंशन (Assured Pension): UPS के स्तंभ 1 के अनुसार, जिस कर्मचारी ने कम से कम 25 वर्ष की न्यूनतम अर्हक सेवा पूरी की है, उसे सेवानिवृत्ति से ठीक पहले के अंतिम 12 महीनों में आहरित औसत मूल वेतन का 50% सुनिश्चित पेंशन के रूप में प्रदान किया जाएगा।\n2. आनुपातिक पेंशन: 10 वर्ष से 25 वर्ष की अर्हक सेवा वाले कर्मचारियों के लिए सुनिश्चित पेंशन का निर्धारण आनुपातिक (proportionate) आधार पर किया जाता है।\n3. महंगाई राहत (DR): पुरानी पेंशन योजना (OPS) की भांति, UPS में भी सुनिश्चित पेंशन मुद्रास्फीति से जुड़ी है और इस पर औद्योगिक श्रमिकों के लिए उपभोक्ता मूल्य सूचकांक (AICPI-IW) के आधार पर महंगाई राहत (DR) देय होगी।\nअतः विकल्प D सही उत्तर है।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) 50% of average basic pay over last 12 months",
+        "Answer explanation extracted from supplied reference material: for 25 years of service. Under the Unified Pension Scheme, the core feature of the Assured Pension is fifty percent of the average basic pay drawn during the last twelve months of service prior to retirement. To qualify for this full assured pension, the employee must have completed a minimum qualifying service of twenty-five years."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "27b1ec00-f7c1-4c64-8b2f-dd7ca86d48fe",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "NPS टियर-I में, किसी वित्तीय वर्ष के दौरान न्यूनतम आवश्यक वार्षिक अंशदान जमा करने में विफल रहने पर क्या परिणाम होता है?",
+      "options_hindi": [
+        "खाता स्थायी रूप से बंद कर दिया जाता है, और संपूर्ण संचित निधि राज्य द्वारा जब्त कर ली जाती है।",
+        "संचित निधि स्वतः एक नए बनाए गए टियर-II स्वैच्छिक खाते में स्थानांतरित कर दी जाती है।",
+        "खाता तब तक फ्रीज/निष्क्रिय रहता है जब तक कि न्यूनतम अंशदान और जुर्माना शुल्क देकर इसे पुनः सक्रिय न किया जाए।",
+        "CRA या PFRDA द्वारा अभिदाता के विरुद्ध तत्काल औपचारिक कानूनी वसूली कार्यवाही शुरू की जाती है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In NPS Tier I, what is the consequence of failing to deposit the minimum required annual contribution (for a citizen model, analogous to situations of non-deduction in government)?",
+      "options_english": [
+        "The account is permanently closed, and all accumulated subscriber funds are forfeited to the state.",
+        "The accumulated funds are automatically transferred to a newly created Tier II voluntary account.",
+        "Account is frozen until reactivated by paying penalty and minimum contribution.",
+        "The CRA or PFRDA immediately initiates formal legal recovery action against the subscriber."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under PFRDA regulations governing National Pension System (NPS) Tier-I accounts, subscribers are required to deposit a minimum statutory contribution (prescribed at ₹1,000 per financial year in the voluntary/citizen model) to keep the account active. If a subscriber fails to deposit the mandatory minimum contribution within a financial year, the Tier-I PRAN account is marked as 'Frozen' or 'Inactive' in the Central Recordkeeping Agency (CRA) system. While frozen, the existing corpus continues to earn market-linked returns based on NAV, but the subscriber cannot perform transactions or withdraw funds. To unfreeze and reactivate the account, the subscriber must deposit the overdue minimum contribution along with the prescribed reactivation penalty fee. Accumulated funds are never forfeited to the government. Hence, option C is correct.",
+      "explanation_hindi": "पेंशन निधि विनियामक और विकास प्राधिकरण (PFRDA) के दिशा-निर्देशों के अनुसार, NPS टियर-I खाते को सक्रिय बनाए रखने के लिए प्रत्येक वित्तीय वर्ष में न्यूनतम निर्धारित अंशदान (कम से कम ₹1,000 प्रति वर्ष) जमा करना अनिवार्य होता है।\nयदि कोई अभिदाता किसी वित्तीय वर्ष में यह न्यूनतम राशि जमा नहीं करता है, तो CRA प्रणाली द्वारा उसके टियर-I खाते को 'फ्रीज' (Frozen) या निष्क्रिय घोषित कर दिया जाता है।\nखाता फ्रीज होने पर भी पूर्व में जमा राशि पर NAV के अनुसार रिटर्न मिलता रहता है, परंतु खाताधारक कोई नया लेन-देन या निकासी नहीं कर सकता। खाते को पुनः सक्रिय (Unfreeze) कराने के लिए अभिदाता को न्यूनतम अंशदान के साथ निर्धारित नाममात्र का जुर्माना/अनफ्रीजिंग शुल्क अदा करना पड़ता है। इसमें धनराशि जब्त नहीं होती। अतः सही उत्तर C है।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (C) Account is frozen until reactivated by paying penalty and minimum contribution.",
+        "Answer explanation extracted from supplied reference material: In National Pension System accounts, if a subscriber fails to deposit the mandatory minimum prescribed contribution during a financial year, the Tier I account is categorized as inactive or frozen. To reactivate the frozen account, the subscriber must pay the prescribed penalty fee along with the minimum contribution amount."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "c5d25367-d98e-4cdd-86dc-7777d8a23ccd",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "राष्ट्रीय पेंशन प्रणाली (NPS) के अंतर्गत आहरण एवं संवितरण अधिकारी (DDO) की भूमिका और कर्तव्यों के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\nI. DDO मासिक वेतन बिल से कर्मचारी के 10% अनिवार्य अंशदान की कटौती करने के लिए उत्तरदायी है।\nII. DDO को PAO या CRA के माध्यम से भेजे बिना स्वतंत्र रूप से स्थायी सेवानिवृत्ति खाता संख्या (PRAN) सृजित और आवंटित करने का अधिकार है।\nIII. DDO सरकार के 14% समकक्ष अंशदान का बिल तैयार करता है।\nIV. DDO को अभिदाता अंशदान फाइल (SCF) विवरण को CRA प्रणाली पर अपलोड करना होता है।\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल I, III और IV",
+        "केवल II, III और IV",
+        "I, II, III और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the role of the Drawing and Disbursing Officer (DDO) in NPS:\nI. The DDO is responsible for deducting the employee’s contribution of 10% from the monthly salary.\nII. The DDO is responsible for generating the PRAN independently without routing through PAO/CRA.\nIII. The DDO prepares the bill for the government’s matching contribution of 14%.\nIV. The DDO must upload the subscriber contribution file to the CRA system.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "I and II only",
+        "I, III, and IV",
+        "II, III, and IV",
+        "I, II, III, and IV"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under standard operational guidelines of the National Pension System (NPS) and Central Civil Accounts Service procedures:\n- Statement I is correct: The DDO is statutorily mandated to deduct 10% of (Basic Pay + DA) as the employee's monthly contribution from their salary bill.\n- Statement II is incorrect: The DDO cannot generate the Permanent Retirement Account Number (PRAN) independently. The DDO verifies the subscriber registration form (CSRF) and forwards it to the Nodal Office / Pay and Accounts Office (PAO). The PAO authorizes and submits the request to the Central Recordkeeping Agency (CRA), which registers the subscriber and generates the PRAN.\n- Statement III is correct: As per Ministry of Finance notification (effective from 01.04.2019), the central government matching contribution is 14% of (Basic Pay + DA). The DDO prepares the bill for this 14% government contribution.\n- Statement IV is correct: The DDO/PAO is responsible for preparing and uploading the Subscriber Contribution File (SCF) through the CRA system to ensure timely credit into the subscriber's PRAN.\nTherefore, statements I, III, and IV are correct, while statement II is incorrect. Hence, option B is correct.",
+      "explanation_hindi": "राष्ट्रीय पेंशन प्रणाली (NPS) की परिचालन कार्यप्रणाली तथा लेखा प्रक्रियाओं के अनुसार:\n- कथन I सही है: DDO प्रत्येक माह कर्मचारी के वेतन से 10% (मूल वेतन + DA) अनिवार्य अंशदान की कटौती करने के लिए उत्तरदायी होता है।\n- कथन II गलत है: DDO स्वतंत्र रूप से PRAN (स्थायी सेवानिवृत्ति खाता संख्या) सृजित नहीं कर सकता। DDO केवल अभिदाता के पंजीकरण प्रपत्र को सत्यापित कर नोडल कार्यालय/वेतन एवं लेखा कार्यालय (PAO) को भेजता है, जो इसे केंद्रीय रिकॉर्डकीपिंग एजेंसी (CRA) को प्रेषित करता है, जहाँ से PRAN जारी होता है।\n- कथन III सही है: 1 अप्रैल 2019 से प्रभावी केंद्र सरकार के नियमों के अनुसार सरकार का समकक्ष अंशदान 14% है, जिसका बिल DDO द्वारा तैयार किया जाता है।\n- कथन IV सही है: DDO/नोडल कार्यालय द्वारा अभिदाता अंशदान फाइल (SCF) को CRA सिस्टम पर अपलोड किया जाता है ताकि धनराशि अभिदाता के खाते में समय पर जमा हो सके।\nअतः कथन I, III और IV सही हैं, जबकि कथन II गलत है। सही उत्तर B है।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) I, III, and IV",
+        "Answer explanation extracted from supplied reference material: The Drawing and Disbursing Officer deducts ten percent subscriber contribution, prepares the matching fourteen percent government contribution bill, and uploads contribution details to the CRA system. However, PRAN generation is not done independently by the DDO, as it must be processed and registered through the PAO and CRA."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "70a6f477-52b0-4cd6-a195-9659b6fb4919",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "केंद्रीय सिविल सेवा (पेंशन) नियम, 2021 (पुरानी पेंशन योजना ढांचा) के अंतर्गत निम्नलिखित में से कौन-सा पेंशन का एक मान्यता प्राप्त सांविधिक प्रकार (Category) नहीं है?",
+      "options_hindi": [
+        "योग्यता पेंशन (Merit Pension)",
+        "अधिवर्षिता पेंशन (Superannuation Pension)",
+        "सेवानिवृत्ति पेंशन (Retiring Pension)",
+        "क्षतिपूर्ति पेंशन (Compensation Pension)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; CCS Pension Rules, 2021 and NPS",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following is NOT a recognized statutory class of pension under the Central Civil Services (Pension) Rules, 2021?",
+      "options_english": [
+        "Merit Pension",
+        "Superannuation Pension",
+        "Retiring Pension",
+        "Compensation Pension"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Chapters V and VI of the Central Civil Services (Pension) Rules, 2021, the statutory categories of pensions recognized by the Government of India are strictly enumerated:\n1. Superannuation Pension (Rule 34) – granted upon reaching the age of superannuation (60 years).\n2. Retiring Pension (Rule 35) – granted on voluntary retirement or retirement under FR 56(j)/(k).\n3. Invalid Pension (Rule 39) – granted on permanent medical incapacitation.\n4. Compensation Pension (Rule 40) – granted upon discharge owing to the abolition of a permanent post.\n5. Compulsory Retirement Pension (Rule 41) – imposed as a disciplinary penalty.\n6. Compassionate Allowance (Rule 42) – granted to dismissed or removed employees in deserving cases.\nThere is NO statutory category or provision known as 'Merit Pension' in the Central Civil Services rules.",
+      "explanation_hindi": "केंद्रीय सिविल सेवा (पेंशन) नियम, 2021 के अध्याय V एवं VI के अंतर्गत भारत सरकार द्वारा मान्यता प्राप्त सांविधिक पेंशन की श्रेणियां निम्नलिखित हैं:\n1. अधिवर्षिता पेंशन (Superannuation Pension - नियम 34): 60 वर्ष की आयु पूर्ण करने पर।\n2. सेवानिवृत्ति पेंशन (Retiring Pension - नियम 35): स्वैच्छिक या समय-पूर्व सेवानिवृत्ति पर।\n3. अशक्तता पेंशन (Invalid Pension - नियम 39): चिकित्सीय रूप से स्थायी अयोग्य घोषित होने पर।\n4. क्षतिपूर्ति पेंशन (Compensation Pension - नियम 40): स्थायी पद समाप्त होने पर।\n5. अनिवार्य सेवानिवृत्ति पेंशन (Compulsory Retirement Pension - नियम 41): अनुशासनात्मक दंड के रूप में।\n6. अनुकंपा भत्ता (Compassionate Allowance - नियम 42): बर्खास्त या हटाए गए कर्मचारियों के लिए।\nकेंद्रीय सेवा नियमों में 'योग्यता पेंशन' (Merit Pension) नाम की कोई पेंशन श्रेणी या प्रावधान अस्तित्व में नहीं है।",
+      "topic": "CCS Pension Rules, 2021 and NPS",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (A) Merit Pension",
+        "Answer explanation extracted from supplied reference material: Under the Central Civil Services (Pension) Rules, recognized categories of pension include Superannuation Pension, Retiring Pension, Invalid Pension, Compensation Pension, and Extraordinary Pension. “Merit Pension” is not a defined or recognized category of pensionary benefit within the statutory framework of the Old Pension Scheme or central service rules."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    }
+  ]
+}

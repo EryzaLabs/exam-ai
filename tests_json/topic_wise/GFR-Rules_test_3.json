@@ -1,0 +1,769 @@
+{
+  "test_id": "ee170a78-3500-4d47-8a6d-29e4c68d18ab",
+  "test_name": "Topic Test: GFR RULES - Part 3",
+  "type": "topic_wise",
+  "topic": "GFR-Rules",
+  "created_at": "2026-10-25T18:14:58.792271",
+  "questions": [
+    {
+      "id": "8e5fcdbc-a5ad-4fb5-bd2a-f63e93f55bfd",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "एक विद्यालय के प्राचार्य को कक्षाओं के लिए ₹1,50,000/- के ड्यूल डेस्क खरीदने हैं। यदि यह सामग्री गवर्नमेंट ई-मार्केटप्लेस (GeM) पर उपलब्ध नहीं है, तो GFR 2017 के अनुसार इस खरीद को करने की सर्वाधिक उपयुक्त विधि कौन-सी है?",
+      "options_hindi": [
+        "प्रतिस्पर्धी कोटेशन प्राप्त किए बिना किसी स्थानीय विक्रेता से सीधे नकद खरीद करना।",
+        "प्रमुख राष्ट्रीय समाचार पत्रों और सार्वजनिक पोर्टलों पर विज्ञापित निविदा जांच (Advertised Tender Enquiry) प्रकाशित करना।",
+        "किसी असत्यापित स्थानीय फर्नीचर आपूर्तिकर्ता को सीधे एकल निविदा (Single Tender) जारी करना।",
+        "सक्षम प्राधिकारी द्वारा अनुमोदित तीन सदस्यों की स्थानीय क्रय समिति (Local Purchase Committee) के माध्यम से खरीद करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "A school Principal needs to purchase dual desks worth Rs. 1,50,000/- for classrooms. According to GFR 2017, what is the most appropriate procurement method if the required items are certified as not available on the Government e-Marketplace (GeM)?",
+      "options_english": [
+        "Direct cash purchase from a single nearby vendor without seeking competitive quotations.",
+        "Publishing an Advertised Tender Enquiry across leading national newspapers and public portals.",
+        "Single Tender Enquiry awarded directly to an unverified local furniture supplier.",
+        "Procurement through a Local Purchase Committee comprising three members as approved by the competent authority."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under Rule 155 of GFR 2017 ('Purchase of goods by Purchase Committee'), purchase of goods costing above Rs. 25,000/- and up to Rs. 2,50,000/- on each occasion may be carried out on the recommendations of a duly constituted Local Purchase Committee (LPC) consisting of three members appointed by the Head of Department/Competent Authority. When the goods are not available on GeM, the committee conducts an offline or local market survey to identify suitable suppliers, ascertains price reasonableness and quality, obtains quotations, and prepares a joint survey certificate before recommending the purchase. Since Rs. 1,50,000/- falls squarely between Rs. 25,000 and Rs. 2,50,000, procurement via a 3-member Local Purchase Committee is the exact prescribed procedure.",
+      "explanation_hindi": "GFR 2017 के नियम 155 ('क्रय समिति द्वारा माल की खरीद') के अनुसार, प्रत्येक अवसर पर ₹25,000/- से अधिक और ₹2,50,000/- तक की लागत वाली वस्तुओं की खरीद विभागाध्यक्ष/सक्षम प्राधिकारी द्वारा गठित तीन सदस्यों की एक 'स्थानीय क्रय समिति' (LPC) की सिफारिश पर की जा सकती है। यदि वस्तुएं GeM पर उपलब्ध नहीं हैं, तो यह समिति बाजार सर्वेक्षण करती है, प्रतिष्ठित आपूर्तिकर्ताओं से दरों का पता लगाती है, गुणवत्ता और मूल्य की औचित्यता की जांच करती है तथा संयुक्त प्रमाण पत्र तैयार करके खरीद की सिफारिश करती है। चूँकि ₹1,50,000/- की राशि ₹25,000 से ₹2.5 लाख के मध्य आती है, अतः तीन सदस्यीय स्थानीय क्रय समिति के माध्यम से खरीद करना ही नियमानुकूल प्रक्रिया है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) Purchase through a Local Purchase Committee of three members as decided by Head of Department.",
+        "Answer explanation extracted from supplied reference material: Committee of three members as decided by Head of Department. For procuring goods valued above twenty-five thousand rupees and up to two lakh fifty thousand rupees on each occasion when not available on GeM, Rule 155 mandates purchase through a three-member Local Purchase Committee. The committee conducts a local market survey, evaluates suitable suppliers, certifies quality and price reasonableness, and jointly recommends the most appropriate purchase offer."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "3e91157a-2050-4b02-bc57-dcdccf33d9aa",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "GFR 2017 के नियम 170 के तहत, भाग लेने वाले बोलीदाताओं से बोली सुरक्षा (बयाना राशि जमा / EMD) के रूप में माल के अनुमानित मूल्य का सामान्यतः कितना प्रतिशत मांगा जाना चाहिए?",
+      "options_hindi": [
+        "1% से 2%",
+        "2% से 5%",
+        "5% से 10%",
+        "10% से 15%"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under Rule 170 of GFR 2017, what is the standard percentage range of the estimated value of goods that must be demanded as Bid Security (Earnest Money Deposit - EMD) from participating bidders?",
+      "options_english": [
+        "1% to 2%",
+        "2% to 5%",
+        "5% to 10%",
+        "10% to 15%"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Rule 170 of GFR 2017 prescribes the provisions for 'Bid Security' (Earnest Money Deposit - EMD). To safeguard against frivolous or irresponsible bidders withdrawing or altering their bids during the bid validity period, procuring authorities obtain Bid Security from bidders. The amount of Bid Security should ordinarily range between two percent to five percent (2% to 5%) of the estimated value of the goods to be procured. The bid security may be accepted in the form of Account Payee Demand Draft, Fixed Deposit Receipt, Banker's Cheque, or Bank Guarantee. Note that Micro and Small Enterprises (MSEs) registered with designated bodies (Udyam Registration) and Startups recognized by DPIIT are exempted from submitting Bid Security (Rule 170(i)).",
+      "explanation_hindi": "GFR 2017 के नियम 170 के अनुसार 'बोली सुरक्षा' (Bid Security / बयाना राशि - EMD) का प्रावधान गैर-गंभीर या लापरवाह बोलीदाताओं को बोली वैधता अवधि के दौरान हटने से रोकने के लिए किया जाता है। नियम 170 के तहत बोली सुरक्षा की राशि सामान्यतः खरीदे जाने वाले माल के अनुमानित मूल्य के 2% से 5% के बीच निर्धारित की जानी चाहिए। यह राशि अकाउंट पेयी डिमांड ड्राफ्ट, सावधि जमा रसीद (FDR), बैंकर चेक या बैंक गारंटी के रूप में स्वीकार की जा सकती है। उल्लेखनीय है कि सूक्ष्म एवं लघु उद्यमों (MSEs) तथा DPIIT द्वारा मान्यता प्राप्त स्टार्टअप्स को नियम 170(i) के तहत EMD जमा करने से छूट प्राप्त होती है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) 2% to 5%",
+        "Answer explanation extracted from supplied reference material: Rule 170 of the General Financial Rules mandates that procuring authorities obtain Bid Security, also known as Earnest Money Deposit, from participating bidders to safeguard against frivolous or non-serious bids. The standard bid security amount ranges between two percent and five percent of the estimated procurement value, deposited via approved banking instruments like demand drafts or bank guarantees."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "2d10fbd0-41b4-4783-9614-a7e5580c3e15",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "आईटी प्रयोगशाला (IT Lab) के भौतिक सत्यापन (Physical Verification) के दौरान सत्यापन समिति को पता चलता है कि दो डेस्कटॉप मॉनिटर गायब हैं। जीएफआर (GFR), 2017 के नियमों के अनुसार इस निष्कर्ष का तात्कालिक परिणाम क्या होगा?",
+      "options_hindi": [
+        "गायब मॉनिटरों को बिना किसी औपचारिक प्रशासनिक प्रक्रिया के स्टॉक रजिस्टर से स्वतः ही हटा दिया जाता है।",
+        "भौतिक सत्यापन समिति के सदस्यों को गायब मॉनिटरों की क्रय लागत का व्यक्तिगत रूप से भुगतान करना होगा।",
+        "कमी को छिपाने के लिए विद्यालय प्रशासन को स्थानीय/छात्र निधि से चुपचाप प्रतिस्थापन मॉनिटर खरीदने होंगे।",
+        "विसंगति (Discrepancy) को तुरंत अभिलिखित किया जाना चाहिए और कार्यालयाध्यक्ष (Head of Office) को जिम्मेदारी तय करने के लिए जांच शुरू करनी चाहिए।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "During the physical verification of an IT laboratory, the verification committee discovers that two desktop monitors are missing. What is the immediate procedural requirement under GFR 2017 regarding this finding?",
+      "options_english": [
+        "The missing monitors are automatically struck off from the register without any formal administrative procedure.",
+        "The members of the physical verification committee must personally reimburse the purchase cost of the missing monitors.",
+        "The school administration must silently purchase replacement monitors using local school funds to cover up the shortage.",
+        "The discrepancy must be formally recorded and the Head of Office must initiate an inquiry to fix responsibility."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "As per Rule 213 and Rule 214 of General Financial Rules (GFR), 2017, along with Rule 33 and Rule 34 concerning reports of losses, any shortage, loss, or discrepancy discovered during the physical verification of fixed assets or stores must be immediately recorded in the physical verification report and brought to the notice of the Head of Office (HOO) / competent authority. The Head of Office (e.g., School Principal) is duty-bound to initiate an immediate administrative inquiry to ascertain the cause of the loss (whether due to theft, fraud, or negligence), fix responsibility on the defaulting custodian/custody officer, and process the matter either for recovery or formal write-off under the Delegation of Financial Powers Rules (DFPR). Striking off assets arbitrarily or covering shortages by unapproved purchases is illegal under financial regulations.",
+      "explanation_hindi": "सामान्य वित्तीय नियम (GFR), 2017 के नियम 213 और 214 के साथ पठित नियम 33 एवं 34 (हानियों की रिपोर्ट) के अनुसार, अचल परिसंपत्तियों या भंडार के भौतिक सत्यापन के दौरान पाई गई किसी भी प्रकार की कमी, क्षति या विसंगति को भौतिक सत्यापन रिपोर्ट में विधिवत दर्ज किया जाना अनिवार्य है। कार्यालयाध्यक्ष (जैसे विद्यालय के प्राचार्य) का यह विधिक दायित्व है कि वे इस विसंगति को संज्ञान में लेकर तुरंत एक प्रशासनिक जांच शुरू करें, ताकि हानि के वास्तविक कारणों (चोरी, कपट या घोर उपेक्षा) का पता लगाया जा सके, संबंधित स्टॉक अभिरक्षक पर उत्तरदायित्व निर्धारित किया जा सके, तथा वित्तीय अधिकार प्रत्यायोजन नियमों (DFPR) के तहत वसूली या अपलेखन (write-off) की प्रक्रिया प्रारंभ की जा सके। किसी भी सरकारी सामग्री को बिना जांच के रजिस्टर से हटाना या गुप्त रूप से प्रतिस्थापन करना वित्तीय नियमों का गंभीर उल्लंघन है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (D) The discrepancy must be recorded and the Head of Office must initiate an inquiry to fix responsibility.",
+        "Answer explanation extracted from supplied reference material: Head of Office must initiate an inquiry to fix responsibility. When physical verification reveals missing non-consumable assets, the verification committee must document the discrepancy in the verification report. The Head of Office is required to initiate an immediate administrative inquiry to investigate the cause of the loss, fix responsibility for negligence, and initiate formal recovery or write-off procedures under financial rules."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "9fa843c0-07ca-4ef8-8a03-b46ce242181e",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से कौन-सा कार्य वित्तीय औचित्य के उस सिद्धांत का प्रत्यक्ष उल्लंघन है जिसके अनुसार \"व्यय प्रथम दृष्टया अवसर की मांग से अधिक नहीं होना चाहिए\"?",
+      "options_hindi": [
+        "GeM द्वारा अनुमोदित दरों पर माध्यमिक कक्षाओं हेतु मानकीकृत प्रयोगशाला उपकरण खरीदना",
+        "नियमित स्टाफ बैठक आयोजित करने हेतु सरकारी विद्यालय कोष का उपयोग करके पांच सितारा (5-स्टार) होटल में बैंक्वेट हॉल बुक करना",
+        "विद्यालय भवन के लिए निर्धारित मानक सरकारी बिजली दरों का भुगतान करना",
+        "विद्यालय प्राथमिक उपचार कक्ष हेतु आवश्यक दवाएं और प्राथमिक चिकित्सा सामग्री खरीदना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following actions represents a direct violation of the canon of financial propriety requiring that \"expenditure should not be prima facie more than the occasion demands\"?",
+      "options_english": [
+        "Procuring standardized laboratory equipment for secondary classes at GeM-approved rates",
+        "Booking a banquet hall in a luxury five-star hotel using government school funds to conduct a routine staff meeting",
+        "Paying the standard government electricity tariffs for the school building",
+        "Purchasing necessary first-aid and medical supplies for the school infirmary"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Booking an expensive five-star hotel for a routine staff meeting represents a blatant breach of Rule 21(ii) of GFR 2017, which mandates that \"The expenditure should not be prima facie more than the occasion demands.\"\n\nAnalysis:\n1. Extravagance vs Economy: A routine administrative meeting requires a standard, modest meeting room. Hosting it in a luxury commercial hotel using public educational funds is grossly disproportionate to the administrative occasion, especially when school halls or departmental premises are available at no extra cost.\n2. Legitimate Expenditures: Purchasing lab equipment, paying utility bills, and stocking first-aid supplies are essential, cost-controlled, and proportionate expenditures that satisfy the standards of financial propriety.",
+      "explanation_hindi": "एक नियमित स्टाफ बैठक के लिए एक महंगे पांच सितारा होटल को बुक करना GFR 2017 के नियम 21(ii) का खुला उल्लंघन है, जो यह निर्धारित करता है कि \"व्यय प्रथम दृष्टया अवसर की मांग से अधिक नहीं होना चाहिए।\"\n\nविश्लेषण:\n1. अपव्यय बनाम मितव्ययिता: एक सामान्य प्रशासनिक बैठक के लिए एक साधारण बैठक कक्ष पर्याप्त होता है। सरकारी विद्यालय कोष से लग्जरी होटल में ऐसी बैठक आयोजित करना अवसर की तुलना में अत्यधिक और असंगत व्यय है, विशेषकर जब विद्यालय सभागार बिना किसी अतिरिक्त लागत के उपलब्ध हो।\n2. वैध व्यय: प्रयोगशाला उपकरण खरीदना, उपयोगिता बिलों का भुगतान करना और प्राथमिक उपचार सामग्री रखना आवश्यक, लागत-नियंत्रित और आनुपातिक व्यय हैं जो वित्तीय औचित्य की कसौटी पर खरे उतरते हैं।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) Organizing a routine staff meeting in a five- star hotel using school funds.",
+        "Answer explanation extracted from supplied reference material: star hotel using school funds. Hosting a routine departmental staff meeting in an expensive luxury venue represents an extravagant expenditure that clearly exceeds what the occasion reasonably demands. Standards of financial propriety require maintaining strict economy and choosing cost-effective options for public business. Unnecessary lavish spending of public funds on basic routine administrative functions constitutes a direct violation of fundamental financial propriety principles."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "6969dfc8-2a9d-4cb8-be6b-8fe1feaaf891",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "इस सामान्य नियम का कि 'कंडम घोषित वस्तुओं को राजस्व जुटाने के लिए बेचा जाना चाहिए', निम्नलिखित में से कौन-सा एक प्रमुख अपवाद है?",
+      "options_hindi": [
+        "अखंड ऐतिहासिक पीतल की कलाकृतियां जिन्हें प्रशासनिक आदेशों द्वारा कार्यात्मक रूप से अप्रचलित घोषित किया गया है।",
+        "अनुपयोगी सरकारी मोटर वाहन जो अपने निर्धारित परिचालन जीवनकाल को पूरा कर चुके हैं।",
+        "पुराने क्षतिग्रस्त लकड़ी के फर्नीचर जिन्हें नियमित कक्षा के उपयोग के लिए अब ठीक नहीं किया जा सकता।",
+        "अत्यधिक गोपनीय या सुरक्षा संबंधी दस्तावेज जिन्हें सार्वजनिक बिक्री के बिना नष्ट / विखंडित (Shredded) किया जाना अनिवार्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following represents a recognized exception to the general rule that condemned items must be sold through commercial bidding to generate public revenue?",
+      "options_english": [
+        "Intact historic brass artifacts declared functionally obsolete by administrative executive orders.",
+        "Unserviceable government motor vehicles that have exceeded their prescribed operational lifespan.",
+        "Old broken wooden furniture items that can no longer be repaired for classroom use.",
+        "Highly classified, sensitive, or security documents that must be destroyed/shredded rather than sold publicly."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "While GFR 2017 generally mandates that unserviceable assets and scrap be sold via tender or auction to realize revenue for the exchequer (Rule 218), Rule 222 and departmental security instructions provide an explicit exception for classified, secret, or confidential records, confidential examination materials (such as question papers/used answer sheets after prescribed retention periods), and security-sensitive items. To prevent breaches of national security, institutional confidentiality, or personal privacy, such documents must be pulped, shredded, or incinerated under the direct supervision of a gazetted officer, rather than offered for public sale or commercial recycling.",
+      "explanation_hindi": "सामान्यतः जीएफआर (GFR), 2017 के नियम 218 के तहत कंडम संपत्ति और कबाड़ को सार्वजनिक राजस्व अर्जित करने के लिए बेचा जाता है। किंतु जीएफआर के नियम 222 तथा सरकारी सुरक्षा नियमों के अनुसार अति गोपनीय, संवेदनशील या सुरक्षा संबंधी दस्तावेज (जैसे परीक्षा संबंधी गोपनीय अभिलेख, गोपनीय पत्राचार आदि) इसका अनिवार्य अपवाद हैं। गोपनीयता और सुरक्षा के उल्लंघन को रोकने के उद्देश्य से ऐसे संवेदनशील दस्तावेजों को व्यावसायिक रूप से बेचने के बजाय एक राजपत्रित अधिकारी की प्रत्यक्ष देखरेख में कतरकर (shredding), लुगदी बनाकर (pulping) या जलाकर नष्ट करना आवश्यक होता है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) Highly classified or security documents which must be destroyed/shredded without public sale.",
+        "Answer explanation extracted from supplied reference material: must be destroyed/shredded without public sale. While condemned property is generally sold to generate public revenue, highly classified, sensitive, or security-restricted documents represent a clear exception. To prevent unauthorized disclosure of confidential information, security regulations require that such sensitive papers be destroyed or shredded under official supervision rather than offered for public sale or commercial recycling."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "394e687d-5157-4156-b299-897601a56bb8",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "सामान्य वित्तीय नियमावली (GFR), 2017 के अंतर्गत अनुबंध के मानक प्रपत्रों (Standard Forms of Contract) के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\nI. जहाँ कहीं भी संभव और व्यावहारिक हो, अनुबंध के मानक प्रपत्रों को ही अपनाया जाना चाहिए।\nII. किसी विशिष्ट विक्रेता की सुविधा के अनुसार कार्यालय प्रमुख (Head of Office) द्वारा मानक अनुबंध की शर्तों में मनमाने ढंग से बदलाव किया जा सकता है।\nIII. मानक प्रपत्र से किसी भी महत्वपूर्ण विचलन अथवा संशोधन के लिए पूर्व कानूनी जांच (विधिक परीक्षण) और वित्तीय सहमति आवश्यक है।\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल II और III",
+        "केवल I और III",
+        "I, II और III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the standard forms of contract under the General Financial Rules (GFR), 2017:\nI. Standard forms of contract should be adopted wherever feasible and practicable.\nII. The terms of a standard contract can be altered arbitrarily by the Head of Office to accommodate the specific requests of a favored vendor.\nIII. Any significant deviation or departure from the standard form of contract requires prior legal vetting and financial concurrence.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "I and II only",
+        "II and III only",
+        "I and III only",
+        "I, II and III"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under Rule 225(i) and (ii) of the General Financial Rules (GFR), 2017, standard forms of contract must be adopted in all public procurements wherever feasible and available. Standardized contract agreements ensure uniform legal protection, maintain transparency, and mitigate contractual ambiguities. Modifying or diluting standard contract terms arbitrarily to favor specific suppliers or contractors is strictly prohibited under financial propriety canons. Furthermore, Rule 225(ii) explicitly mandates that whenever standard contract forms are not available or significant deviations/modifications from standard conditions are deemed essential, the draft contract must be formally vetted by the Ministry of Law and Justice and concurred with by the Financial Adviser (FA) or competent financial authority prior to execution. Hence, statements I and III are correct, while statement II is incorrect.",
+      "explanation_hindi": "सामान्य वित्तीय नियमावली (GFR), 2017 के नियम 225(i) और (ii) के अनुसार, जहाँ कहीं भी संभव हो, सार्वजनिक खरीद में अनुबंध के मानक प्रपत्रों (Standard Forms of Contract) को ही अपनाया जाना चाहिए। मानक अनुबंध सरकारी हितों की रक्षा करते हैं, विधिक एकरूपता लाते हैं और संविदात्मक अस्पष्टता को रोकते हैं। किसी विशिष्ट विक्रेता को लाभ पहुँचाने के लिए कार्यालय प्रमुख द्वारा मानक अनुबंध की शर्तों में मनमाने ढंग से बदलाव करना वित्तीय औचित्य के सिद्धांतों का पूर्ण उल्लंघन और सख्त वर्जित है। इसके अलावा, नियम 225(ii) यह स्पष्ट प्रावधान करता है कि मानक प्रपत्र से किसी भी महत्वपूर्ण विचलन या संशोधन की स्थिति में अनुबंध निष्पादित करने से पहले कानून एवं न्याय मंत्रालय से विधिक परीक्षण (Legal Vetting) और वित्तीय सलाहकार (FA) से वित्तीय सहमति प्राप्त करना अनिवार्य है। अतः कथन I और III सही हैं, जबकि कथन II गलत है। सही विकल्प C है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (C) I and III",
+        "Answer explanation extracted from supplied reference material: Standard contract forms should be adopted wherever possible to streamline administrative procurement and ensure uniform legal protection. Modifying standard contract terms arbitrarily to favor specific suppliers is strictly prohibited. Any significant deviation from standard contract conditions requires prior legal vetting by the Law Ministry and financial concurrence."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "a524e330-ed74-4579-9aa0-22487ba5565f",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "सामान्य वित्तीय नियमावली (GFR) और संविदा प्रबंधन सिद्धांतों के अंतर्गत 'एकमुश्त अनुबंध' (Lump-sum Contract) को किस रूप में परिभाषित किया जाता है?",
+      "options_hindi": [
+        "एक ऐसा अनुबंध जिसमें ठेकेदार पूर्व-निर्धारित निश्चित कुल राशि के बदले एक निर्दिष्ट और पूर्णतः परिभाषित कार्य को निष्पादित करने के लिए सहमत होता है।",
+        "एक ऐसा अनुबंध जिसमें ठेकेदार को दैनिक श्रमिक उपस्थिति पंजिका (Muster Roll) के आधार पर परिवर्तनीय दैनिक मजदूरी का भुगतान किया जाता है।",
+        "एक अल्पकालिक वाणिज्यिक व्यवस्था जिसके तहत सरकारी कार्यालय आस्थगित साख (क्रेडिट) शर्तों पर परिचालन संबंधी सामान खरीदते हैं।",
+        "एक अनिश्चितकालीन सेवा अनुबंध जिसमें कार्य का दायरा अनिर्धारित होता है और कोई निश्चित बजटीय सीमा तय नहीं होती है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under the principles of public procurement and works contract management outlined in the General Financial Rules (GFR), what defines a 'Lump-sum Contract'?",
+      "options_english": [
+        "A contract under which the contractor agrees to execute a specified and fully defined scope of work for a predetermined, fixed total sum.",
+        "A contract where the contractor is reimbursed variable labor costs calculated strictly on daily worker muster rolls and attendance logs.",
+        "A short-term commercial arrangement where government offices procure consumable stores on extended open credit terms.",
+        "An open-ended service agreement characterized by an undefined scope of deliverables and an unrestricted budgetary ceiling."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "In government works and procurement under GFR and standard Works Manuals, a 'Lump-sum Contract' is an agreement under which a contractor undertakes to execute a complete and accurately defined scope of work or project in accordance with detailed plans and specifications for a single, fixed all-inclusive total sum. The contractor is responsible for completing the entire project within that agreed price, absorbing ordinary cost fluctuations within the agreed scope. Payment is released either upon complete satisfactory finishing or in pre-agreed milestone stages, provided the original design and specifications remain unchanged. Hence, option A accurately defines a lump-sum contract.",
+      "explanation_hindi": "GFR और निर्माण कार्य मैनुअल (Works Manual) के सिद्धांतों के अनुसार, 'एकमुश्त अनुबंध' (Lump-sum Contract) एक ऐसा अनुबंध होता है जिसमें ठेकेदार विस्तृत योजनाओं, विनिर्देशों और ड्राइंग के अनुसार किसी पूर्णतः परिभाषित कार्य या परियोजना को एक पूर्व-निर्धारित, निश्चित कुल राशि (Fixed Total Sum) के बदले पूरा करने का दायित्व लेता है। इस प्रकार के अनुबंध में कार्य के परिभाषित दायरे के भीतर लागत वृद्धि या उतार-चढ़ाव का जोखिम ठेकेदार का होता है, और उसे कार्य पूरा होने पर या पूर्व-निर्धारित मील के पत्थरों (Milestones) के आधार पर निश्चित एकमुश्त राशि का भुगतान किया जाता है। अतः विकल्प A सही उत्तर है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (A) A contract where contractor is paid a fixed sum for completing a specified work.",
+        "Answer explanation extracted from supplied reference material: sum for completing a specified work. A lump-sum contract is an agreement wherein a contractor agrees to execute a completely defined scope of work or project for a single, fixed total sum. The fixed price covers all labor, materials, overheads, and profit, shifting cost-overrun risks to the contractor provided the original project specifications remain unchanged."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "4e3c52cd-b6eb-4b1e-a9f6-56540788447f",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "GFR 2017 के प्रावधानों के अनुसार, निम्नलिखित में से किसे बोली दस्तावेज़ (Bid Document) में शामिल नहीं किया जाना चाहिए?",
+      "options_hindi": [
+        "प्रस्तुत बोलियों को आधिकारिक रूप से खोलने की सटीक तिथि, समय तथा भौतिक या ऑनलाइन स्थान",
+        "आवश्यक वस्तुओं के विस्तृत तकनीकी विनिर्देश, कार्यात्मक मानक और गुणवत्ता के पैमाने",
+        "अस्पष्ट, अपरिभाषित या व्यक्तिपरक (subjective) मूल्यांकन मानदंड जो खरीद प्राधिकरण को मनमाना विवेकाधिकार प्रदान करते हों",
+        "भुगतान की व्यापक शर्तें, संवितरण अनुसूची और आवश्यक परफॉर्मेंस सिक्योरिटी (निष्पादन गारंटी) की मांग"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "According to the provisions of GFR 2017, which of the following elements must NOT be incorporated into a Bid Document?",
+      "options_english": [
+        "The exact date, time, and mode/venue for the official opening of submitted bids",
+        "Detailed technical specifications, functional parameters, and quality benchmarks of the goods required",
+        "Vague, undefined, or subjective evaluation criteria that confer discretionary powers upon the procuring authority",
+        "Comprehensive terms of payment, milestone disbursements, and required performance security guarantees"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Rule 173 of GFR 2017 strictly prescribes that the evaluation criteria in a tender document must be clear, quantifiable, objective, and unambiguous to eliminate arbitrariness, favouritism, and subjective bias. Bid documents must state all criteria in precise terms so that bidders understand how their proposals will be judged. Including vague or subjective parameters confers unchecked discretion upon the evaluation committee, which is contrary to the core procurement principles of transparency and fairness. Essential elements that must be included are bid opening details, technical specifications, payment terms, and warranty/security requirements.",
+      "explanation_hindi": "GFR 2017 के नियम 173 के तहत यह अनिवार्य है कि निविदा दस्तावेज़ में मूल्यांकन मानदंड स्पष्ट, निष्पक्ष, वस्तुनिष्ठ (objective) और मापने योग्य होने चाहिए ताकि किसी भी प्रकार के मनमानेपन या पक्षपात को समाप्त किया जा सके। बोली दस्तावेज़ में अस्पष्ट या व्यक्तिपरक (subjective) मानदंड शामिल करना पूरी तरह निषिद्ध है क्योंकि इससे खरीद समिति को अनुचित विवेकाधिकार मिलता है, जो खरीद की निष्पक्षता को भंग करता है। बोलियां खोलने का समय/स्थान, तकनीकी विनिर्देश, भुगतान शर्तें और निष्पादन गारंटी जैसे स्पष्ट नियम बोली दस्तावेज़ के अनिवार्य अंग हैं।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (C) Vague and subjective evaluation criteria that give arbitrary discretion to the buyer",
+        "Answer explanation extracted from supplied reference material: that give arbitrary discretion to the buyer Bid documents must clearly state objective, unambiguous, and measurable evaluation parameters to ensure total fairness and transparency in vendor selection. Including vague or subjective evaluation criteria grants arbitrary discretion to the procuring official, which violates fundamental procurement principles. All criteria regarding technical eligibility, price evaluation, payment terms, delivery schedules, and required guarantees must be precisely defined."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "a8b5aded-c73e-4d1c-8876-2c56214288cf",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को अभिकथन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअभिकथन (A): किसी सरकारी सेवक को यात्रा भत्ता (TA) का दूसरा अग्रिम सामान्यतः तब तक नहीं दिया जाना चाहिए जब तक कि पहले अग्रिम का हिसाब प्रस्तुत और समायोजित न कर दिया गया हो।\nकारण (R): अग्रिमों का तत्काल और समयबद्ध समायोजन व्यक्तियों के हाथों में सरकारी धन के अनधिकृत संचय को रोकने तथा सार्वजनिक धन के गबन को रोकने के लिए अनिवार्य है।\nउपर्युक्त कथनों के आलोक में, नीचे दिए गए विकल्पों में से सही उत्तर का चयन कीजिए:",
+      "options_hindi": [
+        "(A) और (R) दोनों सही हैं और (R), (A) की सही व्याख्या है",
+        "(A) और (R) दोनों सही हैं, लेकिन (R), (A) की सही व्याख्या नहीं है",
+        "(A) सही है, लेकिन (R) गलत है",
+        "(A) गलत है, लेकिन (R) सही है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A): A second advance for Travelling Allowance (TA) should not normally be granted to a government servant until an account has been rendered and adjusted for the first advance.\nReason (R): Immediate and timely adjustment of advances is essential to prevent unauthorized accumulation of public money in the hands of individuals and to prevent misappropriation.\nIn light of the above statements, choose the correct answer from the options given below:",
+      "options_english": [
+        "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+        "(A) is true but (R) is false",
+        "(A) is false but (R) is true"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Rule 291 of GFR 2017 and general principles of government financial accounting:\n- Assertion (A) is true: Financial rules explicitly dictate that no second advance for travel or other official purposes should normally be granted to an employee while a previous advance remains outstanding and unadjusted. Sanctioning overlapping advances without settlement of prior accounts is a grave procedural irregularity.\n- Reason (R) is true: The foundational rationale for this restriction is financial prudence and internal audit control. Allowing advances to remain unadjusted results in unauthorized retention and accumulation of government cash in private hands, increasing the risk of loss, cash hoarding, and fraudulent misappropriation of public funds.\nMoreover, Reason (R) provides the exact logical and regulatory justification for why Assertion (A) is strictly enforced.\nTherefore, both (A) and (R) are true, and (R) is the correct explanation of (A).",
+      "explanation_hindi": "जीएफआर 2017 के नियम 291 तथा सरकारी वित्तीय लेखांकन के सामान्य सिद्धांतों के अनुसार:\n- अभिकथन (A) सही है: वित्तीय नियमों में यह स्पष्ट रूप से निर्धारित है कि किसी भी कर्मचारी को यात्रा या अन्य आधिकारिक उद्देश्यों हेतु दूसरा अग्रिम तब तक स्वीकृत नहीं किया जाना चाहिए जब तक कि पहले अग्रिम का पूर्ण हिसाब प्रस्तुत और समायोजित न कर दिया गया हो। पिछले खातों के निपटारे के बिना नया अग्रिम देना गंभीर प्रक्रियात्मक अनियमितता है।\n- कारण (R) सही है: इस प्रतिबंध का मूल आधार वित्तीय सतर्कता और आंतरिक लेखापरीक्षा नियंत्रण है। अग्रिमों को असमायोजित छोड़ने से व्यक्तियों के हाथों में सरकारी धन का अनधिकृत संचय और प्रतिधारण होता है, जिससे वित्तीय लापरवाही, धन के अनुचित उपयोग और सार्वजनिक धन के गबन का जोखिम काफी बढ़ जाता है।\nइसके अतिरिक्त, कारण (R) सीधे तौर पर यह सिद्ध करता है कि अभिकथन (A) को एक सख्त वित्तीय नियंत्रण के रूप में क्यों लागू किया गया है।\nअतः (A) और (R) दोनों सही हैं और (R), (A) की सही व्याख्या है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "Answer explanation extracted from supplied reference material: correct explanation of (A) Financial rules dictate that a second travel advance should not be sanctioned to an employee until the previous advance has been fully accounted for or adjusted. Timely settlement prevents the improper accumulation of public funds in individual hands, ensures accurate accounting, and mitigates risks of financial negligence, unauthorized retention, or potential misappropriation of government funds."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "8fbf982b-4ac0-4445-82d4-4371255344da",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "GFR 2017 के नियम 144 (सार्वजनिक खरीद के मौलिक सिद्धांत) के तहत निर्धारित निम्नलिखित मानदंडों पर विचार कीजिए:\n\nI. गुणवत्ता और प्रकार के संदर्भ में विनिर्देश संगठन की बुनियादी आवश्यकताओं को पूरा करने वाले होने चाहिए और उनमें अनावश्यक सुविधाएं शामिल नहीं होनी चाहिए।\nII. इन्वेंटरी लॉक-अप को रोकने के लिए वास्तविक आवश्यकता से अधिक मात्रा में खरीद से बचने की सावधानी बरती जानी चाहिए।\nIII. एक निष्पक्ष, पारदर्शी और उचित प्रक्रिया का पालन करते हुए प्रस्ताव आमंत्रित किए जाने चाहिए।\nIV. तकनीकी विनिर्देशों को इस प्रकार प्रतिबंधात्मक रूप से तैयार किया जाना चाहिए कि बोली केवल एक पसंदीदा ब्रांड तक ही सीमित रहे।\n\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "केवल I, II और III",
+        "केवल II, III और IV",
+        "केवल I, III और IV",
+        "I, II, III और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following yardsticks laid down under Rule 144 of GFR 2017 (Fundamental principles of public buying):\n\nI. The specifications in terms of quality and type should meet the basic needs of the organization without including superfluous features.\nII. Care should be taken to avoid purchasing quantities in excess of genuine requirement to prevent inventory lock-up.\nIII. Offers should be invited following a fair, transparent, and reasonable procedure.\nIV. Technical specifications should be drawn up in a restrictive manner to limit the bidding exclusively to a preferred single brand.\n\nWhich of the statements given above are correct?",
+      "options_english": [
+        "I, II and III only",
+        "II, III and IV only",
+        "I, III and IV only",
+        "I, II, III and IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Statements I, II, and III are correct, whereas Statement IV directly violates Rule 144.\n\nStatutory Mandate under Rule 144 of GFR 2017:\n1. Objective Specifications (Rule 144(i)(a)): The description of the subject matter of procurement must be objective, functional, and meet the basic needs of the organization without incorporating superfluous or luxury features.\n2. Prohibition of Brand Bias (Rule 144(i)(b)): Technical specifications shall NOT indicate a requirement for a particular trademark, trade name, patent, design, origin, or specific producer unless there is no other sufficiently precise way of describing the requirements (and even then, words like \"or equivalent\" must be included). Tailoring specifications to favor a single vendor/brand is prohibited.\n3. Quantity Control (Rule 144(ii)): Over-purchasing leads to wastage and inventory holding costs.\n4. Transparency (Rule 144(iii)): Procurement must be conducted through an open, transparent, and non-discriminatory competitive process.",
+      "explanation_hindi": "कथन I, II और III सही हैं, जबकि कथन IV नियम 144 का सीधा उल्लंघन करता है।\n\nGFR 2017 के नियम 144 के तहत वैधानिक अधिदेश:\n1. वस्तुनिष्ठ विनिर्देश (नियम 144(i)(a)): खरीद की विषय-वस्तु का विवरण वस्तुनिष्ठ और कार्यात्मक होना चाहिए, जो बिना किसी अनावश्यक या विलासितापूर्ण विशेषताओं के संगठन की बुनियादी जरूरतों को पूरा करे।\n2. ब्रांड पक्षपात का निषेध (नियम 144(i)(b)): तकनीकी विनिर्देशों में किसी विशेष ट्रेडमार्क, ब्रांड नाम, पेटेंट, डिजाइन या विशिष्ट निर्माता का उल्लेख नहीं होना चाहिए, जिससे प्रतिस्पर्धा प्रतिबंधित होती हो। किसी एक विक्रेता/ब्रांड को लाभ पहुंचाने के लिए विनिर्देश तैयार करना पूरी तरह प्रतिबंधित है।\n3. मात्रा नियंत्रण (नियम 144(ii)): वास्तविक आवश्यकता से अधिक खरीद करने से बर्बादी और पूंजी अवरुद्ध होती है।\n4. पारदर्शिता (नियम 144(iii)): खरीद प्रक्रिया खुली, पारदर्शी और गैर-भेदभावपूर्ण प्रतिस्पर्धी प्रणाली के माध्यम से आयोजित की जानी चाहिए।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) I, II and III",
+        "Answer explanation extracted from supplied reference material: Public procurement yardsticks mandate that technical specifications meet actual organizational requirements without including unnecessary, restrictive, or luxurious features. Procuring authorities must avoid purchasing quantities exceeding actual needs and must invite offers through transparent, competitive procedures. Drawing up specifications to favor or restrict bidding to a single brand is strictly prohibited, as procurement must remain open and non-discriminatory."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "9fbe5467-8dfb-43a2-b5e9-4cc6b561f8e3",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "गवर्नमेंट ई-मार्केटप्लेस (GeM) पर खरीद सीमाओं (वित्तीय सीमाओं) के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\nI. ₹25,000 तक की खरीद GeM पर उपलब्ध किसी भी आपूर्तिकर्ता के माध्यम से की जा सकती है, बशर्ते वह वांछित गुणवत्ता, विनिर्देश और वितरण अवधि को पूरा करता हो।\nII. ₹25,000 से अधिक और ₹5,00,000 तक की खरीद कम से कम तीन विभिन्न निर्माताओं के उपलब्ध विक्रेताओं में से सबसे कम मूल्य वाले (L1) विक्रेता के माध्यम से की जानी चाहिए।\nIII. ₹5,00,000 से अधिक की खरीद के लिए GeM पर ऑनलाइन बिडिंग (बोली) या ई-रिवर्स ऑक्शन अनिवार्य है।\nIV. केंद्र सरकार के मंत्रालयों और विभागों के लिए GeM के माध्यम से खरीद करना वैकल्पिक (ऐच्छिक) है।\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "I, II और III",
+        "I, III और IV",
+        "II, III और IV",
+        "I, II, III और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding procurement limits on the Government e-Marketplace (GeM):\nI. Purchases up to Rs. 25,000 can be made through any of the available suppliers on GeM meeting the requisite quality, specification, and delivery period.\nII. Purchases above Rs. 25,000 and up to Rs. 5,00,000 should be made through the L1 (lowest) bidder among available suppliers of at least three different manufacturers.\nIII. Purchases above Rs. 5,00,000 mandatorily require online bidding or reverse auction on GeM.\nIV. Procurement through GeM is optional for Ministries and Departments of the Central Government.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "I, II and III",
+        "I, III and IV",
+        "II, III and IV",
+        "I, II, III and IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Rule 149 of the General Financial Rules (GFR), 2017, procurement of common-use goods and services through the Government e-Marketplace (GeM) is mandatory, not optional, for all Central Government Ministries, Departments, and attached/subordinate offices, including educational institutions like Kendriya Vidyalayas and Navodaya Vidyalayas. Rule 149 prescribes strict threshold-based procurement procedures:\n1. Direct Purchase (Up to Rs. 25,000): The buyer can procure directly from any available supplier on GeM whose product meets requisite quality, technical specifications, and delivery period.\n2. L1 Comparison (Above Rs. 25,000 up to Rs. 5,00,000): The buyer must compare available products from at least three different manufacturers on GeM and select the lowest cost (L1) bidder that satisfies technical requirements.\n3. Mandatory Online Bidding / e-Reverse Auction (Above Rs. 5,00,000): The procurement must mandatorily be conducted through online bidding or reverse auction tools integrated into GeM.\nBecause GeM is statutory and mandatory under GFR Rule 149, Statement IV is incorrect. Statements I, II, and III are correct.",
+      "explanation_hindi": "सामान्य वित्तीय नियम (GFR), 2017 के नियम 149 के अनुसार, केंद्र सरकार के सभी मंत्रालयों, विभागों तथा उनके अधीनस्थ कार्यालयों (जिनमें केंद्रीय विद्यालय एवं नवोदय विद्यालय जैसे स्वायत्त निकाय भी शामिल हैं) के लिए GeM (गवर्नमेंट ई-मार्केटप्लेस) पर उपलब्ध सामान्य उपयोग की वस्तुओं और सेवाओं की खरीद करना अनिवार्य है, न कि वैकल्पिक। नियम 149 के अंतर्गत वित्तीय सीमाएं इस प्रकार निर्धारित हैं:\n1. ₹25,000 तक: वांछित गुणवत्ता, तकनीकी विनिर्देश और वितरण अवधि को पूरा करने वाले GeM पर उपलब्ध किसी भी विक्रेता से सीधी खरीद की जा सकती है।\n2. ₹25,000 से अधिक तथा ₹5,00,000 तक: GeM पर उपलब्ध कम से कम तीन अलग-अलग निर्माताओं के उत्पादों की तुलना करके सबसे कम मूल्य (L1) वाले योग्य विक्रेता का चयन करना अनिवार्य है।\n3. ₹5,00,000 से अधिक: GeM पर उपलब्ध ऑनलाइन बिडिंग (बोली) या ई-रिवर्स ऑक्शन (e-Reverse Auction) उपकरण के माध्यम से ही खरीद की जानी अनिवार्य है।\nचूंकि GeM से खरीद करना मंत्रालयों/विभागों के लिए अनिवार्य है, अतः कथन IV गलत है। कथन I, II और III सही हैं।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) I, II and III",
+        "Answer explanation extracted from supplied reference material: GeM rules establish structured purchase thresholds: direct purchase up to twenty-five thousand rupees, mandatory comparison among at least three different manufacturers to select the lowest bidder for values up to five lakh rupees, and mandatory online bidding or reverse auction above five lakh rupees. Crucially, GeM procurement is mandatory, not optional, for central government entities."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "4e000e93-d877-424a-a471-11da901ae5d0",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "GFR 2017 के तहत एक मानक सार्वजनिक खरीद चक्र के निम्नलिखित चरणों को सही कालानुक्रमिक क्रम में व्यवस्थित कीजिए:\nI. तकनीकी और वित्तीय बोलियों का मूल्यांकन\nII. आवश्यकता का आकलन और तकनीकी विनिर्देशों का निर्धारण\nIII. अनुबंध प्रदान करना और खरीद आदेश (Purchase Order) जारी करना\nIV. निविदा सूचना का प्रकाशन और बोलियां आमंत्रित करना",
+      "options_hindi": [
+        "II, IV, I, III",
+        "IV, II, I, III",
+        "II, I, IV, III",
+        "IV, I, II, III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Arrange the following sequential stages of a standard public procurement cycle under GFR 2017 in the correct chronological order:\nI. Evaluation of technical and financial bids\nII. Assessment of need and formulation of technical specifications\nIII. Award of contract and issuance of purchase order\nIV. Publication of tender notice and invitation of bids",
+      "options_english": [
+        "II, IV, I, III",
+        "IV, II, I, III",
+        "II, I, IV, III",
+        "IV, I, II, III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A standard public procurement cycle under GFR 2017 and procurement manuals follows a strict chronological workflow:\n1. Stage II (Need & Specifications): The procuring entity determines the precise institutional need, checks budget availability, and frames generic, objective technical specifications (Rule 144).\n2. Stage IV (Tender Publication): The bid document is issued and published on the Central Public Procurement Portal (CPPP) or GeM to invite offers (Rule 161/162).\n3. Stage I (Bid Evaluation): Submitted bids are opened publicly, evaluated by a designated tender committee on technical and financial grounds against the pre-disclosed criteria (Rule 163/173).\n4. Stage III (Contract Award): The competent financial authority approves the recommendation of the lowest evaluated responsive bidder (L1) and issues the formal contract/purchase order (Rule 173(xxi)).\nTherefore, the correct chronological order is II -> IV -> I -> III.",
+      "explanation_hindi": "GFR 2017 और खरीद नियमावली के अंतर्गत सार्वजनिक खरीद प्रक्रिया का सही कालानुक्रमिक चरण इस प्रकार होता है:\n1. चरण II (आवश्यकता और विनिर्देश निर्धारण): सर्वप्रथम संस्थागत आवश्यकता का निर्धारण, बजट की उपलब्धता की जांच और गैर-स्वामित्व वाले सामान्य तकनीकी विनिर्देश तैयार किए जाते हैं (नियम 144)।\n2. चरण IV (निविदा आमंत्रण): निविदा सूचना तैयार करके CPPP पोर्टल, वेबसाइट या GeM पर प्रकाशित की जाती है ताकि बोलियां आमंत्रित की जा सकें (नियम 161/162)।\n3. चरण I (बोलियों का मूल्यांकन): प्राप्त बोलियों को सार्वजनिक रूप से खोला जाता है और निविदा समिति द्वारा पूर्व-निर्धारित मानदंडों पर तकनीकी एवं वित्तीय मूल्यांकन किया जाता है (नियम 163/173)।\n4. चरण III (अनुबंध प्रदान करना): सक्षम प्राधिकारी के अनुमोदनोपरांत सफल न्यूनतम उत्तरदायी बोलीदाता (L1) को अनुबंध प्रदान किया जाता है और आपूर्ति आदेश जारी किया जाता है।\nअतः सही क्रम II -> IV -> I -> III है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) II, IV, I, III",
+        "Answer explanation extracted from supplied reference material: The standard procurement cycle follows a systematic chronological order. First, the procuring entity determines operational requirements and frames technical specifications. Next, the entity publishes the tender invitation to attract vendor offers. Following tender submission, the committee systematically evaluates technical and financial bids against pre-established criteria. Finally, the competent authority approves the selection and issues the formal contract award."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "9341f5b6-8fb3-45fa-81a6-3a2f1ee89c71",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "GFR 2017 के वित्तीय प्रबंधन ढांचे के तहत, सभी अधीनस्थ संवितरण अधिकारियों (Disbursing Officers) द्वारा वित्तीय औचित्य और वित्तीय नियमितता के सामान्य सिद्धांतों का पालन सुनिश्चित करने के लिए प्राथमिक रूप से कौन उत्तरदायी है?",
+      "options_hindi": [
+        "नियंत्रक अधिकारी (Controlling Officer)",
+        "नामित कार्यालय रोकड़िया (Designated Office Cashier)",
+        "वरिष्ठ भंडार संरक्षक (Senior Store Keeper)",
+        "प्रधान सांविधिक लेखापरीक्षक (Principal Statutory Auditor)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under the financial management framework of GFR 2017, who among the following is primarily responsible for ensuring that the general principles of financial propriety and regularity are observed by all subordinate Disbursing Officers?",
+      "options_english": [
+        "The Controlling Officer",
+        "The Designated Office Cashier",
+        "The Senior Store Keeper",
+        "The Principal Statutory Auditor"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under GFR 2017 (Rules 10, 52, and 67), the Controlling Officer holds primary administrative and supervisory responsibility for public expenditure within their department or division.\n\nKey Responsibilities of a Controlling Officer:\n1. Ensuring Propriety and Regularity: The Controlling Officer must verify that all Drawing and Disbursing Officers (DDOs) functioning under their supervision strictly observe the Canons of Financial Propriety, adhere to delegated financial powers, and follow accounting rules.\n2. Budgetary Control: They must ensure expenditure does not exceed sanctioned grants and that allocations are utilized for the purposes intended by Parliament/Government.\n3. Institutional Context: In educational directorates, the Deputy Director of Education or Regional Officer acts as the Controlling Officer overseeing school Principals (DDOs).",
+      "explanation_hindi": "GFR 2017 (नियम 10, 52 और 67) के तहत, नियंत्रक अधिकारी (Controlling Officer) अपने विभाग या प्रभाग के भीतर सार्वजनिक व्यय की प्राथमिक प्रशासनिक और पर्यवेक्षी जिम्मेदारी संभालता है।\n\nनियंत्रक अधिकारी के मुख्य दायित्व:\n1. औचित्य और नियमितता सुनिश्चित करना: नियंत्रक अधिकारी को यह सत्यापित करना होता है कि उसके पर्यवेक्षण में कार्यरत सभी आहरण एवं संवितरण अधिकारी (DDOs) वित्तीय औचित्य के नियमों का कड़ाई से पालन करें, प्रत्यायोजित वित्तीय शक्तियों का उल्लंघन न करें और लेखा नियमों का पालन करें।\n2. बजटीय नियंत्रण: उन्हें यह सुनिश्चित करना होता है कि व्यय स्वीकृत बजट अनुदानों से अधिक न हो और धन का उपयोग उसी उद्देश्य के लिए किया जाए जिसके लिए संसद/सरकार द्वारा इसे स्वीकृत किया गया था।\n3. संस्थागत संदर्भ: शिक्षा निदेशालयों में, उप शिक्षा निदेशक (DDE) या क्षेत्रीय अधिकारी नियंत्रक अधिकारी के रूप में कार्य करते हैं जो विद्यालय प्राचार्यों (DDOs) के वित्तीय कामकाज की निगरानी करते हैं।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) The Controlling Officer",
+        "Answer explanation extracted from supplied reference material: The Controlling Officer is primarily responsible for monitoring and supervising the financial conduct of all disbursing officers placed under their administrative jurisdiction. This responsibility includes verifying that subordinate officers strictly observe the principles of financial propriety, remain within allocated budget limits, maintain accurate accounts, submit timely financial returns, and prevent any unauthorized, wasteful, or illegal expenditure of public funds."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "7f14eb64-85bc-41e7-b96f-5f83e4e9c6bb",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "आंतरिक लेखापरीक्षा रिपोर्ट (Internal Audit Report) के निपटान एवं अनुवर्ती कार्रवाई के संदर्भ में निम्नलिखित में से कौन-सा कथन गलत (INCORRECT) है?",
+      "options_hindi": [
+        "लेखापरीक्षा रिपोर्ट व्यवस्थित रूप से प्रक्रियागत विचलनों, वित्तीय अनियमितताओं और आंतरिक नियंत्रण की कमजोरियों को उजागर करती है।",
+        "कार्यालय प्रमुख (Head of Office) से यह अपेक्षा की जाती है कि वह उठाए गए सभी ऑडिट पैराग्राफों पर एक विस्तृत अनुपालन या की गई कार्रवाई रिपोर्ट (ATR) प्रस्तुत करे।",
+        "उठाए गए सभी ऑडिट आक्षेपों को नजरअंदाज कर दिया जाना चाहिए यदि वे ₹10,000 से कम राशि से संबंधित हों।",
+        "अनिस्तारित गंभीर ऑडिट पैराग्राफ अंततः अनुशासनात्मक या प्रशासनिक विचारार्थ सीधे विभागाध्यक्ष (HoD) को भेजे जा सकते हैं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which of the following statements is INCORRECT regarding the procedure for handling and follow-up of an Internal Audit Report?",
+      "options_english": [
+        "The audit report systematically highlights procedural deviations, financial irregularities, and internal control weaknesses.",
+        "The Head of Office is expected to submit a detailed compliance or Action Taken Report (ATR) addressing all raised audit paragraphs.",
+        "All audit objections raised must be ignored if they relate to amounts under Rs. 10,000.",
+        "Unsettled serious audit paragraphs may eventually be escalated directly to the Head of the Department for disciplinary or administrative consideration."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Statement C is incorrect because there is no provision in government financial accounting or the General Financial Rules (GFR) that permits an establishment to ignore audit objections merely on grounds of a low monetary threshold. Internal audit functions as an integral managerial control and surveillance mechanism designed to detect systemic procedural deviations, accounting errors, non-compliance with rules, and potential embezzlement. Even an objection involving an amount under Rs. 10,000 may reflect a breakdown of internal check systems, unauthorized expenditure, or recurring leakages. Therefore, the Head of Office (HOO) or Drawing and Disbursing Officer (DDO) must submit a prompt, para-wise Action Taken Report (ATR) / compliance reply for every single audit query. Persistently unresolved or grave audit paras are brought to the notice of the Head of Department (HOD) for appropriate remedial and disciplinary action.",
+      "explanation_hindi": "कथन C गलत है क्योंकि सरकारी लेखांकन नियमों अथवा जीएफआर (GFR) में ऐसा कोई नियम नहीं है जो किसी ऑडिट आपत्ति को केवल कम राशि (जैसे ₹10,000 से कम) होने के आधार पर अनदेखा करने की अनुमति देता हो। आंतरिक लेखापरीक्षा (Internal Audit) प्रशासन का एक अनिवार्य आंतरिक नियंत्रण तंत्र है, जिसका उद्देश्य प्रक्रियागत कमियों, वित्तीय अनियमितताओं, खातों की त्रुटियों तथा गबन की संभावनाओं को उजागर करना है। ₹10,000 से कम का आक्षेप भी आंतरिक नियंत्रण प्रणाली की विफलता या लगातार होने वाली प्रक्रियागत अनियमितता का संकेत हो सकता है। अतः कार्यालय प्रमुख (Head of Office) या आहरण एवं संवितरण अधिकारी (DDO) के लिए उठाए गए प्रत्येक ऑडिट पैराग्राफ पर विस्तृत अनुपालन आख्या / कार्रवाई रिपोर्ट (ATR) प्रस्तुत करना अनिवार्य है। अनिस्तारित गंभीर आक्षेपों को सुधारात्मक व अनुशासनात्मक कार्रवाई हेतु विभागाध्यक्ष (HOD) को भेजा जाता है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (c) All audit objections raised must be ignored if relating to amounts under Rs. 10,000.",
+        "Answer explanation extracted from supplied reference material: if relating to amounts under Rs. 10,000. Internal audit reports detail procedural flaws, accounting defects, and financial irregularities observed during inspection. Establishments must submit prompt compliance reports addressing every raised audit paragraph. Audit objections cannot be ignored based on small monetary thresholds, as even minor amounts may reflect serious internal control lapses or systemic financial non-compliance."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "d8f87b3a-f70d-444a-9502-36c554975392",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को अभिकथन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअभिकथन (A): किसी अधिकारी के पास रखे गए स्थायी अग्रिम की पावती (Acknowledgment) प्रतिवर्ष 1 अप्रैल को लेखा अधिकारी को भेजी जानी अनिवार्य है।\nकारण (R): यह वार्षिक पावती प्रत्येक वित्तीय वर्ष की शुरुआत में अग्रिम की भौतिक उपलब्धता और शुद्धता का सत्यापन करती है, जिससे लेखांकन जवाबदेही सुनिश्चित होती है।\nउपर्युक्त कथनों के आलोक में, नीचे दिए गए विकल्पों में से सही उत्तर का चयन कीजिए:",
+      "options_hindi": [
+        "(A) और (R) दोनों सही हैं और (R), (A) की सही व्याख्या है",
+        "(A) और (R) दोनों सही हैं, लेकिन (R), (A) की सही व्याख्या नहीं है",
+        "(A) सही है, लेकिन (R) गलत है",
+        "(A) गलत है, लेकिन (R) सही है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A): The permanent advance held by an officer must be acknowledged by them to the Accounts Officer on the first of April every year.\nReason (R): This annual acknowledgment verifies the physical existence and correctness of the advance at the beginning of each financial year, ensuring accounting accountability.\nIn light of the above statements, choose the correct answer from the options given below:",
+      "options_english": [
+        "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+        "(A) is true but (R) is false",
+        "(A) is false but (R) is true"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under Rule 322(3) of GFR 2017 and Central Government Account (Receipts and Payments) Rules:\n- Assertion (A) is true: Every administrative officer who holds a permanent advance (imprest) is required under statutory rules to formally send an acknowledgment of the exact amount of the advance held by them to the Accounts Officer on the 1st of April each financial year (as well as whenever there is a transfer of administrative charge).\n- Reason (R) is true: An imprest involves public funds kept permanently outside the treasury chest under the immediate physical custody of the DDO. Annual acknowledgment acts as a primary audit verification tool to ensure that the physical cash plus valid unrecouped vouchers equal the total sanctioned advance at the opening of the fiscal year, preventing unrecorded deficits, embezzlement, or unauthorized retention.\nReason (R) provides the exact regulatory objective and direct explanation for why Assertion (A) is mandated.\nTherefore, both (A) and (R) are true, and (R) is the correct explanation of (A).",
+      "explanation_hindi": "जीएफआर 2017 के नियम 322(3) और केंद्रीय सरकारी लेखा (प्राप्ति और भुगतान) नियमों के अनुसार:\n- अभिकथन (A) सही है: स्थायी अग्रिम (इम्प्रेस्ट) रखने वाले प्रत्येक प्रशासनिक अधिकारी के लिए यह वैधानिक अनिवार्यता है कि वह प्रत्येक वित्तीय वर्ष की 1 अप्रैल को (तथा प्रशासनिक प्रभार के हस्तांतरण के समय भी) अपने पास मौजूद अग्रिम की सटीक राशि की औपचारिक पावती (Acknowledgment) लेखा अधिकारी को प्रेषित करे।\n- कारण (R) सही है: इम्प्रेस्ट के अंतर्गत सरकारी खजाने से बाहर डीडीओ की अभिरक्षा में स्थायी नकदी रखी जाती है। वार्षिक पावती एक प्रमुख लेखापरीक्षा सत्यापन साधन के रूप में कार्य करती है, जो यह सुनिश्चित करती है कि नए वित्तीय वर्ष की शुरुआत में भौतिक नकदी और वैध गैर-प्रतिपूरित वाउचरों का योग कुल स्वीकृत अग्रिम के बराबर है, जिससे किसी भी अनधिकृत कमी, गबन या धन के अनुचित उपयोग को रोका जा सके।\nकारण (R) सीधे तौर पर यह स्पष्ट करता है कि अभिकथन (A) की अनिवार्यता क्यों तय की गई है।\nअतः (A) और (R) दोनों सही हैं और (R), (A) की सही व्याख्या है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "Answer explanation extracted from supplied reference material: correct explanation of (A) Officers holding permanent advances are required to formally acknowledge holding the funds on the first day of April each financial year. This annual acknowledgment verifies the physical availability and correctness of cash balances at the start of the year, maintaining accounting accountability and ensuring continuous monitoring of delegated petty cash balances."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "f4b157fe-6868-4de0-a08f-07c00b41b794",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "GFR 2017 के तहत सरकारी खरीद के संदर्भ में \"बोली दस्तावेज़\" (Bid Document / निविदा दस्तावेज़) का क्या तात्पर्य है?",
+      "options_hindi": [
+        "बजट आवंटन और धनराशि की स्वीकृति हेतु प्रशासनिक प्रमुख द्वारा वित्त विभाग को प्रस्तुत किया गया औपचारिक प्रस्ताव।",
+        "अंतिम भुगतान प्राप्त करने के लिए विक्रेता द्वारा लेखा/कोषागार अधिकारी को प्रस्तुत किया गया वाणिज्यिक बिल और चालान।",
+        "संस्थागत भंडार कक्ष में भंडारपाल द्वारा संधारित स्थायी स्टॉक रजिस्टर जिसमें प्राप्त संपत्तियों की प्रविष्टि की जाती है।",
+        "क्रेता/खरीद प्राधिकरण द्वारा जारी विस्तृत आधिकारिक दस्तावेज़ जिसमें निर्देश, तकनीकी विनिर्देश, अनुबंध की शर्तें और मूल्यांकन मानदंड शामिल होते हैं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In the context of government procurement under GFR 2017, what does the term \"Bid Document\" (or Tender Document) signify?",
+      "options_english": [
+        "The formal proposal submitted by an administrative head to the finance ministry for budget sanction and fund release.",
+        "The commercial invoice and delivery receipt presented by the vendor to the treasury officer for final settlement.",
+        "The permanent dead stock register maintained in the institutional storeroom recording received assets.",
+        "The comprehensive official document issued by the buyer containing instructions, technical specifications, terms, and evaluation criteria."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under Rule 168 of GFR 2017 and the Manual for Procurement of Goods, a 'Bid Document' (or Tender Document / Request for Proposal) is the official dossier prepared and issued by the procuring entity to invite bids from prospective suppliers. It lays down all technical requirements, functional specifications, delivery schedules, terms and conditions of contract (both General Conditions of Contract - GCC, and Special Conditions of Contract - SCC), instructions to bidders (ITB), bid evaluation methodology, and qualification criteria. For an institutional head or DDO, the bid document serves as the legal and operational bedrock for evaluating competing bids objectively and concluding an enforceable public contract.",
+      "explanation_hindi": "GFR 2017 के नियम 168 तथा माल खरीद नियमावली के अनुसार, 'बोली दस्तावेज़' (Bid Document / Tender Document) खरीद प्राधिकरण द्वारा जारी किया गया वह वैधानिक दस्तावेज़ है जिसके आधार पर पात्र बोलीदाताओं से निविदाएं आमंत्रित की जाती हैं। इस दस्तावेज़ में बोलीदाताओं के लिए निर्देश (ITB), विस्तृत तकनीकी विनिर्देश, गुणवत्ता मानक, संविदा की सामान्य और विशेष शर्तें (GCC व SCC), पात्रता शर्तें, मूल्यांकन पद्धति और आपूर्ति की समय-सीमा स्पष्ट रूप से वर्णित होती है। यह क्रेता और विक्रेता के बीच पारदर्शी, निष्पक्ष और निष्पादनीय अनुबंध का आधार बनता है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) The document issued containing instructions, specifications, contract conditions, and evaluation criteria.",
+        "Answer explanation extracted from supplied reference material: instructions, specifications, contract conditions, and evaluation criteria. A bid document is a comprehensive official dossier issued by a procuring authority to invite commercial offers from potential suppliers. It sets out detailed technical specifications, operational scope, performance parameters, bidding instructions, general and special contract terms, evaluation criteria, and submission deadlines. It serves as the legal and technical baseline for evaluating incoming bids and establishing contract agreements."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "6d27d895-526e-4dd6-adbe-47723d7b83b3",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "जीएफआर (GFR) के अंतर्गत कंडम (अनुपयोगी घोषित) वस्तुओं के निपटान (Disposal) के संबंध में निम्नलिखित कथनों पर विचार कीजिए:\nI. विज्ञापित निविदा (Advertised Tender) या सार्वजनिक नीलामी (Public Auction) के माध्यम से बोलियां प्राप्त करके कंडम वस्तुओं का निपटान किया जा सकता है।\nII. ई-कचरे (E-waste) का निपटान पर्यावरण, वन और जलवायु परिवर्तन मंत्रालय द्वारा जारी वैधानिक दिशा-निर्देशों के अनुसार किया जाना अनिवार्य है।\nIII. यदि अवशिष्ट मूल्य (Residual Value) बहुत कम है, तो पारदर्शी प्रक्रिया का पालन करते हुए स्थानीय कबाड़ी (Scrap Dealer) के माध्यम से वस्तुओं का निपटान किया जा सकता है।\nIV. कंडम घोषित वस्तुओं को कार्यालयाध्यक्ष के व्यक्तिगत मित्रों को उपहार के रूप में दिया जा सकता है।\nउपर्युक्त कथनों में से कौन-से सही हैं?",
+      "options_hindi": [
+        "I, II और III",
+        "I, III और IV",
+        "II, III और IV",
+        "I, II, III और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the disposal of condemned goods under GFR 2017:\nI. Condemned items can be disposed of by inviting bids through advertised tender or public auction.\nII. E-waste must be disposed of in strict accordance with the statutory guidelines issued by the Ministry of Environment, Forest and Climate Change (MoEFCC).\nIII. If the residual value is very low, the goods may be disposed of through a local scrap dealer following a transparent competitive process.\nIV. Condemned goods may be gifted to the personal friends or acquaintances of the Head of Office.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "I, II and III",
+        "I, III and IV",
+        "II, III and IV",
+        "I, II, III and IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Rule 218 of GFR 2017 outlines the modes of disposal of surplus, obsolete, or unserviceable goods: (i) Advertised tender or public auction (Rule 218(1)(i)); (ii) Inviting quotations from scrap dealers when the assessed residual value is negligible or below prescribed limits (Rule 218(1)(ii)); and (iii) Hazardous and electronic waste must be disposed of strictly in compliance with statutory rules such as the E-Waste (Management) Rules issued by the Ministry of Environment, Forest and Climate Change (MoEFCC) through authorized dismantlers/recyclers. Public property cannot be gifted or transferred to personal friends or relatives of government officers under any circumstances (Statement IV is completely illegal and false). Thus, Statements I, II, and III are correct.",
+      "explanation_hindi": "जीएफआर (GFR), 2017 के नियम 218 के तहत कंडम या अनुपयोगी वस्तुओं के निपटान के स्पष्ट नियम दिए गए हैं: (i) विज्ञापित निविदा या सार्वजनिक नीलामी द्वारा निपटान (नियम 218(1)(i)); (ii) जब अवशिष्ट मूल्य अत्यंत कम हो, तो प्रतिस्पर्धी कोटेशन प्राप्त करके स्थानीय कबाड़ी/स्क्रैप डीलर को पारदर्शी तरीके से बेचना (नियम 218(1)(ii)); तथा (iii) ई-कचरे और बैटरियों का निपटान पर्यावरण, वन एवं जलवायु परिवर्तन मंत्रालय द्वारा अधिसूचित ई-अपशिष्ट (प्रबंधन) नियमों के अनुसार केवल अधिकृत पुनर्चक्रणकर्ताओं (authorized recyclers) के माध्यम से किया जाना अनिवार्य है। किसी भी सरकारी सामग्री को अधिकारियों के मित्रों या परिचितों को उपहार में देना गैर-कानूनी और वित्तीय कदाचार है (कथन IV असत्य है)। अतः कथन I, II और III सही हैं।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) I, II and III",
+        "Answer explanation extracted from supplied reference material: Condemned goods must be disposed of transparently through public auctions, advertised tenders, or direct sales to scrap dealers when residual value is minimal. Disposal of electronic waste must strictly comply with statutory environmental e-waste management regulations. Gifting public property to acquaintances or personal friends of administrative officers is strictly illegal and prohibited."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "6ea6f69a-61a9-4bae-acb4-74488b35ec55",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "GFR के तहत भंडारों के वर्गीकरण और प्रबंधन के संबंध में निम्नलिखित में से कौन-सा कथन गलत (INCORRECT) है?",
+      "options_hindi": [
+        "कार्यालय स्टेशनरी, प्रयोगशाला रसायन और सफाई सामग्री जैसी वस्तुओं को उपभोज्य भंडार (Consumable stores) के रूप में वर्गीकृत किया जाता है।",
+        "कंप्यूटर, कार्यालयीन फर्नीचर और प्रयोगशाला उपकरणों को गैर-उपभोज्य भंडार / अचल परिसंपत्तियों के रूप में वर्गीकृत किया जाता है।",
+        "गैर-उपभोज्य वस्तुओं को किसी कर्मचारी को जारी (इशू) करते ही स्टॉक रजिस्टर से अपलेखित (Right-off / बट्टे खाते में डालना) कर दिया जाता है।",
+        "उपभोज्य वस्तुएं वे हैं जो नियमित कार्यालयीन उपयोग के दौरान अल्प समय में समाप्त या खर्च हो जाती हैं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Identify the INCORRECT statement regarding the classification, maintenance, and handling of stores under GFR 2017.",
+      "options_english": [
+        "Items such as office stationery, laboratory chemicals, and cleaning supplies are classified as consumable stores.",
+        "Computers, office furniture, and scientific apparatus are classified as non-consumable stores / fixed assets.",
+        "Non-consumable stores are written off and struck off from the asset register as soon as they are issued to an employee.",
+        "Consumable stores are those items that are utilized, transformed, or exhausted within a short timeframe through routine office use."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under Rule 211 of GFR 2017, non-consumable stores encompass durable goods (e.g., computers, furniture, scientific instruments, sports gear). When such items are issued to a staff member, teacher, or department, it represents merely a transfer of operational/physical custody recorded through an internal issue register or custody receipt; it DOES NOT permit striking off or writing off the asset from the master Stock Register. A non-consumable item remains on the institution's books as a government asset throughout its useful life until it is surveyed by a condemnation board, declared surplus/unserviceable/obsolete under Rule 217-219, and formally written off by the competent financial authority. Hence, statement (C) is completely incorrect.",
+      "explanation_hindi": "सामान्य वित्तीय नियम (GFR), 2017 के नियम 211 के अनुसार, गैर-उपभोज्य भंडार (Non-consumable stores) में टिकाऊ वस्तुएं जैसे कंप्यूटर, फर्नीचर, प्रयोगशाला उपकरण आदि शामिल होते हैं। जब ये वस्तुएं किसी कर्मचारी या विभाग को उपयोग हेतु जारी की जाती हैं, तो यह केवल भौतिक अभिरक्षा (Custody) का अंतरण होता है। इसे स्टॉक रजिस्टर से हटाया या बट्टे खाते (Write-off) में नहीं डाला जा सकता। यह वस्तु तब तक सरकारी संपत्ति रजिस्टर में बनी रहती है जब तक कि नियमानुसार (नियम 217-219 के तहत) एक सर्वेक्षण समिति द्वारा इसे अनुपयोगी, अप्रचलित या कबाड़ घोषित करके सक्षम प्राधिकारी द्वारा औपचारिक रूप से अपलेखित न कर दिया जाए। अतः कथन (C) गलत है।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (C) Non-consumable stores are written off from the register as soon as issued to an employee.",
+        "Answer explanation extracted from supplied reference material: the register as soon as issued to an employee. Non-consumable stores represent durable items like computers, furniture, and laboratory apparatus. Issuing non-consumable items to an employee or department transfers physical custody but does not permit writing them off from stock registers. They remain recorded assets until formally declared surplus, unserviceable, or condemned through established administrative procedures at the end of their useful life."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "a5c04dac-a945-4807-bb1c-20c0c4868201",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "सार्वजनिक नीलामी (Public Auction) या निविदा के माध्यम से कबाड़ या अनुपयोगी सामग्री का निपटान करते समय, सक्षम प्राधिकारी या समिति को नीलामी से पूर्व अनिवार्य रूप से कौन-सा वित्तीय कार्य करना चाहिए?",
+      "options_hindi": [
+        "इम्प्रेस्ट (स्थायी अग्रिम) से नीलामीकर्ता को अग्रिम भुगतान करना।",
+        "एक आरक्षित मूल्य (Reserve Price) या उचित आकलित कबाड़ मूल्य निर्धारित करना।",
+        "समाचार पत्र के विज्ञापन में न्यूनतम स्वीकार्य मूल्य को सार्वजनिक रूप से प्रकट करना।",
+        "खरीदारों से सामग्री की सुपुर्दगी (Delivery) के बाद कीमत का मूल्यांकन करने का अनुरोध करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "When disposing of scrap or unserviceable materials through a public auction or competitive bidding, what preliminary financial exercise must the competent authority or evaluation committee determine prior to the sale?",
+      "options_english": [
+        "Disburse advance commission to the auctioneer from the office cash imprest.",
+        "Determine a confidential reserve price or a realistic assessed scrap value.",
+        "Disclose the minimum acceptable floor price in the public newspaper advertisement.",
+        "Request the prospective buyers to determine the final valuation after taking delivery."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Under Rule 218 of GFR 2017 and standard government disposal manuals, before conducting a public auction or opening commercial bids for unserviceable stores, the competent authority/evaluation committee must determine a realistic assessed scrap value and establish a confidential 'Reserve Price'. Fixing a reserve price acts as an essential safeguard against bid-rigging, collusive cartelization among bidders, and distressed underselling of government property, ensuring that public assets are not sold below their true residual market worth.",
+      "explanation_hindi": "जीएफआर (GFR), 2017 के नियम 218 तथा सरकारी निपटान नियमावली के अंतर्गत, सार्वजनिक नीलामी या निविदा प्रक्रिया शुरू करने से पूर्व सक्षम प्राधिकारी अथवा मूल्यांकन समिति द्वारा सामग्री का यथार्थवादी अवशिष्ट मूल्य आंकते हुए एक गोपनीय 'आरक्षित मूल्य' (Reserve Price) निर्धारित करना अनिवार्य होता है। आरक्षित मूल्य तय करना सरकारी संपत्ति के संरक्षण हेतु एक महत्वपूर्ण वित्तीय सुरक्षा उपाय है, जिससे बोलीदाताओं के बीच सिंडिकेट या सांठगांठ (cartelization) को रोका जा सके और सरकारी संपत्ति को उसके उचित बाजार मूल्य से कम पर बिकने से बचाया जा सके।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (B) Determine a reserve price or a reasonable assessed scrap value.",
+        "Answer explanation extracted from supplied reference material: assessed scrap value. Prior to disposing of scrap or unserviceable materials through public auction or tender, the competent authority or evaluation committee must determine a reserve price based on reasonable assessed scrap values. Setting a reserve price prevents the underselling of public property and provides a benchmark to evaluate incoming bids during disposal."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "d6683cd7-32ae-4b3f-ab82-4ea50a2043c8",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "GFR 2017 के नियम 194 के अंतर्गत, अत्यधिक तात्कालिकता (आपात स्थिति) के मामलों में सक्षम प्राधिकारी के अनुमोदन से कोई मंत्रालय या विभाग किस अनुमानित मूल्य तक नामांकन के आधार पर परामर्श सेवाएं प्राप्त कर सकता है?",
+      "options_hindi": [
+        "₹50,000 तक",
+        "₹1 लाख तक",
+        "₹10 लाख तक",
+        "₹2.5 लाख तक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; General Financial Rules (GFR), 2017",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under Rule 194 of GFR 2017, up to what estimated value can a Ministry or Department procure consulting services on a nomination basis in cases of extreme urgency, with the approval of the competent authority?",
+      "options_english": [
+        "Up to Rs. 50,000",
+        "Up to Rs. 1 Lakh",
+        "Up to Rs. 10 Lakhs",
+        "Up to Rs. 2.5 Lakhs"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under Rule 194 of the General Financial Rules (GFR), 2017 ('Procurement of Consulting services by nomination'), single-source selection or engagement of a consultant on a nomination basis without open competitive bidding is an exception strictly restricted to special circumstances, such as:\n(i) In situations of extreme urgency or emergency, or\n(ii) When only a particular consulting firm has exclusive technical ownership or intellectual capability.\nRule 194 specifically provides that in cases of emergency, a Ministry or Department may procure consulting services on a direct nomination basis up to an estimated value of Rs. 2.5 Lakhs (Rupees Two Lakhs and Fifty Thousand only) per occasion, subject to detailed recorded justifications and the prior approval of the competent authority / Head of Department.",
+      "explanation_hindi": "सामान्य वित्तीय नियम (GFR), 2017 के नियम 194 ('नामांकन के आधार पर परामर्श सेवाओं की खरीद') के अनुसार, बिना खुली प्रतिस्पर्धा के एकल स्रोत या नामांकन के आधार पर किसी सलाहकार का चयन केवल असाधारण परिस्थितियों में ही किया जा सकता है, जैसे:\n(क) अत्यधिक तात्कालिकता अथवा आपात स्थिति के मामलों में, अथवा\n(ख) जब केवल किसी एक विशिष्ट परामर्श फर्म के पास ही अनिवार्य तकनीकी स्वामित्व या विशेषज्ञता उपलब्ध हो।\nनियम 194 के अनुसार, आपात स्थिति में सक्षम प्राधिकारी / विभागाध्यक्ष के पूर्व अनुमोदन और उचित लिखित औचित्य के साथ अधिकतम ₹2.5 लाख (दो लाख पचास हजार रुपये) की अनुमानित लागत तक ही नामांकन के आधार पर परामर्श सेवाएं प्राप्त की जा सकती हैं।",
+      "topic": "General Financial Rules (GFR), 2017",
+      "difficulty": "hard",
+      "key_facts": [
+        "Printed answer key: (D) Up to Rs. 2.5 Lakhs",
+        "Answer explanation extracted from supplied reference material: Rule 194 of the General Financial Rules permits the engagement of a consultant on a direct nomination basis in situations of extreme urgency or emergency. Under this rule, single- source nomination is restricted to consulting assignments with an estimated value up to two lakh fifty thousand rupees, requiring formal justification and approval from the competent authority."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    }
+  ]
+}

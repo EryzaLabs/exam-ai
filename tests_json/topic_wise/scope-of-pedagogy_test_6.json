@@ -1,0 +1,769 @@
+{
+  "test_id": "86d58876-1d1f-4487-8731-b0a71ad8b1fd",
+  "test_name": "Topic Test: SCOPE OF PEDAGOGY - Part 6",
+  "type": "topic_wise",
+  "topic": "scope-of-pedagogy",
+  "created_at": "2026-10-25T18:14:59.033898",
+  "questions": [
+    {
+      "id": "fe2045b3-b790-486f-854f-cd0a5238e471",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "शैक्षिक मापन और पद-विश्लेषण में, किसी प्रश्न का 'विभेदन सूचकांक / विभेदीकरण क्षमता' (Discrimination Index - D) शिक्षक को क्या जानकारी प्रदान करता है?",
+      "options_hindi": [
+        "यह प्रश्न उच्च उपलब्धि प्राप्त करने वाले और निम्न उपलब्धि प्राप्त करने वाले विद्यार्थियों के बीच कितनी सटीकता से अंतर करता है",
+        "क्या यह प्रश्न किसी विशिष्ट सामाजिक, सांस्कृतिक या भाषाई समूह के प्रति अनुचित पूर्वाग्रह प्रदर्शित करता है",
+        "विद्यार्थियों द्वारा प्रश्न को पढ़ने और उत्तर देने में लिया गया सटीक औसत समय",
+        "प्रश्न की भाषाई जटिलता, वाक्य विन्यास और व्याकरण संबंधी शुद्धता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In educational measurement and psychometric evaluation, what information does the 'Discrimination Index' (D-value) of an assessment item convey to the educator?",
+      "options_english": [
+        "The efficacy of the item in distinguishing between high-achieving and low-achieving students",
+        "The extent to which the item displays cultural, linguistic, or gender bias against specific student demographics",
+        "The average duration in seconds required by an examinee to comprehend and solve the question",
+        "The syntactic complexity, linguistic readability, and grammatical accuracy of the question stem"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "In item analysis, the Discrimination Index (often denoted as D) measures the capacity of an individual test item to discriminate effectively between examinees who possess high mastery of the subject matter and those who have low mastery. It is calculated by dividing test-takers into an upper scoring group (usually top 27%) and a lower scoring group (bottom 27%): D = (R_U - R_L) / N_G, where R_U and R_L are correct answers in the upper and lower groups respectively, and N_G is the number of students in one group. A high positive discrimination index (e.g., D >= 0.40) indicates that top performers answered the item correctly far more often than low performers, proving the item's technical quality. An item with zero or negative discrimination is defective because it either fails to differentiate or is answered correctly more often by guessing/low-scoring students.",
+      "explanation_hindi": "पद विश्लेषण (Item Analysis) में 'विभेदन सूचकांक' (Discrimination Index - D) यह मापता है कि कोई प्रश्न उच्च उपलब्धि वाले (उच्च अंक प्राप्त करने वाले शीर्ष 27% छात्र) और निम्न उपलब्धि वाले (न्यूनतम अंक प्राप्त करने वाले 27% छात्र) विद्यार्थियों के बीच किस सीमा तक भेद करता है। इसका सूत्र D = (R_U - R_L) / N होता है, जहाँ R_U उच्च समूह में सही उत्तर देने वालों की संख्या और R_L निम्न समूह में सही उत्तर देने वालों की संख्या है। एक धनात्मक विभेदन मान (विशेष रूप से 0.40 या अधिक) यह दर्शाता है कि प्रतिभाशाली छात्रों ने इस प्रश्न को कमजोर छात्रों की तुलना में काफी बेहतर हल किया है, जिससे प्रश्न की गुणवत्ता प्रमाणित होती है। शून्य या ऋणात्मक विभेदन वाला प्रश्न त्रुटिपूर्ण माना जाता है जिसे संशोधित या हटा दिया जाना चाहिए।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (A) How well the item differentiates between high-performing and low-performing students",
+        "Answer explanation extracted from supplied reference material: The Discrimination Index of a test item measures its ability to differentiate effectively between high- achieving and low-achieving students. A positive discrimination index indicates that high-scoring students answered the item correctly more frequently than low-scoring students, confirming that the item effectively measures targeted academic competence across performance tiers."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "bff0430e-461c-4024-bf9f-34491f742e01",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "परिणाम-आधारित शिक्षा (Outcome-Based Education - OBE) की रूपरेखा के अंतर्गत, पाठ्यचर्या और शिक्षण विधियों को तैयार करने से पहले शिक्षण संस्थानों को सबसे पहले क्या निर्धारित करना चाहिए?",
+      "options_hindi": [
+        "कक्षा शिक्षण के लिए निर्धारित की जाने वाली विशिष्ट पाठ्यपुस्तकें और पठन सामग्री",
+        "स्पष्ट और मापने योग्य अधिगम प्रतिफल जिन्हें विद्यार्थियों को कार्यक्रम की समाप्ति पर प्राप्त करना चाहिए",
+        "शिक्षण संकाय के लिए न्यूनतम औपचारिक शैक्षणिक योग्यताएँ और भर्ती के मानक",
+        "शैक्षणिक सत्र के लिए कुल प्रशासनिक परिचालन बजट और वित्तीय आवंटन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Under the framework of Outcome-Based Education (OBE), what must educational institutions formulate and define first before designing curriculum and instruction?",
+      "options_english": [
+        "The specific textbook series and instructional materials to be prescribed for the class",
+        "The tangible learning outcomes and competencies students should achieve at the end of the program",
+        "The formal academic credentials and recruitment guidelines for the teaching staff",
+        "The total operational budget and institutional financial allocations for the academic year"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Outcome-Based Education (OBE), popularized by educational theorist William Spady, organizes an entire educational system around clearly articulated goals termed 'Learning Outcomes'. Rather than beginning with inputs (such as textbooks, hours of instruction, or institutional facilities), OBE relies on 'backward design' (or constructive alignment, as formulated by John Biggs): (1) The institution first establishes the clear, measurable knowledge, competencies, and values that students must be able to demonstrate upon graduating or completing a unit (Program Outcomes / Course Outcomes); (2) Instructional strategies, experiential learning tasks, and learning materials are then backwards-engineered to cultivate those outcomes; (3) Criterion-referenced assessment systems are calibrated specifically to verify outcome achievement. Inputs like textbooks (Option A) and budgets (Option D) are strictly secondary operational resources.",
+      "explanation_hindi": "विलियम स्पैडी द्वारा प्रतिपादित 'परिणाम-आधारित शिक्षा' (Outcome-Based Education - OBE) एक ऐसा शैक्षिक दर्शन है जो संपूर्ण शिक्षण व्यवस्था, पाठ्यचर्या और मूल्यांकन को इस बात के इर्द-गिर्द संरचित करता है कि शिक्षार्थी अपनी शिक्षा या कार्यक्रम के अंत में क्या जानने और करने में सक्षम होगा। यह 'बैकवर्ड डिज़ाइन' (Backward Design) और 'रचनात्मक संरेखण' (Constructive Alignment) के सिद्धांत पर कार्य करता है: (1) संस्थान सबसे पहले अंतिम गंतव्य निर्धारित करता है—अर्थात कार्यक्रम प्रतिफल (Program Outcomes) और विशिष्ट अधिगम प्रतिफल (Learning Outcomes); (2) इन पूर्व-निर्धारित प्रतिफलों के आधार पर ही शिक्षण रणनीतियाँ, शैक्षणिक सामग्री और कक्षा-गतिविधियाँ तैयार की जाती हैं; (3) अंत में, मूल्यांकन के तरीके इस प्रकार बनाए जाते हैं जो सीधे यह माप सकें कि विद्यार्थी ने उन प्रतिफलों को वास्तव में प्राप्त किया है या नहीं। पाठ्यपुस्तकें, वित्तीय बजट या प्रशासनिक नियम केवल साधन हैं, जबकि विद्यार्थी द्वारा दक्षताओं व अधिगम प्रतिफलों की प्राप्ति ही इसका प्राथमिक साध्य है।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) The learning outcomes students should achieve at the end of the program",
+        "Answer explanation extracted from supplied reference material: Outcome-Based Education requires educational institutions to start with a clear definition of the specific learning outcomes, skills, and competencies students must demonstrate by the end of an educational program. Curriculum content, instructional strategies, and assessment methods are then backwards-designed and constructively aligned to ensure every student successfully achieves those pre-specified outcomes."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "ed869127-b60f-43fc-885a-9e356d8e38ed",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "विलियम हर्ड किलपैट्रिक द्वारा औपचारिक रूप से प्रतिपादित शिक्षण की 'प्रायोजना विधि' (Project Method) दार्शनिक और सैद्धांतिक रूप से किस विचारधारा पर आधारित है?",
+      "options_hindi": [
+        "प्रयोजनवाद (Pragmatism)",
+        "आदर्शवाद (Idealism)",
+        "यथार्थवाद (Realism)",
+        "अस्तित्ववाद (Existentialism)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "The 'Project Method' of teaching, formalized and popularized by William Heard Kilpatrick, is philosophically and theoretically grounded in:",
+      "options_english": [
+        "Pragmatism",
+        "Idealism",
+        "Realism",
+        "Existentialism"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Project Method of education, formulated by William Heard Kilpatrick in his seminal 1918 essay 'The Project Method', is deeply anchored in the philosophy of Pragmatism (Progressivism / Instrumentalism) articulated by his mentor, John Dewey. Pragmatism posits that education is not merely preparation for life, but is living itself; true knowledge emerges from practical action, purposeful experiential problem-solving, and social utility ('learning by doing'). Kilpatrick defined a project as a 'wholehearted purposeful activity proceeding in a social environment.' Pragmatic epistemology rejects rote memorization and passive contemplation, asserting that ideas have meaning and validity only through their real-world consequences and experiential verification.",
+      "explanation_hindi": "'प्रायोजना विधि' (Project Method) का प्रतिपादन 1918 में विलियम हर्ड किलपैट्रिक (William Heard Kilpatrick) ने किया था, जो जॉन डीवी (John Dewey) के प्रमुख शिष्य थे। यह विधि पूर्णतः 'प्रयोजनवाद' (Pragmatism / व्यवहारवाद) के शैक्षिक दर्शन पर आधारित है। प्रयोजनवाद का मानना है कि ज्ञान केवल पुस्तकों में संचित अमूर्त विचारों में नहीं, बल्कि प्रत्यक्ष क्रिया, वास्तविक जीवन के अनुभवों और 'करके सीखने' (Learning by Doing) में निहित है। किलपैट्रिक के अनुसार, 'प्रायोजना एक सोद्देश्य कार्य है जो पूरे मन से सामाजिक वातावरण में पूरा किया जाता है।' इसके विपरीत, आदर्शवाद (Idealism) शाश्वत विचारों पर, यथार्थवाद (Realism) भौतिक वस्तुनिष्ठता पर, और अस्तित्ववाद (Existentialism) व्यक्तिगत स्वतंत्रता पर बल देता है।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (A) Pragmatism",
+        "Answer explanation extracted from supplied reference material: The Project Method of teaching is theoretically grounded in the philosophy of Pragmatism, developed by John Dewey and formalized by William Heard Kilpatrick. Pragmatism asserts that learning occurs through direct action, practical experience, meaningful problem- solving, and real-world social utility, forming the conceptual foundation for student-led classroom project activities."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "95c11de1-313b-4a15-a391-44d71d5ca590",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "हावर्ड गार्डनर के बहु-बुद्धि सिद्धांत के अनुसार, एक विद्यार्थी जो दूसरों के साथ सामाजिक अंतःक्रिया के माध्यम से सबसे प्रभावी ढंग से सीखता है तथा साथियों के मनोभावों, अभिप्रेरणाओं और सामाजिक संकेतों को समझने में असाधारण निपुणता प्रदर्शित करता है, उसमें किस प्रकार की बुद्धि की प्रधानता होती है?",
+      "options_hindi": [
+        "अंतरावैयक्तिक बुद्धि (Intrapersonal intelligence)",
+        "भाषाई बुद्धि (Linguistic intelligence)",
+        "स्थानिक बुद्धि (Spatial intelligence)",
+        "अंतर्वैयक्तिक बुद्धि (Interpersonal intelligence)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "According to Howard Gardner's Theory of Multiple Intelligences, a student who learns most effectively through social interaction and exhibits exceptional sensitivity in interpreting peer motivations, moods, and social cues possesses high:",
+      "options_english": [
+        "Intrapersonal intelligence",
+        "Linguistic intelligence",
+        "Spatial intelligence",
+        "Interpersonal intelligence"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "According to Howard Gardner's Multiple Intelligences framework, 'Interpersonal Intelligence' (अंतर्वैयक्तिक बुद्धि) represents the cognitive capacity to understand, interact with, and relate effectively to others. Learners demonstrating high interpersonal intelligence excel at discerning subtleties in facial expressions, vocal inflections, and body postures; empathizing with peers; mediating conflicts; and collaborating productively in group settings. In classroom pedagogy, these students flourish when engaged in cooperative group work, reciprocal teaching, peer tutoring, mock trials, and student council activities. In contrast, 'Intrapersonal Intelligence' relates to internal self-awareness, metacognition, and emotional self-regulation; 'Linguistic Intelligence' involves sensitivity to verbal and written language; and 'Spatial Intelligence' involves mental visualization and spatial navigation.",
+      "explanation_hindi": "हावर्ड गार्डनर के बहु-बुद्धि सिद्धांत के अनुसार, 'अंतर्वैयक्तिक बुद्धि' (Interpersonal Intelligence) से तात्पर्य अन्य व्यक्तियों की भावनाओं, मनोदशाओं, अभिप्रेरणाओं, इरादों और सामाजिक संकेतों को सूक्ष्मता से समझने तथा उनके साथ प्रभावी अंतःक्रिया करने की क्षमता से है। ऐसे शिक्षार्थी सामाजिक संपर्क, सहयोगात्मक अधिगम, समूह चर्चा, दलगत गतिविधियों और सहकर्मी शिक्षण (peer tutoring) में उत्कृष्ट प्रदर्शन करते हैं। वे संघर्ष समाधान और नेतृत्व में कुशल होते हैं। इसके विपरीत, 'अंतरावैयक्तिक बुद्धि' (Intrapersonal Intelligence) स्वयं की आंतरिक भावनाओं, आत्म-चिंतन और व्यक्तिगत शक्तियों व सीमाओं के बोध से संबंधित है; 'भाषाई बुद्धि' भाषा और शब्दों के प्रभावी उपयोग से जुड़ी है; जबकि 'स्थानिक बुद्धि' दृश्यात्मक व स्थानिक अवधारणाओं को मानसिक रूप से समझने की क्षमता है। अतः सामाजिक संकेतों को पढ़ने और दूसरों के साथ अंतःक्रिया में कुशल छात्र में उच्च अंतर्वैयक्तिक बुद्धि पाई जाती है।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) Interpersonal intelligence",
+        "Answer explanation extracted from supplied reference material: According to Howard Gardner’s theory of Multiple Intelligences, interpersonal intelligence involves the capacity to understand, interact with, and relate effectively to other people. Students exhibiting high interpersonal intelligence excel at reading social cues, understanding others’ moods, motivations, and feelings, communicating effectively, resolving conflicts, and working collaboratively in group settings."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "c6a2004e-061e-4eb4-be1f-679bd6ff1ad1",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "विशेष और समावेशी शिक्षा के संदर्भ में, संक्षिप्त नाम 'IEP' का पूर्ण रूप क्या है?",
+      "options_hindi": [
+        "इंटरनल इवैल्यूएशन प्रोसेस (आंतरिक मूल्यांकन प्रक्रिया)",
+        "इंडिविजुअलाइज्ड एजुकेशन प्रोग्राम (वैयक्तिकृत शिक्षा कार्यक्रम)",
+        "इन्क्लूसिव एजुकेशन पॉलिसी (समावेशी शिक्षा नीति)",
+        "इंटीग्रेटेड एजुकेशनल प्लानिंग (एकीकृत शैक्षिक नियोजन)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In the pedagogical domain of Special and Inclusive Education, what is the full form of the acronym 'IEP'?",
+      "options_english": [
+        "Internal Evaluation Process",
+        "Individualized Education Program",
+        "Inclusive Education Policy",
+        "Integrated Educational Planning"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "In special and inclusive education legislation and pedagogy (such as under the Individuals with Disabilities Education Act - IDEA internationally, and aligned with RPwD Act 2016 guidelines in India), 'IEP' stands for Individualized Education Program (or Individualized Education Plan). An IEP is a legally recognized, comprehensive pedagogical blueprint custom-designed to meet the unique learning needs of an exceptional student or a child with disabilities (CwSN). It is formulated collaboratively by a multidisciplinary team composed of the child's general education teachers, special educators, speech/occupational therapists, school psychologists, school leadership, and the parents. A robust IEP documents the student’s present levels of academic achievement and functional performance (PLAAFP), establishes measurable annual academic and behavioral goals, specifies individualized instructional accommodations and assistive technology devices, and defines appropriate assessment modifications.",
+      "explanation_hindi": "विशेष और समावेशी शिक्षा के क्षेत्र में 'IEP' का पूर्ण रूप 'इंडिविजुअलाइज्ड एजुकेशन प्रोग्राम' (Individualized Education Program - वैयक्तिकृत शिक्षा कार्यक्रम या योजना) है। यह दिव्यांग अथवा विशेष आवश्यकता वाले बच्चों (Children with Special Needs - CwSN) की विशिष्ट अधिगम आवश्यकताओं को पूरा करने के लिए तैयार किया गया एक औपचारिक, विस्तृत और वैधानिक दस्तावेज़ होता है। IEP का निर्माण एक बहु-विषयक टीम द्वारा किया जाता है जिसमें सामान्य कक्षा शिक्षक, विशेष शिक्षक (Special Educator), विद्यालय मनोवैज्ञानिक, प्रधानाचार्य, संबंधित चिकित्सक (जैसे वाक् या व्यावसायिक चिकित्सक) और बच्चे के माता-पिता सम्मिलित होते हैं। इस योजना में बालक के वर्तमान शैक्षिक प्रदर्शन का स्तर, मापने योग्य वार्षिक लक्ष्य, कक्षा-कक्ष में आवश्यक समायोजन व अनुकूलन (Accommodations), सहायक तकनीकें तथा मूल्यांकन में दी जाने वाली छूटों का स्पष्ट उल्लेख होता है ताकि बालक सामान्य साथियों के साथ पूर्ण गरिमा के साथ समावेशित होकर सीख सके।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) Individualized Education Program",
+        "Answer explanation extracted from supplied reference material: In special and inclusive education, IEP stands for Individualized Education Program. An IEP is a legally binding, written educational document developed collaboratively by a multidisciplinary team—including special educators, general teachers, specialists, and parents—that details specific learning goals, tailored instructional accommodations, and support services for a child with special needs."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "4a101865-7119-44b2-9663-3a44cbe9a50a",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "एनसीईआरटी (NCERT) द्वारा प्रस्तुत 'राष्ट्रीय पाठ्यचर्या की रूपरेखा' (NCF) 2005 ने शिक्षण-अधिगम में निम्नलिखित में से किस बड़े बदलाव (Shift) की संस्तुति की थी?",
+      "options_hindi": [
+        "सक्रिय रचनावाद से पारंपरिक व्यवहारवाद और निष्क्रिय अधिगम प्रतिमानों की ओर",
+        "सहयोगात्मक शिक्षण से पाठ्यपुस्तकों के व्यक्तिगत रटंत स्मरण (Rote memorization) की ओर",
+        "सतत रचनात्मक आकलन से हटकर केवल एक अंतिम सत्रांत योगात्मक परीक्षा पर निर्भर होने की ओर",
+        "रटंत प्रणाली से मुक्ति दिलाकर ज्ञान को समझने और उसे विद्यालय के बाहर के वास्तविक जीवन से जोड़ने की ओर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "The National Curriculum Framework (NCF) 2005 recommended a fundamental pedagogical shift:",
+      "options_english": [
+        "From active constructivist pedagogy toward traditional behaviorism and passive learning paradigms",
+        "From collaborative social learning toward isolated, solitary rote memorization of textbooks",
+        "From continuous formative assessment toward total reliance upon a single final summative examination",
+        "From rote learning methods toward deep understanding and connecting classroom knowledge to life outside the school"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The National Curriculum Framework (NCF) 2005, chaired by Prof. Yash Pal, articulated five core guiding principles designed to transform Indian school education from a rigid, examination-driven regime to a child-centered, constructivist learning culture: 1. Connecting knowledge to life outside the school; 2. Ensuring that learning shifts away from rote methods; 3. Enriching the curriculum so that it goes beyond textbooks; 4. Making examinations more flexible and integrating them with classroom life; and 5. Nurturing an overriding identity informed by caring concerns within the democratic polity of the country. NCF 2005 rejected rote memorization and passive learning, asserting that children are natural, active constructors of knowledge who learn best when their personal life experiences, cultural contexts, and investigative curiosity are bridged with classroom discourse.",
+      "explanation_hindi": "प्रो. यशपाल की अध्यक्षता में तैयार की गई 'राष्ट्रीय पाठ्यचर्या की रूपरेखा 2005' (NCF 2005) ने भारतीय विद्यालयी शिक्षा को पाठ्यपुस्तक-केंद्रित और रटंत प्रणाली से मुक्त कर बाल-केंद्रित एवं रचनावादी (Constructivist) बनाने हेतु पाँच प्रमुख मार्गदर्शक सिद्धांत प्रतिपादित किए: 1. ज्ञान को विद्यालय के बाहर के जीवन से जोड़ना; 2. यह सुनिश्चित करना कि पढ़ाई रटंत प्रणाली से मुक्त हो; 3. पाठ्यचर्या को इस प्रकार समृद्ध करना कि वह पाठ्यपुस्तकों तक ही सीमित न रह जाए; 4. परीक्षा प्रणाली को अधिक लचीला बनाना और कक्षा की गतिविधियों से जोड़ना; तथा 5. एक ऐसी राष्ट्रीय पहचान का पोषण करना जो प्रजातांत्रिक राज्यव्यवस्था के अंतर्गत सरोकारों पर आधारित हो। अतः NCF 2005 ने रटने की यांत्रिक आदत को समाप्त करने और शिक्षार्थियों द्वारा अपने वास्तविक परिवेशीय अनुभवों के आधार पर ज्ञान के सक्रिय सृजन पर सर्वाधिक बल दिया।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) From rote method to understanding and connecting knowledge to life outside the school",
+        "Answer explanation extracted from supplied reference material: The National Curriculum Framework 2005 recommended a shift in educational practice. It advocated moving away from traditional rote memorization, textbook-centric teaching, and high-stakes terminal exams toward constructivist learning, conceptual understanding, active student participation, flexible assessment methods, and connecting classroom knowledge directly to real-life experiences outside the school environment."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "7c2cfd5b-4971-4067-9f23-50f70014f7e0",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं, एक को अभिकथन (A) और दूसरे को कारण (R) के रूप में अंकित किया गया है:\nअभिकथन (A): समावेशी शिक्षाशास्त्र (Inclusive Pedagogy) सभी विद्यार्थियों के सीखने और सहभागिता में आने वाली बाधाओं को दूर करने की पुरजोर वकालत करता है।\nकारण (R): इसमें ऐसी मानकीकृत और अपरिवर्तनीय शिक्षण विधियों का उपयोग शामिल है जो कभी नहीं बदलतीं, और यह अपेक्षा की जाती है कि सभी छात्र उस एकल पद्धति के अनुकूल बनें।\n\nउपर्युक्त कथनों के आलोक में निम्नलिखित में से सही विकल्प का चयन कीजिए:",
+      "options_hindi": [
+        "A और R दोनों सही हैं और R, A की सही व्याख्या है",
+        "A और R दोनों सही हैं, लेकिन R, A की सही व्याख्या नहीं है",
+        "A सही है, लेकिन R गलत है",
+        "A गलत है, लेकिन R सही है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Given below are two statements, one labelled as Assertion (A) and the other labelled as Reason (R):\nAssertion (A): Inclusive pedagogy advocates for the systematic removal of barriers to learning and participation for all students.\nReason (R): It involves using standardized teaching methods that do not change, expecting all students to adapt to the uniform method.\n\nIn the light of the above statements, choose the correct answer from the options given below:",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Assertion (A) is correct: Inclusive pedagogy is dedicated to identifying and removing physical, sensory, cognitive, curricular, and socio-emotional barriers to ensure full, equitable participation for all learners in common learning spaces. Reason (R) is completely false: The core doctrine of inclusive pedagogy is Universal Design for Learning (UDL) and differentiated instruction. Inclusion explicitly rejects rigid, unchanging, one-size-fits-all standardized methods that demand students assimilate to a uniform curriculum. Instead, inclusive pedagogy requires the educational environment, instructional media, and assessment strategies to flex, adapt, and respond dynamically to learner diversity. Therefore, Assertion (A) is true but Reason (R) is false.",
+      "explanation_hindi": "अभिकथन (A) सत्य है: समावेशी शिक्षाशास्त्र (Inclusive Pedagogy) का केंद्रीय उद्देश्य विद्यालयी वातावरण, पाठ्यचर्या और शिक्षण विधियों में मौजूद उन सभी भौतिक, संज्ञानात्मक, सामाजिक और मनोवैज्ञानिक बाधाओं को समाप्त करना है जो किसी भी बच्चे को सीखने और पूर्ण सहभागिता करने से रोकती हैं। कारण (R) पूर्णतः असत्य है: समावेशी शिक्षाशास्त्र कभी भी कठोर, मानकीकृत और अपरिवर्तनीय शिक्षण विधियों का समर्थन नहीं करता। सभी बच्चों से यह अपेक्षा करना कि वे एक ही जैसी पारंपरिक शिक्षण पद्धति के अनुसार स्वयं को ढालें, समावेश के बजाय 'अनुकूलन' (assimilation) या अलगाववादी व्यवस्था का लक्षण है। समावेशी शिक्षा का मूल नियम यह है कि 'विद्यालय और शिक्षण पद्धति को बच्चे की आवश्यकताओं के अनुसार बदलना होगा, न कि बच्चे को विद्यालय के अनुसार।' अतः A सही है, लेकिन R गलत है।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (C) A is true but R is false",
+        "Answer explanation extracted from supplied reference material: Inclusive pedagogy actively seeks to remove physical, curricular, and social barriers to ensure full participation for all students. However, achieving inclusion requires flexible, differentiated instructional methods adapted to individual learner needs, rather than enforcing uniform, unyielding teaching methods, confirming that the assertion is true while the reason is false."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "99bfb65b-e827-4e74-88b8-3340e7eef7f1",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "शिक्षा मनोविज्ञान (Educational Psychology) शिक्षकों को निम्नलिखित में से क्या समझने में सहायता करके शिक्षाशास्त्र की आधारशिला प्रदान करता है?",
+      "options_hindi": [
+        "विद्यालय प्रशासन को नियंत्रित करने वाले वित्तीय नियम और बजटीय सीमाएँ",
+        "शिक्षार्थियों का संज्ञानात्मक, संवेगात्मक, सामाजिक और मनोवैज्ञानिक विकास",
+        "आधुनिक विद्यालय भवनों का वास्तुशिल्प डिजाइन और स्थानिक योजना",
+        "शिक्षक भर्ती के कानूनी पहलू, सेवा शर्तें और सेवा नियमावली"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Educational psychology establishes the scientific and empirical foundation for pedagogy primarily by enabling educators to understand which of the following?",
+      "options_english": [
+        "The statutory financial rules and budgetary allocations governing school administration",
+        "The cognitive, emotional, social, and psychological development of learners",
+        "The architectural design, civil layout, and spatial planning of school facilities",
+        "The administrative jurisprudence, recruitment policies, and service conditions of teachers"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Educational psychology provides the theoretical and empirical bedrock of pedagogy. It investigates how human beings learn, the developmental stages of childhood and adolescence, the role of motivation, individual differences, cognitive processes (memory, attention, problem-solving), and socio-emotional factors. Insights from foundational psychologists like Piaget (developmental stages), Vygotsky (social mediation and ZPD), Erik Erikson (psychosocial stages), and B.F. Skinner (reinforcement principles) equip educators with the knowledge necessary to design developmentally appropriate instruction, differentiated learning tasks, and effective behavior management systems.",
+      "explanation_hindi": "शिक्षा मनोविज्ञान (Educational Psychology) शिक्षाशास्त्र का वैज्ञानिक और अनुभवजन्य आधार तैयार करता है। यह शिक्षकों को यह समझने में सक्षम बनाता है कि विद्यार्थी कैसे सीखते हैं, विभिन्न आयु-वर्गों में उनकी संज्ञानात्मक, संवेगात्मक, सामाजिक और शारीरिक विकासात्मक आवश्यकताएँ क्या हैं, तथा व्यक्तिगत विभिन्नताओं (Individual Differences) को कैसे संबोधित किया जाए। जीन पियाजे के संज्ञानात्मक विकास, लेव वाइगोत्स्की के सामाजिक-सांस्कृतिक सिद्धांत और एरिक्सन के मनोसामाजिक विकास के सिद्धांत शिक्षकों को विकासात्मक रूप से उपयुक्त शिक्षण रणनीतियाँ बनाने, अधिगम कठिनाइयों का निदान करने और सकारात्मक कक्षा वातावरण स्थापित करने में सक्षम बनाते हैं।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) The cognitive, emotional, social, and psychological development of learners",
+        "Answer explanation extracted from supplied reference material: Educational psychology serves as a foundational pillar for pedagogy by offering scientific insights into how individuals learn, grow, and process information. It enables educators to understand cognitive growth, emotional needs, social interactions, and psychological development patterns across different age groups. This understanding allows teachers to design developmentally appropriate instruction, foster engagement, and address diverse learner needs effectively."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "f3086fc9-8a2b-4249-abc6-c2c7025ca2b1",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "मैल्कम नोल्स द्वारा प्रतिपादित प्रौढ़ शिक्षण की अवधारणा 'एंड्रागॉजी' (Andragogy) का मुख्य सैद्धांतिक आधार निम्नलिखित में से कौन-सा मनोवैज्ञानिक सिद्धांत/संप्रदाय है?",
+      "options_hindi": [
+        "सिगमंड फ्रायड का मनोविश्लेषणवाद (Freudian Psychoanalysis)",
+        "कठोर व्यवहारवाद (जैसे जॉन बी. वॉटसन, बी.एफ. स्किनर)",
+        "शास्त्रीय अनुबंधन सिद्धांत (जैसे इवान पावलव)",
+        "मानवतावादी मनोविज्ञान (जैसे अब्राहम मैस्लो, कार्ल रोजर्स)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which psychological theory and school of thought underpins the foundational concept of 'Andragogy' as popularized by Malcolm Knowles?",
+      "options_english": [
+        "Freudian Psychoanalysis",
+        "Strict / Radical Behaviorism (e.g., Watson, Skinner)",
+        "Classical Conditioning Theory (e.g., Pavlov)",
+        "Humanistic Psychology (e.g., Maslow, Rogers)"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The concept of Andragogy (the art and science of helping adults learn), pioneered and popularized by Malcolm Knowles in the late 1960s and 1970s, is theoretically rooted in Humanistic Psychology, particularly the ideas of Carl Rogers and Abraham Maslow. Humanistic psychology emphasizes human agency, self-actualization, inherent drive toward personal growth, autonomy, and self-directed learning. Knowles derived the core assumptions of adult learners directly from humanistic tenets: 1. Self-concept: As a person matures, their self-concept moves from dependent personality toward self-direction; 2. Experience: Adults accumulate a vast reservoir of experiential learning that serves as a rich learning resource; 3. Readiness to learn: Adult readiness is closely related to developmental tasks of their social and occupational roles; 4. Orientation to learning: Adult perspective shifts from subject-centeredness to problem-centeredness; 5. Internal motivation: Adults are primarily motivated by internal drives (self-esteem, quality of life) rather than external rewards. Behaviorism and psychoanalysis treat individuals as conditioned responders or driven by unconscious impulses, whereas andragogy and humanism celebrate adult autonomy and conscious self-direction.",
+      "explanation_hindi": "मैल्कम नोल्स (Malcolm Knowles) द्वारा विकसित 'एंड्रागॉजी' (Andragogy - प्रौढ़ शिक्षाशास्त्र/वयस्क अधिगम) की अवधारणा मुख्य रूप से 'मानवतावादी मनोविज्ञान' (Humanistic Psychology) पर आधारित है, जिसका नेतृत्व कार्ल रोजर्स और अब्राहम मैस्लो ने किया था। मानवतावादी दर्शन मानव की गरिमा, आंतरिक प्रेरणा, आत्म-सिद्धि (Self-actualization) और आत्म-निर्देशन (Self-directedness) पर बल देता है। नोल्स ने प्रौढ़ शिक्षार्थियों की विशेषताओं को मानवतावादी सिद्धांतों के आधार पर ही परिभाषित किया: 1. प्रौढ़ शिक्षार्थी स्वायत्त और स्व-निर्देशित (Self-directed) होते हैं; 2. उनके पास समृद्ध जीवन अनुभव होते हैं जो सीखने का सबसे बड़ा संसाधन बनते हैं; 3. वे किसी विषय को केवल सैद्धांतिक रूप से पढ़ने के बजाय वास्तविक जीवन की व्यावहारिक समस्याओं के समाधान के उद्देश्य से सीखते हैं (Problem-centered approach); 4. वे बाह्य पुरस्कारों की तुलना में आंतरिक कारकों (आत्म-सम्मान, संतुष्टि, व्यक्तिगत विकास) से अधिक प्रेरित होते हैं। चूंकि व्यवहारवाद व्यक्ति को उद्दीपक-अनुक्रिया द्वारा नियंत्रित मानता है और मनोविश्लेषणवाद अचेतन इच्छाओं से प्रेरित मानता है, इसलिए केवल मानवतावादी मनोविज्ञान ही प्रौढ़ शिक्षार्थी की स्वतंत्रता और आत्म-विकास के अनुकूल बैठता है।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) Humanistic Psychology (e.g., Maslow, Rogers)",
+        "Answer explanation extracted from supplied reference material: The concept of Andragogy, popularized by Malcolm Knowles, is theoretically anchored in humanistic psychology pioneered by Carl Rogers and Abraham Maslow. Humanistic theory emphasizes self-directedness, personal growth, intrinsic motivation, self-actualization, and human potential, aligning directly with adult learning assumptions where adult learners act as autonomous, self-directed individuals driving their education."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "0e338e2e-a174-4a57-9220-7a3fe1e97924",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "‘अभिक्रमित अनुदेशन’ (Programmed Instruction)—जिसमें विषय-वस्तु को छोटे तार्किक पदों में प्रस्तुत करना, शिक्षार्थी की सक्रिय अनुक्रिया, और तत्काल प्रतिपुष्टि शामिल है—निम्नलिखित में से किस अधिगम सिद्धांत का प्रत्यक्ष अनुप्रयोग है?",
+      "options_hindi": [
+        "शास्त्रीय अनुबंधन सिद्धांत (Classical Conditioning)",
+        "क्रियाप्रसूत अनुबंधन सिद्धांत (Operant Conditioning)",
+        "गेस्टाल्ट सिद्धांत (Gestalt Theory)",
+        "रचनावाद (Constructivism)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "'Programmed Instruction', which involves small steps, active responding, and immediate feedback, is a direct pedagogical application of which learning theory?",
+      "options_english": [
+        "Classical Conditioning",
+        "Operant Conditioning",
+        "Gestalt Theory",
+        "Constructivism"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "'Programmed Instruction' (PI) is a systematic instructional technique and technological learning system developed in 1954 by behavioral psychologist B.F. Skinner (Burrhus Frederic Skinner), derived directly from his principles of Operant Conditioning.\n\n- Behavioral Mechanism: Operant conditioning posits that behavior is shaped and maintained by its consequences. Skinner argued that traditional classroom teaching suffered from infrequent, delayed reinforcement. Programmed Instruction translates operant principles into five pedagogical rules:\n  1. Principle of Small Steps: Content is atomized into short, manageable units called 'frames'.\n  2. Principle of Active Responding: The learner must actively interact (write or choose an answer) at every frame.\n  3. Principle of Immediate Confirmation/Reinforcement: Immediate feedback is provided, serving as a positive reinforcer for correct responses.\n  4. Principle of Self-Pacing: Each student progresses through the program at their own idiosyncratic learning speed.\n  5. Principle of Student Testing/Empirical Verification: The program is validated through continuous learner data.\n- Linear programming (Skinner) and Branching programming (Norman Crowder) both trace their behavioral lineage to operant conditioning.",
+      "explanation_hindi": "‘अभिक्रमित अनुदेशन’ (Programmed Instruction - PI) शिक्षण की एक अत्यंत व्यवस्थित और व्यक्तिगत विधि है, जिसे 1954 में प्रसिद्ध अमेरिकी व्यवहारवादी मनोवैज्ञानिक बी. एफ. स्किनर (B.F. Skinner) द्वारा अपने 'क्रियाप्रसूत अनुबंधन सिद्धांत' (Operant Conditioning Theory) के आधार पर विकसित किया गया था।\n\n- क्रियाप्रसूत अनुबंधन का अनुप्रयोग: स्किनर का मानना था कि अधिगम तब सबसे मजबूत होता है जब वांछित अनुक्रिया को तत्काल सकारात्मक पुनर्बलन (Reinforcement) मिले। स्किनर ने इस सिद्धांत को शिक्षण में लागू करने के लिए पांच बुनियादी नियम दिए:\n  1. लघु पदों का सिद्धांत (Small Steps): शिक्षण सामग्री को छोटे-छोटे तार्किक पदों या 'फ्रेम्स' में बांटा जाता है;\n  2. सक्रिय अनुक्रिया का सिद्धांत (Active Responding): शिक्षार्थी को प्रत्येक पद पर सक्रिय होकर उत्तर देना होता है;\n  3. तत्काल पुष्टि/पुनर्बलन का सिद्धांत (Immediate Feedback): सही उत्तर की तुरंत जानकारी पुनर्बलन का कार्य करती है;\n  4. स्व-गति का सिद्धांत (Self-Pacing): प्रत्येक छात्र अपनी सीखने की गति के अनुसार आगे बढ़ता है;\n  5. छात्र परीक्षण का सिद्धांत: कार्यक्रम की प्रभावशीलता शिक्षार्थी के प्रदर्शन से जांची जाती है।\n\nअतः यह पूरी तरह से क्रियाप्रसूत अनुबंधन का प्रत्यक्ष शैक्षणिक अनुप्रयोग है।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) Operant Conditioning",
+        "Answer explanation extracted from supplied reference material: Programmed Instruction is an instructional methodology developed directly from B.F. Skinner’s operant conditioning principles. It presents learning material in small, logically structured steps (frames), requires active learner responses, and provides immediate feedback or reinforcement. This self-paced approach reinforces correct responses immediately, gradually shaping desired learning behaviors and concept mastery."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "3c8b231a-ce9e-4639-8913-7880b529a791",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "शैक्षिक मूल्यांकन में ‘योगात्मक मूल्यांकन’ (Summative Assessment) का प्राथमिक उद्देश्य क्या होता है?",
+      "options_hindi": [
+        "शिक्षण रणनीतियों को व्यवस्थित रूप से सुधारने के लिए पाठ के दौरान कक्षा शिक्षकों को निरंतर निदानात्मक प्रतिपुष्टि प्रदान करना",
+        "एक निश्चित अनुदेशात्मक अवधि के समापन पर विद्यार्थी के अधिगम, कौशल अधिग्रहण और शैक्षणिक उपलब्धि का मूल्यांकन करना",
+        "विद्यार्थियों में विशिष्ट तंत्रिका-विकासात्मक अधिगम अक्षमताओं और संज्ञानात्मक अंतरालों की पहचान और निदान करना",
+        "विद्यार्थियों को दैनिक अनौपचारिक कक्षा चर्चाओं में सक्रिय सहभागिता के लिए मानसिक और सामाजिक रूप से तैयार करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In pedagogical frameworks and assessment paradigms, 'Summative Assessment' is primarily intended to:",
+      "options_english": [
+        "Provide continuous diagnostic feedback to classroom educators during instruction to systematically adjust ongoing teaching strategies",
+        "Evaluate student learning, competency mastery, and academic achievement at the conclusion of a defined instructional period",
+        "Screen for and diagnose specific neurodevelopmental learning disorders and cognitive processing gaps in individual students",
+        "Prepare learners psychologically and socially for active involvement in immediate, informal day-to-day classroom dialogues"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Summative Assessment represents the 'Assessment OF Learning'. It is formally conducted at the conclusion of an instructional sequence—such as the end of a unit, semester, academic term, or school year (e.g., annual board examinations, final portfolio reviews). Its primary pedagogical purpose is evaluative and certifying: measuring cumulative learning, skill acquisition, and student mastery against predetermined curriculum benchmarks and grading standards. It serves to assign grades, award diplomas or certificates, and make decisions regarding grade promotion or graduation. In contrast, Formative Assessment ('Assessment FOR Learning') provides ongoing diagnostic feedback during the learning process to guide instructional modifications, while Diagnostic Assessment identifies underlying learning difficulties.",
+      "explanation_hindi": "शैक्षिक मूल्यांकन में ‘योगात्मक मूल्यांकन’ (Summative Assessment / संकलनात्मक आकलन) को ‘अधिगम का आकलन’ (Assessment OF Learning) कहा जाता है। इसका आयोजन किसी निश्चित शिक्षण अवधि (जैसे इकाई, सत्र या शैक्षणिक वर्ष) के समापन पर किया जाता है (जैसे- वार्षिक बोर्ड परीक्षा, सत्रांत परीक्षा)। इसका प्राथमिक उद्देश्य पूर्व-निर्धारित शैक्षणिक मानकों के संदर्भ में विद्यार्थी द्वारा अर्जित संचित ज्ञान, दक्षता और कौशलों की समग्र उपलब्धि का मूल्यांकन करना, ग्रेड या अंक प्रदान करना, तथा अगली कक्षा में प्रोन्नति अथवा प्रमाणीकरण (प्रमाण-पत्र देना) सुनिश्चित करना है। इसके विपरीत, ‘रचनात्मक आकलन’ (Formative Assessment) शिक्षण-अधिगम प्रक्रिया के दौरान दिया जाने वाला सतत प्रतिपुष्टि तंत्र है। अतः विकल्प B सही है।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) Evaluate student learning, skill acquisition, and academic achievement at the conclusion of a defined instructional period",
+        "Answer explanation extracted from supplied reference material: Summative assessment is an evaluative process administered at the conclusion of a defined instructional period, such as term-end exams or final projects. Its primary purpose is to assess cumulative student learning, skill acquisition, and academic achievement against benchmark standards, assigning formal grades or certifications to document educational outcomes."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "f49d26d1-b56b-4b97-95ed-ab2a325e24a2",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "केस अध्ययन: एक माध्यमिक विद्यालय की प्रधानाचार्य छात्रों के बीच उत्पीड़न (बुलिंग) और आक्रामक व्यवहार की घटनाओं में चिंताजनक वृद्धि देखती हैं। वह नियमित पाठ्यक्रम में एक ऐसी शिक्षाशास्त्रीय रणनीति को शामिल करना चाहती हैं जो बालकों में समानुभूति (Empathy), संवेगात्मक नियंत्रण (Emotional Regulation) और अंतर्वैयक्तिक कौशलों का विकास करे।\nउन्हें निम्नलिखित में से किस कार्यक्रम को एकीकृत करना चाहिए?",
+      "options_hindi": [
+        "उन्नत एसटीईएम (STEM) शिक्षा कार्यक्रम",
+        "विद्यालयी नियमों और अनुशासन संहिताओं का रटकर कंठस्थीकरण",
+        "सामाजिक और संवेगात्मक अधिगम (Social and Emotional Learning - SEL)",
+        "केवल अत्यधिक प्रतिस्पर्धी खेलकूद प्रतियोगिताओं का आयोजन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Case Study: An educational Principal observes a troubling escalation in peer bullying and relational aggression across middle school classrooms. She aims to institute an evidence-based pedagogical initiative that systematically fosters empathy, emotional self-regulation, conflict resolution, and prosocial interpersonal competencies within daily curricular instruction.\nWhich of the following frameworks is most appropriate for her to integrate?",
+      "options_english": [
+        "Advanced Science, Technology, Engineering, and Mathematics (STEM) acceleration",
+        "Rote memorization and public recitation of codified disciplinary regulations",
+        "Social and Emotional Learning (SEL)",
+        "Exclusive expansion of elite competitive athletic tournaments"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Social and Emotional Learning (SEL) is an evidence-based educational process established by CASEL (Collaborative for Academic, Social, and Emotional Learning) through which children and adults acquire and apply five essential cognitive and emotional competencies: (1) Self-awareness, (2) Self-management (emotional regulation and impulse control), (3) Social awareness (empathy and appreciation for diversity), (4) Relationship skills (communication, active listening, conflict resolution, and resisting negative peer pressure), and (5) Responsible decision-making. In middle school leadership, when bullying or peer hostility emerges, punitive or purely cognitive approaches (such as rote memorization of discipline codes or competitive sports alone) often fail because they do not address the root socio-emotional deficiencies. Integrating systematic SEL across the formal and hidden curriculum builds school connectedness, cultivates perspective-taking and empathy, and directly reduces bullying while improving academic flourishing.",
+      "explanation_hindi": "सामाजिक और संवेगात्मक अधिगम (Social and Emotional Learning - SEL) एक शोध-आधारित शैक्षिक ढांचा है, जिसे CASEL (Collaborative for Academic, Social, and Emotional Learning) द्वारा प्रतिपादित किया गया है। इसके अंतर्गत विद्यार्थियों में पाँच प्रमुख योग्यताओं का संवर्धन किया जाता है: (1) आत्म-जागरूकता, (2) आत्म-प्रबंधन (संवेगों पर नियंत्रण व तनाव प्रबंधन), (3) सामाजिक जागरूकता (समानुभूति और दूसरों के दृष्टिकोण का सम्मान), (4) अंतर्वैयक्तिक संबंध कौशल (सकारात्मक संवाद, सक्रिय श्रवण और शांतिपूर्ण विवाद समाधान), तथा (5) उत्तरदायी निर्णय-निर्माण। जब विद्यालय में बुलिंग (धौंसपट्टी/उत्पीड़न) या आक्रामकता की समस्या उत्पन्न होती है, तो नियमों को रटाना या दंडात्मक कार्रवाई करना स्थायी समाधान नहीं दे पाते क्योंकि वे बच्चों के अंतर्निहित संवेगात्मक संकट का समाधान नहीं करते। पाठ्यक्रम में SEL का व्यवस्थित एकीकरण बालकों में दूसरों के प्रति संवेदनशीलता, आवेगात्मक नियंत्रण और स्वस्थ संबंध बनाने की क्षमता विकसित करता है, जिससे विद्यालय का वातावरण सुरक्षित, समावेशी और सौहार्दपूर्ण बनता है।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (C) Social and Emotional Learning (SEL)",
+        "Answer explanation extracted from supplied reference material: Social and Emotional Learning is an educational framework that systematically integrates self- awareness, self-management, social awareness, relationship skills, and responsible decision- making into school curricula. Integrating SEL programs helps students develop emotional regulation, empathy, conflict resolution, and positive interpersonal communication, directly reducing classroom bullying and fostering a supportive school culture."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "94c5f0ea-ec54-4b88-b05a-d912e3b00ade",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "संरचनावादी पाठ्यचर्या निर्माण में, 'समस्या-आधारित अधिगम' (Problem-Based Learning - PBL) की शुरुआत पारंपरिक शिक्षण के विपरीत सामान्यतः किस चरण से होती है?",
+      "options_hindi": [
+        "एक प्रामाणिक, अपरिभाषित और खुले अंत वाली वास्तविक जीवन की समस्या प्रस्तुत करने से",
+        "शिक्षक द्वारा सभी प्रासंगिक सूत्रों और सिद्धांतों की व्याख्या करते हुए एक विस्तृत व्याख्यान देने से",
+        "पृष्ठभूमि के तथ्यों की रटन स्मृति का परीक्षण करने वाली एक संक्षिप्त बहुविकल्पीय प्रश्नोत्तरी आयोजित करने से",
+        "पाठ्यपुस्तक की तथ्यात्मक परिभाषाओं के यांत्रिक अभ्यास और रटकर याद करने से"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In constructivist curriculum design, 'Problem-Based Learning' (PBL) characteristically commences with which of the following instructional steps?",
+      "options_english": [
+        "The presentation of an authentic, ill-structured, open-ended real-world problem",
+        "A comprehensive, didactic theoretical lecture delivered by the teacher explaining all relevant formulas",
+        "Administering a brief diagnostic multiple-choice quiz testing rote recall of background facts",
+        "Repetitive mechanical drills and rote memorization of factual textbook definitions"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Problem-Based Learning (PBL)—pioneered by Howard Barrows and his colleagues in medical education at McMaster University in the late 1960s—is a student-centered pedagogical model that radically reverses the sequence of traditional instruction. In conventional direct instruction, teachers deliver lectures first (tell facts, explain principles) and subsequently assign well-structured end-of-chapter problems for practice. In PBL, instruction deliberately begins with an authentic, complex, ill-structured, open-ended real-world problem before any formal theory is taught. This problem serves as the stimulus and anchor for all subsequent learning. Working collaboratively in small groups, learners identify what they already know, determine what learning issues (gaps) they need to research, engage in self-directed inquiry, and synthesize practical solutions, fostering critical thinking and lifelong learning.",
+      "explanation_hindi": "‘समस्या-आधारित अधिगम’ (Problem-Based Learning - PBL) का विकास 1960 के दशक के उत्तरार्ध में मैकमास्टर विश्वविद्यालय में हॉवर्ड बैरोज (Howard Barrows) और उनके सहयोगियों द्वारा किया गया था। यह बाल-केंद्रित एवं पूछताछ-आधारित अधिगम का एक उत्कृष्ट मॉडल है जो पारंपरिक शिक्षण के क्रम को उलट देता है। पारंपरिक शिक्षण में शिक्षक पहले सिद्धांत पढ़ाता है और अंत में प्रश्न हल करने को देता है। इसके विपरीत, PBL में शिक्षण की शुरुआत ही एक वास्तविक, जटिल, अस्पष्ट और खुले अंत वाली (ill-structured, open-ended) वास्तविक जीवन की समस्या को प्रस्तुत करके की जाती है। यह समस्या छात्रों के लिए अधिगम की प्रेरक शक्ति बनती है। छात्र छोटे समूहों में मिलकर यह पहचानते हैं कि समस्या समाधान हेतु उन्हें क्या सीखने की आवश्यकता है, वे स्वयं शोध करते हैं और तार्किक समाधान तैयार करते हैं। अतः विकल्प A सही उत्तर है।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (A) The presentation of a complex, open-ended, real-world problem",
+        "Answer explanation extracted from supplied reference material: Problem-Based Learning is a student-centered pedagogical model that initiates instruction with the presentation of an authentic, complex, open- ended problem. Learners work collaboratively in small groups to identify learning needs, conduct research, integrate theoretical concepts, and construct viable solutions, thereby developing critical thinking, self-directed learning skills, and practical problem-solving capabilities."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "7c8e1294-0574-4478-baa3-d017acb3505f",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "विश्व स्वास्थ्य संगठन (WHO) के ढांचे के अनुसार, 'जीवन कौशल शिक्षा' (Life Skills Education) को तीन व्यापक और अंतर्संबंधित श्रेणियों में वर्गीकृत किया गया है। वे श्रेणियां कौन-सी हैं?",
+      "options_hindi": [
+        "बुनियादी पठन, लेखन और अंकगणितीय कौशल (3 Rs - Reading, Writing, Arithmetic)",
+        "शारीरिक स्वास्थ्य, वित्तीय साक्षरता और डिजिटल तकनीकी कौशल",
+        "व्यावसायिक शिल्प, तकनीकी दक्षता और औद्योगिक कौशल",
+        "संज्ञानात्मक (चिंतन) कौशल, सामाजिक (अंतर्वैयक्तिक) कौशल और संवेगात्मक (भावनात्मक संतुलन) कौशल"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "According to the World Health Organization (WHO) framework, 'Life Skills Education' is systematically organized into three broad, interlinked categories of skills. These are:",
+      "options_english": [
+        "Foundational Literacy, Numeracy, and Computational skills (Reading, Writing, and Arithmetic)",
+        "Physical Fitness, Financial Literacy, and Digital Technology skills",
+        "Vocational Craft, Technical Competence, and Industrial Trade skills",
+        "Cognitive (Thinking), Social (Interpersonal), and Emotional (Coping) skills"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The World Health Organization (WHO, 1997) defines life skills as 'abilities for adaptive and positive behavior that enable individuals to deal effectively with the demands and challenges of everyday life.' WHO delineates ten core life skills, which are functionally clustered into three overarching, interdependent pedagogical domains: 1. Cognitive (Thinking) Skills: Critical thinking, creative thinking, decision-making, and problem-solving; 2. Social (Interpersonal) Skills: Effective communication, interpersonal relationship skills, and empathy; and 3. Emotional (Coping) Skills: Self-awareness, coping with emotions, and coping with stress. In school pedagogy and holistic education (as underscored by CBSE and NEP 2020), integrating these three dimensions is essential for fostering psychosocial competence, mental health, ethical judgment, and emotional resilience among adolescent learners.",
+      "explanation_hindi": "विश्व स्वास्थ्य संगठन (WHO) के अनुसार, 'जीवन कौशल' (Life Skills) वे अनुकूलनशील और सकारात्मक व्यवहारिक क्षमताएं हैं जो व्यक्तियों को दैनिक जीवन की मांगों और चुनौतियों से प्रभावी ढंग से निपटने में सक्षम बनाती हैं। WHO ने 10 प्रमुख जीवन कौशलों की पहचान की है, जिन्हें तीन मुख्य श्रेणियों में वर्गीकृत किया गया है: 1. संज्ञानात्मक / चिंतन कौशल (Cognitive Skills): आलोचनात्मक चिंतन, रचनात्मक चिंतन, निर्णय लेना और समस्या समाधान; 2. सामाजिक / अंतर्वैयक्तिक कौशल (Social Skills): प्रभावी संप्रेषण कौशल, अंतर्वैयक्तिक संबंध और समानुभूति (Empathy); तथा 3. संवेगात्मक कौशल (Emotional Skills): आत्म-जागरूकता (Self-awareness), तनाव से निपटना और संवेगों (भावनाओं) का प्रबंधन। सीबीएसई (CBSE) और राष्ट्रीय शिक्षा नीति 2020 के तहत विद्यालयी शिक्षा में इन तीनों श्रेणियों का विकास छात्रों के मानसिक स्वास्थ्य, सर्वांगीण विकास और सामाजिक समायोजन के लिए अनिवार्य माना गया है।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (D) Cognitive, Social, and Emotional skills",
+        "Answer explanation extracted from supplied reference material: According to the World Health Organization, Life Skills Education encompasses ten core competencies categorized into three broad interlinked domains: Cognitive skills involving critical thinking and decision-making; Social skills encompassing communication, empathy, and interpersonal relationships; and Emotional skills focusing on coping with stress, self-awareness, and emotional regulation."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "fa822c60-40bf-4d39-b44a-06e89861a2f2",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "समकालीन शिक्षण विधा में, ‘मिश्रित अधिगम’ (Blended Learning / हाइब्रिड अधिगम) निम्नलिखित में से किन दो घटकों का रणनीतिक संयोजन करता है?",
+      "options_hindi": [
+        "पारंपरिक औपचारिक विद्यालयी शिक्षा और अभिभावक-आधारित घरेलू शिक्षा (homeschooling)",
+        "प्रत्यक्ष (आमने-सामने) कक्षा शिक्षण और ऑनलाइन/डिजिटल अधिगम अनुभव",
+        "एक ही कक्षा में कला और विज्ञान विषयों का अंतर्विषयक समेकन",
+        "नियमित छोटे विद्यालयी विद्यार्थियों और परिपक्व वयस्क शिक्षार्थियों का संयुक्त शिक्षण"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In contemporary instructional design, 'Blended Learning' is a pedagogical approach that strategically combines:",
+      "options_english": [
+        "Traditional formal schooling combined directly with homeschooling",
+        "Face-to-face instruction and online/digital learning",
+        "Integrating Arts and Sciences subjects within a single unified class",
+        "Combining young regular school students and mature adult learners"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Blended Learning (often termed Hybrid Learning) is an instructional methodology that strategically fuses traditional face-to-face, instructor-led classroom teaching with online, digital, and computer-mediated learning activities. It provides students with an element of control over time, place, path, and pace of learning. The power of blended learning lies in combining the social, emotional, and collaborative immediacy of the physical classroom with the adaptive personalization, interactive simulations, and anytime-anywhere access of modern digital platforms. Prominent implementations include the Flipped Classroom, Station Rotation Model, and Flex Model.",
+      "explanation_hindi": "मिश्रित अधिगम (Blended Learning) एक आधुनिक संकर (hybrid) शैक्षणिक उपागम है, जिसमें पारंपरिक प्रत्यक्ष कक्षा शिक्षण (Face-to-Face Instruction) और ऑनलाइन/डिजिटल शिक्षण (Digital/E-learning) का सार्थक समन्वय किया जाता है। इसमें छात्र प्रत्यक्ष रूप से शिक्षक व सहपाठियों के साथ संवाद और सामाजिक अंतःक्रिया करते हैं, साथ ही डिजिटल प्लेटफॉर्म्स, वीडियो व्याख्यानों और ऑनलाइन मॉड्यूल्स के माध्यम से अपनी गति से स्व-अधिगम भी करते हैं। 'फ्लिप्ड क्लासरूम' (Flipped Classroom) और 'रोटेशन मॉडल' मिश्रित अधिगम के प्रमुख उदाहरण हैं, जो शिक्षण को अधिक लचीला, शिक्षार्थी-केंद्रित और प्रभावी बनाते हैं।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) Face-to-face instruction and online/digital learning",
+        "Answer explanation extracted from supplied reference material: Blended Learning is a hybrid pedagogical approach that strategically combines traditional face-to-face classroom instruction with online and digital learning activities. This combination leverages the valuable interpersonal benefits of classroom interactions alongside the enhanced flexibility, personalized pacing, digital resources, and interactive content accessible through modern digital learning platforms."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "08365f89-9e19-48c5-bcd3-04436bf16a82",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "केस अध्ययन: एक अकादमिक निरीक्षण के दौरान, प्रधानाचार्य देखते हैं कि एक शिक्षक का प्रश्नपत्र पूरी तरह से पाठ्यपुस्तक के अध्यायों के अंत में दिए गए अभ्यासों से सीधे उतारे गए प्रश्नों पर आधारित है। विद्यार्थी इन परीक्षाओं में उच्च अंक प्राप्त करते हैं, लेकिन प्रयोगशाला के व्यावहारिक सत्रों में अवधारणाओं को लागू करने में कठिनाई महसूस करते हैं।\nयहाँ कौन-सी शिक्षाशास्त्रीय कमी है, और प्रधानाचार्य को इसका समाधान किस प्रकार करना चाहिए?",
+      "options_hindi": [
+        "प्रश्नपत्र में उच्च-स्तरीय चिंतन कौशलों का अभाव है; प्रधानाचार्य को शिक्षक को ब्लूम के वर्गीकरण (Bloom's Taxonomy) पर आधारित मूल्यांकन तैयार करने का परामर्श देना चाहिए, जिसमें 'अनुप्रयोग' (Application) और 'विश्लेषण' (Analysis) सम्मिलित हों।",
+        "प्रश्नपत्र उच्च वैधता प्रदर्शित करता है लेकिन इसकी सांख्यिकीय विश्वसनीयता कम है; सभी मूल्यांकन प्रश्नों को अत्यधिक लंबा और विस्तृत बनाने का सुझाव देना चाहिए।",
+        "विद्यार्थी प्रयोगशाला सत्रों में केवल कम प्रयास दिखा रहे हैं; अतिरिक्त अनिवार्य पाठ्यपुस्तक पठन और सैद्धांतिक गृहकार्य का निर्देश देना चाहिए।",
+        "मूल्यांकन की रूपरेखा पूरी तरह से उपयुक्त है; शैक्षणिक सफलता के लिए अवधारणाओं का व्यावहारिक या वास्तविक जीवन में अनुप्रयोग आवश्यक नहीं है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Case Study: During an instructional supervisory round, a School Principal observes that a teacher’s assessment papers consist solely of questions directly transcribed from the textbook chapter-end exercises. Although students attain high marks on these written tests, they struggle substantially to apply these theoretical concepts during hands-on laboratory sessions.\nWhat is the underlying pedagogical flaw, and what instructional guidance should the Principal provide?",
+      "options_english": [
+        "The assessments focus exclusively on lower-order recall and lack items evaluating higher-order thinking; the Principal should guide the teacher to develop assessments mapped to Bloom's Taxonomy, incorporating 'Application', 'Analysis', and 'Evaluation'.",
+        "The assessment exhibits strong construct validity but lacks statistical reliability; the Principal should direct the teacher to substantially increase the length and narrative detail of each item.",
+        "The discrepancy is solely due to students' lack of diligence in practical sessions; the Principal should mandate additional textbook reading and supplementary theoretical homework.",
+        "The assessment framework is pedagogically sound; demonstrated laboratory proficiency and real-world application are not essential prerequisites for academic achievement."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Assessment drives student learning (the 'washback' or 'backwash' effect). When classroom tests rely exclusively on verbatim end-of-chapter exercises, they stimulate only lower-order cognitive processes—specifically rote memorization and simple recall (Knowledge/Remembering under Bloom's Taxonomy). Students can easily memorize standard solutions to score high marks without developing genuine conceptual schema. Consequently, when confronted with hands-on laboratory experiments requiring transfer of knowledge, synthesis, and troubleshooting (Application and Analysis), they fail. As an instructional leader, the Principal's core responsibility is to foster pedagogical alignment between curriculum, instruction, and assessment. By guiding the teacher to design balanced assessments using Benjamin Bloom’s Revised Taxonomy, the Principal ensures that test items incorporate procedural knowledge, novel context-based problem solving, analytical reasoning, and practical application.",
+      "explanation_hindi": "मूल्यांकन सीधे तौर पर अधिगम की दिशा और प्रकृति को निर्धारित करता है। जब कक्षा परीक्षण पूरी तरह से पाठ्यपुस्तक के अंत में दिए गए पारंपरिक प्रश्नों पर निर्भर होते हैं, तो वे केवल निम्न-स्तरीय संज्ञानात्मक प्रक्रियाओं—विशेषकर रटकर याद रखने और मात्र स्मरण (ब्लूम के वर्गीकरण के अनुसार ज्ञान/स्मरण स्तर) को बढ़ावा देते हैं। छात्र वास्तविक अवधारणात्मक समझ विकसित किए बिना भी ऐसे अभ्यासों को रटकर उच्च अंक प्राप्त कर लेते हैं। इसका परिणाम यह होता है कि जब छात्रों को प्रयोगशाला में किसी नई समस्या, प्रयोग या आंकड़ों के विश्लेषण (अनुप्रयोग और विश्लेषण स्तर) का सामना करना पड़ता है, तो वे ज्ञान का स्थानांतरण करने में असमर्थ रहते हैं। एक शैक्षिक नेता के रूप में, प्रधानाचार्य का कर्तव्य है कि वह शिक्षण, पाठ्यक्रम और मूल्यांकन में तालमेल स्थापित करे। प्रधानाचार्य को शिक्षक को निर्देशित करना चाहिए कि वह ब्लूम के वर्गीकरण के उच्च संज्ञानात्मक स्तरों (अनुप्रयोग, विश्लेषण व मूल्यांकन) को समाहित करते हुए विविध, प्रासंगिक और समस्या-समाधान आधारित प्रश्न तैयार करे ताकि सैद्धांतिक ज्ञान और व्यावहारिक कौशलों का समन्वित विकास हो सके।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "medium",
+      "key_facts": [
+        "Printed answer key: (A) The test lacks questions assessing higher-order thinking skills; advise the teacher to design assessments based on Bloom’s taxonomy including ‘Application’ and ‘Analysis’.",
+        "Answer explanation extracted from supplied reference material: Tests relying exclusively on verbatim textbook questions assess lower-level recall, leaving students unprepared for practical application. The Principal should advise the teacher to align assessments with Bloom’s Taxonomy by incorporating higher-order thinking items—such as application, analysis, and evaluation—to ensure students master theoretical concepts and apply them effectively in practical laboratory settings."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "813cab49-ee35-48b9-a458-720ad408d0e2",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "कौन-सा शिक्षणशास्त्रीय दृष्टिकोण छात्रों की सहभागिता बढ़ाने के लिए गैर-खेल संदर्भों में खेल या खेल जैसे तत्वों (अंक, बैज, लीडरबोर्ड) का उपयोग करता है?",
+      "options_hindi": [
+        "अनुरूपण / सिमुलेशन (Simulation)",
+        "प्रत्यक्ष अनुदेशन (Direct Instruction)",
+        "गेमिफिकेशन (Gamification)",
+        "फ़्लिप्ड क्लासरूम (Flipped Classroom)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Which pedagogical approach strategically incorporates game mechanics and game-like elements (such as points, badges, levels, and leaderboards) into non-game educational contexts to enhance student engagement and motivation?",
+      "options_english": [
+        "Simulation",
+        "Direct Instruction",
+        "Gamification",
+        "Flipped Classroom"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Gamification in education is defined as the integration of game mechanics, dynamics, and aesthetics—such as earning experience points, unlocking accomplishment badges, ascending leaderboard rankings, and tracking progress bars—into non-game academic learning environments. Unlike educational simulations (which recreate real-world scenarios) or educational games (full standalone games designed to teach specific subject matter), gamification retains the standard academic curriculum while introducing motivational game psychology. Grounded in Ryan and Deci's Self-Determination Theory, gamification taps into intrinsic and extrinsic motivators, making repetitive tasks engaging, providing immediate feedback, and encouraging healthy academic goal-setting.",
+      "explanation_hindi": "‘गेमिफिकेशन’ (Gamification) एक आधुनिक शिक्षणशास्त्रीय दृष्टिकोण है जिसमें गैर-खेल शैक्षिक संदर्भों में खेल के तत्वों और यांत्रिकी—जैसे अंक (Points), बैज (Badges), लीडरबोर्ड (Leaderboards), स्तर (Levels) और पुरस्कार प्रणाली—को समाहित किया जाता है ताकि विद्यार्थियों की रुचि, प्रेरणा और सक्रिय सहभागिता में वृद्धि की जा सके।\nयहाँ यह समझना महत्वपूर्ण है कि ‘गेमिफिकेशन’ में पूरी पढ़ाई को खेल में नहीं बदला जाता, बल्कि सामान्य पाठ्यचर्या गतिविधियों (जैसे- नियत समय पर होमवर्क जमा करना, प्रश्नों के सही उत्तर देना) में खेल के प्रेरक तत्वों को जोड़ दिया जाता है जिससे छात्रों को तुरंत प्रतिपुष्टि (Feedback) मिलती है और वे सीखने के लिए आंतरिक व बाह्य रूप से प्रेरित होते हैं। अतः विकल्प C सही उत्तर है।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (C) Gamification",
+        "Answer explanation extracted from supplied reference material: Gamification in education involves integrating game elements—such as points, badges, leaderboards, levels, and reward structures—into non-game academic contexts. This pedagogical approach leverages competitive and playful mechanics to increase student motivation, foster sustained engagement, promote goal tracking, and encourage active participation in learning tasks across diverse subject areas."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "751b926f-d4ad-4821-bbac-67d868653f23",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "डिजिटल शिक्षाशास्त्र (Digital Pedagogy) केवल कक्षा में प्रौद्योगिकी का उपयोग करने तक सीमित नहीं है। यह प्राथमिक रूप से निम्नलिखित में से किस पर केंद्रित है?",
+      "options_hindi": [
+        "कक्षा के शिक्षकों को स्वचालित डिजिटल उपकरणों और कृत्रिम बुद्धिमत्ता (AI) से प्रतिस्थापित करना",
+        "शिक्षाशास्त्रीय प्रथाओं को समृद्ध एवं रूपांतरित करने के लिए डिजिटल उपकरणों का रणनीतिक एकीकरण",
+        "विद्यालयों के लिए महंगे कंप्यूटर हार्डवेयर और तकनीकी अवसंरचना की खरीद करना",
+        "छात्रों को आधुनिक इलेक्ट्रॉनिक उपकरणों की मरम्मत के लिए आवश्यक तकनीकी कौशल सिखाना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Digital pedagogy involves much more than the mere presence of technology in educational spaces. It primarily focuses on which of the following dimensions?",
+      "options_english": [
+        "Replacing classroom educators with automated artificial intelligence and software modules",
+        "Strategically integrating digital tools to enhance, transform, and deepen pedagogical practices",
+        "Procuring high-end computer hardware and establishing physical IT infrastructure in schools",
+        "Training students in vocational hardware maintenance and electronic device repair"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Digital pedagogy is the study and practice of strategically using digital technologies to innovate, transform, and elevate pedagogical design and learning experiences. It is not merely 'pedagogy with technology' or hardware procurement (e.g., smartboards or tablets); rather, it critically re-examines teaching-learning relationships, collaboration, student agency, and conceptual exploration in digitally mediated contexts. Frameworks such as the SAMR model (Substitution, Augmentation, Modification, Redefinition) and TPACK (Technological Pedagogical Content Knowledge by Mishra and Koehler) illustrate that technology is most potent when it redefines learning tasks rather than simply replacing paper-based drills. School leaders must promote digital pedagogy to empower critical thinking, creative collaboration, and adaptive personalized learning.",
+      "explanation_hindi": "डिजिटल शिक्षाशास्त्र (Digital Pedagogy) का अभिप्राय कक्षा में केवल कंप्यूटर या स्मार्ट बोर्ड लगाने अथवा तकनीक का यांत्रिक उपयोग करने से नहीं है। यह शिक्षण-अधिगम की प्रक्रियाओं को अर्थपूर्ण, समावेशी और रूपांतरित करने के लिए डिजिटल उपकरणों के सोद्देश्य एवं रणनीतिक एकीकरण पर केंद्रित है। जैसा कि TPACK मॉडल (प्रौद्योगिकी, शिक्षाशास्त्र और विषय-वस्तु ज्ञान) तथा SAMR मॉडल दर्शाते हैं, डिजिटल पेडागॉजी का उद्देश्य शिक्षण को मात्र प्रतिस्थापित (substitute) करना नहीं, बल्कि अधिगम अनुभवों को पुनःपरिभाषित (redefine) करना है। इसमें शिक्षार्थियों की सक्रिय सहभागिता, आलोचनात्मक सोच, सहयोगात्मक अधिगम और व्यक्तिगत गति से सीखने को प्राथमिकता दी जाती है। विद्यालय प्रमुखों को तकनीकी अवसंरचना के साथ-साथ शिक्षकों के डिजिटल शिक्षण कौशल के विकास पर बल देना चाहिए।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) Integrating digital tools strategically to enhance and transform pedagogical practices",
+        "Answer explanation extracted from supplied reference material: Digital pedagogy moves beyond the simple acquisition of hardware or basic technical skill instruction. It centers on the thoughtful, strategic integration of technology to enhance, transform, and expand pedagogical practices. This approach reimagines instructional delivery, collaboration, and learning assessments through digital environments while maintaining focus on sound learning principles, student engagement, critical thinking, and cognitive growth."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    },
+    {
+      "id": "f372cf3d-3fc0-47cc-bcf0-c65ab34fa31e",
+      "created_at": "2026-10-21T19:00:00.000+00:00",
+      "question_hindi": "ई-लर्निंग (E-learning) मानक ‘SCORM’ का पूर्ण रूप क्या है?",
+      "options_hindi": [
+        "स्टैंडर्ड करिकुलम ऑब्जेक्ट रेफरेंस मैनुअल (Standard Curriculum Object Reference Manual)",
+        "शेयरेबल कंटेंट ऑब्जेक्ट रेफरेंस मॉडल (Sharable Content Object Reference Model)",
+        "सिस्टम कंटेंट ऑर्गनाइजेशन रिसोर्स मॉडल (System Content Organization Resource Model)",
+        "स्कूल करिकुलम ऑब्जेक्ट रेफरेंस मोड (School Curriculum Object Reference Mode)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "In digital pedagogy, online education, and Learning Management Systems, the technical e-learning standard 'SCORM' stands for:",
+      "options_english": [
+        "Standard Curriculum Object Reference Manual",
+        "Sharable Content Object Reference Model",
+        "System Content Organization Resource Model",
+        "School Curriculum Object Reference Mode"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "SCORM stands for Sharable Content Object Reference Model. It is an internationally recognized suite of technical standards and specifications developed by the Advanced Distributed Learning (ADL) Initiative in 2000. SCORM defines how web-based learning content and Learning Management Systems (LMS, such as Moodle, Canvas, or Blackboard) communicate with each other. The core tenets of SCORM are:\n1. Interoperability: E-learning content created in one authoring tool can run seamlessly across any SCORM-compliant LMS;\n2. Reusability: Learning objects (SCOs) can be repurposed and integrated into different instructional modules;\n3. Trackability: SCORM enables the LMS to track student interactions, recording metrics such as completion status, time spent on modules, and assessment scores.",
+      "explanation_hindi": "ई-लर्निंग और डिजिटल शिक्षाशास्त्र में SCORM का पूर्ण रूप ‘Sharable Content Object Reference Model’ (शेयरेबल कंटेंट ऑब्जेक्ट रेफरेंस मॉडल) है। इसे वर्ष 2000 में एडवांस्ड डिस्ट्रीब्यूटेड लर्निंग (ADL) द्वारा विकसित किया गया था। यह ऑनलाइन शिक्षण सामग्री और लर्निंग मैनेजमेंट सिस्टम (LMS - जैसे मूडल, कैनवास आदि) के मध्य तकनीकी संचार और एकीकरण का एक सार्वभौमिक मानक है। इसकी मुख्य विशेषताएं हैं:\n1. अंतर-संचालनीयता (Interoperability): किसी भी सॉफ्टवेयर में बना ई-लर्निंग मॉड्यूल किसी भी SCORM समर्थित LMS पर बिना किसी रुकावट के चल सकता है।\n2. पुन: प्रयोज्यता (Reusability): पाठ्य सामग्री के छोटे-छोटे घटकों को विभिन्न पाठ्यक्रमों में पुनः उपयोग किया जा सकता है।\n3. ट्रैकिंग (Tracking): यह विद्यार्थी के अध्ययन की प्रगति, परीक्षा के अंकों और पाठ्यक्रम समाप्ति की स्थिति को सटीक रूप से रिकॉर्ड करता है। अतः विकल्प B सही है।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (B) Sharable Content Object Reference Model",
+        "Answer explanation extracted from supplied reference material: Reference Model. It represents a recognized suite of technical standards used in e-learning to ensure interoperability, reusability, and seamless accessibility of digital learning content across different Learning Management Systems, enabling standardized tracking of student progress, quiz performance, and online course completion."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-21T19:00:00.000+00:00"
+    },
+    {
+      "id": "3722fd4e-8198-44e5-8190-20f389e48f6b",
+      "created_at": "2026-10-20T19:00:00.000+00:00",
+      "question_hindi": "शिक्षाशास्त्रीय विषय-वस्तु ज्ञान (PCK) किन दो ज्ञान क्षेत्रों के अंतःविभाजन (प्रतिच्छेदन) का प्रतिनिधित्व करता है?",
+      "options_hindi": [
+        "विद्यालय वित्तीय प्रबंधन का ज्ञान और सामुदायिक आवश्यकताओं का ज्ञान",
+        "शिक्षा मनोविज्ञान का ज्ञान और अधिगम समाजशास्त्र का ज्ञान",
+        "विशिष्ट विषय-वस्तु का ज्ञान और शिक्षण रणनीतियों (शिक्षाशास्त्र) का ज्ञान",
+        "डिजिटल हार्डवेयर प्रणालियों का ज्ञान और कंप्यूटर सॉफ्टवेयर का ज्ञान"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Meaning, Nature, and Scope of Pedagogy",
+      "subject": "UPSC Principal Paper",
+      "language": "bilingual",
+      "question_english": "Pedagogical Content Knowledge (PCK) essentially represents the dynamic intersection and synthesis of which two distinct domains of professional knowledge?",
+      "options_english": [
+        "Knowledge of educational institutional finance and knowledge of community civic needs",
+        "Knowledge of cognitive developmental psychology and knowledge of educational sociology",
+        "Knowledge of specific subject matter and knowledge of pedagogical strategies",
+        "Knowledge of computer operating systems and knowledge of electronic hardware architectures"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "According to Lee Shulman's framework, Pedagogical Content Knowledge (PCK) sits at the intersection of Content Knowledge (deep understanding of the academic subject matter, substantive structures, and syntactic rules of a discipline) and General Pedagogical Knowledge (broad principles of classroom organization, student motivation, instructional management, and lesson pacing). PCK answers the question: 'How can this specific disciplinary idea be transformed and represented so that it becomes comprehensible to novice learners?' It includes understanding common learner misconceptions, cognitive bottlenecks, potent analogies, and targeted illustrative models. Later extended to TPACK (by adding technology), PCK remains foundational for master teachers and instructional coaching by school principals.",
+      "explanation_hindi": "ली शुलमैन के मॉडल के अनुसार, 'शिक्षाशास्त्रीय विषय-वस्तु ज्ञान' (PCK) दो मुख्य ज्ञान क्षेत्रों के प्रतिच्छेदन (Intersection) से उत्पन्न होता है: (1) विशिष्ट विषय-वस्तु का ज्ञान (Content Knowledge - जैसे गणित, विज्ञान या इतिहास के तथ्य और सिद्धांत) और (2) सामान्य शिक्षाशास्त्रीय ज्ञान (Pedagogical Knowledge - कक्षा प्रबंधन, शिक्षण विधियाँ और मूल्यांकन)। PCK यह दर्शाता है कि एक शिक्षक किसी अमूर्त या जटिल विषयगत अवधारणा को छात्रों की आयु, पूर्व-ज्ञान और अधिगम शैली के अनुकूल बनाने के लिए किन विशिष्ट शैक्षणिक रणनीतियों, उपमाओं और गतिविधियों का उपयोग करता है। यह शिक्षक को यह पहचानने में मदद करता है कि विद्यार्थी कहाँ त्रुटि कर सकते हैं और उस भ्रांति का निवारण कैसे किया जाए।",
+      "topic": "Meaning, Nature, and Scope of Pedagogy",
+      "difficulty": "easy",
+      "key_facts": [
+        "Printed answer key: (C) Knowledge of specific subject matter and knowledge of teaching strategies",
+        "Answer explanation extracted from supplied reference material: Pedagogical Content Knowledge represents the precise intersection of subject matter knowledge and general pedagogical knowledge. It describes a teacher’s ability to take complex disciplinary concepts and adapt them using effective teaching strategies, analogies, demonstrations, and explanations. This specialized understanding allows teachers to anticipate student misconceptions, adapt content for varying abilities, and make challenging topic material accessible to learners."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-20T19:00:00.000+00:00"
+    }
+  ]
+}
