@@ -1,0 +1,798 @@
+{
+  "test_id": "3a6814fe-1e7b-44bd-8a13-7a95f9f49513",
+  "test_name": "Topic Test: INTERNET_AND_NETWORKING_BASICS - Part 4",
+  "type": "topic_wise",
+  "topic": "internet_and_networking_basics",
+  "created_at": "2026-10-28T18:55:06.734223",
+  "questions": [
+    {
+      "id": "bb9f1888-9085-4684-baa3-1766eaded05f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "87. इंटरनेट प्रोटोकॉल के संबंध में निम्नलिखित बयानों पर विचार करें:\nA. HTTP डेटा को स्पष्ट साधारण पाठ प्रारूप में बिना डिफ़ॉल्ट एन्क्रिप्शन के स्थानांतरित करता है।\nB. HTTPS सुरक्षित संचार के लिए डिफ़ॉल्ट रूप से पोर्ट 443 का उपयोग करता है।\nC. TCP क्रमबद्ध पैकेट डिलीवरी की गारंटी देता है, जबकि UDP डिलीवरी क्रम की गारंटी नहीं देता।\nD. IP पते वैश्विक स्तर पर बिना किसी केंद्रीय प्राधिकरण या रजिस्ट्रेशन आवंटन के प्रबंधित होते हैं।\nउपरोक्त में से कौन से बयान सही हैं?",
+      "options_hindi": [
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A, C और D",
+        "केवल A, B और D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Internet Protocols:\nA. HTTP transfers data in clear plain text format without default encryption.\nB. HTTPS uses port 443 by default for secure communication.\nC. TCP guarantees ordered packet delivery, whereas UDP does not guarantee delivery order.\nD. IP addresses are managed globally without any central authority or registry allocation.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and C only",
+        "B, C and D only",
+        "A, C and D only",
+        "A, B and D only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "HTTP transfers data in plain text without encryption, whereas HTTPS uses port 443 to transmit encrypted data securely. TCP guarantees ordered packet delivery through sequencing, while UDP transfers packets rapidly without delivery ordering guarantees. However, global IP address allocation is managed by centralized authorities, specifically the Internet Corporation for Assigned Names and Numbers and regional internet registries.",
+      "explanation_hindi": "सही उत्तर (a) है। HTTP डेटा को स्पष्ट पाठ में बिना एन्क्रिप्शन के स्थानांतरित करता है, जबकि HTTPS सुरक्षित रूप से एन्क्रिप्टेड डेटा को भेजने के लिए पोर्ट 443 का उपयोग करता है। TCP क्रमबद्ध पैकेट डिलीवरी की गारंटी देता है, जबकि UDP तेजी से पैकेट भेजता है लेकिन डिलीवरी क्रम की गारंटी नहीं देता। हालांकि, वैश्विक IP पते आवंटन केंद्रीय प्राधिकरणों द्वारा प्रबंधित किया जाता है, विशेष रूप से इंटरनेट कॉर्पोरेशन फॉर असाइनड नेम्स एंड नंबर और क्षेत्रीय इंटरनेट रजिस्ट्रियों द्वारा।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "HTTP डेटा को बिना एन्क्रिप्शन के स्थानांतरित करता है।",
+        "HTTPS सुरक्षित संचार के लिए पोर्ट 443 का उपयोग करता है।",
+        "TCP क्रमबद्ध पैकेट डिलीवरी की गारंटी देता है।",
+        "Printed answer key: (A) A, B and C only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1dbc2390-a67d-4b2c-bab6-0028173bed62",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "16. URL `https://www.example.org/about/index.html` में, `.org` क्या दर्शाता है?",
+      "options_hindi": [
+        "यूनिवर्सल प्रोटोकॉल स्कीम नाम",
+        "टॉप-लेवल डोमेन (TLD)",
+        "संसाधन निर्देशिका पथ नाम",
+        "नेटवर्क सर्वर उपडोमेन नाम"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In the URL `https://www.example.org/about/index.html`, what does `.org` represent?",
+      "options_english": [
+        "Universal Protocol Scheme Name",
+        "Top-Level Domain (TLD)",
+        "Resource Directory Path Name",
+        "Network Server Subdomain Name"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "In web address structure, the domain name consists of hierarchical segments. In the given URL, the domain extension `.org` represents the Top-Level Domain, which indicates the purpose, administrative organization, or category of the website. TLDs are crucial for identifying the nature of the site and can influence search engine optimization and user trust.",
+      "explanation_hindi": "सही उत्तर (b) है। वेब पते की संरचना में, डोमेन नाम पदानुक्रमित खंडों से बना होता है। दिए गए URL में, डोमेन एक्सटेंशन `.org` टॉप-लेवल डोमेन को दर्शाता है, जो वेबसाइट के उद्देश्य, प्रशासनिक संगठन या श्रेणी को इंगित करता है। TLD वेबसाइट की प्रकृति की पहचान के लिए महत्वपूर्ण होते हैं और ये खोज इंजन अनुकूलन और उपयोगकर्ता विश्वास को प्रभावित कर सकते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "The domain name consists of hierarchical segments.",
+        ".org is a Top-Level Domain (TLD).",
+        "TLDs indicate the purpose of the website.",
+        "Printed answer key: (B) Top-Level Domain (TLD)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d7f556ce-744b-4659-a688-d80695470bbc",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "70. OSI संदर्भ मॉडल परतों का सही क्रम चुनें, नीचे (परत 1) से ऊपर (परत 7) तक:\n(1) भौतिक → डेटा लिंक → नेटवर्क →\nपरिवहन → सत्र → प्रस्तुति →\nअनुप्रयोग\n(2) अनुप्रयोग → प्रस्तुति → सत्र →",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct order of OSI Reference Model layers from bottom (Layer 1) to top (Layer 7):\n(1) Physical → Data Link → Network → Transport → Session → Presentation → Application\n(2) Application → Presentation → Session →",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Open Systems Interconnection reference model organizes network communications into seven distinct architectural layers from lowest to highest. Layer 1 is the Physical layer, followed by Data Link (Layer 2), Network (Layer 3), Transport (Layer 4), Session (Layer 5), Presentation (Layer 6), and Application (Layer 7). This layered structure standardizes communication functions across diverse hardware and software networking systems.",
+      "explanation_hindi": "सही उत्तर (a) है। ओपन सिस्टम इंटरकनेक्शन संदर्भ मॉडल नेटवर्क संचार को सबसे निचले से सबसे ऊंचे तक सात अलग-अलग आर्किटेक्चरल परतों में व्यवस्थित करता है। परत 1 भौतिक परत है, इसके बाद डेटा लिंक (परत 2), नेटवर्क (परत 3), परिवहन (परत 4), सत्र (परत 5), प्रस्तुति (परत 6), और अनुप्रयोग (परत 7) है। यह परतबद्ध संरचना विभिन्न हार्डवेयर और सॉफ़्टवेयर नेटवर्किंग सिस्टम के बीच संचार कार्यों को मानकीकृत करती है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "OSI मॉडल में कुल सात परतें होती हैं।",
+        "भौतिक परत सबसे निचली परत है।",
+        "यह मॉडल नेटवर्क संचार को मानकीकृत करता है।",
+        "Printed answer key: (A) Physical → Data Link → Network →"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8e1ceab3-77d4-4d63-9ac1-bf0e29fedd00",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) और दूसरे को\nकारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): उपग्रह इंटरनेट कनेक्शन\nअक्सर दूरस्थ या ग्रामीण भौगोलिक\nक्षेत्रों में उपयोग किया जाता है।\nकारण (R): उपग्रह इंटरनेट\nग्राउंड-बेस्ड केबल या फाइबर\nइन्फ्रास्ट्रक्चर पर निर्भर नहीं करता है\nग्राहक के स्थान तक पहुँचने के लिए।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही\nव्याख्या है।",
+        "दोनों A और R सत्य हैं लेकिन R A का\nसही व्याख्या नहीं है।",
+        "A सत्य है लेकिन R गलत है।",
+        "A गलत है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): Satellite internet connection is often used in remote or rural geographical regions. Reason (R): Satellite internet does not rely on ground-based cable or fiber infrastructure to reach the subscriber’s location.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Satellite internet access is frequently deployed in remote, rural, or geographically isolated regions where laying physical terrestrial infrastructure is unfeasible. Because satellite internet communicates via radio signals transmitted directly between a ground satellite dish and geostationary or low-Earth orbit satellites, it bypasses the requirement for physical copper telephone wires, coaxial lines, or underground optical fiber cables to reach subscribers.",
+      "explanation_hindi": "सही उत्तर (a) है। उपग्रह इंटरनेट कनेक्शन अक्सर दूरस्थ, ग्रामीण या भौगोलिक रूप से अलग-थलग क्षेत्रों में तैनात किया जाता है जहाँ भौतिक स्थलीय इन्फ्रास्ट्रक्चर स्थापित करना संभव नहीं होता। उपग्रह इंटरनेट सीधे एक ग्राउंड उपग्रह डिश और भूस्थिर या निम्न-पृथ्वी कक्षा के उपग्रहों के बीच रेडियो सिग्नल के माध्यम से संचार करता है, जिससे ग्राहकों तक पहुँचने के लिए भौतिक तांबे की टेलीफोन तारों, कोएक्सियल लाइनों या भूमिगत ऑप्टिकल फाइबर केबलों की आवश्यकता समाप्त हो जाती है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Satellite internet is often used in remote areas.",
+        "It does not rely on ground-based infrastructure.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c2083f94-b0a1-46e1-8872-c6fd028ac1ec",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "97. कौन सा प्रोटोकॉल मुख्य रूप से इंटरनेट पर ईमेल सर्वरों के बीच इलेक्ट्रॉनिक मेल संदेश भेजने के लिए उपयोग किया जाता है?",
+      "options_hindi": [
+        "HTTP",
+        "SMTP",
+        "FTP",
+        "DHCP"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which protocol is primarily utilized for sending electronic mail messages between email servers across the internet?",
+      "options_english": [
+        "HTTP",
+        "SMTP",
+        "FTP",
+        "DHCP"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Simple Mail Transfer Protocol is the standard application layer protocol used for transmitting electronic mail messages across the Internet. SMTP handles outbound mail transmission, pushing email messages from sender client software to email servers and routing messages between intermediate mail transfer agents across networks. Protocols like POP3 or IMAP are subsequently used by recipient clients to retrieve emails from destination servers.",
+      "explanation_hindi": "सही उत्तर (b) है। सरल मेल ट्रांसफर प्रोटोकॉल इंटरनेट पर इलेक्ट्रॉनिक मेल संदेशों को भेजने के लिए मानक एप्लिकेशन लेयर प्रोटोकॉल है। SMTP आउटबाउंड मेल ट्रांसमिशन को संभालता है, ईमेल संदेशों को प्रेषक क्लाइंट सॉफ़्टवेयर से ईमेल सर्वरों तक पहुँचाता है और नेटवर्क के बीच मध्यवर्ती मेल ट्रांसफर एजेंटों के बीच संदेशों को रूट करता है। POP3 या IMAP जैसे प्रोटोकॉल बाद में प्राप्तकर्ता क्लाइंट द्वारा गंतव्य सर्वरों से ईमेल प्राप्त करने के लिए उपयोग किए जाते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "SMTP is the standard protocol for sending emails.",
+        "It handles outbound mail transmission.",
+        "POP3 and IMAP are used for retrieving emails.",
+        "Printed answer key: (B) SMTP"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6e6ffefb-5e22-4b01-9a48-45c2b40a5e96",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "वेब ब्राउज़र के \"क्लियर ब्राउज़िंग डेटा\" फ़ीचर का कार्य क्या है?",
+      "options_hindi": [
+        "सहेजे गए ब्राउज़िंग इतिहास, कैश,\nकुकीज़ और लॉगिन टोकन को हटाना",
+        "नेटवर्क इंटरफेस कंट्रोलर\nड्राइवरों को नवीनतम सिस्टम फर्मवेयर में अपडेट करना",
+        "स्थायी रूप से होस्ट कंप्यूटर को\nस्थानीय इंटरनेट प्रदाता से डिस्कनेक्ट करना",
+        "दूरस्थ सर्वर निर्देशिकाओं को सक्रिय\nमैलवेयर और सॉफ़्टवेयर वायरस के लिए स्कैन करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the function of a web browser’s “Clear Browsing Data” feature?",
+      "options_english": [
+        "To purge saved browsing history, cache, cookies, and login tokens",
+        "To update network interface controller drivers to the latest system firmware",
+        "To permanently disconnect the host computer from the local internet provider",
+        "To scan remote server directories for active malware and software viruses"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The “Clear Browsing Data” utility in web browsers enables users to delete accumulated browsing records stored on local hard drives. Executing this function purges cached web page files, temporary image files, browsing history logs, download records, stored cookies, and active login session tokens. This practice frees up disk storage, resolves rendering errors, and enhances privacy on shared computing devices.",
+      "explanation_hindi": "सही उत्तर (a) है। \"क्लियर ब्राउज़िंग डेटा\" उपयोगिता वेब ब्राउज़रों में उपयोगकर्ताओं को स्थानीय हार्ड ड्राइव पर संग्रहीत ब्राउज़िंग रिकॉर्ड को हटाने की अनुमति देती है। इस फ़ंक्शन को निष्पादित करने से कैश की गई वेब पृष्ठ फ़ाइलें, अस्थायी छवि फ़ाइलें, ब्राउज़िंग इतिहास लॉग, डाउनलोड रिकॉर्ड, संग्रहीत कुकीज़ और सक्रिय लॉगिन सत्र टोकन हटाए जाते हैं। यह प्रथा डिस्क संग्रहण को मुक्त करती है, रेंडरिंग त्रुटियों को हल करती है, और साझा कंप्यूटिंग उपकरणों पर गोपनीयता को बढ़ाती है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "The 'Clear Browsing Data' feature helps in maintaining privacy.",
+        "It removes cached files and stored cookies.",
+        "Printed answer key: (A) To purge saved browsing history, cache,",
+        "Regularly clearing browsing data can improve browser performance."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "fd01a4ed-31fd-4924-9333-baa294fffbe9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सार्वजनिक वाई-फाई एक्सेस पॉइंट्स से कनेक्ट होने से संबंधित मुख्य सुरक्षा जोखिम क्या है?",
+      "options_hindi": [
+        "आंतरिक डिवाइस बैटरी घटकों को तत्काल भौतिक गर्मी से नुकसान पहुँचाना",
+        "ईव्सड्रॉपिंग हमले अनएन्क्रिप्टेड डेटा ट्रांसमिशन को इंटरसेप्ट करना",
+        "आवश्यक ऑपरेटिंग सिस्टम बूट फ़ाइलों का स्वचालित भ्रष्टाचार और हटाना",
+        "स्थानीय ब्लूटूथ वायरलेस पेयरिंग कॉन्फ़िगरेशन का स्थायी नुकसान और रीसेट करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the main security risk associated with connecting to unencrypted public Wi-Fi access points?",
+      "options_english": [
+        "Causing immediate physical overheating damage to internal device battery components",
+        "Eavesdropping attacks intercepting unencrypted data transmissions",
+        "Automatic corruption and deletion of essential operating system boot files",
+        "Permanent loss and resetting of local Bluetooth wireless pairing configurations"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Connecting to unencrypted public Wi-Fi access points poses major cybersecurity risks, primarily because transmitted data packets are broadcast without cryptographic protection. Malicious actors on the same wireless network can deploy packet sniffing tools to perform eavesdropping attacks, intercepting unencrypted user data such as login credentials, sensitive emails, browsing session cookies, and personal details transmitted across the open radio spectrum.",
+      "explanation_hindi": "सही उत्तर (b) है। सार्वजनिक वाई-फाई एक्सेस पॉइंट्स से कनेक्ट होना महत्वपूर्ण साइबर सुरक्षा जोखिम उत्पन्न करता है, मुख्यतः क्योंकि प्रसारित डेटा पैकेट बिना क्रिप्टोग्राफिक सुरक्षा के प्रसारित होते हैं। एक ही वायरलेस नेटवर्क पर मौजूद दुर्भावनापूर्ण तत्व पैकेट स्निफ़िंग उपकरणों का उपयोग करके ईव्सड्रॉपिंग हमले कर सकते हैं, अनएन्क्रिप्टेड उपयोगकर्ता डेटा जैसे लॉगिन क्रेडेंशियल, संवेदनशील ईमेल, ब्राउज़िंग सत्र कुकीज़, और व्यक्तिगत विवरणों को इंटरसेप्ट कर सकते हैं जो खुले रेडियो स्पेक्ट्रम के माध्यम से प्रसारित होते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Unencrypted public Wi-Fi networks are vulnerable to eavesdropping.",
+        "Malicious actors can intercept sensitive data transmitted over these networks.",
+        "Printed answer key: (B) Eavesdropping",
+        "Using a VPN can enhance security on public Wi-Fi."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "217920c8-586a-4049-aed2-08a0e689ed07",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "48. वाईफाई हॉटस्पॉट और मोबाइल टेथरिंग के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. मोबाइल टेथरिंग एक स्मार्टफोन को अन्य उपकरणों के लिए एक वायरलेस एक्सेस पॉइंट के रूप में कार्य करने में सक्षम बनाता है।\nB. मोबाइल टेथरिंग का उपयोग करने से मोबाइल सब्सक्रिप्शन योजना से डेटा का उपभोग होता है।\nC. एक खुले, असुरक्षित सार्वजनिक वाई-फाई हॉटस्पॉट से कनेक्ट होना शून्य साइबर सुरक्षा जोखिम प्रस्तुत करता है।\nउपरोक्त में से कौन से कथन सही हैं?\n(1) केवल A और B",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल C और D",
+        "A, B और C",
+        "सभी A, B, C और D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding WiFi Hotspots and Mobile Tethering:\nA. Mobile tethering enables a smartphone to act as a wireless access point for other devices.\nB. Using mobile tethering consumes data from the mobile subscription plan.\nC. Connecting to an open, unencrypted public Wi-Fi hotspot poses zero cybersecurity risk.\nWhich of the statements given above are correct?\n(1) A and B only",
+      "options_english": [
+        "A and B only",
+        "C and D only",
+        "A, B and C",
+        "All of A, B, C and D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Mobile tethering configures a smartphone as a wireless access point, sharing its cellular data connectivity with other client devices. Using mobile tethering draws data directly from the host device’s cellular subscription package. Connecting to open, unencrypted public Wi-Fi access points presents significant security risks, as unencrypted data transmissions can be easily intercepted by malicious actors operating on the same network.",
+      "explanation_hindi": "सही उत्तर (a) है। मोबाइल टेथरिंग एक स्मार्टफोन को एक वायरलेस एक्सेस पॉइंट के रूप में कॉन्फ़िगर करता है, जो अन्य क्लाइंट उपकरणों के साथ अपनी सेलुलर डेटा कनेक्टिविटी साझा करता है। मोबाइल टेथरिंग का उपयोग करने से होस्ट डिवाइस की सेलुलर सब्सक्रिप्शन योजना से डेटा सीधे खींचा जाता है। खुले, असुरक्षित सार्वजनिक वाई-फाई एक्सेस पॉइंट से कनेक्ट होना महत्वपूर्ण सुरक्षा जोखिम प्रस्तुत करता है, क्योंकि असुरक्षित डेटा ट्रांसमिशन को उसी नेटवर्क पर काम कर रहे दुर्भावनापूर्ण अभिनेताओं द्वारा आसानी से इंटरसेप्ट किया जा सकता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "मोबाइल टेथरिंग स्मार्टफोन को वायरलेस एक्सेस पॉइंट के रूप में कार्य करने में सक्षम बनाता है।",
+        "मोबाइल टेथरिंग का उपयोग करने से डेटा का उपभोग होता है।",
+        "खुले वाई-फाई हॉटस्पॉट से कनेक्ट होना सुरक्षा जोखिम प्रस्तुत करता है।",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "cd964532-3de5-4cb1-826b-548df76e12a1",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक मोडेम और एक राउटर के बीच मुख्य अंतर क्या है?",
+      "options_hindi": [
+        "एक मोडेम ISP लाइनों और डिजिटल उपकरणों के बीच संकेतों को परिवर्तित करता है, जबकि एक राउटर नेटवर्क उपकरणों के बीच डेटा को निर्देशित करता है।",
+        "एक मोडेम स्थानीय स्थानों में वायरलेस वाई-फाई संकेतों का प्रसारण करता है, जबकि एक राउटर भौतिक केबलों को सेलुलर टावर्स से जोड़ता है।",
+        "एक मोडेम डोमेन नामों को IP पतों में परिवर्तित करता है, जबकि एक राउटर आने वाले मैलवेयर को ब्लॉक करता है और ब्राउज़र कुकीज़ को फ़िल्टर करता है।",
+        "एक मोडेम विशेष रूप से मोबाइल सेलुलर कनेक्शनों के लिए उपयोग किया जाता है, जबकि एक राउटर केवल उपग्रह नेटवर्किंग में तैनात किया जाता है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the main distinction between a Modem and a Router?",
+      "options_english": [
+        "A modem converts signals between ISP lines and digital devices, while a router directs data between network devices.",
+        "A modem broadcasts wireless Wi-Fi signals across local spaces, while a router connects physical cables to cellular towers.",
+        "A modem translates domain names into IP addresses, while a router blocks incoming malware and filters browser cookies.",
+        "A modem is used exclusively for mobile cellular connections, while a router is deployed only in satellite networking."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A modem translates data between analog signals used by telephone or cable lines and digital signals required by computer devices. In contrast, a router routes digital data packets between separate local network devices and manages local traffic pathways, directing incoming data packets from the modem to the appropriate connected end-user devices across wired or wireless local area network configurations.",
+      "explanation_hindi": "सही उत्तर (a) है। एक मोडेम डेटा को टेलीफोन या केबल लाइनों द्वारा उपयोग किए जाने वाले एनालॉग संकेतों और कंप्यूटर उपकरणों द्वारा आवश्यक डिजिटल संकेतों के बीच परिवर्तित करता है। इसके विपरीत, एक राउटर अलग-अलग स्थानीय नेटवर्क उपकरणों के बीच डिजिटल डेटा पैकेट को रूट करता है और स्थानीय ट्रैफ़िक मार्गों का प्रबंधन करता है, मोडेम से आने वाले डेटा पैकेट को उचित जुड़े अंतिम उपयोगकर्ता उपकरणों की ओर निर्देशित करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "A modem converts analog signals to digital.",
+        "A router directs data between network devices.",
+        "Printed answer key: (A) A modem converts signals between ISP lines and digital devices."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b1200c37-81d5-454c-a785-eb4996e734be",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) के रूप में लेबल किया गया है\nऔर दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): एक फ़ायरवॉल उद्यम नेटवर्क प्रशासन में\nएक आवश्यक सुरक्षा घटक है।\nकारण (R): एक फ़ायरवॉल पूर्वनिर्धारित सुरक्षा नियमों के\nआधार पर आने और जाने वाले नेटवर्क ट्रैफ़िक की निगरानी\nऔर फ़िल्टर करता है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): A firewall is an essential security component in enterprise network administration. Reason (R): A firewall monitors and filters incoming and outgoing network traffic based on predefined security rules.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A firewall is a crucial security barrier implemented in individual computers and corporate network infrastructures. It functions by continuously monitoring incoming and outgoing data packet traffic against predefined security rules and access policies. By actively filtering network packets, firewalls block unauthorized external access attempts, isolate malicious software traffic, prevent cyber intrusions, and safeguard sensitive computing environments from unauthorized network exploitation.",
+      "explanation_hindi": "सही उत्तर (a) है। एक फ़ायरवॉल व्यक्तिगत कंप्यूटरों और कॉर्पोरेट नेटवर्क अवसंरचनाओं में लागू किया गया एक महत्वपूर्ण सुरक्षा अवरोध है। यह पूर्वनिर्धारित सुरक्षा नियमों और पहुँच नीतियों के खिलाफ आने और जाने वाले डेटा पैकेट ट्रैफ़िक की निरंतर निगरानी करके कार्य करता है। नेटवर्क पैकेट को सक्रिय रूप से फ़िल्टर करके, फ़ायरवॉल अनधिकृत बाहरी पहुँच प्रयासों को रोकता है, दुर्भावनापूर्ण सॉफ़्टवेयर ट्रैफ़िक को अलग करता है, साइबर घुसपैठ को रोकता है और संवेदनशील कंप्यूटिंग वातावरण को अनधिकृत नेटवर्क शोषण से सुरक्षित रखता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "A firewall is essential for network security.",
+        "It monitors and filters network traffic.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6079be16-ca62-4396-a727-8a0103a15644",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "40. एक स्कूल कंप्यूटर लैब में, साझा इंटरनेट बैंडविड्थ का प्रबंधन और अनुकूलन करने के लिए एक प्रभावी तकनीक क्या है?",
+      "options_hindi": [
+        "QoS नियमों को लागू करना और गैर-शैक्षणिक उच्च-बैंडविड्थ गतिविधियों को प्रतिबंधित करना",
+        "नेटवर्क सामग्री फ़िल्टरिंग को अक्षम करना और सभी मशीनों पर एक साथ असीमित वीडियो स्ट्रीमिंग की अनुमति देना",
+        "सभी स्थानीय नेटवर्क मॉडेम को हटा देना और लैब कंप्यूटरों को सीधे साधारण टेलीफोन लाइनों के माध्यम से जोड़ना",
+        "हर पांच मिनट में सभी क्लाइंट्स पर डोमेन नाम सर्वर सेटिंग्स को गतिशील रूप से पुनः कॉन्फ़िगर और बदलना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In a school computer lab, what is an effective technique for managing and optimizing shared internet bandwidth?",
+      "options_english": [
+        "Implementing QoS rules and restricting noneducational high-bandwidth activities",
+        "Disabling network content filtering and allowing unlimited video streaming on all machines simultaneously",
+        "Removing all local network modems and connecting lab computers directly via basic telephone lines",
+        "Dynamically reconfiguring and changing domain name server settings every five minutes across all clients"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Managing and optimizing internet performance in shared computing environments requires effective bandwidth management strategies. Implementing Quality of Service rules on network routers prioritizes essential educational applications and limits non-essential, high-bandwidth activities like high-definition video streaming or large file downloads. This practice prevents bandwidth congestion, lowers latency, and maintains stable, fair internet speeds for all connected lab user terminals simultaneously.",
+      "explanation_hindi": "सही उत्तर (a) है। साझा कंप्यूटिंग वातावरण में इंटरनेट प्रदर्शन का प्रबंधन और अनुकूलन करने के लिए प्रभावी बैंडविड्थ प्रबंधन रणनीतियों की आवश्यकता होती है। नेटवर्क राउटर पर QoS नियमों को लागू करने से आवश्यक शैक्षणिक अनुप्रयोगों को प्राथमिकता मिलती है और उच्च-परिभाषा वीडियो स्ट्रीमिंग या बड़े फ़ाइल डाउनलोड जैसी गैर-आवश्यक, उच्च-बैंडविड्थ गतिविधियों को सीमित किया जाता है। यह प्रथा बैंडविड्थ भीड़ को रोकती है, विलंबता को कम करती है, और सभी जुड़े लैब उपयोगकर्ता टर्मिनलों के लिए स्थिर, उचित इंटरनेट गति बनाए रखती है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Quality of Service (QoS) is a network feature that prioritizes certain types of traffic.",
+        "Implementing QoS can significantly improve the performance of educational applications.",
+        "Printed answer key: (A) Implementing QoS rules and restricting noneducational high-bandwidth activities."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a59ebe12-1c47-412d-b0af-ffbeac228b18",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "इंटरनेट और वर्ल्ड वाइड वेब (WWW) के बीच मुख्य तकनीकी भेद क्या है?\n(1) इंटरनेट सभी क्लाइंट ब्राउज़र संचालन को संभालता है, जबकि वर्ल्ड वाइड वेब केवल भौतिक नेटवर्क कैब्लिंग और राउटर से बना है।",
+      "options_hindi": [
+        "इंटरनेट सभी क्लाइंट ब्राउज़र संचालन को संभालता है, जबकि वर्ल्ड वाइड वेब केवल भौतिक नेटवर्क कैब्लिंग और राउटर से बना है।",
+        "इंटरनेट विशेष रूप से",
+        "इंटरनेट भौतिक नेटवर्क बुनियादी ढाँचा है, जबकि वर्ल्ड वाइड वेब इसके ऊपर काम करने वाली एक सूचना सेवा है।",
+        "इंटरनेट केवल डेटा ट्रांसफर के लिए है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What key technical distinction separates the Internet from the World Wide Web (WWW)?\n(1) The Internet handles all client browser operations, whereas the World Wide Web consists strictly of physical network cabling and routers.\n(2) The Internet operates exclusively through",
+      "options_english": [
+        "The Internet handles all client browser operations, whereas the World Wide Web consists strictly of physical network cabling and routers.",
+        "The Internet operates exclusively through",
+        "The Internet is the underlying physical network infrastructure, whereas the World Wide Web is an information service operating on top of it.",
+        "The Internet is only for data transfer."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Internet represents the physical and logical network infrastructure comprising cables, routers, switches, servers, and communication protocols that connect devices globally. In contrast, the World Wide Web is an application-level information service operating on top of the Internet infrastructure. It utilizes hyperlinked documents, web servers, browsers, and transfer protocols like HTTP to allow users to navigate, access, search, and view digital content distributed across interconnected global computer servers.",
+      "explanation_hindi": "सही उत्तर (c) है। इंटरनेट भौतिक और तार्किक नेटवर्क बुनियादी ढाँचा है जिसमें केबल, राउटर, स्विच, सर्वर और संचार प्रोटोकॉल शामिल हैं जो वैश्विक रूप से उपकरणों को जोड़ते हैं। इसके विपरीत, वर्ल्ड वाइड वेब एक एप्लिकेशन-स्तरीय सूचना सेवा है जो इंटरनेट बुनियादी ढाँचे के ऊपर काम करती है। यह हाइपरलिंक किए गए दस्तावेज़ों, वेब सर्वरों, ब्राउज़रों और HTTP जैसे ट्रांसफर प्रोटोकॉल का उपयोग करती है ताकि उपयोगकर्ता इंटरकनेक्टेड वैश्विक कंप्यूटर सर्वरों में वितरित डिजिटल सामग्री को नेविगेट, एक्सेस, खोज और देख सकें।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "इंटरनेट भौतिक नेटवर्क बुनियादी ढाँचा है।",
+        "वर्ल्ड वाइड वेब एक सूचना सेवा है जो इंटरनेट पर काम करती है।",
+        "Printed answer key: (C) The Internet is the underlying physical network infrastructure, whereas the World Wide Web is an information service operating on top of it."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f15c5c3b-e9f4-4bcd-a41a-734ef5575491",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "29. कौन सा मेट्रिक एक नेटवर्क संचार चैनल की अधिकतम डेटा ट्रांसफर क्षमता को एक निश्चित अवधि में मापता है?",
+      "options_hindi": [
+        "चैनल लेटेंसी दर",
+        "संप्रेषण जिटर",
+        "चैनल बैंडविड्थ",
+        "राउंड-ट्रिप पिंग समय"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which metric measures the maximum data transfer capacity of a network communication channel over a given period?",
+      "options_english": [
+        "Channel Latency Rate",
+        "Transmission Jitter",
+        "Channel Bandwidth",
+        "Round-Trip Ping Time"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Network bandwidth represents the maximum volume of data that can be transmitted across a given communication link or network path per unit of time. Typically measured in bits per second or megabits per second, bandwidth specifies the data transfer capacity of the physical or wireless network connection, indicating the maximum potential throughput available for downloading and uploading digital information streams.",
+      "explanation_hindi": "सही उत्तर (c) है। नेटवर्क बैंडविड्थ उस अधिकतम डेटा मात्रा का प्रतिनिधित्व करता है जिसे एक निश्चित संचार लिंक या नेटवर्क पथ के माध्यम से समय की एक इकाई में प्रसारित किया जा सकता है। इसे आमतौर पर बिट्स प्रति सेकंड या मेगाबिट्स प्रति सेकंड में मापा जाता है, बैंडविड्थ भौतिक या वायरलेस नेटवर्क कनेक्शन की डेटा ट्रांसफर क्षमता को निर्दिष्ट करता है, जो डिजिटल सूचना धाराओं को डाउनलोड और अपलोड करने के लिए उपलब्ध अधिकतम संभावित थ्रूपुट को इंगित करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Network bandwidth measures data transfer capacity.",
+        "Typically measured in bits per second or megabits per second.",
+        "Printed answer key: (C) Channel Bandwidth"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "99d4502b-53bf-4c60-82fc-c4a40a831bae",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "85. निम्नलिखित में से कौन सा फ़ाइल एक्सटेंशन आमतौर पर एक निष्पादन योग्य इंस्टॉलर फ़ाइल का प्रतिनिधित्व करता है जिसे डाउनलोड करने के बाद चलाने से पहले अत्यधिक सुरक्षा सावधानी की आवश्यकता होती है?",
+      "options_hindi": [
+        "`.txt`",
+        "`.png`",
+        "`.exe`",
+        "`.csv`"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following file extensions typically represents an executable installer file that requires extreme security caution prior to running after downloading?",
+      "options_english": [
+        ".txt",
+        ".png",
+        ".exe",
+        ".csv"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The .exe file extension denotes an executable binary file used primarily in Windows operating systems. When opened, executable files run compiled code instructions directly on the system processor. Downloading .exe files from untrusted web sources requires extreme caution, as malicious executables can secretly install malware, keyloggers, spyware, or trojans, causing significant system damage or data theft upon execution.",
+      "explanation_hindi": "सही उत्तर (c) है। .exe फ़ाइल एक्सटेंशन एक निष्पादन योग्य बाइनरी फ़ाइल को दर्शाता है जिसका उपयोग मुख्य रूप से विंडोज ऑपरेटिंग सिस्टम में किया जाता है। जब खोला जाता है, तो निष्पादन योग्य फ़ाइलें सीधे सिस्टम प्रोसेसर पर संकलित कोड निर्देशों को चलाती हैं। अविश्वसनीय वेब स्रोतों से .exe फ़ाइलें डाउनलोड करना अत्यधिक सावधानी की आवश्यकता होती है, क्योंकि दुर्भावनापूर्ण निष्पादन योग्य फ़ाइलें गुप्त रूप से मैलवेयर, कीलॉगर, स्पाइवेयर या ट्रोजन स्थापित कर सकती हैं, जो निष्पादन के समय महत्वपूर्ण प्रणाली क्षति या डेटा चोरी का कारण बन सकती हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "`.exe` फ़ाइल एक्सटेंशन एक निष्पादन योग्य बाइनरी फ़ाइल को दर्शाता है।",
+        "Windows ऑपरेटिंग सिस्टम में .exe फ़ाइलें संकलित कोड निर्देशों को चलाती हैं।",
+        "Printed answer key: (C) .exe"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7501011d-b6a5-4530-9ca1-e5a808f9c595",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक वेबसाइट पर SSL/TLS प्रमाणपत्र का उपयोग किसके लिए किया जाता है?",
+      "options_hindi": [
+        "स्थानीय इंटरनेट सेवा प्रदाता द्वारा आवंटित भौतिक डेटा ट्रांसफर बैंडविड्थ को काफी बढ़ाना",
+        "एक वेबसाइट की पहचान को प्रमाणित करना और एक एन्क्रिप्टेड कनेक्शन सक्षम करना",
+        "स्वचालित रूप से क्लाइंट ब्राउज़र इतिहास, कैश की गई संपत्तियों और अस्थायी बैकग्राउंड डाउनलोड फ़ाइलों को साफ़ करना",
+        "स्थानीय उपनेट्स के बीच गतिशील आईपी पते आवंटनों को स्थिर डोमेन होस्ट नामों में परिवर्तित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is an SSL/TLS Certificate on a website used for?",
+      "options_english": [
+        "Substantially increasing the physical data transfer bandwidth allocated by the local Internet Service Provider",
+        "Authenticating a website’s identity and enabling an encrypted connection",
+        "Automatically clearing client browser history, cached assets, and temporary background download files",
+        "Converting dynamic IP address allocations into static domain hostnames across local subnets"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "An SSL/TLS certificate is a digital credential issued by a trusted Certificate Authority to secure website communication. It authenticates the true identity of the host domain to web browsers and establishes an encrypted HTTPS communication channel. This cryptographic encryption ensures that sensitive data transferred between the client browser and the web server remains strictly confidential and protected from unauthorized external interception.",
+      "explanation_hindi": "सही उत्तर (b) है। SSL/TLS प्रमाणपत्र एक डिजिटल प्रमाणपत्र है जो एक विश्वसनीय प्रमाणन प्राधिकरण द्वारा वेबसाइट संचार को सुरक्षित करने के लिए जारी किया जाता है। यह वेब ब्राउज़रों के लिए होस्ट डोमेन की वास्तविक पहचान को प्रमाणित करता है और एक एन्क्रिप्टेड HTTPS संचार चैनल स्थापित करता है। यह क्रिप्टोग्राफिक एन्क्रिप्शन सुनिश्चित करता है कि क्लाइंट ब्राउज़र और वेब सर्वर के बीच स्थानांतरित संवेदनशील डेटा पूरी तरह से गोपनीय और अनधिकृत बाहरी हस्तक्षेप से सुरक्षित रहे।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "SSL/TLS certificates are essential for secure online communication.",
+        "They authenticate the identity of websites and encrypt data.",
+        "Printed answer key: (B) Authenticating a website’s identity and enabling an encrypted connection."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8d420f22-0ddc-470b-bb9e-d187395ae286",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "संयुक्त राज्य अमेरिका के रक्षा विभाग द्वारा वित्त पोषित पूर्ववर्ती नेटवर्क कौन सा था जिसने आधुनिक इंटरनेट के मौलिक सिद्धांतों की नींव रखी?",
+      "options_hindi": [
+        "ARPANET",
+        "ALOHANET",
+        "BITNET",
+        "ETHERNET"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What was the precursor network funded by the United States Department of Defense that laid the foundational principles of the modern Internet?",
+      "options_english": [
+        "ARPANET",
+        "ALOHANET",
+        "BITNET",
+        "ETHERNET"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Advanced Research Projects Agency Network was initiated in the late 1960s by the United States Department of Defense. It was designed to create a robust, fault-tolerant communication system connecting distant university and research computers. By introducing packet switching technology rather than traditional circuit switching, it demonstrated how independent computer systems could reliably exchange information, establishing the core technical principles and network architecture that eventually evolved into the global Internet.",
+      "explanation_hindi": "सही उत्तर (a) है। उन्नत अनुसंधान परियोजना एजेंसी नेटवर्क को 1960 के दशक के अंत में संयुक्त राज्य अमेरिका के रक्षा विभाग द्वारा शुरू किया गया था। इसे दूरस्थ विश्वविद्यालयों और अनुसंधान कंप्यूटरों को जोड़ने के लिए एक मजबूत, दोष सहिष्णु संचार प्रणाली बनाने के लिए डिज़ाइन किया गया था। पारंपरिक सर्किट स्विचिंग के बजाय पैकेट स्विचिंग प्रौद्योगिकी को पेश करके, इसने यह प्रदर्शित किया कि स्वतंत्र कंप्यूटर सिस्टम कैसे विश्वसनीय रूप से जानकारी का आदान-प्रदान कर सकते हैं, जो अंततः वैश्विक इंटरनेट में विकसित होने वाले मूल तकनीकी सिद्धांतों और नेटवर्क आर्किटेक्चर की स्थापना करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "ARPANET was the precursor to the modern Internet.",
+        "It introduced packet switching technology.",
+        "Printed answer key: (A) ARPANET"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3a0c6ea3-fff2-45b1-be06-20c12a290f7a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "इंटरनेट कनेक्टिविटी में लेटेंसी क्या है?",
+      "options_hindi": [
+        "विशिष्ट नेटवर्क बिलिंग अवधि के दौरान\nस्थानांतरित किए गए डेटा की अधिकतम मात्रा",
+        "स्रोत से गंतव्य और वापस डेटा पैकेट्स\nको स्थानांतरित करने में समय विलंब",
+        "ब्रॉडबैंड लाइनों में ऑप्टिकल ग्लास स्ट्रैंड्स की\nभौतिक क्रॉस-सेक्शनल मोटाई",
+        "एकल एक्सेस पॉइंट से एक साथ जुड़े\nवायरलेस उपकरणों की कुल संख्या"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is latency in internet connectivity?",
+      "options_english": [
+        "The maximum volume of data transferred over a specific network billing period",
+        "The time delay in transmitting data packets from source to destination and back",
+        "The physical cross-sectional thickness of optical glass strands in broadband lines",
+        "The total number of wireless devices concurrently connected to a single access point"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Network latency refers to the time delay experienced when transmitting data packets across a network connection, typically measured as round-trip ping time in milliseconds. Low latency results in near-instantaneous data responses, whereas high latency causes noticeable delays during interactive online tasks such as video conferencing, online gaming, dynamic web browsing, and real-time remote system access over global connections.",
+      "explanation_hindi": "सही उत्तर (b) है। नेटवर्क लेटेंसी उस समय विलंब को संदर्भित करती है जो डेटा पैकेट्स को नेटवर्क कनेक्शन के माध्यम से स्थानांतरित करते समय अनुभव होता है, जिसे आमतौर पर मिलीसेकंड में राउंड-ट्रिप पिंग समय के रूप में मापा जाता है। कम लेटेंसी तात्कालिक डेटा प्रतिक्रियाओं का परिणाम देती है, जबकि उच्च लेटेंसी वीडियो कॉन्फ्रेंसिंग, ऑनलाइन गेमिंग, गतिशील वेब ब्राउज़िंग और वैश्विक कनेक्शनों के माध्यम से वास्तविक समय की दूरस्थ प्रणाली पहुंच जैसे इंटरैक्टिव ऑनलाइन कार्यों के दौरान ध्यान देने योग्य विलंब का कारण बनती है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Network latency is typically measured as round-trip ping time in milliseconds.",
+        "Low latency results in near-instantaneous data responses.",
+        "High latency can cause delays in online tasks.",
+        "Printed answer key: (B) The time delay in transmitting data packets"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "af6be901-17b0-4f77-bea3-a250efc882c2",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "86. किस प्रकार का नेटवर्क कवरेज आमतौर पर एक पूरे महानगरीय शहर क्षेत्र में तैनात किया जाता है,\nजो अक्सर दर्जनों किलोमीटर तक फैला होता है?",
+      "options_hindi": [
+        "वायरलेस पर्सनल एरिया नेटवर्क (WPAN)",
+        "महानगरीय क्षेत्र नेटवर्क (MAN)",
+        "हाई-स्पीड लोकल एरिया नेटवर्क (LAN)",
+        "प्राइवेट होम एरिया नेटवर्क (HAN)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which type of network coverage is typically deployed across an entire metropolitan city area, often spanning tens of kilometers?",
+      "options_english": [
+        "Wireless Personal Area Network (WPAN)",
+        "Metropolitan Area Network (MAN)",
+        "High-Speed Local Area Network (LAN)",
+        "Private Home Area Network (HAN)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "A Metropolitan Area Network is designed to cover an intermediate geographic region, typically spanning an entire city, town, or large university campus covering distances of up to tens of kilometers. MANs typically combine high-speed optical fiber links and wireless infrastructure to provide connectivity across the area.",
+      "explanation_hindi": "सही उत्तर (b) है। महानगरीय क्षेत्र नेटवर्क (MAN) एक मध्यवर्ती भौगोलिक क्षेत्र को कवर करने के लिए डिज़ाइन किया गया है, जो आमतौर पर एक पूरे शहर, कस्बे या बड़े विश्वविद्यालय परिसर को कवर करता है, जिसकी दूरी दर्जनों किलोमीटर तक होती है। MAN आमतौर पर उच्च गति के ऑप्टिकल फाइबर लिंक और वायरलेस बुनियादी ढांचे को जोड़ता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "महानगरीय क्षेत्र नेटवर्क (MAN) एक पूरे शहर क्षेत्र को कवर करता है।",
+        "MAN की दूरी आमतौर पर दर्जनों किलोमीटर तक होती है।",
+        "Printed answer key: (B) Metropolitan Area Network (MAN)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1ae9bbb7-eff8-474d-b849-2b5be9678d3b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक वेब पोर्टल एक मानक सूचना वेबपृष्ठ से कैसे भिन्न है?",
+      "options_hindi": [
+        "एक वेब पोर्टल केवल स्थिर सामान्य पाठ पर आधारित होता है जिसमें ग्राफिक्स, इंटरएक्टिव स्क्रिप्ट या बाहरी लिंक नहीं होते हैं",
+        "एक वेब पोर्टल विभिन्न व्यक्तिगत उपकरणों, सेवाओं और वेब लिंक के लिए एकल पहुँच बिंदु प्रदान करता है",
+        "एक वेब पोर्टल विशेष टर्मिनल सॉफ़्टवेयर की आवश्यकता होती है और इसे मानक वेब ब्राउज़रों के माध्यम से नहीं खोला जा सकता है",
+        "एक वेब पोर्टल केवल क्लाइंट में संग्रहीत होता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "How does a web portal differ from a standard informational webpage?",
+      "options_english": [
+        "A web portal consists strictly of static plain text without graphics, interactive scripts, or external links",
+        "A web portal offers a single point of access to varied personalized tools, services, and web links",
+        "A web portal requires proprietary terminal software and cannot be accessed via standard web browsers",
+        "A web portal is stored exclusively in client"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "A web portal functions as a central, consolidated gateway providing users with unified access to a wide array of personalized services, links, tools, and information streams from diverse sources. Unlike static informational web pages that display uniform content to all visitors, portals often require user authentication, offer customized dashboards, and integrate specialized services such as email, news feeds, search tools, and databases.",
+      "explanation_hindi": "सही उत्तर (b) है। एक वेब पोर्टल एक केंद्रीय, समेकित गेटवे के रूप में कार्य करता है जो उपयोगकर्ताओं को विभिन्न व्यक्तिगत सेवाओं, लिंक, उपकरणों और जानकारी के प्रवाह तक एकीकृत पहुँच प्रदान करता है। स्थिर सूचना वेब पृष्ठों के विपरीत, जो सभी आगंतुकों को समान सामग्री प्रदर्शित करते हैं, पोर्टल अक्सर उपयोगकर्ता प्रमाणीकरण की आवश्यकता करते हैं, अनुकूलित डैशबोर्ड प्रदान करते हैं और ईमेल, समाचार फ़ीड, खोज उपकरण और डेटाबेस जैसी विशेष सेवाओं को एकीकृत करते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Web portals provide personalized access to various services and tools.",
+        "Unlike static web pages, portals often require user authentication.",
+        "Printed answer key: (B) A web portal offers a single point of access to varied personalized tools, services, and web links."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9e9b97be-f577-4e08-9d0c-c8e10786b670",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "डोमेन नाम प्रणाली (DNS) का मूलभूत कार्य क्या है?",
+      "options_hindi": [
+        "डोमेन नामों को संख्यात्मक आईपी में मैप करना",
+        "डाटा पैकेट्स को पुनः भेजना",
+        "नेटवर्क सुरक्षा प्रदान करना",
+        "इंटरनेट पर डेटा स्टोर करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the fundamental function of the Domain Name System (DNS)?",
+      "options_english": [
+        "Mapping domain names to numerical IP",
+        "Re-sending data packets",
+        "Providing network security",
+        "Storing data on the Internet"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The fundamental purpose of the Domain Name System is converting human-readable domain names into machine-readable numerical IP addresses. Because users easily remember word-based domain names while networking devices route data packets using numeric IP addresses, DNS serves as the Internet’s directory service, resolving domain queries into corresponding IP addresses to establish accurate network connections between endpoints.",
+      "explanation_hindi": "सही उत्तर (a) है। डोमेन नाम प्रणाली का मूल उद्देश्य मानव-पठनीय डोमेन नामों को मशीन-पठनीय संख्यात्मक आईपी पते में परिवर्तित करना है। उपयोगकर्ता शब्द-आधारित डोमेन नामों को आसानी से याद रखते हैं, जबकि नेटवर्किंग उपकरण डेटा पैकेट्स को संख्यात्मक आईपी पते का उपयोग करके रूट करते हैं। DNS इंटरनेट की निर्देशिका सेवा के रूप में कार्य करता है, डोमेन प्रश्नों को संबंधित आईपी पतों में हल करता है ताकि अंत बिंदुओं के बीच सटीक नेटवर्क कनेक्शन स्थापित किया जा सके।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "DNS converts domain names to IP addresses.",
+        "It acts as the Internet's directory service.",
+        "Users prefer memorable domain names.",
+        "Printed answer key: (A) Mapping domain names to numerical IP"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

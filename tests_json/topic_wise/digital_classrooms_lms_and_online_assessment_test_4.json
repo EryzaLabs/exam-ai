@@ -1,0 +1,796 @@
+{
+  "test_id": "e2e17b2a-7e6e-4561-8183-63fb5b4e6a50",
+  "test_name": "Topic Test: DIGITAL_CLASSROOMS_LMS_AND_ONLINE_ASSESSMENT - Part 4",
+  "type": "topic_wise",
+  "topic": "digital_classrooms_lms_and_online_assessment",
+  "created_at": "2026-10-28T18:55:06.581588",
+  "questions": [
+    {
+      "id": "87d690a4-53af-4e0e-8dfb-4fac2ad6c82a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "UDISE+ डेटा प्रविष्टि प्रक्रिया के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. डेटा प्रविष्टि सीधे स्कूलों द्वारा ऑनलाइन वेब पोर्टल या मोबाइल एप्लिकेशन का उपयोग करके की जाती है। \nB. स्कूलों द्वारा प्रस्तुत डेटा क्लस्टर, ब्लॉक और जिला स्तरों पर बहु-स्तरीय सत्यापन से गुजरता है। \nC. स्कूल साल भर में बिना जिला अनुमोदन के अपने भौतिक बुनियादी ढांचे के डेटा को किसी भी समय बदल सकते हैं। \nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the UDISE+ data entry process:\nA. Data entry is performed directly by schools using online Web Portals or Mobile Applications.\nB. Data submitted by schools undergoes multilevel verification at Cluster, Block, and District levels.\nC. Schools can alter their physical infrastructure data at any time throughout the year without district approval.\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Statements A and B are correct. Data entry is indeed performed directly by schools using online portals or mobile applications, and this data undergoes multilevel verification at various administrative levels to ensure accuracy and reliability. However, statement C is incorrect as schools cannot alter their physical infrastructure data without district approval, which is necessary for maintaining accurate records and ensuring compliance with educational standards.",
+      "explanation_hindi": "सही उत्तर (a) है। कथन A और B सही हैं। डेटा प्रविष्टि वास्तव में स्कूलों द्वारा ऑनलाइन पोर्टल या मोबाइल एप्लिकेशन का उपयोग करके सीधे की जाती है, और यह डेटा विभिन्न प्रशासनिक स्तरों पर बहु-स्तरीय सत्यापन से गुजरता है ताकि सटीकता और विश्वसनीयता सुनिश्चित की जा सके। हालाँकि, कथन C गलत है क्योंकि स्कूल बिना जिला अनुमोदन के अपने भौतिक बुनियादी ढांचे के डेटा को नहीं बदल सकते, जो सटीक रिकॉर्ड बनाए रखने और शैक्षिक मानकों के अनुपालन को सुनिश्चित करने के लिए आवश्यक है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "डेटा प्रविष्टि स्कूलों द्वारा ऑनलाइन पोर्टल या मोबाइल एप्लिकेशन के माध्यम से की जाती है।",
+        "डेटा बहु-स्तरीय सत्यापन से गुजरता है।",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8258943f-870c-4e1d-83ab-7062e69db8bc",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "14. स्कूल ERP का कौन सा मॉड्यूल संभावित छात्र आवेदनों, दस्तावेज़ सत्यापन, प्रवेश मानदंड और सीट आवंटन को संभालने के लिए विशेष रूप से जिम्मेदार है?",
+      "options_hindi": [
+        "फीस प्रबंधन मॉड्यूल",
+        "इन्वेंटरी प्रबंधन मॉड्यूल",
+        "स्टाफ एचआर मॉड्यूल",
+        "प्रवेश प्रबंधन मॉड्यूल"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which module of a School ERP is specifically responsible for handling prospective student applications, document verification, entrance criteria, and seat allocation?",
+      "options_english": [
+        "Fee Management Module",
+        "Inventory Management Module",
+        "Staff HR Module",
+        "Admission Management Module"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The correct answer is option D. The Admission Management Module of a School ERP is specifically designed to manage the entire process of student admissions. This includes handling prospective student applications, verifying documents, setting entrance criteria, and allocating seats. By utilizing this module, schools can streamline their admission processes, ensuring that they are efficient and transparent, while also maintaining accurate records of applicants and their statuses.",
+      "explanation_hindi": "सही उत्तर (d) है। स्कूल ERP का प्रवेश प्रबंधन मॉड्यूल विशेष रूप से छात्र प्रवेश की पूरी प्रक्रिया को प्रबंधित करने के लिए डिज़ाइन किया गया है। इसमें संभावित छात्र आवेदनों को संभालना, दस्तावेज़ों की सत्यापन, प्रवेश मानदंड निर्धारित करना और सीट आवंटन शामिल है। इस मॉड्यूल का उपयोग करके, स्कूल अपने प्रवेश प्रक्रियाओं को सुव्यवस्थित कर सकते हैं, यह सुनिश्चित करते हुए कि वे कुशल और पारदर्शी हैं, साथ ही आवेदकों और उनकी स्थिति के सटीक रिकॉर्ड बनाए रखते हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Admission Management Module handles student applications and seat allocation.",
+        "It ensures efficient and transparent admission processes.",
+        "Printed answer key: (D) Admission Management Module"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "4f61be5c-9603-45b4-af34-2e761d280117",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "81. ऑनलाइन आकलन इंजन में स्वचालित ऑटो-ग्रेडिंग के लिए सबसे कम उपयुक्त प्रश्न आइटम प्रारूप कौन सा है?",
+      "options_hindi": [
+        "बहुविकल्पीय प्रश्न (MCQ) प्रारूप",
+        "विस्तारित रचनात्मक चिंतनात्मक निबंध",
+        "सत्य / असत्य द्विआधारी कथन",
+        "एकल-शब्द भरने के लिए रिक्त स्थान"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which type of question item format is LEAST suitable for automated auto-grading in an online assessment engine?",
+      "options_english": [
+        "Multiple Choice Question (MCQ) format",
+        "Extended Creative Reflective Essay",
+        "True / False Binary Statement item",
+        "Single-Word Fill-in-the-Blank prompt"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Extended creative reflective essays represent qualitative open-ended writing tasks that require subjective human judgment to evaluate original thought, expressive nuance, thematic coherence, and critical reflection. Because these qualitative attributes lack deterministic pattern rules or simple exact-match answer keys, automated auto-grading systems are poorly suited for evaluating them accurately, making essay evaluation dependent on manual teacher scoring guided by standardized rubrics.",
+      "explanation_hindi": "सही उत्तर (b) है। विस्तारित रचनात्मक चिंतनात्मक निबंध गुणात्मक खुले-समापन लेखन कार्यों का प्रतिनिधित्व करते हैं जिन्हें मूल विचार, अभिव्यक्तिगत बारीकी, विषयगत संगति, और आलोचनात्मक विचार के मूल्यांकन के लिए व्यक्तिपरक मानव निर्णय की आवश्यकता होती है। क्योंकि इन गुणात्मक विशेषताओं में निश्चित पैटर्न नियम या सरल सटीक-मैच उत्तर कुंजी की कमी होती है, स्वचालित ऑटो-ग्रेडिंग सिस्टम को इन्हें सटीक रूप से मूल्यांकन करने के लिए उपयुक्त नहीं माना जाता है, जिससे निबंध मूल्यांकन मानक रूपरेखाओं द्वारा मार्गदर्शित मैनुअल शिक्षक स्कोरिंग पर निर्भर हो जाता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "hard",
+      "key_facts": [
+        "Qualitative tasks require subjective evaluation.",
+        "Automated grading is best for objective question formats.",
+        "Printed answer key: (B) Extended Creative Reflective Essay"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c9ef9ed8-53e0-437a-a278-0cf4918fe9d6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "60. डिजिटल आकलनों में प्रॉक्टरिंग उपकरणों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. दूरस्थ प्रॉक्टरिंग चेहरे की पहचान एल्गोरिदम का उपयोग कर सकती है यह सुनिश्चित करने के लिए कि पंजीकृत उम्मीदवार परीक्षा दे रहा है। \nB. स्क्रीन-शेयरिंग पहचान उम्मीदवारों को बाहरी मॉनिटरों पर अनधिकृत सामग्री प्रदर्शित करने से रोकती है। \nC. स्वचालित प्रॉक्टरिंग स्पष्ट गोपनीयता नीतियों और उम्मीदवार की सहमति की आवश्यकता को पूरी तरह से समाप्त कर देती है। \nउपरोक्त में से कौन सा/से कथन सही है/हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Proctoring Tools in digital assessments:\nA. Remote proctoring can utilize facial detection algorithms to ensure the registered candidate is taking the test.\nB. Screen-sharing detection prevents candidates from displaying unauthorized material on external monitors.\nC. Automated proctoring completely eliminates the requirement for clear privacy policies and candidate consent.\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Digital proctoring software ensures test integrity through automated user authentication, facial recognition verification, and screen-sharing detection that prevents access to external unauthorized displays or tabs during exams. However, automated monitoring tools must strictly comply with institutional data privacy regulations, requiring clear transparency, explicit user consent, and standardized privacy policies regarding candidate audio and video data collection, rendering the complete elimination of consent policies totally invalid.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल प्रॉक्टरिंग सॉफ़्टवेयर स्वचालित उपयोगकर्ता प्रमाणीकरण, चेहरे की पहचान सत्यापन, और स्क्रीन-शेयरिंग पहचान के माध्यम से परीक्षा की अखंडता सुनिश्चित करता है जो परीक्षा के दौरान बाहरी अनधिकृत डिस्प्ले या टैब तक पहुँच को रोकता है। हालाँकि, स्वचालित निगरानी उपकरणों को संस्थागत डेटा गोपनीयता नियमों का सख्ती से पालन करना चाहिए, जिसमें स्पष्ट पारदर्शिता, स्पष्ट उपयोगकर्ता सहमति, और उम्मीदवार ऑडियो और वीडियो डेटा संग्रह के संबंध में मानकीकृत गोपनीयता नीतियों की आवश्यकता होती है, जिससे सहमति नीतियों का पूर्ण उन्मूलन पूरी तरह से अमान्य हो जाता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Remote proctoring uses facial detection for verification.",
+        "Screen-sharing detection prevents unauthorized access.",
+        "Printed answer key: (A) A and B only."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "59ca4d48-2fc7-4f1a-8c65-f9671dba969b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "57. एक डिजिटल कक्षा के वातावरण में उच्च नेटवर्क बैंडविड्थ मुख्य रूप से किसका समर्थन करने के लिए आवश्यक है:",
+      "options_hindi": [
+        "ऑफलाइन पाठ्यपुस्तक पृष्ठों और भौतिक दस्तावेज़ शीट्स की यांत्रिक प्रिंटिंग",
+        "स्थानीय बाहरी फ्लैश ड्राइव पर किए गए एन्क्रिप्टेड ऑफ़लाइन स्टोरेज ऑपरेशन",
+        "उच्च-परिभाषा शैक्षिक वीडियो और गतिशील इंटरएक्टिविटी का निर्बाध स्ट्रीमिंग",
+        "प्रशासनिक स्कूल लेजर में भौतिक रोल कॉल नंबरों का मैनुअल प्रविष्टि"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "High network bandwidth in a digital classroom environment is essential primarily to support:",
+      "options_english": [
+        "Mechanical printing of offline textbook pages and physical document sheets",
+        "Encrypted offline storage operations conducted on local external flash drives",
+        "Seamless streaming of high-definition educational video and dynamic interactivity",
+        "Manual entry of physical roll call numbers into administrative school ledgers"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "High network bandwidth is a crucial technical prerequisite in modern digital learning spaces to support real-time, data-intensive educational activities. Adequate bandwidth enables uninterrupted streaming of high-definition instructional videos, rapid loading of complex digital simulations, smooth execution of video conferencing sessions, and simultaneous cloud interaction across multiple student devices, preventing network congestion, video buffering, and disruptive technical latency during classroom instruction.",
+      "explanation_hindi": "सही उत्तर (c) है। उच्च नेटवर्क बैंडविड्थ आधुनिक डिजिटल शिक्षण स्थानों में वास्तविक समय, डेटा-गहन शैक्षिक गतिविधियों का समर्थन करने के लिए एक महत्वपूर्ण तकनीकी पूर्वापेक्षा है। पर्याप्त बैंडविड्थ उच्च-परिभाषा शैक्षिक वीडियो का निर्बाध स्ट्रीमिंग, जटिल डिजिटल सिमुलेशन का त्वरित लोडिंग, वीडियो कॉन्फ्रेंसिंग सत्रों का सुचारू निष्पादन, और कई छात्र उपकरणों के बीच समानांतर क्लाउड इंटरएक्शन को सक्षम बनाता है, जिससे नेटवर्क भीड़, वीडियो बफरिंग, और कक्षा के निर्देश के दौरान तकनीकी विलंबता से बचा जा सके।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "High network bandwidth is essential for seamless streaming of educational content.",
+        "It prevents network congestion and technical latency during online learning.",
+        "Printed answer key: (C) Seamless streaming of high-definition educational video and dynamic interactivity."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e6a8937b-2328-4a83-8c41-0f067692c0d1",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "63. कौन सी डिजिटल तकनीक व्यक्तिगत,\nगतिशील अध्ययन पथ प्रदान करती है,\nछात्र के प्रदर्शन मेट्रिक्स के आधार पर\nकार्य की कठिनाई को निरंतर संशोधित\nकरते हुए?",
+      "options_hindi": [
+        "अनुकूली अध्ययन इंजन जो छात्र के प्रदर्शन के आधार पर कार्य की कठिनाई को संशोधित करते हैं",
+        "ब्रॉडकास्ट टेलीविजन नेटवर्क जो निर्धारित समय पर मानकीकृत शैक्षिक कार्यक्रम प्रसारित करते हैं",
+        "स्थिर पीडीएफ रीडर जो इंटरैक्टिव सुविधाओं के बिना निश्चित डिजिटल दस्तावेज़ पृष्ठ प्रदर्शित करते हैं",
+        "रेखीय ऑडियो कैसेट जो क्रमिक रूप से पूर्व-रिकॉर्डेड वॉयस निर्देश चलाते हैं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which digital technology provides personalized,\ndynamic learning paths by continuously\nmodifying task difficulty based on student\nperformance metrics?",
+      "options_english": [
+        "Adaptive Learning Engines modifying task difficulty based on student performance",
+        "Broadcast Television networks airing standardized educational programming on schedule",
+        "Static PDF Readers displaying fixed digital document pages without interactive features",
+        "Linear Audio Cassettes playing back prerecorded voice instruction sequentially"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Adaptive learning engines utilize real-time algorithmic evaluation to deliver personalized learning experiences for every student. By continuously assessing performance metrics such as quiz scores and engagement levels, these systems adjust the difficulty of tasks to match the learner's needs. This approach fosters a more effective learning environment by ensuring that students are neither overwhelmed nor under-challenged, thus optimizing their educational outcomes.",
+      "explanation_hindi": "सही उत्तर (a) है। अनुकूली अध्ययन इंजन वास्तविक समय के एल्गोरिदमिक मूल्यांकन का उपयोग करते हैं ताकि प्रत्येक छात्र के लिए व्यक्तिगत अध्ययन अनुभव प्रदान किया जा सके। ये सिस्टम प्रश्नोत्तरी के स्कोर और संलग्नता स्तर जैसे प्रदर्शन मेट्रिक्स का निरंतर मूल्यांकन करके कार्य की कठिनाई को छात्र की आवश्यकताओं के अनुसार समायोजित करते हैं। यह दृष्टिकोण छात्रों को न तो अधिक बोझिल और न ही कम चुनौतीपूर्ण बनाकर एक अधिक प्रभावी अध्ययन वातावरण को बढ़ावा देता है, जिससे उनके शैक्षिक परिणामों का अनुकूलन होता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Adaptive learning engines provide personalized learning paths.",
+        "They modify task difficulty based on real-time performance metrics.",
+        "Printed answer key: (A) Adaptive Learning Engines modifying task difficulty based on student performance."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "95e6bbbc-882e-4f17-a77c-3f230c7d0191",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "58. एक LMS के माध्यम से असाइनमेंट को संसाधित करने में शामिल निम्नलिखित चरणों को कालानुक्रमिक क्रम में व्यवस्थित करें:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following steps involved in processing an assignment via an LMS in chronological order:",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Processing assignments through a Learning Management System follows a structured four-stage workflow. First, the instructor publishes assignment guidelines, attached files, and submission deadlines on the platform. Next, students complete and upload their digital files before the deadline. Third, the instructor evaluates each submission using an integrated digital rubric and provides qualitative feedback. Finally, the system records the grade and sends automated notifications.",
+      "explanation_hindi": "सही उत्तर (a) है। एक लर्निंग मैनेजमेंट सिस्टम के माध्यम से असाइनमेंट को संसाधित करना एक संरचित चार-चरणीय कार्यप्रवाह का पालन करता है। सबसे पहले, प्रशिक्षक प्लेटफ़ॉर्म पर असाइनमेंट दिशानिर्देश, संलग्न फ़ाइलें और सबमिशन की समय सीमा प्रकाशित करता है। अगला, छात्र समय सीमा से पहले अपनी डिजिटल फ़ाइलें पूरी करते हैं और अपलोड करते हैं। तीसरा, प्रशिक्षक एकीकृत डिजिटल रूपरेखा का उपयोग करके प्रत्येक सबमिशन का मूल्यांकन करता है और गुणात्मक फीडबैक प्रदान करता है। अंततः, प्रणाली ग्रेड रिकॉर्ड करती है और स्वचालित सूचनाएँ भेजती है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "The LMS workflow includes publishing guidelines, submission, evaluation, and grading.",
+        "It enhances the efficiency of assignment processing in educational settings.",
+        "Printed answer key: (A) 1 → 2 → 3 → 4"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6ccb305c-955b-4bf0-99ef-39392b6232bb",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "67. निरंतर और समग्र मूल्यांकन (CCE) को डिजिटल कक्षा के वातावरण में मुख्य रूप से किसके माध्यम से सुगम बनाया जाता है:",
+      "options_hindi": [
+        "एक ही उच्च-स्तरीय वार्षिक परीक्षा पत्र का प्रशासन करना",
+        "गैर-शिक्षण प्रशासनिक कर्मचारियों द्वारा संकलित मानकीकृत वार्षिक मैनुअल पेपर समीक्षाएँ",
+        "ऑनलाइन असाइनमेंट, निदान क्विज़ और भागीदारी लॉग का निरंतर ट्रैकिंग",
+        "कक्षा सत्रों के दौरान हर महीने एक बार मैन्युअल रूप से शारीरिक उपस्थिति रोल लेना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Continuous and Comprehensive Evaluation (CCE) is facilitated in a digital classroom environment primarily through:",
+      "options_english": [
+        "Administering a single high-stakes end-of-year physical examination paper",
+        "Standardized annual manual paper reviews compiled by non-teaching administrative staff",
+        "Continuous tracking of online assignments, diagnostic quizzes, and participation logs",
+        "Taking periodic physical attendance rolls manually once per month during class sessions"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Continuous and Comprehensive Evaluation is efficiently facilitated within digital classroom ecosystems through systematic tracking of diverse learning activities. Platforms continuously collect and record data from daily online homework assignments, formative diagnostic quizzes, forum participation, and project submissions. This steady data stream provides a complete, ongoing profile of student progress across time, avoiding sole reliance on high-stakes end-of-year examinations.",
+      "explanation_hindi": "सही उत्तर (c) है। निरंतर और समग्र मूल्यांकन डिजिटल कक्षा पारिस्थितिकी में विविध शिक्षण गतिविधियों के व्यवस्थित ट्रैकिंग के माध्यम से प्रभावी रूप से सुगम होता है। प्लेटफ़ॉर्म दैनिक ऑनलाइन होमवर्क असाइनमेंट, प्रारंभिक निदान क्विज़, फोरम भागीदारी और परियोजना प्रस्तुतियों से डेटा एकत्र और रिकॉर्ड करते हैं। यह निरंतर डेटा प्रवाह समय के साथ छात्र प्रगति का एक संपूर्ण, चल रहा प्रोफ़ाइल प्रदान करता है, जो उच्च-स्तरीय वार्षिक परीक्षाओं पर एकमात्र निर्भरता से बचता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Continuous and Comprehensive Evaluation (CCE) emphasizes ongoing assessment.",
+        "Digital platforms enable real-time tracking of student performance.",
+        "Printed answer key: (C) Continuous tracking of online assignments,",
+        "Effective evaluation reduces reliance on high-stakes testing."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "42b21be3-0847-4468-a974-cd8e3148e09e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से कौन सा कार्य एक स्कूल-स्तरीय लर्निंग मैनेजमेंट सिस्टम (LMS) की प्राथमिक जिम्मेदारी है?",
+      "options_hindi": [
+        "स्कूल तैनाती के लिए कंप्यूटिंग हार्डवेयर उपकरण और भौतिक घटकों का निर्माण करना",
+        "बाहरी इंटरनेट सेवा प्रदाता सर्वरों के लिए स्वचालित नेटवर्क बैंडविड्थ आवंटन उत्पन्न करना",
+        "क्षेत्रीय प्रशासनिक स्कूल क्षेत्रों में भौतिक सुविधा निर्माण कार्यक्रमों का प्रबंधन करना",
+        "एकीकृत प्लेटफार्म पर पाठ्यक्रम वितरण, छात्र ट्रैकिंग, मूल्यांकन और संसाधनों का केंद्रीकरण करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following functions is a primary responsibility of a school-level Learning Management System (LMS)?",
+      "options_english": [
+        "Manufacturing computing hardware equipment and physical components for school deployments",
+        "Generating automated network bandwidth allocations for external internet service provider servers",
+        "Managing physical facility construction schedules across regional administrative school zones",
+        "Centralizing course delivery, student tracking, assessment, and resources on a unified platform"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Role-Based Access Control regulates system permissions according to specific user designations, such as administrator, teacher, or student. Analytics Dashboards collect and display aggregated performance indicators and engagement metrics to highlight learning progress. Automated Notification Engines automatically dispatch alerts regarding upcoming test dates, assignments, and announcements. Finally, SCORM Compliance establishes standardized packaging protocols, ensuring that digital learning content remains fully interoperable across different learning management software platforms and external institutional ecosystems.",
+      "explanation_hindi": "सही उत्तर (a) है। भूमिका-आधारित पहुँच नियंत्रण प्रणाली की अनुमतियों को विशिष्ट उपयोगकर्ता पदनामों के अनुसार नियंत्रित करता है, जैसे कि प्रशासक, शिक्षक, या छात्र। एनालिटिक्स डैशबोर्ड प्रदर्शन संकेतकों और संलग्नता मैट्रिक्स को एकत्रित और प्रदर्शित करते हैं ताकि सीखने की प्रगति को उजागर किया जा सके। स्वचालित सूचना इंजन आगामी परीक्षा तिथियों, असाइनमेंट और घोषणाओं के बारे में स्वचालित रूप से सूचनाएँ भेजते हैं। अंत में, SCORM अनुपालन मानकीकृत पैकेजिंग प्रोटोकॉल स्थापित करता है, यह सुनिश्चित करते हुए कि डिजिटल शिक्षण सामग्री विभिन्न लर्निंग मैनेजमेंट सॉफ़्टवेयर प्लेटफ़ॉर्म और बाहरी संस्थागत पारिस्थितिक तंत्रों के बीच पूरी तरह से इंटरऑपरेबल बनी रहे।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "LMS centralizes course delivery and student tracking.",
+        "Role-Based Access Control ensures user-specific permissions.",
+        "Analytics Dashboards display aggregated performance metrics.",
+        "Printed answer key: (A) P-IV, Q-I, R-III, S-II"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3ec07f00-00c3-49a2-bcef-335986dd3b92",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "65. डिजिटल शिक्षा प्लेटफार्मों में डेटा गोपनीयता और सुरक्षा के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. ट्रांजिट और स्टोर में एन्क्रिप्शन छात्र डेटा को अनधिकृत पहुंच से सुरक्षित रखता है। \nB. डेटा संरक्षण नियमों का अनुपालन सुनिश्चित करता है कि छात्र की व्यक्तिगत जानकारी अनधिकृत तीसरे पक्ष के साथ साझा नहीं की जाती। \nC. मजबूत भूमिका-आधारित पहुंच नियंत्रण सुनिश्चित करते हैं कि छात्र सहपाठियों के गोपनीय रिकॉर्ड नहीं देख सकते। \nD. छात्र पासवर्ड को स्पष्ट पाठ फ़ाइलों में संग्रहीत करना प्रशासकों द्वारा आसान खाता पुनर्प्राप्ति के लिए अनुशंसित है। \nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A, C और D",
+        "A, B, C और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "65. Consider the following statements regarding Data Privacy and Security in digital education platforms:\nA. Encryption in transit and at rest protects student data against unauthorized access.\nB. Compliance with data protection regulations ensures student personal information is not shared with unauthorized third parties.\nC. Strong role-based access controls ensure students cannot view peer confidential records.\nD. Storing student passwords in plain text files is recommended to facilitate easy account recovery by administrators.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and C only",
+        "B, C and D only",
+        "A, C and D only",
+        "A, B, C and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Robust data security in digital education relies on data encryption in transit and at rest, compliance with privacy regulations, and strict role-based access controls to prevent unauthorized data exposure. Conversely, storing user passwords in plain text creates severe security vulnerabilities that expose personal records to hacking threats. Industry best practices require secure cryptographic hashing of all password credentials to guarantee user privacy protection.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल शिक्षा में मजबूत डेटा सुरक्षा ट्रांजिट और स्टोर में डेटा एन्क्रिप्शन, गोपनीयता नियमों के अनुपालन और अनधिकृत डेटा एक्सपोजर को रोकने के लिए सख्त भूमिका-आधारित पहुंच नियंत्रण पर निर्भर करती है। इसके विपरीत, उपयोगकर्ता पासवर्ड को स्पष्ट पाठ में संग्रहीत करना गंभीर सुरक्षा कमजोरियों को उत्पन्न करता है जो व्यक्तिगत रिकॉर्ड को हैकिंग खतरों के लिए उजागर करता है। उद्योग की सर्वोत्तम प्रथाएँ सभी पासवर्ड क्रेडेंशियल्स के सुरक्षित क्रिप्टोग्राफिक हैशिंग की आवश्यकता करती हैं ताकि उपयोगकर्ता की गोपनीयता की सुरक्षा सुनिश्चित हो सके।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "डेटा एन्क्रिप्शन ट्रांजिट और स्टोर में सुरक्षा प्रदान करता है।",
+        "गोपनीयता नियमों का अनुपालन आवश्यक है।",
+        "भूमिका-आधारित पहुंच नियंत्रण गोपनीयता की रक्षा करता है।",
+        "Printed answer key: (A) A, B and C only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e745f548-b4e0-4631-8a2c-e2f342753fc6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "82. एक शैक्षिक LMS में, स्वचालित उपस्थिति ट्रैकर का कार्य क्या है?",
+      "options_hindi": [
+        "छात्रों के प्लेटफ़ॉर्म लॉगिन, मॉड्यूल पहुँच समय, और सत्र भागीदारी को स्वचालित रूप से लॉग करना",
+        "ऑनलाइन परीक्षणों के दौरान छात्रों की शारीरिक हृदय गति और शारीरिक तनाव स्तरों को रिकॉर्ड करना",
+        "शिक्षक प्रशासनिक मासिक वेतन वितरण और पेरोल रिकॉर्ड की गणना करना",
+        "छात्रों के गतिशील IP पते को बाहरी वेब ब्राउज़िंग और ट्रैकिंग के खिलाफ एन्क्रिप्ट करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In an educational LMS, what is the function of an automated attendance tracker?",
+      "options_english": [
+        "Logging student platform logins, module access times, and session participation automatically",
+        "Recording student physical heart rate and physiological stress levels during online tests",
+        "Calculating teacher administrative monthly salary disbursements and payroll records",
+        "Encrypting student dynamic IP addresses against external web browsing and tracking"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Automated attendance tracking tools in a Learning Management System systematically record student digital engagement across online learning environments. The system automatically logs user login events, module access timestamps, video viewing durations, and active participation in online activities or virtual live sessions. This continuous automated tracking eliminates manual roll calls, provides accurate attendance records, and helps educators identify patterns of student absenteeism or disengagement early.",
+      "explanation_hindi": "सही उत्तर (a) है। स्वचालित उपस्थिति ट्रैकिंग उपकरण एक लर्निंग मैनेजमेंट सिस्टम में छात्रों की डिजिटल सहभागिता को व्यवस्थित रूप से रिकॉर्ड करते हैं। यह प्रणाली स्वचालित रूप से उपयोगकर्ता लॉगिन घटनाओं, मॉड्यूल पहुँच समय, वीडियो देखने की अवधि, और ऑनलाइन गतिविधियों या वर्चुअल लाइव सत्रों में सक्रिय भागीदारी को लॉग करती है। यह निरंतर स्वचालित ट्रैकिंग मैनुअल रोल कॉल को समाप्त करती है, सटीक उपस्थिति रिकॉर्ड प्रदान करती है, और शिक्षकों को छात्रों की अनुपस्थिति या असंलग्नता के पैटर्न को जल्दी पहचानने में मदद करती है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Automated attendance tracking enhances engagement monitoring.",
+        "It eliminates the need for manual roll calls.",
+        "Printed answer key: (A) Logging student platform logins, module",
+        "Accurate records help identify absenteeism patterns."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "277d7bb7-28fe-4060-8cfa-5970c8eb19d9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "3. अंतिम राज्य और राष्ट्रीय स्तर डेटा फ्रीज़",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "विकल्प सी",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Final State and National Level Data Freeze",
+      "options_english": [
+        "Allowing students to manipulate variables",
+        "Providing static information only",
+        "Limiting student interaction",
+        "Restricting access to resources"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Computer simulations provide an immersive pedagogical workspace where learners can actively modify theoretical parameters and observe immediate, dynamic feedback. Unlike static textbooks that only describe scientific or conceptual principles passively, interactive simulations encourage experiential learning, trial-and-error experimentation, and deeper conceptual understanding. Students can test hypotheses, analyze cause-and-effect relationships, and visualize complex multi-step processes in real time, leading to higher-order cognitive engagement and better problem-solving skills across diverse learning disciplines.",
+      "explanation_hindi": "सही उत्तर (c) है। कंप्यूटर सिमुलेशन एक इमर्सिव शैक्षिक कार्यक्षेत्र प्रदान करते हैं जहाँ शिक्षार्थी सक्रिय रूप से सैद्धांतिक मानकों को संशोधित कर सकते हैं और तात्कालिक, गतिशील प्रतिक्रिया देख सकते हैं। स्थिर पाठ्यपुस्तकों के विपरीत, जो केवल वैज्ञानिक या वैचारिक सिद्धांतों का निष्क्रिय रूप से वर्णन करती हैं, इंटरैक्टिव सिमुलेशन अनुभवात्मक अध्ययन, परीक्षण-और-त्रुटि प्रयोग और गहरे वैचारिक समझ को प्रोत्साहित करते हैं। छात्र परिकल्पनाओं का परीक्षण कर सकते हैं, कारण-और-प्रभाव संबंधों का विश्लेषण कर सकते हैं, और वास्तविक समय में जटिल बहु-चरण प्रक्रियाओं को दृश्य रूप में देख सकते हैं, जिससे उच्च-स्तरीय संज्ञानात्मक संलग्नता और बेहतर समस्या-समाधान कौशल विकसित होते हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Interactive simulations enhance experiential learning.",
+        "Students can manipulate variables and observe outcomes.",
+        "Printed answer key: (C) Allowing students to manipulate variables"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d0f53279-c419-4fcd-a3c1-d8a2a7bc936d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "88. एक डिजिटल लर्निंग प्लेटफॉर्म विभेदित शिक्षण का समर्थन कैसे करता है?",
+      "options_hindi": [
+        "विभिन्न सीखने की गति और प्राथमिकताओं के अनुसार विभिन्न शिक्षण कार्य सौंपना",
+        "हर छात्र को एक समान सामग्री को एक ही गति पर बिना किसी भिन्नता के उपभोग करने के लिए मजबूर करना",
+        "विषय सामग्री को पूरी तरह से मानकीकृत यांत्रिक कीबोर्ड टाइपिंग ड्रिल्स से बदलना",
+        "छात्रों की पहुंच को प्रति शैक्षणिक सप्ताह एक स्थिर डिजिटल दस्तावेज़ तक सीमित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "How does a digital learning platform support differentiated instruction?",
+      "options_english": [
+        "Assigning varied learning tasks adapted to different learning speeds and preferences",
+        "Forcing every student to consume identical content at the exact same pace without variation",
+        "Replacing subject content entirely with standardized mechanical keyboard typing drills",
+        "Restricting student access to a single static digital document per academic week"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Digital learning platforms facilitate differentiated instruction by enabling educators to tailor learning materials, activities, and assessment pathways to match individual student learning styles, speeds, and readiness levels. Instructors can assign targeted supplementary reading, dynamic visual simulations, or advanced enrichment tasks to specific student groups within the same platform, ensuring that diverse learning needs are addressed effectively without stigmatizing or locking students into rigid, standardized formats.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल लर्निंग प्लेटफॉर्म विभेदित शिक्षण को सक्षम बनाते हैं क्योंकि यह शिक्षकों को व्यक्तिगत छात्र सीखने की शैलियों, गति और तैयारी स्तरों के अनुसार शिक्षण सामग्री, गतिविधियों और मूल्यांकन पथों को अनुकूलित करने की अनुमति देता है। शिक्षक लक्षित पूरक पठन, गतिशील दृश्य अनुकरण, या उन्नत समृद्धि कार्यों को एक ही प्लेटफॉर्म के भीतर विशिष्ट छात्र समूहों को सौंप सकते हैं, यह सुनिश्चित करते हुए कि विविध सीखने की आवश्यकताओं को प्रभावी ढंग से संबोधित किया जा सके।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital learning platforms allow for tailored educational experiences.",
+        "Differentiated instruction addresses diverse learning needs.",
+        "Printed answer key: (A) Assigning varied learning tasks adapted to",
+        "Educators can use various methods to engage different learners."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f8a83714-6cdf-43c4-a4f0-c42547faf509",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को असर्शन (A) के रूप में लेबल किया गया है और दूसरे को कारण (R) के रूप में लेबल किया गया है। \nअसर्शन (A): माइक्रो-लर्निंग मॉड्यूल आधुनिक डिजिटल लर्निंग डिज़ाइन में प्रभावी होते हैं। \nकारण (R): सामग्री को छोटे टुकड़ों में वितरित करना संज्ञानात्मक लोड सिद्धांत के साथ मेल खाता है और शिक्षार्थी की याददाश्त और ध्यान में सुधार करता है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R गलत है।",
+        "A गलत है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): Micro-learning modules are effective in modern digital learning design. Reason (R): Delivering content in bite-sized chunks aligns with cognitive load theory and improves learner retention and focus.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Micro-learning modules are highly effective in modern digital pedagogy because they present learning content in concise, targeted bite-sized units. This instructional design aligns directly with cognitive load theory by reducing working memory strain, enhancing information processing, and improving retention. Delivering focused learning topics enables modern students to absorb key concepts quickly, maintain higher attention levels, and engage in flexible, self-paced learning across digital devices.",
+      "explanation_hindi": "सही उत्तर (a) है। माइक्रो-लर्निंग मॉड्यूल आधुनिक डिजिटल शिक्षा में अत्यधिक प्रभावी होते हैं क्योंकि ये सीखने की सामग्री को संक्षिप्त, लक्षित छोटे टुकड़ों में प्रस्तुत करते हैं। यह शैक्षणिक डिज़ाइन सीधे संज्ञानात्मक लोड सिद्धांत के साथ मेल खाता है, जिससे कार्यशील स्मृति पर दबाव कम होता है, सूचना प्रसंस्करण में सुधार होता है, और याददाश्त में वृद्धि होती है। केंद्रित शिक्षण विषयों को वितरित करने से आधुनिक छात्रों को प्रमुख अवधारणाओं को तेजी से अवशोषित करने, उच्च ध्यान स्तर बनाए रखने और डिजिटल उपकरणों के माध्यम से लचीले, आत्म-गति वाले अध्ययन में संलग्न होने में मदद मिलती है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Micro-learning enhances retention and focus.",
+        "Cognitive load theory supports bite-sized learning.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A.",
+        "Effective digital pedagogy incorporates micro-learning."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2149d88d-20c8-4b6f-b49b-cc5f8ff6485e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "38. एक नए शैक्षणिक सत्र के लिए संस्थागत LMS स्थापित करने में शामिल चरणों का तार्किक अनुक्रम व्यवस्थित करें:",
+      "options_hindi": [
+        "प्रशासनिक ढांचे और उपयोगकर्ता भूमिका पहुंच अनुमतियों को परिभाषित करना",
+        "शिक्षण स्टाफ द्वारा डिजिटल शिक्षण मॉड्यूल अपलोड और व्यवस्थित करना",
+        "छात्रों का नामांकन और उचित पाठ्यक्रम अनुभागों में असाइन करना",
+        "सक्रिय पाठ्यक्रम वितरण शुरू करना और निरंतर प्रगति ट्रैकिंग करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the logical sequence of steps involved in setting up an institutional LMS for a new academic term:",
+      "options_english": [
+        "Define overall course frameworks and user role access permissions",
+        "Upload and organize digital learning modules by instructional staff",
+        "Enroll students and assign them to appropriate course sections",
+        "Commence active course delivery alongside continuous progress tracking"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Setting up an institutional learning management system for a new academic term requires a methodical four-step operational sequence. First, administrators define overall course frameworks, global enrollment rules, and user role access permissions. Next, instructional staff upload and organize digital learning modules within the course structure. Third, students are enrolled and assigned to appropriate course sections alongside designated faculty. Finally, active course delivery commences alongside continuous progress tracking.",
+      "explanation_hindi": "सही उत्तर (a) है। संस्थागत लर्निंग मैनेजमेंट सिस्टम को नए शैक्षणिक सत्र के लिए स्थापित करने में चार चरणों का अनुक्रम आवश्यक है। पहले, प्रशासनिक ढांचे और उपयोगकर्ता भूमिका पहुंच अनुमतियों को परिभाषित किया जाता है। इसके बाद, शिक्षण स्टाफ द्वारा डिजिटल शिक्षण मॉड्यूल अपलोड और व्यवस्थित किए जाते हैं। तीसरे चरण में, छात्रों का नामांकन किया जाता है और उन्हें उचित पाठ्यक्रम अनुभागों में असाइन किया जाता है। अंत में, सक्रिय पाठ्यक्रम वितरण शुरू होता है और निरंतर प्रगति ट्रैकिंग की जाती है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "LMS setup involves defining course frameworks and user roles.",
+        "Printed answer key: (A) Define overall course frameworks and user role access permissions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ede14bb1-67da-4dfd-82e3-ca04fa497f81",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "27. टीपीसीके (तकनीकी शैक्षिक सामग्री ज्ञान)\nफ्रेमवर्क के चारों ओर संरचित शिक्षक प्रशिक्षण\nकार्यक्रमों का मुख्य उद्देश्य क्या है?",
+      "options_hindi": [
+        "शिक्षकों को कक्षा के कंप्यूटर हार्डवेयर\nघटक को शारीरिक रूप से असेंबल और मरम्मत करना सिखाना",
+        "शिक्षकों को केवल सॉफ़्टवेयर लाइसेंसिंग\nनियमों और नेटवर्क प्रशासनिक कोडिंग में प्रशिक्षित करना",
+        "शिक्षकों को सभी आमने-सामने की बातचीत को\nस्वचालित डिजिटल शिक्षण बॉट्स से बदलने के लिए निर्देशित करना",
+        "शिक्षकों को प्रौद्योगिकी को विषय ज्ञान और\nसाउंड शैक्षणिक प्रथाओं के साथ एकीकृत करने में सक्षम बनाना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the main objective of teacher training programmes structured around the TPACK (Technological Pedagogical Content Knowledge) framework?",
+      "options_english": [
+        "Teaching instructors how to disassemble and repair classroom computer hardware components physically",
+        "Training teachers exclusively in software licensing regulations and network administrative coding",
+        "Instructing educators to replace all face-to-face interaction with automated digital teaching bots",
+        "Enabling teachers to integrate technology with subject knowledge and sound pedagogical practices"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The Technological Pedagogical Content Knowledge framework emphasizes the complex interaction between technological tools, subject matter expertise, and instructional methods. By enabling teachers to integrate technology with their subject knowledge and pedagogical practices, the TPACK framework aims to enhance teaching effectiveness and improve student learning outcomes. This holistic approach ensures that educators are well-equipped to navigate the challenges of modern educational environments.",
+      "explanation_hindi": "सही उत्तर (d) है। तकनीकी शैक्षिक सामग्री ज्ञान (TPACK) फ्रेमवर्क तकनीकी उपकरणों, विषय वस्तु विशेषज्ञता और शैक्षणिक विधियों के बीच जटिल अंतःक्रिया पर जोर देता है। शिक्षकों को प्रौद्योगिकी को उनके विषय ज्ञान और शैक्षणिक प्रथाओं के साथ एकीकृत करने में सक्षम बनाकर, TPACK फ्रेमवर्क शिक्षण की प्रभावशीलता को बढ़ाने और छात्र सीखने के परिणामों में सुधार करने का लक्ष्य रखता है। यह समग्र दृष्टिकोण सुनिश्चित करता है कि शिक्षक आधुनिक शैक्षणिक वातावरण की चुनौतियों का सामना करने के लिए अच्छी तरह से तैयार हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "TPACK framework integrates technology, pedagogy, and content knowledge.",
+        "Focuses on enhancing teaching effectiveness and student learning outcomes.",
+        "Encourages a holistic approach to teacher training.",
+        "Printed answer key: (D) Enabling teachers to integrate technology with subject knowledge and sound pedagogical practices"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "99d5afc3-18aa-443f-8a41-12c1463b6036",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "संस्थानों के लिए स्वतंत्र रूप से सुलभ स्रोत कोड के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "स्वतंत्र रूप से सुलभ स्रोत कोड की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding freely accessible source code that institutions, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of freely accessible source code that institutions",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The correct option is 'Freely accessible source code that institutions'. Open-source learning management systems, such as Moodle, are characterized by freely accessible software source code that organizations can download, customize, and host independently. Unlike proprietary commercial software that requires ongoing license fees and limits structural modification, open-source platforms give educational institutions complete control over system configurations, visual branding, feature integration, and data security, allowing customized adaptation to match specific institutional and pedagogical requirements.",
+      "explanation_hindi": "सही उत्तर (b) है। स्वतंत्र रूप से सुलभ स्रोत कोड की विशेषताएँ ऐसी होती हैं कि संस्थाएँ इसे अपनी आवश्यकताओं के अनुसार संशोधित और होस्ट कर सकती हैं। ओपन-सोर्स लर्निंग मैनेजमेंट सिस्टम, जैसे Moodle, स्वतंत्र रूप से सुलभ सॉफ़्टवेयर स्रोत कोड की विशेषता रखते हैं जिसे संगठन डाउनलोड, अनुकूलित और स्वतंत्र रूप से होस्ट कर सकते हैं। यह व्यावसायिक सॉफ़्टवेयर की तुलना में संस्थानों को पूरी नियंत्रण देता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Open-source platforms provide complete control over system configurations.",
+        "They allow customization to meet specific institutional needs.",
+        "Printed answer key: (B) Freely accessible source code that institutions"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1238b092-5407-461e-b305-55edbe8eef77",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "UDISe+ वार्षिक डेटा प्रबंधन जीवनचक्र के निम्नलिखित चरणों को सही क्रम में व्यवस्थित करें:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following stages of the UDISE+ annual data management lifecycle in the correct sequence:",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct answer is option a. The stages of the UDISE+ annual data management lifecycle typically follow a systematic sequence. Initially, a test blueprint is created, followed by item authoring, configuring test delivery parameters, and finally administering the test. Each stage is crucial for ensuring that the data collected is accurate and useful for educational planning and assessment.",
+      "explanation_hindi": "सही उत्तर (a) है। UDISE+ वार्षिक डेटा प्रबंधन जीवनचक्र के चरण आमतौर पर एक व्यवस्थित क्रम का पालन करते हैं। सबसे पहले, एक परीक्षण ब्लूप्रिंट बनाया जाता है, इसके बाद प्रश्नों का लेखन, परीक्षण वितरण पैरामीटर को कॉन्फ़िगर करना, और अंत में परीक्षण का संचालन करना होता है। प्रत्येक चरण यह सुनिश्चित करने के लिए महत्वपूर्ण है कि एकत्रित डेटा सटीक और शैक्षिक योजना और मूल्यांकन के लिए उपयोगी हो।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "The UDISE+ lifecycle includes stages from planning to assessment.",
+        "Each stage is essential for accurate data collection.",
+        "Printed answer key: (A) 1 → 2 → 3 → 4."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3fccec8e-0a5c-442d-9dd3-e0e69dc474f8",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "18. एक स्कूल ERP परीक्षा और परिणाम प्रबंधन मॉड्यूल में, \"ग्रेडबुक कॉन्फ़िगरेशन\" शब्द किस कार्य को संदर्भित करता है?",
+      "options_hindi": [
+        "मूल्यांकन मानदंड, भार और ग्रेड सीमाओं को परिभाषित करना",
+        "परीक्षा के लिए भौतिक नोटबुक और खाली उत्तर पुस्तिकाएँ ऑर्डर करना",
+        "सुरक्षा बारकोड के साथ एम्बेडेड भौतिक परीक्षा उत्तर पत्रों को प्रिंट करना",
+        "परीक्षाओं के दौरान दैनिक कक्षा की भौतिक सफाई और सैनिटाइजेशन रूटीन निर्धारित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In a School ERP Examination and Result Management module, what function does the term 'Gradebook Configuration' refer to?",
+      "options_english": [
+        "Defining evaluation rubrics, weightages, and grade boundaries",
+        "Ordering paper physical notebooks and blank answer booklets for term examinations",
+        "Printing physical examination answer sheets embedded with security barcodes",
+        "Scheduling daily classroom physical cleaning and sanitization routines during exams"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The term 'Gradebook Configuration' in a School ERP system refers to the process of defining evaluation rubrics, weightages, and grade boundaries. This configuration is crucial for ensuring that assessments are fair and standardized across different subjects and classes. It allows educators to set clear expectations for student performance and provides a structured framework for grading, which is essential for maintaining academic integrity and transparency.",
+      "explanation_hindi": "सही उत्तर (a) है। स्कूल ERP प्रणाली में 'ग्रेडबुक कॉन्फ़िगरेशन' शब्द मूल्यांकन मानदंड, भार और ग्रेड सीमाओं को परिभाषित करने की प्रक्रिया को संदर्भित करता है। यह कॉन्फ़िगरेशन यह सुनिश्चित करने के लिए महत्वपूर्ण है कि विभिन्न विषयों और कक्षाओं में मूल्यांकन निष्पक्ष और मानकीकृत हो। यह शिक्षकों को छात्र प्रदर्शन के लिए स्पष्ट अपेक्षाएँ निर्धारित करने की अनुमति देता है और ग्रेडिंग के लिए एक संरचित ढांचा प्रदान करता है, जो शैक्षणिक अखंडता और पारदर्शिता बनाए रखने के लिए आवश्यक है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Gradebook configuration defines how student performance is assessed.",
+        "It includes setting evaluation rubrics and grade boundaries.",
+        "Printed answer key: (A) Defining evaluation rubrics, weightages, and grade boundaries"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8ca02707-4e0a-4767-9682-5b30a888edaa",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "99. कौन सा तंत्र एक LMS को अस्थायी या कम इंटरनेट कनेक्टिविटी वाले क्षेत्रों में प्रभावी ढंग से काम करने की अनुमति देता है?",
+      "options_hindi": [
+        "स्थानीय कक्षा नेटवर्क के माध्यम से 4K रिज़ॉल्यूशन में गतिशील लाइव वीडियो स्ट्रीमिंग",
+        "हर 5 सेकंड में अनिवार्य निरंतर ब्रॉडबैंड कनेक्शन सत्यापन",
+        "ऑफलाइन समन्वयन जो सामग्री डाउनलोड और ऑफलाइन कार्य को पृष्ठभूमि समन्वय के साथ सक्षम करता है",
+        "सिस्टम बैंडविड्थ को बचाने के लिए मोबाइल एप्लिकेशन एकीकरण को पूरी तरह से निष्क्रिय करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which mechanism allows an LMS to work effectively in regions with intermittent or low internet connectivity?",
+      "options_english": [
+        "Dynamic live video streaming at 4K resolution across local classroom networks",
+        "Mandatory continuous broadband connection verification every 5 seconds online",
+        "Offline synchronization enabling content download and offline work with background sync",
+        "Disabling mobile application integration completely to conserve system bandwidth"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Offline synchronization features allow Learning Management Systems to operate effectively in regions with unstable or low internet connectivity. Students can download course modules, instructional videos, and assignments to their local devices while connected, work through learning tasks offline without internet access, and automatically sync completed work, quiz scores, and interaction logs back to the central server once internet connection is restored.",
+      "explanation_hindi": "सही उत्तर (c) है। ऑफलाइन समन्वयन सुविधाएँ लर्निंग मैनेजमेंट सिस्टम को अस्थिर या कम इंटरनेट कनेक्टिविटी वाले क्षेत्रों में प्रभावी ढंग से काम करने की अनुमति देती हैं। छात्र जुड़े रहने के दौरान पाठ्यक्रम मॉड्यूल, शैक्षिक वीडियो और असाइनमेंट को अपने स्थानीय उपकरणों पर डाउनलोड कर सकते हैं, बिना इंटरनेट कनेक्शन के ऑफलाइन कार्य कर सकते हैं, और एक बार इंटरनेट कनेक्शन बहाल होने पर स्वचालित रूप से पूरा किया गया कार्य, क्विज़ स्कोर और इंटरैक्शन लॉग को केंद्रीय सर्वर पर समन्वयित कर सकते हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Offline synchronization allows LMS to function in low connectivity areas.",
+        "Students can download content for offline use.",
+        "Completed work syncs back to the server when online.",
+        "Printed answer key: (C) Offline synchronization enabling content"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

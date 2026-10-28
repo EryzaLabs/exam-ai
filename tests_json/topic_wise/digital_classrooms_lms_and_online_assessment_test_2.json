@@ -1,0 +1,793 @@
+{
+  "test_id": "661cb428-433a-41d1-bc34-31875e434d9b",
+  "test_name": "Topic Test: DIGITAL_CLASSROOMS_LMS_AND_ONLINE_ASSESSMENT - Part 2",
+  "type": "topic_wise",
+  "topic": "digital_classrooms_lms_and_online_assessment",
+  "created_at": "2026-10-28T18:55:06.578988",
+  "questions": [
+    {
+      "id": "22148666-8599-41fe-9c0f-78a8e9042e73",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "90. डिजिटल लर्निंग मॉड्यूल में प्रदान किए गए आत्म-मूल्यांकन क्विज़ का शैक्षणिक कार्य क्या है?",
+      "options_hindi": [
+        "छात्रों को स्वतंत्र रूप से समझ की जांच करने और ज्ञान में अंतर पहचानने में सक्षम बनाना",
+        "आधिकारिक राज्य रैंक प्रमाणपत्रों और औपचारिक शैक्षणिक पुरस्कारों का निर्धारण करना",
+        "छात्र अनुशासन ट्रैकिंग के लिए स्वचालित माता-पिता की सूचना अलर्ट को सक्रिय करना",
+        "मैनुअल प्रशासनिक अनलॉकिंग तक पाठ्यक्रम मॉड्यूल तक पहुंच को स्थायी रूप से लॉक करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the pedagogical function of self-assessment quizzes provided in digital learning modules?",
+      "options_english": [
+        "Enabling students to check comprehension and identify knowledge gaps independently",
+        "Determining official state rank certifications and formal academic awards",
+        "Triggering automatic parent notification alerts for student disciplinary tracking",
+        "Locking course module access permanently until manual administrative unlocking"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Self-assessment quizzes in digital learning modules serve a key formative pedagogical function by providing low-stakes opportunities for learners to test their conceptual understanding independently. By answering automated questions and reviewing immediate feedback explanations, students can gauge their mastery levels, identify specific knowledge gaps, and take ownership of their learning. This reflective self-evaluation reinforces retention, promotes self-regulated learning habits, and prepares students for formal summative assessments.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल लर्निंग मॉड्यूल में आत्म-मूल्यांकन क्विज़ एक महत्वपूर्ण शैक्षणिक कार्य करते हैं, जो छात्रों को स्वतंत्र रूप से अपनी समझ की जांच करने और ज्ञान में अंतर पहचानने के लिए निम्न-जोखिम वाले अवसर प्रदान करते हैं। स्वचालित प्रश्नों का उत्तर देकर और तात्कालिक फीडबैक स्पष्टीकरण की समीक्षा करके, छात्र अपनी महारत के स्तर का आकलन कर सकते हैं, विशिष्ट ज्ञान में अंतर पहचान सकते हैं, और अपने सीखने की जिम्मेदारी ले सकते हैं। यह आत्म-आकलन पुनः धारण को मजबूत करता है, आत्म-नियामित अध्ययन की आदतों को बढ़ावा देता है, और छात्रों को औपचारिक समापन मूल्यांकन के लिए तैयार करता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Self-assessment quizzes provide low-stakes opportunities for learners.",
+        "They help students identify knowledge gaps and take ownership of their learning.",
+        "Printed answer key: (A) Enabling students to check comprehension"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "00af7469-bd3e-4b34-b3f9-98d590aab9fb",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "87. एक डिजिटल मूल्यांकन प्लेटफ़ॉर्म में, \"प्रश्न-प्रति-समय विश्लेषण\" का उपयोग किस लिए किया जाता है?",
+      "options_hindi": [
+        "परीक्षा के दौरान वस्तु की कठिनाई का मूल्यांकन करना और गति की समस्याओं का पता लगाना",
+        "कंप्यूटर लैब में कुल सिस्टम हार्डवेयर पावर खपत की गणना करना",
+        "भौतिक पुस्तकालय पुस्तक लौटाने का कार्यक्रम बनाना और इन्वेंटरी लॉग का प्रबंधन करना",
+        "ऑनलाइन परीक्षा सत्रों के दौरान स्क्रीन की चमक को गतिशील रूप से समायोजित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In a digital assessment platform, what is 'time-per-question analytics' used for?",
+      "options_english": [
+        "Evaluating item difficulty and detecting pacing issues during testing",
+        "Calculating total system hardware power consumption in computer labs",
+        "Scheduling physical library book returns and managing inventory logs",
+        "Adjusting screen brightness dynamically during online exam sessions"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Time-per-question analytics in digital assessment software record the exact duration students spend answering individual test items. By evaluating these timing metrics across student cohorts, educators can identify unusually complex or confusing questions that cause testing bottlenecks, detect potential pacing issues, and evaluate overall item difficulty. This empirical data helps instructional designers refine question wording, calibrate appropriate exam time limits, and improve test quality.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल मूल्यांकन सॉफ़्टवेयर में प्रश्न-प्रति-समय विश्लेषण छात्रों द्वारा व्यक्तिगत परीक्षण वस्तुओं का उत्तर देने में बिताए गए सटीक समय को रिकॉर्ड करता है। शिक्षकों को इन समय मेट्रिक्स का मूल्यांकन करके असामान्य रूप से जटिल या भ्रमित करने वाले प्रश्नों की पहचान करने में मदद मिलती है, जो परीक्षण में बाधाएँ उत्पन्न करते हैं, संभावित गति की समस्याओं का पता लगाते हैं, और समग्र वस्तु की कठिनाई का मूल्यांकन करते हैं। यह अनुभवजन्य डेटा शैक्षणिक डिज़ाइनरों को प्रश्नों के शब्दों को परिष्कृत करने, उचित परीक्षा समय सीमाओं को कैलिब्रेट करने और परीक्षण की गुणवत्ता में सुधार करने में मदद करता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Time-per-question analytics helps evaluate item difficulty.",
+        "Identifies pacing issues during assessments.",
+        "Printed answer key: (A) Evaluating item difficulty and detecting"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7e0d37ec-d096-4fbe-a228-0839372c3137",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "ई-लर्निंग डिजिटल सामग्री भंडार में मेटाडेटा टैगिंग की भूमिका क्या है?",
+      "options_hindi": [
+        "डिजिटल मीडिया फ़ाइलों को एन्क्रिप्ट करना ताकि उन्हें\nमोबाइल हार्डवेयर उपकरणों पर नहीं देखा जा सके",
+        "सामग्री को खोज शब्दों, मार्करों,\nऔर सीखने के लक्ष्यों के साथ लेबल करना ताकि आसानी से पुनर्प्राप्त किया जा सके",
+        "स्थानीय सर्वर भंडारण सरणियों से स्वचालित रूप से डुप्लिकेट वीडियो फ़ाइलों को हटाना",
+        "दृश्य छवि फ़ाइलों को स्थिर ऑडियो प्रारूपों में परिवर्तित करना ताकि श्रवण प्लेबैक हो सके"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the role of metadata tagging in an e-learning digital content repository?",
+      "options_english": [
+        "Encrypting digital media files so they cannot be viewed on mobile hardware devices",
+        "Labeling content with search terms, markers, and learning goals for easy retrieval",
+        "Deleting duplicate video files automatically from local server storage arrays",
+        "Converting visual image files into static audio formats for auditory playback"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Metadata tagging in digital content repositories involves attaching descriptive labels, keyword tags, subject markers, and learning objective parameters to e-learning resources. This systematic indexing allows educators and students to search, filter, locate, and reuse digital instructional assets efficiently within large centralized databases. Proper metadata classification streamlines content curation, enhances resource discoverability, and supports aligned instructional planning across digital learning platforms.",
+      "explanation_hindi": "सही उत्तर (b) है। मेटाडेटा टैगिंग डिजिटल सामग्री भंडार में वर्णनात्मक लेबल, कीवर्ड टैग, विषय मार्कर, और सीखने के उद्देश्य के पैरामीटर को ई-लर्निंग संसाधनों से जोड़ने की प्रक्रिया है। यह प्रणालीबद्ध अनुक्रमण शिक्षकों और छात्रों को बड़े केंद्रीकृत डेटाबेस में डिजिटल शैक्षिक संपत्तियों को कुशलता से खोजने, फ़िल्टर करने, स्थानांतरित करने और पुन: उपयोग करने की अनुमति देता है। उचित मेटाडेटा वर्गीकरण सामग्री क्यूरेशन को सरल बनाता है, संसाधन खोजने की क्षमता को बढ़ाता है, और डिजिटल शिक्षण प्लेटफार्मों के बीच संरेखित शैक्षिक योजना का समर्थन करता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Metadata tagging enhances searchability and organization of digital content.",
+        "It involves attaching descriptive labels and learning objectives.",
+        "Printed answer key: (B) Labeling content with search terms, markers, and learning goals for easy retrieval."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c0ed8714-205e-4b20-aca5-3fa76b709a60",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "डिजिटल परीक्षा मॉड्यूल में रिपोर्ट कार्ड जनरेशन को स्वचालित करने का प्राथमिक उद्देश्य क्या है?",
+      "options_hindi": [
+        "जानबूझकर परिणाम प्रविष्टि के दौरान मानव मैनुअल ट्रांसक्रिप्शन त्रुटियों की दरों को बढ़ाना",
+        "छात्रों की शैक्षणिक प्रदर्शन सांख्यिकी का आधिकारिक प्रकाशन विलंबित करना",
+        "टर्म मार्क्स को एकत्रित करना, जीपीए की गणना करना, और मानकीकृत प्रगति कार्ड जारी करना",
+        "व्यक्तिगत शिक्षक फीडबैक को मानकीकृत सामान्य स्वचालित वाक्यांशों से बदलना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the primary purpose of automating report card generation in a digital Examination Module?",
+      "options_english": [
+        "To deliberately increase human manual transcription error rates during result entry",
+        "To delay the official publication of student academic performance statistics nationwide",
+        "To aggregate term marks, calculate GPAs, and issue standardized progress cards",
+        "To replace personalized teacher feedback with standardized generic automated phrases"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The primary purpose of automating report card generation in a digital Examination Module is to aggregate term marks, calculate GPAs, and issue standardized progress cards. This process enhances efficiency, reduces human error, and ensures that students receive timely and accurate feedback on their academic performance. By automating these tasks, educational institutions can focus more on teaching and less on administrative burdens, ultimately improving the learning experience.",
+      "explanation_hindi": "सही उत्तर (c) है। डिजिटल परीक्षा मॉड्यूल में रिपोर्ट कार्ड जनरेशन को स्वचालित करने का प्राथमिक उद्देश्य टर्म मार्क्स को एकत्रित करना, जीपीए की गणना करना, और मानकीकृत प्रगति कार्ड जारी करना है। यह प्रक्रिया दक्षता को बढ़ाती है, मानव त्रुटियों को कम करती है, और सुनिश्चित करती है कि छात्रों को उनके शैक्षणिक प्रदर्शन पर समय पर और सटीक फीडबैक प्राप्त हो। इन कार्यों को स्वचालित करके, शैक्षणिक संस्थान अधिक ध्यान शिक्षण पर केंद्रित कर सकते हैं और प्रशासनिक बोझ को कम कर सकते हैं, जिससे सीखने के अनुभव में सुधार होता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Automating report card generation improves efficiency and accuracy.",
+        "Standardized progress cards provide clear feedback to students.",
+        "Printed answer key: (C) To aggregate term marks, calculate GPAs, and issue standardized progress cards."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6e51662d-1630-4a39-bf2b-4375a010f9cf",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "51. निम्नलिखित में से कौन सा डिजिटल उपकरण कक्षा व्याख्यान के दौरान लाइव, इंटरैक्टिव छात्र प्रतिक्रिया क्विज़ बनाने के लिए व्यापक रूप से उपयोग किया जाता है?",
+      "options_hindi": [
+        "मानक पाठ संपादन अनुप्रयोग जैसे नोटपैड या बेसिक टेक्स्टपैड",
+        "यूटिलिटी फ़ाइल संकुचन सॉफ़्टवेयर उपकरण जैसे WinRAR या 7-Zip",
+        "छात्र प्रतिक्रिया प्रणाली या इंटरैक्टिव ऑडियंस मतदान अनुप्रयोग",
+        "डेस्कटॉप एंटीवायरस स्कैनिंग उपकरण और सिस्टम सुरक्षा उपयोगिताएँ"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following digital tools is widely used for creating live, interactive student response quizzes during classroom lectures?",
+      "options_english": [
+        "Standard text editing applications such as Notepad or Basic TextPad",
+        "Utility file compression software tools such as WinRAR or 7-Zip",
+        "Student Response Systems or interactive audience polling applications",
+        "Desktop antivirus scanning tools and system security utilities"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Student Response Systems and interactive polling applications are specialized software tools designed to convert passive lectures into dynamic learning sessions. Educators use these applications to present live multiple-choice prompts during lectures, allowing students to submit immediate responses using personal mobile devices or dedicated hardware clickers. The system aggregates responses instantly into visual charts, enabling instructors to gauge real-time class understanding and adapt instruction accordingly.",
+      "explanation_hindi": "सही उत्तर (c) है। छात्र प्रतिक्रिया प्रणाली और इंटरैक्टिव मतदान अनुप्रयोग विशेष सॉफ़्टवेयर उपकरण हैं जो निष्क्रिय व्याख्यानों को गतिशील शिक्षण सत्रों में परिवर्तित करने के लिए डिज़ाइन किए गए हैं। शिक्षक इन अनुप्रयोगों का उपयोग व्याख्यान के दौरान लाइव बहुविकल्पीय प्रश्न प्रस्तुत करने के लिए करते हैं, जिससे छात्र व्यक्तिगत मोबाइल उपकरणों या समर्पित हार्डवेयर क्लिकर्स का उपयोग करके तात्कालिक प्रतिक्रियाएँ प्रस्तुत कर सकते हैं। यह प्रणाली प्रतिक्रियाओं को तुरंत दृश्य चार्ट में संकलित करती है, जिससे प्रशिक्षकों को वास्तविक समय में कक्षा की समझ का आकलन करने और निर्देश को तदनुसार अनुकूलित करने में मदद मिलती है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Student Response Systems enhance interactivity in classrooms.",
+        "These tools allow real-time feedback from students.",
+        "Printed answer key: (C) Student Response Systems or interactive audience polling applications."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9a7c4bc4-3ed9-4ecc-887b-989918f26d0f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "21. एक शुल्क प्रबंधन मॉड्यूल में कौन सी मुख्य वित्तीय विशेषता माता-पिता को डिजिटल भुगतान गेटवे, यूपीआई और क्रेडिट/डेबिट कार्ड के माध्यम से ट्यूशन शुल्क का भुगतान करने में सक्षम बनाती है?",
+      "options_hindi": [
+        "ऑफलाइन समायोजन खाता मॉड्यूल",
+        "छोटी नकद वितरण मॉड्यूल",
+        "भुगतान गेटवे एकीकरण",
+        "ह्रास लेखांकन इंजन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which core financial feature in a Fee Management Module enables parents to pay tuition fees through digital payment gateways, UPI, and credit/debit cards?",
+      "options_english": [
+        "Reconciliation ledger offline module",
+        "Petty Cash Disbursement module",
+        "Payment Gateway Integration",
+        "Depreciation Accounting engine"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Payment Gateway Integration feature allows parents to make tuition fee payments through various digital platforms, enhancing convenience and efficiency. This integration supports multiple payment methods, including UPI and credit/debit cards, which are essential in today's digital economy. By facilitating online transactions, educational institutions can streamline their fee collection processes, reduce administrative burdens, and improve cash flow management.",
+      "explanation_hindi": "सही उत्तर (c) है। भुगतान गेटवे एकीकरण सुविधा माता-पिता को विभिन्न डिजिटल प्लेटफार्मों के माध्यम से ट्यूशन शुल्क का भुगतान करने की अनुमति देती है, जिससे सुविधा और दक्षता बढ़ती है। यह एकीकरण यूपीआई और क्रेडिट/डेबिट कार्ड सहित कई भुगतान विधियों का समर्थन करता है, जो आज की डिजिटल अर्थव्यवस्था में आवश्यक हैं। ऑनलाइन लेनदेन को सुविधाजनक बनाकर, शैक्षणिक संस्थान अपने शुल्क संग्रह प्रक्रियाओं को सुव्यवस्थित कर सकते हैं, प्रशासनिक बोझ को कम कर सकते हैं और नकदी प्रवाह प्रबंधन में सुधार कर सकते हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Payment Gateway Integration is essential for digital transactions in education.",
+        "Supports multiple payment methods like UPI and credit/debit cards.",
+        "Printed answer key: (C) Payment Gateway Integration"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1cd913aa-dcfc-4f5d-97ac-50e730ac2ed7",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "52. फ्लिप्ड कक्षा शिक्षण चक्र को निष्पादित करने में शामिल चरणों का सही अनुक्रम चुनें:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct sequence of steps involved in executing a Flipped Classroom instructional cycle:",
+      "options_english": [
+        "1 → 2 → 3 → 4",
+        "2 → 3 → 4 → 1",
+        "4 → 1 → 2 → 3",
+        "3 → 4 → 1 → 2"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Executing a flipped classroom cycle follows a distinct four-stage instructional sequence. First, the instructor authors or curates concise instructional videos and digital reading materials. Next, students engage with these digital resources independently out of class to build baseline knowledge. In the third phase, class time is dedicated to active collaborative activities and clarifying misconceptions. Finally, student learning is evaluated using continuous digital formative assessments.",
+      "explanation_hindi": "सही उत्तर (a) है। फ्लिप्ड कक्षा चक्र को निष्पादित करने में एक विशिष्ट चार-चरणीय शिक्षण अनुक्रम का पालन किया जाता है। पहले, प्रशिक्षक संक्षिप्त शिक्षण वीडियो और डिजिटल पठन सामग्री तैयार करता है या संकलित करता है। इसके बाद, छात्र कक्षा से बाहर इन डिजिटल संसाधनों के साथ स्वतंत्र रूप से संलग्न होते हैं ताकि वे आधारभूत ज्ञान का निर्माण कर सकें। तीसरे चरण में, कक्षा का समय सक्रिय सहयोगात्मक गतिविधियों और भ्रांतियों को स्पष्ट करने के लिए समर्पित होता है। अंततः, छात्र के सीखने का मूल्यांकन निरंतर डिजिटल प्रारंभिक आकलनों का उपयोग करके किया जाता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Flipped classrooms enhance student engagement and learning.",
+        "The cycle includes preparation, independent study, collaborative activities, and assessment.",
+        "Printed answer key: (A) 1 → 2 → 3 → 4"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "333f79fc-50b8-48df-88ec-899f7f4cec4a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "13. स्कूल प्रबंधन के संदर्भ में एंटरप्राइज रिसोर्स प्लानिंग (ERP) प्रणाली का मौलिक सिद्धांत क्या है?",
+      "options_hindi": [
+        "एक स्वतंत्र ऑफ़लाइन स्प्रेडशीट सॉफ़्टवेयर एप्लिकेशन जो विशेष रूप से व्यक्तिगत छात्र अंक की गणना के लिए उपयोग किया जाता है",
+        "स्कूल कंप्यूटर नेटवर्क प्रयोगशालाओं को सुरक्षित करने के लिए स्थापित एक विशेष हार्डवेयर फ़ायरवॉल उपकरण",
+        "एक एकीकृत प्रणाली जो प्रशासनिक, शैक्षणिक और वित्तीय स्कूल संचालन को केंद्रीकृत करती है",
+        "क्लासरूम व्याख्यानों को संग्रहीत करने के लिए उपयोग की जाने वाली एक समर्पित डिजिटल वीडियो रिकॉर्डिंग और स्ट्रीमिंग प्लेटफ़ॉर्म"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the fundamental concept of an Enterprise Resource Planning (ERP) system in the context of school management?",
+      "options_english": [
+        "A standalone offline spreadsheet software application used exclusively for computing individual student marks",
+        "A specialized hardware firewall device installed for securing school computer network laboratories",
+        "An integrated system centralizing administrative, academic, and financial school operations",
+        "A dedicated digital video recording and streaming platform used for storing classroom lectures"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The correct answer is option C. An Enterprise Resource Planning (ERP) system in a school context is designed to integrate and centralize various administrative, academic, and financial operations. This integration allows for improved data management, streamlined processes, and enhanced communication among different departments within the school. By utilizing an ERP system, schools can efficiently manage student information, financial records, and academic performance, leading to better decision-making and resource allocation.",
+      "explanation_hindi": "सही उत्तर (c) है। एंटरप्राइज रिसोर्स प्लानिंग (ERP) प्रणाली स्कूल के संदर्भ में विभिन्न प्रशासनिक, शैक्षणिक और वित्तीय संचालन को एकीकृत और केंद्रीकृत करने के लिए डिज़ाइन की गई है। यह एकीकरण डेटा प्रबंधन में सुधार, प्रक्रियाओं को सुव्यवस्थित करने और स्कूल के विभिन्न विभागों के बीच संचार को बढ़ाने की अनुमति देता है। ERP प्रणाली का उपयोग करके, स्कूल छात्र जानकारी, वित्तीय रिकॉर्ड और शैक्षणिक प्रदर्शन को प्रभावी ढंग से प्रबंधित कर सकते हैं, जिससे बेहतर निर्णय लेने और संसाधन आवंटन होता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "ERP systems integrate various school operations for efficiency.",
+        "They enhance communication and data management within schools.",
+        "Printed answer key: (C) An integrated system centralizing administrative, academic, and financial school operations."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "fc761d23-1b67-4f97-9ac2-683b8a226fd2",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "54. डिजिटल आकलनों में, \"डिस्ट्रैक्टर\" क्या है?\n(1) एक तकनीकी कंप्यूटर हार्डवेयर त्रुटि जो परीक्षा के दौरान ऑनलाइन परीक्षण वितरण को बाधित करती है\n(2) एक गलत विकल्प जो प्रश्न में सही उत्तर के साथ संभावित रूप से तैयार किया गया है\n(3) एक बाहरी पॉप-अप विज्ञापन जो फ़्लिपकार्ट पर एक पुस्तक प्रदर्शित करता है",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In digital assessments, what is a “distractor”? (1) A technical computer hardware error that disrupts test delivery online during exams (2) An incorrect option framed plausibly alongside the correct answer in a question (3) An external pop-up advertisement displayed on a",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "In objective digital testing, a distractor refers to an incorrect option deliberately designed to appear plausible to test takers who lack complete mastery of the subject. Properly constructed distractors reflect common student misconceptions, logical errors, or partial understandings without being trick choices or grammatically obvious errors. Evaluating how frequently distractors are chosen provides educators with valuable diagnostic insights into specific learning gaps across student cohorts.",
+      "explanation_hindi": "सही उत्तर (b) है। डिजिटल परीक्षण में, डिस्ट्रैक्टर एक गलत विकल्प को संदर्भित करता है जिसे जानबूझकर इस तरह से तैयार किया गया है कि यह उन परीक्षणकर्ताओं के लिए संभावित रूप से सही प्रतीत होता है जो विषय में पूर्ण महारत नहीं रखते हैं। सही तरीके से बनाए गए डिस्ट्रैक्टर्स सामान्य छात्र भ्रांतियों, तार्किक त्रुटियों, या आंशिक समझ को दर्शाते हैं। डिस्ट्रैक्टर्स के चयन की आवृत्ति का मूल्यांकन शिक्षकों को छात्रों के समूहों में विशिष्ट सीखने की खामियों के बारे में मूल्यवान नैदानिक अंतर्दृष्टि प्रदान करता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Distractors are designed to test student understanding and misconceptions.",
+        "They should not be obvious errors or trick choices.",
+        "Printed answer key: (B) An incorrect option framed plausibly alongside the correct answer in a question."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d7300e06-3847-4964-ab56-d951da6662fa",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "विद्यालय स्तर के डेटा की सटीकता और समय पर सबमिशन के लिए मुख्य जिम्मेदारी किसकी होती है UDISE+ पोर्टल पर?",
+      "options_hindi": [
+        "क्लस्टर रिसोर्स सेंटर समन्वयक (CRCC)",
+        "जिला सूचना अधिकारी (DIO)",
+        "प्रधानाचार्य / स्कूल प्रभारी",
+        "स्कूल शिक्षा विभाग में प्रणाली प्रशासक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Who carries the primary responsibility for the accuracy and timely submission of school-level data on the UDISE+ portal?",
+      "options_english": [
+        "Cluster Resource Centre Coordinator (CRCC)",
+        "District Informatics Officer (DIO)",
+        "Headmaster / Principal / School In-charge",
+        "System Administrator at Department of School Education"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Headmaster, Principal, or School In-charge is primarily responsible for ensuring the accuracy and timely submission of school-level data on the UDISE+ portal. This role involves overseeing the data entry process, ensuring that all information is accurate and submitted within the stipulated deadlines. The accuracy of this data is crucial for effective educational planning and resource allocation at various administrative levels.",
+      "explanation_hindi": "सही उत्तर (c) है। प्रधानाचार्य, स्कूल प्रभारी या मुख्याध्यापक विद्यालय स्तर के डेटा की सटीकता और समय पर सबमिशन के लिए मुख्य रूप से जिम्मेदार होते हैं। इस भूमिका में डेटा प्रविष्टि प्रक्रिया की निगरानी करना शामिल है, यह सुनिश्चित करना कि सभी जानकारी सटीक हो और निर्धारित समय सीमा के भीतर सबमिट की जाए। इस डेटा की सटीकता विभिन्न प्रशासनिक स्तरों पर प्रभावी शैक्षिक योजना और संसाधन आवंटन के लिए महत्वपूर्ण है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "UDISE+ पोर्टल पर डेटा की सटीकता और समय पर सबमिशन के लिए प्रधानाचार्य जिम्मेदार होते हैं।",
+        "सही डेटा शैक्षिक योजना और संसाधन आवंटन के लिए आवश्यक है।",
+        "Printed answer key: (C) Headmaster / Principal / School In-charge"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "61c14517-4d87-4479-b58f-d9f6906cbef5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "22. सूची I को सूची II से मिलाएं:\nसूची I: (स्कूल ईआरपी मॉड्यूल)\nP. स्टाफ/एचआर प्रबंधन\nQ. टाइमटेबल प्रबंधन\nR. इन्वेंटरी प्रबंधन\nS. पुस्तकालय प्रबंधन\nसूची II: (मुख्य कार्यात्मक ध्यान)\nI. संपत्ति ट्रैकिंग, स्टॉक रजिस्टर, और उपभोग्य वस्तुओं का वितरण\nII. छुट्टी ट्रैकिंग, वेतन प्रसंस्करण, और सेवा पुस्तक प्रबंधन\nIII. स्वचालित संघर्ष-मुक्त विषय और प्रतिस्थापन शिक्षक अनुसूची\nIV. MARC21/Dewey Decimal का उपयोग करके सूचीबद्ध करना, बारकोड परिसंचरण, और OPAC\nनीचे दिए गए कोड का उपयोग करके सही उत्तर चुनें:",
+      "options_hindi": [
+        "P-II, Q-III, R-I, S-IV",
+        "P-I, Q-III, R-II, S-IV",
+        "P-II, Q-I, R-III, S-IV",
+        "P-III, Q-II, R-IV, S-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (School ERP Module)\nP. Staff/HR Management\nQ. Timetable Management\nR. Inventory Management\nS. Library Management\nList II: (Core Functional Focus)\nI. Asset tracking, stock register, and consumable item distribution\nII. Leave tracking, payroll processing, and service book management\nIII. Automated conflict-free subject and substitute teacher scheduling\nIV. Cataloguing using MARC21/Dewey Decimal, barcode circulation, and OPAC\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "P-II, Q-III, R-I, S-IV",
+        "P-I, Q-III, R-II, S-IV",
+        "P-II, Q-I, R-III, S-IV",
+        "P-III, Q-II, R-IV, S-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct matching of the School ERP Module with its core functional focus is essential for effective management in educational institutions. Staff/HR Management aligns with leave tracking and payroll processing, while Timetable Management corresponds to automated scheduling. Inventory Management is linked to asset tracking and consumable distribution, and Library Management relates to cataloguing and circulation processes. This structured approach enhances operational efficiency and resource management in schools.",
+      "explanation_hindi": "सही उत्तर (a) है। स्कूल ईआरपी मॉड्यूल के मुख्य कार्यात्मक ध्यान के साथ सही मिलान शैक्षणिक संस्थानों में प्रभावी प्रबंधन के लिए आवश्यक है। स्टाफ/एचआर प्रबंधन छुट्टी ट्रैकिंग और वेतन प्रसंस्करण के साथ मेल खाता है, जबकि टाइमटेबल प्रबंधन स्वचालित अनुसूची के साथ संबंधित है। इन्वेंटरी प्रबंधन संपत्ति ट्रैकिंग और उपभोग्य वितरण से जुड़ा है, और पुस्तकालय प्रबंधन सूचीबद्ध करने और परिसंचरण प्रक्रियाओं से संबंधित है। यह संरचित दृष्टिकोण स्कूलों में संचालन दक्षता और संसाधन प्रबंधन को बढ़ाता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Effective management in schools requires proper matching of ERP modules.",
+        "Staff/HR Management involves leave tracking and payroll processing.",
+        "Printed answer key: (A) P-II, Q-III, R-I, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "57c9b863-3661-4607-b2e7-5c2ab46faeb7",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "76. डिजिटल कक्षाओं में यूनिवर्सल डिज़ाइन फॉर लर्निंग (UDL) के सिद्धांतों का जोर है:\n(1) डिजिटल पाठ्यक्रम सामग्री तक पहुँचने के लिए अनिवार्य मौद्रिक भुगतान की आवश्यकता\n(2) विविध शिक्षार्थियों के अनुकूलन के लिए संलग्नता, प्रतिनिधित्व, और क्रिया/व्यक्तित्व के कई साधनों की पेशकश करना\n(3) उपयोगकर्ता उपकरणों की पहुँच को प्रतिबंधित करने के लिए हार्डवेयर भौतिक लॉक किए गए आवरण स्थापित करना",
+      "options_hindi": [
+        "अनिवार्य मौद्रिक भुगतान की आवश्यकता",
+        "संलग्नता, प्रतिनिधित्व, और क्रिया/व्यक्तित्व के कई साधनों की पेशकश करना",
+        "हार्डवेयर भौतिक लॉक किए गए आवरण स्थापित करना",
+        "फ्लिपकार्ट पर मेरी किताब"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Universal Design for Learning (UDL) principles in digital classrooms emphasize providing multiple means of:\n\n(1) Requiring mandatory monetary payment for accessing digital course content online\n(2) Engagement, Representation, and Action/Expression to accommodate diverse learners\n(3) Installing hardware physical locked enclosures to restrict access to user devices",
+      "options_english": [
+        "Requiring mandatory monetary payment for accessing digital course content online",
+        "Engagement, Representation, and Action/Expression to accommodate diverse learners",
+        "Installing hardware physical locked enclosures to restrict access to user devices",
+        "My"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Universal Design for Learning principles in digital education focus on providing multiple means of engagement, representation, and action or expression to support diverse learning styles and abilities. Representation involves presenting information using flexible audio, visual, and text formats; action and expression allow learners varied ways to demonstrate knowledge; and engagement taps into diverse student interests and motivations, creating an inclusive instructional ecosystem.",
+      "explanation_hindi": "सही उत्तर (b) है। यूनिवर्सल डिज़ाइन फॉर लर्निंग के सिद्धांत डिजिटल शिक्षा में संलग्नता, प्रतिनिधित्व, और क्रिया/व्यक्तित्व के कई साधनों की पेशकश पर जोर देते हैं ताकि विविध शिक्षण शैलियों और क्षमताओं का समर्थन किया जा सके। प्रतिनिधित्व में जानकारी को लचीले ऑडियो, दृश्य, और पाठ प्रारूपों में प्रस्तुत करना शामिल है; क्रिया और व्यक्तित्व छात्रों को ज्ञान प्रदर्शित करने के लिए विभिन्न तरीके प्रदान करते हैं; और संलग्नता विविध छात्र रुचियों और प्रेरणाओं का उपयोग करती है, जिससे एक समावेशी शैक्षणिक पारिस्थितिकी तंत्र बनता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Universal Design for Learning (UDL) promotes inclusive education.",
+        "Printed answer key: (B) Engagement, Representation, and Action/Expression to accommodate diverse learners.",
+        "UDL principles support diverse learning styles and abilities.",
+        "Engagement, representation, and action are key components of UDL."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "52ff4f80-51fc-401a-9f0e-ef97f0297e1b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "83. कौन सा डिजिटल उपकरण एक प्रशिक्षक को स्मार्ट कक्षा में सीधे प्रदर्शन पैनल पर मुक्त हाथ से टिप्पणियाँ लिखने या खींचने की अनुमति देता है?",
+      "options_hindi": [
+        "ऑप्टिकल कैरेक्टर स्कैनर यूनिट",
+        "थर्मल रसीद प्रिंटर उपकरण",
+        "इंटरैक्टिव स्टाइलस या टच पेन",
+        "एनालॉग जॉयस्टिक कंट्रोलर मॉड्यूल"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which digital device allows an instructor to write or draw freehand annotations directly onto a display panel in a smart classroom?",
+      "options_english": [
+        "Optical character scanner unit",
+        "Thermal receipt printer device",
+        "Interactive Stylus or Touch Pen",
+        "Analog joystick controller module"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "An interactive stylus or touch pen serves as an input device in smart classrooms, allowing educators and students to write, draw, and annotate directly on interactive display panels or digital whiteboards. The pen emits signals detected by touch sensors on the panel overlay, translating physical hand movements into clear digital ink strokes on screen, facilitating dynamic diagramming, live problem-solving, and engaging visual instruction.",
+      "explanation_hindi": "सही उत्तर (c) है। एक इंटरैक्टिव स्टाइलस या टच पेन स्मार्ट कक्षाओं में एक इनपुट उपकरण के रूप में कार्य करता है, जिससे शिक्षकों और छात्रों को इंटरैक्टिव प्रदर्शन पैनलों या डिजिटल व्हाइटबोर्ड पर सीधे लिखने, खींचने और टिप्पणियाँ करने की अनुमति मिलती है। यह पेन पैनल ओवरले पर टच सेंसर द्वारा पहचाने गए संकेतों को उत्सर्जित करता है, जो भौतिक हाथ की गतिविधियों को स्क्रीन पर स्पष्ट डिजिटल स्याही स्ट्रोक में अनुवादित करता है, गतिशील चित्रण, लाइव समस्या समाधान, और आकर्षक दृश्य निर्देश को सुविधाजनक बनाता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Interactive stylus enhances engagement in smart classrooms.",
+        "It allows freehand annotations on digital displays.",
+        "Printed answer key: (C) Interactive Stylus or Touch Pen",
+        "Facilitates dynamic teaching and learning experiences."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d6438a0c-c1e9-4ab0-b20d-caa5d772653b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "35. डिजिटल मूल्यांकन प्लेटफार्मों से प्राप्त डेटा-आधारित अंतर्दृष्टियों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. वे शिक्षकों को छात्र समूहों में विशिष्ट सीखने की खामियों और भ्रांतियों की पहचान करने में सक्षम बनाते हैं।\nB. वे शिक्षकों को विशिष्ट शिक्षण रणनीतियों की प्रभावशीलता का मूल्यांकन करने की अनुमति देते हैं।\nC. वे जोखिम में रहने वाले छात्रों की पहचान के लिए पूर्वानुमानात्मक विश्लेषण प्रदान करते हैं जिन्हें प्रारंभिक सुधार की आवश्यकता होती है।\nD. वे गुणात्मक शिक्षक फीडबैक और मार्गदर्शन की आवश्यकता को समाप्त करते हैं।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A, C और D",
+        "A, B, C और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding data-driven insights derived from digital assessment platforms:\nA. They enable educators to identify specific learning gaps and misconceptions across student cohorts.\nB. They allow teachers to evaluate the effectiveness of specific instructional strategies.\nC. They provide predictive analytics to identify at-risk students needing early remediation.\nD. They eliminate the necessity for qualitative teacher feedback and mentoring.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and C only",
+        "B, C and D only",
+        "A, C and D only",
+        "A, B, C and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Data-driven insights from digital assessment engines offer significant analytical benefits for instruction. They allow educators to identify widespread conceptual errors across cohorts, evaluate the effectiveness of teaching strategies, and utilize predictive analytics to highlight at-risk learners needing early intervention. However, automated data analytics serve to inform and enhance pedagogical decision-making rather than eliminate qualitative teacher feedback, personal mentoring, and empathetic direct support essential for student growth.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल मूल्यांकन इंजनों से प्राप्त डेटा-आधारित अंतर्दृष्टियाँ शिक्षण के लिए महत्वपूर्ण विश्लेषणात्मक लाभ प्रदान करती हैं। वे शिक्षकों को समूहों में व्यापक वैचारिक त्रुटियों की पहचान करने, शिक्षण रणनीतियों की प्रभावशीलता का मूल्यांकन करने, और जोखिम में रहने वाले शिक्षार्थियों की पहचान के लिए पूर्वानुमानात्मक विश्लेषण का उपयोग करने की अनुमति देती हैं। हालाँकि, स्वचालित डेटा विश्लेषण शैक्षणिक निर्णय लेने को सूचित और सुधारने के लिए कार्य करते हैं, गुणात्मक शिक्षक फीडबैक, व्यक्तिगत मार्गदर्शन, और छात्र विकास के लिए आवश्यक सहानुभूतिपूर्ण प्रत्यक्ष समर्थन को समाप्त नहीं करते।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Data-driven insights help identify learning gaps and misconceptions.",
+        "They evaluate instructional strategies and provide predictive analytics.",
+        "Printed answer key: (A) A, B and C only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f148e794-c037-4d96-b518-2e554decd395",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "75. MOOCs की कक्षा-सहायक शिक्षा के संदर्भ में निम्नलिखित बयानों पर विचार करें:\nA. वे शिक्षार्थियों को स्थानीय कक्षा की सीमाओं से परे उच्च गुणवत्ता वाली शिक्षा तक पहुँच प्रदान करते हैं।\nB. वे उन्नत शिक्षार्थियों को अपने स्वयं के गति से समृद्ध विषयों का अध्ययन करने की अनुमति देते हैं।\nC. वे इंटरैक्टिव चर्चाओं और प्रशिक्षक समर्थन की आवश्यकता को पूरी तरह से समाप्त कर देते हैं।\nउपरोक्त में से कौन से बयान सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the role of MOOCs as classroom-supplementary learning:\nA. They offer learners access to high-quality instruction beyond local classroom boundaries.\nB. They allow advanced learners to pursue enrichment topics at their own pace.\nC. They completely eliminate the need for interactive discussions and instructor support.\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Massive Open Online Courses expand educational boundaries by delivering high-quality instructional content from subject experts globally, enabling advanced learners to pursue enrichment topics flexibly at their own pace. However, MOOCs do not eliminate the necessity for teacher guidance, interactive discussion, and peer collaboration; instead, modern digital platforms integrate discussion forums, virtual office hours, and peer feedback tools to maintain supportive interactive environments.",
+      "explanation_hindi": "सही उत्तर (a) है। MOOCs शैक्षिक सीमाओं का विस्तार करते हैं, क्योंकि वे विषय विशेषज्ञों से उच्च गुणवत्ता वाली शैक्षणिक सामग्री प्रदान करते हैं, जिससे उन्नत शिक्षार्थियों को अपने स्वयं के गति से समृद्ध विषयों का अध्ययन करने की अनुमति मिलती है। हालाँकि, MOOCs शिक्षक मार्गदर्शन, इंटरैक्टिव चर्चाओं और सहकर्मी सहयोग की आवश्यकता को समाप्त नहीं करते हैं; इसके बजाय, आधुनिक डिजिटल प्लेटफ़ॉर्म चर्चा फोरम, आभासी कार्यालय घंटे और सहकर्मी फीडबैक उपकरणों को एकीकृत करते हैं ताकि सहायक इंटरैक्टिव वातावरण बनाए रखा जा सके।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "MOOCs provide access to high-quality education beyond local boundaries.",
+        "They allow self-paced learning for advanced topics.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "11cf93ed-14c5-4fbd-9d97-ad546924f908",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "32. फ्लिप्ड क्लासरूम शिक्षण मॉडल में चरणों का सही क्रम चुनें:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct sequence of phases in the Flipped Classroom learning model:",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The flipped classroom instructional cycle follows three sequential steps. The process begins with students independently engaging with digital instructional materials, such as pre-recorded video lectures and readings, prior to attending class. Next, in-class time is dedicated to active learning, collaborative problem-solving, and addressing specific learning misconceptions with teacher guidance. Finally, post-class activities focus on consolidating knowledge, self-directed reflection, and completing continuous diagnostic assessments to evaluate mastery.",
+      "explanation_hindi": "सही उत्तर (a) है। फ्लिप्ड क्लासरूम शिक्षण चक्र तीन अनुक्रमिक चरणों का पालन करता है। प्रक्रिया की शुरुआत छात्रों द्वारा कक्षाओं में जाने से पहले डिजिटल शिक्षण सामग्रियों, जैसे कि पूर्व-रिकॉर्डेड वीडियो व्याख्यान और पठन सामग्री के साथ स्वतंत्र रूप से जुड़ने से होती है। इसके बाद, कक्षा का समय सक्रिय शिक्षण, सहयोगात्मक समस्या समाधान और शिक्षक मार्गदर्शन के साथ विशिष्ट शिक्षण भ्रांतियों को संबोधित करने के लिए समर्पित होता है। अंततः, कक्षा के बाद की गतिविधियाँ ज्ञान को संकुचित करने, आत्म-निर्देशित प्रतिबिंब और निरंतर नैदानिक मूल्यांकन पूरा करने पर केंद्रित होती हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "फ्लिप्ड क्लासरूम मॉडल में छात्रों को पहले से सामग्री के साथ जुड़ने के लिए प्रेरित किया जाता है।",
+        "कक्षा में सक्रिय शिक्षण और सहयोगात्मक समस्या समाधान पर ध्यान केंद्रित किया जाता है।",
+        "Printed answer key: (A) 1 → 2 → 3"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b432ccef-33cf-4ef5-ade8-42198c4cf7fe",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "मानकीकृत, पारदर्शी स्कोरिंग प्रदान करने के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "मानकीकृत, पारदर्शी स्कोरिंग प्रदान करने की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding Providing standardized, transparent scoring, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of Providing standardized, transparent scoring",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Digital rubrics in learning platforms establish structured scoring matrices that articulate explicit performance expectations across predefined criteria levels. By outlining clear standards for varying achievement quality, rubrics remove subjectivity and promote equitable, objective grading across all student assignments. They provide learners with transparent evaluation criteria prior to task completion and offer detailed, criteria-specific diagnostic feedback post-evaluation, helping students understand exact areas of strength and necessary academic improvements.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल रूपरेखाएँ शिक्षण प्लेटफार्मों में संरचित स्कोरिंग मैट्रिक्स स्थापित करती हैं जो पूर्वनिर्धारित मानदंड स्तरों के बीच स्पष्ट प्रदर्शन अपेक्षाएँ व्यक्त करती हैं। विभिन्न उपलब्धि गुणवत्ता के लिए स्पष्ट मानकों को रेखांकित करके, रूपरेखाएँ विषयवस्तु को हटा देती हैं और सभी छात्र असाइनमेंट में समान, वस्तुनिष्ठ ग्रेडिंग को बढ़ावा देती हैं। वे छात्रों को कार्य पूर्णता से पहले पारदर्शी मूल्यांकन मानदंड प्रदान करती हैं और मूल्यांकन के बाद विस्तृत, मानदंड-विशिष्ट निदानात्मक फीडबैक देती हैं, जिससे छात्रों को ताकत के सटीक क्षेत्रों और आवश्यक शैक्षणिक सुधारों को समझने में मदद मिलती है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital rubrics establish structured scoring matrices.",
+        "Clear standards promote objective grading.",
+        "Transparent criteria aid in student understanding.",
+        "Printed answer key: (A) Providing standardized, transparent scoring"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3122dd6a-873f-4136-8977-6e5267f4fb34",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "A और B केवल के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "A और B केवल की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding A and B only, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of A and B only",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct option is 'Primary definition and standard features of A and B only'. Accessibility in digital learning requires incorporating features like closed captioning for video content, which supports hearing-impaired learners and non-native speakers, along with high-contrast text design to enhance visual readability. Universal Design for Learning emphasizes providing flexible, multi-modal presentation formats, including audio, visual, and interactive media. Therefore, restricting content strictly to text-only formats violates UDL principles by limiting learning options for diverse student needs.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल शिक्षा में पहुँच सुनिश्चित करने के लिए वीडियो सामग्री के लिए बंद कैप्शनिंग जैसी सुविधाओं को शामिल करना आवश्यक है, जो सुनने में असमर्थ छात्रों और गैर-देशी वक्ताओं का समर्थन करती है। यूनिवर्सल डिज़ाइन फॉर लर्निंग लचीले, बहु-मोडल प्रस्तुति प्रारूप प्रदान करने पर जोर देता है। इसलिए, केवल पाठ-आधारित प्रारूपों तक सामग्री को सीमित करना UDL सिद्धांतों का उल्लंघन करता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Accessibility features include closed captioning and high-contrast text design.",
+        "Universal Design for Learning promotes flexible presentation formats.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "4c0421b9-d01f-4fe7-b107-eea33e4d1b35",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "26. कौन सा भौतिक अवसंरचना तत्वों का सेट\nसंपूर्ण डिजिटल कक्षा स्थापित करने के लिए\nआवश्यक पूर्वापेक्षाएँ प्रस्तुत करता है?",
+      "options_hindi": [
+        "ब्रॉडबैंड इंटरनेट, पावर बैक-अप, इंटरैक्टिव डिस्प्ले और जुड़े हुए कंप्यूटर",
+        "सिर्फ प्रोजेक्टर और स्क्रीन",
+        "सिर्फ वाई-फाई राउटर और लैपटॉप",
+        "सिर्फ स्मार्टफोन और टैबलेट"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which set of physical infrastructure elements represents the essential prerequisites for establishing a seamless digital classroom?",
+      "options_english": [
+        "Broadband internet, power back-up, interactive displays, and connected computers",
+        "Only projectors and screens",
+        "Only Wi-Fi routers and laptops",
+        "Only smartphones and tablets"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Establishing a functional smart classroom depends on key physical and technological infrastructure elements working together. High-speed broadband internet provides reliable access to online content and educational platforms, while uninterrupted power back-up systems ensure continuous operational stability during power outages. Interactive display panels serve as dynamic presentation surfaces, and interconnected desktop or laptop computers allow seamless digital content processing, content delivery, and interactive student engagement during daily instructional activities.",
+      "explanation_hindi": "सही उत्तर (a) है। एक कार्यात्मक स्मार्ट कक्षा स्थापित करने के लिए भौतिक और तकनीकी अवसंरचना तत्वों का एक साथ काम करना आवश्यक है। उच्च गति का ब्रॉडबैंड इंटरनेट ऑनलाइन सामग्री और शैक्षिक प्लेटफार्मों तक विश्वसनीय पहुंच प्रदान करता है, जबकि निर्बाध पावर बैक-अप सिस्टम बिजली की कटौती के दौरान निरंतर संचालन की स्थिरता सुनिश्चित करता है। इंटरैक्टिव डिस्प्ले पैनल गतिशील प्रस्तुति सतहों के रूप में कार्य करते हैं, और जुड़े हुए डेस्कटॉप या लैपटॉप कंप्यूटर दैनिक शैक्षणिक गतिविधियों के दौरान डिजिटल सामग्री के प्रसंस्करण, सामग्री वितरण और इंटरैक्टिव छात्र सहभागिता की अनुमति देते हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "High-speed broadband internet is essential for reliable access to online resources.",
+        "Power back-up systems are crucial for operational stability during outages.",
+        "Interactive displays enhance engagement and presentation in classrooms.",
+        "Printed answer key: (A) Broadband internet, power back-up, interactive displays, and connected computers"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a69af8e2-2b7c-4d30-94f7-ac6f1c4774d4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "100. निम्नलिखित बयानों पर विचार करें जो PARAKH (प्रदर्शन मूल्यांकन, समीक्षा, और समग्र विकास के लिए ज्ञान का विश्लेषण) के संबंध में हैं:\nA. इसका उद्देश्य विभिन्न स्कूल बोर्डों के बीच मूल्यांकन मानकों में असमानताओं को समाप्त करना है।\nB. यह रटने की याददाश्त के बजाय क्षमता आधारित मूल्यांकन की ओर मूल्यांकन सुधार को प्रेरित करने पर केंद्रित है।\nC. यह विदेशी कंप्यूटर हार्डवेयर विक्रेताओं के लिए एक विशेष लाइसेंसिंग प्राधिकरण के रूप में कार्य करता है।\nउपरोक्त में से कौन सा/से बयान सही है/हैं?",
+      "options_hindi": [
+        "A और B केवल",
+        "B और C केवल",
+        "A और C केवल",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding PARAKH (Performance Assessment, Review, and Analysis of Knowledge for Holistic Development):\nA. It aims to eliminate discrepancies in assessment standards among different school boards.\nB. It focuses on driving assessment reform towards competency-based evaluation rather than rote memorization.\nC. It acts as an exclusive licensing authority for foreign computer hardware vendors.\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "PARAKH was established to standardize evaluation criteria across diverse regional and national school boards in India, shifting national assessment approaches from rote learning toward competency-based understanding. It formulates uniform assessment guidelines, performance benchmarks, and progress reporting standards. However, PARAKH operates strictly as an educational assessment standards organization and does not act as a commercial licensing authority for hardware vendors or external technology companies.",
+      "explanation_hindi": "सही उत्तर (a) है। PARAKH का गठन विभिन्न क्षेत्रीय और राष्ट्रीय स्कूल बोर्डों के बीच मूल्यांकन मानकों को मानकीकृत करने के लिए किया गया था, जो राष्ट्रीय मूल्यांकन दृष्टिकोण को रटने की याददाश्त से क्षमता आधारित समझ की ओर स्थानांतरित करता है। यह समान मूल्यांकन दिशानिर्देश, प्रदर्शन मानक, और प्रगति रिपोर्टिंग मानकों का निर्माण करता है। हालांकि, PARAKH केवल एक शैक्षणिक मूल्यांकन मानक संगठन के रूप में कार्य करता है और हार्डवेयर विक्रेताओं या बाहरी प्रौद्योगिकी कंपनियों के लिए एक व्यावसायिक लाइसेंसिंग प्राधिकरण के रूप में कार्य नहीं करता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "PARAKH aims to standardize assessment criteria across school boards.",
+        "It promotes competency-based evaluation over rote memorization.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

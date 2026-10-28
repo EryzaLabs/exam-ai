@@ -1,0 +1,802 @@
+{
+  "test_id": "492fe566-2afb-45d7-9bfc-8686c83631ba",
+  "test_name": "Topic Test: SCHOOL_DATA_MANAGEMENT_AND_INFORMATION_SYSTEMS - Part 4",
+  "type": "topic_wise",
+  "topic": "school_data_management_and_information_systems",
+  "created_at": "2026-10-28T18:55:06.873487",
+  "questions": [
+    {
+      "id": "1ef9197d-ca6f-414a-863a-19ee92ad4405",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "भूमिका-आधारित पहुँच नियंत्रण (RBAC) के तहत, स्कूल MIS में कौन सा भूमिका आमतौर पर व्यक्तिगत छात्र प्रगति रिपोर्ट और उपस्थिति तक केवल पढ़ने की अनुमति रखती है, लेकिन अंक बदलने के लिए कोई प्रशासनिक लिखने की अनुमति नहीं होती?",
+      "options_hindi": [
+        "सिस्टम प्रशासक",
+        "कक्षा शिक्षक",
+        "अभिभावक / छात्र",
+        "वित्तीय ऑडिटर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In Role-Based Access Control (RBAC) of a school MIS, which role typically has read-only access to individual student progress reports and attendance, but no administrative write privileges to change marks?",
+      "options_english": [
+        "System Administrator",
+        "Class Teacher",
+        "Parent / Student",
+        "Financial Auditor"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Within a Role-Based Access Control architecture, parents and students are assigned read-only permission profiles. This restricted access level enables them to view personal academic progress reports, continuous assessment scores, fee ledgers, and attendance logs through secure portals. Read-only permissions prevent unauthorized alteration of academic marks, attendance records, or administrative settings, preserving system data integrity while maintaining transparent communication.",
+      "explanation_hindi": "सही उत्तर (c) है। भूमिका-आधारित पहुँच नियंत्रण के ढाँचे के भीतर, अभिभावकों और छात्रों को केवल पढ़ने की अनुमति वाले प्रोफ़ाइल सौंपे जाते हैं। यह प्रतिबंधित पहुँच स्तर उन्हें व्यक्तिगत शैक्षणिक प्रगति रिपोर्ट, निरंतर मूल्यांकन स्कोर, शुल्क खाता और उपस्थिति लॉग को सुरक्षित पोर्टलों के माध्यम से देखने की अनुमति देता है। केवल पढ़ने की अनुमति शैक्षणिक अंकों, उपस्थिति रिकॉर्ड या प्रशासनिक सेटिंग्स में अनधिकृत परिवर्तन को रोकती है, जिससे प्रणाली के डेटा की अखंडता बनी रहती है और पारदर्शी संचार सुनिश्चित होता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "अभिभावक और छात्र केवल पढ़ने की अनुमति वाले प्रोफ़ाइल रखते हैं।",
+        "यह अनुमति शैक्षणिक अंकों में अनधिकृत परिवर्तन को रोकती है।",
+        "Printed answer key: (C) Parent / Student"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5e8fcc90-5b55-4e2d-afd2-389cb132ed41",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "89. कौन सा सुरक्षा प्रोटोकॉल उपयोगकर्ता के वेब ब्राउज़र और UDISE+ वेब पोर्टल के बीच एन्क्रिप्टेड संचार सुनिश्चित करता है?",
+      "options_hindi": [
+        "सरल मेल ट्रांसफर प्रोटोकॉल (SMTP)",
+        "फाइल ट्रांसफर प्रोटोकॉल (FTP) विरासत\nअनएन्क्रिप्टेड",
+        "HTTPS (हाइपरटेक्स्ट ट्रांसफर प्रोटोकॉल\nसुरक्षित)",
+        "उपयोगकर्ता डाटाग्राम प्रोटोकॉल (UDP) अनएन्क्रिप्टेड"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which security protocol ensures encrypted communication between a user’s web browser and the UDISE+ web portal?",
+      "options_english": [
+        "Simple Mail Transfer Protocol (SMTP)",
+        "File Transfer Protocol (FTP) legacy unencrypted",
+        "HTTPS (Hypertext Transfer Protocol Secure)",
+        "User Datagram Protocol (UDP) unencrypted"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Hypertext Transfer Protocol Secure provides encrypted communication and secure data transfer between client web browsers and the UDISE+ portal. HTTPS incorporates SSL and TLS encryption protocols to protect sensitive user credentials, personal student details, and administrative inputs from network eavesdropping, packet interception, and data tampering, preserving web communication security and user privacy during online portal interactions.",
+      "explanation_hindi": "सही उत्तर (c) है। हाइपरटेक्स्ट ट्रांसफर प्रोटोकॉल सुरक्षित उपयोगकर्ता के वेब ब्राउज़र और UDISE+ पोर्टल के बीच एन्क्रिप्टेड संचार और सुरक्षित डेटा ट्रांसफर प्रदान करता है। HTTPS संवेदनशील उपयोगकर्ता क्रेडेंशियल, व्यक्तिगत छात्र विवरण और प्रशासनिक इनपुट को नेटवर्क ईव्सड्रॉपिंग, पैकेट इंटरसेप्शन और डेटा छेड़छाड़ से सुरक्षित करने के लिए SSL और TLS एन्क्रिप्शन प्रोटोकॉल को शामिल करता है, ऑनलाइन पोर्टल इंटरैक्शन के दौरान वेब संचार सुरक्षा और उपयोगकर्ता गोपनीयता को बनाए रखता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "HTTPS is essential for secure web communication.",
+        "It uses SSL and TLS encryption protocols.",
+        "Printed answer key: (C) HTTPS (Hypertext Transfer Protocol Secure)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c34623a1-6f82-4fd7-b436-f65ad893614d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "30. संस्थागत रिकॉर्ड के लिए डेटा बैकअप और आपदा पुनर्प्राप्ति रणनीतियों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. ऑफ-साइट क्लाउड बैकअप स्थानीय भौतिक हार्डवेयर विफलताओं के दौरान डेटा उपलब्धता सुनिश्चित करता है।\nB. दैनिक वृद्धि बैकअप के साथ-साथ समय-समय पर पूर्ण बैकअप डेटा हानि के खिलाफ सुरक्षा प्रदान करते हैं।\nC. आपदा पुनर्प्राप्ति योजनाएँ रिकवरी पॉइंट ऑब्जेक्टिव्स (RPO) और रिकवरी टाइम ऑब्जेक्टिव्स (RTO) को निर्दिष्ट करती हैं।\nD. स्कूल कार्यालय में एकल भौतिक फ्लैश ड्राइव पर डेटा संग्रहीत करना एक पूर्ण आपदा पुनर्प्राप्ति योजना के रूप में पर्याप्त है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A और D",
+        "A, B, C और D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Data Backup and Disaster Recovery strategies for institutional records:\nA. Off-site cloud backup ensures data availability during local physical hardware failures.\nB. Daily incremental backups combined with periodic full backups protect against data loss.\nC. Disaster recovery plans specify Recovery Point Objectives (RPO) and Recovery Time Objectives (RTO).\nD. Storing data on a single physical flash drive at the school office is sufficient as a complete disaster recovery plan.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and C only",
+        "B, C and D only",
+        "A and D only",
+        "A, B, C and D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Comprehensive institutional data protection relies on robust backup and recovery frameworks. Off-site cloud backups protect operational records against localized server failures and hardware loss. Combining daily incremental updates with periodic full backups prevents accidental data corruption. Formal disaster recovery plans define clear recovery metrics to restore operations quickly. Relying solely on a single physical flash drive offers inadequate protection against loss.",
+      "explanation_hindi": "सही उत्तर (a) है। व्यापक संस्थागत डेटा सुरक्षा मजबूत बैकअप और पुनर्प्राप्ति ढांचों पर निर्भर करती है। ऑफ-साइट क्लाउड बैकअप स्थानीय सर्वर विफलताओं और हार्डवेयर हानि के खिलाफ संचालन रिकॉर्ड की रक्षा करता है। दैनिक वृद्धि अपडेट को समय-समय पर पूर्ण बैकअप के साथ मिलाकर आकस्मिक डेटा भ्रष्टाचार को रोकता है। औपचारिक आपदा पुनर्प्राप्ति योजनाएँ संचालन को जल्दी पुनर्स्थापित करने के लिए स्पष्ट पुनर्प्राप्ति मैट्रिक्स को परिभाषित करती हैं। केवल एक भौतिक फ्लैश ड्राइव पर निर्भर रहना हानि के खिलाफ अपर्याप्त सुरक्षा प्रदान करता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Off-site cloud backups protect against local hardware failures.",
+        "Daily incremental and periodic full backups prevent data loss.",
+        "Disaster recovery plans include RPO and RTO metrics.",
+        "Printed answer key: (A) A, B and C only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b970cf20-4fae-408a-b52e-db1c11dad60a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "57. एक शैक्षणिक कैलेंडर प्रबंधन उपकरण की कौन सी विशेषता शिक्षकों को पाठ योजनाओं को निर्धारित स्कूल कार्य दिवसों के साथ संरेखित करने में मदद करती है?",
+      "options_hindi": [
+        "दैनिक भौतिक प्रतिस्थापन शिक्षक असाइनमेंट लॉगबुक का स्वचालित उत्पादन",
+        "मासिक कर्मचारी भविष्य निधि ब्याज दरों और पेंशन संचय की गणना करना",
+        "कार्य दिवसों, छुट्टियों और परीक्षा कार्यक्रमों के खिलाफ पाठ्यक्रम इकाइयों का मानचित्रण",
+        "स्कूल बस चालक के वाणिज्यिक ड्राइविंग लाइसेंस नवीनीकरण की तिथियों की निगरानी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which feature of an Academic Calendar Management tool helps teachers align lesson plans with scheduled school working days?",
+      "options_english": [
+        "Generating automatic physical substitute teacher assignment logbooks daily",
+        "Calculating monthly staff provident fund interest rates and pension accruals",
+        "Mapping syllabus units against working days, holidays, and exam schedules",
+        "Monitoring school bus driver commercial driving license renewal due dates"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Academic calendar management software assists teachers by mapping curriculum units against scheduled working days, institutional holidays, and examination periods. Aligning instructional units with available classroom hours allows educators to pace syllabus delivery effectively throughout the term. System tracking prevents academic lag, supports timely completion of learning objectives, and ensures smooth administrative coordination across academic departments.",
+      "explanation_hindi": "सही उत्तर (c) है। शैक्षणिक कैलेंडर प्रबंधन सॉफ़्टवेयर शिक्षकों को निर्धारित कार्य दिवसों, संस्थागत छुट्टियों और परीक्षा अवधि के खिलाफ पाठ्यक्रम इकाइयों का मानचित्रण करके सहायता करता है। उपलब्ध कक्षा घंटों के साथ शैक्षणिक इकाइयों को संरेखित करना शिक्षकों को पूरे सेमेस्टर में पाठ्यक्रम वितरण को प्रभावी ढंग से गति देने की अनुमति देता है। प्रणाली ट्रैकिंग शैक्षणिक पिछड़ाव को रोकती है, सीखने के उद्देश्यों की समय पर पूर्ति का समर्थन करती है, और शैक्षणिक विभागों के बीच सुचारू प्रशासनिक समन्वय सुनिश्चित करती है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Academic calendar management tools help in aligning lesson plans with school schedules.",
+        "Effective pacing of syllabus delivery is crucial for educational success.",
+        "System tracking aids in preventing academic lag.",
+        "Printed answer key: (C) Mapping syllabus units against working days, holidays, and exam schedules."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "61cef65f-974a-468b-a2b8-d73bd21e36dc",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "1. ब्राउज़र फ़ॉर्म में क्लाइंट-साइड इनपुट सत्यापन",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "विकल्प सी",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Client-Side Input Validation in browser form",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The acronym UDISE+ stands for Unified District Information System for Education Plus. Initiated by the Ministry of Education in India, this comprehensive platform collects detailed operational data from all recognized schools across the nation. It serves as a vital database for analyzing infrastructure, student enrollment, teacher availability, and academic metrics, thereby facilitating evidence-based educational planning, policy formulation, and efficient resource distribution across states.",
+      "explanation_hindi": "सही उत्तर (b) है। UDISE+ का संक्षिप्त नाम यूनिफाइड डिस्ट्रिक्ट इंफॉर्मेशन सिस्टम फॉर एजुकेशन प्लस है। इसे भारत के शिक्षा मंत्रालय द्वारा शुरू किया गया था, यह व्यापक प्लेटफ़ॉर्म सभी मान्यता प्राप्त स्कूलों से विस्तृत संचालन डेटा एकत्र करता है। यह बुनियादी ढांचे, छात्र नामांकन, शिक्षक उपलब्धता और शैक्षणिक मैट्रिक्स का विश्लेषण करने के लिए एक महत्वपूर्ण डेटाबेस के रूप में कार्य करता है, जिससे साक्ष्य-आधारित शैक्षणिक योजना, नीति निर्माण और राज्यों के बीच संसाधनों का कुशल वितरण संभव होता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "UDISE+ is a comprehensive platform for educational data management.",
+        "It collects data from all recognized schools in India.",
+        "It aids in evidence-based educational planning and policy formulation.",
+        "Printed answer key: (B) Unified District Information System for"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6cd76966-c163-45f4-baca-08bdcf5a07df",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) और दूसरे को\nकारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): वास्तविक समय के बायोमेट्रिक उपस्थिति\nप्रणालियाँ दूरस्थ स्कूलों में\nशिक्षक की अनुपस्थिति को कम करने में मदद करती हैं।\nकारण (R): बायोमेट्रिक प्रणालियाँ भौतिक\nबायोमेट्रिक लक्षणों को सटीक समय के साथ\nपंजीकृत करती हैं, जिससे सत्यापित और\nछेड़छाड़-प्रूफ उपस्थिति रिकॉर्ड बनते हैं।\nनिम्नलिखित में से कौन सा विकल्प सही है?",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही\nव्याख्या है।",
+        "दोनों A और R सत्य हैं लेकिन R A का\nसही व्याख्या नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): Real-time biometric attendance systems help reduce chronic teacher absenteeism in remote schools. Reason (R): Biometric systems register physical biometric traits along with exact timestamps, creating verifiable and tamper-proof attendance records. Which of the following options is correct?",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Real-time biometric attendance tracking effectively reduces chronic staff absenteeism in remote educational institutions. Biometric devices capture unique physical traits alongside immutable timestamps upon arrival and departure, generating tamper-proof attendance logs. Eliminating manual register manipulation creates transparent verification, encourages accountability, and ensures that attendance records are accurate and reliable.",
+      "explanation_hindi": "सही उत्तर (a) है। वास्तविक समय के बायोमेट्रिक उपस्थिति ट्रैकिंग दूरस्थ शैक्षणिक संस्थानों में दीर्घकालिक स्टाफ अनुपस्थिति को प्रभावी ढंग से कम करती है। बायोमेट्रिक उपकरण आगमन और प्रस्थान पर अद्वितीय भौतिक लक्षणों के साथ अपरिवर्तनीय समय चिह्नों को कैप्चर करते हैं, जिससे छेड़छाड़-प्रूफ उपस्थिति लॉग उत्पन्न होते हैं। मैनुअल रजिस्टर हेरफेर को समाप्त करना पारदर्शी सत्यापन, जवाबदेही को प्रोत्साहित करता है, और यह सुनिश्चित करता है कि उपस्थिति रिकॉर्ड सटीक और विश्वसनीय हैं।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Real-time biometric systems enhance attendance accuracy.",
+        "Biometric traits and timestamps ensure tamper-proof records.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A.",
+        "Chronic absenteeism can be mitigated through technology."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "369517e6-f352-4fc0-b963-1e83c3bba815",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II से मिलाएँ:\nसूची I: (डेटा सुरक्षा तंत्र)\nP. भूमिका-आधारित पहुँच नियंत्रण\nQ. एन्क्रिप्शन\nR. आवधिक डेटा ऑडिट\nS. ऑडिट ट्रेल लॉग\nसूची II: (संचालनात्मक उद्देश्य)\nI. संवेदनशील डेटा को अनधिकृत दृश्यता से सुरक्षित करना\nII. संस्थागत पदानुक्रम के आधार पर उपयोगकर्ता अनुमतियों को परिभाषित करना\nIII. उपयोगकर्ता टाइमस्टैम्प के साथ हर डेटा सम्मिलन, संशोधन और विलोपन को रिकॉर्ड करना",
+      "options_hindi": [
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-II, R-III, S-IV",
+        "P-III, Q-IV, R-II, S-I",
+        "P-IV, Q-III, R-I, S-II"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (Data Security Mechanism)\nP. Role-Based Access Control\nQ. Encryption\nR. Periodic Data Audit\nS. Audit Trail Log\nList II: (Operational Purpose)\nI. Protecting sensitive data at rest and in transit from unauthorized viewing\nII. Defining user permissions based on institutional hierarchy\nIII. Recording every data insertion, modification, and deletion with user timestamp",
+      "options_english": [
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-II, R-III, S-IV",
+        "P-III, Q-IV, R-II, S-I",
+        "P-IV, Q-III, R-I, S-II"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Securing educational databases requires multiple technical mechanisms. Role-Based Access Control defines user permissions based on institutional hierarchy. Encryption protects sensitive data at rest and during transit against unauthorized intercept. Periodic data audits systematically verify digital entries against physical source documents. Finally, audit trail logs record every record creation, edit, or deletion with user timestamps, maintaining full accountability across operations.",
+      "explanation_hindi": "सही उत्तर (a) है। शैक्षिक डेटाबेस की सुरक्षा के लिए कई तकनीकी तंत्रों की आवश्यकता होती है। भूमिका-आधारित पहुँच नियंत्रण संस्थागत पदानुक्रम के आधार पर उपयोगकर्ता अनुमतियों को परिभाषित करता है। एन्क्रिप्शन संवेदनशील डेटा को अनधिकृत हस्तक्षेप से सुरक्षित करता है। आवधिक डेटा ऑडिट डिजिटल प्रविष्टियों को भौतिक स्रोत दस्तावेजों के खिलाफ व्यवस्थित रूप से सत्यापित करते हैं। अंततः, ऑडिट ट्रेल लॉग हर रिकॉर्ड निर्माण, संपादन, या विलोपन को उपयोगकर्ता टाइमस्टैम्प के साथ रिकॉर्ड करते हैं, जिससे संचालन में पूर्ण जवाबदेही बनी रहती है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Role-Based Access Control defines user permissions based on institutional hierarchy.",
+        "Encryption protects sensitive data at rest and in transit.",
+        "Periodic data audits verify digital entries against physical documents.",
+        "Printed answer key: (A) P-II, Q-I, R-IV, S-III"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5aff61d3-e93d-4529-a695-c64ac4ed9c07",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "यह बडी पंचिंग को रोकता है और सत्यापित करता है, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "यह बडी पंचिंग को रोकता है और सत्यापित करने की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding It prevents buddy punching and verifies, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of It prevents buddy punching and verifies",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Biometric attendance systems record unique physiological traits, such as fingerprints or facial scans, along with exact time logs upon entry and exit. This technology eliminates proxy marking and buddy punching, which frequently occur in traditional manual register tracking. By ensuring authentic physical presence on school premises, biometric verification enhances staff discipline, accurate payroll generation, and transparent reporting for educational administration.",
+      "explanation_hindi": "सही उत्तर (b) है। बायोमेट्रिक उपस्थिति प्रणाली अद्वितीय शारीरिक लक्षणों, जैसे कि फिंगरप्रिंट या चेहरे की स्कैनिंग, के साथ-साथ प्रवेश और निकासी के समय लॉग को रिकॉर्ड करती है। यह तकनीक प्रॉक्सी मार्किंग और बडी पंचिंग को समाप्त करती है, जो पारंपरिक मैनुअल रजिस्टर ट्रैकिंग में अक्सर होती है। स्कूल परिसर में वास्तविक शारीरिक उपस्थिति सुनिश्चित करके, बायोमेट्रिक सत्यापन स्टाफ अनुशासन, सटीक वेतन उत्पादन, और शैक्षणिक प्रशासन के लिए पारदर्शी रिपोर्टिंग को बढ़ाता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Biometric systems enhance attendance accuracy and discipline.",
+        "Eliminates proxy marking and buddy punching.",
+        "Printed answer key: (B) यह बडी पंचिंग को रोकता है और सत्यापित करने की प्राथमिक परिभाषा और मानक विशेषताएँ"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7ec7ea05-b96b-457a-859d-2e214c49bfd6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) और दूसरे को\nकारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): स्कूल से बाहर के बच्चों (OOSC) का डेटा कैप्चर करना\nऔर राज्य शिक्षा पोर्टलों में मुख्यधारा की प्रगति\nको ट्रैक करना सार्वभौमिक शिक्षा लक्ष्यों को\nप्राप्त करने के लिए महत्वपूर्ण है।\nकारण (R): व्यक्तिगत बच्चे की आईडी को ट्रैक करना\nडुप्लिकेट नामांकन को रोकता है और\nस्कूलों के बीच प्रवासी और कमजोर बच्चों का\nनिरंतर ट्रैकिंग सक्षम करता है।\nनिम्नलिखित में से कौन सा विकल्प सही है?",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही\nव्याख्या है।",
+        "दोनों A और R सत्य हैं लेकिन R A का\nसही व्याख्या नहीं है।",
+        "A सत्य है लेकिन R गलत है।",
+        "A गलत है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): Data capture of out-of-school children (OOSC) and mainstreaming progress in state education portals is vital for achieving universal education goals. Reason (R): Tracking individual child IDs prevents double enrollment and enables continuous tracking of migrant and vulnerable children across schools. Which of the following options is correct?",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Documenting out-of-school children and tracking mainstreaming progress in state portals is vital for achieving universal education goals. Assigning unique tracking IDs to students prevents duplicate registrations and enables continuous tracking of migrant and vulnerable children during school transfers. System tracking guarantees uninterrupted access to social welfare benefits, supports continuous monitoring, and aids retention efforts across public schools.",
+      "explanation_hindi": "सही उत्तर (a) है। स्कूल से बाहर के बच्चों का डेटा कैप्चर करना और राज्य शिक्षा पोर्टलों में मुख्यधारा की प्रगति को ट्रैक करना सार्वभौमिक शिक्षा लक्ष्यों को प्राप्त करने के लिए महत्वपूर्ण है। छात्रों को अद्वितीय ट्रैकिंग आईडी असाइन करना डुप्लिकेट नामांकन को रोकता है और स्कूलों के बीच प्रवासी और कमजोर बच्चों की निरंतर ट्रैकिंग को सक्षम करता है। सिस्टम ट्रैकिंग सामाजिक कल्याण लाभों तक निरंतर पहुंच की गारंटी देती है, निरंतर निगरानी का समर्थन करती है, और सार्वजनिक स्कूलों में रिटेंशन प्रयासों में सहायता करती है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Documenting out-of-school children is essential for universal education.",
+        "Unique child IDs prevent double enrollment.",
+        "Tracking supports migrant and vulnerable children's education.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a3db3592-6e0d-40cf-8e1b-534cec0d248a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक ERP इन्वेंटरी मॉड्यूल में, \"पुनःआदेश स्तर\" शब्द का क्या अर्थ है?\n(1) अधिकतम वैधानिक मूल्य सीमा जो एक स्कूल\nकंप्यूटर पेपर खरीदते समय कानूनी रूप से\nभुगतान करने की अनुमति है। \n(2) न्यूनतम स्टॉक सीमा जिस पर एक\nपुनःपूर्ति आदेश सक्रिय होता है।",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In an ERP Inventory Module, what does the term 'Reorder Level' refer to? The maximum statutory price limit a school is legally permitted to pay when procuring computer paper. The minimum stock threshold at which a replenishment order is triggered.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "In an ERP Inventory Module, the reorder level represents a predetermined minimum stock threshold for consumable materials or institutional assets. When inventory drops to this specific quantity, the system automatically triggers a replenishment alert or purchase requisition. Automated tracking prevents stockouts of essential items like laboratory supplies and classroom paper, ensuring continuous administrative operations without overstocking unnecessary inventory.",
+      "explanation_hindi": "सही उत्तर (b) है। एक ERP इन्वेंटरी मॉड्यूल में, पुनःआदेश स्तर उपभोग्य सामग्रियों या संस्थागत संपत्तियों के लिए एक पूर्व निर्धारित न्यूनतम स्टॉक सीमा का प्रतिनिधित्व करता है। जब इन्वेंटरी इस विशिष्ट मात्रा तक गिरती है, तो प्रणाली स्वचालित रूप से एक पुनःपूर्ति अलर्ट या खरीद अनुरोध सक्रिय करती है। स्वचालित ट्रैकिंग आवश्यक वस्तुओं जैसे प्रयोगशाला आपूर्ति और कक्षा के कागज की स्टॉकआउट को रोकती है, जिससे निरंतर प्रशासनिक संचालन सुनिश्चित होता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "easy",
+      "key_facts": [
+        "Reorder level is crucial for inventory management.",
+        "Triggers replenishment orders to avoid stockouts.",
+        "Printed answer key: (B) The minimum stock threshold at which a replenishment order is triggered.",
+        "Automated systems enhance operational efficiency."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "4ba4b38f-315c-49e0-bbf4-e055ce1f034c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "राष्ट्रीय और राज्य स्तर पर तैनात 'विद्या समीक्षा केंद्र' (VSK) का प्राथमिक ध्यान क्या है?",
+      "options_hindi": [
+        "सीखने के परिणामों, उपस्थिति, और प्रशासनिक दक्षता की निगरानी के लिए डेटा एनालिटिक्स और डैशबोर्ड का उपयोग करना",
+        "सभी जिला स्तरों पर वार्षिक शारीरिक खेल प्रतियोगिताओं और एथलेटिक मीट का आयोजन और संचालन करना",
+        "प्राथमिक शैक्षणिक संस्थानों के लिए निर्धारित भौतिक पाठ्यपुस्तकों का संपादन, प्रिंटिंग, और प्रकाशन करना",
+        "वरिष्ठ विश्वविद्यालय प्रोफेसरों की सीधी भर्ती, साक्षात्कार, और प्लेसमेंट प्रक्रिया का प्रबंधन करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the primary focus of the “Vidya Samiksha Kendra” (VSK) deployed at national and state levels?",
+      "options_english": [
+        "Using data analytics and dashboards to monitor learning outcomes, attendance, and administrative efficiency",
+        "Organizing and conducting annual physical sports tournaments and athletic meets across all district levels",
+        "Editing, printing, and publishing physical paper textbooks designated for primary educational institutions",
+        "Managing the direct recruitment, interviewing, and placement process of senior university professors"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Vidya Samiksha Kendras serve as central data intelligence and monitoring hubs at national and state levels. These centers aggregate live educational data streams using advanced analytics and visual dashboards. Education leaders monitor key performance indicators, including student learning outcomes, daily attendance, and scheme implementation efficiency, using real-time insights to drive systemic administrative reforms and improve overall educational delivery.",
+      "explanation_hindi": "सही उत्तर (a) है। विद्या समीक्षा केंद्र राष्ट्रीय और राज्य स्तर पर केंद्रीय डेटा बुद्धिमत्ता और निगरानी केंद्र के रूप में कार्य करते हैं। ये केंद्र उन्नत विश्लेषण और दृश्य डैशबोर्ड का उपयोग करके लाइव शैक्षणिक डेटा धाराओं को एकत्र करते हैं। शिक्षा के नेता प्रमुख प्रदर्शन संकेतकों की निगरानी करते हैं, जिसमें छात्र सीखने के परिणाम, दैनिक उपस्थिति, और योजना कार्यान्वयन दक्षता शामिल हैं, वास्तविक समय की अंतर्दृष्टियों का उपयोग करके प्रणालीगत प्रशासनिक सुधारों को प्रेरित करते हैं और समग्र शैक्षणिक वितरण में सुधार करते हैं।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "डेटा एनालिटिक्स और डैशबोर्ड का उपयोग",
+        "छात्र सीखने के परिणामों और उपस्थिति की निगरानी",
+        "प्रशासनिक दक्षता में सुधार",
+        "Printed answer key: (A) Using data analytics and dashboards to"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "21a1d4c1-c976-494e-8208-9f2d6dad2c49",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "48. कौन सा राज्य-स्तरीय पहल/प्लेटफ़ॉर्म स्कूल डेटाबेस के साथ एकीकृत होता है ताकि तेलंगाना में छात्र नामांकन, बाल जानकारी और शैक्षिक प्रोत्साहन कार्यान्वयन को ट्रैक किया जा सके?",
+      "options_hindi": [
+        "टीएस-आईपास औद्योगिक पोर्टल",
+        "तेलंगाना चाइल्ड इंफो / समग्र शिक्षा एमआईएस पोर्टल",
+        "धरनी भूमि पोर्टल",
+        "मीसेवा नागरिक पोर्टल केवल"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which state-level initiative/platform integrates with school databases to track student enrolment, child information, and educational incentives implementation in Telangana?",
+      "options_english": [
+        "TS-iPASS Industrial Portal",
+        "Telangana Child Info / Samagra Shiksha MIS Portal",
+        "Dharani Land Portal",
+        "Meeseva Citizen Portal only"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "In Telangana, the Child Info portal integrated with the Samagra Shiksha MIS framework tracks student enrollment, demographic details, and academic progression across schools. This centralized database enables state authorities to monitor entitlement distribution, direct incentive schemes, verify attendance, and prevent double enrollment. System integration ensures streamlined administrative tracking, helping retain vulnerable children within the formal state education system.",
+      "explanation_hindi": "सही उत्तर (b) है। तेलंगाना में, चाइल्ड इंफो पोर्टल समग्र शिक्षा एमआईएस ढांचे के साथ एकीकृत होता है जो छात्र नामांकन, जनसांख्यिकीय विवरण और स्कूलों में शैक्षणिक प्रगति को ट्रैक करता है। यह केंद्रीकृत डेटाबेस राज्य प्राधिकरणों को अधिकार वितरण, प्रत्यक्ष प्रोत्साहन योजनाओं की निगरानी, उपस्थिति की पुष्टि और डबल नामांकन को रोकने में सक्षम बनाता है। प्रणाली एकीकरण प्रशासनिक ट्रैकिंग को सुव्यवस्थित करता है, जिससे कमजोर बच्चों को औपचारिक राज्य शिक्षा प्रणाली में बनाए रखने में मदद मिलती है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Child Info portal is integrated with Samagra Shiksha MIS framework.",
+        "Tracks student enrollment and demographic details.",
+        "Enables monitoring of entitlement distribution and incentive schemes.",
+        "Printed answer key: (B) Telangana Child Info / Samagra Shiksha"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b18da484-0ffd-41ed-bcd6-9782496840f6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "मूल्यांकन रूपरेखाएँ, भार और परिभाषित करने के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "मूल्यांकन रूपरेखाएँ, भार और परिभाषित करने की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding Defining evaluation rubrics, weightages, and, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of Defining evaluation rubrics, weightages, and",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Gradebook configuration in an examination module involves establishing the structural assessment rules for an academic term. Administrators define grading scales, evaluation rubrics, component weightages, continuous assessment ratios, and pass boundaries within the system software. Once configured, entering raw student marks automatically computes weighted totals, percentage scores, and corresponding letter grades, ensuring standardized evaluation across classes and subjects.",
+      "explanation_hindi": "सही उत्तर (a) है। परीक्षा मॉड्यूल में ग्रेडबुक कॉन्फ़िगरेशन शैक्षणिक अवधि के लिए संरचनात्मक मूल्यांकन नियमों को स्थापित करने में शामिल होता है। प्रशासक ग्रेडिंग स्केल, मूल्यांकन रूपरेखाएँ, घटक भार, निरंतर मूल्यांकन अनुपात और पास सीमाएँ प्रणाली सॉफ़्टवेयर के भीतर परिभाषित करते हैं। एक बार कॉन्फ़िगर होने के बाद, कच्चे छात्र अंकों को दर्ज करने से स्वचालित रूप से भारित कुल, प्रतिशत स्कोर और संबंधित पत्र ग्रेड की गणना होती है, जो कक्षाओं और विषयों में मानकीकृत मूल्यांकन सुनिश्चित करता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Evaluation rubrics define grading criteria and weightages.",
+        "Standardized evaluation ensures fairness across assessments.",
+        "Printed answer key: (A) Defining evaluation rubrics, weightages, and"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "79e790e0-078f-4013-8333-408f5e29c41d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "स्कूल MIS में डेटा ऑडिट के संबंध में निम्नलिखित बयानों पर विचार करें:\nA. यादृच्छिक छात्र नमूनों के भौतिक सत्यापन के माध्यम से डेटाबेस रिकॉर्ड के खिलाफ प्रविष्टि की सटीकता को मान्य किया जाता है।\nB. आंतरिक डेटा ऑडिट भूत प्रविष्टियों या गलत नामांकन आंकड़ों की पहचान करने में मदद करते हैं।\nC. वार्षिक आंकड़ों को फ्रीज़ करने से पहले उच्च शैक्षणिक प्राधिकरण द्वारा बाहरी डेटा मान्यता की जाती है।\nD. डेटा ऑडिट यह सुनिश्चित करते हैं कि सिस्टम कोड में सॉफ़्टवेयर बग कभी नहीं होंगे।\nउपरोक्त दिए गए बयानों में से कौन से सही हैं?",
+      "options_hindi": [
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A और D",
+        "A, B, C और D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Data Audit in School MIS:\nA. Physical verification of random student samples against database records validates entry accuracy.\nB. Internal data audits help identify ghost entries or erroneous enrollment figures.\nC. External data validation is performed by higher educational authorities before freezing annual statistics.\nD. Data audits guarantee that software bugs will never occur in system code.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and C only",
+        "B, C and D only",
+        "A and D only",
+        "A, B, C and D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Data audits in school information systems use multiple verification methods to maintain high data quality. On-site random sampling checks physical records against online entries to confirm reporting accuracy. Internal audits help identify ghost enrollments and entry discrepancies. External verification by higher authorities validates statistics before annual database freezing. However, data audits verify record accuracy rather than eliminating software bugs.",
+      "explanation_hindi": "सही उत्तर (a) है। स्कूल सूचना प्रणालियों में डेटा ऑडिट उच्च डेटा गुणवत्ता बनाए रखने के लिए कई सत्यापन विधियों का उपयोग करते हैं। ऑन-साइट यादृच्छिक नमूनाकरण भौतिक रिकॉर्ड की जांच करता है ताकि ऑनलाइन प्रविष्टियों के खिलाफ रिपोर्टिंग की सटीकता की पुष्टि की जा सके। आंतरिक ऑडिट भूत नामांकन और प्रविष्टि विसंगतियों की पहचान करने में मदद करते हैं। उच्च प्राधिकरण द्वारा बाहरी सत्यापन वार्षिक डेटाबेस फ्रीज़ करने से पहले आंकड़ों को मान्य करता है। हालांकि, डेटा ऑडिट रिकॉर्ड की सटीकता की पुष्टि करते हैं न कि सॉफ़्टवेयर बग को समाप्त करते हैं।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Data audits ensure accuracy through physical verification and internal checks.",
+        "External validation is crucial before finalizing annual statistics.",
+        "Printed answer key: (A) A, B and C only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "cd956dd9-70c6-4ad4-9a74-991853e6447e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "संस्थानिक डेटा आर्किटेक्चर में \"सिंगल सोर्स ऑफ ट्रुथ\" (SSOT) शब्द का क्या अर्थ है?",
+      "options_hindi": [
+        "प्रत्येक कार्यात्मक विभाग को विरोधाभासी स्वतंत्र कागजी डेटा रजिस्टर बनाए रखने की अनुमति देना",
+        "आवश्यक संस्थागत डेटा को केवल एक केंद्रीय प्रशासनिक कार्यालय में बंद भौतिक कागजी फ़ाइलों पर संग्रहीत करना",
+        "डेटा को केंद्रीय रूप से संग्रहीत करना ताकि सभी अनुप्रयोग एक समान, विरोधाभासी जानकारी प्राप्त कर सकें",
+        "राज्य और जिला शिक्षा कार्यालयों में सभी उपयोगकर्ता रिकॉर्ड संपादन विशेषाधिकार पूरी तरह से अक्षम करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What does the term “Single Source of Truth” (SSOT) signify in institutional data architecture?",
+      "options_english": [
+        "Permitting every functional department to maintain conflicting independent paper data registers",
+        "Storing essential institutional data solely on physical paper files locked in a central administrative office",
+        "Storing data centrally so all applications retrieve uniform, non-conflicting information",
+        "Completely disabling all user record editing privileges across all state and district education offices"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Single Source of Truth architecture ensures that essential institutional data is centrally stored and managed within a single database system. By establishing a central repository, all integrated applications and user interfaces retrieve standardized, synchronized information. This design eliminates conflicting duplicate records across departments, improves overall data integrity, and provides consistent analytics for administrative planning and policy execution.",
+      "explanation_hindi": "सही उत्तर (c) है। सिंगल सोर्स ऑफ ट्रुथ आर्किटेक्चर यह सुनिश्चित करता है कि आवश्यक संस्थागत डेटा एकल डेटाबेस प्रणाली में केंद्रीय रूप से संग्रहीत और प्रबंधित किया जाए। एक केंद्रीय भंडार स्थापित करके, सभी एकीकृत अनुप्रयोग और उपयोगकर्ता इंटरफेस मानकीकृत, समन्वित जानकारी प्राप्त करते हैं। यह डिज़ाइन विभागों के बीच विरोधाभासी डुप्लिकेट रिकॉर्ड को समाप्त करता है, समग्र डेटा अखंडता में सुधार करता है, और प्रशासनिक योजना और नीति कार्यान्वयन के लिए सुसंगत विश्लेषण प्रदान करता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Single Source of Truth (SSOT) ensures centralized data management.",
+        "Eliminates conflicting duplicate records across departments.",
+        "Improves data integrity and provides consistent analytics.",
+        "Printed answer key: (C) Storing data centrally so all applications retrieve uniform, non-conflicting information."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "29cea16b-1194-4d91-b4bc-ef04672aab6b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "विद्यालय रिकॉर्ड प्रबंधन प्रणालियों में आवधिक डेटा ऑडिट करने का एक प्रमुख उद्देश्य क्या है?",
+      "options_hindi": [
+        "असंगतियों का पता लगाना, धोखाधड़ी प्रविष्टियों की पहचान करना, और अनुपालन को लागू करना",
+        "एक शैक्षणिक वर्ष से पुरानी सभी ऐतिहासिक विद्यालय डेटाबेस रिकॉर्ड को स्थायी रूप से हटाना",
+        "संस्थानात्मक प्रणाली हार्डवेयर क्षमताओं और नेटवर्क बैंडविड्थ आवंटनों को जानबूझकर कम करना",
+        "बाहरी तकनीकी विक्रेताओं द्वारा चार्ज किए गए वार्षिक सॉफ़्टवेयर लाइसेंसिंग लागत को कृत्रिम रूप से बढ़ाना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is a key objective of conducting periodic data audits in school record management systems?",
+      "options_english": [
+        "Detecting inaccuracies, identifying fraudulent entries, and enforcing compliance",
+        "Permanently deleting all historical school database records that are older than one academic year",
+        "Intentionally downgrading institutional system hardware capabilities and network bandwidth allocations",
+        "Artificially increasing annual software licensing costs charged by external technology vendors"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Conducting periodic data audits is essential for maintaining the quality and security of school management databases. Data audits systematically examine recorded online statistics against physical registers, original receipts, and physical infrastructure. This verification process identifies reporting errors, detects duplicate or fraudulent entries, enforces regulatory compliance, and ensures that official decision-making relies on verified, high-quality institutional data.",
+      "explanation_hindi": "सही उत्तर (a) है। आवधिक डेटा ऑडिट करना विद्यालय प्रबंधन डेटाबेस की गुणवत्ता और सुरक्षा बनाए रखने के लिए आवश्यक है। डेटा ऑडिट व्यवस्थित रूप से रिकॉर्ड की गई ऑनलाइन सांख्यिकी की तुलना भौतिक रजिस्टर, मूल रसीदों और भौतिक बुनियादी ढाँचे से करते हैं। यह सत्यापन प्रक्रिया रिपोर्टिंग त्रुटियों की पहचान करती है, डुप्लिकेट या धोखाधड़ी प्रविष्टियों का पता लगाती है, नियामक अनुपालन को लागू करती है, और सुनिश्चित करती है कि आधिकारिक निर्णय लेने में सत्यापित, उच्च गुणवत्ता वाले संस्थागत डेटा पर निर्भर किया जाए।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Periodic data audits maintain the quality and security of school management databases.",
+        "Data audits examine recorded online statistics against physical documents.",
+        "Verification identifies reporting errors and enforces regulatory compliance.",
+        "Printed answer key: (A) Detecting inaccuracies, identifying fraudulent entries, and enforcing compliance"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e342ad99-3f1f-4081-aa01-785e1695006d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "प्रवेश प्रबंधन मॉड्यूल के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "प्रवेश प्रबंधन मॉड्यूल की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding Admission Management Module, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of Admission Management Module",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The Admission Management Module in a school ERP system explicitly oversees the entire prospective student intake lifecycle. It processes digital application submissions, manages document verification workflows, tracks entrance examination scores, and automates seat allocation according to institutional criteria. By centralizing applicant interactions, this module eliminates manual paperwork, minimizes administrative errors, and ensures transparent admission procedures before transferring enrolled profiles into student records.",
+      "explanation_hindi": "सही उत्तर (d) है। प्रवेश प्रबंधन मॉड्यूल एक स्कूल ERP प्रणाली में संभावित छात्र भर्ती जीवनचक्र का पूरी तरह से प्रबंधन करता है। यह डिजिटल आवेदन प्रस्तुतियों को संसाधित करता है, दस्तावेज़ सत्यापन कार्यप्रवाह का प्रबंधन करता है, प्रवेश परीक्षा के स्कोर को ट्रैक करता है, और संस्थागत मानदंडों के अनुसार सीट आवंटन को स्वचालित करता है। आवेदक इंटरैक्शन को केंद्रीकृत करके, यह मॉड्यूल मैनुअल कागजी कार्रवाई को समाप्त करता है, प्रशासनिक त्रुटियों को कम करता है, और नामांकित प्रोफाइल को छात्र रिकॉर्ड में स्थानांतरित करने से पहले पारदर्शी प्रवेश प्रक्रियाओं को सुनिश्चित करता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "The module manages the entire prospective student intake lifecycle.",
+        "It automates seat allocation according to institutional criteria.",
+        "Printed answer key: (D) Admission Management Module",
+        "Centralizes applicant interactions to minimize errors."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "275702be-bc4a-4f54-b261-e13344fcdc07",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II से मिलाएं:\nसूची I: (MIS विशेषता/उपकरण)\nP. स्वचालित SMS गेटवे\nQ. OPAC प्रणाली\nR. भू-सीमाबद्ध मोबाइल ऐप\nS. स्वचालित ग्रेडबुक\nसूची II: (मुख्य प्रशासनिक कार्य)\nI. पुस्तकालय संसाधनों की ऑनलाइन खोज और आरक्षण\nII. क्षेत्रीय कर्मचारियों के लिए स्थान-प्रमाणित उपस्थिति ट्रैकिंग\nIII. माता-पिता को सूचनाओं/बकाया की प्रत्यक्ष बहु-चैनल संचार\nIV. GPA, टर्म प्रतिशत, और ग्रेड शीट्स की गणना\nनीचे दिए गए कोड का उपयोग करके सही उत्तर चुनें:",
+      "options_hindi": [
+        "P-III, Q-I, R-II, S-IV",
+        "P-I, Q-III, R-II, S-IV",
+        "P-III, Q-II, R-I, S-IV",
+        "P-II, Q-I, R-IV, S-III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (MIS Feature/Tool)\nP. Automated SMS Gateway\nQ. OPAC System\nR. Geo-fenced Mobile App\nS. Automated Gradebook\nList II: (Core Administrative Function)\nI. Online search and reservation of library resources\nII. Location-verified attendance tracking for field staff\nIII. Direct multi-channel communication of notices/dues to parents\nIV. Computation of GPA, term percentages, and grade sheets\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "P-III, Q-I, R-II, S-IV",
+        "P-I, Q-III, R-II, S-IV",
+        "P-III, Q-II, R-I, S-IV",
+        "P-II, Q-I, R-IV, S-III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Modern educational management relies on specialized tools to streamline school administration. Automated SMS gateways enable direct multi-channel communication of notices and fee dues to parents. OPAC systems allow online searching and reservation of library resources. Geo-fenced mobile applications track location-verified attendance for field staff. Finally, automated gradebooks process assessment scores to compute term percentages, grade point averages, and official report cards.",
+      "explanation_hindi": "सही उत्तर (a) है। आधुनिक शैक्षिक प्रबंधन विशेष उपकरणों पर निर्भर करता है जो स्कूल प्रशासन को सुव्यवस्थित करते हैं। स्वचालित SMS गेटवे माता-पिता को सूचनाओं और शुल्क बकाया की प्रत्यक्ष बहु-चैनल संचार की अनुमति देते हैं। OPAC प्रणाली पुस्तकालय संसाधनों की ऑनलाइन खोज और आरक्षण की अनुमति देती है। भू-सीमाबद्ध मोबाइल ऐप क्षेत्रीय कर्मचारियों के लिए स्थान-प्रमाणित उपस्थिति को ट्रैक करते हैं। अंततः, स्वचालित ग्रेडबुक मूल्यांकन स्कोर को प्रोसेस करती है ताकि टर्म प्रतिशत, ग्रेड प्वाइंट औसत और आधिकारिक रिपोर्ट कार्ड की गणना की जा सके।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Automated SMS gateways facilitate communication with parents.",
+        "OPAC systems enhance library resource management.",
+        "Geo-fenced apps improve attendance tracking.",
+        "Printed answer key: (A) P-III, Q-I, R-II, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "031dc1cd-e213-49c8-bf1f-47357502d57a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) के रूप में लेबल किया गया है\nऔर दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): क्लाउड-आधारित स्कूल ERP समाधान\nपरंपरागत स्थानीय सर्वर इंस्टॉलेशन की तुलना में\nबढ़ती हुई प्राथमिकता प्राप्त कर रहे हैं।\nकारण (R): क्लाउड समाधान स्कूलों को महंगे\nस्थानीय सर्वर हार्डवेयर को बनाए रखने की\nआवश्यकता को समाप्त करते हैं और\nस्वचालित दूरस्थ बैकअप के साथ कहीं से भी\nपहुँच प्रदान करते हैं।\nनिम्नलिखित में से कौन सा विकल्प सही है?",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही\nव्याख्या है।",
+        "दोनों A और R सत्य हैं लेकिन R A का\nसही व्याख्या नहीं है।",
+        "A सत्य है लेकिन R गलत है।",
+        "A गलत है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): Cloud-based School ERP solutions are increasingly preferred over traditional on-premise local server installations. Reason (R): Cloud solutions eliminate the need for schools to maintain expensive local server hardware and offer anywhere access with automated remote backups. Which of the following options is correct?",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Cloud-based ERP solutions are widely preferred over local server installations in educational management. Cloud platforms remove the requirement for schools to purchase and maintain expensive physical servers locally. They provide continuous remote access for staff and parents while delivering automated data backups, high scalability, robust security patches, and reduced operational costs compared to maintaining localized hardware infrastructure.",
+      "explanation_hindi": "सही उत्तर (a) है। क्लाउड-आधारित ERP समाधान शैक्षणिक प्रबंधन में स्थानीय सर्वर इंस्टॉलेशन की तुलना में व्यापक रूप से प्राथमिकता प्राप्त कर रहे हैं। क्लाउड प्लेटफार्म स्कूलों को महंगे भौतिक सर्वरों को खरीदने और बनाए रखने की आवश्यकता को समाप्त करते हैं। ये स्टाफ और माता-पिता के लिए निरंतर दूरस्थ पहुँच प्रदान करते हैं, जबकि स्वचालित डेटा बैकअप, उच्च स्केलेबिलिटी, मजबूत सुरक्षा पैच और स्थानीयकृत हार्डवेयर अवसंरचना बनाए रखने की तुलना में कम परिचालन लागत प्रदान करते हैं।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Cloud-based ERP solutions reduce the need for expensive local server maintenance.",
+        "They provide automated backups and remote access.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a00a6181-fb40-46ca-8566-ea715828589e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "P-II, Q-III, R-I, S-IV के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "P-II, Q-III, R-I, S-IV की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding P-II, Q-III, R-I, S-IV, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of P-II, Q-III, R-I, S-IV",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Different ERP modules manage specific institutional operations. The HR module oversees leave tracking, payroll calculation, and teacher service records. The Timetable module automates conflict-free scheduling for subjects, classrooms, and proxy staff. The Inventory module manages stock registers, asset allocation, and consumable items. Finally, the Library module handles book cataloguing using standard library classification systems, barcode circulation, and online catalog searches.",
+      "explanation_hindi": "सही उत्तर (a) है। विभिन्न ईआरपी मॉड्यूल विशिष्ट संस्थागत संचालन का प्रबंधन करते हैं। एचआर मॉड्यूल छुट्टी ट्रैकिंग, वेतन गणना, और शिक्षक सेवा रिकॉर्ड की देखरेख करता है। टाइमटेबल मॉड्यूल विषयों, कक्षाओं, और प्रॉक्सी स्टाफ के लिए संघर्ष-मुक्त अनुसूची को स्वचालित करता है। इन्वेंटरी मॉड्यूल स्टॉक रजिस्टर, संपत्ति आवंटन, और उपभोग्य वस्तुओं का प्रबंधन करता है। अंत में, पुस्तकालय मॉड्यूल मानक पुस्तकालय वर्गीकरण प्रणालियों, बारकोड परिसंचरण, और ऑनलाइन कैटलॉग खोजों का उपयोग करके पुस्तक सूचीकरण को संभालता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "ईआरपी मॉड्यूल संस्थागत संचालन का प्रबंधन करते हैं।",
+        "एचआर मॉड्यूल छुट्टी ट्रैकिंग और वेतन गणना करता है।",
+        "Printed answer key: (A) P-II, Q-III, R-I, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

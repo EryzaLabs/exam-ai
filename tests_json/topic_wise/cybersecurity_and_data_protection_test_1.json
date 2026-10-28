@@ -1,0 +1,793 @@
+{
+  "test_id": "2aaa90c8-4383-43e4-83d9-0ebce77d61d9",
+  "test_name": "Topic Test: CYBERSECURITY_AND_DATA_PROTECTION - Part 1",
+  "type": "topic_wise",
+  "topic": "cybersecurity_and_data_protection",
+  "created_at": "2026-10-28T18:55:06.548794",
+  "questions": [
+    {
+      "id": "4ead33a7-4019-470f-a46e-aa0adfb35407",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "73. सूचना प्रौद्योगिकी अधिनियम, 2000 का कौन सा धारा कंप्यूटर सिस्टम को नुकसान पहुँचाने, वायरस डालने, या अनुमति के बिना पहुँच से इनकार करने के लिए दंड निर्धारित करती है?",
+      "options_hindi": [
+        "धारा 66C",
+        "धारा 67B",
+        "धारा 43",
+        "धारा 72"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which Section of the IT Act, 2000 prescribes penalties for damaging computer systems, injecting viruses, or causing denial of access without permission?",
+      "options_english": [
+        "Section 66C",
+        "Section 67B",
+        "Section 43",
+        "Section 72"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Information Technology Act, 2000 sets civil penalties for unauthorized computer system access and damage. Section 43 outlines civil liability for damaging computer systems, introducing computer viruses, disrupting network services, or causing denial of access without owner permission. Offenders are legally bound to pay damages by way of monetary compensation to affected parties for losses incurred during such unauthorized activities.",
+      "explanation_hindi": "सही उत्तर (c) है। सूचना प्रौद्योगिकी अधिनियम, 2000 अनधिकृत कंप्यूटर प्रणाली पहुँच और नुकसान के लिए नागरिक दंड निर्धारित करता है। धारा 43 कंप्यूटर सिस्टम को नुकसान पहुँचाने, कंप्यूटर वायरस डालने, नेटवर्क सेवाओं में बाधा डालने, या मालिक की अनुमति के बिना पहुँच से इनकार करने के लिए नागरिक दायित्व को स्पष्ट करती है। अपराधियों को ऐसे अनधिकृत गतिविधियों के दौरान हुए नुकसान के लिए प्रभावित पक्षों को धनराशि के रूप में क्षति का भुगतान करने के लिए कानूनी रूप से बाध्य किया जाता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Section 43 outlines civil liability for unauthorized access and damage.",
+        "Offenders must compensate affected parties for losses.",
+        "Printed answer key: (C) Section 43"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e781ff07-1327-4d94-84c4-7bbf77308c26",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "61. किस प्रकार का मैलवेयर कंप्यूटिंग डिवाइस पर किए गए हर की प्रेस को रिकॉर्ड करता है ताकि लॉगिन क्रेडेंशियल और गोपनीय जानकारी चुराई जा सके?",
+      "options_hindi": [
+        "रूटकिट",
+        "रैंसमवेयर",
+        "कीलॉगर",
+        "लॉजिक बम"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which type of malware records every key press made on a computing device to steal login credentials and confidential information?",
+      "options_english": [
+        "Rootkit",
+        "Ransomware",
+        "Keylogger",
+        "Logic Bomb"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Information theft threats employ diverse monitoring mechanisms to capture sensitive credentials directly at input source points. A keylogger is a specialized strain of spyware designed to record every keystroke pressed on a target computing device. By capturing typed input sequences, keyloggers silently harvest account passwords, administrative credentials, personal messaging logs, and credit card numbers, relaying the gathered data directly to remote attackers.",
+      "explanation_hindi": "सही उत्तर (c) है। सूचना चोरी के खतरों में संवेदनशील क्रेडेंशियल को सीधे इनपुट स्रोत बिंदुओं पर कैप्चर करने के लिए विविध निगरानी तंत्र का उपयोग किया जाता है। कीलॉगर एक विशेष प्रकार का स्पाईवेयर है जो लक्षित कंप्यूटिंग डिवाइस पर किए गए हर की प्रेस को रिकॉर्ड करने के लिए डिज़ाइन किया गया है। टाइप की गई इनपुट अनुक्रमों को कैप्चर करके, कीलॉगर चुपचाप खाता पासवर्ड, प्रशासनिक क्रेडेंशियल, व्यक्तिगत संदेश लॉग और क्रेडिट कार्ड नंबर एकत्र करता है, और एकत्रित डेटा को सीधे दूरस्थ हमलावरों को भेजता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Keyloggers are a type of spyware that records keystrokes.",
+        "They can capture sensitive information like passwords and credit card details.",
+        "Printed answer key: (C) Keylogger"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1129001e-8196-4531-a9a2-7e8412fe0d21",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "83. एक इंट्रूज़न डिटेक्शन सिस्टम (IDS) की भूमिका क्या है?",
+      "options_hindi": [
+        "सुरक्षा उल्लंघनों के लिए नेटवर्क ट्रैफ़िक की निगरानी करना और सिस्टम प्रशासकों को सूचित करना",
+        "बिना उपयोगकर्ता प्राधिकरण के प्रशासनिक डेटाबेस सामग्री को स्वचालित रूप से संपादित और अपडेट करना",
+        "शारीरिक हार्डवेयर घटकों की निगरानी करना ताकि कंप्यूटर सिस्टम की बैटरियों को बदला जा सके",
+        "प्रणाली उपयोगकर्ता पहुँच लॉग के भौतिक कागज़ के प्रतियों को प्रति घंटे प्रिंट करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the role of an Intrusion Detection System (IDS)?",
+      "options_english": [
+        "Monitoring network traffic for security violations and alerting system administrators",
+        "Automatically editing and updating administrative database contents without user authorization",
+        "Monitoring physical hardware components to replace exhausted computer system batteries",
+        "Generating and printing physical paper copies of system user access logs on an hourly schedule"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Network security monitoring tools analyze traffic patterns to maintain threat visibility across IT infrastructure. An Intrusion Detection System operates by passively monitoring incoming and outgoing network traffic, comparing packet signatures and communication behaviors against known threat patterns. Upon detecting security policy violations, port scans, or malicious traffic anomalies, the IDS generates automated security alerts to inform network administrators immediately.",
+      "explanation_hindi": "सही उत्तर (a) है। नेटवर्क सुरक्षा निगरानी उपकरण ट्रैफ़िक पैटर्न का विश्लेषण करते हैं ताकि आईटी अवसंरचना में खतरे की दृश्यता बनाए रखी जा सके। एक इंट्रूज़न डिटेक्शन सिस्टम सक्रिय रूप से आने वाले और जाने वाले नेटवर्क ट्रैफ़िक की निगरानी करता है, पैकेट हस्ताक्षरों और संचार व्यवहारों की तुलना ज्ञात खतरे के पैटर्न से करता है। सुरक्षा नीति उल्लंघनों, पोर्ट स्कैन, या दुर्भावनापूर्ण ट्रैफ़िक विसंगतियों का पता लगाने पर, IDS स्वचालित सुरक्षा अलर्ट उत्पन्न करता है ताकि नेटवर्क प्रशासकों को तुरंत सूचित किया जा सके।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "An IDS passively monitors network traffic to detect security violations.",
+        "It compares traffic patterns against known threat signatures.",
+        "Automated alerts are generated upon detection of anomalies.",
+        "Printed answer key: (A) Monitoring network traffic for security"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "27976bba-be18-4403-8d19-8e4874b6632c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "82. एक संस्थागत वाई-फाई नेटवर्क को सुरक्षित करने के लिए निम्नलिखित सुरक्षा उपायों पर विचार करें:\nA. नेटवर्क नाम को आकस्मिक खोज से छिपाने के लिए SSID प्रसारण को बंद करना।\nB. व्यक्तिगत उपयोगकर्ता प्रमाणपत्रों के साथ WPA3 एंटरप्राइज प्रमाणीकरण लागू करना।\nC. राउटर हार्डवेयर पर डिफ़ॉल्ट व्यवस्थापक पासवर्ड को अपरिवर्तित छोड़ना।\nD. अतिथि वाई-फाई नेटवर्क को प्राथमिक प्रशासनिक नेटवर्क VLAN से अलग करना।\nउपरोक्त में से कौन से उपाय मान्य हैं?",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following security measures for securing an institutional Wi-Fi network:\nA. Disabling SSID broadcast to conceal network name from casual discovery.\nB. Implementing WPA3 Enterprise authentication with individual user credentials.\nC. Leaving the default administrator password on the router hardware unchanged.\nD. Isolating the guest Wi-Fi network from the primary administrative network VLAN.\nWhich of the measures given above are valid?",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Securing institutional wireless networks requires combining technical access controls and network segmentation strategies. Valid security measures include disabling SSID broadcast to hide network names, deploying WPA3 Enterprise authentication for individual credentials, and isolating guest Wi-Fi networks using VLAN segmentation. Leaving default router administrator passwords unchanged represents a critical operational vulnerability, allowing unauthorized actors to compromise router configurations effortlessly.",
+      "explanation_hindi": "सही उत्तर (a) है। संस्थागत वायरलेस नेटवर्क को सुरक्षित करने के लिए तकनीकी पहुँच नियंत्रण और नेटवर्क विभाजन रणनीतियों को संयोजित करना आवश्यक है। मान्य सुरक्षा उपायों में नेटवर्क नामों को छिपाने के लिए SSID प्रसारण को बंद करना, व्यक्तिगत प्रमाणपत्रों के लिए WPA3 एंटरप्राइज प्रमाणीकरण लागू करना, और अतिथि वाई-फाई नेटवर्क को VLAN विभाजन का उपयोग करके अलग करना शामिल है। राउटर के डिफ़ॉल्ट व्यवस्थापक पासवर्ड को अपरिवर्तित छोड़ना एक महत्वपूर्ण संचालनात्मक संवेदनशीलता का प्रतिनिधित्व करता है, जिससे अनधिकृत व्यक्तियों को राउटर कॉन्फ़िगरेशन को आसानी से समझौता करने की अनुमति मिलती है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Disabling SSID broadcast enhances network security by hiding the network name.",
+        "WPA3 Enterprise authentication provides robust security through individual user credentials.",
+        "Isolating guest networks using VLANs prevents unauthorized access to the main network.",
+        "Printed answer key: (A) A, B and D only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "509c7b32-bd2d-4b73-9284-9ba80f17cf06",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "27. एक संस्थागत स्कूल या कॉलेज सेटिंग में स्वीकार्य उपयोग नीति (AUP) क्या है?",
+      "options_hindi": [
+        "हार्डवेयर अधिग्रहण, बजट आवंटन और उपकरण रखरखाव दिशानिर्देशों को रेखांकित करने वाली आधिकारिक संस्थागत नीति",
+        "कंप्यूटर विज्ञान और डिजिटल साक्षरता कक्षाओं के लिए मानकों की स्थापना करने वाला शैक्षणिक पाठ्यक्रम ढांचा",
+        "संस्थानिक प्रिंटर सिस्टम को स्थापित करने और बनाए रखने के लिए चरण-दर-चरण निर्देश प्रदान करने वाला तकनीकी संचालन मैनुअल",
+        "संस्थानिक डिजिटल नेटवर्क और उपकरणों तक पहुँचने के लिए उपयोगकर्ता शर्तों और नियमों को परिभाषित करने वाला नीति ढांचा"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is an Acceptable Use Policy (AUP) in an institutional school or college setting?",
+      "options_english": [
+        "An official institutional policy outlining hardware procurement, budget allocation, and device maintenance guidelines",
+        "An academic curriculum framework establishing standards for teaching computer science and digital literacy classes",
+        "A technical operational manual providing step-by-step instructions for installing and maintaining institutional printer systems",
+        "A policy framework defining user terms and conditions for accessing institutional digital networks and devices"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "An Acceptable Use Policy is an essential administrative security document in educational institutions. It establishes formal rules, operational boundaries, rights, and user responsibilities regarding access to institutional networks, computing hardware, internet services, and digital databases. By signing or agreeing to an AUP, students, faculty, and administrative staff commit to adhering to security guidelines, protecting institutional data, and avoiding improper or malicious digital activities.",
+      "explanation_hindi": "सही उत्तर (d) है। स्वीकार्य उपयोग नीति (AUP) एक आवश्यक प्रशासनिक सुरक्षा दस्तावेज है जो शैक्षणिक संस्थानों में लागू होता है। यह संस्थागत नेटवर्क, कंप्यूटिंग हार्डवेयर, इंटरनेट सेवाओं और डिजिटल डेटाबेस तक पहुँच के संबंध में औपचारिक नियम, संचालन सीमाएँ, अधिकार और उपयोगकर्ता जिम्मेदारियों को स्थापित करता है। AUP पर हस्ताक्षर करके या सहमत होकर, छात्र, संकाय और प्रशासनिक कर्मचारी सुरक्षा दिशानिर्देशों का पालन करने, संस्थागत डेटा की सुरक्षा करने और अनुचित या दुर्भावनापूर्ण डिजिटल गतिविधियों से बचने के लिए प्रतिबद्ध होते हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "An AUP outlines the acceptable use of institutional resources and networks.",
+        "It establishes user responsibilities and rights regarding digital access.",
+        "Printed answer key: (D) A policy framework defining user terms and conditions for accessing institutional digital networks and devices",
+        "AUPs help protect institutional data and prevent misuse."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f79c8080-c750-47e2-9372-b9d87ae57137",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "39. निम्नलिखित में से कौन सा ब्राउज़र सुरक्षा फ़ीचर\nउपयोगकर्ताओं को तब सचेत करता है जब वे किसी ऐसे वेबसाइट पर जाते हैं जो\nवैध SSL/TLS प्रमाणपत्र नहीं रखती?",
+      "options_hindi": [
+        "वेब ब्राउज़र पॉप-अप ब्लॉकिंग सॉफ़्टवेयर एक्सटेंशन",
+        "स्वचालित फ़ॉर्म भरने की क्रेडेंशियल प्रबंधन उपयोगिता",
+        "सुरक्षा प्रमाणपत्र चेतावनी या HTTPS\nमान्यता चेतावनी",
+        "बिल्ट-इन डेवलपर निरीक्षण तत्व डिबगिंग\nउपकरण"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following browser security features alerts users when they visit a website that does not possess a valid SSL/TLS certificate?",
+      "options_english": [
+        "Web browser pop-up blocking software extension",
+        "Automated form fill credential management utility",
+        "Security certificate warning or HTTPS validation alert",
+        "Built-in developer inspect element debugging toolkit"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Modern web browsers incorporate security mechanisms to protect users from unencrypted or fraudulent web connections. When a user attempts to visit a website that lacks a valid SSL/TLS certificate, expires, or uses invalid credentials, the browser displays a security certificate warning or HTTPS validation alert. This feature is crucial for maintaining secure online transactions and protecting sensitive user data.",
+      "explanation_hindi": "सही उत्तर (c) है। आधुनिक वेब ब्राउज़र सुरक्षा तंत्रों को शामिल करते हैं जो उपयोगकर्ताओं को अनएन्क्रिप्टेड या धोखाधड़ी वाले वेब कनेक्शनों से बचाते हैं। जब कोई उपयोगकर्ता किसी ऐसे वेबसाइट पर जाने का प्रयास करता है जो वैध SSL/TLS प्रमाणपत्र नहीं रखती, समाप्त हो गई है, या अमान्य क्रेडेंशियल का उपयोग करती है, तो ब्राउज़र सुरक्षा प्रमाणपत्र चेतावनी या HTTPS मान्यता चेतावनी प्रदर्शित करता है। यह सुविधा सुरक्षित ऑनलाइन लेनदेन बनाए रखने और संवेदनशील उपयोगकर्ता डेटा की सुरक्षा के लिए महत्वपूर्ण है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Modern browsers alert users about invalid SSL/TLS certificates.",
+        "Security certificate warnings protect against fraudulent connections.",
+        "HTTPS validation is crucial for secure transactions.",
+        "Printed answer key: (C) Security certificate warning or HTTPS validation alert"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "dc03f8dc-5c6b-4636-99f2-ca4a52beb8c5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक इंट्रूज़न प्रिवेंशन सिस्टम (IPS) को इंट्रूज़न डिटेक्शन सिस्टम (IDS) से क्या अलग करता है?",
+      "options_hindi": [
+        "IDS सक्रिय रूप से नेटवर्क ट्रैफ़िक को ब्लॉक करता है जबकि IPS केवल संचालन घटनाओं को रिकॉर्ड और लॉग करता है",
+        "IDS केवल भौतिक हार्डवेयर पर कार्य करता है जबकि IPS मैन्युअल रूप से कागज़ के फॉर्म पर कार्य करता है",
+        "IDS और IPS सिस्टम के बीच कोई तकनीकी या कार्यात्मक संचालन का अंतर नहीं है",
+        "IPS सक्रिय रूप से पहचाने गए खतरे के ट्रैफ़िक को ब्लॉक करता है, जबकि IDS मुख्य रूप से पहचानता और चेतावनी देता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What distinguishes an Intrusion Prevention System (IPS) from an Intrusion Detection System (IDS)?",
+      "options_english": [
+        "IDS actively blocks network traffic while IPS exclusively records and logs operational events",
+        "IDS functions exclusively on physical hardware while IPS operates manually on paper forms",
+        "There is no technical or functional operational difference between IDS and IPS systems",
+        "IPS actively blocks detected threat traffic, while IDS primarily detects and alerts"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "IPS actively blocks detected threat traffic, while IDS primarily detects and alerts. Network defense tools are categorized by their operational capability to respond to cybersecurity threats. While both systems monitor network traffic for security violations, an Intrusion Detection System functions passively by detecting anomalous traffic and generating administrative alerts. In contrast, an Intrusion Prevention System operates inline, actively blocking, dropping, or terminating malicious network traffic packets automatically in real-time.",
+      "explanation_hindi": "सही उत्तर (d) है। IPS सक्रिय रूप से पहचाने गए खतरे के ट्रैफ़िक को ब्लॉक करता है, जबकि IDS मुख्य रूप से पहचानता और चेतावनी देता है। नेटवर्क रक्षा उपकरणों को साइबर सुरक्षा खतरों के प्रति प्रतिक्रिया देने की उनकी संचालन क्षमता के अनुसार वर्गीकृत किया जाता है। जबकि दोनों सिस्टम सुरक्षा उल्लंघनों के लिए नेटवर्क ट्रैफ़िक की निगरानी करते हैं, एक इंट्रूज़न डिटेक्शन सिस्टम असामान्य ट्रैफ़िक का पता लगाकर और प्रशासनिक चेतावनियाँ उत्पन्न करके निष्क्रिय रूप से कार्य करता है। इसके विपरीत, एक इंट्रूज़न प्रिवेंशन सिस्टम इनलाइन कार्य करता है, स्वचालित रूप से वास्तविक समय में दुर्भावनापूर्ण नेटवर्क ट्रैफ़िक पैकेट को सक्रिय रूप से ब्लॉक, ड्रॉप या समाप्त करता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "IPS actively blocks malicious traffic, while IDS only detects.",
+        "IDS generates alerts for anomalies without blocking traffic.",
+        "Printed answer key: (D) IPS actively blocks detected threat traffic, while IDS primarily detects and alerts."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b17bdd05-0283-4cfe-9fad-a233b9838c14",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को 'असर्शन' के रूप में लेबल किया गया है और दूसरे को 'कारण (R)' के रूप में। \nअसर्शन: शैक्षणिक संस्थानों को प्रशासनिक पोर्टल पहुंच के लिए मल्टी-फैक्टर प्रमाणीकरण (MFA) अपनाना चाहिए। \nकारण (R): MFA यह सुनिश्चित करता है कि नेटवर्क सिस्टम कभी भी रैनसमवेयर वायरस से संक्रमित नहीं होंगे। \nउपरोक्त कथनों के प्रकाश में, नीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "A और R दोनों सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "A और R दोनों सत्य हैं लेकिन R गलत है।",
+        "A सत्य है लेकिन R गलत है।",
+        "A गलत है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion and the other is labelled as Reason (R). \nAssertion: Educational institutions should adopt multi-factor authentication (MFA) for administrative portal access. \nReason (R): MFA guarantees that network systems will never be infected by ransomware viruses. \nIn light of the above statements, choose the correct answer from the options given below:",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Multi-Factor Authentication is an essential security control that educational institutions must deploy for administrative portal access to prevent unauthorized logins resulting from credential theft or compromised passwords. However, MFA does not guarantee complete protection against ransomware infection, as ransomware can still infect systems via unpatched software vulnerabilities, compromised email attachments, infected USB drives, or malicious drive-by downloads bypassing user authentication layers entirely.",
+      "explanation_hindi": "सही उत्तर (c) है। मल्टी-फैक्टर प्रमाणीकरण एक आवश्यक सुरक्षा नियंत्रण है जिसे शैक्षणिक संस्थानों को प्रशासनिक पोर्टल पहुंच के लिए लागू करना चाहिए ताकि क्रेडेंशियल चोरी या समझौता किए गए पासवर्ड के परिणामस्वरूप अनधिकृत लॉगिन को रोका जा सके। हालाँकि, MFA रैनसमवेयर संक्रमण के खिलाफ पूर्ण सुरक्षा की गारंटी नहीं देता है, क्योंकि रैनसमवेयर बिना पैच किए गए सॉफ़्टवेयर कमजोरियों, समझौता किए गए ईमेल अटैचमेंट, संक्रमित USB ड्राइव, या उपयोगकर्ता प्रमाणीकरण परतों को पूरी तरह से बायपास करने वाले दुर्भावनापूर्ण ड्राइव-बाय डाउनलोड के माध्यम से सिस्टम को संक्रमित कर सकता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Multi-Factor Authentication (MFA) is crucial for securing administrative access.",
+        "MFA does not prevent ransomware infections entirely.",
+        "Printed answer key: (C) A is true but R is false."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "55fcdb61-eebb-4011-aeb6-7fae0db73bd4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "43. एक अगली पीढ़ी की फ़ायरवॉल (NGFW) एक पारंपरिक नेटवर्क फ़ायरवॉल से\nमुख्य रूप से इस कारण भिन्न होती है कि इसमें शामिल हैं:",
+      "options_hindi": [
+        "सर्वर कक्षों के लिए एकीकृत भौतिक सुरक्षा लॉकिंग तंत्र और बायोमेट्रिक एक्सेस नियंत्रण",
+        "स्वचालित आत्म-सेवा पासवर्ड रीसेट उपयोगिताएँ और अंत उपयोगकर्ताओं के लिए उपयोगकर्ता प्रमाणीकरण सॉफ़्टवेयर",
+        "विशेषीकृत हार्डवेयर पर्यावरण नियंत्रण और सर्वर रैक के लिए स्वचालित कूलिंग प्रबंधन",
+        "डीप पैकेट निरीक्षण, घुसपैठ रोकथाम, और एप्लिकेशन-स्तरीय फ़िल्टरिंग क्षमताएँ"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "A Next-Generation Firewall (NGFW) differs from a traditional network firewall primarily because it includes:",
+      "options_english": [
+        "Integrated physical security locking mechanisms and biometric access controls for server rooms",
+        "Automated self-service password reset utilities and user authentication software for end users",
+        "Specialized hardware environmental controls and automated cooling management for server racks",
+        "Deep packet inspection, intrusion prevention, and application-level filtering capabilities"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Enterprise firewalls protect organizational network boundaries against malicious external traffic. A Next-Generation Firewall advances beyond traditional packet filtering by integrating deep packet inspection, inline intrusion prevention systems, and granular application-level filtering. Unlike basic firewalls that analyze only packet headers at the network and transport layers, NGFWs inspect complete data payloads to identify hidden malware, rogue application protocols, and sophisticated cyber threats.",
+      "explanation_hindi": "सही उत्तर (d) है। एंटरप्राइज फ़ायरवॉल संगठनात्मक नेटवर्क सीमाओं की सुरक्षा करते हैं, जो दुर्भावनापूर्ण बाहरी ट्रैफ़िक के खिलाफ होते हैं। अगली पीढ़ी की फ़ायरवॉल पारंपरिक पैकेट फ़िल्टरिंग से आगे बढ़ती है, जिसमें डीप पैकेट निरीक्षण, इनलाइन घुसपैठ रोकथाम प्रणाली, और ग्रैन्युलर एप्लिकेशन-स्तरीय फ़िल्टरिंग शामिल होती है। बुनियादी फ़ायरवॉल के विपरीत, जो केवल नेटवर्क और ट्रांसपोर्ट परतों पर पैकेट हेडर का विश्लेषण करते हैं, NGFWs पूर्ण डेटा पेलोड का निरीक्षण करते हैं ताकि छिपे हुए मैलवेयर, बागी एप्लिकेशन प्रोटोकॉल और जटिल साइबर खतरों की पहचान की जा सके।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "NGFW में डीप पैकेट निरीक्षण और घुसपैठ रोकथाम शामिल हैं।",
+        "Printed answer key: (D) Deep packet inspection, intrusion prevention, and application-level filtering capabilities"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "fd3f026c-e980-4a45-9e52-432a0b328779",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "11. कौन सा कारक आमतौर पर यह निर्धारित करते समय मूल्यांकन नहीं किया जाता है कि क्या कॉपीराइटेड डिजिटल सामग्री का शैक्षिक उपयोग “फेयर यूज़” सिद्धांत के अंतर्गत आता है?\n(1) उपयोग का उद्देश्य और चरित्र,\nजिसमें यह शामिल है कि क्या यह व्यावसायिक है।",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "विकल्प सी",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which factor is NOT typically evaluated when determining whether an educational usage of copyrighted digital material falls under the “Fair Use” doctrine?\nThe purpose and character of the use, including whether it is of a commercial nature.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Incremental backup"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Data backup strategies maintain data resilience and facilitate disaster recovery following system failure or cyberattacks. An incremental backup strategy captures and stores only the data elements that have changed or been modified since the most recent backup operation, whether full or incremental. This method conserves storage space, reduces operational network bandwidth usage, and significantly minimizes the time required to complete regular daily backup tasks.",
+      "explanation_hindi": "सही उत्तर (d) है। डेटा बैकअप रणनीतियाँ डेटा की स्थिरता बनाए रखती हैं और प्रणाली की विफलता या साइबर हमलों के बाद आपदा पुनर्प्राप्ति में सहायता करती हैं। एक इंक्रीमेंटल बैकअप रणनीति केवल उन डेटा तत्वों को कैप्चर और स्टोर करती है जो हालिया बैकअप संचालन के बाद से बदले या संशोधित हुए हैं। यह विधि संग्रहण स्थान को बचाती है, परिचालन नेटवर्क बैंडविड्थ के उपयोग को कम करती है, और नियमित दैनिक बैकअप कार्यों को पूरा करने के लिए आवश्यक समय को महत्वपूर्ण रूप से कम करती है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Incremental backup captures only changed data since the last backup.",
+        "This method conserves storage space and reduces bandwidth usage.",
+        "Printed answer key: (D) Incremental backup"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "032f6f15-38d9-4009-ac82-5ad1d27e8112",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक हमलावर द्वारा एक शैक्षणिक परिसर के पास स्थापित एक धोखाधड़ी एक्सेस पॉइंट जो छात्र वाईफाई ट्रैफ़िक को इंटरसेप्ट करता है, किस प्रकार के नेटवर्क हमले का उदाहरण है?",
+      "options_hindi": [
+        "SQL इंजेक्शन हमला",
+        "मैन-इन-द-मिडल (MitM) हमला",
+        "बफर ओवरफ्लो हमला",
+        "क्रॉस-साइट स्क्रिप्टिंग (XSS) हमला"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "A rogue access point setup by an attacker near an educational campus to intercept student WiFi traffic is an example of which type of network attack?",
+      "options_english": [
+        "SQL Injection attack",
+        "Man-in-the-Middle (MitM) attack",
+        "Buffer overflow attack",
+        "Cross-Site Scripting (XSS) attack"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Deploying a rogue wireless access point near an educational campus mimics a legitimate institution network to deceive connecting devices. This configuration facilitates a Man-in-the-Middle attack, where the adversary intercepts, inspects, and potentially alters communication traffic passing between student devices and external servers. Unsuspecting users connected to the rogue hotspot expose their login credentials, unencrypted personal messages, and sensitive web browsing data to interception.",
+      "explanation_hindi": "सही उत्तर (b) है। एक शैक्षणिक परिसर के पास धोखाधड़ी वाईफाई एक्सेस पॉइंट स्थापित करना एक वैध संस्थान नेटवर्क की नकल करता है ताकि कनेक्टिंग उपकरणों को धोखा दिया जा सके। यह कॉन्फ़िगरेशन एक मैन-इन-द-मिडल हमले की सुविधा प्रदान करता है, जहां प्रतिकूल व्यक्ति छात्र उपकरणों और बाहरी सर्वरों के बीच संचार ट्रैफ़िक को इंटरसेप्ट, निरीक्षण और संभावित रूप से परिवर्तित करता है। धोखे में पड़े उपयोगकर्ता जो धोखाधड़ी हॉटस्पॉट से जुड़े होते हैं, अपने लॉगिन क्रेडेंशियल, अनएन्क्रिप्टेड व्यक्तिगत संदेश और संवेदनशील वेब ब्राउज़िंग डेटा को इंटरसेप्शन के लिए उजागर करते हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "hard",
+      "key_facts": [
+        "A rogue access point can intercept sensitive data by mimicking legitimate networks.",
+        "Printed answer key: (B) Man-in-the-Middle (MitM) attack"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5eca955a-9f1c-44d6-90a8-d02e44e61f9e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "संवेदनशील डेटा की सुरक्षा में विफलता के लिए मुआवजे के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "संवेदनशील डेटा की सुरक्षा में विफलता के लिए मुआवजे की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "स्ट्रेटेजिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding Compensation for failure to protect sensitive, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of Compensation for failure to protect sensitive",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Information Technology Amendment Act, 2008 introduced crucial enhancements to India’s legal framework for cyber security and privacy. Section 43A mandates that corporate bodies possessing, dealing with, or handling sensitive personal data or information in a computer resource must maintain reasonable security practices. Failure to protect such data, resulting in wrongful loss or gain, renders the body corporate liable to pay compensation to affected individuals.",
+      "explanation_hindi": "सही उत्तर (a) है। सूचना प्रौद्योगिकी संशोधन अधिनियम, 2008 ने भारत के साइबर सुरक्षा और गोपनीयता के कानूनी ढांचे में महत्वपूर्ण सुधार किए। धारा 43A यह अनिवार्य करती है कि संवेदनशील व्यक्तिगत डेटा या जानकारी रखने वाले, निपटाने वाले, या संभालने वाले कॉर्पोरेट निकायों को उचित सुरक्षा प्रथाओं को बनाए रखना चाहिए। ऐसी डेटा की सुरक्षा में विफलता, जिसके परिणामस्वरूप गलत लाभ या हानि होती है, कॉर्पोरेट निकाय को प्रभावित व्यक्तियों को मुआवजा देने के लिए उत्तरदायी बनाती है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Section 43A mandates reasonable security practices for sensitive data.",
+        "Corporate bodies are liable for compensation in case of data breaches.",
+        "Printed answer key: (A) Compensation for failure to protect sensitive"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "18e1e19b-46c0-4579-a11d-0d828a0eb4a5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "1. जीवन समाप्ति भंडारण उपकरणों की पहचान करें।",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Identify end-of-life storage devices.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Information Security Triad, commonly known as the CIA triad, serves as a foundational model for guiding policies for information security within organizations. The triad consists of three core components: confidentiality, integrity, and availability. Availability specifically guarantees that system resources, network infrastructure, and data remain operational and continuously accessible to authorized personnel whenever required, preventing operational disruptions from network failures, power outages, or malicious distributed denial-of-service cyberattacks.",
+      "explanation_hindi": "सही उत्तर (b) है। सूचना सुरक्षा त्रिकोण, जिसे सामान्यतः CIA त्रिकोण के रूप में जाना जाता है, संगठनों के भीतर सूचना सुरक्षा के लिए नीतियों को मार्गदर्शित करने के लिए एक मौलिक मॉडल के रूप में कार्य करता है। त्रिकोण में तीन मुख्य घटक होते हैं: गोपनीयता, अखंडता, और उपलब्धता। उपलब्धता विशेष रूप से यह सुनिश्चित करती है कि प्रणाली संसाधन, नेटवर्क अवसंरचना, और डेटा कार्यशील और अधिकृत व्यक्तियों के लिए निरंतर सुलभ रहें, जिससे नेटवर्क विफलताओं, बिजली की कटौती, या दुर्भावनापूर्ण वितरित सेवा से इनकार साइबर हमलों से परिचालन में रुकावटें नहीं आतीं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "The CIA triad includes confidentiality, integrity, and availability.",
+        "Availability ensures continuous access to resources and data.",
+        "Operational disruptions can arise from various failures.",
+        "Printed answer key: (B) Availability"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "dc0334e8-5d93-4705-865d-45bd0adf96a3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "29. शैक्षणिक संस्थानों में साइबर स्वच्छता मुख्य रूप से किससे संबंधित है:",
+      "options_hindi": [
+        "कंप्यूटर मॉनिटरों, कीबोर्डों और प्रयोगशाला हार्डवेयर उपकरणों पर दैनिक भौतिक सफाई और रखरखाव प्रोटोकॉल",
+        "संस्थान के प्राथमिक सर्वर अवसंरचना के समय-समय पर प्रतिस्थापन और निर्धारित हार्डवेयर उन्नयन हर छह कार्यात्मक महीनों में",
+        "सिस्टम स्वास्थ्य को बनाए रखने और ऑनलाइन नेटवर्क सुरक्षा को बढ़ाने के लिए नियमित उपयोगकर्ता सुरक्षा प्रथाएँ और प्रक्रियाएँ",
+        "अनिवार्य संस्थागत प्रशासनिक नीतियाँ जो सभी कर्मचारियों को समय-समय पर टाइपिंग दक्षता आकलन से गुजरने की आवश्यकता होती हैं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Cyber hygiene in educational institutions primarily refers to:",
+      "options_english": [
+        "Daily physical cleaning and maintenance protocols performed on computer monitors, keyboards, and laboratory hardware equipment",
+        "Periodic replacement and scheduled hardware upgrading of institutional primary server infrastructure every six operational months",
+        "Routine user security practices and procedures maintained to preserve system health and enhance online network safety",
+        "Mandatory institutional administrative policies requiring all staff members to undergo periodic typing proficiency assessments"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Cyber hygiene refers to the foundational, routine security practices, habits, and technical procedures maintained by users and administrators within an institution to preserve system health and online network safety. Key practices include using complex passwords, enabling multi-factor authentication, applying software security patches, performing routine data backups, and recognizing phishing attempts, thereby fortifying organizational defense against evolving digital cyber threats.",
+      "explanation_hindi": "सही उत्तर (c) है। साइबर स्वच्छता उन मौलिक, नियमित सुरक्षा प्रथाओं, आदतों और तकनीकी प्रक्रियाओं को संदर्भित करती है जो एक संस्थान के भीतर उपयोगकर्ताओं और प्रशासकों द्वारा प्रणाली के स्वास्थ्य और ऑनलाइन नेटवर्क सुरक्षा को बनाए रखने के लिए बनाए रखी जाती हैं। प्रमुख प्रथाओं में जटिल पासवर्ड का उपयोग करना, बहु-कारक प्रमाणीकरण सक्षम करना, सॉफ़्टवेयर सुरक्षा पैच लागू करना, नियमित डेटा बैकअप करना और फ़िशिंग प्रयासों को पहचानना शामिल है, जिससे विकसित हो रहे डिजिटल साइबर खतरों के खिलाफ संगठनात्मक रक्षा को मजबूत किया जा सके।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Cyber hygiene encompasses routine security practices to protect systems.",
+        "Printed answer key: (C) Routine user security practices and",
+        "Key practices include password management and recognizing phishing."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5071b5e4-76ea-4659-a75e-ae9fc1fdca0d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II के साथ मिलाएं:\nसूची I: (आईटी अधिनियम धारा)\nP. धारा 65\nQ. धारा 66\nR. धारा 66E\nS. धारा 66F\nसूची II: (अपराध / प्रावधान)\nI. कंप्यूटर संबंधित अपराध / हैकिंग\nII. कंप्यूटर स्रोत दस्तावेजों के साथ छेड़छाड़\nIII. साइबर आतंकवाद\nIV. गोपनीयता का उल्लंघन (निजी छवियों को कैप्चर करना/प्रकाशित करना)\nनीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-IV, R-I, S-III",
+        "P-III, Q-I, R-IV, S-II"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (IT Act Section)\nP. Section 65\nQ. Section 66\nR. Section 66E\nS. Section 66F\nList II: (Offense / Provision)\nI. Computer related offenses / Hacking\nII. Tampering with computer source documents\nIII. Cyber terrorism\nIV. Violation of privacy (capturing/publishing private images)\nChoose the correct answer from the options given below:",
+      "options_english": [
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-IV, R-I, S-III",
+        "P-III, Q-I, R-IV, S-II"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Information Technology Act, 2000 penalizes various cyber offenses under distinct statutory sections. Section 65 penalizes tampering with computer source documents. Section 66 addresses general computer-related offenses, including hacking and unauthorized system access. Section 66E penalizes violation of privacy through capturing or publishing private body images without consent. Section 66F specifically prescribes severe penalties for acts of cyber terrorism threatening national sovereignty.",
+      "explanation_hindi": "सही उत्तर (a) है। सूचना प्रौद्योगिकी अधिनियम, 2000 विभिन्न साइबर अपराधों को विशिष्ट वैधानिक धाराओं के तहत दंडित करता है। धारा 65 कंप्यूटर स्रोत दस्तावेजों के साथ छेड़छाड़ को दंडित करती है। धारा 66 सामान्य कंप्यूटर-संबंधित अपराधों, जिसमें हैकिंग और अनधिकृत प्रणाली पहुंच शामिल है, को संबोधित करती है। धारा 66E गोपनीयता के उल्लंघन को दंडित करती है, जिसमें बिना सहमति के निजी शरीर की छवियों को कैप्चर करना या प्रकाशित करना शामिल है। धारा 66F विशेष रूप से राष्ट्रीय संप्रभुता को खतरे में डालने वाले साइबर आतंकवाद के कार्यों के लिए गंभीर दंड निर्धारित करती है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "सूचना प्रौद्योगिकी अधिनियम, 2000 विभिन्न साइबर अपराधों को दंडित करता है।",
+        "धारा 65 कंप्यूटर स्रोत दस्तावेजों के साथ छेड़छाड़ को दंडित करती है।",
+        "धारा 66 सामान्य कंप्यूटर संबंधित अपराधों को संबोधित करती है।",
+        "Printed answer key: (A) P-II, Q-I, R-IV, S-III"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d6c5d63a-6a3e-4f9b-b20e-f64d3d5f7b5c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "53. किस शब्द का अर्थ है संवेदनशील डेटा तत्वों को गैर-संवेदनशील विकल्पों से बदलना, जिनका कोई बाह्य या शोषण योग्य मूल्य नहीं है?",
+      "options_hindi": [
+        "डेटा संकुचन",
+        "डेटा विखंडन",
+        "डेटा टोकनाइजेशन",
+        "डेटा डुप्लीकेशन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which term refers to the process of replacing sensitive data elements with non-sensitive substitutes that have no extrinsic or exploitable value?",
+      "options_english": [
+        "Data Compression",
+        "Data Defragmentation",
+        "Data Tokenization",
+        "Data Duplication"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Data security frameworks utilize advanced obfuscation methods to prevent sensitive information disclosure during processing and storage operations. Tokenization is the process of substituting sensitive data elements, such as bank account numbers or primary identification codes, with non-sensitive surrogate values called tokens. Because these tokens possess no intrinsic mathematical relationship to the original underlying data, tokenized databases remain completely useless to unauthorized malicious actors.",
+      "explanation_hindi": "सही उत्तर (c) है। डेटा सुरक्षा ढांचे संवेदनशील जानकारी के प्रकटीकरण को रोकने के लिए उन्नत अस्पष्टता विधियों का उपयोग करते हैं। टोकनाइजेशन संवेदनशील डेटा तत्वों, जैसे बैंक खाता नंबर या प्राथमिक पहचान कोड, को गैर-संवेदनशील विकल्पों से बदलने की प्रक्रिया है, जिन्हें टोकन कहा जाता है। चूंकि ये टोकन मूल डेटा के साथ कोई अंतर्निहित गणितीय संबंध नहीं रखते हैं, इसलिए टोकनाइज्ड डेटाबेस अनधिकृत दुर्भावनापूर्ण तत्वों के लिए पूरी तरह से बेकार रहते हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Tokenization replaces sensitive data with non-sensitive tokens.",
+        "Tokens have no exploitable value or relationship to the original data.",
+        "Printed answer key: (C) Data Tokenization"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2862c237-dc01-4acf-a8a1-b544892fc006",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "74. सूचना प्रौद्योगिकी अधिनियम, 2000 की धारा 70 कुछ कंप्यूटर संसाधनों की घोषणा से संबंधित है:",
+      "options_hindi": [
+        "महत्वपूर्ण सूचना अवसंरचना",
+        "सार्वजनिक डोमेन ओपन सॉफ़्टवेयर भंडार",
+        "व्यावसायिक हार्डवेयर प्रौद्योगिकी संपत्ति",
+        "साझा ओपन-सोर्स सॉफ़्टवेयर संग्रह"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Section 70 of the Information Technology Act, 2000 relates to the declaration of certain computer resources as:",
+      "options_english": [
+        "Critical Information Infrastructure",
+        "Public domain open software repository",
+        "Commercial hardware technology asset",
+        "Shared open source software archive"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Section 70 of the Information Technology Act, 2000 empowers appropriate governments to declare critical computer resources as Critical Information Infrastructure. The statute defines CII as any computer resource whose incapacitation or destruction would severely impact national security, economy, public health, or safety. Unauthorized physical or digital access to designated CII resources is penalizable with rigorous imprisonment extending up to ten years.",
+      "explanation_hindi": "सही उत्तर (a) है। सूचना प्रौद्योगिकी अधिनियम, 2000 की धारा 70 उपयुक्त सरकारों को महत्वपूर्ण कंप्यूटर संसाधनों को महत्वपूर्ण सूचना अवसंरचना के रूप में घोषित करने का अधिकार देती है। यह अधिनियम CII को किसी भी कंप्यूटर संसाधन के रूप में परिभाषित करता है, जिसकी अक्षमता या विनाश राष्ट्रीय सुरक्षा, अर्थव्यवस्था, सार्वजनिक स्वास्थ्य, या सुरक्षा पर गंभीर प्रभाव डालेगा। निर्धारित CII संसाधनों तक अनधिकृत भौतिक या डिजिटल पहुँच के लिए कठोर कारावास की सजा दी जा सकती है, जो दस वर्षों तक बढ़ सकती है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Section 70 allows declaration of Critical Information Infrastructure.",
+        "CII impacts national security and public safety.",
+        "Printed answer key: (A) Critical Information Infrastructure"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7dc4380e-99c0-4e00-a52e-e65ac85e9127",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "पासवर्ड प्रबंधन के संदर्भ में, \"सॉल्टिंग\" क्या है?",
+      "options_hindi": [
+        "उपयोगकर्ता पासवर्ड को स्पष्ट पाठ प्रारूप में अनएन्क्रिप्टेड स्थानीय कार्यस्थल ड्राइव पर संग्रहीत करना",
+        "क्रिप्टोग्राफिक हैशिंग से पहले पासवर्ड में यादृच्छिक वर्ण जोड़ना",
+        "उपयोगकर्ता की याददाश्त को सरल बनाने के लिए जटिल परिचालन पासवर्ड को चार अंकों तक छोटा करना",
+        "सभी विभागीय प्रणाली उपयोगकर्ताओं के बीच मास्टर प्रशासनिक पहुंच पासवर्ड साझा करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In the context of password management, what is “Salting”?",
+      "options_english": [
+        "Storing user passwords in clear text format across unencrypted local workstation drives",
+        "Adding random characters to a password prior to cryptographic hashing",
+        "Shortening complex operational passwords to four digits to simplify user memorization",
+        "Sharing master administrative access passwords across all departmental system users"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Salting involves generating a unique, random string of characters that is added to a password before it is hashed. This process enhances security by ensuring that even if two users have the same password, their hashed values will be different due to the unique salt. This technique helps protect against rainbow table attacks and other forms of password cracking, making it a crucial practice in secure password management.",
+      "explanation_hindi": "सही उत्तर (b) है। सॉल्टिंग में एक अद्वितीय, यादृच्छिक वर्णों की श्रृंखला उत्पन्न करना शामिल है जिसे पासवर्ड में जोड़ा जाता है इससे पहले कि इसे हैश किया जाए। यह प्रक्रिया सुरक्षा को बढ़ाती है क्योंकि यह सुनिश्चित करती है कि भले ही दो उपयोगकर्ताओं के पास समान पासवर्ड हो, उनके हैश किए गए मान अद्वितीय सॉल्ट के कारण भिन्न होंगे। यह तकनीक रेनबो टेबल हमलों और पासवर्ड क्रैकिंग के अन्य रूपों से सुरक्षा में मदद करती है, जिससे यह सुरक्षित पासवर्ड प्रबंधन में एक महत्वपूर्ण प्रथा बन जाती है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Salting adds randomness to password hashing.",
+        "It protects against rainbow table attacks.",
+        "Printed answer key: (B) Adding random characters to a password"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b9db1de5-f5df-45f4-b6f4-b42b15a3cec5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "88. एक संस्थान में आधिकारिक साइबर सुरक्षा जागरूकता अभियान के दौरान निम्नलिखित क्रियाओं को कालानुक्रमिक क्रम में व्यवस्थित करें:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following actions in chronological order during an official cyber security awareness drive in an institution:",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Executing an institutional cybersecurity awareness campaign requires a structured, multi-phase methodology. The process begins by conducting a baseline security survey to assess existing employee awareness levels. Next, administrators deliver targeted interactive training modules on digital safety. Third, simulated phishing tests are launched to evaluate retention and practical vulnerability. Finally, administrators publish evaluation reports and establish scheduled periodic refresher training sessions.",
+      "explanation_hindi": "सही उत्तर (a) है। एक संस्थान में साइबर सुरक्षा जागरूकता अभियान को सफलतापूर्वक लागू करने के लिए एक संरचित, बहु-चरणीय पद्धति की आवश्यकता होती है। प्रक्रिया का आरंभ मौजूदा कर्मचारी जागरूकता स्तरों का आकलन करने के लिए एक आधारभूत सुरक्षा सर्वेक्षण करने से होता है। इसके बाद, प्रशासक डिजिटल सुरक्षा पर लक्षित इंटरैक्टिव प्रशिक्षण मॉड्यूल प्रदान करते हैं। तीसरे चरण में, रिटेंशन और व्यावहारिक संवेदनशीलता का मूल्यांकन करने के लिए अनुकरणीय फ़िशिंग परीक्षण शुरू किए जाते हैं। अंत में, प्रशासक मूल्यांकन रिपोर्ट प्रकाशित करते हैं और निर्धारित समय पर ताज़ा प्रशिक्षण सत्र स्थापित करते हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Cybersecurity awareness campaigns are essential for institutional safety.",
+        "Printed answer key: (A) Option A"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2c847942-78ba-4dd1-9ff1-34869ed46db4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "66. निम्नलिखित पासवर्ड निर्माण प्रथाओं को सबसे कमजोर से सबसे मजबूत सुरक्षा ताकत तक क्रमबद्ध करें:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Sequence the following password creation practices from weakest to strongest security strength:",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Password strength increases with character complexity, entropy, and total length. Common dictionary words like 'password123' represent extremely weak credentials easily cracked by automated tools. Adding capitalization and basic punctuation provides minimal strength improvement. Random alphanumeric character combinations increase entropy significantly. Finally, long passphrases exceeding 16 characters with mixed symbols and random letters provide maximum cryptographic protection against automated brute-force attacks.",
+      "explanation_hindi": "सही उत्तर (a) है। पासवर्ड की ताकत वर्ण जटिलता, एंट्रॉपी और कुल लंबाई के साथ बढ़ती है। सामान्य शब्दकोश शब्द जैसे 'password123' अत्यंत कमजोर क्रेडेंशियल का प्रतिनिधित्व करते हैं जिन्हें स्वचालित उपकरणों द्वारा आसानी से क्रैक किया जा सकता है। पूंजीकरण और बुनियादी विराम चिह्न जोड़ने से ताकत में न्यूनतम सुधार होता है। यादृच्छिक अल्फ़ान्यूमेरिक वर्ण संयोजन एंट्रॉपी को महत्वपूर्ण रूप से बढ़ाते हैं। अंततः, 16 से अधिक वर्णों वाले लंबे पासफ्रेज़ जो मिश्रित प्रतीकों और यादृच्छिक अक्षरों के साथ होते हैं, स्वचालित ब्रूट-फोर्स हमलों के खिलाफ अधिकतम क्रिप्टोग्राफिक सुरक्षा प्रदान करते हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Password strength increases with complexity and length.",
+        "Common words are weak credentials.",
+        "Random combinations enhance security.",
+        "Printed answer key: (A) 1 → 2 → 3 → 4"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

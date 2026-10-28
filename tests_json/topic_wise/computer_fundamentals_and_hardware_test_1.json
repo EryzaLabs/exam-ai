@@ -1,0 +1,797 @@
+{
+  "test_id": "e680c6ff-3dd8-40f9-bdf3-1df509da3f82",
+  "test_name": "Topic Test: COMPUTER_FUNDAMENTALS_AND_HARDWARE - Part 1",
+  "type": "topic_wise",
+  "topic": "computer_fundamentals_and_hardware",
+  "created_at": "2026-10-28T18:55:06.487785",
+  "questions": [
+    {
+      "id": "cbaa7e4d-3b2c-4a08-a61b-b651808817b7",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कंप्यूटर फ़ॉर्म फैक्टर के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. एक 2-इन-1 लैपटॉप पारंपरिक नोटबुक और टचस्क्रीन टैबलेट दोनों के रूप में कार्य कर सकता है।\nB. डेस्कटॉप कंप्यूटर पतले लैपटॉप की तुलना में अधिक भौतिक मॉड्यूलरिटी और घटक अपग्रेड करने में आसानी प्रदान करते हैं।\nC. स्मार्टफोन कम शक्ति वाले सिस्टम-ऑन-चिप (SoC) आर्किटेक्चर पर निर्भर करते हैं जो CPU, GPU और मेमोरी प्रबंधन को एकीकृत करते हैं।",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding computer form factors:\nA. A 2-in-1 laptop can function as both a traditional notebook and a touchscreen tablet.\nB. Desktop computers offer greater physical modularity and ease of component upgrading compared to thin laptops.\nC. Smartphones rely on low-power System-on-Chip (SoC) architectures to integrate CPU, GPU, and memory management.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Modern computer form factors exhibit diverse architectural capabilities. Convertible 2-in-1 laptops integrate physical keyboards with flexible hinges and touchscreens to function as notebooks or tablets. Desktop workstations maintain modular chassis structures allowing easy component replacement, upgrades, and physical maintenance compared to compact laptops. Smartphones utilize highly integrated System-on-Chip technology combining processor cores, graphics units, and memory management onto a single energy-efficient silicon substrate.",
+      "explanation_hindi": "सही उत्तर (d) है। आधुनिक कंप्यूटर फ़ॉर्म फैक्टर विविध आर्किटेक्चरल क्षमताओं का प्रदर्शन करते हैं। परिवर्तनीय 2-इन-1 लैपटॉप भौतिक कीबोर्ड को लचीले हिंज और टचस्क्रीन के साथ एकीकृत करते हैं ताकि वे नोटबुक या टैबलेट के रूप में कार्य कर सकें। डेस्कटॉप वर्कस्टेशन मॉड्यूलर चेसिस संरचनाओं को बनाए रखते हैं जो कॉम्पैक्ट लैपटॉप की तुलना में आसान घटक प्रतिस्थापन, अपग्रेड और भौतिक रखरखाव की अनुमति देते हैं। स्मार्टफोन अत्यधिक एकीकृत सिस्टम-ऑन-चिप प्रौद्योगिकी का उपयोग करते हैं जो प्रोसेसर कोर, ग्राफिक्स इकाइयों और मेमोरी प्रबंधन को एक ही ऊर्जा-कुशल सिलिकॉन सब्सट्रेट पर संयोजित करते हैं।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Convertible 2-in-1 laptops can function as both notebooks and tablets.",
+        "Desktop computers offer greater modularity and ease of upgrades.",
+        "Smartphones use low-power System-on-Chip architectures.",
+        "Printed answer key: (D) A, B and C"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "98e0850d-48fa-43c4-b206-1a59d8e2a0bb",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "68. नीचे दो कथन दिए गए हैं: एक को असर्शन (A) के रूप में लेबल किया गया है और दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): सॉलिड स्टेट ड्राइव (SSDs) पारंपरिक मैकेनिकल हार्ड डिस्क ड्राइव (HDDs) की तुलना में ऑपरेटिंग सिस्टम के लिए बहुत तेज़ बूट गति प्रदान करते हैं।\nकारण (R): SSDs डेटा को इलेक्ट्रॉनिक रूप से फ्लैश मेमोरी चिप्स का उपयोग करके पढ़ते और लिखते हैं, बिना मैकेनिकल मैग्नेटिक प्लेटर्स के घूमने या पढ़ने के सिर को खोजने के लिए इंतज़ार किए।\n(1) A और R दोनों सत्य हैं और R सही है।",
+      "options_hindi": [
+        "A और R दोनों सत्य हैं और R सही है।",
+        "A सत्य है, लेकिन R गलत है।",
+        "A गलत है, लेकिन R सत्य है।",
+        "A और R दोनों गलत हैं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: One is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A): Solid State Drives (SSDs) deliver much faster boot speeds for operating systems than traditional mechanical Hard Disk Drives (HDDs).\nReason (R): SSDs read and write data electronically using flash memory chips without waiting for mechanical magnetic platters to spin or read heads to seek.\n(1) Both A and R are true and R is the correct explanation of A.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "A is true, but R is false.",
+        "A is false, but R is true.",
+        "Both A and R are false."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Both statements are true. Solid State Drives deliver significantly faster operating system boot speeds and application loading times compared to mechanical Hard Disk Drives. The technology behind SSDs allows for electronic data storage in non-volatile flash memory microchips, enabling near-instantaneous access. This electronic operation eliminates mechanical latency, which is a key factor in their superior performance over HDDs.",
+      "explanation_hindi": "सही उत्तर (a) है। दोनों कथन सत्य हैं। सॉलिड स्टेट ड्राइव पारंपरिक मैकेनिकल हार्ड डिस्क ड्राइव की तुलना में ऑपरेटिंग सिस्टम के बूट गति और एप्लिकेशन लोडिंग समय में काफी तेजी लाते हैं। SSDs की तकनीक डेटा को गैर-स्वैप मेमोरी माइक्रोचिप्स में इलेक्ट्रॉनिक रूप से संग्रहीत करने की अनुमति देती है, जिससे तात्कालिक पहुँच संभव होती है। यह इलेक्ट्रॉनिक संचालन मैकेनिकल विलंबता को समाप्त करता है, जो HDDs की तुलना में उनके प्रदर्शन में एक प्रमुख कारक है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "SSDs पारंपरिक HDDs की तुलना में तेज़ बूट गति प्रदान करते हैं।",
+        "SSDs डेटा को इलेक्ट्रॉनिक रूप से फ्लैश मेमोरी में संग्रहीत करते हैं।",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "62aa8b4c-2c6c-4ded-a558-5ab1d925cc6a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "94. एक मानक एकल-परत ऑप्टिकल कॉम्पैक्ट डिस्क (CDROM) की अनुमानित भंडारण क्षमता क्या है?",
+      "options_hindi": [
+        "1.44 एमबी",
+        "700 एमबी",
+        "4.7 जीबी",
+        "25 जीबी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the approximate storage capacity of a standard single-layer optical Compact Disc (CDROM)?",
+      "options_english": [
+        "1.44 MB",
+        "700 MB",
+        "4.7 GB",
+        "25 GB"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "A standard single-layer optical Compact Disc Read-Only Memory provides a standard data storage capacity of approximately 700 Megabytes, equivalent to 80 minutes of uncompressed audio. CD-ROM technology uses a focused 780-nanometer infrared laser to read optical pits and lands molded onto a polycarbonate disc substrate, offering standardized removable storage widely used for legacy software, music, and digital documents.",
+      "explanation_hindi": "सही उत्तर (b) है। एक मानक एकल-परत ऑप्टिकल कॉम्पैक्ट डिस्क रीड-ओनली मेमोरी की अनुमानित भंडारण क्षमता लगभग 700 मेगाबाइट्स है, जो 80 मिनट के बिना संकुचित ऑडियो के बराबर है। CD-ROM प्रौद्योगिकी एक केंद्रित 780-नैनोमीटर अवरक्त लेजर का उपयोग करती है जो ऑप्टिकल पिट्स और लैंड्स को पढ़ने के लिए एक पॉलीकार्बोनेट डिस्क सब्सट्रेट पर ढाला जाता है, जो विरासत सॉफ़्टवेयर, संगीत और डिजिटल दस्तावेज़ों के लिए व्यापक रूप से उपयोग की जाने वाली मानकीकृत हटाने योग्य भंडारण प्रदान करता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "Standard storage capacity of a single-layer CD-ROM is approximately 700 MB.",
+        "Printed answer key: (B) 700 MB"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7934dbce-6114-4b6a-bc78-6b60d600e81d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "क्यों स्थिर RAM (SRAM) को आमतौर पर कंप्यूटर कैश मेमोरी के लिए डायनामिक RAM (DRAM) के बजाय उपयोग किया जाता है?",
+      "options_hindi": [
+        "SRAM को डायनामिक मेमोरी की तुलना में बड़े पैमाने पर उत्पादन के लिए काफी कम महंगा है",
+        "SRAM प्रति वर्ग मिलीमीटर सिलिकॉन में बहुत अधिक डेटा घनत्व प्राप्त करता है",
+        "SRAM बिना किसी विद्युत शक्ति इनपुट के स्थायी रूप से बाइनरी डेटा बनाए रखता है",
+        "SRAM तेज है और रिफ्रेश चक्रों की आवश्यकता नहीं होती"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Why is Static RAM (SRAM) typically used for computer cache memory instead of Dynamic RAM (DRAM)?",
+      "options_english": [
+        "SRAM is significantly less expensive to mass-produce than dynamic memory",
+        "SRAM achieves much higher data density per square millimeter of silicon",
+        "SRAM retains binary data permanently without any electrical power input",
+        "SRAM is faster and requires no refresh cycles"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Static RAM is used for computer cache memory because its flip-flop circuit architecture delivers significantly faster read/write access times than Dynamic RAM. Unlike Dynamic RAM, which relies on capacitors that constantly lose electrical charge and require hundreds of periodic refresh cycles per second, SRAM maintains binary data states continuously while powered, eliminating refresh delays and minimizing memory access latency.",
+      "explanation_hindi": "सही उत्तर (d) है। स्थिर RAM (SRAM) का उपयोग कंप्यूटर कैश मेमोरी के लिए किया जाता है क्योंकि इसका फ्लिप-फ्लॉप सर्किट आर्किटेक्चर डायनामिक RAM की तुलना में काफी तेज़ पढ़ने/लिखने की पहुँच समय प्रदान करता है। डायनामिक RAM के विपरीत, जो कैपेसिटर्स पर निर्भर करता है जो लगातार विद्युत चार्ज खोते हैं और प्रति सेकंड सैकड़ों आवधिक रिफ्रेश चक्रों की आवश्यकता होती है, SRAM लगातार बाइनरी डेटा राज्यों को बनाए रखता है जबकि यह चालू होता है, जिससे रिफ्रेश देरी समाप्त होती है और मेमोरी एक्सेस विलंबता कम होती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "SRAM is faster than DRAM and does not require refresh cycles.",
+        "Dynamic RAM needs periodic refreshing due to its capacitor-based design.",
+        "SRAM maintains data states continuously while powered.",
+        "Printed answer key: (D) SRAM is faster and requires no refresh cycles"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5f1e2128-341e-4aeb-b0cb-f65b78102aad",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कंप्यूटर की निम्नलिखित मौलिक विशेषताओं में से कौन सी विशेषता इसकी क्षमता को संदर्भित करती है कि यह बिना थकावट या ध्यान की कमी के साथ एक समान सटीकता के साथ दोहराने वाले कार्य कर सकता है?",
+      "options_hindi": [
+        "बहुपरकारी",
+        "परिश्रम",
+        "गति",
+        "स्वचालन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following fundamental characteristics of a computer refers to its ability to perform repetitive tasks with the exact same accuracy without suffering from tiredness or lack of concentration?",
+      "options_english": [
+        "Versatility",
+        "Diligence",
+        "Speed",
+        "Automation"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Diligence represents a core characteristic of digital computer systems that highlights their ability to perform continuous, highly repetitive tasks without suffering from operational fatigue, reduced speed, or loss of concentration. Unlike human workers, electronic computing machines sustain identical processing accuracy, precision, and efficiency across millions of consecutive execution cycles, operating continuously under demanding institutional workloads without requiring rest breaks or administrative intervention.",
+      "explanation_hindi": "सही उत्तर (b) है। परिश्रम एक मौलिक विशेषता को दर्शाता है जो डिजिटल कंप्यूटर सिस्टम की क्षमता को उजागर करता है कि वे निरंतर, अत्यधिक दोहराने वाले कार्य कर सकते हैं बिना परिचालन थकावट, गति में कमी, या ध्यान की कमी के। मानव श्रमिकों के विपरीत, इलेक्ट्रॉनिक कंप्यूटिंग मशीनें लाखों लगातार निष्पादन चक्रों में समान प्रसंस्करण सटीकता, सटीकता, और दक्षता बनाए रखती हैं, मांग वाले संस्थागत कार्यभार के तहत निरंतर कार्य करती हैं बिना विश्राम ब्रेक या प्रशासनिक हस्तक्षेप की आवश्यकता के।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "परिश्रम कंप्यूटर की एक मौलिक विशेषता है।",
+        "कंप्यूटर बिना थके लगातार कार्य कर सकते हैं।",
+        "Printed answer key: (B) Diligence"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a129baca-209a-4dac-88e6-0b6575fe6550",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "34. पीसी के प्रारंभिक हार्डवेयर बूट अनुक्रम (पावर-ऑन सेल्फ-टेस्ट) के दौरान उठाए गए कदमों का सही क्रम चुनें:",
+      "options_hindi": [
+        "पावर सप्लाई स्थिरता संकेत देता है → सीपीयू BIOS/UEFI निर्देशों को निष्पादित करता है → POST RAM और बुनियादी हार्डवेयर का परीक्षण करता है → बूटलोडर ऑपरेटिंग सिस्टम को RAM में लोड करता है",
+        "बूटलोडर OS लोड करता है → POST RAM का परीक्षण करता है → सीपीयू BIOS निष्पादित करता है → पावर सप्लाई चालू होती है",
+        "सीपीयू BIOS निष्पादित करता है → बूटलोडर OS लोड करता है → पावर सप्लाई चालू होती है → POST चलाता है",
+        "POST चलता है → पावर सप्लाई चालू होती है → बूटलोडर OS लोड करता है → सीपीयू BIOS निष्पादित करता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct order of steps taken during the initial hardware boot sequence (Power-On Self-Test) of a PC:",
+      "options_english": [
+        "Power Supply outputs stability signal → CPU executes BIOS/UEFI instructions → POST tests RAM and basic hardware → Bootloader loads Operating System into RAM",
+        "Bootloader loads OS → POST tests RAM → CPU executes BIOS → Power Supply turns on",
+        "CPU executes BIOS → Bootloader loads OS → Power Supply turns on → POST runs",
+        "POST runs → Power supply turns on → Bootloader loads OS → CPU executes BIOS"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The computer startup sequence follows a precise hardware initialization order. When power turns on, the power supply unit stabilizes direct current outputs and sends a power-good signal. The central processing unit executes system BIOS/UEFI firmware, which runs the Power-On Self-Test to verify memory, graphics, and system hardware. Upon successful verification, the bootloader initializes and loads the operating system into main RAM.",
+      "explanation_hindi": "सही उत्तर (a) है। कंप्यूटर स्टार्टअप अनुक्रम एक सटीक हार्डवेयर प्रारंभिककरण क्रम का पालन करता है। जब पावर चालू होता है, तो पावर सप्लाई यूनिट स्थिरता संकेत भेजता है। केंद्रीय प्रसंस्करण इकाई सिस्टम BIOS/UEFI फर्मवेयर को निष्पादित करती है, जो मेमोरी, ग्राफिक्स और सिस्टम हार्डवेयर का परीक्षण करने के लिए पावर-ऑन सेल्फ-टेस्ट चलाती है। सफल परीक्षण के बाद, बूटलोडर ऑपरेटिंग सिस्टम को मुख्य RAM में लोड करता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Power-On Self-Test (POST) is a diagnostic testing sequence run by the BIOS.",
+        "Printed answer key: (A) Power Supply outputs stability signal → CPU executes BIOS/UEFI instructions → POST tests RAM and basic hardware → Bootloader loads Operating System into RAM.",
+        "The bootloader is responsible for loading the operating system into RAM after POST.",
+        "The power supply must stabilize before the CPU can execute BIOS instructions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f83edcc9-007a-4e24-80d3-3c0ca70d1cd9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "41. कंप्यूटर मदरबोर्ड पर कौन सा भौतिक स्लॉट उच्च प्रदर्शन वाले डिस्क्रीट ग्राफिक्स विस्तार कार्ड स्थापित करने के लिए मुख्य रूप से उपयोग किया जाता है?",
+      "options_hindi": [
+        "ऑप्शन A",
+        "ऑप्शन B",
+        "ऑप्शन C",
+        "ऑप्शन D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which physical slot on a computer motherboard is primarily used to install high-performance discrete graphics expansion cards?",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "PCI Express slots on desktop computer motherboards are high-speed expansion interfaces designed to connect high-performance peripheral expansion cards. Featuring multiple serial lanes that deliver ultra-high data transfer bandwidth, PCIe slots serve as the standard physical mounting slot for installing discrete graphics processing units, high-speed network cards, and other peripherals.",
+      "explanation_hindi": "सही उत्तर (c) है। PCI एक्सप्रेस स्लॉट डेस्कटॉप कंप्यूटर मदरबोर्ड पर उच्च गति के विस्तार इंटरफेस होते हैं, जिन्हें उच्च प्रदर्शन वाले परिधीय विस्तार कार्ड कनेक्ट करने के लिए डिज़ाइन किया गया है। कई अनुक्रमिक लेन की विशेषता, जो अल्ट्रा-उच्च डेटा ट्रांसफर बैंडविड्थ प्रदान करती हैं, PCIe स्लॉट डिस्क्रीट ग्राफिक्स प्रोसेसिंग यूनिट, उच्च गति के नेटवर्क कार्ड और अन्य परिधीय उपकरणों को स्थापित करने के लिए मानक भौतिक माउंटिंग स्लॉट के रूप में कार्य करते हैं।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "PCI Express slots are high-speed expansion interfaces.",
+        "They are used for connecting high-performance peripheral expansion cards.",
+        "Printed answer key: (C) PCI Express (PCIe) slot",
+        "PCIe slots provide ultra-high data transfer bandwidth."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c0bf9b7a-0b4e-4afd-933b-1488afd246db",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "63. एक इम्पैक्ट प्रिंटर (जैसे, डॉट मैट्रिक्स) को एक गैर-इम्पैक्ट प्रिंटर (जैसे, लेजर या इंकजेट) से क्या अलग करता है?",
+      "options_hindi": [
+        "इम्पैक्ट प्रिंटर कागज पर स्याहीदार रिबन के माध्यम से शारीरिक रूप से प्रहार करते हैं",
+        "इम्पैक्ट प्रिंटर कागज पर टोनर को बिना छुए फ्यूज़ करने के लिए केंद्रित लेजर बीम का उपयोग करते हैं",
+        "इम्पैक्ट प्रिंटर ठोस-राज्य पाईज़ोइलेक्ट्रिक दबाव ट्रांसड्यूसर का उपयोग करके चुपचाप काम करते हैं",
+        "गैर-इम्पैक्ट प्रिंटर यांत्रिक रूप से स्ट्राइकिंग पिन पर निर्भर करते हैं जो शारीरिक रूप से कागज पर अक्षरों को दबाते हैं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What distinguishes an impact printer (e.g., Dot Matrix) from a non-impact printer (e.g., Laser or Inkjet)?",
+      "options_english": [
+        "Impact printers physically strike paper through an inked ribbon",
+        "Impact printers use concentrated laser beams to fuse toner onto paper without touching",
+        "Impact printers operate silently using solid-state piezoelectric pressure transducers",
+        "Non-impact printers rely on mechanical striking pins that physically press characters onto paper"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Impact printers, such as dot matrix printers, operate by physically striking mechanical pins or character dies against an inked ribbon to transfer character impressions onto paper. In contrast, non-impact printers like inkjet and laser printers print without physical mechanical contact against paper, using electrostatic toner transfer or microscopic liquid ink jets, resulting in significantly quieter operation and higher printing output quality.",
+      "explanation_hindi": "सही उत्तर (a) है। इम्पैक्ट प्रिंटर, जैसे डॉट मैट्रिक्स प्रिंटर, शारीरिक रूप से यांत्रिक पिन या अक्षर डाई को स्याहीदार रिबन के खिलाफ प्रहार करके कागज पर अक्षरों के प्रभावों को स्थानांतरित करते हैं। इसके विपरीत, गैर-इम्पैक्ट प्रिंटर जैसे इंकजेट और लेजर प्रिंटर कागज के खिलाफ शारीरिक यांत्रिक संपर्क के बिना प्रिंट करते हैं, जो इलेक्ट्रोस्टैटिक टोनर ट्रांसफर या सूक्ष्म तरल स्याही जेट का उपयोग करते हैं, जिससे संचालन में काफी शांति और उच्च प्रिंटिंग आउटपुट गुणवत्ता प्राप्त होती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "इम्पैक्ट प्रिंटर कागज पर स्याहीदार रिबन के माध्यम से प्रहार करते हैं।",
+        "गैर-इम्पैक्ट प्रिंटर बिना शारीरिक संपर्क के प्रिंट करते हैं।",
+        "Printed answer key: (A) इम्पैक्ट प्रिंटर कागज पर स्याहीदार रिबन के माध्यम से शारीरिक रूप से प्रहार करते हैं।"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "42fcb246-0c0f-4f63-aa28-b9b156b68778",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "67. आधुनिक सामान्य-उद्देश्य इलेक्ट्रॉनिक कंप्यूटरों का मौलिक आर्किटेक्चरल डिज़ाइन, जिसमें स्टोर्ड-प्रोग्राम अवधारणाएँ, CPU, मेमोरी और I/O संरचना शामिल हैं, को क्या कहा जाता है:",
+      "options_hindi": [
+        "ट्यूरिंग इंजन आर्किटेक्चर",
+        "चार्ल्स बैबेज एनालिटिकल मॉड्यूल",
+        "वॉन न्यूमैन आर्किटेक्चर",
+        "हार्वर्ड कैश प्रोटोकॉल"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "The fundamental architectural design upon which modern general-purpose electronic computers are based, featuring stored-program concepts, CPU, memory, and I/O structure, is known as the:",
+      "options_english": [
+        "Turing Engine Architecture",
+        "Charles Babbage Analytical Module",
+        "Von Neumann Architecture",
+        "Harvard Cache Protocol"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Von Neumann architecture is the foundational model for modern general-purpose electronic computers. Developed by John von Neumann, this design establishes a shared memory structure where the CPU, memory, and input/output devices work together. It allows for the storage of both data and instructions in the same memory space, which is a key feature of contemporary computing systems.",
+      "explanation_hindi": "सही उत्तर (c) है। वॉन न्यूमैन आर्किटेक्चर आधुनिक सामान्य-उद्देश्य इलेक्ट्रॉनिक कंप्यूटरों का मौलिक मॉडल है। इसे जॉन वॉन न्यूमैन द्वारा विकसित किया गया था, और यह एक साझा मेमोरी संरचना स्थापित करता है जहाँ CPU, मेमोरी और इनपुट/आउटपुट उपकरण एक साथ काम करते हैं। यह डेटा और निर्देशों को एक ही मेमोरी स्थान में संग्रहीत करने की अनुमति देता है, जो समकालीन कंप्यूटिंग प्रणालियों की एक प्रमुख विशेषता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "वॉन न्यूमैन आर्किटेक्चर आधुनिक कंप्यूटरों का मौलिक मॉडल है।",
+        "यह डेटा और निर्देशों को एक ही मेमोरी में संग्रहीत करता है।",
+        "Printed answer key: (C) Von Neumann Architecture"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "128396a3-96e4-4f60-b6a2-d6d1b8d3c8bb",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "91. एक पीसी मदरबोर्ड पर विस्तार स्लॉट (जैसे PCI एक्सप्रेस) का मुख्य कार्य क्या है?\n(1) प्राथमिक उच्च-वोल्टेज वैकल्पिक धारा के\nतारों को सीधे विद्युत दीवार सॉकेट से\nरूट करना\n(2) गैर-स्वैच्छिक फर्मवेयर चिप्स को\nस्थायी रूप से एंकर करना जो मूल इनपुट\nआउटपुट सिस्टम रूटीन को शामिल करते हैं\n(3) उच्च-तापमान प्रोसेसर के चारों ओर\nशीतलन तरल और वायु प्रवाह को सक्रिय रूप से\nसंचालित करना",
+      "options_hindi": [
+        "विस्तार कार्ड डालने के लिए जो कार्यक्षमता का विस्तार करते हैं",
+        "प्राथमिक उच्च-वोल्टेज वैकल्पिक धारा के तारों को रूट करना",
+        "गैर-स्वैच्छिक फर्मवेयर चिप्स को एंकर करना",
+        "उच्च-तापमान प्रोसेसर के चारों ओर शीतलन तरल और वायु प्रवाह को संचालित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the core function of an expansion slot (such as PCI Express) on a PC motherboard?\n(1) To route primary high-voltage alternating current cables directly from electrical wall sockets\n(2) To permanently anchor non-volatile firmware chips containing basic input output system routines\n(3) To actively circulate cooling liquid and airflow across high-temperature processor",
+      "options_english": [
+        "To insert expansion cards that extend hardware functionality",
+        "To route primary high-voltage alternating current cables",
+        "To permanently anchor non-volatile firmware chips",
+        "To actively circulate cooling liquid and airflow"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Expansion slots, such as PCI Express interfaces on modern motherboards, serve to connect additional specialized hardware expansion cards that expand system capabilities. By plugging dedicated expansion cards into these high-speed slots, users can integrate high-performance discrete graphics processing units, high-speed wired or wireless network interface adapters, dedicated audio cards, or specialized storage controller cards into system hardware.",
+      "explanation_hindi": "सही उत्तर (d) है। विस्तार स्लॉट, जैसे कि आधुनिक मदरबोर्ड पर PCI एक्सप्रेस इंटरफेस, अतिरिक्त विशेषीकृत हार्डवेयर विस्तार कार्डों को जोड़ने के लिए कार्य करते हैं जो प्रणाली की क्षमताओं का विस्तार करते हैं। इन उच्च गति स्लॉट में समर्पित विस्तार कार्डों को प्लग करके, उपयोगकर्ता उच्च-प्रदर्शन ग्राफिक्स प्रोसेसिंग यूनिट, उच्च गति के वायर्ड या वायरलेस नेटवर्क इंटरफेस एडाप्टर, समर्पित ऑडियो कार्ड, या विशेषीकृत स्टोरेज कंट्रोलर कार्ड को प्रणाली के हार्डवेयर में एकीकृत कर सकते हैं।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Expansion slots allow for hardware upgrades and enhancements.",
+        "PCI Express is a common type of expansion slot.",
+        "Printed answer key: (D) To insert expansion cards that extend hardware functionality"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7234ebc8-c335-4523-a9d2-5dd95aea6009",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "केंद्रीय प्रसंस्करण इकाई (CPU) का कौन सा उप-इकाई सीधे निर्देश कोडों को डिकोड करने और मेमोरी और निष्पादन इकाइयों के बीच डेटा के प्रवाह को निर्देशित करने के लिए जिम्मेदार है?",
+      "options_hindi": [
+        "अंकगणित लॉजिक इकाई (ALU)",
+        "नियंत्रण इकाई (CU)",
+        "आंतरिक रजिस्टर फ़ाइल",
+        "सिस्टम बस इंटरफ़ेस"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which sub-unit of the Central Processing Unit (CPU) is directly responsible for decoding instruction codes and directing the flow of data between memory and execution units?",
+      "options_english": [
+        "Arithmetic Logic Unit (ALU)",
+        "Control Unit (CU)",
+        "Internal Register File",
+        "System Bus Interface"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Control Unit is a vital functional subdivision of the Central Processing Unit that manages and coordinates overall system operations. It fetches instruction codes sequentially from primary system memory, decodes their operational meaning, and sends timing control signals throughout the CPU. By managing data movement between internal registers, arithmetic execution units, and main memory, the Control Unit enforces proper program flow.",
+      "explanation_hindi": "सही उत्तर (b) है। नियंत्रण इकाई केंद्रीय प्रसंस्करण इकाई का एक महत्वपूर्ण कार्यात्मक उपविभाजन है जो समग्र प्रणाली संचालन का प्रबंधन और समन्वय करता है। यह प्राथमिक प्रणाली मेमोरी से अनुक्रमिक रूप से निर्देश कोड लाता है, उनके संचालनात्मक अर्थ को डिकोड करता है, और CPU के चारों ओर समय नियंत्रण संकेत भेजता है। आंतरिक रजिस्टर, अंकगणितीय निष्पादन इकाइयों और मुख्य मेमोरी के बीच डेटा आंदोलन का प्रबंधन करके, नियंत्रण इकाई उचित कार्यक्रम प्रवाह को लागू करती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "The Control Unit manages overall CPU operations.",
+        "It fetches and decodes instruction codes from memory.",
+        "It directs data flow between registers and execution units.",
+        "Printed answer key: (B) Control Unit (CU)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "63a35e47-7dd6-4a9e-b858-f98cacb9a1be",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "81. डेस्कटॉप कंप्यूटर सिस्टम RAM इंस्टॉलेशन के लिए मानक मेमोरी मॉड्यूल प्रकार कौन सा है?\n(1) SO-DIMM (स्मॉल आउटलाइन डुअल इन-लाइन मेमोरी मॉड्यूल)\n(2) DIMM (डुअल इन-लाइन मेमोरी मॉड्यूल)",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which memory module type is standard for desktop computer system RAM installations?\n(1) SO-DIMM (Small Outline Dual In-line Memory Module)\n(2) DIMM (Dual In-line Memory Module)",
+      "options_english": [
+        "Option A",
+        "DIMM (Dual In-line Memory Module)",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Dual In-line Memory Modules are the standard physical form factor for desktop computer RAM installations. DIMM circuit boards feature independent electrical connector pins on both sides of the module base, providing high data bus channel width. They fit into motherboard memory slots to supply high-speed main RAM access, whereas smaller SO-DIMM modules are used in compact devices like laptops.",
+      "explanation_hindi": "सही उत्तर (b) है। डुअल इन-लाइन मेमोरी मॉड्यूल डेस्कटॉप कंप्यूटर RAM इंस्टॉलेशन के लिए मानक भौतिक रूप कारक हैं। DIMM सर्किट बोर्डों में मॉड्यूल के आधार के दोनों पक्षों पर स्वतंत्र विद्युत कनेक्टर पिन होते हैं, जो उच्च डेटा बस चैनल चौड़ाई प्रदान करते हैं। ये मदरबोर्ड मेमोरी स्लॉट में फिट होते हैं ताकि उच्च गति मुख्य RAM पहुंच प्रदान की जा सके, जबकि छोटे SO-DIMM मॉड्यूल कॉम्पैक्ट उपकरणों जैसे लैपटॉप में उपयोग किए जाते हैं।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "DIMM मॉड्यूल डेस्कटॉप कंप्यूटर के लिए मानक मेमोरी प्रकार हैं।",
+        "DIMM सर्किट बोर्डों में स्वतंत्र विद्युत कनेक्टर पिन होते हैं।",
+        "SO-DIMM मॉड्यूल छोटे उपकरणों में उपयोग होते हैं।",
+        "Printed answer key: (B) DIMM (Dual In-line Memory Module)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f899b189-e7b4-4f57-9725-1de52fe7b6e9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कौन सी विशेषता यह सुनिश्चित करती है कि दिए गए समान इनपुट डेटा और निर्देश सेट के साथ, यह लगातार समान परिणाम उत्पन्न करेगा?\n(1) उच्च गति निष्पादन",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which characteristic of a computer ensures that given the same input data and instruction set, it will consistently produce identical results?\n(1) High-speed execution",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "System reliability is a fundamental characteristic of electronic computers ensuring that given identical input data and instruction sets, the computer will consistently produce identical computational results. Operating deterministically through precision digital logic circuits, digital computers execute instructions with unwavering mathematical exactness, eliminating random errors, human bias, or operational inconsistency during processing execution across repeated system tasks.",
+      "explanation_hindi": "सही उत्तर (c) है। सिस्टम विश्वसनीयता इलेक्ट्रॉनिक कंप्यूटरों की एक मौलिक विशेषता है जो यह सुनिश्चित करती है कि समान इनपुट डेटा और निर्देश सेट दिए जाने पर, कंप्यूटर लगातार समान गणनात्मक परिणाम उत्पन्न करेगा। सटीक डिजिटल लॉजिक सर्किट के माध्यम से निर्धारक रूप से कार्य करते हुए, डिजिटल कंप्यूटर निर्देशों को बिना किसी त्रुटि के गणितीय सटीकता के साथ निष्पादित करते हैं, जिससे प्रक्रिया निष्पादन के दौरान यादृच्छिक त्रुटियों, मानव पूर्वाग्रह या संचालन में असंगति समाप्त हो जाती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "System reliability ensures consistent computational results.",
+        "Digital computers operate deterministically through precision logic circuits.",
+        "Eliminates random errors and human bias during processing.",
+        "Printed answer key: (C) System reliability"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a3e071d0-f112-417d-b9df-432d24430412",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "64. एक संस्थागत पीसी प्रणाली के सुरक्षित शटडाउन के लिए कदमों का सही क्रम चुनें:\n(1) खुले फ़ाइलों को सहेजें → सक्रिय सॉफ़्टवेयर अनुप्रयोगों को बंद करें → ऑपरेटिंग सिस्टम शटडाउन कमांड निष्पादित करें → मॉनिटर और यूपीएस मुख्य स्विच बंद करें\n(2) मुख्य दीवार की शक्ति बंद करें → मॉनिटर बंद करें → खुले फ़ाइलों को सहेजें → ऑपरेटिंग सिस्टम शटडाउन निष्पादित करें\n(3) मॉनिटर बंद करें → पावर केबल अनप्लग करें →",
+      "options_hindi": [
+        "खुले फ़ाइलों को सहेजें → सक्रिय सॉफ़्टवेयर अनुप्रयोगों को बंद करें",
+        "मुख्य दीवार की शक्ति बंद करें → मॉनिटर बंद करें",
+        "मॉनिटर बंद करें → पावर केबल अनप्लग करें",
+        "सभी विकल्प सही हैं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct order of steps for safe shutdown of an institutional PC system:\n(1) Save open files → Close active software applications → Execute Operating System Shutdown command → Turn off monitor and UPS main switch\n(2) Switch off main wall power → Turn off monitor → Save open files → Execute OS shutdown\n(3) Turn off monitor → Unplug power cable →",
+      "options_english": [
+        "Save open files → Close active software applications",
+        "Switch off main wall power → Turn off monitor",
+        "Turn off monitor → Unplug power cable",
+        "All options are correct"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Safe system shutdown requires completing operational steps sequentially to prevent data loss or software corruption. Users must first save open work files and close active application software. Next, executing the operating system shutdown command allows the system to unmount storage volumes, clear temporary files, and power down hardware safely. Finally, turning off display monitors and main UPS power switches completes the procedure.",
+      "explanation_hindi": "सही उत्तर (a) है। सुरक्षित प्रणाली शटडाउन के लिए संचालनात्मक कदमों को क्रमबद्ध तरीके से पूरा करना आवश्यक है ताकि डेटा हानि या सॉफ़्टवेयर भ्रष्टाचार से बचा जा सके। उपयोगकर्ताओं को पहले खुले कार्य फ़ाइलों को सहेजना और सक्रिय अनुप्रयोग सॉफ़्टवेयर को बंद करना चाहिए। इसके बाद, ऑपरेटिंग सिस्टम शटडाउन कमांड निष्पादित करना सिस्टम को संग्रहण वॉल्यूम को अनमाउंट करने, अस्थायी फ़ाइलों को साफ़ करने और हार्डवेयर को सुरक्षित रूप से बंद करने की अनुमति देता है। अंततः, डिस्प्ले मॉनिटरों और मुख्य यूपीएस पावर स्विच को बंद करना प्रक्रिया को पूरा करता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "सुरक्षित शटडाउन के लिए कदमों को क्रमबद्ध तरीके से पूरा करना आवश्यक है।",
+        "पहले खुले फ़ाइलों को सहेजना और सक्रिय अनुप्रयोगों को बंद करना चाहिए।",
+        "Printed answer key: (A) खुले फ़ाइलों को सहेजें → सक्रिय सॉफ़्टवेयर अनुप्रयोगों को बंद करें"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5057061d-f701-4115-a227-18f998ffc4ed",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "87. कौन सा घटक सीपीयू और उच्च गति प्राथमिक संग्रहण के बीच इंटरफेस के रूप में कार्य करता है ताकि गति के अंतर को पाटा जा सके?",
+      "options_hindi": [
+        "कैश मेमोरी",
+        "मैग्नेटिक टेप",
+        "ऑप्टिकल ड्राइव",
+        "बाहरी हार्ड डिस्क"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which component serves as the interface between the CPU and high-speed primary storage to bridge speed disparities?",
+      "options_english": [
+        "Cache Memory",
+        "Magnetic Tape",
+        "Optical Drive",
+        "External Hard Disk"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Cache memory acts as a high-speed intermediary buffer positioned physically between CPU registers and primary system memory (RAM). Composed of high-speed static RAM, cache memory stores frequently accessed instructions and data. By delivering significantly faster access speeds than main dynamic memory, cache memory reduces central processor wait states, effectively bridging operational speed disparities between fast CPU cores and slower RAM.",
+      "explanation_hindi": "सही उत्तर (a) है। कैश मेमोरी एक उच्च गति मध्यवर्ती बफर के रूप में कार्य करती है जो भौतिक रूप से सीपीयू रजिस्टरों और प्राथमिक सिस्टम मेमोरी (RAM) के बीच स्थित होती है। उच्च गति स्थिर RAM से बनी, कैश मेमोरी अक्सर एक्सेस की गई निर्देशों और डेटा को संग्रहीत करती है। मुख्य गतिशील मेमोरी की तुलना में तेजी से एक्सेस गति प्रदान करके, कैश मेमोरी केंद्रीय प्रोसेसर की प्रतीक्षा स्थितियों को कम करती है, प्रभावी रूप से तेज सीपीयू कोर और धीमी RAM के बीच संचालन गति के अंतर को पाटती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Cache memory is a high-speed intermediary between CPU and RAM.",
+        "It reduces wait states for the CPU.",
+        "Printed answer key: (A) Cache Memory"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c66fc54a-bc78-48b8-8d96-34bd5aa3143a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "100. किस प्रकार की कीबोर्ड लेआउट कंप्यूटर सिस्टम में वैश्विक स्तर पर उपयोग की जाने वाली मानक भौतिक कुंजी व्यवस्था है?",
+      "options_hindi": [
+        "डीवीओआरक",
+        "एज़र्टी",
+        "कोलेमाक",
+        "क्यूवर्टी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which type of keyboard layout is the standard physical key arrangement used in computer systems globally?",
+      "options_english": [
+        "DVORAK",
+        "AZERTY",
+        "COLEMAK",
+        "QWERTY"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The QWERTY key arrangement is the globally accepted standard physical keyboard layout used across personal computers, laptops, and mobile device touchscreens. Named after the first six letters appearing on the top alphanumeric key row, QWERTY was originally designed for mechanical typewriters to minimize physical key jam issues, subsequently becoming the universal input layout standard in modern computer systems.",
+      "explanation_hindi": "सही उत्तर (d) है। क्यूवर्टी कुंजी व्यवस्था वैश्विक स्तर पर व्यक्तिगत कंप्यूटर, लैपटॉप और मोबाइल उपकरणों के टचस्क्रीन में उपयोग की जाने वाली मानक भौतिक कीबोर्ड लेआउट है। इसे शीर्ष अल्फ़ान्यूमेरिक कुंजी पंक्ति पर पहले छह अक्षरों के नाम पर रखा गया है। क्यूवर्टी को मूल रूप से यांत्रिक टाइपराइटरों के लिए डिज़ाइन किया गया था ताकि भौतिक कुंजी जाम की समस्याओं को कम किया जा सके, और यह आधुनिक कंप्यूटर सिस्टम में सार्वभौमिक इनपुट लेआउट मानक बन गया है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "QWERTY is the most widely used keyboard layout globally.",
+        "It was designed to reduce key jams in mechanical typewriters.",
+        "Printed answer key: (D) QWERTY"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "bd978e06-321e-4ee9-b106-00f3ac6a9fab",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "51. प्रोसेसर क्लॉक स्पीड रेटिंग 3.2\nगीगाहर्ट्ज़ का क्या अर्थ है?",
+      "options_hindi": [
+        "चिप प्रति सेकंड 3.2 गीगाबाइट डेटा को नेटवर्क में स्थानांतरित करती है",
+        "चिप 3.2 गीगावाट विद्युत शक्ति का उपभोग करती है",
+        "चिप प्रति सेकंड 3.2 अरब आंतरिक क्लॉक चक्रों को निष्पादित करती है",
+        "चिप में 3.2 मिलियन भौतिक ट्रांजिस्टर होते हैं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What does a processor clock speed rating of 3.2 GHz represent?",
+      "options_english": [
+        "The chip transfers 3.2 Gigabytes of data per second across the network",
+        "The chip consumes 3.2 Gigawatts of electrical power",
+        "The chip executes 3.2 billion internal clock cycles per second",
+        "The chip contains 3.2 million physical transistors"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A processor clock speed rating of 3.2 Gigahertz means the CPU operating clock generates 3.2 billion synchronization pulses or cycles per second. Internal clock cycles regulate the fundamental operational frequency of microprocessors, dictating the timing at which logic gates evaluate instructions. Higher clock frequencies allow processing units to execute billions of elementary instruction steps per second under optimal conditions.",
+      "explanation_hindi": "सही उत्तर (c) है। प्रोसेसर क्लॉक स्पीड रेटिंग 3.2 गीगाहर्ट्ज़ का अर्थ है कि सीपीयू ऑपरेटिंग क्लॉक प्रति सेकंड 3.2 अरब समन्वय पल्स या चक्र उत्पन्न करता है। आंतरिक क्लॉक चक्र माइक्रोप्रोसेसर की मौलिक संचालन आवृत्ति को नियंत्रित करते हैं, जो यह निर्धारित करते हैं कि लॉजिक गेट कब निर्देशों का मूल्यांकन करते हैं। उच्च क्लॉक आवृत्तियाँ प्रोसेसिंग यूनिट्स को अनुकूल परिस्थितियों में प्रति सेकंड अरबों प्राथमिक निर्देशात्मक कदमों को निष्पादित करने की अनुमति देती हैं।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Processor clock speed is measured in Hertz (Hz), with 1 GHz equating to 1 billion cycles per second.",
+        "Higher clock speeds generally lead to better performance in processing tasks.",
+        "Printed answer key: (C) The chip executes 3.2 billion internal clock cycles per second."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "27232ab7-9bb7-4c0e-98e7-2980700c81ef",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दिए गए कथनों पर विचार करें:\nA. 1 KB = 1024 बाइट्स\nB. 1 MB = 1024 KB\nC. 1 GB = 1024 MB\nD. 1 TB = 1024 GB\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "A, B और C केवल",
+        "B, C और D केवल",
+        "A और C केवल",
+        "A, B, C और D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding memory capacity units:\nA. 1 KB = 1024 Bytes\nB. 1 MB = 1024 KB\nC. 1 GB = 1024 MB\nD. 1 TB = 1024 GB\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and C only",
+        "B, C and D only",
+        "A and C only",
+        "A, B, C and D"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Computer storage capacity measurement follows standard binary conversion factors. One Kilobyte equals 1024 Bytes. Scaling upwards, one Megabyte equals 1024 Kilobytes, one Gigabyte contains 1024 Megabytes, and one Terabyte comprises 1024 Gigabytes. Each unit expands by a power factor of two to the tenth power, establishing the hierarchy of data storage units.",
+      "explanation_hindi": "सही उत्तर (d) है। कंप्यूटर भंडारण क्षमता माप मानक बाइनरी रूपांतरण कारकों का पालन करती है। एक किलोबाइट 1024 बाइट्स के बराबर होता है। ऊपर की ओर बढ़ते हुए, एक मेगाबाइट 1024 किलोबाइट्स के बराबर होता है, एक गीगाबाइट 1024 मेगाबाइट्स में होता है, और एक टेराबाइट 1024 गीगाबाइट्स में होता है। प्रत्येक इकाई दो की दसवीं शक्ति द्वारा बढ़ती है, जो डेटा भंडारण इकाइयों की श्रेणी स्थापित करती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "1 KB = 1024 Bytes",
+        "1 MB = 1024 KB",
+        "1 GB = 1024 MB",
+        "Printed answer key: (D) A, B, C and D"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e7841d2a-1833-4465-a816-767b921567de",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "28. नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) और दूसरे को\nकारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): जब एक डेस्कटॉप कंप्यूटर\nपावर-ऑन के दौरान निरंतर बीप कोड उत्पन्न करता है\nबिना मॉनिटर पर कोई छवि प्रदर्शित किए, तो यह\nहार्डवेयर प्रारंभिक विफलता का संकेत देता है।\nकारण (R): पावर-ऑन सेल्फ-टेस्ट (POST) फर्मवेयर\nROM में बुनियादी हार्डवेयर डायग्नोस्टिक त्रुटियों को\nऑडियो बीप पैटर्न के माध्यम से संकेत करता है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही\nव्याख्या है।",
+        "दोनों A और R सत्य हैं लेकिन R A का\nसही व्याख्या नहीं है।",
+        "A सत्य है लेकिन R गलत है।",
+        "A गलत है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "28. Given below are two statements: One is labelled\nas Assertion (A) and the other is labelled as\nReason (R).\nAssertion (A): When a desktop computer\nproduces continuous beep codes during power-on\nwithout displaying any image on the monitor, it\nindicates a hardware initialization failure.\nReason (R): Power-On Self-Test (POST) firmware\nin ROM signals basic hardware diagnostic errors\nvia audio beep patterns.",
+      "options_english": [
+        "Both A and R are true and R is the correct\nexplanation of A.",
+        "Both A and R are true but R is not the\ncorrect explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Both A and R are true and R is the correct\nexplanation of A.\nWhen a desktop computer undergoes power-on initialization without displaying monitor graphics, continuous audible beep codes signal a hardware initialization failure. During the startup sequence, Power-On Self-Test firmware stored in system ROM checks essential components like RAM modules and display adaptors. Detecting a critical hardware fault causes POST firmware to trigger specific motherboard audio beep codes diagnostic of the failure.",
+      "explanation_hindi": "सही उत्तर (a) है। जब एक डेस्कटॉप कंप्यूटर पावर-ऑन प्रारंभिक प्रक्रिया के दौरान मॉनिटर पर ग्राफिक्स प्रदर्शित नहीं करता है, तो निरंतर ऑडियो बीप कोड हार्डवेयर प्रारंभिक विफलता का संकेत देते हैं। पावर-ऑन सेल्फ-टेस्ट फर्मवेयर जो सिस्टम ROM में संग्रहीत होता है, RAM मॉड्यूल और डिस्प्ले एडाप्टर जैसे आवश्यक घटकों की जांच करता है। एक महत्वपूर्ण हार्डवेयर दोष का पता लगाना POST फर्मवेयर को विशिष्ट मदरबोर्ड ऑडियो बीप कोड को सक्रिय करने के लिए मजबूर करता है जो विफलता का निदान करते हैं।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Power-On Self-Test (POST) is a diagnostic process that checks hardware components.",
+        "Continuous beep codes indicate specific hardware issues during startup.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c5d7bc12-0522-486c-824b-b9c559b75509",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "40. कंप्यूटर हार्डवेयर आर्किटेक्चर के बारे में निम्नलिखित कथनों पर विचार करें:\nA. निष्पादन चक्र में फ़ेच, डिकोड, निष्पादित और स्टोर चरण शामिल होते हैं।\nB. सिस्टम बस में डेटा बस, पता बस और नियंत्रण बस शामिल होते हैं।\nC. पता बस RAM और CPU के बीच डेटा को द्विदिशात्मक रूप से ले जाती है।\nD. नियंत्रण संकेत मेमोरी पर पढ़ने और लिखने के संचालन को निर्धारित करते हैं।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और D",
+        "केवल A, C और D",
+        "केवल B और C",
+        "A, B, C और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding basic computer hardware architecture:\nA. The execution cycle consists of Fetch, Decode, Execute, and Store stages.\nB. The system bus consists of data bus, address bus, and control bus.\nC. Address bus carries data bidirectionally between RAM and CPU.\nD. Control signals dictate read and write operations on memory.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and D only",
+        "A, C and D only",
+        "B and C only",
+        "A, B, C and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Computer architecture relies on standardized instruction execution cycles and system bus structures. The processing cycle consists of Fetch, Decode, Execute, and Store stages. System buses comprise data, address, and control buses; control signals direct memory read and write operations. However, the address bus is strictly unidirectional, carrying memory locations from CPU to RAM, unlike the bidirectional data bus.",
+      "explanation_hindi": "सही उत्तर (a) है। कंप्यूटर आर्किटेक्चर मानकीकृत निर्देश निष्पादन चक्र और सिस्टम बस संरचनाओं पर निर्भर करता है। निष्पादन चक्र में फ़ेच, डिकोड, निष्पादित और स्टोर चरण शामिल होते हैं। सिस्टम बस में डेटा, पता और नियंत्रण बस शामिल होते हैं; नियंत्रण संकेत मेमोरी पर पढ़ने और लिखने के संचालन को निर्देशित करते हैं। हालाँकि, पता बस केवल एक दिशा में कार्य करती है, CPU से RAM तक मेमोरी स्थान ले जाती है, जबकि डेटा बस द्विदिशात्मक होती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "The execution cycle includes Fetch, Decode, Execute, and Store stages.",
+        "The system bus consists of data bus, address bus, and control bus.",
+        "Printed answer key: (A) A, B and D only",
+        "The address bus is unidirectional."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

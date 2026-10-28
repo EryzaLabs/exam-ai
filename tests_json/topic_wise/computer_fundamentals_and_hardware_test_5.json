@@ -1,0 +1,797 @@
+{
+  "test_id": "6cbc831e-5a33-434a-81f9-9887728564ec",
+  "test_name": "Topic Test: COMPUTER_FUNDAMENTALS_AND_HARDWARE - Part 5",
+  "type": "topic_wise",
+  "topic": "computer_fundamentals_and_hardware",
+  "created_at": "2026-10-28T18:55:06.494240",
+  "questions": [
+    {
+      "id": "3e519efa-ecfc-495a-aa28-3077a5ec2832",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) के रूप में लेबल किया गया है\nऔर दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): चौथी पीढ़ी में पेश किए गए माइक्रोप्रोसेसरों ने\nव्यक्तिगत कंप्यूटरों (PCs) के विकास की अनुमति दी।\nकारण (R): चौथी पीढ़ी के कंप्यूटरों ने\nबहुत बड़े पैमाने पर एकीकरण (VLSI) सर्किटों का उपयोग किया,\nजो एकल सिलिकॉन माइक्रोचिप पर हजारों ट्रांजिस्टरों को पैक करते हैं।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: One is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): Microprocessors introduced in the fourth generation allowed the development of Personal Computers (PCs). Reason (R): Fourth-generation computers utilized Very Large Scale Integration (VLSI) circuits that packed thousands of transistors onto a single silicon microchip.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Fourth-generation computing was defined by the invention of microprocessors, which enabled the development of modern personal computers. Microprocessors integrated complete central processing unit circuitry onto single silicon microchips using Very Large Scale Integration technology that packed thousands of transistors onto a semiconductor substrate. This massive circuit miniaturization dramatically reduced computer manufacturing costs, directly enabling personal computing.",
+      "explanation_hindi": "सही उत्तर (a) है। चौथी पीढ़ी की कंप्यूटिंग को माइक्रोप्रोसेसरों के आविष्कार द्वारा परिभाषित किया गया था, जिसने आधुनिक व्यक्तिगत कंप्यूटरों के विकास की अनुमति दी। माइक्रोप्रोसेसरों ने बहुत बड़े पैमाने पर एकीकरण प्रौद्योगिकी का उपयोग करके एकल सिलिकॉन माइक्रोचिप पर केंद्रीय प्रसंस्करण इकाई सर्किटरी को एकीकृत किया, जिसने हजारों ट्रांजिस्टरों को एक अर्धचालक सब्सट्रेट पर पैक किया। इस विशाल सर्किट लघुकरण ने कंप्यूटर निर्माण लागत को नाटकीय रूप से कम कर दिया, जिससे व्यक्तिगत कंप्यूटिंग को सीधे सक्षम किया गया।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Microprocessors are key components of fourth-generation computers.",
+        "Very Large Scale Integration (VLSI) technology allows thousands of transistors on a chip.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "afe4eb92-b127-4c4e-9d91-c84a2c7215c2",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "85. कौन सी मानक वायरलेस तकनीक माउस और कीबोर्ड जैसे परिधीय उपकरणों को लगभग 10 मीटर की छोटी दूरी पर बिना सीधे दृश्य रेखा के जोड़ती है?",
+      "options_hindi": [
+        "इन्फ्रारेड डेटा एसोसिएशन",
+        "WiMAX ब्रॉडबैंड",
+        "ब्लूटूथ",
+        "वायरलेस एचडीएमआई"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which standard wireless technology connects peripheral devices like mice and keyboards across a short radius up to approximately 10 meters without direct line-of-sight?",
+      "options_english": [
+        "Infrared Data Association",
+        "WiMAX Broadband",
+        "Bluetooth",
+        "Wireless HDMI"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Bluetooth is a standardized short-range wireless communication technology operating on the 2.4 GHz Industrial, Scientific, and Medical frequency band. Designed for low power consumption, Bluetooth establishes secure wireless connections between host devices and peripherals across distances up to 10 meters. It enables reliable wireless communication for devices like computer mice, keyboards, wireless headphones, and portable speakers without requiring direct line-of-sight.",
+      "explanation_hindi": "सही उत्तर (c) है। ब्लूटूथ एक मानकीकृत छोटी दूरी की वायरलेस संचार तकनीक है जो 2.4 GHz औद्योगिक, वैज्ञानिक और चिकित्सा आवृत्ति बैंड पर कार्य करती है। कम ऊर्जा खपत के लिए डिज़ाइन किया गया, ब्लूटूथ होस्ट उपकरणों और परिधीय उपकरणों के बीच 10 मीटर तक की दूरी पर सुरक्षित वायरलेस कनेक्शन स्थापित करता है। यह कंप्यूटर माउस, कीबोर्ड, वायरलेस हेडफ़ोन और पोर्टेबल स्पीकर जैसे उपकरणों के लिए विश्वसनीय वायरलेस संचार सक्षम करता है, बिना सीधे दृश्य रेखा की आवश्यकता के।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "ब्लूटूथ 2.4 GHz आवृत्ति बैंड पर कार्य करता है।",
+        "यह 10 मीटर तक की दूरी पर उपकरणों को जोड़ता है।",
+        "Printed answer key: (C) Bluetooth"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3b8209a3-ab71-45aa-b858-318a784a2492",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "62. सूची I को सूची II के साथ मिलाएं। \nसूची I: (डिवाइस प्रकार)\nA. बारकोड स्कैनर\nB. प्रोजेक्टर\nC. टचस्क्रीन डिस्प्ले\nD. मैग्नेटिक इंक कैरेक्टर रीडर (MICR)\nसूची II: (वर्गीकरण)\nI. मुद्रित ऑप्टिकल पट्टियों को पढ़ने के लिए इनपुट डिवाइस\nII. बड़े स्क्रीन दृश्य प्रक्षिप्ति के लिए आउटपुट डिवाइस\nIII. हाइब्रिड इनपुट/आउटपुट इंटरएक्टिव डिवाइस\nIV. बैंक चेकों को संसाधित करने के लिए विशेष इनपुट डिवाइस\nनीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II.\nList I: (Device Type)\nA. Barcode Scanner\nB. Projector\nC. Touchscreen Display\nD. Magnetic Ink Character Reader (MICR)\nList II: (Classification)\nI. Input device for reading printed optical stripes\nII. Output device for big-screen visual projection\nIII. Hybrid Input/Output interactive device\nIV. Specialized input device for processing bank cheques\nChoose the correct answer from the options given below:",
+      "options_english": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Computer devices are classified by operational function. Barcode scanners are input peripherals that capture printed optical code patterns. Video projectors serve as output devices projecting large visual displays onto external screens. Touchscreen displays operate as hybrid input/output interfaces, capturing touch gestures while displaying graphics. Magnetic Ink Character Readers are specialized input devices that read iron-oxide characters printed on bank cheques.",
+      "explanation_hindi": "सही उत्तर (a) है। कंप्यूटर उपकरणों को संचालन कार्य के अनुसार वर्गीकृत किया जाता है। बारकोड स्कैनर इनपुट पेरिफेरल होते हैं जो मुद्रित ऑप्टिकल कोड पैटर्न को कैप्चर करते हैं। वीडियो प्रोजेक्टर आउटपुट उपकरण होते हैं जो बड़े दृश्य प्रदर्शनों को बाहरी स्क्रीन पर प्रक्षिप्त करते हैं। टचस्क्रीन डिस्प्ले हाइब्रिड इनपुट/आउटपुट इंटरफेस के रूप में कार्य करते हैं, जो स्पर्श इशारों को कैप्चर करते हैं जबकि ग्राफिक्स प्रदर्शित करते हैं। मैग्नेटिक इंक कैरेक्टर रीडर विशेष इनपुट उपकरण होते हैं जो बैंक चेक पर मुद्रित लोहे-ऑक्साइड वर्णों को पढ़ते हैं।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Barcode scanners are input devices for reading optical codes.",
+        "Projectors are output devices for visual displays.",
+        "Touchscreens are hybrid devices for input and output.",
+        "Printed answer key: (A) A-I, B-II, C-III, D-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "124ac0b1-cde5-4444-87cc-43f3bc4b20ec",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "65. कंप्यूटर परिधीय प्रबंधन और देखभाल के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. मॉनिटरों और CPU टावरों पर ढके हुए वेंटिलेशन स्लॉट आंतरिक गर्मी के संचय का कारण बनते हैं।\nB. ऑप्टिकल फाइबर या नेटवर्क पैच केबल को तेज़ी से मोड़ने से सिग्नल ट्रांसमिशन को नुकसान हो सकता है।\nC. फ्लैटबेड दस्तावेज़ स्कैनरों की कांच की सतहों को कठोर एब्रेसिव स्टील ऊन से साफ करने से स्कैनर का जीवनकाल बढ़ता है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding computer peripheral handling and care:\nA. Covered ventilation slots on monitors and CPU towers cause internal heat buildup.\nB. Bending optical fiber or network patch cables sharply can damage signal transmission.\nC. Cleaning glass surfaces of flatbed document scanners with harsh abrasive steel wool prolongs scanner life.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Proper handling of computer equipment preserves system longevity and functionality. Covering computer ventilation slots causes internal thermal heat buildup, risking processor damage. Bending optical fiber or network patch cables sharply breaks internal glass fibers or copper conductors, degrading data transmission. Cleaning delicate scanner glass with abrasive steel wool scratches the surface, destroying optical scanning clarity and permanently damaging the device.",
+      "explanation_hindi": "सही उत्तर (a) है। कंप्यूटर उपकरणों का उचित प्रबंधन प्रणाली की दीर्घकालिकता और कार्यक्षमता को बनाए रखता है। कंप्यूटर के वेंटिलेशन स्लॉट को ढकने से आंतरिक गर्मी का संचय होता है, जो प्रोसेसर को नुकसान पहुंचा सकता है। ऑप्टिकल फाइबर या नेटवर्क पैच केबल को तेज़ी से मोड़ने से आंतरिक कांच के फाइबर या तांबे के कंडक्टर टूट सकते हैं, जिससे डेटा ट्रांसमिशन में गिरावट आती है। स्कैनर के कांच की सतह को एब्रेसिव स्टील ऊन से साफ करने से सतह पर खरोंचें आती हैं, जिससे ऑप्टिकल स्कैनिंग की स्पष्टता नष्ट होती है और उपकरण को स्थायी रूप से नुकसान होता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Covered ventilation slots can cause overheating.",
+        "Bending cables can damage signal transmission.",
+        "Cleaning with abrasive materials can damage devices.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f5910b13-01f4-482f-9a18-4f6f8fa886c2",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "99. कौन सा घटक CPU रजिस्टरों और प्राथमिक सिस्टम मेमोरी (RAM) के बीच एक मध्यस्थ पुल के रूप में कार्य करता है?",
+      "options_hindi": [
+        "हार्ड ड्राइव मैग्नेटिक प्लेटर",
+        "पावर सप्लाई इन्वर्टर",
+        "CPU कैश मेमोरी",
+        "USB बस कंट्रोलर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which component acts as an intermediary bridge between CPU registers and primary system memory (RAM)?",
+      "options_english": [
+        "Hard Drive magnetic platter",
+        "Power Supply Inverter",
+        "CPU Cache Memory",
+        "USB Bus Controller"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "CPU cache memory acts as a high-speed hardware bridge operating between fast internal processor registers and slower primary system RAM. Constructed using high-speed static RAM logic cells, cache memory retains frequently executed instructions and active data variables, minimizing memory bus delay times and ensuring the central processing unit avoids idle processor clock cycles while retrieving data from main RAM.",
+      "explanation_hindi": "सही उत्तर (c) है। CPU कैश मेमोरी एक उच्च गति हार्डवेयर पुल के रूप में कार्य करती है जो तेज आंतरिक प्रोसेसर रजिस्टरों और धीमी प्राथमिक सिस्टम RAM के बीच काम करती है। उच्च गति स्थिर RAM लॉजिक सेल का उपयोग करके निर्मित, कैश मेमोरी अक्सर निष्पादित निर्देशों और सक्रिय डेटा वेरिएबल्स को बनाए रखती है, मेमोरी बस देरी के समय को कम करती है और सुनिश्चित करती है कि केंद्रीय प्रसंस्करण इकाई मुख्य RAM से डेटा प्राप्त करते समय निष्क्रिय प्रोसेसर घड़ी चक्रों से बचती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "CPU cache memory enhances processing speed by reducing access time to RAM.",
+        "It stores frequently used data and instructions for quick retrieval.",
+        "Printed answer key: (C) CPU Cache Memory"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "37fd0816-0673-4e18-a378-ae883021d5ed",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "35. कंप्यूटर हार्डवेयर संपत्तियों को संभालने के लिए निम्नलिखित सुरक्षा निर्देशों पर विचार करें:\nA. आंतरिक रखरखाव के लिए सिस्टम चेसिस खोलने से पहले पावर केबल्स को अनप्लग करें।\nB. इलेक्ट्रोस्टैटिक डिस्चार्ज (ESD) से बचने के लिए एक ग्राउंडेड धातु सतह को छूएं या एंटी-स्टेटिक कलाई पट्टा पहनें।\nC. कंप्यूटर टावर्स को रबर पैडिंग के बिना सीधे गीले कंक्रीट फर्श पर रखें।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following safety instructions for handling computer hardware assets:\nA. Unplug power cables prior to opening system chassis for interior maintenance.\nB. Touch a grounded metal surface or wear an anti-static wrist strap to prevent Electrostatic Discharge (ESD).\nC. Place computer towers directly on wet concrete floors without rubber padding.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Safe hardware maintenance requires strictly adhering to safety procedures. Technician safety requires unplugging power cords from electrical outlets before opening system cases to eliminate electrical shock hazards. Wearing anti-static wrist straps or grounding oneself prevents electrostatic discharge, which can permanently destroy sensitive semiconductor microchips. Placing computer towers directly on wet concrete floors is unsafe due to severe moisture and shock risks.",
+      "explanation_hindi": "सही उत्तर (a) है। सुरक्षित हार्डवेयर रखरखाव के लिए सुरक्षा प्रक्रियाओं का सख्ती से पालन करना आवश्यक है। तकनीशियन की सुरक्षा के लिए सिस्टम केस खोलने से पहले पावर कॉर्ड को इलेक्ट्रिकल आउटलेट से अनप्लग करना आवश्यक है ताकि विद्युत झटके के खतरों को समाप्त किया जा सके। एंटी-स्टेटिक कलाई पट्टे पहनना या खुद को ग्राउंड करना इलेक्ट्रोस्टैटिक डिस्चार्ज को रोकता है, जो संवेदनशील सेमीकंडक्टर माइक्रोचिप्स को स्थायी रूप से नष्ट कर सकता है। कंप्यूटर टावर्स को सीधे गीले कंक्रीट फर्श पर रखना गंभीर नमी और झटके के खतरों के कारण असुरक्षित है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Unplugging power cables is essential to prevent electrical shock.",
+        "Printed answer key: (A) A and B only.",
+        "Wearing anti-static wrist straps helps prevent ESD damage.",
+        "Placing hardware on wet surfaces can lead to damage and safety hazards."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c0c2a5f6-4420-40ed-9050-adcbf7a2072a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "76. कौन सा घटक दीवार के मुख्य से वैकल्पिक धारा (AC) बिजली को मदरबोर्ड घटकों द्वारा आवश्यक विनियमित प्रत्यक्ष धारा (DC) वोल्टेज में परिवर्तित करता है?",
+      "options_hindi": [
+        "अनियंत्रित पावर सप्लाई (UPS)",
+        "स्विच मोड पावर सप्लाई (SMPS)",
+        "वोल्टेज इन्वर्टर कार्ड",
+        "वोल्टेज ट्रांसफार्मर मॉड्यूल"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which component converts alternating current (AC) electricity from wall mains into regulated direct current (DC) voltages required by motherboard components?",
+      "options_english": [
+        "Uninterruptible Power Supply (UPS)",
+        "Switch Mode Power Supply (SMPS)",
+        "Voltage Inverter Card",
+        "Voltage Transformer Module"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Switch Mode Power Supply is an internal hardware component that converts incoming high-voltage alternating current electricity from electrical wall outlets into regulated, low-voltage direct current power. The SMPS distributes precise direct current voltages, typically +3.3V, +5V, and +12V, to motherboard circuits, central processing units, solid-state drives, hard drives, and internal cooling fans within desktop systems.",
+      "explanation_hindi": "सही उत्तर (b) है। स्विच मोड पावर सप्लाई एक आंतरिक हार्डवेयर घटक है जो दीवार के आउटलेट से आने वाली उच्च-वोल्टेज वैकल्पिक धारा को विनियमित, निम्न-वोल्टेज प्रत्यक्ष धारा में परिवर्तित करता है। SMPS मदरबोर्ड सर्किट, केंद्रीय प्रसंस्करण इकाइयों, ठोस-राज्य ड्राइव, हार्ड ड्राइव और डेस्कटॉप सिस्टम के भीतर आंतरिक कूलिंग फैंस को सामान्यतः +3.3V, +5V, और +12V जैसे सटीक प्रत्यक्ष धारा वोल्टेज वितरित करता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "स्विच मोड पावर सप्लाई (SMPS) उच्च-वोल्टेज AC को निम्न-वोल्टेज DC में परिवर्तित करता है।",
+        "SMPS सामान्यतः +3.3V, +5V, और +12V वोल्टेज प्रदान करता है।",
+        "Printed answer key: (B) Switch Mode Power Supply (SMPS)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a80cb679-d06d-403d-ba93-d90115347220",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "प्रिंटर प्रौद्योगिकी के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. लेजर प्रिंटर उच्च गति के पाठ प्रिंट बनाने के लिए टोनर पाउडर और इलेक्ट्रोस्टैटिक ड्रम का उपयोग करते हैं।\nB. इंकजेट प्रिंटर कागज पर सूक्ष्म नोजल के माध्यम से तरल स्याही का छिड़काव करते हैं।\nC. डॉट मैट्रिक्स प्रिंटर गैर-प्रभाव प्रिंटर की श्रेणी में आते हैं।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding printer technology:\nA. Laser printers use toner powder and electrostatic drums to produce high-speed text prints.\nB. Inkjet printers utilize liquid ink sprayed through microscopic nozzles onto paper.\nC. Dot matrix printers belong to the class of non-impact printers.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Laser printers utilize electrostatic drums, lasers, and fine toner powder to produce sharp, high-speed document prints without mechanical paper contact. Inkjet printers operate by spraying microscopic droplets of liquid ink through precise thermal or piezoelectric nozzles. Conversely, dot matrix printers are classified as impact printers because they physically strike inked ribbons against paper surfaces using mechanical pins to form character impressions.",
+      "explanation_hindi": "सही उत्तर (a) है। लेजर प्रिंटर इलेक्ट्रोस्टैटिक ड्रम, लेजर और बारीक टोनर पाउडर का उपयोग करके तेज़, उच्च गुणवत्ता वाले दस्तावेज़ प्रिंट बनाते हैं। इंकजेट प्रिंटर सूक्ष्म तरल स्याही की बूँदों को सटीक थर्मल या पिज़ोइलेक्ट्रिक नोज़ल के माध्यम से छिड़कते हैं। इसके विपरीत, डॉट मैट्रिक्स प्रिंटर प्रभाव प्रिंटर के रूप में वर्गीकृत होते हैं क्योंकि वे स्याही वाले रिबन को कागज की सतह पर यांत्रिक पिनों के माध्यम से शारीरिक रूप से मारते हैं।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "लेजर प्रिंटर उच्च गति और गुणवत्ता के लिए टोनर पाउडर का उपयोग करते हैं।",
+        "इंकजेट प्रिंटर सूक्ष्म नोजल के माध्यम से तरल स्याही का उपयोग करते हैं।",
+        "डॉट मैट्रिक्स प्रिंटर प्रभाव प्रिंटर होते हैं।",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "bf9b3906-3fa0-4eb1-ba10-1f943379b37f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "52. सूची I को सूची II से मिलाएं।\nसूची I: (कनेक्टर्स / केबल्स)\nA. यूएसबी टाइप-सी\nB. आरजे-45\nC. 3.5 मिमी जैक\nD. डिस्प्ले पोर्ट\nसूची II: (प्राथमिक अनुप्रयोग)\nI. उलटने योग्य उच्च गति डेटा, वीडियो, और शक्ति वितरण इंटरफ़ेस\nII. ट्विस्टेड-पेयर ईथरनेट नेटवर्क केबल समाप्ति\nIII. एनालॉग ऑडियो सिग्नल लाइन-इन/लाइन-आउट कनेक्शन\nIV. उच्च-बैंडविड्थ डिजिटल डिस्प्ले ऑडियो-वीडियो कनेक्शन\nनीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II.\nList I: (Connectors / Cables)\nA. USB Type-C\nB. RJ-45\nC. 3.5mm Jack\nD. DisplayPort\nList II: (Primary Application)\nI. Reversible high-speed data, video, and power delivery interface\nII. Twisted-pair Ethernet network cable termination\nIII. Analog audio signal line-in/line-out connection\nIV. High-bandwidth digital display audio-video connection\nChoose the correct answer from the options given below:",
+      "options_english": [
+        "A-I, B-II, C-III, D-IV",
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-IV, C-I, D-II",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Peripheral cables and physical hardware connectors perform specific connectivity roles. USB Type-C provides a compact, reversible interface supporting high-speed data transfer, video transmission, and power delivery. RJ45 connectors terminate twisted-pair Ethernet cables for local area networks. The 3.5mm jack provides analog audio connectivity for headphones and microphones. DisplayPort delivers high-bandwidth digital audio and video signals to external monitors.",
+      "explanation_hindi": "सही उत्तर (a) है। पेरिफेरल केबल और भौतिक हार्डवेयर कनेक्टर्स विशिष्ट कनेक्टिविटी भूमिकाएँ निभाते हैं। यूएसबी टाइप-सी एक कॉम्पैक्ट, उलटने योग्य इंटरफ़ेस प्रदान करता है जो उच्च गति डेटा ट्रांसफर, वीडियो ट्रांसमिशन, और शक्ति वितरण का समर्थन करता है। आरजे-45 कनेक्टर्स ट्विस्टेड-पेयर ईथरनेट केबलों के लिए समाप्ति प्रदान करते हैं। 3.5 मिमी जैक हेडफ़ोन और माइक्रोफ़ोन के लिए एनालॉग ऑडियो कनेक्टिविटी प्रदान करता है। डिस्प्ले पोर्ट बाहरी मॉनिटरों के लिए उच्च-बैंडविड्थ डिजिटल ऑडियो और वीडियो सिग्नल प्रदान करता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "USB Type-C is a versatile connector used for data, video, and power.",
+        "RJ-45 is commonly used for Ethernet networking.",
+        "Printed answer key: (A) A-I, B-II, C-III, D-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7e3fcbb0-d0cd-46be-b55c-f144169f4178",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "66. निम्नलिखित कंप्यूटर आउटपुट डिस्प्ले तकनीकों को उनके ऐतिहासिक विकास के क्रम में व्यवस्थित करें:\nA. LCD (लिक्विड क्रिस्टल डिस्प्ले)\nB. CRT (कैथोड रे ट्यूब)\nC. OLED (ऑर्गेनिक लाइट एमिटिंग डायोड)\nD. LED-बैकलिट LCD\nनीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "B, A, D, C",
+        "A, B, C, D",
+        "B, D, A, C",
+        "C, A, B,"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following computer output display technologies in order of their historical evolution:\nA. LCD (Liquid Crystal Display)\nB. CRT (Cathode Ray Tube)\nC. OLED (Organic Light Emitting Diode)\nD. LED-backlit LCD\nChoose the correct answer from the options given below:",
+      "options_english": [
+        "B, A, D, C",
+        "A, B, C, D",
+        "B, D, A, C",
+        "C, A, B,"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Computer display technologies progressed through key technological milestones. Heavy Cathode Ray Tube displays based on vacuum tube technology dominated early computing. Liquid Crystal Display flat panels emerged next, using cold cathode fluorescent backlights. LED-backlit LCD monitors followed, replacing fluorescent tubes with energy-efficient light-emitting diodes. Organic Light Emitting Diode technology represents a newer evolution, utilizing self-emissive organic pixel layers without backlights.",
+      "explanation_hindi": "सही उत्तर (a) है। कंप्यूटर डिस्प्ले तकनीकों ने प्रमुख तकनीकी मील के पत्थरों के माध्यम से प्रगति की। भारी कैथोड रे ट्यूब डिस्प्ले, जो वैक्यूम ट्यूब तकनीक पर आधारित थे, प्रारंभिक कंप्यूटिंग में प्रमुख थे। इसके बाद लिक्विड क्रिस्टल डिस्प्ले फ्लैट पैनल आए, जो ठंडी कैथोड फ्लोरोसेंट बैकलाइट्स का उपयोग करते थे। LED-बैकलिट LCD मॉनिटर्स ने फ्लोरोसेंट ट्यूबों को ऊर्जा-कुशल लाइट-एमिटिंग डायोड से बदल दिया। ऑर्गेनिक लाइट एमिटिंग डायोड तकनीक एक नई प्रगति का प्रतिनिधित्व करती है, जो बिना बैकलाइट के आत्म-उत्सर्जक ऑर्गेनिक पिक्सेल परतों का उपयोग करती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "CRT technology was dominant in early computing.",
+        "LCD panels use cold cathode fluorescent backlights.",
+        "LED-backlit LCDs are more energy-efficient.",
+        "Printed answer key: (A) B, A, D, C"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d4073ff6-a921-4da9-be1a-cac8b2b5ed5c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II से मिलाएं। \nसूची I: (कंप्यूटर पीढ़ी) \nA. पहली पीढ़ी \nB. दूसरी पीढ़ी \nC. तीसरी पीढ़ी \nD. चौथी पीढ़ी \nसूची II: (मुख्य घटक) \nI. एकीकृत सर्किट (ICs) \nII. वैक्यूम ट्यूब \nIII. माइक्रोप्रोसेसर (VLSI) \nIV. ट्रांजिस्टर \nनीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-IV, C-I, D-II"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II.\nList I: (Computer Generation)\nA. First Generation\nB. Second Generation\nC. Third Generation\nD. Fourth Generation\nList II: (Key Component)\nI. Integrated Circuits (ICs)\nII. Vacuum Tubes\nIII. Microprocessors (VLSI)\nIV. Transistors\nChoose the correct answer from the options given below:",
+      "options_english": [
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-III, D-I",
+        "A-II, B-I, C-IV, D-III",
+        "A-III, B-IV, C-I, D-II"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Computer technology generations are distinguished by their defining hardware switching components. First-generation systems relied on thermionic vacuum tubes for basic circuitry. Second-generation computers replaced vacuum tubes with discrete transistors, improving efficiency. Third-generation machines introduced integrated circuits, combining multiple electronic components onto single semiconductor chips. Fourth-generation computing emerged with microprocessors utilizing Very Large Scale Integration technology to pack thousands of transistors onto chips.",
+      "explanation_hindi": "सही उत्तर (a) है। कंप्यूटर प्रौद्योगिकी की पीढ़ियाँ उनके परिभाषित हार्डवेयर स्विचिंग घटकों द्वारा भिन्न होती हैं। पहली पीढ़ी के सिस्टम ने बुनियादी सर्किट्री के लिए थर्मायोनिक वैक्यूम ट्यूब पर निर्भर किया। दूसरी पीढ़ी के कंप्यूटरों ने वैक्यूम ट्यूब को पृथक ट्रांजिस्टर से बदल दिया, जिससे दक्षता में सुधार हुआ। तीसरी पीढ़ी की मशीनों ने एकीकृत सर्किट पेश किए, जो कई इलेक्ट्रॉनिक घटकों को एकल सेमीकंडक्टर चिप्स पर संयोजित करते हैं। चौथी पीढ़ी की कंप्यूटिंग माइक्रोप्रोसेसर के साथ उभरी, जो बहुत बड़े पैमाने पर एकीकरण प्रौद्योगिकी का उपयोग करके चिप्स पर हजारों ट्रांजिस्टर को पैक करती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "कंप्यूटर पीढ़ियाँ उनके परिभाषित हार्डवेयर स्विचिंग घटकों द्वारा भिन्न होती हैं।",
+        "पहली पीढ़ी में वैक्यूम ट्यूब, दूसरी में ट्रांजिस्टर, तीसरी में एकीकृत सर्किट, और चौथी में माइक्रोप्रोसेसर होते हैं।",
+        "Printed answer key: (A) A-II, B-IV, C-I, D-III"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ab39961d-a965-46dc-9f41-a7d91debfe36",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "47. कौन सा आउटपुट डिवाइस निरंतर\nइंकजेट या पेन तंत्र का उपयोग करता है\nविशाल-स्तरीय इंजीनियरिंग ड्रॉइंग,\nआर्किटेक्चरल ब्लूप्रिंट, और GIS मानचित्रों को\nरेंडर करने के लिए?",
+      "options_hindi": [
+        "प्लॉटर",
+        "इम्पैक्ट लाइन प्रिंटर",
+        "डॉट मैट्रिक्स प्रिंटर",
+        "डॉक्यूमेंट स्कैनर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which output device utilizes continuous inkjet or pen mechanisms to render large-scale engineering drawings, architectural blueprints, and GIS maps?",
+      "options_english": [
+        "Plotter",
+        "Impact Line Printer",
+        "Dot Matrix Printer",
+        "Document Scanner"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A plotter is a specialized hardware output device engineered to render high-precision vector graphics, large-scale engineering schematics, architectural blueprints, and Geographic Information System maps. Utilizing continuous mechanical ink pens or specialized inkjet printing mechanisms, plotters draw continuous high-resolution lines directly onto large paper sheets, achieving precise graphical accuracy superior to standard raster printers.",
+      "explanation_hindi": "सही उत्तर (a) है। एक प्लॉटर एक विशेष हार्डवेयर आउटपुट डिवाइस है जिसे उच्च-सटीकता वाले वेक्टर ग्राफिक्स, विशाल-स्तरीय इंजीनियरिंग स्कीमैटिक्स, आर्किटेक्चरल ब्लूप्रिंट और भौगोलिक सूचना प्रणाली के मानचित्रों को रेंडर करने के लिए डिज़ाइन किया गया है। निरंतर यांत्रिक इंक पेन या विशेष इंकजेट प्रिंटिंग तंत्र का उपयोग करते हुए, प्लॉटर्स सीधे बड़े कागज की शीट पर निरंतर उच्च-रिज़ॉल्यूशन लाइनों को खींचते हैं, जो मानक रास्टर प्रिंटर की तुलना में सटीक ग्राफिकल सटीकता प्राप्त करते हैं।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Plotters are used for high-precision vector graphics.",
+        "They can render large-scale engineering and architectural drawings.",
+        "Plotters utilize continuous inkjet or pen mechanisms.",
+        "Printed answer key: (A) Plotter"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "24c2b550-ac33-4a4b-b052-384485a43b47",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II के साथ मिलाएं। \nसूची I: (पोर्ट / इंटरफेस) \nA. एचडीएमआई \nB. ईथरनेट (RJ-45) \nC. VGA \nD. यूएसबी \nसूची II: (प्राथमिक कार्य) \nI. उच्च-परिभाषा डिजिटल वीडियो और ऑडियो ट्रांसमिशन",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II.\nList I: (Port / Interface)\nA. HDMI\nB. Ethernet (RJ-45)\nC. VGA\nD. USB\nList II: (Primary Function)\nI. High-Definition digital video and audio transmission",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Computer peripheral interfaces serve distinct functional roles. HDMI transfers high-definition digital video and multi-channel audio through a single cable connection. Ethernet ports using RJ-45 connectors establish wired local area network connectivity. VGA interfaces transmit legacy analog video signals to display monitors. Universal Serial Bus ports provide standardized, hot-swappable connectivity for transferring data and supplying electrical power to peripherals.",
+      "explanation_hindi": "सही उत्तर (a) है। कंप्यूटर परिधीय इंटरफेस विशिष्ट कार्यात्मक भूमिकाएँ निभाते हैं। एचडीएमआई उच्च-परिभाषा डिजिटल वीडियो और मल्टी-चैनल ऑडियो को एकल केबल कनेक्शन के माध्यम से स्थानांतरित करता है। ईथरनेट पोर्ट RJ-45 कनेक्टर्स का उपयोग करके वायर्ड स्थानीय क्षेत्र नेटवर्क कनेक्टिविटी स्थापित करते हैं। VGA इंटरफेस डिस्प्ले मॉनिटर्स के लिए विरासत एनालॉग वीडियो सिग्नल को स्थानांतरित करते हैं। यूनिवर्सल सीरियल बस पोर्ट डेटा स्थानांतरित करने और परिधीय को विद्युत शक्ति प्रदान करने के लिए मानकीकृत, हॉट-स्वैपेबल कनेक्टिविटी प्रदान करते हैं।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "HDMI is used for high-definition video and audio transmission.",
+        "Ethernet (RJ-45) is used for wired networking.",
+        "Printed answer key: (A) A-I, B-II, C-III, D-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2a9a7b0c-30be-48b9-818c-6119ad78db6d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "86. लेज़र प्रिंटर का कौन सा प्राथमिक प्रदर्शन मेट्रिक अधिकतम पृष्ठों की संख्या को इंगित करता है जो यह प्रति मिनट आउटपुट कर सकता है?",
+      "options_hindi": [
+        "डीपीआई (डॉट्स प्रति इंच)",
+        "पीपीएम (पृष्ठ प्रति मिनट)",
+        "आरपीएम (रिवोल्यूशन्स प्रति मिनट)",
+        "हर्ट्ज (Hz)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which primary performance metric of a laser printer indicates the maximum number of pages it can output per minute?",
+      "options_english": [
+        "DPI (Dots Per Inch)",
+        "PPM (Pages Per Minute)",
+        "RPM (Revolutions Per Minute)",
+        "Hz (Hertz)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Pages Per Minute is the primary metric used to measure print speed in document printers, particularly laser and inkjet printers. PPM specifies the maximum number of standard single-sided text pages a printer output engine can produce in one minute. Higher PPM ratings indicate faster printing mechanisms, providing an important performance standard for evaluating high-volume office and institutional printing equipment.",
+      "explanation_hindi": "सही उत्तर (b) है। पृष्ठ प्रति मिनट (PPM) एक प्राथमिक मेट्रिक है जिसका उपयोग दस्तावेज़ प्रिंटरों, विशेष रूप से लेज़र और इंकजेट प्रिंटरों में प्रिंट गति को मापने के लिए किया जाता है। PPM अधिकतम संख्या को निर्दिष्ट करता है जो एक प्रिंटर आउटपुट इंजन एक मिनट में उत्पादन कर सकता है। उच्च PPM रेटिंग तेज प्रिंटिंग तंत्र को इंगित करती है, जो उच्च मात्रा वाले कार्यालय और संस्थागत प्रिंटिंग उपकरणों के मूल्यांकन के लिए एक महत्वपूर्ण प्रदर्शन मानक प्रदान करती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "PPM (Pages Per Minute) is a key performance metric for printers.",
+        "Higher PPM indicates faster printing capabilities.",
+        "Printed answer key: (B) PPM (Pages Per Minute)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e94b881d-e17c-47fc-bb12-e58190e2cafd",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कंप्यूटर चेसिस के अंदर अत्यधिक धूल जमा होने से मुख्य रूप से किस हार्डवेयर जोखिम का सामना करना पड़ता है?\n(1) प्राथमिक सिस्टम RAM बस बैंडविड्थ का अनियंत्रित भौतिक विस्तार और गतिशील वृद्धि।",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Excessive dust accumulation inside a computer chassis leads primarily to which hardware risk?\nUncontrolled physical expansion and dynamic increase of primary system RAM bus bandwidth.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Overheating due to blocked airflow, causing",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Excessive dust accumulation inside a desktop computer chassis poses significant hardware risks by coating internal cooling fan blades, blocking ventilation mesh grilles, and insulating heatsink fins. This physical obstruction severely restricts cooling airflow across microprocessors, leading to rapid thermal heat buildup. Elevated operational temperatures trigger automatic CPU thermal throttling, reducing processing clock speeds to prevent catastrophic permanent hardware damage.",
+      "explanation_hindi": "सही उत्तर (c) है। कंप्यूटर चेसिस के अंदर अत्यधिक धूल जमा होना आंतरिक कूलिंग फैन ब्लेड्स को ढक देता है, वेंटिलेशन ग्रिल्स को अवरुद्ध करता है और हीटसिंक फिन्स को इंसुलेट करता है। यह भौतिक अवरोध माइक्रोप्रोसेसर के चारों ओर कूलिंग एयरफ्लो को गंभीर रूप से सीमित करता है, जिससे तेजी से थर्मल हीट का निर्माण होता है। बढ़ी हुई संचालन तापमान स्वचालित CPU थर्मल थ्रॉटलिंग को सक्रिय करता है, जिससे प्रसंस्करण घड़ी की गति को कम किया जाता है ताकि स्थायी हार्डवेयर क्षति से बचा जा सके।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Excessive dust can block airflow and cause overheating.",
+        "Thermal throttling is a protective mechanism for CPUs.",
+        "Printed answer key: (C) Overheating due to blocked airflow, causing"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "4f28ec0b-c676-49ab-97c2-51892861a743",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कंप्यूटर डेटा मापन की निम्नलिखित इकाइयों को बढ़ते क्रम में व्यवस्थित करें:\nA. मेगाबाइट (MB)\nB. पेटाबाइट (PB)",
+      "options_hindi": [
+        "A, C, D, B",
+        "C, D, A, B",
+        "D, A, B, C",
+        "B, C, A, D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following units of computer data measurement in ascending order of magnitude:\nA. Megabyte (MB)\nB. Petabyte (PB)",
+      "options_english": [
+        "A, C, D, B",
+        "C, D, A, B",
+        "D, A, B, C",
+        "B, C, A, D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Units of digital computer memory measurement are ordered strictly by their exponential storage magnitude based on binary factors of 1024. A Megabyte represents 1024 Kilobytes, a Gigabyte equals 1024 Megabytes, a Terabyte contains 1024 Gigabytes, and a Petabyte expands to 1024 Terabytes. Therefore, arranging these specified measurement units in ascending order yields Megabyte, Gigabyte, Terabyte, and Petabyte.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल कंप्यूटर मेमोरी मापन की इकाइयाँ 1024 के बाइनरी कारकों के आधार पर उनके गुणात्मक भंडारण परिमाण के अनुसार क्रमबद्ध होती हैं। एक मेगाबाइट 1024 किलोबाइट का प्रतिनिधित्व करता है, एक गीगाबाइट 1024 मेगाबाइट के बराबर होता है, एक टेराबाइट 1024 गीगाबाइट्स में होता है, और एक पेटाबाइट 1024 टेराबाइट्स में विस्तारित होता है। इसलिए, इन निर्दिष्ट मापन इकाइयों को बढ़ते क्रम में व्यवस्थित करने पर मेगाबाइट, गीगाबाइट, टेराबाइट और पेटाबाइट प्राप्त होता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "Digital storage units are based on powers of 1024.",
+        "1 Megabyte = 1024 Kilobytes, 1 Gigabyte = 1024 Megabytes.",
+        "1 Terabyte = 1024 Gigabytes, 1 Petabyte = 1024 Terabytes.",
+        "Printed answer key: (A) A, C, D, B"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d8abab28-5326-45a1-8745-1f9e94a2fd74",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कंप्यूटर हार्डवेयर के लिए ऑफ़लाइन पावर बैकअप उपकरणों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. अनइंटरप्टिबल पावर सप्लाई (UPS) इकाइयों में आंतरिक रिचार्जेबल बैटरी होती हैं।\nB. सर्ज प्रोटेक्टर्स पावर आउटलेट से आने वाले अप्रत्याशित वोल्टेज स्पाइक्स को दबाते हैं।\nC. एक मानक UPS एक पूर्ण कंप्यूटर लैब को ग्रिड आपूर्ति के बिना 24 घंटे लगातार चालू रख सकता है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding offline power backup devices for computer hardware:\nA. Uninterruptible Power Supply (UPS) units contain internal rechargeable batteries.\nB. Surge protectors suppress unexpected voltage spikes coming from power outlets.\nC. A standard UPS can keep a full computer lab operational for 24 continuous hours without grid supply.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Uninterruptible Power Supply units integrate internal rechargeable batteries to supply temporary electrical power to computer systems during electrical grid disruptions. Surge protectors suppress dangerous high-voltage electrical spikes coming from power outlets, shielding circuit boards from damage. Standard laboratory UPS units provide emergency runtime for 10 to 30 minutes to enable safe system shutdown, not 24 continuous hours.",
+      "explanation_hindi": "सही उत्तर (a) है। अनइंटरप्टिबल पावर सप्लाई इकाइयाँ आंतरिक रिचार्जेबल बैटरी को एकीकृत करती हैं ताकि विद्युत ग्रिड में व्यवधान के दौरान कंप्यूटर सिस्टम को अस्थायी विद्युत शक्ति प्रदान की जा सके। सर्ज प्रोटेक्टर्स पावर आउटलेट से आने वाले खतरनाक उच्च-वोल्टेज इलेक्ट्रिकल स्पाइक्स को दबाते हैं, जिससे सर्किट बोर्ड को नुकसान से बचाया जा सके। मानक प्रयोगशाला UPS इकाइयाँ सुरक्षित सिस्टम शटडाउन के लिए 10 से 30 मिनट का आपातकालीन रनटाइम प्रदान करती हैं, न कि 24 घंटे लगातार।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Uninterruptible Power Supply (UPS) units contain internal rechargeable batteries.",
+        "Surge protectors suppress unexpected voltage spikes.",
+        "Standard UPS units provide emergency runtime for 10 to 30 minutes.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d67a9302-bb7c-46cb-afd7-61d2cf62ec91",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "आधुनिक डेस्कटॉप माइक्रोप्रोसेसर की घड़ी की गति सामान्यतः किस आवृत्ति की इकाई में व्यक्त की जाती है?",
+      "options_hindi": [
+        "मेगाबिट प्रति सेकंड (Mbps)",
+        "क्रांतियों प्रति मिनट (RPM)",
+        "गिगाहर्ट्ज़ (GHz)",
+        "टेराबाइट प्रति सेकंड (TBps)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "The clock speed of modern desktop microprocessors is commonly expressed in which unit of frequency?",
+      "options_english": [
+        "Megabits per second (Mbps)",
+        "Revolutions per minute (RPM)",
+        "Gigahertz (GHz)",
+        "Terabytes per second (TBps)"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The clock speed of modern microprocessor units is expressed in Gigahertz, representing billions of internal clock cycles per second. Clock frequency defines the operational cadence at which a CPU executes microcode instructions and synchronizes hardware logic circuits. A higher clock rate generally enables processing units to fetch, decode, and execute a greater volume of instructions per second, enhancing processing performance.",
+      "explanation_hindi": "सही उत्तर (c) है। आधुनिक माइक्रोप्रोसेसर की घड़ी की गति गिगाहर्ट्ज़ में व्यक्त की जाती है, जो प्रति सेकंड अरबों आंतरिक घड़ी चक्रों का प्रतिनिधित्व करती है। घड़ी की आवृत्ति उस संचालन की ताल को परिभाषित करती है जिस पर एक CPU माइक्रोकोड निर्देशों को निष्पादित करता है और हार्डवेयर लॉजिक सर्किट को समन्वयित करता है। उच्च घड़ी की दर सामान्यतः प्रोसेसिंग इकाइयों को प्रति सेकंड अधिक मात्रा में निर्देशों को लाने, डिकोड करने और निष्पादित करने में सक्षम बनाती है, जिससे प्रोसेसिंग प्रदर्शन में सुधार होता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "Clock speed is measured in Gigahertz (GHz).",
+        "Higher clock rates improve CPU performance.",
+        "Printed answer key: (C) Gigahertz (GHz)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "47aae5c5-19ec-4dc1-8d36-b8a53c84adac",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "84. डेस्कटॉप मदरबोर्ड पर स्थित CMOS बैटरी का मुख्य संचालन उद्देश्य क्या है?",
+      "options_hindi": [
+        "सक्रिय प्रोसेसर कूलिंग फैन मोटर्स को उच्च-वोल्टेज विद्युत ऊर्जा लगातार प्रदान करना",
+        "सक्रिय सिस्टम डाउनलोड के दौरान आंतरिक वायरलेस नेटवर्क इंटरफेस कार्ड को ऊर्जा प्रदान करना",
+        "मुख्य लाइन विफलताओं के दौरान आंतरिक आपातकालीन अनवरत पावर सप्लाई के रूप में कार्य करना",
+        "वास्तविक समय घड़ी सेटिंग्स और BIOS कॉन्फ़िगरेशन को बनाए रखना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the main operational purpose of the CMOS battery located on desktop motherboards?",
+      "options_english": [
+        "To continuously deliver high-voltage electrical energy to active processor cooling fan motors",
+        "To energize internal wireless network interface cards during active system downloads",
+        "To serve as an internal emergency uninterrupted power supply during main line failures",
+        "To maintain real-time clock settings and BIOS configuration"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The primary operational role of the motherboard CMOS battery is to supply continuous low-voltage electrical power to non-volatile complementary metal-oxide-semiconductor memory when the main system power is turned off. This constant power preserves system hardware configuration settings, drive boot priorities, and real-time clock time settings, preventing BIOS setup loss.",
+      "explanation_hindi": "सही उत्तर (d) है। मदरबोर्ड CMOS बैटरी की मुख्य संचालन भूमिका मुख्य सिस्टम पावर बंद होने पर गैर-वाष्पशील समपूरक धातु-ऑक्साइड-सेमिकंडक्टर मेमोरी को निरंतर निम्न-वोल्टेज विद्युत शक्ति प्रदान करना है। यह निरंतर शक्ति सिस्टम हार्डवेयर कॉन्फ़िगरेशन सेटिंग्स, ड्राइव बूट प्राथमिकताओं और वास्तविक समय घड़ी समय सेटिंग्स को बनाए रखती है, जिससे BIOS सेटअप की हानि को रोका जा सके।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "CMOS बैटरी मदरबोर्ड पर BIOS सेटिंग्स को बनाए रखती है।",
+        "यह बैटरी मुख्य पावर बंद होने पर भी कार्य करती है।",
+        "Printed answer key: (D) To maintain real-time clock settings and"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f493cee4-226a-46c0-a0f8-175273e79e62",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "98. कौन सा मापदंड कंप्यूटर मॉनिटरों और प्रिंटरों द्वारा उत्पन्न छवि संकल्प को मापता है?",
+      "options_hindi": [
+        "डॉट्स प्रति इंच (DPI)",
+        "गिगाहर्ट्ज़ आवृत्ति",
+        "प्रति मिनट क्रांतियाँ",
+        "मेगाबिट्स प्रति सेकंड"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which metric measures the image resolution produced by computer monitors and printers?",
+      "options_english": [
+        "Dots Per Inch (DPI)",
+        "Gigahertz frequency",
+        "Revolutions per minute",
+        "Megabits per second"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Dots Per Inch is the standard spatial measurement metric used to quantify visual image resolution and clarity for hardware display monitors, optical document scanners, and digital printers. DPI specifies the number of individual printed ink dots or visual display pixels present within one linear inch, where higher DPI ratings indicate greater detail, sharper image rendering, and finer print output.",
+      "explanation_hindi": "सही उत्तर (a) है। डॉट्स प्रति इंच (DPI) एक मानक स्थानिक मापदंड है जिसका उपयोग हार्डवेयर डिस्प्ले मॉनिटरों, ऑप्टिकल दस्तावेज़ स्कैनरों और डिजिटल प्रिंटरों के लिए दृश्य छवि संकल्प और स्पष्टता को मापने के लिए किया जाता है। DPI एक रेखीय इंच के भीतर मौजूद व्यक्तिगत प्रिंटेड इंक डॉट्स या दृश्य डिस्प्ले पिक्सल की संख्या को निर्दिष्ट करता है, जहां उच्च DPI रेटिंग अधिक विवरण, तेज छवि रेंडरिंग और बारीक प्रिंट आउटपुट को दर्शाती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "DPI is crucial for determining print quality and display clarity.",
+        "Higher DPI values result in better image resolution.",
+        "Printed answer key: (A) Dots Per Inch (DPI)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

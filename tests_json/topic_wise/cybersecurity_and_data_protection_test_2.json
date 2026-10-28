@@ -1,0 +1,792 @@
+{
+  "test_id": "489b0676-45af-4c1d-a420-9831316a963b",
+  "test_name": "Topic Test: CYBERSECURITY_AND_DATA_PROTECTION - Part 2",
+  "type": "topic_wise",
+  "topic": "cybersecurity_and_data_protection",
+  "created_at": "2026-10-28T18:55:06.550223",
+  "questions": [
+    {
+      "id": "543fc6e2-2b9c-4ea5-b9ed-e0bfa0d82aa9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "64. उस प्रकार के सामाजिक इंजीनियरिंग हमले का क्या नाम है जब एक हमलावर शारीरिक रूप से एक पीड़ित के कंधे पर देखता है ताकि पासवर्ड या संवेदनशील डेटा कैप्चर कर सके?",
+      "options_hindi": [
+        "बेटिंग हमला",
+        "कंधे पर देखना",
+        "टेलगेटिंग हमला",
+        "डंपस्टर डाइविंग"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What type of social engineering attack occurs when an attacker physically looks over a victim’s shoulder to capture passwords or sensitive data?",
+      "options_english": [
+        "Baiting attack",
+        "Shoulder surfing",
+        "Tailgating attack",
+        "Dumpster diving"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Shoulder surfing occurs when an attacker physically observes a victim entering passwords, personal identification numbers, or confidential data on a screen or keypad. This type of physical security threat exploits direct line-of-sight exposure to steal confidential credentials without using digital surveillance software. Attackers perform shoulder surfing in public places or busy offices by looking over user shoulders or observing input activity from nearby locations.",
+      "explanation_hindi": "सही उत्तर (b) है। कंधे पर देखना तब होता है जब एक हमलावर शारीरिक रूप से एक पीड़ित को पासवर्ड, व्यक्तिगत पहचान संख्या, या स्क्रीन या कीपैड पर संवेदनशील डेटा दर्ज करते हुए देखता है। यह प्रकार का भौतिक सुरक्षा खतरा सीधे दृष्टि की एक्सपोजर का लाभ उठाता है ताकि डिजिटल निगरानी सॉफ़्टवेयर का उपयोग किए बिना गोपनीय क्रेडेंशियल चुराए जा सकें। हमलावर सार्वजनिक स्थानों या व्यस्त कार्यालयों में उपयोगकर्ताओं के कंधों पर देख कर या निकटवर्ती स्थानों से इनपुट गतिविधियों का अवलोकन करके कंधे पर देखने का कार्य करते हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Shoulder surfing is a common social engineering attack.",
+        "Printed answer key: (B) Shoulder surfing",
+        "It exploits direct line-of-sight to capture sensitive information.",
+        "Awareness and vigilance are key to preventing such attacks."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6e0a9b64-bfc1-42f9-a932-3d18d1f7c92f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "डेटा फिड्यूशियरी के तहत DPDP अधिनियम, 2023 के तहत दायित्वों के संबंध में निम्नलिखित बयानों पर विचार करें:\nA. अधिनियम के प्रभावी पालन को सुनिश्चित करने के लिए उचित तकनीकी और संगठनात्मक उपाय लागू करें। \nB. डेटा प्रिंसिपल को प्रभावित करने वाले निर्णयों के लिए उपयोग किए जाने वाले व्यक्तिगत डेटा की सटीकता, पूर्णता और संगति सुनिश्चित करें। \nC. व्यक्तिगत डेटा उल्लंघन की स्थिति में डेटा संरक्षण बोर्ड और प्रभावित डेटा प्रिंसिपल को सूचित करें। \nD. डेटा उल्लंघन को रोकने के लिए अपनी संपत्ति में व्यक्तिगत डेटा की सुरक्षा के लिए उचित सुरक्षा उपाय करें। \nउपरोक्त में से कौन से बयान सही हैं?\n(1) A, B और C केवल",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the obligations of Data Fiduciaries under the DPDP Act, 2023:\nA. Implement appropriate technical and organizational measures to ensure effective adherence to the Act.\nB. Ensure accuracy, completeness, and consistency of personal data used to make decisions affecting a Data Principal.\nC. Notify the Data Protection Board and affected Data Principals in the event of a personal data breach.\nD. Protect personal data in its possession by taking reasonable security safeguards to prevent data breach.\nWhich of the statements given above are correct?\n(1) A, B and C only",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Under the Digital Personal Data Protection Act, 2023, Data Fiduciaries must adhere to strict statutory obligations to protect personal data. They must implement technical and organizational measures to ensure compliance, maintain data accuracy for decisions affecting principals, enforce security safeguards to prevent data breaches, and immediately notify the Data Protection Board along with affected Data Principals in the event of an operational data breach.",
+      "explanation_hindi": "सही उत्तर (d) है। डिजिटल व्यक्तिगत डेटा संरक्षण अधिनियम, 2023 के तहत, डेटा फिड्यूशियरी को व्यक्तिगत डेटा की सुरक्षा के लिए सख्त कानूनी दायित्वों का पालन करना चाहिए। उन्हें अनुपालन सुनिश्चित करने के लिए तकनीकी और संगठनात्मक उपाय लागू करने चाहिए, प्रिंसिपल को प्रभावित करने वाले निर्णयों के लिए डेटा की सटीकता बनाए रखनी चाहिए, डेटा उल्लंघनों को रोकने के लिए सुरक्षा उपाय लागू करने चाहिए, और संचालन डेटा उल्लंघन की स्थिति में तुरंत डेटा संरक्षण बोर्ड और प्रभावित डेटा प्रिंसिपल को सूचित करना चाहिए।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Data Fiduciaries must implement technical and organizational measures.",
+        "They are required to notify in case of data breaches.",
+        "Printed answer key: (D) A, B, C and D"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "61082969-1ab4-416a-952c-c7f66fe1c09a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कौन सा कानूनी सिद्धांत सीमित उपयोग की अनुमति देता है\nकॉपीराइट सामग्री का बिना अधिकार धारक से अनुमति लिए,\nजैसे कि आलोचना, समाचार रिपोर्टिंग, शिक्षण, और\nअनुसंधान के उद्देश्यों के लिए?",
+      "options_hindi": [
+        "सार्वजनिक डोमेन उपयोग",
+        "कॉपीलेफ्ट लाइसेंसिंग",
+        "फेयर यूज़",
+        "विशेषाधिकार छूट"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which legal doctrine permits the limited use of copyrighted material without acquiring permission from the rights holder for purposes such as criticism, news reporting, teaching, and research?",
+      "options_english": [
+        "Public Domain Usage",
+        "Copyleft Licensing",
+        "Fair Use",
+        "Exclusive Rights Exemption"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The correct answer is 'Fair Use'. This legal doctrine allows for the limited use of copyrighted material without permission from the rights holder, provided it is for purposes such as criticism, comment, news reporting, teaching, scholarship, or research. Fair Use is essential in promoting freedom of expression and the dissemination of knowledge while balancing the rights of copyright holders.",
+      "explanation_hindi": "सही उत्तर (c) है। यह कानूनी सिद्धांत कॉपीराइट सामग्री के सीमित उपयोग की अनुमति देता है बिना अधिकार धारक से अनुमति लिए, बशर्ते कि यह आलोचना, टिप्पणी, समाचार रिपोर्टिंग, शिक्षण, अध्ययन, या अनुसंधान के उद्देश्यों के लिए हो। फेयर यूज़ अभिव्यक्ति की स्वतंत्रता और ज्ञान के प्रसार को बढ़ावा देने में महत्वपूर्ण है, जबकि कॉपीराइट धारकों के अधिकारों का संतुलन भी बनाए रखता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Fair Use allows limited use of copyrighted material without permission.",
+        "It is applicable for criticism, news reporting, teaching, and research.",
+        "Printed answer key: (C) Fair Use"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b49c6d65-b31c-4113-ab0e-6bb70894c3b7",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "72. सूचना प्रौद्योगिकी अधिनियम, 2000 का कौन सा\nधारा इलेक्ट्रॉनिक रूप में अश्लील सामग्री के\nप्रकाशन या प्रसारण के लिए दंड प्रदान करती है?",
+      "options_hindi": [
+        "धारा 67",
+        "धारा 65",
+        "धारा 43",
+        "धारा 70"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which Section of the IT Act, 2000 provides punishment for publishing or transmitting obscene material in electronic form?",
+      "options_english": [
+        "Section 67",
+        "Section 65",
+        "Section 43",
+        "Section 70"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Information Technology Act, 2000 establishes statutory penalties for transmitting inappropriate content across digital communication channels. Section 67 penalizes publishing or transmitting obscene material in electronic form. Anyone publishing or transmitting electronic content that appeals to prurient interest or tends to deprave is subject to legal action under this section.",
+      "explanation_hindi": "सही उत्तर (a) है। सूचना प्रौद्योगिकी अधिनियम, 2000 डिजिटल संचार चैनलों के माध्यम से अनुपयुक्त सामग्री के प्रसारण के लिए वैधानिक दंड स्थापित करता है। धारा 67 इलेक्ट्रॉनिक रूप में अश्लील सामग्री के प्रकाशन या प्रसारण को दंडित करती है। जो कोई भी ऐसा इलेक्ट्रॉनिक सामग्री प्रकाशित या प्रसारित करता है जो प्रुरिएंट रुचि को आकर्षित करता है या विकृत करने की प्रवृत्ति रखता है, उसे इस धारा के तहत कानूनी कार्रवाई का सामना करना पड़ता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Section 67 addresses obscene material in electronic form.",
+        "It establishes penalties for inappropriate content transmission.",
+        "Legal action can be taken against violators.",
+        "Printed answer key: (A) Section 67"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "970e3d0a-59d2-42f5-83db-6752abfceb25",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "डेटा सुरक्षा मानकों के तहत डेटा मिटाने की विधियों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. तार्किक हटाना (फाइल को रीसायकल बिन में ले जाना) डेटा को स्थायी रूप से नष्ट कर देता है।\nB. स्टोरेज मीडिया को कई बार यादृच्छिक बिट्स से ओवरराइट करना फोरेंसिक डेटा पुनर्प्राप्ति को रोकता है।\nC. भौतिक विनाश (डिगॉसिंग या हार्ड ड्राइव को काटना) डेटा की पूर्ण अप्राप्यता की गारंटी देता है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल B और C",
+        "केवल A और B",
+        "केवल A और C",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Data Erasure mechanisms under data protection standards:\nA. Logical deletion (moving file to Recycle Bin) permanently destroys data beyond recovery.\nB. Overwriting storage media with random bits multiple times prevents forensic data recovery.\nC. Physical destruction (degaussing or shredding hard drives) guarantees complete data unrecoverability.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "B and C only",
+        "A and B only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Permanent data destruction requires technical procedures that prevent forensic recovery of stored information. Moving files to a digital Recycle Bin merely deletes index references, leaving underlying data fully recoverable using forensic recovery tools. In contrast, overwriting storage media with random data bits multiple times or executing physical destruction via degaussing and disk shredding guarantees that stored data remains completely unrecoverable.",
+      "explanation_hindi": "सही उत्तर (a) है। स्थायी डेटा नष्ट करने के लिए तकनीकी प्रक्रियाओं की आवश्यकता होती है जो संग्रहीत जानकारी की फोरेंसिक पुनर्प्राप्ति को रोकती हैं। फ़ाइलों को डिजिटल रीसायकल बिन में ले जाना केवल अनुक्रमणिका संदर्भों को हटाता है, जिससे अंतर्निहित डेटा फोरेंसिक पुनर्प्राप्ति उपकरणों का उपयोग करके पूरी तरह से पुनर्प्राप्त किया जा सकता है। इसके विपरीत, स्टोरेज मीडिया को कई बार यादृच्छिक डेटा बिट्स से ओवरराइट करना या डिगॉसिंग और डिस्क काटने के माध्यम से भौतिक विनाश करना यह सुनिश्चित करता है कि संग्रहीत डेटा पूरी तरह से अप्राप्य बना रहे।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Logical deletion does not guarantee data unrecoverability.",
+        "Overwriting and physical destruction are effective data erasure methods.",
+        "Printed answer key: (A) B and C only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ddd1eef7-123b-42c9-977b-796eace58bb5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "45. सूची I को सूची II के साथ मिलाएं:\nसूची I: (सुरक्षा तंत्र)\nP. एंटीवायरस सॉफ़्टवेयर\nQ. फ़ायरवॉल\nR. डेटा एन्क्रिप्शन\nS. दो-कारक प्रमाणीकरण\nसूची II: (प्राथमिक सुरक्षा कार्य)",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (Security Mechanism)\nP. Antivirus Software\nQ. Firewall\nR. Data Encryption\nS. Two-Factor Authentication\nList II: (Primary Security Function)",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Essential security mechanisms fulfill complementary roles within an organizational cyber defense architecture. Antivirus software scans local host storage drives to detect and remove malicious code. A firewall filters incoming and outgoing traffic based on predefined security rules. Data encryption converts plaintext into unreadable ciphertext to guarantee confidentiality. Two-factor authentication verifies user identity using multiple distinct factors, preventing unauthorized system access through stolen passwords.",
+      "explanation_hindi": "सही उत्तर (a) है। आवश्यक सुरक्षा तंत्र संगठनात्मक साइबर रक्षा आर्किटेक्चर में पूरक भूमिकाएँ निभाते हैं। एंटीवायरस सॉफ़्टवेयर स्थानीय होस्ट भंडारण ड्राइव को स्कैन करता है ताकि दुर्भावनापूर्ण कोड का पता लगाया जा सके और उसे हटाया जा सके। फ़ायरवॉल पूर्वनिर्धारित सुरक्षा नियमों के आधार पर आने वाले और जाने वाले ट्रैफ़िक को फ़िल्टर करता है। डेटा एन्क्रिप्शन स्पष्ट पाठ को अपठनीय सिफरटेक्स्ट में परिवर्तित करता है ताकि गोपनीयता सुनिश्चित की जा सके। दो-कारक प्रमाणीकरण कई अलग-अलग कारकों का उपयोग करके उपयोगकर्ता की पहचान की पुष्टि करता है, जिससे चोरी हुए पासवर्ड के माध्यम से अनधिकृत प्रणाली पहुंच को रोका जा सके।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Antivirus software detects and removes malicious code.",
+        "Firewalls filter traffic based on security rules.",
+        "Printed answer key: (A) P-II, Q-I, R-IV, S-III"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "324c9bf1-5206-4de0-a2fd-2fc85d8d0c43",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "70. नीचे दिए गए दो कथन हैं: एक को असर्शन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है। \nअसर्शन (A): लेयर 7 (एप्लिकेशन लेयर) पर काम करने वाले फ़ायरवॉल वेब सामग्री और विशिष्ट एप्लिकेशन कमांड के आधार पर ट्रैफ़िक को फ़िल्टर कर सकते हैं। \nकारण (R): एप्लिकेशन-लेयर फ़ायरवॉल पैकेट हेडर की केवल लेयर 3 (नेटवर्क लेयर) तक जांच करते हैं बिना संदेश के पेलोड को पढ़े। \nउपरोक्त कथनों के प्रकाश में, नीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). \nAssertion (A): Firewalls operating at Layer 7 (Application Layer) can filter traffic based on web content and specific application commands. \nReason (R): Application-layer firewalls inspect packet headers only up to Layer 3 (Network Layer) without reading message payloads. \nIn light of the above statements, choose the correct answer from the options given below:",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Modern application-layer firewalls operate at Layer 7 of the Open Systems Interconnection model, enabling them to analyze specific application protocols, web content, and HTTP commands. The statement regarding packet inspection limiting analysis to Layer 3 header fields is incorrect, as application firewalls perform deep packet inspection, examining full message payloads beyond basic IP packet headers to block sophisticated web threats.",
+      "explanation_hindi": "सही उत्तर (c) है। आधुनिक एप्लिकेशन-लेयर फ़ायरवॉल ओपन सिस्टम इंटरकनेक्शन मॉडल की लेयर 7 पर काम करते हैं, जिससे उन्हें विशिष्ट एप्लिकेशन प्रोटोकॉल, वेब सामग्री और HTTP कमांड का विश्लेषण करने की अनुमति मिलती है। पैकेट निरीक्षण के बारे में कथन जो विश्लेषण को लेयर 3 हेडर फ़ील्ड तक सीमित करता है, गलत है, क्योंकि एप्लिकेशन फ़ायरवॉल गहरे पैकेट निरीक्षण करते हैं, जो मूल IP पैकेट हेडर से परे पूर्ण संदेश पेलोड की जांच करते हैं ताकि जटिल वेब खतरों को अवरुद्ध किया जा सके।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Application-layer firewalls operate at Layer 7 of the OSI model.",
+        "They perform deep packet inspection beyond Layer 3.",
+        "Printed answer key: (C) A is true but R is false."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2058e4ec-584d-44ce-a087-d8647086f08f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "89. कौन सा सिद्धांत यह सुनिश्चित करता है कि एक प्रेषक किसी विशेष संदेश को भेजने या किसी लेनदेन को आरंभ करने से इनकार नहीं कर सकता?",
+      "options_hindi": [
+        "गोपनीयता",
+        "अखंडता",
+        "अस्वीकृति-निषेध",
+        "उपलब्धता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which concept ensures that a sender cannot deny having sent a specific message or initiated a transaction?",
+      "options_english": [
+        "Confidentiality",
+        "Integrity",
+        "Non-repudiation",
+        "Availability"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Cryptographic communications guarantee operational trust by enforcing non-repudiation across digital transactions. Non-repudiation ensures that an individual or entity initiating an action cannot deny having done so, thus providing accountability and integrity in digital communications. This concept is crucial in legal and financial contexts where proof of action is necessary.",
+      "explanation_hindi": "सही उत्तर (c) है। क्रिप्टोग्राफिक संचार संचालनात्मक विश्वास की गारंटी देता है, जो डिजिटल लेनदेन में अस्वीकृति-निषेध को लागू करता है। अस्वीकृति-निषेध यह सुनिश्चित करता है कि कोई व्यक्ति या संस्था जो किसी क्रिया को आरंभ करती है, वह इसे करने से इनकार नहीं कर सकती, इस प्रकार डिजिटल संचार में जवाबदेही और अखंडता प्रदान करती है। यह सिद्धांत कानूनी और वित्तीय संदर्भों में महत्वपूर्ण है जहाँ क्रिया का प्रमाण आवश्यक होता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Non-repudiation is essential for accountability in digital transactions.",
+        "Printed answer key: (C) Non-repudiation"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8e4c816c-07e1-4ca0-920c-14c65cc09576",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "36. कौन सा निवारक उपाय सबसे प्रभावी है\nजो पारंपरिक सिग्नेचर-आधारित एंटीवायरस सॉफ़्टवेयर को\nबायपास करने वाले जीरो-डे रैनसमवेयर हमलों के खिलाफ है?",
+      "options_hindi": [
+        "जब भी कर्मचारी अस्थायी रूप से अपने डेस्क से दूर जाते हैं,\nभौतिक कंप्यूटर मॉनिटरों को बंद करना",
+        "संक्षिप्त, सरल अल्फ़ान्यूमेरिक पासवर्ड का उपयोग करना\nजो दैनिक संचालन कार्यक्रम पर मैन्युअल रूप से अपडेट होते हैं",
+        "व्यवहार विश्लेषण उपकरणों का उपयोग करना और नियमित ऑफ़लाइन\nअपरिवर्तनीय डेटा बैकअप के साथ",
+        "सभी सिस्टम डेटा बैकअप को सीधे उसी स्थानीय\nअन्क्रिप्टेड प्राथमिक सिस्टम डिस्क ड्राइव पर स्टोर करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which preventive measure is most effective against zero-day ransomware attacks that bypass traditional signature-based antivirus software?",
+      "options_english": [
+        "Turning off physical computer monitors whenever staff members temporarily step away from their desks",
+        "Utilizing short, simple alphanumeric passwords that are manually updated on a daily operational schedule",
+        "Utilizing behavioral analysis tools alongside regular offline immutable data backups",
+        "Storing all system data backups directly on the same local unencrypted primary system disk drive"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Zero-day ransomware threats exploit unknown software vulnerabilities, rendering traditional signature-based antivirus solutions ineffective. To counter these advanced threats, organizations deploy endpoint behavioral analysis tools that detect anomalous file encryption activity in real-time. Paired with regular offline immutable data backups, organizations ensure complete data resilience; if files are encrypted, clean data copies can be restored without paying ransoms or suffering permanent data loss.",
+      "explanation_hindi": "सही उत्तर (c) है। जीरो-डे रैनसमवेयर खतरों का उपयोग अज्ञात सॉफ़्टवेयर कमजोरियों का लाभ उठाने के लिए किया जाता है, जिससे पारंपरिक सिग्नेचर-आधारित एंटीवायरस समाधान अप्रभावी हो जाते हैं। इन उन्नत खतरों का मुकाबला करने के लिए, संगठन ऐसे एंडपॉइंट व्यवहार विश्लेषण उपकरणों को तैनात करते हैं जो वास्तविक समय में असामान्य फ़ाइल एन्क्रिप्शन गतिविधियों का पता लगाते हैं। नियमित ऑफ़लाइन अपरिवर्तनीय डेटा बैकअप के साथ मिलकर, संगठन पूर्ण डेटा लचीलापन सुनिश्चित करते हैं; यदि फ़ाइलें एन्क्रिप्ट की जाती हैं, तो साफ डेटा प्रतियां बिना फिरौती का भुगतान किए या स्थायी डेटा हानि का सामना किए पुनर्स्थापित की जा सकती हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Zero-day ransomware exploits unknown vulnerabilities.",
+        "Behavioral analysis tools detect anomalous activities.",
+        "Regular offline immutable backups ensure data resilience.",
+        "Printed answer key: (C) Utilizing behavioral analysis tools alongside"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "05d6223c-ade4-4b22-9861-e139e07e9384",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "“दुष्प्रचार” और “गलत सूचना” में मौलिक रूप से क्या अंतर है?",
+      "options_hindi": [
+        "दुष्प्रचार केवल पारंपरिक मुद्रित मीडिया पर लागू होता है, जबकि गलत सूचना विशेष रूप से ऑनलाइन डिजिटल प्लेटफार्मों से संबंधित है",
+        "दुष्प्रचार केवल विदेशी राज्य संस्थाओं द्वारा आयोजित किया जाता है, जबकि गलत सूचना घरेलू व्यक्तियों द्वारा उत्पन्न होती है",
+        "गलत सूचना एक गंभीर समस्या है",
+        "दुष्प्रचार का उद्देश्य केवल राजनीतिक लाभ प्राप्त करना है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "How does “Disinformation” differ fundamentally from “Misinformation”?",
+      "options_english": [
+        "Disinformation applies strictly to traditional printed media, whereas misinformation pertains exclusively to online digital platforms",
+        "Disinformation is orchestrated exclusively by foreign state entities, whereas misinformation originates from domestic individuals",
+        "Misinformation constitutes a severe issue",
+        "Disinformation aims solely to gain political advantage"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The correct answer is d. Disinformation is often characterized by its intent to mislead or manipulate public perception, typically for political gain. In contrast, misinformation refers to false or misleading information that is spread without malicious intent. Understanding the distinction between these two concepts is crucial in the context of media literacy and critical thinking, especially in an age where information is rapidly disseminated across various platforms.",
+      "explanation_hindi": "सही उत्तर (d) है। दुष्प्रचार अक्सर जनता की धारणा को भ्रामक या हेरफेर करने के इरादे से किया जाता है, जो आमतौर पर राजनीतिक लाभ के लिए होता है। इसके विपरीत, गलत सूचना उस झूठी या भ्रामक जानकारी को संदर्भित करती है जो दुर्भावनापूर्ण इरादे के बिना फैलती है। इन दोनों अवधारणाओं के बीच के अंतर को समझना मीडिया साक्षरता और महत्वपूर्ण सोच के संदर्भ में महत्वपूर्ण है, विशेष रूप से उस युग में जब जानकारी विभिन्न प्लेटफार्मों पर तेजी से प्रसारित होती है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Disinformation is intended to mislead for political gain.",
+        "Misinformation is spread without malicious intent.",
+        "Printed answer key: (D) Disinformation aims solely to gain political advantage"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7431d491-4bd8-4a02-858f-905ab4e1bae5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "76. DPDP अधिनियम, 2023 के तहत, एक बच्चे (18 वर्ष से कम) के व्यक्तिगत डेटा को संसाधित करने के लिए आवश्यक है:",
+      "options_hindi": [
+        "बच्चे से सीधे मौखिक सहमति",
+        "यदि डेटा निजी शैक्षणिक विक्रेताओं द्वारा एकत्र किया गया है तो कोई सहमति नहीं",
+        "स्थानीय पुलिस अधिकारियों को सूचित करना",
+        "माता-पिता या कानूनी अभिभावक की सत्यापित सहमति"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Under the DPDP Act, 2023, processing personal data of a child (under 18 years) requires:",
+      "options_english": [
+        "Oral consent from the child directly",
+        "No consent if data is collected by private educational vendors",
+        "Notification to local police authorities",
+        "Verifiable consent of the parent or lawful guardian"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The Digital Personal Data Protection Act, 2023 establishes legal safeguards for processing personal data belonging to minors under eighteen years of age. Data Fiduciaries are statutorily required to obtain verifiable consent from the child’s parent or lawful guardian before initiating any personal data processing activities, ensuring parental oversight and protection against unauthorized commercial tracking or exploitation.",
+      "explanation_hindi": "सही उत्तर (d) है। डिजिटल व्यक्तिगत डेटा संरक्षण अधिनियम, 2023, अठारह वर्ष से कम उम्र के बच्चों के व्यक्तिगत डेटा को संसाधित करने के लिए कानूनी सुरक्षा स्थापित करता है। डेटा फिड्यूशियरी को किसी भी व्यक्तिगत डेटा प्रसंस्करण गतिविधियों को शुरू करने से पहले बच्चे के माता-पिता या कानूनी अभिभावक से सत्यापित सहमति प्राप्त करना आवश्यक है, जिससे माता-पिता की निगरानी और अनधिकृत वाणिज्यिक ट्रैकिंग या शोषण से सुरक्षा सुनिश्चित होती है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital Personal Data Protection Act, 2023 mandates parental consent for processing children's data.",
+        "Data Fiduciaries must ensure compliance with legal safeguards.",
+        "Printed answer key: (D) Verifiable consent of the parent or lawful guardian"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "54574f33-1313-475e-990d-e01a38f16f3e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "धारा 66C के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "धारा 66C की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "स्ट्रेटेजिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding Section 66C, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of Section 66C",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Information Technology Act, 2000 contains specific provisions penalizing digital offenses to ensure cybersecurity. Section 66C specifically addresses punishment for identity theft. Under this statutory section, whoever fraudulently or dishonestly makes use of the electronic signature, password, or any other unique identification feature of another person faces imprisonment for a term extending up to three years along with a liability to pay a monetary fine.",
+      "explanation_hindi": "सही उत्तर (b) है। सूचना प्रौद्योगिकी अधिनियम, 2000 में साइबर सुरक्षा सुनिश्चित करने के लिए डिजिटल अपराधों को दंडित करने के लिए विशिष्ट प्रावधान हैं। धारा 66C विशेष रूप से पहचान की चोरी के लिए दंड का उल्लेख करती है। इस वैधानिक धारा के तहत, जो कोई किसी अन्य व्यक्ति के इलेक्ट्रॉनिक हस्ताक्षर, पासवर्ड, या किसी अन्य अद्वितीय पहचान विशेषता का धोखाधड़ी या बेईमानी से उपयोग करता है, उसे तीन वर्ष तक की सजा और मौद्रिक जुर्माना अदा करने की जिम्मेदारी का सामना करना पड़ता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Section 66C addresses identity theft and its penalties.",
+        "Imprisonment for up to three years for fraudulent use of identification features.",
+        "Printed answer key: (B) Section 66C"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a40501da-ed90-40d3-8bef-357992cbc59e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "28. निम्नलिखित में से कौन सा संगठन में सक्रिय साइबर सुरक्षा डेटा उल्लंघन के प्रति प्रतिक्रिया देने के लिए कदमों का सही अनुक्रम दर्शाता है?",
+      "options_hindi": [
+        "नियंत्रण → पहचान → उन्मूलन → पुनर्प्राप्ति → घटना के बाद का विश्लेषण",
+        "पहचान → नियंत्रण → उन्मूलन → पुनर्प्राप्ति → घटना के बाद का विश्लेषण",
+        "पुनर्प्राप्ति → उन्मूलन → नियंत्रण → पहचान → घटना के बाद का विश्लेषण",
+        "पहचान → पुनर्प्राप्ति → उन्मूलन → नियंत्रण → घटना के बाद का विश्लेषण"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following represents the correct sequence of steps in responding to an active cyber security data breach in an organization?",
+      "options_english": [
+        "Containment → Detection → Eradication → Recovery → Post-incident analysis",
+        "Detection → Containment → Eradication → Recovery → Post-incident analysis",
+        "Recovery → Eradication → Containment → Detection → Post-incident analysis",
+        "Detection → Recovery → Eradication → Containment → Post-incident analysis"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Standard incident response frameworks dictate a logical sequence of phases to effectively mitigate cyber security data breaches. First, detection identifies the security incident and assesses its scope. Second, containment isolates affected systems to prevent threat propagation across networks. Third, eradication eliminates the root threat and patches system vulnerabilities. Fourth, recovery restores clean systems to operational status. Finally, post-incident analysis reviews response efficacy to improve resilience.",
+      "explanation_hindi": "सही उत्तर (b) है। मानक घटना प्रतिक्रिया ढांचे साइबर सुरक्षा डेटा उल्लंघनों को प्रभावी ढंग से कम करने के लिए चरणों के एक तार्किक अनुक्रम को निर्धारित करते हैं। पहले, पहचान सुरक्षा घटना की पहचान करती है और इसके दायरे का आकलन करती है। दूसरे, नियंत्रण प्रभावित प्रणालियों को अलग करता है ताकि नेटवर्क में खतरे के प्रसार को रोका जा सके। तीसरे, उन्मूलन मूल खतरे को समाप्त करता है और प्रणाली की कमजोरियों को पैच करता है। चौथे, पुनर्प्राप्ति साफ प्रणालियों को परिचालन स्थिति में बहाल करती है। अंत में, घटना के बाद का विश्लेषण प्रतिक्रिया की प्रभावशीलता की समीक्षा करता है ताकि लचीलापन में सुधार किया जा सके।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Incident response frameworks outline a structured approach to managing cyber incidents.",
+        "Printed answer key: (B) Detection → Containment → Eradication →",
+        "Effective incident response includes detection, containment, eradication, recovery, and analysis."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "cdbd187e-0112-493d-a7eb-b634b7a65ef6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "44. आधुनिक ईमेल फ़िल्टर में कौन सी विशेषता है जो\nआने वाले अटैचमेंट्स का विश्लेषण करती है\nएक अलग वर्चुअल वातावरण में, इससे पहले कि\nउन्हें उपयोगकर्ता के इनबॉक्स में भेजा जाए?",
+      "options_hindi": [
+        "ईमेल धोखाधड़ी",
+        "सैंडबॉक्सिंग",
+        "वेब क्रॉलिंग",
+        "ऑटो-उत्तर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What feature in modern email filters analyzes incoming attachments in an isolated virtual environment before delivering them to the user’s inbox?",
+      "options_english": [
+        "Email spoofing",
+        "Sandboxing",
+        "Web crawling",
+        "Auto-responding"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Advanced email filtering solutions employ automated threat protection techniques to counter dangerous zero-day malware attachments. Sandboxing is a specialized security mechanism that automatically detaches and executes incoming email attachments within a secure, isolated virtual environment. By monitoring the behavior of the attachment in isolation before delivering the message to the user inbox, the system detects malicious actions, preventing ransomware execution and system compromise.",
+      "explanation_hindi": "सही उत्तर (b) है। आधुनिक ईमेल फ़िल्टर उन्नत खतरा सुरक्षा तकनीकों का उपयोग करते हैं ताकि खतरनाक ज़ीरो-डे मैलवेयर अटैचमेंट्स का मुकाबला किया जा सके। सैंडबॉक्सिंग एक विशेष सुरक्षा तंत्र है जो आने वाले ईमेल अटैचमेंट्स को एक सुरक्षित, अलग वर्चुअल वातावरण में स्वचालित रूप से अलग करता है और निष्पादित करता है। संदेश को उपयोगकर्ता के इनबॉक्स में भेजने से पहले अटैचमेंट के व्यवहार की निगरानी करके, प्रणाली दुर्भावनापूर्ण क्रियाओं का पता लगाती है, जिससे रैनसमवेयर निष्पादन और प्रणाली के समझौते को रोका जा सके।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Sandboxing is a security mechanism that isolates and tests attachments.",
+        "It helps prevent malware from executing on user systems.",
+        "Printed answer key: (B) Sandboxing"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "88772d53-bafb-4d73-b29f-3b5e8d82afa4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "71. एक ईमेल हेडर फीचर जिसे SPF (सेंडर\nपॉलिसी फ्रेमवर्क) कहा जाता है, किस\nईमेल खतरे को रोकने के लिए डिज़ाइन किया गया है?",
+      "options_hindi": [
+        "ईमेल प्रेषक पते की धोखाधड़ी",
+        "ईमेल अटैचमेंट आकार का विस्तार",
+        "स्वचालित मेलबॉक्स पूर्ण त्रुटियाँ",
+        "प्राप्तकर्ताओं द्वारा ईमेल हटाना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "An email header feature known as SPF (Sender Policy Framework) is designed to prevent which mail threat?",
+      "options_english": [
+        "Email sender address spoofing",
+        "Email attachment size expansion",
+        "Automatic mailbox full errors",
+        "Email deletion by recipients"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Email domain security protocols rely on public DNS verification standards to authenticate outgoing email origins. Sender Policy Framework is an email authentication technique that allows domain owners to publish a list of authorized IP addresses permitted to send emails on behalf of their domain. Receiving mail servers evaluate SPF records to detect and block malicious sender address spoofing attempts.",
+      "explanation_hindi": "सही उत्तर (a) है। ईमेल डोमेन सुरक्षा प्रोटोकॉल सार्वजनिक DNS सत्यापन मानकों पर निर्भर करते हैं ताकि आउटगोइंग ईमेल मूल की प्रमाणीकरण किया जा सके। सेंडर पॉलिसी फ्रेमवर्क एक ईमेल प्रमाणीकरण तकनीक है जो डोमेन मालिकों को उन अधिकृत IP पतों की सूची प्रकाशित करने की अनुमति देती है जिन्हें उनके डोमेन की ओर से ईमेल भेजने की अनुमति है। प्राप्त करने वाले मेल सर्वर SPF रिकॉर्ड का मूल्यांकन करते हैं ताकि दुर्भावनापूर्ण प्रेषक पते की धोखाधड़ी के प्रयासों का पता लगाया जा सके और उन्हें अवरुद्ध किया जा सके।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "SPF helps in preventing email spoofing.",
+        "It allows domain owners to specify authorized IP addresses.",
+        "Receiving servers check SPF records for verification.",
+        "Printed answer key: (A) Email sender address spoofing"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c52f6990-09cb-425b-9ec2-181299e2763f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "90. सूची I को सूची II के साथ मिलाएँ:\nसूची I: (साइबर सुरक्षा शब्द)\nP. बॉटनेट\nQ. फिरौती मांगने वाला मालवेयर\nR. रूटकिट\nS. एडवेयर\nसूची II: (विवरण)\nI. एक नेटवर्क\n\nसमझौता किए गए\nकंप्यूटरों का\nजो एक हमलावर द्वारा दूरस्थ रूप से नियंत्रित होते हैं",
+      "options_hindi": [
+        "P-I, Q-IV, R-III, S-II",
+        "P-II, Q-III, R-IV, S-I",
+        "P-III, Q-I, R-II, S-IV",
+        "P-IV, Q-II, R-I, S-III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "90. Match List I with List II:\nList I: (Cyber Security Term)\nP. Botnet\nQ. Ransomware\nR. Rootkit\nS. Adware\nList II: (Description)\nI. Network of compromised computers controlled remotely by an attacker",
+      "options_english": [
+        "P-I, Q-IV, R-III, S-II",
+        "P-II, Q-III, R-IV, S-I",
+        "P-III, Q-I, R-II, S-IV",
+        "P-IV, Q-II, R-I, S-III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Distinct malware categories exhibit unique operational behaviors. A botnet is a network of compromised computers controlled remotely by an attacker. Ransomware encrypts user files and locks access until a monetary ransom is paid. A rootkit grants privileged, hidden administrator access to system operating systems. Adware automatically displays unauthorized advertisement pop-ups on infected endpoint devices.",
+      "explanation_hindi": "सही उत्तर (a) है। विभिन्न प्रकार के मालवेयर अद्वितीय संचालन व्यवहार प्रदर्शित करते हैं। बॉटनेट एक नेटवर्क है जिसमें समझौता किए गए कंप्यूटर होते हैं जिन्हें एक हमलावर द्वारा दूरस्थ रूप से नियंत्रित किया जाता है। फिरौती मांगने वाला मालवेयर उपयोगकर्ता की फ़ाइलों को एन्क्रिप्ट करता है और एक मौद्रिक फिरौती का भुगतान किए जाने तक पहुँच को लॉक कर देता है। रूटकिट प्रणाली के ऑपरेटिंग सिस्टम में विशेषाधिकार प्राप्त, छिपी हुई व्यवस्थापक पहुँच प्रदान करता है। एडवेयर संक्रमित एंडपॉइंट उपकरणों पर अनधिकृत विज्ञापन पॉप-अप प्रदर्शित करता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Botnet is a network of compromised computers controlled remotely.",
+        "Ransomware encrypts files and demands payment for access.",
+        "Rootkits provide hidden access to systems.",
+        "Printed answer key: (A) P-I, Q-IV, R-III, S-II"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "44f59f92-e81a-48fc-be18-16bc9378a830",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "23. सूचना प्रौद्योगिकी अधिनियम, 2000 की धारा 70B के तहत CERT-In (भारतीय कंप्यूटर आपातकालीन प्रतिक्रिया टीम) की वैधानिक भूमिका क्या है?",
+      "options_hindi": [
+        "कंप्यूटर सुरक्षा घटनाओं के लिए प्रतिक्रिया देने वाली राष्ट्रीय नोडल एजेंसी",
+        "घरेलू सॉफ़्टवेयर पेटेंट और बौद्धिक संपदा कॉपीराइट प्रदान करने वाली वैधानिक प्राधिकरण",
+        "राष्ट्रीय क्षेत्रों में वाणिज्यिक इंटरनेट सेवा प्रदाताओं को लाइसेंस देने वाली नियामक संस्था",
+        "कंप्यूटर अपराधों के लिए कानूनी परीक्षण करने वाला विशेष न्यायालय"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the statutory role of CERT-In (Indian Computer Emergency Response Team) under Section 70B of the IT Act, 2000?",
+      "options_english": [
+        "National nodal agency for responding to computer security incidents",
+        "Statutory authority granting domestic software patents and intellectual property copyrights",
+        "Regulatory body licensing commercial Internet Service Providers across national regions",
+        "Specialized judicial court conducting legal trials for computer crime offenses"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Section 70B of the Information Technology Act, 2000 designates the Indian Computer Emergency Response Team as the national nodal agency for cybersecurity in India. CERT-In is statutorily tasked with collecting, analyzing, and disseminating information on cyber incidents, issuing security advisories, coordinating emergency response efforts during major security breaches, and issuing binding cybersecurity guidelines to service providers, data centers, and corporate entities nationwide.",
+      "explanation_hindi": "सही उत्तर (a) है। सूचना प्रौद्योगिकी अधिनियम, 2000 की धारा 70B के तहत भारतीय कंप्यूटर आपातकालीन प्रतिक्रिया टीम को भारत में साइबर सुरक्षा के लिए राष्ट्रीय नोडल एजेंसी के रूप में नामित किया गया है। CERT-In को साइबर घटनाओं की जानकारी एकत्रित करने, विश्लेषण करने और प्रसारित करने, सुरक्षा सलाह जारी करने, प्रमुख सुरक्षा उल्लंघनों के दौरान आपातकालीन प्रतिक्रिया प्रयासों का समन्वय करने और सेवा प्रदाताओं, डेटा केंद्रों और कॉर्पोरेट संस्थाओं के लिए बाध्यकारी साइबर सुरक्षा दिशानिर्देश जारी करने का वैधानिक कार्य सौंपा गया है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "CERT-In is the national nodal agency for cybersecurity in India.",
+        "It is responsible for responding to computer security incidents.",
+        "Printed answer key: (A) National nodal agency for responding to computer security incidents."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e5dd500d-a248-4c8b-8563-498ff0a63284",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "4. निपटान लॉग और विनाश प्रमाणपत्र बनाए रखें। नीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "1 → 2 → 3 → 4",
+        "2 → 1 → 3 → 4",
+        "1 → 3 → 2 → 4",
+        "3 → 1 → 2 →"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Maintain disposal logs and destruction certificates. Choose the correct answer from the options given below:",
+      "options_english": [
+        "1 → 2 → 3 → 4",
+        "2 → 1 → 3 → 4",
+        "1 → 3 → 2 → 4",
+        "3 → 1 → 2 →"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Ransomware is a destructive form of malware engineered to compromise victim systems and obstruct access to critical data. During an attack, the ransomware deploys strong cryptographic algorithms, utilizing asymmetric or symmetric encryption to lock files and databases across connected storage media. The victim’s files remain inaccessible because decryption requires a unique, secret cryptographic key held exclusively by the threat actor, who demands financial ransom for its release.",
+      "explanation_hindi": "सही उत्तर (d) है। रैनसमवेयर एक विनाशकारी प्रकार का मैलवेयर है जिसे पीड़ित प्रणालियों से समझौता करने और महत्वपूर्ण डेटा तक पहुंच को बाधित करने के लिए तैयार किया गया है। एक हमले के दौरान, रैनसमवेयर मजबूत क्रिप्टोग्राफिक एल्गोरिदम का उपयोग करता है, असममित या सममित एन्क्रिप्शन का उपयोग करके फ़ाइलों और डेटाबेस को लॉक करता है। पीड़ित की फ़ाइलें अनुपलब्ध रहती हैं क्योंकि डिक्रिप्शन के लिए एक अद्वितीय, गुप्त क्रिप्टोग्राफिक कुंजी की आवश्यकता होती है जो विशेष रूप से खतरे के अभिनेता के पास होती है, जो इसके विमोचन के लिए वित्तीय फिरौती की मांग करता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "hard",
+      "key_facts": [
+        "Ransomware uses strong cryptographic algorithms for data encryption.",
+        "Printed answer key: (D) Asymmetric or symmetric encryption of data"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "aa0439cd-5ffa-4297-9911-19fac238bbf4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) और दूसरे को\nकारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): शैक्षणिक संस्थानों को\nछात्र डेटा को संभालने के लिए अपने\nप्रशासनिक डेटाबेस सॉफ़्टवेयर पर\nभूमिका-आधारित पहुंच नियंत्रण (RBAC)\nलागू करना चाहिए।\nकारण (R): RBAC यह सुनिश्चित करता है कि\nकर्मचारी केवल उन डेटा और सिस्टम तक\nपहुँच प्राप्त करें जो उनके सौंपे गए\nकार्य जिम्मेदारियों को पूरा करने के लिए\nआवश्यक हैं।\nउपरोक्त कथनों के आलोक में, नीचे दिए गए\nविकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही\nव्याख्या है।",
+        "दोनों A और R सत्य हैं लेकिन R A का\nसही व्याख्या नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled\nas Assertion (A) and the other is labelled as\nReason (R).\nAssertion (A): Educational institutions handling\nstudent data must implement Role-Based\nAccess Control (RBAC) on their administrative\ndatabase software.\nReason (R): RBAC ensures that staff members\nare granted access only to the data and\nsystems necessary to perform their assigned job\nresponsibilities.\nIn light of the above statements, choose the\ncorrect answer from the options given below:",
+      "options_english": [
+        "Both A and R are true and R is the correct\nexplanation of A.",
+        "Both A and R are true but R is not the\ncorrect explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Role-Based Access Control is a fundamental\naccess management strategy that restricts\nsystem access to authorized personnel based on\ndesignated organizational roles. Implementing\nRBAC on administrative databases in educational\ninstitutions ensures that faculty, administrative\nstaff, and IT personnel are granted access\npermissions strictly necessary to fulfill their\nspecific job duties. This enforces the principle of\nleast privilege, preventing unauthorized access to\nsensitive records.",
+      "explanation_hindi": "सही उत्तर (a) है। भूमिका-आधारित पहुंच नियंत्रण एक मौलिक\nपहुँच प्रबंधन रणनीति है जो अधिकृत कर्मचारियों को\nनिर्धारित संगठनात्मक भूमिकाओं के आधार पर सिस्टम\nपहुँच को प्रतिबंधित करती है। शैक्षणिक संस्थानों में\nप्रशासनिक डेटाबेस पर RBAC लागू करने से यह सुनिश्चित\nहोता है कि संकाय, प्रशासनिक कर्मचारी और IT कर्मियों को\nउनकी विशिष्ट कार्य जिम्मेदारियों को पूरा करने के लिए\nआवश्यक पहुँच अनुमतियाँ दी जाती हैं। यह न्यूनतम\nअधिकार के सिद्धांत को लागू करता है, संवेदनशील रिकॉर्ड\nतक अनधिकृत पहुँच को रोकता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Role-Based Access Control (RBAC) is essential for data protection.",
+        "RBAC limits access based on job roles to enhance security.",
+        "Implementing RBAC helps in enforcing the principle of least privilege.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "0fcd0edb-9f83-41db-871d-bef163b2ff98",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "3. हार्ड ड्राइव को डिगॉस या भौतिक रूप से नष्ट करें।",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "विकल्प सी",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Degauss or physically shred hard drives.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Pretexting",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Social engineering relies on psychological manipulation to trick individuals into divulging confidential information or granting unauthorized system access. Pretexting is a specific social engineering technique where an attacker invents a plausible, fabricated scenario or false identity to manipulate a target victim. The attacker establishes trust by pretending to be an authority figure, auditor, or service provider, persuading the victim to reveal sensitive data, credentials, or administrative secrets.",
+      "explanation_hindi": "सही उत्तर (c) है। सामाजिक इंजीनियरिंग मनोवैज्ञानिक हेरफेर पर निर्भर करती है ताकि व्यक्तियों को गोपनीय जानकारी प्रकट करने या अनधिकृत प्रणाली तक पहुंच देने के लिए धोखा दिया जा सके। प्रीटेक्सटिंग एक विशिष्ट सामाजिक इंजीनियरिंग तकनीक है जहां एक हमलावर एक संभावित, निर्मित परिदृश्य या झूठी पहचान का आविष्कार करता है ताकि एक लक्षित पीड़ित को हेरफेर किया जा सके। हमलावर एक प्राधिकरण व्यक्ति, ऑडिटर, या सेवा प्रदाता होने का नाटक करके विश्वास स्थापित करता है, पीड़ित को संवेदनशील डेटा, क्रेडेंशियल्स, या प्रशासनिक रहस्यों को प्रकट करने के लिए मनाता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Social engineering techniques include pretexting, phishing, and baiting.",
+        "Printed answer key: (C) Pretexting"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

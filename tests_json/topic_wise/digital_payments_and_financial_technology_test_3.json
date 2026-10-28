@@ -1,0 +1,801 @@
+{
+  "test_id": "f9f5eb42-c85d-4373-aa19-00ba4baf2e52",
+  "test_name": "Topic Test: DIGITAL_PAYMENTS_AND_FINANCIAL_TECHNOLOGY - Part 3",
+  "type": "topic_wise",
+  "topic": "digital_payments_and_financial_technology",
+  "created_at": "2026-10-28T18:55:06.605530",
+  "questions": [
+    {
+      "id": "56bcf63f-8922-4947-8c4c-d58c1e77a921",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सार्वजनिक ओपन वाई-फाई नेटवर्क का उपयोग करते समय ऑनलाइन नेट बैंकिंग लेनदेन करने से संबंधित मुख्य सुरक्षा जोखिम क्या है?",
+      "options_hindi": [
+        "सभी लेनदेन मूल्यों पर आयकर अधिभार का स्वचालित लेवी और कटौती।",
+        "पूर्ण नेटवर्क विफलता जो बैंकों को तात्कालिक एसएमएस सत्यापन अलर्ट भेजने से रोकती है।",
+        "मैन-इन-द-मिडल (MitM) ईव्सड्रॉपिंग, पैकेट स्निफिंग, और डेटा इंटरसेप्शन।",
+        "जुड़ने वाले मोबाइल उपकरण के स्क्रीन डिस्प्ले को स्थायी हार्डवेयर क्षति।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the main security risk associated with utilizing public open Wi-Fi networks for performing online net banking transactions?",
+      "options_english": [
+        "Automatic levy and deduction of income tax surcharges on all transaction values.",
+        "Complete network failure preventing banks from sending instant SMS verification alerts.",
+        "Man-in-the-Middle (MitM) eavesdropping, packet sniffing, and data interception.",
+        "Permanent hardware damage caused to the screen display of the connecting mobile device."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Utilizing open public wireless networks for internet banking poses severe cyber risks due to lack of encryption and weak access controls. Cyber criminals can deploy packet sniffing tools or execute man-in-the-middle attacks on public networks, intercepting sensitive data streams, login credentials, card numbers, and session tokens transmitted between the user device and financial portal servers.",
+      "explanation_hindi": "सही उत्तर (c) है। सार्वजनिक ओपन वाई-फाई नेटवर्क का उपयोग करते समय ऑनलाइन नेट बैंकिंग में गंभीर साइबर जोखिम होते हैं क्योंकि इसमें एन्क्रिप्शन और कमजोर पहुँच नियंत्रण की कमी होती है। साइबर अपराधी पैकेट स्निफिंग उपकरणों का उपयोग कर सकते हैं या सार्वजनिक नेटवर्क पर मैन-इन-द-मिडल हमले कर सकते हैं, जिससे संवेदनशील डेटा स्ट्रीम, लॉगिन क्रेडेंशियल, कार्ड नंबर और उपयोगकर्ता उपकरण और वित्तीय पोर्टल सर्वर के बीच भेजे गए सत्र टोकन को इंटरसेप्ट किया जा सकता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Public Wi-Fi networks are often unsecured and lack encryption.",
+        "Man-in-the-Middle attacks can intercept sensitive information.",
+        "Packet sniffing tools can capture data transmitted over networks.",
+        "Printed answer key: (C) Man-in-the-Middle (MitM) eavesdropping, packet sniffing, and data interception."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5e8ac0a1-fb54-4ff3-a62a-211932ab91c1",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "7.\n\nयूपीआई लाइट के लिए प्रति लेनदेन अधिकतम सीमा क्या है, जिसे बिना यूपीआई पिन का उपयोग किए छोटे-मूल्य के ऑफ़लाइन/ऑनलाइन डिजिटल लेनदेन को सुविधाजनक बनाने के लिए पेश किया गया है?",
+      "options_hindi": [
+        "₹100",
+        "₹500",
+        "₹2,000",
+        "₹5,000"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the maximum upper limit per transaction for UPI Lite, introduced to facilitate small-value offline/online digital transactions without using a UPI PIN?",
+      "options_english": [
+        "₹100",
+        "₹500",
+        "₹2,000",
+        "₹5,000"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Designed to facilitate small-value digital transactions without requiring a Personal Identification Number, the maximum per-transaction limit for offline payments using this lightweight mechanism is set at five hundred rupees. This boundary ensures quick processing for routine everyday purchases while minimizing potential financial risk, allowing users to execute rapid micro-transactions directly from an on-device digital balance without network delays.",
+      "explanation_hindi": "सही उत्तर (b) है। छोटे-मूल्य के डिजिटल लेनदेन को बिना व्यक्तिगत पहचान संख्या की आवश्यकता के लिए सुविधाजनक बनाने के लिए, इस हल्के तंत्र का उपयोग करते हुए ऑफ़लाइन भुगतानों के लिए प्रति लेनदेन अधिकतम सीमा पांच सौ रुपये निर्धारित की गई है। यह सीमा रोज़मर्रा की खरीदारी के लिए त्वरित प्रसंस्करण सुनिश्चित करती है और संभावित वित्तीय जोखिम को कम करती है, जिससे उपयोगकर्ता नेटवर्क की देरी के बिना सीधे अपने उपकरण के डिजिटल बैलेंस से त्वरित सूक्ष्म लेनदेन कर सकते हैं।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "easy",
+      "key_facts": [
+        "UPI Lite facilitates small-value transactions without a PIN.",
+        "Maximum limit for UPI Lite transactions is ₹500.",
+        "Designed for quick processing of everyday purchases.",
+        "Printed answer key: (B) ₹500"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "31106448-3465-4e91-8059-c423f644964c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "भारत इंटरफेस फॉर मनी (BHIM) एप्लिकेशन की कौन सी विशेषता उपयोगकर्ताओं को उन व्यक्तियों को धन हस्तांतरित करने की अनुमति देती है जिनके पास वर्चुअल पेमेंट एड्रेस (VPA) या स्मार्टफोन नहीं है?",
+      "options_hindi": [
+        "संपर्क रहित निकट क्षेत्र संचार भुगतान",
+        "एन्क्रिप्टेड ब्लूटूथ पीयर-टू-पीयर डेटा ट्रांसफर",
+        "मानक बैंक खाता संख्या और IFSC ट्रांसफर",
+        "फीचर फोन USSD कोड *99# नेटवर्क प्रणाली"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which feature of the Bharat Interface for Money (BHIM) application allows users to transfer funds to individuals who do not possess a Virtual Payment Address (VPA) or smartphone?",
+      "options_english": [
+        "Contactless Near Field Communication payment",
+        "Encrypted Bluetooth peer-to-peer data transfer",
+        "Standard bank account number and IFSC transfer",
+        "Feature phone USSD code *99# network system"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Bharat Interface for Money application provides multiple transfer options to accommodate diverse user needs. For beneficiaries who do not possess a Virtual Payment Address or a smartphone, the system allows direct transfers using the recipient’s standard account number and Indian Financial System Code. This ensures broad accessibility, enabling seamless electronic fund distribution across all registered banking accounts.",
+      "explanation_hindi": "सही उत्तर (c) है। भारत इंटरफेस फॉर मनी एप्लिकेशन विभिन्न उपयोगकर्ता आवश्यकताओं को पूरा करने के लिए कई ट्रांसफर विकल्प प्रदान करता है। उन लाभार्थियों के लिए जिनके पास वर्चुअल पेमेंट एड्रेस या स्मार्टफोन नहीं है, यह प्रणाली प्राप्तकर्ता के मानक खाता संख्या और भारतीय वित्तीय प्रणाली कोड का उपयोग करके सीधे ट्रांसफर की अनुमति देती है। यह व्यापक पहुंच सुनिश्चित करता है, जिससे सभी पंजीकृत बैंक खातों के बीच निर्बाध इलेक्ट्रॉनिक धन वितरण संभव होता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "BHIM एप्लिकेशन उपयोगकर्ताओं को सीधे बैंक खाता संख्या और IFSC का उपयोग करके धन हस्तांतरित करने की अनुमति देता है।",
+        "Printed answer key: (C) Standard bank account number and IFSC",
+        "यह प्रणाली उन उपयोगकर्ताओं के लिए डिज़ाइन की गई है जिनके पास स्मार्टफोन या VPA नहीं है।",
+        "यह भारतीय वित्तीय प्रणाली के तहत कार्य करता है।"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2bb246ee-d6c3-4cce-b777-15e875bf1690",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II के साथ मिलाएं:\nसूची I: (डिजिटल वित्तीय तंत्र)\nP. व्यापारी छूट दर (MDR)\nQ. दो-कारक प्रमाणीकरण (2FA)\nR. टोकनाइजेशन\nS. केंद्रीय बैंक डिजिटल मुद्रा (CBDC)\nसूची II: (मुख्य नियामक / तकनीकी अवधारणा)\nI. डेबिट/क्रेडिट कार्ड लेनदेन को संसाधित करने के लिए व्यापारी से लिया गया शुल्क\nII. पहचान प्रमाणों के दो अलग-अलग रूपों की आवश्यकता वाली सुरक्षा प्रक्रिया\nIII. वास्तविक संवेदनशील कार्ड विवरणों को एक अद्वितीय टोकन कोड के साथ प्रतिस्थापित करने की प्रक्रिया\nIV. केंद्रीय बैंक द्वारा जारी और समर्थित फिएट मुद्रा का डिजिटल रूप\nसही उत्तर चुनें:",
+      "options_hindi": [
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-III, R-II, S-IV",
+        "P-IV, Q-II, R-III, S-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (Digital Financial Mechanism)\nP. Merchant Discount Rate (MDR)\nQ. Two-Factor Authentication (2FA)\nR. Tokenization\nS. Central Bank Digital Currency (CBDC)\nList II: (Core Regulatory / Technical Concept)\nI. Fee charged to a merchant for processing debit/credit card transactions\nII. Security process requiring two distinct forms of identification credentials\nIII. Process of substituting actual sensitive card details with a unique token code\nIV. Digital form of fiat currency issued and backed by the central bank\nChoose the correct answer from the options given below:",
+      "options_english": [
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-III, R-II, S-IV",
+        "P-IV, Q-II, R-III, S-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Merchant Discount Rate is the processing fee charged to merchants by acquirers for card payments. Two-Factor Authentication requires two distinct credential sources to verify identity. Tokenization substitutes sensitive card details with dynamic non-sensitive surrogate codes. Central Bank Digital Currency is an official digital representation of sovereign fiat currency issued and backed directly by the central monetary authority.",
+      "explanation_hindi": "सही उत्तर (a) है। व्यापारी छूट दर (MDR) वह शुल्क है जो व्यापारी से कार्ड भुगतान के लिए लिया जाता है। दो-कारक प्रमाणीकरण में पहचान की पुष्टि के लिए दो अलग-अलग प्रमाणों की आवश्यकता होती है। टोकनाइजेशन संवेदनशील कार्ड विवरणों को गतिशील गैर-संवेदनशील प्रतिनिधि कोड के साथ प्रतिस्थापित करता है। केंद्रीय बैंक डिजिटल मुद्रा एक आधिकारिक डिजिटल प्रतिनिधित्व है जो सीधे केंद्रीय मौद्रिक प्राधिकरण द्वारा जारी और समर्थित फिएट मुद्रा है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "MDR is the fee charged to merchants for card transactions.",
+        "2FA enhances security by requiring two forms of identification.",
+        "Printed answer key: (A) P-I, Q-II, R-III, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "73956c33-e88c-4a72-babc-5ee13ea1a988",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II के साथ मिलाएं:\nसूची I: (डिजिटल भुगतान नियामक/संचालन निकाय)\nP. भारतीय रिजर्व बैंक (आरबीआई)\nQ. राष्ट्रीय भुगतान निगम (एनपीसीआई)\nR. डेटा सुरक्षा परिषद (डीएससीआई)\nS. भारतीय कंप्यूटर आपातकालीन प्रतिक्रिया टीम (सीईआरटी-इन)\nसूची II: (मुख्य दायरा/जिम्मेदारी)\nI. भारत में सभी भुगतान और निपटान प्रणालियों का नियामक पर्यवेक्षण\nII. यूपीआई, आईएमपीएस और रुपे जैसे खुदरा भुगतान आर्किटेक्चर का संचालन\nIII. डेटा सुरक्षा मानकों और साइबर सुरक्षा प्रथाओं को बढ़ावा देना\nIV. कंप्यूटर सुरक्षा घटनाओं का जवाब देने के लिए राष्ट्रीय नोडल एजेंसी\nनीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-III, R-II, S-IV",
+        "P-IV, Q-II, R-III, S-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (Digital Payment Regulatory/Operating Body)\nP. Reserve Bank of India (RBI)\nQ. National Payments Corporation of India (NPCI)\nR. Data Security Council of India (DSCI)\nS. Indian Computer Emergency Response Team (CERT-In)\nList II: (Core Scope/Responsibility)\nI. Regulatory oversight of all payment and settlement systems in India\nII. Operation of retail payment architectures like UPI, IMPS, and RuPay\nIII. Promotion of data protection standards and cybersecurity practices\nIV. National nodal agency for responding to computer security incidents\nChoose the correct answer from the options given below:",
+      "options_english": [
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-III, R-II, S-IV",
+        "P-IV, Q-II, R-III, S-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Reserve Bank of India holds statutory authority over payment and settlement systems nationwide. The National Payments Corporation of India operates retail payment systems including instant transfer networks and domestic card schemes. The Data Security Council of India promotes data protection frameworks and cybersecurity standards. The Computer Emergency Response Team acts as the national agency handling cybersecurity incidents.",
+      "explanation_hindi": "सही उत्तर (a) है। भारतीय रिजर्व बैंक भुगतान और निपटान प्रणालियों पर वैधानिक अधिकार रखता है। राष्ट्रीय भुगतान निगम खुदरा भुगतान प्रणालियों का संचालन करता है, जिसमें तात्कालिक हस्तांतरण नेटवर्क और घरेलू कार्ड योजनाएं शामिल हैं। डेटा सुरक्षा परिषद डेटा सुरक्षा ढांचे और साइबर सुरक्षा मानकों को बढ़ावा देती है। कंप्यूटर आपातकालीन प्रतिक्रिया टीम साइबर सुरक्षा घटनाओं को संभालने वाली राष्ट्रीय एजेंसी है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "भारतीय रिजर्व बैंक सभी भुगतान प्रणालियों का नियामक है।",
+        "राष्ट्रीय भुगतान निगम यूपीआई और आईएमपीएस का संचालन करता है।",
+        "डेटा सुरक्षा परिषद साइबर सुरक्षा मानकों को बढ़ावा देती है।",
+        "Printed answer key: (A) P-I, Q-II, R-III, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5ea0c084-58da-46d6-9161-7a98f606424d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "29. मोबाइल बैंकिंग और डिजिटल लेनदेन में, \"OTP\" संक्षेप का क्या अर्थ है?",
+      "options_hindi": [
+        "ऑनलाइन लेनदेन प्रोटोकॉल",
+        "ऑपरेशनल भुगतान ट्रांसफर",
+        "एक बार का पासवर्ड",
+        "ऑप्टिमल ट्रस्ट पासवर्ड"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In mobile banking and digital transactions, what does the abbreviation “OTP” stand for?",
+      "options_english": [
+        "Online Transaction Protocol",
+        "Operational Payment Transfer",
+        "One-Time Password",
+        "Optimal Trust Password"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "In digital banking and mobile payment applications, the standard abbreviation OTP stands for One-Time Password. It is a dynamically generated numeric or alphanumeric passcode valid for only a single transaction or session during a limited timeframe. Implementing this dynamic factor provides enhanced authentication security, safeguarding accounts against unauthorized access and credential reuse attacks.",
+      "explanation_hindi": "सही उत्तर (c) है। डिजिटल बैंकिंग और मोबाइल भुगतान अनुप्रयोगों में, \"OTP\" संक्षेप का अर्थ एक बार का पासवर्ड है। यह एक गतिशील रूप से उत्पन्न संख्यात्मक या अल्फ़ान्यूमेरिक पासकोड है जो केवल एकल लेनदेन या सत्र के लिए सीमित समयावधि के दौरान मान्य होता है। इस गतिशील कारक को लागू करने से प्रमाणीकरण सुरक्षा में वृद्धि होती है, जो खातों को अनधिकृत पहुंच और प्रमाण पत्र पुन: उपयोग हमलों से सुरक्षित रखती है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "easy",
+      "key_facts": [
+        "OTP stands for One-Time Password, enhancing security in transactions.",
+        "It is valid for a single transaction or session.",
+        "Printed answer key: (C) One-Time Password"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8f040e07-335b-4d98-9159-19c08ee9b314",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "भारत में कौन सा संगठन भुगतान और निपटान प्रणाली अधिनियम, 2007 के प्रावधानों के तहत स्थापित किया गया था, जो खुदरा भुगतान और निपटान प्रणालियों के संचालन के लिए एक छाता संगठन के रूप में कार्य करता है?",
+      "options_hindi": [
+        "भारतीय रिजर्व बैंक (RBI)",
+        "भारत का राष्ट्रीय भुगतान निगम (NPCI)",
+        "सिक्योरिटीज और एक्सचेंज बोर्ड ऑफ इंडिया (SEBI)",
+        "भारतीय बैंकों का संघ (IBA)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which organization in India was established under the provisions of the Payment and Settlement Systems Act, 2007, to act as an umbrella organization for operating retail payments and settlement systems?",
+      "options_english": [
+        "Reserve Bank of India (RBI)",
+        "National Payments Corporation of India (NPCI)",
+        "Securities and Exchange Board of India (SEBI)",
+        "Indian Banks’ Association (IBA)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The National Payments Corporation of India was created as an umbrella organization for operating retail payment and settlement systems across India. Established under the provisions of the Payment and Settlement Systems Act of 2007, it operates as an initiative of the Reserve Bank of India and the Indian Banks’ Association. It facilitates robust, secure, and accessible digital payment infrastructure throughout the nation.",
+      "explanation_hindi": "सही उत्तर (b) है। भारत का राष्ट्रीय भुगतान निगम खुदरा भुगतान और निपटान प्रणालियों के संचालन के लिए एक छाता संगठन के रूप में कार्य करने के लिए भुगतान और निपटान प्रणाली अधिनियम, 2007 के प्रावधानों के तहत स्थापित किया गया था। यह भारतीय रिजर्व बैंक और भारतीय बैंकों के संघ की पहल के रूप में कार्य करता है। यह देश भर में मजबूत, सुरक्षित और सुलभ डिजिटल भुगतान अवसंरचना को सक्षम करता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "राष्ट्रीय भुगतान निगम (NPCI) खुदरा भुगतान प्रणालियों का संचालन करता है।",
+        "यह भुगतान और निपटान प्रणाली अधिनियम, 2007 के तहत स्थापित किया गया था।",
+        "Printed answer key: (B) भारत का राष्ट्रीय भुगतान निगम (NPCI)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "29e43b7f-eca0-41db-8b7e-870e3f8039e5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "85. EMV चिप डेबिट/क्रेडिट कार्ड में \"EMV\" का क्या अर्थ है?",
+      "options_hindi": [
+        "इलेक्ट्रॉनिक मनी वेरिफिकेशन",
+        "एन्क्रिप्टेड मोबाइल वेरिफिकेशन",
+        "यूरोपे, मास्टरकार्ड और वीज़ा",
+        "यूरोपीय मौद्रिक मूल्य"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What does “EMV” stand for in EMV Chip debit/credit cards?",
+      "options_english": [
+        "Electronic Money Verification",
+        "Encrypted Mobile Verification",
+        "Europay, Mastercard, and Visa",
+        "European Monetary Value"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The abbreviation EMV stands for Europay, Mastercard, and Visa, the global payment organizations that originally created the technical standard for smart payment cards. EMV technology utilizes integrated microchips on payment cards to dynamic authentication data during transactions, providing significantly stronger security against card cloning and fraudulent transaction replay compared to traditional magnetic stripe cards.",
+      "explanation_hindi": "सही उत्तर (c) है। EMV का संक्षिप्त रूप यूरोपे, मास्टरकार्ड और वीज़ा है, जो वैश्विक भुगतान संगठन हैं जिन्होंने स्मार्ट भुगतान कार्डों के लिए तकनीकी मानक बनाया। EMV तकनीक लेनदेन के दौरान गतिशील प्रमाणीकरण डेटा के लिए भुगतान कार्ड पर एकीकृत माइक्रोचिप्स का उपयोग करती है, जो पारंपरिक मैग्नेटिक स्ट्राइप कार्ड की तुलना में कार्ड क्लोनिंग और धोखाधड़ी लेनदेन के पुनःप्रयोजन के खिलाफ काफी मजबूत सुरक्षा प्रदान करती है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "easy",
+      "key_facts": [
+        "EMV का अर्थ यूरोपे, मास्टरकार्ड और वीज़ा है।",
+        "EMV तकनीक स्मार्ट भुगतान कार्डों के लिए मानक है।",
+        "यह कार्ड क्लोनिंग के खिलाफ सुरक्षा प्रदान करता है।",
+        "Printed answer key: (C) Europay, Mastercard, and Visa"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "42db31dd-051a-48dc-b2de-7a913759752d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "91. राष्ट्रीय इलेक्ट्रॉनिक फंड ट्रांसफर (NEFT) में “बैच प्रोसेसिंग” का प्राथमिक कार्य क्या है?",
+      "options_hindi": [
+        "सभी धन हस्तांतरण अनुरोधों को 24 घंटे के लिए एकत्रित किया जाता है और एकल अंत-दिन बैच में एक साथ निपटाया जाता है।",
+        "लेनदेन अस्थायी कतारों में रखे जाते हैं जब तक कि शाखा संचालन प्रबंधकों द्वारा मैनुअल प्राधिकरण पूरा नहीं हो जाता।",
+        "विशिष्ट थ्रेशोल्ड से अधिक उच्च-मूल्य के हस्तांतरण अनुरोधों को विशेष रूप से साप्ताहिक निपटान बैचों में संसाधित किया जाता है।",
+        "लेनदेन आधे घंटे के नेट निपटान बैचों में एकत्रित और निपटाए जाते हैं, न कि निरंतर।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the primary function of “Batch Processing” in National Electronic Funds Transfer (NEFT)?",
+      "options_english": [
+        "All fund transfer requests are accumulated for 24 hours and settled together in a single end-of-day batch.",
+        "Transactions are held in temporary queues until manual authorization is completed by branch operation managers.",
+        "High-value transfer requests exceeding specified thresholds are processed exclusively in weekly clearing batches.",
+        "Transactions are pooled and cleared in half-hourly net settlement batches rather than continuously."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Batch processing in National Electronic Funds Transfer operates by accumulating fund transfer requests over fixed intervals and clearing them in scheduled half-hourly net settlement batches throughout twenty-four hours. Instead of processing transactions individually in real time, the central clearing system calculates net balances across participating financial institutions for each batch, ensuring organized and efficient bulk payment processing.",
+      "explanation_hindi": "सही उत्तर (d) है। राष्ट्रीय इलेक्ट्रॉनिक फंड ट्रांसफर में बैच प्रोसेसिंग निश्चित अंतराल पर धन हस्तांतरण अनुरोधों को एकत्रित करने और उन्हें चौबीस घंटे के दौरान निर्धारित आधे घंटे के नेट निपटान बैचों में निपटाने का कार्य करती है। लेनदेन को व्यक्तिगत रूप से वास्तविक समय में संसाधित करने के बजाय, केंद्रीय निपटान प्रणाली प्रत्येक बैच के लिए भाग लेने वाले वित्तीय संस्थानों के बीच नेट संतुलन की गणना करती है, जिससे संगठित और कुशल बल्क भुगतान प्रोसेसिंग सुनिश्चित होती है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "बैच प्रोसेसिंग निश्चित अंतराल पर धन हस्तांतरण अनुरोधों को एकत्रित करती है।",
+        "यह आधे घंटे के नेट निपटान बैचों में निपटान करती है।",
+        "यह व्यक्तिगत लेनदेन को वास्तविक समय में संसाधित नहीं करती है।",
+        "Printed answer key: (D) Transactions are pooled and cleared in half-hourly net settlement batches rather than continuously."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "54b9b977-a88f-4d05-a5d7-fe3e3357ba35",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "39. (1) कॉर्पोरेट इंटरनेट बैंकिंग (CINB) के संदर्भ में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "प्राथमिक परिभाषा और मानक विशेषताएँ (1) कॉर्पोरेट इंटरनेट बैंकिंग (CINB) की",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding (1) Corporate Internet Banking (CINB), which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of (1) Corporate Internet Banking (CINB)",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Corporate Internet Banking provides specialized multi-user digital portal facilities designed for commercial, educational, and public sector organizations. This financial platform enables institutional administrators to manage multiple sub-accounts, execute high-volume vendor disbursements, conduct automated bulk salary payments, and establish customized workflow authorization hierarchies, ensuring comprehensive operational efficiency and control over corporate funds.",
+      "explanation_hindi": "सही उत्तर (a) है। कॉर्पोरेट इंटरनेट बैंकिंग विशेषीकृत बहु-उपयोगकर्ता डिजिटल पोर्टल सुविधाएँ प्रदान करती है जो वाणिज्यिक, शैक्षणिक और सार्वजनिक क्षेत्र के संगठनों के लिए डिज़ाइन की गई हैं। यह वित्तीय मंच संस्थागत प्रशासकों को कई उप-खातों का प्रबंधन करने, उच्च मात्रा में विक्रेता भुगतान करने, स्वचालित बड़े वेतन भुगतान करने और अनुकूलित कार्यप्रवाह प्राधिकरण पदानुक्रम स्थापित करने में सक्षम बनाता है, जिससे कॉर्पोरेट फंड पर व्यापक संचालनात्मक दक्षता और नियंत्रण सुनिश्चित होता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Corporate Internet Banking is designed for multi-user access.",
+        "It supports high-volume vendor disbursements and bulk salary payments.",
+        "Custom workflow authorization hierarchies enhance operational control.",
+        "Printed answer key: (A) Primary definition and standard features of (1) Corporate Internet Banking (CINB)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f3affadc-6adf-45e9-9675-f17081f78533",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "“विषिंग” क्या है?",
+      "options_hindi": [
+        "वीडियो फ़िशिंग: सार्वजनिक स्ट्रीमिंग चैनलों पर धोखाधड़ी प्रचार वीडियो विज्ञापनों का स्ट्रीमिंग।",
+        "विज़ुअल स्किमिंग: एटीएम पर पासवर्ड प्रविष्टियों को देख कर उपयोगकर्ता की पहुँच प्रमाणपत्र चुराना।",
+        "वायरस अंतर्ग्रहण: अव्यक्त दुर्भावनापूर्ण ईमेल अटैचमेंट के माध्यम से केंद्रीय बैंकिंग सर्वरों में संक्रमण।",
+        "वॉयस फ़िशिंग: धोखाधड़ी फोन कॉल जो पीड़ितों को गोपनीय बैंकिंग विवरण प्रकट करने के लिए धोखा देती हैं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is “Vishing”?",
+      "options_english": [
+        "Video Phishing: Streaming fraudulent promotional video advertisements on public streaming channels.",
+        "Visual Skimming: Stealing user access credentials by observing password entries over shoulders at ATMs.",
+        "Virus Infiltration: Infecting internal central banking servers via undetected malicious email attachments.",
+        "Voice Phishing: Deceptive phone calls tricking victims into revealing confidential banking details."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Vishing, or voice phishing, is a social engineering attack where fraudsters initiate deceptive telephone calls while impersonating bank representatives, regulatory officials, or service providers. The attacker uses urgency or technical jargon to manipulate victims into revealing confidential banking information, such as login credentials, card verification numbers, or One-Time Passwords, leading to unauthorized account access and financial loss.",
+      "explanation_hindi": "सही उत्तर (d) है। विषिंग, या वॉयस फ़िशिंग, एक सामाजिक इंजीनियरिंग हमला है जहाँ धोखेबाज़ बैंक प्रतिनिधियों, नियामक अधिकारियों, या सेवा प्रदाताओं की नकल करते हुए धोखाधड़ी फोन कॉल शुरू करते हैं। हमलावर पीड़ितों को गोपनीय बैंकिंग जानकारी प्रकट करने के लिए मजबूर करने के लिए तात्कालिकता या तकनीकी शब्दावली का उपयोग करता है, जैसे कि लॉगिन प्रमाणपत्र, कार्ड सत्यापन नंबर, या एक बार के पासवर्ड, जिससे अनधिकृत खाता पहुंच और वित्तीय हानि होती है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Vishing is a form of phishing that uses voice communication.",
+        "Fraudsters often impersonate trusted entities to gain sensitive information.",
+        "Printed answer key: (D) Voice Phishing: Deceptive phone calls tricking victims into revealing confidential banking details."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "678ce219-3899-4cec-aad1-2810d349302d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "78. पहले बार मोबाइल एप्लिकेशन पर UPI प्रोफ़ाइल सेट करने में शामिल चरणों का सही क्रम चुनें:\nA. UPI एप्लिकेशन डाउनलोड करें और एसएमएस के माध्यम से मोबाइल नंबर की पुष्टि करें।",
+      "options_hindi": [
+        "UPI एप्लिकेशन डाउनलोड करें और मोबाइल नंबर की पुष्टि करें।",
+        "बैंक खाता लिंक करें।",
+        "डेबिट कार्ड क्रेडेंशियल्स का उपयोग करके व्यक्तिगत पहचान संख्या सेट करें।",
+        "एक अद्वितीय वर्चुअल पेमेंट पता बनाएं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct sequence of steps involved in setting up a UPI profile on a mobile application for the first time:\nA. Download UPI application and verify mobile number via SMS.",
+      "options_english": [
+        "Download UPI application and verify mobile number via SMS.",
+        "Link bank account.",
+        "Configure personal identification number using debit card credentials.",
+        "Create a unique Virtual Payment Address."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Setting up a mobile payment profile requires downloading the application and verifying the registered mobile number via short message service. Next, the user selects their bank to link the corresponding account. A personal identification number is then configured using debit card credentials, followed by creating a unique Virtual Payment Address to initiate electronic transactions securely.",
+      "explanation_hindi": "सही उत्तर (a) है। मोबाइल भुगतान प्रोफ़ाइल सेट करने के लिए एप्लिकेशन डाउनलोड करना और पंजीकृत मोबाइल नंबर की पुष्टि करना आवश्यक है। इसके बाद, उपयोगकर्ता अपने बैंक का चयन करता है ताकि संबंधित खाते को लिंक किया जा सके। फिर, डेबिट कार्ड क्रेडेंशियल्स का उपयोग करके व्यक्तिगत पहचान संख्या सेट की जाती है, इसके बाद एक अद्वितीय वर्चुअल पेमेंट पता बनाया जाता है ताकि इलेक्ट्रॉनिक लेनदेन को सुरक्षित रूप से शुरू किया जा सके।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "UPI प्रोफ़ाइल सेट करने के लिए मोबाइल नंबर की पुष्टि आवश्यक है।",
+        "बैंक खाता लिंक करना आवश्यक है।",
+        "व्यक्तिगत पहचान संख्या डेबिट कार्ड से सेट की जाती है।",
+        "Printed answer key: (A) UPI एप्लिकेशन डाउनलोड करें और मोबाइल नंबर की पुष्टि करें।"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "005d9596-dad7-44ce-bf13-5b8d21e48cee",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कौन सा तंत्र एक खाता धारक को बैंक को एक निश्चित राशि को आवधिक रूप से डेबिट करने के लिए स्थायी निर्देश देने की अनुमति देता है, जैसे कि उपयोगिता बिल या स्कूल की फीस?\n(1) तात्कालिक भुगतान सेवा (IMPS) प्रणाली",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which mechanism allows an account holder to give a standing instruction to a bank to debit a specific amount periodically for recurring payments like utility bills or school fees?\n(1) Immediate Payment Service (IMPS) System",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The National Automated Clearing House is a centralized electronic clearing system developed by the National Payments Corporation of India to facilitate high-volume, recurring periodic payments. It allows account holders to register standing debit mandates, enabling institutions to collect regular payments, such as utility bills, insurance premiums, and educational fees, directly from parents’ bank accounts automatically on scheduled dates.",
+      "explanation_hindi": "सही उत्तर (b) है। राष्ट्रीय स्वचालित निपटान गृह एक केंद्रीकृत इलेक्ट्रॉनिक निपटान प्रणाली है जिसे भारत के राष्ट्रीय भुगतान निगम द्वारा विकसित किया गया है ताकि उच्च मात्रा में आवधिक भुगतान को सुविधाजनक बनाया जा सके। यह खाता धारकों को स्थायी डेबिट आदेश पंजीकृत करने की अनुमति देता है, जिससे संस्थाएं नियमित भुगतान, जैसे कि उपयोगिता बिल, बीमा प्रीमियम और शैक्षिक फीस, स्वचालित रूप से निर्धारित तिथियों पर माता-पिता के बैंक खातों से एकत्र कर सकें।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "The National Automated Clearing House facilitates recurring payments.",
+        "It allows standing debit mandates for regular payments.",
+        "Developed by the National Payments Corporation of India.",
+        "Printed answer key: (B) National Automated Clearing House"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "07d94971-0a64-40fc-8dc3-4ae9a156ca07",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दिए गए दो कथन हैं: एक को असर्शन A और दूसरे को कारण R के रूप में लेबल किया गया है। \nअसर्शन A: एकीकृत भुगतान इंटरफेस (UPI) बैंक खातों के बीच तत्काल धन हस्तांतरण की अनुमति देता है। \nकारण R: UPI तत्काल भुगतान सेवा (IMPS) अवसंरचना पर कार्य करता है। \nउपरोक्त कथनों के प्रकाश में, नीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R. \nAssertion A: The Unified Payments Interface (UPI) permits instant round-the-clock money transfers directly between bank accounts using a Virtual Payment Address (VPA). \nReason R: UPI operates on the Immediate Payment Service (IMPS) infrastructure developed by the National Payments Corporation of India (NPCI). \nIn the light of the above statements, choose the correct answer from the options given below:",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Aadhaar Enabled Payment System allows financial transactions at point-of-sale terminals and Micro ATMs by leveraging the unique twelve-digit Aadhaar identification number alongside biometric authentication, such as fingerprint or iris scans. This dual-verification mechanism confirms the identity of the account holder directly against the national central database, facilitating secure basic banking operations in financial inclusion settings without debit cards.",
+      "explanation_hindi": "सही उत्तर (b) है। आधार सक्षम भुगतान प्रणाली वित्तीय लेनदेन की अनुमति देती है। यह अद्वितीय बारह अंकों के आधार पहचान संख्या के साथ बायोमेट्रिक प्रमाणीकरण का उपयोग करती है। यह दोहरी प्रमाणीकरण तंत्र खाता धारक की पहचान को राष्ट्रीय केंद्रीय डेटाबेस के खिलाफ सीधे पुष्टि करता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "UPI allows instant money transfers using a Virtual Payment Address.",
+        "UPI operates on the IMPS infrastructure.",
+        "Printed answer key: (B) Both A and R are true but R is not the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1c1671b5-da45-4aaf-b0a4-0f9c459cabe9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन A के रूप में लेबल किया गया है और दूसरे को\nकारण R के रूप में लेबल किया गया है।\nअसर्शन A: इलेक्ट्रॉनिक राष्ट्रीय स्वचालित\nक्लियरिंग हाउस (e-NACH) शैक्षणिक\nसंस्थानों को माता-पिता के बैंक खातों से\nस्वचालित रूप से आवर्ती शुल्क एकत्र करने की\nअनुमति देता है।\nकारण R: e-NACH प्रत्येक व्यक्तिगत लेन-देन\nडेबिट के लिए NPCI कार्यालय में भौतिक\nकागजी कार्रवाई जमा करने की आवश्यकता है।\nउपरोक्त कथनों के प्रकाश में, नीचे दिए गए विकल्पों\nमें से सही उत्तर चुनें:\n(3) A सत्य है लेकिन R असत्य है।",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R. Assertion A: Electronic National Automated Clearing House (e-NACH) enables educational institutions to collect recurring fees automatically from parents’ bank accounts. Reason R: e-NACH mandates physical paperwork submission to the NPCI office for every individual transaction debit. In the light of the above statements, choose the correct answer from the options given below: (3) A is true but R is false.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Electronic National Automated Clearing House simplifies recurring financial disbursements and collections, allowing institutions to process periodic fee debits efficiently through digital mandates. The system operates entirely through electronic file processing and digital mandate registration, removing the necessity of submitting physical documentation or paper forms to central clearinghouses for individual recurring transaction executions.",
+      "explanation_hindi": "सही उत्तर (c) है। इलेक्ट्रॉनिक राष्ट्रीय स्वचालित क्लियरिंग हाउस आवर्ती वित्तीय वितरण और संग्रह को सरल बनाता है, जिससे संस्थाएँ डिजिटल जनादेशों के माध्यम से आवर्ती शुल्क डेबिट को कुशलतापूर्वक संसाधित कर सकती हैं। यह प्रणाली पूरी तरह से इलेक्ट्रॉनिक फ़ाइल प्रसंस्करण और डिजिटल जनादेश पंजीकरण के माध्यम से संचालित होती है, जिससे व्यक्तिगत आवर्ती लेन-देन निष्पादन के लिए भौतिक दस्तावेज़ या कागज़ के फॉर्म जमा करने की आवश्यकता समाप्त हो जाती है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "e-NACH allows automatic collection of recurring fees from bank accounts.",
+        "e-NACH does not require physical paperwork for individual transactions.",
+        "Printed answer key: (3) A is true but R is false.",
+        "It streamlines the process of fee collection for educational institutions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b0e0e3dc-c6b7-4302-9ef8-a9206778d3ac",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "भारत बिल भुगतान प्रणाली (BBPS) के संबंध में निम्नलिखित बयानों पर विचार करें:\nA. यह NPCI के तहत कार्यरत एक एकीकृत बिल भुगतान पारिस्थितिकी तंत्र है।\nB. यह ग्राहकों को एजेंटों के नेटवर्क के माध्यम से इंटरऑपरेबल और सुलभ बिल भुगतान सेवा प्रदान करता है।\nC. यह विभिन्न भुगतान मोड के माध्यम से उपयोगिता बिल, शैक्षिक शुल्क और करों का भुगतान करने की अनुमति देता है।\nD. यह केवल भौतिक बैंक शाखाओं में नकद भुगतान तक सीमित है।\nउपरोक्त में से कौन से बयान सही हैं?",
+      "options_hindi": [
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A और D",
+        "A, B, C और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the Bharat Bill Payment System (BBPS):\nA. It is an integrated bill payment ecosystem operating under NPCI.\nB. It offers interoperable and accessible bill payment service to customers through a network of agents.\nC. It allows payment of utility bills, educational fees, and taxes through multiple payment modes.\nD. It is restricted exclusively to cash payments made at physical bank branches.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and C only",
+        "B, C and D only",
+        "A and D only",
+        "A, B, C and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Bharat Bill Payment System is a centralized, interoperable bill payment ecosystem managed by the National Payments Corporation of India. It provides accessible bill payment services across multiple channels, supporting utility payments, educational fees, and taxes through various digital modes as well as agent outlets. The service is not restricted to physical branch cash payments.",
+      "explanation_hindi": "सही उत्तर (a) है। भारत बिल भुगतान प्रणाली एक केंद्रीकृत, इंटरऑपरेबल बिल भुगतान पारिस्थितिकी तंत्र है जिसे भारतीय राष्ट्रीय भुगतान निगम द्वारा प्रबंधित किया जाता है। यह विभिन्न चैनलों के माध्यम से सुलभ बिल भुगतान सेवाएं प्रदान करता है, जो उपयोगिता भुगतान, शैक्षिक शुल्क और करों का भुगतान विभिन्न डिजिटल मोड और एजेंट आउटलेट के माध्यम से करता है। यह सेवा भौतिक शाखाओं में नकद भुगतान तक सीमित नहीं है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "BBPS is managed by the National Payments Corporation of India (NPCI).",
+        "It supports multiple payment modes for various bill payments.",
+        "Printed answer key: (A) A, B and C only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "95b41d36-a01d-4ca1-8cd9-2444f70475ab",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "89. डिजिटल भुगतान में “वर्चुअल पेमेंट एड्रेस” (VPA) क्या है?\n(1) वह भौतिक सड़क स्थान और डाक कोड\nजो वाणिज्यिक बैंक शाखा का है जहाँ एक\nU",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "89. In digital payments, what is a “Virtual Payment Address” (VPA)?\n(1) The physical street location and postal code of the commercial bank branch where a U",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A Virtual Payment Address is a unique financial alias used within the Unified Payments Interface to route money directly between bank accounts. Serving as a secure payment address, it maps directly to an underlying bank account, enabling users to send or request money without disclosing sensitive financial information such as account numbers or branch codes to transaction counterparties.",
+      "explanation_hindi": "सही उत्तर (c) है। वर्चुअल पेमेंट एड्रेस एक अद्वितीय वित्तीय उपनाम है जिसका उपयोग यूनिफाइड पेमेंट्स इंटरफेस के भीतर धन को सीधे बैंक खातों के बीच मार्गदर्शित करने के लिए किया जाता है। यह एक सुरक्षित भुगतान पते के रूप में कार्य करता है, जो सीधे एक अंतर्निहित बैंक खाते से जुड़ा होता है, जिससे उपयोगकर्ताओं को संवेदनशील वित्तीय जानकारी जैसे खाता नंबर या शाखा कोड को लेनदेन के पक्षों के साथ साझा किए बिना धन भेजने या अनुरोध करने की अनुमति मिलती है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "वर्चुअल पेमेंट एड्रेस UPI का एक महत्वपूर्ण हिस्सा है।",
+        "यह बैंक खातों के बीच धन हस्तांतरण के लिए उपयोग किया जाता है।",
+        "यह संवेदनशील वित्तीय जानकारी को उजागर किए बिना लेनदेन की अनुमति देता है।",
+        "Printed answer key: (C) A unique identifier mapping to a bank"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9af13787-673e-4acb-b747-d088012bea33",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "रुपे किस प्रकार की भुगतान संरचना है?",
+      "options_hindi": [
+        "अंतर्राष्ट्रीय मुद्रा कोष द्वारा संचालित विदेशी मुद्रा विनिमय नेटवर्क।",
+        "क्रिप्टो-करेंसी लेनदेन के लिए विशेष रूप से उपयोग किया जाने वाला एक स्वामित्व सॉफ़्टवेयर।",
+        "एनपीसीआई द्वारा लॉन्च किया गया एक स्वदेशी घरेलू कार्ड भुगतान नेटवर्क।",
+        "विदेशी वाणिज्यिक बैंकों द्वारा उपयोग किया जाने वाला एक निजी नेट बैंकिंग सॉफ़्टवेयर।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which type of payment architecture is RuPay?",
+      "options_english": [
+        "A foreign currency exchange network operated by the International Monetary Fund.",
+        "A proprietary software used exclusively for crypto-currency transactions.",
+        "An indigenous domestic card payment network launched by NPCI.",
+        "A private net banking software used by foreign commercial banks."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "RuPay is an indigenous card payment network developed and launched by the National Payments Corporation of India to provide a domestic, low-cost, and secure card payment solution. Fulfilling regulatory objectives for financial inclusion, it facilitates electronic card transactions within India. RuPay aims to reduce dependence on international card networks and promote digital payments in the country.",
+      "explanation_hindi": "सही उत्तर (c) है। रुपे एक स्वदेशी कार्ड भुगतान नेटवर्क है जिसे राष्ट्रीय भुगतान निगम भारत द्वारा विकसित और लॉन्च किया गया है। यह एक घरेलू, कम लागत और सुरक्षित कार्ड भुगतान समाधान प्रदान करता है। यह वित्तीय समावेशन के लिए नियामक उद्देश्यों को पूरा करता है और भारत में इलेक्ट्रॉनिक कार्ड लेनदेन को सुविधाजनक बनाता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "easy",
+      "key_facts": [
+        "RuPay is developed by NPCI.",
+        "It aims to promote digital payments in India.",
+        "Printed answer key: (C) An indigenous domestic card payment network launched by NPCI."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "53c7bef5-8193-418b-8cfa-4228ebabe943",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कौन सा शब्द एक डिजिटल खाता या प्रीपेड भुगतान उपकरण (PPI) का वर्णन करता है जहाँ एक उपयोगकर्ता\nकम मूल्य के ऑनलाइन लेनदेन करने के लिए पैसे जमा कर सकता है?",
+      "options_hindi": [
+        "एस्क्रो खाता",
+        "डिमैट खाता",
+        "डिजिटल वॉलेट",
+        "नॉस्ट्रो खाता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which term describes a digital account or prepaid payment instrument (PPI) where a user can store money for performing low-value online transactions?",
+      "options_english": [
+        "Escrow Account",
+        "Demat Account",
+        "Digital Wallet",
+        "Nostro Account"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A digital wallet is a virtual pre-paid payment instrument that stores funds electronically, allowing users to make rapid online purchases, service payments, and fund transfers. By holding pre-stored monetary balances or linked card details, it simplifies small-value transactions, eliminates the repetitive entry of banking credentials, and offers a secure, convenient medium for day-to-day electronic commerce.",
+      "explanation_hindi": "सही उत्तर (c) है। डिजिटल वॉलेट एक आभासी प्री-पेड भुगतान उपकरण है जो इलेक्ट्रॉनिक रूप से धन को संग्रहीत करता है, जिससे उपयोगकर्ताओं को त्वरित ऑनलाइन खरीदारी, सेवा भुगतान और धन हस्तांतरण करने की अनुमति मिलती है। पूर्व-स्टोर किए गए मौद्रिक संतुलनों या जुड़े कार्ड विवरणों को धारण करके, यह छोटे मूल्य के लेनदेन को सरल बनाता है, बैंकिंग प्रमाणपत्रों के दोहराए जाने वाले प्रवेश को समाप्त करता है, और दिन-प्रतिदिन की इलेक्ट्रॉनिक वाणिज्य के लिए एक सुरक्षित, सुविधाजनक माध्यम प्रदान करता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "easy",
+      "key_facts": [
+        "डिजिटल वॉलेट एक प्री-पेड भुगतान उपकरण है।",
+        "यह छोटे मूल्य के ऑनलाइन लेनदेन के लिए उपयोग किया जाता है।",
+        "Printed answer key: (c) Digital Wallet"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ce6d98ab-4487-450f-a2d1-2e1f97f512c3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II के साथ मिलाएं:\nसूची I: (वित्तीय समावेशन / डिजिटल शब्द)\nP. व्यवसाय प्रतिनिधि (BC)\nQ. माइक्रो एटीएम\nR. वित्तीय समावेशन\nS. डिजिटल भुगतान साक्षरता\nसूची II: (मुख्य दायरा / परिभाषा)\nI. बिना बैंक वाले ग्रामीण क्षेत्रों में बैंकिंग सेवाएं प्रदान करने वाला बैंक प्रतिनिधि\nII. कार्ड और बायोमेट्रिक बुनियादी बैंकिंग सेवाओं को सक्षम करने वाला पॉइंट ऑफ सेल उपकरण\nIII. बिना सेवा और कम सेवा वाले जनसंख्या के लिए सस्ती वित्तीय सेवाओं की उपलब्धता\nIV. इलेक्ट्रॉनिक भुगतान विधियों का सुरक्षित उपयोग करने के लिए आवश्यक ज्ञान और कौशल\nनीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-III, R-II, S-IV",
+        "P-IV, Q-II, R-III, S-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (Financial Inclusion / Digital Term)\nP. Business Correspondent (BC)\nQ. Micro ATM\nR. Financial Inclusion\nS. Digital Payment Literacy\nList II: (Core Scope / Definition)\nI. Bank representative providing banking services in unbanked rural areas\nII. Point of Sale device enabling card and biometric basic banking services\nIII. Provision of affordable financial services to unserved and underserved populations\nIV. Knowledge and skills required to securely use electronic payment methods\nChoose the correct answer from the options given below:",
+      "options_english": [
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-III, R-II, S-IV",
+        "P-IV, Q-II, R-III, S-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A Business Correspondent acts as an authorized representative providing essential banking services in unbanked areas. A Micro ATM is a portable terminal facilitating card and biometric transactions at point-of-sale outlets. Financial inclusion involves extending accessible financial services to underserved populations. Digital payment literacy encompasses the knowledge and skills necessary to navigate electronic financial tools securely.",
+      "explanation_hindi": "सही उत्तर (a) है। व्यवसाय प्रतिनिधि बिना बैंक वाले क्षेत्रों में आवश्यक बैंकिंग सेवाएं प्रदान करने वाला अधिकृत प्रतिनिधि होता है। माइक्रो एटीएम एक पोर्टेबल टर्मिनल है जो पॉइंट-ऑफ-सेल आउटलेट्स पर कार्ड और बायोमेट्रिक लेनदेन को सक्षम बनाता है। वित्तीय समावेशन का तात्पर्य बिना सेवा और कम सेवा वाले जनसंख्या के लिए सस्ती वित्तीय सेवाओं को विस्तारित करने से है। डिजिटल भुगतान साक्षरता इलेक्ट्रॉनिक वित्तीय उपकरणों का सुरक्षित रूप से उपयोग करने के लिए आवश्यक ज्ञान और कौशल को शामिल करती है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Business Correspondents provide banking services in unbanked areas.",
+        "Micro ATMs facilitate card and biometric transactions.",
+        "Financial inclusion aims to provide services to underserved populations.",
+        "Printed answer key: (A) P-I, Q-II, R-III, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

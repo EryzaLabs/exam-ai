@@ -1,0 +1,797 @@
+{
+  "test_id": "e11d9aa7-6ef5-41f7-abb3-4b57b61a32ea",
+  "test_name": "Topic Test: INTERNET_AND_NETWORKING_BASICS - Part 3",
+  "type": "topic_wise",
+  "topic": "internet_and_networking_basics",
+  "created_at": "2026-10-28T18:55:06.733531",
+  "questions": [
+    {
+      "id": "2f2b9fa4-9485-4614-9777-d39c2dea72d4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को आश्वासन (A) के रूप में और दूसरे को कारण (R) के रूप में लेबल किया गया है। \nआश्वासन (A): HTTPS ऑनलाइन बैंकिंग और डेटा प्रविष्टि के लिए HTTP की तुलना में अधिक सुरक्षित है। \nकारण (R): HTTPS वेब ब्राउज़र और वेब सर्वर के बीच संचार को SSL/TLS प्रोटोकॉल का उपयोग करके एन्क्रिप्ट करता है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). \nAssertion (A): HTTPS is more secure for online banking and data entry than HTTP. \nReason (R): HTTPS encrypts the communications between the web browser and the web server using SSL/TLS protocols.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Hypertext Transfer Protocol Secure provides enhanced security for sensitive web transactions like internet banking and confidential data submission. It achieves this protection by establishing an encrypted communication channel between client web browsers and web servers using Secure Sockets Layer or Transport Layer Security protocols. This encryption prevents unauthorized third parties from eavesdropping, tampering with, or intercepting sensitive data packets transmitted over public networks.",
+      "explanation_hindi": "सही उत्तर (a) है। हाइपरटेक्स्ट ट्रांसफर प्रोटोकॉल सुरक्षित संवेदनशील वेब लेनदेन जैसे इंटरनेट बैंकिंग और गोपनीय डेटा सबमिशन के लिए बढ़ी हुई सुरक्षा प्रदान करता है। यह सुरक्षा क्लाइंट वेब ब्राउज़रों और वेब सर्वरों के बीच एन्क्रिप्टेड संचार चैनल स्थापित करके प्राप्त की जाती है, जो सुरक्षित सॉकेट्स लेयर या ट्रांसपोर्ट लेयर सुरक्षा प्रोटोकॉल का उपयोग करती है। यह एन्क्रिप्शन तीसरे पक्ष को संवेदनशील डेटा पैकेटों को सुनने, छेड़छाड़ करने या सार्वजनिक नेटवर्क पर भेजे जाने से रोकता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "HTTPS encrypts communications for secure online transactions.",
+        "It uses SSL/TLS protocols for encryption.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "38f4a233-4c01-466f-8d41-a59141c8c730",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "58. सबसे पुराने से सबसे नए तक सेलुलर मोबाइल डेटा नेटवर्क पीढ़ियों का सही क्रम चुनें:",
+      "options_hindi": [
+        "2G → 3G → 4G (LTE) → 5G",
+        "3G → 2G → 4G (LTE) → 5G",
+        "2G → 4G (LTE) → 3G → 5G",
+        "5G → 4G (LTE) → 3G → 2G"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct order of cellular mobile data network generations from oldest to newest:",
+      "options_english": [
+        "2G → 3G → 4G (LTE) → 5G",
+        "3G → 2G → 4G (LTE) → 5G",
+        "2G → 4G (LTE) → 3G → 5G",
+        "5G → 4G (LTE) → 3G → 2G"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Cellular wireless data networks have advanced through successive technological generations. The second generation introduced digital voice calls and basic text messaging. The third generation enabled mobile broadband internet access and video calling. The fourth generation, featuring Long Term Evolution technology, delivered high-speed mobile data streaming. The fifth generation offers ultra-low latency, massive device connectivity, and multi-gigabit data transfer capabilities.",
+      "explanation_hindi": "सही उत्तर (a) है। सेलुलर वायरलेस डेटा नेटवर्क ने लगातार तकनीकी पीढ़ियों के माध्यम से प्रगति की है। दूसरी पीढ़ी ने डिजिटल वॉयस कॉल और बुनियादी टेक्स्ट संदेशों को पेश किया। तीसरी पीढ़ी ने मोबाइल ब्रॉडबैंड इंटरनेट एक्सेस और वीडियो कॉलिंग को सक्षम किया। चौथी पीढ़ी, जो लॉन्ग टर्म इवोल्यूशन तकनीक पर आधारित है, उच्च गति मोबाइल डेटा स्ट्रीमिंग प्रदान करती है। पांचवीं पीढ़ी अल्ट्रा-लो लेटेंसी, विशाल डिवाइस कनेक्टिविटी और मल्टी-गिगाबिट डेटा ट्रांसफर क्षमताओं की पेशकश करती है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "2G introduced digital voice calls and SMS.",
+        "3G enabled mobile broadband and video calls.",
+        "4G (LTE) provided high-speed data streaming.",
+        "Printed answer key: (A) 2G → 3G → 4G (LTE) → 5G"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2842d492-a9ef-450f-9b01-d92202cbf915",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "74. निम्नलिखित में से कौन सा एक ओपन-सोर्स, गैर-लाभकारी वेब ब्राउज़र है जिसे\nमोज़िला फाउंडेशन द्वारा विकसित किया गया है?\n(1) मोज़िला फ़ायरफ़ॉक्स\n(2) सफारी",
+      "options_hindi": [
+        "मोज़िला फ़ायरफ़ॉक्स",
+        "सफारी",
+        "विकिपीडिया",
+        "क्रोम"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following is an example of an open-source, non-profit web browser developed by the Mozilla Foundation?\n(1) Mozilla Firefox\n(2) Safari",
+      "options_english": [
+        "Mozilla Firefox",
+        "Safari",
+        "Wikipedia",
+        "Chrome"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Mozilla Firefox is a prominent free and open-source web browser developed by the Mozilla Foundation and its subsidiary corporation. Built on the Gecko rendering engine, Firefox prioritizes user privacy, open web standards, and cross-platform customizability. Unlike proprietary browsers controlled by single commercial corporations, Firefox’s source code is publicly accessible for community modification, peer review, and continuous collaborative software development.",
+      "explanation_hindi": "सही उत्तर (a) है। मोज़िला फ़ायरफ़ॉक्स एक प्रमुख मुफ्त और ओपन-सोर्स वेब ब्राउज़र है जिसे मोज़िला फाउंडेशन और इसकी सहायक कंपनी द्वारा विकसित किया गया है। यह गेको रेंडरिंग इंजन पर आधारित है और उपयोगकर्ता की गोपनीयता, ओपन वेब मानकों और क्रॉस-प्लेटफ़ॉर्म अनुकूलनता को प्राथमिकता देता है। एकल व्यावसायिक कंपनियों द्वारा नियंत्रित स्वामित्व वाले ब्राउज़रों के विपरीत, फ़ायरफ़ॉक्स का स्रोत कोड सामुदायिक संशोधन, समकक्ष समीक्षा और निरंतर सहयोगी सॉफ़्टवेयर विकास के लिए सार्वजनिक रूप से उपलब्ध है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Mozilla Firefox is developed by the Mozilla Foundation.",
+        "It is an open-source web browser prioritizing user privacy.",
+        "Printed answer key: (A) Mozilla Firefox"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "19e0210c-99e1-4b40-be27-7e2cbd736a97",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "84. इंटरनेट बैंडविड्थ और स्कूल लैब्स के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. वीडियो स्ट्रीमिंग साधारण पाठ वेब पृष्ठों की तुलना में काफी अधिक बैंडविड्थ का उपभोग करती है।\nB. बैंडविड्थ थ्रॉटलिंग विशिष्ट उपयोगकर्ता समूहों या उपकरणों के लिए अधिकतम डेटा ट्रांसफर दरों को सीमित करती है।\nC. बैंडविड्थ बढ़ाने से नेटवर्क कनेक्शनों की समग्र गति की संभावनाएं घटती हैं।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Internet Bandwidth and School Labs:\nA. Video streaming consumes significantly more bandwidth than plain text web pages.\nB. Bandwidth throttling limits maximum data transfer rates for specific user groups or devices.\nC. Increasing bandwidth decreases the overall speed potential of network connections.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Video streaming requires transferring continuous, dense data streams, consuming substantially more bandwidth than simple text pages. Bandwidth throttling is an administrative control technique used to intentionally restrict maximum transfer speeds for specific user accounts, protocols, or network devices. However, increasing available bandwidth expands total network transfer capacity, improving potential network speed rather than decreasing connection capabilities.",
+      "explanation_hindi": "सही उत्तर (a) है। वीडियो स्ट्रीमिंग निरंतर, घने डेटा स्ट्रीम को स्थानांतरित करने की आवश्यकता होती है, जो साधारण पाठ पृष्ठों की तुलना में काफी अधिक बैंडविड्थ का उपभोग करती है। बैंडविड्थ थ्रॉटलिंग एक प्रशासनिक नियंत्रण तकनीक है जिसका उपयोग विशिष्ट उपयोगकर्ता खातों, प्रोटोकॉल या नेटवर्क उपकरणों के लिए अधिकतम ट्रांसफर गति को जानबूझकर सीमित करने के लिए किया जाता है। हालाँकि, उपलब्ध बैंडविड्थ को बढ़ाना कुल नेटवर्क ट्रांसफर क्षमता को बढ़ाता है, जो कनेक्शन क्षमताओं को घटाने के बजाय संभावित नेटवर्क गति में सुधार करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "वीडियो स्ट्रीमिंग साधारण पाठ पृष्ठों की तुलना में अधिक बैंडविड्थ का उपभोग करती है।",
+        "बैंडविड्थ थ्रॉटलिंग विशिष्ट उपयोगकर्ता समूहों के लिए अधिकतम डेटा ट्रांसफर दरों को सीमित करती है।",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6299ed07-0777-46fb-a308-cf1df5f657b8",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "92. कौन सा विकल्प ब्राउज़र और उसके माता-पिता विकास संगठन के बीच एक गलत जोड़ी का प्रतिनिधित्व करता है?",
+      "options_hindi": [
+        "क्रोम — गूगल कॉर्पोरेशन",
+        "फायरफॉक्स — एडोब सिस्टम्स",
+        "सफारी — एप्पल इंकॉर्पोरेटेड",
+        "एज — माइक्रोसॉफ्ट कॉर्पोरेशन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which option represents an incorrect pair of browser and parent developer organization?",
+      "options_english": [
+        "Chrome — Google Corporation",
+        "Firefox — Adobe Systems",
+        "Safari — Apple Incorporated",
+        "Edge — Microsoft Corporation"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Mozilla Firefox is developed by the Mozilla Foundation and its subsidiary Mozilla Corporation, not Adobe Systems. Adobe Systems specializes in creative software applications like Photoshop and Acrobat Reader. In contrast, Google Chrome is developed by Google Corporation, Apple Safari is developed by Apple Incorporated, and Microsoft Edge is developed by Microsoft Corporation as their respective flagship web browsing applications.",
+      "explanation_hindi": "सही उत्तर (b) है। मोज़िला फ़ायरफ़ॉक्स का विकास मोज़िला फ़ाउंडेशन और इसकी सहायक कंपनी मोज़िला कॉर्पोरेशन द्वारा किया गया है, न कि एडोब सिस्टम्स द्वारा। एडोब सिस्टम्स क्रिएटिव सॉफ़्टवेयर एप्लिकेशन जैसे फ़ोटोशॉप और एक्रोबेट रीडर में विशेषज्ञता रखता है। इसके विपरीत, गूगल क्रोम का विकास गूगल कॉर्पोरेशन द्वारा, एप्पल सफारी का विकास एप्पल इंकॉर्पोरेटेड द्वारा और माइक्रोसॉफ्ट एज का विकास माइक्रोसॉफ्ट कॉर्पोरेशन द्वारा किया गया है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "Mozilla Firefox is developed by the Mozilla Foundation.",
+        "Adobe Systems specializes in creative software applications.",
+        "Printed answer key: (B) Firefox — Adobe Systems"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "71c1720c-b42e-4424-ad44-d9057290a62d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "61. कौन सा उपकरण भौतिक/डेटा-लिंक परत पर कार्य करता है ताकि एक कंप्यूटर से डिजिटल संकेतों को टेलीफोन या केबल लाइनों के लिए उपयुक्त एनालॉग संकेतों में परिवर्तित किया जा सके, और इसके विपरीत?",
+      "options_hindi": [
+        "राउटर",
+        "स्विच",
+        "मोडेम",
+        "फायरवॉल"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which device operates at the physical/data-link layer to convert digital signals from a computer into analog signals suitable for transmission over telephone or cable lines, and vice versa?",
+      "options_english": [
+        "Router",
+        "Switch",
+        "Modem",
+        "Firewall"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A modem, short for modulator-demodulator, converts digital data generated by computer equipment into analog signals suitable for transmission over traditional copper telephone or coaxial cable lines during modulation. During demodulation, the modem receives incoming analog signals from telecommunication lines and converts them back into digital data formats readable by computing devices, facilitating internet access across different physical media.",
+      "explanation_hindi": "सही उत्तर (c) है। एक मोडेम, जिसका पूरा नाम मोड्यूलेटर-डिमोड्यूलेटर है, कंप्यूटर उपकरणों द्वारा उत्पन्न डिजिटल डेटा को पारंपरिक तांबे के टेलीफोन या कोएक्सियल केबल लाइनों के लिए उपयुक्त एनालॉग संकेतों में परिवर्तित करता है। डिमोड्यूलेशन के दौरान, मोडेम टेलीकम्युनिकेशन लाइनों से आने वाले एनालॉग संकेतों को प्राप्त करता है और उन्हें फिर से कंप्यूटर उपकरणों द्वारा पढ़े जाने योग्य डिजिटल डेटा प्रारूपों में परिवर्तित करता है, विभिन्न भौतिक मीडिया के माध्यम से इंटरनेट एक्सेस को सुगम बनाता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "मोडेम डिजिटल डेटा को एनालॉग संकेतों में परिवर्तित करता है और इसके विपरीत।",
+        "यह टेलीफोन और केबल लाइनों के माध्यम से डेटा संचारित करने के लिए आवश्यक है।",
+        "Printed answer key: (C) Modem"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "93714b25-6af4-4354-8bd4-44bdc020284b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "73. कौन सा नेटवर्क कनेक्शन प्रकार मौजूदा पारंपरिक तांबे की टेलीफोन लाइनों के माध्यम से डिजिटल संकेत भेजता है\nबिना आवाज़ कॉल को रोकने के?",
+      "options_hindi": [
+        "पारंपरिक डायल-अप टेलीफोन लाइन",
+        "जियोस्टेशनरी सैटेलाइट ब्रॉडबैंड",
+        "डिजिटल सब्सक्राइबर लाइन (DSL)",
+        "कोएक्सियल केबल टेलीविजन नेटवर्क"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which network connection type delivers digital signals over existing traditional copper telephone lines without preventing simultaneous voice calls?",
+      "options_english": [
+        "Traditional Dial-up Telephone Line",
+        "Geostationary Satellite Broadband",
+        "Digital Subscriber Line (DSL)",
+        "Coaxial Cable Television Network"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Digital Subscriber Line technology delivers high-speed digital internet connections over existing copper telephone wire infrastructure. By operating on higher electromagnetic frequencies than standard analog voice calls, DSL allows simultaneous high-speed internet data transmission and voice phone calls over the same copper line without interference, offering broadband connectivity without requiring specialized fiber installations or cable television wiring.",
+      "explanation_hindi": "सही उत्तर (c) है। डिजिटल सब्सक्राइबर लाइन तकनीक मौजूदा तांबे की टेलीफोन वायर संरचना के माध्यम से उच्च गति डिजिटल इंटरनेट कनेक्शन प्रदान करती है। यह मानक एनालॉग आवाज कॉल की तुलना में उच्च विद्युत चुम्बकीय आवृत्तियों पर काम करके, DSL एक ही तांबे की लाइन पर उच्च गति इंटरनेट डेटा संचरण और आवाज फोन कॉल को बिना किसी हस्तक्षेप के अनुमति देती है, जिससे विशेष फाइबर इंस्टॉलेशन या केबल टेलीविजन वायरिंग की आवश्यकता के बिना ब्रॉडबैंड कनेक्टिविटी मिलती है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "DSL technology uses existing copper telephone lines for internet connectivity.",
+        "DSL allows simultaneous voice and data transmission.",
+        "Printed answer key: (C) Digital Subscriber Line (DSL)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e1356e8a-da2f-49ef-952c-531f8c26fe9d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "प्रमुख इंटरनेट प्रौद्योगिकियों के विकास का सही ऐतिहासिक क्रम क्या है?\nप्रारंभिक से नवीनतम तक:",
+      "options_hindi": [
+        "ARPANET निर्माण → TCP/IP का परिचय → विश्वव्यापी वेब का शुभारंभ → आधुनिक ऑप्टिकल फाइबर नेटवर्क का विकास",
+        "TCP/IP का परिचय → ARPANET निर्माण → विश्वव्यापी वेब का शुभारंभ → आधुनिक ऑप्टिकल फाइबर नेटवर्क का विकास",
+        "विश्वव्यापी वेब का शुभारंभ → ARPANET निर्माण → TCP/IP का परिचय → आधुनिक ऑप्टिकल फाइबर नेटवर्क का विकास",
+        "ARPANET निर्माण → विश्वव्यापी वेब का शुभारंभ → TCP/IP का परिचय → आधुनिक ऑप्टिकल फाइबर नेटवर्क का विकास"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct historical sequence of the evolution of key Internet technologies from earliest to latest:",
+      "options_english": [
+        "ARPANET creation → Introduction of TCP/IP → Launch of World Wide Web → Development of modern optical fibre networks",
+        "Introduction of TCP/IP → ARPANET creation → Launch of World Wide Web → Development of modern optical fibre networks",
+        "Launch of World Wide Web → ARPANET creation → Introduction of TCP/IP → Development of modern optical fibre networks",
+        "ARPANET creation → Launch of World Wide Web → Introduction of TCP/IP → Development of modern optical fibre networks"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The historical development of global networking began with ARPANET in 1969 establishing packet switching principles. The standardized TCP/IP protocol suite was officially adopted in 1983 to interconnect distinct subnets. Tim Berners-Lee invented the World Wide Web in 1989 and launched public web access in the early 1990s. Subsequently, widespread commercial optical fibre networks were deployed to provide ultra-high bandwidth, forming modern digital communications backbone infrastructure.",
+      "explanation_hindi": "सही उत्तर (a) है। वैश्विक नेटवर्किंग का ऐतिहासिक विकास 1969 में ARPANET के साथ शुरू हुआ, जिसने पैकेट स्विचिंग के सिद्धांतों की स्थापना की। मानकीकृत TCP/IP प्रोटोकॉल सूट को 1983 में विभिन्न उपनेट्स को आपस में जोड़ने के लिए आधिकारिक रूप से अपनाया गया। टिम बर्नर्स-ली ने 1989 में विश्वव्यापी वेब का आविष्कार किया और 1990 के दशक की शुरुआत में सार्वजनिक वेब एक्सेस शुरू किया। इसके बाद, अत्यधिक बैंडविड्थ प्रदान करने के लिए व्यापक व्यावसायिक ऑप्टिकल फाइबर नेटवर्क तैनात किए गए, जिसने आधुनिक डिजिटल संचार की रीढ़ की हड्डी का बुनियादी ढाँचा बनाया।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "ARPANET was the first operational packet-switching network.",
+        "TCP/IP became the standard for Internet communication in 1983.",
+        "Printed answer key: (A) ARPANET creation → Introduction of TCP/IP → Launch of World Wide Web → Development of modern optical fibre networks."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f8d8222d-20df-40d1-add6-5bcae88c11dc",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "डोमेन नामों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. डोमेन नाम बनाए गए क्योंकि मानव-पठनीय पाठ संख्यात्मक IP पते की तुलना में याद रखना आसान है। \nB. `.in` भारत का प्रतिनिधित्व करने वाला एक देश-कोड शीर्ष-स्तरीय डोमेन (ccTLD) है। \nC. डोमेन नामों में स्पेस और विशेष वर्ण जैसे `@` या `#` शामिल हो सकते हैं। \nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding domain names:\nA. Domain names were created because human-readable text is easier to remember than numerical IP addresses.\nB. `.in` is a country-code Top-Level Domain (ccTLD) representing India.\nC. Domain names can contain spaces and special characters like `@` or `#`.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Domain names were introduced to provide readable text addresses that replace complex numerical IP addresses. The `.in` domain extension represents India’s official country-code Top-Level Domain. However, domain names must strictly adhere to specific formatting rules: they cannot contain spaces, and special symbols like `@` or `#` are strictly prohibited, permitting only alphanumeric characters and hyphens within domain labels.",
+      "explanation_hindi": "सही उत्तर (a) है। डोमेन नामों को पढ़ने योग्य पाठ पते प्रदान करने के लिए पेश किया गया था जो जटिल संख्यात्मक IP पते को प्रतिस्थापित करते हैं। `.in` डोमेन एक्सटेंशन भारत के आधिकारिक देश-कोड शीर्ष-स्तरीय डोमेन का प्रतिनिधित्व करता है। हालाँकि, डोमेन नामों को विशिष्ट स्वरूपण नियमों का सख्ती से पालन करना चाहिए: इनमें स्पेस नहीं हो सकते हैं, और विशेष प्रतीकों जैसे `@` या `#` की अनुमति नहीं है, केवल अल्फ़ान्यूमेरिक वर्ण और डैश डोमेन लेबल में शामिल हो सकते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Domain names simplify the use of numerical IP addresses.",
+        "The `.in` ccTLD is specifically for India.",
+        "Domain names cannot contain spaces or special characters like `@` or `#`.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ff178374-5493-4d45-9df7-b4f2e17c5aec",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "51. इंटरनेट सेवा प्रदाताओं (ISPs) के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. टियर 1 ISPs वैश्विक इंटरनेट की रीढ़ बनाते हैं और बिना ट्रांजिट शुल्क का भुगतान किए एक-दूसरे के साथ पीयर करते हैं। \nB. क्षेत्रीय ISPs बड़े ISPs से इंटरनेट ट्रांजिट खरीदते हैं ताकि अंतिम उपयोगकर्ताओं की सेवा कर सकें। \nC. एक ISP जुड़े हुए ग्राहकों को स्थिर और गतिशील IP पते वितरित करता है। \nD. ISPs केवल तांबे की लैंडलाइन टेलीफोन कनेक्शन का प्रबंधन करते हैं और सेलुलर डेटा सेवाएं प्रदान नहीं कर सकते। \nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A, C और D",
+        "केवल A, B और D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Internet Service Providers (ISPs):\nA. Tier 1 ISPs form the backbone of the global internet and peer with each other without paying transit fees.\nB. Regional ISPs purchase internet transit from larger ISPs to serve end users.\nC. An ISP distributes static and dynamic IP addresses to connected clients.\nD. ISPs only manage copper landline telephone connections and cannot provide cellular data services.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and C only",
+        "B, C and D only",
+        "A, C and D only",
+        "A, B and D only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Tier 1 Internet Service Providers maintain global fiber backbones and exchange traffic through settlement-free peering. Tier 2 and Tier 3 regional ISPs purchase transit bandwidth from larger networks to serve end users. ISPs actively assign static and dynamic IP addresses to connected devices. Furthermore, ISPs provide data services across diverse mediums, including optical fiber, coaxial cables, satellite links, and mobile cellular networks.",
+      "explanation_hindi": "सही उत्तर (a) है। टियर 1 इंटरनेट सेवा प्रदाता वैश्विक फाइबर बैकबोन बनाए रखते हैं और बिना निपटान शुल्क के पीयरिंग के माध्यम से ट्रैफ़िक का आदान-प्रदान करते हैं। टियर 2 और टियर 3 क्षेत्रीय ISPs बड़े नेटवर्क से ट्रांजिट बैंडविड्थ खरीदते हैं ताकि अंतिम उपयोगकर्ताओं की सेवा कर सकें। ISPs जुड़े हुए उपकरणों को स्थिर और गतिशील IP पते सक्रिय रूप से असाइन करते हैं। इसके अलावा, ISPs विभिन्न माध्यमों के माध्यम से डेटा सेवाएं प्रदान करते हैं, जिसमें ऑप्टिकल फाइबर, कोएक्सियल केबल, उपग्रह लिंक और मोबाइल सेलुलर नेटवर्क शामिल हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Tier 1 ISPs peer without transit fees.",
+        "Regional ISPs purchase bandwidth from larger ISPs.",
+        "ISPs assign static and dynamic IP addresses.",
+        "Printed answer key: (A) A, B and C only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "059a2a71-e73b-474a-9f90-0c4a4f872662",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "53. कौन सा नेटवर्क प्रकार शहरों, क्षेत्रों या पूरे राष्ट्रीय सीमाओं में फैला होता है, जो अक्सर पट्टे पर लिए गए दूरसंचार लाइनों पर निर्भर करता है?\n(1) स्थानीय क्षेत्र नेटवर्क (LAN)\n(2) व्यक्तिगत क्षेत्र नेटवर्क (PAN)\n(3) विस्तृत क्षेत्र नेटवर्क (WAN)",
+      "options_hindi": [
+        "स्थानीय क्षेत्र नेटवर्क (LAN)",
+        "व्यक्तिगत क्षेत्र नेटवर्क (PAN)",
+        "विस्तृत क्षेत्र नेटवर्क (WAN)",
+        "विभिन्न क्षेत्र नेटवर्क (VAN)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which network type spans across cities, regions, or entire national boundaries, often relying on leased telecommunication lines?",
+      "options_english": [
+        "Local Area Network (LAN)",
+        "Personal Area Network (PAN)",
+        "Wide Area Network (WAN)",
+        "Various Area Network (VAN)"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A Wide Area Network spans vast geographical regions, extending across cities, provinces, nations, or global territories. WANs interconnect smaller networks, such as LANs and MANs, using leased telecommunication lines, satellite transmissions, fiber optic backbones, and wireless links. The Internet itself represents the largest and most prominent public example of a globally distributed Wide Area Network architecture.",
+      "explanation_hindi": "सही उत्तर (c) है। विस्तृत क्षेत्र नेटवर्क (WAN) विशाल भौगोलिक क्षेत्रों में फैला होता है, जो शहरों, प्रांतों, देशों या वैश्विक क्षेत्रों को जोड़ता है। WAN छोटे नेटवर्कों जैसे LAN और MAN को पट्टे पर लिए गए दूरसंचार लाइनों, उपग्रह संचार, फाइबर ऑप्टिक बैकबोन और वायरलेस लिंक का उपयोग करके आपस में जोड़ता है। इंटरनेट स्वयं एक वैश्विक स्तर पर वितरित विस्तृत क्षेत्र नेटवर्क आर्किटेक्चर का सबसे बड़ा और प्रमुख सार्वजनिक उदाहरण है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "विस्तृत क्षेत्र नेटवर्क (WAN) बड़े भौगोलिक क्षेत्रों को जोड़ता है।",
+        "WANs छोटे नेटवर्कों को आपस में जोड़ने के लिए पट्टे पर लिए गए दूरसंचार लाइनों का उपयोग करते हैं।",
+        "Printed answer key: (C) Wide Area Network (WAN)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a69e9cec-b3c6-496d-8881-5e67d79c9481",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "49. कौन सा संक्षिप्ताक्षर नेटवर्क इंटरफेस कार्ड (NIC) में निर्मित अद्वितीय भौतिक हार्डवेयर पते को संदर्भित करता है?",
+      "options_hindi": [
+        "आईपी पता",
+        "MAC पता",
+        "DNS पता",
+        "URL पता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which acronym refers to the unique physical hardware address baked into a network interface card (NIC)?",
+      "options_english": [
+        "IP Address",
+        "MAC Address",
+        "DNS Address",
+        "URL Address"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "A Media Access Control address is a unique 48-bit physical identifier permanently burned into a Network Interface Controller during manufacturing. Unlike logical IP addresses assigned dynamically by network software, a MAC address functions at the data link layer of the OSI model to uniquely identify physical hardware devices on local network segments, ensuring accurate frame delivery across physical channels.",
+      "explanation_hindi": "सही उत्तर (b) है। मीडिया एक्सेस कंट्रोल पता एक अद्वितीय 48-बिट भौतिक पहचानकर्ता है जो निर्माण के दौरान नेटवर्क इंटरफेस कंट्रोलर में स्थायी रूप से जलाया जाता है। तार्किक आईपी पतों के विपरीत, जो नेटवर्क सॉफ़्टवेयर द्वारा गतिशील रूप से असाइन किए जाते हैं, एक MAC पता OSI मॉडल के डेटा लिंक परत पर कार्य करता है ताकि स्थानीय नेटवर्क खंडों पर भौतिक हार्डवेयर उपकरणों की अद्वितीय पहचान सुनिश्चित की जा सके, जिससे भौतिक चैनलों के माध्यम से सटीक फ्रेम डिलीवरी सुनिश्चित होती है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "MAC पता एक अद्वितीय 48-बिट भौतिक पहचानकर्ता है।",
+        "MAC पता नेटवर्क इंटरफेस कार्ड में निर्मित होता है।",
+        "MAC पता डेटा लिंक परत पर कार्य करता है।",
+        "Printed answer key: (B) MAC Address"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f67ce7c9-7a84-43ec-863c-b9f3ad907a26",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को असर्शन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है। \nअसर्शन (A): एक पुराना वेब ब्राउज़र उपयोग करना\nमैलवेयर और साइबर हमलों के प्रति संवेदनशीलता बढ़ाता है।",
+      "options_hindi": [
+        "A और R दोनों सत्य हैं और R A का सही\nव्याख्या है।",
+        "A सत्य है, लेकिन R असत्य है।",
+        "R सत्य है, लेकिन A असत्य है।",
+        "A और R दोनों असत्य हैं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). \nAssertion (A): Using an outdated web browser increases susceptibility to malware and cyberattacks.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "A is true, but R is false.",
+        "R is true, but A is false.",
+        "Both A and R are false."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Operating an outdated web browser exposes client computing systems to significant cybersecurity threats. Software developers regularly release browser updates to patch newly discovered security vulnerabilities in layout engines, script interpreters, and network drivers. Without timely updates, unpatched security flaws can be exploited by malicious websites to inject malware, compromise personal data, steal credentials, or execute unauthorized remote code.",
+      "explanation_hindi": "सही उत्तर (a) है। एक पुराने वेब ब्राउज़र का संचालन क्लाइंट कंप्यूटिंग सिस्टम को महत्वपूर्ण साइबर सुरक्षा खतरों के प्रति संवेदनशील बनाता है। सॉफ़्टवेयर डेवलपर्स नियमित रूप से ब्राउज़र अपडेट जारी करते हैं ताकि लेआउट इंजनों, स्क्रिप्ट इंटरप्रेटर्स और नेटवर्क ड्राइवरों में हाल ही में खोजी गई सुरक्षा कमजोरियों को पैच किया जा सके। समय पर अपडेट के बिना, बिना पैच की गई सुरक्षा खामियों का दुरुपयोग किया जा सकता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Using an outdated web browser increases susceptibility to malware and cyberattacks.",
+        "Software developers regularly release updates to patch security vulnerabilities.",
+        "Unpatched security flaws can be exploited by malicious websites.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f34ea911-9d83-4c39-9d47-92dfea402513",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "95. कंप्यूटर नेटवर्किंग संदर्भ में “डाउनलोड” शब्द का क्या अर्थ है?",
+      "options_hindi": [
+        "एक स्थानीय डिवाइस पर एक दूरस्थ सर्वर से डेटा या फ़ाइलें प्राप्त करना",
+        "एक स्थानीय क्लाइंट सिस्टम से एक दूरस्थ सर्वर पर फ़ाइलें या डेटा पैकेज भेजना",
+        "स्थानीय सिस्टम मेमोरी से अस्थायी इंटरनेट फ़ाइलें और ब्राउज़र कैश साफ़ करना",
+        "स्थानीय स्टोरेज ड्राइव में उपयोगकर्ता पासवर्ड और सुरक्षा क्रेडेंशियल्स को एन्क्रिप्ट करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What does the term “Download” mean in computer networking context?",
+      "options_english": [
+        "Receiving data or files from a remote server to a local device",
+        "Transmitting files or data packages from a local client system to a distant server",
+        "Clearing temporary internet files and browser cache from local system memory",
+        "Encrypting user passwords and security credentials within local storage drives"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "In computer networking, downloading describes the process of receiving digital data, files, or web resources from a remote server host to a local computing device across a network connection. When a user opens a web page, saves an image, or fetches document files, the local browser initiates network requests that transfer data to the local device.",
+      "explanation_hindi": "सही उत्तर (a) है। कंप्यूटर नेटवर्किंग में, डाउनलोडिंग उस प्रक्रिया का वर्णन करता है जिसमें डिजिटल डेटा, फ़ाइलें, या वेब संसाधन एक दूरस्थ सर्वर होस्ट से एक स्थानीय कंप्यूटिंग डिवाइस पर नेटवर्क कनेक्शन के माध्यम से प्राप्त किए जाते हैं। जब कोई उपयोगकर्ता एक वेब पृष्ठ खोलता है, एक छवि सहेजता है, या दस्तावेज़ फ़ाइलें लाता है, तो स्थानीय ब्राउज़र नेटवर्क अनुरोधों को आरंभ करता है जो डेटा को स्थानीय डिवाइस पर स्थानांतरित करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "Downloading is the process of receiving data from a remote server.",
+        "It involves transferring files over a network connection.",
+        "Printed answer key: (A) Receiving data or files from a remote server"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8a4d9b43-53b3-47a3-9a20-c222cde46cf8",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "स्थानीय क्षेत्र नेटवर्क (LAN) के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. LAN आमतौर पर छोटे भौगोलिक क्षेत्रों को कवर करता है जैसे घर, कार्यालय या स्कूल प्रयोगशालाएँ।\nB. ईथरनेट कैबलिंग (Cat5e/Cat6) का उपयोग आमतौर पर वायर्ड LAN बनाने के लिए किया जाता है।\nC. वाई-फाई तकनीक का उपयोग वायरलेस LAN (WLAN) बनाने के लिए किया जा सकता है।\nD. LAN को विस्तृत क्षेत्र नेटवर्क (WAN) बनाने के लिए आपस में नहीं जोड़ा जा सकता।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A, C और D",
+        "केवल A, B और D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Local Area Networks (LAN):\nA. LANs typically cover small geographic areas like homes, offices, or school laboratories.\nB. Ethernet cabling (Cat5e/Cat6) is commonly used to form wired LANs.\nC. Wi-Fi technology can be used to create wireless LANs (WLAN).\nD. LANs cannot be interconnected to form a Wide Area Network (WAN).\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and C only",
+        "B, C and D only",
+        "A, C and D only",
+        "A, B and D only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Local Area Networks span geographically limited environments such as homes, offices, or school laboratories. Wired LANs frequently deploy twisted-pair Ethernet cables like Cat5e or Cat6, whereas wireless LANs utilize Wi-Fi technology to connect devices. Furthermore, individual Local Area Networks can be interconnected using network routers and telecommunication links to form expansive Wide Area Networks spanning large geographical areas.",
+      "explanation_hindi": "सही उत्तर (a) है। स्थानीय क्षेत्र नेटवर्क भौगोलिक रूप से सीमित वातावरण जैसे घर, कार्यालय या स्कूल प्रयोगशालाओं को कवर करते हैं। वायर्ड LAN आमतौर पर Cat5e या Cat6 जैसे ट्विस्टेड-पेयर ईथरनेट केबल का उपयोग करते हैं, जबकि वायरलेस LAN उपकरणों को जोड़ने के लिए वाई-फाई तकनीक का उपयोग करते हैं। इसके अलावा, व्यक्तिगत स्थानीय क्षेत्र नेटवर्क को नेटवर्क राउटर और दूरसंचार लिंक का उपयोग करके आपस में जोड़ा जा सकता है ताकि बड़े भौगोलिक क्षेत्रों में फैले विस्तृत क्षेत्र नेटवर्क का निर्माण किया जा सके।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "LANs cover small geographic areas like homes and offices.",
+        "Ethernet cabling (Cat5e/Cat6) is commonly used for wired LANs.",
+        "Wi-Fi technology is used to create wireless LANs (WLAN).",
+        "Printed answer key: (A) A, B and C only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1a1847bd-18af-4651-aa1b-a7bcfd4dd087",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "स्थिर आईपी पते और गतिशील आईपी पते के बीच का मौलिक अंतर क्या है?\n(I) स्थिर आईपी पते हर सत्र के साथ स्वचालित रूप से बदलते हैं, जबकि गतिशील आईपी पते स्थायी रूप से अपरिवर्तित रहते हैं। \n(II) स्थिर आईपी पते केवल वायरलेस नेटवर्क पर कार्य करते हैं, जबकि गतिशील आईपी पते ऑप्टिकल फाइबर पर कार्य करते हैं। \n(III) स्थिर आईपी पते स्थिर रहते हैं, जबकि गतिशील आईपी पते असाइन किए जाते हैं।",
+      "options_hindi": [
+        "स्थिर आईपी पते हर सत्र के साथ स्वचालित रूप से बदलते हैं, जबकि गतिशील आईपी पते स्थायी रूप से अपरिवर्तित रहते हैं।",
+        "स्थिर आईपी पते केवल वायरलेस नेटवर्क पर कार्य करते हैं, जबकि गतिशील आईपी पते ऑप्टिकल फाइबर पर कार्य करते हैं।",
+        "स्थिर आईपी पते स्थिर रहते हैं, जबकि गतिशील आईपी पते असाइन किए जाते हैं।",
+        "स्थिर आईपी पते असाइन किए जाते हैं, जबकि गतिशील आईपी पते स्थिर रहते हैं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the fundamental difference between a static IP address and a dynamic IP address?\n(I) Static IP addresses automatically change with every session, whereas dynamic IP addresses remain unchanged permanently.\n(II) Static IP addresses function exclusively on wireless networks, whereas dynamic IP addresses operate on optical fiber.\n(III) Static IP addresses remain fixed, whereas dynamic IP addresses are assigned.",
+      "options_english": [
+        "Static IP addresses automatically change with every session, whereas dynamic IP addresses remain unchanged permanently.",
+        "Static IP addresses function exclusively on wireless networks, whereas dynamic IP addresses operate on optical fiber.",
+        "Static IP addresses remain fixed, whereas dynamic IP addresses are assigned.",
+        "Static IP addresses are assigned, whereas dynamic IP addresses remain fixed."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The correct answer is that static IP addresses remain fixed, whereas dynamic IP addresses are assigned temporarily by a DHCP server. A static IP address is permanently configured and remains constant over time, making it ideal for web servers, enterprise infrastructure, and network printers that require stable addresses. In contrast, a dynamic IP address is automatically assigned on a temporary lease basis from an IP address pool by a Dynamic Host Configuration Protocol server, changing periodically or whenever devices reconnect to the network.",
+      "explanation_hindi": "सही उत्तर (c) है। स्थिर आईपी पते स्थिर रहते हैं, जबकि गतिशील आईपी पते असाइन किए जाते हैं। स्थिर आईपी पता स्थायी रूप से कॉन्फ़िगर किया जाता है और समय के साथ स्थिर रहता है, जिससे यह वेब सर्वर, उद्यम बुनियादी ढाँचा, और नेटवर्क प्रिंटर के लिए आदर्श होता है जिन्हें स्थिर पते की आवश्यकता होती है। इसके विपरीत, गतिशील आईपी पता स्वचालित रूप से असाइन किया जाता है और यह एक अस्थायी लीज़ के आधार पर कार्य करता है, जो एक आईपी पते के पूल से DHCP सर्वर द्वारा असाइन किया जाता है, जो समय-समय पर या जब उपकरण नेटवर्क से फिर से कनेक्ट होते हैं तो बदलता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Static IP addresses are permanently configured and do not change.",
+        "Dynamic IP addresses are assigned temporarily by a DHCP server.",
+        "Static IP addresses are ideal for servers and devices requiring stable addresses.",
+        "Printed answer key: (C) Static IP addresses remain fixed, whereas"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7a672ce1-80e7-4cff-bdbc-83ddf59dcca1",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "34. नेटवर्क टोपोलॉजी की सही अनुक्रम का चयन करें\nएकल केंद्रीय हब/स्विच पर निर्भरता के आधार पर (उच्चतम निर्भरता से\nन्यूनतम/शून्य निर्भरता तक):",
+      "options_hindi": [
+        "स्टार टोपोलॉजी → मेष टोपोलॉजी",
+        "मेष टोपोलॉजी → स्टार टोपोलॉजी",
+        "रिंग टोपोलॉजी → स्टार टोपोलॉजी",
+        "बस टोपोलॉजी → स्टार टोपोलॉजी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Choose the correct sequence of network topologies based on their dependence on a single central hub/switch (from highest dependence to lowest/zero dependence):",
+      "options_english": [
+        "Star Topology → Mesh Topology",
+        "Mesh Topology → Star Topology",
+        "Ring Topology → Star Topology",
+        "Bus Topology → Star Topology"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Network topologies differ in their centralized dependency structure. Star topology exhibits complete reliance on a single central switch or hub, through which all node communications pass; if the central switch fails, the entire network collapses. Conversely, mesh topology exhibits zero dependence on a central hub, as individual nodes connect directly to each other via redundant, decentralized point-to-point links.",
+      "explanation_hindi": "सही उत्तर (a) है। नेटवर्क टोपोलॉजी केंद्रीय निर्भरता संरचना में भिन्न होती है। स्टार टोपोलॉजी एकल केंद्रीय स्विच या हब पर पूरी तरह से निर्भर होती है, जिसके माध्यम से सभी नोड संचारित होते हैं; यदि केंद्रीय स्विच विफल हो जाता है, तो पूरा नेटवर्क ठप हो जाता है। इसके विपरीत, मेष टोपोलॉजी केंद्रीय हब पर कोई निर्भरता नहीं होती है, क्योंकि व्यक्तिगत नोड एक-दूसरे से सीधे जुड़ते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Star topology relies on a central hub for communication.",
+        "Mesh topology allows direct connections between nodes.",
+        "Printed answer key: (A) Star Topology → Mesh Topology"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "975b851b-8d53-408e-8d4e-ea2e50ed99b4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "69. सूची I में नेटवर्क अवधारणाओं को सूची II में उनके परिभाषाओं से मिलाएं:\nसूची I: (नेटवर्क अवधारणा)\nP. बैंडविड्थ\nQ. विलंबता\nR. वाई-फाई\nS. हॉटस्पॉट\nसूची II: (परिभाषा/गुण)\nI. नेटवर्क डेटा ट्रांसमिशन में देरी\nII. WLAN के माध्यम से वायरलेस इंटरनेट\nएक्सेस प्रदान करने वाला भौतिक स्थान\nIII. डेटा ट्रांसमिट करने के लिए नेटवर्क लिंक की अधिकतम क्षमता\nIV. रेडियो आवृत्ति संकेतों का उपयोग करने वाली वायरलेस नेटवर्किंग तकनीक",
+      "options_hindi": [
+        "P-III, Q-I, R-IV, S-II",
+        "P-I, Q-III, R-II, S-IV",
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-I, R-III, S-II"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match the network concepts in List I with their definitions in List II:\nList I: (Network Concept)\nP. Bandwidth\nQ. Latency\nR. Wi-Fi\nS. Hotspot\nList II: (Definition/Property)\nI. Delay in network data transmission\nII. Physical location providing wireless internet access via a WLAN\nIII. Maximum capacity of a network link to transmit data\nIV. Wireless networking technology using radio frequency signals",
+      "options_english": [
+        "P-III, Q-I, R-IV, S-II",
+        "P-I, Q-III, R-II, S-IV",
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-I, R-III, S-II"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Bandwidth represents the maximum data transfer capacity of a network transmission link. Latency measures the time delay experienced during packet transmission across network paths. Wi-Fi is a wireless networking technology that uses radio frequency signals to connect computing devices. A hotspot is a physical location that provides wireless internet access to client devices through a wireless local area network access point.",
+      "explanation_hindi": "सही उत्तर (a) है। बैंडविड्थ नेटवर्क ट्रांसमिशन लिंक की अधिकतम डेटा ट्रांसफर क्षमता को दर्शाता है। विलंबता नेटवर्क पथों के पार पैकेट ट्रांसमिशन के दौरान अनुभव की गई समय देरी को मापता है। वाई-फाई एक वायरलेस नेटवर्किंग तकनीक है जो कंप्यूटिंग उपकरणों को जोड़ने के लिए रेडियो आवृत्ति संकेतों का उपयोग करती है। हॉटस्पॉट एक भौतिक स्थान है जो वायरलेस स्थानीय क्षेत्र नेटवर्क एक्सेस पॉइंट के माध्यम से क्लाइंट उपकरणों को वायरलेस इंटरनेट एक्सेस प्रदान करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "बैंडविड्थ नेटवर्क लिंक की अधिकतम डेटा ट्रांसफर क्षमता है।",
+        "विलंबता नेटवर्क डेटा ट्रांसमिशन में देरी को दर्शाती है।",
+        "वाई-फाई एक वायरलेस नेटवर्किंग तकनीक है।",
+        "Printed answer key: (A) P-III, Q-I, R-IV, S-II"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f2be1579-7473-48e4-9b0f-ae38a95867ea",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "13. URL का कौन सा घटक वेब संसाधन तक पहुँचने के लिए उपयोग किए जाने वाले संचार प्रोटोकॉल को निर्दिष्ट करता है?\n(1) पंजीकृत डोमेन नाम\n(2) नेटवर्क संसाधन पथ",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "स्कीम / प्रोटोकॉल",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which component of a URL specifies the communication protocol used to access a web resource?\nRegistered Domain Name\nNetwork Resource Path",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Scheme / Protocol",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A Uniform Resource Locator consists of multiple structured components that guide network communication. The scheme or protocol component, positioned before the colon and double slashes, explicitly tells the web browser which protocol to use when establishing a connection and retrieving data from the server. Common examples include HTTP for standard web traffic, HTTPS for encrypted web access, and FTP for file transfers.",
+      "explanation_hindi": "सही उत्तर (c) है। URL एकीकृत संसाधन लोकेटर कई संरचित घटकों से बना होता है जो नेटवर्क संचार को मार्गदर्शित करते हैं। स्कीम या प्रोटोकॉल घटक, जो कोलन और डबल स्लैश से पहले स्थित होता है, स्पष्ट रूप से वेब ब्राउज़र को बताता है कि सर्वर से डेटा प्राप्त करने और कनेक्शन स्थापित करने के लिए कौन सा प्रोटोकॉल उपयोग करना है। सामान्य उदाहरणों में HTTP मानक वेब ट्रैफ़िक के लिए, HTTPS एन्क्रिप्टेड वेब एक्सेस के लिए, और FTP फ़ाइल ट्रांसफर के लिए शामिल हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "URL में स्कीम या प्रोटोकॉल घटक संचार प्रोटोकॉल को निर्दिष्ट करता है।",
+        "HTTP, HTTPS, और FTP सामान्य प्रोटोकॉल हैं।",
+        "Printed answer key: (C) Scheme / Protocol"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3fd11b7a-6800-4949-b0df-60e2a463e41d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "24. इंटरनेट प्रोटोकॉल (IP) पते के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. IPv4 पते 32-बिट संख्यात्मक पते होते हैं जो आमतौर पर डॉटेड-डेसिमल नोटेशन में लिखे जाते हैं।\nB. IPv6 को IPv4 के पते की कमी की सीमाओं को पार करने के लिए पेश किया गया था।\nC. एक गतिशील IP पता हमेशा एकल हार्डवेयर डिवाइस को स्थायी रूप से सौंपा जाता है।\nउपरोक्त दिए गए कथनों में से कौन से सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Internet Protocol (IP) addresses:\nA. IPv4 addresses are 32-bit numerical addresses usually written in dotted-decimal notation.\nB. IPv6 was introduced to overcome the address exhaustion limitations of IPv4.\nC. A dynamic IP address remains permanently assigned to a single hardware device forever.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "IPv4 addresses use 32-bit numeric values formatted as four octets in dotted-decimal notation. IPv6 was created to replace IPv4 due to the exhaustion of available 32-bit addresses, offering a 128-bit address space. Dynamic IP addresses are allocated temporarily by network servers using dynamic assignment protocols and change over time, whereas static IP addresses remain permanently assigned to fixed network equipment.",
+      "explanation_hindi": "सही उत्तर (a) है। IPv4 पते 32-बिट संख्यात्मक मानों का उपयोग करते हैं जो डॉटेड-डेसिमल नोटेशन में चार ऑक्टेट के रूप में स्वरूपित होते हैं। IPv6 को IPv4 के उपलब्ध 32-बिट पते की कमी के कारण प्रतिस्थापित करने के लिए बनाया गया था, जो 128-बिट पते की जगह प्रदान करता है। गतिशील IP पते अस्थायी रूप से नेटवर्क सर्वरों द्वारा गतिशील असाइनमेंट प्रोटोकॉल का उपयोग करके आवंटित किए जाते हैं और समय के साथ बदलते हैं, जबकि स्थिर IP पते स्थायी रूप से निश्चित नेटवर्क उपकरणों को सौंपे जाते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "IPv4 addresses are 32-bit and in dotted-decimal notation.",
+        "IPv6 addresses provide a 128-bit address space.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

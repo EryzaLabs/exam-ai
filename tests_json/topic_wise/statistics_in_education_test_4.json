@@ -1,0 +1,784 @@
+{
+  "test_id": "835e5719-e3fe-4dc3-becc-6030316f00ee",
+  "test_name": "Topic Test: STATISTICS_IN_EDUCATION - Part 4",
+  "type": "topic_wise",
+  "topic": "statistics_in_education",
+  "created_at": "2026-10-28T18:55:06.900051",
+  "questions": [
+    {
+      "id": "fea284dd-6492-49dd-b535-1f05e09ffbd8",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कौन सा ग्राफिकल प्रतिनिधित्व आवृत्ति वितरण के मध्यिका और प्रतिशत बिंदुओं को आसानी से निर्धारित करने के लिए उपयोग किया जाता है?",
+      "options_hindi": [
+        "श्रेणीबद्ध ऊर्ध्वाधर बार आरेख",
+        "सतत समूहित हिस्टोग्राम",
+        "संचित आवृत्ति ओगिव",
+        "अनुपातात्मक वृत्तीय पाई चार्ट"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Which graphical representation is used to easily determine the median and percentiles of a frequency distribution?",
+      "options_english": [
+        "Categorical Vertical Bar Diagram",
+        "Continuous Grouped Histogram",
+        "Cumulative Frequency Ogive",
+        "Proportional Circular Pie Chart"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A cumulative frequency curve, commonly called an ogive, provides a visual tool for determining positional statistics across continuous data. By plotting cumulative frequencies against class boundaries, educators can locate specific percentiles, deciles, and the median directly from the visual graph by tracing horizontal percentage lines to the curve and reading corresponding score values.",
+      "explanation_hindi": "सही उत्तर (c) है। एक संचित आवृत्ति आरेख, जिसे सामान्यतः ओगिव कहा जाता है, निरंतर डेटा के माध्यम से स्थिति सांख्यिकी निर्धारित करने के लिए एक दृश्य उपकरण प्रदान करता है। संचित आवृत्तियों को वर्ग सीमाओं के खिलाफ प्लॉट करके, शिक्षक दृश्य ग्राफ से सीधे विशिष्ट प्रतिशत बिंदुओं, दशमलव और मध्यिका को ढूंढ सकते हैं, जिससे वे क्षैतिज प्रतिशत रेखाओं को आरेख तक ट्रेस करके और संबंधित स्कोर मान पढ़ सकते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Cumulative frequency ogive is essential for determining median and percentiles.",
+        "Printed answer key: (C) Cumulative Frequency Ogive"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ca8f9b65-96f1-47a8-a282-d35522b21f04",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को असर्शन (A) के रूप में लेबल किया गया है और दूसरे को कारण (R) के रूप में लेबल किया गया है। \nअसर्शन (A): वितरण में सभी स्कोर में 10 का एक स्थायी मान जोड़ने से औसत 10 से बढ़ जाता है लेकिन मानक विचलन अपरिवर्तित रहता है। \nकारण (R): मानक विचलन औसत से फैलाव को मापता है, और एक स्थायी जोड़ने से पूरे वितरण को स्थानांतरित करता है बिना स्कोर के फैलाव को बदले।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है",
+        "A सत्य है लेकिन R गलत है",
+        "A गलत है लेकिन R सत्य है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). \nAssertion (A): Adding a constant value of 10 to all scores in a distribution increases the mean by 10 but leaves the standard deviation unchanged. \nReason (R): The standard deviation measures dispersion from the mean, and adding a constant shifts the entire distribution without changing the spread of the scores.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Adding a constant to every score shifts the entire distribution along the measurement scale, increasing the arithmetic mean by that exact amount. However, because the relative spacing between individual scores remains completely unchanged, the overall spread and standard deviation of the dataset remain identical to their original values.",
+      "explanation_hindi": "सही उत्तर (a) है। प्रत्येक स्कोर में एक स्थायी जोड़ने से पूरे वितरण को मापने के पैमाने के साथ स्थानांतरित किया जाता है, जिससे अंकगणितीय औसत उसी मात्रा से बढ़ जाता है। हालाँकि, क्योंकि व्यक्तिगत स्कोर के बीच का सापेक्ष स्थान पूरी तरह से अपरिवर्तित रहता है, डेटा सेट का समग्र फैलाव और मानक विचलन उनके मूल मानों के समान रहते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Adding a constant shifts the distribution without changing spread.",
+        "Mean increases by the constant added.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "60299649-bcda-4afd-aab8-63bd1e48e8bf",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "जब किसी परीक्षा की कठिनाई स्तर का विश्लेषण किया जाता है, यदि\nऔसत स्कोर बहुत उच्च है और अधिकतम संभव स्कोर के\nनजदीक है, तो परीक्षा किससे प्रभावित होती है:",
+      "options_hindi": [
+        "फ्लोर प्रभाव",
+        "हॉथोर्न प्रभाव",
+        "प्लेसबो प्रभाव",
+        "सीलिंग प्रभाव"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "When analyzing the difficulty level of a test, if the mean score is very high and approaches the maximum possible score, the test suffers from:",
+      "options_english": [
+        "The floor effect",
+        "The Hawthorne effect",
+        "The placebo effect",
+        "The ceiling effect"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The ceiling effect occurs when a test is so easy that a high proportion of examinees score near or at the maximum possible score. This clustering at the upper boundary prevents the test from discriminating among high-performing students, artificially truncating score variance and obscuring differences in true ability.",
+      "explanation_hindi": "सही उत्तर (d) है। सीलिंग प्रभाव तब होता है जब परीक्षा इतनी आसान होती है कि एक उच्च अनुपात में परीक्षार्थियों का स्कोर अधिकतम संभव स्कोर के नजदीक या उस पर होता है। यह उच्च सीमा पर समूहबद्धता उच्च प्रदर्शन करने वाले छात्रों के बीच भेदभाव करने में परीक्षा को रोकती है, कृत्रिम रूप से स्कोर भिन्नता को काटती है और वास्तविक क्षमता में भिन्नताओं को अस्पष्ट करती है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The ceiling effect limits the ability to differentiate high achievers.",
+        "Printed answer key: (D) The ceiling effect"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6d720a9d-d4ea-4171-9a33-cfefcbca7e10",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "यदि एक वर्ग अंतराल की निम्न सीमा 40 है और ऊपरी सीमा 49 है, तो इस वर्ग अंतराल की सटीक निम्न और ऊपरी सीमाएँ (सच्ची सीमाएँ) क्या हैं?",
+      "options_hindi": [
+        "40.0 और 49.0",
+        "40.5 और 48.5",
+        "39.5 और 49.5",
+        "39.0 और 50.0"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "If the lower limit of a class interval is 40 and the upper limit is 49 in a discrete series, what are the exact lower and upper boundaries (true limits) of this class interval?",
+      "options_english": [
+        "40.0 and 49.0",
+        "40.5 and 48.5",
+        "39.5 and 49.5",
+        "39.0 and 50.0"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "True class limits or exact class boundaries establish continuous boundaries for discrete intervals by bridging gap spaces between adjacent classes. Calculating exact boundaries involves subtracting half of the unit gap, specifically 0.5, from the lower class limit of 40 and adding 0.5 to the upper class limit of 49. This results in exact boundaries of 39.5 and 49.5.",
+      "explanation_hindi": "सही उत्तर (c) है। सच्ची वर्ग सीमाएँ या सटीक वर्ग सीमाएँ निरंतर सीमाएँ स्थापित करती हैं जो निकटवर्ती वर्गों के बीच के अंतराल को भरती हैं। सटीक सीमाओं की गणना करने के लिए, 40 की निम्न वर्ग सीमा से 0.5 घटाना और 49 की ऊपरी वर्ग सीमा में 0.5 जोड़ना शामिल है। इससे 39.5 और 49.5 की सटीक सीमाएँ प्राप्त होती हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "easy",
+      "key_facts": [
+        "True class limits establish continuous boundaries for discrete intervals.",
+        "Exact boundaries are calculated by adjusting the lower and upper limits.",
+        "Printed answer key: (C) 39.5 and 49.5"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "46f90a09-a7e4-49fe-9589-fe0a424b1dc3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से कौन-सी सांख्यिकीय तकनीक का उपयोग एक स्वतंत्र चर के मान के आधार पर एक आश्रित चर के मान की भविष्यवाणी करने के लिए किया जाता है?",
+      "options_hindi": [
+        "अन्वेषणात्मक कारक विश्लेषण",
+        "स्वतंत्रता का ची-स्क्वायर परीक्षण",
+        "प्रतिगमन",
+        "स्वतंत्र छात्र टी-टेस्ट"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Which of the following statistical techniques is used to predict the value of a dependent variable based on the value of an independent variable?",
+      "options_english": [
+        "Exploratory Factor Analysis",
+        "Chi-Square Test of Independence",
+        "Regression",
+        "Independent Student T-test"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Regression analysis is a statistical method used to model and predict the value of a continuous dependent variable based on one or more independent variables. It establishes a relationship between the variables, allowing for predictions about the dependent variable when the independent variable changes. This technique is widely used in various fields, including education, to assess the impact of different factors on student performance.",
+      "explanation_hindi": "सही उत्तर (c) है। प्रतिगमन विश्लेषण एक सांख्यिकीय विधि है जिसका उपयोग एक या अधिक स्वतंत्र चर के आधार पर एक निरंतर आश्रित चर के मान की भविष्यवाणी करने के लिए किया जाता है। यह चर के बीच संबंध स्थापित करता है, जिससे स्वतंत्र चर में परिवर्तन होने पर आश्रित चर के बारे में भविष्यवाणियाँ की जा सकती हैं। यह तकनीक विभिन्न क्षेत्रों में, विशेष रूप से शिक्षा में, छात्र प्रदर्शन पर विभिन्न कारकों के प्रभाव का आकलन करने के लिए व्यापक रूप से उपयोग की जाती है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "प्रतिगमन विश्लेषण का उपयोग निरंतर आश्रित चर की भविष्यवाणी के लिए किया जाता है।",
+        "यह स्वतंत्र और आश्रित चर के बीच संबंध स्थापित करता है।",
+        "Printed answer key: (C) Regression"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "94f7f5b1-c5e1-4653-b87f-4a98faee50dd",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक वितरण जिसमें औसत 50, मध्य 60, और मोड 70 है:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A distribution with a Mean of 50, a Median of 60, and a Mode of 70 is:",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "In a frequency distribution where the mean (50) is smaller than the median (60), which is in turn smaller than the mode (70), the distribution is negatively skewed. The lower mean indicates that extreme low scores pull the tail toward the left end of the score scale.",
+      "explanation_hindi": "सही उत्तर (b) है। एक आवृत्ति वितरण में जहाँ औसत (50) मध्य (60) से छोटा है, जो कि मोड (70) से भी छोटा है, वह वितरण नकारात्मक रूप से झुका हुआ है। कम औसत यह दर्शाता है कि अत्यधिक निम्न स्कोर पूंछ को स्कोर पैमाने के बाएँ छोर की ओर खींचते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The mean is less than the median and mode.",
+        "Indicates a negatively skewed distribution.",
+        "Printed answer key: (B) Negatively skewed"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5e5a62f6-1d9a-4e0d-b285-68e75ef99a87",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक स्कैटरप्लॉट में बिंदुओं का एक समूह है जो\nनीचे बाईं ओर से शुरू होकर ऊपर दाईं ओर\nजाता है। यह पैटर्न क्या दर्शाता है:",
+      "options_hindi": [
+        "सकारात्मक सहसंबंध",
+        "शून्य सहसंबंध",
+        "नकारात्मक सहसंबंध",
+        "पूर्ण वक्र संबंध"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A scatterplot shows a cluster of points starting from the bottom left and moving towards the top right. This pattern indicates:",
+      "options_english": [
+        "A positive correlation",
+        "A zero correlation",
+        "A negative correlation",
+        "A perfect curvilinear relationship"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "On a bivariate scatterplot, when data points cluster along an upward linear path from bottom-left to top-right, it indicates a positive correlation. This visual pattern demonstrates that as values for the variable on the horizontal axis increase, corresponding values for the variable on the vertical axis also systematically increase.",
+      "explanation_hindi": "सही उत्तर (a) है। एक द्विविवर्ती स्कैटरप्लॉट में, जब डेटा बिंदु नीचे बाईं ओर से ऊपर दाईं ओर की ओर एक ऊर्ध्वाधर रेखा के साथ समूहित होते हैं, तो यह सकारात्मक सहसंबंध को दर्शाता है। यह दृश्य पैटर्न यह दर्शाता है कि जैसे-जैसे क्षैतिज धुरी पर मान बढ़ते हैं, उसी के अनुरूप ऊर्ध्वाधर धुरी पर मान भी व्यवस्थित रूप से बढ़ते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "easy",
+      "key_facts": [
+        "Positive correlation indicates a direct relationship between two variables.",
+        "Printed answer key: (A) A positive correlation"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e73b19ca-543b-4f01-8c68-da75d542b0d4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक स्कूल के विभिन्न अनुभागों में परीक्षण प्रदर्शन की तुलना करते समय, कब मोड केंद्रीय प्रवृत्ति का सबसे उपयुक्त माप होता है?",
+      "options_hindi": [
+        "जब समग्र छात्र ग्रेडिंग के लिए एक सटीक अंकगणितीय औसत की आवश्यकता होती है",
+        "जब वितरण गंभीर चरम स्कोर आउटलेयर के साथ भारी रूप से झुका होता है",
+        "जब डेटा के आगे जटिल बीजगणितीय हेरफेर की योजना बनाई जाती है",
+        "जब डेटा नाममात्र पैमाने पर होता है ताकि सबसे मोडल श्रेणी की पहचान की जा सके"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "In the context of comparing test performance across different sections of a school, when is the mode the most appropriate measure of central tendency?",
+      "options_english": [
+        "When an exact arithmetic average is required for overall student grading",
+        "When the distribution is heavily skewed with severe extreme score outliers",
+        "When further complex algebraic manipulation of the data is planned later",
+        "When data is on a nominal scale to identify the most modal category"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The mode is the primary measure of central tendency applicable to nominal scale data, where scores exist purely as distinct qualitative categories. In these instances, calculating means or medians is mathematically invalid. Identifying the mode highlights the single category containing the highest concentration or frequency of responses, providing valuable insights into categorical educational data.",
+      "explanation_hindi": "सही उत्तर (d) है। मोड नाममात्र पैमाने के डेटा के लिए केंद्रीय प्रवृत्ति का प्राथमिक माप है, जहाँ स्कोर केवल विशिष्ट गुणात्मक श्रेणियों के रूप में मौजूद होते हैं। इन मामलों में, औसत या माध्य की गणना करना गणितीय रूप से अवैध है। मोड की पहचान करना उस एकल श्रेणी को उजागर करता है जिसमें प्रतिक्रियाओं का सबसे अधिक संकेंद्रण या आवृत्ति होती है, जो श्रेणीबद्ध शैक्षिक डेटा में मूल्यवान अंतर्दृष्टि प्रदान करती है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The mode is applicable to nominal scale data.",
+        "Calculating means or medians is mathematically invalid for nominal data.",
+        "Printed answer key: (D) When data is on a nominal scale to identify"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b214ff82-0cf2-4f3a-88c1-fa12dec83fd5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित मापों पर विचार करें:\nI. मानक विचलन\nII. सीमा\nIII. विविधता\nIV. Z-स्कोर\nउपरोक्त में से कौन से विशेष रूप से विविधता/विस्थापन के माप हैं?",
+      "options_hindi": [
+        "केवल I, II और III",
+        "केवल I और III",
+        "केवल II, III और IV",
+        "I, II, III और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Consider the following measures:\nI. Standard Deviation\nII. Range\nIII. Variance\nIV. Z-score\nWhich of the above are exclusively measures of variability/dispersion?",
+      "options_english": [
+        "I, II, and III only",
+        "I and III only",
+        "II, III, and IV only",
+        "I, II, III, and IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Standard deviation, range, and variance are descriptive statistical measures designed exclusively to quantify the degree of spread or dispersion within a set of scores. Conversely, a Z-score is a standardized score that indicates an individual's relative distance from the group mean in standard deviation units, rather than serving as an overall measure of group variability.",
+      "explanation_hindi": "सही उत्तर (a) है। मानक विचलन, सीमा, और विविधता वर्णात्मक सांख्यिकीय माप हैं जो विशेष रूप से स्कोर के सेट के भीतर फैलाव या विविधता की डिग्री को मापने के लिए डिज़ाइन किए गए हैं। इसके विपरीत, Z-स्कोर एक मानकीकृत स्कोर है जो समूह के औसत से मानक विचलन इकाइयों में किसी व्यक्ति की सापेक्ष दूरी को इंगित करता है, न कि समूह की विविधता के समग्र माप के रूप में कार्य करता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Standard deviation, range, and variance are measures of dispersion.",
+        "Printed answer key: (A) I, II, and III only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "efc6f14f-87f5-4007-9dda-1e859875ad3b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "पॉइंट-बिसेरियल सहसंबंध गुणांक का उपयोग तब किया जाता है जब दो चर के बीच सहसंबंधित किया जा रहा हो जहाँ:",
+      "options_hindi": [
+        "दोनों विश्लेषित चर निरंतर अंतराल पैमाने पर मापे जाते हैं",
+        "दोनों चर को सख्ती से unordered नाममात्र वर्गों में वर्गीकृत किया गया है",
+        "दोनों चर विषयों के बीच असमान रैंक का प्रतिनिधित्व करते हैं",
+        "एक चर निरंतर है और दूसरा एक वास्तविक द्विभाजन है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "The Point-Biserial correlation coefficient is used when correlating two variables where:",
+      "options_english": [
+        "Both analyzed variables are measured on a continuous interval scale",
+        "Both variables are categorized strictly into unordered nominal classes",
+        "Both variables represent ordinal ranks assigned across subjects",
+        "One variable is continuous and the other is a true dichotomy"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The point-biserial correlation coefficient measures the strength of linear association between two variables when one variable is measured on a continuous interval or ratio scale and the other variable is a true naturally occurring dichotomy, such as pass/fail status or biological sex, providing a specialized correlation tool for educational research.",
+      "explanation_hindi": "सही उत्तर (d) है। पॉइंट-बिसेरियल सहसंबंध गुणांक दो चर के बीच रैखिक संबंध की ताकत को मापता है जब एक चर निरंतर अंतराल या अनुपात पैमाने पर मापा जाता है और दूसरा चर एक वास्तविक स्वाभाविक द्विभाजन होता है, जैसे पास/फेल स्थिति या जैविक लिंग, जो शैक्षिक अनुसंधान के लिए एक विशेष सहसंबंध उपकरण प्रदान करता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The point-biserial correlation is specifically designed for one continuous and one dichotomous variable.",
+        "Printed answer key: (D) One variable is continuous and the other is a true dichotomy."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9e38dd05-129e-442c-9fd9-64073615c0f3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक मानक स्कोर (Z-स्कोर) क्या दर्शाता है:",
+      "options_hindi": [
+        "किसी छात्र के कच्चे स्कोर का वर्गमूल मान, जो कक्षा के औसत से विभाजित होता है",
+        "कितने प्रश्नों का सही उत्तर छात्र ने दिया है, इसका सटीक प्रतिशत",
+        "कितने मानक विचलन एक स्कोर औसत से दूर है",
+        "किसी छात्र की कुल कक्षा में 100 साथियों के भीतर सापेक्ष रैंक स्थिति"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A standard score (Z-score) indicates:",
+      "options_english": [
+        "The absolute numerical value of a student's raw score divided by the class mean",
+        "The exact overall percentage of test questions a student answered correctly",
+        "How many standard deviations a score is from the mean",
+        "The relative rank position of a student within an overall class of 100 peers"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A standard Z-score quantifies the exact distance between an individual raw score and the group arithmetic mean, expressed in units of standard deviation. It indicates both the direction and relative distance of a score from the group mean, transforming raw test marks into a unified, standardized comparative scale.",
+      "explanation_hindi": "सही उत्तर (c) है। एक मानक Z-स्कोर एक व्यक्तिगत कच्चे स्कोर और समूह के अंकगणितीय औसत के बीच की सटीक दूरी को मानक विचलन की इकाइयों में व्यक्त करता है। यह समूह के औसत से एक स्कोर की दिशा और सापेक्ष दूरी दोनों को दर्शाता है, कच्चे परीक्षण अंकों को एकीकृत, मानकीकृत तुलनात्मक पैमाने में परिवर्तित करता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Z-scores standardize scores across different distributions.",
+        "Printed answer key: (C) How many standard deviations a score is from the mean."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "440c4537-9ba5-437e-bcc8-4c4c84433c6f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "प्रतिशत रैंक को सबसे अच्छे तरीके से कैसे वर्णित किया जा सकता है:",
+      "options_hindi": [
+        "एक व्यक्तिगत छात्र द्वारा प्राप्त कुल संख्या का स्कोर",
+        "एक विशिष्ट कच्चे स्कोर के लिए मानक विचलन इकाई",
+        "एक छात्र के स्कोर और कक्षा के औसत के बीच का बीजगणितीय अंतर",
+        "एक दिए गए कच्चे स्कोर के नीचे गिरने वाले स्कोर का प्रतिशत"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Percentile Rank is best described as:",
+      "options_english": [
+        "The absolute numerical raw score achieved by an individual student",
+        "The standard deviation unit corresponding to a specific raw score",
+        "The algebraic difference between a student's score and class mean",
+        "The percentage of scores falling below a given raw score"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Percentile rank reflects an individual's relative performance position by expressing the percentage of scores within a reference norm group that fall below or equal to a specific raw score. It converts raw test scores into standardized relational metrics, enabling meaningful comparisons of performance across different groups, tests, or academic subject areas.",
+      "explanation_hindi": "सही उत्तर (d) है। प्रतिशत रैंक एक व्यक्ति के सापेक्ष प्रदर्शन स्थिति को दर्शाता है, जो एक संदर्भ मान समूह के भीतर उन स्कोर का प्रतिशत व्यक्त करता है जो एक विशिष्ट कच्चे स्कोर के नीचे या उसके बराबर होते हैं। यह कच्चे परीक्षण स्कोर को मानकीकृत संबंधात्मक मैट्रिक्स में परिवर्तित करता है, जिससे विभिन्न समूहों, परीक्षणों या शैक्षणिक विषय क्षेत्रों में प्रदर्शन की सार्थक तुलना संभव होती है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Percentile rank indicates relative performance within a norm group.",
+        "Printed answer key: (D) The percentage of scores falling below a given raw score"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6abc5a64-d796-4b36-a2ea-ccb46c0e7b44",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "यदि पढ़ने की समझ और गणित की समस्या समाधान के बीच सहसंबंध गुणांक +0.85 है, तो प्रधानाचार्य निष्कर्ष निकाल सकते हैं कि:\n(A) उच्च पढ़ने की समझ उच्च गणितीय प्रदर्शन का कारण बनती है\n(B) जो छात्र पढ़ने में उच्च स्कोर करते हैं, वे गणित में भी उच्च स्कोर करते हैं\n(C) पढ़ने की समझ और गणित के प्रदर्शन के बीच कोई संबंध नहीं है\n(D) गणित में उच्च स्कोर करने वाले छात्र पढ़ाई में कमजोर होते हैं",
+      "options_hindi": [
+        "उच्च पढ़ने की समझ उच्च गणितीय प्रदर्शन का कारण बनती है",
+        "जो छात्र पढ़ने में उच्च स्कोर करते हैं, वे गणित में भी उच्च स्कोर करते हैं",
+        "पढ़ने की समझ और गणित के प्रदर्शन के बीच कोई संबंध नहीं है",
+        "गणित में उच्च स्कोर करने वाले छात्र पढ़ाई में कमजोर होते हैं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "If the correlation coefficient between reading comprehension and mathematics problem-solving is +0.85, the Principal can conclude that:\nA) High reading comprehension causes high mathematics performance.\nB) Students who score high in reading tend to score high in mathematics.\nC) There is no relationship between reading comprehension and mathematics performance.\nD) Students who score high in mathematics are weak in studies.",
+      "options_english": [
+        "High reading comprehension causes high mathematics performance.",
+        "Students who score high in reading tend to score high in mathematics.",
+        "There is no relationship between reading comprehension and mathematics performance.",
+        "Students who score high in mathematics are weak in studies."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "A strong positive correlation coefficient of +0.85 indicates a robust direct relationship between reading comprehension and mathematics performance. Students scoring high in reading comprehension consistently tend to achieve high marks in mathematics. However, correlation alone does not prove that reading ability directly causes mathematical achievement, as both may depend on underlying factors.",
+      "explanation_hindi": "सही उत्तर (b) है। +0.85 का मजबूत सकारात्मक सहसंबंध गुणांक पढ़ने की समझ और गणित के प्रदर्शन के बीच एक मजबूत प्रत्यक्ष संबंध को दर्शाता है। जो छात्र पढ़ने की समझ में उच्च स्कोर करते हैं, वे गणित में भी उच्च अंक प्राप्त करने की प्रवृत्ति रखते हैं। हालांकि, केवल सहसंबंध यह साबित नहीं करता कि पढ़ने की क्षमता सीधे गणितीय उपलब्धि का कारण बनती है, क्योंकि दोनों ही अंतर्निहित कारकों पर निर्भर कर सकते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "A strong positive correlation indicates a direct relationship.",
+        "Correlation does not imply causation.",
+        "Printed answer key: (B) Students who score high in reading tend to score high in mathematics."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2012fb6b-6cc2-4549-a68b-e1ed09e9c91f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "समूहित आवृत्ति वितरण के लिए एक हिस्टोग्राम बनाने के लिए, X-अक्ष और Y-अक्ष पर क्रमशः कौन-से डेटा को प्लॉट किया जाता है:",
+      "options_hindi": [
+        "कक्षा के मध्य बिंदु और संचयी आवृत्तियाँ",
+        "निर्धारित कक्षा सीमाएँ और प्रतिशत",
+        "कच्चे स्कोर और मानक विचलन",
+        "सटीक कक्षा सीमाएँ और आवृत्तियाँ"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "To construct a Histogram for a grouped frequency distribution, the data plotted on the X-axis and Y-axis respectively are:",
+      "options_english": [
+        "Class midpoints and cumulative frequencies",
+        "Stated class limits and percentages",
+        "Raw scores and standard deviations",
+        "Exact class limits and frequencies"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Constructing a histogram for continuous grouped frequency distributions requires plotting exact class limits on the horizontal axis and class frequencies along the vertical axis. Using true boundaries ensures that adjacent vertical bars touch without gaps, accurately reflecting the continuous nature of the underlying data distribution across successive intervals.",
+      "explanation_hindi": "सही उत्तर (d) है। समूहित आवृत्ति वितरण के लिए हिस्टोग्राम बनाने में, सटीक कक्षा सीमाओं को क्षैतिज अक्ष पर और कक्षा आवृत्तियों को ऊर्ध्वाधर अक्ष पर प्लॉट करना आवश्यक है। सच्चे सीमाओं का उपयोग यह सुनिश्चित करता है कि निकटवर्ती ऊर्ध्वाधर बार बिना किसी गैप के छूते हैं, जो लगातार डेटा वितरण की प्रकृति को सटीक रूप से दर्शाता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Histrograms require exact class limits for accurate representation.",
+        "Adjacent bars in histograms must touch to reflect continuity.",
+        "Printed answer key: (D) Exact class limits and frequencies"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3d71aa03-8a2d-41ef-b36a-a19a6ff4a15d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सहसंबंध गुणांक (r) के संबंध में निम्नलिखित कथनों पर विचार करें:\nI. इसका मान हमेशा -1.00 से +1.00 के बीच होता है।\nII. 0.00 का सहसंबंध एक पूर्ण विपरीत संबंध को दर्शाता है।\nIII. नकारात्मक सहसंबंध का अर्थ है कि जैसे-जैसे एक चर बढ़ता है, दूसरा घटता है।\nIV. सहसंबंध शैक्षिक चर के बीच कारणता को साबित करता है।\nसही कथनों का संयोजन कौन सा है?",
+      "options_hindi": [
+        "केवल I और III",
+        "केवल I, II और III",
+        "केवल II और IV",
+        "केवल I, III और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the\ncoefficient of correlation (r):\nI. Its value always ranges from -1.00 to +1.00.\nII. A correlation of 0.00 indicates a perfect\ninverse relationship.\nIII. A negative correlation means that as\none variable increases, the other tends to\ndecrease.\nIV. Correlation proves causation between\neducational variables.\nWhich combination of statements is correct?",
+      "options_english": [
+        "I and III only",
+        "I, II, and III only",
+        "II and IV only",
+        "I, III, and IV only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correlation coefficient ranges strictly between\nnegative one and positive one. A negative\ncoefficient indicates an inverse relationship where\none variable increases as the other decreases.\nHowever, a zero correlation reflects an absence\nof linear association rather than a perfect\ninverse relationship, and correlation alone never\nestablishes direct causal relationships between\nvariables.",
+      "explanation_hindi": "सही उत्तर (a) है। सहसंबंध गुणांक का मान हमेशा -1.00 से +1.00 के बीच होता है। एक नकारात्मक सहसंबंध का अर्थ है कि जैसे-जैसे एक चर बढ़ता है, दूसरा घटता है। हालांकि, 0.00 का सहसंबंध एक पूर्ण विपरीत संबंध को नहीं दर्शाता, बल्कि यह रेखीय संबंध की अनुपस्थिति को दर्शाता है। इसके अलावा, सहसंबंध केवल चर के बीच कारणता को स्थापित नहीं करता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Correlation coefficient ranges from -1.00 to +1.00.",
+        "A negative correlation indicates an inverse relationship.",
+        "Correlation does not imply causation.",
+        "Printed answer key: (A) I and III only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "37c53a82-0872-4e4a-9769-2df24ea0f508",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कर्टोसिस एक आवृत्ति वितरण वक्र की किस विशेषता को संदर्भित करता है?",
+      "options_hindi": [
+        "गणितीय माध्य के चारों ओर द्विपक्षीय समरूपता की डिग्री",
+        "सामान्य वक्र के सापेक्ष इसकी चोटी",
+        "इसके मानक विचलन इकाइयों की कुल संख्यात्मक सीमा",
+        "इसके लम्बे पूंछ की विशिष्ट पार्श्व दिशा"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Kurtosis refers to which characteristic of a frequency distribution curve?",
+      "options_english": [
+        "Its degree of bilateral symmetry around the arithmetic mean",
+        "Its peakedness relative to the normal curve",
+        "The total numerical range of its standard deviation units",
+        "The specific lateral direction of its elongated tail"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Kurtosis measures the vertical sharpness or flatness of a frequency distribution curve relative to a standard normal curve. It quantifies score concentrations in the central peak versus the distribution tails, categorizing curves as highly peaked, moderately rounded, or relatively flat based on mathematical moment calculations or percentile ratios.",
+      "explanation_hindi": "सही उत्तर (b) है। कर्टोसिस एक आवृत्ति वितरण वक्र की ऊर्ध्वाधर तीव्रता या चपटा होने को मापता है, जो एक मानक सामान्य वक्र के सापेक्ष होता है। यह केंद्रीय चोटी और वितरण की पूंछों में स्कोर संकेंद्रण को मापता है, और गणितीय क्षण गणनाओं या प्रतिशत अनुपात के आधार पर वक्रों को अत्यधिक चोटी वाले, मध्यम गोलाकार या अपेक्षाकृत चपटा के रूप में वर्गीकृत करता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Kurtosis quantifies the shape of a distribution curve.",
+        "It indicates how much of the distribution is concentrated in the tails versus the peak.",
+        "Printed answer key: (B) Its peakedness relative to the normal curve"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6195352d-b233-4e42-9331-3282f8da8fb3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "औसत की मानक त्रुटि किसका माप है:",
+      "options_hindi": [
+        "सांख्यिकीविद द्वारा की गई गणना की त्रुटियाँ",
+        "एकल नमूने के भीतर व्यक्तिगत अंकों का वितरण",
+        "जनसंख्या के औसत के चारों ओर नमूना औसत का परिवर्तन",
+        "मोड और औसत के बीच का अंतर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "The standard error of the mean is a measure of:",
+      "options_english": [
+        "The calculation errors made by the statistician",
+        "The dispersion of individual scores within a single sample",
+        "The variation of sample means around the population mean",
+        "The difference between the mode and the mean"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The standard error of the mean measures the dispersion of sample means around the true population mean across repeated sampling. It quantifies sampling error, reflecting the precision with which a sample mean estimates the population parameter. Larger sample sizes reduce standard error, yielding more reliable population estimates.",
+      "explanation_hindi": "सही उत्तर (c) है। औसत की मानक त्रुटि नमूना औसत के चारों ओर वास्तविक जनसंख्या औसत के चारों ओर वितरण को मापती है। यह नमूना त्रुटि को मापती है, जो यह दर्शाती है कि एक नमूना औसत जनसंख्या पैरामीटर का कितना सटीक अनुमान लगाता है। बड़े नमूना आकार मानक त्रुटि को कम करते हैं, जिससे जनसंख्या के अधिक विश्वसनीय अनुमान प्राप्त होते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Standard error measures the dispersion of sample means.",
+        "Larger sample sizes reduce standard error.",
+        "Printed answer key: (C) The variation of sample means around the population mean"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "cdb46d95-cfa2-4cac-9831-615e594fa43f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "यदि कोई वितरण पूरी तरह से प्लेटीकुर्टिक है, तो यह ग्राफ़िक रूप से किस प्रकार दिखाई देता है:",
+      "options_hindi": [
+        "सामान्य वक्र की तुलना में चपटा और चौड़ा",
+        "अत्यधिक उभड़ा हुआ, अत्यधिक ऊँचा और संकीर्ण संरचना में",
+        "पूर्णतः सममित घंटी के आकार के साथ मानक कर्टोसिस",
+        "मध्यम से गंभीर रूप से दाएं पूंछ की ओर झुका हुआ"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "If a distribution is perfectly platykurtic, it appears graphically as:",
+      "options_english": [
+        "Flatter and broader than the normal curve",
+        "Highly peaked, extremely tall, and narrow in structure",
+        "Perfectly symmetrical bell shape with standard kurtosis",
+        "Moderately to severely skewed heavily toward the right tail"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A platykurtic distribution features a flatter central peak and wider tails compared to a standard normal probability curve. This structural appearance indicates that individual scores are distributed relatively evenly across the scale rather than concentrating tightly around the mean, resulting in negative kurtosis values when evaluated using standard moment calculations.",
+      "explanation_hindi": "सही उत्तर (a) है। प्लेटीकुर्टिक वितरण में केंद्रीय चोटी चपटी होती है और मानक सामान्य संभाव्यता वक्र की तुलना में चौड़ी पूंछें होती हैं। यह संरचनात्मक रूप से दर्शाता है कि व्यक्तिगत स्कोर स्केल के चारों ओर अपेक्षाकृत समान रूप से वितरित होते हैं, बजाय इसके कि वे माध्य के चारों ओर कसकर केंद्रित हों, जिससे मानक क्षण गणनाओं का उपयोग करते समय नकारात्मक कर्टोसिस मान प्राप्त होते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "प्लेटीकुर्टिक वितरण में चोटी चपटी होती है।",
+        "यह सामान्य वक्र की तुलना में चौड़ी पूंछें दिखाता है।",
+        "Printed answer key: (a) Flatter and broader than the normal curve"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1c7b32c3-25cf-43d3-a2eb-655e6c59e1f7",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कार्ल पीयरसन का सहसंबंध गुणांक (उत्पाद-क्षण सहसंबंध) तब सबसे उपयुक्त होता है जब:",
+      "options_hindi": [
+        "दोनों विश्लेषित चर एक नाममात्र श्रेणीगत पैमाने पर सख्ती से मापे जाते हैं",
+        "मापे गए चर के बीच कार्यात्मक संबंध गैर-रेखीय है",
+        "दोनों चर निरंतर हैं और एक रेखीय संबंध है",
+        "अध्ययन का नमूना आकार अत्यधिक छोटा है और रैंक डेटा के रूप में प्रस्तुत किया गया है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Karl Pearson's Coefficient of Correlation (Product-Moment Correlation) is most appropriate when:",
+      "options_english": [
+        "Both analyzed variables are measured strictly on a nominal categorical scale",
+        "The functional relationship between the measured variables is non-linear",
+        "Both variables are continuous with a linear relationship",
+        "The study sample size is extremely small and presented as ranked data"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Karl Pearson product-moment correlation requires interval or ratio scale data collected from continuous variables. It operates on the parametric assumption that the co-variation between the two analyzed measures follows a linear trend. When variables are ordinal or nonlinearly related, non-parametric alternatives must be selected instead of Pearson product-moment correlation.",
+      "explanation_hindi": "सही उत्तर (c) है। कार्ल पीयरसन उत्पाद-क्षण सहसंबंध के लिए निरंतर चर से एकत्रित अंतराल या अनुपात पैमाने के डेटा की आवश्यकता होती है। यह इस पैरामीट्रिक धारणा पर कार्य करता है कि दोनों विश्लेषित मापों के बीच सह-परिवर्तन एक रेखीय प्रवृत्ति का पालन करता है। जब चर क्रमिक या गैर-रेखीय रूप से संबंधित होते हैं, तो पीयरसन उत्पाद-क्षण सहसंबंध के बजाय गैर-पैरामीट्रिक विकल्पों का चयन करना चाहिए।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Pearson's correlation requires continuous data.",
+        "It assumes a linear relationship between variables.",
+        "Non-parametric alternatives are needed for ordinal data.",
+        "Printed answer key: (C) Both variables are continuous with a linear"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d6c216b0-3b9f-4831-a0bf-97cc22fda7d4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "परीक्षण स्कोर के एक सेट की सीमा को निम्नलिखित रूप में परिभाषित किया गया है:",
+      "options_hindi": [
+        "उच्चतम और न्यूनतम स्कोर के बीच का अंतर",
+        "उच्चतम और न्यूनतम स्कोर का औसत",
+        "ऊपरी और निचले क्वारटाइल के बीच का अंतर",
+        "न्यूनतम और अधिकतम डेसाइल का मानक विचलन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "The range of a set of test scores is defined as:",
+      "options_english": [
+        "The difference between the highest and lowest scores",
+        "The average of the highest and lowest scores",
+        "The difference between the upper and lower quartiles",
+        "The standard deviation of the lowest and highest deciles"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The range represents the simplest measure of variability in descriptive statistics. It is calculated by taking the absolute arithmetic difference between the maximum and minimum observed values in a given set of test scores. While quick to compute, it reflects only the extreme spread of the distribution without accounting for intermediate score concentrations.",
+      "explanation_hindi": "सही उत्तर (a) है। सीमा वर्णात्मक सांख्यिकी में परिवर्तनशीलता का सबसे सरल माप है। इसे दिए गए परीक्षण स्कोर के सेट में अधिकतम और न्यूनतम देखे गए मानों के बीच का पूर्ण अंकगणितीय अंतर लेकर गणना की जाती है। इसे गणना करना त्वरित है, लेकिन यह वितरण के केवल चरम फैलाव को दर्शाता है, जबकि मध्यवर्ती स्कोर सांद्रणों का ध्यान नहीं रखता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "easy",
+      "key_facts": [
+        "The range is the simplest measure of variability.",
+        "It is calculated by the difference between maximum and minimum scores.",
+        "Printed answer key: (A) The difference between the highest and lowest scores."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

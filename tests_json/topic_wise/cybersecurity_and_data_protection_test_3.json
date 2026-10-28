@@ -1,0 +1,796 @@
+{
+  "test_id": "6728a042-b20f-4f24-a3c3-02698232db88",
+  "test_name": "Topic Test: CYBERSECURITY_AND_DATA_PROTECTION - Part 3",
+  "type": "topic_wise",
+  "topic": "cybersecurity_and_data_protection",
+  "created_at": "2026-10-28T18:55:06.551395",
+  "questions": [
+    {
+      "id": "4254cd0f-470f-4c2c-91b0-e98511a8660d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निजी संचार को बिना अनुमति के वास्तविक समय में नेटवर्क के माध्यम से इंटरसेप्ट और मॉनिटर करने की क्रिया को क्या कहा जाता है:",
+      "options_hindi": [
+        "क्रॉस-साइट स्क्रिप्टिंग",
+        "SQL इंजेक्शन",
+        "ईव्सड्रॉपिंग",
+        "सोशल इंजीनियरिंग"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "The act of intercepting and monitoring private communication passing through a network in real-time without authorization is referred to as:",
+      "options_english": [
+        "Cross-site scripting",
+        "SQL injection",
+        "Eavesdropping",
+        "Social engineering"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Network monitoring and interception threats pose significant risks to communication confidentiality across unencrypted communication channels. Eavesdropping occurs when an unauthorized actor actively intercepts, listens to, and monitors private network communications, packet transmissions, or message traffic in real-time. By capturing sensitive unencrypted data streams, such as user login credentials, financial details, or personal emails, attackers compromise data privacy without altering or disrupting the underlying network service.",
+      "explanation_hindi": "सही उत्तर (c) है। नेटवर्क मॉनिटरिंग और इंटरसेप्शन खतरों से बिना एन्क्रिप्टेड संचार चैनलों के माध्यम से संचार गोपनीयता पर महत्वपूर्ण जोखिम उत्पन्न होते हैं। ईव्सड्रॉपिंग तब होती है जब कोई अनधिकृत व्यक्ति सक्रिय रूप से निजी नेटवर्क संचार, पैकेट ट्रांसमिशन, या संदेश ट्रैफ़िक को वास्तविक समय में इंटरसेप्ट, सुनता है और मॉनिटर करता है। संवेदनशील बिना एन्क्रिप्टेड डेटा स्ट्रीम, जैसे कि उपयोगकर्ता लॉगिन क्रेडेंशियल, वित्तीय विवरण, या व्यक्तिगत ईमेल को कैप्चर करके, हमलावर डेटा गोपनीयता को बिना नेटवर्क सेवा को बदलने या बाधित किए समझौता करते हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Eavesdropping is a significant threat to data privacy.",
+        "It involves unauthorized interception of communications.",
+        "Sensitive data can be captured without altering network services.",
+        "Printed answer key: (C) Eavesdropping"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3cde227a-ea8b-4798-92e2-efc4db8aac86",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "62. साधारण पाठ को एक क्रिप्टोग्राफिक एल्गोरिदम और कुंजी का उपयोग करके सिफर पाठ में scrambling करने की प्रक्रिया को क्या कहा जाता है?",
+      "options_hindi": [
+        "डिक्रिप्शन",
+        "हैशिंग",
+        "संपीड़न",
+        "एन्क्रिप्शन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the process of scrambling plain text into cipher text using a cryptographic algorithm and key called?",
+      "options_english": [
+        "Decryption",
+        "Hashing",
+        "Compression",
+        "Encryption"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Cryptography forms the core foundation of data privacy across modern digital communication systems. Encryption is the algorithmic process of encoding readable plain text into unreadable cipher text using mathematical algorithms and cryptographic keys. Unauthorized entities intercepting encrypted data cannot interpret the content without the corresponding secret decryption key, ensuring confidentiality across public network transmissions and local data storage systems.",
+      "explanation_hindi": "सही उत्तर (d) है। क्रिप्टोग्राफी आधुनिक डिजिटल संचार प्रणालियों में डेटा गोपनीयता की मूल नींव बनाती है। एन्क्रिप्शन पढ़ने योग्य साधारण पाठ को गणितीय एल्गोरिदम और क्रिप्टोग्राफिक कुंजियों का उपयोग करके अप्र-readable सिफर पाठ में कोडित करने की प्रक्रिया है। एन्क्रिप्टेड डेटा को इंटरसेप्ट करने वाले अनधिकृत संस्थाएं सामग्री को संबंधित गुप्त डिक्रिप्शन कुंजी के बिना व्याख्या नहीं कर सकती हैं, जो सार्वजनिक नेटवर्क ट्रांसमिशन और स्थानीय डेटा भंडारण प्रणालियों में गोपनीयता सुनिश्चित करती है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Encryption transforms plain text into cipher text for security.",
+        "It uses cryptographic algorithms and keys to ensure confidentiality.",
+        "Printed answer key: (D) Encryption"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a06e582a-5cb5-41b6-ba98-abbbd2550da9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दिए गए दो कथन हैं: एक को असर्शन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): संस्थागत उपकरणों में सॉफ़्टवेयर अनुप्रयोगों और ऑपरेटिंग सिस्टम को नियमित रूप से सुरक्षा पैच के साथ अपडेट किया जाना चाहिए।\nकारण (R): बिना पैच किया गया सॉफ़्टवेयर ज्ञात सुरक्षा कमजोरियों को स्वचालित मैलवेयर और दुर्भावनापूर्ण अभिनेताओं द्वारा शोषण के लिए खुला छोड़ देता है।\nउपरोक्त कथनों के आलोक में, नीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "A और R दोनों सत्य हैं और R, A का सही स्पष्टीकरण है।",
+        "A और R दोनों सत्य हैं लेकिन R, A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): Software applications and operating systems in institutional devices should be updated with security patches regularly. Reason (R): Unpatched software leaves known security vulnerabilities open to exploitation by automated malware and malicious actors. In light of the above statements, choose the correct answer from the options given below:",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Both A and R are true and R is the correct explanation of A. Regularly applying operating system and application security patches is essential for maintaining institutional endpoint security. Software vendors publish patch updates to resolve newly discovered security flaws in code. Leaving software unpatched exposes system resources to automated malware scans, remote code execution attacks, and threat exploits designed specifically to target known security vulnerabilities in unpatched software applications.",
+      "explanation_hindi": "सही उत्तर (a) है। A और R दोनों सत्य हैं और R, A का सही स्पष्टीकरण है। ऑपरेटिंग सिस्टम और अनुप्रयोग सुरक्षा पैच को नियमित रूप से लागू करना संस्थागत एंडपॉइंट सुरक्षा बनाए रखने के लिए आवश्यक है। सॉफ़्टवेयर विक्रेता कोड में नए खोजे गए सुरक्षा दोषों को हल करने के लिए पैच अपडेट प्रकाशित करते हैं। सॉफ़्टवेयर को बिना पैच किए छोड़ने से सिस्टम संसाधनों को स्वचालित मैलवेयर स्कैन, रिमोट कोड निष्पादन हमलों और उन खतरों के शोषण के लिए उजागर किया जाता है जो विशेष रूप से बिना पैच किए गए सॉफ़्टवेयर अनुप्रयोगों में ज्ञात सुरक्षा कमजोरियों को लक्षित करने के लिए डिज़ाइन किए गए हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Regular updates are crucial for security in institutional devices.",
+        "Unpatched software is vulnerable to malware exploitation.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c693614b-de41-42ac-8b21-cdd917aa3fce",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "99. DPDP अधिनियम, 2023 के तहत, \"डेटा सुरक्षा अधिकारी\" (DPO) की भूमिका क्या है?",
+      "options_hindi": [
+        "प्रशासनिक संस्थान के प्रवेश बिंदुओं पर तैनात भौतिक सुरक्षा गार्डों की निगरानी करना",
+        "संस्थान के प्रिंटर उपकरणों की हार्डवेयर रखरखाव और तकनीकी समस्या निवारण करना",
+        "डेटा सुरक्षा अनुपालन की निगरानी करना और शिकायत निवारण के लिए संपर्क के रूप में कार्य करना",
+        "संस्थान के मोबाइल लर्निंग अनुप्रयोगों के लिए सॉफ़्टवेयर स्रोत कोड विकसित और बनाए रखना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Under the DPDP Act, 2023, what is the role of a “Data Protection Officer” (DPO)?",
+      "options_english": [
+        "To supervise physical security guards stationed at administrative institution entry points",
+        "To handle hardware maintenance and technical troubleshooting of institutional printer devices",
+        "To oversee data protection compliance and serve as contact for grievance redressal",
+        "To develop and maintain software source code for institutional mobile learning applications"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under the Digital Personal Data Protection Act, 2023, designated Significant Data Fiduciaries are statutorily required to appoint a Data Protection Officer. The DPO serves as an independent compliance leader responsible for overseeing data protection strategies, evaluating risk assessments, ensuring organizational adherence to statutory obligations, and acting as the official point of contact for handling Data Principal grievance redressal queries.",
+      "explanation_hindi": "सही उत्तर (c) है। डिजिटल व्यक्तिगत डेटा सुरक्षा अधिनियम, 2023 के तहत, नामित महत्वपूर्ण डेटा फिड्यूशियरी को एक डेटा सुरक्षा अधिकारी नियुक्त करने की वैधानिक आवश्यकता होती है। DPO एक स्वतंत्र अनुपालन नेता के रूप में कार्य करता है जो डेटा सुरक्षा रणनीतियों की निगरानी, जोखिम आकलनों का मूल्यांकन, वैधानिक दायित्वों के प्रति संगठनात्मक अनुपालन सुनिश्चित करता है, और डेटा प्रिंसिपल की शिकायत निवारण प्रश्नों को संभालने के लिए आधिकारिक संपर्क बिंदु के रूप में कार्य करता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "The DPDP Act mandates the appointment of a Data Protection Officer.",
+        "DPO oversees compliance with data protection laws.",
+        "DPO acts as a contact point for grievance redressal.",
+        "Printed answer key: (C) To oversee data protection compliance and serve as contact for grievance redressal"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7897f49f-0b90-4c0f-9391-8d933879e211",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "वितरित अस्वीकृति सेवा (DDoS) हमले का प्राथमिक संचालन तंत्र क्या है?\n(1) लक्षित सर्वर को बूट सेक्टर के साथ संक्रमित करना",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the primary operational mechanism of a Distributed Denial-of-Service (DDoS) attack?\n(1) Infecting the target server with boot sector",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Flooding the target system with overwhelming",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Distributed Denial-of-Service attacks aim to make online services and infrastructure unavailable to legitimate users. The primary operational mechanism involves orchestrating a network of multiple compromised computers, commonly known as a botnet, to flood the target server, website, or network infrastructure with overwhelming volumes of traffic. This massive influx exhausts system processing power, memory, and bandwidth capacity, causing server crashes, operational degradation, and complete service denial.",
+      "explanation_hindi": "सही उत्तर (b) है। वितरित अस्वीकृति सेवा हमले का उद्देश्य ऑनलाइन सेवाओं और अवसंरचना को वैध उपयोगकर्ताओं के लिए अनुपलब्ध बनाना है। प्राथमिक संचालन तंत्र में कई समझौता किए गए कंप्यूटरों के नेटवर्क को व्यवस्थित करना शामिल है, जिसे सामान्यतः बॉटनेट कहा जाता है, ताकि लक्षित सर्वर, वेबसाइट, या नेटवर्क अवसंरचना को अत्यधिक मात्रा में ट्रैफ़िक से भर दिया जाए। यह विशाल प्रवाह प्रणाली की प्रोसेसिंग शक्ति, मेमोरी, और बैंडविड्थ क्षमता को समाप्त कर देता है, जिससे सर्वर क्रैश, संचालन में गिरावट, और पूर्ण सेवा अस्वीकृति होती है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "hard",
+      "key_facts": [
+        "DDoS attacks use a botnet to overwhelm targets.",
+        "They aim to disrupt legitimate user access.",
+        "Traffic flooding is the primary mechanism.",
+        "Printed answer key: (B) Flooding the target system with overwhelming"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "bc550950-48ae-4392-9278-ec2bef1d9c37",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "54. कौन सी संस्थागत नीति उन प्रक्रियाओं को रेखांकित करती है जिनके तहत कर्मचारी अपने व्यक्तिगत लैपटॉप या मोबाइल उपकरणों को संगठन के आधिकारिक नेटवर्क से जोड़ने के लिए लाते हैं?",
+      "options_hindi": [
+        "आपदा पुनर्प्राप्ति योजना (DRP) नीति",
+        "अपने उपकरण लाओ (BYOD) नीति",
+        "सिस्टम विकास जीवन चक्र (SDLC) ढांचा",
+        "स्वीकृत भंडारण उपयोग नीति (ASP) 2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which institutional policy outlines procedures for staff members bringing their personal laptops or mobile devices to connect to the organization’s official network?",
+      "options_english": [
+        "Disaster Recovery Plan (DRP) Policy",
+        "Bring Your Own Device (BYOD) Policy",
+        "System Development Life Cycle (SDLC) Framework",
+        "Acceptable Storage Usage Policy (ASP) 2"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Organizations frequently permit personnel to use personal smartphones, tablets, and laptops for official communication and tasks. A Bring Your Own Device Policy establishes formal security controls, acceptable access boundaries, encryption standards, and endpoint compliance protocols for connecting personal hardware to institutional networks. The policy mitigates risks related to corporate data leakage, malware entry, and unauthorized network privilege escalation from unmanaged employee hardware.",
+      "explanation_hindi": "सही उत्तर (b) है। संगठन अक्सर कर्मचारियों को आधिकारिक संचार और कार्यों के लिए व्यक्तिगत स्मार्टफोन, टैबलेट और लैपटॉप का उपयोग करने की अनुमति देते हैं। अपने उपकरण लाओ नीति औपचारिक सुरक्षा नियंत्रण, स्वीकार्य पहुंच सीमाएं, एन्क्रिप्शन मानक, और व्यक्तिगत हार्डवेयर को संस्थागत नेटवर्क से जोड़ने के लिए अंतिम अनुपालन प्रोटोकॉल स्थापित करती है। यह नीति कॉर्पोरेट डेटा लीक, मैलवेयर प्रवेश, और unmanaged कर्मचारी हार्डवेयर से अनधिकृत नेटवर्क विशेषाधिकार वृद्धि से संबंधित जोखिमों को कम करती है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "BYOD policy allows personal devices to connect to official networks.",
+        "Establishes security controls and compliance protocols.",
+        "Printed answer key: (B) Bring Your Own Device (BYOD) Policy"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "93e3bd8b-7727-4fdf-a164-16bdf21d1899",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "86. सूचना प्रौद्योगिकी अधिनियम, 2000 के किस धारा में\nकंप्यूटर संसाधनों का उपयोग करके धोखाधड़ी द्वारा\nव्यक्तित्व का अपराध करने के लिए दंड का प्रावधान है?",
+      "options_hindi": [
+        "धारा 66A",
+        "धारा 66D",
+        "धारा 65",
+        "धारा 67C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which section of the IT Act, 2000 deals with punishment for cheating by personation by using computer resource?",
+      "options_english": [
+        "Section 66A",
+        "Section 66D",
+        "Section 65",
+        "Section 67C"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Statutory cybersecurity provisions in India address digital impersonation and electronic fraud through specific legislative penalties. Section 66D of the Information Technology Act, 2000 prescribes punishment for cheating by personation using computer resources. Anyone using a computer, communication device, or digital network to fraudulently impersonate another entity faces statutory imprisonment extending up to three years along with mandatory fines.",
+      "explanation_hindi": "सही उत्तर (b) है। सूचना प्रौद्योगिकी अधिनियम, 2000 में वैधानिक साइबर सुरक्षा प्रावधान डिजिटल व्यक्तित्व और इलेक्ट्रॉनिक धोखाधड़ी को विशेष विधायी दंड के माध्यम से संबोधित करते हैं। धारा 66D धोखाधड़ी द्वारा व्यक्तित्व के अपराध के लिए दंड का प्रावधान करती है। कोई भी व्यक्ति जो कंप्यूटर, संचार उपकरण या डिजिटल नेटवर्क का उपयोग करके धोखाधड़ी से किसी अन्य इकाई का व्यक्तित्व ग्रहण करता है, उसे तीन वर्ष तक की वैधानिक कारावास और अनिवार्य जुर्माना का सामना करना पड़ सकता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Section 66D prescribes punishment for cheating by personation using computer resources.",
+        "Statutory imprisonment can extend up to three years.",
+        "Mandatory fines are also applicable.",
+        "Printed answer key: (B) Section 66D"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d0213f05-7754-4c97-a435-8ee7d3fbafd0",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कृपया निम्नलिखित बयानों पर विचार करें जो DPDP अधिनियम, 2023 के तहत सहमति प्रबंधक के बारे में हैं:\nA. सहमति प्रबंधकों को डेटा सुरक्षा बोर्ड के साथ पंजीकरण कराना आवश्यक है। \nB. वे डेटा प्रिंसिपलों को एक सुलभ प्लेटफार्म के माध्यम से सहमति देने, प्रबंधित करने, समीक्षा करने और वापस लेने में सक्षम बनाते हैं। \nC. सहमति प्रबंधक डेटा फिड्यूशियरी के कानूनी प्रतिनिधियों के रूप में प्रिंसिपलों को डेटा तक पहुंच से वंचित करते हैं। \nउपरोक्त में से कौन से बयान सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the Consent Manager under the DPDP Act, 2023:\nA. Consent Managers must be registered with the Data Protection Board.\nB. They enable Data Principals to give, manage, review, and withdraw consent through an accessible platform.\nC. Consent Managers act as legal representatives of Data Fiduciaries to deny data access to principals.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Digital Personal Data Protection Act, 2023 introduces the legal framework for Consent Managers to simplify privacy administration. A Consent Manager must register with the Data Protection Board and provide an accessible digital platform through which Data Principals can grant, manage, review, and withdraw consent seamlessly. They serve as neutral intermediaries for data principals rather than acting as legal representatives for data fiduciaries.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल व्यक्तिगत डेटा सुरक्षा अधिनियम, 2023 सहमति प्रबंधकों के लिए कानूनी ढांचे को पेश करता है ताकि गोपनीयता प्रशासन को सरल बनाया जा सके। एक सहमति प्रबंधक को डेटा सुरक्षा बोर्ड के साथ पंजीकरण कराना आवश्यक है और एक सुलभ डिजिटल प्लेटफार्म प्रदान करना होता है जिसके माध्यम से डेटा प्रिंसिपल सहमति को आसानी से देने, प्रबंधित करने, समीक्षा करने और वापस लेने में सक्षम होते हैं। वे डेटा प्रिंसिपलों के लिए तटस्थ मध्यस्थ के रूप में कार्य करते हैं, न कि डेटा फिड्यूशियरी के कानूनी प्रतिनिधियों के रूप में।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Consent Managers must register with the Data Protection Board.",
+        "They provide an accessible platform for Data Principals to manage consent.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "eff45c27-5ed8-4e22-8631-8abfe434fada",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "97. एक सममित कुंजी एन्क्रिप्शन प्रणाली में:",
+      "options_hindi": [
+        "एक सार्वजनिक कुंजी एन्क्रिप्शन के लिए और एक अलग निजी कुंजी डिक्रिप्शन के लिए उपयोग की जाती है",
+        "एन्क्रिप्शन और डिक्रिप्शन के लिए एक ही कुंजी का उपयोग किया जाता है",
+        "कोई क्रिप्टोग्राफिक कुंजी की आवश्यकता नहीं है",
+        "कुंजी हर मिनट स्वचालित रूप से नए सिरे से उत्पन्न की जाती हैं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In a symmetric key encryption system, what is the key characteristic?",
+      "options_english": [
+        "One public key is used for encryption and a different private key for decryption",
+        "The same key is used for both encryption and decryption",
+        "No cryptographic keys are required",
+        "Keys are generated anew every minute automatically"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Cryptographic architectures fall into symmetric and asymmetric encryption models based on key management design. In a symmetric key encryption system, the exact same secret cryptographic key is utilized for both encrypting plain text and decrypting cipher text. Consequently, sender and recipient must securely exchange and safeguard the shared secret key to maintain overall communication privacy and data confidentiality.",
+      "explanation_hindi": "सही उत्तर (b) है। क्रिप्टोग्राफिक आर्किटेक्चर सममित और विषम एन्क्रिप्शन मॉडल में विभाजित होते हैं जो कुंजी प्रबंधन डिज़ाइन पर आधारित होते हैं। एक सममित कुंजी एन्क्रिप्शन प्रणाली में, समान गुप्त क्रिप्टोग्राफिक कुंजी का उपयोग स्पष्ट पाठ को एन्क्रिप्ट करने और सिफर पाठ को डिक्रिप्ट करने के लिए किया जाता है। इसलिए, प्रेषक और प्राप्तकर्ता को साझा गुप्त कुंजी को सुरक्षित रूप से आदान-प्रदान और सुरक्षित रखना चाहिए ताकि संपूर्ण संचार गोपनीयता और डेटा गोपनीयता बनी रहे।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Symmetric key encryption uses the same key for both encryption and decryption.",
+        "It requires secure key exchange between sender and recipient.",
+        "Printed answer key: (B) The same key is used for both encryption and decryption"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "4eb935a0-4b22-4e4a-98e7-487c0d4cd10a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "96. कौन सी साइबर हमले की तकनीक एक प्रशासनिक उपयोगकर्ता को एक सामान्य दिखने वाले वेबपृष्ठ तत्व पर क्लिक करने के लिए धोखा देती है जो एक अंतर्निहित दुर्भावनापूर्ण बटन को छिपाती है?",
+      "options_hindi": [
+        "क्रॉस-साइट स्क्रिप्टिंग",
+        "क्लिकजैकिंग",
+        "बफर ओवरफ्लो",
+        "आईपी स्पूफिंग"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which cyber attack technique tricks an administrative user into clicking on a benign-looking webpage element that conceals an underlying malicious button?",
+      "options_english": [
+        "Cross-site scripting",
+        "Clickjacking",
+        "Buffer overflow",
+        "IP spoofing"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Web interface security threats manipulate user interactions to execute hidden, unauthorized commands. Clickjacking, also known as a user interface redress attack, tricks users into clicking transparent or concealed webpage elements overlaid on legitimate web pages. When a user attempts to click a visible benign button, they unintentionally click an underlying malicious link, triggering unauthorized actions like changing system settings or initiating transactions.",
+      "explanation_hindi": "सही उत्तर (b) है। वेब इंटरफेस सुरक्षा खतरों का उपयोगकर्ता इंटरैक्शन को छिपे हुए, अनधिकृत आदेशों को निष्पादित करने के लिए हेरफेर करता है। क्लिकजैकिंग, जिसे उपयोगकर्ता इंटरफेस पुनः परिधान हमले के रूप में भी जाना जाता है, उपयोगकर्ताओं को वैध वेब पृष्ठों पर ओवरले किए गए पारदर्शी या छिपे हुए वेबपृष्ठ तत्वों पर क्लिक करने के लिए धोखा देता है। जब एक उपयोगकर्ता एक दृश्य सामान्य बटन पर क्लिक करने का प्रयास करता है, तो वे अनजाने में एक अंतर्निहित दुर्भावनापूर्ण लिंक पर क्लिक करते हैं, जिससे अनधिकृत क्रियाएँ होती हैं जैसे कि सिस्टम सेटिंग्स को बदलना या लेनदेन शुरू करना।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Clickjacking is a technique that tricks users into clicking on hidden elements.",
+        "It can lead to unauthorized actions on legitimate websites.",
+        "Printed answer key: (B) Clickjacking"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b2a89a8d-029d-4f75-8705-77a7b4500820",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को कथन (A) के रूप में लेबल किया गया है और दूसरे को कारण (R) के रूप में लेबल किया गया है। \nकथन (A): डेटा बैकअप को समय-समय पर परीक्षण पुनर्स्थापनों को निष्पादित करके परीक्षण किया जाना चाहिए। \nकारण (R): बिना सत्यापित बैकअप वास्तविक रैनसमवेयर पुनर्प्राप्ति घटना के दौरान भ्रष्टाचार या अधूरे छवि कैप्चर के कारण विफल हो सकते हैं। \nउपरोक्त कथनों के प्रकाश में, नीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). \nAssertion (A): Data back-ups should be tested periodically by executing test restores. \nReason (R): Unverified backups may fail during an actual ransomware recovery event due to corruption or incomplete image captures. \nIn light of the above statements, choose the correct answer from the options given below:",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Regular system data backups form the primary defense against catastrophic data loss caused by system crashes or ransomware encryption. However, backups must undergo routine restoration testing to verify data integrity. Unverified backups can harbor undetected data corruption, broken archive structures, or incomplete system image captures, causing complete disaster recovery failure when attempting to restore files during a live security crisis.",
+      "explanation_hindi": "सही उत्तर (a) है। नियमित सिस्टम डेटा बैकअप प्रणाली की विफलता या रैनसमवेयर एन्क्रिप्शन के कारण होने वाले विनाशकारी डेटा हानि के खिलाफ प्राथमिक रक्षा बनाते हैं। हालाँकि, बैकअप को डेटा अखंडता की पुष्टि के लिए नियमित पुनर्स्थापन परीक्षण से गुजरना चाहिए। बिना सत्यापित बैकअप में अनदेखी डेटा भ्रष्टाचार, टूटे हुए आर्काइव संरचनाएँ, या अधूरे सिस्टम छवि कैप्चर हो सकते हैं, जो लाइव सुरक्षा संकट के दौरान फ़ाइलों को पुनर्स्थापित करने का प्रयास करते समय पूरी आपदा पुनर्प्राप्ति विफलता का कारण बनते हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "डेटा बैकअप को नियमित रूप से परीक्षण किया जाना चाहिए।",
+        "बिना सत्यापित बैकअप वास्तविक संकट के दौरान विफल हो सकते हैं।",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "dec26e86-af03-4710-9fc3-f0ce643b7f55",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "68. निम्नलिखित घटकों पर विचार करें जो एक\nसंस्थानिक साइबर सुरक्षा नीति में शामिल होने\nचाहिए:\nA. स्वीकार्य सॉफ़्टवेयर उपयोग और स्थापना\nअधिकारों पर स्पष्ट दिशानिर्देश।\nB. घटना प्रतिक्रिया प्रोटोकॉल और आपातकालीन\nसूचना मैट्रिक्स।\nC. पासवर्ड जटिलता और संचालन खाता\nअपडेट मानक।\nD. सभी अस्थायी कर्मचारियों के साथ सिस्टम\nप्रशासक अधिकार साझा करने का आदेश।\nउपरोक्त में से कौन से घटक सही/आवश्यक हैं?",
+      "options_hindi": [
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A, C और D",
+        "A, B, C और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following components that should be included in an Institutional Cyber Security Policy:\nA. Clear guidelines on acceptable software usage and installation rights.\nB. Incident response protocol and emergency notification matrix.\nC. Password complexity and operational account update standards.\nD. Mandate to share system administrator rights with all temporary staff.\nWhich of the components given above are correct/essential?",
+      "options_english": [
+        "A, B and C only",
+        "B, C and D only",
+        "A, C and D only",
+        "A, B, C and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A comprehensive Institutional Cyber Security Policy defines rules regarding organizational security posture and resource usage. Essential components include clear guidelines on acceptable software installation rights, formal incident response and notification frameworks, and strict password complexity standards. However, sharing administrative access rights broadly with temporary staff violates fundamental access control principles, exposing systems to unnecessary insider threats and administrative data tampering.",
+      "explanation_hindi": "सही उत्तर (a) है। एक व्यापक संस्थानिक साइबर सुरक्षा नीति संगठनात्मक सुरक्षा स्थिति और संसाधन उपयोग के संबंध में नियमों को परिभाषित करती है। आवश्यक घटकों में स्वीकार्य सॉफ़्टवेयर स्थापना अधिकारों पर स्पष्ट दिशानिर्देश, औपचारिक घटना प्रतिक्रिया और सूचना ढांचे, और कड़े पासवर्ड जटिलता मानक शामिल हैं। हालाँकि, अस्थायी कर्मचारियों के साथ प्रशासनिक पहुँच अधिकारों को व्यापक रूप से साझा करना मौलिक पहुँच नियंत्रण सिद्धांतों का उल्लंघन करता है, जिससे सिस्टम अनावश्यक आंतरिक खतरों और प्रशासनिक डेटा छेड़छाड़ के प्रति संवेदनशील हो जाते हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "An Institutional Cyber Security Policy should include guidelines on software usage, incident response, and password standards.",
+        "Sharing admin rights with temporary staff can lead to security vulnerabilities.",
+        "Printed answer key: (A) A, B and C only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a9bf2005-dd0a-4e39-862b-6a13b483ba1e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "42. 3-2-1 बैकअप नियम के अनुसार, एक संस्था को\nरखना चाहिए:",
+      "options_hindi": [
+        "डेटा की 3 प्रतियां, 2 मीडिया प्रकारों पर, 1\nप्रतिलिपि ऑफ-साइट",
+        "डेटा की 3 प्रतियां, 1 मीडिया प्रकार पर, 2\nप्रतियां ऑफ-साइट",
+        "डेटा की 2 प्रतियां, 3 मीडिया प्रकारों पर, 1\nप्रतिलिपि ऑन-साइट",
+        "डेटा की 1 प्रतिलिपि, 2 मीडिया प्रकारों पर, 3\nप्रतियां ऑफ-साइट"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "According to the 3-2-1 backup rule, an institution should maintain:",
+      "options_english": [
+        "3 copies of data, on 2 media types, with 1 copy off-site",
+        "3 copies of data, on 1 media type, with 2 copies off-site",
+        "2 copies of data, on 3 media types, with 1 copy on-site",
+        "1 copy of data, on 2 media types, with 3 copies off-site"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The 3-2-1 backup strategy is a globally recognized data protection benchmark designed to ensure comprehensive operational redundancy and disaster recovery capabilities. Under this standard rule, an organization must maintain three complete copies of critical business data, store those copies across two distinct storage media formats, and keep at least one backup copy at an off-site geographical location to safeguard records against hardware failure, localized disasters, or ransomware.",
+      "explanation_hindi": "सही उत्तर (a) है। 3-2-1 बैकअप रणनीति एक वैश्विक स्तर पर मान्यता प्राप्त डेटा सुरक्षा मानक है, जिसका उद्देश्य व्यापक परिचालन पुनरावृत्ति और आपदा वसूली क्षमताओं को सुनिश्चित करना है। इस मानक नियम के तहत, एक संगठन को महत्वपूर्ण व्यावसायिक डेटा की तीन पूर्ण प्रतियां बनाए रखनी चाहिए, उन प्रतियों को दो अलग-अलग स्टोरेज मीडिया प्रारूपों में संग्रहीत करना चाहिए, और कम से कम एक बैकअप प्रतिलिपि को एक ऑफ-साइट भौगोलिक स्थान पर रखना चाहिए ताकि हार्डवेयर विफलता, स्थानीय आपदाओं या रैनसमवेयर के खिलाफ रिकॉर्ड की सुरक्षा की जा सके।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "easy",
+      "key_facts": [
+        "3-2-1 बैकअप नियम: 3 प्रतियां, 2 मीडिया प्रकार, 1 ऑफ-साइट",
+        "Printed answer key: (A) 3 copies of data, on 2 media types, with 1 copy off-site"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "27f32453-88af-4e87-9ce7-89bf3b0ad6b2",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "P-III, Q-I, R-IV, S-II के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "P-III, Q-I, R-IV, S-II की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding P-III, Q-I, R-IV, S-II, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of P-III, Q-I, R-IV, S-II",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Different cyber threats possess distinct operational characteristics. Phishing uses deceptive electronic communications to trick users into revealing sensitive personal or login data. A Trojan disguises itself as legitimate software to deceive users into installing malicious code. Ransomware encrypts user data files and demands monetary payment for the decryption key. Spyware operates covertly in the system.",
+      "explanation_hindi": "सही उत्तर (a) है। विभिन्न साइबर खतरों की विशिष्ट संचालनात्मक विशेषताएँ होती हैं। फ़िशिंग उपयोगकर्ताओं को संवेदनशील व्यक्तिगत या लॉगिन डेटा प्रकट करने के लिए धोखाधड़ी करने वाले इलेक्ट्रॉनिक संचार का उपयोग करता है। एक ट्रोजन अपने आप को वैध सॉफ़्टवेयर के रूप में प्रच्छन्न करता है ताकि उपयोगकर्ताओं को दुर्भावनापूर्ण कोड स्थापित करने के लिए धोखा दिया जा सके। रैनसमवेयर उपयोगकर्ता डेटा फ़ाइलों को एन्क्रिप्ट करता है और डिक्रिप्शन कुंजी के लिए मौद्रिक भुगतान की मांग करता है। स्पाइवेयर प्रणाली में गुप्त रूप से कार्य करता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Different cyber threats have unique operational characteristics.",
+        "Phishing, Trojans, Ransomware, and Spyware are common types of cyber threats.",
+        "Printed answer key: (A) P-III, Q-I, R-IV, S-II"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2205be77-5c0f-495f-8a78-b3996fbd65cd",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "94. इंटरनेट नेटवर्किंग में \"DNS\" संक्षेप का क्या अर्थ है?\n(1) डिजिटल नेटवर्क सुरक्षा\n(2) डायनामिक नोड स्टोरेज\n(3) डोमेन नाम प्रणाली\n(4) डेटा नेटवर्क सेवा",
+      "options_hindi": [
+        "डिजिटल नेटवर्क सुरक्षा",
+        "डायनामिक नोड स्टोरेज",
+        "डोमेन नाम प्रणाली",
+        "डेटा नेटवर्क सेवा"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What does the acronym “DNS” stand for in internet networking?\n1. Digital Network Security\n2. Dynamic Node Storage\n3. Domain Name System\n4. Data Network Service",
+      "options_english": [
+        "Digital Network Security",
+        "Dynamic Node Storage",
+        "Domain Name System",
+        "Data Network Service"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The Domain Name System serves as a core networking directory service across the global internet infrastructure. DNS translates human-readable domain names into numerical IP addresses required by networking hardware to route data packets across global networks. By resolving domain names automatically, DNS enables users to access websites using simple names rather than memorizing complex numerical network IP addresses.",
+      "explanation_hindi": "सही उत्तर (c) है। डोमेन नाम प्रणाली एक मुख्य नेटवर्किंग निर्देशिका सेवा के रूप में कार्य करती है। DNS मानव-पठनीय डोमेन नामों को संख्यात्मक IP पतों में अनुवाद करता है, जो नेटवर्किंग हार्डवेयर द्वारा डेटा पैकेट्स को वैश्विक नेटवर्क में रूट करने के लिए आवश्यक होते हैं। डोमेन नामों को स्वचालित रूप से हल करके, DNS उपयोगकर्ताओं को जटिल संख्यात्मक नेटवर्क IP पतों को याद करने के बजाय सरल नामों का उपयोग करके वेबसाइटों तक पहुँचने में सक्षम बनाता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "easy",
+      "key_facts": [
+        "DNS translates domain names into IP addresses.",
+        "It is essential for routing data on the internet.",
+        "Printed answer key: (C) Domain Name System"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "23b612d4-81d0-44c6-aad4-24e9eb084d78",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "57. किस प्रकार का साइबर हमला विशेष रूप से\nडोमेन नाम समाधान में हेरफेर करता है ताकि\nउपयोगकर्ताओं को गलत वेबसाइट पर पुनर्निर्देशित\nकिया जा सके, भले ही वे सही URL टाइप करें?",
+      "options_hindi": [
+        "फार्मिंग",
+        "फिशिंग",
+        "शोल्डर सर्फिंग",
+        "टाइपोसक्वाटिंग"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which type of cyber attack specifically manipulates domain name resolution to redirect users to a fraudulent website even when they type the correct URL?",
+      "options_english": [
+        "Pharming",
+        "Phishing",
+        "Shoulder surfing",
+        "Typosquatting"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Cybercriminals deploy sophisticated domain manipulation techniques to hijack online web traffic without targeting individual user communications directly. Pharming is an attack vector that compromises underlying Domain Name System resolution tables or local host configuration files. By corrupting IP mapping records, pharming automatically redirects users to malicious web portals, even when the user manually enters the correct, legitimate web domain URL into their browser.",
+      "explanation_hindi": "सही उत्तर (a) है। साइबर अपराधी ऑनलाइन वेब ट्रैफ़िक को हाईजैक करने के लिए जटिल डोमेन हेरफेर तकनीकों का उपयोग करते हैं, बिना व्यक्तिगत उपयोगकर्ता संचार को सीधे लक्षित किए। फार्मिंग एक ऐसा हमला है जो अंतर्निहित डोमेन नाम प्रणाली समाधान तालिकाओं या स्थानीय होस्ट कॉन्फ़िगरेशन फ़ाइलों को समझौता करता है। आईपी मैपिंग रिकॉर्ड को भ्रष्ट करके, फार्मिंग उपयोगकर्ताओं को दुर्भावनापूर्ण वेब पोर्टलों पर स्वचालित रूप से पुनर्निर्देशित करता है, भले ही उपयोगकर्ता अपने ब्राउज़र में सही, वैध वेब डोमेन URL मैन्युअल रूप से दर्ज करे।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Pharming is a type of cyber attack that redirects users to fraudulent websites.",
+        "It manipulates Domain Name System resolution.",
+        "Cybercriminals use sophisticated techniques to hijack web traffic.",
+        "Printed answer key: (A) Pharming"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "03cabbc1-6d3a-49e1-9ee7-8ae55b3a3c85",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "26. निम्नलिखित में से कौन सा उपाय संस्थागत क्लाउड सर्वरों पर संग्रहीत छात्र और स्टाफ के व्यक्तिगत डेटा को सुरक्षित करने के लिए प्रभावी है?\n(1) मजबूत बहु-कारक प्रमाणीकरण और डेटा एन्क्रिप्शन लागू करना",
+      "options_hindi": [
+        "स्ट्रॉन्ग मल्टी-फैक्टर प्रमाणीकरण लागू करना",
+        "डेटा एन्क्रिप्शन लागू करना",
+        "सुरक्षा उपायों का एक सेट लागू करना",
+        "सर्वर की सुरक्षा बढ़ाना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following is an effective measure for securing student and staff personal data stored on institutional cloud servers?\nImplementing strong multi-factor authentication and data encryption at rest.",
+      "options_english": [
+        "Implementing strong multi-factor authentication",
+        "Applying data encryption",
+        "Implementing a set of security measures",
+        "Enhancing server security"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Implementing strong multi-factor authentication and data encryption at rest is crucial for securing sensitive student and staff personal data stored on institutional cloud infrastructure. Multi-factor authentication ensures that only verified users with secondary authentication factors can gain system entry. Furthermore, applying strong cryptographic encryption to data at rest protects stored records against unauthorized extraction, database leaks, or physical storage theft, rendering stolen files completely unreadable to unauthorized actors.",
+      "explanation_hindi": "सही उत्तर (a) है। मजबूत बहु-कारक प्रमाणीकरण और डेटा एन्क्रिप्शन लागू करना संस्थागत क्लाउड अवसंरचना पर संग्रहीत छात्र और स्टाफ के व्यक्तिगत डेटा को सुरक्षित करने के लिए महत्वपूर्ण है। बहु-कारक प्रमाणीकरण यह सुनिश्चित करता है कि केवल सत्यापित उपयोगकर्ता जो द्वितीयक प्रमाणीकरण कारकों के साथ हैं, सिस्टम में प्रवेश कर सकें। इसके अलावा, डेटा एन्क्रिप्शन लागू करने से संग्रहीत रिकॉर्ड को अनधिकृत निकासी, डेटाबेस लीक या भौतिक भंडारण चोरी के खिलाफ सुरक्षित किया जा सकता है, जिससे चुराए गए फ़ाइलें अनधिकृत व्यक्तियों के लिए पूरी तरह से अप्राप्य हो जाती हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Multi-factor authentication enhances security by requiring multiple forms of verification.",
+        "Data encryption protects sensitive information from unauthorized access.",
+        "Printed answer key: (A) Implementing strong multi-factor authentication",
+        "Cloud security measures are essential for protecting institutional data."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7ea3b906-79a9-47a0-af0a-28198e5be1ff",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "क्रिएटिव कॉमन्स (CC) लाइसेंसों के संबंध में निम्नलिखित बयानों पर विचार करें:\nA. क्रिएटिव कॉमन्स लाइसेंस रचनाकारों को अपनी रचनात्मक\nकृति को साझा करने और उपयोग करने के लिए सार्वजनिक अनुमति\nदेने की अनुमति देते हैं, निर्धारित शर्तों के तहत।\nB. CC BY श्रेय उपयोगकर्ताओं को मूल लेखक को उचित\nश्रेय देने की आवश्यकता है।\nC. CC NC लाइसेंसित सामग्री का व्यावसायिक शोषण\nबिना किसी प्रतिबंध के अनुमति देता है।\nउपरोक्त में से कौन से बयान सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Creative Commons (CC) licenses:\nA. Creative Commons licenses allow creators to grant public permissions to share and use their creative work under defined conditions.\nB. CC BY attribution requires users to give appropriate credit to the original author.\nC. CC NC permits commercial exploitation of the licensed material without restriction.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The correct answer is 'A and C only'. Creative Commons licenses indeed allow creators to grant permissions for sharing and using their work, but CC NC (Non-Commercial) does not permit commercial exploitation. Therefore, while statements A and B are correct, statement C is incorrect, making the combination of A and C the right choice.",
+      "explanation_hindi": "सही उत्तर (c) है। क्रिएटिव कॉमन्स लाइसेंस वास्तव में रचनाकारों को अपनी रचनाओं को साझा करने और उपयोग करने की अनुमति देने के लिए अनुमति देने की अनुमति देते हैं, लेकिन CC NC (गैर-व्यावसायिक) व्यावसायिक शोषण की अनुमति नहीं देता है। इसलिए, जबकि बयान A और B सही हैं, बयान C गलत है, जिससे A और C का संयोजन सही विकल्प बनता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Creative Commons licenses allow sharing and use under defined conditions.",
+        "CC BY requires attribution to the original author.",
+        "CC NC does not permit commercial exploitation.",
+        "Printed answer key: (C) A and C only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7c3a04ab-8174-4624-ae60-3eba94d3153e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "79. “स्मिशिंग” क्या है?",
+      "options_hindi": [
+        "एसएमएस पाठ संदेशों के माध्यम से किया गया सामाजिक इंजीनियरिंग हमला",
+        "भौतिक डाक मेल के माध्यम से किया गया सामाजिक इंजीनियरिंग धोखाधड़ी",
+        "एन्क्रिप्टेड उपग्रह संचार पर इंटरसेप्टिंग और ईव्सड्रॉपिंग",
+        "उच्च गति सुपरकंप्यूटर का उपयोग करके प्रशासनिक डेटाबेस भंडारण को डिक्रिप्ट करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is “Smishing”?",
+      "options_english": [
+        "Social engineering attack carried out via SMS text messages",
+        "Social engineering fraud conducted through physical postal mail",
+        "Intercepting and eavesdropping on encrypted satellite communications",
+        "Decrypting administrative database storage using high-speed supercomputers"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Cybercriminals deploy mobile messaging protocols to launch targeted social engineering attacks against mobile users. Smishing is a form of phishing executed specifically through Short Message Service text messaging. Attackers send deceptive text messages containing malicious links or urgent caller prompts, tricking recipients into revealing confidential account credentials, personal identity numbers, or downloading harmful software onto mobile devices.",
+      "explanation_hindi": "सही उत्तर (a) है। साइबर अपराधी मोबाइल संदेश प्रोटोकॉल का उपयोग करके मोबाइल उपयोगकर्ताओं के खिलाफ लक्षित सामाजिक इंजीनियरिंग हमले शुरू करते हैं। स्मिशिंग एक प्रकार का फ़िशिंग है जो विशेष रूप से शॉर्ट मैसेज सर्विस टेक्स्ट मैसेजिंग के माध्यम से किया जाता है। हमलावर धोखाधड़ी वाले पाठ संदेश भेजते हैं जिनमें हानिकारक लिंक या तात्कालिक कॉलर संकेत होते हैं, जिससे प्राप्तकर्ता अपने गोपनीय खाता क्रेडेंशियल, व्यक्तिगत पहचान संख्या, या मोबाइल उपकरणों पर हानिकारक सॉफ़्टवेयर डाउनलोड करने के लिए धोखा देते हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "easy",
+      "key_facts": [
+        "Smishing is a type of phishing attack conducted via SMS.",
+        "Attackers use deceptive messages to extract sensitive information.",
+        "Mobile users are particularly vulnerable to smishing attacks.",
+        "Printed answer key: (A) Social engineering attack carried out via SMS text messages"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "dc076919-540a-4a31-a5cb-555427bc2a6f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूचना प्रौद्योगिकी अधिनियम, 2000 की कौन सी धारा केंद्रीय सरकार को किसी भी कंप्यूटर संसाधन के माध्यम से किसी भी जानकारी की इंटरसेप्शन, निगरानी या डिक्रिप्शन के लिए निर्देश जारी करने का अधिकार देती है?",
+      "options_hindi": [
+        "धारा 69",
+        "धारा 66F",
+        "धारा 43A",
+        "धारा 72A"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which Section of the Information Technology Act, 2000 empowers the Central Government to issue directions for interception or monitoring or decryption of any information through any computer resource?",
+      "options_english": [
+        "Section 69",
+        "Section 66F",
+        "Section 43A",
+        "Section 72A"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Information Technology Act, 2000 outlines regulatory powers granted to government authorities for national security and public order. Section 69 specifically empowers the Central Government or State Governments to direct the interception or monitoring of any information through computer resources, ensuring that necessary measures can be taken to safeguard national interests.",
+      "explanation_hindi": "सही उत्तर (a) है। सूचना प्रौद्योगिकी अधिनियम, 2000 में सरकारी अधिकारियों को राष्ट्रीय सुरक्षा और सार्वजनिक व्यवस्था के लिए नियामक शक्तियाँ प्रदान की गई हैं। धारा 69 विशेष रूप से केंद्रीय सरकार या राज्य सरकारों को किसी भी कंप्यूटर संसाधन के माध्यम से किसी भी जानकारी की इंटरसेप्शन या निगरानी के लिए निर्देश देने का अधिकार देती है, यह सुनिश्चित करते हुए कि राष्ट्रीय हितों की रक्षा के लिए आवश्यक उपाय किए जा सकें।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Section 69 empowers interception and monitoring by the government.",
+        "Part of the regulatory framework for national security.",
+        "Printed answer key: (A) Section 69"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

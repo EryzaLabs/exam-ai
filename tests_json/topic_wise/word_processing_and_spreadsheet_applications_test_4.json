@@ -1,0 +1,796 @@
+{
+  "test_id": "2e951e5c-717e-42e2-be2a-1b3244d14e5b",
+  "test_name": "Topic Test: WORD_PROCESSING_AND_SPREADSHEET_APPLICATIONS - Part 4",
+  "type": "topic_wise",
+  "topic": "word_processing_and_spreadsheet_applications",
+  "created_at": "2026-10-28T18:55:06.930037",
+  "questions": [
+    {
+      "id": "17488676-514d-42e3-8cd8-fbc36ea987cf",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "22. एक परीक्षा मार्क शीट स्प्रेडशीट में,\nकौन सा फॉर्मूला B2:B50 रेंज में उच्चतम स्कोर\nनिर्धारित करता है?",
+      "options_hindi": [
+        "=TOP(B2:B50)",
+        "=MAX(B2:B50)",
+        "=HIGH(B2:B50)",
+        "=SUM(B2:B50)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In an examination mark sheet spreadsheet, which formula determines the highest score in range B2:B50?",
+      "options_english": [
+        "=TOP(B2:B50)",
+        "=MAX(B2:B50)",
+        "=HIGH(B2:B50)",
+        "=SUM(B2:B50)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Finding extreme values within extensive numerical datasets is a fundamental requirement in automated record processing. The MAX function in spreadsheet applications scans a designated range of cells and returns the single highest numerical value present. Applying the formula =MAX(B2:B50) instructs the computational engine to evaluate all numeric scores stored from cell B2 through cell B50, instantly identifying the maximum examination score achieved.",
+      "explanation_hindi": "सही उत्तर (b) है। व्यापक संख्यात्मक डेटा सेट में चरम मानों को खोजना स्वचालित रिकॉर्ड प्रोसेसिंग में एक मौलिक आवश्यकता है। स्प्रेडशीट अनुप्रयोगों में MAX फ़ंक्शन निर्दिष्ट सेल रेंज को स्कैन करता है और उपस्थित एकल उच्चतम संख्यात्मक मान को लौटाता है। फॉर्मूला =MAX(B2:B50) लागू करने से गणनात्मक इंजन को सेल B2 से लेकर B50 तक संग्रहीत सभी संख्यात्मक स्कोर का मूल्यांकन करने का निर्देश मिलता है, जिससे तुरंत अधिकतम परीक्षा स्कोर की पहचान होती है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "The MAX function identifies the highest value in a range.",
+        "It is essential for analyzing examination scores.",
+        "Printed answer key: (B) =MAX(B2:B50)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "aec9993d-6c57-4034-8ed9-9a7a742e16ae",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "96. स्प्रेडशीट में डेटा मान्यता के संबंध में निम्नलिखित कथनों पर विचार करें:\nकथन A: डेटा मान्यता सेल इनपुट को स्वीकार्य ड्रॉप-डाउन विकल्पों की सूची तक सीमित कर सकती है।\nकथन B: डेटा मान्यता विशिष्ट संख्यात्मक सीमाओं के भीतर संख्यात्मक इनपुट को सीमित कर सकती है।\nकथन C: डेटा मान्यता कंप्यूटर मॉनिटर स्क्रीन को भौतिक क्षति से रोकती है।\nउपरोक्त में से कौन सा कथन सही है?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Data Validation in spreadsheets:\nStatement A: Data validation can restrict cell input to a list of acceptable drop-down options.\nStatement B: Data validation can restrict numerical input within specific numeric ranges.\nStatement C: Data validation prevents physical damage to computer monitor screens.\nWhich of the statement(s) given above is/are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Data validation rules maintain spreadsheet accuracy by restricting input values within defined guidelines. Data validation can enforce drop-down menus containing allowable choices or restrict numerical data to specific ranges, such as values between zero and one hundred. However, data validation is purely a software control mechanism and has no physical interaction with hardware or monitor screens, rendering statement C false while statements A and B are fully accurate.",
+      "explanation_hindi": "सही उत्तर (a) है। डेटा मान्यता नियम स्प्रेडशीट की सटीकता बनाए रखने के लिए परिभाषित दिशानिर्देशों के भीतर इनपुट मानों को सीमित करते हैं। डेटा मान्यता स्वीकार्य विकल्पों की ड्रॉप-डाउन मेनू लागू कर सकती है या संख्यात्मक डेटा को विशिष्ट सीमाओं, जैसे कि शून्य और एक सौ के बीच के मानों तक सीमित कर सकती है। हालाँकि, डेटा मान्यता केवल एक सॉफ़्टवेयर नियंत्रण तंत्र है और हार्डवेयर या मॉनिटर स्क्रीन के साथ कोई भौतिक इंटरैक्शन नहीं है, जिससे कथन C गलत हो जाता है जबकि कथन A और B पूरी तरह से सटीक हैं।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "डेटा मान्यता इनपुट मानों को सीमित करती है।",
+        "यह ड्रॉप-डाउन विकल्पों और संख्यात्मक सीमाओं को लागू कर सकती है।",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1b149b87-b967-4bfb-a6d1-6dcf8ad9782a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "63. स्प्रेडशीट फ़ॉर्मूला =AVERAGE(10, 20, 30) द्वारा कौन सा परिणाम लौटाया जाता है?",
+      "options_hindi": [
+        "20",
+        "60",
+        "3",
+        "10"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What result is returned by the spreadsheet formula =AVERAGE(10, 20, 30)?",
+      "options_english": [
+        "20",
+        "60",
+        "3",
+        "10"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The AVERAGE function in spreadsheet applications calculates the mathematical arithmetic mean of numerical arguments provided within its parentheses. Evaluating the formula =AVERAGE(10, 20, 30) causes the calculation engine to first sum the three numerical values, yielding a total of 60. It then divides this cumulative sum by the total count of numbers, which is 3, producing an exact average output value of 20.",
+      "explanation_hindi": "सही उत्तर (a) है। AVERAGE फ़ंक्शन स्प्रेडशीट अनुप्रयोगों में दिए गए संख्यात्मक तर्कों का गणितीय औसत निकालता है। फ़ॉर्मूला =AVERAGE(10, 20, 30) का मूल्यांकन करने पर, गणना इंजन पहले तीन संख्यात्मक मानों को जोड़ता है, जिससे कुल 60 प्राप्त होता है। फिर यह इस संचयी योग को संख्याओं की कुल संख्या, जो 3 है, से विभाजित करता है, जिससे औसत मान 20 प्राप्त होता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "AVERAGE function calculates the arithmetic mean.",
+        "Total of the numbers 10, 20, and 30 is 60.",
+        "Printed answer key: (A) 20"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "06cbea03-0593-448d-8b02-b58d54aefb49",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "68. एक स्प्रेडशीट में कस्टम प्रिंट क्षेत्र सेट करने के लिए निम्नलिखित चरणों पर विचार करें:\nI. पूर्ण वित्तीय डेटासेट के साथ लक्षित कार्यपत्र खोलें\nII. प्रिंट करने के लिए निर्दिष्ट सेल की विशिष्ट सीमा को हाइलाइट करें\nIII. पृष्ठ लेआउट टैब तक पहुँचें और प्रिंट क्षेत्र पर क्लिक करें → प्रिंट क्षेत्र सेट करें\nIV. प्रिंट पूर्वावलोकन मेनू विकल्प का उपयोग करके प्रिंट कार्य की पूर्वावलोकन करें\nनिम्नलिखित में से कौन सा सही निष्पादन क्रम का प्रतिनिधित्व करता है?",
+      "options_hindi": [
+        "I, II, III, IV",
+        "II, I, IV, III",
+        "III, I, II, IV",
+        "IV, III, II, I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following steps for setting up a custom Print Area in a spreadsheet:\nI. Open target worksheet with complete financial dataset\nII. Highlight specific range of cells intended for printing\nIII. Access Page Layout tab and click Print Area → Set Print Area\nIV. Preview print job using Print Preview menu option\nWhich of the following represents the correct execution order?",
+      "options_english": [
+        "I, II, III, IV",
+        "II, I, IV, III",
+        "III, I, II, IV",
+        "IV, III, II, I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Establishing a custom print area in spreadsheet software requires following a specific sequential process. First, the user opens the target worksheet containing the dataset. Second, the user highlights the specific range of cells designated for printing. Third, the user accesses the Page Layout tab and selects Print Area → Set Print Area. Fourth, the print job is reviewed using the Print Preview window.",
+      "explanation_hindi": "सही उत्तर (a) है। स्प्रेडशीट सॉफ़्टवेयर में कस्टम प्रिंट क्षेत्र स्थापित करने के लिए एक विशिष्ट अनुक्रमिक प्रक्रिया का पालन करना आवश्यक है। सबसे पहले, उपयोगकर्ता डेटासेट वाला लक्षित कार्यपत्र खोलता है। दूसरे, उपयोगकर्ता प्रिंट करने के लिए निर्दिष्ट सेल की विशिष्ट सीमा को हाइलाइट करता है। तीसरे, उपयोगकर्ता पृष्ठ लेआउट टैब तक पहुँचता है और प्रिंट क्षेत्र → प्रिंट क्षेत्र सेट करें का चयन करता है। चौथे, प्रिंट कार्य की समीक्षा प्रिंट पूर्वावलोकन विंडो का उपयोग करके की जाती है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Custom print areas allow users to select specific cells for printing.",
+        "The process involves highlighting cells and setting the print area.",
+        "Printed answer key: (A) I, II, III, IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2cac29bb-2fab-4a4c-b9e2-7507d5452da8",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को आश्वासन (A) के रूप में लेबल किया गया है और दूसरे को कारण (R) के रूप में लेबल किया गया है। \nआश्वासन (A): मेल मर्ज व्यक्तिगत प्राप्तकर्ताओं के लिए व्यक्तिगत रूप से बड़े पैमाने पर संस्थागत परिपत्रों के उत्पादन की अनुमति देता है। \nकारण (R): मेल मर्ज एक मुख्य दस्तावेज़ को एक डेटा स्रोत के साथ लिंक करता है जिसमें परिवर्तनशील जानकारी होती है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R झूठा है।",
+        "A झूठा है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). \nAssertion (A): Mail merge enables the generation of mass institutional circulars personalized for individual recipients. \nReason (R): Mail merge links a main document containing static text with a data source containing variable information.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Mail merge functionality allows organizations to efficiently produce large volumes of customized circulars, notices, or formal letters. The mechanism operates by dynamically merging a static main document, which contains fixed core text and structural formatting, with an external data source containing recipient-specific variables like names and addresses. Because the data source automatically populates placeholder merge fields, mass correspondence achieves high personalization while maintaining institutional consistency.",
+      "explanation_hindi": "सही उत्तर (a) है। मेल मर्ज कार्यक्षमता संगठनों को अनुकूलित परिपत्रों, सूचनाओं या औपचारिक पत्रों की बड़ी मात्रा को प्रभावी ढंग से उत्पन्न करने की अनुमति देती है। यह तंत्र एक स्थिर मुख्य दस्तावेज़ को एक बाहरी डेटा स्रोत के साथ गतिशील रूप से जोड़ता है जिसमें प्राप्तकर्ता-विशिष्ट चर होते हैं जैसे नाम और पते। डेटा स्रोत स्वचालित रूप से प्लेसहोल्डर मर्ज फ़ील्ड को भरता है, जिससे बड़े पैमाने पर पत्राचार उच्च व्यक्तिगतकरण प्राप्त करता है जबकि संस्थागत स्थिरता बनाए रखता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Mail merge allows for personalized mass communication.",
+        "It links static documents with dynamic data sources.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a695d6fb-b84b-4a69-aede-c85704e6125b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची विकल्पों के संबंध में निम्नलिखित कथनों पर विचार करें\nशब्द प्रसंस्करण में:\nकथन A: बुलेटेड सूचियाँ आइटमों को व्यवस्थित करती हैं",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding list options in word processing:\nStatement A: Bulleted lists organize items using",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "List formatting features in word processing applications structure textual information logically for improved readability. Bulleted lists use uniform visual symbols for non-sequential items. Numbered lists arrange items sequentially using ordered numbers or letters when step order matters. Multilevel lists establish nested hierarchical structures. Importantly, numbered lists renumber automatically when items are inserted or removed, rendering statement D inaccurate while statements A, B, and C are correct.",
+      "explanation_hindi": "सही उत्तर (a) है। शब्द प्रसंस्करण अनुप्रयोगों में सूची प्रारूपण सुविधाएँ पाठ्य जानकारी को तार्किक रूप से संरचित करती हैं जिससे पठनीयता में सुधार होता है। बुलेटेड सूचियाँ गैर-क्रमबद्ध आइटमों के लिए समान दृश्य प्रतीकों का उपयोग करती हैं। क्रमांकित सूचियाँ क्रम में आइटमों को व्यवस्थित करती हैं जब क्रम महत्वपूर्ण होता है। बहु-स्तरीय सूचियाँ घोंसलेदार पदानुक्रमिक संरचनाएँ स्थापित करती हैं। महत्वपूर्ण रूप से, क्रमांकित सूचियाँ स्वचालित रूप से पुनः क्रमांकित होती हैं जब आइटम जोड़े या हटाए जाते हैं, जिससे कथन D गलत हो जाता है जबकि कथन A, B, और C सही हैं।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Bulleted lists use visual symbols for non-sequential items.",
+        "Numbered lists arrange items sequentially.",
+        "Multilevel lists establish nested structures.",
+        "Printed answer key: (A) A, B and C only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "125cf83c-e6ac-4733-9243-5fb34523970d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II के साथ मिलाएं:\nसूची I: (शब्द प्रसंस्करण विशेषता)\nP. शीर्षक\nQ. पाद लेख\nR. फुटनोट\nS. वॉटरमार्क\nसूची II: (मुख्य उद्देश्य)\nI. प्रत्येक दस्तावेज़ पृष्ठ के शीर्ष सीमा पर पाठ\nII. प्रत्येक दस्तावेज़ पृष्ठ के नीचे सीमा पर पाठ\nIII. स्थिति दर्शाने वाला अर्ध-पारदर्शी पृष्ठभूमि छवि या पाठ (जैसे DRAFT)\nIV. विशिष्ट शब्द के लिए पृष्ठ के नीचे संदर्भ या उद्धरण नोट",
+      "options_hindi": [
+        "P-I, Q-II, R-IV, S-III",
+        "P-II, Q-I, R-III, S-IV",
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-III, R-II, S-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (Word Processing Feature)\nP. Header\nQ. Footer\nR. Footnote\nS. Watermark\nList II: (Core Purpose)\nI. Text appearing at top margin of every document page\nII. Text appearing at bottom margin of every document page\nIII. Semi-transparent background image or text indicating status (e.g. DRAFT)\nIV. Reference or citation note located at page bottom for specific term",
+      "options_english": [
+        "P-I, Q-II, R-IV, S-III",
+        "P-II, Q-I, R-III, S-IV",
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-III, R-II, S-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct answer is 'P-I, Q-II, R-IV, S-III'. Specialized document features serve distinct contextual roles in formal word processing. Headers display recurring text at the top margin of every page, while footers appear consistently along bottom margins. Footnotes place reference citations or supplementary explanatory notes at the base of the specific page containing the citation mark. Watermarks render semi-transparent background text or logos behind body content to indicate document status such as draft or confidential.",
+      "explanation_hindi": "सही उत्तर (a) है। विशेष दस्तावेज़ सुविधाएँ औपचारिक शब्द प्रसंस्करण में विशिष्ट संदर्भीय भूमिकाएँ निभाती हैं। शीर्षक प्रत्येक पृष्ठ के शीर्ष सीमा पर पुनरावृत्त पाठ प्रदर्शित करते हैं, जबकि पाद लेख नीचे की सीमाओं के साथ लगातार दिखाई देते हैं। फुटनोट संदर्भ उद्धरण या पूरक व्याख्यात्मक नोट्स को उस विशेष पृष्ठ के नीचे रखते हैं जिसमें उद्धरण चिह्न होता है। वॉटरमार्क अर्ध-पारदर्शी पृष्ठभूमि पाठ या लोगो को शरीर की सामग्री के पीछे प्रदर्शित करते हैं ताकि दस्तावेज़ की स्थिति जैसे ड्राफ्ट या गोपनीयता को दर्शाया जा सके।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Headers display text at the top margin.",
+        "Footers appear at the bottom margin.",
+        "Footnotes provide reference citations.",
+        "Printed answer key: (A) P-I, Q-II, R-IV, S-III"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ff254e1d-acf5-46e4-849b-30051117ea35",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II से मिलाएं:\nसूची I: (स्प्रेडशीट फ़ंक्शन)\nP. SUM\nQ. AVERAGE\nR. IF\nS. COUNT\nसूची II: (संस्थागत वित्तीय अनुप्रयोग)\nI. विभिन्न लाइन आइटम के बीच कुल विभागीय व्यय निर्धारित करता है\nII. यह मूल्यांकन करता है कि मासिक बजट खर्च स्वीकृत आवंटन से अधिक है या नहीं\nIII. प्रति व्यय प्रमुख औसत परिचालन व्यय की गणना करता है\nIV. संसाधित विक्रेता चालानों की कुल संख्या की गणना करना",
+      "options_hindi": [
+        "P-I, Q-III, R-II, S-IV",
+        "P-III, Q-I, R-IV, S-II",
+        "P-II, Q-IV, R-I, S-III",
+        "P-IV, Q-II, R-III, S-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (Spreadsheet Function)\nP. SUM\nQ. AVERAGE\nR. IF\nS. COUNT\nList II: (Institutional Financial Application)\nI. Determines total departmental expenditure across multiple line items\nII. Evaluates whether monthly budget spending exceeds approved allocation\nIII. Calculates mean operational expense per expenditure head\nIV. Tallying total number of processed vendor invoices",
+      "options_english": [
+        "P-I, Q-III, R-II, S-IV",
+        "P-III, Q-I, R-IV, S-II",
+        "P-II, Q-IV, R-I, S-III",
+        "P-IV, Q-II, R-III, S-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Spreadsheet functions serve specialized operational roles in institutional financial analysis and accounting management. The SUM function calculates cumulative expenditures across budget items. The AVERAGE function computes mean operational costs per spending department. The logical IF function determines whether spending levels remain within allocated budget constraints. Finally, the COUNT function tallies the total number of processed invoices, ensuring comprehensive financial monitoring and administrative oversight.",
+      "explanation_hindi": "सही उत्तर (a) है। स्प्रेडशीट फ़ंक्शन संस्थागत वित्तीय विश्लेषण और लेखा प्रबंधन में विशेषीकृत संचालन भूमिकाएँ निभाते हैं। SUM फ़ंक्शन बजट आइटम के बीच संचयी व्यय की गणना करता है। AVERAGE फ़ंक्शन व्यय विभाग के अनुसार औसत परिचालन लागत की गणना करता है। तार्किक IF फ़ंक्शन यह निर्धारित करता है कि क्या व्यय स्तर आवंटित बजट सीमाओं के भीतर रहते हैं। अंततः, COUNT फ़ंक्शन संसाधित चालानों की कुल संख्या की गणना करता है, जो व्यापक वित्तीय निगरानी और प्रशासनिक निगरानी सुनिश्चित करता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "SUM function calculates total expenditures.",
+        "AVERAGE function computes mean costs.",
+        "IF function evaluates budget constraints.",
+        "Printed answer key: (A) P-I, Q-III, R-II, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "4ebcbe4c-4679-478c-8bc9-3ad37eba29ab",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "99. नीचे दो कथन दिए गए हैं: एक को आश्वासन (A) के रूप में लेबल किया गया है और दूसरे को कारण (R) के रूप में लेबल किया गया है। \nआश्वासन (A): सहयोगात्मक वास्तविक समय दस्तावेज़ संपादन संस्थागत संचालन की दक्षता बढ़ाता है। \nकारण (R): सहयोगात्मक उपकरण कई टीम सदस्यों से अलग-अलग ईमेल अटैचमेंट को मैन्युअल रूप से मर्ज करने की आवश्यकता को समाप्त करते हैं।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). \nAssertion (A): Collaborative real-time document editing increases institutional operational efficiency. \nReason (R): Collaborative tools eliminate necessity of manually merging disparate email attachments from multiple team members.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Real-time collaborative editing platforms significantly enhance institutional productivity by enabling multiple team members to work on a single centralized document concurrently. This cloud-based approach completely eliminates the cumbersome administrative necessity of manually reconciling and consolidating disparate email attachments sent by individual team members. By maintaining a single live master document, organizations prevent version confusion, accelerate editing workflows, and streamline document finalization, making both statements true and logically aligned.",
+      "explanation_hindi": "सही उत्तर (a) है। वास्तविक समय सहयोगात्मक संपादन प्लेटफार्म संस्थागत उत्पादकता को महत्वपूर्ण रूप से बढ़ाते हैं क्योंकि यह कई टीम सदस्यों को एक ही केंद्रीकृत दस्तावेज़ पर एक साथ काम करने की अनुमति देता है। यह क्लाउड-आधारित दृष्टिकोण अलग-अलग टीम सदस्यों द्वारा भेजे गए ईमेल अटैचमेंट को मैन्युअल रूप से समेटने की थकाऊ प्रशासनिक आवश्यकता को पूरी तरह से समाप्त कर देता है। एकल लाइव मास्टर दस्तावेज़ बनाए रखकर, संगठन संस्करण भ्रम को रोकते हैं, संपादन कार्यप्रवाह को तेज करते हैं, और दस्तावेज़ को अंतिम रूप देने की प्रक्रिया को सरल बनाते हैं, जिससे दोनों कथन सत्य और तार्किक रूप से जुड़े होते हैं।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "सहयोगात्मक वास्तविक समय संपादन प्लेटफार्म संस्थागत उत्पादकता को बढ़ाते हैं।",
+        "क्लाउड-आधारित दृष्टिकोण मैन्युअल समेकन की आवश्यकता को समाप्त करता है।",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d95244fa-5871-4654-bd93-39747a82c587",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "1. दस्तावेज़ निर्माण और समीक्षा संपादन को पूरा करें",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "विकल्प सी",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Complete document creation and review edits.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Word processing software is specifically designed to facilitate the creation, editing, formatting, and saving of textual material in professional office environments. These applications offer comprehensive utilities for typography management, layout design, document structure configuration, and digital storage. By streamlining document preparation processes, word processors enhance administrative efficiency, enable standardized organizational communication, and maintain consistent output quality across routine correspondence, reports, circulars, and institutional documentation.",
+      "explanation_hindi": "सही उत्तर (b) है। शब्द प्रसंस्करण सॉफ़्टवेयर विशेष रूप से पेशेवर कार्यालय वातावरण में पाठ्य सामग्री के निर्माण, संपादन, प्रारूपण और सहेजने की सुविधा के लिए डिज़ाइन किया गया है। ये अनुप्रयोग टाइपोग्राफी प्रबंधन, लेआउट डिज़ाइन, दस्तावेज़ संरचना कॉन्फ़िगरेशन और डिजिटल भंडारण के लिए व्यापक उपयोगिताएँ प्रदान करते हैं। दस्तावेज़ तैयारी प्रक्रियाओं को सरल बनाकर, शब्द प्रसंस्करण उपकरण प्रशासनिक दक्षता को बढ़ाते हैं, मानकीकृत संगठनात्मक संचार को सक्षम करते हैं, और नियमित पत्राचार, रिपोर्ट, परिपत्र और संस्थागत दस्तावेज़ों में निरंतर आउटपुट गुणवत्ता बनाए रखते हैं।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Word processing software enhances document creation and management.",
+        "It offers utilities for formatting, editing, and saving text.",
+        "Printed answer key: (B) To create, edit, format, and save text-based",
+        "Streamlines administrative efficiency and communication."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6cfb2363-3fb7-4f15-9650-876c804a08e3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक वर्ड दस्तावेज़ में बनाए गए तालिका में, एक पंक्ति और एक कॉलम के इंटरसेक्शन से कौन सा संरचनात्मक इकाई बनती है?",
+      "options_hindi": [
+        "ग्रिड",
+        "सेल",
+        "अनुभाग",
+        "मार्जिन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What structural unit is formed by the intersection of a row and a column in a table created within a word document?",
+      "options_english": [
+        "Grid",
+        "Cell",
+        "Section",
+        "Margin"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The basic structural unit formed by the precise intersection of a horizontal row and a vertical column within a table is termed a cell. Each individual cell functions as an isolated container capable of storing textual data, numerical figures, embedded graphical objects, or nested formatting parameters independently. Tables in word processing applications provide organized grid structures for presenting numerical data, comparative information, and administrative lists.",
+      "explanation_hindi": "सही उत्तर (b) है। तालिका में एक क्षैतिज पंक्ति और एक लंबवत कॉलम के सटीक इंटरसेक्शन से बनने वाली मूल संरचनात्मक इकाई को सेल कहा जाता है। प्रत्येक व्यक्तिगत सेल एक अलग कंटेनर के रूप में कार्य करता है जो स्वतंत्र रूप से पाठ डेटा, संख्यात्मक आंकड़े, अंतर्निहित ग्राफिकल ऑब्जेक्ट, या नेस्टेड फॉर्मेटिंग पैरामीटर को संग्रहीत कर सकता है। वर्ड प्रोसेसिंग अनुप्रयोगों में तालिकाएँ संख्यात्मक डेटा, तुलनात्मक जानकारी और प्रशासनिक सूचियों को प्रस्तुत करने के लिए संगठित ग्रिड संरचनाएँ प्रदान करती हैं।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "The intersection of a row and a column forms a cell.",
+        "Cells can store text, numbers, and graphical objects.",
+        "Tables provide organized structures for data presentation.",
+        "Printed answer key: (B) Cell"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "124e293a-e34c-473d-948e-fb6466ce77ec",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "पृष्ठ सेटअप में, मुद्रित दस्तावेज़ के बाइंडिंग मार्जिन में जोड़ा गया स्थान किसे कहते हैं?",
+      "options_hindi": [
+        "गटर मार्जिन",
+        "फुटर क्षेत्र",
+        "इंडेंट मार्कर",
+        "ओरिएंटेशन पैड"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In page setup, what is the term for space added to the binding margin of a printed document?",
+      "options_english": [
+        "Gutter margin",
+        "Footer area",
+        "Indent marker",
+        "Orientation pad"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Preparing documents for physical printing and commercial binding requires specialized page layout configurations. A gutter margin adds extra blank space to the inside binding edge or top margin of document pages. Incorporating a gutter margin ensures that printed text and graphical elements are not obscured or driven into the paper crease when documents are stapled, spiral-bound, or bound into formal institutional volumes.",
+      "explanation_hindi": "सही उत्तर (a) है। भौतिक मुद्रण और व्यावसायिक बाइंडिंग के लिए दस्तावेज़ तैयार करने में विशेष पृष्ठ लेआउट कॉन्फ़िगरेशन की आवश्यकता होती है। गटर मार्जिन दस्तावेज़ के पृष्ठों के अंदर बाइंडिंग किनारे या शीर्ष मार्जिन में अतिरिक्त खाली स्थान जोड़ता है। गटर मार्जिन को शामिल करने से यह सुनिश्चित होता है कि मुद्रित पाठ और ग्राफिकल तत्व छापे गए दस्तावेज़ों को स्टेपल, स्पाइरल-बाउंड या औपचारिक संस्थागत वॉल्यूम में बंधे जाने पर कागज की मोड़ में छिपे या धकेले नहीं जाते हैं।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "A gutter margin adds extra space to the binding edge.",
+        "It prevents text from being obscured during binding.",
+        "Printed answer key: (A) Gutter margin.",
+        "Specialized layout configurations are needed for printing."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "153b60b9-4805-42e3-acc8-dae08b51049f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "15. कौन सा आवश्यकताएँ पूरी की जानी चाहिए ताकि\nस्प्रेडशीट सॉफ़्टवेयर एक सेल प्रविष्टि को\nसूत्र के रूप में मान सके?",
+      "options_hindi": [
+        "प्रविष्टि का प्रारंभ एक समान चिह्न (=) से होना चाहिए",
+        "प्रविष्टि का अंत पूर्ण विराम या\nविराम चिह्न से होना चाहिए",
+        "पाठ को बोल्ड इटैलिक\nटाइपोग्राफी प्रारूप में स्टाइल किया जाना चाहिए",
+        "सेल कंटेनर को पीले बैकग्राउंड फ़िल से हाइलाइट किया जाना चाहिए"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What requirement must be fulfilled to ensure spreadsheet software treats a cell entry as a formula?",
+      "options_english": [
+        "The entry begins with an equals sign (=)",
+        "The entry must end with a full stop or punctuation mark",
+        "The text must be styled in bold italic typography format",
+        "The cell container must be highlighted with yellow background fill"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Spreadsheet calculation engines determine whether a cell entry contains static text, numeric constant data, or executable mathematical instructions based on the initial character entered. Beginning a cell entry with an equals sign triggers the software parser to interpret following characters as a formula or function call. Without this mandatory initial symbol, the software cannot recognize the entry as a formula.",
+      "explanation_hindi": "सही उत्तर (a) है। स्प्रेडशीट गणना इंजन यह निर्धारित करते हैं कि क्या एक सेल प्रविष्टि में स्थिर पाठ, संख्यात्मक स्थिर डेटा, या निष्पादित गणितीय निर्देश शामिल हैं, जो प्रारंभिक वर्ण पर निर्भर करता है। एक समान चिह्न से सेल प्रविष्टि की शुरुआत करने से सॉफ़्टवेयर पार्सर को अगले वर्णों को सूत्र या फ़ंक्शन कॉल के रूप में व्याख्या करने के लिए प्रेरित किया जाता है। इस अनिवार्य प्रारंभिक चिह्न के बिना, सॉफ़्टवेयर प्रविष्टि को सूत्र के रूप में पहचान नहीं सकता।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "Spreadsheet software uses an equals sign to identify formulas.",
+        "The equals sign is mandatory for formula recognition.",
+        "Printed answer key: (A) The entry begins with an equals sign (=)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "fd9ef222-e88b-4307-88a4-eb2cdbba35db",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को कथन के रूप में लेबल किया गया है\nऔर दूसरे को कारण (R) के रूप में लेबल किया गया है।\nकथन: पासवर्ड सुरक्षा स्प्रेडशीट फ़ाइलों को एन्क्रिप्ट करती है ताकि अनधिकृत पहुँच को प्रतिबंधित किया जा सके।\nकारण (R): पासवर्ड सुरक्षा स्वचालित रूप से\nकार्यपत्रों में सूत्र गणना त्रुटियों को सुधारती है।",
+      "options_hindi": [
+        "A और R दोनों सत्य हैं और R, A का सही स्पष्टीकरण है।",
+        "A और R दोनों सत्य हैं लेकिन R सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion and the other is labelled as Reason (R).\nAssertion: Password protection encrypts spreadsheet files to restrict unauthorized access.\nReason (R): Password protection automatically corrects formula calculation errors within worksheets.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Password protection in spreadsheet software restricts unauthorized access by applying strong cryptographic encryption to workbook files, requiring users to enter a secret password before viewing or modifying content. However, password protection operates strictly as a security access control and has no effect on mathematical logic or formula accuracy. It does not evaluate, modify, or correct calculation errors contained within worksheets, making the reason false.",
+      "explanation_hindi": "सही उत्तर (c) है। स्प्रेडशीट सॉफ़्टवेयर में पासवर्ड सुरक्षा अनधिकृत पहुँच को प्रतिबंधित करती है, जिससे उपयोगकर्ताओं को सामग्री को देखने या संशोधित करने से पहले एक गुप्त पासवर्ड दर्ज करना आवश्यक होता है। हालाँकि, पासवर्ड सुरक्षा केवल एक सुरक्षा पहुँच नियंत्रण के रूप में कार्य करती है और गणितीय तर्क या सूत्र की सटीकता पर कोई प्रभाव नहीं डालती है। यह कार्यपत्रों में मौजूद गणना त्रुटियों का मूल्यांकन, संशोधन या सुधार नहीं करती है, जिससे कारण असत्य हो जाता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Password protection encrypts files to restrict access.",
+        "It does not correct formula calculation errors.",
+        "Users must enter a password to access content.",
+        "Printed answer key: (C) A is true but R is false."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "77e99795-71d3-4f45-8f65-3be3d393da79",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "64. जब डेटा पंक्तियों को वर्णानुक्रम में एक पाठ कॉलम पर क्रमबद्ध किया जाता है, तो क्या होता है?",
+      "options_hindi": [
+        "पाठ आइटम Z से A तक व्यवस्थित होते हैं",
+        "पाठ आइटम A से Z तक व्यवस्थित होते हैं",
+        "पाठ आइटम संख्याओं में परिवर्तित होते हैं",
+        "पाठ आइटम स्थायी रूप से हटा दिए जाते हैं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What happens when data rows are sorted in ascending order on an alphabetical text column?",
+      "options_english": [
+        "Text items are arranged from Z to A",
+        "Text items are arranged from A to Z",
+        "Text items are converted to numbers",
+        "Text items are deleted permanently"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Sorting functionality in spreadsheet software organizes data rows logically based on alphabetical character ordering. Executing an ascending sort on an alphabetical text column instructs the system to reorder table records sequentially starting from the letter A through the letter Z. This operation groups identical text items together and arranges administrative lists, employee names, or institutional records in standard alphabetical order without deleting data.",
+      "explanation_hindi": "सही उत्तर (b) है। स्प्रेडशीट सॉफ़्टवेयर में क्रमबद्ध करने की कार्यक्षमता डेटा पंक्तियों को वर्णानुक्रम में व्यवस्थित करती है। एक वर्णात्मक पाठ कॉलम पर आरोही क्रम को निष्पादित करने से प्रणाली को तालिका रिकॉर्ड को क्रम में व्यवस्थित करने का निर्देश मिलता है, जो पत्र A से लेकर पत्र Z तक होता है। यह प्रक्रिया समान पाठ आइटमों को एक साथ समूहित करती है और प्रशासनिक सूचियों, कर्मचारी नामों या संस्थागत रिकॉर्ड को मानक वर्णानुक्रम में व्यवस्थित करती है, बिना डेटा को हटाए।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "Sorting organizes data based on alphabetical order.",
+        "Ascending sort arranges items from A to Z.",
+        "Printed answer key: (B) Text items are arranged from A to Z"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9aba95e3-6849-4a1c-bad4-5fab6a391816",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "47. स्प्रेडशीट में प्रिंट सेटअप के संबंध में निम्नलिखित कथनों पर विचार करें:\nकथन A: प्रिंट क्षेत्र सेटिंग्स उस विशेष सेल रेंज को परिभाषित करती हैं जो वर्कशीट को प्रिंटर पर भेजते समय प्रिंट होती हैं।\nकथन B: प्रिंट क्षेत्र सेटिंग्स अनियोजित अतिरिक्त खाली पृष्ठों को प्रिंट होने से रोकती हैं।\nकथन C: प्रिंट क्षेत्र सेटिंग्स स्थायी रूप से गैर-चयनित कोशिकाओं को कार्यपुस्तिका फ़ाइल से हटा देती हैं।\nउपरोक्त में से कौन सा कथन सही है?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding print setup in spreadsheets:\nStatement A: Print area settings define the specific cell range printed when sending a worksheet to a printer.\nStatement B: Setting a print area prevents unintended extra blank pages from printing.\nStatement C: Print area settings permanently delete non-selected cells from the workbook file.\nWhich of the statement(s) given above is/are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Defining a dedicated print area in spreadsheet software ensures that only specified worksheet ranges are transmitted to output devices during printing operations. Setting a print area prevents unintended extra blank pages and trailing empty grid areas from printing, thereby conserving paper and maintaining professional output layout. Importantly, setting print boundaries strictly controls print output views without permanently deleting non-selected worksheet cells from files.",
+      "explanation_hindi": "सही उत्तर (a) है। प्रिंट क्षेत्र को परिभाषित करना सुनिश्चित करता है कि केवल निर्दिष्ट वर्कशीट रेंज प्रिंटिंग के दौरान आउटपुट उपकरणों पर भेजी जाती हैं। प्रिंट क्षेत्र सेट करना अनियोजित अतिरिक्त खाली पृष्ठों और खाली ग्रिड क्षेत्रों को प्रिंट होने से रोकता है, जिससे कागज की बचत होती है और पेशेवर आउटपुट लेआउट बनाए रखा जाता है। यह महत्वपूर्ण है कि प्रिंट सीमाएँ सेट करना गैर-चयनित वर्कशीट कोशिकाओं को फ़ाइलों से स्थायी रूप से हटाए बिना प्रिंट आउटपुट दृश्य को सख्ती से नियंत्रित करता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Print area settings define which cells are printed.",
+        "They prevent unintended blank pages.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2fa1b698-f22b-4a34-8da5-6c0f690a3f67",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "95. सक्रिय दस्तावेज़ में क्लिपबोर्ड से पहले से कॉपी किए गए पाठ या वस्तुओं को चिपकाने के लिए कौन सा कुंजी संयोजन है?",
+      "options_hindi": [
+        "Ctrl + V",
+        "Ctrl + C",
+        "Ctrl + X",
+        "Ctrl + P"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What key combination pastes previously copied text or objects from clipboard into active document?",
+      "options_english": [
+        "Ctrl + V",
+        "Ctrl + C",
+        "Ctrl + X",
+        "Ctrl + P"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Clipboard operations are fundamental to text manipulation and data transfer across modern operating systems and office software. The standard universal keyboard shortcut Ctrl + V executes the paste command. Pressing Ctrl + V inserts previously cut or copied textual matter, numerical tables, or graphical objects stored in system clipboard memory directly into the active document window at the exact insertion cursor position.",
+      "explanation_hindi": "सही उत्तर (a) है। क्लिपबोर्ड संचालन पाठ हेरफेर और आधुनिक ऑपरेटिंग सिस्टम और कार्यालय सॉफ़्टवेयर के बीच डेटा स्थानांतरण के लिए मौलिक हैं। मानक सार्वभौमिक कीबोर्ड शॉर्टकट Ctrl + V चिपकाने का आदेश निष्पादित करता है। Ctrl + V दबाने से पहले से काटे गए या कॉपी किए गए पाठ, संख्यात्मक तालिकाएँ, या ग्राफिकल वस्तुएँ सीधे सक्रिय दस्तावेज़ विंडो में सटीक सम्मिलन कर्सर स्थिति पर डाली जाती हैं।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "Ctrl + V is the universal paste command.",
+        "It is used for inserting copied content into documents.",
+        "Printed answer key: (A) Ctrl + V"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "0ceecd17-375f-4660-9488-4ba4f749b9ab",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "69. कौन सी विशेषता एक सेल से सेल फ़ॉर्मेटिंग (रंग, फ़ॉन्ट, बॉर्डर) को कॉपी करने और इसे दूसरे में लागू करने की अनुमति देती है बिना सेल की सामग्री को बदले?",
+      "options_hindi": [
+        "ऑटोसम",
+        "डेटा मान्यता",
+        "फॉर्मेट पेंटर",
+        "फ्रीज़ पेन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which feature allows copying cell formatting (color, font, borders) from one cell and applying it to another without changing cell content?",
+      "options_english": [
+        "AutoSum",
+        "Data Validation",
+        "Format Painter",
+        "Freeze Panes"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Format Painter tool in office applications allows users to quickly duplicate formatting attributes from a source cell or text block and apply them to target content. Attributes such as font style, size, background fill color, text alignment, and cell borders are copied cleanly without modifying underlying cell values or text. This utility ensures formatting consistency while significantly accelerating layout configuration across extensive documents.",
+      "explanation_hindi": "सही उत्तर (c) है। फॉर्मेट पेंटर उपकरण कार्यालय अनुप्रयोगों में उपयोगकर्ताओं को एक स्रोत सेल या पाठ ब्लॉक से फ़ॉर्मेटिंग विशेषताओं को जल्दी से डुप्लिकेट करने और उन्हें लक्षित सामग्री पर लागू करने की अनुमति देता है। फ़ॉन्ट शैली, आकार, पृष्ठभूमि भरने का रंग, पाठ संरेखण और सेल बॉर्डर जैसी विशेषताएँ बिना अंतर्निहित सेल मान या पाठ को संशोधित किए साफ़-साफ़ कॉपी की जाती हैं। यह उपयोगिता फ़ॉर्मेटिंग की निरंतरता सुनिश्चित करती है जबकि व्यापक दस्तावेज़ों में लेआउट कॉन्फ़िगरेशन को तेजी से बढ़ाती है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "Format Painter allows copying formatting without changing cell content.",
+        "It can copy attributes like font style, size, and borders.",
+        "Printed answer key: (C) Format Painter"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "19d775ea-1c25-4239-8315-45d0a1c750ad",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "4. फ़िक्स्ड लेआउट PDF दस्तावेज़ फ़ाइल बनाने के लिए सहेजें पर क्लिक करें। निम्नलिखित में से कौन सा सही क्रम दर्शाता है?",
+      "options_hindi": [
+        "1 → 2 → 3 → 4",
+        "2 → 1 → 4 → 3",
+        "3 → 1 → 2 → 4",
+        "4 → 3 → 2 → 1"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Click Save to create fixed layout PDF document file. Which of the following represents correct order?",
+      "options_english": [
+        "1 → 2 → 3 → 4",
+        "2 → 1 → 4 → 3",
+        "3 → 1 → 2 → 4",
+        "4 → 3 → 2 → 1"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Page orientation dictates the visual layout direction of document pages within word processing software. Portrait orientation aligns pages vertically, making page height greater than width, which serves as the standard format for general correspondence and letters. Conversely, landscape orientation positions pages horizontally so width exceeds height, accommodating wide tables or charts. Both orientations affect visual presentation and physical printing, rendering statements regarding display-only limitations completely inaccurate.",
+      "explanation_hindi": "सही उत्तर (a) है। पृष्ठ की दिशा दस्तावेज़ पृष्ठों के दृश्य लेआउट को निर्धारित करती है। पोर्ट्रेट दिशा पृष्ठों को लंबवत संरेखित करती है, जिससे पृष्ठ की ऊँचाई चौड़ाई से अधिक होती है, जो सामान्य पत्राचार और पत्रों के लिए मानक प्रारूप के रूप में कार्य करती है। इसके विपरीत, लैंडस्केप दिशा पृष्ठों को क्षैतिज रूप से स्थिति में रखती है, जिससे चौड़ाई ऊँचाई से अधिक होती है, जो चौड़े तालिकाओं या चार्टों के लिए उपयुक्त होती है। दोनों दिशाएँ दृश्य प्रस्तुति और भौतिक प्रिंटिंग को प्रभावित करती हैं।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Page orientation affects document layout.",
+        "Portrait and landscape orientations serve different purposes.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "0c563d7c-a2c1-4258-ae29-44e045d6b0e7",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "98. वित्तीय ट्रैकिंग स्प्रेडशीट में, यदि सेल B10 में कर योग्य राजस्व है और कर दर 18% है, तो कुल कर देयता निर्धारित करने के लिए कौन-सी गणना की जाती है?",
+      "options_hindi": [
+        "=B10 * 0.18",
+        "=B10 + 0.18",
+        "=B10 / 0.18",
+        "=B10 - 0.18"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In financial tracking spreadsheets, what calculation determines total tax payable if cell B10 contains taxable revenue and tax rate is 18%?",
+      "options_english": [
+        "=B10 * 0.18",
+        "=B10 + 0.18",
+        "=B10 / 0.18",
+        "=B10 - 0.18"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Financial calculations in spreadsheets rely on precise mathematical formulas multiplying base figures by percentage rates. When taxable revenue figure is stored in cell B10 and the applicable statutory tax rate is 18%, the correct formula to calculate total tax payable is =B10 * 0.18. This formula multiplies the numeric revenue stored in B10 by the decimal equivalent of 18%, returning the precise calculated tax liability.",
+      "explanation_hindi": "सही उत्तर (a) है। वित्तीय गणनाएँ स्प्रेडशीट में सटीक गणितीय सूत्रों पर निर्भर करती हैं जो आधार आंकड़ों को प्रतिशत दरों से गुणा करती हैं। जब कर योग्य राजस्व का आंकड़ा सेल B10 में संग्रहीत होता है और लागू कर दर 18% होती है, तो कुल कर देयता की गणना करने के लिए सही सूत्र =B10 * 0.18 है। यह सूत्र B10 में संग्रहीत संख्यात्मक राजस्व को 18% के दशमलव समकक्ष से गुणा करता है, जो सटीक कर देयता की गणना लौटाता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "स्प्रेडशीट में वित्तीय गणनाएँ सटीक सूत्रों पर निर्भर करती हैं।",
+        "कर देयता की गणना के लिए सही सूत्र =B10 * 0.18 है।",
+        "Printed answer key: (A) =B10 * 0.18"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

@@ -1,0 +1,798 @@
+{
+  "test_id": "8c35c4ca-a596-45c8-996a-db27f4c6555a",
+  "test_name": "Topic Test: DIGITAL_INDIA_CITIZEN_CENTRIC_E_GOVERNANCE - Part 1",
+  "type": "topic_wise",
+  "topic": "digital_india_citizen_centric_e_governance",
+  "created_at": "2026-10-28T18:55:06.597144",
+  "questions": [
+    {
+      "id": "b930def1-903b-42db-a1dc-4f08c3645a5d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "डिजिटल सार्वजनिक अवसंरचना और सॉफ़्टवेयर एकीकरण के संदर्भ में 'API' का क्या अर्थ है?",
+      "options_hindi": [
+        "अनुप्रयोग प्रोग्रामिंग इंटरफ़ेस",
+        "स्वचालित प्रक्रिया एकीकरण",
+        "उन्नत सार्वजनिक अवसंरचना",
+        "प्रशासनिक कार्यक्रम इंटरफ़ेस"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What does ‘API’ stand for in the context of Digital Public Infrastructure and software integration?",
+      "options_english": [
+        "Application Programming Interface",
+        "Automated Process Integration",
+        "Advanced Public Infrastructure",
+        "Administrative Program Interface"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "API stands for Application Programming Interface in software engineering and digital public infrastructure. It consists of a set of standardized protocols, routines, and tools that allow different software applications to communicate and exchange data seamlessly. Open APIs enable third-party developers to integrate core public utility services, such as identity verification and payment gateways, into new mobile and web applications efficiently.",
+      "explanation_hindi": "सही उत्तर (a) है। API का अर्थ अनुप्रयोग प्रोग्रामिंग इंटरफ़ेस है, जो सॉफ़्टवेयर इंजीनियरिंग और डिजिटल सार्वजनिक अवसंरचना में महत्वपूर्ण है। यह मानकीकृत प्रोटोकॉल, प्रक्रियाओं और उपकरणों का एक सेट है जो विभिन्न सॉफ़्टवेयर अनुप्रयोगों को संवाद करने और डेटा का आदान-प्रदान करने की अनुमति देता है। ओपन API तीसरे पक्ष के डेवलपर्स को पहचान सत्यापन और भुगतान गेटवे जैसी सार्वजनिक उपयोगिता सेवाओं को नए मोबाइल और वेब अनुप्रयोगों में प्रभावी ढंग से एकीकृत करने में सक्षम बनाता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "easy",
+      "key_facts": [
+        "API का अर्थ अनुप्रयोग प्रोग्रामिंग इंटरफ़ेस है।",
+        "यह विभिन्न सॉफ़्टवेयर अनुप्रयोगों के बीच डेटा का आदान-प्रदान करने की अनुमति देता है।",
+        "ओपन API तीसरे पक्ष के डेवलपर्स को सेवाओं को एकीकृत करने में मदद करता है।",
+        "Printed answer key: (A) Application Programming Interface"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "52949368-0fd8-4e2e-a568-0cbd2ec35717",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "48. निम्नलिखित चरणों पर विचार करें जो आमतौर पर\ne-KYC प्रमाणीकरण की प्रक्रिया में होते हैं:\nI. उपयोगकर्ता सेवा का अनुरोध करता है और\nअनुरोध करने वाली संस्था को आधार संख्या प्रदान करता है।\nII. अनुरोध करने वाली संस्था बायोमेट्रिक डेटा कैप्चर करती है या\nUIDAI डेटाबेस को OTP अनुरोध भेजती है।\nIII. UIDAI उपयोगकर्ता विवरणों को केंद्रीय पहचान\nभंडार के खिलाफ प्रमाणीकरण करता है।\nIV. UIDAI सत्यापित जनसांख्यिकीय/बायोमेट्रिक\nपुष्टि के साथ डिजिटल रूप से हस्ताक्षरित प्रतिक्रिया लौटाता है।\nनिम्नलिखित में से कौन सा सही तार्किक अनुक्रम का प्रतिनिधित्व करता है?",
+      "options_hindi": [
+        "I - II - III - IV",
+        "II - I - IV - III",
+        "III - I - II - IV",
+        "I - III - II - IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following steps in the typical process of e-KYC validation via Aadhaar:\nI. User requests service and provides Aadhaar number to the requesting entity.\nII. Requesting entity captures biometric or sends OTP request to UIDAI database.\nIII. UIDAI authenticates user details against central identity repository.\nIV. UIDAI returns digitally signed response containing verified demographic/biometric confirmation.\nWhich of the following represents the correct logical sequence?",
+      "options_english": [
+        "I - II - III - IV",
+        "II - I - IV - III",
+        "III - I - II - IV",
+        "I - III - II - IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Aadhaar-based e-KYC validation process follows a logical sequential workflow. First, the user requests a service and provides their Aadhaar number to the requesting service entity. Second, the entity captures biometric data or requests an OTP from the central database. Third, the UIDAI database authenticates the user details against central identity repositories. Finally, UIDAI transmits a digitally signed response confirming verified demographic or biometric identity.",
+      "explanation_hindi": "सही उत्तर (a) है। आधार आधारित e-KYC प्रमाणीकरण प्रक्रिया एक तार्किक अनुक्रमिक कार्यप्रवाह का पालन करती है। पहले, उपयोगकर्ता सेवा का अनुरोध करता है और अनुरोध करने वाली सेवा संस्था को अपनी आधार संख्या प्रदान करता है। दूसरे, संस्था बायोमेट्रिक डेटा कैप्चर करती है या केंद्रीय डेटाबेस से OTP का अनुरोध करती है। तीसरे, UIDAI डेटाबेस उपयोगकर्ता विवरणों को केंद्रीय पहचान भंडार के खिलाफ प्रमाणीकरण करता है। अंततः, UIDAI सत्यापित जनसांख्यिकीय या बायोमेट्रिक पहचान की पुष्टि करने वाली डिजिटल रूप से हस्ताक्षरित प्रतिक्रिया भेजता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "e-KYC is a process for verifying identity using Aadhaar.",
+        "UIDAI stands for Unique Identification Authority of India.",
+        "The process includes biometric data capture and OTP verification.",
+        "Printed answer key: (A) I - II - III - IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b62e0e04-094c-4dd6-8fdc-8377406fe322",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "‘यूनिफाइड पेमेंट्स इंटरफेस’ (UPI) की भूमिका भारत स्टैक के व्यापक ढांचे में क्या है?",
+      "options_hindi": [
+        "खुला, अंतःक्रियाशील भुगतान स्तर सक्षम करना",
+        "सुरक्षित डेटा संग्रहण और प्रबंधन",
+        "वित्तीय लेनदेन के लिए एकल बिंदु पहुंच",
+        "भुगतान प्रक्रिया को स्वचालित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the role of the ‘Unified Payments Interface’ (UPI) within the broader framework of India Stack?",
+      "options_english": [
+        "Open, interoperable payment layer enabling",
+        "Secure data storage and management",
+        "Single point of access for financial transactions",
+        "Automating the payment process"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Unified Payments Interface represents the open, real-time payment layer of India Stack, developed by the National Payments Corporation of India. It enables instant, account-to-account money transfers using mobile devices through virtual payment addresses. By standardizing inter-bank settlement protocols, UPI allows financial applications to interoperate seamlessly. This open digital infrastructure has transformed commercial transactions, drastically reduced physical cash dependency, and accelerated financial inclusion nationwide.",
+      "explanation_hindi": "सही उत्तर (c) है। यूनिफाइड पेमेंट्स इंटरफेस भारत स्टैक का खुला, वास्तविक समय का भुगतान स्तर है, जिसे भारतीय राष्ट्रीय भुगतान निगम द्वारा विकसित किया गया है। यह मोबाइल उपकरणों के माध्यम से वर्चुअल भुगतान पते का उपयोग करके तात्कालिक, खाता से खाता धन हस्तांतरण सक्षम करता है। अंतर-बैंक निपटान प्रोटोकॉल को मानकीकृत करके, UPI वित्तीय अनुप्रयोगों को सहजता से अंतःक्रियाशील होने की अनुमति देता है। यह खुला डिजिटल बुनियादी ढांचा वाणिज्यिक लेनदेन को परिवर्तित कर चुका है, भौतिक नकद पर निर्भरता को काफी कम कर दिया है, और देशव्यापी वित्तीय समावेशन को तेज किया है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "Unified Payments Interface (UPI) enables instant money transfers.",
+        "Developed by the National Payments Corporation of India.",
+        "Standardizes inter-bank settlement protocols.",
+        "Printed answer key: (C) Open, interoperable payment layer enabling"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3182553b-b3f5-42d5-a0ec-8e6da77c58eb",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "डिजी लॉकर के माध्यम से जारी प्रमाण पत्र प्राप्त करने में शामिल निम्नलिखित चरणों के क्रम पर विचार करें:\nI. नागरिक आधार/मोबाइल सत्यापन का उपयोग करके डिजी लॉकर खाते में लॉगिन करता है।\nII. नागरिक जारी करने वाली प्राधिकरण (जैसे, राज्य शिक्षा बोर्ड) और संबंधित दस्तावेज़ प्रकार का चयन करता है।\nIII. नागरिक आवश्यक खोज विवरण प्रदान करता है (जैसे, रोल नंबर, पासिंग वर्ष)।\nIV. प्रणाली जारीकर्ता डेटाबेस से URI लाती है और प्रामाणिक डिजिटल दस्तावेज़ को उपयोगकर्ता प्रोफ़ाइल से जोड़ती है।\nनिम्नलिखित में से कौन सा सही तार्किक क्रम दर्शाता है?",
+      "options_hindi": [
+        "I - II - III - IV",
+        "II - I - IV - III",
+        "I - III - II - IV",
+        "IV - I - II - III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following sequence of steps involved in obtaining an issued certificate via DigiLocker:\nI. Citizen creates/logs into DigiLocker account using Aadhaar/Mobile verification.\nII. Citizen selects the issuing authority (e.g., State Board of Education) and relevant document type.\nIII. Citizen provides required search details (e.g., Roll Number, Passing Year).\nIV. System fetches URI from issuer database and links authentic digital document to user profile.\nWhich of the following represents the correct logical sequence?",
+      "options_english": [
+        "I - II - III - IV",
+        "II - I - IV - III",
+        "I - III - II - IV",
+        "IV - I - II - III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Retrieving an authentic document through DigiLocker follows a structured digital workflow. First, the citizen logs into their DigiLocker account using verified Aadhaar or mobile verification. Next, the citizen selects the issuing authority and the type of document they need. After providing the necessary search details, the system fetches the URI from the issuer's database and links the authentic digital document to the user's profile. This sequence ensures a smooth and efficient process for obtaining digital certificates.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजी लॉकर के माध्यम से प्रामाणिक दस्तावेज़ प्राप्त करने की प्रक्रिया एक संरचित डिजिटल कार्यप्रवाह का पालन करती है। सबसे पहले, नागरिक सत्यापित आधार या मोबाइल सत्यापन का उपयोग करके अपने डिजी लॉकर खाते में लॉगिन करता है। इसके बाद, नागरिक जारी करने वाली प्राधिकरण और आवश्यक दस्तावेज़ के प्रकार का चयन करता है। आवश्यक खोज विवरण प्रदान करने के बाद, प्रणाली जारीकर्ता के डेटाबेस से URI लाती है और प्रामाणिक डिजिटल दस्तावेज़ को उपयोगकर्ता प्रोफ़ाइल से जोड़ती है। यह क्रम डिजिटल प्रमाण पत्र प्राप्त करने की प्रक्रिया को सुगम और प्रभावी बनाता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "DigiLocker allows citizens to access and store digital documents securely.",
+        "The process involves verification, selection, and linking of documents.",
+        "Printed answer key: (A) I - II - III - IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e8ea02d8-5bc8-480d-a5c9-8c371925872f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "78. निम्नलिखित प्रमुख डिजिटल इंडिया पहलों पर विचार करें:\nI. भौतिक ऑप्टिकल फाइबर नेटवर्क का निर्माण (भारतनेट)\nII. डिजिटल पहचान ढांचे का निर्माण (आधार)\nIII. भुगतान इंटरफेस का एकीकरण (यूपीआई)\nIV. एकीकृत नागरिक सेवा ऐप का शुभारंभ (उमंग)\nनिम्नलिखित में से कौन सा सही अनुक्रम दर्शाता है जो बुनियादी ढांचे से अनुप्रयोग तक के लॉन्चिंग फोकस क्षेत्र के अनुसार है?",
+      "options_hindi": [
+        "I - II - III - IV",
+        "II - I - III - IV",
+        "IV - III - II - I",
+        "III - II - I - IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following key Digital India initiatives:\nI. Laying physical optical fibre network (BharatNet)\nII. Building digital identity framework (Aadhaar)\nIII. Unifying payment interfaces (UPI)\nIV. Launching unified citizen service app (UMANG)\nWhich of the following represents the correct sequence by their launching focus area from infrastructure to application?",
+      "options_english": [
+        "I - II - III - IV",
+        "II - I - III - IV",
+        "IV - III - II - I",
+        "III - II - I - IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The evolutionary path of Digital India initiatives moves systematically from foundational connectivity infrastructure to top-level citizen applications. The deployment begins with establishing physical optical fibre networks via BharatNet. Next, building the digital identity framework through Aadhaar creates universal verification. This enables unifying payment interfaces through UPI for digital transactions. Finally, unified application platforms like UMANG deliver multi-departmental services directly to citizens.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल इंडिया पहलों का विकासात्मक मार्ग बुनियादी कनेक्टिविटी अवसंरचना से नागरिक अनुप्रयोगों तक व्यवस्थित रूप से आगे बढ़ता है। तैनाती की शुरुआत भारतनेट के माध्यम से भौतिक ऑप्टिकल फाइबर नेटवर्क स्थापित करने से होती है। इसके बाद, आधार के माध्यम से डिजिटल पहचान ढांचे का निर्माण सार्वभौमिक सत्यापन करता है। यह यूपीआई के माध्यम से डिजिटल लेनदेन के लिए भुगतान इंटरफेस के एकीकरण को सक्षम बनाता है। अंततः, उमंग जैसे एकीकृत अनुप्रयोग प्लेटफार्म नागरिकों को सीधे बहु-विभागीय सेवाएँ प्रदान करते हैं।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital India initiatives focus on enhancing connectivity and citizen services.",
+        "BharatNet aims to provide broadband connectivity to rural areas.",
+        "Aadhaar serves as a unique identification system for Indian residents.",
+        "Printed answer key: (A) I - II - III - IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "0e74c40e-4efb-4dab-96b7-b414b0147554",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "67. पीएमजीडीआईएसएचए योजना के तहत ग्रामीण परिवार के लिए प्रशिक्षण का लक्षित जनसंख्या आकार क्या है?",
+      "options_hindi": [
+        "हर शहरी वाणिज्यिक प्रतिष्ठान के सभी स्थायी श्रमिक",
+        "मेट्रो शहरों में प्राथमिक और माध्यमिक सरकारी स्कूल के शिक्षक",
+        "योग्य ग्रामीण परिवार के लिए एक व्यक्ति",
+        "औद्योगिक नगरों में निवास करने वाले सभी सेवानिवृत्त वरिष्ठ नागरिक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the target population size for training under PMGDISHA scheme per rural household?",
+      "options_english": [
+        "All permanent workers of every urban commercial establishment",
+        "Primary and secondary government school teachers in metro cities",
+        "One person per eligible rural household",
+        "All retired senior citizens residing in industrial townships"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The PMGDISHA scheme specifically targets training one digitally illiterate person per eligible rural household across Indian villages. By training a designated family member in basic computer and smartphone operations, digital payments, and e-governance navigation, the initiative ensures that every rural household gains the capability to access online public services independently. This targeted approach accelerates digital literacy and socio-economic empowerment across rural communities.",
+      "explanation_hindi": "सही उत्तर (c) है। पीएमजीडीआईएसएचए योजना विशेष रूप से योग्य ग्रामीण परिवार के लिए एक डिजिटल रूप से निरक्षर व्यक्ति के प्रशिक्षण को लक्षित करती है। एक निर्धारित परिवार के सदस्य को बुनियादी कंप्यूटर और स्मार्टफोन संचालन, डिजिटल भुगतान और ई-गवर्नेंस नेविगेशन में प्रशिक्षित करके, यह पहल सुनिश्चित करती है कि हर ग्रामीण परिवार स्वतंत्र रूप से ऑनलाइन सार्वजनिक सेवाओं तक पहुंच प्राप्त कर सके। यह लक्षित दृष्टिकोण ग्रामीण समुदायों में डिजिटल साक्षरता और सामाजिक-आर्थिक सशक्तिकरण को तेज करता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "easy",
+      "key_facts": [
+        "PMGDISHA aims to enhance digital literacy in rural areas.",
+        "One person from each eligible rural household is targeted for training.",
+        "Printed answer key: (C) One person per eligible rural household"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "68ef2468-5e13-43f6-a90c-1084e4f1fcb0",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "‘e-NAM’ (राष्ट्रीय कृषि बाजार) के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. यह एक पैन-इंडिया इलेक्ट्रॉनिक ट्रेडिंग पोर्टल है जो मौजूदा एपीएमसी मंडियों को नेटवर्क करता है।\nB. यह कृषि वस्तुओं के लिए एक एकीकृत राष्ट्रीय बाजार बनाता है।\nC. यह वास्तविक समय में मांग और आपूर्ति के आधार पर मूल्य निर्धारण को बढ़ावा देता है।\nD. यह उत्पादों के व्यापार के लिए भौतिक नकद-केवल लेनदेन को अनिवार्य करता है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A, C और D",
+        "A, B, C और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding ‘e-NAM’ (National Agriculture Market):\nA. It is a pan-India electronic trading portal that networks existing APMC mandis.\nB. It creates a unified national market for agricultural commodities.\nC. It promotes real-time price discovery based on actual demand and supply.\nD. It mandates physical cash-only transactions for trading produce.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and C only",
+        "B, C and D only",
+        "A, C and D only",
+        "A, B, C and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The National Agriculture Market is a pan-India electronic trading portal that networks existing Agricultural Produce Market Committee mandis into a unified national market for agricultural commodities. It facilitates real-time price discovery based on demand and supply, promoting online auctions and direct digital payments. Option statements claiming that e-NAM mandates physical cash-only transactions are incorrect, as the platform actively promotes electronic payments to farmers.",
+      "explanation_hindi": "सही उत्तर (a) है। राष्ट्रीय कृषि बाजार एक पैन-इंडिया इलेक्ट्रॉनिक ट्रेडिंग पोर्टल है जो मौजूदा कृषि उत्पाद बाजार समिति मंडियों को एकीकृत राष्ट्रीय बाजार में नेटवर्क करता है। यह मांग और आपूर्ति के आधार पर वास्तविक समय में मूल्य निर्धारण को बढ़ावा देता है, ऑनलाइन नीलामियों और सीधे डिजिटल भुगतान को प्रोत्साहित करता है। विकल्प में दिए गए कथन जो यह कहते हैं कि e-NAM भौतिक नकद-केवल लेनदेन को अनिवार्य करता है, गलत हैं, क्योंकि यह प्लेटफॉर्म किसानों के लिए इलेक्ट्रॉनिक भुगतान को सक्रिय रूप से बढ़ावा देता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "e-NAM is a pan-India electronic trading portal.",
+        "It creates a unified national market for agricultural commodities.",
+        "It promotes real-time price discovery based on demand and supply.",
+        "Printed answer key: (A) A, B and C only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9328e25f-fd63-48f7-bdaa-cc34c7bd0078",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "88. एक डिजिटल रूप से हस्ताक्षरित जन्म प्रमाण पत्र जारी करने में शामिल निम्नलिखित चरणों पर विचार करें:\nI. अस्पताल/आवेदक द्वारा पोर्टल पर जन्म विवरण का पंजीकरण।\nII. स्थानीय जन्म और मृत्यु रजिस्ट्रार द्वारा प्रक्रिया और सत्यापन।\nIII. इलेक्ट्रॉनिक रिकॉर्ड पर सक्षम प्राधिकरण द्वारा डिजिटल हस्ताक्षर लगाया गया।\nIV. नागरिक पोर्टल या डिजी लॉकर से सत्यापित डिजिटल प्रमाण पत्र डाउनलोड करता है।\nनिम्नलिखित में से कौन सा सही तार्किक अनुक्रम का प्रतिनिधित्व करता है?",
+      "options_hindi": [
+        "I - II - III - IV",
+        "II - I - IV - III",
+        "III - II - I - IV",
+        "I - III - II - IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "88. Consider the following steps involved in issuing a digitally signed birth certificate via an e-District / MeeSeva portal:\nI. Registration of birth details by hospital/applicant on portal.\nII. Processing and verification by the local Registrar of Births and Deaths.\nIII. Digital signature affixed by the competent authority on the electronic record.\nIV. Citizen downloads verified digital certificate from portal or DigiLocker.\nWhich of the following represents the correct logical sequence?",
+      "options_english": [
+        "I - II - III - IV",
+        "II - I - IV - III",
+        "III - II - I - IV",
+        "I - III - II - IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Issuing a birth certificate via an e-District or MeeSeva portal follows a structured logical sequence. First, the applicant or hospital registers birth details on the official digital portal. Second, the local Registrar of Births and Deaths verifies the submitted data. Third, the competent authority affixes a digital signature to the electronic document. Finally, the citizen downloads the verified certificate from the portal.",
+      "explanation_hindi": "सही उत्तर (a) है। जन्म प्रमाण पत्र जारी करने की प्रक्रिया एक सुव्यवस्थित तार्किक अनुक्रम का पालन करती है। पहले, आवेदक या अस्पताल आधिकारिक डिजिटल पोर्टल पर जन्म विवरण पंजीकृत करता है। दूसरे, स्थानीय जन्म और मृत्यु रजिस्ट्रार प्रस्तुत डेटा का सत्यापन करता है। तीसरे, सक्षम प्राधिकरण इलेक्ट्रॉनिक दस्तावेज़ पर डिजिटल हस्ताक्षर लगाता है। अंततः, नागरिक पोर्टल से सत्यापित प्रमाण पत्र डाउनलोड करता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital portals streamline the process of issuing birth certificates.",
+        "Verification by local authorities is crucial for authenticity.",
+        "Digital signatures enhance the security of electronic documents.",
+        "Printed answer key: (A) I - II - III - IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "985b440e-3064-45fa-ba50-dc908f91ef65",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "38. ई-गवर्नेंस परिपक्वता के निम्नलिखित कार्यात्मक चरणों पर विचार करें:\nI. सूचना प्रदान करना (वेबसाइटों पर स्थिर जानकारी प्रकाशित करना)\nII. द्वि-तरफा इंटरैक्शन (फॉर्म डाउनलोड करना और पूछताछ प्रस्तुत करना)\nIII. लेन-देन स्तर (ऑनलाइन शुल्क भुगतान और स्थिति ट्रैकिंग)\nIV. निर्बाध एकीकरण (अंतर-संचालनीय अंत-से-अंत बहु-एजेंसी सेवा वितरण)\nनिम्नलिखित में से कौन सा सही क्रम का प्रतिनिधित्व करता है, जो बुनियादी से उन्नत की ओर है?",
+      "options_hindi": [
+        "I - II - III - IV",
+        "II - I - IV - III",
+        "III - II - I - IV",
+        "I - III - II - IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following functional stages of e-governance maturity:\nI. Information Provision (Publishing static info on websites)\nII. Two-way Interaction (Downloading forms and submitting inquiries)\nIII. Transactional Level (Online fee payment and status tracking)\nIV. Seamless Integration (Interoperable end-to-end multi-agency service delivery)\nWhich of the following represents the correct sequence in order from basic to advanced?",
+      "options_english": [
+        "I - II - III - IV",
+        "II - I - IV - III",
+        "III - II - I - IV",
+        "I - III - II - IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "E-governance maturity progresses systematically through four evolutionary stages. The process begins with Information Provision, where static government information is published online. Next is Two-way Interaction, allowing citizens to download forms and submit online inquiries. The third level is Transactional, enabling complete online fee payments and application tracking. Finally, Seamless Integration achieves fully interoperable, automated end-to-end service delivery across multiple government agencies without manual barriers.",
+      "explanation_hindi": "सही उत्तर (a) है। ई-गवर्नेंस परिपक्वता चार विकासात्मक चरणों के माध्यम से व्यवस्थित रूप से आगे बढ़ती है। प्रक्रिया सूचना प्रदान करने से शुरू होती है, जहाँ स्थिर सरकारी जानकारी ऑनलाइन प्रकाशित की जाती है। इसके बाद द्वि-तरफा इंटरैक्शन आता है, जो नागरिकों को फॉर्म डाउनलोड करने और ऑनलाइन पूछताछ प्रस्तुत करने की अनुमति देता है। तीसरा स्तर लेन-देन है, जो पूर्ण ऑनलाइन शुल्क भुगतान और आवेदन ट्रैकिंग को सक्षम बनाता है। अंततः, निर्बाध एकीकरण कई सरकारी एजेंसियों के बीच बिना मैनुअल बाधाओं के पूरी तरह से अंतर-संचालनीय, स्वचालित अंत-से-अंत सेवा वितरण को प्राप्त करता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "ई-गवर्नेंस परिपक्वता के चार चरण: सूचना प्रदान करना, द्वि-तरफा इंटरैक्शन, लेन-देन स्तर, निर्बाध एकीकरण।",
+        "Printed answer key: (A) I - II - III - IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7cc926a1-6e27-4ce6-99c5-97c6d1796207",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "MyGov प्लेटफ़ॉर्म, जिसे जुलाई 2014 में लॉन्च किया गया था,\nआधुनिक डिजिटल शासन के किस प्रमुख आयाम को पूरा करता है?",
+      "options_hindi": [
+        "विदेशी निगमों के लिए वाणिज्यिक आयकर रिटर्न का ऑनलाइन फाइलिंग",
+        "राज्य सीमाओं के पार रेलवे मालगाड़ियों का वास्तविक समय ट्रैकिंग",
+        "ग्रामीण स्कूलों को भौतिक हार्डवेयर उपकरणों का वितरण",
+        "नागरिकों से विचारों की भागीदारी और भीड़-स्रोत शासन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "MyGov platform, launched in July 2014, primarily fulfills which key dimension of modern digital governance?",
+      "options_english": [
+        "Online filing of commercial income tax returns for foreign corporations",
+        "Real-time tracking of railway freight trains across state borders",
+        "Distribution of physical hardware devices to rural schools",
+        "Participatory governance and crowdsourcing of ideas from citizens"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Launched in July 2014, the MyGov platform is an innovative engagement platform designed to foster active citizen participation in national governance. It enables citizens to share ideas, submit feedback on public policy drafts, participate in discussions, and contribute to government projects. By creating a direct channel for citizen engagement, MyGov enhances transparency, accountability, and responsiveness in governance, making it a cornerstone of participatory governance in India.",
+      "explanation_hindi": "सही उत्तर (d) है। जुलाई 2014 में लॉन्च किया गया MyGov प्लेटफ़ॉर्म एक अभिनव संलग्नता प्लेटफ़ॉर्म है जिसे राष्ट्रीय शासन में सक्रिय नागरिक भागीदारी को बढ़ावा देने के लिए डिज़ाइन किया गया है। यह नागरिकों को विचार साझा करने, सार्वजनिक नीति ड्राफ्ट पर फीडबैक देने, चर्चाओं में भाग लेने और सरकारी परियोजनाओं में योगदान करने की अनुमति देता है। नागरिक संलग्नता के लिए एक सीधा चैनल बनाकर, MyGov शासन में पारदर्शिता, जवाबदेही और उत्तरदायित्व को बढ़ाता है, जिससे यह भारत में भागीदारी शासन का एक मुख्य आधार बनता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "MyGov platform was launched in July 2014.",
+        "It fosters active citizen participation in governance.",
+        "It enhances transparency and accountability.",
+        "Printed answer key: (D) Participatory governance and crowdsourcing"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7fc053d8-d6e4-466a-8e01-35dab902484e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "PRAGATI (प्रो-एक्टिव गवर्नेंस एंड टाइमली इम्प्लीमेंटेशन) प्लेटफार्म के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. यह एक बहु-आयामी प्लेटफार्म है जो आम आदमी की शिकायतों को संबोधित करने और महत्वपूर्ण सरकारी परियोजनाओं की निगरानी करने के लिए डिज़ाइन किया गया है।\nB. यह तीन तकनीकों को अनूठे रूप से एकीकृत करता है: डिजिटल डेटा प्रबंधन, वीडियो कॉन्फ्रेंसिंग, और भू-स्थानिक तकनीक।\nC. इसे भारत के प्रधानमंत्री द्वारा संघ सचिवों और राज्य मुख्य सचिवों के साथ मासिक इंटरैक्टिव सत्रों में अध्यक्षता की जाती है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the PRAGATI (Pro-Active Governance And Timely Implementation) platform:\nA. It is a multi-modal platform designed to address common man’s grievances and monitor critical government projects.\nB. It uniquely integrates three technologies: Digital data management, Videoconferencing, and Geo-spatial technology.\nC. It is chaired by the Prime Minister of India in monthly interactive sessions with Union Secretaries and State Chief Secretaries.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "PRAGATI is a unique multi-modal platform launched to monitor critical central projects and resolve public grievances effectively. It integrates digital data management, video-conferencing, and geospatial tracking to evaluate project execution in real time. Chaired personally by the Prime Minister in monthly interactive sessions with Union Secretaries and State Chief Secretaries, PRAGATI breaks departmental silos, enforces accountability, and ensures time-bound completion of major infrastructure initiatives.",
+      "explanation_hindi": "सही उत्तर (d) है। PRAGATI एक अनूठा बहु-आयामी प्लेटफार्म है जिसे महत्वपूर्ण केंद्रीय परियोजनाओं की निगरानी और सार्वजनिक शिकायतों को प्रभावी ढंग से हल करने के लिए लॉन्च किया गया है। यह डिजिटल डेटा प्रबंधन, वीडियो कॉन्फ्रेंसिंग, और भू-स्थानिक ट्रैकिंग को एकीकृत करता है ताकि परियोजना के कार्यान्वयन का वास्तविक समय में मूल्यांकन किया जा सके। प्रधानमंत्री द्वारा मासिक इंटरैक्टिव सत्रों में संघ सचिवों और राज्य मुख्य सचिवों के साथ व्यक्तिगत रूप से अध्यक्षता की जाती है, PRAGATI विभागीय बाधाओं को तोड़ता है, जवाबदेही को लागू करता है, और प्रमुख अवसंरचना पहलों की समयबद्ध पूर्णता सुनिश्चित करता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "PRAGATI platform integrates digital data management, video conferencing, and geospatial technology.",
+        "It is chaired by the Prime Minister of India.",
+        "Printed answer key: (D) A, B and C"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2a19751a-b068-439c-bd83-fb3e76403036",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "85. 'राष्ट्रीय एकल खिड़की प्रणाली' (NSWS) के बारे में निम्नलिखित कथनों पर विचार करें:\nA. यह एक एकल बुद्धिमत्ता मंच प्रदान करता है\nजो निवेशकों को आवश्यक अनुमतियों पर मार्गदर्शन करता है। \nB. यह निवेशकों को बार-बार कई मंत्रालयों के पोर्टल पर जाने की आवश्यकता को समाप्त करता है। \nC. यह आवेदन की स्थिति को वास्तविक समय में ट्रैक करने की अनुमति देता है। \nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the ‘National Single Window System’ (NSWS): A. It provides a single intelligence platform that guides investors on required approvals. B. It eliminates the need for investors to visit multiple ministry portals repeatedly. C. It allows tracking of application status in real-time. Which of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The National Single Window System is an integrated investor portal that provides comprehensive guidance on necessary statutory clearances across ministries. It eliminates the burden of submitting repetitive applications across multiple departmental portals, offering a single application interface. Furthermore, the portal enables real-time tracking of approval statuses, enhancing administrative transparency, reducing compliance costs, and significantly improving the ease of doing business for prospective investors.",
+      "explanation_hindi": "सही उत्तर (d) है। राष्ट्रीय एकल खिड़की प्रणाली एक एकीकृत निवेशक पोर्टल है जो मंत्रालयों के बीच आवश्यक वैधानिक मंजूरियों पर व्यापक मार्गदर्शन प्रदान करता है। यह कई विभागीय पोर्टलों पर बार-बार आवेदन प्रस्तुत करने के बोझ को समाप्त करता है, एक एकल आवेदन इंटरफेस प्रदान करता है। इसके अलावा, यह पोर्टल मंजूरी की स्थिति को वास्तविक समय में ट्रैक करने की अनुमति देता है, प्रशासनिक पारदर्शिता को बढ़ाता है, अनुपालन लागत को कम करता है, और संभावित निवेशकों के लिए व्यापार करने की सुविधा को महत्वपूर्ण रूप से सुधारता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "एकल बुद्धिमत्ता मंच जो निवेशकों को मार्गदर्शन करता है",
+        "कई मंत्रालयों के पोर्टल पर जाने की आवश्यकता को समाप्त करता है",
+        "वास्तविक समय में आवेदन की स्थिति ट्रैक करने की अनुमति देता है",
+        "Printed answer key: (D) A, B and C"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f1930905-c9e7-45a8-bed5-304cd06fb2ee",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "58. 'इंडिया स्टैक' अवधारणा की निम्नलिखित परतों पर विचार करें:\nI. प्रेजेंस-लेस लेयर (आधार पहचान)\nII. पेपरलेस लेयर (ई-केवाईसी और डिजिलॉकर/ई-साइन)\nIII. कैशलेस लेयर (यूपीआई और आधार भुगतान पुल)\nIV. सहमति परत (डेटा सशक्तिकरण और सुरक्षा वास्तुकला)\nनिम्नलिखित में से कौन सी सही अनुक्रम का प्रतिनिधित्व करती है जो आधारभूत परत से ऊपर की ओर है?\n(1) I - II - III - IV\n(2) II - I - IV - III\n(3) III - II - I - IV",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "58. Consider the following layers of the ‘India Stack’\nconcept:\nI. Presence-less Layer (Aadhaar Identity)\nII. Paperless Layer (e-KYC and DigiLocker/\neSign)\nIII. Cashless Layer (UPI and Aadhaar Payment\nBridge)\nIV. Consent Layer (Data Empowerment and\nProtection Architecture)\nWhich of the following represents the correct\nsequence from the foundational layer upwards?\n(1) I - II - III - IV\n(2) II - I - IV - III\n(3) III - II - I - IV",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The India Stack framework is built upon four progressive infrastructure layers. At the foundation lies the Presence-less Layer, providing digital identity verification through Aadhaar. Built upon it is the Paperless Layer, enabling document storage and signatures via DigiLocker and eSign. Next is the Cashless Layer, facilitating real-time payments through UPI. Finally, the top Consent Layer (DEPA) enables secure, user-controlled sharing of personal and financial data.",
+      "explanation_hindi": "सही उत्तर (a) है। इंडिया स्टैक ढांचा चार प्रगतिशील बुनियादी ढांचा परतों पर आधारित है। आधार पर प्रेजेंस-लेस लेयर है, जो आधार के माध्यम से डिजिटल पहचान सत्यापन प्रदान करता है। इसके ऊपर पेपरलेस लेयर है, जो डिजिलॉकर और ई-साइन के माध्यम से दस्तावेज़ भंडारण और हस्ताक्षर की अनुमति देता है। अगली कैशलेस लेयर है, जो यूपीआई के माध्यम से वास्तविक समय में भुगतान की सुविधा प्रदान करती है। अंततः, शीर्ष सहमति परत (DEPA) व्यक्तिगत और वित्तीय डेटा के सुरक्षित, उपयोगकर्ता-नियंत्रित साझा करने की अनुमति देती है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "India Stack consists of multiple layers for digital infrastructure.",
+        "Presence-less Layer is based on Aadhaar for identity verification.",
+        "Paperless Layer enables document storage and e-signatures.",
+        "Printed answer key: (A) I - II - III - IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "831cfbd3-554c-4b42-80e3-ad6df9683fc8",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "‘वाहन’ प्लेटफार्म का मुख्य कार्य क्या है, जो MoRTH के अंतर्गत है?",
+      "options_hindi": [
+        "मानक ड्राइवर कौशल विकास परीक्षण मान्यता प्राप्त ग्रामीण ड्राइविंग स्कूलों में",
+        "केंद्रीकृत रेलवे यात्री टिकट आरक्षण और सीट आवंटन बुकिंग इंजन",
+        "वाहन पंजीकरण और ट्रैकिंग के लिए केंद्रीकृत डेटाबेस",
+        "नागरिक उड्डयन प्रशिक्षण के लिए इंटरैक्टिव एयर ट्रैफिक कंट्रोल रडार सिमुलेशन पोर्टल"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the main function of the ‘Vahan’ platform under MoRTH?",
+      "options_english": [
+        "Mandatory driver skill development testing in accredited rural driving schools",
+        "Centralized railway passenger ticket reservation and seat allotment booking engine",
+        "Centralized database for vehicle registration and tracking",
+        "Interactive air traffic control radar simulation portal for civil aviation training"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Vahan platform, managed by the Ministry of Road Transport and Highways, is a nationwide centralized database for vehicle registration and tracking. It digitizes operations across Regional Transport Offices, facilitating online vehicle registration, ownership transfers, fitness certification, and road tax payments. Vahan maintains accurate vehicle records across states, aiding law enforcement agencies, improving revenue collection, and simplifying commercial vehicle permit management.",
+      "explanation_hindi": "सही उत्तर (c) है। वाहन प्लेटफार्म, जो सड़क परिवहन और राजमार्ग मंत्रालय द्वारा प्रबंधित है, वाहन पंजीकरण और ट्रैकिंग के लिए एक राष्ट्रीय केंद्रीकृत डेटाबेस है। यह क्षेत्रीय परिवहन कार्यालयों में संचालन को डिजिटाइज़ करता है, ऑनलाइन वाहन पंजीकरण, स्वामित्व हस्तांतरण, फिटनेस प्रमाणन, और सड़क कर भुगतान की सुविधा प्रदान करता है। वाहन राज्यों में सटीक वाहन रिकॉर्ड बनाए रखता है, कानून प्रवर्तन एजेंसियों की सहायता करता है, राजस्व संग्रह में सुधार करता है, और वाणिज्यिक वाहन परमिट प्रबंधन को सरल बनाता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "वाहन प्लेटफार्म वाहन पंजीकरण और ट्रैकिंग के लिए केंद्रीकृत डेटाबेस है।",
+        "यह ऑनलाइन पंजीकरण और स्वामित्व हस्तांतरण की सुविधा देता है।",
+        "Printed answer key: (C) Centralized database for vehicle registration and tracking"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a5d42cf5-c3d2-4df5-a148-eb96f897287d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित ई-गवर्नेंस मॉडल को सूची I में उनके संबंधित व्यावहारिक उदाहरण के साथ सूची II में मिलान करें:\nसूची I: (ई-गवर्नेंस मॉडल)\nP. G2C\nQ. G2B\nR. G2G\nS. G2E\nसूची II: (व्यावहारिक उदाहरण)\nI. सरकारी कर्मचारियों के लिए वार्षिक संपत्ति रिटर्न जमा करने और वेतन पर्ची देखने के लिए पोर्टल\nII. मीसेवा पोर्टल के माध्यम से एक छात्र को जाति प्रमाण पत्र जारी करना\nIII. कॉर्पोरेट संस्थाओं के लिए कारखाना पर्यावरण लाइसेंस के लिए आवेदन करने के लिए एकल-खिड़की पोर्टल\nIV. ई-ऑफिस प्लेटफार्म के माध्यम से अंतर्विभागीय फ़ाइल प्रसंस्करण\nनीचे दिए गए कोड का उपयोग करके सही उत्तर चुनें:",
+      "options_hindi": [
+        "P-II, Q-III, R-IV, S-I",
+        "P-I, Q-II, R-III, S-IV",
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-I, R-II, S-III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match the following E-Governance Models in List I with their corresponding Practical Example in List II:\nList I: (E-Governance Model)\nP. G2C\nQ. G2B\nR. G2G\nS. G2E\nList II: (Practical Example)\nI. Portal for government employees to submit annual asset returns and view payslips\nII. Issuance of caste certificate to a student via MeeSeva portal\nIII. Single-window portal for corporate entities to apply for factory environment licenses\nIV. Inter-departmental file processing via e-Office platform\nSelect the correct answer using the codes given below:",
+      "options_english": [
+        "P-II, Q-III, R-IV, S-I",
+        "P-I, Q-II, R-III, S-IV",
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-I, R-II, S-III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Different e-governance models serve distinct administrative functions. Issuing a caste certificate to a student via MeeSeva represents a Government-to-Citizen interaction. A single-window portal providing environmental clearances to businesses exemplifies Government-to-Business governance. Processing inter-departmental files via e-Office illustrates Government-to-Government administration. Finally, an employee portal enabling civil servants to view payslips and file tax returns reflects the Government-to-Employee model.",
+      "explanation_hindi": "सही उत्तर (a) है। विभिन्न ई-गवर्नेंस मॉडल विभिन्न प्रशासनिक कार्यों की सेवा करते हैं। मीसेवा के माध्यम से एक छात्र को जाति प्रमाण पत्र जारी करना सरकार से नागरिक के बीच बातचीत का प्रतिनिधित्व करता है। व्यवसायों को पर्यावरणीय मंजूरी प्रदान करने वाला एकल-खिड़की पोर्टल सरकार से व्यवसाय के शासन का उदाहरण है। ई-ऑफिस के माध्यम से अंतर्विभागीय फ़ाइलों को संसाधित करना सरकार से सरकार के प्रशासन को दर्शाता है। अंततः, एक कर्मचारी पोर्टल जो सिविल सेवकों को वेतन पर्चियाँ देखने और कर रिटर्न दाखिल करने में सक्षम बनाता है, सरकार से कर्मचारी मॉडल को दर्शाता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "G2C, G2B, G2G, और G2E मॉडल विभिन्न प्रशासनिक कार्यों का प्रतिनिधित्व करते हैं।",
+        "मीसेवा पोर्टल का उपयोग नागरिकों को सेवाएँ प्रदान करने के लिए किया जाता है।",
+        "एकल-खिड़की पोर्टल व्यवसायों के लिए आवेदन प्रक्रिया को सरल बनाता है।",
+        "Printed answer key: (A) P-II, Q-III, R-IV, S-I"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2288e3a6-140a-428b-9fcd-ec80e8c52996",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "‘आधार भुगतान पुल’ (APB) प्रणाली का NPCI द्वारा क्या कार्य है?",
+      "options_hindi": [
+        "लाभार्थियों को आधार नंबर का उपयोग करके प्रत्यक्ष लाभ हस्तांतरण भुगतान करना",
+        "सरकारी प्राथमिक स्कूलों के माध्यम से प्रत्यक्ष वितरण के लिए भौतिक कानूनी मुद्रा नोट प्रिंट करना",
+        "अंतरराष्ट्रीय संस्थागत निवेशकों के लिए विदेशी मुद्रा विनिमय और सीमा पार रेमिटेंस लेनदेन का प्रबंधन करना",
+        "बड़े वाणिज्यिक निजी निगमों के लिए कॉर्पोरेट कर रिफंड वाउचर और कागजी लाभांश प्रमाण पत्र उत्पन्न करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the role of the ‘Aadhaar Payment Bridge’ (APB) system operated by NPCI?",
+      "options_english": [
+        "Routing Direct Benefit Transfer payments to beneficiaries using Aadhaar numbers",
+        "Printing physical legal tender currency notes for direct distribution through government primary schools",
+        "Managing foreign currency exchange and cross-border remittance transactions for international institutional investors",
+        "Generating corporate tax refund vouchers and paper dividend certificates for large commercial private corporations"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Aadhaar Payment Bridge system, operated by the National Payments Corporation of India, facilitates direct benefit transfer payments from government entities to welfare beneficiaries. By utilizing unique Aadhaar numbers as central payment keys, APB routes financial subsidies, scholarships, and pension disbursements directly into beneficiaries’ Aadhaar-linked bank accounts. This eliminates duplicate payouts, minimizes leakage, lowers transaction processing costs, and enhances the efficiency of welfare distribution.",
+      "explanation_hindi": "सही उत्तर (a) है। आधार भुगतान पुल प्रणाली, जो भारतीय राष्ट्रीय भुगतान निगम द्वारा संचालित है, सरकारी संस्थाओं से कल्याण लाभार्थियों को प्रत्यक्ष लाभ हस्तांतरण भुगतान की सुविधा प्रदान करती है। अद्वितीय आधार नंबरों का उपयोग करते हुए, APB वित्तीय सब्सिडी, छात्रवृत्तियाँ और पेंशन का वितरण सीधे लाभार्थियों के आधार से जुड़े बैंक खातों में करता है। यह डुप्लिकेट भुगतान को समाप्त करता है, लीक को कम करता है, लेनदेन की प्रक्रिया की लागत को घटाता है और कल्याण वितरण की दक्षता को बढ़ाता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "आधार भुगतान पुल प्रणाली प्रत्यक्ष लाभ हस्तांतरण के लिए आधार नंबरों का उपयोग करती है।",
+        "यह प्रणाली सरकारी कल्याण योजनाओं के तहत लाभार्थियों को सीधे भुगतान करती है।",
+        "Printed answer key: (A) Routing Direct Benefit Transfer payments to beneficiaries using Aadhaar numbers"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "92f786ec-7960-4ec0-9d75-5f7250b7fa0f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "15. अदhaar प्लेटफ़ॉर्म के संबंध में निम्नलिखित कथनों पर विचार करें, जिसे भारत की अद्वितीय पहचान प्राधिकरण (UIDAI) द्वारा प्रबंधित किया जाता है:\nA. अदhaar एक 12-अंकों की यादृच्छिक संख्या है जो भारत के निवासियों को जैविक और जनसांख्यिकीय डेटा के आधार पर जारी की जाती है।\nB. अदhaar संविधानिक कानून के तहत भारतीय नागरिकता और आय का निर्णायक प्रमाण है।\nC. अदhaar ऑनलाइन वास्तविक समय जैविक और OTP-आधारित पहचान प्रमाणीकरण प्रदान करता है।\nD. अदhaar प्रत्यक्ष लाभ हस्तांतरण (DBT) योजनाओं के लिए मौलिक आधार के रूप में कार्य करता है।\nउपरोक्त में से कौन से कथन सही हैं?\n(1) केवल A, C और D\n(2) केवल A, B और C",
+      "options_hindi": [
+        "केवल A, C और D",
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A, B और D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "15. Consider the following statements regarding the Aadhaar platform managed by Unique Identification Authority of India (UIDAI):\nA. Aadhaar is a 12-digit random number issued to residents of India based on biometric and demographic data.\nB. Aadhaar serves as conclusive proof of Indian citizenship and age under constitutional law.\nC. Aadhaar provides online real-time biometric and OTP-based identity authentication.\nD. Aadhaar serves as the foundational core for Direct Benefit Transfer (DBT) schemes.\nWhich of the statements given above are correct?\n(1) A, C and D only\n(2) A, B and C only",
+      "options_english": [
+        "A, C and D only",
+        "A, B and C only",
+        "B, C and D only",
+        "A, B and D only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Aadhaar is a unique twelve-digit identity number issued by the Unique Identification Authority of India based on demographic and biometric data. It serves as a foundational core for real-time online identity authentication and direct benefit transfers. However, under Indian law, Aadhaar functions strictly as proof of identity and residence, and does not serve as conclusive legal proof of citizenship or age, making statements regarding citizenship status legally inaccurate.",
+      "explanation_hindi": "सही उत्तर (a) है। अदhaar एक अद्वितीय बारह-अंकीय पहचान संख्या है जो जनसांख्यिकीय और जैविक डेटा के आधार पर भारत की अद्वितीय पहचान प्राधिकरण द्वारा जारी की जाती है। यह वास्तविक समय ऑनलाइन पहचान प्रमाणीकरण और प्रत्यक्ष लाभ हस्तांतरण के लिए मौलिक आधार के रूप में कार्य करती है। हालाँकि, भारतीय कानून के तहत, अदhaar केवल पहचान और निवास का प्रमाण है, और नागरिकता या आय का निर्णायक कानूनी प्रमाण नहीं है, जिससे नागरिकता स्थिति के संबंध में कथन कानूनी रूप से गलत हो जाते हैं।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "Aadhaar is a 12-digit unique identity number.",
+        "It is based on biometric and demographic data.",
+        "Aadhaar does not serve as conclusive proof of citizenship.",
+        "Printed answer key: (A) A, C and D only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "14873d44-e2aa-4b4e-addd-fcf3b02c286e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं, एक को\nअसर्शन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है:\nअसर्शन (A): ओपन गवर्नमेंट डेटा (OGD)\nप्लेटफार्म प्रशासनिक\nपारदर्शिता\nऔर\nनागरिक\nभागीदारी को बढ़ाने में महत्वपूर्ण भूमिका निभाते हैं।\nकारण (R): डेटा सेट को खुले,\nमशीन-पठनीय प्रारूपों में प्रकाशित करना नागरिकों,\nपत्रकारों और शोधकर्ताओं को सरकार के\nप्रदर्शन का ऑडिट करने और नवोन्मेषी उपकरण बनाने में सक्षम बनाता है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements, one labeled as\nAssertion (A) and the other as Reason (R):\nAssertion (A): Open Government Data (OGD)\nplatforms play a vital role in enhancing\nadministrative transparency and civic participation.\nReason (R): Publishing datasets in open,\nmachine-readable formats enables citizens,\njournalists, and researchers to audit government\nperformance and build innovative tools.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Open Government Data platforms play a critical role in enhancing administrative transparency, civic trust, and public participation. By releasing non-sensitive official datasets in standardized, machine-readable formats on portals like data.gov.in, the government enables citizens, journalists, and researchers to audit administrative performance independently. This open access facilitates evidence-based policy analysis and technological tool development, confirming that data transparency directly drives public accountability.",
+      "explanation_hindi": "सही उत्तर (a) है। ओपन गवर्नमेंट डेटा प्लेटफार्म प्रशासनिक पारदर्शिता, नागरिक विश्वास और सार्वजनिक भागीदारी को बढ़ाने में महत्वपूर्ण भूमिका निभाते हैं। गैर-संवेदनशील आधिकारिक डेटा सेट को मानकीकृत, मशीन-पठनीय प्रारूपों में जारी करके, सरकार नागरिकों, पत्रकारों और शोधकर्ताओं को स्वतंत्र रूप से प्रशासनिक प्रदर्शन का ऑडिट करने में सक्षम बनाती है। यह खुला डेटा साक्ष्य-आधारित नीति विश्लेषण और तकनीकी उपकरणों के विकास को सुविधाजनक बनाता है, यह पुष्टि करते हुए कि डेटा पारदर्शिता सीधे सार्वजनिक जवाबदेही को बढ़ावा देती है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "Open Government Data platforms enhance transparency and civic participation.",
+        "Standardized, machine-readable formats allow independent auditing of government performance.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "733e018f-dc6d-4291-9a1d-53b04acc589d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "भारत सरकार द्वारा शुरू किए गए राष्ट्रीय एकल खिड़की प्रणाली (NSWS) का केंद्रीय उद्देश्य क्या है?",
+      "options_hindi": [
+        "नगर निगम के पानी और उपयोगिता बिलों का भुगतान करने के लिए नागरिकों के लिए एक व्यापक एकल खिड़की डिजिटल पोर्टल प्रदान करना",
+        "केंद्रीय सरकारी अधिकारियों के सभी आधिकारिक सोशल मीडिया संचार खातों को एकल वेब पृष्ठ में समेकित करना",
+        "निवेशकों और व्यवसायों के लिए आवश्यक मंजूरियों को प्राप्त करने के लिए एक एकल पोर्टल के रूप में कार्य करना",
+        "देशभर में अंतर-राज्यीय रेलवे यात्री टिकटों के लिए एक एकीकृत डिजिटल बुकिंग प्लेटफॉर्म प्रदान करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the central objective of the National Single Window System (NSWS) launched by the Government of India?",
+      "options_english": [
+        "To offer a comprehensive single window digital portal for citizens to pay municipal water and utility bills across metro cities",
+        "To aggregate all official social media communication accounts of central government officials into a single web page",
+        "To serve as a single portal for investors and businesses to obtain required clearances",
+        "To provide a single unified digital booking platform for reserving inter-state railway passenger tickets nationwide"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The National Single Window System is a single-window portal launched by the Government of India to streamline procedures for investors and commercial businesses. It acts as a single digital platform where entrepreneurs can identify, apply for, and track all required statutory approvals, licenses, and clearances across central ministries and state departments. By eliminating redundant application processes, the platform enhances ease of doing business, attracts investment, and reduces delays.",
+      "explanation_hindi": "सही उत्तर (c) है। राष्ट्रीय एकल खिड़की प्रणाली एक एकल खिड़की पोर्टल है जिसे भारत सरकार द्वारा निवेशकों और व्यावसायिक व्यवसायों के लिए प्रक्रियाओं को सरल बनाने के लिए शुरू किया गया है। यह एक एकल डिजिटल प्लेटफॉर्म के रूप में कार्य करता है जहाँ उद्यमी सभी आवश्यक वैधानिक अनुमतियों, लाइसेंसों और मंजूरियों की पहचान, आवेदन और ट्रैक कर सकते हैं। यह प्लेटफॉर्म अनुप्रयोग प्रक्रियाओं को समाप्त करके व्यापार करने में आसानी को बढ़ाता है, निवेश को आकर्षित करता है और देरी को कम करता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "The National Single Window System simplifies the approval process for businesses.",
+        "It integrates various statutory approvals into a single platform.",
+        "Printed answer key: (C) To serve as a single portal for investors and businesses to obtain required clearances."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3688bd4e-1790-4a29-a742-e907b91b2f69",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "डिजिटल इंडिया के किस स्तंभ का विशेष रूप से घरेलू इलेक्ट्रॉनिक्स निर्माण को बढ़ावा देने पर ध्यान केंद्रित है ताकि 'नेट जीरो आयात' प्राप्त किया जा सके?",
+      "options_hindi": [
+        "इलेक्ट्रॉनिक्स निर्माण",
+        "नौकरियों के लिए आईटी",
+        "अर्ली हार्वेस्ट कार्यक्रम",
+        "इनमें से कोई नहीं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital India, Citizen-Centric E-Governance",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which pillar of Digital India specifically focuses on promoting domestic electronics manufacturing to achieve ‘Net Zero Imports’?",
+      "options_english": [
+        "Electronics Manufacturing",
+        "IT for Jobs",
+        "Early Harvest Programmes",
+        "None of the above"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Electronics Manufacturing pillar of Digital India focuses on promoting domestic manufacturing of electronic hardware, including smartphones, consumer devices, and industrial chips. By incentivizing local production through industrial policies and infrastructure clusters, the initiative aims to achieve Net Zero Imports in electronics. Promoting domestic hardware manufacturing strengthens economic self-reliance, creates high-tech employment opportunities, reduces trade deficits, and secures critical technology supply chains nationally.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल इंडिया का इलेक्ट्रॉनिक्स निर्माण स्तंभ इलेक्ट्रॉनिक हार्डवेयर, जिसमें स्मार्टफोन, उपभोक्ता उपकरण और औद्योगिक चिप्स शामिल हैं, के घरेलू निर्माण को बढ़ावा देने पर केंद्रित है। औद्योगिक नीतियों और बुनियादी ढांचे के क्लस्टरों के माध्यम से स्थानीय उत्पादन को प्रोत्साहित करके, यह पहल इलेक्ट्रॉनिक्स में नेट जीरो आयात प्राप्त करने का लक्ष्य रखती है। घरेलू हार्डवेयर निर्माण को बढ़ावा देने से आर्थिक आत्मनिर्भरता मजबूत होती है, उच्च तकनीक रोजगार के अवसर पैदा होते हैं, व्यापार घाटे में कमी आती है, और राष्ट्रीय स्तर पर महत्वपूर्ण प्रौद्योगिकी आपूर्ति श्रृंखलाओं को सुरक्षित किया जाता है।",
+      "topic": "Digital India, Citizen-Centric E-Governance",
+      "difficulty": "medium",
+      "key_facts": [
+        "Electronics Manufacturing aims for Net Zero Imports.",
+        "Printed answer key: (a) Electronics Manufacturing"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

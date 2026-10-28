@@ -1,0 +1,795 @@
+{
+  "test_id": "ec584a71-adfb-430f-9fdd-c60f754a7266",
+  "test_name": "Topic Test: DIGITAL_PAYMENTS_AND_FINANCIAL_TECHNOLOGY - Part 1",
+  "type": "topic_wise",
+  "topic": "digital_payments_and_financial_technology",
+  "created_at": "2026-10-28T18:55:06.602714",
+  "questions": [
+    {
+      "id": "325b5668-cadc-4ee6-adec-fc42ce38e475",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "42. (1) ए और बी केवल के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "प्राथमिक परिभाषा और (1) ए और बी केवल की मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालन मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding (1) A and B only, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of (1) A and B only",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Central Bank Digital Currency, known as the Digital Rupee, is official legal tender issued by the Reserve Bank of India in sovereign digital form. It represents a direct sovereign liability on the central bank’s balance sheet, corresponding to physical banknotes. However, holding digital currency in a wallet does not yield interest, maintaining parity with physical cash balances.",
+      "explanation_hindi": "सही उत्तर (a) है। केंद्रीय बैंक डिजिटल मुद्रा, जिसे डिजिटल रुपी के नाम से जाना जाता है, भारत के रिजर्व बैंक द्वारा संप्रभु डिजिटल रूप में जारी की गई आधिकारिक कानूनी मुद्रा है। यह केंद्रीय बैंक के बैलेंस शीट पर एक प्रत्यक्ष संप्रभु देनदारी का प्रतिनिधित्व करती है, जो भौतिक बैंकनोटों के अनुरूप है। हालाँकि, एक वॉलेट में डिजिटल मुद्रा रखने से ब्याज नहीं मिलता है, जो भौतिक नकद संतुलनों के साथ समानता बनाए रखता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Central Bank Digital Currency is issued by the Reserve Bank of India.",
+        "It does not yield interest like physical cash.",
+        "Printed answer key: (A) Primary definition and standard features of (1) A and B only."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "90391709-9e0e-4e5d-88e5-7884a35613c2",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "डायनामिक QR कोड का स्थिर QR कोड पर खुदरा बिक्री स्थान पर लेनदेन में मुख्य लाभ क्या है?",
+      "options_hindi": [
+        "वे लाभार्थी सर्वर पर किसी सक्रिय इंटरनेट कनेक्शन की आवश्यकता के बिना निर्बाध रूप से कार्य करते हैं।",
+        "वे इस तरह से संरचित हैं कि स्कैनिंग विशेष औद्योगिक हार्डवेयर इकाइयों तक सीमित है।",
+        "वे स्वचालित रूप से लेनदेन की राशि को एम्बेड करते हैं, जिससे उपयोगकर्ता द्वारा मैन्युअल प्रविष्टि में त्रुटियाँ रोकते हैं।",
+        "वे स्वतंत्र मूल्य टोकन के रूप में कार्य करते हैं जो वाणिज्यिक बैंक खातों की आवश्यकता को समाप्त करते हैं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the key advantage of using a Dynamic QR code over a Static QR code in retail point-of-sale transactions?",
+      "options_english": [
+        "They operate seamlessly without requiring any active internet connection on the beneficiary server.",
+        "They are structured so that scanning is strictly restricted to specialized industrial hardware units.",
+        "They automatically embed the transaction amount, preventing user manual entry errors.",
+        "They function as independent value tokens that eliminate the requirement for commercial bank accounts."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Dynamic Quick Response codes offer enhanced accuracy over static codes by embedding specific transaction details, including the exact payment amount, dynamically for each individual purchase. When scanned at point-of-sale terminals, the customer is not required to enter the transacted sum manually, thereby eliminating user input errors, streamlining processing speed, and ensuring precise financial reconciliation for merchants.",
+      "explanation_hindi": "सही उत्तर (c) है। डायनामिक क्यूआर कोड स्थिर कोड की तुलना में अधिक सटीकता प्रदान करते हैं क्योंकि वे प्रत्येक व्यक्तिगत खरीद के लिए लेनदेन के विवरण, जिसमें सटीक भुगतान राशि शामिल है, को स्वचालित रूप से एम्बेड करते हैं। जब इन्हें बिक्री स्थान पर स्कैन किया जाता है, तो ग्राहक को लेनदेन की राशि मैन्युअल रूप से दर्ज करने की आवश्यकता नहीं होती, जिससे उपयोगकर्ता द्वारा प्रविष्टि में त्रुटियाँ समाप्त होती हैं, प्रक्रिया की गति तेज होती है और व्यापारियों के लिए वित्तीय समायोजन सटीक होता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Dynamic QR codes enhance transaction accuracy by embedding details.",
+        "They eliminate manual entry errors at point-of-sale.",
+        "Printed answer key: (C) They automatically embed the transaction amount."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f0aa17c6-3fb0-4cd7-be16-6916112cf61b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "93. स्कूलों में माता-पिता की सामुदायिक भागीदारी के लिए डिजिटल भुगतान साक्षरता अभियानों का मुख्य उद्देश्य क्या है?\n(1) सभी छात्र माता-पिता को आधिकारिक संस्थागत विक्रेताओं से सीधे समर्पित कंप्यूटर लैपटॉप खरीदने के लिए अनिवार्य करना।",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "विकल्प सी",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the main objective of conducting digital payment literacy campaigns for parent community engagement in schools?",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Conducting digital payment literacy campaigns for parent communities aims to educate families on navigating online fee collection systems safely. By demonstrating secure payment steps, explaining verification mechanisms, and raising awareness about common online financial scams, institutions empower parents to perform digital transactions confidently, minimizing transaction errors, reducing physical cash dependency, and protecting community members from electronic fraud.",
+      "explanation_hindi": "सही उत्तर (c) है। माता-पिता की सामुदायिक भागीदारी के लिए डिजिटल भुगतान साक्षरता अभियानों का आयोजन परिवारों को ऑनलाइन शुल्क संग्रह प्रणाली को सुरक्षित रूप से नेविगेट करने के लिए शिक्षित करने का लक्ष्य रखता है। सुरक्षित भुगतान कदमों को प्रदर्शित करके, सत्यापन तंत्र को समझाकर, और सामान्य ऑनलाइन वित्तीय धोखाधड़ी के बारे में जागरूकता बढ़ाकर, संस्थान माता-पिता को आत्मविश्वास से डिजिटल लेनदेन करने के लिए सशक्त बनाते हैं, लेनदेन की गलतियों को कम करते हैं, भौतिक नकद पर निर्भरता को घटाते हैं, और सामुदायिक सदस्यों को इलेक्ट्रॉनिक धोखाधड़ी से बचाते हैं।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital payment literacy campaigns educate parents on safe online practices.",
+        "They aim to minimize transaction errors and reduce cash dependency.",
+        "Institutions raise awareness about online financial scams.",
+        "Printed answer key: (C) Educating parents on safe online payment"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ef82eaf0-3b52-41ea-9f0f-b8e0a657e6da",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "43. (4) दो विशिष्ट कारकों का उपयोग करके सत्यापन के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "प्राथमिक परिभाषा और (4) दो विशिष्ट कारकों का उपयोग करके सत्यापन की मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालन मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding (4) Verification using two distinct factors, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of (4) Verification using two distinct factors:",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Two-Factor Authentication enhances transaction security by requiring two distinct identity verification factors prior to granting system access or releasing funds. Typically, this mechanism combines a knowledge factor, such as a static password or personal identification number, with a possession factor, such as a dynamic One-Time Password sent to a registered mobile device or an encrypted smart card token.",
+      "explanation_hindi": "सही उत्तर (d) है। दो-कारक प्रमाणीकरण लेनदेन की सुरक्षा को बढ़ाता है क्योंकि यह प्रणाली तक पहुँच प्रदान करने या धन जारी करने से पहले दो विशिष्ट पहचान सत्यापन कारकों की आवश्यकता करता है। आमतौर पर, यह तंत्र एक ज्ञान कारक, जैसे स्थिर पासवर्ड या व्यक्तिगत पहचान संख्या, को एक स्वामित्व कारक के साथ जोड़ता है, जैसे कि एक पंजीकृत मोबाइल डिवाइस पर भेजा गया गतिशील वन-टाइम पासवर्ड या एक एन्क्रिप्टेड स्मार्ट कार्ड टोकन।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Two-Factor Authentication requires two distinct identity verification factors.",
+        "It combines a knowledge factor with a possession factor.",
+        "Printed answer key: (D) Primary definition and standard features of (4) Verification using two distinct factors:"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f5828fcb-b86b-4eea-b525-eca6209cbcd3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "48. एक आधार सक्षम भुगतान प्रणाली (AEPS) माइक्रो एटीएम का उपयोग करते समय लेनदेन करने में शामिल संचालन के अनुक्रम का सही क्रम चुनें:\nA. ग्राहक आधार संख्या और बैंक का नाम व्यवसाय प्रतिनिधि को प्रदान करता है।\nB. प्रणाली UIDAI डेटाबेस के साथ बायोमेट्रिक्स की पुष्टि करती है।\nC. ग्राहक बायोमेट्रिक स्कैनर पर अंगुली रखता है।\nD. लेनदेन को मंजूरी दी जाती है और बैंक खाता डेबिट/क्रेडिट किया जाता है और रसीद उत्पन्न होती है।\nनीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "A, C, B, D",
+        "A, B, C, D",
+        "C, A, B, D",
+        "A, C, D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct order of sequence of operations involved when performing a transaction using an Aadhaar Enabled Payment System (AEPS) Micro ATM:\nA. Customer provides Aadhaar number and Bank name to the Business Correspondent.\nB. System verifies biometrics with UIDAI database.\nC. Customer places finger on biometric scanner.\nD. Transaction is approved and bank account is debited/credited with receipt generation.\nChoose the correct answer from the options given below:",
+      "options_english": [
+        "A, C, B, D",
+        "A, B, C, D",
+        "C, A, B, D",
+        "A, C, D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "During an Aadhaar Enabled Payment System transaction at a Micro ATM, the customer first provides their Aadhaar number and bank name to the Business Correspondent. Next, the customer places a finger on the biometric scanner. The system verifies these biometrics against the central identity repository, after which the transaction is authorized, account funds debited or credited, and a receipt issued.",
+      "explanation_hindi": "सही उत्तर (a) है। आधार सक्षम भुगतान प्रणाली के लेनदेन के दौरान, ग्राहक पहले व्यवसाय प्रतिनिधि को अपनी आधार संख्या और बैंक का नाम प्रदान करता है। इसके बाद, ग्राहक बायोमेट्रिक स्कैनर पर अंगुली रखता है। प्रणाली इन बायोमेट्रिक्स की पुष्टि केंद्रीय पहचान भंडार के साथ करती है, जिसके बाद लेनदेन को मंजूरी दी जाती है, खाते के फंड डेबिट या क्रेडिट किए जाते हैं, और एक रसीद जारी की जाती है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Aadhaar Enabled Payment System (AEPS) allows transactions using biometric authentication.",
+        "Printed answer key: (A) A, C, B, D"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1904f3aa-899c-4170-a709-9adedfc65897",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक शैक्षणिक संस्थान के लिए एक सामान्य दैनिक डिजिटल लेनदेन सामंजस्य प्रक्रिया में शामिल चरणों को व्यवस्थित करें:\nA. भुगतान गेटवे सारांश रिपोर्ट और दैनिक बैंक विवरण डाउनलोड करें। \nB. आंतरिक लेखांकन रिकॉर्ड और बैंक क्रेडिट के बीच लेनदेन संदर्भ आईडी और राशियों का मिलान करें। \nC. लंबित लेनदेन, चार्जबैक, या असफल भुगतानों जैसे विसंगतियों की पहचान करें। \nD. सामंजस्य जर्नल प्रविष्टियाँ तैयार करें और अनसुलझे आइटम के लिए भुगतान गेटवे को सूचित करें। \nनीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "A, B, C, D",
+        "B, A, C, D",
+        "A, C, B, D",
+        "C, A, B,"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the steps involved in a typical daily digital transaction reconciliation process for an educational institution:\nA. Download payment gateway summary report and daily bank statement.\nB. Match transaction reference IDs and amounts between internal accounting records and bank credits.\nC. Identify discrepancies such as pending transactions, chargebacks, or failed payments.\nD. Prepare reconciliation journal entries and notify payment gateway for unresolved items.\nChoose the correct answer from the options given below:",
+      "options_english": [
+        "A, B, C, D",
+        "B, A, C, D",
+        "A, C, B, D",
+        "C, A, B,"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A routine institutional digital transaction reconciliation process begins by downloading gateway transaction reports and bank statements. The administrator then compares reference codes and transaction values between internal ledgers and bank credits. Any identified discrepancies, such as pending items or failed payments, are isolated, followed by adjusting journal entries and notifying payment gateway support for resolution.",
+      "explanation_hindi": "सही उत्तर (a) है। एक सामान्य शैक्षणिक संस्थान के डिजिटल लेनदेन सामंजस्य प्रक्रिया की शुरुआत भुगतान गेटवे लेनदेन रिपोर्ट और बैंक विवरण डाउनलोड करने से होती है। इसके बाद, प्रशासक आंतरिक खाता पुस्तकों और बैंक क्रेडिट के बीच संदर्भ कोड और लेनदेन मूल्यों की तुलना करता है। किसी भी पहचानी गई विसंगतियों, जैसे लंबित वस्तुओं या असफल भुगतानों, को अलग किया जाता है, उसके बाद जर्नल प्रविष्टियों को समायोजित किया जाता है और अनसुलझे मामलों के लिए भुगतान गेटवे सहायता को सूचित किया जाता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Daily reconciliation involves matching transaction records with bank statements.",
+        "Discrepancies must be identified and resolved promptly.",
+        "Reconciliation ensures accurate financial reporting and accountability.",
+        "Printed answer key: (A) A, B, C, D"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b1a02f76-d87e-498b-b0d0-c9895ede9cb8",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "90. कौन सी प्राधिकरण भुगतान सेवा प्रदाताओं में प्रणालीगत कमियों के खिलाफ असमर्थित शिकायतों को संभालती है, जो रिजर्व बैंक - एकीकृत लोकपाल योजना के अंतर्गत आती है?",
+      "options_hindi": [
+        "रिजर्व बैंक लोकपाल",
+        "टेलीकॉम नियामक प्राधिकरण",
+        "साइबर अपराध पुलिस स्टेशन",
+        "उपभोक्ता विवाद निवारण फोरम"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which authority handles unresolved complaints against systemic deficiencies in payment service providers under the Reserve Bank - Integrated Ombudsman Scheme?",
+      "options_english": [
+        "Reserve Bank Ombudsman",
+        "Telecom Regulatory Authority",
+        "Cyber Crime Police Station",
+        "Consumer Disputes Redressal Forum"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Reserve Bank Ombudsman is an independent authority appointed under the Reserve Bank - Integrated Ombudsman Scheme to resolve customer grievances regarding service deficiencies in regulated financial entities. If a digital payment provider fails to resolve a customer complaint satisfactorily within thirty days, the affected consumer can file a dispute with the Ombudsman for free conciliation and formal adjudication.",
+      "explanation_hindi": "सही उत्तर (a) है। रिजर्व बैंक लोकपाल एक स्वतंत्र प्राधिकरण है जिसे रिजर्व बैंक - एकीकृत लोकपाल योजना के तहत नियुक्त किया गया है ताकि वित्तीय संस्थाओं में सेवा की कमियों के संबंध में ग्राहक की शिकायतों का समाधान किया जा सके। यदि कोई डिजिटल भुगतान प्रदाता तीस दिनों के भीतर ग्राहक की शिकायत को संतोषजनक ढंग से हल करने में असफल रहता है, तो प्रभावित उपभोक्ता लोकपाल के पास निःशुल्क सुलह और औपचारिक निर्णय के लिए विवाद दर्ज कर सकता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "रिजर्व बैंक लोकपाल एक स्वतंत्र प्राधिकरण है।",
+        "यह ग्राहक की शिकायतों का समाधान करता है।",
+        "उपभोक्ता 30 दिनों के भीतर शिकायत दर्ज कर सकते हैं।",
+        "Printed answer key: (A) Reserve Bank Ombudsman"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b57b1499-c984-46e1-b0db-d0ac1da7f509",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "भारतीय रिजर्व बैंक द्वारा कौन-सा पहल नागरिकों के बीच डिजिटल भुगतान साक्षरता को बढ़ाने के लिए है, विशेष रूप से ग्रामीण और अर्ध-शहरी क्षेत्रों में?",
+      "options_hindi": [
+        "इलेक्ट्रॉनिक बैंकिंग जागरूकता और प्रशिक्षण (e-BAAT)",
+        "आधुनिक विद्यालय कक्षाओं के लिए डिजिटल बोर्ड का संचालन",
+        "नकद रहित भारत मिशन के लिए राष्ट्रीय डिजिटल समावेशन",
+        "ग्रामीण कंप्यूटर साक्षरता के लिए डिजिटल साक्षरता अभियान"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which initiative by the Reserve Bank of India aims to enhance digital payment literacy among citizens, especially in rural and semi-urban areas?",
+      "options_english": [
+        "Electronic Banking Awareness and Training (e-BAAT)",
+        "Operation Digital Board for Modern School Classrooms",
+        "Cashless India Mission for Nationwide Digital Inclusion",
+        "Digital Saksharta Abhiyan for Rural Computer Literacy"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Electronic Banking Awareness and Training (e-BAAT) is an educational outreach initiative established by the Reserve Bank of India to enhance financial literacy and spread awareness regarding safe digital payment services. Through regular workshops and informational programs, the initiative educates citizens across diverse demographic segments on utilizing electronic payment mechanisms securely while recognizing potential cyber threats.",
+      "explanation_hindi": "सही उत्तर (a) है। इलेक्ट्रॉनिक बैंकिंग जागरूकता और प्रशिक्षण (e-BAAT) भारतीय रिजर्व बैंक द्वारा स्थापित एक शैक्षिक आउटरीच पहल है, जिसका उद्देश्य वित्तीय साक्षरता को बढ़ाना और सुरक्षित डिजिटल भुगतान सेवाओं के बारे में जागरूकता फैलाना है। नियमित कार्यशालाओं और सूचना कार्यक्रमों के माध्यम से, यह पहल विभिन्न जनसांख्यिकीय वर्गों के नागरिकों को सुरक्षित रूप से इलेक्ट्रॉनिक भुगतान तंत्र का उपयोग करने के लिए शिक्षित करती है, जबकि संभावित साइबर खतरों को पहचानती है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "easy",
+      "key_facts": [
+        "e-BAAT डिजिटल भुगतान साक्षरता को बढ़ाने के लिए है।",
+        "यह ग्रामीण और अर्ध-शहरी क्षेत्रों पर ध्यान केंद्रित करता है।",
+        "यह सुरक्षित डिजिटल भुगतान सेवाओं के बारे में जागरूकता फैलाता है।",
+        "Printed answer key: (A) Electronic Banking Awareness and Training (e-BAAT)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "48c46be9-a6d1-4530-8bdb-97730972488c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "86. किस प्रकार का साइबर धोखाधड़ी तब होती है जब एक धोखेबाज एक डुप्लिकेट मोबाइल सिम कार्ड प्राप्त करता है ताकि बैंकों द्वारा भेजे गए वन-टाइम पासवर्ड (OTP) को इंटरसेप्ट कर सके?",
+      "options_hindi": [
+        "आईपी स्पूफिंग",
+        "सिम स्वैपिंग",
+        "डीएनएस पॉइज़निंग",
+        "मैन-इन-द-मिडल अटैक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which type of cyber fraud occurs when a fraudster obtains a duplicate mobile SIM card in order to intercept One-Time Passwords (OTPs) sent by banks?",
+      "options_english": [
+        "IP Spoofing",
+        "SIM Swapping",
+        "DNS Poisoning",
+        "Man-in-the-Middle Attack"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "SIM Swapping occurs when a perpetrator fraudulently convinces a mobile telecom operator to issue a duplicate Subscriber Identity Module card linked to the victim’s phone number. Once activated, the fraudster’s duplicate card intercepts incoming text messages, including One-Time Passwords sent by financial institutions, allowing unauthorized access to online banking accounts and bypassing multi-factor security protections.",
+      "explanation_hindi": "सही उत्तर (b) है। सिम स्वैपिंग तब होती है जब एक अपराधी धोखाधड़ी से एक मोबाइल टेलीकॉम ऑपरेटर को पीड़ित के फोन नंबर से जुड़े एक डुप्लिकेट सब्सक्राइबर आइडेंटिटी मॉड्यूल कार्ड जारी करने के लिए मनाता है। एक बार सक्रिय होने पर, धोखेबाज का डुप्लिकेट कार्ड आने वाले टेक्स्ट संदेशों को इंटरसेप्ट करता है, जिसमें वित्तीय संस्थानों द्वारा भेजे गए वन-टाइम पासवर्ड शामिल होते हैं, जिससे ऑनलाइन बैंकिंग खातों तक अनधिकृत पहुंच मिलती है और मल्टी-फैक्टर सुरक्षा सुरक्षा को बायपास किया जा सकता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "सिम स्वैपिंग एक प्रकार का साइबर धोखाधड़ी है।",
+        "यह धोखाधड़ी वन-टाइम पासवर्ड (OTP) को इंटरसेप्ट करने के लिए की जाती है।",
+        "Printed answer key: (b) SIM Swapping"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "bc98cb1d-481b-4b4e-b0e4-10316c2b801b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "76. मोबाइल बैंकिंग में किस चैनल का उपयोग\nग्राहक के पंजीकृत मोबाइल नंबर पर\nस्वचालित वास्तविक समय लेनदेन अपडेट और\nOTP अलर्ट भेजने के लिए किया जाता है?",
+      "options_hindi": [
+        "एकीकृत संदेश प्रोटोकॉल (UMP)",
+        "संक्षिप्त संदेश सेवा (SMS)",
+        "वायरलेस एप्लिकेशन प्रोटोकॉल (WAP)",
+        "डिजिटल ऑडियो प्रसारण (DAB)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which channel is used in mobile banking to send automated real-time transaction updates and OTP alerts to a customer’s registered mobile number?",
+      "options_english": [
+        "Unified Messaging Protocol (UMP)",
+        "Short Message Service (SMS)",
+        "Wireless Application Protocol (WAP)",
+        "Digital Audio Broadcasting (DAB)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Short Message Service is the primary telecommunications channel utilized by banking institutions to deliver real-time automated transaction alerts, account debit or credit notifications, and One-Time Passwords directly to a customer’s registered mobile phone. This channel provides immediate operational communication, enabling account holders to monitor account activity instantly and identify potential unauthorized transactions without delay.",
+      "explanation_hindi": "सही उत्तर (b) है। संक्षिप्त संदेश सेवा (SMS) मुख्य टेली संचार चैनल है जिसका उपयोग बैंकिंग संस्थानों द्वारा ग्राहकों के पंजीकृत मोबाइल फोन पर वास्तविक समय स्वचालित लेनदेन अलर्ट, खाता डेबिट या क्रेडिट सूचनाएँ और एक बार के पासवर्ड भेजने के लिए किया जाता है। यह चैनल तात्कालिक संचालन संचार प्रदान करता है, जिससे खाता धारक तुरंत खाता गतिविधियों की निगरानी कर सकते हैं और बिना किसी देरी के संभावित अनधिकृत लेनदेन की पहचान कर सकते हैं।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "easy",
+      "key_facts": [
+        "संक्षिप्त संदेश सेवा (SMS) का उपयोग बैंकिंग लेनदेन के लिए किया जाता है।",
+        "यह चैनल तात्कालिक संचार प्रदान करता है।",
+        "Printed answer key: (B) Short Message Service (SMS)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "80c857e4-0e3a-4c7b-8680-8a06a73188b3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सुरक्षित ऑनलाइन नेट बैंकिंग उपयोग के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. लॉगिन करने से पहले हमेशा ब्राउज़र के पते की पट्टी में 'https://' और पैडलॉक आइकन की जांच करें।\nB. सार्वजनिक या साझा साइबर कैफे कंप्यूटर पर कभी भी बैंकिंग पासवर्ड न डालें।\nC. त्वरित पहुंच के लिए इंटरनेट ब्राउज़र ऑटो-फिल सेटिंग्स में बैंकिंग पासवर्ड सहेजें।\nD. लेनदेन पूरा करने के बाद हमेशा नेट बैंकिंग सत्र से लॉग आउट करें।",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding safe online net banking usage:\nA. Always check for ‘https://’ and the padlock icon in the browser address bar before logging in.\nB. Never enter banking passwords on public or shared cyber café computers.\nC. Save banking passwords in internet browser auto-fill settings for quick access.\nD. Always log out of the net banking session after completing transactions.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Secure internet banking practices involve checking for secure browser encryption indicators, avoiding banking transactions on shared public terminals, and logging out immediately after completing sessions. Saving banking passwords inside browser auto-fill memory poses severe cyber risks, as unencrypted saved credentials can be extracted by unauthorized users or malicious software gaining access to the local browser profile.",
+      "explanation_hindi": "सही उत्तर (a) है। सुरक्षित इंटरनेट बैंकिंग प्रथाओं में सुरक्षित ब्राउज़र एन्क्रिप्शन संकेतकों की जांच करना, साझा सार्वजनिक टर्मिनलों पर बैंकिंग लेनदेन से बचना और सत्र समाप्त करने के तुरंत बाद लॉग आउट करना शामिल है। ब्राउज़र ऑटो-फिल मेमोरी में बैंकिंग पासवर्ड को सहेजना गंभीर साइबर जोखिम पैदा करता है, क्योंकि असुरक्षित सहेजे गए क्रेडेंशियल्स को अनधिकृत उपयोगकर्ताओं या स्थानीय ब्राउज़र प्रोफ़ाइल तक पहुंच प्राप्त करने वाले दुर्भावनापूर्ण सॉफ़्टवेयर द्वारा निकाला जा सकता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Always check for 'https://' and padlock icon for secure connections.",
+        "Avoid entering banking passwords on public computers.",
+        "Printed answer key: (A) A, B and D only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2bff3273-8e11-4286-a6ec-1b5323f63083",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "97. कौन सा डिजिटल भुगतान तंत्र मोबाइल उपकरणों और भुगतान टर्मिनलों के बीच एन्क्रिप्टेड लेनदेन डेटा को प्रसारित करने के लिए ध्वनि तरंगों का उपयोग करता है?",
+      "options_hindi": [
+        "ब्लूटूथ लो एनर्जी (BLE) भुगतान",
+        "ध्वनि-आधारित / ध्वनिक भुगतान",
+        "इन्फ्रारेड डेटा ट्रांसफर (IrDA) सिस्टम",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which digital payment mechanism uses sound waves to transmit encrypted transaction data between mobile devices and payment terminals?",
+      "options_english": [
+        "Bluetooth Low Energy (BLE) Payments",
+        "Sound-based / Acoustic Payments",
+        "Infrared Data Transfer (IrDA) Systems",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Sound-based acoustic payment technology utilizes encrypted, non-audible data tones transmitted through standard mobile phone speakers and microphones to conduct financial transactions. By converting transaction data into acoustic waves, this technology enables secure proximity data exchange between devices without requiring specialized hardware chips, near-field hardware, or active internet connectivity on receiver terminals, facilitating versatile digital payments.",
+      "explanation_hindi": "सही उत्तर (b) है। ध्वनि-आधारित ध्वनिक भुगतान तकनीक एन्क्रिप्टेड, गैर-श्रव्य डेटा टोन का उपयोग करती है जो मानक मोबाइल फोन स्पीकर और माइक्रोफोनों के माध्यम से वित्तीय लेनदेन करने के लिए प्रसारित होती है। लेनदेन डेटा को ध्वनिक तरंगों में परिवर्तित करके, यह तकनीक उपकरणों के बीच सुरक्षित निकटता डेटा विनिमय की अनुमति देती है बिना विशेष हार्डवेयर चिप्स, निकट-क्षेत्र हार्डवेयर, या रिसीवर टर्मिनलों पर सक्रिय इंटरनेट कनेक्टिविटी की आवश्यकता के, जिससे बहुपरकारी डिजिटल भुगतान को सुगम बनाता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Sound-based payments use non-audible data tones for transactions.",
+        "This method does not require specialized hardware.",
+        "Printed answer key: (B) Sound-based / Acoustic Payments."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "16226391-edea-4011-a4e7-91f0e25aedde",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "77. तेलंगाना में सरकारी संस्थानों के संदर्भ में,\nनकद रहित लेनदेन नीतियों को लागू करने का\nमुख्य उद्देश्य क्या है?",
+      "options_hindi": [
+        "सभी नागरिक-केंद्रित नागरिक सेवाओं पर अनिवार्य प्रशासनिक लेनदेन अधिभार लागू करना।",
+        "विदेशी धन हस्तांतरण चैनलों को प्रतिबंधित करना और गैर-निवासी नागरिकों से राजस्व भुगतान स्वीकार करना बंद करना।",
+        "वित्तीय पारदर्शिता सुनिश्चित करना, लीक को कम करना, और शासन की दक्षता में सुधार करना।",
+        "तुरंत विमुद्रीकरण करना और सभी क्षेत्रीय वाणिज्यिक बाजारों से भौतिक मुद्रा नोटों को समाप्त करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In the context of government institutions in Telangana, what is the primary purpose of introducing cashless transaction policies?",
+      "options_english": [
+        "To enforce compulsory administrative transaction surcharges across all citizen-centric civic services.",
+        "To restrict foreign remittance channels and stop accepting revenue payments from non-resident citizens.",
+        "To ensure financial transparency, minimize leakages, and improve governance efficiency.",
+        "To immediately demonetize and eliminate physical currency notes from all regional commercial markets."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Government institutions implement cashless transaction policies to promote complete financial transparency, eliminate revenue leakage, and enhance overall administrative efficiency. Transitioning from physical currency handling to electronic channels creates verifiable digital audit trails, simplifies accounting reconciliation, accelerates service delivery, and ensures that citizen fee payments and public revenue collection are processed through secure, traceable digital infrastructure.",
+      "explanation_hindi": "सही उत्तर (c) है। सरकारी संस्थान नकद रहित लेनदेन नीतियों को लागू करते हैं ताकि वित्तीय पारदर्शिता को बढ़ावा दिया जा सके, राजस्व लीक को समाप्त किया जा सके, और प्रशासनिक दक्षता को बढ़ाया जा सके। भौतिक मुद्रा प्रबंधन से इलेक्ट्रॉनिक चैनलों में संक्रमण सत्यापन योग्य डिजिटल ऑडिट ट्रेल्स बनाता है, लेखांकन समन्वय को सरल बनाता है, सेवा वितरण को तेज करता है, और सुनिश्चित करता है कि नागरिक शुल्क भुगतान और सार्वजनिक राजस्व संग्रह सुरक्षित, ट्रेस करने योग्य डिजिटल बुनियादी ढांचे के माध्यम से संसाधित किए जाते हैं।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "नकद रहित लेनदेन नीतियाँ वित्तीय पारदर्शिता को बढ़ावा देती हैं।",
+        "यह राजस्व लीक को समाप्त करने में मदद करती हैं।",
+        "Printed answer key: (C) To ensure financial transparency, minimize"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d874db9f-8adc-4b2f-987b-4d36aebd46c0",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "(3) एकीकृत वित्तीय प्रबंधन प्रणाली के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "(3) एकीकृत वित्तीय प्रबंधन प्रणाली की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding (3) Integrated Financial Management System, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of (3) Integrated Financial Management System",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Integrated Financial Management System (IFMIS) is a centralized digital governance platform implemented by the Government of Telangana to streamline state public financial management. It facilitates treasury operations, automated bill processing, digital receipts, expenditure monitoring, and payroll disbursements, ensuring transparent, real-time financial administration and electronic audit capability across all government departments and public institutions.",
+      "explanation_hindi": "सही उत्तर (c) है। एकीकृत वित्तीय प्रबंधन प्रणाली (IFMIS) एक केंद्रीकृत डिजिटल शासन मंच है जिसे तेलंगाना सरकार द्वारा राज्य सार्वजनिक वित्तीय प्रबंधन को सुव्यवस्थित करने के लिए लागू किया गया है। यह खजाना संचालन, स्वचालित बिल प्रसंस्करण, डिजिटल रसीदें, व्यय निगरानी और वेतन वितरण की सुविधा प्रदान करता है, जिससे सभी सरकारी विभागों और सार्वजनिक संस्थानों में पारदर्शी, वास्तविक समय की वित्तीय प्रशासन और इलेक्ट्रॉनिक ऑडिट क्षमता सुनिश्चित होती है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "IFMIS is a centralized platform for financial management.",
+        "It streamlines treasury operations and automated bill processing.",
+        "Ensures real-time financial administration across government departments.",
+        "Printed answer key: (C) (3) Integrated Financial Management System"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f7ee992a-1852-481e-9163-5c0f15ad5803",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "98. ऑनलाइन लेनदेन के लिए डिजिटल भुगतान रसीद उत्पन्न करने के चरणों को क्रम में व्यवस्थित करें:\nA. लेनदेन अनुरोध को जारी करने वाले बैंक द्वारा संसाधित और अनुमोदित किया गया।\nB. भुगतान गेटवे व्यापारी वेबसाइट को सफलता प्रतिक्रिया पेलोड भेजता है।\nC. प्रणाली अद्वितीय लेनदेन संदर्भ, तिथि, समय और राशि के साथ रसीद उत्पन्न करती है।\nD. रसीद स्क्रीन पर प्रदर्शित की जाती है और ग्राहक को एसएमएस/ईमेल के माध्यम से भेजी जाती है।\nनीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "A, B, C, D",
+        "B, A, C, D",
+        "A, C, B, D",
+        "C, A, B"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following steps in the sequence of generating a digital payment receipt for an online transaction:\nA. Transaction request processed and approved by issuing bank.\nB. Payment gateway sends success response payload to merchant website.\nC. System generates receipt with unique transaction reference, date, time, and amount.\nD. Receipt is displayed on screen and sent to customer via SMS/Email.\nChoose the correct answer from the options given below:",
+      "options_english": [
+        "A, B, C, D",
+        "B, A, C, D",
+        "A, C, B, D",
+        "C, A, B"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Generating a digital payment receipt begins when the transaction request is processed and authorized by the issuing bank. The payment gateway transmits a successful response payload to the merchant portal. The system automatically creates a digital receipt featuring unique reference numbers, dates, and amounts, which is then displayed on screen and transmitted to the customer via text message or email.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल भुगतान रसीद उत्पन्न करने की प्रक्रिया उस समय शुरू होती है जब लेनदेन अनुरोध को जारी करने वाले बैंक द्वारा संसाधित और अनुमोदित किया जाता है। भुगतान गेटवे व्यापारी पोर्टल को सफल प्रतिक्रिया पेलोड भेजता है। इसके बाद, प्रणाली अद्वितीय संदर्भ संख्या, तिथियों और राशियों के साथ डिजिटल रसीद उत्पन्न करती है, जिसे स्क्रीन पर प्रदर्शित किया जाता है और ग्राहक को एसएमएस या ईमेल के माध्यम से भेजा जाता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital payment receipts are generated after transaction approval.",
+        "Payment gateways play a crucial role in transaction processing.",
+        "Printed answer key: (A) A, B, C, D",
+        "Receipts can be sent via SMS or email."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1f587e3f-ecf1-4b2f-b281-df6296c21522",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "(1) P-I, Q-II, R-III, S-IV के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "(1) P-I, Q-II, R-III, S-IV की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding (1) P-I, Q-II, R-III, S-IV, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of (1) P-I, Q-II, R-III, S-IV",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Preventing voice phishing requires never disclosing personal security passcodes or authentication codes over telephone calls. Guarding against unauthorized card transactions involves utilizing dynamic tokenization and setting custom operational spending limits. Defending against malicious software requires installing anti-virus programs, whereas mitigating public network eavesdropping entails connecting via virtual private networks rather than open Wi-Fi.",
+      "explanation_hindi": "सही उत्तर (a) है। वॉयस फिशिंग को रोकने के लिए व्यक्तिगत सुरक्षा पासकोड या प्रमाणीकरण कोड को टेलीफोन कॉल के माध्यम से कभी भी प्रकट नहीं करना चाहिए। अनधिकृत कार्ड लेनदेन से बचने के लिए गतिशील टोकनाइजेशन का उपयोग करना और कस्टम संचालनात्मक व्यय सीमाएँ निर्धारित करना आवश्यक है। दुर्भावनापूर्ण सॉफ़्टवेयर से बचाव के लिए एंटी-वायरस प्रोग्राम स्थापित करना चाहिए, जबकि सार्वजनिक नेटवर्क की सुनवाई को कम करने के लिए ओपन वाई-फाई के बजाय वर्चुअल प्राइवेट नेटवर्क के माध्यम से कनेक्ट करना चाहिए।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Voice phishing can be prevented by not disclosing personal security codes.",
+        "Dynamic tokenization helps in securing card transactions.",
+        "Using anti-virus software is essential for defending against malware.",
+        "Printed answer key: (A) (1) P-I, Q-II, R-III, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "cb121353-08d3-4f3b-9fc2-0ef2deb15494",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "71. एक संस्थागत प्रशासक को अनधिकृत लेन-देन का पता लगाने पर तुरंत क्या कार्रवाई करनी चाहिए?",
+      "options_hindi": [
+        "बैंक को क्रेडेंशियल्स को फ्रीज़ करने के लिए सूचित करें और एक आधिकारिक शिकायत दर्ज करें।",
+        "लेन-देन को रद्द करने के लिए ग्राहक सेवा से संपर्क करें।",
+        "सभी उपयोगकर्ताओं को सूचित करें और लेन-देन को रोकें।",
+        "अधिकारियों को रिपोर्ट करें और कानूनी कार्रवाई शुरू करें।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What action should an institutional administrator take immediately upon detecting an unauthorized debit transaction?",
+      "options_english": [
+        "Notify the bank to freeze credentials and log an official grievance.",
+        "Contact customer service to cancel the transaction.",
+        "Inform all users and halt the transaction.",
+        "Report to authorities and initiate legal action."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Upon discovering an unauthorized debit transaction from an institutional account, the administrator must immediately notify the account-holding bank to block affected credentials and register an official fraud report. Prompt notification minimizes potential financial loss, protects remaining funds, satisfies regulatory criteria for limited customer liability, and initiates formal investigation and dispute resolution procedures across payment networks.",
+      "explanation_hindi": "सही उत्तर (a) है। अनधिकृत लेन-देन का पता लगाने पर, प्रशासक को तुरंत खाते के बैंक को सूचित करना चाहिए ताकि प्रभावित क्रेडेंशियल्स को ब्लॉक किया जा सके और एक आधिकारिक धोखाधड़ी रिपोर्ट दर्ज की जा सके। त्वरित सूचना संभावित वित्तीय हानि को कम करती है, शेष धन की सुरक्षा करती है, सीमित ग्राहक देयता के लिए नियामक मानदंडों को पूरा करती है, और भुगतान नेटवर्क में औपचारिक जांच और विवाद समाधान प्रक्रियाओं को शुरू करती है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Immediate reporting to the bank is crucial to prevent further losses.",
+        "Regulatory frameworks often protect consumers from unauthorized transactions.",
+        "Printed answer key: (A) Notify the bank to freeze credentials and log an official grievance."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f954422d-b305-450d-a9e9-f079eff93923",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "23. ऑनलाइन स्कूल शुल्क संग्रहण प्रणालियों में भुगतान गेटवे की मुख्य भूमिका क्या है?",
+      "options_hindi": [
+        "भुगतान पोर्टलों और अधिग्रहण या जारी करने वाले बैंकों के बीच एन्क्रिप्टेड लेनदेन डेटा को रूट करना।",
+        "स्वचालित रूप से शुल्क छूट का आकलन करना और पात्र छात्र आवेदकों को रियायतें प्रदान करना।",
+        "संस्थान के शुल्क डेस्क पर कागजी भुगतान काउंटरफॉयल उत्पन्न करना और भौतिक रूप से प्रिंट करना।",
+        "वार्षिक संस्थागत खाता-बही की समीक्षा करने वाले स्वतंत्र बाहरी लेखा परीक्षक के रूप में कार्य करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the principal role of a Payment Gateway in online school fee collection systems?",
+      "options_english": [
+        "To route encrypted transaction data between payment portals and acquiring or issuing banks.",
+        "To automatically assess fee waivers and grant concessions to eligible student applicants.",
+        "To generate and physically print paper payment counterfoils at institutional fee desks.",
+        "To function as an independent external auditor reviewing annual institutional ledgers."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "In online fee collection systems, a Payment Gateway acts as an essential technical intermediary that securely captures, encrypts, and transmits payment request details from the institution’s web portal to the acquiring and issuing banks. It ensures seamless communication across payment networks, verifying credentials and facilitating real-time authorization for safe electronic transfer of institutional funds.",
+      "explanation_hindi": "सही उत्तर (a) है। ऑनलाइन शुल्क संग्रहण प्रणालियों में, भुगतान गेटवे एक आवश्यक तकनीकी मध्यस्थ के रूप में कार्य करता है जो संस्थान के वेब पोर्टल से अधिग्रहण और जारी करने वाले बैंकों तक भुगतान अनुरोध विवरण को सुरक्षित रूप से कैप्चर, एन्क्रिप्ट और ट्रांसमिट करता है। यह भुगतान नेटवर्क के बीच निर्बाध संचार सुनिश्चित करता है, प्रमाण पत्रों की पुष्टि करता है और संस्थागत धन के सुरक्षित इलेक्ट्रॉनिक हस्तांतरण के लिए वास्तविक समय में प्राधिकरण की सुविधा प्रदान करता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "Payment Gateways are crucial for secure online transactions.",
+        "They encrypt transaction data to protect sensitive information.",
+        "Printed answer key: (A) To route encrypted transaction data between payment portals and acquiring or issuing banks.",
+        "They facilitate real-time authorization of payments."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ff6bcd23-7ef9-42ec-9bcc-2798ba98b66f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "49. वित्तीय प्रौद्योगिकी में, \"फिनटेक\" का क्या अर्थ है?",
+      "options_hindi": [
+        "भौतिक वाणिज्यिक बैंक शाखाओं में तैनात स्वचालित यांत्रिक गिनती उपकरण और मुद्रा छंटाई हार्डवेयर।",
+        "वित्तीय सेवाओं में प्रौद्योगिकी-प्रेरित नवाचार जो नए व्यावसायिक मॉडल, अनुप्रयोग और प्रक्रियाएँ बनाता है।",
+        "प्रमाणित बाहरी लेखा परीक्षकों और नियामक निकायों द्वारा विशेष रूप से निष्पादित वैधानिक वित्तीय निरीक्षण प्रक्रियाएँ।",
+        "उच्च-सुरक्षा केंद्रीय बैंक मुद्रा वॉल्टों के लिए विशेष भौतिक वास्तुकला और इंजीनियरिंग मानक।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In financial technology, what does “FinTech” refer to?",
+      "options_english": [
+        "Automated mechanical counting devices and currency sorting hardware deployed across physical commercial bank branches.",
+        "Technology-driven innovation in financial services creating new business models, applications, and processes.",
+        "Statutory financial inspection procedures executed exclusively by certified external auditors and regulatory bodies.",
+        "Specialized physical architectural and engineering standards governing high-security central bank currency vaults."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Financial Technology, commonly known as FinTech, encompasses technological innovations applied within the financial services sector. It involves utilizing advanced software, mobile applications, cloud infrastructure, and data analytics to design, improve, and automate financial activities. This technological integration transforms traditional banking, payment processing, lending, and investment mechanisms into accessible, efficient digital services for institutions and consumers alike.",
+      "explanation_hindi": "सही उत्तर (b) है। वित्तीय प्रौद्योगिकी, जिसे सामान्यतः फिनटेक के रूप में जाना जाता है, वित्तीय सेवाओं के क्षेत्र में लागू तकनीकी नवाचारों को शामिल करता है। इसमें उन्नत सॉफ़्टवेयर, मोबाइल अनुप्रयोग, क्लाउड अवसंरचना, और डेटा विश्लेषण का उपयोग करके वित्तीय गतिविधियों को डिज़ाइन, सुधार और स्वचालित करना शामिल है। यह तकनीकी एकीकरण पारंपरिक बैंकिंग, भुगतान प्रसंस्करण, उधारी, और निवेश तंत्रों को संस्थानों और उपभोक्ताओं के लिए सुलभ, कुशल डिजिटल सेवाओं में बदल देता है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "easy",
+      "key_facts": [
+        "FinTech refers to technology-driven innovations in financial services.",
+        "Printed answer key: (B) Technology-driven innovation in"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "cd904da7-a0fd-4995-a8c5-46ab2695f3a6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दिए गए दो कथन हैं: एक को\nअसर्शन A के रूप में लेबल किया गया है और दूसरे को\nकारण R के रूप में लेबल किया गया है।\nअसर्शन A: डिजिटल भुगतान प्रणाली ग्रामीण और\nबैंक रहित क्षेत्रों में वित्तीय समावेशन को\nविस्तारित करने में महत्वपूर्ण योगदान देती हैं।\nकारण R: डिजिटल भुगतान अवसंरचना जैसे\nAEPS और USSD भौतिक बैंक शाखाओं की\nआवश्यकता के बिना बुनियादी बैंकिंग सेवाओं\nतक पहुँच प्रदान करती है।\nउपरोक्त कथनों के प्रकाश में, नीचे दिए गए विकल्पों\nमें से सही उत्तर चुनें:",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही\nव्याख्या है।",
+        "दोनों A और R सत्य हैं लेकिन R A का\nसही व्याख्या नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Payments and Financial Technology",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R. Assertion A: Digital payment systems contribute significantly to expanding financial inclusion in rural and unbanked regions. Reason R: Digital payment infrastructure like AEPS and USSD allows access to basic banking services without requiring physical bank branches. In the light of the above statements, choose the correct answer from the options given below:",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Digital payment systems significantly expand financial inclusion across remote and unbanked populations by reducing reliance on physical infrastructure. Technologies such as biometric authentication and unstructured supplementary service data enable individuals in rural regions to perform fundamental banking operations, cash transfers, and balance inquiries through local representatives, eliminating the requirement of visiting traditional bank branches.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल भुगतान प्रणाली ग्रामीण और बैंक रहित जनसंख्या में वित्तीय समावेशन को बढ़ाने में महत्वपूर्ण भूमिका निभाती हैं। बायोमेट्रिक प्रमाणीकरण और असंरचित पूरक सेवा डेटा जैसी तकनीकें ग्रामीण क्षेत्रों में व्यक्तियों को बुनियादी बैंकिंग संचालन, नकद हस्तांतरण और बैलेंस पूछताछ करने में सक्षम बनाती हैं, जिससे पारंपरिक बैंक शाखाओं में जाने की आवश्यकता समाप्त हो जाती है।",
+      "topic": "Digital Payments and Financial Technology",
+      "difficulty": "medium",
+      "key_facts": [
+        "डिजिटल भुगतान प्रणाली वित्तीय समावेशन को बढ़ावा देती हैं।",
+        "AEPS और USSD जैसी तकनीकें भौतिक बैंक शाखाओं की आवश्यकता को समाप्त करती हैं।",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

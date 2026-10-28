@@ -1,0 +1,793 @@
+{
+  "test_id": "fa50f544-4b65-46a9-b23c-7628be513a36",
+  "test_name": "Topic Test: INTERNET_AND_NETWORKING_BASICS - Part 2",
+  "type": "topic_wise",
+  "topic": "internet_and_networking_basics",
+  "created_at": "2026-10-28T18:55:06.732500",
+  "questions": [
+    {
+      "id": "9b1af647-475f-40e7-8356-6c9e21057b91",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "27. वाई-फाई नेटवर्क और वायरलेस कनेक्टिविटी के संबंध में निम्नलिखित बयानों पर विचार करें:\nA. वाई-फाई डेटा को उपकरणों और राउटर के बीच वायरलेस रूप से प्रसारित करने के लिए रेडियो आवृत्ति तरंगों का उपयोग करता है।\nB. WPA3 एक सुरक्षा प्रोटोकॉल है जिसे वाई-फाई कनेक्शनों को सुरक्षित करने के लिए डिज़ाइन किया गया है।\nC. वाई-फाई नेटवर्क बिना किसी भौतिक एक्सेस पॉइंट या राउटर अवसंरचना के बिना कार्य करते हैं।\nD. भौतिक बाधाएँ और विद्युत चुम्बकीय हस्तक्षेप वाई-फाई की गति और रेंज को कम कर सकते हैं।\nउपरोक्त में से कौन से बयान सही हैं?",
+      "options_hindi": [
+        "केवल A, B और D",
+        "केवल B, C और D",
+        "केवल A, C और D",
+        "केवल A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Wi-Fi networks and wireless connectivity:\nA. Wi-Fi uses radio frequency waves to transmit data wirelessly between devices and a router.\nB. WPA3 is a security protocol designed to secure Wi-Fi connections.\nC. Wi-Fi networks operate without needing any physical access point or router infrastructure.\nD. Wi-Fi speed and range can be degraded by physical obstacles and electromagnetic interference.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and D only",
+        "B, C and D only",
+        "A, C and D only",
+        "A, B and C only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Wi-Fi technology utilizes high-frequency radio signals to establish wireless networking connections between consumer devices and central access points. Modern security standards like WPA3 protect data transmissions across Wi-Fi networks from unauthorized access. Wi-Fi performance degrades when encountering physical obstacles like dense walls or electromagnetic interference. However, Wi-Fi networks require physical infrastructure, including access points or wireless routers, to function correctly.",
+      "explanation_hindi": "सही उत्तर (a) है। वाई-फाई प्रौद्योगिकी उच्च-आवृत्ति रेडियो संकेतों का उपयोग करके उपभोक्ता उपकरणों और केंद्रीय एक्सेस पॉइंट के बीच वायरलेस नेटवर्किंग कनेक्शन स्थापित करती है। WPA3 जैसे आधुनिक सुरक्षा मानक वाई-फाई नेटवर्क के माध्यम से डेटा ट्रांसमिशन को अनधिकृत पहुंच से सुरक्षित करते हैं। भौतिक बाधाओं जैसे घने दीवारों या विद्युत चुम्बकीय हस्तक्षेप का सामना करते समय वाई-फाई प्रदर्शन कम हो जाता है। हालाँकि, वाई-फाई नेटवर्क को सही ढंग से कार्य करने के लिए भौतिक अवसंरचना की आवश्यकता होती है, जिसमें एक्सेस पॉइंट या वायरलेस राउटर शामिल हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "वाई-फाई डेटा को वायरलेस रूप से प्रसारित करने के लिए रेडियो आवृत्ति तरंगों का उपयोग करता है।",
+        "WPA3 एक सुरक्षा प्रोटोकॉल है जो वाई-फाई कनेक्शनों को सुरक्षित करता है।",
+        "Printed answer key: (A) A, B and D only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "362793fe-6faa-4c2c-bc8a-14aeb3287a2b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "3.\n\nकौन सा मौलिक प्रोटोकॉल सूट 1970 और 1980 के दशक में पेश किया गया था ताकि इंटरनेट पर विषम नेटवर्क के बीच मानक संचार सक्षम किया जा सके?",
+      "options_hindi": [
+        "HTTP/HTTPS",
+        "FTP/SFTP",
+        "TCP/IP",
+        "SMTP/IMAP"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What fundamental protocol suite was introduced in the 1970s and 1980s to enable standard communication across heterogeneous networks on the Internet?",
+      "options_english": [
+        "HTTP/HTTPS",
+        "FTP/SFTP",
+        "TCP/IP",
+        "SMTP/IMAP"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Transmission Control Protocol and Internet Protocol suite serves as the fundamental networking framework for internet communications. Transmission Control Protocol manages reliable data packet assembly and error checking, while Internet Protocol handles packet addressing and routing across diverse networks. Developed during the 1970s and adopted in 1983, this unified framework allows heterogeneous computing hardware and operating systems worldwide to seamlessly exchange information across global interconnected network pathways.",
+      "explanation_hindi": "सही उत्तर (c) है। ट्रांसमिशन कंट्रोल प्रोटोकॉल और इंटरनेट प्रोटोकॉल सूट इंटरनेट संचार के लिए मौलिक नेटवर्किंग ढांचा के रूप में कार्य करता है। ट्रांसमिशन कंट्रोल प्रोटोकॉल विश्वसनीय डेटा पैकेट असेंबली और त्रुटि जांच का प्रबंधन करता है, जबकि इंटरनेट प्रोटोकॉल विभिन्न नेटवर्कों के बीच पैकेट पते और रूटिंग को संभालता है। 1970 के दशक में विकसित और 1983 में अपनाया गया, यह एकीकृत ढांचा दुनिया भर में विषम कंप्यूटिंग हार्डवेयर और ऑपरेटिंग सिस्टम को वैश्विक आपस में जुड़े नेटवर्क पथों के माध्यम से जानकारी का निर्बाध आदान-प्रदान करने की अनुमति देता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Transmission Control Protocol (TCP) ensures reliable data transmission.",
+        "Internet Protocol (IP) is responsible for addressing and routing packets.",
+        "Printed answer key: (C) TCP/IP"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7ea70dc7-fa4e-4ef3-8412-6baca56242bd",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "62. निम्नलिखित में से कौन सा खोज इंजन सुविधा उपयोगकर्ताओं को विशिष्ट फ़ाइल प्रकारों को बाहर करने या स्पष्ट फ़ाइल एक्सटेंशन (जैसे, PDF दस्तावेज़) को खोजने की अनुमति देती है?",
+      "options_hindi": [
+        "खोज सिंटैक्स क्वेरी ऑपरेटर `site:`",
+        "खोज सिंटैक्स क्वेरी ऑपरेटर `link:`",
+        "खोज सिंटैक्स क्वेरी ऑपरेटर `inurl:`",
+        "खोज सिंटैक्स ऑपरेटर `filetype:`"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following search engine features allows users to exclude specific file types or locate explicit file extensions (e.g., PDF documents)?",
+      "options_english": [
+        "Search syntax query operator `site:`",
+        "Search syntax query operator `link:`",
+        "Search syntax query operator `inurl:`",
+        "Search syntax operator `filetype:`"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The `filetype:` query operator allows users to restrict search engine results to documents matching specific file extensions, such as PDF, DOCX, or PPT. By appending `filetype:pdf` to search keywords, search engines filter out standard web content and display only downloadable PDF files containing the query terms, greatly assisting academic researchers looking for official documents or reports.",
+      "explanation_hindi": "सही उत्तर (d) है। `filetype:` क्वेरी ऑपरेटर उपयोगकर्ताओं को खोज इंजन परिणामों को विशिष्ट फ़ाइल एक्सटेंशन, जैसे PDF, DOCX, या PPT से मेल खाने वाले दस्तावेज़ों तक सीमित करने की अनुमति देता है। खोज कीवर्ड के साथ `filetype:pdf` जोड़ने से, खोज इंजन मानक वेब सामग्री को बाहर करता है और केवल उन डाउनलोड करने योग्य PDF फ़ाइलों को प्रदर्शित करता है जिनमें प्रश्न शब्द होते हैं, जो आधिकारिक दस्तावेज़ों या रिपोर्टों की तलाश कर रहे शैक्षणिक शोधकर्ताओं के लिए बहुत सहायक है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "`filetype:` क्वेरी ऑपरेटर विशिष्ट फ़ाइल एक्सटेंशन के लिए खोज परिणामों को सीमित करता है।",
+        "यह शोधकर्ताओं के लिए आधिकारिक दस्तावेज़ों को खोजने में सहायक है।",
+        "Printed answer key: (D) Search syntax operator `filetype:`"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8bb7183b-c490-4714-9b0f-52297f53963b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "99. फाइबर ऑप्टिक कनेक्टिविटी के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. डेटा को कांच या प्लास्टिक के कोर के माध्यम से प्रकाश पल्स के रूप में प्रसारित किया जाता है।\nB. फाइबर ऑप्टिक्स पारंपरिक तांबे के तारों की तुलना में काफी उच्च बैंडविड्थ प्रदान करते हैं।\nC. फाइबर ऑप्टिक प्रसारण विद्युत चुम्बकीय हस्तक्षेप के प्रति लगभग प्रतिरक्षित होते हैं।\nD. फाइबर ऑप्टिक केबल लंबी दूरी पर विद्युत तांबे के धारा के माध्यम से डेटा स्थानांतरित करते हैं।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A, C और D",
+        "केवल A, B और D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Fibre Optic connectivity:\nA. Data is transmitted as light pulses through glass or plastic cores.\nB. Fiber optics offer significantly higher bandwidth compared to traditional copper wires.\nC. Fiber optic transmissions are virtually immune to electromagnetic interference.\nD. Fiber optic cables transfer data via electrical copper currents over long distances.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and C only",
+        "B, C and D only",
+        "A, C and D only",
+        "A, B and D only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Fibre optic technology transmits data using light pulses through glass or plastic cores. It provides significantly higher data bandwidth and lower signal degradation over long distances compared to copper wiring. Additionally, light transmissions are immune to electromagnetic interference. However, fiber optic cables rely strictly on optical signals made of light, not electrical currents passing through copper wire conductors.",
+      "explanation_hindi": "सही उत्तर (a) है। फाइबर ऑप्टिक प्रौद्योगिकी डेटा को कांच या प्लास्टिक के कोर के माध्यम से प्रकाश पल्स के रूप में प्रसारित करती है। यह तांबे की तारों की तुलना में काफी उच्च डेटा बैंडविड्थ और लंबी दूरी पर कम सिग्नल अपघटन प्रदान करती है। इसके अतिरिक्त, प्रकाश प्रसारण विद्युत चुम्बकीय हस्तक्षेप के प्रति प्रतिरक्षित होते हैं। हालाँकि, फाइबर ऑप्टिक केबल केवल प्रकाश के ऑप्टिकल संकेतों पर निर्भर करते हैं, न कि तांबे के तारों के माध्यम से गुजरने वाले विद्युत धाराओं पर।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Fiber optics transmit data as light pulses.",
+        "Fiber optics provide higher bandwidth than copper wires.",
+        "Printed answer key: (A) A, B and C only."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "216511e7-15dd-4871-a033-504899d6b3ab",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "79. कौन सा प्रोटोकॉल नेटवर्क के पार विश्वसनीय पैकेट\nडिलीवरी सुनिश्चित करने के लिए मुख्य रूप से जिम्मेदार है\nकनेक्शन स्थापित करके और पैकेट हानि की जाँच करके?",
+      "options_hindi": [
+        "ट्रांसमिशन कंट्रोल प्रोटोकॉल (TCP)",
+        "यूजर डाटाग्राम प्रोटोकॉल (UDP)",
+        "इंटरनेट कंट्रोल मैसेज प्रोटोकॉल (ICMP)",
+        "एड्रेस रिज़ॉल्यूशन प्रोटोकॉल (ARP)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which protocol is primarily responsible for\nensuring reliable packet delivery across networks\nby establishing connections and checking for\npacket loss?",
+      "options_english": [
+        "Transmission Control Protocol (TCP)",
+        "User Datagram Protocol (UDP)",
+        "Internet Control Message Protocol (ICMP)",
+        "Address Resolution Protocol (ARP)"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Transmission Control Protocol is a core\ntransport layer protocol that provides reliable,\nconnection-oriented data transmission across\ncomputer networks. Before transferring data,\nTCP establishes a logical connection via a\nthree-way handshake. It breaks data streams\ninto packets, assigns sequence numbers, tracks\npacket delivery, acknowledges received packets,\nand retransmits lost packets, ensuring complete\nand correctly ordered data delivery between\nnetworked systems.",
+      "explanation_hindi": "सही उत्तर (a) है। ट्रांसमिशन कंट्रोल प्रोटोकॉल एक मुख्य\nपरिवहन परत प्रोटोकॉल है जो कंप्यूटर नेटवर्क के\nबीच विश्वसनीय, कनेक्शन-उन्मुख डेटा ट्रांसमिशन\nप्रदान करता है। डेटा स्थानांतरित करने से पहले, TCP\nतीन-तरफा हैंडशेक के माध्यम से एक तार्किक कनेक्शन\nस्थापित करता है। यह डेटा धाराओं को पैकेट में तोड़ता है,\nक्रमांक असाइन करता है, पैकेट डिलीवरी को ट्रैक करता है,\nप्राप्त पैकेटों की स्वीकृति करता है, और खोए हुए पैकेटों को\nफिर से भेजता है, यह सुनिश्चित करते हुए कि नेटवर्क किए\nगए सिस्टम के बीच डेटा की पूर्ण और सही क्रम में डिलीवरी\nहो।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "TCP ensures reliable, connection-oriented data transmission.",
+        "TCP uses a three-way handshake to establish connections.",
+        "Printed answer key: (A) Transmission Control Protocol (TCP)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "dfacd4fe-e26d-4a9b-a1d3-2c2434e6b17b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "94. कौन सा सर्च इंजन ऑपरेटर वेब पृष्ठों को खोजने की अनुमति देता है जो या तो एक शब्द या दूसरे शब्द को शामिल करते हैं?",
+      "options_hindi": [
+        "`AND`",
+        "`NOT`",
+        "`NEAR`",
+        "`OR`"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which search engine operator allows finding web pages that contain either one term or another?",
+      "options_english": [
+        "`AND`",
+        "`NOT`",
+        "`NEAR`",
+        "`OR`"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The boolean operator `OR` in search engine syntax allows users to retrieve web pages containing either one specified search term, another search term, or both. Typing `OR` in capital letters between query terms broadens the search scope, instructing search engine algorithms to return documents matching any of the specified keywords rather than requiring all terms to appear together.",
+      "explanation_hindi": "सही उत्तर (d) है। सर्च इंजन सिंटैक्स में बूलियन ऑपरेटर `OR` उपयोगकर्ताओं को उन वेब पृष्ठों को पुनः प्राप्त करने की अनुमति देता है जो या तो एक निर्दिष्ट खोज शब्द, दूसरा खोज शब्द, या दोनों को शामिल करते हैं। प्रश्न शब्दों के बीच बड़े अक्षरों में `OR` टाइप करने से खोज का दायरा बढ़ता है, जो सर्च इंजन एल्गोरिदम को यह निर्देश देता है कि वे निर्दिष्ट की गई किसी भी कीवर्ड से मेल खाने वाले दस्तावेज़ लौटाएं, न कि सभी शब्दों का एक साथ उपस्थित होना आवश्यक है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "Boolean operators are used to refine search queries.",
+        "The `OR` operator broadens search results.",
+        "Printed answer key: (D) `OR`"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c9c748b0-8627-4aab-af66-55a3d22bdfd3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "वेब ब्राउज़िंग के संदर्भ में \"कुकी\" क्या है?",
+      "options_hindi": [
+        "एक हानिकारक पृष्ठभूमि कार्यक्रम जो स्वचालित रूप से हार्ड ड्राइव विभाजन और सिस्टम फ़ाइलों को मिटा देता है",
+        "एक छोटा पाठ फ़ाइल जो उपयोगकर्ता की प्राथमिकताओं और सत्र डेटा को बनाए रखने के लिए क्लाइंट कंप्यूटर पर संग्रहीत होती है",
+        "एक विशेष हार्डवेयर चिप जो नेटवर्क स्विच के अंदर स्थापित होती है ताकि इंटरनेट डेटा ट्रांसफर गति को बढ़ाया जा सके",
+        "एक समर्पित ग्राफिक्स कार्ड ड्राइवर जो उच्च-रिज़ॉल्यूशन वेब स्ट्रीमिंग वीडियो को प्रोसेस और प्रदर्शित करने के लिए डिज़ाइन किया गया है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is a “Cookie” in the context of web browsing?",
+      "options_english": [
+        "A malicious background program that automatically deletes hard drive partitions and system files",
+        "A small text file stored on a client computer to retain user preferences and session data",
+        "A specialized hardware chip installed inside a network switch to boost internet data transfer speeds",
+        "A dedicated graphics card driver designed to process and display high-resolution web streaming video"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "A browser cookie is a small text file placed onto a client computer by web servers during browsing sessions. Cookies store small tokens of data, such as user preferences, login authentication states, user configuration settings, and shopping cart items. When the user visits the same website again, the browser sends the cookie back to the server to maintain seamless user persistence.",
+      "explanation_hindi": "सही उत्तर (b) है। एक ब्राउज़र कुकी एक छोटा पाठ फ़ाइल है जो वेब सर्वरों द्वारा ब्राउज़िंग सत्रों के दौरान क्लाइंट कंप्यूटर पर रखा जाता है। कुकीज़ उपयोगकर्ता की प्राथमिकताओं, लॉगिन प्रमाणीकरण स्थितियों, उपयोगकर्ता कॉन्फ़िगरेशन सेटिंग्स और शॉपिंग कार्ट आइटम जैसे डेटा के छोटे टोकन को संग्रहीत करती हैं। जब उपयोगकर्ता फिर से उसी वेबसाइट पर जाता है, तो ब्राउज़र कुकी को सर्वर पर वापस भेजता है ताकि निर्बाध उपयोगकर्ता निरंतरता बनाए रखी जा सके।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "Cookies are used to store user preferences and session data.",
+        "They help maintain user persistence across browsing sessions.",
+        "Printed answer key: (B) A small text file stored on a client computer"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "947b3484-e8ee-4040-9e5c-3c50e6ae9adc",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से कौन सी टोपोलॉजी एकल\nकेंद्रीय निरंतर कोएक्सियल या ईथरनेट केबल का\nउपयोग करती है, जिसके साथ सभी नेटवर्क नोड्स\nड्रॉप लाइनों के माध्यम से जुड़े होते हैं?",
+      "options_hindi": [
+        "तारा टोपोलॉजी",
+        "रिंग टोपोलॉजी",
+        "मेष टोपोलॉजी",
+        "बस टोपोलॉजी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following topologies uses a single central continuous coaxial or ethernet cable to which all network nodes are attached via drop lines?",
+      "options_english": [
+        "Star Topology",
+        "Ring Topology",
+        "Mesh Topology",
+        "Bus Topology"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "In a bus network topology, all network nodes are connected sequentially to a single, continuous central transmission cable known as the backbone cable. Data signals emitted by a transmitting node travel along this common backbone cable in both directions, accessible by all attached drop lines. Termination resistors are placed at both ends of the central cable line to absorb reflecting signals.",
+      "explanation_hindi": "सही उत्तर (d) है। बस नेटवर्क टोपोलॉजी में, सभी नेटवर्क नोड्स एकल, निरंतर केंद्रीय ट्रांसमिशन केबल से क्रमबद्ध रूप से जुड़े होते हैं, जिसे बैकबोन केबल कहा जाता है। एक ट्रांसमिटिंग नोड द्वारा उत्सर्जित डेटा संकेत इस सामान्य बैकबोन केबल के साथ दोनों दिशाओं में यात्रा करते हैं, जो सभी जुड़े ड्रॉप लाइनों द्वारा सुलभ होते हैं। केंद्रीय केबल लाइन के दोनों सिरों पर टर्मिनेशन रेजिस्टर्स रखे जाते हैं ताकि परावर्तित संकेतों को अवशोषित किया जा सके।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "Bus topology connects all nodes to a single central cable.",
+        "Data signals travel along the backbone cable in both directions.",
+        "Termination resistors prevent signal reflection.",
+        "Printed answer key: (D) Bus Topology"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3c9d4774-fcff-43ca-98cf-2f6f11de53b9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "93. सूची I में नेटवर्क टोपोलॉजी को सूची II में उनके मुख्य विशेषताओं से मिलाएं:\nसूची I: (नेटवर्क टोपोलॉजी)\nP. स्टार टोपोलॉजी\nQ. बस टोपोलॉजी\nR. रिंग टोपोलॉजी\nS. मेष टोपोलॉजी\nसूची II: (मुख्य विशेषता)\nI. नोड्स एक निरंतर गोलाकार लूप में जुड़े हुए हैं\nII. एक केंद्रीय केबल जिसे बैकबोन कहा जाता है, जिसमें ड्रॉप लाइन्स हैं\nIII. हर नोड सीधे हर अन्य नोड से जुड़ा हुआ है\nIV. सभी नोड्स व्यक्तिगत रूप से एक केंद्रीय स्विच/हब से जुड़े हुए हैं",
+      "options_hindi": [
+        "P-IV, Q-II, R-I, S-III",
+        "P-II, Q-IV, R-III, S-I",
+        "P-IV, Q-I, R-II, S-III",
+        "P-III, Q-II, R-I, S-IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match the network topologies in List I with their core features in List II:\nList I: (Network Topology)\nP. Star Topology\nQ. Bus Topology\nR. Ring Topology\nS. Mesh Topology\nList II: (Core Feature)\nI. Nodes connected in a continuous circular loop\nII. Central cable called a backbone with drop lines\nIII. Every node connected to every other node directly\nIV. All nodes connected individually to a central switch/hub",
+      "options_english": [
+        "P-IV, Q-II, R-I, S-III",
+        "P-II, Q-IV, R-III, S-I",
+        "P-IV, Q-I, R-II, S-III",
+        "P-III, Q-II, R-I, S-IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "In a star topology, peripheral network nodes connect individually to a central switch or hub. In a bus topology, nodes connect to a single central cable known as the backbone cable. In a ring topology, nodes connect sequentially in a closed circular loop. In a mesh topology, every node connects directly to every other node, providing redundant, dedicated point-to-point links.",
+      "explanation_hindi": "सही उत्तर (a) है। स्टार टोपोलॉजी में, परिधीय नेटवर्क नोड्स व्यक्तिगत रूप से एक केंद्रीय स्विच या हब से जुड़े होते हैं। बस टोपोलॉजी में, नोड्स एक केंद्रीय केबल से जुड़े होते हैं जिसे बैकबोन केबल कहा जाता है। रिंग टोपोलॉजी में, नोड्स एक बंद गोलाकार लूप में अनुक्रमिक रूप से जुड़े होते हैं। मेष टोपोलॉजी में, हर नोड सीधे हर अन्य नोड से जुड़ा होता है, जो अतिरिक्त, समर्पित बिंदु-से-बिंदु लिंक प्रदान करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "In a star topology, nodes connect to a central switch.",
+        "In a bus topology, nodes connect to a single central cable.",
+        "Printed answer key: (A) P-IV, Q-II, R-I, S-III"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d4bd2c5c-67c9-422a-a321-648535ad66c9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक IP पते का कार्य क्या है?",
+      "options_hindi": [
+        "बाहरी पर्यावरणीय क्षति से अंतर्निहित तांबे के नेटवर्क वायरिंग को शारीरिक रूप से ढालना।",
+        "स्थानीय ब्राउज़र कैश मेमोरी में अस्थायी वेब पृष्ठ छवियों और स्टाइलशीट फ़ाइलों को संग्रहीत करना।",
+        "HTML अनुप्रयोगों के लिए जटिल गतिशील पृष्ठ लेआउट और उपयोगकर्ता इंटरफ़ेस तत्वों को प्रस्तुत करना।",
+        "डेटा पैकेट रूटिंग के लिए नेटवर्क पर एक डिवाइस की अद्वितीय पहचान करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the function of an IP Address?",
+      "options_english": [
+        "To physically shield underlying copper network wiring from external environmental degradation",
+        "To store temporary web page images and stylesheet files within local browser cache memory",
+        "To render complex dynamic page layouts and user interface elements for HTML applications",
+        "To uniquely identify a device on a network for data packet routing"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "An Internet Protocol address is a unique numerical label assigned to every device connected to a computer network that uses the IP protocol for communication. IP addresses serve two primary functions: network interface identification and location addressing. They enable routers to accurately address, route, and deliver data packets across interconnected local networks and global internet backbones.",
+      "explanation_hindi": "सही उत्तर (d) है। इंटरनेट प्रोटोकॉल पता एक अद्वितीय संख्या लेबल है जो हर डिवाइस को सौंपा जाता है जो उस कंप्यूटर नेटवर्क से जुड़ा होता है जो संचार के लिए IP प्रोटोकॉल का उपयोग करता है। IP पते दो मुख्य कार्य करते हैं: नेटवर्क इंटरफ़ेस पहचान और स्थान पता लगाना। ये राउटर को डेटा पैकेट को सटीक रूप से पता लगाने, रूट करने और वितरित करने में सक्षम बनाते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "IP addresses uniquely identify devices on a network.",
+        "They facilitate data packet routing.",
+        "Printed answer key: (D) To uniquely identify a device on a network for data packet routing."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "652f16d9-cfbc-4005-8b56-38c942c148d6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नेटवर्किंग में इंटरनेट सेवा प्रदाता (ISP) की मुख्य भूमिका क्या है?",
+      "options_hindi": [
+        "कॉर्पोरेट वेबसाइटों के लिए वेब पृष्ठों को डिजाइन करना और डेटाबेस प्रबंधन प्रणालियों की मेज़बानी करना।",
+        "उपयोगकर्ताओं और संगठनों को बुनियादी ढाँचा कनेक्टिविटी के माध्यम से इंटरनेट तक पहुँच प्रदान करना।",
+        "भौतिक नेटवर्क इंटरफेस कार्ड और कंप्यूटर प्रोसेसिंग यूनिट का निर्माण करना।",
+        "उपयोगकर्ता खोज कीवर्ड को निष्पादित करने योग्य प्रोग्रामिंग स्रोत कोड में अनुवाद करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What primary role does an Internet Service Provider (ISP) fulfill in networking?",
+      "options_english": [
+        "Designing web pages and hosting database management systems for corporate websites.",
+        "Granting users and organizations access to the Internet through infrastructure connectivity.",
+        "Manufacturing physical network interface cards and computer processing units.",
+        "Translating user search keywords into executable programming source codes."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "An Internet Service Provider is a commercial, community, or telecommunication entity that furnishes connectivity infrastructure enabling individuals, schools, businesses, and government agencies to access the global Internet. Providers deploy physical transmission channels, such as copper phone lines, fiber optic cables, coaxial systems, satellite links, and cellular networks, while managing routing equipment and allocating network addresses to maintain reliable endpoint connections to global backbones.",
+      "explanation_hindi": "सही उत्तर (b) है। इंटरनेट सेवा प्रदाता एक वाणिज्यिक, सामुदायिक, या दूरसंचार संस्था है जो कनेक्टिविटी बुनियादी ढाँचा प्रदान करती है जिससे व्यक्तियों, स्कूलों, व्यवसायों और सरकारी एजेंसियों को वैश्विक इंटरनेट तक पहुँच प्राप्त होती है। प्रदाता भौतिक ट्रांसमिशन चैनल, जैसे तांबे की फोन लाइनों, फाइबर ऑप्टिक केबल, कोएक्सियल सिस्टम, उपग्रह लिंक, और सेलुलर नेटवर्क को तैनात करते हैं, जबकि विश्वसनीय अंत बिंदु कनेक्शन बनाए रखने के लिए राउटिंग उपकरण का प्रबंधन करते हैं और नेटवर्क पते आवंटित करते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "इंटरनेट सेवा प्रदाता कनेक्टिविटी बुनियादी ढाँचा प्रदान करते हैं।",
+        "वे भौतिक ट्रांसमिशन चैनल तैनात करते हैं।",
+        "Printed answer key: (B) Granting users and organizations access to the Internet through infrastructure connectivity."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ea203842-db8f-469b-8a02-0162425ce5b2",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "46. इंटरनेट कनेक्शन प्रौद्योगिकियों के लिए डेटा ट्रांसफर गति का सही क्रम चुनें,\nधीमी से तेज़ तक:",
+      "options_hindi": [
+        "डायल-अप → DSL → ब्रॉडबैंड कोएक्सियल → फाइबर ऑप्टिक",
+        "फाइबर ऑप्टिक → ब्रॉडबैंड कोएक्सियल → DSL → डायल-अप",
+        "डायल-अप → फाइबर ऑप्टिक → DSL → ब्रॉडबैंड कोएक्सियल",
+        "DSL → डायल-अप → ब्रॉडबैंड कोएक्सियल → फाइबर ऑप्टिक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct order of data transfer speeds typical for internet connection technologies from slowest to fastest:",
+      "options_english": [
+        "Dial-up → DSL → Broadband Coaxial → Fiber Optic",
+        "Fiber Optic → Broadband Coaxial → DSL → Dial-up",
+        "Dial-up → Fiber Optic → DSL → Broadband Coaxial",
+        "DSL → Dial-up → Broadband Coaxial → Fiber Optic"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Internet access technologies have evolved significantly in data transfer capacity. Legacy dial-up over copper telephone lines offers the slowest speeds, capped at 56 kilobits per second. Digital Subscriber Line improves speed using higher copper frequencies. Broadband coaxial cable television networks deliver faster megabit-per-second throughput. Fiber optic technology provides the fastest speeds, transferring gigabits of data per second via light pulses.",
+      "explanation_hindi": "सही उत्तर (a) है। इंटरनेट एक्सेस प्रौद्योगिकियों ने डेटा ट्रांसफर क्षमता में महत्वपूर्ण विकास किया है। पुरानी डायल-अप सेवा तांबे की टेलीफोन लाइनों पर सबसे धीमी गति प्रदान करती है, जो 56 किलोबिट प्रति सेकंड पर सीमित होती है। डिजिटल सब्सक्राइबर लाइन उच्च तांबे की आवृत्तियों का उपयोग करके गति में सुधार करती है। ब्रॉडबैंड कोएक्सियल केबल टेलीविजन नेटवर्क तेज मेगाबिट प्रति सेकंड थ्रूपुट प्रदान करते हैं। फाइबर ऑप्टिक प्रौद्योगिकी सबसे तेज गति प्रदान करती है, जो प्रकाश पुंजों के माध्यम से डेटा के गीगाबिट्स को स्थानांतरित करती है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Dial-up offers speeds capped at 56 kbps.",
+        "DSL improves speed using higher frequencies.",
+        "Broadband coaxial delivers faster speeds than DSL.",
+        "Printed answer key: (A) Dial-up → DSL → Broadband Coaxial →"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "277bc224-b122-45ab-a51b-2c9801673496",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "26. कौन सी सेवा मानव-पठनीय डोमेन\nनामों (जैसे, `www.tgpsc.gov.in`) को मशीन-पठनीय आईपी पतों में बदलती है?",
+      "options_hindi": [
+        "डोमेन नाम प्रणाली (DNS)",
+        "डायनामिक होस्ट कॉन्फ़िगरेशन प्रोटोकॉल (DHCP)",
+        "सिंपल मेल ट्रांसफर प्रोटोकॉल (SMTP)",
+        "फाइल ट्रांसफर प्रोटोकॉल (FTP)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which service translates human-readable domain names (e.g., `www.tgpsc.gov.in`) into machine-readable IP addresses?",
+      "options_english": [
+        "Domain Name System (DNS)",
+        "Dynamic Host Configuration Protocol (DHCP)",
+        "Simple Mail Transfer Protocol (SMTP)",
+        "File Transfer Protocol (FTP)"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Domain Name System functions as a distributed hierarchical database and lookup directory for the Internet. Because human users easily remember textual domain names while network hardware routes packets using numerical IP addresses, the Domain Name System translates user-entered domain names into their matching binary or numeric IP addresses, enabling client browsers to correctly locate and connect to destination web servers.",
+      "explanation_hindi": "सही उत्तर (a) है। डोमेन नाम प्रणाली (DNS) एक वितरित पदानुक्रमित डेटाबेस और इंटरनेट के लिए लुकअप निर्देशिका के रूप में कार्य करती है। मानव उपयोगकर्ता पाठ्य डोमेन नामों को आसानी से याद रखते हैं, जबकि नेटवर्क हार्डवेयर संख्यात्मक आईपी पतों का उपयोग करके पैकेट को रूट करता है। डोमेन नाम प्रणाली उपयोगकर्ता द्वारा दर्ज किए गए डोमेन नामों को उनके मिलते-जुलते बाइनरी या संख्यात्मक आईपी पतों में बदलती है, जिससे क्लाइंट ब्राउज़र सही ढंग से गंतव्य वेब सर्वरों से जुड़ने में सक्षम होते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "डोमेन नाम प्रणाली (DNS) मानव-पठनीय डोमेन नामों को मशीन-पठनीय आईपी पतों में बदलती है।",
+        "Printed answer key: (A) Domain Name System (DNS)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "42a52bee-07b6-416c-941d-73a50d4d52b3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "57. सूची I में ब्राउज़र सुविधाओं को सूची II में उनके विवरणों के साथ मिलाएँ:\nसूची I: (ब्राउज़र विशेषता / कार्य)\nP. टैब्ड ब्राउज़िंग\nQ. ब्राउज़र इतिहास\nR. डाउनलोड प्रबंधक\nS. कुकीज़\nसूची II: (विवरण)\nI. पूर्व में देखी गई वेब पृष्ठों के वेब पते को ट्रैक और लॉग करता है\nII. एक ही ब्राउज़र विंडो में कई वेब पृष्ठों को खोलने की अनुमति देता है\nIII. छोटे डेटा टोकन जो स्थानीय रूप से उपयोगकर्ता लॉगिन स्थितियों और प्राथमिकताओं को याद रखने के लिए संग्रहीत होते हैं\nIV. डाउनलोडिंग को संभालता है, रोकता है और फिर से शुरू करता है",
+      "options_hindi": [
+        "P-II, Q-I, R-IV, S-III",
+        "P-III, Q-IV, R-II, S-I",
+        "P-I, Q-II, R-III, S-IV",
+        "P-IV, Q-III, R-I, S-II"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match the browser features in List I with their descriptions in List II:\nList I: (Browser Feature / Function)\nP. Tabbed Browsing\nQ. Browser History\nR. Download Manager\nS. Cookies\nList II: (Description)\nI. Tracks and logs the web addresses of previously visited web pages\nII. Enables opening multiple web pages within a single browser window\nIII. Small data tokens stored locally to remember user login states and preferences\nIV. Handles, pauses, and resumes downloading",
+      "options_english": [
+        "P-II, Q-I, R-IV, S-III",
+        "P-III, Q-IV, R-II, S-I",
+        "P-I, Q-II, R-III, S-IV",
+        "P-IV, Q-III, R-I, S-II"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Tabbed browsing allows users to open and manage multiple web pages simultaneously within a single browser window. Browser history records a chronological log of previously visited web page addresses. A download manager oversees, pauses, and resumes file transfers from web servers to local storage. Browser cookies are small data tokens stored locally to maintain user login states and customized site preferences.",
+      "explanation_hindi": "सही उत्तर (a) है। टैब्ड ब्राउज़िंग उपयोगकर्ताओं को एक ही ब्राउज़र विंडो में कई वेब पृष्ठों को एक साथ खोलने और प्रबंधित करने की अनुमति देती है। ब्राउज़र इतिहास पूर्व में देखी गई वेब पृष्ठों के पते का कालानुक्रमिक लॉग रिकॉर्ड करता है। डाउनलोड प्रबंधक वेब सर्वर से स्थानीय संग्रहण में फ़ाइल ट्रांसफर को देखता है, रोकता है और फिर से शुरू करता है। ब्राउज़र कुकीज़ छोटे डेटा टोकन होते हैं जो स्थानीय रूप से उपयोगकर्ता लॉगिन स्थितियों और अनुकूलित साइट प्राथमिकताओं को बनाए रखने के लिए संग्रहीत होते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Tabbed browsing allows multiple pages in one window.",
+        "Browser history logs previously visited URLs.",
+        "Download managers facilitate file transfers.",
+        "Printed answer key: (A) P-II, Q-I, R-IV, S-III"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9d512ca2-4899-437f-b073-c5e4cc426c14",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक वेब ब्राउज़र का मुख्य कार्य क्या है?\n(1) सभी सार्वजनिक वेबसाइटों को वैश्विक सर्वर नेटवर्क में अनुक्रमित, अनुक्रमणिका-कैटलॉग और रैंक करना\n(2) स्थानीय नेटवर्क में क्लाइंट एंडपॉइंट्स को गतिशील आईपी पता कॉन्फ़िगरेशन असाइन करना\n(3) दूरस्थ वेब सर्वरों से प्राप्त वेब सामग्री को पुनः प्राप्त करना, व्याख्या करना और प्रदर्शित करना",
+      "options_hindi": [
+        "सभी सार्वजनिक वेबसाइटों को वैश्विक सर्वर नेटवर्क में अनुक्रमित, अनुक्रमणिका-कैटलॉग और रैंक करना",
+        "स्थानीय नेटवर्क में क्लाइंट एंडपॉइंट्स को गतिशील आईपी पता कॉन्फ़िगरेशन असाइन करना",
+        "दूरस्थ वेब सर्वरों से प्राप्त वेब सामग्री को पुनः प्राप्त करना, व्याख्या करना और प्रदर्शित करना",
+        "अन्य विकल्प"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the main function of a web browser?\nTo retrieve, interpret, and display web content fetched from remote web servers.",
+      "options_english": [
+        "To index, index-catalog, and rank all public websites across global server networks",
+        "To assign dynamic IP address configurations to client endpoints in local networks",
+        "To retrieve, interpret, and display web content fetched from remote web servers",
+        "Other options"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A web browser serves as a client software application designed to interact with remote web servers across network connections. When provided with a Uniform Resource Locator, the browser sends network requests using standard protocols, fetches hyperlinked document files, parses HTML and CSS markup, executes client-side scripts, and renders structured graphical web pages onto client display devices for seamless user interaction, reading, and digital media access.",
+      "explanation_hindi": "सही उत्तर (c) है। एक वेब ब्राउज़र एक क्लाइंट सॉफ़्टवेयर एप्लिकेशन के रूप में कार्य करता है जो नेटवर्क कनेक्शनों के माध्यम से दूरस्थ वेब सर्वरों के साथ बातचीत करने के लिए डिज़ाइन किया गया है। जब इसे एक यूनिफ़ॉर्म रिसोर्स लोकेटर प्रदान किया जाता है, तो ब्राउज़र मानक प्रोटोकॉल का उपयोग करके नेटवर्क अनुरोध भेजता है, हाइपरलिंक किए गए दस्तावेज़ फ़ाइलों को लाता है, HTML और CSS मार्कअप को पार्स करता है, क्लाइंट-साइड स्क्रिप्ट को निष्पादित करता है, और उपयोगकर्ता इंटरैक्शन, पढ़ने और डिजिटल मीडिया तक पहुँच के लिए संरचित ग्राफिकल वेब पृष्ठों को क्लाइंट डिस्प्ले उपकरणों पर प्रदर्शित करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "Web browsers are essential for accessing and displaying web content.",
+        "They use protocols like HTTP and HTTPS to communicate with web servers.",
+        "Printed answer key: (C) To retrieve, interpret, and display web content fetched from remote web servers."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1838c335-0f46-4e5b-9da5-f5b27d0c3828",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "20. कौन सी नेटवर्क टोपोलॉजी सभी नोड्स को एक केंद्रीय कनेक्टिंग डिवाइस जैसे कि स्विच या हब से जोड़ती है?",
+      "options_hindi": [
+        "बस टोपोलॉजी",
+        "रिंग टोपोलॉजी",
+        "मैश टोपोलॉजी",
+        "स्टार टोपोलॉजी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which network topology connects all nodes to a central connecting device such as a switch or hub?",
+      "options_english": [
+        "Bus Topology",
+        "Ring Topology",
+        "Mesh Topology",
+        "Star Topology"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "In a star network topology, all individual computers and peripheral network nodes are connected independently to a central networking device, such as a switch or hub, using point-to-point physical links. Data sent from a node travels directly to the central device before being forwarded to its destination, preventing single cable disruptions from affecting unconnected nodes, although central switch failure collapses network connectivity.",
+      "explanation_hindi": "सही उत्तर (d) है। एक स्टार नेटवर्क टोपोलॉजी में, सभी व्यक्तिगत कंप्यूटर और पेरिफेरल नेटवर्क नोड्स को एक केंद्रीय नेटवर्किंग डिवाइस, जैसे कि स्विच या हब से स्वतंत्र रूप से जोड़ा जाता है, जो पॉइंट-टू-पॉइंट भौतिक लिंक का उपयोग करता है। एक नोड से भेजा गया डेटा सीधे केंद्रीय डिवाइस पर जाता है, फिर इसे उसके गंतव्य पर अग्रेषित किया जाता है, जिससे एकल केबल विघटन से अनजुड़े नोड्स पर प्रभाव नहीं पड़ता है, हालांकि केंद्रीय स्विच की विफलता नेटवर्क कनेक्टिविटी को बाधित कर देती है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Star topology connects all nodes to a central device.",
+        "It prevents disruptions from affecting unconnected nodes.",
+        "Printed answer key: (D) Star Topology"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ab1aa0af-f9bc-4181-ad62-6c94864393e6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "47. निम्नलिखित चरणों को एक खोज इंजन द्वारा खोज परिणाम देने के लिए अपनाए गए क्रम में व्यवस्थित करें:\nI. एक डेटाबेस में एकत्रित सामग्री को अनुक्रमित करना\nII. लिंक के माध्यम से वेब पृष्ठों को क्रॉल करना\nIII. उपयोगकर्ता क्वेरी को संसाधित करना और मिलते-जुलते पृष्ठों को रैंक करना\nIV. उपयोगकर्ता को खोज इंजन परिणाम पृष्ठ (SERP) प्रदर्शित करना",
+      "options_hindi": [
+        "II, I, III, IV",
+        "I, II, III, IV",
+        "III, II, I, IV",
+        "II, III, I, IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following steps in the sequence followed by a search engine to deliver search results:\nI. Indexing collected content into a database\nII. Crawling web pages via links\nIII. Processing user query and ranking matching pages\nIV. Displaying Search Engine Results Page (SERP) to user",
+      "options_english": [
+        "II, I, III, IV",
+        "I, II, III, IV",
+        "III, II, I, IV",
+        "II, III, I, IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Search engines process web information through a sequential operational workflow. Automated software crawlers first browse the web to discover pages by traversing hyperlinks. Next, the collected page content is organized and stored in an index database. When a user submits a search query, the engine processes the keywords, ranks matching documents using relevance algorithms, and presents the Search Engine Results Page.",
+      "explanation_hindi": "सही उत्तर (a) है। खोज इंजन वेब जानकारी को एक अनुक्रमिक संचालन कार्यप्रवाह के माध्यम से संसाधित करते हैं। स्वचालित सॉफ़्टवेयर क्रॉलर पहले हाइपरलिंक्स के माध्यम से पृष्ठों को खोजने के लिए वेब को ब्राउज़ करते हैं। इसके बाद, एकत्रित पृष्ठ की सामग्री को एक अनुक्रमणिका डेटाबेस में व्यवस्थित और संग्रहीत किया जाता है। जब उपयोगकर्ता एक खोज क्वेरी प्रस्तुत करता है, तो इंजन कीवर्ड को संसाधित करता है, प्रासंगिकता एल्गोरिदम का उपयोग करके मिलते-जुलते दस्तावेजों को रैंक करता है, और खोज इंजन परिणाम पृष्ठ प्रस्तुत करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Search engines use crawlers to discover web pages.",
+        "Collected content is indexed in a database.",
+        "User queries are processed to rank results.",
+        "Printed answer key: (A) II, I, III, IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "31a64259-c367-488f-90d3-ab401bd5647a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "11. निम्नलिखित नेटवर्किंग कवरेज क्षेत्रों को उनके भौगोलिक दायरे के अनुसार क्रमबद्ध करें (सबसे छोटे से सबसे बड़े):\nI. वाइड एरिया नेटवर्क (WAN)\nII. लोकल एरिया नेटवर्क (LAN)\nIII. मेट्रोपॉलिटन एरिया नेटवर्क (MAN)\nIV. पर्सनल एरिया नेटवर्क (PAN)",
+      "options_hindi": [
+        "IV, II, III, I",
+        "II, IV, III, I",
+        "IV, III, II, I",
+        "I, III, II, IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following networking coverage areas in ascending order of their geographic scope (smallest to largest):\nI. Wide Area Network (WAN)\nII. Local Area Network (LAN)\nIII. Metropolitan Area Network (MAN)\nIV. Personal Area Network (PAN)",
+      "options_english": [
+        "IV, II, III, I",
+        "II, IV, III, I",
+        "IV, III, II, I",
+        "I, III, II, IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Network classifications based on geographic scope arrange from smallest to largest coverage area. A Personal Area Network spans a few meters around an individual user. A Local Area Network covers a single building or room like an office or lab. A Metropolitan Area Network spans across an entire city or town. A Wide Area Network covers vast regions, countries, or the entire globe.",
+      "explanation_hindi": "सही उत्तर (a) है। नेटवर्क वर्गीकरण भौगोलिक दायरे के आधार पर सबसे छोटे से सबसे बड़े कवरेज क्षेत्र में व्यवस्थित होते हैं। पर्सनल एरिया नेटवर्क एक व्यक्तिगत उपयोगकर्ता के चारों ओर कुछ मीटर तक फैला होता है। लोकल एरिया नेटवर्क एक कार्यालय या प्रयोगशाला जैसे एकल भवन या कमरे को कवर करता है। मेट्रोपॉलिटन एरिया नेटवर्क एक पूरे शहर या कस्बे में फैला होता है। वाइड एरिया नेटवर्क विशाल क्षेत्रों, देशों या पूरे globe को कवर करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "Personal Area Network (PAN) is the smallest network type.",
+        "Wide Area Network (WAN) is the largest network type.",
+        "Printed answer key: (A) IV, II, III, I"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5c14cf6a-c487-44dd-a6fe-60905640a49f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "35. निम्नलिखित ऑप्टिकल इंटरनेट कनेक्शन के चरणों को\nउपयोगकर्ता के स्मार्टफोन तक वाई-फाई के माध्यम से\nसंकेत प्रवाह के तार्किक क्रम में व्यवस्थित करें:\nI. फाइबर ऑप्टिक संकेत मोडेम तक पहुँचता है\nII. मोडेम ऑप्टिकल संकेत को डिजिटल डेटा में परिवर्तित करता है\nIII. राउटर डिजिटल डेटा प्राप्त करता है और वाई-फाई संकेत प्रसारित करता है\nIV. स्मार्टफोन वाई-फाई से जुड़ता है और डेटा पैकेट प्राप्त करता है",
+      "options_hindi": [
+        "I, II, III, IV",
+        "II, I, IV, III",
+        "I, III, II, IV",
+        "III, II, I, IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following optical internet connection steps in logical order of signal flow from the Internet infrastructure to a user’s smartphone via Wi-Fi:\nI. Fiber Optic signal reaches the Modem\nII. Modem converts optical signal to digital data\nIII. Router receives digital data and broadcasts Wi-Fi signals\nIV. Smartphone connects to Wi-Fi and receives data packets",
+      "options_english": [
+        "I, II, III, IV",
+        "II, I, IV, III",
+        "I, III, II, IV",
+        "III, II, I, IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The flow of internet data across home connections follows a structured hardware sequence. An incoming optical fiber line carries light signals directly into the modem. The modem converts optical light pulses into digital electronic data. The router receives this digital data, processes network routing, and broadcasts wireless Wi-Fi radio signals. Finally, a smartphone connects to the Wi-Fi network and receives the incoming data packets.",
+      "explanation_hindi": "सही उत्तर (a) है। इंटरनेट डेटा का प्रवाह घरेलू कनेक्शनों में एक संरचित हार्डवेयर अनुक्रम का पालन करता है। एक आने वाली ऑप्टिकल फाइबर लाइन प्रकाश संकेतों को सीधे मोडेम में ले जाती है। मोडेम ऑप्टिकल प्रकाश पल्स को डिजिटल इलेक्ट्रॉनिक डेटा में परिवर्तित करता है। राउटर इस डिजिटल डेटा को प्राप्त करता है, नेटवर्क रूटिंग को संसाधित करता है, और वायरलेस वाई-फाई रेडियो संकेत प्रसारित करता है। अंततः, स्मार्टफोन वाई-फाई नेटवर्क से जुड़ता है और आने वाले डेटा पैकेट प्राप्त करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Fiber optic signals are converted to digital data by modems.",
+        "Routers broadcast Wi-Fi signals after processing data.",
+        "Printed answer key: (A) I, II, III, IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "88363dd8-0e3e-44fe-ad2f-3dbddfc0879d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "52. इंटरनेट कनेक्शन के माध्यम से डेटा को डाउनलोड या अपलोड करने की अधिकतम गति के लिए मानक शब्द क्या है, जिसे आमतौर पर Mbps या Gbps में व्यक्त किया जाता है?",
+      "options_hindi": [
+        "औसत पिंग विलंबता दर",
+        "नेटवर्क फ़्रीक्वेंसी मॉड्यूलेटर",
+        "कुल पैकेट टकराव दर",
+        "डेटा बैंडविड्थ / थ्रूपुट"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the standard term for the maximum speed at which data can be downloaded or uploaded over an internet connection, typically expressed in Mbps or Gbps?",
+      "options_english": [
+        "Average Ping Latency Rate",
+        "Network Frequency Modulator",
+        "Total Packet Collision Rate",
+        "Data Bandwidth / Throughput"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Network bandwidth or throughput refers to the maximum volume of digital data that can be transmitted across an internet connection in a specified time frame. Commonly expressed in megabits per second or gigabits per second, this metric determines how rapidly data streams can download or upload between client devices and remote servers over wired, wireless, or optical telecommunication channels.",
+      "explanation_hindi": "सही उत्तर (d) है। नेटवर्क बैंडविड्थ या थ्रूपुट उस अधिकतम मात्रा को संदर्भित करता है जिसमें डिजिटल डेटा को एक निर्दिष्ट समय सीमा में इंटरनेट कनेक्शन के माध्यम से प्रसारित किया जा सकता है। इसे आमतौर पर मेगाबिट प्रति सेकंड या गीगाबिट प्रति सेकंड में व्यक्त किया जाता है, यह मेट्रिक निर्धारित करता है कि डेटा स्ट्रीम कितनी तेजी से क्लाइंट उपकरणों और दूरस्थ सर्वरों के बीच डाउनलोड या अपलोड हो सकती है, चाहे वह वायर्ड, वायरलेस, या ऑप्टिकल दूरसंचार चैनलों के माध्यम से हो।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "Bandwidth is expressed in Mbps or Gbps.",
+        "It determines the speed of data transmission.",
+        "Throughput refers to the actual data transfer rate.",
+        "Printed answer key: (D) Data Bandwidth / Throughput"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

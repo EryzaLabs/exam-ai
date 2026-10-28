@@ -1,0 +1,792 @@
+{
+  "test_id": "839d2892-3c0c-4dc9-9e86-75f9a5abea08",
+  "test_name": "Topic Test: CYBERSECURITY_AND_DATA_PROTECTION - Part 4",
+  "type": "topic_wise",
+  "topic": "cybersecurity_and_data_protection",
+  "created_at": "2026-10-28T18:55:06.552690",
+  "questions": [
+    {
+      "id": "965c4584-8aa3-4b79-828d-1f026e43d148",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "डिजिटल व्यक्तिगत डेटा संरक्षण (DPDP) अधिनियम, 2023 के तहत, जिस व्यक्ति से व्यक्तिगत डेटा संबंधित है, उसे कानूनी रूप से निम्नलिखित के रूप में परिभाषित किया गया है:",
+      "options_hindi": [
+        "डेटा फिड्यूशियरी",
+        "डेटा प्रोसेसर",
+        "डेटा प्रिंसिपल",
+        "डेटा प्रोटेक्शन ऑफिसर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Under the Digital Personal Data Protection (DPDP) Act, 2023, the individual to whom the personal data relates is legally defined as the:",
+      "options_english": [
+        "Data Fiduciary",
+        "Data Processor",
+        "Data Principal",
+        "Data Protection Officer"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Digital Personal Data Protection Act, 2023 establishes legal definitions for entities involved in data processing within India. The individual to whom personal data relates is defined as the Data Principal. Where such an individual is a child or a person with a disability, the legal definition extends to include their parent or lawful guardian, empowering them to exercise legal rights over personal data management.",
+      "explanation_hindi": "सही उत्तर (c) है। डिजिटल व्यक्तिगत डेटा संरक्षण अधिनियम, 2023 में डेटा प्रोसेसिंग में शामिल संस्थाओं के लिए कानूनी परिभाषाएँ स्थापित की गई हैं। जिस व्यक्ति से व्यक्तिगत डेटा संबंधित है, उसे डेटा प्रिंसिपल के रूप में परिभाषित किया गया है। यदि ऐसा व्यक्ति एक बच्चा या विकलांग व्यक्ति है, तो कानूनी परिभाषा उनके माता-पिता या कानूनी अभिभावक को भी शामिल करती है, जिससे उन्हें व्यक्तिगत डेटा प्रबंधन पर कानूनी अधिकारों का प्रयोग करने का अधिकार मिलता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "easy",
+      "key_facts": [
+        "Digital Personal Data Protection Act, 2023 establishes legal definitions for data processing entities.",
+        "Data Principal is the individual to whom personal data relates.",
+        "Legal definitions extend to include guardians for children or disabled individuals.",
+        "Printed answer key: (C) Data Principal"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "489dbdcc-6557-496a-bf53-9ce791f0c250",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "38. निम्नलिखित बयानों पर विचार करें जो\nडिनायल-ऑफ-सेवा (DoS) और वितरित डिनायल-ऑफ-सेवा (DDoS) हमलों से संबंधित हैं:\nA. एक DoS हमला आमतौर पर एक\nएकल स्रोत कंप्यूटर से उत्पन्न होता है।\nB. एक DDoS हमला समझौता किए गए उपकरणों के नेटवर्क का उपयोग करता है जिसे बॉटनेट कहा जाता है।\nC. फ़ायरवॉल अकेले हमेशा विशेष\nमिटिगेशन सेवाओं के बिना उच्च-परिवाह DDoS हमलों को रोक सकते हैं।\nD. उच्च मात्रा का SYN बाढ़ एक सामान्य\nप्रोटोकॉल-आधारित DoS हमला है।\nउपरोक्त में से कौन से बयान सही हैं?",
+      "options_hindi": [
+        "केवल A, B और D",
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A, C और D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Denial-of-Service (DoS) and Distributed Denial-of-Service (DDoS) attacks:\nA. A DoS attack typically originates from a single source computer.\nB. A DDoS attack utilizes a network of compromised devices known as a botnet.\nC. Firewalls alone can always effortlessly stop high-volume DDoS attacks without specialized mitigation services.\nD. High volume SYN flood is a common protocol-based DoS attack.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and D only",
+        "A, B and C only",
+        "B, C and D only",
+        "A, C and D only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Denial-of-Service attacks disrupt network availability through diverse operational methodologies. A standard DoS attack originates from a single source device, whereas a Distributed Denial-of-Service attack utilizes a network of compromised devices, called a botnet, to amplify traffic volume. SYN flooding is a common protocol-based attack that exhausts server connections. Standard firewalls alone cannot effortlessly mitigate high-volume DDoS attacks without specialized scrubbing services.",
+      "explanation_hindi": "सही उत्तर (a) है। डिनायल-ऑफ-सेवा हमले विभिन्न संचालन विधियों के माध्यम से नेटवर्क उपलब्धता को बाधित करते हैं। एक मानक DoS हमला एक एकल स्रोत उपकरण से उत्पन्न होता है, जबकि एक वितरित डिनायल-ऑफ-सेवा हमला समझौता किए गए उपकरणों के नेटवर्क का उपयोग करता है, जिसे बॉटनेट कहा जाता है, ट्रैफ़िक मात्रा को बढ़ाने के लिए। SYN बाढ़ एक सामान्य प्रोटोकॉल-आधारित हमला है जो सर्वर कनेक्शनों को समाप्त करता है। मानक फ़ायरवॉल अकेले उच्च-परिवाह DDoS हमलों को बिना विशेष स्क्रबिंग सेवाओं के आसानी से रोक नहीं सकते।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "DoS attacks originate from a single source device.",
+        "DDoS attacks use a botnet to amplify traffic volume.",
+        "SYN flooding is a common protocol-based DoS attack.",
+        "Printed answer key: (A) A, B and D only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5fddf339-c773-49d9-8c2f-94ca304e8cb0",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "7।\n\nकौन सा ब्राउज़र प्रोटोकॉल सुनिश्चित करता है कि डेटा\nजो एक वेब ब्राउज़र और एक\nवेबसाइट के बीच प्रेषित होता है, एन्क्रिप्टेड और सुरक्षित है?",
+      "options_hindi": [
+        "HTTPS",
+        "HTTP",
+        "FTP",
+        "टेलनेट"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which browser protocol ensures that data transmitted between a web browser and a website is encrypted and secure?",
+      "options_english": [
+        "HTTPS",
+        "HTTP",
+        "FTP",
+        "Telnet"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Secure web browsing protocols safeguard communication privacy and data integrity between client web browsers and web servers. Hypertext Transfer Protocol Secure utilizes cryptographic protocols, such as Transport Layer Security, to encrypt transmitted data. This encryption protects sensitive user communications, credit card details, and administrative login credentials from eavesdropping, packet interception, and session tampering by unauthorized third parties during transit across public internet network routes.",
+      "explanation_hindi": "सही उत्तर (a) है। सुरक्षित वेब ब्राउज़िंग प्रोटोकॉल ग्राहक वेब ब्राउज़रों और वेब सर्वरों के बीच संचार गोपनीयता और डेटा अखंडता की रक्षा करते हैं। हाइपरटेक्स्ट ट्रांसफर प्रोटोकॉल सुरक्षित, क्रिप्टोग्राफिक प्रोटोकॉल, जैसे कि ट्रांसपोर्ट लेयर सुरक्षा का उपयोग करके प्रेषित डेटा को एन्क्रिप्ट करता है। यह एन्क्रिप्शन संवेदनशील उपयोगकर्ता संचार, क्रेडिट कार्ड विवरण और प्रशासनिक लॉगिन क्रेडेंशियल्स को अवैध तीसरे पक्ष द्वारा सुनने, पैकेट इंटरसेप्शन और सत्र छेड़छाड़ से सुरक्षित करता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "HTTPS encrypts data between the browser and the server.",
+        "Transport Layer Security is a key component of HTTPS.",
+        "Printed answer key: (A) HTTPS"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b08fa0ad-03bf-4a15-9e54-eee5eec2af94",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "12. सूची I को सूची II से मिलाएं:\nसूची I: (शिक्षा में एआई अवधारणाएँ)\nP. भ्रांति\nQ. एल्गोरिदम पूर्वाग्रह\nR. डीपफेक\nS. डेटा संग्रहण\nसूची II: (नैतिक चिंताएँ)\nI. जनरेटिव एआई द्वारा आत्मविश्वास से भरी लेकिन पूरी तरह से गलत तथ्यात्मक जानकारी उत्पन्न करना\nII. पूर्वाग्रहित प्रशिक्षण डेटा के कारण प्रणालीगत सामाजिक असमानताओं को बढ़ावा देना\nIII. बिना सहमति के व्यक्तियों की नकल करने के लिए हाइपर-यथार्थवादी ऑडियो/वीडियो का संश्लेषण करना\nIV. वाणिज्यिक प्रोफाइलिंग के लिए छात्र व्यवहार डेटा का अनियमित संग्रह\nनीचे दिए गए कोड का उपयोग करके सही उत्तर चुनें:",
+      "options_hindi": [
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-III, R-II, S-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (AI Concepts in Education)\nP. Hallucination\nQ. Algorithmic Bias\nR. Deepfake\nS. Data Harvesting\nList II: (Ethical Concerns)\nI. Generative AI generating confident but completely false factual information\nII. Perpetuating systemic societal inequalities due to skewed training data\nIII. Synthesizing hyper-realistic audio/video to impersonate individuals without consent\nIV. Unregulated collection of student behavioral data for commercial profiling\nSelect the correct answer using the codes given below:",
+      "options_english": [
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-III, R-II, S-I"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Firewalls regulate data traffic crossing network boundaries to enforce organizational security policies. A packet-filtering firewall inspects individual incoming and outgoing network data packets operating at the network and transport layers of the Open Systems Interconnection model. It evaluates packet headers against predefined filtering rules, examining parameters such as source IP address, destination IP address, port numbers, and protocol types to permit or block traffic.",
+      "explanation_hindi": "सही उत्तर (b) है। फ़ायरवॉल नेटवर्क सीमाओं को पार करने वाले डेटा ट्रैफ़िक को नियंत्रित करते हैं ताकि संगठनात्मक सुरक्षा नीतियों को लागू किया जा सके। एक पैकेट-फ़िल्टरिंग फ़ायरवॉल नेटवर्क और ट्रांसपोर्ट परतों पर काम करने वाले व्यक्तिगत आने वाले और जाने वाले नेटवर्क डेटा पैकेटों का निरीक्षण करता है। यह पूर्वनिर्धारित फ़िल्टरिंग नियमों के खिलाफ पैकेट हेडर का मूल्यांकन करता है, जैसे स्रोत आईपी पता, गंतव्य आईपी पता, पोर्ट नंबर और प्रोटोकॉल प्रकारों की जांच करता है ताकि ट्रैफ़िक की अनुमति या अवरुद्ध किया जा सके।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "hard",
+      "key_facts": [
+        "Packet-filtering firewalls inspect data packets at network layers.",
+        "They evaluate packet headers against filtering rules.",
+        "Printed answer key: (B) Packet-filtering firewall"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7f4b1a60-99b5-4fca-9c81-fd4954b8eb32",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "8।\n\nआधुनिक स्वचालित साहित्यिक चोरी पहचान उपकरण\nमुख्य रूप से छात्र प्रस्तुतियों में संभावित बौद्धिक\nसंपत्ति उल्लंघनों की पहचान कैसे करते हैं?",
+      "options_hindi": [
+        "प्रकाशित साहित्य और वेबसाइटों के डेटाबेस के खिलाफ\nपाठ्य स्ट्रिंग्स का मिलान करके",
+        "छात्र लेखक की भावनात्मक भावना,\nशब्दावली जटिलता, और टाइपिंग रिदम का विश्लेषण करके",
+        "दस्तावेज़ फ़ॉन्ट विकल्पों, मार्जिन शैलियों, और संरचनात्मक\nलेआउट फ़ॉर्मेटिंग संगति का मूल्यांकन करके",
+        "जिस भौतिक भौगोलिक स्थान और आईपी नेटवर्क पते से\nकार्य सौंपा गया था, उसे ट्रैक करके"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "How do modern automated plagiarism detection tools primarily identify potential intellectual property violations in student submissions?",
+      "options_english": [
+        "By matching textual strings against databases of published literature and websites",
+        "By analyzing the emotional sentiment, vocabulary complexity, and typing rhythm of the student author",
+        "By evaluating document font choices, margin styles, and structural layout formatting consistency",
+        "By tracking the physical geographical location and IP network address from which the assignment was submitted"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Modern plagiarism detection tools primarily identify potential intellectual property violations by matching textual strings against extensive databases of published literature and websites. This method allows the software to find similarities in phrasing, structure, and content, which may indicate plagiarism. The effectiveness of these tools relies on their ability to access a wide range of sources, ensuring comprehensive coverage of existing works. Consequently, they play a crucial role in maintaining academic integrity and originality in student submissions.",
+      "explanation_hindi": "सही उत्तर (a) है। आधुनिक साहित्यिक चोरी पहचान उपकरण मुख्य रूप से पाठ्य स्ट्रिंग्स को प्रकाशित साहित्य और वेबसाइटों के व्यापक डेटाबेस के खिलाफ मिलाकर संभावित बौद्धिक संपत्ति उल्लंघनों की पहचान करते हैं। यह विधि सॉफ़्टवेयर को वाक्यांशों, संरचना और सामग्री में समानताएँ खोजने की अनुमति देती है, जो साहित्यिक चोरी का संकेत दे सकती हैं। इन उपकरणों की प्रभावशीलता उनके द्वारा व्यापक स्रोतों तक पहुँचने की क्षमता पर निर्भर करती है, जो छात्र प्रस्तुतियों में शैक्षणिक अखंडता और मौलिकता बनाए रखने में महत्वपूर्ण भूमिका निभाते हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Plagiarism detection tools match text against published sources.",
+        "They help maintain academic integrity.",
+        "Printed answer key: (A) By matching textual strings against databases of published literature and websites"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "59263a44-a7be-47ef-bafd-06bd29b665eb",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "67. कौन सा पोर्ट सुरक्षा तंत्र एक नेटवर्क\nप्रशासक को केवल विशिष्ट अधिकृत हार्डवेयर\nनेटवर्क उपकरणों को भौतिक नेटवर्क इंटरफेस\nपते के आधार पर वाई-फाई एक्सेस की अनुमति\nदेने की अनुमति देता है?",
+      "options_hindi": [
+        "गतिशील आईपी रूटिंग नियंत्रण",
+        "स्थिर पोर्ट फॉरवर्डिंग नियम",
+        "मैक्स पता फ़िल्टरिंग नियंत्रण",
+        "डीएचसीपी पता पट्टे फ़िल्टरिंग"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which port security mechanism allows a network administrator to permit Wi-Fi access only to specific authorized hardware network devices based on physical network interface addresses?",
+      "options_english": [
+        "Dynamic IP routing control",
+        "Static port forwarding rule",
+        "MAC address filtering control",
+        "DHCP address lease filtering"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Wireless network access control relies on physical hardware identification parameters to regulate connected endpoint devices. Media Access Control address filtering allows network administrators to configure wireless routers to permit connections only from specific physical network interface cards. By checking incoming connection requests against an approved whitelist of hardware MAC addresses, the network denies unauthorized endpoint hardware access even if users know passwords.",
+      "explanation_hindi": "सही उत्तर (c) है। वायरलेस नेटवर्क एक्सेस नियंत्रण भौतिक हार्डवेयर पहचान मापदंडों पर निर्भर करता है ताकि जुड़े हुए एंडपॉइंट उपकरणों को नियंत्रित किया जा सके। मीडिया एक्सेस कंट्रोल पता फ़िल्टरिंग नेटवर्क प्रशासकों को वायरलेस राउटर को कॉन्फ़िगर करने की अनुमति देती है ताकि केवल विशिष्ट भौतिक नेटवर्क इंटरफेस कार्ड से कनेक्शन की अनुमति दी जा सके। स्वीकृत हार्डवेयर मैक पते की एक श्वेतसूची के खिलाफ आने वाले कनेक्शन अनुरोधों की जांच करके, नेटवर्क अनधिकृत एंडपॉइंट हार्डवेयर एक्सेस को अस्वीकार करता है, भले ही उपयोगकर्ताओं को पासवर्ड पता हो।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "MAC address filtering is a security measure that restricts network access based on device hardware addresses.",
+        "It helps prevent unauthorized access even if passwords are known.",
+        "Printed answer key: (C) MAC address filtering control"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d80689a5-ef2e-4c95-b673-a6df6dc98e13",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II से मिलाएँ:\nसूची I: (डीपीडीपी अधिनियम 2023 की इकाई/शब्द)\nP. डेटा प्रिंसिपल\nQ. डेटा फिड्यूशियरी\nR. डेटा प्रोसेसर\nS. डेटा प्रोटेक्शन बोर्ड\nसूची II: (परिभाषा)\nI. व्यक्तिगत डेटा के प्रसंस्करण के उद्देश्य और साधनों का निर्धारण करने वाली इकाई\nII. वह व्यक्ति जिससे व्यक्तिगत डेटा संबंधित है\nIII. अधिनियम के तहत स्थापित न्यायिक निकाय\nIV. डेटा फिड्यूशियरी की ओर से व्यक्तिगत डेटा को संसाधित करने वाली इकाई\nनीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-IV, R-I, S-III",
+        "P-III, Q-I, R-IV, S-II"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (DPDP Act 2023 Entity/Term)\nP. Data Principal\nQ. Data Fiduciary\nR. Data Processor\nS. Data Protection Board\nList II: (Definition)\nI. Entity determining the purpose and means of processing personal data\nII. Individual to whom personal data relates\nIII. Adjudicating body established under the Act\nIV. Entity processing personal data on behalf of Data Fiduciary\nChoose the correct answer from the options given below:",
+      "options_english": [
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-IV, R-I, S-III",
+        "P-III, Q-I, R-IV, S-II"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Digital Personal Data Protection Act, 2023 defines legal roles for personal data handling. The Data Principal is the individual to whom data relates. The Data Fiduciary determines the purpose and means of data processing. A Data Processor processes personal data on behalf of the fiduciary. The Data Protection Board serves as the statutory adjudicating body tasked with handling non-compliance complaints.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल व्यक्तिगत डेटा सुरक्षा अधिनियम, 2023 व्यक्तिगत डेटा प्रबंधन के लिए कानूनी भूमिकाएँ परिभाषित करता है। डेटा प्रिंसिपल वह व्यक्ति है जिससे डेटा संबंधित है। डेटा फिड्यूशियरी डेटा प्रसंस्करण के उद्देश्य और साधनों का निर्धारण करता है। डेटा प्रोसेसर फिड्यूशियरी की ओर से व्यक्तिगत डेटा को संसाधित करता है। डेटा प्रोटेक्शन बोर्ड गैर-अनुपालन शिकायतों को संभालने के लिए स्थापित वैधानिक न्यायिक निकाय के रूप में कार्य करता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "The DPDP Act 2023 outlines roles for Data Principals, Fiduciaries, and Processors.",
+        "The Data Protection Board adjudicates complaints related to data protection.",
+        "Printed answer key: (A) P-II, Q-I, R-IV, S-III"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e6da1513-1f86-4599-a9a4-62775fd13b40",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कौन सा सिद्धांत एक अप्रमाणित\nअनुप्रयोग या निष्पादन फ़ाइल को एक प्रतिबंधित\nपर्यावरण में अलग करने से संबंधित है ताकि यह\nआधारभूत ऑपरेटिंग सिस्टम को नुकसान न पहुँचा सके?",
+      "options_hindi": [
+        "क्लस्टरिंग",
+        "स्प्लाइसिंग",
+        "पोर्ट फॉरवर्डिंग",
+        "सैंडबॉक्सिंग"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which concept involves isolating an unverified application or executable file in a restricted environment so it cannot harm the underlying operating system?",
+      "options_english": [
+        "Clustering",
+        "Splicing",
+        "Port forwarding",
+        "Sandboxing"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Software security practices rely on containment mechanisms to analyze untrusted application code without exposing core computing systems to harm. Sandboxing involves executing unverified software programs or suspicious files inside a tightly restricted, isolated virtual environment. By isolating executable actions from the primary operating system, security administrators can observe file behaviors, evaluate potential malware threats, and prevent unauthorized modifications to host infrastructure.",
+      "explanation_hindi": "सही उत्तर (d) है। सॉफ़्टवेयर सुरक्षा प्रथाएँ उन कंटेनमेंट तंत्रों पर निर्भर करती हैं जो अप्रमाणित अनुप्रयोग कोड का विश्लेषण करने के लिए हैं बिना मुख्य कंप्यूटिंग सिस्टम को नुकसान पहुँचाए। सैंडबॉक्सिंग में अप्रमाणित सॉफ़्टवेयर कार्यक्रमों या संदिग्ध फ़ाइलों को एक कड़े प्रतिबंधित, अलग वर्चुअल वातावरण में निष्पादित करना शामिल है। मुख्य ऑपरेटिंग सिस्टम से निष्पादन क्रियाओं को अलग करके, सुरक्षा प्रशासक फ़ाइल व्यवहारों का अवलोकन कर सकते हैं, संभावित मैलवेयर खतरों का मूल्यांकन कर सकते हैं, और होस्ट अवसंरचना में unauthorized संशोधनों को रोक सकते हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Sandboxing is a security mechanism that isolates unverified applications.",
+        "It helps in analyzing potentially harmful software without risking the main system.",
+        "Printed answer key: (D) Sandboxing"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "035dc514-393e-4827-b621-d2a7164efa40",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "2023 के डीपीडीपी अधिनियम के तहत, डेटा सुरक्षा बोर्ड ऑफ इंडिया द्वारा डेटा उल्लंघन को रोकने के लिए उचित सुरक्षा उपायों को लागू करने में विफलता के लिए अधिकतम दंड क्या लगाया जा सकता है?",
+      "options_hindi": [
+        "₹10 लाख तक",
+        "₹50 करोड़ तक",
+        "₹250 करोड़ तक",
+        "₹500 करोड़ तक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Under the DPDP Act, 2023, what is the maximum penalty that can be imposed by the Data Protection Board of India for failure to implement reasonable security safeguards to prevent data breach?",
+      "options_english": [
+        "Up to ₹10 lakh",
+        "Up to ₹50 crore",
+        "Up to ₹250 crore",
+        "Up to ₹500 crore"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Digital Personal Data Protection Act, 2023 establishes stringent monetary penalties to ensure strict corporate compliance and discourage data protection negligence. For failures by a Data Fiduciary to implement reasonable security safeguards to prevent personal data breaches, the statutory penalty framework empowers the Data Protection Board of India to impose financial penalties extending up to two hundred fifty crore rupees per instance.",
+      "explanation_hindi": "सही उत्तर (c) है। डिजिटल व्यक्तिगत डेटा सुरक्षा अधिनियम, 2023 सख्त मौद्रिक दंड स्थापित करता है ताकि कॉर्पोरेट अनुपालन को सुनिश्चित किया जा सके और डेटा सुरक्षा की लापरवाही को हतोत्साहित किया जा सके। व्यक्तिगत डेटा उल्लंघनों को रोकने के लिए उचित सुरक्षा उपायों को लागू करने में विफलता के लिए, वैधानिक दंड ढांचा डेटा सुरक्षा बोर्ड ऑफ इंडिया को प्रति घटना दो सौ पचास करोड़ रुपये तक के वित्तीय दंड लगाने का अधिकार देता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital Personal Data Protection Act, 2023 establishes penalties for data breaches.",
+        "Data Protection Board of India can impose penalties up to ₹250 crore.",
+        "Printed answer key: (C) Up to ₹250 crore"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f6f24a9a-e634-4fe2-bafe-cf8ddafd5cf5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "2. क्रिप्टोग्राफिक मिटाना या मल्टी-पास डेटा ओवरराइटिंग करें।",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Perform cryptographic erase or multi-pass data overwriting.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Malicious software programs are categorized based on their propagation mechanisms and behaviors. Computer worms are standalone malicious software programs designed to self-replicate and propagate independently across computer networks without any human intervention, user interaction, or attachment to a host file. By exploiting operating system security vulnerabilities, worms spread rapidly across connected devices, consuming significant network bandwidth, depleting system processing resources, and causing widespread network congestion across infrastructure.",
+      "explanation_hindi": "सही उत्तर (a) है। दुर्भावनापूर्ण सॉफ़्टवेयर कार्यक्रमों को उनके प्रसार तंत्र और व्यवहार के आधार पर वर्गीकृत किया जाता है। कंप्यूटर की कीड़े स्वतंत्र रूप से कार्य करने वाले दुर्भावनापूर्ण सॉफ़्टवेयर कार्यक्रम होते हैं जो मानव हस्तक्षेप, उपयोगकर्ता इंटरैक्शन, या किसी मेज़बान फ़ाइल से जुड़े बिना कंप्यूटर नेटवर्क में स्वतंत्र रूप से आत्म-प्रतिकृति और प्रसार करने के लिए डिज़ाइन किए गए हैं। ऑपरेटिंग सिस्टम की सुरक्षा कमजोरियों का लाभ उठाकर, कीड़े जुड़े हुए उपकरणों में तेजी से फैलते हैं, महत्वपूर्ण नेटवर्क बैंडविड्थ का उपभोग करते हैं, प्रणाली संसाधनों को समाप्त करते हैं, और अवसंरचना में व्यापक नेटवर्क भीड़ का कारण बनते हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Computer worms self-replicate and propagate independently.",
+        "They exploit operating system vulnerabilities.",
+        "Worms can cause significant network congestion.",
+        "Printed answer key: (A) Computer Worm"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6b18f37c-03b8-45f3-a161-5e7296ac581e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "65. पासवर्ड प्रबंधकों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. पासवर्ड प्रबंधक विभिन्न उपयोगकर्ता खातों के लिए मजबूत, अद्वितीय पासवर्ड उत्पन्न और संग्रहीत करते हैं। \nB. उपयोगकर्ताओं को केवल एन्क्रिप्टेड पासवर्ड वॉल्ट को अनलॉक करने के लिए एक मास्टर कुंजी या पासवर्ड याद रखने की आवश्यकता होती है। \nC. पासवर्ड प्रबंधक स्वचालित रूप से दर्ज किए गए डेटा को कैप्चर करने के लिए कीलॉगर के जोखिम को समाप्त करते हैं। \nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Password Managers:\nA. Password managers generate and store strong, unique passwords for different user accounts.\nB. Users only need to memorize one master key or password to unlock the encrypted password vault.\nC. Password managers eliminate the risk of keyloggers capturing any entered data automatically.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Password managers improve personal credential hygiene by generating and storing unique, complex passwords for multiple user accounts inside an encrypted storage vault. Users only need to memorize a single master password to access their vault. However, password managers do not eliminate keylogger risks entirely; if keylogging software infects a user endpoint device, it can record the master password as it is typed.",
+      "explanation_hindi": "सही उत्तर (a) है। पासवर्ड प्रबंधक व्यक्तिगत क्रेडेंशियल स्वच्छता में सुधार करते हैं क्योंकि वे कई उपयोगकर्ता खातों के लिए अद्वितीय, जटिल पासवर्ड उत्पन्न और संग्रहीत करते हैं। उपयोगकर्ताओं को अपने वॉल्ट तक पहुँचने के लिए केवल एक मास्टर पासवर्ड याद रखने की आवश्यकता होती है। हालाँकि, पासवर्ड प्रबंधक कीलॉगर के जोखिम को पूरी तरह से समाप्त नहीं करते हैं; यदि कीलॉगर सॉफ़्टवेयर किसी उपयोगकर्ता के डिवाइस में संक्रमित हो जाता है, तो यह टाइप करते समय मास्टर पासवर्ड को रिकॉर्ड कर सकता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Password managers generate and store unique passwords.",
+        "Users only need to remember one master password.",
+        "Password managers do not eliminate keylogger risks.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "303b327e-d4c5-40f6-8756-888c5a1edecf",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "संस्थागत सेटिंग में अनुकरणीय फ़िशिंग अभ्यास करने का मुख्य उद्देश्य क्या है?",
+      "options_hindi": [
+        "उन कर्मचारियों की पहचान करना और दंडित करना जो सुरक्षा अनुपालन अभ्यास में विफल होते हैं।",
+        "उपयोगकर्ता जागरूकता का आकलन करना और कर्मचारियों को फ़िशिंग खतरों को पहचानने के लिए प्रशिक्षित करना।",
+        "बिजली की अनवरत आपूर्ति की भंडारण क्षमता का मूल्यांकन करना।",
+        "स्वचालित रूप से अंत-शिक्षण छात्र शैक्षणिक प्रदर्शन रिपोर्ट को एकत्रित करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the main purpose of conducting simulated phishing exercises in an institutional setting?",
+      "options_english": [
+        "To identify and penalize staff members who fail security compliance exercises.",
+        "To assess user awareness and train staff to recognize phishing threats.",
+        "To evaluate the electrical storage capacity of uninterrupted power supplies.",
+        "To automatically aggregate end-of-term student academic performance reports."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Social engineering defense requires continuous educational assessment alongside automated technical controls. Conducting simulated phishing exercises involves sending controlled, artificial phishing emails to staff members within an organization. The primary objective is to evaluate overall workforce security awareness, identify operational vulnerabilities in human defense layers, and provide targeted educational training to help employees recognize suspicious sender addresses, malicious links, and social engineering lures.",
+      "explanation_hindi": "सही उत्तर (b) है। सामाजिक इंजीनियरिंग रक्षा के लिए स्वचालित तकनीकी नियंत्रणों के साथ निरंतर शैक्षिक मूल्यांकन की आवश्यकता होती है। अनुकरणीय फ़िशिंग अभ्यास करने में संगठन के कर्मचारियों को नियंत्रित, कृत्रिम फ़िशिंग ईमेल भेजना शामिल है। इसका प्राथमिक उद्देश्य समग्र कार्यबल सुरक्षा जागरूकता का मूल्यांकन करना, मानव रक्षा परतों में परिचालन कमजोरियों की पहचान करना और कर्मचारियों को संदिग्ध प्रेषक पते, दुर्भावनापूर्ण लिंक और सामाजिक इंजीनियरिंग के प्रलोभनों को पहचानने में मदद करने के लिए लक्षित शैक्षिक प्रशिक्षण प्रदान करना है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Simulated phishing exercises help assess user awareness.",
+        "Continuous training is essential for social engineering defense.",
+        "Printed answer key: (B) To assess user awareness and train staff to recognize phishing threats."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e8d86d00-7402-485d-acdd-2a2b8ee3f654",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक मजबूत संस्थागत साइबर सुरक्षा नीति स्थापित करने के निम्नलिखित चरणों को तार्किक अनुक्रम में व्यवस्थित करें:",
+      "options_hindi": [
+        "चरण 1",
+        "चरण 2",
+        "चरण 3",
+        "चरण 4"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following steps of establishing a strong institutional Cyber Security Policy in logical sequential order:",
+      "options_english": [
+        "Step 1",
+        "Step 2",
+        "Step 3",
+        "Step 4"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Establishing a robust institutional Cyber Security Policy follows a logical sequential process. The initial step requires conducting a thorough risk assessment and identifying all critical digital and hardware assets. Next, administrators draft explicit policy rules and acceptable use guidelines. Third, technical security controls and baseline software solutions are deployed to enforce policies. Finally, continuous employee training and regular compliance monitoring are conducted.",
+      "explanation_hindi": "सही उत्तर (a) है। एक मजबूत संस्थागत साइबर सुरक्षा नीति स्थापित करने के लिए एक तार्किक अनुक्रम का पालन करना आवश्यक है। प्रारंभिक चरण में एक व्यापक जोखिम मूल्यांकन करना और सभी महत्वपूर्ण डिजिटल और हार्डवेयर संपत्तियों की पहचान करना शामिल है। इसके बाद, प्रशासक स्पष्ट नीति नियम और स्वीकार्य उपयोग दिशानिर्देश तैयार करते हैं। तीसरे चरण में, नीतियों को लागू करने के लिए तकनीकी सुरक्षा नियंत्रण और बुनियादी सॉफ़्टवेयर समाधान लागू किए जाते हैं। अंत में, निरंतर कर्मचारी प्रशिक्षण और नियमित अनुपालन निगरानी की जाती है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Establishing a Cyber Security Policy involves risk assessment, policy drafting, technical controls, and training.",
+        "Printed answer key: (A) Step 1 → Step 2 → Step 3 → Step 4"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "10acf74d-3cc7-4d6f-ac90-6226e0136407",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "93. “ड्राइव-बाय डाउनलोड” क्या है?",
+      "options_hindi": [
+        "वाहन चलाते समय वायरलेस सेलुलर डेटा कनेक्शन का उपयोग करके डिजिटल फ़ाइलें डाउनलोड करना",
+        "USB मीडिया के माध्यम से डेटा फ़ाइलों को स्थानांतरित करना जबकि शारीरिक रूप से एक सर्वर कक्ष के अंदर चलना",
+        "एक संक्रमित वेबसाइट पर जाने से केवल एक उपकरण पर मैलवेयर का स्वचालित डाउनलोड",
+        "संस्थानिक उच्च गति वायरलेस नेटवर्क पर अनधिकृत वीडियो गेम फ़ाइलें डाउनलोड करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is “Drive-by Download”?",
+      "options_english": [
+        "Downloading digital files while operating a vehicle using wireless cellular data connections",
+        "Transferring data files via removable USB media while physically moving inside a server room",
+        "Automatic download of malware onto a device simply by visiting an infected website",
+        "Downloading unauthorized video game files over institutional high-speed wireless networks"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Drive-by download attacks exploit browser vulnerabilities to compromise client endpoint security silently. A drive-by download occurs when malicious software downloads and installs onto a user device simply by visiting a compromised website, without requiring user consent or intentional file download actions. Attackers inject malicious scripts into web pages that automatically exploit browser security flaws to execute unauthorized payloads.",
+      "explanation_hindi": "सही उत्तर (c) है। ड्राइव-बाय डाउनलोड हमले ब्राउज़र की कमजोरियों का लाभ उठाते हैं ताकि चुपचाप क्लाइंट एंडपॉइंट सुरक्षा को समझौता किया जा सके। ड्राइव-बाय डाउनलोड तब होता है जब दुर्भावनापूर्ण सॉफ़्टवेयर एक उपयोगकर्ता उपकरण पर डाउनलोड और स्थापित होता है केवल एक समझौता की गई वेबसाइट पर जाने से, बिना उपयोगकर्ता की सहमति या जानबूझकर फ़ाइल डाउनलोड क्रियाओं की आवश्यकता के। हमलावर वेब पृष्ठों में दुर्भावनापूर्ण स्क्रिप्ट डालते हैं जो स्वचालित रूप से ब्राउज़र सुरक्षा दोषों का लाभ उठाते हैं ताकि अनधिकृत पेलोड निष्पादित किया जा सके।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "hard",
+      "key_facts": [
+        "ड्राइव-बाय डाउनलोड हमले ब्राउज़र की कमजोरियों का लाभ उठाते हैं।",
+        "यह उपयोगकर्ता की सहमति के बिना मैलवेयर डाउनलोड करता है।",
+        "Printed answer key: (C) Automatic download of malware onto a"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f73a2bd9-1d70-4568-9606-00bd67206696",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक विद्यालय प्रशासक की भूमिका क्या है\nसंस्थानिक अनुपालन के संबंध में डेटा\nसंरक्षण नियमों के तहत?",
+      "options_hindi": [
+        "कानूनी गोपनीयता ढांचों के साथ अनुपालन सुनिश्चित करना,\nसंस्थानिक रिकॉर्ड सुरक्षित करना,\nऔर डेटा पहुंच का ऑडिट करना",
+        "जब कोई शैक्षणिक संस्थान पूरी तरह से सार्वजनिक रूप से वित्त पोषित हो, तो वैधानिक डेटा संरक्षण\nदिशानिर्देशों की अनदेखी करना",
+        "सभी कानूनी डेटा सुरक्षा\nजिम्मेदारी को पूरी तरह से बाहरी तीसरे पक्ष के सॉफ़्टवेयर विक्रेताओं और सेवा प्रदाताओं को स्थानांतरित करना",
+        "संपूर्ण अनरेडेक्टेड छात्र रिकॉर्ड को सार्वजनिक वेब डोमेन पर प्रकाशित करना ताकि\nपूर्ण परिचालन पारदर्शिता सुनिश्चित हो सके"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the role of a school administrator regarding institutional compliance under data protection rules?",
+      "options_english": [
+        "Ensuring compliance with legal privacy frameworks, securing institutional records, and auditing data access",
+        "Disregarding statutory data protection guidelines whenever an educational institution is fully publicly funded",
+        "Transferring all legal data security accountability entirely to external third-party software vendors and service providers",
+        "Publishing complete unredacted student records on public web domains to ensure total operational transparency"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "School administrators serve a critical governance function in ensuring institutional compliance with legal data protection frameworks. Their responsibilities encompass safeguarding student and staff personal records, enforcing security policies, managing role-based access privileges, and conducting regular audits to ensure compliance with applicable laws. This role is essential in protecting sensitive information and maintaining trust within the educational community.",
+      "explanation_hindi": "सही उत्तर (a) है। विद्यालय प्रशासक कानूनी डेटा संरक्षण ढांचों के साथ संस्थागत अनुपालन सुनिश्चित करने में एक महत्वपूर्ण शासन कार्य करते हैं। उनकी जिम्मेदारियों में छात्र और स्टाफ के व्यक्तिगत रिकॉर्ड की सुरक्षा, सुरक्षा नीतियों को लागू करना, भूमिका-आधारित पहुंच विशेषाधिकारों का प्रबंधन करना और लागू कानूनों के साथ अनुपालन सुनिश्चित करने के लिए नियमित ऑडिट करना शामिल है। यह भूमिका संवेदनशील जानकारी की सुरक्षा और शैक्षणिक समुदाय के भीतर विश्वास बनाए रखने में आवश्यक है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "विद्यालय प्रशासक कानूनी डेटा संरक्षण ढांचों के साथ अनुपालन सुनिश्चित करते हैं।",
+        "छात्र और स्टाफ के व्यक्तिगत रिकॉर्ड की सुरक्षा उनकी जिम्मेदारी है।",
+        "सुरक्षा नीतियों को लागू करना और नियमित ऑडिट करना आवश्यक है।",
+        "Printed answer key: (A) Ensuring compliance with legal privacy frameworks, securing institutional records, and auditing data access"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a902b733-ced1-4b80-a8d9-08d038fd9a19",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "छात्रों द्वारा विश्लेषणात्मक निबंध असाइनमेंट पूरा करने के लिए जनरेटिव एआई उपकरणों पर पूरी तरह से निर्भर रहने से संबंधित मुख्य नैतिक जोखिम क्या है?",
+      "options_hindi": [
+        "पीक स्कूल घंटों के दौरान साझा संस्थागत इंटरनेट नेटवर्क बैंडविड्थ का अनियंत्रित उपभोग",
+        "उत्पन्न टेक्स्ट फ़ाइलों को मानकीकृत डिजिटल दस्तावेज़ प्रारूपों में निर्यात करने में लगातार तकनीकी असमर्थता",
+        "महत्वपूर्ण सोच, विश्लेषणात्मक कौशल और प्रामाणिक सीखने का क्षय",
+        "स्वचालित एआई टेक्स्ट आउटपुट और भौतिक कक्षा के सफेद बोर्डों के बीच पूर्ण हार्डवेयर असंगतता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the principal ethical risk associated with students relying exclusively on Generative AI tools for completing analytical essay assignments?",
+      "options_english": [
+        "Uncontrolled consumption of shared institutional internet network bandwidth during peak school hours",
+        "Persistent technical inability to export generated text files into standardized digital document formats",
+        "Erosion of critical thinking, analytical skills, and authentic learning",
+        "Complete hardware incompatibility between automated AI text outputs and physical classroom whiteboards"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The correct answer is c. Relying solely on Generative AI tools can lead to the erosion of critical thinking and analytical skills among students. When students depend on AI for their assignments, they may not engage deeply with the material, resulting in a lack of authentic learning experiences. This reliance can diminish their ability to think critically and analyze information independently, which are essential skills in both academic and real-world contexts.",
+      "explanation_hindi": "सही उत्तर (c) है। जनरेटिव एआई उपकरणों पर पूरी तरह से निर्भर रहने से छात्रों में महत्वपूर्ण सोच और विश्लेषणात्मक कौशल का क्षय हो सकता है। जब छात्र अपने असाइनमेंट के लिए एआई पर निर्भर होते हैं, तो वे सामग्री के साथ गहराई से संलग्न नहीं हो पाते, जिससे प्रामाणिक सीखने के अनुभवों की कमी होती है। यह निर्भरता उनकी स्वतंत्र रूप से जानकारी का विश्लेषण करने और महत्वपूर्ण रूप से सोचने की क्षमता को कम कर सकती है, जो शैक्षणिक और वास्तविक दुनिया दोनों में आवश्यक कौशल हैं।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Critical thinking and analytical skills are essential for effective learning.",
+        "Relying on AI tools can hinder authentic learning experiences.",
+        "Printed answer key: (C) Erosion of critical thinking, analytical skills, and authentic learning"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5adbe5fe-645b-495f-8035-6baf2c392983",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "77. DPDP अधिनियम, 2023 के तहत, बच्चों के डेटा को संसाधित करने वाले डेटा फिड्यूशियरी को निम्नलिखित में से क्या करने से प्रतिबंधित किया गया है:",
+      "options_hindi": [
+        "शैक्षणिक प्रदर्शन और उपस्थिति ट्रैकिंग रिकॉर्ड बनाए रखना",
+        "भौतिक छात्र पहचान पत्र जारी करने के लिए व्यक्तिगत रिकॉर्ड संसाधित करना",
+        "बच्चों के लिए लक्षित विज्ञापन या व्यवहारिक निगरानी",
+        "लिखित परीक्षा उत्तर पुस्तिकाओं का ग्रेडिंग और रिपोर्ट कार्ड जारी करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Under the DPDP Act, 2023, a Data Fiduciary processing children’s data is prohibited from undertaking:",
+      "options_english": [
+        "Maintaining academic performance and attendance tracking records",
+        "Processing personal records for issuing physical student identity cards",
+        "Behavioral monitoring or targeted advertising directed at children",
+        "Grading written examination answer scripts and issuing report cards"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Safeguarding minor privacy is a fundamental obligation under modern data protection frameworks. Under the Digital Personal Data Protection Act, 2023, Data Fiduciaries processing personal data of children are strictly prohibited from undertaking behavioral monitoring, tracking, or targeted advertising directed at children. Fiduciaries must ensure that data processing activities cause no harmful effects on the well-being of minors.",
+      "explanation_hindi": "सही उत्तर (c) है। छोटे बच्चों की गोपनीयता की रक्षा करना आधुनिक डेटा संरक्षण ढांचों के तहत एक मौलिक दायित्व है। डिजिटल व्यक्तिगत डेटा संरक्षण अधिनियम, 2023 के तहत, बच्चों के व्यक्तिगत डेटा को संसाधित करने वाले डेटा फिड्यूशियरी को बच्चों के लिए लक्षित विज्ञापन या व्यवहारिक निगरानी करने से सख्ती से प्रतिबंधित किया गया है। फिड्यूशियरी को यह सुनिश्चित करना चाहिए कि डेटा प्रसंस्करण गतिविधियाँ छोटे बच्चों की भलाई पर कोई हानिकारक प्रभाव न डालें।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Data Fiduciaries are prohibited from behavioral monitoring of children under DPDP Act, 2023.",
+        "Protection of minors' privacy is essential in data processing.",
+        "Printed answer key: (C) Behavioral monitoring or targeted advertising directed at children"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "97c48dc9-b8c4-49f9-939b-c302b7e302fa",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "48. व्यक्तिगत डेटा को DPDP अधिनियम, 2023 के तहत संसाधित करने में शामिल चरणों का सही क्रम क्या है?",
+      "options_hindi": [
+        "सूचना जारी की गई → सहमति प्राप्त की गई → डेटा प्रसंस्करण किया गया → उद्देश्य की पूर्ति / डेटा नष्ट करना",
+        "सहमति प्राप्त की गई → सूचना जारी की गई → डेटा प्रसंस्करण किया गया → डेटा नष्ट करना",
+        "डेटा प्रसंस्करण किया गया → सूचना जारी की गई → सहमति प्राप्त की गई → डेटा नष्ट करना",
+        "सूचना जारी की गई → डेटा प्रसंस्करण किया गया → सहमति प्राप्त की गई → डेटा नष्ट करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the correct sequence of steps involved in processing personal data under the DPDP Act, 2023?",
+      "options_english": [
+        "Notice issued → Consent obtained → Data processing executed → Purpose fulfillment / Data erasure",
+        "Consent obtained → Notice issued → Data processing executed → Data erasure",
+        "Data processing executed → Notice issued → Consent obtained → Data erasure",
+        "Notice issued → Data processing executed → Consent obtained → Data erasure"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Digital Personal Data Protection Act, 2023 defines a strict sequential process for processing personal data legally. The process begins with the Data Fiduciary issuing an explicit notice to the Data Principal detailing data collection purposes. Next, freely given, specific consent is obtained. Data processing is then lawfully executed strictly according to specified purposes. Finally, upon purpose fulfillment, data must be deleted.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल व्यक्तिगत डेटा संरक्षण अधिनियम, 2023 व्यक्तिगत डेटा को कानूनी रूप से संसाधित करने के लिए एक सख्त अनुक्रमिक प्रक्रिया को परिभाषित करता है। प्रक्रिया की शुरुआत डेटा फिड्यूशियरी द्वारा डेटा प्रिंसिपल को डेटा संग्रह के उद्देश्यों का विवरण देने वाली स्पष्ट सूचना जारी करने से होती है। इसके बाद, स्वतंत्र रूप से दी गई, विशिष्ट सहमति प्राप्त की जाती है। फिर, डेटा प्रसंस्करण को निर्दिष्ट उद्देश्यों के अनुसार कानूनी रूप से निष्पादित किया जाता है। अंततः, उद्देश्य की पूर्ति के बाद, डेटा को नष्ट करना आवश्यक है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital Personal Data Protection Act, 2023 outlines a sequential process for data processing.",
+        "Printed answer key: (A) Notice issued → Consent obtained → Data processing executed → Purpose fulfillment / Data erasure"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "04debe90-edf4-4abc-874d-058bf2b9157d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "इलेक्ट्रॉनिक के लिए कानूनी मान्यता प्रदान करने के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "इलेक्ट्रॉनिक के लिए कानूनी मान्यता प्रदान करने की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding to provide legal recognition for electronic, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of to provide legal recognition for electronic",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Information Technology Act, 2000 serves as the primary statutory law in India governing cybercrime and electronic commerce. Enacted to support the growth of the digital economy, its primary objective is to accord legal recognition to transactions carried out through electronic data interchange and other electronic communications. Additionally, it facilitates e-governance by providing official statutory recognition to electronic records and digital signatures across governmental departments.",
+      "explanation_hindi": "सही उत्तर (b) है। सूचना प्रौद्योगिकी अधिनियम, 2000 भारत में साइबर अपराध और इलेक्ट्रॉनिक वाणिज्य को नियंत्रित करने वाला प्राथमिक वैधानिक कानून है। इसे डिजिटल अर्थव्यवस्था के विकास का समर्थन करने के लिए लागू किया गया था, इसका प्राथमिक उद्देश्य इलेक्ट्रॉनिक डेटा इंटरचेंज और अन्य इलेक्ट्रॉनिक संचार के माध्यम से किए गए लेनदेन को कानूनी मान्यता प्रदान करना है। इसके अतिरिक्त, यह सरकारी विभागों में इलेक्ट्रॉनिक रिकॉर्ड और डिजिटल हस्ताक्षरों को आधिकारिक वैधानिक मान्यता प्रदान करके ई-गवर्नेंस को सुविधाजनक बनाता है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "The Information Technology Act, 2000 governs cybercrime and electronic commerce in India.",
+        "It provides legal recognition to electronic transactions and facilitates e-governance.",
+        "Printed answer key: (B) To provide legal recognition for electronic"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c7af26a6-62e7-4387-90b7-0d72eabf5ad1",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "24. CERT-In द्वारा 2022 में जारी निर्देशों के अनुसार, सेवा प्रदाताओं और कॉर्पोरेट संस्थाओं द्वारा CERT-In को अनिवार्य साइबर सुरक्षा घटनाओं की रिपोर्टिंग के लिए समय सीमा क्या है?",
+      "options_hindi": [
+        "घटना का पता लगाने या सूचित होने के 6 घंटे के भीतर",
+        "घटना का पता लगाने या सूचित होने के 24 घंटे के भीतर",
+        "7 कार्य दिवसों के भीतर",
+        "30 दिनों के भीतर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Cybersecurity and Data Protection",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "As per the directions issued by CERT-In in 2022, within what timeframe are mandatory cyber security incidents required to be reported to CERT-In by service providers and body corporates?",
+      "options_english": [
+        "Within 6 hours of noticing or being brought to notice",
+        "Within 24 hours of noticing or being brought to notice",
+        "Within 7 working days",
+        "Within 30 days"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Under the cybersecurity directions issued by CERT-In in April 2022 under Section 70B of the IT Act, 2000, mandatory cybersecurity incident reporting timelines were significantly tightened. All service providers, intermediaries, data centers, body corporates, and government organizations are legally required to report identified cyber security incidents to CERT-In within 6 hours of noticing or being brought to notice of the incident.",
+      "explanation_hindi": "सही उत्तर (a) है। CERT-In द्वारा अप्रैल 2022 में जारी साइबर सुरक्षा निर्देशों के तहत, सूचना प्रौद्योगिकी अधिनियम, 2000 की धारा 70B के तहत अनिवार्य साइबर सुरक्षा घटना रिपोर्टिंग की समय सीमाएँ काफी कड़ी कर दी गई थीं। सभी सेवा प्रदाताओं, मध्यस्थों, डेटा केंद्रों, कॉर्पोरेट संस्थाओं और सरकारी संगठनों को कानूनी रूप से घटना का पता लगाने या सूचित होने के 6 घंटे के भीतर CERT-In को पहचानी गई साइबर सुरक्षा घटनाओं की रिपोर्ट करनी होती है।",
+      "topic": "Cybersecurity and Data Protection",
+      "difficulty": "medium",
+      "key_facts": [
+        "Mandatory reporting of cybersecurity incidents is required within 6 hours.",
+        "This is mandated by CERT-In's 2022 directions under Section 70B.",
+        "Printed answer key: (A) Within 6 hours of noticing or being brought to notice."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

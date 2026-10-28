@@ -1,0 +1,785 @@
+{
+  "test_id": "8b15a0a3-16d4-4b62-9ce1-2ffcca9b4c99",
+  "test_name": "Topic Test: STATISTICS_IN_EDUCATION - Part 2",
+  "type": "topic_wise",
+  "topic": "statistics_in_education",
+  "created_at": "2026-10-28T18:55:06.898321",
+  "questions": [
+    {
+      "id": "a00e0f92-37d9-403f-b9a9-a1bad761b348",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "यदि एक प्रधान हर छात्र के परीक्षण स्कोर को 2 से गुणा करने का निर्णय लेता है, तो स्कोर के विचलन के साथ क्या होगा?",
+      "options_hindi": [
+        "यह 2 से गुणा होगा।",
+        "यह समान रहेगा।",
+        "यह 2 से विभाजित होगा।",
+        "यह 4 से गुणा होगा।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "If a Principal decides to multiply every student's test score by 2, what will happen to the variance of the scores?",
+      "options_english": [
+        "It will be multiplied by 2.",
+        "It will remain the same.",
+        "It will be divided by 2.",
+        "It will be multiplied by 4."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Multiplying every score in a distribution by a constant scales the standard deviation by that same constant. Because variance is the square of the standard deviation, multiplying scores by 2 multiplies the standard deviation by 2 and the variance by 2 squared, resulting in a variance four times larger.",
+      "explanation_hindi": "सही उत्तर (d) है। हर स्कोर को एक स्थिरांक से गुणा करने पर मानक विचलन भी उसी स्थिरांक से गुणा होता है। चूंकि विचलन मानक विचलन का वर्ग होता है, स्कोर को 2 से गुणा करने पर मानक विचलन 2 से गुणा होता है और विचलन 2 के वर्ग से गुणा होता है, जिससे विचलन चार गुना बड़ा हो जाता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Multiplying scores by a constant scales the standard deviation by that constant.",
+        "Variance is the square of the standard deviation.",
+        "Printed answer key: (D) It will be multiplied by 4."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "4d84eabc-b64d-4499-a384-060c3612a8fb",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "यदि कक्षा के प्रत्येक छात्र को परीक्षा में 5 ग्रेस अंक दिए जाते हैं, तो नए स्कोर का मानक डेविएशन:",
+      "options_hindi": [
+        "5 से बढ़ जाएगा",
+        "5 से घट जाएगा",
+        "बिना बदले रहेगा",
+        "5 से गुणा किया जाएगा"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "If every student in a class is awarded 5 grace marks in an examination, the standard deviation of the new scores will:",
+      "options_english": [
+        "Increase by 5",
+        "Decrease by 5",
+        "Remain unchanged",
+        "Be multiplied by 5"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Adding a constant value to every score in a distribution shifts the entire dataset along the scale, increasing the arithmetic mean by that exact constant. However, because every individual score changes by the same amount, the relative distance between scores remains identical. Consequently, measures of dispersion, including standard deviation and variance, remain completely unchanged.",
+      "explanation_hindi": "सही उत्तर (c) है। वितरण में प्रत्येक स्कोर में एक स्थिर मान जोड़ने से संपूर्ण डेटा सेट को स्केल के साथ स्थानांतरित किया जाता है, जिससे अंकगणितीय औसत उसी स्थिर मान से बढ़ जाता है। हालाँकि, क्योंकि प्रत्येक व्यक्तिगत स्कोर समान मात्रा में बदलता है, स्कोर के बीच का सापेक्ष दूरी समान रहता है। परिणामस्वरूप, फैलाव के माप, जिसमें मानक डेविएशन और वैरिएंस शामिल हैं, पूरी तरह से अपरिवर्तित रहते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Adding a constant to all scores shifts the mean but not the standard deviation.",
+        "Standard deviation measures the spread of scores around the mean.",
+        "Printed answer key: (C) Remain unchanged"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "78d1cfde-2223-4669-bef6-51a7dbbba1f5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "Z-स्कोर का सूत्र क्या है:",
+      "options_hindi": [
+        "(स्कोर - औसत) / मानक विचलन",
+        "(स्कोर - औसत) / विविधता",
+        "(औसत - स्कोर) / सीमा",
+        "(स्कोर * औसत) / मानक विचलन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "The formula for the Z-score is:",
+      "options_english": [
+        "(Score - Mean) / Standard Deviation",
+        "(Score - Mean) / Variance",
+        "(Mean - Score) / Range",
+        "(Score * Mean) / Standard Deviation"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The formula for calculating a standard Z-score requires subtracting the group mean from an individual's raw score and dividing that difference by the group standard deviation. This mathematical transformation converts raw scores into standard deviation units, indicating precisely how far and in what direction an individual score deviates from the distribution average. Understanding Z-scores is crucial for interpreting data in educational assessments.",
+      "explanation_hindi": "सही उत्तर (a) है। Z-स्कोर की गणना के लिए सूत्र में समूह के औसत से किसी व्यक्ति के कच्चे स्कोर को घटाना और उस अंतर को समूह के मानक विचलन से विभाजित करना आवश्यक है। यह गणितीय परिवर्तन कच्चे स्कोर को मानक विचलन इकाइयों में परिवर्तित करता है, यह दर्शाते हुए कि एक व्यक्ति का स्कोर वितरण के औसत से कितनी दूर और किस दिशा में भिन्न होता है। शैक्षिक आकलनों में डेटा की व्याख्या के लिए Z-स्कोर को समझना महत्वपूर्ण है।",
+      "topic": "Statistics in Education",
+      "difficulty": "easy",
+      "key_facts": [
+        "Z-स्कोर का सूत्र (स्कोर - औसत) / मानक विचलन है।",
+        "यह कच्चे स्कोर को मानक विचलन इकाइयों में परिवर्तित करता है।",
+        "Printed answer key: (A) (Score - Mean) / Standard Deviation"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6ef2c340-af36-4909-9a0e-2b3b681a6967",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक प्रधानाध्यापक बोर्ड परिणामों का विश्लेषण कर रहा है। स्कूल A का औसत स्कोर 75 है और मानक विचलन 5 है। स्कूल B का औसत स्कोर 75 है और मानक विचलन 15 है। प्रधानाध्यापक कौन सा वैध निष्कर्ष निकाल सकते हैं?",
+      "options_hindi": [
+        "स्कूल A ने स्कूल B की तुलना में काफी अधिक कुल उपलब्धि प्रदर्शित की।",
+        "स्कूल B सभी छात्रों के बीच अधिक सुसंगत शैक्षणिक प्रदर्शन प्रदर्शित करता है।",
+        "स्कूल A के स्कोर औसत के चारों ओर अधिक समान हैं।",
+        "दोनों स्कूलों में प्रशासित मानकीकृत परीक्षणों की कठिनाइयाँ भिन्न थीं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A Principal is analyzing board results. School A has a mean score of 75 with a standard deviation of 5. School B has a mean score of 75 with a standard deviation of 15. What valid conclusion can the Principal draw?",
+      "options_english": [
+        "School A demonstrated significantly higher overall achievement than School B.",
+        "School B exhibits far more consistent academic performance across all students.",
+        "School A's scores are more uniform around the mean.",
+        "The standardized tests administered to both schools possessed different difficulties."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Both schools share an identical mean score of 75, but School A has a smaller standard deviation of 5 compared to School B's 15. A smaller standard deviation indicates that student scores cluster tightly around the mean, demonstrating higher academic consistency and lower internal performance variance in School A.",
+      "explanation_hindi": "सही उत्तर (c) है। दोनों स्कूलों का औसत स्कोर 75 है, लेकिन स्कूल A का मानक विचलन 5 है जबकि स्कूल B का 15 है। छोटा मानक विचलन यह दर्शाता है कि छात्रों के स्कोर औसत के चारों ओर कसकर समूहित होते हैं, जो स्कूल A में उच्च शैक्षणिक स्थिरता और कम आंतरिक प्रदर्शन भिन्नता को दर्शाता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Standard deviation indicates score consistency.",
+        "Printed answer key: (C) School A's scores are more uniform around the mean.",
+        "Identical mean scores can have different variances."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ceb25d4c-908d-4a61-9fdf-10e40e475f21",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक सामान्य संभावना वक्र में, +1 एसडी और -1 एसडी के बीच का क्षेत्र कुल मामलों का लगभग कितना अंश कवर करता है?",
+      "options_hindi": [
+        "दो-तिहाई",
+        "आधा",
+        "एक-तिहाई",
+        "तीन-चौथाई"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "In a Normal Probability Curve, the area between +1 SD and -1 SD covers approximately what fraction of the total cases?",
+      "options_english": [
+        "Two-thirds",
+        "One-half",
+        "One-third",
+        "Three-quarters"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "In a standard Normal Probability Curve, approximately 68.26 percent of the total area lies within one standard deviation above and below the arithmetic mean. Statistically, this value of roughly 68 percent corresponds closely to two-thirds of the total case population falling within the -1 SD to +1 SD range.",
+      "explanation_hindi": "सही उत्तर (a) है। एक मानक सामान्य संभावना वक्र में, कुल क्षेत्र का लगभग 68.26 प्रतिशत एक मानक विचलन के भीतर होता है जो गणितीय माध्य के ऊपर और नीचे होता है। सांख्यिकीय रूप से, यह लगभग 68 प्रतिशत का मान -1 एसडी से +1 एसडी सीमा के भीतर कुल मामले की जनसंख्या के दो-तिहाई के करीब होता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Approximately 68% of cases fall within one standard deviation.",
+        "Printed answer key: (A) Two-thirds"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b294315d-89b0-43a1-ae9b-5ebc6392eb0d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक प्रधानाचार्य एक जिले में स्कूलों को उनके बुनियादी ढांचे की गुणवत्ता के आधार पर \"खराब\" से \"उत्कृष्ट\" तक रैंक करना चाहता है। किस मापने की स्केल सबसे उपयुक्त है?",
+      "options_hindi": [
+        "नाममात्र",
+        "अंतर",
+        "अनुपात",
+        "क्रम"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A Principal wants to rank schools in a district based on their infrastructure quality from 'Poor' to 'Excellent'. Which scale of measurement is most appropriate?",
+      "options_english": [
+        "Nominal",
+        "Interval",
+        "Ratio",
+        "Ordinal"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The ordinal scale of measurement is designed to rank observations according to ordered categories such as poor, fair, good, and excellent. While it establishes a clear hierarchical order among elements, it does not specify equal mathematical distances between adjacent ranks. Therefore, ranking institutional infrastructure quality across distinct ordered levels corresponds directly to an ordinal scale of measurement.",
+      "explanation_hindi": "सही उत्तर (d) है। क्रम मापने की स्केल अवलोकनों को क्रमबद्ध श्रेणियों जैसे खराब, उचित, अच्छा, और उत्कृष्ट के अनुसार रैंक करने के लिए डिज़ाइन की गई है। जबकि यह तत्वों के बीच स्पष्ट पदानुक्रमित क्रम स्थापित करती है, यह निकटवर्ती रैंक के बीच समान गणितीय दूरी निर्दिष्ट नहीं करती है। इसलिए, विभिन्न क्रमबद्ध स्तरों में संस्थागत बुनियादी ढांचे की गुणवत्ता को रैंक करना क्रम मापने की स्केल के अनुरूप है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Ordinal scale allows for ranking but not precise measurement of differences.",
+        "Printed answer key: (D) Ordinal"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d45991e4-25f5-49de-86c1-20267040c313",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "\"प्रतिशत रैंक\" का अर्थ है:",
+      "options_hindi": [
+        "एक व्यक्तिगत छात्र की सटीक संख्यात्मक रैंक 100 स्कूल साथियों में",
+        "उन परीक्षार्थियों का प्रतिशत जो कच्चे स्कोर पर या उससे नीचे स्कोर करते हैं",
+        "सटीक कुल प्रतिशत आइटम जो एक छात्र ने सही उत्तर दिए",
+        "नमूना औसत के अनुरूप मानक प्रतिशत रैंक मान"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "\"Percentile Rank\" indicates:",
+      "options_english": [
+        "An individual student's exact numerical rank out of 100 school peers",
+        "The percentage of examinees scoring at or below a raw score",
+        "The exact total percentage of items a student answered correctly",
+        "The standard percentile rank value corresponding to the sample mean"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Percentile rank expresses an individual's relative performance by indicating the exact percentage of test-takers within a reference group who achieved scores equal to or lower than a specific raw score. This normative metric allows educators to evaluate relative student standing independently of absolute test length or raw scoring scales.",
+      "explanation_hindi": "सही उत्तर (b) है। प्रतिशत रैंक एक व्यक्ति के सापेक्ष प्रदर्शन को व्यक्त करता है, जो यह दर्शाता है कि एक विशिष्ट कच्चे स्कोर के लिए संदर्भ समूह में कितने प्रतिशत परीक्षार्थियों ने समान या उससे कम स्कोर प्राप्त किया। यह मानक मेट्रिक शिक्षकों को छात्रों की सापेक्ष स्थिति का मूल्यांकन करने की अनुमति देता है, जो कि कुल परीक्षा की लंबाई या कच्चे स्कोरिंग स्केल से स्वतंत्र है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Percentile rank indicates relative performance among peers.",
+        "Printed answer key: (B) The percentage of examinees scoring at or",
+        "It allows for evaluation independent of absolute scoring."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "dce6529e-0a47-49fa-82b2-8c316490a68b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक बार आरेख किस प्रकार के शैक्षिक डेटा का प्रतिनिधित्व करने के लिए सबसे उपयुक्त है?",
+      "options_hindi": [
+        "विशिष्ट धाराओं में विवेचनात्मक श्रेणीबद्ध डेटा",
+        "लगातार मात्रात्मक चर जैसे कि छात्रों की ऊँचाई और वजन",
+        "मानकीकृत परीक्षण स्कोर से व्युत्पन्न संचयी आवृत्ति वितरण",
+        "दो लगातार चर के बीच रैखिक सहसंबंध की डिग्री"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A Bar Diagram is most appropriate for representing which type of educational data?",
+      "options_english": [
+        "Discrete categorical data across distinct streams",
+        "Continuous quantitative variables such as student heights and weights",
+        "Cumulative frequency distributions derived from standardized test scores",
+        "The degree of linear correlation between two continuous variables"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Bar diagrams use discrete, non-touching rectangular bars to represent categorical or discrete data. Spacing between bars emphasizes that categories represent distinct, non-continuous classifications. This formatting distinguishes bar diagrams from other types of charts, making them ideal for displaying discrete categorical data across different streams.",
+      "explanation_hindi": "सही उत्तर (a) है। बार आरेख विवेचनात्मक या विवेचनात्मक डेटा का प्रतिनिधित्व करने के लिए उपयोग किया जाता है। बार के बीच की दूरी यह दर्शाती है कि श्रेणियाँ विशिष्ट, गैर-निरंतर वर्गीकरण का प्रतिनिधित्व करती हैं। यह प्रारूप बार आरेखों को अन्य प्रकार के आरेखों से अलग करता है, जिससे वे विभिन्न धाराओं में विवेचनात्मक श्रेणीबद्ध डेटा को प्रदर्शित करने के लिए आदर्श बन जाते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Bar diagrams are used for categorical data.",
+        "They emphasize distinct classifications.",
+        "Printed answer key: (A) Discrete categorical data across distinct streams"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ec8285dd-f8d8-4a26-a6fe-db187a5e8e3a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नकारात्मक रूप से झुके हुए वितरण के बारे में निम्नलिखित कथनों पर विचार करें:\nI. वक्र की पूंछ बाईं ओर (कम अंकों) की ओर लंबी होती है।\nII. औसत, माध्य से कम होता है।\nIII. यह प्रकार का वितरण तब होता है जब परीक्षा बहुत आसान होती है।\nIV. मोड, माध्य से अधिक होता है।\nकौन सा संयोजन सही है?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल III और IV",
+        "केवल I, II और III",
+        "I, II, III और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Consider the following statements about a negatively skewed distribution:\nI. The tail of the curve is elongated towards the left (lower scores).\nII. The Mean is less than the Median.\nIII. This type of distribution typically occurs when a test is very easy.\nIV. The Mode is greater than the Median.\nWhich combination of statements is correct?",
+      "options_english": [
+        "I and II only",
+        "III and IV only",
+        "I, II, and III only",
+        "I, II, III, and IV"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "A negatively skewed distribution occurs when an examination is easy, causing most students to achieve high scores. The tail of the distribution elongates toward lower scores on the left. In this asymmetrical distribution, low score values pull the arithmetic mean below the positional median, which in turn lies below the peak modal score.",
+      "explanation_hindi": "सही उत्तर (d) है। नकारात्मक रूप से झुका हुआ वितरण तब होता है जब परीक्षा आसान होती है, जिससे अधिकांश छात्र उच्च अंक प्राप्त करते हैं। वितरण की पूंछ बाईं ओर कम अंकों की ओर लंबी होती है। इस विषम वितरण में, कम अंक वाले मान अंकगणितीय औसत को स्थिति माध्य से नीचे खींचते हैं, जो कि शिखर मोड के अंक से नीचे होता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "नकारात्मक रूप से झुका हुआ वितरण तब होता है जब अधिकांश छात्र उच्च अंक प्राप्त करते हैं।",
+        "Printed answer key: (D) I, II, III और IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b93acdcd-df2f-4785-b525-866f7e06da35",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नकारात्मक संख्याओं और दशमलवों को समाप्त करने के लिए, शिक्षक अक्सर Z-स्कोर को T-स्कोर में परिवर्तित करते हैं। T-स्कोर वितरण का औसत और मानक विचलन क्रमशः क्या हैं?",
+      "options_hindi": [
+        "औसत = 0, SD = 1",
+        "औसत = 100, SD = 15",
+        "औसत = 50, SD = 10",
+        "औसत = 500, SD = 100"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "To eliminate negative numbers and decimals found in Z-scores, educators often convert them into T-scores. The mean and standard deviation of a T-score distribution are respectively:",
+      "options_english": [
+        "Mean = 0, SD = 1",
+        "Mean = 100, SD = 15",
+        "Mean = 50, SD = 10",
+        "Mean = 500, SD = 100"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "T-scores are standardized scores designed to eliminate negative numbers and decimal fractions typical of Z-scores. The T-scale relies on a fixed linear transformation setting the mean to 50 and the standard deviation to 10. Multiplying a Z-score by 10 and adding 50 yields its corresponding T-score value.",
+      "explanation_hindi": "सही उत्तर (c) है। T-स्कोर मानकीकृत स्कोर हैं जो Z-स्कोर की नकारात्मक संख्याओं और दशमलव अंशों को समाप्त करने के लिए डिज़ाइन किए गए हैं। T-स्केल एक निश्चित रैखिक परिवर्तन पर निर्भर करता है जो औसत को 50 और मानक विचलन को 10 पर सेट करता है। Z-स्कोर को 10 से गुणा करने और 50 जोड़ने पर इसके संबंधित T-स्कोर मान प्राप्त होता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "T-scores are used to avoid negative values in scoring.",
+        "Printed answer key: (C) Mean = 50, SD = 10"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6382eec1-e728-41ff-ab22-0688b4ebb876",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक स्कूल परीक्षा में एक बहुविकल्पीय प्रश्न की वस्तु कठिनाई निर्धारित करने के लिए सबसे उपयुक्त सांख्यिकीय माप कौन सा है?",
+      "options_hindi": [
+        "कुल परीक्षा स्कोर का समग्र मानक विचलन",
+        "परीक्षा वस्तु का बिंदु-बिसेरियल सहसंबंध गुणांक",
+        "सही उत्तर देने वाले परीक्षार्थियों का प्रतिशत",
+        "गलत विकर्षकों के बीच देखी गई सांख्यिकीय विविधता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Which statistical measure is most appropriate to\ndetermine the item difficulty of a multiple-choice\nquestion in a school examination?",
+      "options_english": [
+        "The overall standard deviation of total examination scores",
+        "The point-biserial correlation coefficient of the test item",
+        "The percentage of examinees answering correctly",
+        "The statistical variance observed across incorrect distractors"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Item difficulty, or the p-value, is determined by calculating the proportion or percentage of test-takers who answer a test question correctly. A high percentage indicates an easy test question, whereas a low percentage signifies a difficult item, providing administrators with critical quantitative feedback during examination design.",
+      "explanation_hindi": "सही उत्तर (c) है। वस्तु कठिनाई, या p-मूल्य, उस अनुपात या प्रतिशत की गणना करके निर्धारित की जाती है जो परीक्षार्थी एक परीक्षण प्रश्न का सही उत्तर देते हैं। उच्च प्रतिशत एक आसान परीक्षण प्रश्न को दर्शाता है, जबकि निम्न प्रतिशत एक कठिन वस्तु को दर्शाता है, जो परीक्षा डिजाइन के दौरान प्रशासकों को महत्वपूर्ण मात्रात्मक फीडबैक प्रदान करता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "easy",
+      "key_facts": [
+        "Item difficulty is calculated as the percentage of correct responses.",
+        "A high percentage indicates an easy question.",
+        "Printed answer key: (C) The percentage of examinees answering correctly."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e1a24397-163d-4395-a3fa-ef123087eaf4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "शैक्षिक मापन के संदर्भ में, कौन सा मापन पैमाना पूर्ण शून्य बिंदु रखता है?",
+      "options_hindi": [
+        "अनुपात पैमाना",
+        "नाममात्र पैमाना",
+        "क्रमिक पैमाना",
+        "अंतर पैमाना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "In the context of educational measurement, which scale of measurement possesses an absolute zero point?",
+      "options_english": [
+        "Ratio scale",
+        "Nominal scale",
+        "Ordinal scale",
+        "Interval scale"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The ratio scale of measurement possesses an absolute zero point, which signifies the complete absence of the characteristic being measured. This feature allows for meaningful comparisons of absolute magnitudes and the calculation of ratios between measurements. In contrast, nominal and ordinal scales lack equal units, while the interval scale contains an arbitrary zero point rather than an absolute zero.",
+      "explanation_hindi": "सही उत्तर (a) है। अनुपात पैमाना पूर्ण शून्य बिंदु रखता है, जो मापी गई विशेषता की पूर्ण अनुपस्थिति को दर्शाता है। यह विशेषता मापों के बीच अर्थपूर्ण तुलना और अनुपात की गणना की अनुमति देती है। इसके विपरीत, नाममात्र और क्रमिक पैमाने समान इकाइयों की कमी रखते हैं, जबकि अंतर पैमाना एक मनमाना शून्य बिंदु रखता है, न कि पूर्ण शून्य।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Ratio scale allows for meaningful comparisons and calculations.",
+        "Nominal and ordinal scales do not have equal units.",
+        "Interval scale has an arbitrary zero point.",
+        "Printed answer key: (A) Ratio scale"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2b042c66-0366-4cf1-a135-d6af53cbcce8",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "5।\nकारण (R): निरंतर चर के लिए निरंतरता सुनिश्चित करने के लिए निम्नलिखित सीमाओं से 0.5 घटाकर और ऊपरी सीमाओं में 0.5 जोड़कर सटीक सीमाएँ स्थापित की जाती हैं।",
+      "options_hindi": [
+        "A और R दोनों सत्य हैं और R A का सही स्पष्टीकरण है",
+        "A और R दोनों सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है",
+        "A सत्य है लेकिन R असत्य है",
+        "A असत्य है लेकिन R सत्य है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "5. Reason (R): Exact limits are established by subtracting 0.5 from the lower stated limit and adding 0.5 to the upper stated limit to ensure continuity for continuous variables.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct answer is (a). The reason provided explains the concept of establishing exact limits for continuous variables, which is crucial for accurate statistical analysis. By adjusting the stated limits, we ensure that the data is treated appropriately, allowing for a more precise interpretation of the results. This method is particularly important in educational statistics where accurate data representation is essential for valid conclusions.",
+      "explanation_hindi": "सही उत्तर (a) है। यह कारण निरंतर चर के लिए सटीक सीमाएँ स्थापित करने की अवधारणा को स्पष्ट करता है, जो सांख्यिकीय विश्लेषण के लिए महत्वपूर्ण है। निर्धारित सीमाओं को समायोजित करके, हम सुनिश्चित करते हैं कि डेटा को उचित रूप से संभाला जाए, जिससे परिणामों की अधिक सटीक व्याख्या संभव हो सके। यह विधि शैक्षिक सांख्यिकी में विशेष रूप से महत्वपूर्ण है जहाँ सटीक डेटा प्रतिनिधित्व वैध निष्कर्षों के लिए आवश्यक है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Exact limits are crucial for continuous variables.",
+        "Adjusting limits ensures accurate data representation.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a935d004-0eac-4bf9-8e30-4bb9d9d22d01",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "जब हम औसत, माध्य और बहुलक की तुलना करते हैं,\nतो आगे के सांख्यिकीय विश्लेषण (जैसे मानक विचलन की गणना) के लिए\nकौन सा माप सबसे अधिक बीजगणितीय रूप से सुलभ है?",
+      "options_hindi": [
+        "औसत",
+        "बहुलक",
+        "माध्य",
+        "रेंज"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "When comparing the Mean, Median, and Mode,\nwhich measure is most algebraically tractable for\nfurther statistical analysis (such as calculating\nstandard deviation)?",
+      "options_english": [
+        "Mean",
+        "Mode",
+        "Median",
+        "Range"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The arithmetic mean is the most algebraically\ntractable measure of central tendency because\nits calculation incorporates every value through\nsimple algebraic summation. This property allows\nthe mean to serve as a foundational component\nin further complex inferential procedures, such\nas calculating variance, standard deviation, and\nanalysis of variance.",
+      "explanation_hindi": "सही उत्तर (a) है। औसत सबसे अधिक बीजगणितीय रूप से सुलभ केंद्रीय प्रवृत्ति का माप है क्योंकि इसकी गणना सरल बीजगणितीय योग के माध्यम से हर मान को शामिल करती है। यह गुण औसत को आगे की जटिल अनुमानात्मक प्रक्रियाओं, जैसे कि विविधता, मानक विचलन, और विविधता के विश्लेषण में एक मौलिक घटक के रूप में कार्य करने की अनुमति देता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The arithmetic mean is crucial for statistical analysis.",
+        "It allows for the calculation of variance and standard deviation.",
+        "Printed answer key: (A) Mean"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "980b0628-6ad1-4cc6-b21e-e51550330558",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "स्कूल परीक्षा परिणामों का विश्लेषण करते समय परिवर्तनशीलता के माप के रूप में सीमा का उपयोग करने का एक प्रमुख नुकसान यह है कि:",
+      "options_hindi": [
+        "यह जटिल और थकाऊ बीजगणितीय गणना चरणों में शामिल है",
+        "यह वितरण में हर स्कोर का व्यवस्थित रूप से ध्यान रखता है",
+        "यह डेटा सेट के दो चरम स्कोर पर पूरी तरह निर्भर करता है",
+        "यह निरंतर मात्रात्मक डेटा पर अर्थपूर्ण रूप से लागू नहीं किया जा सकता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A major disadvantage of using the Range as a measure of variability in analyzing school examination results is that:",
+      "options_english": [
+        "It involves complex and tedious algebraic calculation steps",
+        "It systematically accounts for every score in the distribution",
+        "It relies entirely on the two extreme scores of the dataset",
+        "It cannot be meaningfully applied to continuous quantitative data"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Relying on the range to evaluate score variability presents a major statistical drawback because its calculation depends exclusively on the two extreme values in a dataset. Consequently, a single unusually high or low score can drastically inflate the range, giving a misleading impression of overall group dispersion while ignoring how intermediate scores are distributed.",
+      "explanation_hindi": "सही उत्तर (c) है। सीमा का उपयोग करके स्कोर परिवर्तनशीलता का मूल्यांकन करने पर एक प्रमुख सांख्यिकीय कमी यह है कि इसकी गणना पूरी तरह से डेटा सेट के दो चरम मानों पर निर्भर करती है। परिणामस्वरूप, एक असामान्य रूप से उच्च या निम्न स्कोर सीमा को नाटकीय रूप से बढ़ा सकता है, जिससे समग्र समूह फैलाव का एक भ्रामक प्रभाव उत्पन्न होता है, जबकि मध्यवर्ती स्कोर के वितरण की अनदेखी की जाती है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The range depends solely on the two extreme scores.",
+        "A single extreme score can distort the range significantly.",
+        "Printed answer key: (C) It relies entirely on the two extreme scores of the dataset."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "33d1736a-d115-4105-a537-190bcd8cc419",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से कौन से चर के जोड़े में सबसे अधिक संभावना है कि नकारात्मक सहसंबंध प्रदर्शित करें?",
+      "options_hindi": [
+        "छात्र अनुपस्थिति की दर और शैक्षणिक प्रदर्शन",
+        "बुद्धिमत्ता गुणांक और शैक्षणिक उपलब्धि",
+        "अध्ययन में बिताए गए घंटे और परीक्षण स्कोर",
+        "शिक्षकों के अनुभव के वर्ष और उनके विषय ज्ञान"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Which of the following pairs of variables is most\nlikely to exhibit a negative correlation?",
+      "options_english": [
+        "Rate of student absenteeism and academic performance",
+        "Intelligence quotient and academic achievement",
+        "Number of hours spent studying and test scores",
+        "Teachers' years of experience and their subject knowledge"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A negative correlation occurs when high values\nof one variable systematically associate with\nlow values of another. Student absenteeism and\nacademic performance typically demonstrate an\ninverse relationship; as unexcused class absences\nincrease, overall academic performance tends to\ndecrease. This pattern exemplifies a negative\nlinear correlation between two educational\nmeasures.",
+      "explanation_hindi": "सही उत्तर (a) है। नकारात्मक सहसंबंध तब होता है जब एक चर के उच्च मान व्यवस्थित रूप से दूसरे के निम्न मानों के साथ जुड़े होते हैं। छात्र अनुपस्थिति और शैक्षणिक प्रदर्शन आमतौर पर एक विपरीत संबंध प्रदर्शित करते हैं; जैसे-जैसे बिना अनुमति की कक्षाओं की अनुपस्थिति बढ़ती है, समग्र शैक्षणिक प्रदर्शन घटता है। यह पैटर्न दो शैक्षणिक मापों के बीच नकारात्मक रेखीय सहसंबंध को दर्शाता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Negative correlation indicates an inverse relationship.",
+        "High absenteeism correlates with lower academic performance.",
+        "Printed answer key: (A) Rate of student absenteeism and academic performance"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2abf851b-fabc-47c9-a172-78e2a61c82b5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक प्रधानाचार्य विद्यालय की कक्षा X के गणित परिणामों की समीक्षा कर रहे हैं। स्कोर का वितरण 15 का क्वारटाइल डेविएशन दिखाता है। पहला क्वारटाइल (Q1) 40 है। तीसरे क्वारटाइल (Q3) का मान क्या है?",
+      "options_hindi": [
+        "70",
+        "55",
+        "60",
+        "80"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A Principal is reviewing the school's Class X mathematics results. The distribution of scores shows a Quartile Deviation of 15. The first quartile (Q1) is 40. What is the value of the third quartile (Q3)?",
+      "options_english": [
+        "70",
+        "55",
+        "60",
+        "80"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Quartile deviation is mathematically defined as half the difference between the third quartile and the first quartile. Given a quartile deviation of 15 and a first quartile of 40, multiplying the quartile deviation by two gives an interquartile range of 30. Adding 30 to the first quartile yields 70 for the third quartile.",
+      "explanation_hindi": "सही उत्तर (a) है। क्वारटाइल डेविएशन को तीसरे क्वारटाइल और पहले क्वारटाइल के बीच के अंतर का आधा माना जाता है। 15 के क्वारटाइल डेविएशन और 40 के पहले क्वारटाइल को देखते हुए, क्वारटाइल डेविएशन को दो से गुणा करने पर 30 का इंटरक्वारटाइल रेंज मिलता है। पहले क्वारटाइल में 30 जोड़ने पर तीसरे क्वारटाइल का मान 70 प्राप्त होता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "क्वारटाइल डेविएशन तीसरे और पहले क्वारटाइल के बीच का आधा अंतर है।",
+        "पहला क्वारटाइल (Q1) 40 है और क्वारटाइल डेविएशन 15 है।",
+        "Printed answer key: (A) 70"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f32de350-7031-41a9-aa2f-0f52fc003ebf",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) के रूप में लेबल किया गया है\nऔर दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): जब एक हिस्टोग्राम का निर्माण किया जाता है,\nयदि वर्ग अंतराल असमान हैं, तो आवृत्तियों को\nचित्रण से पहले आवृत्ति घनत्व में समायोजित किया जाना चाहिए।\nकारण (R): हिस्टोग्राम में प्रत्येक आयत का क्षेत्र\nउस आवृत्ति के समानुपाती होना चाहिए जिसे यह दर्शाता है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है",
+        "A सत्य है लेकिन R असत्य है",
+        "A असत्य है लेकिन R सत्य है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled\nas Assertion (A) and the other is labelled as\nReason (R).\nAssertion (A): While constructing a histogram,\nif the class intervals are unequal, frequencies\nmust be adjusted into frequency densities before\nplotting.\nReason (R): The area of each rectangle in a\nhistogram must be proportional to the frequency\nit represents.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "When constructing histograms with unequal class intervals, plotting raw frequencies directly distorts visual area proportions. Because bar areas must represent relative frequencies accurately, raw frequencies are converted to frequency densities by dividing frequency by interval width, maintaining proper mathematical proportions across variable bar widths in the chart.",
+      "explanation_hindi": "सही उत्तर (a) है। जब असमान वर्ग अंतराल के साथ हिस्टोग्राम का निर्माण किया जाता है, तो कच्ची आवृत्तियों को सीधे चित्रित करना दृश्य क्षेत्र अनुपातों को विकृत करता है। क्योंकि बार क्षेत्रों को सटीक रूप से सापेक्ष आवृत्तियों का प्रतिनिधित्व करना चाहिए, कच्ची आवृत्तियों को आवृत्ति घनत्व में परिवर्तित किया जाता है, जिससे आवृत्ति को अंतराल की चौड़ाई से विभाजित किया जाता है, चार्ट में भिन्न बार चौड़ाई के बीच उचित गणितीय अनुपात बनाए रखा जाता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The area of each rectangle in a histogram must be proportional to the frequency it represents.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "bfd0b6d9-4a05-4d6d-ac46-1aecbc3b13a7",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सहसंबंध गुणांक के व्याख्या के संबंध में निम्नलिखित पर विचार करें:\nI. +0.90 का r -0.90 के r की तुलना में एक मजबूत संबंध को दर्शाता है। \nII. चिह्न (+ या -) संबंध की दिशा को दर्शाता है, न कि इसकी ताकत। \nIII. परिमाण संबंध की ताकत को दर्शाता है। \nकौन सा कथन सही है?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल II और III",
+        "केवल I और III",
+        "I, II और III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Consider the following regarding the interpretation of correlation coefficients:\nI. An r of +0.90 indicates a stronger relationship than an r of -0.90.\nII. The sign (+ or -) indicates the direction of the relationship, not its strength.\nIII. The magnitude indicates the strength of the relationship.\nWhich statement(s) is/are correct?",
+      "options_english": [
+        "I and II only",
+        "II and III only",
+        "I and III only",
+        "I, II, and III"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The mathematical sign of a correlation coefficient indicates direction, whereas its absolute numerical magnitude reflects relationship strength. Consequently, an r-value of -0.90 reflects the exact same relationship strength as +0.90, differing only in direction. Evaluating relationship magnitude requires examining absolute value regardless of whether the sign is positive or negative.",
+      "explanation_hindi": "सही उत्तर (b) है। सहसंबंध गुणांक का गणितीय चिह्न दिशा को दर्शाता है, जबकि इसका पूर्णांकात्मक परिमाण संबंध की ताकत को दर्शाता है। इसलिए, -0.90 का r मूल्य +0.90 के समान संबंध की ताकत को दर्शाता है, केवल दिशा में भिन्नता होती है। संबंध की ताकत का मूल्यांकन करने के लिए पूर्णांक मूल्य की जांच करना आवश्यक है, चाहे चिह्न सकारात्मक हो या नकारात्मक।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The sign indicates direction, not strength.",
+        "Magnitude reflects relationship strength.",
+        "Printed answer key: (B) II and III only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1a30b43b-508a-4746-9169-6136e405bf55",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "यदि छात्र उपस्थिति और शैक्षणिक उपलब्धि के बीच सहसंबंध +0.75 है, तो निर्धारण गुणांक क्या है, और इसका क्या अर्थ है?",
+      "options_hindi": [
+        "0.7500; यह इंगित करता है कि कुल शैक्षणिक उपलब्धि का 75% सीधे उपस्थिति द्वारा कारण है।",
+        "1.5000; यह इंगित करता है कि एक असाधारण उच्च और सांख्यिकीय रूप से महत्वपूर्ण रैखिक संबंध है।",
+        "0.8660; यह प्राथमिक सहसंबंध गुणांक के गणितीय वर्गमूल को इंगित करता है।",
+        "0.5625; यह इंगित करता है कि उपलब्धि का 56% भिन्नता उपस्थिति द्वारा समझाया गया है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "If the correlation between student attendance and academic achievement is +0.75, what is the coefficient of determination, and what does it signify?",
+      "options_english": [
+        "0.7500; indicating that exactly 75% of overall academic achievement is caused directly by attendance.",
+        "1.5000; indicating an exceptionally high and statistically significant linear relationship magnitude.",
+        "0.8660; indicating the exact mathematical square root of the primary correlation coefficient value.",
+        "0.5625; indicating 56% of achievement variance is explained by attendance."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The coefficient of determination is calculated by squaring the correlation coefficient. Squaring +0.75 yields 0.5625, meaning that 56.25 percent of the variance in academic achievement is explained by student attendance. The remaining variance stems from other unmeasured factors influencing student achievement.",
+      "explanation_hindi": "सही उत्तर (d) है। निर्धारण गुणांक को सहसंबंध गुणांक के वर्ग द्वारा गणना की जाती है। +0.75 का वर्ग 0.5625 देता है, जिसका अर्थ है कि शैक्षणिक उपलब्धि में 56.25 प्रतिशत भिन्नता छात्र उपस्थिति द्वारा समझाई जाती है। शेष भिन्नता अन्य अव्यवस्थित कारकों से उत्पन्न होती है जो छात्र उपलब्धि को प्रभावित करते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "निर्धारण गुणांक सहसंबंध का वर्ग है।",
+        "56.25% भिन्नता उपस्थिति द्वारा समझाई जाती है।",
+        "Printed answer key: (D) 0.5625; indicating 56% of achievement"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

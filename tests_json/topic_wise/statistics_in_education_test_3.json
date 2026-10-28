@@ -1,0 +1,782 @@
+{
+  "test_id": "8fcef91f-0d12-40ba-a82f-e75147105a03",
+  "test_name": "Topic Test: STATISTICS_IN_EDUCATION - Part 3",
+  "type": "topic_wise",
+  "topic": "statistics_in_education",
+  "created_at": "2026-10-28T18:55:06.899134",
+  "questions": [
+    {
+      "id": "23419fef-d622-4f5b-a940-219b5263fa9f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक मानक सामान्य संभाव्यता वक्र (NPC) में,\nमीन और +1 मानक विचलन (SD) के बीच\nकितने प्रतिशत मामले होते हैं?",
+      "options_hindi": [
+        "34.13%",
+        "68.26%",
+        "47.72%",
+        "95.44%"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "In a standard Normal Probability Curve (NPC), what percentage of cases lie between the mean and +1 Standard Deviation (SD)?",
+      "options_english": [
+        "34.13%",
+        "68.26%",
+        "47.72%",
+        "95.44%"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Normal Probability Curve possesses well-defined mathematical properties regarding area distribution. The region bounded between the arithmetic mean and one standard deviation unit above the mean contains precisely 34.13 percent of the total area under the curve. Due to bilateral symmetry, an identical 34.13 percent lies between the mean and negative one standard deviation.",
+      "explanation_hindi": "सही उत्तर (a) है। सामान्य संभाव्यता वक्र क्षेत्र वितरण के संबंध में अच्छी तरह से परिभाषित गणितीय गुणों को रखता है। गणितीय औसत और औसत से एक मानक विचलन इकाई के बीच का क्षेत्र कुल वक्र के तहत 34.13 प्रतिशत क्षेत्र को सटीक रूप से समाहित करता है। द्विपक्षीय समरूपता के कारण, मीन और नकारात्मक एक मानक विचलन के बीच भी समान 34.13 प्रतिशत है।",
+      "topic": "Statistics in Education",
+      "difficulty": "easy",
+      "key_facts": [
+        "34.13% of cases lie between the mean and +1 SD.",
+        "Normal Probability Curve has defined area properties.",
+        "Printed answer key: (A) 34.13%."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "111a5e0d-52ca-4edf-ace0-e70506d64192",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "मोड के संबंध में निम्नलिखित कथनों पर विचार करें:\nI. यह एक वितरण में सबसे अधिक बार आने वाला स्कोर है।\nII. एक वितरण में एक से अधिक मोड हो सकते हैं।\nIII. यह अनुमानात्मक सांख्यिकी के लिए केंद्रीय प्रवृत्ति का सबसे विश्वसनीय माप है।\nIV. इसे ग्राफ़िक रूप से एक हिस्टोग्राम का उपयोग करके निर्धारित किया जा सकता है।\nसही कथनों का संयोजन कौन सा है?",
+      "options_hindi": [
+        "केवल I, II और III",
+        "केवल I, II और IV",
+        "केवल II, III और IV",
+        "केवल I, III और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the Mode:\nI. It is the score that occurs most frequently in a distribution.\nII. A distribution can have more than one mode.\nIII. It is the most reliable measure of central tendency for inferential statistics.\nIV. It can be determined graphically using a histogram.\nWhich combination of statements is correct?",
+      "options_english": [
+        "I, II, and III only",
+        "I, II, and IV only",
+        "II, III, and IV only",
+        "I, III, and IV only"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The mode represents the most frequently occurring score in a distribution and can be determined graphically from the highest peak of a histogram. A dataset may contain multiple modes if several values share peak frequencies. However, the mode is unstable across samples and is unsuitable for advanced inferential statistical procedures due to its reliance on single-point frequency peaks.",
+      "explanation_hindi": "सही उत्तर (b) है। मोड एक वितरण में सबसे अधिक बार आने वाले स्कोर का प्रतिनिधित्व करता है और इसे हिस्टोग्राम के सबसे ऊँचे शिखर से ग्राफ़िक रूप से निर्धारित किया जा सकता है। यदि कई मानों में समान शिखर आवृत्तियाँ होती हैं, तो एक डेटा सेट में एक से अधिक मोड हो सकते हैं। हालाँकि, मोड नमूनों के बीच अस्थिर होता है और एकल-बिंदु आवृत्ति शिखरों पर निर्भरता के कारण उन्नत अनुमानात्मक सांख्यिकी प्रक्रियाओं के लिए अनुपयुक्त है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The mode is the most frequently occurring score in a distribution.",
+        "A dataset may contain multiple modes.",
+        "Printed answer key: (B) I, II, and IV only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1d2bde70-4432-4dbb-b43f-4ed30b2fcfa5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक छात्र ने राष्ट्रीय मानकीकृत परीक्षा में 85वें प्रतिशत पर स्कोर किया। इसका अर्थ है कि:",
+      "options_hindi": [
+        "छात्र ने सभी परीक्षा देने वालों में से 85% से अधिक स्कोर किया।",
+        "छात्र ने सभी परीक्षा प्रश्नों में से 85% को सही उत्तर दिया।",
+        "कुल छात्र समूह में से ठीक 85% ने इस उम्मीदवार से अधिक स्कोर किया।",
+        "छात्र ने परीक्षा में 85 का एक निश्चित स्केल स्कोर प्राप्त किया।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A student scores in the 85th percentile on a national standardized test. This means that:",
+      "options_english": [
+        "The student scored higher than 85% of all test takers.",
+        "The student successfully answered 85% of all test questions correctly.",
+        "Exactly 85% of the total student group scored higher than this candidate.",
+        "The student achieved an absolute scaled score of 85 on the examination."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Percentile scores indicate an individual's relative standing within a norm group rather than absolute percentage accuracy on a test. A score at the 85th percentile signifies that the candidate performed equal to or better than exactly 85 percent of the comparison group, leaving only 15 percent of test takers achieving higher marks.",
+      "explanation_hindi": "सही उत्तर (a) है। प्रतिशत स्कोर किसी व्यक्ति की मानक समूह में सापेक्ष स्थिति को दर्शाते हैं, न कि परीक्षा पर सटीक प्रतिशत सटीकता को। 85वें प्रतिशत पर स्कोर का अर्थ है कि उम्मीदवार ने तुलना समूह के ठीक 85 प्रतिशत से समान या बेहतर प्रदर्शन किया, जिससे केवल 15 प्रतिशत परीक्षा देने वालों ने उच्च अंक प्राप्त किए।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Percentiles indicate relative standing among test takers.",
+        "An 85th percentile score means better performance than 85% of peers.",
+        "Printed answer key: (A) The student scored higher than 85% of all test takers."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "4914a44f-add1-4232-ada7-1fa000b30ec6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "शैक्षिक मापन में उपयोग किए जाने वाले परिवर्तनशीलता के सबसे विश्वसनीय और स्थिर माप, जो मानक स्कोर के लिए आधार बनाता है, है:",
+      "options_hindi": [
+        "रेंज",
+        "क्वारटाइल डेविएशन",
+        "मीन डेविएशन",
+        "मानक डेविएशन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "The most reliable and stable measure of variability used in educational measurement, which forms the basis for standard scores, is the:",
+      "options_english": [
+        "Range",
+        "Quartile Deviation",
+        "Mean Deviation",
+        "Standard Deviation"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Standard deviation is the most stable and mathematically reliable measure of variability in educational measurement. By calculating the root mean square of deviations from the arithmetic mean, it incorporates every score while adhering to strict algebraic principles. It serves as the foundation for inferential statistics and the construction of standardized test scores.",
+      "explanation_hindi": "सही उत्तर (d) है। मानक डेविएशन शैक्षिक मापन में परिवर्तनशीलता का सबसे स्थिर और गणितीय रूप से विश्वसनीय माप है। यह अंकगणितीय औसत से विचलनों का वर्गमूल औसत निकालकर हर स्कोर को शामिल करता है, जबकि सख्त बीजगणितीय सिद्धांतों का पालन करता है। यह अनुमानात्मक सांख्यिकी और मानकीकृत परीक्षण स्कोर के निर्माण के लिए आधार बनाता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Standard deviation is crucial for understanding variability in data.",
+        "It is used extensively in educational assessments.",
+        "Printed answer key: (D) Standard Deviation"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8a971afd-8af9-4d7a-bce2-d5ca13854bc3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक आवृत्ति वितरण वक्र जो सामान्य संभाव्यता वक्र से अधिक चोटी वाला है, उसे क्या कहा जाता है:",
+      "options_hindi": [
+        "मेसोकुर्टिक",
+        "प्लेटीकुर्टिक",
+        "लेप्टोकुर्टिक",
+        "असंप्टोटिक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A frequency distribution curve that is more peaked than the normal probability curve is termed:",
+      "options_english": [
+        "Mesokurtic",
+        "Platykurtic",
+        "Leptokurtic",
+        "Asymptotic"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A frequency distribution curve that exhibits a higher, more pointed central peak than a standard normal curve is described as leptokurtic. This structure indicates that individual scores concentrate heavily around the central mean with relatively thin tails, resulting in positive kurtosis values when evaluated using standard moment formulas.",
+      "explanation_hindi": "सही उत्तर (c) है। एक आवृत्ति वितरण वक्र जो एक मानक सामान्य वक्र की तुलना में अधिक ऊँची और तीव्र केंद्रीय चोटी प्रदर्शित करता है, उसे लेप्टोकुर्टिक कहा जाता है। यह संरचना यह संकेत करती है कि व्यक्तिगत स्कोर केंद्रीय माध्य के चारों ओर भारी रूप से संकेंद्रित होते हैं, जिनकी पूंछें अपेक्षाकृत पतली होती हैं, जिससे मानक क्षण सूत्रों का उपयोग करते समय सकारात्मक कर्टोसिस मान प्राप्त होते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Leptokurtic distributions have sharper peaks than normal distributions.",
+        "They indicate higher concentration of scores around the mean.",
+        "Printed answer key: (C) Leptokurtic"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "bee22a48-595c-4ab5-afb2-03a2534e9916",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक सममित वितरण में, 50वां पर्सेंटाइल\n(P50), 5वां डेसाइल (D5), और 2रा क्वारटाइल\n(Q2) सभी समान हैं:",
+      "options_hindi": [
+        "औसत",
+        "मोड",
+        "मानक विचलन",
+        "माध्य"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "In a symmetrical distribution, the 50th percentile\n(P50), the 5th decile (D5), and the 2nd quartile\n(Q2) are all identical to the:",
+      "options_english": [
+        "Mean",
+        "Mode",
+        "Standard Deviation",
+        "Median"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "In any symmetrical frequency distribution, positional partition measures align at the central midpoint of the dataset. The 50th percentile, the 5th decile, and the 2nd quartile all mark the exact threshold below which fifty percent of the total observations fall, making them mathematically identical to each other and to the distribution median.",
+      "explanation_hindi": "सही उत्तर (d) है। किसी भी सममित आवृत्ति वितरण में, स्थिति विभाजन माप डेटा सेट के केंद्रीय मध्य बिंदु पर संरेखित होते हैं। 50वां पर्सेंटाइल, 5वां डेसाइल, और 2रा क्वारटाइल सभी उस सटीक सीमा को चिह्नित करते हैं जिसके नीचे कुल अवलोकनों का पचास प्रतिशत आता है, जिससे वे एक-दूसरे और वितरण के माध्य के लिए गणितीय रूप से समान होते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Positional measures in symmetrical distributions are equal.",
+        "Printed answer key: (d) Median"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "bc656fc4-b6be-4976-b89b-fad7e9dfcc8c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "विद्यालय के प्रदर्शन का विश्लेषण करते समय, पारिस्थितिकी त्रुटि तब होती है जब एक प्रधान:",
+      "options_hindi": [
+        "एक मजबूत नकारात्मक सहसंबंध को सकारात्मक के रूप में गलत व्याख्या करता है",
+        "रिपोर्टिंग में मानक विचलन की गणना और उपयोग करने में प्रणालीगत विफलता",
+        "माध्य की गणना से पहले डेटा सेट से चरम बाहरी मानों को जानबूझकर बाहर करता है",
+        "समूह औसत से सीधे व्यक्तिगत छात्र विशेषताओं का अनुमान लगाता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "In analyzing school performance, the ecological fallacy occurs when a Principal:",
+      "options_english": [
+        "Incorrectly misinterprets a strong negative correlation as a positive one",
+        "Systematic failure to calculate and utilize standard deviations in reporting",
+        "Deliberately excludes extreme outliers from datasets before computing means",
+        "Infers individual student characteristics directly from group averages"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The ecological fallacy occurs when an evaluator draws improper inferences about individual students based exclusively on aggregated group summary metrics. Assuming every student in a high-performing school possesses high academic ability mistakes overall group averages for individual performance metrics, ignoring variations present within institutional student populations.",
+      "explanation_hindi": "सही उत्तर (d) है। पारिस्थितिकी त्रुटि तब होती है जब एक मूल्यांकनकर्ता केवल समुचित समूह सारांश मैट्रिक्स के आधार पर व्यक्तिगत छात्रों के बारे में गलत निष्कर्ष निकालता है। यह मान लेना कि एक उच्च प्रदर्शन वाले विद्यालय में हर छात्र उच्च शैक्षणिक क्षमता रखता है, व्यक्तिगत प्रदर्शन मैट्रिक्स के लिए समग्र समूह औसत को गलत समझता है, जो संस्थागत छात्र जनसंख्या में मौजूद भिन्नताओं की अनदेखी करता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Ecological fallacy involves misinterpretation of group data for individuals.",
+        "Printed answer key: (D) Infers individual student characteristics"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a09809e5-fb82-48b6-9492-adb2c5dbb4cb",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कच्चे परीक्षण स्कोर को समूहित आवृत्ति वितरण में व्यवस्थित करते समय, सामान्यतः कितनी वर्ग अंतरालों की सिफारिश की जाती है ताकि महत्वपूर्ण डेटा संक्षेपण सुनिश्चित किया जा सके बिना अत्यधिक विवरण खोए?",
+      "options_hindi": [
+        "3 से 5 के बीच",
+        "10 से 20 के बीच",
+        "25 से 35 के बीच",
+        "40 से अधिक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "When organizing raw test scores into a grouped frequency distribution, what is the generally recommended number of class intervals to ensure meaningful data summarization without losing excessive detail?",
+      "options_english": [
+        "Between 3 and 5",
+        "Between 10 and 20",
+        "Between 25 and 35",
+        "More than 40"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Organizing raw test scores into a grouped frequency distribution typically requires between 10 and 20 class intervals. This recommended range ensures effective data summarization while preserving critical pattern details. Having fewer than ten intervals oversimplifies data by losing important distribution nuances, whereas establishing more than twenty intervals creates excessive detail that hinders clear visual interpretation and synthesis.",
+      "explanation_hindi": "सही उत्तर (b) है। कच्चे परीक्षण स्कोर को समूहित आवृत्ति वितरण में व्यवस्थित करने के लिए सामान्यतः 10 से 20 वर्ग अंतरालों की आवश्यकता होती है। यह सिफारिश की गई सीमा प्रभावी डेटा संक्षेपण सुनिश्चित करती है जबकि महत्वपूर्ण पैटर्न विवरणों को बनाए रखती है। दस से कम अंतराल होने पर डेटा को सरल बना दिया जाता है, जिससे महत्वपूर्ण वितरण की बारीकियाँ खो जाती हैं, जबकि बीस से अधिक अंतराल स्थापित करने पर अत्यधिक विवरण उत्पन्न होता है जो स्पष्ट दृश्य व्याख्या और संश्लेषण में बाधा डालता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Recommended range for class intervals is 10 to 20.",
+        "Fewer than ten intervals oversimplify data.",
+        "More than twenty intervals create excessive detail.",
+        "Printed answer key: (B) Between 10 and 20"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "03cebe5e-6686-4f89-8c2f-dabb9fcb2b0e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक प्रधान 1000 छात्रों को एक योग्यता परीक्षण\nकराते हैं। स्कोर सामान्य रूप से वितरित होते हैं\nजिसका औसत 50 और मानक विचलन है",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A Principal administers an aptitude test to 1000 students. The scores are normally distributed with a mean of 50 and a standard deviation of",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Given a mean of 50 and standard deviation of 10, the range from 40 to 60 spans from -1 SD to +1 SD around the mean. In a normal curve, approximately 68.26 percent of all cases fall within this interval. Multiplying 1000 total students by 0.6826 yields approximately 683 students scoring within this range.",
+      "explanation_hindi": "सही उत्तर (c) है। औसत 50 और मानक विचलन 10 होने पर, 40 से 60 तक का क्षेत्र औसत के चारों ओर -1 SD से +1 SD तक फैला होता है। एक सामान्य वक्र में, लगभग 68.26 प्रतिशत सभी मामलों का यह अंतराल में आना होता है। 1000 कुल छात्रों को 0.6826 से गुणा करने पर लगभग 683 छात्र इस क्षेत्र में स्कोर करते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Normal distribution is characterized by its mean and standard deviation.",
+        "Approximately 68.26% of data falls within one standard deviation from the mean.",
+        "Printed answer key: (C) 683"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5c637227-2077-4449-9bdc-33194b1183b3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "असंगठित डेटा के लिए मानक विचलन की गणना करने के लिए निम्नलिखित चरणों पर विचार करें:\nI. प्रत्येक विचलन का वर्ग करें।\nII. स्कोर का औसत निकालें।\nIII. वर्ग विचलनों का योग करें और N से विभाजित करें।\nIV. प्रत्येक स्कोर का औसत से विचलन निकालें।\nV. परिणाम का वर्गमूल निकालें।\nसही तार्किक अनुक्रम क्या है?",
+      "options_hindi": [
+        "II, IV, I, III, V",
+        "IV, II, I, III, V",
+        "II, I, IV, III, V",
+        "II, IV, III, I, V"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Consider the following steps in calculating Standard Deviation for ungrouped data:\nI. Square each deviation.\nII. Find the mean of the scores.\nIII. Sum the squared deviations and divide by N.\nIV. Calculate the deviation of each score from the mean.\nV. Find the square root of the result.\nWhat is the correct logical sequence?",
+      "options_english": [
+        "II, IV, I, III, V",
+        "IV, II, I, III, V",
+        "II, I, IV, III, V",
+        "II, IV, III, I, V"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Calculating standard deviation for ungrouped data follows a logical step sequence: first, calculate the group mean; second, find the deviation of each score from that mean; third, square each individual deviation; fourth, sum the squared deviations and divide by N; and finally, take the square root of that variance value.",
+      "explanation_hindi": "सही उत्तर (a) है। असंगठित डेटा के लिए मानक विचलन की गणना करने के लिए तार्किक चरणों का अनुक्रम है: पहले, समूह का औसत निकालें; दूसरे, उस औसत से प्रत्येक स्कोर का विचलन निकालें; तीसरे, प्रत्येक व्यक्तिगत विचलन का वर्ग करें; चौथे, वर्ग विचलनों का योग करें और N से विभाजित करें; और अंत में, उस विविधता के मान का वर्गमूल निकालें।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The correct sequence for calculating standard deviation is crucial for accurate results.",
+        "Printed answer key: (A) II, IV, I, III, V."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9c5dc245-3ed1-43c2-80b0-892becd38cf4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक छात्र ने एक परीक्षा में 60 अंक प्राप्त किए, जहाँ कक्षा का औसत 50 है और मानक विचलन 5 है। छात्र का Z-स्कोर क्या है?",
+      "options_hindi": [
+        "+1.0",
+        "+2.0",
+        "-2.0",
+        "+10.0"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A student scores 60 on a test where the class mean is 50 and the standard deviation is 5. What is the student's Z-score?",
+      "options_english": [
+        "+1.0",
+        "+2.0",
+        "-2.0",
+        "+10.0"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Z-score formula subtracts the distribution mean from an individual score and divides the result by the standard deviation. Subtracting the mean of 50 from the student's score of 60 gives a deviation of +10. Dividing +10 by the standard deviation of 5 results in a Z-score of +2.0.",
+      "explanation_hindi": "सही उत्तर (b) है। Z-स्कोर सूत्र वितरण के औसत को व्यक्तिगत स्कोर से घटाता है और परिणाम को मानक विचलन से विभाजित करता है। छात्र के 60 अंक से 50 का औसत घटाने पर +10 का विचलन मिलता है। +10 को मानक विचलन 5 से विभाजित करने पर Z-स्कोर +2.0 प्राप्त होता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "easy",
+      "key_facts": [
+        "Z-score measures how many standard deviations an element is from the mean.",
+        "Printed answer key: (B) +2.0"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "54496126-2d4d-48da-a8d2-1d2928844b10",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "विविधता को गणितीय रूप से इस प्रकार परिभाषित किया गया है:",
+      "options_hindi": [
+        "मानक विचलन का वर्गमूल",
+        "औसत का मान से निरपेक्ष विचलनों का औसत",
+        "उच्चतम स्कोर और मान के बीच का अंतर",
+        "मानक विचलन का वर्ग"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Variance is mathematically defined as:",
+      "options_english": [
+        "The square root of the standard deviation",
+        "The average of the absolute deviations from the mean",
+        "The difference between the highest score and the mean",
+        "The square of the standard deviation"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Variance is a fundamental measure of statistical dispersion defined mathematically as the arithmetic mean of squared deviations from the population mean. Because variance represents squared units of the original measurement scale, taking its non-negative square root yields the standard deviation, establishing a direct mathematical relationship where variance equals standard deviation squared.",
+      "explanation_hindi": "सही उत्तर (d) है। विविधता एक मौलिक सांख्यिकीय फैलाव का माप है जिसे गणितीय रूप से जनसंख्या के मान से वर्गीकृत विचलनों के औसत के रूप में परिभाषित किया गया है। चूंकि विविधता मूल मापने के पैमाने के वर्गीय इकाइयों का प्रतिनिधित्व करती है, इसका गैर-नकारात्मक वर्गमूल लेना मानक विचलन देता है, जो यह स्थापित करता है कि विविधता मानक विचलन के वर्ग के बराबर है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Variance is the average of squared deviations from the mean.",
+        "Standard deviation is the square root of variance.",
+        "Printed answer key: (D) The square of the standard deviation"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d71c1f36-3ff1-4b98-be98-4a9afb94e613",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से कौन सा कथन 'रेंज' के बारे में सही है?",
+      "options_hindi": [
+        "यह परिवर्तनशीलता का सबसे मजबूत माप है।",
+        "यह मध्य स्कोर के प्रसार को ध्यान में रखता है।",
+        "यह परिवर्तनशीलता का एक त्वरित लेकिन मोटा अनुमान प्रदान करता है।",
+        "यह मानक विचलन के समान है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Which of the following statements about the 'Range' is true?",
+      "options_english": [
+        "It is the most robust measure of variability.",
+        "It takes into account the dispersion of middle scores.",
+        "It provides a quick but rough estimate of variability.",
+        "It is synonymous with standard deviation."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The range provides a quick, simple estimate of total score spread by calculating the difference between extreme values. However, because it relies entirely on the two outermost scores while ignoring all internal data points, it serves only as a crude indicator of dispersion rather than a robust measure of overall variability.",
+      "explanation_hindi": "सही उत्तर (c) है। रेंज कुल स्कोर के फैलाव का एक त्वरित, सरल अनुमान प्रदान करता है, जो चरम मूल्यों के बीच का अंतर निकालकर किया जाता है। हालाँकि, यह केवल दो बाहरी स्कोर पर निर्भर करता है और सभी आंतरिक डेटा बिंदुओं को नजरअंदाज करता है, इसलिए यह केवल फैलाव का एक मोटा संकेतक है, न कि समग्र परिवर्तनशीलता का मजबूत माप।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The range is calculated as the difference between the maximum and minimum values.",
+        "Printed answer key: (C) It provides a quick but rough estimate of variability."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8e5e30f6-e752-4f60-a12e-0fa465cbede1",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "Cumulative Grade Point Average (CGPA) की गणना के संबंध में निम्नलिखित कथनों पर विचार करें:\nI. CGPA की गणना सभी विषयों में प्राप्त ग्रेड पॉइंट्स के योग को कुल विषयों की संख्या से विभाजित करके की जाती है। \nII. एक मानक माध्यमिक शिक्षा पैटर्न में, CGPA को 9.5 से गुणा करके संकेतात्मक प्रतिशत निकाला जा सकता है। \nIII. CGPA की गणना में अंतिम शैक्षणिक स्कोर के लिए शैक्षणिक और सह-शैक्षणिक ग्रेड पॉइंट्स दोनों शामिल होते हैं। \nउपरोक्त में से कौन सा/से कथन सही है/हैं?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल II और III",
+        "केवल I और III",
+        "I, II, और III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the calculation of Cumulative Grade Point Average (CGPA):\nI. CGPA is calculated by dividing the sum of the grade points obtained in all subjects by the total number of subjects.\nII. In a standard secondary education pattern, the indicative percentage can be derived by multiplying the CGPA by 9.5.\nIII. CGPA calculation includes both scholastic and co-scholastic grade points for the final academic score.\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "I and II only",
+        "II and III only",
+        "I and III only",
+        "I, II, and III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The cumulative grade point average (CGPA) is calculated by taking the total of grade points earned across all subjects and dividing it by the number of subjects. This method provides a comprehensive measure of a student's overall academic performance. Additionally, in many educational systems, the CGPA can be converted into a percentage by multiplying by 9.5, which is a common practice. The inclusion of both scholastic and co-scholastic grade points ensures that all aspects of a student's performance are considered.",
+      "explanation_hindi": "सही उत्तर (a) है। Cumulative Grade Point Average (CGPA) की गणना सभी विषयों में अर्जित ग्रेड पॉइंट्स के कुल योग को विषयों की संख्या से विभाजित करके की जाती है। यह विधि छात्र के समग्र शैक्षणिक प्रदर्शन का एक व्यापक माप प्रदान करती है। इसके अतिरिक्त, कई शैक्षणिक प्रणालियों में, CGPA को 9.5 से गुणा करके प्रतिशत में परिवर्तित किया जा सकता है, जो एक सामान्य प्रथा है। शैक्षणिक और सह-शैक्षणिक ग्रेड पॉइंट्स दोनों को शामिल करने से यह सुनिश्चित होता है कि छात्र के प्रदर्शन के सभी पहलुओं पर विचार किया जाए।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "CGPA is calculated by dividing total grade points by the number of subjects.",
+        "Printed answer key: (A) The sum of frequencies of all classes up to"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "bf6ba2d6-f437-4d8e-af33-28e581dc62c0",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "25वां प्रतिशत (P25) समान है:",
+      "options_hindi": [
+        "पहला क्वारटाइल (Q1)",
+        "दूसरा क्वारटाइल (Q2)",
+        "तीसरा क्वारटाइल (Q3)",
+        "पहला डेसाइल (D1)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "The 25th percentile (P25) is identical to the:",
+      "options_english": [
+        "First Quartile (Q1)",
+        "Second Quartile (Q2)",
+        "Third Quartile (Q3)",
+        "First Decile (D1)"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Quartiles divide ordered distributions into four equal parts, with each quartile representing twenty-five percent of total observations. The first quartile marks the lower twenty-five percent threshold, making it mathematically identical to the 25th percentile, as both partition points designate the score below which exactly one-quarter of cases fall.",
+      "explanation_hindi": "सही उत्तर (a) है। क्वारटाइल क्रमबद्ध वितरण को चार समान भागों में विभाजित करते हैं, प्रत्येक क्वारटाइल कुल अवलोकनों का बीस-पांच प्रतिशत दर्शाता है। पहला क्वारटाइल निचले बीस-पांच प्रतिशत के थ्रेशोल्ड को चिह्नित करता है, जिससे यह गणितीय रूप से 25वें प्रतिशत के समान होता है, क्योंकि दोनों विभाजन बिंदु उस स्कोर को निर्दिष्ट करते हैं जिसके नीचे ठीक एक-चौथाई मामले आते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The first quartile is the same as the 25th percentile.",
+        "Printed answer key: (A) First Quartile (Q1)",
+        "Quartiles divide data into four equal parts."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "0d111a0f-2e44-478a-a546-71ddfb575066",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "स्टेनाइन स्कोर कच्चे स्कोर को 1 से 9 के बीच के पैमाने में परिवर्तित करते हैं। स्टेनाइन स्केल का औसत और मानक विचलन क्या है?",
+      "options_hindi": [
+        "औसत = 5, मानक विचलन = 2",
+        "औसत = 5, मानक विचलन = 10",
+        "औसत = 10, मानक विचलन = 3",
+        "औसत = 0, मानक विचलन ="
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Stanine scores transform raw scores into a scale ranging from 1 to 9. What are the mean and standard deviation of a stanine scale?",
+      "options_english": [
+        "Mean = 5, SD = 2",
+        "Mean = 5, SD = 10",
+        "Mean = 10, SD = 3",
+        "Mean = 0, SD ="
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Stanine, short for standard nine, is a standardized scoring system that maps raw test scores onto a simplified nine-point scale ranging from 1 to 9. The stanine distribution is constructed to have a theoretical mean of 5 and a standard deviation of 2, providing an easily understandable single-digit metric for reporting student achievement levels.",
+      "explanation_hindi": "सही उत्तर (a) है। स्टेनाइन, जिसका संक्षिप्त रूप मानक नौ है, एक मानकीकृत स्कोरिंग प्रणाली है जो कच्चे परीक्षण स्कोर को 1 से 9 के बीच के सरल नौ-बिंदु पैमाने पर मानचित्रित करती है। स्टेनाइन वितरण को 5 के सिद्धांतात्मक औसत और 2 के मानक विचलन के साथ बनाया गया है, जो छात्र उपलब्धि स्तरों की रिपोर्टिंग के लिए एक आसानी से समझने योग्य एकल-अंक मीट्रिक प्रदान करता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "स्टेनाइन स्केल का औसत 5 और मानक विचलन 2 है।",
+        "स्टेनाइन स्कोर 1 से 9 के बीच होते हैं।",
+        "Printed answer key: (A) Mean = 5, SD = 2"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c472e3d1-15a7-46dc-aa73-56c7bb9a2fff",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) और दूसरे को कारण (R) के रूप में\nलेबल किया गया है।\nअसर्शन (A): एक आवृत्ति वितरण में, वर्ग अंतराल 20-29\nका सटीक निम्न सीमा है:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled\nas Assertion (A) and the other is labelled as\nReason (R).\nAssertion (A): In a frequency distribution, the\nexact lower limit of the class interval 20-29 is",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Class boundaries establish true exact limits for continuous data presented in discrete frequency tables. Subtracting 0.5 from the stated lower limit of 20 gives an exact lower limit of 19.5, while adding 0.5 to the upper limit of 29 gives 29.5, eliminating gaps between adjacent intervals to ensure continuous measurement representation.",
+      "explanation_hindi": "सही उत्तर (a) है। वर्ग सीमाएँ निरंतर डेटा के लिए सटीक सीमाएँ स्थापित करती हैं जो विविक्त आवृत्ति तालिकाओं में प्रस्तुत की जाती हैं। 20 के निम्न सीमा से 0.5 घटाने पर 19.5 की सटीक निम्न सीमा मिलती है, जबकि 29 के ऊपरी सीमा में 0.5 जोड़ने पर 29.5 मिलती है, जो निकटवर्ती अंतरालों के बीच के अंतराल को समाप्त करती है ताकि निरंतर मापन प्रतिनिधित्व सुनिश्चित हो सके।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Class boundaries ensure accurate limits for continuous data.",
+        "Printed answer key: (a) Both A and R are true and R is the correct"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3cf7746c-5f12-48f3-94d3-a6df9cf02bd0",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से कौन सा \"पैरामीटर\" को परिभाषित करता है\nशैक्षिक सांख्यिकी में?",
+      "options_hindi": [
+        "नमूना डेटा का सारांशित संख्यात्मक मान",
+        "एक जनसंख्या का संख्यात्मक सारांश",
+        "एक सांख्यिकीय परीक्षण में अनुमानित त्रुटि का मार्जिन",
+        "अंक के उपसमुच्चय का कुल सांख्यिकीय भिन्नता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Which of the following defines a \"Parameter\" in educational statistics?",
+      "options_english": [
+        "A calculated numerical value summarizing sample data",
+        "A numerical summary of a population",
+        "The estimated margin of error in a statistical test",
+        "The total statistical variance of a subset of scores"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "In statistics, a parameter is a numerical value that summarizes a characteristic of an entire population. Parameters represent fixed population values, such as the true population mean or standard deviation. In contrast, corresponding values calculated from sample data are termed sample statistics and serve as estimates of population parameters.",
+      "explanation_hindi": "सही उत्तर (b) है। सांख्यिकी में, पैरामीटर एक संख्यात्मक मान है जो संपूर्ण जनसंख्या की एक विशेषता का सारांश प्रस्तुत करता है। पैरामीटर निश्चित जनसंख्या मानों का प्रतिनिधित्व करते हैं, जैसे कि वास्तविक जनसंख्या का औसत या मानक विचलन। इसके विपरीत, नमूना डेटा से गणना किए गए संबंधित मानों को नमूना सांख्यिकी कहा जाता है और ये जनसंख्या पैरामीटर के अनुमान के रूप में कार्य करते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "easy",
+      "key_facts": [
+        "Parameters summarize characteristics of entire populations.",
+        "Sample statistics are estimates of population parameters.",
+        "Printed answer key: (B) A numerical summary of a population"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5ba5589e-2be7-43c6-8fe5-3427ce4799f9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सार्वजनिक विद्यालय प्रबंधन में छात्र रिकॉर्ड बनाए रखने और ऑनलाइन रिपोर्ट कार्ड उत्पन्न करने के लिए मुख्य रूप से कौन सा डिजिटल पोर्टल उपयोग किया जाता है?",
+      "options_hindi": [
+        "DIKSHA राष्ट्रीय शिक्षक पोर्टल",
+        "E-Pramaan सरकारी पहचान पोर्टल",
+        "शगुन ऑनलाइन शिक्षा भंडार",
+        "शिक्षा पोर्टल का छात्र प्रबंधन मॉड्यूल"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Which digital portal is primarily used in public school management for maintaining student records and generating online report cards?",
+      "options_english": [
+        "DIKSHA National Teachers Portal",
+        "E-Pramaan Government Identity Portal",
+        "Shagun Online Education Repository",
+        "Student Management Module of the Education Portal"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Shagun Online Education Repository is primarily used in public school management for maintaining student records and generating online report cards. This digital portal facilitates efficient management of educational data, ensuring that student information is easily accessible and up-to-date. It plays a crucial role in enhancing the transparency and accountability of the educational system.",
+      "explanation_hindi": "सही उत्तर (c) है। शगुन ऑनलाइन शिक्षा भंडार सार्वजनिक विद्यालय प्रबंधन में छात्र रिकॉर्ड बनाए रखने और ऑनलाइन रिपोर्ट कार्ड उत्पन्न करने के लिए मुख्य रूप से उपयोग किया जाता है। यह डिजिटल पोर्टल शैक्षणिक डेटा के कुशल प्रबंधन को सुविधाजनक बनाता है, यह सुनिश्चित करता है कि छात्र की जानकारी आसानी से उपलब्ध और अद्यतन हो। यह शैक्षणिक प्रणाली की पारदर्शिता और जवाबदेही को बढ़ाने में महत्वपूर्ण भूमिका निभाता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "शगुन ऑनलाइन शिक्षा भंडार छात्र रिकॉर्ड प्रबंधन के लिए उपयोग होता है।",
+        "यह ऑनलाइन रिपोर्ट कार्ड उत्पन्न करने में सहायक है।",
+        "Printed answer key: (C) शगुन ऑनलाइन शिक्षा भंडार"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b07e0174-56e6-4f02-9a69-ed9337043065",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "यदि किसी छात्र का Z-score -1.5 है, तो उनका समकक्ष T-score क्या होगा?",
+      "options_hindi": [
+        "35",
+        "45",
+        "65",
+        "85"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "If a student's Z-score is -1.5, what is their equivalent T-score?",
+      "options_english": [
+        "35",
+        "45",
+        "65",
+        "85"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Converting a standard Z-score into its equivalent T-score utilizes the linear formula: T equals 50 plus 10 times Z. Substituting -1.5 for Z gives 10 multiplied by -1.5, which equals -15. Adding -15 to 50 yields an equivalent T-score of 35.",
+      "explanation_hindi": "सही उत्तर (a) है। Z-score को उसके समकक्ष T-score में परिवर्तित करने के लिए रैखिक सूत्र का उपयोग किया जाता है: T बराबर 50 प्लस 10 गुणा Z। Z के लिए -1.5 को प्रतिस्थापित करने पर 10 को -1.5 से गुणा किया जाता है, जो -15 के बराबर होता है। -15 को 50 में जोड़ने पर समकक्ष T-score 35 प्राप्त होता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "easy",
+      "key_facts": [
+        "T-score formula: T = 50 + 10 * Z",
+        "Printed answer key: (A) 35"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

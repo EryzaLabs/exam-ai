@@ -1,0 +1,800 @@
+{
+  "test_id": "8d04ccf1-ba45-4f32-9ad0-c49e447e95fd",
+  "test_name": "Topic Test: DIGITAL_ETHICS_ONLINE_SAFETY_AND_RESPONSIBLE_USE - Part 2",
+  "type": "topic_wise",
+  "topic": "digital_ethics_online_safety_and_responsible_use",
+  "created_at": "2026-10-28T18:55:06.585705",
+  "questions": [
+    {
+      "id": "c93e606a-99b1-450c-831f-7df95eee31e4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "संवेदनशील छात्र निदान या व्यवहार मूल्यांकन को संग्रहीत करते समय कौन-सी प्रथा नैतिक सिद्धांतों का उल्लंघन करती है?",
+      "options_hindi": [
+        "सिर्फ प्रमाणित स्कूल काउंसलरों और प्रशासनिक अधिकारियों के लिए डेटाबेस पहुंच को सीमित करना",
+        "क्लाउड सर्वरों पर संग्रहीत डेटाबेस बैकअप को एन्क्रिप्ट करना",
+        "सार्वजनिक स्कूल वेबसाइट पर गैर-गोपनीय व्यवहारात्मक दंड रिकॉर्ड प्रकाशित करना",
+        "छात्र मूल्यांकन फ़ाइलों को किसने एक्सेस किया या अपडेट किया, इसके ऑडिट लॉग बनाए रखना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which practice violates ethical principles when storing sensitive student diagnostic or behavioral evaluations?",
+      "options_english": [
+        "Restricting database access strictly to certified school counselors and administrators",
+        "Encrypting database backups stored on cloud servers",
+        "Publishing non-anonymized behavioral penalty records on the open public school website",
+        "Maintaining audit logs of who accessed or updated student evaluation files"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Publishing non-anonymized student behavioral, disciplinary, or diagnostic evaluation records on a public website severely violates data protection laws, student privacy rights, and ethical governance standards. Sensitive student evaluations require strict role-based access restrictions, encrypted database storage, and complete confidentiality. Unauthorized public exposure exposes students to social stigma, psychological distress, and potential identity misuse, breaching institutional duty of care obligations.",
+      "explanation_hindi": "सही उत्तर (c) है। सार्वजनिक वेबसाइट पर गैर-गोपनीय छात्र व्यवहार, अनुशासनात्मक, या निदान मूल्यांकन रिकॉर्ड प्रकाशित करना डेटा संरक्षण कानूनों, छात्र गोपनीयता अधिकारों, और नैतिक शासन मानकों का गंभीर उल्लंघन करता है। संवेदनशील छात्र मूल्यांकन के लिए सख्त भूमिका-आधारित पहुंच प्रतिबंध, एन्क्रिप्टेड डेटाबेस भंडारण, और पूर्ण गोपनीयता की आवश्यकता होती है। अनधिकृत सार्वजनिक प्रदर्शन छात्रों को सामाजिक कलंक, मनोवैज्ञानिक तनाव, और संभावित पहचान दुरुपयोग के प्रति उजागर करता है, जो संस्थागत देखभाल के दायित्वों का उल्लंघन करता है।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "hard",
+      "key_facts": [
+        "Publishing non-anonymized records violates data protection laws.",
+        "Printed answer key: (C) Publishing non-anonymized behavioral penalty records on the open public school website.",
+        "Sensitive evaluations require strict access controls and confidentiality.",
+        "Unauthorized exposure can lead to social stigma and identity misuse."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "488673f2-224e-4bf5-82b6-19611b51c093",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं, एक को असर्शन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है:\nअसर्शन (A): शैक्षणिक संस्थानों को छात्रों की तस्वीरें या वीडियो कैप्चर करने और उन्हें आधिकारिक सोशल मीडिया चैनलों पर अपलोड करने से पहले स्पष्ट, सूचित सहमति प्राप्त करनी चाहिए।\nकारण (R): छात्रों के मीडिया को बिना प्रकाशित करना",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements, one labelled as Assertion (A) and the other as Reason (R):\nAssertion (A): Educational institutions must obtain explicit, informed consent before capturing and uploading photographs or videos of students onto official social media channels.\nReason (R): Publishing student media without consent can lead to privacy violations.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Educational institutions must obtain explicit, informed consent from parents or guardians prior to publishing photographs or media of students on public channels. Digital media uploaded online can be downloaded, altered, or tracked, presenting child safety and privacy risks under data protection laws. Because non-consensual publication compromises student personal security and violates statutory privacy rights, the potential safety risks directly explain the mandatory consent requirement.",
+      "explanation_hindi": "सही उत्तर (a) है। शैक्षणिक संस्थानों को सार्वजनिक चैनलों पर छात्रों की तस्वीरें या मीडिया प्रकाशित करने से पहले माता-पिता या अभिभावकों से स्पष्ट, सूचित सहमति प्राप्त करनी चाहिए। ऑनलाइन अपलोड की गई डिजिटल मीडिया को डाउनलोड, परिवर्तित या ट्रैक किया जा सकता है, जो डेटा संरक्षण कानूनों के तहत बच्चों की सुरक्षा और गोपनीयता के लिए जोखिम प्रस्तुत करता है। क्योंकि बिना सहमति के प्रकाशन छात्र की व्यक्तिगत सुरक्षा को खतरे में डालता है और वैधानिक गोपनीयता अधिकारों का उल्लंघन करता है, संभावित सुरक्षा जोखिम अनिवार्य सहमति की आवश्यकता को स्पष्ट करते हैं।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "Explicit consent is required for publishing student media.",
+        "Non-consensual publication poses privacy risks.",
+        "Data protection laws safeguard children's rights.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6a3ddde6-ffa7-4ec1-aa7f-12070a3aeaf8",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "99. \"टू-फैक्टर ऑथेंटिकेशन\" (2FA) उपयोगकर्ता पहचान की पुष्टि के लिए क्या आवश्यक है?",
+      "options_hindi": [
+        "लॉगिन के दौरान तुरंत दो बार एक ही खाता पासवर्ड को फिर से दर्ज करना",
+        "भौतिक सत्यापन अनुमोदन प्राप्त करना",
+        "एक सुरक्षा प्रश्न का उत्तर देना",
+        "बायोमेट्रिक डेटा का उपयोग करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What does “Two-Factor Authentication” (2FA) require to verify user identity?",
+      "options_english": [
+        "Re-entering the exact same account password twice in immediate succession during login",
+        "Obtaining physical verification approval",
+        "Two factors: something you know (password) and something you have or are",
+        "Using biometric data"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Two-factor authentication enhances account security by requiring two distinct identity verification factors before granting system access. These factors combine something the user knows, such as a password or PIN, with something the user has, such as a physical token or mobile authenticator code, or something the user is, such as biometric fingerprint data. This defense prevents unauthorized access even if passwords are compromised.",
+      "explanation_hindi": "सही उत्तर (c) है। टू-फैक्टर ऑथेंटिकेशन खाता सुरक्षा को बढ़ाता है क्योंकि यह प्रणाली तक पहुँच प्रदान करने से पहले दो अलग-अलग पहचान सत्यापन कारकों की आवश्यकता करता है। ये कारक उपयोगकर्ता द्वारा ज्ञात किसी चीज़, जैसे पासवर्ड या पिन, के साथ उपयोगकर्ता के पास मौजूद किसी चीज़, जैसे भौतिक टोकन या मोबाइल ऑथेंटिकेटर कोड, या उपयोगकर्ता के रूप में किसी चीज़, जैसे बायोमेट्रिक फिंगरप्रिंट डेटा को जोड़ते हैं। यह सुरक्षा उपाय पासवर्ड के समझौता होने पर भी अनधिकृत पहुँच को रोकता है।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "Two-factor authentication requires two distinct verification factors.",
+        "It combines something the user knows with something the user has or is.",
+        "Printed answer key: (C) Two factors: something you know (password) and something you have or are."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a5e36383-d726-4de7-85ba-ca4cf1da9a45",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "71. छात्रों द्वारा व्यक्तिगत सोशल मीडिया खातों पर अधिक जानकारी साझा करने से क्या जोखिम होता है?",
+      "options_hindi": [
+        "पहचान चोरी या ट्रैकिंग के जोखिमों के लिए व्यक्तिगत विवरण उजागर करना",
+        "मोबाइल कंप्यूटिंग हार्डवेयर की समग्र प्रोसेसिंग गति और प्रदर्शन में महत्वपूर्ण कमी",
+        "सोशल मीडिया प्लेटफार्मों पर सत्यापित उपयोगकर्ता पहचान बैज का अचानक, स्वचालित रूप से निलंबन",
+        "संस्थानिक वायरलेस वाई-फाई एक्सेस कॉन्फ़िगरेशन के साथ तकनीकी नेटवर्क असंगतता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the risk associated with oversharing on personal social media accounts by students?",
+      "options_english": [
+        "Exposing personal details to risks of identity theft or tracking",
+        "Significant reduction in the overall processing speed and performance of mobile computing hardware",
+        "The sudden, automated revocation of verified user identification badges on social media platforms",
+        "Technical network incompatibility with institutional wireless Wi-Fi access configurations"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Oversharing personal information, daily schedules, location updates, or sensitive photos on social media profiles creates significant security and privacy risks. Cybercriminals, stalkers, and malicious actors can exploit exposed personal details to commit identity theft, execute targeted phishing attacks, track physical locations, or perform doxxing. Educating students on maintaining strict privacy configurations and limiting personal post visibility is vital for personal safeguarding.",
+      "explanation_hindi": "सही उत्तर (a) है। व्यक्तिगत जानकारी, दैनिक कार्यक्रम, स्थान अपडेट, या संवेदनशील तस्वीरों को सोशल मीडिया प्रोफाइल पर अधिक साझा करना महत्वपूर्ण सुरक्षा और गोपनीयता जोखिम पैदा करता है। साइबर अपराधी, स्टॉकर और दुर्भावनापूर्ण अभिनेता उजागर किए गए व्यक्तिगत विवरणों का उपयोग पहचान चोरी करने, लक्षित फ़िशिंग हमले करने, भौतिक स्थानों को ट्रैक करने या डॉक्सिंग करने के लिए कर सकते हैं। छात्रों को सख्त गोपनीयता कॉन्फ़िगरेशन बनाए रखने और व्यक्तिगत पोस्ट की दृश्यता को सीमित करने के लिए शिक्षित करना व्यक्तिगत सुरक्षा के लिए महत्वपूर्ण है।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "Oversharing can lead to identity theft and privacy breaches.",
+        "Educating students on privacy settings is crucial.",
+        "Printed answer key: (A) Exposing personal details to risks of identity theft or tracking."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f9d78b0e-5b4d-46c7-a64d-f89591fb8245",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II से मिलाएं:\nसूची I: (ऑनलाइन खतरे)\nP. असुरक्षित डाउनलोड\nQ. पहचान की चोरी\nR. पासवर्ड स्प्रेइंग\nS. नेटवर्क ईव्सड्रॉपिंग\nसूची II: (रोकथाम के उपाय)\nI. आधिकारिक ऐप स्टोर्स और सत्यापित स्रोत लिंक का उपयोग करना\nII. असुरक्षित वेब फॉर्म पर राष्ट्रीय पहचान नंबर साझा करने से बचना\nIII. मल्टी-फैक्टर ऑथेंटिकेशन (MFA) और मजबूत अद्वितीय पासफ़्रेज़ लागू करना\nIV. सार्वजनिक वाई-फाई पर केवल वर्चुअल प्राइवेट नेटवर्क (VPN) के माध्यम से कनेक्ट करना\nनीचे दिए गए कोड का उपयोग करके सही उत्तर चुनें:",
+      "options_hindi": [
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-III, R-II, S-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (Online Threats)\nP. Unsafe Downloads\nQ. Identity Theft\nR. Password Spraying\nS. Network Eavesdropping\nList II: (Preventive Measure)\nI. Utilizing official app stores and verified source links\nII. Refraining from sharing national identity numbers on unencrypted web forms\nIII. Implementing Multi-Factor Authentication (MFA) and strong unique passphrases\nIV. Connecting exclusively through Virtual Private Networks (VPN) on public Wi-Fi\nSelect the correct answer using the codes given below:",
+      "options_english": [
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-III, R-II, S-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Mitigating online threats requires targeted preventive practices. Unsafe downloads are minimized by utilizing verified official application repositories. Identity theft is countered by refraining from sharing national identity details on unencrypted forms. Password spraying attacks are mitigated using multi-factor authentication and unique passphrases. Network eavesdropping on public wireless networks is prevented by connecting through virtual private networks. Matching these threats aligns risks with preventive measures.",
+      "explanation_hindi": "सही उत्तर (a) है। ऑनलाइन खतरों को कम करने के लिए लक्षित रोकथाम के उपायों की आवश्यकता होती है। असुरक्षित डाउनलोड को सत्यापित आधिकारिक एप्लिकेशन भंडार का उपयोग करके कम किया जाता है। पहचान की चोरी को असुरक्षित फॉर्म पर राष्ट्रीय पहचान विवरण साझा करने से बचकर रोका जाता है। पासवर्ड स्प्रेइंग हमलों को मल्टी-फैक्टर ऑथेंटिकेशन और अद्वितीय पासफ़्रेज़ का उपयोग करके कम किया जाता है। सार्वजनिक वायरलेस नेटवर्क पर नेटवर्क ईव्सड्रॉपिंग को वर्चुअल प्राइवेट नेटवर्क के माध्यम से कनेक्ट करके रोका जाता है। इन खतरों को मिलाना जोखिमों को रोकथाम के उपायों के साथ संरेखित करता है।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "Unsafe downloads can lead to malware infections.",
+        "Identity theft is a serious crime that can have long-lasting effects.",
+        "Multi-Factor Authentication (MFA) significantly enhances account security.",
+        "Printed answer key: (A) P-I, Q-II, R-III, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "78f62d02-6a52-441a-9e69-6d959131c730",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "23. \"पैरेंटल कंट्रोल\" बच्चों के लिए आयु-उपयुक्त डिजिटल सामग्री तक पहुँच सुनिश्चित करने में क्या भूमिका निभाते हैं?",
+      "options_hindi": [
+        "सामग्री को फ़िल्टर करना, हानिकारक वेबसाइटों को ब्लॉक करना, और उपकरण समय सीमाएँ निर्धारित करना",
+        "स्वचालित रूप से पाठ्यपुस्तक अध्यायों का सारांश बनाना और छात्रों के लिए लिखित गृहकार्य असाइनमेंट पूरा करना",
+        "शैक्षणिक संस्थानों में समर्पित भौतिक कंप्यूटर प्रयोगशाला हार्डवेयर की प्रशासनिक आवश्यकता को समाप्त करना",
+        "छात्रों की ऑनलाइन सुरक्षा के लिए पूर्ण वैधानिक कानूनी जिम्मेदारी को सीधे व्यावसायिक इंटरनेट सेवा प्रदाताओं को स्थानांतरित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What role do 'Parental Controls' play in ensuring age-appropriate digital content access for children?",
+      "options_english": [
+        "Filtering content, blocking harmful websites, and setting device time limits",
+        "Automatically summarizing textbook chapters and completing written homework assignments for students",
+        "Eliminating the administrative need for dedicated physical computer laboratory hardware in educational institutions",
+        "Transferring full statutory legal liability for student online protection directly to commercial internet service providers"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Parental controls serve as critical software and hardware mechanisms that allow parents and guardians to manage children’s digital environments. These tools filter age-inappropriate content, block access to malicious or explicit websites, enforce screen time boundaries, and restrict unauthorized software downloads. By setting protective parameters, parental controls support healthy digital habits, reduce exposure to online predatory risks, and ensure age-appropriate internet navigation for young learners.",
+      "explanation_hindi": "सही उत्तर (a) है। पैरेंटल कंट्रोल माता-पिता और अभिभावकों को बच्चों के डिजिटल वातावरण का प्रबंधन करने के लिए महत्वपूर्ण सॉफ़्टवेयर और हार्डवेयर तंत्र के रूप में कार्य करते हैं। ये उपकरण आयु-अनुपयुक्त सामग्री को फ़िल्टर करते हैं, हानिकारक या स्पष्ट वेबसाइटों तक पहुँच को ब्लॉक करते हैं, स्क्रीन समय की सीमाएँ लागू करते हैं, और अनधिकृत सॉफ़्टवेयर डाउनलोड को प्रतिबंधित करते हैं। सुरक्षात्मक मानकों को स्थापित करके, पैरेंटल कंट्रोल स्वस्थ डिजिटल आदतों का समर्थन करते हैं, ऑनलाइन शिकार के खतरों के संपर्क को कम करते हैं, और युवा शिक्षार्थियों के लिए आयु-उपयुक्त इंटरनेट नेविगेशन सुनिश्चित करते हैं।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "पैरेंटल कंट्रोल बच्चों की ऑनलाइन सुरक्षा के लिए महत्वपूर्ण हैं।",
+        "Printed answer key: (A) Filtering content, blocking harmful websites, and setting device time limits.",
+        "ये उपकरण हानिकारक सामग्री को फ़िल्टर करते हैं और स्क्रीन समय सीमाएँ निर्धारित करते हैं।",
+        "सुरक्षात्मक पैरामीटर स्थापित करने से स्वस्थ डिजिटल आदतों को बढ़ावा मिलता है।"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "021fdbbf-c0e9-485c-a667-51e54e983e4b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "4. उचित शैक्षिक फीडबैक,\nपुनः-प्रस्तुति के अवसर, या अनुशासनात्मक\nकदम लागू करें\nसही अनुक्रम चुनें:",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "विकल्प सी",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Apply constructive educational feedback, re-submission opportunities, or disciplinary steps as appropriate. Select the correct sequence:",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The correct answer is option D, which highlights the long-term visibility of past online actions to recruiters and academic admissions officers. An unmanaged digital footprint persists over extended periods due to search engine indexing, data archiving, and online public accessibility. Admissions committees and corporate recruiters routinely perform digital background checks to assess candidates’ character, professionalism, and behavioral integrity. Inappropriate public content, unprofessional online communication, or unethical digital behavior can persistently remain visible, negatively influencing academic admissions decisions, scholarship evaluations, and long-term professional employment opportunities for prospective applicants.",
+      "explanation_hindi": "सही उत्तर (d) है। यह विकल्प भर्तीकर्ताओं और शैक्षणिक प्रवेश अधिकारियों के लिए पिछले ऑनलाइन कार्यों की दीर्घकालिक दृश्यता को उजागर करता है। एक unmanaged डिजिटल फुटप्रिंट लंबे समय तक बना रहता है, जो सर्च इंजन इंडेक्सिंग, डेटा आर्काइविंग, और ऑनलाइन सार्वजनिक पहुंच के कारण होता है। प्रवेश समितियाँ और कॉर्पोरेट भर्तीकर्ता नियमित रूप से डिजिटल पृष्ठभूमि की जांच करते हैं ताकि उम्मीदवारों के चरित्र, पेशेवरता, और व्यवहारिक अखंडता का आकलन किया जा सके। अनुचित सार्वजनिक सामग्री, अप्रासंगिक ऑनलाइन संचार, या अनैतिक डिजिटल व्यवहार स्थायी रूप से दृश्य रह सकते हैं, जो शैक्षणिक प्रवेश निर्णयों, छात्रवृत्ति मूल्यांकन, और संभावित आवेदकों के लिए दीर्घकालिक पेशेवर रोजगार के अवसरों को नकारात्मक रूप से प्रभावित कर सकते हैं।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "Unmanaged digital footprints persist due to search engine indexing.",
+        "They can negatively influence admissions and employment opportunities.",
+        "Printed answer key: (D) Long-term visibility of past online actions to"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e3509f92-d7b8-4755-a6ca-aa5d52247b14",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "16. उस शब्द का क्या नाम है जिसका उपयोग डिजिटल संचार उपकरणों के माध्यम से एक पीड़ित के खिलाफ बार-बार, जानबूझकर और हानिकारक आक्रामक व्यवहार का वर्णन करने के लिए किया जाता है जो आसानी से अपनी रक्षा नहीं कर सकता?",
+      "options_hindi": [
+        "साइबरस्टॉकिंग",
+        "साइबरबुलिंग",
+        "फिशिंग",
+        "टाइपोसक्वाटिंग"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "16. What is the term used to describe repeated, deliberate, and harmful aggressive behavior executed through digital communication devices against a victim who cannot easily defend themselves?",
+      "options_english": [
+        "Cyberstalking",
+        "Cyberbullying",
+        "Phishing",
+        "Typosquatting"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Cyberbullying refers to repeated, deliberate, and hostile behavior conducted through digital communication devices against an individual who cannot easily defend themselves. Executed via text messages, social media, online forums, or gaming platforms, it includes harassment, intimidation, exclusion, and public humiliation. Recognizing cyberbullying is essential for educational administrators to implement effective safeguarding policies, offer timely psychological intervention, and foster safe, inclusive online learning environments.",
+      "explanation_hindi": "सही उत्तर (b) है। साइबरबुलिंग का अर्थ है डिजिटल संचार उपकरणों के माध्यम से एक व्यक्ति के खिलाफ बार-बार, जानबूझकर और शत्रुतापूर्ण व्यवहार करना जो आसानी से अपनी रक्षा नहीं कर सकता। यह व्यवहार टेक्स्ट संदेशों, सोशल मीडिया, ऑनलाइन फोरम या गेमिंग प्लेटफार्मों के माध्यम से किया जाता है, जिसमें उत्पीड़न, डराना, बहिष्कार और सार्वजनिक अपमान शामिल हैं। साइबरबुलिंग को पहचानना शैक्षणिक प्रशासकों के लिए प्रभावी सुरक्षा नीतियों को लागू करने, समय पर मनोवैज्ञानिक हस्तक्षेप प्रदान करने और सुरक्षित, समावेशी ऑनलाइन शिक्षण वातावरण को बढ़ावा देने के लिए आवश्यक है।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "Cyberbullying involves repeated aggressive behavior online.",
+        "It can occur through various digital platforms.",
+        "Recognizing it is crucial for educational policies.",
+        "Printed answer key: (B) Cyberbullying"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e6a1dffb-4107-4b17-9ae9-de5d14581034",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "91. \"स्क्रीन टाइम पैसिव कंजम्पशन\" और \"एक्टिव स्क्रीन टाइम\" में क्या अंतर है?",
+      "options_hindi": [
+        "पैसिव कंजम्पशन के लिए शारीरिक व्यायाम की आवश्यकता होती है, जबकि एक्टिव स्क्रीन टाइम स्थिर रहते हुए किया जाता है",
+        "पैसिव स्क्रीन टाइम केवल मोबाइल स्मार्टफोनों पर होता है, जबकि सक्रिय सहभागिता के लिए डेस्कटॉप कंप्यूटर की आवश्यकता होती है",
+        "पैसिव मीडिया कंजम्पशन बाल संरक्षण कानूनों के तहत पूरी तरह से अवैध है, जबकि सक्रिय डिजिटल स्क्रीन टाइम अनिवार्य है",
+        "पैसिव कंजम्पशन अनियंत्रित स्क्रॉलिंग है, जबकि सक्रिय समय में निर्माण और समस्या समाधान शामिल है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is “Screen Time Passive Consumption” versus “Active Screen Time”?",
+      "options_english": [
+        "Passive consumption requires physical workout routines, whereas active screen time is performed while remaining sedentary",
+        "Passive screen time takes place exclusively on mobile smartphones, whereas active engagement requires desktop computers",
+        "Passive media consumption is strictly illegal under child protection laws, whereas active digital screen time is mandatory",
+        "Passive consumption is uncritical scrolling, while active time involves creating and problem-solving"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Distinguishing screen time modes is vital for digital well-being. Passive screen consumption involves uncritical, receptive media consumption, such as endlessly scrolling through social media feeds or continuously watching online videos without cognitive engagement. Conversely, active screen time engages higher-order cognitive processing through interactive problem-solving, digital content creation, coding, and collaborative learning, yielding positive developmental and educational outcomes.",
+      "explanation_hindi": "सही उत्तर (d) है। स्क्रीन टाइम के तरीकों का भेद करना डिजिटल कल्याण के लिए महत्वपूर्ण है। पैसिव स्क्रीन कंजम्पशन अनियंत्रित, ग्रहणशील मीडिया कंजम्पशन को शामिल करता है, जैसे कि सोशल मीडिया फ़ीड्स के माध्यम से अंतहीन स्क्रॉलिंग करना या बिना किसी संज्ञानात्मक संलग्नता के लगातार ऑनलाइन वीडियो देखना। इसके विपरीत, एक्टिव स्क्रीन टाइम इंटरैक्टिव समस्या समाधान, डिजिटल सामग्री निर्माण, कोडिंग, और सहयोगात्मक सीखने के माध्यम से उच्च-क्रम की संज्ञानात्मक प्रक्रिया में संलग्न होता है, जो सकारात्मक विकासात्मक और शैक्षिक परिणाम देता है।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "Passive consumption involves uncritical media engagement.",
+        "Active screen time includes problem-solving and creation.",
+        "Understanding screen time types is crucial for well-being.",
+        "Printed answer key: (D) Passive consumption is uncritical scrolling,"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b8140d4c-9605-4fb0-a810-3baf19d0b7e0",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक छात्र के लिए अपने सक्रिय डिजिटल फुटप्रिंट को\nकम करने के लिए सबसे प्रभावी रणनीति कौन सी है?",
+      "options_hindi": [
+        "सभी व्यक्तिगत, वित्तीय, और शैक्षणिक खातों में एक ही सरल पासवर्ड का उपयोग करना",
+        "गोपनीयता सेटिंग्स का ऑडिट करना, अप्रयुक्त खातों को हटाना, और पोस्ट साझा करने को सीमित करना",
+        "नेटवर्किंग के लिए खुले सोशल मीडिया प्रोफाइल पर व्यक्तिगत संपर्क विवरण और स्थान अपडेट सार्वजनिक रूप से साझा करना",
+        "तीसरे पक्ष को सभी स्वचालित रूप से स्वीकार करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which strategy is most effective for a student to\nminimize their active digital footprint?",
+      "options_english": [
+        "Utilizing a single simple password across all\npersonal, financial, and educational accounts",
+        "Auditing privacy settings, deleting unused\naccounts, and limiting post sharing",
+        "Publicly sharing personal contact details\nand location updates on open social media\nprofiles for networking",
+        "Automatically accepting all third-party"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Minimizing an active digital footprint requires proactive data management practices. Students achieve this by regularly auditing social media privacy settings, permanently deleting unused web accounts, limiting public sharing of personal information, and opting out of unnecessary tracking cookies. Reducing online data visibility safeguards personal identity, protects privacy, and prevents third-party data profiling, making footprint management a fundamental digital citizenship skill.",
+      "explanation_hindi": "सही उत्तर (b) है। सक्रिय डिजिटल फुटप्रिंट को कम करने के लिए सक्रिय डेटा प्रबंधन प्रथाओं की आवश्यकता होती है। छात्र इसे सामाजिक मीडिया गोपनीयता सेटिंग्स का नियमित ऑडिट करके, अप्रयुक्त वेब खातों को स्थायी रूप से हटाकर, व्यक्तिगत जानकारी के सार्वजनिक साझा करने को सीमित करके, और अनावश्यक ट्रैकिंग कुकीज़ से बाहर निकलकर प्राप्त करते हैं। ऑनलाइन डेटा दृश्यता को कम करना व्यक्तिगत पहचान की सुरक्षा करता है, गोपनीयता की रक्षा करता है, और तीसरे पक्ष के डेटा प्रोफाइलिंग को रोकता है, जिससे फुटप्रिंट प्रबंधन एक मौलिक डिजिटल नागरिकता कौशल बन जाता है।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "Auditing privacy settings is essential for digital footprint management.",
+        "Deleting unused accounts helps protect personal information.",
+        "Printed answer key: (B) Auditing privacy settings, deleting unused accounts, and limiting post sharing.",
+        "Limiting public sharing of information is crucial for privacy."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "41677998-dc52-4dc1-99f6-e007b4ad46e2",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "77. डिजिटल बाल सुरक्षा ढांचों में \"Sextortion\" शब्द का क्या अर्थ है?",
+      "options_hindi": [
+        "अनधिकृत ऑनलाइन मार्केटप्लेस प्लेटफार्मों के माध्यम से वाणिज्यिक डिजिटल पाठ्यपुस्तकों का अवैध वितरण",
+        "उपयोगकर्ता को आधिकारिक संस्थागत वेब पोर्टलों तक पहुँच से वंचित करना जब तक बकाया ट्यूशन शुल्क का निपटारा नहीं किया जाता",
+        "इंटिमेट मीडिया को सार्वजनिक रूप से जारी करने की धमकी देकर पैसे या फavors की मांग करना",
+        "केंद्रीय प्रशासनिक कंप्यूटर टर्मिनलों पर अनधिकृत स्वामित्व सॉफ़्टवेयर एप्लिकेशन स्थापित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "The term “Sextortion” in digital child safety frameworks refers to:",
+      "options_english": [
+        "Illegally distributing commercial digital textbooks through unauthorized online marketplace platforms",
+        "Denying user access to official institutional web portals until outstanding tuition fees are settled",
+        "Extorting money or favors by threatening to release intimate media",
+        "Installing unlicensed proprietary software applications on central administrative computer terminals"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Sextortion is a form of cyber extortion where perpetrators coerce, manipulate, or blackmail victims by threatening to publicly distribute explicit or intimate images and videos unless financial payment, additional explicit content, or sexual favors are provided. Representing a severe digital child safety violation, sextortion causes severe psychological distress, requiring robust institutional prevention, legal reporting, and immediate crisis support.",
+      "explanation_hindi": "सही उत्तर (c) है। Sextortion एक प्रकार का साइबर जबरदस्ती है जहाँ अपराधी पीड़ितों को मजबूर करते हैं, हेरफेर करते हैं, या ब्लैकमेल करते हैं, यह धमकी देकर कि वे स्पष्ट या इंटिमेट छवियों और वीडियो को सार्वजनिक रूप से वितरित करेंगे जब तक कि वित्तीय भुगतान, अतिरिक्त स्पष्ट सामग्री, या यौन फेवर प्रदान नहीं किए जाते। यह एक गंभीर डिजिटल बाल सुरक्षा उल्लंघन का प्रतिनिधित्व करता है, जो गंभीर मनोवैज्ञानिक तनाव का कारण बनता है, और इसके लिए मजबूत संस्थागत रोकथाम, कानूनी रिपोर्टिंग, और तत्काल संकट समर्थन की आवश्यकता होती है।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "hard",
+      "key_facts": [
+        "Sextortion involves coercion through threats of media release.",
+        "It is a severe violation of digital child safety.",
+        "Printed answer key: (C) Extorting money or favors by threatening to release intimate media"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "79815794-0c49-4963-b19b-01e2ff5b6248",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "डिजिटल नैतिकता के संदर्भ में उपयोगकर्ता इंटरफ़ेस डिज़ाइन में \"डार्क पैटर्न\" का क्या अर्थ है?",
+      "options_hindi": [
+        "उच्च-प्रतिबिंबित प्रदर्शन रंग थीम जो स्क्रीन की चमक को कम करने और बैटरी की शक्ति को बचाने के लिए विशेष रूप से तैयार की गई हैं",
+        "सुरक्षित एंड-टू-एंड एन्क्रिप्टेड संचार प्रोटोकॉल जो विशेष रूप से वरिष्ठ सरकारी प्रशासकों द्वारा उपयोग किए जाते हैं",
+        "उपयोगकर्ता इंटरफ़ेस जो उपयोगकर्ताओं को अनचाहे कार्यों में हेरफेर करने के लिए डिज़ाइन किए गए हैं",
+        "जटिल कमांड-लाइन टर्मिनल स्क्रिप्ट"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What does “Dark Patterns” refer to in the context of user interface design and digital ethics?",
+      "options_english": [
+        "High-contrast display color themes specifically engineered to reduce screen glare and conserve battery power",
+        "Secure end-to-end encrypted communication protocols utilized exclusively by senior government administrators",
+        "User interfaces designed to manipulate users into unwanted actions",
+        "Complex command-line terminal scripts"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Dark patterns refer to deceptive user interface design choices engineered to trick or manipulate users into performing unintended actions. Examples include obscure opt-out options, hidden recurring subscription fees, aggressive pop-up prompts, and forced data collection. In digital ethics, dark patterns violate user autonomy, exploit cognitive biases, and undermine informed consent, highlighting the need for ethical software design standards across digital platforms.",
+      "explanation_hindi": "सही उत्तर (c) है। डार्क पैटर्न का अर्थ है उपयोगकर्ता इंटरफ़ेस डिज़ाइन में धोखाधड़ी के विकल्प जो उपयोगकर्ताओं को अनचाहे कार्यों में हेरफेर करने के लिए तैयार किए जाते हैं। उदाहरणों में अस्पष्ट ऑप्ट-आउट विकल्प, छिपी हुई आवर्ती सदस्यता शुल्क, आक्रामक पॉप-अप प्रॉम्प्ट और मजबूर डेटा संग्रह शामिल हैं। डिजिटल नैतिकता में, डार्क पैटर्न उपयोगकर्ता स्वायत्तता का उल्लंघन करते हैं, संज्ञानात्मक पूर्वाग्रहों का शोषण करते हैं, और सूचित सहमति को कमजोर करते हैं, जो डिजिटल प्लेटफार्मों में नैतिक सॉफ़्टवेयर डिज़ाइन मानकों की आवश्यकता को उजागर करता है।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "Dark patterns manipulate users into unintended actions.",
+        "They violate user autonomy and undermine informed consent.",
+        "Printed answer key: (C) User interfaces designed to manipulate users"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a00f42d8-9adb-40e8-afbd-3ea2397ecb60",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "औपचारिक शैक्षणिक और आधिकारिक ईमेल संचार में, \"नेटिक्वेट\" शब्द के संदर्भ में सभी कैप्स टेक्स्ट के उपयोग के बारे में क्या आवश्यक है?",
+      "options_hindi": [
+        "इससे बचें क्योंकि यह चिल्लाने के समान है और आक्रामक स्वर व्यक्त करता है",
+        "यह संदेश के पूरे शरीर में दृश्य फ़ॉन्ट पठनीयता को अधिकतम करने के लिए लागू किया जाना चाहिए",
+        "यह वरिष्ठ शैक्षणिक प्रशासकों को संबोधित करते समय अनिवार्य है",
+        "यह आधिकारिक रूप से इंगित करता है कि संदेश की सामग्री स्वचालित तथ्य-जांच सॉफ़्टवेयर का उपयोग करके सत्यापित की गई थी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In formal academic and official email communication, what does the term 'Netiquette' require regarding the use of ALL CAPS text?",
+      "options_english": [
+        "Avoid it as it resembles shouting and conveys an aggressive tone",
+        "It must be applied across the entire message body to maximize visual font readability",
+        "It is strictly required when addressing official communications to senior educational administrators",
+        "It officially indicates that the message content was verified using automated fact-checking software"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Netiquette standards in official electronic communications dictate that typing entire messages in capital letters should be avoided. In digital interaction conventions, continuous uppercase text visually simulates yelling or shouting, conveying an aggressive, demanding, or unprofessional tone. Standard email etiquette mandates proper capitalization, professional formatting, and clear syntax to ensure messages maintain a respectful, constructive, and formal tone in academic and administrative settings.",
+      "explanation_hindi": "सही उत्तर (a) है। नेटिक्वेट मानक औपचारिक इलेक्ट्रॉनिक संचार में यह निर्धारित करते हैं कि पूरे संदेश को बड़े अक्षरों में टाइप करने से बचना चाहिए। डिजिटल इंटरैक्शन की परंपराओं में, निरंतर बड़े अक्षर का पाठ चिल्लाने या चिल्लाने का दृश्य अनुकरण करता है, जो आक्रामक, मांग करने वाला या अप्राकृतिक स्वर व्यक्त करता है। मानक ईमेल शिष्टाचार उचित पूंजीकरण, पेशेवर प्रारूपण और स्पष्ट व्याकरण को अनिवार्य करता है ताकि संदेश शैक्षणिक और प्रशासनिक सेटिंग्स में एक सम्मानजनक, रचनात्मक और औपचारिक स्वर बनाए रख सकें।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "Typing in all caps is often perceived as shouting in digital communication.",
+        "Proper email etiquette includes using standard capitalization and formatting.",
+        "Printed answer key: (A) Avoid it as it resembles shouting and conveys"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "726c710b-9752-4b82-b7a0-487fe119ce77",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "2. छात्र के साथ एक सहायक संवाद करें ताकि उनकी वास्तविक वैचारिक समझ का आकलन किया जा सके।",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "विकल्प सी",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Conduct a supportive dialogue with the student to assess their actual conceptual understanding.",
+      "options_english": [
+        "Digital Etiquette",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Digital etiquette, often referred to as netiquette, defines the electronic standards of conduct and procedural norms governing digital interactions. It focuses on encouraging polite, respectful, and appropriate communication across digital platforms while mitigating online harassment and disruptive behavior. Educational institutions emphasize digital etiquette to foster constructive online learning environments, teach students social awareness in virtual spaces, and prevent peer conflict during collaborative digital activities and electronic communications.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल शिष्टाचार, जिसे अक्सर नेटिकेट कहा जाता है, डिजिटल इंटरैक्शन को नियंत्रित करने वाले इलेक्ट्रॉनिक आचार के मानकों और प्रक्रियात्मक मानदंडों को परिभाषित करता है। यह डिजिटल प्लेटफार्मों पर विनम्र, सम्मानजनक और उचित संचार को प्रोत्साहित करने पर केंद्रित है, जबकि ऑनलाइन उत्पीड़न और विघटनकारी व्यवहार को कम करता है। शैक्षणिक संस्थान डिजिटल शिष्टाचार पर जोर देते हैं ताकि वे रचनात्मक ऑनलाइन शिक्षण वातावरण को बढ़ावा दें, छात्रों को आभासी स्थानों में सामाजिक जागरूकता सिखाएं, और सहयोगात्मक डिजिटल गतिविधियों और इलेक्ट्रॉनिक संचार के दौरान सहपाठी संघर्ष को रोकें।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital etiquette promotes respectful communication online.",
+        "Educational institutions teach social awareness in virtual spaces.",
+        "Printed answer key: (A) Digital Etiquette"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f6acd7ba-2eb9-4bf1-9abd-ba067a102483",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "74. कौन सा प्रशासनिक कार्य स्कूल परिसर में\nशैक्षिक प्रौद्योगिकी निगरानी के नैतिक उपयोग का\nउदाहरण प्रस्तुत करता है?",
+      "options_hindi": [
+        "सुरक्षा के लिए स्पष्ट संकेत के साथ सामान्य क्षेत्रों में\nदृश्यमान सीसीटीवी स्थापित करना",
+        "संपत्ति वंदलिज्म को रोकने के लिए निजी शौचालयों में\nगुप्त निगरानी कैमरे स्थापित करना",
+        "स्कूल द्वारा जारी लैपटॉप पर निगरानी सॉफ़्टवेयर का\nउपयोग करके निजी घरेलू नेटवर्क ट्रैफ़िक को गुप्त रूप से\nकैप्चर करना",
+        "बिना पूर्व सूचना के निजी स्टाफ रूम की\nबातचीत को गुप्त रूप से रिकॉर्ड करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which administrative action exemplifies ethical use of educational technology surveillance in a school campus?",
+      "options_english": [
+        "Installing visible CCTV in common areas with clear signage for safety",
+        "Installing concealed surveillance cameras inside private restroom facilities to deter property vandalism",
+        "Covertly capturing private home network traffic using monitoring software on school-issued laptops",
+        "Secretly recording private staff room conversations using hidden audio devices without prior disclosure"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Ethical campus surveillance requires transparency, proportionality, and clear public disclosure. Installing visible CCTV cameras in public common areas with prominent signage enhances physical security and deters misconduct while respecting privacy rights. Conversely, deploying hidden cameras in private spaces, covertly monitoring personal devices, or recording private staff conversations constitutes invasive surveillance, violating fundamental privacy rights, institutional trust, and legal data protection frameworks.",
+      "explanation_hindi": "सही उत्तर (a) है। नैतिक परिसर निगरानी के लिए पारदर्शिता, अनुपात और स्पष्ट सार्वजनिक प्रकटीकरण की आवश्यकता होती है। सामान्य क्षेत्रों में स्पष्ट संकेत के साथ दृश्यमान सीसीटीवी कैमरे स्थापित करना शारीरिक सुरक्षा को बढ़ाता है और दुराचार को रोकता है, जबकि गोपनीयता अधिकारों का सम्मान करता है। इसके विपरीत, निजी स्थानों में छिपे हुए कैमरे स्थापित करना, व्यक्तिगत उपकरणों की गुप्त निगरानी करना, या निजी स्टाफ बातचीत को रिकॉर्ड करना आक्रामक निगरानी का गठन करता है, जो मौलिक गोपनीयता अधिकारों, संस्थागत विश्वास और कानूनी डेटा सुरक्षा ढांचे का उल्लंघन करता है।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "दृश्यमान सीसीटीवी सुरक्षा को बढ़ाता है।",
+        "गोपनीयता अधिकारों का सम्मान करना आवश्यक है।",
+        "Printed answer key: (A) Installing visible CCTV in common areas"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e18aa4f9-fcf3-452e-a90f-4ebf03778b45",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "30. बच्चों की ऑनलाइन सुरक्षा ढांचों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. COPPA (बच्चों की ऑनलाइन गोपनीयता संरक्षण अधिनियम) का सिद्धांत 13 वर्ष से कम उम्र के बच्चों से व्यक्तिगत डेटा एकत्र करने से पहले सत्यापित माता-पिता की सहमति पर जोर देता है।\nB. भारतीय आईटी अधिनियम के प्रावधानों में बच्चों से संबंधित डिजिटल अश्लीलता और साइबर उत्पीड़न के लिए दंडात्मक नियम शामिल हैं।\nC. बच्चों की सुरक्षा ढांचे केवल हार्डवेयर सुरक्षा पर ध्यान केंद्रित करते हैं और ऑनलाइन ग्रूमिंग व्यवहार की अनदेखी करते हैं।\nD. स्कूल स्तर की सुरक्षा नीतियों को राष्ट्रीय बाल संरक्षण कानूनों और डिजिटल सुरक्षा दिशानिर्देशों के साथ संरेखित करना चाहिए।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और D",
+        "केवल A और C",
+        "केवल B और C",
+        "A, B, C और D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Child Online Safety Frameworks:\nA. The COPPA (Children’s Online Privacy Protection Act) principle emphasizes verifiable parental consent prior to gathering personal data from children under 13.\nB. Indian IT Act provisions contain penal rules addressing digital pornography and cyber harassment involving minors.\nC. Child safety frameworks focus exclusively on hardware protection and ignore online grooming behaviors.\nD. School-level safeguarding policies should align with national child protection laws and digital safety guidelines.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and D only",
+        "A and C only",
+        "B and C only",
+        "A, B, C and D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Child online safety frameworks integrate legal mandates, technical safeguards, and institutional policies. Legislative measures require parental consent for personal data collection from young children and penalize cyber harassment and explicit content involving minors. School safeguarding strategies align institutional rules with statutory guidelines. However, effective safety frameworks extend beyond hardware controls to address behavioral risks like grooming, making claims limiting protection solely to physical devices false.",
+      "explanation_hindi": "सही उत्तर (a) है। बच्चों की ऑनलाइन सुरक्षा ढांचे कानूनी आवश्यकताओं, तकनीकी सुरक्षा उपायों और संस्थागत नीतियों को एकीकृत करते हैं। विधायी उपायों में छोटे बच्चों से व्यक्तिगत डेटा संग्रह के लिए माता-पिता की सहमति की आवश्यकता होती है और बच्चों से संबंधित साइबर उत्पीड़न और स्पष्ट सामग्री के लिए दंडित किया जाता है। स्कूल सुरक्षा रणनीतियाँ संस्थागत नियमों को वैधानिक दिशानिर्देशों के साथ संरेखित करती हैं। हालाँकि, प्रभावी सुरक्षा ढांचे केवल हार्डवेयर नियंत्रणों से परे जाते हैं और ग्रूमिंग जैसे व्यवहार संबंधी जोखिमों को संबोधित करते हैं, जिससे केवल भौतिक उपकरणों तक सुरक्षा सीमित करने वाले दावों को गलत साबित किया जाता है।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "COPPA mandates verifiable parental consent for data collection from children under 13.",
+        "Indian IT Act includes provisions against digital pornography and cyber harassment of minors.",
+        "Effective child safety frameworks address both technical and behavioral risks.",
+        "Printed answer key: (A) A, B and D only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "86389790-aac0-45ca-9a81-f0ceda0c3cb4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक स्कूल के कंप्यूटर नेटवर्क अवसंरचना में \"फायरवॉल\" का प्राथमिक उद्देश्य क्या है?",
+      "options_hindi": [
+        "पर्यावरणीय कक्षा के तापमान को निरंतर मॉनिटर करना और कंप्यूटिंग हार्डवेयर के अधिक गर्म होने से रोकना",
+        "छात्रों के बहुविकल्पीय परीक्षा उत्तर पत्रों को स्वचालित रूप से स्कैन और ग्रेड करना",
+        "हटाए गए छात्र फ़ाइलों की स्वचालित रूप से बैकअप प्रतियां स्थानीय हार्ड ड्राइव पर बनाना",
+        "सुरक्षा नियमों के आधार पर नेटवर्क ट्रैफ़िक को फ़िल्टर करना और अनधिकृत पहुँच को रोकना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the primary purpose of a “Firewall” in a school’s computer network infrastructure?",
+      "options_english": [
+        "To monitor environmental classroom temperatures continuously and prevent computing hardware overheating",
+        "To automatically scan and grade student multiple-choice examination answer sheets using optical recognition",
+        "To automatically create redundant backup copies of deleted student files onto secondary local hard drives",
+        "To filter network traffic based on security rules and block unauthorized access"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "A firewall is a core network security system that monitors and filters incoming and outgoing network traffic based on predetermined security rules. Operating between secure internal local networks and untrusted external networks like the internet, firewalls block unauthorized access, prevent malicious intrusion attempts, and restrict dangerous data packets. In educational institutions, firewalls safeguard central servers, secure student data, and enforce network usage policies.",
+      "explanation_hindi": "सही उत्तर (d) है। एक फायरवॉल एक मुख्य नेटवर्क सुरक्षा प्रणाली है जो पूर्व निर्धारित सुरक्षा नियमों के आधार पर आने वाले और जाने वाले नेटवर्क ट्रैफ़िक की निगरानी और फ़िल्टर करता है। सुरक्षित आंतरिक स्थानीय नेटवर्क और इंटरनेट जैसे अविश्वसनीय बाहरी नेटवर्क के बीच काम करते हुए, फायरवॉल अनधिकृत पहुँच को रोकते हैं, दुर्भावनापूर्ण घुसपैठ के प्रयासों को रोकते हैं, और खतरनाक डेटा पैकेट्स को प्रतिबंधित करते हैं। शैक्षणिक संस्थानों में, फायरवॉल केंद्रीय सर्वरों की सुरक्षा करते हैं, छात्र डेटा को सुरक्षित रखते हैं, और नेटवर्क उपयोग नीतियों को लागू करते हैं।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "Firewalls are essential for network security in educational institutions.",
+        "They filter traffic based on security rules to prevent unauthorized access.",
+        "Printed answer key: (D) To filter network traffic based on security"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d5ea8911-29ae-4843-9026-c7697e0118fa",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "20. नीचे दिए गए दो कथन हैं, एक को असर्शन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है:\nअसर्शन (A): विद्यालयों को ऑनलाइन सुरक्षा चिंताओं के लिए स्पष्ट, पारदर्शी रिपोर्टिंग तंत्र स्थापित करने चाहिए जो छात्रों द्वारा गुमनाम रिपोर्टिंग की अनुमति देते हैं।\nकारण (R): प्रतिशोध का डर, सामाजिक कलंक, और साथियों का दबाव अक्सर पीड़ितों और दर्शकों को अपने असली पहचान के तहत साइबरबुलिंग की घटनाओं की रिपोर्ट करने से रोकता है।\nउपरोक्त कथनों के प्रकाश में, नीचे दिए गए विकल्पों में से सही उत्तर चुनें:",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements, one labelled as Assertion (A) and the other as Reason (R):\nAssertion (A): Schools must establish clear, transparent reporting mechanisms for online safety concerns that allow anonymous reporting by students.\nReason (R): Fear of retaliation, social stigma, and peer pressure often prevent victims and bystanders from reporting cyberbullying incidents under their real identities.\nIn the light of the above statements, choose the correct answer from the options given below:",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Educational institutions must provide accessible, transparent, and anonymous reporting channels for online safety concerns. Victims and student witnesses often hesitate to report cyberbullying due to fear of retaliation, social stigma, or peer isolation. Anonymous reporting mechanisms eliminate these barriers, ensuring safety and confidentiality. Because fear of social backlash directly prevents reporting, offering confidential options directly explains why schools must establish accessible, anonymous reporting systems.",
+      "explanation_hindi": "सही उत्तर (a) है। शैक्षणिक संस्थानों को ऑनलाइन सुरक्षा चिंताओं के लिए सुलभ, पारदर्शी, और गुमनाम रिपोर्टिंग चैनल प्रदान करने चाहिए। पीड़ित और छात्र गवाह अक्सर प्रतिशोध, सामाजिक कलंक, या साथियों के अलगाव के डर के कारण साइबरबुलिंग की रिपोर्ट करने में हिचकिचाते हैं। गुमनाम रिपोर्टिंग तंत्र इन बाधाओं को समाप्त करते हैं, सुरक्षा और गोपनीयता सुनिश्चित करते हैं। क्योंकि सामाजिक प्रतिक्रिया के डर से रिपोर्टिंग सीधे प्रभावित होती है, इसलिए गुमनाम विकल्प प्रदान करना यह स्पष्ट करता है कि विद्यालयों को सुलभ, गुमनाम रिपोर्टिंग सिस्टम स्थापित करने की आवश्यकता है।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "Anonymous reporting mechanisms are essential for student safety.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A.",
+        "Fear of retaliation can prevent reporting of incidents.",
+        "Transparent reporting channels encourage students to speak up."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b019f860-d9f3-44c4-b3df-75926298da40",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "29. \"डिजिटल विभाजन\" कैसे शिक्षा में डिजिटल नैतिकता के साथ इंटरसेक्ट करता है?",
+      "options_hindi": [
+        "यह सभी शहरी सार्वजनिक स्कूलों में व्यावसायिक सॉफ़्टवेयर लाइसेंसों का समान वितरण सुनिश्चित करता है",
+        "यह सुनिश्चित करता है कि हर छात्र समान गति से उन्नत प्रोग्रामिंग कौशल विकसित करे",
+        "प्रौद्योगिकी तक असमान पहुँच असमान शैक्षिक आकलन और असमानता उत्पन्न करती है",
+        "यह ग्रामीण स्कूल कक्षाओं में पारंपरिक मुद्रित भौतिक पाठ्यपुस्तकों की आवश्यकता को पूरी तरह से समाप्त कर देता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "29. How does the “Digital Divide” intersect with digital ethics in education?",
+      "options_english": [
+        "It guarantees the perfectly equal distribution of commercial software licenses across all urban public schools",
+        "It ensures that every student develops advanced programming skills at an identical pace regardless of background",
+        "Unequal access to technology creates unfair educational assessments and disadvantage",
+        "It completely removes the requirement for traditional printed physical textbooks in rural school classrooms"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The digital divide highlights socioeconomic disparities in physical device availability, high-speed broadband infrastructure, and digital skill acquisition. In educational contexts, unequal technology access compromises assessment fairness and educational equity. Students lacking reliable internet access or personal computing devices struggle to complete digital assignments, which can lead to lower performance and increased dropout rates. Addressing the digital divide is essential for ensuring that all students have equal opportunities to succeed in a technology-driven educational landscape.",
+      "explanation_hindi": "सही उत्तर (c) है। डिजिटल विभाजन भौतिक उपकरणों की उपलब्धता, उच्च गति ब्रॉडबैंड अवसंरचना, और डिजिटल कौशल अधिग्रहण में सामाजिक-आर्थिक विषमताओं को उजागर करता है। शैक्षिक संदर्भों में, असमान प्रौद्योगिकी पहुँच मूल्यांकन की निष्पक्षता और शैक्षिक समानता को प्रभावित करती है। जिन छात्रों के पास विश्वसनीय इंटरनेट पहुँच या व्यक्तिगत कंप्यूटिंग उपकरण नहीं होते, वे डिजिटल असाइनमेंट पूरा करने में संघर्ष करते हैं, जिससे प्रदर्शन में कमी और ड्रॉपआउट दर में वृद्धि हो सकती है। डिजिटल विभाजन को संबोधित करना आवश्यक है ताकि सभी छात्रों को प्रौद्योगिकी-आधारित शैक्षिक परिदृश्य में सफल होने के समान अवसर मिल सकें।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "डिजिटल विभाजन भौतिक उपकरणों की उपलब्धता में विषमताओं को दर्शाता है।",
+        "असमान प्रौद्योगिकी पहुँच शैक्षिक निष्पक्षता को प्रभावित करती है।",
+        "विश्वसनीय इंटरनेट पहुँच की कमी प्रदर्शन में कमी का कारण बन सकती है।",
+        "Printed answer key: (C) Unequal access to technology creates unfair"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "4ec56851-3601-4318-a0c4-e0b78cbd92d6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "43. डिजिटल भुगतान लेनदेन में दो-कारक प्रमाणीकरण (2FA) के माध्यम से लागू किया गया मौलिक सुरक्षा आवश्यकता क्या है?",
+      "options_hindi": [
+        "एक सुरक्षा सत्यापन प्रोटोकॉल जो हर नियमित लेनदेन को संयुक्त रूप से अनुमोदित करने के लिए दो अधिकृत उपयोगकर्ताओं की आवश्यकता करता है।",
+        "एक अनिवार्य मंजूरी प्रक्रिया जो भेजने वाले और प्राप्त करने वाले दोनों वाणिज्यिक बैंकों से द्वैध अनुमोदन की आवश्यकता करती है।",
+        "एक मैनुअल प्रविष्टि तंत्र जहां कार्ड नंबर और सुरक्षा CVV को प्रोसेसिंग से पहले दो बार प्रस्तुत किया जाना चाहिए।",
+        "दो अलग-अलग कारकों का उपयोग करके सत्यापन: कुछ ऐसा जो आप जानते हैं और कुछ ऐसा जो आप"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Ethics, Online Safety, and Responsible Use",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the fundamental security requirement enforced through Two-Factor Authentication (2FA) in digital payment transactions?",
+      "options_english": [
+        "A security verification protocol requiring two authorized users to jointly approve every routine transaction.",
+        "A mandatory clearance process requiring dual approval from both the sending and receiving commercial banks.",
+        "A manual entry mechanism where card numbers and security CVVs must be submitted twice prior to processing.",
+        "Verification using two distinct factors: something you know and something you have."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The fundamental security requirement of Two-Factor Authentication (2FA) is to enhance security by requiring two distinct forms of verification. This typically involves something the user knows, such as a password, and something the user has, like a mobile device or security token. This layered approach significantly reduces the risk of unauthorized access and fraud in digital payment transactions, making it a critical component of online security protocols.",
+      "explanation_hindi": "सही उत्तर (d) है। दो-कारक प्रमाणीकरण (2FA) की मौलिक सुरक्षा आवश्यकता सुरक्षा को बढ़ाने के लिए दो अलग-अलग सत्यापन रूपों की आवश्यकता है। इसमें आमतौर पर कुछ ऐसा शामिल होता है जो उपयोगकर्ता जानता है, जैसे पासवर्ड, और कुछ ऐसा जो उपयोगकर्ता के पास है, जैसे मोबाइल डिवाइस या सुरक्षा टोकन। यह स्तरित दृष्टिकोण डिजिटल भुगतान लेनदेन में अनधिकृत पहुंच और धोखाधड़ी के जोखिम को काफी कम करता है, जिससे यह ऑनलाइन सुरक्षा प्रोटोकॉल का एक महत्वपूर्ण घटक बन जाता है।",
+      "topic": "Digital Ethics, Online Safety, and Responsible Use",
+      "difficulty": "medium",
+      "key_facts": [
+        "2FA requires two distinct forms of verification.",
+        "One factor is something the user knows (e.g., password).",
+        "The other factor is something the user has (e.g., mobile device).",
+        "Printed answer key: (D) Verification using two distinct factors: something you know and something you have."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

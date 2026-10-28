@@ -1,0 +1,799 @@
+{
+  "test_id": "b13046f8-79dc-475d-b422-03cbc7af8ae6",
+  "test_name": "Topic Test: SCHOOL_DATA_MANAGEMENT_AND_INFORMATION_SYSTEMS - Part 5",
+  "type": "topic_wise",
+  "topic": "school_data_management_and_information_systems",
+  "created_at": "2026-10-28T18:55:06.874240",
+  "questions": [
+    {
+      "id": "23865b45-5fdd-45a0-8b22-14f359c6f6ac",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कौन सा सिद्धांत स्कूल के भीतर एक कर्मचारी के अधिकृत कार्य फ़ंक्शन के आधार पर विशिष्ट MIS डेटा और सुविधाओं तक पहुँच अधिकारों को प्रतिबंधित करने को परिभाषित करता है?",
+      "options_hindi": [
+        "ओपन सोर्स डेटा आर्किटेक्चर",
+        "यूनिवर्सल रीड-राइट अनुमति",
+        "पीयर-टू-पीयर डेटा वितरण",
+        "भूमिका-आधारित पहुँच नियंत्रण (RBAC)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What concept defines restricting access rights to specific MIS data and features based on an employee’s authorized job function within the school?",
+      "options_english": [
+        "Open Source Data Architecture",
+        "Universal Read-Write Permission",
+        "Peer-to-Peer Data Distribution",
+        "Role-Based Access Control (RBAC)"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Role-Based Access Control is a fundamental information security framework that regulates user access to system features and records according to defined institutional roles. System administrators assign permissions based on job duties, granting teachers, accountants, and principals access only to data necessary for their roles. Restricting access privileges prevents unauthorized viewing, modification, or deletion of sensitive student and financial records.",
+      "explanation_hindi": "सही उत्तर (d) है। भूमिका-आधारित पहुँच नियंत्रण एक मौलिक सूचना सुरक्षा ढांचा है जो परिभाषित संस्थागत भूमिकाओं के अनुसार प्रणाली की सुविधाओं और रिकॉर्ड तक उपयोगकर्ता पहुँच को नियंत्रित करता है। प्रणाली प्रशासक कार्य कर्तव्यों के आधार पर अनुमतियाँ सौंपते हैं, जिससे शिक्षकों, लेखाकारों और प्रिंसिपलों को केवल उनके कार्यों के लिए आवश्यक डेटा तक पहुँच मिलती है। पहुँच अधिकारों को प्रतिबंधित करने से संवेदनशील छात्र और वित्तीय रिकॉर्ड की अनधिकृत दृश्यता, संशोधन या हटाने को रोका जा सकता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "भूमिका-आधारित पहुँच नियंत्रण (RBAC) एक सुरक्षा ढांचा है जो उपयोगकर्ता पहुँच को नियंत्रित करता है।",
+        "प्रिंसिपल, शिक्षक और लेखाकारों को उनके कार्यों के अनुसार डेटा तक पहुँच दी जाती है।",
+        "Printed answer key: (D) Role-Based Access Control (RBAC)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "26c085e9-45da-43c3-a816-2751fb759e69",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "90. विद्यालय प्रबंधन में एआई-आधारित विश्लेषण के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. एआई एल्गोरिदम उपस्थिति और आंतरिक अंकों में सूक्ष्म पैटर्न की पहचान कर सकते हैं ताकि जल्दी ड्रॉपआउट की भविष्यवाणी की जा सके।\nB. एआई उपकरण व्यक्तिगत शिक्षण पथों का विश्लेषण कर सकते हैं ताकि छात्रों के लिए सुधारात्मक शिक्षण मॉड्यूल का सुझाव दिया जा सके।\nC. एआई प्रणाली प्राथमिक विद्यालयों में मानव शिक्षकों की पूर्ण आवश्यकता को समाप्त कर देती हैं।\nD. मशीन लर्निंग मॉडल सटीक विश्लेषणात्मक भविष्यवाणियों के लिए स्वच्छ, मानकीकृत ऐतिहासिक डेटा की आवश्यकता होती है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और D",
+        "केवल B, C और D",
+        "केवल A और C",
+        "A, B, C और D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding AI-driven analytics in school management:\nA. AI algorithms can identify subtle patterns in attendance and internal marks to predict dropouts early.\nB. AI tools can analyze personalized learning paths to suggest remedial teaching modules for students.\nC. AI systems eliminate the complete necessity of human teachers in primary schools.\nD. Machine learning models require clean, standardized historical data to generate accurate analytical predictions.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and D only",
+        "B, C and D only",
+        "A and C only",
+        "A, B, C and D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Artificial intelligence application in educational analytics leverages machine learning algorithms to identify subtle patterns in student attendance and academic scores, predicting dropout risks early. AI platforms can also recommend personalized remedial learning modules for struggling pupils. Machine learning models require clean, standardized historical datasets to produce accurate analytical predictions, though these digital tools assist rather than replace human classroom teachers.",
+      "explanation_hindi": "सही उत्तर (a) है। शैक्षिक विश्लेषण में कृत्रिम बुद्धिमत्ता का अनुप्रयोग मशीन लर्निंग एल्गोरिदम का उपयोग करता है ताकि छात्रों की उपस्थिति और शैक्षणिक अंकों में सूक्ष्म पैटर्न की पहचान की जा सके, जिससे ड्रॉपआउट के जोखिम की भविष्यवाणी की जा सके। एआई प्लेटफार्म भी संघर्ष कर रहे छात्रों के लिए व्यक्तिगत सुधारात्मक शिक्षण मॉड्यूल का सुझाव दे सकते हैं। मशीन लर्निंग मॉडल सटीक विश्लेषणात्मक भविष्यवाणियों के लिए स्वच्छ, मानकीकृत ऐतिहासिक डेटा सेट की आवश्यकता होती है, हालांकि ये डिजिटल उपकरण मानव कक्षा शिक्षकों की सहायता करते हैं, उन्हें प्रतिस्थापित नहीं करते।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "AI algorithms can predict dropout risks early by analyzing attendance and internal marks.",
+        "Machine learning models require clean, standardized historical data for accuracy.",
+        "Printed answer key: (A) A, B and D only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c924795e-4c20-4570-adce-47769f4e02ae",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II से मिलाएं:\nसूची I: (MIS सुरक्षा खतरा)\nP. अनधिकृत प्रणाली पहुँच\nQ. सर्वर विफलता के कारण डेटा हानि\nR. नेटवर्क पर डेटा इंटरसेप्शन\nS. SQL इंजेक्शन / प्रणाली भेद्यता\nसूची II: (निवारण उपाय)\nI. HTTPS / SSL एन्क्रिप्शन\nII. मजबूत प्रमाणीकरण और भूमिका-आधारित पहुँच नियंत्रण\nIII. नियमित इनपुट मान्यता और सुरक्षा पैचिंग",
+      "options_hindi": [
+        "P-II, Q-IV, R-I, S-III",
+        "P-I, Q-II, R-III, S-IV",
+        "P-III, Q-I, R-II, S-IV",
+        "P-IV, Q-III, R-II, S-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (MIS Security Threat)\nP. Unauthorized System Access\nQ. Data Loss due to Server Failure\nR. Data Interception over Network\nS. SQL Injection / System Vulnerability\nList II: (Mitigation Measure)\nI. HTTPS / SSL Encryption\nII. Strong Authentication & Role-Based Access Control\nIII. Regular Input Validation and Security Patching",
+      "options_english": [
+        "P-II, Q-IV, R-I, S-III",
+        "P-I, Q-II, R-III, S-IV",
+        "P-III, Q-I, R-II, S-IV",
+        "P-IV, Q-III, R-II, S-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Protecting management information systems requires targeted technical countermeasures against specific threats. Unauthorized system access is controlled using strong user authentication and role-based permissions. Server failure data loss is mitigated through redundant off-site cloud backups. Interception during network transmission is prevented using HTTPS and SSL encryption. Finally, software vulnerabilities and SQL injection risks are mitigated via regular input validation and security patching.",
+      "explanation_hindi": "सही उत्तर (a) है। प्रबंधन सूचना प्रणालियों की सुरक्षा के लिए विशिष्ट खतरों के खिलाफ लक्षित तकनीकी उपायों की आवश्यकता होती है। अनधिकृत प्रणाली पहुँच को मजबूत उपयोगकर्ता प्रमाणीकरण और भूमिका-आधारित अनुमतियों का उपयोग करके नियंत्रित किया जाता है। सर्वर विफलता के कारण डेटा हानि को ऑफ-साइट क्लाउड बैकअप के माध्यम से कम किया जाता है। नेटवर्क ट्रांसमिशन के दौरान इंटरसेप्शन को HTTPS और SSL एन्क्रिप्शन का उपयोग करके रोका जाता है। अंततः, सॉफ़्टवेयर भेद्यताओं और SQL इंजेक्शन के खतरों को नियमित इनपुट मान्यता और सुरक्षा पैचिंग के माध्यम से कम किया जाता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "अनधिकृत प्रणाली पहुँच को नियंत्रित करने के लिए मजबूत प्रमाणीकरण का उपयोग किया जाता है।",
+        "सर्वर विफलता के कारण डेटा हानि को ऑफ-साइट बैकअप से कम किया जाता है।",
+        "HTTPS और SSL एन्क्रिप्शन का उपयोग नेटवर्क इंटरसेप्शन को रोकने के लिए किया जाता है।",
+        "Printed answer key: (A) P-II, Q-IV, R-I, S-III"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8a1c502f-416c-4e07-9f63-30195a0d71ff",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "प्रधानाध्यापक / प्राचार्य / विद्यालय प्रभारी के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "प्रधानाध्यापक / प्राचार्य / विद्यालय प्रभारी की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding Headmaster / Principal / School In-charge, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of Headmaster / Principal / School In-charge",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The institutional head, whether designated as Headmaster, Principal, or School In-charge, holds primary responsibility for the accuracy, authenticity, and timely uploading of school records on UDISE+. As the certified reporting authority at the source level, the principal must verify all data parameters before final digital submission, ensuring that information regarding enrollment, staffing, and facilities accurately reflects ground realities.",
+      "explanation_hindi": "सही उत्तर (c) है। प्रधानाध्यापक, प्राचार्य या विद्यालय प्रभारी के रूप में नामित संस्थागत प्रमुख की प्राथमिक जिम्मेदारी UDISE+ पर विद्यालय रिकॉर्ड की सटीकता, प्रामाणिकता और समय पर अपलोडिंग है। स्रोत स्तर पर प्रमाणित रिपोर्टिंग प्राधिकरण के रूप में, प्राचार्य को अंतिम डिजिटल सबमिशन से पहले सभी डेटा पैरामीटर की पुष्टि करनी चाहिए, यह सुनिश्चित करते हुए कि नामांकन, स्टाफिंग और सुविधाओं से संबंधित जानकारी वास्तविकता को सही ढंग से दर्शाती है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "प्रधानाध्यापक / प्राचार्य / विद्यालय प्रभारी की भूमिका में डेटा की सटीकता सुनिश्चित करना शामिल है।",
+        "UDISE+ पर रिकॉर्ड अपलोड करने की जिम्मेदारी।",
+        "Printed answer key: (C) Headmaster / Principal / School In-charge"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c945f1a6-d77c-49bb-a1cb-7f5528277977",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "70. शैक्षिक शासन में रियल-टाइम डैशबोर्ड के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. वे शीर्ष स्तर के शिक्षा अधिकारियों को\nजिले में प्रमुख प्रदर्शन मैट्रिक्स की निगरानी\nकरने में सक्षम बनाते हैं।\nB. वे ग्राफिकल चार्ट, हीट मैप और\nसंकेतकों का उपयोग करते हैं ताकि पिछड़ते\nविद्यालयों या क्षेत्रों को उजागर किया जा सके।",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Real-Time Dashboards in educational governance:\nA. They enable top-level education officials to monitor key performance metrics across districts in real time.\nB. They use graphical charts, heat maps, and indicators to highlight lagging schools or regions.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Real-time educational dashboards enable top-level education officials to monitor key performance indicators across districts continuously. By displaying data through visual charts, heat maps, and comparative metrics, dashboards quickly highlight underperforming schools and regional deficits. These automated visual interfaces aggregate live database entries directly, removing any need for physical paper submissions before updating display visuals for decision-makers.",
+      "explanation_hindi": "सही उत्तर (a) है। रियल-टाइम शैक्षिक डैशबोर्ड शीर्ष स्तर के शिक्षा अधिकारियों को जिलों में प्रमुख प्रदर्शन संकेतकों की निरंतर निगरानी करने में सक्षम बनाते हैं। डेटा को दृश्य चार्ट, हीट मैप और तुलनात्मक मैट्रिक्स के माध्यम से प्रदर्शित करके, डैशबोर्ड जल्दी से कम प्रदर्शन करने वाले विद्यालयों और क्षेत्रीय कमी को उजागर करते हैं। ये स्वचालित दृश्य इंटरफेस सीधे लाइव डेटाबेस प्रविष्टियों को संकलित करते हैं, जिससे निर्णय निर्माताओं के लिए दृश्य अपडेट करने से पहले भौतिक कागजी सबमिशन की आवश्यकता समाप्त हो जाती है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Real-time dashboards provide continuous monitoring of educational metrics.",
+        "They utilize visual tools like charts and heat maps for data representation.",
+        "Dashboards help identify underperforming schools and regions.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f63a7886-1e67-4892-bbe7-c5913c0e8155",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "42. UDISE+ डेटा कैसे सीधे सतत विकास लक्ष्य 4 (SDG-4) की निगरानी में योगदान करता है?",
+      "options_hindi": [
+        "सभी के लिए समावेशी, समान गुणवत्ता की शिक्षा और जीवन भर सीखने के लिए मेट्रिक्स को ट्रैक करना",
+        "क्षेत्रीय औद्योगिक आर्थिक उत्पादन संकेतकों और राष्ट्रीय निर्माण वृद्धि सूचकांकों को मापना",
+        "वैश्विक समुद्री शिपिंग मार्गों और अंतरराष्ट्रीय वाणिज्यिक व्यापार लॉजिस्टिक्स नेटवर्क का ऑडिट करना",
+        "सीमा पार शिक्षा ऋणों के लिए अंतरराष्ट्रीय मुद्रा विनिमय दर में उतार-चढ़ाव को मानकीकरण करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "How does UDISE+ data directly contribute to monitoring Sustainable Development Goal 4 (SDG-4)?",
+      "options_english": [
+        "Tracking metrics for inclusive, equitable quality education and lifelong learning for all",
+        "Measuring regional industrial economic output indicators and national manufacturing growth indices",
+        "Auditing global maritime shipping routes and international commercial trade logistics networks",
+        "Standardizing international currency exchange rate fluctuations for cross-border education loans"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Sustainable Development Goal 4 aims to ensure inclusive, equitable quality education and promote lifelong learning opportunities for all. UDISE+ captures comprehensive metrics on enrollment, retention, gender parity, teacher qualifications, and school facilities. Tracking these indicators enables education authorities to monitor national progress toward international standards, identify educational inequities, and formulate target policies to fulfill global commitments.",
+      "explanation_hindi": "सही उत्तर (a) है। सतत विकास लक्ष्य 4 का उद्देश्य सभी के लिए समावेशी, समान गुणवत्ता की शिक्षा सुनिश्चित करना और जीवन भर सीखने के अवसरों को बढ़ावा देना है। UDISE+ नामांकन, बनाए रखने, लिंग समानता, शिक्षक योग्यता, और स्कूल सुविधाओं पर व्यापक मेट्रिक्स को कैप्चर करता है। इन संकेतकों को ट्रैक करना शिक्षा प्राधिकरणों को अंतरराष्ट्रीय मानकों की ओर राष्ट्रीय प्रगति की निगरानी करने, शैक्षिक असमानताओं की पहचान करने, और वैश्विक प्रतिबद्धताओं को पूरा करने के लिए लक्षित नीतियों को तैयार करने में सक्षम बनाता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "UDISE+ captures metrics on enrollment, retention, and school facilities.",
+        "SDG-4 emphasizes quality education and lifelong learning.",
+        "Tracking indicators helps identify educational inequities.",
+        "Printed answer key: (A) Tracking metrics for inclusive, equitable quality education and lifelong learning for all"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e7b64271-567c-43d7-a043-08b48ab5d810",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "27. एक स्कूल पुस्तकालय परिसंचरण प्रक्रिया को स्वचालित करने में शामिल चरणों को अनुक्रम में व्यवस्थित करें:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the steps involved in automating a school library circulation process in sequential order:",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Automating library circulation follows a sequential, logical process during desk operations. First, a student presents the chosen book along with a student ID card. Next, counter staff scan barcodes or RFID tags on both items. The system then automatically verifies borrowing eligibility and loan limits. Finally, the transaction date is recorded, updating book availability status within the library database.",
+      "explanation_hindi": "सही उत्तर (a) है। पुस्तकालय परिसंचरण को स्वचालित करना डेस्क संचालन के दौरान एक अनुक्रमिक, तार्किक प्रक्रिया का पालन करता है। सबसे पहले, एक छात्र चुनी हुई पुस्तक के साथ छात्र आईडी कार्ड प्रस्तुत करता है। अगला, काउंटर स्टाफ दोनों वस्तुओं पर बारकोड या RFID टैग स्कैन करते हैं। फिर, प्रणाली स्वचालित रूप से उधारी की पात्रता और ऋण सीमाओं की पुष्टि करती है। अंततः, लेनदेन की तिथि दर्ज की जाती है, पुस्तक उपलब्धता स्थिति को पुस्तकालय डेटाबेस में अपडेट करती है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Library automation improves efficiency and accuracy.",
+        "Sequential processing is crucial for effective circulation.",
+        "Printed answer key: (A) 1-2-3-4."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1e78a07d-b718-45f9-bacf-6d82865310c9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "तेलंगाना के स्कूल शिक्षा ढांचे में कौन सा प्रशासनिक स्तर क्लस्टर समेकन से पहले प्रधानाध्यापकों द्वारा प्रस्तुत स्कूल-स्तरीय डेटा की सीधे समीक्षा और सत्यापन करता है?",
+      "options_hindi": [
+        "मंडल शैक्षणिक अधिकारी (MEO)",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which administrative level in Telangana’s school education structure directly reviews and verifies school-level data submitted by Headmasters before cluster aggregation?",
+      "options_english": [
+        "Mandal Educational Officer (MEO)",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "In Telangana’s educational administrative hierarchy, the Mandal Educational Officer alongside Complex Headmasters directly reviews and verifies school-level data submitted by Headmasters. This sub-district verification tier checks reported statistics against local institutional records, corrects reporting errors, and confirms data authenticity before endorsing data submission for cluster aggregation and final district compilation on state portals.",
+      "explanation_hindi": "सही उत्तर (a) है। तेलंगाना के शैक्षणिक प्रशासनिक ढांचे में, मंडल शैक्षणिक अधिकारी और जटिल प्रधानाध्यापक सीधे प्रधानाध्यकों द्वारा प्रस्तुत स्कूल-स्तरीय डेटा की समीक्षा और सत्यापन करते हैं। यह उप-जिला सत्यापन स्तर रिपोर्ट की गई सांख्यिकी की स्थानीय संस्थागत रिकॉर्ड के खिलाफ जांच करता है, रिपोर्टिंग त्रुटियों को सही करता है, और डेटा की प्रामाणिकता की पुष्टि करता है, इससे पहले कि डेटा समेकन और राज्य पोर्टलों पर अंतिम जिला संकलन के लिए डेटा प्रस्तुत करने की स्वीकृति दी जाए।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Mandal Educational Officer plays a crucial role in data verification.",
+        "Data authenticity is vital for accurate reporting.",
+        "Printed answer key: (A) Mandal Educational Officer (MEO)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d750280f-8ea9-47d5-ab24-0f49c76b9259",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "2. सर्वर-साइड व्यावसायिक तर्क और सिंटैक्स सत्यापन",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "विकल्प सी",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Server-Side Business Logic and Syntax Verification",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The revamped, online version of the educational management information system, designated as UDISE+, was launched during the academic year 2018-19 by the Ministry of Education. This upgrade transitioned traditional offline data capture methods into an integrated real-time digital portal. It introduced online data collection, automated validation checks, and enhanced data security, streamlining educational administration and enabling faster verification of institutional records across all levels.",
+      "explanation_hindi": "सही उत्तर (c) है। शैक्षणिक प्रबंधन सूचना प्रणाली का नवीनीकरण, जिसे UDISE+ के रूप में नामित किया गया है, 2018-19 के शैक्षणिक वर्ष के दौरान शिक्षा मंत्रालय द्वारा लॉन्च किया गया था। इस उन्नयन ने पारंपरिक ऑफ़लाइन डेटा कैप्चर विधियों को एकीकृत रीयल-टाइम डिजिटल पोर्टल में परिवर्तित कर दिया। इसने ऑनलाइन डेटा संग्रह, स्वचालित सत्यापन जांच और डेटा सुरक्षा को बढ़ाया, जिससे शैक्षणिक प्रशासन को सरल बनाया गया और सभी स्तरों पर संस्थागत रिकॉर्ड के तेज़ सत्यापन को सक्षम किया गया।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "UDISE+ was launched in the academic year 2018-19.",
+        "It transitioned to an integrated real-time digital portal.",
+        "It introduced online data collection and automated validation checks.",
+        "Printed answer key: (C) 2018-19"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6aca66d3-8548-4eac-bb3c-71eff4e66e4d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "84. UDISE+ में कौन सा पैरामीटर स्कूलों में डिजिटल अवसंरचना की उपलब्धता के बारे में विवरण कैप्चर करता है?\n(1) कक्षाओं के अंदर स्थापित विद्युत सीलिंग पंखों का विशेष ब्रांड और पावर रेटिंग\n(2) प्रशासनिक कार्यालयों में उपयोग किए गए दीवार के रंग की रासायनिक संरचना और दृश्य प्रकार\n(3) स्कूल में वितरित पेपर पाठ्यपुस्तकों का कुल बल भौतिक वजन किलोग्राम में\n(4) कंप्यूटरों, इंटरनेट की उपलब्धता",
+      "options_hindi": [
+        "कंप्यूटरों, इंटरनेट की उपलब्धता",
+        "कक्षाओं के अंदर स्थापित विद्युत सीलिंग पंखों का विशेष ब्रांड और पावर रेटिंग",
+        "प्रशासनिक कार्यालयों में उपयोग किए गए दीवार के रंग की रासायनिक संरचना और दृश्य प्रकार",
+        "स्कूल में वितरित पेपर पाठ्यपुस्तकों का कुल बल भौतिक वजन किलोग्राम में"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which parameter in UDISE+ captures details about digital infrastructure availability in schools?\n1. Specific brand and power rating of electrical ceiling fans installed inside classrooms\n2. Chemical composition and visual type of wall paint used in administration office spaces\n3. Total bulk physical weight in kilograms of paper textbooks delivered to the school\n4. Availability of computers, internet",
+      "options_english": [
+        "Availability of computers, internet",
+        "Specific brand and power rating of electrical ceiling fans installed inside classrooms",
+        "Chemical composition and visual type of wall paint used in administration office spaces",
+        "Total bulk physical weight in kilograms of paper textbooks delivered to the school"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "UDISE+ captures detailed parameters regarding digital educational infrastructure across schools. Recorded fields measure the presence of functional desktop computers, laptop availability, internet connectivity types, digital teaching equipment, and smart classrooms. Collecting these indicators allows planners to evaluate digital readiness, identify institutional technology deficits, and direct targeted funding under national e-learning initiatives to narrow the digital divide.",
+      "explanation_hindi": "सही उत्तर (d) है। UDISE+ स्कूलों में डिजिटल शैक्षिक अवसंरचना के बारे में विस्तृत पैरामीटर कैप्चर करता है। रिकॉर्ड किए गए क्षेत्र कार्यात्मक डेस्कटॉप कंप्यूटरों की उपस्थिति, लैपटॉप की उपलब्धता, इंटरनेट कनेक्टिविटी के प्रकार, डिजिटल शिक्षण उपकरण और स्मार्ट कक्षाओं को मापते हैं। इन संकेतकों को एकत्र करना योजनाकारों को डिजिटल तत्परता का मूल्यांकन करने, संस्थागत प्रौद्योगिकी की कमी की पहचान करने और राष्ट्रीय ई-लर्निंग पहलों के तहत लक्षित वित्तपोषण को निर्देशित करने की अनुमति देता है ताकि डिजिटल विभाजन को कम किया जा सके।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "UDISE+ captures digital infrastructure parameters in schools.",
+        "It includes metrics for computers, internet connectivity, and smart classrooms.",
+        "Collecting these indicators helps in evaluating digital readiness.",
+        "Printed answer key: (D) Availability of computers, internet"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1bcd9919-9f10-4fc4-9123-22856394fbcc",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "11. उद्देश्य अंतर डेटा प्रदान करने के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "उद्देश्य अंतर डेटा प्रदान करने की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding By providing objective gap data to guide, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of By providing objective gap data to guide",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Annual Work Plan and Budget grants data captured through UDISE+ provides empirical evidence on infrastructural, human resource, and educational deficits across institutions. Under Samagra Shiksha, policy planners utilize these gap analysis reports to formulate targeted Annual Work Plans and Budgets. Objective metrics guide the equitable allocation of government grants, direct infrastructure interventions, and strategic teaching appointments, ensuring resources reach schools with genuine administrative and physical shortages.",
+      "explanation_hindi": "सही उत्तर (d) है। वार्षिक कार्य योजना और बजट अनुदान डेटा जो UDISE+ के माध्यम से एकत्र किया गया है, संस्थानों में बुनियादी ढांचे, मानव संसाधन और शैक्षिक कमी पर अनुभवजन्य साक्ष्य प्रदान करता है। समग्र शिक्षा के तहत, नीति नियोजक इन अंतर विश्लेषण रिपोर्टों का उपयोग लक्षित वार्षिक कार्य योजनाओं और बजट तैयार करने के लिए करते हैं। उद्देश्य मेट्रिक्स सरकारी अनुदानों के समान वितरण, बुनियादी ढांचे के हस्तक्षेपों और रणनीतिक शिक्षण नियुक्तियों का मार्गदर्शन करते हैं, यह सुनिश्चित करते हुए कि संसाधन उन स्कूलों तक पहुँचें जिनमें वास्तविक प्रशासनिक और भौतिक कमी है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "UDISE+ captures data on educational deficits.",
+        "Gap analysis reports inform policy planning.",
+        "Objective metrics guide resource allocation.",
+        "Printed answer key: (D) By providing objective gap data to guide"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b528dbff-a57d-4cd2-aa9f-d53149fddd30",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दिए गए बयानों पर विचार करें जो सरकार की मुफ्त पाठ्यपुस्तक और वर्दी वितरण योजनाओं की निगरानी में MIS की भूमिका के बारे में हैं:\nA. MIS छात्र ग्रेड-वार अधिकारों को वास्तविक स्टॉक की डिलीवरी और वितरण के खिलाफ मानचित्रित करता है।\nB. यह क्लस्टर संसाधन केंद्रों पर देरी से डिलीवरी या स्टॉक लीक होने की पहचान करने में मदद करता है।\nC. यह केंद्रीय मंत्रालय के अधिकारियों द्वारा हर छात्र की वर्दी का दैनिक भौतिक निरीक्षण करने की आवश्यकता होती है।\nउपरोक्त में से कौन सा/से बयान सही है?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the role of MIS in monitoring government free textbook and uniform distribution schemes:\nA. MIS maps student grade-wise entitlement against actual stock delivered and distributed.\nB. It helps identify delayed deliveries or stock leakages at cluster resource centers.\nC. It requires physical inspection of every student uniform by central ministry officials daily.\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Management information systems streamline social welfare monitoring by matching student grade entitlements against physical inventory records for free textbooks and uniforms. Automated monitoring tracks supply chain distribution from cluster centers down to individual schools, highlighting stock shortages and delivery delays. System tracking eliminates inventory leakages and verifies equitable allocation without requiring central officials to inspect individual student uniforms physically on a daily basis.",
+      "explanation_hindi": "सही उत्तर (a) है। प्रबंधन सूचना प्रणाली सामाजिक कल्याण की निगरानी को सरल बनाती है, जो छात्र ग्रेड अधिकारों को मुफ्त पाठ्यपुस्तकों और वर्दियों के लिए भौतिक इन्वेंटरी रिकॉर्ड के खिलाफ मिलाती है। स्वचालित निगरानी क्लस्टर केंद्रों से लेकर व्यक्तिगत स्कूलों तक आपूर्ति श्रृंखला वितरण को ट्रैक करती है, स्टॉक की कमी और डिलीवरी में देरी को उजागर करती है। प्रणाली ट्रैकिंग इन्वेंटरी लीक को समाप्त करती है और बिना केंद्रीय अधिकारियों को व्यक्तिगत छात्र वर्दियों का दैनिक भौतिक निरीक्षण किए बिना समान आवंटन की पुष्टि करती है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "MIS maps student grade-wise entitlement against actual stock delivered.",
+        "It helps identify delayed deliveries or stock leakages.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ee6f69f2-0508-4bfb-a9e8-cf995dfe4662",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "46. विद्यालय डेटा विश्लेषण में कृत्रिम बुद्धिमत्ता (AI) का एक उभरता हुआ अनुप्रयोग क्या है?",
+      "options_hindi": [
+        "भौतिक विद्यालय भवनों को बिना निगरानी वाले आभासी चैट कमरों से पूरी तरह से बदलना",
+        "राष्ट्रीय जनगणन या शैक्षिक सर्वेक्षण करने की संचालनात्मक आवश्यकता को समाप्त करना",
+        "राज्य माध्यमिक शिक्षा परीक्षा बोर्डों के लिए भौतिक मूल्यांकन मार्क शीट्स को हाथ से लिखना",
+        "छोड़ने के जोखिमों की प्रारंभिक भविष्यवाणी करना ताकि लक्षित शैक्षणिक हस्तक्षेपों की सिफारिश की जा सके"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is an emerging application of Artificial Intelligence (AI) in school data analytics?",
+      "options_english": [
+        "Completely replacing physical school buildings with unmonitored virtual chat rooms",
+        "Eliminating the operational necessity for conducting national censuses or educational surveys",
+        "Hand-writing physical evaluation mark sheets for state secondary education examination boards",
+        "Predicting dropout risks early to recommend targeted academic interventions"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Artificial intelligence applications in educational analytics leverage machine learning algorithms to process historical performance, attendance logs, and socio-economic indicators. By identifying subtle behavioral patterns, AI systems can accurately forecast student dropout risks at early stages. Early identification allows school counselors and administrators to provide timely remedial support, academic assistance, and targeted interventions before students disengage completely from school.",
+      "explanation_hindi": "सही उत्तर (d) है। शैक्षणिक विश्लेषण में कृत्रिम बुद्धिमत्ता के अनुप्रयोग मशीन लर्निंग एल्गोरिदम का उपयोग करते हैं ताकि ऐतिहासिक प्रदर्शन, उपस्थिति लॉग और सामाजिक-आर्थिक संकेतकों को संसाधित किया जा सके। सूक्ष्म व्यवहार पैटर्न की पहचान करके, AI सिस्टम प्रारंभिक चरणों में छात्र छोड़ने के जोखिमों की सटीक भविष्यवाणी कर सकते हैं। प्रारंभिक पहचान स्कूल काउंसलरों और प्रशासकों को समय पर सुधारात्मक समर्थन, शैक्षणिक सहायता और लक्षित हस्तक्षेप प्रदान करने की अनुमति देती है, इससे पहले कि छात्र पूरी तरह से स्कूल से disengage हो जाएं।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "AI leverages machine learning to analyze educational data.",
+        "Early dropout prediction enables timely interventions.",
+        "Printed answer key: (D) Predicting dropout risks early to recommend"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8a31d43b-e78c-4d72-97b4-6d3a7591c758",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "41. विद्यालय ERP रोलआउट के दौरान डिजिटल प्रतिरोध और संचालन संबंधी बाधाओं को प्रभावी ढंग से संबोधित करने की रणनीति कौन सी है?",
+      "options_hindi": [
+        "गैर-अनुपालन करने वाले स्टाफ सदस्यों पर बिना पूर्व अभिविन्यास प्रदान किए तुरंत वित्तीय जुर्माना लगाना",
+        "सभी विद्यालय विभागों में पारंपरिक 100% कागज़ी रजिस्टर प्रविष्टियों पर स्थायी रूप से वापस लौटना",
+        "विद्यालय स्टाफ के लिए निरंतर क्षमता निर्माण और व्यावहारिक प्रशिक्षण प्रदान करना",
+        "विद्यालय परिसर से सभी कंप्यूटर हार्डवेयर सिस्टम और डिजिटल अवसंरचना को पूरी तरह से समाप्त करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which strategy effectively addresses digital resistance and operational hurdles during school ERP rollout?",
+      "options_english": [
+        "Imposing immediate financial fines on noncompliant staff members without providing prior orientation",
+        "Switching back permanently to traditional 100% paper register entries across all school departments",
+        "Providing continuous capacity building and hands-on training for school staff",
+        "Eliminating all computer hardware systems and digital infrastructure completely from school premises"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Overcoming employee reluctance and technical hurdles during system rollout requires comprehensive change management practices. Providing continuous professional development, hands-on software workshops, and user support helps staff build technical confidence and adjust to digital workflows. Constructive skill development fosters positive adoption, reduces operational errors, and ensures long-term transition from traditional manual record-keeping to integrated digital administration systems.",
+      "explanation_hindi": "सही उत्तर (c) है। प्रणाली के रोलआउट के दौरान कर्मचारियों की अनिच्छा और तकनीकी बाधाओं को पार करने के लिए व्यापक परिवर्तन प्रबंधन प्रथाओं की आवश्यकता होती है। निरंतर व्यावसायिक विकास, व्यावहारिक सॉफ़्टवेयर कार्यशालाएँ, और उपयोगकर्ता समर्थन प्रदान करने से स्टाफ को तकनीकी आत्मविश्वास बनाने और डिजिटल कार्यप्रवाह के अनुकूल होने में मदद मिलती है। रचनात्मक कौशल विकास सकारात्मक अपनाने को बढ़ावा देता है, संचालन संबंधी त्रुटियों को कम करता है, और पारंपरिक मैनुअल रिकॉर्ड-कीपिंग से एकीकृत डिजिटल प्रशासनिक प्रणालियों में दीर्घकालिक संक्रमण सुनिश्चित करता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Effective change management is crucial for successful ERP implementation in schools.",
+        "Continuous training helps staff adapt to new digital workflows.",
+        "Printed answer key: (C) Providing continuous capacity building and"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f4063ebe-af01-4353-b45c-64684e5b8117",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "UDISe+ डेटा कैप्चर पैरामीटर के तहत, छात्र-शिक्षक अनुपात (PTR) को कैसे परिभाषित किया जाता है?",
+      "options_hindi": [
+        "कुल छात्र नामांकन को कुल सक्रिय शिक्षण स्टाफ से विभाजित किया गया",
+        "कुल नियमित शिक्षकों की संख्या को कुल स्वीकृत शिक्षण पदों से विभाजित किया गया",
+        "कुल उपयोगी कक्षा क्षेत्र को नामांकित छात्रों की कुल संख्या से विभाजित किया गया",
+        "कुल साप्ताहिक शिक्षण घंटों को नामांकित छात्रों की कुल संख्या से विभाजित किया गया"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Under UDISE+ data capture parameters, how is the Pupil-Teacher Ratio (PTR) defined?",
+      "options_english": [
+        "Total student enrollment divided by total active teaching staff",
+        "Total count of regular teachers divided by total sanctioned teaching posts",
+        "Total usable classroom area divided by total number of enrolled students",
+        "Total weekly teaching hours divided by total number of enrolled students"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Pupil-Teacher Ratio serves as a fundamental educational metric that measures classroom staffing adequacy across schools. Under UDISE+ standards, it is calculated by dividing total enrolled students by the count of active working teachers in an institution. Monitoring this ratio ensures alignment with statutory norms established under national frameworks, helping administrators address staff shortages and balance teacher allocation effectively across districts.",
+      "explanation_hindi": "सही उत्तर (a) है। छात्र-शिक्षक अनुपात एक मौलिक शैक्षिक मीट्रिक है जो स्कूलों में कक्षा के स्टाफ की पर्याप्तता को मापता है। UDISE+ मानकों के तहत, इसे कुल नामांकित छात्रों को संस्थान में सक्रिय कार्यरत शिक्षकों की संख्या से विभाजित करके गणना की जाती है। इस अनुपात की निगरानी करना राष्ट्रीय ढांचों के तहत स्थापित कानूनी मानदंडों के साथ संरेखण सुनिश्चित करता है, जिससे प्रशासकों को स्टाफ की कमी को संबोधित करने और जिलों में शिक्षक आवंटन को प्रभावी ढंग से संतुलित करने में मदद मिलती है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Pupil-Teacher Ratio (PTR) is a key metric for assessing educational quality.",
+        "Calculated as total enrolled students divided by active teachers.",
+        "Helps in monitoring staffing adequacy in schools.",
+        "Printed answer key: (A) Total student enrollment divided by total active teaching staff"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ed71e6a9-aa7d-48cb-a33c-ed27c798c442",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "“डेटा मानकीकरण” का जिला और राज्य शिक्षा प्रबंधन डेटाबेस में क्या भूमिका है?",
+      "options_hindi": [
+        "सभी सार्वजनिक और निजी स्कूलों को एक समान भौतिक वास्तुकला भवन लेआउट अपनाने के लिए मजबूर करना",
+        "सभी राज्यों में एक समान स्कूल छात्र वर्दी डिजाइन और रंग योजनाओं को अनिवार्य करना",
+        "डेटा को एकत्रित और सटीक रूप से तुलना करने के लिए परिभाषाएँ और प्रारूप मानकीकरण करना",
+        "सभी ग्रेडों में एक समान टर्म-समाप्त परीक्षा प्रश्न पत्रों को लागू करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the role of 'Data Standardization' across district and state education management databases?",
+      "options_english": [
+        "Forcing all public and private schools to adopt the exact same physical architectural building layout",
+        "Mandating fully standardized school student uniform design and color schemes across all states nationwide",
+        "Standardizing definitions and formats so data can be aggregated and compared accurately",
+        "Requiring identical term-end examination question papers to be administered across all grades nationwide"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Data standardization establishes uniform data definitions, field formats, and collection protocols across municipal, district, and state education databases. Standardizing incoming parameters ensures that statistics gathered from disparate school systems can be compiled, aggregated, and evaluated consistently. Standardized formats eliminate record ambiguity, simplify regional performance comparisons, and support reliable national educational analysis and evidence-based policy formulation.",
+      "explanation_hindi": "सही उत्तर (c) है। डेटा मानकीकरण नगरपालिका, जिला और राज्य शिक्षा डेटाबेस में समान डेटा परिभाषाएँ, क्षेत्र प्रारूप और संग्रह प्रोटोकॉल स्थापित करता है। आने वाले मानकों को मानकीकरण करने से यह सुनिश्चित होता है कि विभिन्न स्कूल प्रणालियों से एकत्रित आंकड़े एकत्रित, संकलित और लगातार मूल्यांकन किए जा सकें। मानकीकृत प्रारूप रिकॉर्ड अस्पष्टता को समाप्त करते हैं, क्षेत्रीय प्रदर्शन की तुलना को सरल बनाते हैं, और विश्वसनीय राष्ट्रीय शैक्षिक विश्लेषण और साक्ष्य-आधारित नीति निर्माण का समर्थन करते हैं।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Data standardization enhances data comparability.",
+        "Uniform definitions improve data collection accuracy.",
+        "Standardized formats support national educational analysis.",
+        "Printed answer key: (C) Standardizing definitions and formats so"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c8024098-0ff3-4982-ba2a-9c25de7ff051",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "94. एक शुल्क प्रबंधन मॉड्यूल में कौन सी विशेषता\nविद्यालय काउंटर पर नकद लेनदेन में वित्तीय\nअनियमितताओं को रोकने में मदद करती है?",
+      "options_hindi": [
+        "अभिभावकों से बिना लेनदेन को सॉफ़्टवेयर में लॉग किए हुए\nअनौपचारिक हस्तलिखित कागज़ के नोट स्वीकार करना",
+        "दैनिक नकद संग्रह को साप्ताहिक बैंकिंग तक\nअनलॉक किए गए कार्यालय डेस्क दराज में ढीला रखना",
+        "वार्षिक वित्तीय लेखांकन वर्ष के अंत तक\nवित्तीय लेनदेन की प्रविष्टि में देरी करना",
+        "तुरंत प्रणाली-प्रिंटेड, क्रमांकित रसीदों का\nउत्पादन जो वास्तविक समय के खाता बही से जुड़े होते हैं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What feature in a Fee Management Module helps prevent financial irregularities in cash transactions at the school counter?",
+      "options_english": [
+        "Accepting informal hand-written paper notes from parents without logging transactions in software",
+        "Storing daily cash collections loosely in unlocked office desk drawers until weekly banking",
+        "Delaying financial transaction entry until the end of the annual financial accounting year",
+        "Immediate generation of system-printed, numbered receipts linked to real-time ledgers"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Modern fee management software prevents financial irregularities at school collection counters through automated transaction controls. When payments are recorded, the system instantly generates sequential, numbered receipts linked directly to student financial ledgers. Immediate digital logging prevents manual receipt tampering, eliminates off-the-record cash collection, updates revenue accounting in real time, and maintains a complete, verifiable audit trail for financial oversight.",
+      "explanation_hindi": "सही उत्तर (d) है। आधुनिक शुल्क प्रबंधन सॉफ़्टवेयर विद्यालय संग्रह काउंटरों पर वित्तीय अनियमितताओं को स्वचालित लेनदेन नियंत्रण के माध्यम से रोकता है। जब भुगतान दर्ज किए जाते हैं, तो प्रणाली तुरंत क्रमांकित रसीदें उत्पन्न करती है जो सीधे छात्र वित्तीय खाता बही से जुड़ी होती हैं। तात्कालिक डिजिटल लॉगिंग मैनुअल रसीद छेड़छाड़ को रोकती है, रिकॉर्ड से बाहर नकद संग्रह को समाप्त करती है, वास्तविक समय में राजस्व लेखांकन को अपडेट करती है, और वित्तीय निगरानी के लिए एक पूर्ण, सत्यापन योग्य ऑडिट ट्रेल बनाए रखती है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Automated transaction controls enhance financial integrity.",
+        "Sequential, numbered receipts linked to ledgers prevent tampering.",
+        "Real-time updates ensure accurate revenue accounting.",
+        "Printed answer key: (D) Immediate generation of system-printed,"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "27a14023-d63f-4c35-8015-34a445ee44ac",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "UDISe+ के स्कूल प्रोफ़ाइल और भौतिक सुविधाएँ मॉड्यूल के तहत निम्नलिखित में से कौन सा डेटा फ़ील्ड आमतौर पर एकत्र नहीं किया जाता है?",
+      "options_hindi": [
+        "निजी संविदा कर्मचारियों के मासिक वेतन विवरण",
+        "कार्यात्मक पेयजल और स्वच्छता सुविधाओं की उपलब्धता",
+        "ICT लैब में कार्यात्मक कंप्यूटरों की संख्या",
+        "कार्यात्मक पुस्तकालय की उपलब्धता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following data fields is NOT typically collected under the School Profile & Physical Facilities module of UDISE+?",
+      "options_english": [
+        "Monthly salary details of private contract staff",
+        "Availability of functional drinking water and sanitation facilities",
+        "Number of functional computers in ICT lab",
+        "Availability of functional library"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The School Profile and Physical Facilities module of UDISE+ focuses exclusively on institutional infrastructure, basic amenities, and learning equipment. Parameters collected include drinking water availability, functional toilets, computer availability, grid electricity, and internet access. Individual monthly salary disbursements for private contractual personnel fall under financial payroll accounting, which remains outside the scope of physical institutional asset tracking and structural infrastructure mapping.",
+      "explanation_hindi": "सही उत्तर (a) है। स्कूल प्रोफ़ाइल और भौतिक सुविधाएँ मॉड्यूल UDISE+ के तहत संस्थागत बुनियादी ढांचे, बुनियादी सुविधाओं और शिक्षण उपकरणों पर विशेष रूप से ध्यान केंद्रित करता है। एकत्रित किए जाने वाले पैरामीटर में पेयजल की उपलब्धता, कार्यात्मक शौचालय, कंप्यूटर की उपलब्धता, ग्रिड बिजली और इंटरनेट एक्सेस शामिल हैं। निजी संविदा कर्मचारियों के लिए मासिक वेतन का वितरण वित्तीय पेरोल लेखांकन के अंतर्गत आता है, जो भौतिक संस्थागत संपत्ति ट्रैकिंग और संरचनात्मक बुनियादी ढांचे के मानचित्रण के दायरे से बाहर है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "School Profile module focuses on infrastructure and amenities.",
+        "Data collected includes water, sanitation, and ICT resources.",
+        "Salary details are part of financial accounting, not physical tracking.",
+        "Printed answer key: (A) Monthly salary details of private contract staff"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "802a44ba-9b08-4ab9-ba37-bb2dc7123c18",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक स्कूल ERP में ऑनलाइन प्रवेश आवेदन को संभालने के लिए चरणों का क्रम कैसे व्यवस्थित करें:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the sequence of steps for handling an online admission application in a school ERP:",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Handling online student admissions through an ERP platform follows a structured administrative process. First, parents submit online application forms along with required digital documents. Next, admission staff review applications against eligibility criteria. The system then processes validated applications to generate merit lists and display seat allotments. Finally, confirmed fee payments trigger the creation of permanent student master records.",
+      "explanation_hindi": "सही उत्तर (a) है। ऑनलाइन छात्र प्रवेश को एक ERP प्लेटफॉर्म के माध्यम से संभालने के लिए एक संरचित प्रशासनिक प्रक्रिया का पालन किया जाता है। सबसे पहले, माता-पिता आवश्यक डिजिटल दस्तावेजों के साथ ऑनलाइन आवेदन पत्र जमा करते हैं। इसके बाद, प्रवेश कर्मचारी पात्रता मानदंडों के खिलाफ आवेदनों की समीक्षा करते हैं। फिर, प्रणाली मान्य आवेदनों को संसाधित करती है ताकि मेरिट सूची उत्पन्न की जा सके और सीट आवंटन प्रदर्शित किया जा सके। अंततः, पुष्टि किए गए शुल्क भुगतान स्थायी छात्र मास्टर रिकॉर्ड के निर्माण को प्रेरित करते हैं।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Online admissions streamline the application process.",
+        "ERP systems enhance administrative efficiency.",
+        "Printed answer key: (A) 1-2-3-4."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ad3a4dab-240d-4570-a48d-3412d186fb3c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "स्कूलों में डिजिटल पुस्तकालय प्रबंधन प्रणाली (LMS) के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. ये मानक वर्गीकरण प्रणालियों का उपयोग करके पुस्तकों का डिजिटल सूचीकरण सक्षम बनाते हैं।\nB. OPAC (ऑनलाइन सार्वजनिक पहुंच सूची) छात्रों और स्टाफ को ऑनलाइन पुस्तक उपलब्धता खोजने की अनुमति देता है।\nC. LMS भौतिक पुस्तकों की आवश्यकता को समाप्त करता है और उन्हें पूरी तरह से ऑडियो फ़ाइलों से बदल देता है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding digital Library Management Systems (LMS) in schools:\nA. They enable digital cataloguing of books using standard classification systems.\nB. OPAC (Online Public Access Catalog) allows students and staff to search book availability online.\nC. LMS eliminates the need for physical books by replacing them entirely with audio files.\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Digital Library Management Systems categorize physical books and educational resources using international classification standards like Dewey Decimal System or MARC21. Integrating an Online Public Access Catalog allows students and faculty to search book inventories, verify loan availability, and reserve titles remotely. These systems streamline physical circulation and inventory management without eliminating traditional physical books, enhancing overall library efficiency and resource accessibility.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल पुस्तकालय प्रबंधन प्रणाली भौतिक पुस्तकों और शैक्षिक संसाधनों को अंतरराष्ट्रीय वर्गीकरण मानकों जैसे ड्यूई दशमलव प्रणाली या MARC21 का उपयोग करके वर्गीकृत करती हैं। ऑनलाइन सार्वजनिक पहुंच सूची का एकीकरण छात्रों और संकाय को पुस्तक सूची, ऋण उपलब्धता की पुष्टि करने और दूरस्थ रूप से शीर्षकों को आरक्षित करने की अनुमति देता है। ये प्रणालियाँ भौतिक परिसंचरण और सूची प्रबंधन को सुव्यवस्थित करती हैं, बिना पारंपरिक भौतिक पुस्तकों को समाप्त किए, जिससे पुस्तकालय की समग्र दक्षता और संसाधन पहुंच में सुधार होता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital Library Management Systems use international classification standards.",
+        "OPAC allows online searching of book availability.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

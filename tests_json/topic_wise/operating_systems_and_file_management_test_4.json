@@ -1,0 +1,794 @@
+{
+  "test_id": "81394b28-7e62-422c-8852-4adee373b42a",
+  "test_name": "Topic Test: OPERATING_SYSTEMS_AND_FILE_MANAGEMENT - Part 4",
+  "type": "topic_wise",
+  "topic": "operating_systems_and_file_management",
+  "created_at": "2026-10-28T18:55:06.831936",
+  "questions": [
+    {
+      "id": "aea5e393-35bd-468d-9723-f05b276704f0",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से कौन सा अनुप्रयोग सॉफ़्टवेयर के बजाय उपयोगिता सॉफ़्टवेयर माना जाता है?",
+      "options_hindi": [
+        "माइक्रोसॉफ्ट वर्ड",
+        "वीएलसी मीडिया प्लेयर",
+        "डिस्क डिफ्रैग्मेंटर",
+        "एडोब फोटोशॉप"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following is considered utility software rather than application software?",
+      "options_english": [
+        "Microsoft Word",
+        "VLC Media Player",
+        "Disk Defragmenter",
+        "Adobe Photoshop"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Utility software consists of specialized system programs designed to maintain, optimize, and analyze computer hardware and file storage operations. Disk Defragmenter is an explicit utility program that reorganizes fragmented sector storage on physical magnetic drives to improve file access speeds. In contrast, applications like Microsoft Word, VLC Media Player, and Adobe Photoshop are user-oriented application software designed for document creation, media playback, and graphic design tasks.",
+      "explanation_hindi": "सही उत्तर (c) है। उपयोगिता सॉफ़्टवेयर विशेषीकृत प्रणाली कार्यक्रमों का समूह है जो कंप्यूटर हार्डवेयर और फ़ाइल भंडारण संचालन को बनाए रखने, अनुकूलित करने और विश्लेषण करने के लिए डिज़ाइन किया गया है। डिस्क डिफ्रैग्मेंटर एक स्पष्ट उपयोगिता कार्यक्रम है जो भौतिक मैग्नेटिक ड्राइव पर खंडित सेक्टर भंडारण को पुनर्गठित करता है ताकि फ़ाइल पहुंच गति में सुधार हो सके। इसके विपरीत, माइक्रोसॉफ्ट वर्ड, वीएलसी मीडिया प्लेयर और एडोब फोटोशॉप जैसे अनुप्रयोग उपयोगकर्ता-उन्मुख अनुप्रयोग सॉफ़्टवेयर हैं जो दस्तावेज़ निर्माण, मीडिया प्लेबैक और ग्राफिक डिज़ाइन कार्यों के लिए डिज़ाइन किए गए हैं।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Utility software is designed for system maintenance and optimization.",
+        "Disk Defragmenter improves file access speeds by reorganizing fragmented storage.",
+        "Printed answer key: (C) Disk Defragmenter"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ea8b7975-af87-4d11-b15f-e41babf2eca2",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक ऑपरेटिंग सिस्टम का कौन सा कार्य विभिन्न कार्यक्रमों और प्रक्रियाओं को आवश्यकता पड़ने पर मेमोरी स्थान आवंटित करने के लिए जिम्मेदार है?",
+      "options_hindi": [
+        "मेमोरी प्रबंधन",
+        "डिवाइस प्रबंधन",
+        "फाइल प्रबंधन",
+        "उपयोगकर्ता इंटरफ़ेस प्रबंधन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which function of an operating system is responsible for allocating memory space to various programs and processes when needed?",
+      "options_english": [
+        "Memory management",
+        "Device management",
+        "File management",
+        "User interface management"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Memory management is a primary operating system function responsible for coordinating and tracking computer primary memory during system operations. It dynamically allocates specific memory space to active programs and processes upon request while ensuring that allocated regions do not overlap or conflict. Furthermore, memory management reclaims previously allocated memory addresses when programs terminate execution, thereby optimizing available RAM and preventing memory leaks that degrade overall platform stability and execution performance.",
+      "explanation_hindi": "सही उत्तर (a) है। मेमोरी प्रबंधन एक प्राथमिक ऑपरेटिंग सिस्टम कार्य है जो सिस्टम संचालन के दौरान कंप्यूटर की प्राथमिक मेमोरी का समन्वय और ट्रैकिंग करने के लिए जिम्मेदार है। यह सक्रिय कार्यक्रमों और प्रक्रियाओं को अनुरोध पर विशिष्ट मेमोरी स्थान गतिशील रूप से आवंटित करता है जबकि यह सुनिश्चित करता है कि आवंटित क्षेत्र ओवरलैप या संघर्ष न करें। इसके अलावा, मेमोरी प्रबंधन उन पूर्व आवंटित मेमोरी पते को पुनः प्राप्त करता है जब कार्यक्रम निष्पादन समाप्त करते हैं, जिससे उपलब्ध RAM का अनुकूलन होता है और मेमोरी लीक को रोकता है जो समग्र प्लेटफार्म स्थिरता और निष्पादन प्रदर्शन को खराब करता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Memory management allocates memory space to programs.",
+        "It prevents memory overlap and conflicts.",
+        "Printed answer key: (A) Memory management.",
+        "It optimizes RAM and prevents memory leaks."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b275ab25-eb80-42d0-a7c5-4b7be659d7cb",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "96. विंडोज़ में 'कंट्रोल पैनल' या 'सेटिंग्स' एप्लिकेशन का मुख्य उद्देश्य क्या है?",
+      "options_hindi": [
+        "उच्च-रिज़ॉल्यूशन रास्टर फ़ोटोग्राफ़ और ग्राफ़िक डिज़ाइन फ़ाइलों को संपादित और निर्यात करना।",
+        "सिस्टम विकल्पों, हार्डवेयर उपकरणों और उपयोगकर्ता खातों को कॉन्फ़िगर करना।",
+        "क्लाइंट-साइड वेब एप्लिकेशन परियोजनाओं के लिए प्रोग्रामिंग स्रोत कोड लिखना, डिबग करना और निष्पादित करना।",
+        "ऑप्टिकल स्कैनिंग उपकरणों के साथ बातचीत करना और भौतिक कागज़ के दस्तावेज़ों को PDF प्रारूप में परिवर्तित करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the main purpose of the ‘Control Panel’ or ‘Settings’ application in Windows?",
+      "options_english": [
+        "To manipulate, touch up, and export high-resolution raster photographs and graphic design files.",
+        "To configure system options, hardware devices, and user accounts.",
+        "To write, debug, and execute programming source code for client-side web application projects.",
+        "To interact with optical scanning peripherals and convert physical paper documents into PDF format."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Control Panel and Settings applications serve as centralized administrative portals within Windows operating systems. They provide access to system options, enabling users to manage hardware device configurations, adjust network parameters, configure user account profiles, adjust power settings, manage display properties, and control security preferences. These centralized management tools allow administrators to maintain hardware setup, operational security, and overall system functionality effectively.",
+      "explanation_hindi": "सही उत्तर (b) है। कंट्रोल पैनल और सेटिंग्स एप्लिकेशन विंडोज़ ऑपरेटिंग सिस्टम में केंद्रीय प्रशासनिक पोर्टल के रूप में कार्य करते हैं। ये सिस्टम विकल्पों तक पहुँच प्रदान करते हैं, जिससे उपयोगकर्ता हार्डवेयर उपकरण कॉन्फ़िगरेशन, नेटवर्क पैरामीटर, उपयोगकर्ता खाता प्रोफाइल, पावर सेटिंग्स, डिस्प्ले प्रॉपर्टीज़ और सुरक्षा प्राथमिकताओं को प्रबंधित कर सकते हैं। ये केंद्रीय प्रबंधन उपकरण प्रशासकों को हार्डवेयर सेटअप, संचालन सुरक्षा और समग्र प्रणाली कार्यक्षमता को प्रभावी ढंग से बनाए रखने की अनुमति देते हैं।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Control Panel and Settings are essential for system configuration.",
+        "They allow management of hardware, user accounts, and security settings.",
+        "Printed answer key: (B) To configure system options, hardware"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "85a6be40-f6e5-4358-b141-a0f9b3db770b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "Windows फ़ाइल एक्सप्लोरर में फ़ाइल को गलती से स्थानांतरित करने के बाद ‘Ctrl + Z’ दबाने का क्या प्रभाव होता है?",
+      "options_hindi": [
+        "यह चयनित फ़ाइल को स्थानीय संग्रहण मात्रा से स्थायी रूप से हटा देता है।",
+        "यह लक्षित फ़ाइल को सीधे एक संकुचित ZIP कंटेनर में संकुचित करता है।",
+        "यह पिछले फ़ाइल क्रिया को पूर्ववत करता है और इसे इसके मूल स्थान पर पुनर्स्थापित करता है।",
+        "यह तुरंत सिस्टम कॉन्फ़िगरेशन रजिस्ट्री संपादक इंटरफ़ेस लॉन्च करता है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the effect of pressing ‘Ctrl + Z’ in Windows File Explorer after moving a file accidentally?",
+      "options_english": [
+        "It permanently removes the selected file from the local storage volume.",
+        "It compresses the target file directly into an archived ZIP container.",
+        "It undoes the previous file action and restores its original location.",
+        "It launches the system configuration registry editor interface instantly."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "In Windows File Explorer, pressing the ‘Ctrl + Z’ keyboard shortcut invokes the universal undo command. If a user accidentally moves, renames, copies, or sends a file to the Recycle Bin, executing ‘Ctrl + Z’ immediately reverses the most recent file management operation. This action restores moved files to their original directory folder location, restoring file states without requiring manual file searching.",
+      "explanation_hindi": "सही उत्तर (c) है। Windows फ़ाइल एक्सप्लोरर में ‘Ctrl + Z’ कीबोर्ड शॉर्टकट दबाने से सार्वभौमिक पूर्ववत आदेश सक्रिय होता है। यदि कोई उपयोगकर्ता गलती से फ़ाइल को स्थानांतरित, नाम बदलता है, कॉपी करता है, या फ़ाइल को रीसायकल बिन में भेजता है, तो ‘Ctrl + Z’ निष्पादित करने से सबसे हालिया फ़ाइल प्रबंधन क्रिया तुरंत पूर्ववत हो जाती है। यह क्रिया स्थानांतरित फ़ाइलों को उनके मूल निर्देशिका फ़ोल्डर स्थान पर पुनर्स्थापित करती है, फ़ाइल की स्थिति को बिना मैन्युअल फ़ाइल खोजने की आवश्यकता के पुनर्स्थापित करती है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "‘Ctrl + Z’ is a universal shortcut for undoing actions.",
+        "It can reverse file movements, renames, and deletions.",
+        "Printed answer key: (C) It undoes the previous file action and restores"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9be011cd-42f2-4321-b8e3-80a1b8fa32a7",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "79. 'प्लग एंड प्ले' शब्द का क्या अर्थ है\nऑपरेटिंग सिस्टम डिवाइस प्रबंधन के संदर्भ में?",
+      "options_hindi": [
+        "OS स्वचालित रूप से नए जुड़े हार्डवेयर उपकरणों का पता लगाता है और उन्हें कॉन्फ़िगर करता है।",
+        "सिस्टम हार्डवेयर परिधीय बिना बाहरी\nइलेक्ट्रिकल पावर सप्लाई के निर्बाध रूप से कार्य करते हैं।",
+        "एप्लिकेशन और ऑपरेटिंग सिस्टम अपडेट\nस्वचालित रूप से इंस्टॉल होते हैं बिना सक्रिय इंटरनेट कनेक्शन की आवश्यकता के।",
+        "नए उत्पन्न फ़ाइलें तुरंत प्रतिकृत होती हैं\nऔर निर्माण के समय ऑफसाइट नेटवर्क बैकअप\nसर्वरों पर भेजी जाती हैं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What does the term ‘plug and play’ mean regarding operating system device management?",
+      "options_english": [
+        "The OS automatically detects and configures newly connected hardware devices.",
+        "System hardware peripherals function seamlessly without connecting external electrical power supplies.",
+        "Application and operating system updates install automatically without requiring an active internet connection.",
+        "Newly generated files are instantly replicated and transmitted to offsite network backup servers upon creation."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Plug and Play (PnP) is an operating system feature engineered to simplify peripheral hardware installation. When a user connects a compatible hardware device, such as a USB keyboard or mouse, the operating system automatically detects the new hardware, identifies its hardware signatures, allocates system resources, and configures appropriate device drivers without requiring manual hardware jumpers, complex software setups, or immediate system reboots.",
+      "explanation_hindi": "सही उत्तर (a) है। प्लग एंड प्ले (PnP) एक ऑपरेटिंग सिस्टम की विशेषता है जिसे परिधीय हार्डवेयर स्थापना को सरल बनाने के लिए विकसित किया गया है। जब कोई उपयोगकर्ता एक संगत हार्डवेयर उपकरण, जैसे कि USB कीबोर्ड या माउस, कनेक्ट करता है, तो ऑपरेटिंग सिस्टम स्वचालित रूप से नए हार्डवेयर का पता लगाता है, इसके हार्डवेयर हस्ताक्षरों की पहचान करता है, सिस्टम संसाधनों को आवंटित करता है, और उपयुक्त उपकरण ड्राइवरों को कॉन्फ़िगर करता है बिना मैनुअल हार्डवेयर जंपर्स, जटिल सॉफ़्टवेयर सेटअप, या तात्कालिक सिस्टम रिबूट की आवश्यकता के।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "प्लग एंड प्ले उपकरणों को स्वचालित रूप से पहचानने और कॉन्फ़िगर करने की क्षमता है।",
+        "यह उपयोगकर्ताओं के लिए हार्डवेयर सेटअप को सरल बनाता है।",
+        "Printed answer key: (A) The OS automatically detects and configures"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "94ed2c9a-30e4-46c2-8087-0790b101cf9d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "फाइल एक्सप्लोरर में कौन सी विशेषता उपयोगकर्ताओं को फ़ाइलों को नाम, संशोधित तिथि, फ़ाइल प्रकार या फ़ाइल आकार जैसी विशेषताओं के आधार पर व्यवस्थित करने की अनुमति देती है?",
+      "options_hindi": [
+        "डिफ्रैग्मेंटेशन",
+        "इंडेक्सिंग",
+        "एन्क्रिप्शन",
+        "क्रमबद्ध करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which feature in File Explorer allows users to arrange files based on properties like name, date modified, file type, or file size?",
+      "options_english": [
+        "Defragmentation",
+        "Indexing",
+        "Encryption",
+        "Sorting"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "File Explorer provides robust directory management tools designed to assist users in organizing and reviewing stored files efficiently. The sorting feature enables users to rearrange listed items dynamically based on specific metadata properties. Files can be organized alphabetically by filename, chronologically by modification date, structurally by file type, or numerically by file size, thereby expediting the identification and location of specific documents within dense folder structures.",
+      "explanation_hindi": "सही उत्तर (d) है। फाइल एक्सप्लोरर उपयोगकर्ताओं को संग्रहीत फ़ाइलों को कुशलता से व्यवस्थित और समीक्षा करने में सहायता करने के लिए मजबूत निर्देशिका प्रबंधन उपकरण प्रदान करता है। क्रमबद्ध करने की विशेषता उपयोगकर्ताओं को विशिष्ट मेटाडेटा विशेषताओं के आधार पर सूचीबद्ध वस्तुओं को गतिशील रूप से पुनर्व्यवस्थित करने की अनुमति देती है। फ़ाइलों को फ़ाइल नाम के अनुसार वर्णानुक्रम में, संशोधन तिथि के अनुसार कालानुक्रमिक रूप से, फ़ाइल प्रकार के अनुसार संरचनात्मक रूप से, या फ़ाइल आकार के अनुसार संख्यात्मक रूप से व्यवस्थित किया जा सकता है, जिससे घने फ़ोल्डर संरचनाओं के भीतर विशिष्ट दस्तावेज़ों की पहचान और स्थान को तेज किया जा सके।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "File Explorer allows sorting of files based on various properties.",
+        "Sorting can be done by name, date modified, file type, or file size.",
+        "Effective file management enhances user productivity.",
+        "Printed answer key: (D) Sorting"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b3a0a3f5-1dcf-4373-8faf-f0d72b5b65b9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "86. विंडोज़ में कौन सा उपकरण प्रशासकों को स्टार्टअप एप्लिकेशन प्रोग्राम को अक्षम या सक्षम करने की अनुमति देता है?",
+      "options_hindi": [
+        "फाइल एक्सप्लोरर",
+        "टास्क मैनेजर (स्टार्टअप ऐप्स टैब)",
+        "नोटपैड",
+        "डिस्क डिफ्रैग्मेंटर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which tool in Windows allows administrators to disable or enable startup application programs?",
+      "options_english": [
+        "File Explorer",
+        "Task Manager (Startup apps tab)",
+        "Notepad",
+        "Disk Defragmenter"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "In modern Windows operating systems, Task Manager features a dedicated Startup apps tab designed for startup process management. System administrators use this tool to review all applications configured to launch automatically during system boot. Disabling unnecessary startup programs reduces boot times, frees up physical memory resources, prevents background software clutter, and improves system responsiveness, making it a key tool for system maintenance.",
+      "explanation_hindi": "सही उत्तर (b) है। आधुनिक विंडोज़ ऑपरेटिंग सिस्टम में, टास्क मैनेजर में स्टार्टअप प्रक्रिया प्रबंधन के लिए एक समर्पित स्टार्टअप ऐप्स टैब होता है। सिस्टम प्रशासक इस उपकरण का उपयोग सभी एप्लिकेशनों की समीक्षा करने के लिए करते हैं जो सिस्टम बूट के दौरान स्वचालित रूप से लॉन्च करने के लिए कॉन्फ़िगर की गई हैं। अनावश्यक स्टार्टअप प्रोग्राम को अक्षम करने से बूट समय कम होता है, भौतिक मेमोरी संसाधनों को मुक्त करता है, पृष्ठभूमि सॉफ़्टवेयर अव्यवस्था को रोकता है, और सिस्टम की प्रतिक्रिया में सुधार करता है, जिससे यह सिस्टम रखरखाव के लिए एक महत्वपूर्ण उपकरण बन जाता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        "Task Manager includes a Startup apps tab for managing startup programs.",
+        "Disabling startup applications can enhance system performance.",
+        "Printed answer key: (B) Task Manager (Startup apps tab)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f8909b65-4aca-4006-82e1-a18fa45b9959",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) के रूप में लेबल किया गया है\nऔर दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): मानक उपयोगकर्ता खाते के तहत\nप्रशासनिक कार्यों को चलाने के लिए\nउपयोगकर्ता खाता नियंत्रण (UAC) के माध्यम से\nएक व्यवस्थापक पासवर्ड दर्ज करने की आवश्यकता है।\nकारण (R): उपयोगकर्ता खाता नियंत्रण\nअनधिकृत मैलवेयर कार्यक्रमों को\nस्पष्ट अनुमति के बिना प्रशासनिक प्रणाली में\nपरिवर्तन करने से रोकता है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): Running administrative tasks under a Standard User account requires entering an Administrator password via User Account Control (UAC). Reason (R): User Account Control prevents unauthorized malware programs from making administrative system changes without explicit permission.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "User Account Control (UAC) acts as a critical security feature in modern Windows operating systems. When tasks requiring administrative privileges are initiated from a Standard User account, UAC displays a security prompt requiring valid administrator credentials. This mechanism ensures that unverified programs or background malware cannot make silent administrative changes, alter system files, or install unauthorized drivers without explicit, verified permission from an administrator.",
+      "explanation_hindi": "सही उत्तर (a) है। उपयोगकर्ता खाता नियंत्रण (UAC) आधुनिक विंडोज ऑपरेटिंग सिस्टम में एक महत्वपूर्ण सुरक्षा विशेषता के रूप में कार्य करता है। जब मानक उपयोगकर्ता खाते से प्रशासनिक विशेषाधिकार की आवश्यकता वाले कार्य शुरू किए जाते हैं, तो UAC एक सुरक्षा संकेत प्रदर्शित करता है जो वैध व्यवस्थापक क्रेडेंशियल्स की आवश्यकता करता है। यह तंत्र सुनिश्चित करता है कि अविश्वसनीय कार्यक्रम या पृष्ठभूमि में चलने वाला मैलवेयर चुपचाप प्रशासनिक परिवर्तन नहीं कर सकता, प्रणाली फ़ाइलों को बदल नहीं सकता, या स्पष्ट, सत्यापित अनुमति के बिना अनधिकृत ड्राइवर स्थापित नहीं कर सकता।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "User Account Control (UAC) is a security feature in Windows.",
+        "UAC prompts for administrator credentials for administrative tasks.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f0a0e817-9e1a-4956-b8cc-4faeab1388e0",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "आधुनिक मोबाइल ऑपरेटिंग सिस्टम जैसे एंड्रॉइड\nऔर आईओएस में, केंद्रीय सेटिंग्स त्वरित पहुँच पैनल के रूप में क्या कार्य करता है?",
+      "options_hindi": [
+        "कंट्रोल सेंटर / त्वरित सेटिंग्स",
+        "कमांड प्रॉम्प्ट",
+        "फाइल प्रबंधक",
+        "कार्य प्रबंधक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In modern mobile operating systems like Android and iOS, what serves as the centralized settings quick-access panel?",
+      "options_english": [
+        "Control Centre / Quick Settings",
+        "Command Prompt",
+        "File Manager",
+        "Task Manager"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Modern mobile operating systems like Android and iOS feature unified visual access panels commonly designated as Control Centre or Quick Settings. Accessible via simple swipe gestures from screen edges, these interfaces aggregate essential hardware toggles and system controls. Users can rapidly adjust screen brightness, volume, Wi-Fi connections, Bluetooth pairing, cellular data, and flashlight features without navigating through multi-tiered main system settings menus.",
+      "explanation_hindi": "सही उत्तर (a) है। आधुनिक मोबाइल ऑपरेटिंग सिस्टम जैसे एंड्रॉइड और आईओएस में केंद्रीय सेटिंग्स त्वरित पहुँच पैनल के रूप में कंट्रोल सेंटर या त्वरित सेटिंग्स कार्य करता है। ये इंटरफेस स्क्रीन के किनारों से सरल स्वाइप इशारों के माध्यम से पहुँच योग्य होते हैं और आवश्यक हार्डवेयर टॉगल और सिस्टम नियंत्रणों को एकत्रित करते हैं। उपयोगकर्ता बिना कई स्तरों के मुख्य सिस्टम सेटिंग्स मेनू में नेविगेट किए स्क्रीन की चमक, ध्वनि, वाई-फाई कनेक्शन, ब्लूटूथ पेयरिंग, सेलुलर डेटा और फ्लैश लाइट सुविधाओं को त्वरित रूप से समायोजित कर सकते हैं।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        "Modern mobile OS like Android and iOS feature quick-access panels.",
+        "Users can adjust settings without navigating through complex menus.",
+        "Printed answer key: (A) Control Centre / Quick Settings"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1fb68989-3df8-43f7-b0c7-97d1314c7727",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "मानक कंप्यूटर प्रयोगशाला उपयोगकर्ताओं को सुरक्षा नियंत्रण लागू करने के लिए किस प्रकार का उपयोगकर्ता खाता सौंपा जाना चाहिए?\n(1) व्यवस्थापक खाता\n(2) सुपरयूजर / रूट खाता\n(3) मानक उपयोगकर्ता खाता",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "विकल्प सी",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What type of user account should be assigned to standard computer lab users to enforce security controls?\n(1) Administrator Account\n(2) Superuser / Root Account\n(3) Standard User Account",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "To maintain security, access control, and operational stability in computer laboratories, standard user accounts should be assigned to general users and students. Standard accounts grant permissions necessary to run approved applications and manage personal documents while restricting privileges to alter system files, modify network settings, or install unverified software. This privilege restriction prevents accidental system misconfigurations, malware execution, and unauthorized network breaches.",
+      "explanation_hindi": "सही उत्तर (c) है। सुरक्षा, पहुँच नियंत्रण, और कंप्यूटर प्रयोगशालाओं में संचालन स्थिरता बनाए रखने के लिए, सामान्य उपयोगकर्ताओं और छात्रों को मानक उपयोगकर्ता खाते सौंपे जाने चाहिए। मानक खाते उन अनुमतियों को प्रदान करते हैं जो अनुमोदित अनुप्रयोगों को चलाने और व्यक्तिगत दस्तावेज़ों का प्रबंधन करने के लिए आवश्यक हैं, जबकि प्रणाली फ़ाइलों को बदलने, नेटवर्क सेटिंग्स को संशोधित करने, या अप्रमाणित सॉफ़्टवेयर स्थापित करने के लिए अनुमतियों को प्रतिबंधित करते हैं। यह विशेषाधिकार प्रतिबंध आकस्मिक प्रणाली गलत कॉन्फ़िगरेशन, मैलवेयर निष्पादन, और अनधिकृत नेटवर्क उल्लंघनों को रोकता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Standard user accounts are essential for maintaining security in computer labs.",
+        "They restrict privileges to prevent unauthorized changes to system settings.",
+        "Standard accounts allow running approved applications and managing personal documents.",
+        "Printed answer key: (C) Standard User Account"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6b43acf4-fbf1-414e-96e1-c1d84f143887",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "91. यूनिक्स/लिनक्स ऑपरेटिंग सिस्टम में, किस\nकमांड का उपयोग किसी निर्देशिका के भीतर फ़ाइलों और उपनिर्देशिकाओं को सूचीबद्ध करने के लिए किया जाता है?",
+      "options_hindi": [
+        "cd",
+        "pwd",
+        "rm",
+        "ls"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In Unix/Linux operating systems, which command is used to list files and subdirectories within a directory?",
+      "options_english": [
+        "cd",
+        "pwd",
+        "rm",
+        "ls"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "In Unix and Linux operating systems, the ‘ls’ command (short for list) is used within command-line terminal interfaces to display directory contents. Executing ‘ls’ prints a list of files, subdirectories, and symbolic links contained within the active working directory. System operators frequently combine ‘ls’ with command flags to display file permissions, file ownership, exact file sizes, and modified timestamps.",
+      "explanation_hindi": "सही उत्तर (d) है। यूनिक्स और लिनक्स ऑपरेटिंग सिस्टम में, 'ls' कमांड (जिसका अर्थ है सूची) का उपयोग कमांड-लाइन टर्मिनल इंटरफेस में निर्देशिका की सामग्री को प्रदर्शित करने के लिए किया जाता है। 'ls' को निष्पादित करने पर, यह सक्रिय कार्यशील निर्देशिका में निहित फ़ाइलों, उपनिर्देशिकाओं और प्रतीकात्मक लिंक की एक सूची प्रिंट करता है। सिस्टम ऑपरेटर अक्सर फ़ाइल अनुमतियों, फ़ाइल स्वामित्व, सटीक फ़ाइल आकार और संशोधित समय मुहैया कराने के लिए 'ls' को कमांड फ्लैग के साथ संयोजित करते हैं।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        "The 'ls' command is essential for listing directory contents in Unix/Linux.",
+        "System operators can use flags with 'ls' for detailed file information.",
+        "Printed answer key: (D) ls"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e897440b-1833-43c4-9653-45fb50501668",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दिए गए विकल्पों में से कौन सा फ़ाइल एक्सटेंशन एक असंपीड़ित ऑडियो प्रारूप का प्रतिनिधित्व करता है जो विंडोज ऑपरेटिंग सिस्टम में सामान्यतः उपयोग किया जाता है?",
+      "options_hindi": [
+        ".jpg",
+        ".wav",
+        ".mp4",
+        ".rar"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following file extensions represents an uncompressed audio format commonly used in Windows operating systems?",
+      "options_english": [
+        ".jpg",
+        ".wav",
+        ".mp4",
+        ".rar"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Waveform Audio File Format (.wav) is a standard digital audio file format natively supported across Windows operating systems. Developed jointly by Microsoft and IBM, the WAV format typically stores uncompressed raw pulse-code modulation audio data. Because it retains full audio fidelity without lossy encoding, WAV files deliver superior sound quality, making them widely used in professional audio editing, system audio cues, and master recording archives.",
+      "explanation_hindi": "सही उत्तर (b) है। वेवफॉर्म ऑडियो फ़ाइल प्रारूप (.wav) एक मानक डिजिटल ऑडियो फ़ाइल प्रारूप है जिसे विंडोज ऑपरेटिंग सिस्टम में मूल रूप से समर्थित किया गया है। इसे संयुक्त रूप से माइक्रोसॉफ्ट और आईबीएम द्वारा विकसित किया गया था, और यह प्रारूप आमतौर पर असंपीड़ित कच्चे पल्स-कोड मॉड्यूलेशन ऑडियो डेटा को संग्रहीत करता है। यह बिना लॉसी एन्कोडिंग के पूर्ण ऑडियो निष्ठा को बनाए रखता है, जिससे WAV फ़ाइलें पेशेवर ऑडियो संपादन, सिस्टम ऑडियो संकेतों और मास्टर रिकॉर्डिंग संग्रह में व्यापक रूप से उपयोग की जाती हैं।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        "WAV files are uncompressed audio formats.",
+        "Developed by Microsoft and IBM.",
+        "Widely used in professional audio editing.",
+        "Printed answer key: (B) .wav"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d211df8a-d08c-4247-b13b-8feca88fb863",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "Windows में कौन सा उपयोगिता संसाधन खपत को प्रदर्शित करता है जिसमें CPU, मेमोरी, डिस्क और नेटवर्क उपयोग शामिल हैं?",
+      "options_hindi": [
+        "कार्य प्रबंधक",
+        "डिस्क क्लीनअप",
+        "रजिस्ट्री संपादक",
+        "डिवाइस प्रबंधक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which utility in Windows displays resource consumption including CPU, Memory, Disk, and Network utilization in real time?",
+      "options_english": [
+        "Task Manager",
+        "Disk Cleanup",
+        "Registry Editor",
+        "Device Manager"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Task Manager functions as an indispensable monitoring utility in Windows that displays real-time performance metrics across system hardware components. It provides detailed graphical readouts tracking CPU utilization, RAM consumption, disk read/write throughput, and network interface activity. This enables system administrators and users to identify resource-heavy applications, monitor system performance, and troubleshoot issues effectively.",
+      "explanation_hindi": "सही उत्तर (a) है। कार्य प्रबंधक Windows में एक अनिवार्य निगरानी उपयोगिता के रूप में कार्य करता है जो सिस्टम हार्डवेयर घटकों के बीच वास्तविक समय प्रदर्शन मैट्रिक्स प्रदर्शित करता है। यह CPU उपयोग, RAM खपत, डिस्क पढ़ने/लिखने की दर, और नेटवर्क इंटरफ़ेस गतिविधि को ट्रैक करने वाले विस्तृत ग्राफिकल रीडआउट प्रदान करता है। यह सिस्टम प्रशासकों और उपयोगकर्ताओं को संसाधन-भारी अनुप्रयोगों की पहचान करने, सिस्टम प्रदर्शन की निगरानी करने और समस्याओं को प्रभावी ढंग से हल करने में सक्षम बनाता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        "कार्य प्रबंधक CPU, मेमोरी, डिस्क और नेटवर्क उपयोग को प्रदर्शित करता है।",
+        "यह वास्तविक समय में प्रदर्शन मैट्रिक्स दिखाता है।",
+        "संसाधन-भारी अनुप्रयोगों की पहचान करने में मदद करता है।",
+        "Printed answer key: (A) Task Manager"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8f95b416-7ea3-4859-8a64-8bf911691a1e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "92. विंडोज ऑपरेटिंग सिस्टम में, कौन सा कमांड प्रॉम्प्ट कमांड निर्देशिका की सामग्री प्रदर्शित करने के लिए उपयोग किया जाता है?\n(1) ls",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "विकल्प सी",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In Windows operating systems, which command prompt command is used to display directory contents?",
+      "options_english": [
+        "Option A",
+        "dir",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "In Windows operating systems, the ‘dir’ command (short for directory) is the standard command-line utility used to display contents stored within folders. Executing ‘dir’ inside the Command Prompt lists all subdirectories and files in the active path, alongside metadata including creation dates, timestamps, file sizes, and remaining disk storage space, providing an immediate text view of file directory structures.",
+      "explanation_hindi": "सही उत्तर (b) है। विंडोज ऑपरेटिंग सिस्टम में, 'dir' कमांड (निर्देशिका के लिए संक्षिप्त) एक मानक कमांड-लाइन उपयोगिता है जो फ़ोल्डरों के भीतर संग्रहीत सामग्री को प्रदर्शित करने के लिए उपयोग की जाती है। कमांड प्रॉम्प्ट के भीतर 'dir' निष्पादित करने से सक्रिय पथ में सभी उपनिर्देशिकाएँ और फ़ाइलें सूचीबद्ध होती हैं, साथ ही निर्माण तिथियाँ, टाइमस्टैम्प, फ़ाइल आकार और शेष डिस्क भंडारण स्थान जैसी मेटाडेटा भी प्रदर्शित होती हैं, जो फ़ाइल निर्देशिका संरचनाओं का तात्कालिक पाठ दृश्य प्रदान करती हैं।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        "The 'dir' command is used to display directory contents in Windows.",
+        "Printed answer key: (B) dir"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ad972cfd-6544-4819-a0c4-1aaa8ce2b49a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "49. कौन सा सॉफ़्टवेयर लाइसेंस प्रकार उपयोगकर्ताओं को प्रारंभिक रूप से भुगतान किए बिना सॉफ़्टवेयर का परीक्षण करने की अनुमति देता है?",
+      "options_hindi": [
+        "फ्रीवेयर",
+        "शेयरवेयर",
+        "ओपन-सोर्स",
+        "पब्लिक डोमेन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which software license type allows users to test software for a limited trial period without paying initially?",
+      "options_english": [
+        "Freeware",
+        "Shareware",
+        "Open-source",
+        "Public Domain"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Shareware represents a software distribution model where applications are provided free of charge on a trial basis. Users can install, evaluate, and test the software features for a designated trial period or with limited functional capabilities. Once the evaluation period expires, users are legally required to purchase a commercial license or register the software to unlock full, permanent functionality or continue using the application.",
+      "explanation_hindi": "सही उत्तर (b) है। शेयरवेयर एक सॉफ़्टवेयर वितरण मॉडल का प्रतिनिधित्व करता है जहाँ अनुप्रयोगों को परीक्षण आधार पर मुफ्त में उपलब्ध कराया जाता है। उपयोगकर्ता निर्दिष्ट परीक्षण अवधि के लिए या सीमित कार्यात्मक क्षमताओं के साथ सॉफ़्टवेयर सुविधाओं को स्थापित, मूल्यांकन और परीक्षण कर सकते हैं। एक बार परीक्षण अवधि समाप्त होने पर, उपयोगकर्ताओं को पूर्ण, स्थायी कार्यक्षमता को अनलॉक करने या अनुप्रयोग का उपयोग जारी रखने के लिए एक व्यावसायिक लाइसेंस खरीदने या सॉफ़्टवेयर को पंजीकृत करने की कानूनी आवश्यकता होती है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Shareware allows trial use of software before purchase.",
+        "Users must pay for full functionality after the trial.",
+        "Printed answer key: (B) Shareware"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1d01854b-1313-4704-9b9c-0c96b4d3a7ba",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "97. निम्नलिखित में से कौन सा फ़ाइल एक्सटेंशन माइक्रोसॉफ्ट एक्सेल में बनाए गए स्प्रेडशीट दस्तावेज़ का प्रतिनिधित्व करता है?",
+      "options_hindi": [
+        ".docx",
+        ".xlsx",
+        ".pptx",
+        ".pdf"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following file extensions represents a spreadsheet document created in Microsoft Excel?",
+      "options_english": [
+        ".docx",
+        ".xlsx",
+        ".pptx",
+        ".pdf"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The .xlsx file extension represents modern spreadsheet documents generated by Microsoft Excel. Introduced with Office 2007, .xlsx is based on the OpenXML standard format, utilizing compressed XML structures to store numeric datasets, computational formulas, macro scripts, visual data charts, and cell formatting rules efficiently. This structure ensures file integrity, reduces storage file sizes, and facilitates cross-platform document sharing across spreadsheet applications.",
+      "explanation_hindi": "सही उत्तर (b) है। .xlsx फ़ाइल एक्सटेंशन आधुनिक स्प्रेडशीट दस्तावेज़ों का प्रतिनिधित्व करता है जो माइक्रोसॉफ्ट एक्सेल द्वारा उत्पन्न होते हैं। इसे Office 2007 के साथ पेश किया गया था, .xlsx ओपनएक्सएमएल मानक प्रारूप पर आधारित है, जो संकुचित XML संरचनाओं का उपयोग करके संख्यात्मक डेटा सेट, गणनात्मक सूत्र, मैक्रो स्क्रिप्ट, दृश्य डेटा चार्ट और सेल फ़ॉर्मेटिंग नियमों को कुशलता से संग्रहीत करता है। यह संरचना फ़ाइल की अखंडता सुनिश्चित करती है, संग्रहण फ़ाइल आकार को कम करती है, और स्प्रेडशीट अनुप्रयोगों के बीच क्रॉस-प्लेटफ़ॉर्म दस्तावेज़ साझा करने की सुविधा प्रदान करती है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        ".xlsx is the standard file extension for Excel spreadsheets.",
+        "Introduced with Office 2007, it uses OpenXML format.",
+        "Printed answer key: (B) .xlsx"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "091dcbf8-9522-48cc-944a-c9d4a836812e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "99. निम्नलिखित में से कौन सा ऑपरेटिंग सिस्टम ओपन-सोर्स और स्वतंत्र रूप से अनुकूलन योग्य है?",
+      "options_hindi": [
+        "माइक्रोसॉफ्ट विंडोज़ 11",
+        "एप्पल मैकओएस",
+        "लिनक्स",
+        "एप्पल आईओएस"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following operating systems is open-source and freely customizable?",
+      "options_english": [
+        "Microsoft Windows 11",
+        "Apple macOS",
+        "Linux",
+        "Apple iOS"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Linux is an open-source operating system distributed under public software licenses like the GNU GPL. Unlike proprietary platforms such as Microsoft Windows 11, Apple macOS, or iOS, the source code of Linux is freely available to the public. Users, developers, and institutions can inspect, alter, compile, and customize Linux code to build specialized distributions tailored to specific hardware architectures and operational needs.",
+      "explanation_hindi": "सही उत्तर (c) है। लिनक्स एक ओपन-सोर्स ऑपरेटिंग सिस्टम है जिसे सार्वजनिक सॉफ़्टवेयर लाइसेंस जैसे GNU GPL के तहत वितरित किया जाता है। माइक्रोसॉफ्ट विंडोज़ 11, एप्पल मैकओएस या आईओएस जैसे स्वामित्व वाले प्लेटफार्मों के विपरीत, लिनक्स का स्रोत कोड जनता के लिए स्वतंत्र रूप से उपलब्ध है। उपयोगकर्ता, डेवलपर्स और संस्थाएँ लिनक्स कोड का निरीक्षण, संशोधन, संकलन और अनुकूलन कर सकते हैं ताकि विशिष्ट हार्डवेयर आर्किटेक्चर और संचालन की आवश्यकताओं के लिए विशेष वितरण तैयार किया जा सके।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Linux is distributed under public software licenses like the GNU GPL.",
+        "The source code of Linux is freely available to the public.",
+        "Printed answer key: (C) Linux"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5804654a-14e0-4d65-8268-74d3c02eb600",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "Linux और Windows कमांड प्रॉम्प्ट में कमांड लाइन इंटरफेस (CLI) टूल 'mkdir' का कार्य क्या है?",
+      "options_hindi": [
+        "फाइलों को एक ड्राइव से दूसरे ड्राइव में स्थानांतरित करना",
+        "एक सिस्टम कर्नेल फ़ाइल को हटाना",
+        "एक नया निर्देशिका या फ़ोल्डर बनाना",
+        "नेटवर्क IP कॉन्फ़िगरेशन प्रदर्शित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the function of the command line interface (CLI) tool ‘mkdir’ in Linux and Windows command prompt?",
+      "options_english": [
+        "To move files from one drive to another",
+        "To delete a system kernel file",
+        "To create a new directory or folder",
+        "To display network IP configuration"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The ‘mkdir’ command (short for make directory) is a fundamental command-line interface utility available across both Linux terminals and the Windows Command Prompt. Executing this command creates a new empty directory folder within the active working path or at a specified target path. It allows system administrators and users to build directory file hierarchies efficiently without using a graphical mouse interface.",
+      "explanation_hindi": "सही उत्तर (c) है। 'mkdir' कमांड (निर्देशिका बनाने के लिए संक्षिप्त) एक मौलिक कमांड-लाइन इंटरफेस उपयोगिता है जो Linux टर्मिनलों और Windows कमांड प्रॉम्प्ट दोनों में उपलब्ध है। इस कमांड को निष्पादित करने से सक्रिय कार्य पथ के भीतर या निर्दिष्ट लक्ष्य पथ पर एक नया खाली निर्देशिका फ़ोल्डर बनाया जाता है। यह सिस्टम प्रशासकों और उपयोगकर्ताओं को ग्राफिकल माउस इंटरफेस का उपयोग किए बिना निर्देशिका फ़ाइल पदानुक्रम को कुशलतापूर्वक बनाने की अनुमति देता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        "mkdir कमांड का उपयोग नए निर्देशिकाएँ बनाने के लिए किया जाता है।",
+        "यह Linux और Windows दोनों में उपलब्ध है।",
+        "Printed answer key: (C) To create a new directory or folder"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "bd590f54-0c6c-40f3-8bce-ec63ba0df3a9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "8.\n\nविंडोज़ में स्टार्ट मेनू से एप्लिकेशन लॉन्च करने के लिए शामिल कदमों का सही क्रम क्या है?\nI. टास्कबार पर स्टार्ट बटन पर क्लिक करें।\nII. स्थापित एप्लिकेशनों की सूची में इच्छित एप्लिकेशन को खोजें।\nIII. प्रोग्राम को RAM में लोड करने के लिए एप्लिकेशन आइकन पर क्लिक करें।\nIV. ऑपरेटिंग सिस्टम डेस्कटॉप के पूरी तरह से लोड होने की प्रतीक्षा करें।\nनीचे दिए गए विकल्पों में से सही अनुक्रम चुनें:",
+      "options_hindi": [
+        "IV, I, II, III",
+        "I, II, IV, III",
+        "IV, II, I, III",
+        "I, IV, II, III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the correct sequence of steps involved in launching an application from the Start Menu in Windows?\nI. Click on the Start Button on the taskbar.\nII. Locate the desired application in the list of installed applications.\nIII. Click on the application icon to initiate program loading into RAM.\nIV. Wait for the operating system desktop to load completely.\nSelect the correct sequence from the options given below:",
+      "options_english": [
+        "IV, I, II, III",
+        "I, II, IV, III",
+        "IV, II, I, III",
+        "I, IV, II, III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Launching an application using the Windows graphical user interface requires a structured sequence of user interactions. First, the user ensures the desktop environment and system taskbar have completely loaded into memory. Next, the user clicks the Start Button on the taskbar to open the application menu. Then, the user browses the installed program list to locate the desired software. Finally, selecting the icon loads program files into RAM.",
+      "explanation_hindi": "सही उत्तर (a) है। विंडोज़ ग्राफिकल यूजर इंटरफेस का उपयोग करके एप्लिकेशन लॉन्च करने के लिए उपयोगकर्ता इंटरैक्शन का एक संरचित क्रम आवश्यक है। पहले, उपयोगकर्ता सुनिश्चित करता है कि डेस्कटॉप वातावरण और सिस्टम टास्कबार पूरी तरह से मेमोरी में लोड हो गए हैं। इसके बाद, उपयोगकर्ता टास्कबार पर स्टार्ट बटन पर क्लिक करता है ताकि एप्लिकेशन मेनू खोला जा सके। फिर, उपयोगकर्ता इच्छित सॉफ़्टवेयर को खोजने के लिए स्थापित प्रोग्राम सूची को ब्राउज़ करता है। अंत में, आइकन का चयन करने से प्रोग्राम फ़ाइलें RAM में लोड होती हैं।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "The Start Menu is a key feature of the Windows operating system.",
+        "Applications are loaded into RAM for execution.",
+        "The desktop must be fully loaded before launching applications.",
+        "Printed answer key: (A) IV, I, II, III"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b8ff55cb-cea6-402d-a24f-7482be2658f7",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "9.\n\nविंडोज़ डेस्कटॉप वातावरण का कौन सा तत्व खुली एप्लिकेशनों, सिस्टम सूचना आइकनों और सिस्टम घड़ी को प्रदर्शित करता है?",
+      "options_hindi": [
+        "कंट्रोल पैनल",
+        "स्टार्ट मेनू",
+        "टास्कबार",
+        "फाइल एक्सप्लोरर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which element of the Windows desktop environment displays open applications, system notification icons, and the system clock?",
+      "options_english": [
+        "Control Panel",
+        "Start Menu",
+        "Taskbar",
+        "File Explorer"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The Taskbar serves as a foundational visual user interface element situated along the screen boundary in Windows environments. It maintains active visibility of running application windows, permitting seamless window switching and task management. Furthermore, it incorporates the system tray notification area, which displays system icons, background services, network connectivity status, audio volume controls, and the real-time system clock, alongside immediate access to the primary system Start Menu.",
+      "explanation_hindi": "सही उत्तर (c) है। टास्कबार विंडोज़ वातावरण में स्क्रीन सीमा के साथ स्थित एक मौलिक दृश्य उपयोगकर्ता इंटरफ़ेस तत्व के रूप में कार्य करता है। यह चल रही एप्लिकेशन विंडो की सक्रिय दृश्यता बनाए रखता है, जो विंडो स्विचिंग और कार्य प्रबंधन की अनुमति देता है। इसके अलावा, यह सिस्टम ट्रे सूचना क्षेत्र को शामिल करता है, जो सिस्टम आइकन, पृष्ठभूमि सेवाओं, नेटवर्क कनेक्टिविटी स्थिति, ऑडियो वॉल्यूम नियंत्रण और वास्तविक समय की सिस्टम घड़ी को प्रदर्शित करता है, साथ ही प्राथमिक सिस्टम स्टार्ट मेनू तक तात्कालिक पहुंच भी प्रदान करता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        "The Taskbar is a key component of the Windows user interface.",
+        "It allows for quick access to running applications and system notifications.",
+        "Printed answer key: (C) Taskbar"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

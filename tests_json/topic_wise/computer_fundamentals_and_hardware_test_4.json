@@ -1,0 +1,794 @@
+{
+  "test_id": "3fe21117-922e-46e2-9e8e-0364f9ab0cfe",
+  "test_name": "Topic Test: COMPUTER_FUNDAMENTALS_AND_HARDWARE - Part 4",
+  "type": "topic_wise",
+  "topic": "computer_fundamentals_and_hardware",
+  "created_at": "2026-10-28T18:55:06.492647",
+  "questions": [
+    {
+      "id": "69a92663-7c7a-4cbf-8580-e84b94e8bf86",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "70. स्कूल कंप्यूटर लैब में उपयोग किए जाने वाले बायोमेट्रिक उपकरणों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. ऑप्टिकल फिंगरप्रिंट स्कैनर उंगली की रेखाओं की एक दृश्य छवि कैप्चर करते हैं। \nB. फिंगरप्रिंट स्कैनिंग के लिए सटीकता बनाए रखने के लिए ग्लास प्लेटन की उचित सफाई की आवश्यकता होती है। \nC. बायोमेट्रिक उपकरण केवल कच्ची छवि फ़ाइलें भेजते हैं और एन्क्रिप्टेड फ़ीचर टेम्पलेट्स को स्टोर नहीं कर सकते। \nD. सेंसर पर सीधी धूप या अत्यधिक गंदगी प्रमाणीकरण पुनः प्रयास कर सकती है। \nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और D",
+        "केवल A, C और D",
+        "केवल B और C",
+        "A, B, C और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding biometric devices used in school computer labs:\nA. Optical fingerprint scanners capture a visual image of the finger ridges.\nB. Fingerprint scanning requires proper cleaning of the glass platen to maintain accuracy.\nC. Biometric devices transmit raw image files only and cannot store encrypted feature templates.\nD. Direct sunlight or extreme dirt on sensors can cause authentication retries.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and D only",
+        "A, C and D only",
+        "B and C only",
+        "A, B, C and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Biometric devices rely on optical scanning sensors to capture clear visual representations of human fingerprint ridges. Dust, grease, or dirt on sensor glass, as well as direct sunlight glare, can degrade image quality and cause authentication retries. Modern biometric readers process raw sensor images locally into encrypted mathematical feature templates, storing or transmitting encrypted feature data rather than unencrypted raw images.",
+      "explanation_hindi": "सही उत्तर (a) है। बायोमेट्रिक उपकरण ऑप्टिकल स्कैनिंग सेंसर पर निर्भर करते हैं जो मानव फिंगरप्रिंट रेखाओं की स्पष्ट दृश्य प्रतिनिधित्व को कैप्चर करते हैं। सेंसर ग्लास पर धूल, चिकनाई या गंदगी, साथ ही सीधे धूप की चमक, छवि गुणवत्ता को खराब कर सकती है और प्रमाणीकरण पुनः प्रयास कर सकती है। आधुनिक बायोमेट्रिक रीडर कच्ची सेंसर छवियों को स्थानीय रूप से एन्क्रिप्टेड गणितीय फ़ीचर टेम्पलेट्स में संसाधित करते हैं, एन्क्रिप्टेड फ़ीचर डेटा को स्टोर या ट्रांसमिट करते हैं, न कि अनएन्क्रिप्टेड कच्ची छवियों को।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Biometric devices use optical sensors for fingerprint scanning.",
+        "Cleaning the sensor is crucial for accuracy.",
+        "Printed answer key: (A) A, B and D only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ff07f01f-b294-4070-bea3-3222eb38c6fe",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कंप्यूटर प्रयोगशालाओं में अनइंटरप्टिबल पावर सप्लाई (UPS) सिस्टम के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. ऑनलाइन UPS बिना शून्य स्विचिंग ट्रांसफर समय के निरंतर पावर कंडीशनिंग प्रदान करता है। \nB. स्टैंडबाय (ऑफलाइन) UPS उपयोगिता पावर के विफल होने पर मिलीसेकंड के भीतर बैटरी पावर पर स्विच करता है। \nC. UPS अचानक कंप्यूटर शटडाउन को रोकता है, डेटा हानि और मदरबोर्ड सर्किट को नुकसान से बचाता है। \nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Uninterruptible Power Supply (UPS) systems in computer labs:\nA. Online UPS provides continuous power conditioning without zero switching transfer time.\nB. Standby (Offline) UPS switches to battery power within milliseconds when utility power fails.\nC. A UPS prevents sudden computer shutdowns, protecting data loss and motherboard circuit damage.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Uninterruptible Power Supply systems protect computer lab hardware from main power disruptions. Online UPS units continuously condition power without any transfer time, ensuring that devices remain powered without interruption. Standby UPS units switch to battery power almost instantaneously when utility power fails, providing a seamless transition. Together, these features prevent sudden shutdowns, safeguarding data and hardware integrity.",
+      "explanation_hindi": "सही उत्तर (d) है। अनइंटरप्टिबल पावर सप्लाई सिस्टम कंप्यूटर प्रयोगशालाओं के हार्डवेयर को मुख्य पावर विफलताओं से बचाते हैं। ऑनलाइन UPS बिना किसी ट्रांसफर समय के निरंतर पावर कंडीशनिंग प्रदान करता है, जिससे उपकरण बिना रुकावट के चालू रहते हैं। स्टैंडबाय UPS उपयोगिता पावर के विफल होने पर लगभग तात्कालिक रूप से बैटरी पावर पर स्विच करता है, जो एक निर्बाध संक्रमण सुनिश्चित करता है। इन सुविधाओं के संयोजन से अचानक शटडाउन को रोका जाता है, डेटा और हार्डवेयर की अखंडता की रक्षा होती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Online UPS provides continuous power conditioning without zero switching transfer time.",
+        "Standby UPS switches to battery power within milliseconds when utility power fails.",
+        "A UPS prevents sudden computer shutdowns, protecting data loss and motherboard circuit damage.",
+        "Printed answer key: (D) A, B and C"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9409342b-9a5d-433d-9051-a51588f23ce3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को असर्शन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): स्कूल कंप्यूटर लैब UPS लाइन में उच्च-शक्ति वाले उपकरणों जैसे कि इलेक्ट्रिक हीटर या आयरन बॉक्स को जोड़ना सख्त मना है।\nकारण (R): उच्च विद्युत लोड UPS वाट क्षमता को पार कर जाते हैं, जिससे तुरंत ओवरलोड ट्रिपिंग या इन्वर्टर विफलता होती है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: One is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A): Connecting high-power equipment like electric heaters or iron boxes to a school computer lab UPS line is strictly prohibited.\nReason (R): High electrical loads exceed the UPS wattage rating, causing immediate overload tripping or inverter failure.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Connecting high-wattage heating appliances like electric space heaters or iron boxes to dedicated school computer lab UPS lines is strictly prohibited. Computer lab UPS units are rated for specific electronic power loads. High inductive or thermal heating appliances draw large electrical currents that exceed UPS inverter capacity, causing immediate overload circuit tripping, internal fuse failure, or power supply damage.",
+      "explanation_hindi": "सही उत्तर (a) है। स्कूल कंप्यूटर लैब UPS लाइनों में उच्च-वाटेज हीटिंग उपकरणों जैसे कि इलेक्ट्रिक स्पेस हीटर या आयरन बॉक्स को जोड़ना सख्त मना है। कंप्यूटर लैब UPS यूनिट्स को विशिष्ट इलेक्ट्रॉनिक पावर लोड के लिए रेट किया गया है। उच्च प्रेरणात्मक या थर्मल हीटिंग उपकरण बड़े विद्युत धाराओं को खींचते हैं जो UPS इन्वर्टर क्षमता को पार कर जाते हैं, जिससे तुरंत ओवरलोड सर्किट ट्रिपिंग, आंतरिक फ्यूज विफलता, या पावर सप्लाई क्षति होती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "High-power devices can cause UPS overload.",
+        "UPS units have specific wattage ratings.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d9cdd9c2-0d6e-4b54-ad6b-a85029f288b3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) के रूप में लेबल किया गया है\nऔर दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): पुराने कंप्यूटरों से उत्पन्न ई-कचरा\nमानक कचरे के डिब्बों में नहीं फेंका जाना चाहिए।\nकारण (R): कंप्यूटर हार्डवेयर में ऐसे विषैले\nभारी धातुएँ होती हैं जैसे कि सीसा, पारा, और कैडमियम\nजो यदि गलत तरीके से लैंडफिल किया जाए तो\nमिट्टी और भूजल को प्रदूषित करती हैं।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: One is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): E-waste generated from old computers must not be disposed of in standard garbage bins. Reason (R): Computer hardware contains toxic heavy metals like lead, mercury, and cadmium that contaminate soil and groundwater if landfilled improperly.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Electronic waste from decommissioned computer hardware must never be discarded in standard municipal garbage bins. Computer components contain hazardous heavy metals and toxic substances, including lead, mercury, cadmium, and flame retardants. Disposing of e-waste in municipal landfills causes these toxic materials to leach into soil and groundwater, posing severe environmental contamination risks and directly requiring specialized e-waste recycling.",
+      "explanation_hindi": "सही उत्तर (a) है। पुराने कंप्यूटरों से उत्पन्न ई-कचरा मानक कचरे के डिब्बों में नहीं फेंका जाना चाहिए। कंप्यूटर के घटकों में विषैले भारी धातुएँ और अन्य हानिकारक पदार्थ होते हैं, जैसे कि सीसा, पारा, और कैडमियम। ई-कचरे को लैंडफिल में फेंकने से ये विषैले पदार्थ मिट्टी और भूजल में मिल जाते हैं, जिससे गंभीर पर्यावरणीय प्रदूषण का खतरा बढ़ जाता है और इसके लिए विशेष ई-कचरा पुनर्चक्रण की आवश्यकता होती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "E-waste contains hazardous materials that can contaminate the environment.",
+        "Proper disposal and recycling of e-waste are crucial for environmental safety.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "07efa3e4-cb33-4757-81ea-5f539fdd9890",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "74. कौन सा पेरिफेरल पोर्ट विशेष रूप से पुराने VGA और DVI इंटरफेस को बदलने के लिए एक ओपन स्टैंडर्ड के रूप में विकसित किया गया था, जो ऑडियो और वीडियो को पीसी मॉनिटर्स और मल्टी-डिस्प्ले सेटअप से जोड़ता है?",
+      "options_hindi": [
+        "डिस्प्ले पोर्ट",
+        "सीरियल कॉम पोर्ट",
+        "पैरालल LPT पोर्ट",
+        "PS/2 पोर्ट"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which peripheral port was specifically developed as an open standard to replace older VGA and DVI interfaces for connecting audio and video to PC monitors and multi-display setups?",
+      "options_english": [
+        "DisplayPort",
+        "Serial COM Port",
+        "Parallel LPT Port",
+        "PS/2 Port"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "DisplayPort was developed as a standardized digital display interface by a consortium of hardware manufacturers to replace legacy analog interfaces like VGA and older digital standards like DVI. DisplayPort transmits high-bandwidth digital video and multi-channel audio over a single cable, natively supporting high refresh rates, multi-monitor daisy-chaining, and high display resolutions for modern personal computer monitors.",
+      "explanation_hindi": "सही उत्तर (a) है। डिस्प्ले पोर्ट को हार्डवेयर निर्माताओं के एक संघ द्वारा एक मानकीकृत डिजिटल डिस्प्ले इंटरफेस के रूप में विकसित किया गया था ताकि VGA जैसे पुराने एनालॉग इंटरफेस और DVI जैसे पुराने डिजिटल मानकों को प्रतिस्थापित किया जा सके। डिस्प्ले पोर्ट एकल केबल के माध्यम से उच्च-बैंडविड्थ डिजिटल वीडियो और मल्टी-चैनल ऑडियो को संचारित करता है, जो आधुनिक व्यक्तिगत कंप्यूटर मॉनिटर्स के लिए उच्च रिफ्रेश दर, मल्टी-मॉनिटर डेज़ी-चेनिंग और उच्च डिस्प्ले रिज़ॉल्यूशंस का स्वदेशी समर्थन करता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "DisplayPort replaces VGA and DVI interfaces.",
+        "It supports high refresh rates and multi-monitor setups.",
+        "Printed answer key: (A) DisplayPort"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "45108a11-272a-4d2f-91db-1a0a5d744e02",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "3।\n\nकंप्यूटर जो विशेष रूप से जटिल गणितीय गणनाएँ करने के लिए डिज़ाइन किए गए हैं,\nखगोल अनुसंधान या मौसम पूर्वानुमान के लिए किस आकार-आधारित वर्गीकरण में आते हैं?",
+      "options_hindi": [
+        "सूक्ष्म कंप्यूटर",
+        "मिनीकंप्यूटर",
+        "सुपरकंप्यूटर",
+        "मुख्यफ्रेम कंप्यूटर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Computers designed specifically to perform complex mathematical calculations for astronomical research or weather forecasting belong to which size-based classification?",
+      "options_english": [
+        "Microcomputer",
+        "Minicomputer",
+        "Supercomputer",
+        "Mainframe Computer"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Supercomputers represent the most powerful size-based classification of electronic computing systems, engineered specifically to handle extremely complex, data-intensive mathematical calculations. Operating with massive parallel processing architectures, supercomputers perform trillions of floating-point operations per second. This immense processing throughput makes them essential for advanced scientific applications such as global weather forecasting, astronomical simulations, quantum mechanical research, nuclear modeling, and molecular biology.",
+      "explanation_hindi": "सही उत्तर (c) है। सुपरकंप्यूटर इलेक्ट्रॉनिक कंप्यूटिंग सिस्टम का सबसे शक्तिशाली आकार-आधारित वर्गीकरण है, जिसे अत्यधिक जटिल, डेटा-गहन गणितीय गणनाओं को संभालने के लिए विशेष रूप से इंजीनियर किया गया है। विशाल समानांतर प्रसंस्करण आर्किटेक्चर के साथ काम करते हुए, सुपरकंप्यूटर प्रति सेकंड ट्रिलियन फ्लोटिंग-पॉइंट ऑपरेशंस करते हैं। यह विशाल प्रसंस्करण क्षमता उन्हें वैश्विक मौसम पूर्वानुमान, खगोल विज्ञान सिमुलेशन, क्वांटम यांत्रिकी अनुसंधान, परमाणु मॉडलिंग और आणविक जीवविज्ञान जैसे उन्नत वैज्ञानिक अनुप्रयोगों के लिए आवश्यक बनाती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "सुपरकंप्यूटर अत्यधिक जटिल गणितीय गणनाओं के लिए डिज़ाइन किए गए हैं।",
+        "वे प्रति सेकंड ट्रिलियन फ्लोटिंग-पॉइंट ऑपरेशंस कर सकते हैं।",
+        "Printed answer key: (C) Supercomputer"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "24d771d7-20df-4069-8071-084884887647",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "उच्च-धूल वाले कक्षा वातावरण में काम कर रहे डेस्कटॉप कंप्यूटर के CPUs के अधिक गर्म होने से रोकने के लिए मानक निवारक रखरखाव प्रक्रिया क्या है?",
+      "options_hindi": [
+        "सक्रिय सर्किट बोर्डों को चालू अवस्था में नम संवाहक कपड़ों से अच्छी तरह पोंछना",
+        "बाहरी शीतलन वेंटिलेशन ग्रिल को सुरक्षात्मक प्लास्टिक शीट से पूरी तरह ढकना और सील करना",
+        "प्रोसेसर घड़ी की आवृत्तियों को स्थायी रूप से बढ़ाना ताकि उच्च तापीय वायु निष्कासन उत्पन्न हो सके",
+        "सूखी संकुचित हवा का उपयोग करके धूल के फ़िल्टर और आंतरिक पंखों को समय-समय पर साफ करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the standard preventive maintenance procedure to prevent overheating of CPUs in desktop computers operating in high-dust classroom environments?",
+      "options_english": [
+        "Thoroughly wiping active circuit boards using moist conductive cloths while powered on",
+        "Completely covering and sealing exterior cooling ventilation grilles using protective plastic sheets",
+        "Permanently boosting processor clock frequencies to generate high thermal air expulsion",
+        "Periodically clearing dust filters and internal fans using dry compressed air"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Preventive hardware maintenance in dusty educational computer environments requires periodically cleaning internal cooling fans, heatsinks, and chassis air filters using dry compressed air or anti-static brushes. Dust accumulation blocks critical cooling airflow, causing microprocessor temperatures to spike and triggering thermal throttling or sudden system shutdowns. Regular dust removal sustains proper thermal dissipation, maintaining optimal CPU processing stability and longevity.",
+      "explanation_hindi": "सही उत्तर (d) है। धूल वाले शैक्षिक कंप्यूटर वातावरण में निवारक हार्डवेयर रखरखाव के लिए आंतरिक शीतलन पंखों, हीटसिंक और चेसिस एयर फ़िल्टर को सूखी संकुचित हवा या एंटी-स्टेटिक ब्रश का उपयोग करके समय-समय पर साफ करना आवश्यक है। धूल का संचय महत्वपूर्ण शीतलन वायु प्रवाह को अवरुद्ध करता है, जिससे माइक्रोप्रोसेसर के तापमान में वृद्धि होती है और थर्मल थ्रॉटलिंग या अचानक सिस्टम शटडाउन को ट्रिगर करता है। नियमित धूल हटाने से उचित तापीय विसर्जन बनाए रखने में मदद मिलती है, जिससे CPU की प्रसंस्करण स्थिरता और दीर्घकालिकता बनी रहती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Regular cleaning of internal components is essential in dusty environments.",
+        "Dust accumulation can lead to overheating and system failures.",
+        "Use of dry compressed air is recommended for cleaning.",
+        "Printed answer key: (D) Periodically clearing dust filters and internal"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1ad9f8ed-2501-4a2e-8e76-747921c71e11",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "31. एक संस्थागत कंप्यूटर प्रयोगशाला प्रशासक द्वारा भौतिक उपकरणों की आगमन, अनुक्रमांक, आवंटन विवरण और संचालन स्थिति को लॉग करने के लिए बनाए रखा जाने वाला प्राथमिक आधिकारिक रिकॉर्ड क्या है?",
+      "options_hindi": [
+        "हार्डवेयर स्टॉक रजिस्टर",
+        "संस्थागत उपयोगकर्ता पहुंच और उपस्थिति रजिस्टर",
+        "अवधिक वित्तीय ऑडिट बैलेंस शीट लॉगबुक",
+        "विक्रेता उपकरण रखरखाव सेवा कूपन रजिस्टर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the primary official record maintained by an institutional computer lab administrator to log physical equipment arrivals, serial numbers, allocation details, and operational status?",
+      "options_english": [
+        "Hardware Stock Register",
+        "Institutional User Access and Attendance Register",
+        "Periodic Financial Audit Balance Sheet Logbook",
+        "Vendor Equipment Maintenance Service Coupon Register"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A Hardware Stock Register is the primary official record maintained by an institutional computer lab administrator to log physical equipment assets. It documents comprehensive asset details, including equipment acquisition dates, manufacturer serial numbers, physical allocation locations, operational status, and warranty terms. Maintaining an updated stock register ensures transparent inventory accountability, supports periodic audit verifications, and facilitates effective asset tracking.",
+      "explanation_hindi": "सही उत्तर (a) है। हार्डवेयर स्टॉक रजिस्टर एक संस्थागत कंप्यूटर प्रयोगशाला प्रशासक द्वारा भौतिक उपकरण संपत्तियों को लॉग करने के लिए बनाए रखा जाने वाला प्राथमिक आधिकारिक रिकॉर्ड है। यह उपकरण अधिग्रहण तिथियों, निर्माता अनुक्रमांक, भौतिक आवंटन स्थानों, संचालन स्थिति और वारंटी शर्तों सहित व्यापक संपत्ति विवरणों का दस्तावेजीकरण करता है। एक अद्यतन स्टॉक रजिस्टर बनाए रखना पारदर्शी इन्वेंटरी जवाबदेही सुनिश्चित करता है, अवधिक ऑडिट सत्यापन का समर्थन करता है, और प्रभावी संपत्ति ट्रैकिंग की सुविधा प्रदान करता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "A Hardware Stock Register logs physical equipment details.",
+        "It supports inventory accountability and audit verifications.",
+        "Printed answer key: (A) Hardware Stock Register"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "44b2b5e8-5312-4174-b9ef-25f81eb564ec",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "95. एक मानक एकल-परत एकल-पक्षीय डिजिटल वर्सेटाइल डिस्क (DVD) की भंडारण क्षमता क्या है?",
+      "options_hindi": [
+        "700 एमबी",
+        "4.7 जीबी",
+        "25 जीबी",
+        "100 जीबी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the storage capacity of a standard single-layer single-sided Digital Versatile Disc (DVD)?",
+      "options_english": [
+        "700 MB",
+        "4.7 GB",
+        "25 GB",
+        "100 GB"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "A standard single-sided, single-layer Digital Versatile Disc provides a storage capacity of approximately 4.7 Gigabytes. DVD technology utilizes a 650-nanometer red laser beam with a narrower focus spot than CD technology, allowing tighter track pitch and smaller physical data pits. This higher data density enables single-layer DVDs to store over six times the capacity of standard compact discs.",
+      "explanation_hindi": "सही उत्तर (b) है। एक मानक एकल-पक्षीय, एकल-परत डिजिटल वर्सेटाइल डिस्क की भंडारण क्षमता लगभग 4.7 गीगाबाइट्स है। DVD प्रौद्योगिकी 650-नैनोमीटर लाल लेजर बीम का उपयोग करती है, जिसमें CD प्रौद्योगिकी की तुलना में एक संकीर्ण फोकस स्पॉट होता है, जो अधिक तंग ट्रैक पिच और छोटे भौतिक डेटा पिट्स की अनुमति देता है। यह उच्च डेटा घनत्व एकल-परत DVDs को मानक कॉम्पैक्ट डिस्क की क्षमता से छह गुना अधिक भंडारण करने में सक्षम बनाता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "Standard storage capacity of a single-layer DVD is approximately 4.7 GB.",
+        "Printed answer key: (B) 4.7 GB"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "dc52c471-e521-40fc-aece-b87b912af33c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कंप्यूटर हार्डवेयर रखरखाव के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. इलेक्ट्रोस्टैटिक कलाई पट्टियाँ संवेदनशील एकीकृत परिपथों को मानव शरीर के स्थैतिक चार्ज से बचाती हैं।\nB. खुले पावर सप्लाई यूनिट में हवा फेंकने से, बिना पंखे की ब्लेड को स्थिर रखे, पंखों को ओवर-स्पिन कर सकता है और उन्हें नुकसान पहुँचा सकता है।\nC. सिस्टम रखरखाव में आंतरिक SATA और पावर केबलों की जांच और सुरक्षित करना शामिल है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding computer hardware maintenance:\nA. Electrostatic wrist straps protect sensitive integrated circuits from human body static charges.\nB. Blowing air into open power supply units without holding fan blades stationary can over-spin and damage fans.\nC. System maintenance includes checking and securing internal SATA and power cables.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Effective computer hardware maintenance requires adhering to technical safety protocols. Wearing anti-static wrist straps grounds technicians, preventing electrostatic discharge from damaging delicate integrated circuits. When cleaning power supply units with compressed air, holding fan blades still prevents over-spinning, which can ruin fan bearings or generate reverse currents. Furthermore, regularly inspecting internal SATA and power cables ensures stable connectivity.",
+      "explanation_hindi": "सही उत्तर (d) है। प्रभावी कंप्यूटर हार्डवेयर रखरखाव के लिए तकनीकी सुरक्षा प्रोटोकॉल का पालन करना आवश्यक है। एंटी-स्टेटिक कलाई पट्टियाँ तकनीशियनों को ग्राउंड करती हैं, जिससे इलेक्ट्रोस्टैटिक डिस्चार्ज संवेदनशील एकीकृत परिपथों को नुकसान नहीं पहुँचाता। पावर सप्लाई यूनिट को साफ करते समय, पंखे की ब्लेड को स्थिर रखना ओवर-स्पिनिंग को रोकता है, जो पंखे के बेयरिंग को खराब कर सकता है या रिवर्स करंट उत्पन्न कर सकता है। इसके अलावा, आंतरिक SATA और पावर केबलों की नियमित जांच स्थिर कनेक्टिविटी सुनिश्चित करती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Electrostatic wrist straps prevent damage to integrated circuits.",
+        "Over-spinning fans can lead to hardware damage.",
+        "Regular checks of internal cables are essential for system stability.",
+        "Printed answer key: (D) A, B and C"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5b1959ad-9edd-4798-b22b-856c4940d731",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सार्वजनिक संस्थानों में तैनात बायोमेट्रिक उपस्थिति उपकरणों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. आइरिस स्कैनर आंख के उच्च-प्रतिवर्ती पैटर्न को कैप्चर करने के लिए निकट-अवरक्त प्रकाश का उपयोग करते हैं।\nB. बायोमेट्रिक टेम्पलेट्स को एन्क्रिप्ट किया जाता है और पंजीकृत डिजिटल हैश के खिलाफ तुलना की जाती है।\nC. बायोमेट्रिक इनपुट उपकरणों को उपस्थिति लॉग करने के लिए निरंतर पेपर फीड तंत्र की आवश्यकता होती है।\nउपरोक्त में से कौन से कथन सही हैं?\n(1) केवल A और B",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding biometric attendance devices deployed in public institutions:\nA. Iris scanners utilize near-infrared illumination to capture high-contrast patterns of the eye.\nB. Biometric templates are encrypted and compared against registered digital hashes.\nC. Biometric input devices require continuous paper feed mechanisms to log attendance.\nWhich of the statements given above are correct?\n(1) A and B only",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Biometric authentication systems deploy advanced sensor technologies in public institutions. Iris scanners project harmless near-infrared light to capture high-contrast digital imagery of intricate eye patterns. Biometric devices encrypt captured feature representations into secure digital hashes, comparing them against registered templates for rapid identification. Biometric authentication operates electronically and digitally, requiring no paper feeding mechanisms or physical document printing.",
+      "explanation_hindi": "सही उत्तर (a) है। बायोमेट्रिक प्रमाणीकरण प्रणाली सार्वजनिक संस्थानों में उन्नत सेंसर प्रौद्योगिकियों का उपयोग करती हैं। आइरिस स्कैनर हानिकारक निकट-अवरक्त प्रकाश को प्रक्षिप्त करते हैं ताकि जटिल आंख के पैटर्न की उच्च-प्रतिवर्ती डिजिटल छवियों को कैप्चर किया जा सके। बायोमेट्रिक उपकरण कैप्चर की गई विशेषताओं के प्रतिनिधित्व को सुरक्षित डिजिटल हैश में एन्क्रिप्ट करते हैं, जो पंजीकृत टेम्पलेट्स के खिलाफ तेजी से पहचान के लिए तुलना करते हैं। बायोमेट्रिक प्रमाणीकरण इलेक्ट्रॉनिक और डिजिटल रूप से कार्य करता है, जिसमें पेपर फीड तंत्र या भौतिक दस्तावेज़ प्रिंटिंग की आवश्यकता नहीं होती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "आइरिस स्कैनर निकट-अवरक्त प्रकाश का उपयोग करते हैं।",
+        "बायोमेट्रिक टेम्पलेट्स को एन्क्रिप्ट किया जाता है और पंजीकृत डिजिटल हैश के खिलाफ तुलना की जाती है।",
+        "Printed answer key: (1) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "45dd2a15-8425-4435-8f13-0ab17e9e6786",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक ऐसा उपकरण जो प्रिंटिंग, स्कैनिंग,\nकॉपीिंग और फैक्सिंग कार्यक्षमता को एकल\nएकीकृत संस्थागत परिधीय इकाई में जोड़ता है,\nउसे कहा जाता है:",
+      "options_hindi": [
+        "उच्च-फॉर्मेट सटीक प्लॉटर",
+        "बहु-कार्यात्मक प्रिंटर प्रणाली",
+        "इंटरएक्टिव डिजिटाइज़र कार्यस्थान",
+        "डिजिटल उच्च-गति डुप्लिकेटर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "A device that combines printing, scanning,\ncopying, and faxing functionality into a single\nintegrated institutional peripheral unit is called\na:",
+      "options_english": [
+        "High-format precision plotter",
+        "Multifunction printer system",
+        "Interactive digitizer workstation",
+        "Digital high-speed duplicator"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "A multifunction printer system combines\nmultiple document management capabilities\ninto a single integrated institutional peripheral\nunit. By consolidating digital printing, optical\nflatbed document scanning, paper photocopying,\nand electronic fax transmission functions into\none physical chassis, these all-in-one hardware\nunits save office space, lower overall procurement\ncosts, streamline operational power consumption,\nand simplify equipment maintenance within\nadministrative environments.",
+      "explanation_hindi": "सही उत्तर (b) है। एक बहु-कार्यात्मक प्रिंटर प्रणाली\nकई दस्तावेज़ प्रबंधन क्षमताओं को एकल\nएकीकृत संस्थागत परिधीय इकाई में जोड़ती है।\nडिजिटल प्रिंटिंग, ऑप्टिकल फ्लैटबेड दस्तावेज़ स्कैनिंग,\nकागज़ की फोटोकॉपी और इलेक्ट्रॉनिक फैक्स\nसंवहन कार्यों को एक भौतिक चेसिस में समेकित\nकरने से, ये सभी-एक में हार्डवेयर इकाइयाँ\nकार्यालय की जगह बचाती हैं, कुल अधिग्रहण लागत\nको कम करती हैं, संचालन की शक्ति की खपत\nको सरल बनाती हैं, और प्रशासनिक वातावरण में\nउपकरण रखरखाव को सरल बनाती हैं।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Multifunction printers combine multiple functions into one device.",
+        "They save space and reduce costs in institutional settings.",
+        "Printed answer key: (B) Multifunction printer system"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "51a46120-acd5-454c-953d-c3b93eb14a4c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "दिए गए इंटरफेस मानकों में डेटा ट्रांसफर गति (बैंडविड्थ) का सही क्रम निम्नलिखित में से सबसे कम से सबसे अधिक का चयन करें:",
+      "options_hindi": [
+        "USB 2.0 → USB 3.0 → USB 3.2 जनरल 2x2 → थंडरबोल्ट 4",
+        "थंडरबोल्ट 4 → USB 3.0 → USB 2.0 → USB 3.2",
+        "USB 3.0 → USB 2.0 → थंडरबोल्ट 4 → USB 3.2",
+        "USB 2.0 → थंडरबोल्ट 4 → USB 3.0 → USB 3.2"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct order of data transfer speed (bandwidth) from lowest to highest among the given interface standards:",
+      "options_english": [
+        "USB 2.0 → USB 3.0 → USB 3.2 Gen 2x2 → Thunderbolt 4",
+        "Thunderbolt 4 → USB 3.0 → USB 2.0 → USB 3.2",
+        "USB 3.0 → USB 2.0 → Thunderbolt 4 → USB 3.2",
+        "USB 2.0 → Thunderbolt 4 → USB 3.0 → USB 3.2"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Data transfer bandwidth across serial bus interface standards has increased dramatically over successive hardware releases. USB 2.0 provides legacy transfer rates up to 480 Megabits per second. USB 3.0 expanded bandwidth up to 5 Gigabits per second, while USB 3.2 Gen 2x2 achieves up to 20 Gigabits per second. Thunderbolt 4 represents the highest speed interface among these, delivering bandwidth up to 40 Gigabits per second.",
+      "explanation_hindi": "सही उत्तर (a) है। डेटा ट्रांसफर बैंडविड्थ सीरियल बस इंटरफेस मानकों में लगातार हार्डवेयर रिलीज के साथ तेजी से बढ़ी है। USB 2.0 480 मेगाबिट प्रति सेकंड तक की विरासत ट्रांसफर दर प्रदान करता है। USB 3.0 ने 5 गीगाबिट प्रति सेकंड तक बैंडविड्थ का विस्तार किया, जबकि USB 3.2 जनरल 2x2 20 गीगाबिट प्रति सेकंड तक पहुंचता है। थंडरबोल्ट 4 इन सभी में सबसे उच्च गति इंटरफेस का प्रतिनिधित्व करता है, जो 40 गीगाबिट प्रति सेकंड तक बैंडविड्थ प्रदान करता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "USB 2.0 provides up to 480 Megabits per second.",
+        "USB 3.0 provides up to 5 Gigabits per second.",
+        "USB 3.2 Gen 2x2 achieves up to 20 Gigabits per second.",
+        "Thunderbolt 4 delivers up to 40 Gigabits per second.",
+        "Printed answer key: (A) USB 2.0 → USB 3.0 → USB 3.2 Gen 2x2 → Thunderbolt 4"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9ded2dbe-6b61-4ea6-9192-2f1e5476a2f0",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "83. CPU का कौन सा घटक मध्यवर्ती अंकगणितीय संख्याओं या निर्देश मेमोरी पते को रखता है जो वर्तमान में सर्किट द्वारा संसाधित हो रहा है?",
+      "options_hindi": [
+        "हार्ड ड्राइव सेक्टर",
+        "एक्सपेंशन बस",
+        "CPU रजिस्टर",
+        "CMOS बैटरी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which component of the CPU holds intermediate arithmetic numbers or instruction memory addresses currently being processed by the circuit?",
+      "options_english": [
+        "Hard Drive Sector",
+        "Expansion Bus",
+        "CPU Register",
+        "CMOS Battery"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "CPU registers are small, ultra-fast internal storage locations situated directly within the processor core. Operating at the same internal clock frequency as the CPU, registers temporarily store data values, memory addresses, intermediate arithmetic results, and control instructions currently being processed by the arithmetic logic unit and control unit, delivering the fastest possible access speed during instruction execution cycles.",
+      "explanation_hindi": "सही उत्तर (c) है। CPU रजिस्टर छोटे, अत्यधिक तेज आंतरिक भंडारण स्थान होते हैं जो सीधे प्रोसेसर कोर के भीतर स्थित होते हैं। CPU के समान आंतरिक घड़ी की आवृत्ति पर कार्य करते हुए, रजिस्टर अस्थायी रूप से डेटा मान, मेमोरी पते, मध्यवर्ती अंकगणितीय परिणाम और नियंत्रण निर्देशों को संग्रहीत करते हैं जो वर्तमान में अंकगणितीय लॉजिक यूनिट और नियंत्रण इकाई द्वारा संसाधित हो रहे हैं, जिससे निर्देश निष्पादन चक्रों के दौरान सबसे तेज़ संभव पहुंच गति मिलती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "CPU registers are ultra-fast storage locations within the processor.",
+        "They store data values and memory addresses during processing.",
+        "Registers operate at the same clock frequency as the CPU.",
+        "Printed answer key: (C) CPU Register"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a6d7926e-ea3a-45f7-a26e-20cf016720b0",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "72. सूची I को सूची II के साथ मिलाएं। \nसूची I: (शब्द/संकल्पना)\nA. बिट\nB. बाइट\nC. किलोग्रैम\nD. टेराबाइट\nसूची II: (समान मान)\nI. एकल बाइनरी अंक (0 या 1)\nII. 8 बिट\nIII. 1024 बाइट\nIV. 1024 गीगाबाइट\nनीचे दिए गए विकल्पों में से सही उत्तर चुनें:\n(1) A-I, B-II, C-III, D-IV\n(2) A-II, B-I, C-IV, D-III\n(3) A-III, B-IV, C-I, D-II",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II.\nList I: (Term/Concept)\nA. Bit\nB. Byte\nC. Kilobyte\nD. Terabyte\nList II: (Equivalent Value)\nI. Single binary digit (0 or 1)\nII. 8 bits\nIII. 1024 Bytes\nIV. 1024 Gigabytes\nChoose the correct answer from the options given below:\n(1) A-I, B-II, C-III, D-IV\n(2) A-II, B-I, C-IV, D-III\n(3) A-III, B-IV, C-I, D-II",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Standard computer memory measurement units map directly to specific binary values. A bit represents the smallest single binary digit, holding a value of 0 or 1. A byte consists of 8 consecutive bits. Scaling up exponentially by binary factors, one Kilobyte equals 1024 Bytes, while one Terabyte equals 1024 Gigabytes, providing structured standard metrics for measuring computer memory capacity.",
+      "explanation_hindi": "सही उत्तर (a) है। मानक कंप्यूटर मेमोरी माप इकाइयाँ सीधे विशिष्ट बाइनरी मानों से मेल खाती हैं। एक बिट सबसे छोटा एकल बाइनरी अंक है, जिसका मान 0 या 1 होता है। एक बाइट 8 लगातार बिट्स से बनी होती है। बाइनरी कारकों द्वारा गुणा करते हुए, एक किलोग्रैम 1024 बाइट के बराबर होता है, जबकि एक टेराबाइट 1024 गीगाबाइट के बराबर होता है, जो कंप्यूटर मेमोरी क्षमता को मापने के लिए संरचित मानक मैट्रिक्स प्रदान करता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "A bit is the smallest unit of data in computing, representing a binary value.",
+        "A byte is made up of 8 bits.",
+        "A kilobyte is 1024 bytes, and a terabyte is 1024 gigabytes.",
+        "Printed answer key: (A) A-I, B-II, C-III, D-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "4b36549c-b5d1-4907-a1c2-f2e128bde068",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक डेस्कटॉप कंप्यूटर में CPU, मेमोरी मॉड्यूल, विस्तार कार्ड और बाहरी पेरिफेरल इंटरफेस को जोड़ने वाला भौतिक प्रिंटेड सर्किट बोर्ड को कहा जाता है:",
+      "options_hindi": [
+        "मदरबोर्ड",
+        "विस्तार बस",
+        "पावर सप्लाई यूनिट",
+        "फॉर्म फैक्टर प्लेट"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "The physical printed circuit board that connects the CPU, memory modules, expansion cards, and external peripheral interfaces in a desktop computer is known as the:",
+      "options_english": [
+        "Motherboard",
+        "Expansion Bus",
+        "Power Supply Unit",
+        "Form Factor Plate"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The motherboard serves as the main printed circuit board within a personal computer, establishing the primary physical and electrical interconnect framework for all hardware modules. It directly houses the central processing unit socket, memory slots, chipset controllers, expansion slots, and power delivery circuits. Additionally, it provides integrated communication buses and rear peripheral interface ports to route data between system components.",
+      "explanation_hindi": "सही उत्तर (a) है। मदरबोर्ड व्यक्तिगत कंप्यूटर के भीतर मुख्य प्रिंटेड सर्किट बोर्ड के रूप में कार्य करता है, जो सभी हार्डवेयर मॉड्यूल के लिए प्राथमिक भौतिक और विद्युत इंटरकनेक्ट ढांचे की स्थापना करता है। यह सीधे केंद्रीय प्रसंस्करण इकाई सॉकेट, मेमोरी स्लॉट, चिपसेट नियंत्रक, विस्तार स्लॉट और पावर डिलीवरी सर्किट को समाहित करता है। इसके अतिरिक्त, यह सिस्टम घटकों के बीच डेटा को रूट करने के लिए एकीकृत संचार बसों और पिछले पेरिफेरल इंटरफेस पोर्ट प्रदान करता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "मदरबोर्ड सभी कंप्यूटर हार्डवेयर के लिए एक केंद्रीय कनेक्शन बिंदु है।",
+        "यह CPU, मेमोरी और अन्य घटकों के बीच डेटा संचार की सुविधा प्रदान करता है।",
+        "Printed answer key: (A) Motherboard"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9ff7e4c2-7e61-486c-818b-ec99d1236da5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "77. कौन सा इनपुट उपकरण एक स्पर्श-संवेदनशील पैड है जो उपयोगकर्ता की अंगुली के दबाव और गति को स्क्रीन पर कर्सर को स्थिति में अनुवादित करता है, जो लैपटॉप कंप्यूटरों पर मानक है?",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "टचपैड",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which input device consists of a touch-sensitive pad that translates user finger pressure and motion to position the cursor on screen, standard on laptop computers?",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Touchpad",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A touchpad is an integrated tactile input device standard on laptop computers, featuring a specialized surface that senses user finger movement and pressure. Using capacitive sensors beneath its glass surface, the touchpad tracks finger position and translates physical motion into precise cursor movements across the display screen, enabling smooth navigation, scrolling, and multi-touch gesture inputs without an external mouse.",
+      "explanation_hindi": "सही उत्तर (c) है। टचपैड एक एकीकृत स्पर्श-संवेदनशील इनपुट उपकरण है जो लैपटॉप कंप्यूटरों पर मानक है, जिसमें एक विशेष सतह होती है जो उपयोगकर्ता की अंगुली की गति और दबाव को महसूस करती है। इसके कांच की सतह के नीचे कैपेसिटिव सेंसर का उपयोग करते हुए, टचपैड अंगुली की स्थिति को ट्रैक करता है और भौतिक गति को स्क्रीन पर सटीक कर्सर आंदोलनों में अनुवादित करता है, जिससे बिना किसी बाहरी माउस के सुचारू नेविगेशन, स्क्रॉलिंग और मल्टी-टच इशारा इनपुट संभव होता है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "टचपैड लैपटॉप कंप्यूटरों पर मानक इनपुट उपकरण है।",
+        "यह उपयोगकर्ता की अंगुली की गति और दबाव को ट्रैक करता है।",
+        "Printed answer key: (C) Touchpad"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "eb35ef72-275b-4efe-994c-28780247c8b3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कौन सी कंप्यूटरों की वर्गीकरण जो आकार के आधार पर है,\nमुख्य रूप से बड़े संगठनों जैसे बैंकों और रेलवे\nआरक्षण प्रणालियों द्वारा लाखों वास्तविक समय के लेनदेन\nको एक साथ संसाधित करने के लिए उपयोग की जाती है?",
+      "options_hindi": [
+        "मुख्यफ्रेम कंप्यूटर",
+        "सूक्ष्म कंप्यूटर",
+        "पामटॉप कंप्यूटर",
+        "एंबेडेड वर्कस्टेशन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which classification of computers based on size is primarily used by large organizations like banks and railway reservation systems for processing millions of real-time transactions simultaneously?",
+      "options_english": [
+        "Mainframe Computer",
+        "Microcomputer",
+        "Palmtop Computer",
+        "Embedded Workstation"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Mainframe computers are large-scale digital computing systems designed to support high-volume multi-user environments, immense input/output data throughput, and fault-tolerant continuous availability. Organizations such as commercial banks, airlines, and national railway reservation systems rely on mainframes to process millions of concurrent real-time transactions securely and reliably across geographically distributed networks without system degradation or unexpected operational downtime.",
+      "explanation_hindi": "सही उत्तर (a) है। मुख्यफ्रेम कंप्यूटर बड़े पैमाने पर डिजिटल कंप्यूटिंग सिस्टम हैं जो उच्च मात्रा वाले बहु-उपयोगकर्ता वातावरण, विशाल इनपुट/आउटपुट डेटा थ्रूपुट, और दोष सहिष्णु निरंतर उपलब्धता का समर्थन करने के लिए डिज़ाइन किए गए हैं। वाणिज्यिक बैंकों, एयरलाइनों, और राष्ट्रीय रेलवे आरक्षण प्रणालियों जैसे संगठनों को मुख्यफ्रेम पर निर्भर रहना पड़ता है ताकि वे लाखों समवर्ती वास्तविक समय के लेनदेन को सुरक्षित और विश्वसनीय रूप से संसाधित कर सकें।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Mainframe computers are designed for high-volume transactions.",
+        "They support multi-user environments and fault tolerance.",
+        "Printed answer key: (A) Mainframe Computer"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "fc100938-de52-4e6d-b968-d5f262b901b6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "71. बुनियादी कंप्यूटर आर्किटेक्चर में \"ALU\" संक्षेपाक्षर का क्या अर्थ है?",
+      "options_hindi": [
+        "अंकगणितीय तर्क इकाई",
+        "उन्नत तर्क इकाई",
+        "एरे प्रोसेसिंग इकाई",
+        "स्वचालित भाषा इकाई"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What does the acronym “ALU” stand for in basic computer architecture?",
+      "options_english": [
+        "Arithmetic Logic Unit",
+        "Advanced Logic Unit",
+        "Array Processing Unit",
+        "Automated Language Unit"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The acronym ALU stands for Arithmetic Logic Unit, a fundamental internal processing component of the Central Processing Unit. The ALU contains specialized digital logic circuits that execute fundamental mathematical operations, such as binary addition and subtraction, alongside logical operations like AND, OR, NOT, and numerical comparisons, performing core computational data transformations within digital computing architectures.",
+      "explanation_hindi": "सही उत्तर (a) है। ALU का संक्षेपाक्षर अंकगणितीय तर्क इकाई के लिए है, जो केंद्रीय प्रसंस्करण इकाई का एक मौलिक आंतरिक प्रसंस्करण घटक है। ALU में विशेष डिजिटल तर्क सर्किट होते हैं जो बुनियादी गणितीय संचालन, जैसे कि बाइनरी जोड़ और घटाव, के साथ-साथ AND, OR, NOT जैसे तार्किक संचालन और संख्यात्मक तुलना करते हैं, जो डिजिटल कंप्यूटिंग आर्किटेक्चर के भीतर मुख्य गणनात्मक डेटा रूपांतरण करते हैं।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "easy",
+      "key_facts": [
+        "ALU is a critical component of the CPU responsible for arithmetic and logical operations.",
+        "Printed answer key: (A) Arithmetic Logic Unit"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "64805b82-5d57-4f93-931c-631604191f49",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) के रूप में लेबल किया गया है\nऔर दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): ऑप्टिकल स्टोरेज डिस्क जैसे DVD\nUSB फ्लैश ड्राइव की तुलना में दैनिक फ़ाइल संशोधनों के लिए\nकम उपयुक्त हैं।\nकारण (R): पारंपरिक ऑप्टिकल डिस्क लेज़र बर्न\nफेज़ चेंज का उपयोग करती हैं, जिससे\nपुनः लेखन धीमा हो जाता है और डिस्क फ़ॉर्मेटिंग\nप्रकार द्वारा सीमित होता है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही\nव्याख्या है।",
+        "दोनों A और R सत्य हैं लेकिन R A का\nसही व्याख्या नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Computer Fundamentals and Hardware",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: One is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): Optical storage discs like DVDs are less suitable for frequent, daily file modifications compared to USB flash drives. Reason (R): Traditional optical discs use laser burn phase changes on dye layers, making rewriting slower and limited by disc formatting type.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Optical storage media such as DVDs are less suitable for daily, frequent file modifications than USB flash drives. Optical disc recording relies on focused laser beams that modify organic dye layers or cause physical phase changes on reflective surfaces. This optical writing process requires structured session formatting and operates significantly slower than rewritable solid-state flash memory chips used in flash drives.",
+      "explanation_hindi": "सही उत्तर (a) है। ऑप्टिकल स्टोरेज मीडिया जैसे DVD दैनिक, बार-बार फ़ाइल संशोधनों के लिए USB फ्लैश ड्राइव की तुलना में कम उपयुक्त होते हैं। ऑप्टिकल डिस्क रिकॉर्डिंग केंद्रित लेजर बीम पर निर्भर करती है जो जैविक डाई परतों को संशोधित करती है या परावर्तक सतहों पर भौतिक चरण परिवर्तन का कारण बनती है। यह ऑप्टिकल लेखन प्रक्रिया संरचित सत्र फ़ॉर्मेटिंग की आवश्यकता होती है और फ्लैश ड्राइव में उपयोग किए जाने वाले पुनः लेखनीय ठोस-राज्य फ्लैश मेमोरी चिप्स की तुलना में काफी धीमी होती है।",
+      "topic": "Computer Fundamentals and Hardware",
+      "difficulty": "medium",
+      "key_facts": [
+        "Optical storage discs are slower for frequent modifications compared to flash drives.",
+        "Optical discs use laser technology for writing data.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

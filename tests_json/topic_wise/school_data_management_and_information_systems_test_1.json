@@ -1,0 +1,798 @@
+{
+  "test_id": "697c04d9-06f7-494d-9cbc-4b1fbf0037ae",
+  "test_name": "Topic Test: SCHOOL_DATA_MANAGEMENT_AND_INFORMATION_SYSTEMS - Part 1",
+  "type": "topic_wise",
+  "topic": "school_data_management_and_information_systems",
+  "created_at": "2026-10-28T18:55:06.871144",
+  "questions": [
+    {
+      "id": "a9442c50-189a-49c0-bc5f-6e28d8428728",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "68. सूची I को सूची II के साथ मिलाएं:\nसूची I: (शैक्षणिक मैट्रिक/सूचकांक)\nP. प्रतिधारण दर\nQ. ड्रॉपआउट दर\nR. संक्रमण दर\nS. छात्र-शिक्षक अनुपात\nसूची II: (सूत्र / परिचालन परिभाषा)\nI. एक चक्र के अंतिम ग्रेड में नामांकित छात्रों का प्रतिशत जो अगले चक्र के पहले ग्रेड में जाते हैं\nII. एक दिए गए ग्रेड में नामांकित छात्रों का प्रतिशत जो अगले वर्ष में अगले ग्रेड में जारी रहते हैं\nIII. एक दिए गए ग्रेड से एक दिए गए शैक्षणिक वर्ष के दौरान बाहर निकलने वाले छात्रों का प्रतिशत\nIV. कुल नामांकित छात्रों को सक्रिय शिक्षण स्टाफ से विभाजित करना\nनीचे दिए गए कोड का उपयोग करके सही उत्तर चुनें:",
+      "options_hindi": [
+        "P-II, Q-III, R-I, S-IV",
+        "P-I, Q-II, R-III, S-IV",
+        "P-III, Q-I, R-II, S-IV",
+        "P-II, Q-I, R-IV, S-III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (Educational Metric/Indicator)\nP. Retention Rate\nQ. Dropout Rate\nR. Transition Rate\nS. Pupil-Teacher Ratio\nList II: (Formula / Operational Definition)\nI. Percentage of pupils enrolled in the last grade of a cycle who move to the first grade of the next cycle\nII. Percentage of pupils enrolled in a given grade who continue in the next grade in the subsequent year\nIII. Percentage of pupils who drop out from a given grade during a given academic year\nIV. Total enrolled students divided by total active teaching staff\nSelect the correct answer using the code given below:",
+      "options_english": [
+        "P-II, Q-III, R-I, S-IV",
+        "P-I, Q-II, R-III, S-IV",
+        "P-III, Q-I, R-II, S-IV",
+        "P-II, Q-I, R-IV, S-III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Core educational indicators evaluate student flow and institutional capacity. Retention Rate measures the percentage of students continuing to the next grade in subsequent years. Dropout Rate calculates the percentage of students leaving school during an academic year. Transition Rate assesses students moving from the final grade of one educational level to the next. Pupil-Teacher Ratio divides total enrolled students by active teachers.",
+      "explanation_hindi": "सही उत्तर (a) है। मुख्य शैक्षणिक संकेतक छात्रों के प्रवाह और संस्थागत क्षमता का मूल्यांकन करते हैं। प्रतिधारण दर उन छात्रों का प्रतिशत मापती है जो अगले वर्षों में अगले ग्रेड में जारी रहते हैं। ड्रॉपआउट दर उस प्रतिशत को मापती है जो एक शैक्षणिक वर्ष के दौरान स्कूल छोड़ते हैं। संक्रमण दर उन छात्रों का मूल्यांकन करती है जो एक शैक्षणिक स्तर के अंतिम ग्रेड से अगले स्तर में जाते हैं। छात्र-शिक्षक अनुपात कुल नामांकित छात्रों को सक्रिय शिक्षकों से विभाजित करता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "प्रतिधारण दर अगले ग्रेड में छात्रों के जारी रहने का प्रतिशत मापती है।",
+        "ड्रॉपआउट दर एक शैक्षणिक वर्ष के दौरान स्कूल छोड़ने वाले छात्रों का प्रतिशत है।",
+        "Printed answer key: (A) P-II, Q-III, R-I, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "891ebe70-cdac-43b7-a32d-391cc60d7745",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "32. ऑनलाइन छात्र नामांकन डेटा प्रविष्टि के दौरान लागू डेटा सत्यापन जांचों का सही क्रम चुनें:",
+      "options_hindi": [
+        "1-2-3-4",
+        "2-3-4-1",
+        "3-1-2-4",
+        "4-3-2-1"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct order of data validation checks applied during online student enrollment data entry in an MIS:",
+      "options_english": [
+        "1-2-3-4",
+        "2-3-4-1",
+        "3-1-2-4",
+        "4-3-2-1"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Online data validation during student enrollment applies structured multi-step checks to guarantee database quality. Initially, syntax and format rules verify field inputs, such as telephone digit counts. Next, range checks validate parameters like age eligibility for specific grades. Subsequently, duplicate detection algorithms verify national unique identifiers against existing records. Finally, validated entries are committed to the master database repository.",
+      "explanation_hindi": "सही उत्तर (a) है। ऑनलाइन छात्र नामांकन के दौरान डेटा सत्यापन संरचित बहु-चरण जांचों को लागू करता है ताकि डेटाबेस की गुणवत्ता सुनिश्चित हो सके। प्रारंभ में, वाक्य रचना और प्रारूप नियम फ़ील्ड इनपुट की पुष्टि करते हैं, जैसे कि टेलीफोन अंक की गणना। इसके बाद, रेंज जांचें विशेष ग्रेड के लिए आयु पात्रता जैसे पैरामीटर को मान्य करती हैं। इसके बाद, डुप्लिकेट पहचान एल्गोरिदम राष्ट्रीय अद्वितीय पहचानकर्ताओं को मौजूदा रिकॉर्ड के खिलाफ सत्यापित करते हैं। अंततः, मान्य प्रविष्टियाँ मास्टर डेटाबेस भंडार में जमा की जाती हैं।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "डेटा सत्यापन में बहु-चरणीय जांच शामिल होती है।",
+        "प्रारंभिक चरण में वाक्य रचना और प्रारूप नियमों की पुष्टि होती है।",
+        "डुप्लिकेट पहचान एल्गोरिदम का उपयोग किया जाता है।",
+        "Printed answer key: (A) 1-2-3-4"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "fa747d01-42c1-49d9-a178-240d2b775b5b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "79. निम्नलिखित में से कौन सा डिजिटल व्यक्तिगत डेटा\nसुरक्षा (DPDP) सिद्धांतों का एक प्रमुख\nआवश्यकता है जब डिजिटल छात्र रिकॉर्ड का\nप्रबंधन किया जाता है?",
+      "options_hindi": [
+        "नाबालिगों के डेटा के लिए सहमति, उद्देश्य सीमा,\nऔर तकनीकी सुरक्षा उपायों को लागू करना",
+        "छात्रों की व्यक्तिगत पहचान योग्य जानकारी को\nनिजी विपणन एजेंसियों को वाणिज्यिकृत और बेचना",
+        "छात्रों के व्यक्तिगत स्वास्थ्य और चिकित्सा\nनैदानिक रिकॉर्ड को सार्वजनिक रूप से प्रदर्शित करना",
+        "संवेदनशील उपयोगकर्ता लॉगिन क्रेडेंशियल्स और\nसिस्टम पासवर्ड को असुरक्षित प्लेन टेक्स्ट फ़ाइलों में\nस्टोर करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following is a key requirement of the Digital Personal Data Protection (DPDP) principles when managing digital student records?",
+      "options_english": [
+        "Enforcing consent, purpose limitation, and technical safeguards for minors’ data",
+        "Commercializing and selling student personal identifiable information to private marketing agencies",
+        "Publicly displaying detailed personal health and medical diagnostic records of students on open bulletin boards",
+        "Storing sensitive user login credentials and system passwords in unencrypted plain text files"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Digital Personal Data Protection principles require administrative systems handling student records to implement strict privacy controls. Managing minors’ personal information mandates obtaining parental consent, adhering to explicit purpose limitations, and deploying robust data encryption safeguards. Platforms must restrict access to authorized users and prevent unauthorized public exposure, ensuring full compliance with national data privacy standards and statutory protection frameworks.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल व्यक्तिगत डेटा सुरक्षा सिद्धांतों के अनुसार, छात्र रिकॉर्ड का प्रबंधन करने वाले प्रशासनिक सिस्टम को सख्त गोपनीयता नियंत्रण लागू करने की आवश्यकता होती है। नाबालिगों की व्यक्तिगत जानकारी का प्रबंधन करने के लिए माता-पिता की सहमति प्राप्त करना, स्पष्ट उद्देश्य सीमाओं का पालन करना और मजबूत डेटा एन्क्रिप्शन सुरक्षा उपायों को लागू करना अनिवार्य है। प्लेटफार्मों को अधिकृत उपयोगकर्ताओं तक पहुंच सीमित करनी चाहिए और अनधिकृत सार्वजनिक प्रदर्शन को रोकना चाहिए, जिससे राष्ट्रीय डेटा गोपनीयता मानकों और वैधानिक सुरक्षा ढांचों के साथ पूर्ण अनुपालन सुनिश्चित हो सके।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "DPDP principles enforce strict privacy controls for managing student records.",
+        "Obtaining parental consent and purpose limitations are essential for minors' data.",
+        "Printed answer key: (A) Enforcing consent, purpose limitation, and technical safeguards for minors’ data"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9b407446-c5c3-4a9d-9b5c-342dbfbcd115",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "भू-फेंसिंग और जीपीएस ट्रैकिंग के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "भू-फेंसिंग और जीपीएस ट्रैकिंग की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding Geo-fencing and GPS tracking, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of Geo-fencing and GPS tracking",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Mobile digital attendance solutions for remote or field educational personnel frequently incorporate Global Positioning System tracking and geofencing technology. Geo-fencing creates a virtual geographic boundary around designated school campuses. Attendance recorded through mobile applications is validated against live location coordinates, ensuring that staff members log in exclusively while physically present within the mandated institutional perimeter, thereby deterring remote attendance fraud.",
+      "explanation_hindi": "सही उत्तर (b) है। मोबाइल डिजिटल उपस्थिति समाधान, जो दूरस्थ या क्षेत्रीय शैक्षिक कर्मचारियों के लिए होते हैं, अक्सर वैश्विक स्थिति प्रणाली ट्रैकिंग और भू-फेंसिंग प्रौद्योगिकी को शामिल करते हैं। भू-फेंसिंग निर्दिष्ट स्कूल परिसरों के चारों ओर एक आभासी भौगोलिक सीमा बनाता है। मोबाइल अनुप्रयोगों के माध्यम से दर्ज उपस्थिति को लाइव स्थान समन्वय के खिलाफ मान्य किया जाता है, यह सुनिश्चित करते हुए कि कर्मचारी केवल तब लॉग इन करते हैं जब वे अनिवार्य संस्थागत परिधि के भीतर शारीरिक रूप से उपस्थित होते हैं, इस प्रकार दूरस्थ उपस्थिति धोखाधड़ी को रोकते हैं।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Geo-fencing creates virtual boundaries for attendance verification.",
+        "GPS tracking ensures real-time location validation.",
+        "Printed answer key: (B) Geo-fencing and GPS tracking"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1ddca17c-ccde-41f8-ba3a-9205b50b6c60",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "88. विद्यालय संसाधन आवंटन में प्रभावी डेटा-आधारित निर्णय लेने का एक प्रमुख संकेतक क्या है?\nसंरचना अनुदान का विद्यालयों को आवंटन",
+      "options_hindi": [
+        "संरचना अनुदान का विद्यालयों को आवंटन",
+        "अन्य विकल्प B",
+        "अन्य विकल्प C",
+        "अन्य विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is a key indicator of effective data-driven decision making in school resource allocation?\nAllocating infrastructure grants to schools",
+      "options_english": [
+        "Allocating infrastructure grants to schools",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Effective data-driven decision making relies on empirical indicators captured in management systems to allocate resources efficiently. Rather than distributing budgets uniformly or arbitrarily, administrators evaluate verified facility and staffing metrics. Identifying institutions with severe pupil-teacher ratio imbalances or physical deficits is crucial for targeted resource allocation.",
+      "explanation_hindi": "सही उत्तर (a) है। प्रभावी डेटा-आधारित निर्णय लेना प्रबंधन प्रणालियों में कैद किए गए अनुभवजन्य संकेतकों पर निर्भर करता है ताकि संसाधनों का कुशलतापूर्वक आवंटन किया जा सके। बजट को समान रूप से या मनमाने ढंग से वितरित करने के बजाय, प्रशासक सत्यापित सुविधाओं और स्टाफिंग मैट्रिक्स का मूल्यांकन करते हैं। गंभीर छात्र-शिक्षक अनुपात असंतुलन या भौतिक कमी वाले संस्थानों की पहचान करना लक्षित संसाधन आवंटन के लिए महत्वपूर्ण है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Data-driven decision making is essential for effective resource allocation.",
+        "Empirical indicators such as pupil-teacher ratios are critical.",
+        "Printed answer key: (A) Allocating infrastructure grants to schools"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "654e2539-e4b6-4f68-affc-3f44fda6fadf",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "छात्र डेटा गोपनीयता और डिजिटल स्कूल पोर्टलों में सुरक्षा के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. छात्र व्यक्तिगत पहचान योग्य जानकारी (PII) को अनधिकृत प्रकटीकरण से सुरक्षित रखा जाना चाहिए।\nB. डेटा सुरक्षा सिद्धांतों के अनुसार केवल वही डेटा एकत्र करना आवश्यक है जो निर्दिष्ट शैक्षणिक उद्देश्यों के लिए आवश्यक है।\nC. पारदर्शिता के लिए खुले वेबसाइटों पर छात्र के व्यक्तिगत विवरण जैसे घर का पता और आधार नंबरों का सार्वजनिक प्रदर्शन प्रोत्साहित किया जाता है।\nD. एक्सेस लॉग को संवेदनशील छात्र रिकॉर्ड तक उपयोगकर्ता पहुंच को रिकॉर्ड करना चाहिए।",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding student data privacy and protection in digital school portals:\nA. Student Personally Identifiable Information (PII) must be protected against unauthorized disclosure.\nB. Data protection principles require collecting only data that is necessary for specified educational purposes.\nC. Public display of complete personal student details including home address and Aadhaar numbers on open websites is encouraged for transparency.\nD. Access logs must record user access to sensitive student records.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Protecting student data privacy requires adherence to key information security standards. Personally Identifiable Information, including unique identity numbers and home addresses, must be safeguarded against unauthorized disclosure. System rules mandate collecting only data necessary for explicit educational functions. Additionally, access logs must track interactions with sensitive records. Publishing private student information on open web portals violates compliance norms.",
+      "explanation_hindi": "सही उत्तर (a) है। छात्र डेटा गोपनीयता की सुरक्षा के लिए प्रमुख सूचना सुरक्षा मानकों का पालन आवश्यक है। व्यक्तिगत पहचान योग्य जानकारी, जिसमें अद्वितीय पहचान संख्या और घर के पते शामिल हैं, को अनधिकृत प्रकटीकरण से सुरक्षित रखा जाना चाहिए। प्रणाली के नियम केवल उन डेटा को एकत्र करने की आवश्यकता को अनिवार्य करते हैं जो स्पष्ट शैक्षणिक कार्यों के लिए आवश्यक हैं। इसके अतिरिक्त, एक्सेस लॉग को संवेदनशील रिकॉर्ड के साथ इंटरैक्शन को ट्रैक करना चाहिए। खुले वेब पोर्टलों पर निजी छात्र जानकारी का प्रकाशन अनुपालन मानकों का उल्लंघन करता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "छात्र की व्यक्तिगत पहचान योग्य जानकारी को सुरक्षित रखा जाना चाहिए।",
+        "डेटा सुरक्षा सिद्धांतों के अनुसार केवल आवश्यक डेटा एकत्र किया जाना चाहिए।",
+        "संवेदनशील रिकॉर्ड के लिए एक्सेस लॉग का ट्रैक रखना आवश्यक है।",
+        "Printed answer key: (A) A, B and D only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b43d590c-1de4-4d07-a89d-e51a43f52306",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "31. स्कूल प्रबंधन सूचना प्रणाली में \"डेटा अखंडता\" का क्या अर्थ है?\n(1) डेटा सटीकता, पूर्णता, संगति,",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is meant by “Data Integrity” in a School Management Information System?\nData accuracy, completeness, consistency,",
+      "options_english": [
+        "Data accuracy, completeness, consistency,",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Data integrity in a management information system refers to maintaining complete accuracy, consistency, and reliability of stored records across their operational lifecycle. It ensures that educational records remain uncorrupted, properly formatted, and protected against unauthorized modifications or system errors. Maintaining high data integrity is essential for generating reliable analytical reports, conducting accurate audits, and making informed institutional policy choices.",
+      "explanation_hindi": "सही उत्तर (a) है। प्रबंधन सूचना प्रणाली में डेटा अखंडता का तात्पर्य संग्रहीत रिकॉर्ड की पूर्ण सटीकता, संगति और विश्वसनीयता बनाए रखने से है। यह सुनिश्चित करता है कि शैक्षणिक रिकॉर्ड अव्यवस्थित, सही ढंग से स्वरूपित और अनधिकृत संशोधनों या प्रणाली की त्रुटियों से सुरक्षित रहें। उच्च डेटा अखंडता बनाए रखना विश्वसनीय विश्लेषणात्मक रिपोर्ट बनाने, सटीक ऑडिट करने और सूचित संस्थागत नीति विकल्प बनाने के लिए आवश्यक है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "easy",
+      "key_facts": [
+        "Data integrity ensures accuracy and reliability of records.",
+        "It protects against unauthorized modifications.",
+        "High data integrity is crucial for audits and reports.",
+        "Printed answer key: (A) Data accuracy, completeness, consistency,"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9967f6f4-e898-4046-818f-1884e2753148",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "56. एक सरकारी या निजी स्कूल में इन्वेंटरी और संपत्ति प्रबंधन मॉड्यूल का क्या कार्य होता है?",
+      "options_hindi": [
+        "भौतिक संपत्तियों, प्रयोगशाला उपकरणों, फर्नीचर और स्टॉक खपत को ट्रैक करना",
+        "स्कूल खेल आयोजनों के लिए दैनिक स्थानीय मौसम पूर्वानुमान और मौसम पैटर्न की गणना करना",
+        "मानकीकृत शैक्षणिक प्रदर्शन ग्रेडिंग और टर्म परीक्षाओं के लिए संकलन करना",
+        "स्थानीय प्रशासनिक क्षेत्र में राजनीतिक नगरपालिका चुनाव अभियानों का प्रबंधन और समन्वय करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What function does an Inventory and Asset Management Module serve in a government or private school?",
+      "options_english": [
+        "Tracking physical assets, laboratory equipment, furniture, and stock consumption",
+        "Calculating daily localized weather forecasts and meteorological patterns for school sports events",
+        "Conducting standardized academic performance grading and compilation for term examinations",
+        "Managing and coordinating political municipal election campaigns in the local administrative area"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "An Inventory and Asset Management Module oversees physical property, lab equipment, classroom furniture, and consumable items across an institution. It maintains digital stock registers, logs item issuance, tracks equipment warranties, and monitors maintenance schedules. Automated stock monitoring prevents asset misplacement, minimizes resource wastage, ensures timely reordering of essential supplies, and maintains fiscal accountability across departments.",
+      "explanation_hindi": "सही उत्तर (a) है। एक इन्वेंटरी और संपत्ति प्रबंधन मॉड्यूल संस्थान में भौतिक संपत्तियों, प्रयोगशाला उपकरणों, कक्षा के फर्नीचर और उपभोग्य वस्तुओं की देखरेख करता है। यह डिजिटल स्टॉक रजिस्टर बनाए रखता है, वस्तुओं के निर्गमन को लॉग करता है, उपकरणों की वारंटी को ट्रैक करता है, और रखरखाव कार्यक्रमों की निगरानी करता है। स्वचालित स्टॉक निगरानी संपत्ति के गलत स्थानांतरण को रोकती है, संसाधनों की बर्बादी को कम करती है, आवश्यक आपूर्ति के समय पर पुनः आदेश सुनिश्चित करती है, और विभागों में वित्तीय जवाबदेही बनाए रखती है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "An Inventory and Asset Management Module tracks physical assets and consumables.",
+        "It helps in maintaining digital stock registers and monitoring maintenance schedules.",
+        "Printed answer key: (A) Tracking physical assets, laboratory"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c07a4007-f2fb-4274-9440-40a216b16395",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "54. UDISE+ छात्र मॉड्यूल में छात्रों को स्थायी शिक्षा संख्या (PEN) सौंपने का मुख्य उद्देश्य क्या है?",
+      "options_hindi": [
+        "राज्य सीमाओं के बाहर वाणिज्यिक पुस्तकालय सदस्यता और बाहरी उधारी विशेषाधिकार जारी करना",
+        "देशभर में स्कूलों के बीच छात्र की शैक्षणिक प्रगति को ट्रैक करना",
+        "सभी नागरिक पंजीकरण उद्देश्यों के लिए राष्ट्रीय आधार पहचान पत्र को स्थायी रूप से बदलना",
+        "उच्च विद्यालय की समाप्ति के बिना विश्वविद्यालय डिग्री कार्यक्रमों में स्वचालित सीधी प्रवेश देना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the main objective of assigning a Permanent Education Number (PEN) to students in UDISE+ student module?",
+      "options_english": [
+        "To issue commercial library memberships and external borrowing privileges outside state boundaries",
+        "To track a student’s academic trajectory across schools nationwide",
+        "To permanently replace the national Aadhaar identity card for all civil registration purposes",
+        "To grant automatic direct entrance to university degree programs without high school completion"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Assigning a Permanent Education Number to students within UDISE+ establishes a unique lifelong educational identifier. PEN enables continuous tracking of a student’s academic progression, enrollment status, and institutional transfers across schools nationwide. Centralized tracking eliminates duplicate enrollments, simplifies inter-school transfer procedures, assists in identifying dropouts, and supports targeted delivery of welfare benefits throughout the student’s schooling lifecycle.",
+      "explanation_hindi": "सही उत्तर (b) है। UDISE+ में छात्रों को स्थायी शिक्षा संख्या (PEN) सौंपना एक अद्वितीय जीवनकाल शैक्षणिक पहचानकर्ता स्थापित करता है। PEN छात्रों की शैक्षणिक प्रगति, नामांकन स्थिति, और देशभर में स्कूलों के बीच संस्थागत स्थानांतरण को निरंतर ट्रैक करने की अनुमति देता है। केंद्रीकृत ट्रैकिंग डुप्लिकेट नामांकन को समाप्त करता है, अंतर-विद्यालय स्थानांतरण प्रक्रियाओं को सरल बनाता है, ड्रॉपआउट की पहचान में मदद करता है, और छात्र के शैक्षणिक जीवन चक्र के दौरान कल्याण लाभों की लक्षित डिलीवरी का समर्थन करता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Permanent Education Number (PEN) is a unique identifier for students.",
+        "PEN facilitates tracking of academic progression and transfers.",
+        "Centralized tracking helps in identifying dropouts and resource allocation.",
+        "Printed answer key: (B) To track a student’s academic trajectory"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "cd0f08ee-d019-40ba-9b28-6634937f694a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II से मिलाएं:\nसूची I: (MIS अनुप्रयोग परिदृश्य)\nP. स्वचालित उपस्थिति एसएमएस\nQ. केंद्रीकृत छात्र प्रोफ़ाइल\nR. डिजिटल संपत्ति रजिस्टर\nS. ऑनलाइन शुल्क गेटवे\nसूची II: (प्रत्यक्ष परिणाम / लाभ)\nI. छात्र की उपस्थिति के बारे में वास्तविक समय में माता-पिता की जागरूकता\nII. छात्र की शैक्षणिक प्रगति का निरंतर ट्रैकिंग\nIII. स्कूल की संपत्ति और उपकरणों का पारदर्शी ट्रैकिंग\nIV. सुविधाजनक कैशलेस लेनदेन और प्रशासनिक बोझ में कमी\nनीचे दिए गए कोड का उपयोग करके सही उत्तर चुनें:\n(1) P-I, Q-II, R-III, S-IV\n(2) P-II, Q-I, R-IV, S-III",
+      "options_hindi": [
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-III, R-II, S-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (MIS Application Scenario)\nP. Automated Attendance SMS\nQ. Centralized Student Profile\nR. Digital Asset Register\nS. Online Fee Gateway\nList II: (Direct Outcome / Benefit)\nI. Real-time parent awareness regarding student presence\nII. Continuous tracking of student educational trajectory\nIII. Transparent tracking of school property and equipment\nIV. Convenient cashless transaction and reduced administrative load\nSelect the correct answer using the code given below:\n(1) P-I, Q-II, R-III, S-IV\n(2) P-II, Q-I, R-IV, S-III",
+      "options_english": [
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-III, R-II, S-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Integrated school management features deliver distinct operational benefits across institutional workflows. Automated attendance SMS notifications provide parents with real-time awareness regarding student presence. Centralized student profiles enable continuous tracking of academic progression across grades. Digital asset registers ensure transparent monitoring of physical school equipment. Finally, online fee payment gateways provide convenient cashless transactions while reducing administrative processing workloads.",
+      "explanation_hindi": "सही उत्तर (a) है। एकीकृत स्कूल प्रबंधन सुविधाएँ संस्थागत कार्यप्रवाहों में विशिष्ट परिचालन लाभ प्रदान करती हैं। स्वचालित उपस्थिति एसएमएस सूचनाएँ माता-पिता को छात्र की उपस्थिति के बारे में वास्तविक समय में जागरूकता प्रदान करती हैं। केंद्रीकृत छात्र प्रोफाइल शैक्षणिक प्रगति का निरंतर ट्रैकिंग सक्षम बनाती हैं। डिजिटल संपत्ति रजिस्टर भौतिक स्कूल उपकरणों की पारदर्शी निगरानी सुनिश्चित करते हैं। अंततः, ऑनलाइन शुल्क भुगतान गेटवे सुविधाजनक कैशलेस लेनदेन प्रदान करते हैं जबकि प्रशासनिक प्रसंस्करण कार्यभार को कम करते हैं।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Automated attendance systems enhance parental engagement.",
+        "Centralized profiles support continuous academic tracking.",
+        "Digital asset registers improve transparency in asset management.",
+        "Printed answer key: (A) P-I, Q-II, R-III, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7cf524ee-5246-440a-a31b-4f074de0d32b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "64. स्कूल प्रबंधन प्रणालियों के संदर्भ में, \"इंटरऑपरेबिलिटी\" शब्द का क्या अर्थ है?",
+      "options_hindi": [
+        "कंप्यूटर मॉनिटर स्क्रीन की भौतिक दृश्य क्षमता जो कई गतिशील रंगों को प्रदर्शित कर सकती है",
+        "प्रणालियों की डेटा का आदान-प्रदान करने और मानक प्रोटोकॉल के माध्यम से आपस में उपयोग करने की क्षमता",
+        "स्कूल परिवहन बसों की यांत्रिक क्षमता जो लगातार दो ईंधन प्रकारों पर संचालित हो सकती है",
+        "शिक्षकों के लिए कई शैक्षणिक विषयों को एक साथ पढ़ाने की प्रशासनिक आवश्यकता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In the context of school management systems, what does the term “Interoperability” refer to?",
+      "options_english": [
+        "The physical visual capacity of a computer monitor screen to display multiple dynamic colors",
+        "Capability of systems to exchange and mutually use data via standard protocols",
+        "The mechanical ability of school transport buses to operate continuously on dual fuel types",
+        "The administrative requirement for teachers to concurrently teach multiple academic subjects"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Interoperability in educational software architecture refers to the technical ability of different systems to exchange and use data seamlessly through standard protocols. This capability is crucial for ensuring that various educational tools and platforms can work together effectively, enhancing the overall functionality and efficiency of school management systems. It allows for better data sharing, reduces redundancy, and improves the user experience across different applications.",
+      "explanation_hindi": "सही उत्तर (b) है। शैक्षणिक सॉफ़्टवेयर आर्किटेक्चर में इंटरऑपरेबिलिटी विभिन्न प्रणालियों की डेटा का आदान-प्रदान करने और मानक प्रोटोकॉल के माध्यम से उपयोग करने की तकनीकी क्षमता को संदर्भित करता है। यह क्षमता यह सुनिश्चित करने के लिए महत्वपूर्ण है कि विभिन्न शैक्षणिक उपकरण और प्लेटफ़ॉर्म प्रभावी ढंग से एक साथ काम कर सकें, जिससे स्कूल प्रबंधन प्रणालियों की समग्र कार्यक्षमता और दक्षता में सुधार होता है। यह बेहतर डेटा साझा करने की अनुमति देता है, पुनरावृत्ति को कम करता है, और विभिन्न अनुप्रयोगों में उपयोगकर्ता अनुभव को बेहतर बनाता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Interoperability allows different systems to work together effectively.",
+        "It enhances data sharing and reduces redundancy.",
+        "Printed answer key: (B) Capability of systems to exchange and mutually use data via standard protocols."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d8141080-21a3-422f-87ed-85771bc21e4f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "छात्रों के टर्म परीक्षा परिणामों को एक ERP प्रणाली के माध्यम से उत्पन्न करने और प्रकाशित करने के लिए संचालनात्मक चरणों का सही क्रम चुनें:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct order of operational steps for generating and publishing student term examination results through an ERP system:",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Processing term examination results through an ERP system follows a strict operational sequence. First, subject teachers enter raw assessment marks into the digital gradebook. The system then automatically calculates total weighted scores, percentages, and letter grades based on predefined rules. Next, examination heads review and approve the generated result ledger. Finally, results are published on student portals and sent to parents.",
+      "explanation_hindi": "सही उत्तर (a) है। ERP प्रणाली के माध्यम से टर्म परीक्षा परिणामों को संसाधित करने के लिए एक सख्त संचालनात्मक अनुक्रम का पालन किया जाता है। सबसे पहले, विषय शिक्षक कच्चे मूल्यांकन अंक डिजिटल ग्रेडबुक में दर्ज करते हैं। फिर, प्रणाली स्वचालित रूप से पूर्वनिर्धारित नियमों के आधार पर कुल भारित स्कोर, प्रतिशत और पत्र ग्रेड की गणना करती है। इसके बाद, परीक्षा प्रमुख उत्पन्न परिणाम लेजर की समीक्षा और स्वीकृति करते हैं। अंततः, परिणाम छात्र पोर्टलों पर प्रकाशित किए जाते हैं और माता-पिता को भेजे जाते हैं।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "ERP systems streamline the process of generating examination results.",
+        "Teachers input raw marks into a digital gradebook.",
+        "Results are reviewed and approved before publication.",
+        "Printed answer key: (A) 1-2-3-4"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "826ed06c-9469-4345-8608-cf444b14f19c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "छुट्टी के संतुलन और प्रक्रिया प्रबंधन के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "छुट्टी के संतुलन और प्रक्रिया प्रबंधन की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding managing leave balances and processing, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of managing leave balances and processing",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct option is 'Primary definition and standard features of managing leave balances and processing'. This option highlights the essential aspects of leave management, which includes administrative approval workflows. The Staff HR module automates leave administration by tracking employee leave entitlements, accumulated balances, and absence history. It provides an online submission and approval workflow where staff request leave and administrators review applications digitally, ensuring compliance with service conditions.",
+      "explanation_hindi": "सही उत्तर (a) है। यह विकल्प छुट्टी प्रबंधन के आवश्यक पहलुओं को उजागर करता है, जिसमें प्रशासनिक अनुमोदन कार्यप्रवाह शामिल हैं। स्टाफ एचआर मॉड्यूल छुट्टी प्रशासन को स्वचालित करता है, जिसमें कर्मचारियों की छुट्टी के अधिकार, संचित संतुलन और अनुपस्थिति का इतिहास शामिल है। यह एक ऑनलाइन सबमिशन और अनुमोदन कार्यप्रवाह प्रदान करता है, जहाँ स्टाफ छुट्टी का अनुरोध करता है और प्रशासक डिजिटल रूप से आवेदन की समीक्षा करते हैं।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Automated leave administration tracks employee leave entitlements and balances.",
+        "Online submission and approval workflows enhance efficiency.",
+        "Ensures compliance with service conditions.",
+        "Printed answer key: (A) Managing leave balances and processing"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c0c199a5-34a2-49a9-9b58-3d81b453bfc4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "40. ग्रामीण विद्यालयों में MIS कार्यान्वयन से संबंधित सामान्य चुनौतियों के बारे में निम्नलिखित कथनों पर विचार करें:\nA. अस्थायी इंटरनेट कनेक्टिविटी और\nअपर्याप्त बिजली आपूर्ति अवसंरचना।\nB. विद्यालय स्टाफ के बीच पर्याप्त डिजिटल साक्षरता और\nतकनीकी प्रशिक्षण की कमी।\nC. कंप्यूटर हार्डवेयर और सॉफ़्टवेयर रखरखाव की अत्यधिक कम लागत।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding common challenges in MIS implementation in rural schools:\nA. Intermittent internet connectivity and inadequate power supply infrastructure.\nB. Lack of adequate digital literacy and technical training among school staff.\nC. Excessively low cost of computer hardware and software maintenance.\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Rural educational institutions frequently encounter infrastructure and capacity challenges during software deployment. Unstable internet connections and frequent electrical power interruptions hinder continuous online record updates. Furthermore, limited digital literacy and insufficient technical training among staff create operational bottlenecks. High hardware maintenance expenses also create hurdles, whereas lower maintenance costs would facilitate rather than impede software implementation.",
+      "explanation_hindi": "सही उत्तर (a) है। ग्रामीण शैक्षणिक संस्थान अक्सर सॉफ़्टवेयर कार्यान्वयन के दौरान अवसंरचना और क्षमता की चुनौतियों का सामना करते हैं। अस्थिर इंटरनेट कनेक्शन और बार-बार बिजली की कटौती निरंतर ऑनलाइन रिकॉर्ड अपडेट में बाधा डालते हैं। इसके अलावा, स्टाफ के बीच सीमित डिजिटल साक्षरता और अपर्याप्त तकनीकी प्रशिक्षण संचालन में बाधाएं उत्पन्न करते हैं। उच्च हार्डवेयर रखरखाव लागत भी बाधाएं उत्पन्न करती है, जबकि कम रखरखाव लागत सॉफ़्टवेयर कार्यान्वयन को सुविधाजनक बनाती है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Rural schools face significant challenges in MIS implementation due to infrastructure issues.",
+        "Digital literacy and technical training are crucial for effective software deployment.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9f7ed77d-e540-428d-abd6-cfaac35d0995",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "3. डेटाबेस बाधा जांच (जैसे, अद्वितीय कुंजी प्रवर्तन)",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Database Constraint Check (e.g., Unique Key enforcement)",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Under the UDISE+ data management framework, the individual school operates as the primary functional unit for data collection and entry. Every recognized educational institution directly uploads its structural, demographic, financial, and academic records onto the central online portal. Direct entry ensures source accuracy, holding school leadership accountable for reporting before data undergoes multi-level verification across block, district, and state administrative tiers.",
+      "explanation_hindi": "सही उत्तर (c) है। UDISE+ डेटा प्रबंधन ढांचे के तहत, व्यक्तिगत विद्यालय डेटा संग्रह और प्रविष्टि के लिए प्राथमिक कार्यात्मक इकाई के रूप में कार्य करता है। प्रत्येक मान्यता प्राप्त शैक्षणिक संस्थान अपने संरचनात्मक, जनसांख्यिकीय, वित्तीय और शैक्षणिक रिकॉर्ड को केंद्रीय ऑनलाइन पोर्टल पर सीधे अपलोड करता है। सीधी प्रविष्टि स्रोत सटीकता सुनिश्चित करती है, जिससे विद्यालय नेतृत्व को रिपोर्टिंग के लिए जिम्मेदार ठहराया जाता है, इससे पहले कि डेटा ब्लॉक, जिला और राज्य प्रशासनिक स्तरों के माध्यम से बहु-स्तरीय सत्यापन से गुजरता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "UDISE+ डेटा प्रबंधन ढांचा विद्यालयों के लिए प्राथमिक कार्यात्मक इकाई के रूप में कार्य करता है।",
+        "प्रत्येक विद्यालय अपने रिकॉर्ड को केंद्रीय ऑनलाइन पोर्टल पर सीधे अपलोड करता है।",
+        "Printed answer key: (C) Individual School"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "11b7375e-b42a-40f4-b52d-421f86abd2c9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "33. विद्यालय स्तर के MIS का UDISE+ और विद्या समिक्षा केंद्र (VSK) जैसे राष्ट्रीय/राज्य प्रणालियों के साथ एकीकरण शासन को कैसे लाभ पहुंचाता है?",
+      "options_hindi": [
+        "यह हर व्यक्तिगत गांव प्रशासनिक स्तर पर पूरी तरह से अलग और असंबंधित डेटा साइलो बनाता है",
+        "यह निर्बाध डेटा प्रवाह को सक्षम बनाता है, डुप्लिकेट रिपोर्टिंग को समाप्त करता है, और एकल-स्रोत डैशबोर्ड प्रदान करता है",
+        "यह हर महीने प्रशासनिक कार्यालयों के बीच कागजी फ़ाइलों के भौतिक हस्तांतरण की सख्त आवश्यकता है",
+        "यह स्थानीय विद्यालय प्रशासन के अपने आंतरिक छात्र रिकॉर्ड तक पहुंच अधिकारों को पूरी तरह से हटा देता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "How does the integration of school-level MIS with national/state systems like UDISE+ and Vidya Samiksha Kendra (VSK) benefit governance?",
+      "options_english": [
+        "It creates completely isolated and disconnected data silos at every individual village administrative level",
+        "It enables seamless data flow, cuts duplicate reporting, and provides single-source dashboards",
+        "It strictly requires manual physical transfer of paper files between administrative offices every month",
+        "It completely removes local school administration’s access rights to their own internal student records"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Integrating institutional management software with state and national platforms like UDISE+ and Vidya Samiksha Kendra creates a unified educational data network. Automated data exchange removes the requirement for redundant manual reporting across administrative levels. Centralized integration provides administrators with consolidated single-source dashboards, ensuring synchronized statistics, improving operational governance, and facilitating precise policy monitoring across districts and states.",
+      "explanation_hindi": "सही उत्तर (b) है। विद्यालय स्तर के प्रबंधन सॉफ़्टवेयर का UDISE+ और विद्या समिक्षा केंद्र जैसे राज्य और राष्ट्रीय प्लेटफार्मों के साथ एकीकरण एक एकीकृत शैक्षिक डेटा नेटवर्क बनाता है। स्वचालित डेटा विनिमय प्रशासनिक स्तरों पर पुनरावृत्त मैनुअल रिपोर्टिंग की आवश्यकता को समाप्त करता है। केंद्रीकृत एकीकरण प्रशासकों को समेकित एकल-स्रोत डैशबोर्ड प्रदान करता है, जो समन्वित आंकड़ों को सुनिश्चित करता है, संचालन शासन में सुधार करता है, और जिलों और राज्यों में सटीक नीति निगरानी को सुविधाजनक बनाता है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "एकीकरण से डेटा प्रवाह में सुधार होता है।",
+        "यह डुप्लिकेट रिपोर्टिंग को समाप्त करता है।",
+        "केंद्रीकृत डैशबोर्ड प्रशासनिक निर्णय लेने में मदद करते हैं।",
+        "Printed answer key: (B) It enables seamless data flow, cuts duplicate reporting, and provides single-source dashboards"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "cd366461-1d71-494d-8a3d-2dcf6efa5454",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II से मिलाएँ:\nसूची I: (UDISE+ मॉड्यूल)\nP. प्रोफ़ाइल और सुविधा मॉड्यूल\nQ. शिक्षक मॉड्यूल\nR. छात्र मॉड्यूल\nS. रिपोर्ट कार्ड मॉड्यूल\nसूची II: (मुख्य कार्य/डेटा दायरा)",
+      "options_hindi": [
+        "P-III, Q-I, R-II, S-IV",
+        "P-II, Q-III, R-IV, S-I",
+        "P-I, Q-IV, R-III, S-II",
+        "P-IV, Q-II, R-I, S-III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (UDISE+ Module)\nP. Profile and Facility Module\nQ. Teacher Module\nR. Student Module\nS. Report Card Module\nList II: (Key Function/Data Scope)",
+      "options_english": [
+        "P-III, Q-I, R-II, S-IV",
+        "P-II, Q-III, R-IV, S-I",
+        "P-I, Q-IV, R-III, S-II",
+        "P-IV, Q-II, R-I, S-III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The UDISE+ framework uses specialized modules to capture different institutional parameters accurately. The Profile and Facility Module records physical infrastructure, building condition, and equipment availability. The Teacher Module tracks educator qualifications, deployment details, and professional profiles. The Student Module maintains individual demographic details and academic progression tracking. Finally, the Report Card Module aggregates these operational parameters to calculate institutional key performance indicators.",
+      "explanation_hindi": "सही उत्तर (a) है। UDISE+ ढांचा विभिन्न संस्थागत मानकों को सटीक रूप से कैप्चर करने के लिए विशेष मॉड्यूल का उपयोग करता है। प्रोफ़ाइल और सुविधा मॉड्यूल भौतिक बुनियादी ढांचे, भवन की स्थिति और उपकरण उपलब्धता को रिकॉर्ड करता है। शिक्षक मॉड्यूल शिक्षकों की योग्यताओं, तैनाती विवरण और पेशेवर प्रोफाइल को ट्रैक करता है। छात्र मॉड्यूल व्यक्तिगत जनसांख्यिकीय विवरण और शैक्षणिक प्रगति को बनाए रखता है। अंततः, रिपोर्ट कार्ड मॉड्यूल इन परिचालन मानकों को एकत्रित करता है ताकि संस्थागत प्रमुख प्रदर्शन संकेतकों की गणना की जा सके।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "UDISE+ framework includes various modules for comprehensive data collection.",
+        "Profile and Facility Module focuses on infrastructure and resources.",
+        "Teacher Module tracks educator qualifications and profiles.",
+        "Printed answer key: (A) P-III, Q-I, R-II, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6a864e80-d3e0-44ca-b81a-0e0326314fd9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "स्कूल MIS उपयोगकर्ता खातों में डिफ़ॉल्ट या कमजोर पासवर्ड प्रबंधन से कौन सा जोखिम जुड़ा है?",
+      "options_hindi": [
+        "स्थानीय कार्यालय प्रिंटर की प्रिंटिंग गति को महत्वपूर्ण रूप से धीमा करना",
+        "डेस्कटॉप कंप्यूटर मॉनिटर की स्क्रीन की चमक को अधिकतम स्तर पर स्वचालित रूप से बढ़ाना",
+        "अनधिकृत प्रणाली पहुंच, डेटा छेड़छाड़, और सुरक्षा उल्लंघन",
+        "आंतरिक सर्वर रूम नेटवर्क केबलों को सीधे भौतिक ओवरहीटिंग क्षति पहुंचाना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What risk is associated with default or weak password management in school MIS user accounts?",
+      "options_english": [
+        "Significantly slowing down local office printer printing speeds during operation",
+        "Automatically increasing desktop computer monitor screen brightness to maximum levels",
+        "Unauthorized system access, data tampering, and security breaches",
+        "Causing direct physical overheating damage to internal server room network cables"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Using default or weak credentials in administrative user accounts compromises information system security. Weak password practices expose administrative portals to credential cracking and unauthorized system entry, enabling malicious entities to tamper with academic marks, expose personal student information, or delete vital institutional records. Enforcing robust password policies and access protocols is critical for safeguarding database security and system integrity.",
+      "explanation_hindi": "सही उत्तर (c) है। डिफ़ॉल्ट या कमजोर क्रेडेंशियल का उपयोग प्रशासनिक उपयोगकर्ता खातों में सूचना प्रणाली की सुरक्षा को कमजोर करता है। कमजोर पासवर्ड प्रथाएँ प्रशासनिक पोर्टल को क्रेडेंशियल क्रैकिंग और अनधिकृत प्रणाली में प्रवेश के लिए उजागर करती हैं, जिससे दुर्भावनापूर्ण तत्व शैक्षणिक अंक छेड़छाड़ कर सकते हैं, व्यक्तिगत छात्र जानकारी उजागर कर सकते हैं, या महत्वपूर्ण संस्थागत रिकॉर्ड हटा सकते हैं। मजबूत पासवर्ड नीतियों और पहुंच प्रोटोकॉल को लागू करना डेटाबेस सुरक्षा और प्रणाली की अखंडता की रक्षा के लिए महत्वपूर्ण है।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Weak password practices can lead to unauthorized access.",
+        "Robust password policies are essential for security.",
+        "Printed answer key: (C) Unauthorized system access, data tampering, and security breaches."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c244521d-d8cb-4290-8b37-767a4ab26b5a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "91. जब छात्र रिकॉर्ड विद्यालय में विभिन्न, असंबंधित सॉफ़्टवेयर मॉड्यूल में बनाए जाते हैं, तो कौन सी संचालन समस्या उत्पन्न होती है?",
+      "options_hindi": [
+        "उद्यम सॉफ़्टवेयर लाइसेंसिंग शुल्क व्यय में स्वचालित और निरंतर कमी",
+        "प्रशासनिक कार्यालयों में वास्तविक समय डेटा समन्वय गति में महत्वपूर्ण वृद्धि",
+        "सभी संभावित नेटवर्क साइबर सुरक्षा खतरों का पूर्ण और स्थायी उन्मूलन",
+        "डेटा पुनरावृत्ति, असंगत रिकॉर्ड, और पुनरावृत्त मैनुअल डेटा प्रविष्टि"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What operational problem occurs when student records are maintained in disparate, unlinked software modules across a school?",
+      "options_english": [
+        "Automatic and continuous reduction in enterprise software licensing fee expenditures",
+        "Significantly enhanced real-time data synchronization speed across administrative offices",
+        "Complete and permanent elimination of all potential network cybersecurity threats",
+        "Data redundancy, inconsistent records, and repeated manual data entry"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Maintaining student records across disparate, standalone software applications creates major operational inefficiencies. Disconnected modules cause data redundancy, where the same student information is re-entered multiple times across departments. Repeated manual entries increase human error rates and produce inconsistent records across fee, academic, and attendance systems, obstructing centralized reporting and hindering seamless data access for school administrators.",
+      "explanation_hindi": "सही उत्तर (d) है। विभिन्न, असंबंधित सॉफ़्टवेयर अनुप्रयोगों में छात्र रिकॉर्ड बनाए रखने से प्रमुख संचालनात्मक अक्षमताएँ उत्पन्न होती हैं। असंबंधित मॉड्यूल डेटा पुनरावृत्ति का कारण बनते हैं, जहाँ एक ही छात्र की जानकारी कई बार विभागों में फिर से दर्ज की जाती है। पुनरावृत्त मैनुअल प्रविष्टियाँ मानव त्रुटियों की दर को बढ़ाती हैं और शुल्क, शैक्षणिक, और उपस्थिति प्रणालियों में असंगत रिकॉर्ड उत्पन्न करती हैं, जो केंद्रीकृत रिपोर्टिंग में बाधा डालती हैं और विद्यालय प्रशासकों के लिए डेटा तक निर्बाध पहुँच को रोकती हैं।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Disparate software modules lead to data redundancy and inconsistent records.",
+        "Repeated manual data entry increases human error rates.",
+        "Printed answer key: (D) Data redundancy, inconsistent records, and repeated manual data entry"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "be9d8008-6420-4267-83cc-75fee959fa9f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "96. स्कूल ERP का कौन सा मॉड्यूल नियमित शिक्षकों की अनुपस्थिति या छुट्टी के दौरान दैनिक प्रॉक्सी व्यवस्थाओं का प्रबंधन करता है?",
+      "options_hindi": [
+        "परिवहन मार्ग प्रबंधन और बेड़े मॉड्यूल",
+        "समय सारणी और प्रतिस्थापन प्रबंधन मॉड्यूल",
+        "संपत्ति सूची और स्टॉक ट्रैकिंग मॉड्यूल",
+        "प्रवेश गेटकीपर और पूछताछ मॉड्यूल"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; School Data Management and Information Systems",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which module of a School ERP manages daily proxy arrangements when regular teachers are absent or on leave?",
+      "options_english": [
+        "Transport Route Management and Fleet Module",
+        "Timetable and Substitute Management Module",
+        "Asset Inventory and Stock Tracking Module",
+        "Admission Gatekeeper and Inquiry Module"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Timetable and Substitute Management Module handles daily schedule adjustments when regular teaching staff are absent. The software identifies free faculty members with matching subject expertise and automatically assigns them to cover classes. This ensures that students continue to receive instruction without interruption, maintaining the educational flow even in the absence of regular teachers.",
+      "explanation_hindi": "सही उत्तर (b) है। समय सारणी और प्रतिस्थापन प्रबंधन मॉड्यूल नियमित शिक्षकों की अनुपस्थिति के दौरान दैनिक कार्यक्रम समायोजन करता है। यह सॉफ़्टवेयर विषय विशेषज्ञता के साथ मुक्त शिक्षकों की पहचान करता है और उन्हें कक्षाओं को कवर करने के लिए स्वचालित रूप से असाइन करता है। इससे यह सुनिश्चित होता है कि छात्रों को नियमित शिक्षकों की अनुपस्थिति में भी बिना किसी रुकावट के शिक्षा मिलती रहे।",
+      "topic": "School Data Management and Information Systems",
+      "difficulty": "medium",
+      "key_facts": [
+        "Timetable and Substitute Management Module is essential for maintaining educational continuity.",
+        "It automatically assigns substitute teachers based on subject expertise.",
+        "Printed answer key: (B) Timetable and Substitute Management"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

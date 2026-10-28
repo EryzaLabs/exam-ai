@@ -1,0 +1,800 @@
+{
+  "test_id": "ac560d01-1544-47ea-92cf-9fded1702f0e",
+  "test_name": "Topic Test: DIGITAL_SCHOOL_GOVERNANCE_AND_STAKEHOLDER_COMMUNICATION - Part 3",
+  "type": "topic_wise",
+  "topic": "digital_school_governance_and_stakeholder_communication",
+  "created_at": "2026-10-28T18:55:06.612982",
+  "questions": [
+    {
+      "id": "2f69479f-27d7-4c1b-87a0-76e4ff3a7b8d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "11. कौन सी बैकअप रणनीति केवल उन डेटा को कैप्चर करती है जो पिछले पूर्ण या आवधिक बैकअप के बाद बदले हैं, स्टोरेज स्पेस को बचाने और बैकअप समय को कम करने के लिए?",
+      "options_hindi": [
+        "डिफरेंशियल बैकअप",
+        "मिरर बैकअप",
+        "सिंथेटिक फुल बैकअप",
+        "इंक्रीमेंटल बैकअप"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which backup strategy involves capturing only the data that has changed since the last full or incremental backup, conserving storage space and minimizing backup time?",
+      "options_english": [
+        "Differential backup",
+        "Mirror backup",
+        "Synthetic full backup",
+        "Incremental backup"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The correct answer is Incremental backup. This strategy captures only the data that has changed since the last backup, whether it was a full or incremental backup. This method is efficient as it conserves storage space and minimizes the time required for backup operations. Incremental backups are crucial for organizations that need to ensure data integrity while optimizing resource usage.",
+      "explanation_hindi": "सही उत्तर (d) है। यह रणनीति केवल उन डेटा को कैप्चर करती है जो पिछले बैकअप के बाद बदले हैं, चाहे वह पूर्ण या आवधिक बैकअप हो। यह विधि कुशल है क्योंकि यह स्टोरेज स्पेस को बचाती है और बैकअप संचालन के लिए आवश्यक समय को कम करती है। इंक्रीमेंटल बैकअप उन संगठनों के लिए महत्वपूर्ण हैं जिन्हें डेटा की अखंडता सुनिश्चित करते हुए संसाधनों के उपयोग को अनुकूलित करने की आवश्यकता होती है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Incremental backups capture only changed data since the last backup.",
+        "They conserve storage space and reduce backup time.",
+        "Printed answer key: (D) Incremental backup"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2c6402b4-7ce2-4978-80ac-d5fdf76b6460",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "70. शैक्षणिक संस्थानों में ऑनलाइन शुल्क भुगतान प्रणालियों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. वे माता-पिता को कई सुरक्षित डिजिटल भुगतान मोड का समर्थन करके सुविधा प्रदान करते हैं। \nB. स्वचालित अनुस्मारक रिकॉर्ड ट्रैकिंग की आवश्यकता को कम करते हैं।",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding online fee payment systems in educational institutions:\nA. They offer parents convenience by supporting multiple secure digital payment modes.\nB. Automated reminders reduce the need for record tracking.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Online fee payment systems improve administrative accounting and parental convenience by supporting multiple secure digital payment channels. Automated notifications streamline record tracking for school accountants, while transparent disclosures regarding processing fees build financial trust. However, charging non-transparent hidden penalties without prior notice is illegal and violates standard financial governance norms, as all financial liabilities must be clearly disclosed to parents in advance.",
+      "explanation_hindi": "सही उत्तर (a) है। ऑनलाइन शुल्क भुगतान प्रणालियाँ प्रशासनिक लेखांकन और माता-पिता की सुविधा में सुधार करती हैं क्योंकि ये कई सुरक्षित डिजिटल भुगतान चैनलों का समर्थन करती हैं। स्वचालित सूचनाएँ स्कूल लेखाकारों के लिए रिकॉर्ड ट्रैकिंग को सरल बनाती हैं, जबकि प्रसंस्करण शुल्क के बारे में पारदर्शी खुलासे वित्तीय विश्वास का निर्माण करते हैं। हालाँकि, बिना पूर्व सूचना के गैर-पारदर्शी छिपी हुई दंड लगाना अवैध है और मानक वित्तीय शासन मानदंडों का उल्लंघन करता है, क्योंकि सभी वित्तीय दायित्वों को माता-पिता को स्पष्ट रूप से पहले से सूचित किया जाना चाहिए।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Online fee payment systems enhance administrative efficiency.",
+        "They support multiple secure digital payment modes.",
+        "Automated reminders improve record tracking.",
+        "Printed answer key: (A) A, B and C only."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8651b11f-7a6a-4d24-8748-6473fa6c84d1",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "जिले में ई-गवर्नेंस स्टाफ क्षमता निर्माण कार्यक्रम को लागू करने के लिए कदमों का क्रम व्यवस्थित करें:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the sequence of steps for implementing an\ne-governance staff capacity building programme\nin a district:",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Executing an e-governance capacity building programme for school staff follows a systematic four-stage framework. Administrators first conduct skill gap assessments to identify specific technical training needs. Next, practical training modules covering software management and data security protocols are developed. Hands-on practical workshops are then conducted for administrative personnel. Finally, leadership evaluates operational efficiency gains, assesses system usage, and provides continuous technical support.",
+      "explanation_hindi": "सही उत्तर (a) है। स्कूल स्टाफ के लिए ई-गवर्नेंस क्षमता निर्माण कार्यक्रम को लागू करने के लिए एक व्यवस्थित चार-चरणीय ढांचे का पालन किया जाता है। प्रशासक पहले तकनीकी प्रशिक्षण आवश्यकताओं की पहचान के लिए कौशल अंतर आकलन करते हैं। इसके बाद, सॉफ़्टवेयर प्रबंधन और डेटा सुरक्षा प्रोटोकॉल को कवर करने वाले व्यावहारिक प्रशिक्षण मॉड्यूल विकसित किए जाते हैं। फिर प्रशासनिक कर्मचारियों के लिए व्यावहारिक कार्यशालाएँ आयोजित की जाती हैं। अंततः, नेतृत्व संचालनात्मक दक्षता लाभों का मूल्यांकन करता है, प्रणाली के उपयोग का आकलन करता है, और निरंतर तकनीकी समर्थन प्रदान करता है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Capacity building programs require skill gap assessments.",
+        "Practical training modules are essential for effective implementation.",
+        "Workshops enhance hands-on experience for staff.",
+        "Printed answer key: (A) 1 - 2 - 3 - 4"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "bb0c9878-ee8a-4b4d-8526-b5805c5ded70",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "74. डिजिटल समन्वय उपकरण स्कूल प्रबंधन समितियों (SMCs) को\nस्कूल विकास परियोजनाओं की निगरानी में किस प्रकार सहायता\nकरते हैं?",
+      "options_hindi": [
+        "समिति के सदस्यों को वास्तविक समय में धन आवंटन, व्यय विवरण,\nऔर परियोजना प्रगति की तस्वीरें डिजिटल रूप से देखने की अनुमति देकर",
+        "स्कूल शासन और निर्णय लेने का पूर्ण आउटसोर्सिंग बाहरी\nनिजी एजेंसियों को सक्षम करके",
+        "स्कूल खर्च की सामुदायिक समीक्षा और सार्वजनिक निगरानी की\nआवश्यकता को समाप्त करके",
+        "स्थानीय निर्वाचित माता-पिता के प्रतिनिधित्व को स्वचालित\nकंप्यूटर एल्गोरिदम और निर्णय बॉट्स से बदलकर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In what way do digital coordination tools assist School Management Committees (SMCs) in monitoring school development projects?",
+      "options_english": [
+        "By allowing committee members to view real-time fund allocation, expenditure details, and project progress photos digitally",
+        "By enabling complete outsourcing of school governance and decision-making to external private agencies",
+        "By eliminating the requirement for periodic community review and public oversight of school spending",
+        "By replacing local elected parent representation with automated computer algorithms and decision bots"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Digital coordination tools empower School Management Committees to fulfill their monitoring duties effectively through transparent information access. These platforms provide members with direct digital access to real-time fund allocations, itemized expenditure ledgers, procurement documentation, and photographic evidence of physical infrastructure project progress. Transparent data visibility allows parent representatives to audit project execution accurately, verify resource utilization, and ensure institutional funds directly benefit student welfare.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल समन्वय उपकरण स्कूल प्रबंधन समितियों को पारदर्शी सूचना पहुंच के माध्यम से अपनी निगरानी जिम्मेदारियों को प्रभावी ढंग से पूरा करने में सक्षम बनाते हैं। ये प्लेटफार्म सदस्यों को वास्तविक समय में धन आवंटन, वस्तुवादी व्यय खाता, खरीद दस्तावेज, और भौतिक अवसंरचना परियोजना की प्रगति के फोटोग्राफिक प्रमाणों तक सीधी डिजिटल पहुंच प्रदान करते हैं। पारदर्शी डेटा दृश्यता माता-पिता के प्रतिनिधियों को परियोजना निष्पादन का सटीक ऑडिट करने, संसाधन उपयोग की पुष्टि करने, और सुनिश्चित करने की अनुमति देती है कि संस्थागत धन सीधे छात्र कल्याण में लाभान्वित हो।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital tools enhance transparency in school project monitoring.",
+        "They provide real-time access to financial and project data.",
+        "Printed answer key: (A) By allowing committee members to view real-time fund allocation, expenditure details, and project progress photos digitally.",
+        "Empowers parent representatives to audit resource utilization."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ac404b30-6597-4275-9068-4962c8382bb4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "52. उच्च शिक्षा पोर्टलों पर संवेदनशील छात्र शैक्षणिक रिकॉर्ड स्थानांतरित करते समय कौन सा डेटा प्रोटोकॉल अनिवार्य है?",
+      "options_hindi": [
+        "असुरक्षित सार्वजनिक इलेक्ट्रॉनिक मेल नेटवर्क पर कच्चे छात्र डेटा फ़ाइलों का स्थानांतरण",
+        "संवेदनशील छात्र डेटा को बिना पासवर्ड सुरक्षा या एन्क्रिप्शन के सार्वजनिक क्लाउड फ़ोल्डरों में संग्रहीत करना",
+        "रिकॉर्ड की हार्ड कॉपी प्रिंट करना और उन्हें बिना पंजीकृत मानक डाक सेवाओं के माध्यम से भेजना",
+        "सुरक्षित एपीआई एकीकरण जो एंड-टू-एंड डेटा एन्क्रिप्शन और सख्त पहचान प्रमाणीकरण का उपयोग करता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which data protocol is imperative when transferring sensitive student academic records to higher education portals?",
+      "options_english": [
+        "Transferring raw student data files over unencrypted public electronic mail networks",
+        "Storing sensitive student data on open public cloud folders without password protection or encryption",
+        "Printing hard copies of records and mailing them via unregistered standard postal services",
+        "Secure API integration utilizing end-to-end data encryption and strict identity authentication"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Transferring sensitive student academic records to higher education portals requires advanced technical security measures to safeguard data integrity. Utilizing secure Application Programming Interface links with end-to-end data encryption and multi-factor identity authentication ensures that digital credentials are transmitted safely. This automated, encrypted process eliminates physical document fraud, prevents unauthorized data interception, complies with privacy protection laws, and accelerates higher education admission verification.",
+      "explanation_hindi": "सही उत्तर (d) है। उच्च शिक्षा पोर्टलों पर संवेदनशील छात्र शैक्षणिक रिकॉर्ड स्थानांतरित करने के लिए डेटा की अखंडता की सुरक्षा के लिए उन्नत तकनीकी सुरक्षा उपायों की आवश्यकता होती है। एंड-टू-एंड डेटा एन्क्रिप्शन और बहु-कारक पहचान प्रमाणीकरण के साथ सुरक्षित एप्लीकेशन प्रोग्रामिंग इंटरफेस लिंक का उपयोग करना यह सुनिश्चित करता है कि डिजिटल प्रमाणपत्र सुरक्षित रूप से स्थानांतरित किए जाते हैं। यह स्वचालित, एन्क्रिप्टेड प्रक्रिया भौतिक दस्तावेज़ धोखाधड़ी को समाप्त करती है, अनधिकृत डेटा इंटरसेप्शन को रोकती है, गोपनीयता संरक्षण कानूनों का पालन करती है, और उच्च शिक्षा प्रवेश सत्यापन को तेज करती है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "hard",
+      "key_facts": [
+        "संवेदनशील छात्र डेटा के लिए सुरक्षित एपीआई एकीकरण आवश्यक है।",
+        "Printed answer key: (D) Secure API integration utilizing end-to-end"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "765dfcb7-9b0e-49a9-b27c-2a274426f94b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II के साथ मिलाएं:\nसूची I: (शासन मीट्रिक)\nA. वास्तविक समय उपस्थिति निगरानी\nB. सार्वजनिक प्रशासनिक पारदर्शिता\nC. आपातकालीन संचार\nD. बहुभाषी हितधारक संलग्नता\nसूची II: (डिजिटल उपकरण / प्लेटफार्म तंत्र)\nI. समर्पित मोबाइल ऐप पुश सूचनाएँ और मास एसएमएस गेटवे\nII. वेब पोर्टल जो अंग्रेजी और क्षेत्रीय भाषा टॉगल का समर्थन करता है\nIII. स्कूल सार्वजनिक वेब पोर्टल / अनिवार्य खुलासे पृष्ठ\nIV. विभागीय सर्वर के साथ एकीकृत बायोमेट्रिक / डिजिटल उपस्थिति ऐप\nसही विकल्प चुनें:",
+      "options_hindi": [
+        "A-IV, B-III, C-I, D-II",
+        "A-I, B-II, C-III, D-IV",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II: List I: (Governance Metric) A. Real-time Attendance Monitoring B. Public Administrative Transparency C. Emergency Communication D. Multi-lingual Stakeholder Engagement List II: (Digital Tool / Platform Mechanism) I. Dedicated Mobile App Push Notifications and Mass SMS Gateway II. Web Portal supporting English and regional language toggles III. School Public Web Portal / Mandatory Disclosures Page IV. Biometric / Digital Attendance App integrated with Departmental Server Select the correct option:",
+      "options_english": [
+        "A-IV, B-III, C-I, D-II",
+        "A-I, B-II, C-III, D-IV",
+        "A-III, B-IV, C-I, D-II",
+        "A-II, B-I, C-IV, D-III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Matching school governance objectives with appropriate digital platforms ensures effective administrative outcomes. Real-time attendance monitoring uses digital apps synced with departmental servers. Public administrative transparency is maintained through mandatory disclosure pages on official web portals. Emergency communication relies on dedicated mobile app push notifications and automated SMS gateways for immediate broadcasting, while multi-lingual engagement is achieved using web interfaces offering regional language toggles.",
+      "explanation_hindi": "सही उत्तर (a) है। स्कूल शासन के उद्देश्यों को उचित डिजिटल प्लेटफार्मों के साथ मिलाना प्रभावी प्रशासनिक परिणाम सुनिश्चित करता है। वास्तविक समय उपस्थिति निगरानी के लिए विभागीय सर्वरों के साथ समन्वयित डिजिटल ऐप्स का उपयोग किया जाता है। सार्वजनिक प्रशासनिक पारदर्शिता आधिकारिक वेब पोर्टलों पर अनिवार्य खुलासे पृष्ठों के माध्यम से बनाए रखी जाती है। आपातकालीन संचार के लिए तत्काल प्रसारण के लिए समर्पित मोबाइल ऐप पुश सूचनाओं और स्वचालित एसएमएस गेटवे पर निर्भर करता है, जबकि बहुभाषी संलग्नता क्षेत्रीय भाषा टॉगल की पेशकश करने वाले वेब इंटरफेस का उपयोग करके प्राप्त की जाती है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Real-time attendance monitoring requires digital apps synced with servers.",
+        "Public transparency is ensured through mandatory disclosures.",
+        "Printed answer key: (A) A-IV, B-III, C-I, D-II"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ab8260fc-7c0e-4925-9ca1-f634e7d39af9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "54. निम्न-बैंडविड्थ क्षेत्रों में, कौन सी रणनीति स्कूलों और परिवारों के बीच डिजिटल संचार विभाजन को पाटने में मदद करती है?\n(1) माता-पिता से भारी उच्च-परिभाषा वीडियो-स्ट्रीमिंग सॉफ़्टवेयर अनुप्रयोगों को डाउनलोड और स्थापित करने की आवश्यकता करना\n(2) डिजिटल पोर्टलों के साथ हल्के पाठ-आधारित एसएमएस सेवाओं और वॉयस मैसेजिंग सिस्टम का उपयोग करना",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "विकल्प सी",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In low-bandwidth areas, which strategy helps bridge the digital communication divide between schools and families?\n(1) Requiring parents to download and install heavy high-definition video-streaming software applications\n(2) Utilizing lightweight text-based SMS services and voice messaging systems alongside digital portals",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Addressing digital communication barriers in low-bandwidth regions necessitates deploying accessible, low-data communication solutions. Supplementing rich web portals with lightweight plain-text SMS messages and automated Interactive Voice Response calls ensures that essential notices reach families without reliable broadband access. This dual-channel strategy prevents digital exclusion, allows low-income families to stay informed about school events and attendance, and maintains continuous communication across all demographic groups.",
+      "explanation_hindi": "सही उत्तर (b) है। निम्न-बैंडविड्थ क्षेत्रों में डिजिटल संचार बाधाओं को दूर करने के लिए सुलभ, कम-डेटा संचार समाधान लागू करना आवश्यक है। समृद्ध वेब पोर्टलों के साथ हल्के पाठ-आधारित एसएमएस संदेशों और स्वचालित इंटरएक्टिव वॉयस रिस्पांस कॉल को जोड़ने से यह सुनिश्चित होता है कि आवश्यक नोटिस उन परिवारों तक पहुँचें जिनके पास विश्वसनीय ब्रॉडबैंड एक्सेस नहीं है। यह द्वि-चैनल रणनीति डिजिटल बहिष्कार को रोकती है, कम आय वाले परिवारों को स्कूल के कार्यक्रमों और उपस्थिति के बारे में सूचित रहने की अनुमति देती है, और सभी जनसांख्यिकीय समूहों के बीच निरंतर संचार बनाए रखती है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Low-bandwidth areas require accessible communication solutions.",
+        "Lightweight SMS and voice messaging are effective in low connectivity.",
+        "Printed answer key: (B) Utilizing lightweight text-based SMS services and voice messaging systems alongside digital portals.",
+        "Digital inclusion is essential for effective stakeholder communication."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b7130083-2a7d-48da-967a-ac3f1eea4b3b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से कौन सा विषय अनिवार्य सामग्री का प्रतिनिधित्व करता है जिसे डिजिटल पारदर्शिता मानदंडों के तहत एक संस्थागत विद्यालय की वेबसाइट पर सार्वजनिक रूप से प्रकट किया जाना चाहिए?",
+      "options_hindi": [
+        "सभी छात्रों के व्यक्तिगत मोबाइल नंबर और घर के पते",
+        "व्यक्तिगत माता-पिता-शिक्षक संघ के सदस्यों के निजी वित्तीय खाते",
+        "प्रधानाध्यापक और व्यक्तिगत शिक्षकों के बीच आदान-प्रदान किए गए वर्गीकृत प्रशासनिक नोट्स",
+        "विद्यालय की फीस संरचना, फैकल्टी सूची, और सूचना के अधिकार अधिनियम की धारा 4 के तहत सार्वजनिक खुलासे"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following items represents mandatory content that must be publicly disclosed on an institutional school website under digital transparency norms?",
+      "options_english": [
+        "Personal mobile numbers and home addresses of all students",
+        "Private financial accounts of individual Parent-Teacher Association members",
+        "Classified administrative notes exchanged between the headmaster and individual teachers",
+        "School fee structure, faculty list, and public disclosures under Section 4 of the RTI Act"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Establishing a formal social media usage policy is a critical prerequisite for any educational institution before launching official digital handles. Standardized guidelines are essential because official platforms handle public communications, child representation, and institutional branding. Without structured rules regarding content authorization, student privacy protection, and cybersecurity protocols, institutions risk exposing minor students to security vulnerabilities, violating data privacy regulations, spreading unverified information, and damaging organizational administrative reputation.",
+      "explanation_hindi": "सही उत्तर (a) है। औपचारिक सोशल मीडिया उपयोग नीति स्थापित करना किसी भी शैक्षणिक संस्थान के लिए आधिकारिक डिजिटल हैंडल शुरू करने से पहले एक महत्वपूर्ण पूर्वापेक्षा है। मानकीकृत दिशानिर्देश आवश्यक हैं क्योंकि आधिकारिक प्लेटफार्म सार्वजनिक संचार, बाल प्रतिनिधित्व और संस्थागत ब्रांडिंग को संभालते हैं। सामग्री प्राधिकरण, छात्र गोपनीयता सुरक्षा, और साइबर सुरक्षा प्रोटोकॉल के संबंध में संरचित नियमों के बिना, संस्थान छोटे छात्रों को सुरक्षा जोखिमों के प्रति उजागर करने, डेटा गोपनीयता नियमों का उल्लंघन करने, अविश्वसनीय जानकारी फैलाने, और संगठनात्मक प्रशासनिक प्रतिष्ठा को नुकसान पहुँचाने का जोखिम उठाते हैं।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital transparency norms require certain information to be publicly disclosed.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a718aa7e-78a6-4957-a013-baca813fc651",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "63. एक माता-पिता-शिक्षक संचार ऐप में पेशेवर सीमाओं को बनाए रखने के लिए सबसे महत्वपूर्ण विशेषता क्या है?",
+      "options_hindi": [
+        "निर्धारित संचार समय, संरचित संदेश और इंटरैक्शन का प्रशासनिक लॉगिंग",
+        "शिक्षकों के निजी फोन नंबरों तक 24/7 व्यक्तिगत सीधी संदेश भेजने की अनुमति",
+        "माता-पिता को संचार ऐप के अंदर सीधे छात्र ग्रेड को बदलने या ओवरराइट करने की अनुमति देना",
+        "छात्रों के शैक्षणिक ग्रेड सूचना फ़ीड में व्यावसायिक उत्पाद विज्ञापन की अनुमति देना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which feature is most important in a Parent-Teacher communication app to maintain professional boundaries?",
+      "options_english": [
+        "Scheduled communication windows, structured messaging, and administrative logging of interactions",
+        "Unrestricted 24/7 personal direct messaging access to teachers’ private personal phone numbers",
+        "Allowing parents to alter or overwrite student grades directly inside the communication application",
+        "Permitting commercial product advertising within student academic grade notification feeds"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Maintaining professional boundaries in digital parent-teacher communications requires structured application features. Communication tools must incorporate scheduled messaging hours, structured query templates, and centralized administrative logging of all exchanges. These boundary controls prevent unmonitored off-hours contact, safeguard teacher personal privacy, preserve professional decorum, and create transparent records of parent-teacher interactions that can be reviewed by school leadership if administrative disputes arise.",
+      "explanation_hindi": "सही उत्तर (a) है। पेशेवर सीमाओं को बनाए रखने के लिए डिजिटल माता-पिता-शिक्षक संचार में संरचित एप्लिकेशन सुविधाओं की आवश्यकता होती है। संचार उपकरणों में निर्धारित संदेश भेजने के घंटे, संरचित प्रश्न टेम्पलेट और सभी आदान-प्रदान का केंद्रीकृत प्रशासनिक लॉगिंग शामिल होना चाहिए। ये सीमाएं अनियंत्रित ऑफ-घंटे संपर्क को रोकती हैं, शिक्षक की व्यक्तिगत गोपनीयता की रक्षा करती हैं, पेशेवर शिष्टाचार को बनाए रखती हैं, और माता-पिता-शिक्षक इंटरैक्शन के पारदर्शी रिकॉर्ड बनाती हैं जिन्हें प्रशासनिक विवादों के मामले में स्कूल नेतृत्व द्वारा समीक्षा किया जा सकता है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Structured communication features are essential for maintaining professional boundaries.",
+        "Scheduled messaging hours help prevent unmonitored contact.",
+        "Centralized logging of interactions ensures transparency.",
+        "Printed answer key: (A) Scheduled communication windows, structured messaging, and administrative logging of interactions"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c1f4dbd9-cd99-4f43-9c73-047b5369ce05",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "81. स्कूल की आपात स्थितियों या स्थानीय परिस्थितियों के कारण अचानक बंद होने के समय, डिजिटल संचार चैनलों का मुख्य लाभ क्या है?",
+      "options_hindi": [
+        "वे स्कूल स्टाफ सदस्यों द्वारा घरों में कागज़ की सूचनाओं की भौतिक डिलीवरी की आवश्यकता होती है",
+        "वे माता-पिता तक तात्कालिक, सामूहिक पहुंच सक्षम करते हैं, भ्रम और सुरक्षा जोखिमों को कम करते हैं",
+        "वे यह सुनिश्चित करते हैं कि सभी माता-पिता नोटिस को पांच सेकंड के भीतर पढ़ें और स्वीकार करें",
+        "वे स्कूल को राज्य नियामक प्राधिकरणों को सूचित किए बिना अनिश्चितकाल के लिए बंद करने की अनुमति देते हैं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In times of school emergencies or sudden closures due to local conditions, what is the key advantage of digital communication channels?",
+      "options_english": [
+        "They require physical delivery of paper notices to households by school staff members",
+        "They enable immediate, mass reach to parents, minimizing confusion and safety risks",
+        "They guarantee that all parents will read and acknowledge the notice within five seconds",
+        "They allow the school to shut down indefinitely without informing state regulatory authorities"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "In emergency situations or unexpected school closures, digital communication channels provide an indispensable operational advantage through immediate, simultaneous mass broadcasting. Deploying instant alerts across SMS networks, mobile app push notifications, and portal headers ensures that thousands of parents receive accurate safety updates instantly. Rapid communication prevents misinformation, reduces parental anxiety, ensures child safety during sudden closures, and allows school leadership to coordinate emergency responses effectively.",
+      "explanation_hindi": "सही उत्तर (b) है। आपात स्थितियों या अप्रत्याशित स्कूल बंद होने की स्थिति में, डिजिटल संचार चैनल तात्कालिक, सामूहिक प्रसारण के माध्यम से एक अनिवार्य संचालन लाभ प्रदान करते हैं। एसएमएस नेटवर्क, मोबाइल ऐप पुश सूचनाओं और पोर्टल हेडर के माध्यम से तात्कालिक अलर्ट भेजने से हजारों माता-पिता को तुरंत सटीक सुरक्षा अपडेट प्राप्त होते हैं। त्वरित संचार गलत सूचना को रोकता है, माता-पिता की चिंता को कम करता है, अचानक बंद होने के दौरान बच्चों की सुरक्षा सुनिश्चित करता है, और स्कूल नेतृत्व को आपातकालीन प्रतिक्रियाओं का समन्वय करने की अनुमति देता है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital communication channels enable immediate mass communication.",
+        "They help reduce confusion and enhance safety during emergencies.",
+        "Printed answer key: (B) They enable immediate, mass reach to parents, minimizing confusion and safety risks"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e31b893f-b319-4af9-ac66-7f25c6811880",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "42. एक ऑनलाइन आरटीआई मॉड्यूल जिला शिक्षा स्तर पर जन सूचना अधिकारी (पीआईओ) की सहायता कैसे करता है?",
+      "options_hindi": [
+        "स्वचालित रूप से वैधानिक समयसीमाओं का ट्रैकिंग करना, प्रतिक्रिया दस्तावेजों का संग्रहण करना, और देरी को रोकना",
+        "सभी आने वाली सार्वजनिक आवेदनों को पूर्व समीक्षा के बिना तुरंत स्वचालित रूप से अस्वीकार करना",
+        "सभी नियमित सरकारी संचार को सामान्य जनता के लिए स्थायी रूप से अनुपलब्ध बनाना",
+        "सभी आने वाले आरटीआई प्रश्नों को सीधे तीसरे पक्ष के व्यावसायिक आउटसोर्सिंग ठेकेदारों के पास भेजना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "How does an online RTI module assist the Public Information Officer (PIO) at the district education level?",
+      "options_english": [
+        "By automatically tracking statutory deadlines, archiving response documents, and preventing delays",
+        "By enabling immediate automatic rejection of all incoming public applications without prior review",
+        "By making all routine government communications permanently non-accessible to the general public",
+        "By routing all incoming RTI queries directly to third-party commercial outsourcing contractors"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "An online Right to Information module significantly assists district-level Public Information Officers by automating workflow management. The digital platform automatically tracks statutory response deadlines, generates alerts for pending applications, routes queries to appropriate sub-departments, and maintains centralized electronic archives of past responses. This automated tracking prevents procedural delays, ensures strict compliance with legal disclosure mandates, and streamlines the processing of public information requests across schools.",
+      "explanation_hindi": "सही उत्तर (a) है। एक ऑनलाइन सूचना का अधिकार मॉड्यूल जिला स्तर पर जन सूचना अधिकारियों की सहायता करता है। यह स्वचालित रूप से वैधानिक समयसीमाओं का ट्रैकिंग करता है, लंबित आवेदनों के लिए अलर्ट उत्पन्न करता है, प्रश्नों को उपयुक्त उप-विभागों में भेजता है, और पिछले उत्तरों के केंद्रीकृत इलेक्ट्रॉनिक अभिलेखों को बनाए रखता है। यह स्वचालित ट्रैकिंग प्रक्रियात्मक देरी को रोकती है, कानूनी प्रकटीकरण के मानदंडों के साथ सख्त अनुपालन सुनिश्चित करती है, और स्कूलों में सार्वजनिक सूचना अनुरोधों की प्रक्रिया को सरल बनाती है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Online RTI modules enhance transparency and efficiency in public information requests.",
+        "Automated tracking helps in meeting statutory deadlines and compliance.",
+        "Printed answer key: (A) By automatically tracking statutory deadlines, archiving response documents, and preventing delays."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "0039051c-a076-48f0-b86d-1db994153afc",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "53. एक बड़े स्कूल में कई डिजिटल संचार चैनलों का प्रबंधन करने के लिए सबसे प्रभावी दृष्टिकोण क्या है?",
+      "options_hindi": [
+        "हर एक कक्षा के शिक्षक को अलग-अलग असंगठित डिजिटल संदेश उपकरण सौंपना",
+        "पारंपरिक भौतिक सूचना बोर्डों के पक्ष में डिजिटल संचार प्लेटफार्मों को पूरी तरह से छोड़ देना",
+        "एक केंद्रीकृत सामग्री प्रबंधन प्रणाली (CMS) और एकीकृत संचार रणनीति के माध्यम से संचालन करना",
+        "चुनाव द्वारा चुने गए छात्र प्रतिनिधियों को आधिकारिक स्कूल प्रशासनिक चैनलों का स्वतंत्र रूप से प्रबंधन करने की अनुमति देना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the most effective approach to managing multiple digital communication channels in a large school?",
+      "options_english": [
+        "Assigning different uncoordinated digital messaging tools to every individual classroom teacher",
+        "Abandoning digital communication platforms completely in favor of traditional physical notice boards",
+        "Operating through a centralized Content Management System (CMS) and unified communication strategy",
+        "Allowing elected student representatives to manage official school administrative channels independently"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Managing digital communication effectively in a large educational institution requires a centralized, coordinated operational model. Implementing a unified Content Management System allows administrators to control, verify, and schedule all outgoing notices, app notifications, and portal updates from a single platform. Centralized management prevents channel fragmentation, eliminates conflicting departmental announcements, ensures message accuracy, and presents a professional, cohesive institutional voice to parents and stakeholders.",
+      "explanation_hindi": "सही उत्तर (c) है। एक बड़े शैक्षणिक संस्थान में डिजिटल संचार को प्रभावी ढंग से प्रबंधित करने के लिए एक केंद्रीकृत, समन्वित संचालन मॉडल की आवश्यकता होती है। एक एकीकृत सामग्री प्रबंधन प्रणाली को लागू करने से प्रशासकों को सभी आउटगोइंग नोटिस, ऐप सूचनाएं और पोर्टल अपडेट को एक ही प्लेटफार्म से नियंत्रित, सत्यापित और शेड्यूल करने की अनुमति मिलती है। केंद्रीकृत प्रबंधन चैनल के विखंडन को रोकता है, विभागीय घोषणाओं में विरोधाभास को समाप्त करता है, संदेश की सटीकता सुनिश्चित करता है, और माता-पिता और हितधारकों के लिए एक पेशेवर, समेकित संस्थागत आवाज प्रस्तुत करता है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Centralized management prevents channel fragmentation.",
+        "Unified Content Management System enhances communication efficiency.",
+        "Printed answer key: (C) Operating through a centralized Content Management System (CMS) and unified communication strategy.",
+        "Effective communication is crucial for stakeholder engagement."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f1fbb92e-d28a-4b10-a811-7e68174b2a66",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीति अनुपालन के संबंध में डिजिटल शासन में निम्नलिखित कथनों पर विचार करें:\nA. स्कूलों को छात्र जैविक डेटा एकत्र करते समय संबंधित डेटा गोपनीयता प्रावधानों का पालन करना चाहिए। \nB. छात्र डेटा होस्ट करने वाले क्लाउड सर्वर को राष्ट्रीय साइबर सुरक्षा मानकों का पालन करना चाहिए। \nC. संस्थागत पारदर्शिता के लिए छात्र चिकित्सा रिकॉर्ड तक बिना किसी प्रतिबंध के सार्वजनिक पहुंच अनिवार्य है। \nD. डिजिटल स्कूल पोर्टलों पर स्पष्ट सेवा की शर्तें और गोपनीयता नीतियाँ प्रदान की जानी चाहिए। \nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और D",
+        "केवल B और C",
+        "केवल A, C और D",
+        "केवल A और B"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding policy compliance in digital governance:\nA. Schools must comply with relevant data privacy provisions when collecting student biometric data.\nB. Cloud servers hosting student data should comply with national cybersecurity standards.\nC. Unrestricted public access to student medical records is mandatory for institutional transparency.\nD. Clear terms of service and privacy policies must be provided on digital school portals.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and D only",
+        "B and C only",
+        "A, C and D only",
+        "A and B only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Policy compliance in digital governance mandates rigorous data protection standards across institutional systems. Schools must observe legal data privacy provisions when handling student biometric data, host records on cloud servers complying with national cybersecurity standards, and provide clear terms of service and privacy policies on digital portals. However, unrestricted public access to student medical records is not a requirement and could violate privacy laws. Therefore, the correct statements are A, B, and D.",
+      "explanation_hindi": "सही उत्तर (a) है। नीति अनुपालन के लिए डिजिटल शासन में संस्थागत प्रणालियों में कठोर डेटा सुरक्षा मानकों का पालन करना आवश्यक है। स्कूलों को छात्र जैविक डेटा के प्रबंधन में कानूनी डेटा गोपनीयता प्रावधानों का पालन करना चाहिए, छात्र डेटा को होस्ट करने वाले क्लाउड सर्वर को राष्ट्रीय साइबर सुरक्षा मानकों का पालन करना चाहिए, और डिजिटल पोर्टलों पर स्पष्ट सेवा की शर्तें और गोपनीयता नीतियाँ प्रदान करनी चाहिए। हालाँकि, छात्र चिकित्सा रिकॉर्ड तक बिना किसी प्रतिबंध के सार्वजनिक पहुंच एक आवश्यकता नहीं है और यह गोपनीयता कानूनों का उल्लंघन कर सकता है। इसलिए, सही कथन A, B और D हैं।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Schools must comply with relevant data privacy provisions.",
+        "Cloud servers should meet national cybersecurity standards.",
+        "Printed answer key: (A) A, B and D only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f06bc31b-ee02-487b-b7bb-f1ab2789ccec",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "72. स्कूल स्तर पर ऑनलाइन आरटीआई अनुरोधों का प्रभावी प्रबंधन करने के लिए कौन सा घटक महत्वपूर्ण है?",
+      "options_hindi": [
+        "एक केंद्रीकृत डिजिटल रजिस्टर जो प्राप्ति तिथि, असाइन किए गए अधिकारी, प्रसंस्करण चरण, और प्रेषण विवरण को रिकॉर्ड करता है",
+        "एक स्वचालित प्रणाली तंत्र जो स्कूल खर्चों से संबंधित सार्वजनिक अनुरोधों को फ़िल्टर और अस्वीकार करता है",
+        "ऑनलाइन आरटीआई सबमिशन और ट्रैकिंग की पहुंच को केवल सत्यापित पूर्व छात्रों तक सीमित करना",
+        "सभी आने वाले सार्वजनिक आरटीआई आवेदकों को बाहरी निजी खोज इंजनों और तीसरे पक्ष के पोर्टलों पर पुनर्निर्देशित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which component is crucial for managing online RTI requests at the school level effectively?",
+      "options_english": [
+        "A centralized digital register that records receipt date, assigned officer, processing stage, and dispatch details",
+        "An automated system mechanism to filter out and reject public requests concerning school expenditures",
+        "Restricting online RTI submission and tracking access solely to verified former students of the institution",
+        "Redirecting all incoming public RTI applicants to external private search engines and third-party portals"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Managing online Right to Information requests effectively requires maintaining a centralized digital register within the institutional portal. This electronic registry tracks key details, including the application receipt date, assigned Public Information Officer, current processing stage, and dispatch details of final responses. Systematic tracking ensures compliance with strict statutory response deadlines, prevents administrative oversight, and provides an auditable digital trail for departmental review and statutory reporting.",
+      "explanation_hindi": "सही उत्तर (a) है। ऑनलाइन सूचना के अधिकार अनुरोधों का प्रभावी प्रबंधन करने के लिए संस्थागत पोर्टल के भीतर एक केंद्रीकृत डिजिटल रजिस्टर बनाए रखना आवश्यक है। यह इलेक्ट्रॉनिक रजिस्ट्रार महत्वपूर्ण विवरणों को ट्रैक करता है, जिसमें आवेदन की प्राप्ति तिथि, असाइन किए गए जन सूचना अधिकारी, वर्तमान प्रसंस्करण चरण, और अंतिम प्रतिक्रियाओं के प्रेषण विवरण शामिल हैं। प्रणालीगत ट्रैकिंग सख्त वैधानिक प्रतिक्रिया समय सीमा के अनुपालन को सुनिश्चित करती है, प्रशासनिक चूक को रोकती है, और विभागीय समीक्षा और वैधानिक रिपोर्टिंग के लिए एक ऑडिट योग्य डिजिटल ट्रेल प्रदान करती है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "A centralized digital register is essential for managing RTI requests.",
+        "Tracking details ensures compliance with statutory deadlines.",
+        "Public Information Officers play a key role in the RTI process.",
+        "Printed answer key: (A) A centralized digital register that records receipt date, assigned officer, processing stage, and dispatch details"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7768a9ef-4957-4b81-a47c-40c1718db1d6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "58. निम्नलिखित में से कौन-सी प्रथा डिजिटल स्कूल संचार में डेटा गोपनीयता सिद्धांतों का उल्लंघन करती है?",
+      "options_hindi": [
+        "छात्रों के फोन नंबर और घर के पते को व्यावसायिक विपणन विक्रेताओं के साथ साझा करना",
+        "संस्थानात्मक क्लाउड डेटाबेस में संग्रहीत छात्र स्वास्थ्य प्रोफाइल और व्यक्तिगत पहचानकर्ताओं को एन्क्रिप्ट करना",
+        "माता-पिता के ऐप एक्सेस के लिए पासवर्ड-संरक्षित उपयोगकर्ता लॉगिन और मल्टी-फैक्टर प्रमाणीकरण की आवश्यकता करना",
+        "प्रशासनिक डेटाबेस संशोधन अधिकारों को विशेष रूप से अधिकृत संस्थागत कर्मियों तक सीमित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following practices violates data privacy principles in digital school communication?",
+      "options_english": [
+        "Sharing student phone numbers and home addresses with commercial marketing vendors",
+        "Encrypting student health profiles and personal identifiers stored on institutional cloud databases",
+        "Requiring password-protected user logins and multi-factor authentication for parent app access",
+        "Restricting administrative database modification rights exclusively to authorized institutional personnel"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Protecting student data privacy is a statutory obligation for educational institutions. Transmitting sensitive personally identifiable information, such as home addresses or phone numbers, to commercial marketing vendors constitutes a direct breach of privacy laws and ethical standards. Educational institutions must enforce strict data protection protocols, including data encryption, restricted administrative database access rights, and password-protected portal logins, to safeguard student profiles from commercial exploitation and cybersecurity risks.",
+      "explanation_hindi": "सही उत्तर (a) है। छात्रों के डेटा की गोपनीयता की रक्षा करना शैक्षणिक संस्थानों के लिए एक कानूनी दायित्व है। संवेदनशील व्यक्तिगत पहचान योग्य जानकारी, जैसे कि घर के पते या फोन नंबर, को व्यावसायिक विपणन विक्रेताओं को भेजना गोपनीयता कानूनों और नैतिक मानकों का सीधा उल्लंघन है। शैक्षणिक संस्थानों को छात्रों के प्रोफाइल को व्यावसायिक शोषण और साइबर सुरक्षा जोखिमों से बचाने के लिए डेटा एन्क्रिप्शन, प्रतिबंधित प्रशासनिक डेटाबेस पहुंच अधिकारों, और पासवर्ड-संरक्षित पोर्टल लॉगिन जैसे सख्त डेटा सुरक्षा प्रोटोकॉल लागू करने चाहिए।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "hard",
+      "key_facts": [
+        "Protecting student data privacy is a statutory obligation.",
+        "Transmitting sensitive information to vendors breaches privacy laws.",
+        "Strict data protection protocols must be enforced.",
+        "Printed answer key: (A) Sharing student phone numbers and home addresses with commercial marketing vendors"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c0dc1dbf-f06f-4b9a-bf98-e75b0aef7ad3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II से मिलाएं:\nसूची I: (शासन की समस्या)\nA. आपातकालीन घोषणाओं का विलंबित प्रकाशन\nB. विद्यालय निधियों के उपयोग में पारदर्शिता की कमी\nC. शारीरिक बैठकों में कम माता-पिता की उपस्थिति\nD. ऐतिहासिक बैठक रिकॉर्ड का नुकसान",
+      "options_hindi": [
+        "A-II, B-IV, C-I, D-III",
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-II, C-III, D-IV",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (Governance Problem)\nA. Delayed publication of emergency announcements\nB. Lack of transparency in school fund utilization\nC. Low parental attendance at physical meetings\nD. Loss of historical meeting records",
+      "options_english": [
+        "A-II, B-IV, C-I, D-III",
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-II, C-III, D-IV",
+        "A-IV, B-III, C-II, D-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Targeted digital governance solutions resolve common administrative challenges in school management. Delayed emergency announcements are corrected using instant mass SMS and emergency portal alerts. Financial opacity is mitigated by publishing audited financial statements and interactive budget dashboards online. Low parental meeting attendance is overcome by offering hybrid virtual meeting access and digital polling options, while record loss is prevented through centralized digital minute archives.",
+      "explanation_hindi": "सही उत्तर (a) है। लक्षित डिजिटल शासन समाधान विद्यालय प्रबंधन में सामान्य प्रशासनिक चुनौतियों को हल करते हैं। आपातकालीन घोषणाओं का विलंबित प्रकाशन तात्कालिक एसएमएस और आपातकालीन पोर्टल अलर्ट का उपयोग करके सही किया जाता है। वित्तीय अस्पष्टता को ऑडिट किए गए वित्तीय विवरण और इंटरैक्टिव बजट डैशबोर्ड ऑनलाइन प्रकाशित करके कम किया जाता है। माता-पिता की बैठक में कम उपस्थिति को हाइब्रिड वर्चुअल बैठक पहुंच और डिजिटल मतदान विकल्प प्रदान करके दूर किया जाता है, जबकि रिकॉर्ड हानि को केंद्रीकृत डिजिटल मिनट अभिलेखों के माध्यम से रोका जाता है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital governance solutions enhance school management efficiency.",
+        "Printed answer key: (A) A-II, B-IV, C-I, D-III",
+        "Transparency in financial reporting is crucial for stakeholder trust.",
+        "Hybrid meetings can increase parental engagement."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6a38f787-b55f-45f3-852f-d390dd1b2e93",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "99. कौन सा अभ्यास यह सुनिश्चित करता है कि डिजिटल सहमति फ़ॉर्म कानूनी रूप से मान्य और लागू हैं?\n(1) सहमति फ़ॉर्म से घटना के जोखिम, लागत और गतिविधि कार्यक्रमों के बारे में महत्वपूर्ण जानकारी को हटाना\n(2) माता-पिता की ओर से स्वचालित रूप से सहमति बॉक्स को पूर्व-चेक करना",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "सत्यापित माता-पिता लॉगिन कैप्चर करना",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which practice ensures that digital consent forms are legally valid and enforceable?\n(1) Removing critical information regarding event risks, costs, and activity schedules from the consent form\n(2) Pre-checking approval consent boxes on behalf of parents automatically prior to sending the form",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Capturing authenticated parent login",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Ensuring that digital consent forms are legally valid requires implementing robust electronic authentication standards. Systems must record authenticated user login credentials, precise submission timestamps, internet protocol addresses, and explicit opt-in confirmation check boxes. Capturing these verification parameters creates a tamper-evident, non-repudiable digital audit log, establishing clear legal proof of parental authorization for school field trips, medical procedures, or institutional media releases.",
+      "explanation_hindi": "सही उत्तर (c) है। डिजिटल सहमति फ़ॉर्मों को कानूनी रूप से मान्य बनाने के लिए मजबूत इलेक्ट्रॉनिक प्रमाणीकरण मानकों को लागू करना आवश्यक है। सिस्टम को सत्यापित उपयोगकर्ता लॉगिन क्रेडेंशियल, सटीक सबमिशन टाइमस्टैम्प, इंटरनेट प्रोटोकॉल पते, और स्पष्ट ऑप्ट-इन पुष्टि चेक बॉक्स रिकॉर्ड करना चाहिए। इन सत्यापन मानकों को कैप्चर करना एक टेम्पर-एविडेंट, नॉन-रिपुडिएबल डिजिटल ऑडिट लॉग बनाता है, जो स्कूल फील्ड ट्रिप, चिकित्सा प्रक्रियाओं, या संस्थागत मीडिया रिलीज़ के लिए माता-पिता की स्वीकृति का स्पष्ट कानूनी प्रमाण स्थापित करता है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "hard",
+      "key_facts": [
+        "Robust electronic authentication is essential for legal consent.",
+        "Systems must capture user credentials and timestamps.",
+        "Clear opt-in confirmation is necessary for validity.",
+        "Printed answer key: (C) Capturing authenticated parent login"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f55cf978-af7d-49e7-81d7-ce1d82f88a74",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "68. डिजिटल परिपत्र प्रकाशित करते समय निम्नलिखित में से कौन-सी सर्वोत्तम प्रथा मानी जाती है?",
+      "options_hindi": [
+        "अस्पष्ट तकनीकी भाषा, कानूनी शब्दावली का उपयोग करना, और आधिकारिक जारी करने की तिथि को जानबूझकर छोड़ना",
+        "सूचनाओं का वितरण केवल मौखिक संचार और छात्र नेताओं द्वारा मौखिक रूप से करना",
+        "प्रशासनिक नोटिस को 12 घंटे बाद स्थायी रूप से हटाना बिना किसी संस्थागत अभिलेख को बनाए रखे",
+        "स्पष्ट विषय शीर्षक, संदर्भ संख्या, आधिकारिक इलेक्ट्रॉनिक हस्ताक्षर, और सुलभ भाषा प्रारूप सुनिश्चित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following is considered best practice when publishing digital circulars?",
+      "options_english": [
+        "Using obscure technical language, legal jargon, and deliberately omitting the official date of issuance",
+        "Distributing notices solely through oral transmission and word-of-mouth passed along by student leaders",
+        "Deleting administrative notices permanently after 12 hours without maintaining an institutional archive",
+        "Ensuring clear subject headings, reference numbers, official electronic signature, and accessible language formats"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Best practices for issuing digital circulars center on clarity, authenticity, and accessibility. Official notices must include concise subject headings, unique reference numbers, official electronic signatures, and clear issue dates to guarantee authenticity and facilitate archiving. Furthermore, utilizing accessible formatting and multi-lingual language options ensures that all parents can comprehend administrative instructions clearly. Maintaining online archives allows stakeholders to reference past circulars whenever necessary.",
+      "explanation_hindi": "सही उत्तर (d) है। डिजिटल परिपत्र जारी करने के लिए सर्वोत्तम प्रथाएँ स्पष्टता, प्रामाणिकता और सुलभता पर केंद्रित होती हैं। आधिकारिक नोटिस में संक्षिप्त विषय शीर्षक, अद्वितीय संदर्भ संख्या, आधिकारिक इलेक्ट्रॉनिक हस्ताक्षर और स्पष्ट जारी करने की तिथियाँ शामिल होनी चाहिए ताकि प्रामाणिकता सुनिश्चित हो सके और अभिलेख बनाए रखने में मदद मिल सके। इसके अलावा, सुलभ प्रारूप और बहुभाषी भाषा विकल्पों का उपयोग यह सुनिश्चित करता है कि सभी माता-पिता प्रशासनिक निर्देशों को स्पष्ट रूप से समझ सकें। ऑनलाइन अभिलेख बनाए रखना हितधारकों को आवश्यकतानुसार पिछले परिपत्रों का संदर्भ लेने की अनुमति देता है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "easy",
+      "key_facts": [
+        "Digital circulars should be clear, authentic, and accessible.",
+        "Important elements include subject headings, reference numbers, and electronic signatures.",
+        "Maintaining archives is crucial for future reference.",
+        "Printed answer key: (D) Ensuring clear subject headings, reference"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2c777ee6-5aec-4ca3-a4b6-3e2678d8ea7e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II से मिलाएं:\nसूची I: (डिजिटल शासन क्षेत्र)\nA. माता-पिता की सहमति\nB. शुल्क अनुस्मारक\nC. बहु-चैनल प्रबंधन\nD. कम कनेक्टिविटी आउटरीच\nसूची II: (मुख्य सर्वोत्तम प्रथा)\nI. निजी, प्रत्यक्ष अलर्ट सुरक्षित,\nपारदर्शी डिजिटल रसीदों के साथ\nII. डिजिटल ऐप्स और\nफॉलबैक एसएमएस / IVR सेवाओं का दोहरा कार्यान्वयन",
+      "options_hindi": [
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-III, C-II, D-IV",
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-III, D-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (Digital Governance Area)\nA. Parental Consent\nB. Fee Reminders\nC. Multi-channel Management\nD. Low-connectivity Outreach\nList II: (Key Best Practice)\nI. Private, direct alerts accompanied by secure,\ntransparent digital receipts\nII. Dual implementation of digital apps and\nfallback SMS / IVR services",
+      "options_english": [
+        "A-III, B-I, C-IV, D-II",
+        "A-I, B-III, C-II, D-IV",
+        "A-II, B-IV, C-I, D-III",
+        "A-IV, B-II, C-III, D-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Implementing digital governance best practices addresses diverse operational requirements in school management. Parental consent requires explicit, opt-in digital records with clear activity details. Fee reminders should be issued privately with itemized digital receipts. Multi-channel communication is streamlined using a single-window integrated portal for unified broadcast management, while outreach in low-connectivity areas utilizes a hybrid approach combining smartphone apps with fallback SMS and IVR services.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल शासन की सर्वोत्तम प्रथाओं को लागू करना विद्यालय प्रबंधन में विविध संचालन आवश्यकताओं को संबोधित करता है। माता-पिता की सहमति के लिए स्पष्ट, ऑप्ट-इन डिजिटल रिकॉर्ड की आवश्यकता होती है जिसमें गतिविधियों का स्पष्ट विवरण होता है। शुल्क अनुस्मारक को निजी रूप से आइटमाइज्ड डिजिटल रसीदों के साथ जारी किया जाना चाहिए। बहु-चैनल संचार को एकीकृत पोर्टल के माध्यम से सुव्यवस्थित किया जाता है, जबकि कम कनेक्टिविटी वाले क्षेत्रों में स्मार्टफोन ऐप्स और फॉलबैक एसएमएस और IVR सेवाओं का संयोजन किया जाता है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Parental consent requires explicit digital records.",
+        "Fee reminders should include itemized digital receipts.",
+        "Multi-channel communication enhances stakeholder engagement.",
+        "Printed answer key: (A) A-III, B-I, C-IV, D-II"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d89e22e9-5872-48f7-a224-c261b0877351",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "40. डिजिटल शुल्क भुगतान संचार के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. अनुस्मारक विनम्र, निजी और सीधे माता-पिता के खातों पर भेजे जाने चाहिए।\nB. डिजिटल रसीदों में लेनदेन आईडी और शुल्क घटकों का विवरण होना चाहिए।\nC. शुल्क संरचनाओं को पूर्व ऑनलाइन खुलासा के बिना मनमाने ढंग से बदला जा सकता है।\nD. सुरक्षित भुगतान गेटवे माता-पिता के वित्तीय क्रेडेंशियल्स की सुरक्षा करते हैं।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और D",
+        "केवल B और C",
+        "केवल A, C और D",
+        "केवल A और B"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital School Governance and Stakeholder Communication",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding digital fee payment communication:\nA. Reminders should be polite, private, and sent directly to parent accounts.\nB. Digital receipts must contain transaction IDs and breakdown of fee components.\nC. Fee structures can be changed arbitrarily without prior online disclosure.\nD. Secure payment gateways protect parent financial credentials.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and D only",
+        "B and C only",
+        "A, C and D only",
+        "A and B only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Digital fee communication best practices prioritize privacy, payment transparency, and transaction security. Reminders should be sent privately to individual parent accounts, while digital receipts must feature explicit transaction IDs and fee component breakdowns. Integrated payment gateways must utilize robust encryption to safeguard banking credentials. Arbitrary alterations to fee structures without prior public disclosure are strictly prohibited, as fee modifications require transparent review and official authorization.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल शुल्क संचार की सर्वोत्तम प्रथाएँ गोपनीयता, भुगतान पारदर्शिता और लेनदेन सुरक्षा को प्राथमिकता देती हैं। अनुस्मारक व्यक्तिगत माता-पिता के खातों पर निजी रूप से भेजे जाने चाहिए, जबकि डिजिटल रसीदों में स्पष्ट लेनदेन आईडी और शुल्क घटकों का विवरण होना चाहिए। एकीकृत भुगतान गेटवे को बैंकिंग क्रेडेंशियल्स की सुरक्षा के लिए मजबूत एन्क्रिप्शन का उपयोग करना चाहिए। पूर्व सार्वजनिक खुलासे के बिना शुल्क संरचनाओं में मनमाने परिवर्तन सख्त रूप से निषिद्ध हैं, क्योंकि शुल्क संशोधन के लिए पारदर्शी समीक्षा और आधिकारिक प्राधिकरण की आवश्यकता होती है।",
+      "topic": "Digital School Governance and Stakeholder Communication",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital fee communication should prioritize privacy and transparency.",
+        "Digital receipts must include transaction IDs and fee breakdowns.",
+        "Changes to fee structures require prior disclosure.",
+        "Printed answer key: (A) A, B and D only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

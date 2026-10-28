@@ -1,0 +1,793 @@
+{
+  "test_id": "5dffcca4-961d-415c-949a-da0b50bec38d",
+  "test_name": "Topic Test: DIGITAL_CLASSROOMS_LMS_AND_ONLINE_ASSESSMENT - Part 5",
+  "type": "topic_wise",
+  "topic": "digital_classrooms_lms_and_online_assessment",
+  "created_at": "2026-10-28T18:55:06.582372",
+  "questions": [
+    {
+      "id": "4143967b-6339-441a-9f58-a78c4a6f86f3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "17. कौन सी तकनीक मोबाइल-आधारित डिजिटल उपस्थिति प्रणालियों के साथ आमतौर पर एकीकृत की जाती है ताकि क्षेत्र के कर्मचारियों और ग्रामीण शिक्षकों को उपस्थिति स्थान कैप्चर करने में मदद मिल सके?",
+      "options_hindi": [
+        "ऑप्टिकल कैरेक्टर रिकग्निशन (OCR)",
+        "जियो-फेंसिंग और GPS ट्रैकिंग",
+        "रेडियो फ्रीक्वेंसी आइडेंटिफिकेशन (RFID) केवल पैसिव टैगिंग",
+        "नियर फील्ड कम्युनिकेशन (NFC) विरासत प्रोटोकॉल"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which technology is commonly integrated with mobile-based digital attendance systems for field staff and rural teachers to capture attendance location?",
+      "options_english": [
+        "Optical Character Recognition (OCR)",
+        "Geo-fencing and GPS tracking",
+        "Radio Frequency Identification (RFID) passive tagging only",
+        "Near Field Communication (NFC) legacy protocol"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Geo-fencing and GPS tracking are essential technologies used in mobile-based digital attendance systems. They allow for precise location tracking, ensuring that attendance is recorded accurately based on the geographical location of the field staff or rural teachers. This integration enhances accountability and provides real-time data on attendance, which is crucial for effective management in educational settings.",
+      "explanation_hindi": "सही उत्तर (b) है। जियो-फेंसिंग और GPS ट्रैकिंग मोबाइल-आधारित डिजिटल उपस्थिति प्रणालियों में आवश्यक तकनीकें हैं। ये सटीक स्थान ट्रैकिंग की अनुमति देती हैं, यह सुनिश्चित करते हुए कि उपस्थिति क्षेत्र के कर्मचारियों या ग्रामीण शिक्षकों के भौगोलिक स्थान के आधार पर सही ढंग से रिकॉर्ड की जाती है। यह एकीकरण जवाबदेही को बढ़ाता है और शैक्षिक सेटिंग्स में प्रभावी प्रबंधन के लिए महत्वपूर्ण उपस्थिति पर वास्तविक समय का डेटा प्रदान करता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Geo-fencing technology allows for virtual boundaries to be set for attendance.",
+        "GPS tracking provides real-time location data.",
+        "Printed answer key: (B) Geo-fencing and GPS tracking"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "0fa1bcc9-2764-44ba-9f72-8e293a217a7a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "30. एक प्रभावी विद्यालय-स्तरीय लर्निंग मैनेजमेंट सिस्टम की विशेषताओं के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. यह संचार के लिए एकीकृत उपकरण प्रदान करता है, जैसे चर्चा बोर्ड और संदेश भेजना।\nB. इसमें मजबूत सुरक्षा प्रोटोकॉल शामिल हैं जो डेटा पहुंच को केवल अधिकृत भूमिका-आधारित क्रेडेंशियल्स तक सीमित करते हैं।\nC. यह प्रत्येक व्यक्तिगत शिक्षण सत्र के बाद छात्र रिकॉर्ड को लगातार मैन्युअल रूप से फिर से दर्ज करने की आवश्यकता होती है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "30. Consider the following statements regarding the features of an effective school-level Learning Management System:\nA. It provides integrated tools for communication, such as discussion boards and messaging.\nB. It includes robust security protocols to restrict data access strictly to authorized role-based credentials.\nC. It requires constant manual re-entering of student records after every individual learning session.\nWhich of the statements given above is/are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Effective school-level Learning Management Systems incorporate built-in communication mechanisms like messaging and discussion forums to foster collaborative interactions. They also implement strong security protocols and role-based access controls to safeguard sensitive administrative and academic records against unauthorized access. Conversely, modern platforms eliminate tedious repetitive tasks by automatically updating student progress records and interaction logs, rendering manual data entry after every learning session completely unnecessary in standard operational workflows.",
+      "explanation_hindi": "सही उत्तर (a) है। प्रभावी विद्यालय-स्तरीय लर्निंग मैनेजमेंट सिस्टम संचार के लिए अंतर्निहित तंत्र जैसे संदेश भेजने और चर्चा फोरम को शामिल करते हैं, जिससे सहयोगात्मक इंटरैक्शन को बढ़ावा मिलता है। वे संवेदनशील प्रशासनिक और शैक्षणिक रिकॉर्ड को अनधिकृत पहुंच से सुरक्षित रखने के लिए मजबूत सुरक्षा प्रोटोकॉल और भूमिका-आधारित पहुंच नियंत्रण लागू करते हैं। इसके विपरीत, आधुनिक प्लेटफार्म मैन्युअल डेटा प्रविष्टि को पूरी तरह से अनावश्यक बनाते हुए छात्र प्रगति रिकॉर्ड और इंटरैक्शन लॉग को स्वचालित रूप से अपडेट करते हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Effective LMS includes communication tools and security protocols.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "73a891f7-9c10-43f5-8a90-7cca0f836fab",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "ऑनलाइन वातावरण में निरंतर निदानात्मक आकलनों का प्राथमिक उद्देश्य क्या है?",
+      "options_hindi": [
+        "सीखने में अंतराल को जल्दी पहचानना ताकि लक्षित सुधारात्मक हस्तक्षेप प्रदान किया जा सके",
+        "आधिकारिक शैक्षणिक स्नातक प्रमाणन के लिए आवश्यक अंतिम पत्र ग्रेड असाइन करना",
+        "संस्थान भर में प्रशासनिक डिस्प्ले बोर्ड पर छात्रों को सार्वजनिक रूप से रैंक करना",
+        "स्कूल कंप्यूटर प्रयोगशालाओं में स्थापित भौतिक कंप्यूटिंग हार्डवेयर उपकरणों का ऑडिट करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the primary purpose of conducting continuous diagnostic assessments in an online environment?",
+      "options_english": [
+        "Identifying learning gaps early so targeted remedial intervention can be provided",
+        "Assigning final letter grades required for official academic graduation certification",
+        "Ranking students publicly on administrative display boards across the institution",
+        "Auditing physical computing hardware equipment installed in school computer labs"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Continuous diagnostic assessments in online learning environments serve to identify learning gaps early, allowing educators to provide targeted remedial interventions. This proactive approach ensures that students receive the necessary support to improve their understanding and performance before they fall too far behind. By focusing on individual learning needs, these assessments contribute to a more personalized and effective educational experience.",
+      "explanation_hindi": "सही उत्तर (a) है। निरंतर निदानात्मक आकलन ऑनलाइन शिक्षण वातावरण में सीखने में अंतराल को जल्दी पहचानने के लिए किया जाता है, जिससे शिक्षकों को लक्षित सुधारात्मक हस्तक्षेप प्रदान करने की अनुमति मिलती है। यह सक्रिय दृष्टिकोण सुनिश्चित करता है कि छात्रों को उनकी समझ और प्रदर्शन में सुधार के लिए आवश्यक समर्थन प्राप्त हो, इससे पहले कि वे बहुत पीछे रह जाएं। व्यक्तिगत सीखने की आवश्यकताओं पर ध्यान केंद्रित करके, ये आकलन एक अधिक व्यक्तिगत और प्रभावी शैक्षणिक अनुभव में योगदान करते हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Continuous diagnostic assessments help identify learning gaps early.",
+        "Targeted remedial interventions can significantly improve student outcomes.",
+        "Printed answer key: (A) Identifying learning gaps early so targeted"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "fefc3f0a-f8ea-4a8a-b71f-38e102a5b56d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "हायरार्किकल संरचनाओं के बारे में निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "हायरार्किकल संरचनाओं की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding Into hierarchical structures comprising, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of Into hierarchical structures comprising",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Structured Learning Management Systems organize educational content into a logical, hierarchical architecture consisting of overall courses, distinct modules, specific topics, and individual learning activities. This structured breakdown allows learners to progress systematically through academic material at their own pace while maintaining a clear view of curriculum pathways. Such organized navigation helps prevent cognitive overload, supports self-directed study habits, and allows instructors to effectively manage learning outcomes.",
+      "explanation_hindi": "सही उत्तर (b) है। संरचित लर्निंग मैनेजमेंट सिस्टम शैक्षिक सामग्री को एक तार्किक, हायरार्किकल आर्किटेक्चर में व्यवस्थित करते हैं, जिसमें समग्र पाठ्यक्रम, विशिष्ट मॉड्यूल, विशेष विषय और व्यक्तिगत शिक्षण गतिविधियाँ शामिल होती हैं। यह संरचित विभाजन छात्रों को शैक्षणिक सामग्री के माध्यम से व्यवस्थित रूप से प्रगति करने की अनुमति देता है, जबकि पाठ्यक्रम के मार्गों का स्पष्ट दृश्य बनाए रखता है। इस प्रकार की संगठित नेविगेशन संज्ञानात्मक अधिभार को रोकने में मदद करती है, आत्म-निर्देशित अध्ययन की आदतों का समर्थन करती है, और शिक्षकों को प्रभावी ढंग से सीखने के परिणामों का प्रबंधन करने की अनुमति देती है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Structured LMS organizes content into courses, modules, and topics.",
+        "Hierarchical structures aid in systematic learning.",
+        "Clear curriculum pathways prevent cognitive overload.",
+        "Printed answer key: (B) Into hierarchical structures comprising"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ccc9ed86-4634-4e55-9b65-842baf3a8c49",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "93. डिजिटल परीक्षण आइटम विश्लेषण में “आइटम विभेदन सूचकांक” का मुख्य उद्देश्य क्या है?",
+      "options_hindi": [
+        "ऑनलाइन परीक्षण के दौरान प्रश्न कितनी जल्दी स्क्रीन पर लोड होता है, इसे मापना",
+        "परीक्षा प्रश्न स्टेम में उपस्थित कुल शब्दों की संख्या गिनना",
+        "उच्च प्रदर्शन करने वाले और निम्न प्रदर्शन करने वाले शिक्षार्थियों के बीच भेद करना",
+        "छात्रों द्वारा उत्तर प्रस्तुत करने के लिए उपयोग किए गए भौतिक उपकरण के प्रकार को ट्रैक करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the main purpose of “item discrimination index” in digital test item analytics?",
+      "options_english": [
+        "Measuring how quickly a question loads on screen during online testing",
+        "Counting the total number of words present in a test question stem",
+        "Differentiating between high-performing and low-performing learners",
+        "Tracking the physical device type used by students to submit answers"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The item discrimination index in test analytics measures how effectively an individual assessment item differentiates between overall high-performing and low-performing students. A high positive discrimination value indicates that students who performed well on the test overall answered the specific item correctly, while lower-performing students answered incorrectly. Calculating this index allows test developers to identify, refine, or remove flawed, ambiguous, or non-discriminating test questions.",
+      "explanation_hindi": "सही उत्तर (c) है। परीक्षण विश्लेषण में आइटम विभेदन सूचकांक यह मापता है कि एक व्यक्तिगत मूल्यांकन आइटम उच्च प्रदर्शन करने वाले और निम्न प्रदर्शन करने वाले छात्रों के बीच कितनी प्रभावी ढंग से भेद करता है। एक उच्च सकारात्मक विभेदन मान यह संकेत करता है कि जो छात्र समग्र रूप से परीक्षण में अच्छा प्रदर्शन करते हैं, उन्होंने विशेष आइटम का सही उत्तर दिया, जबकि निम्न प्रदर्शन करने वाले छात्रों ने गलत उत्तर दिया। इस सूचकांक की गणना करने से परीक्षण विकासकर्ताओं को दोषपूर्ण, अस्पष्ट, या गैर-विभेदक परीक्षण प्रश्नों की पहचान, परिष्कृत या हटा देने में मदद मिलती है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Item discrimination index helps in assessing question effectiveness.",
+        "High values indicate good differentiation between student performance levels.",
+        "Printed answer key: (C) Differentiating between high-performing and low-performing learners"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f6d62413-8d9f-4c7f-b712-79eca95c3132",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "प्रश्न: आइटम से प्रश्न चयन को यादृच्छिक बनाने के संबंध में, निम्नलिखित में से कौन सा सही है?",
+      "options_hindi": [
+        "आइटम से प्रश्न चयन को यादृच्छिक बनाने की प्राथमिक परिभाषा और मानक विशेषताएँ",
+        "सामान्य सिद्धांत",
+        "संचालनात्मक मानदंड",
+        "रणनीतिक दिशानिर्देश"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Regarding randomizing question selection from an item, which of the following is correct?",
+      "options_english": [
+        "Primary definition and standard features of randomizing question selection from an item",
+        "General principles",
+        "Operational criteria",
+        "Strategic guidelines"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Digital assessment platforms discourage unauthorized collaboration and student cheating by employing automated question randomization and option shuffling. By drawing unique subsets of equivalent test items from a central question bank and randomizing the sequence of answer options for each candidate, no two students receive an identical exam layout. This technical safeguard renders answer-sharing ineffective, maintains test security, and ensures fair evaluation during online examinations.",
+      "explanation_hindi": "सही उत्तर (d) है। डिजिटल मूल्यांकन प्लेटफार्मों द्वारा स्वचालित प्रश्न यादृच्छिकता और विकल्पों के मिश्रण का उपयोग करके अनधिकृत सहयोग और छात्र धोखाधड़ी को हतोत्साहित किया जाता है। एक केंद्रीय प्रश्न बैंक से समकक्ष परीक्षण वस्तुओं के अद्वितीय उपसमुच्चय खींचकर और प्रत्येक उम्मीदवार के लिए उत्तर विकल्पों के अनुक्रम को यादृच्छिक बनाकर, कोई दो छात्रों को समान परीक्षा लेआउट नहीं मिलता। यह तकनीकी सुरक्षा उत्तर साझा करने को अप्रभावी बनाती है, परीक्षण सुरक्षा बनाए रखती है, और ऑनलाइन परीक्षाओं के दौरान निष्पक्ष मूल्यांकन सुनिश्चित करती है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Automated question randomization enhances test security.",
+        "Unique subsets of questions prevent answer-sharing.",
+        "Printed answer key: (D) Randomizing question selection from an item"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "274efc79-1015-4b46-9e1d-6acf0eea783f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "68. इंटरैक्टिव व्हाइटबोर्ड की कौन सी विशेषता शिक्षकों को व्याख्यान के दौरान किए गए टिप्पणियों को भविष्य के छात्र समीक्षा के लिए संरक्षित करने की अनुमति देती है?",
+      "options_hindi": [
+        "5 मिनट की निष्क्रियता के बाद स्वचालित रूप से स्क्रीन मेमोरी मिटाना",
+        "कक्षा की दीवारों और भौतिक प्रदर्शन बोर्डों का ऑप्टिकल भौतिक स्कैनिंग",
+        "व्हाइटबोर्ड से जुड़े निरंतर पेपर रोल पर एनालॉग थर्मल प्रिंटिंग",
+        "डिजिटल स्क्रीन रिकॉर्डिंग और सत्र निर्यात क्षमताएँ"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which feature of interactive whiteboards allows teachers to preserve annotations made during a lecture for future student review?",
+      "options_english": [
+        "Auto-erasing screen memory automatically after 5 minutes of inactivity",
+        "Optical physical scanning of classroom walls and physical display boards",
+        "Analog thermal printing on continuous paper rolls attached to whiteboards",
+        "Digital screen recording and session export capabilities"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Modern interactive whiteboards feature built-in session recording and digital export functionalities that enable educators to capture live screen annotations, drawings, and presentation audio. Instructors can save these annotated interactive sessions as digital PDF documents or video files, which can then be uploaded directly to the class learning platform, providing students with accurate review resources for subsequent self-paced study.",
+      "explanation_hindi": "सही उत्तर (d) है। आधुनिक इंटरैक्टिव व्हाइटबोर्ड में अंतर्निहित सत्र रिकॉर्डिंग और डिजिटल निर्यात कार्यक्षमताएँ होती हैं जो शिक्षकों को लाइव स्क्रीन टिप्पणियों, चित्रणों और प्रस्तुति ऑडियो को कैप्चर करने की अनुमति देती हैं। शिक्षक इन एनोटेटेड इंटरैक्टिव सत्रों को डिजिटल पीडीएफ दस्तावेज़ों या वीडियो फ़ाइलों के रूप में सहेज सकते हैं, जिन्हें सीधे कक्षा के शिक्षण मंच पर अपलोड किया जा सकता है, जिससे छात्रों को बाद में आत्म-निर्देशित अध्ययन के लिए सटीक समीक्षा संसाधन मिलते हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Interactive whiteboards enhance teaching through digital tools.",
+        "Session recording allows for future reference and review.",
+        "Printed answer key: (D) Digital screen recording and session export capabilities",
+        "Facilitates self-paced learning for students."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5a9ae612-13e3-4509-9ad8-2b5d63962bb3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "79. LMS ग्रेडिंग कार्यप्रवाह में डिजिटल रूपरेखाओं का उपयोग करने का एक प्रमुख लाभ क्या है?",
+      "options_hindi": [
+        "प्रतिस्पर्धात्मक मूल्यांकन मानदंड प्रदान करना ताकि फीडबैक वितरण में तेजी आए।",
+        "लक्षित ग्रेड औसत प्राप्त करने के लिए स्वचालित रूप से संख्यात्मक स्कोर बढ़ाना।",
+        "छात्रों से स्कोरिंग मानदंडों को छिपाना ताकि परीक्षा की तैयारी में बाधा आए।",
+        "लिखित ग्रेड को एन्क्रिप्टेड भौतिक प्रशासनिक कोड में परिवर्तित करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is a key advantage of utilizing digital rubrics within an LMS grading workflow?",
+      "options_english": [
+        "Providing transparent evaluation criteria to speed up feedback delivery.",
+        "Automatically raising numerical scores to achieve target grade averages.",
+        "Obscuring scoring criteria from students to prevent exam preparation.",
+        "Converting written grades into encrypted physical administrative codes."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Integrating digital rubrics into LMS grading workflows establishes explicit, structured scoring criteria across defined competency levels. This transparency clarifies performance expectations for students prior to assignment completion and speeds up evaluation workflows for instructors. By simply clicking pre-defined rubric performance levels, teachers can deliver consistent, objective, and detailed qualitative feedback rapidly, helping students understand exact academic evaluation benchmarks and areas for growth.",
+      "explanation_hindi": "सही उत्तर (a) है। LMS ग्रेडिंग कार्यप्रवाह में डिजिटल रूपरेखाओं को एकीकृत करने से परिभाषित क्षमता स्तरों के बीच स्पष्ट, संरचित स्कोरिंग मानदंड स्थापित होते हैं। यह पारदर्शिता छात्रों के लिए कार्य पूरा करने से पहले प्रदर्शन की अपेक्षाओं को स्पष्ट करती है और शिक्षकों के लिए मूल्यांकन कार्यप्रवाह में तेजी लाती है। पूर्व-निर्धारित रूपरेखा प्रदर्शन स्तरों पर बस क्लिक करके, शिक्षक तेजी से सुसंगत, वस्तुनिष्ठ और विस्तृत गुणात्मक फीडबैक प्रदान कर सकते हैं, जिससे छात्रों को सटीक शैक्षणिक मूल्यांकन मानकों और विकास के क्षेत्रों को समझने में मदद मिलती है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Digital rubrics enhance clarity in grading processes.",
+        "Printed answer key: (A) Providing transparent evaluation criteria to speed up feedback delivery."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2ebcd426-0954-4e5b-ade9-002c052a1565",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक LMS में, \"सहयोगात्मक विकी\" क्या है?",
+      "options_hindi": [
+        "एक लॉक किया गया पाठ दस्तावेज़ जिसे केवल\nविद्यालय के प्रधान द्वारा संपादित किया जा सकता है",
+        "एक वेब कार्यक्षेत्र जहाँ छात्र सामूहिक रूप से\nसामग्री का सह-लेखन और आयोजन कर सकते हैं",
+        "एक स्वचालित ग्रेडबुक गणना प्लगइन\nजो अंत-कालीन स्कोर रिपोर्ट उत्पन्न करने के लिए उपयोग किया जाता है",
+        "एक हार्डवेयर उपकरण जो इंटरैक्टिव\nडिस्प्ले टच सेंसर और स्टाइलस उपकरणों को कैलिब्रेट करने के लिए उपयोग किया जाता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In an LMS, what is a 'Collaborative Wiki'?",
+      "options_english": [
+        "A locked text document editable only by school principal administrative software accounts",
+        "A web workspace where students can coauthor and organize content collectively for projects",
+        "An automated gradebook calculation plugin used for generating end-of-term score reports",
+        "A hardware tool used to calibrate interactive display touch sensors and stylus instruments"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "A collaborative wiki within a Learning Management System is an interactive web-based workspace where students can collectively create, edit, structure, and refine digital content for group projects. The wiki tracks edit history, attributes contributions to individual group members, and supports real-time co-authoring. This tool fosters teamwork, peer learning, collaborative knowledge building, and organized document management, allowing learners to construct knowledge collectively within a digital environment.",
+      "explanation_hindi": "सही उत्तर (b) है। एक सहयोगात्मक विकी एक इंटरैक्टिव वेब-आधारित कार्यक्षेत्र है जहाँ छात्र सामूहिक रूप से समूह परियोजनाओं के लिए डिजिटल सामग्री का निर्माण, संपादन, संरचना और परिष्कृत कर सकते हैं। विकी संपादन इतिहास को ट्रैक करता है, व्यक्तिगत समूह सदस्यों के योगदान को श्रेय देता है, और वास्तविक समय में सह-लेखन का समर्थन करता है। यह उपकरण टीमवर्क, सहकर्मी सीखने, सहयोगात्मक ज्ञान निर्माण, और संगठित दस्तावेज़ प्रबंधन को बढ़ावा देता है, जिससे शिक्षार्थियों को एक डिजिटल वातावरण में सामूहिक रूप से ज्ञान का निर्माण करने की अनुमति मिलती है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Collaborative wikis enhance teamwork and peer learning.",
+        "They allow real-time co-authoring and track contributions.",
+        "Printed answer key: (B) A web workspace where students can coauthor and organize content collectively for projects."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "223b922d-fa68-438f-93ca-edf585eda086",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक स्मार्ट कक्षा में डिजिटल विज़ुअलाइज़र (दस्तावेज़ कैमरा) का मुख्य उपयोग क्या है?",
+      "options_hindi": [
+        "डिजिटल छात्र उपस्थिति रिकॉर्ड को एन्क्रिप्टेड बाहरी सर्वर एरे पर सुरक्षित रूप से संग्रहीत करना",
+        "लिखित पाठ फ़ाइलों को स्वचालित रूप से विदेशी भाषा ऑडियो फ़ीड में अनुवाद करना",
+        "भौतिक वस्तुओं या दस्तावेज़ों के बढ़ाए गए वास्तविक समय के चित्रों को प्रदर्शन स्क्रीन पर प्रक्षिप्त करना",
+        "पर्यावरणीय तापमान, सापेक्ष"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "A digital visualizer (document camera) in a smart classroom is primarily used to:",
+      "options_english": [
+        "Store digital student attendance records securely on encrypted external server arrays",
+        "Translate written text files into foreign language audio feeds automatically in real time",
+        "Project enlarged real-time images of physical objects or documents onto a display screen",
+        "Measure the ambient temperature, relative"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A digital visualizer, also known as a document camera, captures high-resolution real-time video images of physical objects, printed documents, handwritten notes, or biological specimens placed under its lens. By transmitting these live visual feeds directly onto a central interactive display or projector screen, educators can demonstrate intricate physical details clearly to an entire classroom simultaneously, enhancing visual explanations, interactive experiments, and collaborative group discussions during instruction.",
+      "explanation_hindi": "सही उत्तर (c) है। डिजिटल विज़ुअलाइज़र, जिसे दस्तावेज़ कैमरा भी कहा जाता है, भौतिक वस्तुओं, मुद्रित दस्तावेज़ों, हस्तलिखित नोट्स, या जैविक नमूनों के उच्च-रिज़ॉल्यूशन वास्तविक समय के वीडियो चित्रों को कैप्चर करता है जो इसके लेंस के नीचे रखे जाते हैं। इन लाइव दृश्य फ़ीड को सीधे एक केंद्रीय इंटरैक्टिव डिस्प्ले या प्रोजेक्टर स्क्रीन पर प्रसारित करके, शिक्षक पूरे कक्षा को एक साथ जटिल भौतिक विवरण स्पष्ट रूप से प्रदर्शित कर सकते हैं, जिससे दृश्य व्याख्याओं, इंटरैक्टिव प्रयोगों और शिक्षण के दौरान सहयोगी समूह चर्चाओं को बढ़ावा मिलता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "easy",
+      "key_facts": [
+        "Digital visualizers enhance classroom engagement.",
+        "They project real-time images for better understanding.",
+        "Printed answer key: (C) Project enlarged real-time images of physical objects or documents onto a display screen.",
+        "Used for interactive teaching and demonstrations."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ed223137-8d3f-40e1-9487-08c7e4e98609",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "89. एक LMS में कौन सी विशेषता शिक्षकों और छात्रों के बीच वास्तविक समय, इंटरैक्टिव ऑडियो-वीडियो शिक्षण की अनुमति देती है?",
+      "options_hindi": [
+        "स्थिर PDF दस्तावेज़ रेंडरिंग और दृश्यता इंजन मॉड्यूल",
+        "ऑफलाइन ZIP संग्रह निकालने वाला और फ़ाइल संकुचन उपकरण",
+        "एकीकृत वर्चुअल क्लासरूम या वीडियो कॉन्फ्रेंसिंग मॉड्यूल",
+        "स्वचालित ईमेल डाइजेस्ट जनरेटर और सूचना उपयोगिताएँ"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which feature in an LMS permits real-time, interactive audio-video instruction between teachers and students?",
+      "options_english": [
+        "Static PDF document rendering and viewing engine modules",
+        "Offline ZIP archive extractor and file compression tools",
+        "Integrated Virtual Classroom or Video Conferencing Module",
+        "Automated email digest generator and notification utilities"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "An integrated virtual classroom or video conferencing module within a Learning Management System enables real-time synchronous distance education. This tool supports live high-definition video and audio communication, interactive screen sharing, digital whiteboard collaboration, dynamic text chat, and breakout rooms. It enables teachers to conduct live interactive lectures, guide group discussions, host virtual office hours, and deliver immediate instruction to remote or hybrid student cohorts seamlessly.",
+      "explanation_hindi": "सही उत्तर (c) है। एकीकृत वर्चुअल क्लासरूम या वीडियो कॉन्फ्रेंसिंग मॉड्यूल एक लर्निंग मैनेजमेंट सिस्टम के भीतर वास्तविक समय में समकालिक दूरस्थ शिक्षा को सक्षम बनाता है। यह उपकरण लाइव उच्च-परिभाषा वीडियो और ऑडियो संचार, इंटरैक्टिव स्क्रीन साझा करना, डिजिटल व्हाइटबोर्ड सहयोग, गतिशील पाठ चैट और ब्रेकआउट कमरों का समर्थन करता है। यह शिक्षकों को लाइव इंटरैक्टिव व्याख्यान आयोजित करने, समूह चर्चाओं का मार्गदर्शन करने, वर्चुअल कार्यालय घंटे आयोजित करने और दूरस्थ या हाइब्रिड छात्र समूहों को तुरंत निर्देश देने की अनुमति देता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Integrated virtual classrooms facilitate real-time interaction.",
+        "Video conferencing modules enhance distance education.",
+        "Printed answer key: (C) Integrated Virtual Classroom or Video",
+        "Supports various interactive teaching methods."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "4e933f7f-3148-4881-bc60-08dfb1b88299",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "23. विद्यालय सेटअप में अवकाश प्रबंधन के संबंध में स्टाफ एचआर मॉड्यूल क्या कार्य करता है?",
+      "options_hindi": [
+        "अवकाश संतुलन का प्रबंधन और प्रशासनिक अनुमोदन कार्यप्रवाह को संसाधित करना",
+        "प्रबंधन की पूर्व अनुमति के बिना बाहरी अस्थायी स्टाफ सदस्यों की सीधी भर्ती को सुविधाजनक बनाना",
+        "अनुपस्थित शिक्षण कर्मियों को दैनिक कक्षा गृहकार्य कार्यों को स्वचालित रूप से सौंपना",
+        "व्यक्तिगत वेतन के आधार पर विद्यालय स्टाफ की वार्षिक सार्वजनिक रैंकिंग सूचियों को प्रकाशित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What function does the Staff HR Module perform regarding leave management in a school setup?",
+      "options_english": [
+        "Managing leave balances and processing administrative approval workflows",
+        "Facilitating direct hiring of external temporary staff members without prior management approval",
+        "Automatically assigning daily classroom homework tasks to absent teaching personnel",
+        "Publishing annual public ranking lists of school staff based strictly on individual salary"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The Staff HR Module plays a crucial role in managing leave balances and processing administrative approval workflows in a school setting. This function ensures that staff members can request leave efficiently while maintaining accurate records of leave balances. By streamlining the approval process, the module helps administrators manage staffing levels effectively, ensuring that the school operates smoothly even when staff are absent. This is essential for maintaining educational continuity and supporting both staff and student needs.",
+      "explanation_hindi": "सही उत्तर (a) है। स्टाफ एचआर मॉड्यूल विद्यालय सेटअप में अवकाश संतुलन का प्रबंधन और प्रशासनिक अनुमोदन कार्यप्रवाह को संसाधित करने में महत्वपूर्ण भूमिका निभाता है। यह कार्य सुनिश्चित करता है कि स्टाफ सदस्य प्रभावी ढंग से अवकाश का अनुरोध कर सकें जबकि अवकाश संतुलन का सटीक रिकॉर्ड बनाए रखा जा सके। अनुमोदन प्रक्रिया को सुव्यवस्थित करके, यह मॉड्यूल प्रशासकों को स्टाफिंग स्तरों का प्रभावी ढंग से प्रबंधन करने में मदद करता है, यह सुनिश्चित करते हुए कि विद्यालय सुचारू रूप से कार्य करता है, भले ही स्टाफ अनुपस्थित हो। यह शैक्षणिक निरंतरता बनाए रखने और स्टाफ और छात्र दोनों की आवश्यकताओं का समर्थन करने के लिए आवश्यक है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Staff HR Module is essential for managing leave balances.",
+        "Streamlines administrative approval workflows.",
+        "Ensures smooth operation of the school during staff absences.",
+        "Printed answer key: (A) Managing leave balances and processing administrative approval workflows"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "13acedf9-9efc-43f7-b709-8c061b8dfda4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "2. ब्लॉक/जिला स्तर पर डेटा सत्यापन और प्रमाणीकरण",
+      "options_hindi": [
+        "विकल्प ए",
+        "विकल्प बी",
+        "विकल्प सी",
+        "विकल्प डी"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Data Validation and Verification at Block/District Level",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Interactive Whiteboards enhance active classroom engagement by capturing user touch or stylus input directly on a digitized projection surface. The system detects physical touch signals and converts them into immediate software commands, allowing educators and students to annotate diagrams, manipulate digital objects, and navigate software applications directly from the board. This real-time interactive capability transforms passive viewing into a hands-on, collaborative learning experience that significantly boosts student participation.",
+      "explanation_hindi": "सही उत्तर (a) है। इंटरैक्टिव व्हाइटबोर्ड सक्रिय कक्षा सहभागिता को बढ़ाते हैं, क्योंकि वे उपयोगकर्ता के स्पर्श या स्टाइलस इनपुट को सीधे डिजिटाइज्ड प्रक्षिप्ति सतह पर कैप्चर करते हैं। यह प्रणाली भौतिक स्पर्श संकेतों का पता लगाती है और उन्हें तात्कालिक सॉफ़्टवेयर आदेशों में परिवर्तित करती है, जिससे शिक्षकों और छात्रों को आरेखों पर टिप्पणी करने, डिजिटल वस्तुओं को संचालित करने और सीधे बोर्ड से सॉफ़्टवेयर अनुप्रयोगों को नेविगेट करने की अनुमति मिलती है। यह वास्तविक समय की इंटरैक्टिव क्षमता निष्क्रिय दृश्यता को एक व्यावहारिक, सहयोगात्मक शिक्षण अनुभव में बदल देती है, जो छात्र भागीदारी को महत्वपूर्ण रूप से बढ़ाती है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Interactive Whiteboards facilitate real-time interaction.",
+        "They convert touch input into software commands.",
+        "Printed answer key: (A) Translating user touch or stylus input into"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8ac66056-3bd0-476c-99d1-3d93124eb259",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "94. डिजिटल पेडागॉजी में शिक्षकों के लिए निरंतर व्यावसायिक विकास (CPD) आवश्यक है क्योंकि:",
+      "options_hindi": [
+        "हार्डवेयर कॉन्फ़िगरेशन हर सप्ताह संस्थागत नेटवर्क में स्थायी रूप से बदलते हैं",
+        "संविधानिक शैक्षिक कानूनों द्वारा मैनुअल शिक्षण विधियों पर पूरी तरह से प्रतिबंध है",
+        "शिक्षक लाइसेंस स्वचालित रूप से समाप्त हो जाते हैं जब तक कि वे वार्षिक रूप से शैक्षिक सॉफ़्टवेयर ऐप्स प्रकाशित नहीं करते",
+        "तकनीकी उपकरण और विधियाँ विकसित होती हैं, जो शिक्षण के लिए निरंतर कौशल उन्नयन की आवश्यकता होती है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Continuous Professional Development (CPD) for teachers in digital pedagogy is necessary because:",
+      "options_english": [
+        "Hardware configurations change permanently every week across institutional networks",
+        "Manual teaching methods are completely banned by federal educational laws",
+        "Teacher licenses expire automatically unless they publish educational software apps annually",
+        "Technological tools and methods evolve, requiring ongoing skill upgrades for instruction"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Continuous Professional Development in digital pedagogy is essential for teachers because technological tools and methods evolve, requiring ongoing skill upgrades for instruction. As technology advances, educators must stay updated with the latest tools and methodologies to effectively engage students and enhance learning outcomes. This ongoing training ensures that teachers can utilize new technologies to their fullest potential, thereby improving the educational experience.",
+      "explanation_hindi": "सही उत्तर (d) है। डिजिटल पेडागॉजी में निरंतर व्यावसायिक विकास शिक्षकों के लिए आवश्यक है क्योंकि तकनीकी उपकरण और विधियाँ विकसित होती हैं, जो शिक्षण के लिए निरंतर कौशल उन्नयन की आवश्यकता होती है। जैसे-जैसे तकनीक में प्रगति होती है, शिक्षकों को नवीनतम उपकरणों और विधियों के साथ अद्यतित रहना चाहिए ताकि वे छात्रों को प्रभावी ढंग से संलग्न कर सकें और सीखने के परिणामों को बढ़ा सकें। यह निरंतर प्रशिक्षण सुनिश्चित करता है कि शिक्षक नई तकनीकों का पूरा लाभ उठा सकें, जिससे शैक्षिक अनुभव में सुधार होता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Continuous Professional Development (CPD) is crucial for educators in adapting to technological changes.",
+        "Ongoing skill upgrades are necessary to effectively utilize evolving educational tools.",
+        "Printed answer key: (D) Technological tools and methods evolve, requiring ongoing skill upgrades for instruction."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c33ce7d9-f5a0-40cf-a2b5-64e1b108e470",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "39. निम्नलिखित में से कौन सा एक प्रमुख विशेषता है जो स्वचालित डिजिटल मूल्यांकन प्लेटफार्मों के माध्यम से प्रदान की गई प्रारूपिक फीडबैक में होती है?",
+      "options_hindi": [
+        "चुने गए विकल्पों से जुड़े तात्कालिक निदान स्पष्टीकरण जो सीखने को मजबूत करते हैं",
+        "शैक्षणिक सत्र के अंत के कई महीने बाद प्रदान की गई देरी से प्रदर्शन फीडबैक",
+        "आइटम-स्तरीय ब्रेकडाउन या स्पष्टीकरणात्मक फीडबैक नोट्स के बिना अंतिम स्कोर कुल",
+        "सभी क्षेत्रीय संस्थागत परीक्षा देने वालों की सार्वजनिक ऑनलाइन तुलना करने वाली मानकीकृत रैंकिंग सूची"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following is a key feature of formative feedback delivered through automated digital assessment platforms?",
+      "options_english": [
+        "Immediate diagnostic explanations linked to selected options to reinforce learning",
+        "Delayed performance feedback provided several months after the end of the academic term",
+        "Final score totals displayed without item-level breakdowns or explanatory feedback notes",
+        "Standardized ranking lists comparing all regional institutional test takers publicly online"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Formative feedback provided by automated assessment platforms delivers immediate diagnostic explanations mapped directly to student option choices. When a student answers a quiz item, the system instantly presents targeted feedback explaining why a selected choice is correct or incorrect. This immediate response reinforces correct concepts while misconceptions are fresh in the learner’s mind, turning routine assessment activities into valuable self-directed learning opportunities that foster continuous cognitive development.",
+      "explanation_hindi": "सही उत्तर (a) है। स्वचालित मूल्यांकन प्लेटफार्मों द्वारा प्रदान की गई प्रारूपिक फीडबैक तात्कालिक निदान स्पष्टीकरण प्रदान करती है जो सीधे छात्र के विकल्पों से जुड़ी होती है। जब एक छात्र एक प्रश्न का उत्तर देता है, तो प्रणाली तुरंत लक्षित फीडबैक प्रस्तुत करती है जो बताती है कि चयनित विकल्प सही या गलत क्यों है। यह तात्कालिक प्रतिक्रिया सही अवधारणाओं को मजबूत करती है जबकि भ्रांतियाँ छात्र के मन में ताजा होती हैं, जिससे नियमित मूल्यांकन गतिविधियाँ मूल्यवान आत्म-निर्देशित शिक्षण अवसरों में परिवर्तित होती हैं जो निरंतर संज्ञानात्मक विकास को बढ़ावा देती हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Formative feedback provides immediate diagnostic explanations.",
+        "Printed answer key: (A) Immediate diagnostic explanations linked to selected options to reinforce learning."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6ad0a29f-1f09-4dcc-bdb7-ab5898689d7c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "36. डिजिटल मूल्यांकन के दौरान लॉकडाउन ब्राउज़र परीक्षण की अखंडता को बनाए रखने के लिए मुख्य रूप से:\n(1) ग्रेडिंग पूरी होने के बाद छात्र के पाठ सबमिशन को एन्क्रिप्ट करना\n(2) निबंध लेखन परीक्षाओं के दौरान छात्र की व्याकरणिक त्रुटियों को स्वचालित रूप से सुधारना\n(3) कंप्यूटर प्रयोगशालाओं में जुड़े मूल्यांकन उपकरणों के लिए इंटरनेट कनेक्शन की गति बढ़ाना",
+      "options_hindi": [
+        "छात्रों को बाहरी टैब खोलने से रोकना",
+        "छात्रों के ग्रेडिंग के बाद पाठ सबमिशन को एन्क्रिप्ट करना",
+        "छात्रों की व्याकरणिक त्रुटियों को सुधारना",
+        "इंटरनेट कनेक्शन की गति बढ़ाना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Lockdown browsers used during digital assessments serve to maintain test integrity primarily by:\n(1) Encrypting student text submissions after grading is fully completed by instructors\n(2) Automatically correcting student grammatical errors during essay writing examinations\n(3) Increasing internet connection speeds for connected assessment devices in computer labs",
+      "options_english": [
+        "Preventing students from opening external tabs, copying text, or using unauthorized apps",
+        "Encrypting student text submissions after grading is fully completed by instructors",
+        "Automatically correcting student grammatical errors during essay writing examinations",
+        "Increasing internet connection speeds for connected assessment devices in computer labs"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Lockdown browsers preserve examination integrity during digital assessments by temporarily restricting student device functionality. When activated, the software locks the testing workspace, preventing candidates from opening external web browser tabs, running unauthorized applications, taking screen captures, or copying and pasting content. By creating a controlled digital environment on the user device, lockdown browsers minimize opportunities for digital cheating and ensure fair evaluation conditions for remote or computer-lab exams.",
+      "explanation_hindi": "सही उत्तर (d) है। लॉकडाउन ब्राउज़र डिजिटल मूल्यांकन के दौरान परीक्षा की अखंडता को बनाए रखने के लिए छात्र के उपकरण की कार्यक्षमता को अस्थायी रूप से प्रतिबंधित करके काम करते हैं। जब सक्रिय किया जाता है, तो सॉफ़्टवेयर परीक्षण कार्यक्षेत्र को लॉक कर देता है, जिससे उम्मीदवारों को बाहरी वेब ब्राउज़र टैब खोलने, अनधिकृत अनुप्रयोग चलाने, स्क्रीन कैप्चर करने या सामग्री को कॉपी और पेस्ट करने से रोका जाता है। उपयोगकर्ता उपकरण पर एक नियंत्रित डिजिटल वातावरण बनाकर, लॉकडाउन ब्राउज़र डिजिटल धोखाधड़ी के अवसरों को कम करते हैं और दूरस्थ या कंप्यूटर-लैब परीक्षाओं के लिए निष्पक्ष मूल्यांकन स्थितियों को सुनिश्चित करते हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Lockdown browsers restrict device functionality during assessments.",
+        "They prevent unauthorized access to external resources.",
+        "Printed answer key: (D) Preventing students from opening external"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "28519d10-a509-4394-94ec-5e1aa7075db3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "92. एक स्मार्ट कक्षा पाठ योजना में डिजिटल सामग्री अनुकरण को एकीकृत करने के लिए सही क्रियाओं का क्रम चुनें:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct sequence of actions for integrating a digital content simulation into a smart classroom lesson plan:",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Integrating a digital simulation into a smart classroom lesson follows four logical pedagogical steps. First, the teacher defines specific learning objectives and identifies suitable simulation models. Next, the teacher pre-screens and technical-tests the simulation software for compatibility and instructional fit. Third, during class, the instructor facilitates student interaction and active exploration using the simulation. Finally, a post-activity debrief and diagnostic evaluation consolidate learning.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल अनुकरण को स्मार्ट कक्षा पाठ योजना में एकीकृत करने के लिए चार तार्किक शैक्षिक चरणों का पालन किया जाता है। पहले, शिक्षक विशिष्ट शिक्षण उद्देश्यों को परिभाषित करता है और उपयुक्त अनुकरण मॉडल की पहचान करता है। अगला, शिक्षक अनुकरण सॉफ़्टवेयर की संगतता और शैक्षिक उपयुक्तता के लिए पूर्व-स्क्रीनिंग और तकनीकी परीक्षण करता है। तीसरे, कक्षा के दौरान, प्रशिक्षक छात्रों की सहभागिता और सक्रिय अन्वेषण को सुविधाजनक बनाता है। अंत में, एक पोस्ट-गतिविधि डिब्रीफ और नैदानिक मूल्यांकन सीखने को मजबूत करता है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Integrating digital simulations enhances interactive learning.",
+        "Pedagogical steps include defining objectives, testing software, facilitating interaction, and evaluating.",
+        "Printed answer key: (A) 1 → 2 → 3 → 4"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b55d7b82-691a-4c0d-ae0c-d5101b4c22ca",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दिए गए दो कथन हैं: एक को\nअसर्शन (A) के रूप में लेबल किया गया है\nऔर दूसरे को कारण (R) के रूप में लेबल किया गया है।",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R).",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Gamification strategies effectively boost student motivation and active engagement by integrating dynamic game design elements into instructional environments. Mechanics such as earning points, unlocking achievement badges, competing on leaderboards, and tracking progress bars stimulate both intrinsic curiosity and extrinsic accomplishment drivers. These features transform routine learning tasks into rewarding challenges, encourage continuous participation, provide immediate positive reinforcement, and sustain long-term learner commitment throughout digital educational programs.",
+      "explanation_hindi": "सही उत्तर (a) है। गेमिफिकेशन रणनीतियाँ छात्रों की प्रेरणा और सक्रिय भागीदारी को बढ़ाने में प्रभावी होती हैं, जो शैक्षणिक वातावरण में गतिशील खेल डिज़ाइन तत्वों को एकीकृत करती हैं। अंक अर्जित करने, उपलब्धि बैज अनलॉक करने, लीडरबोर्ड पर प्रतिस्पर्धा करने और प्रगति बार को ट्रैक करने जैसे तंत्र अंतर्निहित जिज्ञासा और बाह्य उपलब्धि प्रेरकों को उत्तेजित करते हैं। ये विशेषताएँ नियमित सीखने के कार्यों को पुरस्कृत चुनौतियों में बदल देती हैं, निरंतर भागीदारी को प्रोत्साहित करती हैं, तात्कालिक सकारात्मक सुदृढीकरण प्रदान करती हैं, और डिजिटल शैक्षिक कार्यक्रमों के दौरान दीर्घकालिक शिक्षार्थी प्रतिबद्धता को बनाए रखती हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Gamification enhances student engagement.",
+        "Dynamic game design elements are integrated into learning.",
+        "Printed answer key: (A) Both A and R are true and R is the correct"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "370412ec-5f05-4ebd-801f-8bcd1b6eb8e6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "49. एक अनुकूली LMS एल्गोरिदम छात्र के लिए अगली सीखने की गतिविधि का निर्धारण कैसे करता है?",
+      "options_hindi": [
+        "सर्वर डेटाबेस सरणी से अगली सामग्री वस्तुओं का यादृच्छिक चयन करना",
+        "वास्तविक समय की सटीकता, प्रतिक्रिया गति, और प्रदर्शन मैट्रिक्स का विश्लेषण करना",
+        "कोर्स विषयों के कठोर वर्णानुक्रमीय अनुक्रम का पालन करना",
+        "कक्षा में छात्र की भौतिक बैठने की स्थिति की जांच करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "How does an adaptive LMS algorithm determine the next learning activity for a student?",
+      "options_english": [
+        "Randomly selecting next content items from the server database array",
+        "Analyzing real-time accuracy, response speed, and performance metrics",
+        "Following an unchangeable, rigid alphabetical index of course topics",
+        "Checking the physical seating position of the student in the classroom"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Adaptive LMS algorithms determine personalized learning pathways by continuously analyzing real-time student interaction metrics, including answer accuracy, task completion speed, attempt frequency, and diagnostic test performance. Based on this dynamic statistical evaluation, the platform automatically adjusts subsequent instructional activities, providing corrective remedial exercises when difficulties are detected or advancing the student to higher-level enrichment challenges, thereby ensuring optimal individual cognitive growth and engagement.",
+      "explanation_hindi": "सही उत्तर (b) है। अनुकूली LMS एल्गोरिदम व्यक्तिगत सीखने के मार्गों का निर्धारण करते हैं, जो वास्तविक समय में छात्र इंटरैक्शन मैट्रिक्स का निरंतर विश्लेषण करते हैं, जिसमें उत्तर की सटीकता, कार्य पूर्णता की गति, प्रयास की आवृत्ति और निदान परीक्षण का प्रदर्शन शामिल है। इस गतिशील सांख्यिकीय मूल्यांकन के आधार पर, प्लेटफ़ॉर्म स्वचालित रूप से अगली शैक्षणिक गतिविधियों को समायोजित करता है, जब कठिनाइयों का पता लगाया जाता है तो सुधारात्मक उपचारात्मक अभ्यास प्रदान करता है या छात्र को उच्च-स्तरीय समृद्धि चुनौतियों की ओर बढ़ाता है, जिससे व्यक्तिगत संज्ञानात्मक विकास और संलग्नता सुनिश्चित होती है।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "Adaptive LMS algorithms analyze real-time student interaction metrics.",
+        "Printed answer key: (B) Analyzing real-time accuracy, response speed, and performance metrics",
+        "Personalized learning pathways are created based on dynamic evaluations.",
+        "Corrective exercises are provided when difficulties are detected."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6fff86dd-3aef-4245-b01f-dda84e79f612",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "66. डिजिटल प्रश्न भंडार उच्च-स्टेक मूल्यांकन के दौरान परीक्षण सुरक्षा को कैसे बढ़ाते हैं?",
+      "options_hindi": [
+        "एक बड़े आइटम पूल से समान प्रश्नों के अद्वितीय, यादृच्छिक उपसमुच्चय उत्पन्न करना",
+        "परीक्षा तिथियों से पहले भौतिक कक्षा वितरण के लिए समान हार्ड कॉपी प्रिंट करना",
+        "सभी उम्मीदवारों को ऑनलाइन समान अनुक्रम में परीक्षा प्रश्नों का उत्तर देने की आवश्यकता",
+        "परीक्षा निष्पादन से पहले सभी परीक्षण प्रश्नों को सार्वजनिक वेब पोर्टलों पर प्रकाशित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Digital Classrooms, LMS, and Online Assessment",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "66. How do digital question repositories enhance test security during high-stakes evaluations?",
+      "options_english": [
+        "Generating unique, randomized subsets of equivalent questions from a large item pool",
+        "Printing identical hard copies for physical classroom distribution prior to test dates",
+        "Requiring all candidates to answer exam questions in identical sequential order online",
+        "Publishing all test questions on public web portals prior to examination execution"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Digital question repositories bolster assessment security by enabling the automatic generation of unique, randomized test forms from extensive pools of calibrated items. Because the system selects different equivalent subsets of questions and randomizes their display order for each candidate, students sitting for the exam simultaneously receive distinct question sets, effectively eliminating opportunities for peer copying and preserving evaluation fairness in high-stakes online exams.",
+      "explanation_hindi": "सही उत्तर (a) है। डिजिटल प्रश्न भंडार मूल्यांकन सुरक्षा को बढ़ाते हैं क्योंकि वे कैलिब्रेटेड आइटम के व्यापक पूल से अद्वितीय, यादृच्छिक परीक्षण रूपों के स्वचालित उत्पादन की अनुमति देते हैं। चूंकि प्रणाली प्रत्येक उम्मीदवार के लिए प्रश्नों के विभिन्न समान उपसमुच्चय का चयन करती है और उनके प्रदर्शन के क्रम को यादृच्छिक बनाती है, इसलिए परीक्षा में बैठने वाले छात्रों को एक साथ अलग प्रश्न सेट प्राप्त होते हैं, जो सहपाठी की नकल के अवसरों को प्रभावी ढंग से समाप्त करते हैं और उच्च-स्टेक ऑनलाइन परीक्षाओं में मूल्यांकन की निष्पक्षता को बनाए रखते हैं।",
+      "topic": "Digital Classrooms, LMS, and Online Assessment",
+      "difficulty": "medium",
+      "key_facts": [
+        "यादृच्छिक प्रश्न सेट परीक्षा सुरक्षा को बढ़ाते हैं।",
+        "समान प्रश्नों के उपसमुच्चय उत्पन्न करना आवश्यक है।",
+        "उम्मीदवारों के लिए प्रश्नों का क्रम यादृच्छिक होता है।",
+        "Printed answer key: (A) Generating unique, randomized subsets of"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

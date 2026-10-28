@@ -1,0 +1,781 @@
+{
+  "test_id": "0ecf9c3a-e169-4444-b801-f60d603643fd",
+  "test_name": "Topic Test: EDUCATIONAL_MEASUREMENT_CONCEPTS_TOOLS_AND_TECHNIQUES - Part 1",
+  "type": "topic_wise",
+  "topic": "educational_measurement_concepts_tools_and_techniques",
+  "created_at": "2026-10-28T18:55:06.623936",
+  "questions": [
+    {
+      "id": "dca56b58-46ec-4ef7-941f-1c2c5bd52d2d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "56. नीचे दो कथन दिए गए हैं: एक को आश्वासन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है। \nआश्वासन (A): मानक-संदर्भित परीक्षण के लिए, जो भेदभाव को अधिकतम करने के लिए डिज़ाइन किया गया है, 0.50 के आसपास कठिनाई सूचकांक वाली वस्तुएं सबसे पसंदीदा होती हैं। \nकारण (R): 0.50 के कठिनाई स्तर वाली वस्तुएं उच्च-प्राप्त करने वाले और निम्न-प्राप्त करने वाले छात्रों के बीच भेद करने की उच्चतम गणितीय क्षमता रखती हैं।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R, A का सही स्पष्टीकरण है",
+        "दोनों A और R सत्य हैं लेकिन R, A का सही स्पष्टीकरण नहीं है",
+        "A सत्य है लेकिन R गलत है",
+        "A गलत है लेकिन R सत्य है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). \nAssertion (A): For a norm-referenced test designed to maximize discrimination, items with a difficulty index around 0.50 are most preferred. \nReason (R): Items with a difficulty level of 0.50 have the highest mathematical potential to differentiate between high-achieving and low-achieving students.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "On norm-referenced tests, items with a difficulty index around 0.50 are preferred because they maximize score variance. When half the examinees pass and half fail an item, the item reaches its maximum mathematical capacity to differentiate between high-performing and low-performing students.",
+      "explanation_hindi": "सही उत्तर (a) है। मानक-संदर्भित परीक्षणों में, 0.50 के आसपास कठिनाई सूचकांक वाली वस्तुएं पसंद की जाती हैं क्योंकि ये स्कोर भिन्नता को अधिकतम करती हैं। जब आधे परीक्षार्थी एक वस्तु में पास होते हैं और आधे फेल होते हैं, तो वह वस्तु उच्च-प्राप्त करने वाले और निम्न-प्राप्त करने वाले छात्रों के बीच भेद करने की अपनी अधिकतम गणितीय क्षमता तक पहुँच जाती है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Items with a difficulty index around 0.50 maximize score variance.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "456e8bb0-7b74-4821-99e8-bc59ed152f4b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "58. भेदभाव सूचकांक (D) की गणना के लिए निम्नलिखित सूत्र पर विचार करें:\nD = (Ru - Rl) / N\nजहाँ Ru उच्च समूह में सही उत्तरों की संख्या है, Rl निम्न समूह में सही उत्तरों की संख्या है, और N एक समूह में छात्रों की संख्या है।\nयदि एक आइटम को उच्च समूह में 25 छात्रों द्वारा (N=30) और निम्न समूह में 15 छात्रों द्वारा (N=30) सही उत्तर दिया गया है, तो भेदभाव सूचकांक क्या होगा:",
+      "options_hindi": [
+        "0.50",
+        "0.33",
+        "0.66",
+        "0.25"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "58. Consider the following formula for calculating the discrimination index (D):\nD = (Ru - Rl) / N\nWhere Ru is the number of correct responses in the upper group, Rl is the number of correct responses in the lower group, and N is the number of students in one group.\nIf an item is answered correctly by 25 students in the upper group (N=30) and by 15 students in the lower group (N=30), what is the discrimination index?",
+      "options_english": [
+        "0.50",
+        "0.33",
+        "0.66",
+        "0.25"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The discrimination index is calculated by subtracting the number of correct responses in the lower group from the number of correct responses in the upper group and then dividing by the total number of students in one group. In this case, D = (25 - 15) / 30 = 0.33. This indicates that the item effectively differentiates between the two groups.",
+      "explanation_hindi": "सही उत्तर (b) है। भेदभाव सूचकांक को निम्न समूह में सही उत्तरों की संख्या को उच्च समूह में सही उत्तरों की संख्या से घटाकर और फिर एक समूह में छात्रों की कुल संख्या से विभाजित करके गणना की जाती है। इस मामले में, D = (25 - 15) / 30 = 0.33। यह दर्शाता है कि आइटम दोनों समूहों के बीच प्रभावी रूप से भेद करता है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "The formula for discrimination index helps in understanding item effectiveness.",
+        "Printed answer key: (B) 0.33"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d1041cc3-7906-47f4-bf7d-8c6dbf91a2b8",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "60. एक प्रधान के रूप में, जब आप एक मध्य-कालीन परीक्षा के लिए एक वस्तु विश्लेषण रिपोर्ट की समीक्षा कर रहे हैं, तो आपको उस वस्तु के लिए कौन सा कार्य सिफारिश करना चाहिए जिसका कठिनाई सूचकांक 0.15 और विभेदन सूचकांक -0.20 है?",
+      "options_hindi": [
+        "उक्त वस्तु को परीक्षा में बनाए रखें क्योंकि यह सबसे उज्ज्वल उच्च-प्रदर्शन करने वाले छात्रों को प्रभावी रूप से चुनौती देती है",
+        "छात्रों के आत्मविश्वास को जल्दी बढ़ाने में मदद करने के लिए वस्तु को परीक्षा पत्र के बहुत शुरुआत में ले जाएं",
+        "वस्तु को अस्वीकार करें या पूरी तरह से फिर से लिखें क्योंकि यह मनोमिति से दोषपूर्ण और भ्रमित करने वाली है",
+        "परीक्षा पत्र में वस्तु को अपरिवर्तित रखें लेकिन इसके व्यक्तिगत स्कोरिंग वजन मूल्य को समायोजित करें"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "As a Principal reviewing an item analysis report for a mid-term examination, what action should you recommend for an item that has a difficulty index of 0.15 and a discrimination index of -0.20?",
+      "options_english": [
+        "Retain the item in the exam as it effectively challenges the brightest high-achieving students",
+        "Move the item to the very beginning of the exam paper to help build student confidence early",
+        "Reject or completely rewrite the item because it is psychometrically flawed and confusing",
+        "Retain the item unchanged in the paper but adjust its individual scoring weightage value"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "An item with a low difficulty index of 0.15 and a negative discrimination index of -0.20 is both extremely difficult and psychometrically inverse. It penalizes high-achieving students while favoring lower performers, indicating flawed construction or incorrect keying, and should be rejected or completely rewritten.",
+      "explanation_hindi": "सही उत्तर (c) है। एक वस्तु जिसका कठिनाई सूचकांक 0.15 और नकारात्मक विभेदन सूचकांक -0.20 है, वह अत्यधिक कठिन और मनोमिति से विपरीत है। यह उच्च प्रदर्शन करने वाले छात्रों को दंडित करता है जबकि निम्न प्रदर्शन करने वालों को लाभ पहुंचाता है, जो दोषपूर्ण निर्माण या गलत कुंजीकरण को इंगित करता है, और इसे अस्वीकार या पूरी तरह से फिर से लिखा जाना चाहिए।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "hard",
+      "key_facts": [
+        "A low difficulty index with a negative discrimination index indicates flawed items.",
+        "Printed answer key: (C) Reject or completely rewrite the item because it is psychometrically flawed and confusing."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7fcc850b-f454-4f4f-95b8-61f8d811950f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "34. प्रश्नावली शैक्षिक अनुसंधान और प्रशासन में मापन का एक सामान्य उपकरण है। निम्नलिखित में से कौन-सी एक प्रमुख सीमा है बंद-समाप्त प्रश्नावली का उपयोग करने की?",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "यह उत्तरदाताओं को पूर्वनिर्धारित विकल्पों तक सीमित करता है,",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Questionnaires are a common tool of measurement in educational research and administration. Which of the following is a primary limitation of using a closed-ended questionnaire?",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "It restricts respondents to predefined options,",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Closed-ended questionnaires limit respondents to fixed, predetermined response options, preventing individuals from elaborating on their answers or expressing complex, nuanced viewpoints. While this structure facilitates rapid, objective scoring across large samples, it inherently restricts qualitative depth, potentially overlooking subtle contextual insights regarding student attitudes and perceptions.",
+      "explanation_hindi": "सही उत्तर (c) है। बंद-समाप्त प्रश्नावली उत्तरदाताओं को निश्चित, पूर्वनिर्धारित उत्तर विकल्पों तक सीमित करती है, जिससे व्यक्तियों को अपने उत्तरों को विस्तृत करने या जटिल, सूक्ष्म दृष्टिकोण व्यक्त करने से रोका जाता है। जबकि यह संरचना बड़े नमूनों में त्वरित, वस्तुनिष्ठ स्कोरिंग की सुविधा प्रदान करती है, यह स्वाभाविक रूप से गुणात्मक गहराई को सीमित करती है, जो छात्र दृष्टिकोण और धारणाओं के संबंध में सूक्ष्म संदर्भात्मक अंतर्दृष्टियों को नजरअंदाज कर सकती है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Closed-ended questionnaires limit qualitative depth.",
+        "Printed answer key: (C) It restricts respondents to predefined options."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2b2b2982-69a0-4bf4-8f72-0e1f2e06386a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दिए गए दो कथन हैं: एक को असर्शन के रूप में लेबल किया गया है और दूसरे को कारण (R) के रूप में लेबल किया गया है। \nअसर्शन: एक परीक्षण वैध नहीं हो सकता जब तक कि यह विश्वसनीय न हो। \nकारण (R): विश्वसनीयता यह सुनिश्चित करती है कि एक परीक्षण वास्तव में वही मापता है जो इसे मापने का इरादा है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है",
+        "A सत्य है लेकिन R गलत है",
+        "A गलत है लेकिन R सत्य है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion and the other is labelled as Reason (R). Assertion: A test cannot be valid unless it is reliable. Reason (R): Reliability guarantees that a test measures exactly what it intends to measure.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Reliability is a necessary precondition for validity, meaning a test cannot be valid unless it produces consistent scores across administrations. However, high reliability alone does not guarantee validity, because a test can consistently measure the wrong attribute. Validity specifically measures whether an instrument accurately assesses its intended theoretical construct.",
+      "explanation_hindi": "सही उत्तर (c) है। विश्वसनीयता वैधता के लिए एक आवश्यक पूर्वापेक्षा है, जिसका अर्थ है कि एक परीक्षण तब तक वैध नहीं हो सकता जब तक कि यह प्रशासन के दौरान सुसंगत स्कोर उत्पन्न न करे। हालाँकि, उच्च विश्वसनीयता अकेले वैधता की गारंटी नहीं देती है, क्योंकि एक परीक्षण लगातार गलत विशेषता को माप सकता है। वैधता विशेष रूप से यह मापती है कि क्या एक उपकरण अपने इच्छित सैद्धांतिक निर्माण का सही मूल्यांकन करता है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Reliability is necessary for validity.",
+        "High reliability does not guarantee validity.",
+        "Printed answer key: (C) A is true but R is false"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b2aaefdf-20ef-4e9e-a978-a8136c7bac1d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से कौन सा मूल्यांकन और आकलन के बीच संबंध को सही ढंग से वर्णित करता है?",
+      "options_hindi": [
+        "आकलन केवल समापनात्मक और उत्पाद-उन्मुख है, जबकि मूल्यांकन निरंतर और प्रक्रिया-उन्मुख है।",
+        "आकलन और मूल्यांकन को आधुनिक शैक्षिक नीति में पूरी तरह से परस्पर विनिमेय शब्दों के रूप में परिभाषित किया गया है।",
+        "आकलन प्रक्रिया-उन्मुख और निरंतर है, जबकि मूल्यांकन समापनात्मक और उत्पाद-उन्मुख है।",
+        "आकलन वर्णात्मक मूल्य निर्णय प्रदान करता है, जबकि मूल्यांकन केवल वस्तुनिष्ठ डेटा एकत्र करता है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Which of the following accurately describes the relationship between assessment and evaluation?",
+      "options_english": [
+        "Assessment is strictly summative and product-oriented, whereas evaluation is formative and ongoing",
+        "Assessment and evaluation are defined as fully interchangeable terms in modern educational policy",
+        "Assessment is formative and process-oriented, whereas evaluation is summative and product-oriented",
+        "Assessment provides descriptive value judgments, whereas evaluation merely collects objective data"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Assessment is an ongoing, formative process focused on gathering descriptive feedback during the learning cycle to diagnose weaknesses and enhance student understanding. Conversely, evaluation is typically summative and product-oriented, occurring at the conclusion of instruction to make definitive value judgments, award final grades, and certify overall educational outcomes against standards.",
+      "explanation_hindi": "सही उत्तर (c) है। आकलन एक निरंतर, प्रक्रिया-उन्मुख प्रक्रिया है जो सीखने के चक्र के दौरान वर्णात्मक फीडबैक एकत्रित करने पर केंद्रित होती है ताकि कमजोरियों का निदान किया जा सके और छात्र की समझ को बढ़ाया जा सके। इसके विपरीत, मूल्यांकन आमतौर पर समापनात्मक और उत्पाद-उन्मुख होता है, जो निर्देश के अंत में होता है ताकि निश्चित मूल्य निर्णय किए जा सकें, अंतिम ग्रेड दिए जा सकें और मानकों के खिलाफ समग्र शैक्षिक परिणामों को प्रमाणित किया जा सके।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "आकलन निरंतर और प्रक्रिया-उन्मुख होता है।",
+        "मूल्यांकन समापनात्मक और उत्पाद-उन्मुख होता है।",
+        "Printed answer key: (C) Assessment is formative and process-oriented, whereas evaluation is summative and product-oriented"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "38cc2b83-14ef-4618-8f8f-b672aefd72a7",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक स्कूल में संचयी रिकॉर्ड कार्ड (CRC) को सबसे अच्छे तरीके से कैसे वर्णित किया जा सकता है:",
+      "options_hindi": [
+        "एक आधिकारिक प्रशासनिक रिकॉर्ड जो एक छात्र के सभी वित्तीय बकाया, शुल्क भुगतान और बकाया शेष को दस्तावेज करता है",
+        "एक गोपनीय स्वास्थ्य ट्रैकिंग फ़ाइल जो केवल प्रमाणित चिकित्सा कर्मचारियों और स्कूल नर्स द्वारा रखी जाती है",
+        "एक आवधिक मासिक प्रदर्शन रिपोर्ट कार्ड जो सीधे माता-पिता को भेजा जाता है ताकि शैक्षणिक उपलब्धियों का सारांश दिया जा सके",
+        "एक स्थायी, निरंतर रिकॉर्ड जो एक छात्र की शैक्षणिक और व्यक्तिगत विकास के व्यापक डेटा को दस्तावेज करता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A Cumulative Record Card (CRC) in a school is best described as:",
+      "options_english": [
+        "An official administrative record documenting all financial dues, fee payments, and outstanding balances of a student",
+        "A confidential health tracking file maintained exclusively by certified medical staff and the school nurse",
+        "A periodic monthly performance report card sent directly to parents to summarize academic achievements",
+        "A permanent, continuous record documenting comprehensive data on a student's academic and personal growth"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "A Cumulative Record Card is a comprehensive, continuous file maintained by a school to document a student's complete academic, physical, mental, social, and emotional development throughout their schooling. It provides a longitudinal overview of growth, facilitating personalized guidance, academic tracking, and effective educational planning.",
+      "explanation_hindi": "सही उत्तर (d) है। संचयी रिकॉर्ड कार्ड एक व्यापक, निरंतर फ़ाइल है जो एक स्कूल द्वारा एक छात्र के शैक्षणिक, शारीरिक, मानसिक, सामाजिक और भावनात्मक विकास को दस्तावेज करने के लिए रखी जाती है। यह विकास का एक दीर्घकालिक अवलोकन प्रदान करता है, जो व्यक्तिगत मार्गदर्शन, शैक्षणिक ट्रैकिंग और प्रभावी शैक्षणिक योजना को सुविधाजनक बनाता है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "संचयी रिकॉर्ड कार्ड छात्र के विकास का एक दीर्घकालिक अवलोकन प्रदान करता है।",
+        "यह शैक्षणिक, शारीरिक, मानसिक, सामाजिक और भावनात्मक विकास को दस्तावेज करता है।",
+        "Printed answer key: (D) A permanent, continuous record documenting"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b78aa833-ab22-47fa-a8b6-3ba1b3c5d4c5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक विद्यालय पहली बार कंप्यूटर आधारित मूल्यांकन लागू करता है। कई उच्च प्रदर्शन करने वाले छात्र सॉफ़्टवेयर इंटरफ़ेस से अपरिचित होने के कारण खराब स्कोर करते हैं। इस मापन त्रुटि के स्रोत को सबसे अच्छा किस श्रेणी में वर्गीकृत किया जा सकता है:",
+      "options_hindi": [
+        "विषयात्मक स्कोरर की विश्वसनीयता और मूल्यांकनकर्ता ग्रेडिंग पूर्वाग्रह",
+        "परीक्षा प्रशासन त्रुटि जो निर्माण-असंबंधित भिन्नता का कारण बनती है",
+        "मूल्यांकन स्कोरिंग के दौरान की गई प्रणालीगत उदारता त्रुटि",
+        "प्रदर्शन रेटिंग स्केल में मूल्यांकनकर्ता केंद्रीय प्रवृत्ति त्रुटि"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A school implements a computer-based assessment for the first time. Several high-performing students score poorly because they are unfamiliar with the software interface. This source of measurement error is best classified as:",
+      "options_english": [
+        "Subjective scorer unreliability and evaluator grading bias",
+        "Test administration error causing construct-irrelevant variance",
+        "Systematic leniency error committed during assessment scoring",
+        "Evaluator central tendency error in performance rating scales"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Poor student performance caused by unfamiliarity with a computer interface introduces construct-irrelevant variance. The assessment inadvertently measures digital literacy instead of targeted domain knowledge, representing an administration-related measurement error that compromises score validity and undermines accurate achievement assessment.",
+      "explanation_hindi": "सही उत्तर (b) है। कंप्यूटर इंटरफ़ेस से अपरिचितता के कारण छात्रों का खराब प्रदर्शन निर्माण-असंबंधित भिन्नता को जन्म देता है। मूल्यांकन अनजाने में डिजिटल साक्षरता को लक्षित क्षेत्र के ज्ञान के बजाय मापता है, जो एक प्रशासन-संबंधित मापन त्रुटि का प्रतिनिधित्व करता है जो स्कोर की वैधता को कमजोर करता है और सटीक उपलब्धि मूल्यांकन को बाधित करता है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Construct-irrelevant variance can distort assessment outcomes.",
+        "Printed answer key: (B) Test administration error causing construct-irrelevant variance"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "debca239-0abc-447a-8b24-c03a8e8afd72",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "51. एक परीक्षण के प्रारंभिक प्रयास (पायलट अध्ययन) के बारे में निम्नलिखित कथनों पर विचार करें:\nI. यह अस्पष्ट या खराब शब्दबद्ध वस्तुओं की पहचान करने में मदद करता है।\nII. इसका उपयोग अंतिम परीक्षण के लिए उपयुक्त समय सीमा निर्धारित करने के लिए किया जाता है।\nIII. यह वस्तु विश्लेषण से पहले उपकरण की अंतिम भविष्यवाणी वैधता स्थापित करता है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल II और III",
+        "केवल I और III",
+        "I, II और III"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "51. Consider the following statements about the preliminary try-out (pilot study) of a test:\nI. It helps in identifying ambiguous or poorly worded items.\nII. It is used to determine the appropriate time limit for the final test.\nIII. It establishes the final predictive validity of the instrument before item analysis.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "I and II only",
+        "II and III only",
+        "I and III only",
+        "I, II and III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Conducting a preliminary try-out helps identify ambiguous wording, assess item clarity, and determine optimal time limits for test administration. However, evaluating predictive validity requires correlating test scores with future performance criteria over time, which cannot be accomplished solely through initial pilot testing.",
+      "explanation_hindi": "सही उत्तर (a) है। प्रारंभिक प्रयास करने से अस्पष्ट शब्दों की पहचान करने, वस्तु की स्पष्टता का आकलन करने और परीक्षण प्रशासन के लिए अनुकूलतम समय सीमाएँ निर्धारित करने में मदद मिलती है। हालाँकि, भविष्यवाणी वैधता का मूल्यांकन करने के लिए परीक्षण स्कोर को भविष्य के प्रदर्शन मानदंडों के साथ समय के साथ सहसंबंधित करना आवश्यक है, जिसे केवल प्रारंभिक पायलट परीक्षण के माध्यम से पूरा नहीं किया जा सकता।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Preliminary try-out identifies ambiguous items and determines time limits.",
+        "Printed answer key: (A) I and II only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "849d0430-da5e-4325-a223-c1cec5ae5809",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "13. किस प्रकार की वैधता सबसे महत्वपूर्ण है जब एक\nशिक्षक अंतिम टर्म की उपलब्धि परीक्षा की समीक्षा कर रहा है\nयह सुनिश्चित करने के लिए कि यह निर्धारित पाठ्यक्रम\nसिलेबस को उचित रूप से कवर करता है?",
+      "options_hindi": [
+        "संरचनात्मक वैधता",
+        "पूर्वानुमान वैधता",
+        "सामयिक वैधता",
+        "सामग्री वैधता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Which type of validity is most crucial when an educator is reviewing a final term achievement test to ensure it adequately covers the prescribed course syllabus?",
+      "options_english": [
+        "Construct validity",
+        "Predictive validity",
+        "Concurrent validity",
+        "Content validity"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Content validity evaluates how comprehensively and accurately a test's items represent the prescribed course domain, learning objectives, and subject syllabus. When reviewing a final achievement test, establishing content validity ensures that all major topics receive proportional representation, preventing item bias and ensuring that the instrument fairly measures total student academic mastery.",
+      "explanation_hindi": "सही उत्तर (d) है। सामग्री वैधता यह मूल्यांकन करती है कि एक परीक्षा के प्रश्न कितने व्यापक और सटीक रूप से निर्धारित पाठ्यक्रम क्षेत्र, सीखने के उद्देश्यों और विषय सिलेबस का प्रतिनिधित्व करते हैं। अंतिम उपलब्धि परीक्षा की समीक्षा करते समय, सामग्री वैधता स्थापित करना यह सुनिश्चित करता है कि सभी प्रमुख विषयों का समान प्रतिनिधित्व हो, जिससे प्रश्नों में पूर्वाग्रह को रोका जा सके और यह सुनिश्चित किया जा सके कि उपकरण कुल छात्र शैक्षणिक महारत को उचित रूप से मापता है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Content validity ensures comprehensive representation of the syllabus.",
+        "Printed answer key: (D) Content validity"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3d784c85-c071-4741-8fce-072f6bb63218",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "53. एक परीक्षण वस्तु का \"कठिनाई सूचकांक\" (या सुविधा मूल्य) निम्नलिखित के रूप में परिभाषित किया गया है:\n(A) उन छात्रों का अनुपात जिन्होंने वस्तु का उत्तर गलत दिया\n(B) उन छात्रों का अनुपात जिन्होंने वस्तु का उत्तर सही दिया",
+      "options_hindi": [
+        "उन छात्रों का अनुपात जिन्होंने वस्तु का उत्तर गलत दिया",
+        "उन छात्रों का अनुपात जिन्होंने वस्तु का उत्तर सही दिया",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "The \"Difficulty Index\" (or Facility Value) of a test item is defined as:\n(A) The proportion of students who answered the item incorrectly\n(B) The proportion of students who answered the item correctly",
+      "options_english": [
+        "The proportion of students who answered the item incorrectly",
+        "The proportion of students who answered the item correctly",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The difficulty index, or facility value, of a test item is defined as the proportion or percentage of total examinees who answered that specific item correctly. Higher numerical values indicate that a larger proportion of students solved the item, meaning the item is relatively easy for the target group.",
+      "explanation_hindi": "सही उत्तर (b) है। कठिनाई सूचकांक, या सुविधा मूल्य, एक परीक्षण वस्तु का वह अनुपात या प्रतिशत है जो कुल परीक्षार्थियों ने उस विशेष वस्तु का सही उत्तर दिया। उच्च संख्यात्मक मान यह दर्शाते हैं कि छात्रों का एक बड़ा अनुपात वस्तु को हल करता है, जिसका अर्थ है कि वस्तु लक्षित समूह के लिए अपेक्षाकृत आसान है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Difficulty index indicates how many students answered correctly.",
+        "Higher values suggest easier items for the target group.",
+        "Printed answer key: (B) The proportion of students who answered the item correctly"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "05fa5c5f-be60-4a30-8ed3-04b9f65bc804",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "94. निम्नलिखित प्रकार के प्रश्नावली पर विचार करें:\nI. संरचित प्रश्नावली\nII. असंरचित प्रश्नावली\nIII. बंद-समाप्त प्रश्नावली\nIV. खुला-समाप्त प्रश्नावली",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "94. Consider the following types of questionnaires:\nI. Structured Questionnaire\nII. Unstructured Questionnaire\nIII. Closed-ended Questionnaire\nIV. Open-ended Questionnaire",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Unstructured and open-ended questionnaires serve as qualitative evaluation tools well-suited for exploratory research. They allow participants to express nuanced perspectives in their own words without being constrained by predetermined response categories.",
+      "explanation_hindi": "सही उत्तर (b) है। असंरचित और खुला-समाप्त प्रश्नावली गुणात्मक मूल्यांकन उपकरण के रूप में कार्य करती हैं, जो अन्वेषणात्मक अनुसंधान के लिए उपयुक्त होती हैं। ये प्रतिभागियों को पूर्व निर्धारित उत्तर श्रेणियों द्वारा सीमित किए बिना अपने शब्दों में सूक्ष्म दृष्टिकोण व्यक्त करने की अनुमति देती हैं।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Unstructured questionnaires allow for open responses.",
+        "Open-ended questionnaires facilitate qualitative insights.",
+        "Printed answer key: (B) II and IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d2c86e0f-add0-4e58-8faf-6c11f5ba5f18",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "98. एक विद्यालय निरीक्षण के दौरान, एक अधिकारी\nसतत और समग्र मूल्यांकन के प्रभावी कार्यान्वयन\nका प्रमाण मांगता है। निम्नलिखित में से कौन सा\nमापन रिकॉर्ड सबसे मजबूत प्रमाण के रूप में\nकाम करेगा?",
+      "options_hindi": [
+        "छात्र पोर्टफोलियो, नियमित\nफॉर्मेटिव चेकलिस्ट और विस्तृत\nअनुक्रमिक लॉग का संकलन",
+        "एकल टर्मिनल परीक्षा के अंक",
+        "सिर्फ़ शैक्षणिक प्रदर्शन के रिकॉर्ड",
+        "सिर्फ़ अंतिम परीक्षा के परिणाम"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "During a school inspection, an official requests evidence that continuous and comprehensive evaluation is functioning effectively. Which of the following measurement records would serve as the MOST robust evidence?",
+      "options_english": [
+        "A compilation of student portfolios, regular formative checklists, and detailed anecdotal logs",
+        "Single terminal exam marks",
+        "Only academic performance records",
+        "Only final exam results"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The correct answer is a compilation of student portfolios, regular formative checklists, and detailed anecdotal logs. Demonstrating continuous and comprehensive evaluation requires documented evidence across diverse developmental domains. Compilations of student portfolios, observational checklists, and anecdotal records demonstrate ongoing assessment practices better than single terminal exam marks.",
+      "explanation_hindi": "सही उत्तर (c) है। छात्र पोर्टफोलियो, नियमित फॉर्मेटिव चेकलिस्ट और विस्तृत अनुक्रमिक लॉग का संकलन सतत और समग्र मूल्यांकन के प्रभावी कार्यान्वयन का प्रमाण प्रदान करता है। विभिन्न विकासात्मक क्षेत्रों में प्रलेखित साक्ष्य की आवश्यकता होती है। छात्र पोर्टफोलियो, अवलोकनात्मक चेकलिस्ट और अनुक्रमिक रिकॉर्ड सतत मूल्यांकन प्रथाओं को प्रदर्शित करते हैं, जो एकल टर्मिनल परीक्षा के अंकों की तुलना में बेहतर हैं।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Continuous and comprehensive evaluation requires diverse evidence.",
+        "Printed answer key: (C) A compilation of student portfolios, regular formative checklists, and detailed anecdotal logs."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "fea3c468-3b79-4921-a71e-463285aeed3e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "96. निम्नलिखित में से कौन-सा Cumulative Record Card (CRC) का उपयोग एक स्कूल प्रधान के लिए अनुपयुक्त है?",
+      "options_hindi": [
+        "स्कूल मार्गदर्शन परामर्शदाताओं को व्यापक पृष्ठभूमि जानकारी प्रदान करना",
+        "एक व्यक्तिगत छात्र के दीर्घकालिक शैक्षणिक विकास को समय के साथ व्यवस्थित रूप से ट्रैक करना",
+        "मध्य और उच्च विद्यालय के बीच छात्र शैक्षणिक संक्रमण के दौरान स्कूल स्टाफ की सहायता करना",
+        "अभिभावक-शिक्षक समूहों के साथ व्यक्तिगत पारिवारिक रिकॉर्ड सार्वजनिक रूप से साझा करना ताकि स्कूल के लिए धन जुटाया जा सके"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Which of the following uses of a Cumulative Record Card (CRC) is inappropriate for a school Principal?",
+      "options_english": [
+        "Providing comprehensive background information to school guidance counselors",
+        "Methodically tracking an individual student's longitudinal academic development over time",
+        "Assisting school staff during student academic transitions between middle and high school",
+        "Publicly sharing personal family records with parent-teacher groups to solicit school funds"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Cumulative Record Cards contain sensitive personal background information that must remain confidential. Using student growth records publicly to solicit school funds violates privacy guidelines and inappropriate administrative usage standards.",
+      "explanation_hindi": "सही उत्तर (d) है। Cumulative Record Cards में संवेदनशील व्यक्तिगत पृष्ठभूमि जानकारी होती है जिसे गोपनीय रखना आवश्यक है। छात्र विकास रिकॉर्ड का सार्वजनिक रूप से उपयोग करना स्कूल के लिए धन जुटाने के लिए गोपनीयता दिशानिर्देशों का उल्लंघन करता है और अनुपयुक्त प्रशासनिक उपयोग मानकों का उल्लंघन करता है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Cumulative Record Cards contain sensitive information.",
+        "Printed answer key: (D) Publicly sharing personal family records",
+        "Privacy guidelines must be adhered to in educational settings."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "fdd77665-a2f1-4cbb-8cdc-e9638df1565d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक प्रधानाध्यापक एक नई शिक्षण पद्धति की प्रभावशीलता का निर्धारण करना चाहते हैं। शिक्षक एक साप्ताहिक परीक्षण करते हैं और 20 में से अंक रिकॉर्ड करते हैं। इस संदर्भ में, 20 में से अंकों का रिकॉर्ड करना दर्शाता है:",
+      "options_hindi": [
+        "मूल्यांकन",
+        "मापन",
+        "समीक्षा",
+        "मान्यता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A Principal wants to determine the effectiveness of a new teaching methodology in mathematics. The teachers conduct a weekly test and record scores out of 20. In this context, the recording of scores out of 20 represents:",
+      "options_english": [
+        "Assessment",
+        "Measurement",
+        "Evaluation",
+        "Accreditation"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The correct technical standard is option (B). Measurement refers to the process of quantifying the performance or achievement of students, which in this case is represented by the scores recorded out of 20. This process is essential for determining the effectiveness of the teaching methodology.",
+      "explanation_hindi": "सही उत्तर (b) है। मापन छात्रों के प्रदर्शन या उपलब्धियों को मात्रात्मक रूप से व्यक्त करने की प्रक्रिया को संदर्भित करता है, जो इस मामले में 20 में से रिकॉर्ड किए गए अंकों द्वारा दर्शाया गया है। यह प्रक्रिया शिक्षण पद्धति की प्रभावशीलता का निर्धारण करने के लिए आवश्यक है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "easy",
+      "key_facts": [
+        "मापन छात्रों के प्रदर्शन को मात्रात्मक रूप में व्यक्त करता है।",
+        "20 में से अंक रिकॉर्ड करना एक मापन प्रक्रिया है।",
+        "Printed answer key: (B) Measurement"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c83404eb-6425-4ef7-aae2-8ad131af25d3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "8.\n\nशैक्षणिक मूल्यांकन प्रक्रिया में, निम्नलिखित में से कौन सा अनुक्रम सही तार्किक प्रगति का प्रतिनिधित्व करता है?",
+      "options_hindi": [
+        "मूल्यांकन → मूल्यांकन → मापन",
+        "मापन → मूल्यांकन → मूल्यांकन",
+        "मूल्यांकन → मापन → मूल्यांकन",
+        "मापन → मूल्यांकन → मूल्यांकन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "In the educational evaluation process, which of the following sequences represents the correct logical progression?",
+      "options_english": [
+        "Evaluation → Assessment → Measurement",
+        "Measurement → Assessment → Evaluation",
+        "Assessment → Measurement → Evaluation",
+        "Measurement → Evaluation → Assessment"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The logical evaluation process begins with measurement, which collects basic quantitative data by assigning numerical values. Next, assessment interprets this empirical data alongside qualitative evidence to track learning progress and provide feedback. Finally, evaluation synthesizes all collected evidence to make formal value judgments, determine overall educational achievement, and award grades.",
+      "explanation_hindi": "सही उत्तर (b) है। शैक्षणिक मूल्यांकन प्रक्रिया में मापन से शुरू होता है, जो मात्रात्मक डेटा एकत्र करता है। इसके बाद, मूल्यांकन इस डेटा का विश्लेषण करता है और गुणात्मक साक्ष्यों के साथ मिलाकर सीखने की प्रगति को ट्रैक करता है। अंत में, मूल्यांकन सभी एकत्रित साक्ष्यों का संश्लेषण करता है और औपचारिक मूल्य निर्णय करता है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "मापन मात्रात्मक डेटा एकत्र करता है।",
+        "मूल्यांकन सभी एकत्रित साक्ष्यों का संश्लेषण करता है।",
+        "Printed answer key: (B) Measurement → Assessment → Evaluation"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "39710d11-c577-4adc-9049-17d7b4a18d78",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "85. जब एक परीक्षण को मानकीकृत किया जाता है, तो मान स्थापित करने के लिए एक प्रतिनिधि नमूने का चयन करना महत्वपूर्ण होता है। यदि एक नमूना उच्च-आय वाले शहरी स्कूलों की ओर झुका हुआ है, तो परिणामस्वरूप मान likely:",
+      "options_hindi": [
+        "ग्रामीण स्कूलों के लिए पूरी तरह से लागू होंगे",
+        "सामान्य जनसंख्या की औसत क्षमता का अधिक अनुमान लगाएंगे",
+        "सामान्य जनसंख्या की औसत क्षमता का कम अनुमान लगाएंगे",
+        "ग्रामीण छात्रों के स्कोर की व्याख्या पर कोई प्रभाव नहीं पड़ेगा"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "85. When standardizing a test, selecting a representative sample for establishing norms is critical. If a sample is skewed towards high-income urban schools, the resulting norms will likely:",
+      "options_english": [
+        "Be perfectly applicable to rural schools",
+        "Overestimate the average ability of the general population",
+        "Underestimate the average ability of the general population",
+        "Have no impact on the interpretation of rural students' scores"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Establishing norms using a sample skewed toward high-income urban schools overestimates average performance baselines. Applying these elevated norms across diverse student groups creates normative bias, systematically misrepresenting broader student achievement levels.",
+      "explanation_hindi": "सही उत्तर (b) है। उच्च-आय वाले शहरी स्कूलों की ओर झुके हुए नमूने का उपयोग करके मान स्थापित करने से औसत प्रदर्शन के मानक अधिक हो जाते हैं। इन ऊंचे मानों को विभिन्न छात्र समूहों पर लागू करने से मानक पूर्वाग्रह उत्पन्न होता है, जो व्यापक छात्र उपलब्धि स्तरों को व्यवस्थित रूप से गलत तरीके से प्रस्तुत करता है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Skewed samples can lead to biased norms in testing.",
+        "High-income urban norms may not reflect rural student abilities.",
+        "Printed answer key: (B) Overestimate the average ability of the"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2762154e-0adf-45f4-a237-e322226f9294",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "62. निम्नलिखित प्रकार की मापन त्रुटियों पर विचार करें:\nI. यादृच्छिक त्रुटियाँ\nII. प्रणालीगत त्रुटियाँ\nIII. नमूना त्रुटियाँ\nकौन-सी त्रुटि लगातार स्कोर को एक ही दिशा में प्रभावित करती है (जैसे, सभी स्कोर 5 अंक बढ़ जाते हैं) और मुख्य रूप से परीक्षण की वैधता को प्रभावित करती है न कि विश्वसनीयता को?",
+      "options_hindi": [
+        "केवल यादृच्छिक त्रुटियाँ",
+        "केवल प्रणालीगत त्रुटियाँ",
+        "केवल नमूना त्रुटियाँ",
+        "यादृच्छिक और प्रणालीगत त्रुटियाँ दोनों"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Consider the following types of measurement errors:\nI. Random Errors\nII. Systematic Errors\nIII. Sampling Errors\nWhich type of error consistently affects scores in the same direction (e.g., all scores are inflated by 5 points) and primarily impacts test validity rather than reliability?",
+      "options_english": [
+        "Random Errors only",
+        "Systematic Errors only",
+        "Sampling Errors only",
+        "Both Random and Systematic Errors"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Systematic errors consistently shift measurement scores in one direction, such as adding fixed points to all results. Because these errors occur predictably without altering score rank orders, they preserve test reliability while directly undermining test validity by measuring extraneous variables instead of the true construct.",
+      "explanation_hindi": "सही उत्तर (b) है। प्रणालीगत त्रुटियाँ लगातार मापन स्कोर को एक दिशा में स्थानांतरित करती हैं, जैसे सभी परिणामों में निश्चित अंक जोड़ना। चूंकि ये त्रुटियाँ पूर्वानुमानित रूप से होती हैं और स्कोर रैंक आदेश को नहीं बदलती हैं, ये परीक्षण की विश्वसनीयता को बनाए रखती हैं जबकि परीक्षण की वैधता को सीधे कमजोर करती हैं क्योंकि ये वास्तविक निर्माण के बजाय बाहरी चर को मापती हैं।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Systematic errors affect scores in a consistent direction.",
+        "Printed answer key: (B) Systematic Errors only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f14172b7-aa9e-405d-a65b-1810fe7e8bf9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "97. नीचे दो कथन दिए गए हैं: एक को Assertion (A) और दूसरे को Reason (R) के रूप में लेबल किया गया है।\nAssertion (A): Difficulty index और discrimination index item analysis में आपस में निर्भर हैं। \nReason (R): ऐसे आइटम जो बहुत आसान हैं (P 1.0 के करीब) या बहुत कठिन हैं (P के करीब)",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R).\nAssertion (A): Difficulty index and discrimination index are interdependent in item analysis.\nReason (R): Items that are either too easy (P approaching 1.0) or too difficult (P approaching",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Difficulty and discrimination indices are psychometrically interdependent. Items that are extremely easy or extremely difficult yield minimal response variance, restricting their mathematical capacity to differentiate between high and low achievers.",
+      "explanation_hindi": "सही उत्तर (a) है। Difficulty और discrimination indices मनोमापी रूप से आपस में निर्भर होते हैं। जो आइटम अत्यधिक आसान या अत्यधिक कठिन होते हैं, वे न्यूनतम प्रतिक्रिया भिन्नता उत्पन्न करते हैं, जिससे उनके गणितीय क्षमता को उच्च और निम्न प्रदर्शन करने वालों के बीच भेद करने में बाधा आती है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Difficulty and discrimination indices are interdependent.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A",
+        "Items that are too easy or too difficult yield minimal response variance."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "eaaa1f39-dd8d-44cd-aa57-e8a80ed29212",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "मानसिक परीक्षण के मानकीकरण के दौरान, \"मानक\" शब्द का अर्थ है:",
+      "options_hindi": [
+        "कक्षा में परीक्षण आयोजित करने के लिए आवश्यक मानकीकृत और सख्त प्रशासनिक नियम",
+        "कच्चे परीक्षण स्कोर की व्याख्या के लिए स्थापित नैतिक सिद्धांत और पेशेवर दिशानिर्देश",
+        "एक निर्दिष्ट संदर्भ मानक समूह द्वारा प्रदर्शित औसत या सामान्य स्कोर प्रदर्शन",
+        "विषय में महारत प्रदर्शित करने के लिए आवश्यक न्यूनतम मात्रात्मक पासिंग कटऑफ स्कोर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Educational Measurement Concepts Tools and Techniques",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "During the standardization of a psychological test, the term \"norms\" refers to:",
+      "options_english": [
+        "The standardized and strict administrative rules required for conducting the test in classrooms",
+        "The ethical principles and professional guidelines established for interpreting raw test scores",
+        "The average or typical score performance exhibited by a designated reference normative group",
+        "The minimum quantitative passing cutoff score strictly required to demonstrate subject mastery"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The correct answer is c. In standardized testing, norms represent the typical baseline performance established by a representative reference group. Raw scores earned by individuals are compared against these standardized norms to derive relative meaning, enabling educators to determine where a student stands in comparison to a broader peer population.",
+      "explanation_hindi": "सही उत्तर (c) है। मानकीकृत परीक्षण में, मानक एक प्रतिनिधि संदर्भ समूह द्वारा स्थापित सामान्य आधारभूत प्रदर्शन का प्रतिनिधित्व करते हैं। व्यक्तियों द्वारा अर्जित कच्चे स्कोर को इन मानकीकृत मानकों के खिलाफ तुलना की जाती है ताकि सापेक्ष अर्थ निकाला जा सके, जिससे शिक्षकों को यह निर्धारित करने में मदद मिलती है कि एक छात्र व्यापक समकक्ष जनसंख्या की तुलना में कहाँ खड़ा है।",
+      "topic": "Educational Measurement Concepts Tools and Techniques",
+      "difficulty": "medium",
+      "key_facts": [
+        "Norms are essential for interpreting test scores in a standardized manner.",
+        "Printed answer key: (C) The average or typical score performance",
+        "They help in comparing individual performance against a normative group.",
+        "Norms provide a context for understanding raw test scores."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

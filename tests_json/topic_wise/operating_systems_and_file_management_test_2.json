@@ -1,0 +1,794 @@
+{
+  "test_id": "a329eb11-1e4b-4c4d-b6ed-dbe3e244669c",
+  "test_name": "Topic Test: OPERATING_SYSTEMS_AND_FILE_MANAGEMENT - Part 2",
+  "type": "topic_wise",
+  "topic": "operating_systems_and_file_management",
+  "created_at": "2026-10-28T18:55:06.830412",
+  "questions": [
+    {
+      "id": "8b8e9bf4-d087-427b-b38d-b1a1a5f6030f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कौन सा फ़ाइल प्रारूप सार्वभौमिक रूप से मान्यता प्राप्त है\nकच्चे पाठ फ़ाइलों के लिए जिनमें कोई स्वरूपण तत्व नहीं होते?",
+      "options_hindi": [
+        ".txt",
+        ".docx",
+        ".pdf",
+        ".xlsx"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which file format is universally recognized for raw text files containing no formatting elements?",
+      "options_english": [
+        ".txt",
+        ".docx",
+        ".pdf",
+        ".xlsx"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The .txt file extension represents standard plain text files containing unformatted ASCII or UTF8 character strings. Plain text documents store basic written characters without embedded structural styling layout, custom typography, image formatting, or proprietary binary markup. Because of their lightweight and universal format, .txt files are universally accessible across virtually all operating systems, command-line interfaces, and basic text editing software tools without compatibility issues.",
+      "explanation_hindi": "सही उत्तर (a) है। .txt फ़ाइल एक्सटेंशन मानक साधारण पाठ फ़ाइलों का प्रतिनिधित्व करता है जिनमें बिना स्वरूपण के ASCII या UTF8 वर्ण स्ट्रिंग होते हैं। साधारण पाठ दस्तावेज़ बुनियादी लिखित वर्णों को संग्रहीत करते हैं जिनमें अंतर्निहित संरचनात्मक स्टाइलिंग लेआउट, कस्टम टाइपोग्राफी, छवि स्वरूपण, या स्वामित्व बाइनरी मार्कअप नहीं होता। उनके हल्के और सार्वभौमिक प्रारूप के कारण, .txt फ़ाइलें लगभग सभी ऑपरेटिंग सिस्टम, कमांड-लाइन इंटरफेस, और बुनियादी पाठ संपादन सॉफ़्टवेयर उपकरणों में बिना संगतता समस्याओं के सार्वभौमिक रूप से सुलभ होती हैं।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        "Plain text files are typically saved with a .txt extension.",
+        "They do not contain any formatting or styling information.",
+        "Printed answer key: (A) .txt"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2cb87701-5413-4f35-9c05-ef4cf07cd24d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "59. किस प्रकार का मैलवेयर विशेष रूप से उपयोगकर्ता\nफाइलों को एन्क्रिप्ट करता है और डिक्रिप्शन\nकी के लिए भुगतान की मांग करता है?",
+      "options_hindi": [
+        "स्पाईवेयर",
+        "ऐडवेयर",
+        "रूटकिट",
+        "रैंसमवेयर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which type of malware specifically encrypts user files and demands payment for the decryption key?",
+      "options_english": [
+        "Spyware",
+        "Adware",
+        "Rootkit",
+        "Ransomware"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Ransomware is a dangerous category of malicious software engineered to compromise user data security. Once executed on a system, ransomware covertly encrypts critical user files, system documents, and storage directories using strong cryptographic algorithms. The malware then displays extortion notices demanding monetary payment, typically in cryptocurrency, in exchange for the decryption key required to restore access to locked data, causing severe disruption to individuals and enterprise networks.",
+      "explanation_hindi": "सही उत्तर (d) है। रैंसमवेयर एक खतरनाक श्रेणी का मैलवेयर है जिसे उपयोगकर्ता डेटा सुरक्षा को खतरे में डालने के लिए तैयार किया गया है। एक बार जब यह किसी प्रणाली पर निष्पादित होता है, तो रैंसमवेयर महत्वपूर्ण उपयोगकर्ता फ़ाइलों, प्रणाली दस्तावेज़ों और भंडारण निर्देशिकाओं को मजबूत क्रिप्टोग्राफिक एल्गोरिदम का उपयोग करके गुप्त रूप से एन्क्रिप्ट करता है। फिर यह धन की मांग करने वाले जबरन नोटिस प्रदर्शित करता है, आमतौर पर क्रिप्टोक्यूरेंसी में, लॉक की गई डेटा तक पहुँच बहाल करने के लिए आवश्यक डिक्रिप्शन कुंजी के बदले में।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Ransomware encrypts user files and demands payment for decryption.",
+        "It often uses strong cryptographic algorithms to secure data.",
+        "Printed answer key: (D) Ransomware"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "0d5f2122-08a6-4deb-b987-4bbf1d9f5364",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "उपयोगकर्ता खाता प्रकारों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. एक व्यवस्थापक खाता प्रणाली कॉन्फ़िगरेशन को संशोधित करने और सॉफ़्टवेयर स्थापित करने के लिए उच्चाधिकार रखता है।\nB. एक मानक उपयोगकर्ता खाता अनुप्रयोग चला सकता है लेकिन मूल प्रणाली सेटिंग्स को बदल नहीं सकता या अन्य उपयोगकर्ताओं की निजी फ़ाइलों तक पहुँच नहीं सकता।\nC. मानक उपयोगकर्ता खाते बिना पासवर्ड सत्यापन के अन्य उपयोगकर्ताओं को प्रशासनिक अधिकार दे सकते हैं।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding user account types:\nA. An Administrator account has elevated privileges to modify system configuration and install software.\nB. A Standard User account can run applications but cannot alter core system settings or access other users’ private files.\nC. Standard User accounts can grant administrative rights to other users without password verification.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Operating systems implement distinct user account types to manage administrative privileges and system security effectively. An Administrator account possesses elevated rights capable of altering core system parameters, modifying registry entries, and installing device drivers. Conversely, a Standard User account allows execution of installed software applications while prohibiting modifications to global system settings or unauthorized access to other user profile files. Standard accounts cannot elevate privileges independently without administrative password verification.",
+      "explanation_hindi": "सही उत्तर (a) है। ऑपरेटिंग सिस्टम प्रशासनिक विशेषाधिकारों और प्रणाली सुरक्षा को प्रभावी ढंग से प्रबंधित करने के लिए विभिन्न उपयोगकर्ता खाता प्रकारों को लागू करते हैं। एक व्यवस्थापक खाता प्रणाली के मूल पैरामीटर को संशोधित करने, रजिस्ट्र्री प्रविष्टियों को बदलने और डिवाइस ड्राइवर स्थापित करने के लिए उच्च अधिकार रखता है। इसके विपरीत, एक मानक उपयोगकर्ता खाता स्थापित सॉफ़्टवेयर अनुप्रयोगों को चलाने की अनुमति देता है जबकि वैश्विक प्रणाली सेटिंग्स में संशोधन या अन्य उपयोगकर्ता प्रोफ़ाइल फ़ाइलों तक अनधिकृत पहुँच को रोकता है। मानक खाते स्वतंत्र रूप से प्रशासनिक पासवर्ड सत्यापन के बिना विशेषाधिकार नहीं बढ़ा सकते।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Administrator accounts have elevated privileges.",
+        "Standard User accounts cannot modify core system settings.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f3eb7f06-6559-4290-ac60-6a92088ae663",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "88. निम्नलिखित में से कौन-सा फ़ाइल फ़ॉर्मेट एक्सटेंशन\nएक वेक्टर या रास्टर इमेज फ़ाइल का उदाहरण है?",
+      "options_hindi": [
+        ".png",
+        ".exe",
+        ".bat",
+        ".dll"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following file format extensions is an example of a vector or raster image file?",
+      "options_english": [
+        ".png",
+        ".exe",
+        ".bat",
+        ".dll"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Portable Network Graphics (.png) is a widely recognized file format extension representing raster graphics images. Designed as an open alternative to GIF, the PNG format supports lossless data compression along with alpha channel transparency. This makes .png files ideal for web graphics, user interface icons, and digital illustrations where crisp visual detail and quality are essential.",
+      "explanation_hindi": "सही उत्तर (a) है। पोर्टेबल नेटवर्क ग्राफिक्स (.png) एक व्यापक रूप से मान्यता प्राप्त फ़ाइल फ़ॉर्मेट एक्सटेंशन है जो रास्टर ग्राफिक्स छवियों का प्रतिनिधित्व करता है। GIF के लिए एक खुले विकल्प के रूप में डिज़ाइन किया गया, PNG फ़ॉर्मेट लॉसलेस डेटा संकुचन के साथ-साथ अल्फा चैनल पारदर्शिता का समर्थन करता है। यह .png फ़ाइलों को वेब ग्राफिक्स, उपयोगकर्ता इंटरफ़ेस आइकनों और डिजिटल चित्रण के लिए आदर्श बनाता है जहाँ स्पष्ट दृश्य विवरण और गुणवत्ता आवश्यक होती है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        "PNG फ़ाइलें रास्टर ग्राफिक्स का प्रतिनिधित्व करती हैं।",
+        "PNG फ़ॉर्मेट लॉसलेस डेटा संकुचन का समर्थन करता है।",
+        "Printed answer key: (A) .png"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "aa420000-e307-4ab4-bc22-fcd62e1e5d17",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "USB फ्लैश ड्राइव को Windows में सुरक्षित रूप से निकालने के लिए निम्नलिखित चरणों को सही क्रम में व्यवस्थित करें:\nI. टास्कबार पर 'छिपे हुए आइकन दिखाएँ' तीर पर क्लिक करें।",
+      "options_hindi": [
+        "I, II, III, IV",
+        "II, I, IV, III",
+        "III, I, II, IV",
+        "IV, III, II, I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following steps in the correct order to safely remove a USB flash drive in Windows:\nI. Click the ‘Show hidden icons’ arrow on the taskbar.",
+      "options_english": [
+        "I, II, III, IV",
+        "II, I, IV, III",
+        "III, I, II, IV",
+        "IV, III, II, I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Safely disconnecting a USB flash drive in Windows prevents file corruption caused by active write caching. First, the user opens hidden system tray icons on the taskbar. Next, clicking the ‘Safely Remove Hardware and Eject Media’ icon displays active devices. The user selects ‘Eject’ for the target drive letter. Once the operating system displays a safe removal notification, the USB drive is physically unplugged.",
+      "explanation_hindi": "सही उत्तर (a) है। USB फ्लैश ड्राइव को Windows में सुरक्षित रूप से निकालने से सक्रिय लेखन कैशिंग के कारण फ़ाइल भ्रष्टाचार से बचा जाता है। पहले, उपयोगकर्ता टास्कबार पर छिपे हुए सिस्टम ट्रे आइकनों को खोलता है। इसके बाद, 'सुरक्षित रूप से हार्डवेयर निकालें और मीडिया निकालें' आइकन पर क्लिक करने से सक्रिय उपकरण प्रदर्शित होते हैं। उपयोगकर्ता लक्षित ड्राइव पत्र के लिए 'निकालें' का चयन करता है। जब ऑपरेटिंग सिस्टम सुरक्षित निकासी सूचना प्रदर्शित करता है, तो USB ड्राइव को भौतिक रूप से अनप्लग किया जाता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "USB ड्राइव को सुरक्षित रूप से निकालने से फ़ाइल भ्रष्टाचार से बचा जाता है।",
+        "सुरक्षित रूप से निकालने की प्रक्रिया में सिस्टम ट्रे आइकनों का उपयोग किया जाता है।",
+        "Printed answer key: (A) I, II, III, IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "23e56b8f-2282-4882-bd88-f2cd4db1cbc7",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "30. जब एक स्कूल प्रयोगशाला में कंप्यूटर अचानक प्रतिक्रिया देना बंद कर देता है\nकिसी असंवेदनशील पृष्ठभूमि के अनुप्रयोग के कारण, तो कौन सा समस्या निवारण कदम\nअनुशंसित है?",
+      "options_hindi": [
+        "तुरंत ऑपरेटिंग सिस्टम को फिर से स्थापित करना",
+        "कमांड लाइन का उपयोग करके हार्ड डिस्क ड्राइव को फॉर्मेट करना",
+        "सिस्टम को चालू रखते हुए भौतिक रूप से सिस्टम RAM को हटाना",
+        "कार्य प्रबंधक के माध्यम से असंवेदनशील प्रक्रिया को समाप्त करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which troubleshooting step is recommended when a computer in a school lab suddenly stops responding due to an unresponsive background application?",
+      "options_english": [
+        "Reinstalling the operating system immediately",
+        "Format the hard disk drive using command line",
+        "Removing system RAM physically while the system is running",
+        "Terminating the unresponsive process via Task Manager"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "When an individual application becomes unresponsive in a shared laboratory setting, standard troubleshooting mandates isolating the software failure without disrupting active operating system functions. Utilizing Task Manager allows administrators or users to identify the hanging process, review its current memory consumption, and execute an immediate process termination command. This targeted intervention resolves system unresponsiveness safely without resorting to destructive actions like hard reboots, formatting, or hardware removal.",
+      "explanation_hindi": "सही उत्तर (d) है। जब एक व्यक्तिगत अनुप्रयोग एक साझा प्रयोगशाला सेटिंग में असंवेदनशील हो जाता है, तो मानक समस्या निवारण सॉफ़्टवेयर विफलता को सक्रिय ऑपरेटिंग सिस्टम कार्यों को बाधित किए बिना अलग करने की आवश्यकता होती है। कार्य प्रबंधक का उपयोग प्रशासकों या उपयोगकर्ताओं को लटकती प्रक्रिया की पहचान करने, इसकी वर्तमान मेमोरी खपत की समीक्षा करने और तत्काल प्रक्रिया समाप्ति आदेश निष्पादित करने की अनुमति देता है। यह लक्षित हस्तक्षेप बिना हार्ड रिबूट, फॉर्मेटिंग या हार्डवेयर हटाने जैसे विनाशकारी कार्यों का सहारा लिए बिना सिस्टम की असंवेदनशीलता को सुरक्षित रूप से हल करता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Task Manager is a tool used to manage running applications and processes.",
+        "Printed answer key: (D) Terminating the unresponsive process via"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a67d889c-e2ad-4367-872a-2e064b1b46de",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II के साथ मिलाएं:\nसूची I: ऑपरेटिंग सिस्टम\nP. विंडोज़\nQ. लिनक्स\nR. एंड्रॉइड\nS. आईओएस\nसूची II: प्राथमिक विशेषता\nI. गूगल द्वारा विकसित संशोधित लिनक्स कर्नेल पर आधारित मोबाइल OS\nII. माइक्रोसॉफ्ट द्वारा विकसित स्वामित्व वाला डेस्कटॉप OS\nIII. सर्वरों और वितरणों में व्यापक रूप से उपयोग किया जाने वाला ओपन-सोर्स OS कर्नेल\nIV. आईफोन के लिए एप्पल द्वारा विकसित स्वामित्व वाला मोबाइल OS\nनिम्नलिखित में से कौन सा सही मिलान का प्रतिनिधित्व करता है?\n(1) P-II, Q-III, R-I, S-IV",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: Operating System\nP. Windows\nQ. Linux\nR. Android\nS. iOS\nList II: Primary Characteristic\nI. Mobile OS based on modified Linux kernel developed by Google\nII. Proprietary desktop OS developed by Microsoft\nIII. Open-source OS kernel widely used in servers and distributions\nIV. Proprietary mobile OS developed by Apple for iPhone\nWhich of the following represents the correct match?\n(1) P-II, Q-III, R-I, S-IV",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Operating systems exhibit distinctive core characteristics based on their design architectures and target hardware platforms. Microsoft Windows represents a proprietary desktop operating system engineered for personal computers. Linux functions as an open-source operating system kernel deployed extensively across servers and specialized distributions. Google Android operates as an open-source mobile system built on a modified Linux kernel. Apple iOS serves as a proprietary mobile operating system designed exclusively for iPhone devices.",
+      "explanation_hindi": "सही उत्तर (a) है। ऑपरेटिंग सिस्टम अपने डिज़ाइन आर्किटेक्चर और लक्षित हार्डवेयर प्लेटफार्मों के आधार पर विशिष्ट मुख्य विशेषताओं को प्रदर्शित करते हैं। माइक्रोसॉफ्ट विंडोज़ एक स्वामित्व वाला डेस्कटॉप ऑपरेटिंग सिस्टम है जिसे व्यक्तिगत कंप्यूटरों के लिए इंजीनियर किया गया है। लिनक्स एक ओपन-सोर्स ऑपरेटिंग सिस्टम कर्नेल के रूप में कार्य करता है जो सर्वरों और विशेष वितरणों में व्यापक रूप से तैनात है। गूगल एंड्रॉइड एक संशोधित लिनक्स कर्नेल पर आधारित ओपन-सोर्स मोबाइल सिस्टम के रूप में कार्य करता है। एप्पल आईओएस एक स्वामित्व वाला मोबाइल ऑपरेटिंग सिस्टम है जिसे विशेष रूप से आईफोन उपकरणों के लिए डिज़ाइन किया गया है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Microsoft Windows is a proprietary desktop operating system.",
+        "Linux is an open-source OS kernel widely used in servers.",
+        "Google Android is based on a modified Linux kernel.",
+        "Printed answer key: (A) P-II, Q-III, R-I, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a687f9bc-13fa-4d15-a72d-a2cb628e1c02",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "26. विंडोज़ में सेटिंग्स का उपयोग करके एक एप्लिकेशन को अनइंस्टॉल करने के लिए निम्नलिखित चरणों को सही क्रम में व्यवस्थित करें:\nI. विंडोज़ सेटिंग्स खोलें।\nII. ऐप्स → इंस्टॉल किए गए ऐप्स (या ऐप्स और विशेषताएँ) पर जाएँ।\nIII. लक्षित एप्लिकेशन को खोजें और चुनें।\nIV. 'अनइंस्टॉल' पर क्लिक करें और स्क्रीन पर अनइंस्टॉलेशन संकेतों का पालन करें।\nनीचे दिए गए विकल्पों में से सही क्रम चुनें:",
+      "options_hindi": [
+        "I, II, III, IV",
+        "II, I, III, IV",
+        "I, III, II, IV",
+        "III, I, II, IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following steps in the correct sequence to uninstall an application in Windows using Settings:\nI. Open Windows Settings.\nII. Navigate to Apps → Installed apps (or Apps & Features).\nIII. Locate and select the target application.\nIV. Click ‘Uninstall’ and follow the on-screen uninstallation prompts.\nSelect the correct sequence from the options given below:",
+      "options_english": [
+        "I, II, III, IV",
+        "II, I, III, IV",
+        "I, III, II, IV",
+        "III, I, II, IV"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Uninstalling unnecessary or outdated application software in modern Windows environments requires a systematic series of menu selections. The user begins by navigating to Windows Settings from the Start Menu. Next, the user navigates to the ‘Apps’ section and selects ‘Installed apps’. The user then locates the specific application within the list, clicks ‘Uninstall’, and completes the guided wizard to remove all installed program files.",
+      "explanation_hindi": "सही उत्तर (a) है। अनावश्यक या पुरानी एप्लिकेशन सॉफ़्टवेयर को विंडोज़ में अनइंस्टॉल करने के लिए एक व्यवस्थित श्रृंखला की मेनू चयन की आवश्यकता होती है। उपयोगकर्ता स्टार्ट मेनू से विंडोज़ सेटिंग्स पर जाता है। इसके बाद, उपयोगकर्ता 'ऐप्स' अनुभाग में जाता है और 'इंस्टॉल किए गए ऐप्स' का चयन करता है। उपयोगकर्ता फिर सूची में विशिष्ट एप्लिकेशन को खोजता है, 'अनइंस्टॉल' पर क्लिक करता है, और सभी इंस्टॉल किए गए प्रोग्राम फ़ाइलों को हटाने के लिए मार्गदर्शित विज़ार्ड को पूरा करता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        "Uninstalling applications involves navigating through Windows Settings.",
+        "The process includes selecting 'Apps' and then 'Installed apps'.",
+        "Printed answer key: (A) I, II, III, IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3667d1a2-dc36-4e51-b1ba-a7074144956e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II के साथ मिलाएं:\nसूची I: OS प्रकार\nP. एम्बेडेड RTOS\nQ. नेटवर्क OS\nR. मोबाइल OS\nS. सर्वर OS\nसूची II: सामान्य अनुप्रयोग डोमेन\nI. उद्यम डेटा प्रोसेसिंग और वेब होस्टिंग\nII. चिकित्सा उपकरण, ऑटोमोटिव नियंत्रण,\nऔर एवियोनिक्स\nIII. नेटवर्क संसाधनों, उपयोगकर्ता समूहों,\nऔर LANs के माध्यम से सुरक्षा नीतियों का प्रबंधन\nIV. स्मार्टफोन और टैबलेट जो टच\nइनपुट और बैटरी दक्षता के लिए अनुकूलित हैं\nनिम्नलिखित में से कौन सा सही मिलान का प्रतिनिधित्व करता है?",
+      "options_hindi": [
+        "P-II, Q-III, R-IV, S-I",
+        "P-III, Q-II, R-I, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-IV, Q-III, R-II, S-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II: List I: OS Type P. Embedded RTOS Q. Network OS R. Mobile OS S. Server OS List II: Typical Application Domain I. Enterprise data processing and web hosting II. Medical equipment, automotive controls, and avionics III. Management of network resources, user groups, and security policies across LANs IV. Smartphones and tablets optimized for touch input and battery efficiency Which of the following represents the correct match?",
+      "options_english": [
+        "P-II, Q-III, R-IV, S-I",
+        "P-III, Q-II, R-I, S-IV",
+        "P-II, Q-I, R-IV, S-III",
+        "P-IV, Q-III, R-II, S-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Operating system categories cater to specialized computational environments and hardware demands. Embedded real-time operating systems manage deterministic timing in medical tools, automotive modules, and avionics. Network operating systems administer shared network resources, directory services, and security policies across local area networks. Mobile operating systems power smartphones optimized for touch interfaces and power conservation. Server operating systems manage enterprise database processing and high-availability web hosting.",
+      "explanation_hindi": "सही उत्तर (a) है। ऑपरेटिंग सिस्टम श्रेणियाँ विशेषीकृत कंप्यूटेशनल वातावरण और हार्डवेयर आवश्यकताओं को पूरा करती हैं। एम्बेडेड रियल-टाइम ऑपरेटिंग सिस्टम चिकित्सा उपकरणों, ऑटोमोटिव मॉड्यूल, और एवियोनिक्स में निश्चित समय प्रबंधन करते हैं। नेटवर्क ऑपरेटिंग सिस्टम साझा नेटवर्क संसाधनों, निर्देशिका सेवाओं, और स्थानीय क्षेत्र नेटवर्क के माध्यम से सुरक्षा नीतियों का प्रबंधन करते हैं। मोबाइल ऑपरेटिंग सिस्टम टच इंटरफेस और ऊर्जा संरक्षण के लिए अनुकूलित स्मार्टफोनों को शक्ति प्रदान करते हैं। सर्वर ऑपरेटिंग सिस्टम उद्यम डेटाबेस प्रोसेसिंग और उच्च उपलब्धता वेब होस्टिंग का प्रबंधन करते हैं।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Embedded RTOS चिकित्सा उपकरणों में उपयोग होता है।",
+        "Network OS LANs के माध्यम से सुरक्षा नीतियों का प्रबंधन करता है।",
+        "Printed answer key: (A) P-II, Q-III, R-IV, S-I"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "24845135-c129-4671-b2c3-8f4547ccb36a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "98. विंडोज़ में सिस्टम रिस्टोर पॉइंट की भूमिका क्या है?",
+      "options_hindi": [
+        "कोर सिस्टम फ़ाइलों और सेटिंग्स को व्यक्तिगत फ़ाइलों को प्रभावित किए बिना पूर्व स्थिति में लौटाता है।",
+        "सभी डेटा ब्लॉकों को मिटाता है और द्वितीयक संग्रहण ड्राइव पर फ़ाइल आवंटन संरचनाओं को फिर से प्रारंभ करता है।",
+        "मानक उपयोगकर्ता प्रोफाइल को स्वचालित रूप से रूट प्रशासक खातों में परिवर्तित करके विशेषाधिकार बढ़ाता है।",
+        "सभी तृतीय-पक्ष उपयोगकर्ता फ़ाइलों और स्थापित अनुप्रयोगों को हटा कर पूर्ण सिस्टम सफाई करता है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the role of a system restore point in Windows?",
+      "options_english": [
+        "Reverts core system files and settings to a prior state without affecting personal files.",
+        "Erases all data blocks and re-initializes file allocation structures across secondary storage drives.",
+        "Escalates privileges by converting standard user profiles into root administrator accounts automatically.",
+        "Performs full system cleanup by removing all third-party user files and installed applications."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A system restore point in Windows acts as a saved snapshot of core system files, installed driver states, registry settings, and system binaries. When system instability or software conflicts occur after updates, restoring to a previous point reverts operating system settings to that functional state. Crucially, this restoration mechanism repairs system operational stability while keeping personal user documents, photos, and files completely intact.",
+      "explanation_hindi": "सही उत्तर (a) है। विंडोज़ में सिस्टम रिस्टोर पॉइंट कोर सिस्टम फ़ाइलों, स्थापित ड्राइवर की स्थितियों, रजिस्ट्री सेटिंग्स और सिस्टम बाइनरीज़ का एक सहेजा गया स्नैपशॉट के रूप में कार्य करता है। जब अपडेट के बाद सिस्टम अस्थिरता या सॉफ़्टवेयर संघर्ष होते हैं, तो पिछले बिंदु पर पुनर्स्थापित करना ऑपरेटिंग सिस्टम सेटिंग्स को उस कार्यात्मक स्थिति में लौटाता है। यह पुनर्स्थापन तंत्र सिस्टम संचालन की स्थिरता को ठीक करता है जबकि व्यक्तिगत उपयोगकर्ता दस्तावेज़, फ़ोटो और फ़ाइलों को पूरी तरह से बरकरार रखता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "A system restore point is a snapshot of system files and settings.",
+        "Restoration does not affect personal files.",
+        "Printed answer key: (A) Reverts core system files and settings to a prior state without affecting personal files."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9a26e769-9c2b-41b6-b96b-cddd783ecacf",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "21. सॉफ़्टवेयर श्रेणियों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. सिस्टम सॉफ़्टवेयर हार्डवेयर संचालन का प्रबंधन करता है और एप्लिकेशन सॉफ़्टवेयर के लिए एक प्लेटफ़ॉर्म प्रदान करता है।\nB. यूटिलिटी सॉफ़्टवेयर रखरखाव कार्य करता है जैसे कि डिस्क क्लीनअप, बैकअप, और फ़ाइल संकुचन।\nC. एप्लिकेशन सॉफ़्टवेयर में ऑपरेटिंग सिस्टम, फर्मवेयर, और डिवाइस ड्राइवर शामिल होते हैं।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding software categories:\nA. System software manages hardware operations and provides a platform for application software.\nB. Utility software performs maintenance tasks such as disk cleanup, backup, and file compression.\nC. Application software includes operating systems, firmware, and device drivers.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Computer software is broadly divided into fundamental structural categories based on functional roles. System software manages physical hardware operations, providing an operational interface for higher-level applications. Utility software executes system maintenance activities such as file compression, storage cleanup, and system backups. Application software comprises user-focused programs like word processors and web browsers, whereas operating systems and device drivers are explicitly classified as system software rather than application software.",
+      "explanation_hindi": "सही उत्तर (a) है। कंप्यूटर सॉफ़्टवेयर को कार्यात्मक भूमिकाओं के आधार पर मौलिक संरचनात्मक श्रेणियों में व्यापक रूप से विभाजित किया गया है। सिस्टम सॉफ़्टवेयर भौतिक हार्डवेयर संचालन का प्रबंधन करता है, उच्च-स्तरीय अनुप्रयोगों के लिए एक परिचालन इंटरफ़ेस प्रदान करता है। यूटिलिटी सॉफ़्टवेयर फ़ाइल संकुचन, भंडारण सफाई, और सिस्टम बैकअप जैसे सिस्टम रखरखाव गतिविधियों को निष्पादित करता है। एप्लिकेशन सॉफ़्टवेयर उपयोगकर्ता-केंद्रित कार्यक्रमों जैसे कि वर्ड प्रोसेसर और वेब ब्राउज़र में शामिल होता है, जबकि ऑपरेटिंग सिस्टम और डिवाइस ड्राइवर को स्पष्ट रूप से एप्लिकेशन सॉफ़्टवेयर के बजाय सिस्टम सॉफ़्टवेयर के रूप में वर्गीकृत किया गया है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "System software manages hardware operations.",
+        "Utility software performs maintenance tasks.",
+        "Application software includes user-focused programs.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "33f9690d-5210-4b88-856b-96c899a2f2b4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "65. Windows में सिस्टम रिस्टोर पॉइंट बनाने के लिए सही कदमों का क्रम चुनें:\nI. सिस्टम प्रॉपर्टीज खोलें और सिस्टम प्रोटेक्शन टैब पर जाएं।",
+      "options_hindi": [
+        "I, II, III, IV",
+        "II, I, III, IV",
+        "I, III, II, IV",
+        "IV, III, II, I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct sequence of steps to create a system restore point in Windows:\nI. Open System Properties and navigate to the System Protection tab.\nII. Highlight the primary system drive.\nIII. Click ‘Create...’.\nIV. Enter a descriptive identifier name and click ‘Create’.",
+      "options_english": [
+        "I, II, III, IV",
+        "II, I, III, IV",
+        "I, III, II, IV",
+        "IV, III, II, I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "System restore points in Windows capture current operating system configuration states to permit system rollback if issues arise. To create one manually, the user opens System Properties and navigates to the System Protection tab. Next, the user highlights the primary system drive and clicks ‘Create...’. The user then enters a descriptive identifier name and clicks ‘Create’ to complete system state saving.",
+      "explanation_hindi": "सही उत्तर (a) है। Windows में सिस्टम रिस्टोर पॉइंट बनाने के लिए, उपयोगकर्ता को सबसे पहले सिस्टम प्रॉपर्टीज खोलनी होती है और सिस्टम प्रोटेक्शन टैब पर जाना होता है। इसके बाद, प्राथमिक सिस्टम ड्राइव को हाइलाइट किया जाता है और ‘Create...’ पर क्लिक किया जाता है। अंत में, उपयोगकर्ता एक वर्णनात्मक पहचानकर्ता नाम दर्ज करता है और ‘Create’ पर क्लिक करके सिस्टम स्थिति को सहेजता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "System restore points allow rollback to previous system states.",
+        "Creating a restore point involves navigating through System Properties.",
+        "Printed answer key: (A) I, II, III, IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "84c8bab3-6fb6-4bf3-ab22-d334b9dff69a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "69. मल्टीप्रोग्रामिंग और मल्टी-प्रोसेसिंग के बीच मुख्य अंतर क्या है?\n(1) मल्टीप्रोग्रामिंग को कई भौतिक प्रोसेसर की आवश्यकता होती है, जबकि मल्टी-प्रोसेसिंग",
+      "options_hindi": [
+        "विभिन्न कार्यों को एक CPU पर चलाता है।",
+        "कई भौतिक प्रोसेसर पर कार्यों को चलाता है।",
+        "मल्टी-प्रोग्रामिंग संदर्भ-स्विच करता है।",
+        "कई प्रक्रियाओं को एक साथ चलाता है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the main distinction between multiprogramming and multi-processing?\nMulti-programming requires multiple physical processors, whereas multi-processing runs tasks concurrently across multiple CPUs.",
+      "options_english": [
+        "Runs different tasks on one CPU.",
+        "Runs tasks on multiple physical processors.",
+        "Multi-programming context-switches jobs.",
+        "Runs multiple processes simultaneously."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The correct answer is c. Multiprogramming and multi-processing represent distinct computational execution paradigms. Multiprogramming increases CPU utilization on a single processor system by keeping multiple programs in primary memory and rapidly context-switching processing time whenever active tasks await input/output operations. Conversely, multi-processing utilizes two or more physical central processing units or processor cores working simultaneously, allowing multiple instructions and process threads to execute truly concurrently in parallel hardware.",
+      "explanation_hindi": "सही उत्तर (c) है। मल्टीप्रोग्रामिंग और मल्टी-प्रोसेसिंग विभिन्न गणनात्मक निष्पादन पैराजाइम का प्रतिनिधित्व करते हैं। मल्टीप्रोग्रामिंग एकल प्रोसेसर प्रणाली पर CPU उपयोगिता को बढ़ाता है, जिसमें कई कार्यक्रमों को प्राथमिक मेमोरी में रखा जाता है और सक्रिय कार्यों के इनपुट/आउटपुट संचालन की प्रतीक्षा करते समय तेजी से संदर्भ-स्विचिंग की जाती है। इसके विपरीत, मल्टी-प्रोसेसिंग दो या दो से अधिक भौतिक केंद्रीय प्रोसेसिंग यूनिट या प्रोसेसर कोर का उपयोग करता है, जो एक साथ काम करते हैं, जिससे कई निर्देश और प्रक्रिया थ्रेड वास्तव में समानांतर हार्डवेयर में निष्पादित होते हैं।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Multiprogramming increases CPU utilization by context-switching.",
+        "Multi-processing allows true concurrent execution across multiple CPUs.",
+        "Printed answer key: (C) Multi-programming context-switches jobs."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6412aa61-30ba-4188-ad05-b3f5dd33822c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "81. निम्नलिखित में से कौन सा एक ऑपरेटिंग सिस्टम कर्नेल की प्राथमिक मुख्य जिम्मेदारी है?",
+      "options_hindi": [
+        "दृश्य डेस्कटॉप थीम और वॉलपेपर डिज़ाइन बनाना और अनुकूलित करना।",
+        "हार्डवेयर संसाधनों और प्रक्रिया निष्पादन का प्रबंधन करना।",
+        "वेब ब्राउज़िंग को सुविधाजनक बनाना और नेटवर्क प्रोटोकॉल सत्रों का प्रबंधन करना।",
+        "स्प्रेडशीट फ़ाइलों में गणनात्मक सूत्रों और कार्यों का मूल्यांकन करना।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following is a primary core responsibility of an operating system kernel?",
+      "options_english": [
+        "Generating and customizing visual desktop themes and wallpaper designs.",
+        "Managing hardware resources and process execution.",
+        "Facilitating web browsing and managing network protocol sessions.",
+        "Evaluating computational formulas and functions in spreadsheet files."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The kernel is the core component of an operating system, responsible for managing hardware resources and process execution. It maintains direct control over the hardware, handling tasks such as memory allocation, process scheduling, and input/output operations. By abstracting the complexities of the hardware, the kernel provides a stable environment for applications to run efficiently. This foundational role is critical for the overall performance and stability of the operating system.",
+      "explanation_hindi": "सही उत्तर (b) है। कर्नेल ऑपरेटिंग सिस्टम का मुख्य घटक है, जो हार्डवेयर संसाधनों और प्रक्रिया निष्पादन का प्रबंधन करने के लिए जिम्मेदार है। यह हार्डवेयर पर सीधा नियंत्रण बनाए रखता है, जैसे कि मेमोरी आवंटन, प्रक्रिया अनुसूची और इनपुट/आउटपुट संचालन। हार्डवेयर की जटिलताओं को अमूर्त करके, कर्नेल अनुप्रयोगों के लिए कुशलता से चलने के लिए एक स्थिर वातावरण प्रदान करता है। यह मौलिक भूमिका ऑपरेटिंग सिस्टम के समग्र प्रदर्शन और स्थिरता के लिए महत्वपूर्ण है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "कर्नेल हार्डवेयर संसाधनों का प्रबंधन करता है।",
+        "यह प्रक्रिया निष्पादन के लिए जिम्मेदार है।",
+        "यह हार्डवेयर की जटिलताओं को अमूर्त करता है।",
+        "Printed answer key: (B) Managing hardware resources and process."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "21097499-8df1-468e-aa42-d2f56425ba4c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "87. शॉर्टकट कुंजी संयोजन 'Alt + Tab' का कार्य क्या है?",
+      "options_hindi": [
+        "खुले एप्लिकेशन विंडो के बीच स्विच करता है",
+        "वर्तमान सक्रिय प्रोग्राम विंडो को बंद करता है",
+        "कंप्यूटर उपयोगकर्ता खाता लॉक करता है",
+        "सभी विंडो को न्यूनतम करता है ताकि डेस्कटॉप दिख सके"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the function of the shortcut key combination ‘Alt + Tab’?",
+      "options_english": [
+        "Switches between open application windows",
+        "Closes the currently active program window",
+        "Locks the computer user account",
+        "Minimizes all windows to show desktop"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The ‘Alt + Tab’ key combination serves as a fundamental window management shortcut in Windows operating systems. Pressing ‘Alt + Tab’ opens an overlay displaying visual thumbnail previews of all currently open application windows. Holding the Alt key while repeatedly tapping Tab allows users to cycle through active windows quickly and switch operational focus to another running application without using the mouse interface.",
+      "explanation_hindi": "सही उत्तर (a) है। 'Alt + Tab' कुंजी संयोजन विंडोज़ ऑपरेटिंग सिस्टम में एक मौलिक विंडो प्रबंधन शॉर्टकट के रूप में कार्य करता है। 'Alt + Tab' दबाने से सभी खुले एप्लिकेशन विंडो के दृश्य थंबनेल पूर्वावलोकन प्रदर्शित करने वाला एक ओवरले खुलता है। Alt कुंजी को दबाए रखते हुए बार-बार Tab दबाने से उपयोगकर्ता सक्रिय विंडो के बीच तेजी से चक्रित कर सकते हैं और माउस इंटरफेस का उपयोग किए बिना किसी अन्य चल रहे एप्लिकेशन पर कार्यात्मक ध्यान स्विच कर सकते हैं।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        "Alt + Tab is a shortcut for switching between open windows.",
+        "It enhances productivity by allowing quick navigation.",
+        "Printed answer key: (A) Switches between open application windows"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8fddc4da-f29d-4d9e-9a1c-e0c5dfaeded5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "3। \n\nऑपरेटिंग सिस्टम प्रकारों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. एकल-उपयोगकर्ता एकल-कार्यकारी ऑपरेटिंग सिस्टम एक समय में एक उपयोगकर्ता को एक कार्य करने की अनुमति देते हैं।\nB. बहु-उपयोगकर्ता ऑपरेटिंग सिस्टम कई उपयोगकर्ताओं को एक साथ सिस्टम संसाधनों तक पहुंचने की अनुमति देते हैं।\nC. वास्तविक समय के ऑपरेटिंग सिस्टम सख्त समय सीमाओं के भीतर कार्यों के निष्पादन की गारंटी देते हैं।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding operating system types:\nA. Single-user single-tasking operating systems allow one user to perform one task at a time.\nB. Multi-user operating systems allow multiple users to access system resources simultaneously.\nC. Real-time operating systems guarantee execution of tasks within strict time constraints.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and C"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Operating system architectures are designed around distinct operational requirements and resource models. Single-user single-tasking operating systems restrict system operation to executing a single application for one user at any given time. Multi-user operating systems permit multiple concurrent users to access shared system resources simultaneously through user profiles. Real-time operating systems process incoming data streams immediately, delivering deterministic execution guarantees and predictable task completion strictly within specified time constraints.",
+      "explanation_hindi": "सही उत्तर (d) है। ऑपरेटिंग सिस्टम आर्किटेक्चर को विशिष्ट संचालन आवश्यकताओं और संसाधन मॉडलों के चारों ओर डिज़ाइन किया गया है। एकल-उपयोगकर्ता एकल-कार्यकारी ऑपरेटिंग सिस्टम एक समय में एक उपयोगकर्ता के लिए एकल एप्लिकेशन को निष्पादित करने तक सीमित होते हैं। बहु-उपयोगकर्ता ऑपरेटिंग सिस्टम कई समवर्ती उपयोगकर्ताओं को उपयोगकर्ता प्रोफाइल के माध्यम से साझा सिस्टम संसाधनों तक पहुंचने की अनुमति देते हैं। वास्तविक समय के ऑपरेटिंग सिस्टम तुरंत आने वाले डेटा धाराओं को संसाधित करते हैं, सख्त समय सीमाओं के भीतर पूर्वानुमानित कार्य पूर्णता की गारंटी देते हैं।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Single-user single-tasking systems allow only one task for one user.",
+        "Multi-user systems enable simultaneous access for multiple users.",
+        "Real-time systems ensure task execution within strict time limits.",
+        "Printed answer key: (D) A, B and C"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "20275998-3bca-481c-b89d-51465bf8abc4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "32. लिनक्स वितरणों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. उबंटू एक उपयोगकर्ता-अनुकूल लिनक्स वितरण है जो डेबियन पर आधारित है।\nB. फेडोरा एक सामुदायिक-समर्थित लिनक्स वितरण है जिसे रेड हैट द्वारा प्रायोजित किया गया है।\nC. लिनक्स वितरण केवल कमांड-लाइन इंटरफेस के माध्यम से कार्य करते हैं, जिसमें ग्राफिकल डेस्कटॉप समर्थन नहीं होता।\nD. लिनक्स कर्नेल को ओपन-",
+      "options_hindi": [
+        "उपयोगकर्ता-अनुकूल लिनक्स वितरण है जो डेबियन पर आधारित है।",
+        "एक सामुदायिक-समर्थित लिनक्स वितरण है जिसे रेड हैट द्वारा प्रायोजित किया गया है।",
+        "केवल कमांड-लाइन इंटरफेस के माध्यम से कार्य करते हैं, जिसमें ग्राफिकल डेस्कटॉप समर्थन नहीं होता।",
+        "ओपन-"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Linux distributions:\nA. Ubuntu is a user-friendly Linux distribution based on Debian.\nB. Fedora is a community-supported Linux distribution sponsored by Red Hat.\nC. Linux distributions only operate via command-line interface without graphical desktop support.\nD. Linux kernel code is released under open-source licenses.",
+      "options_english": [
+        "Ubuntu is a user-friendly Linux distribution based on Debian.",
+        "Fedora is a community-supported Linux distribution sponsored by Red Hat.",
+        "Linux distributions only operate via command-line interface without graphical desktop support.",
+        "Linux kernel code is released under open-source licenses."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Linux represents a versatile, open-source operating system ecosystem built around a common underlying kernel distributed under public licenses. Popular distributions adapt the system for diverse user bases, such as Ubuntu providing an accessible Debian-derived desktop and Fedora serving as a community project sponsored by Red Hat. Modern Linux distributions support feature-rich graphical desktop environments in addition to command-line interfaces, making them versatile across personal and enterprise deployments.",
+      "explanation_hindi": "सही उत्तर (a) है। लिनक्स एक बहुपरकारी, ओपन-सोर्स ऑपरेटिंग सिस्टम पारिस्थितिकी तंत्र का प्रतिनिधित्व करता है जो सार्वजनिक लाइसेंस के तहत वितरित एक सामान्य अंतर्निहित कर्नेल के चारों ओर निर्मित होता है। लोकप्रिय वितरण प्रणाली को विभिन्न उपयोगकर्ता आधारों के लिए अनुकूलित करते हैं, जैसे उबंटू जो एक सुलभ डेबियन-व्युत्पन्न डेस्कटॉप प्रदान करता है और फेडोरा जो रेड हैट द्वारा प्रायोजित एक सामुदायिक परियोजना के रूप में कार्य करता है। आधुनिक लिनक्स वितरण कमांड-लाइन इंटरफेस के अलावा ग्राफिकल डेस्कटॉप वातावरण का समर्थन करते हैं, जिससे ये व्यक्तिगत और उद्यम तैनाती में बहुपरकारी बनते हैं।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Linux distributions are based on a common kernel and are open-source.",
+        "Ubuntu is based on Debian and is user-friendly.",
+        "Fedora is community-supported and sponsored by Red Hat.",
+        "Printed answer key: (A) A, B and D"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1a43eb8f-da48-40e1-8a25-32668887f9d5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) के रूप में लेबल किया गया है\nऔर दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): एक पदानुक्रमित फ़ाइल प्रणाली में,\nनिर्देशिका पथ ऑपरेटिंग सिस्टम को\nकिसी भी संग्रहीत फ़ाइल को अद्वितीय रूप से\nस्थानांतरित करने की अनुमति देते हैं।\nकारण (R): एक निर्देशिका पथ मूल\nनिर्देशिका से लक्ष्य फ़ाइल तक\nपैरेंट फ़ोल्डरों के सटीक अनुक्रम को\nरेखांकित करता है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही\nव्याख्या है।",
+        "दोनों A और R सत्य हैं लेकिन R A का\nसही व्याख्या नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled\nas Assertion (A) and the other is labelled as\nReason (R).\nAssertion (A): In a hierarchical file system,\ndirectory paths allow the operating system to\nuniquely locate any stored file.\nReason (R): A directory path outlines the precise\nsequence of parent folders starting from the root\ndirectory down to the target file.",
+      "options_english": [
+        "Both A and R are true and R is the correct\nexplanation of A.",
+        "Both A and R are true but R is not the\ncorrect explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Hierarchical file systems organize stored data\nusing a structured tree architecture originating\nfrom a designated root directory. A directory\npath defines the precise sequential path through\nparent folders leading directly to a specific\ntarget file. Because every stored item possesses\na unique path reflecting its exact hierarchical\nfolder address, the operating system can reliably\nidentify, locate, and retrieve stored files across\nlocal or networked storage volumes without\nambiguity.",
+      "explanation_hindi": "सही उत्तर (a) है। पदानुक्रमित फ़ाइल प्रणाली संग्रहीत डेटा को एक संरचित वृक्ष आर्किटेक्चर का उपयोग करके व्यवस्थित करती है, जो एक निर्दिष्ट मूल निर्देशिका से उत्पन्न होती है। एक निर्देशिका पथ पैरेंट फ़ोल्डरों के माध्यम से एक विशिष्ट लक्ष्य फ़ाइल तक पहुँचने के लिए सटीक अनुक्रम को परिभाषित करता है। प्रत्येक संग्रहीत आइटम के पास एक अद्वितीय पथ होता है जो इसके सटीक पदानुक्रमित फ़ोल्डर पते को दर्शाता है, जिससे ऑपरेटिंग सिस्टम स्थानीय या नेटवर्क स्टोरेज वॉल्यूम पर संग्रहीत फ़ाइलों की पहचान, स्थान और पुनर्प्राप्ति कर सकता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Hierarchical file systems use a tree structure for data organization.",
+        "A directory path is essential for locating files in a file system.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A.",
+        "Unique paths are crucial for file retrieval in operating systems."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2a2d4585-64c4-411e-939b-331d5fc72a5d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II के साथ मिलाएं:\nसूची I: सॉफ़्टवेयर लाइसेंसिंग मॉडल\nP. ओपन-सोर्स\nQ. प्रोपाइटरी\nR. शेयरवेयर\nS. फ्रीवेयर\nसूची II: मुख्य विशेषता\nI. परीक्षण अवधि के लिए मूल्यांकन के लिए मुफ्त में प्रदान किया गया, जिसके बाद भुगतान की आवश्यकता होती है\nII. पूर्ण उपयोग के लिए कोई लागत नहीं, लेकिन उपयोगकर्ताओं को स्रोत कोड प्रदान नहीं किया जाता है\nIII. स्रोत कोड निरीक्षण, संशोधन और पुनर्वितरण के लिए स्वतंत्र रूप से उपलब्ध है\nIV. सॉफ़्टवेयर कॉपीराइट किया गया है और स्रोत कोड को विक्रेता द्वारा बंद और प्रतिबंधित रखा गया है\nनिम्नलिखित में से कौन सा सही मेल दर्शाता है?",
+      "options_hindi": [
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-III, R-II, S-I",
+        "P-III, Q-I, R-IV, S-II",
+        "P-I, Q-IV, R-III, S-II"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II: List I: Software Licensing Model P. Open-Source Q. Proprietary R. Shareware S. Freeware List II: Core Feature I. Provided free of charge for evaluation for a trial period, after which payment is required II. Available at no cost for full use, but source code is not provided to users III. Source code is freely available for inspection, modification, and redistribution IV. Software is copyrighted and source code is kept closed and restricted by the vendor Which of the following represents the correct match?",
+      "options_english": [
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-III, R-II, S-I",
+        "P-III, Q-I, R-IV, S-II",
+        "P-I, Q-IV, R-III, S-II"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct match is P-III, Q-IV, R-I, S-II. Software licensing models dictate distribution rules, code accessibility, and usage conditions. Open-Source licenses grant full access to source code for inspection, modification, and community redistribution. Proprietary software keeps source code restricted under strict vendor copyright terms. Shareware offers temporary evaluation access free of charge, requiring payment after a trial period. Freeware provides fully functional software without monetary cost, though source code remains strictly private and closed from modification.",
+      "explanation_hindi": "सही उत्तर (a) है। सही मेल P-III, Q-IV, R-I, S-II है। सॉफ़्टवेयर लाइसेंसिंग मॉडल वितरण नियम, कोड पहुंच और उपयोग की शर्तों को निर्धारित करते हैं। ओपन-सोर्स लाइसेंस निरीक्षण, संशोधन और सामुदायिक पुनर्वितरण के लिए स्रोत कोड तक पूर्ण पहुंच प्रदान करते हैं। प्रोपाइटरी सॉफ़्टवेयर स्रोत कोड को विक्रेता के कॉपीराइट शर्तों के तहत प्रतिबंधित रखता है। शेयरवेयर परीक्षण अवधि के बाद भुगतान की आवश्यकता के साथ मुफ्त में अस्थायी मूल्यांकन पहुंच प्रदान करता है। फ्रीवेयर पूरी तरह से कार्यात्मक सॉफ़्टवेयर प्रदान करता है बिना किसी मौद्रिक लागत के, हालांकि स्रोत कोड संशोधन से सख्ती से निजी और बंद रहता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "medium",
+      "key_facts": [
+        "Open-Source licenses allow full access to source code.",
+        "Proprietary software restricts access to source code.",
+        "Printed answer key: (A) P-III, Q-IV, R-I, S-II"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f19200b8-18cf-4ec7-8dd6-e37f20a5ced3",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "95. कंप्यूटर ऑपरेटिंग सिस्टम संदर्भ में 'GUI' का क्या अर्थ है?",
+      "options_hindi": [
+        "ग्राफिकल यूजर इंटरफेस",
+        "जनरल यूजर जानकारी",
+        "गाइडेड यूटिलिटी इंटरफेस",
+        "ग्लोबल यूजर इंटीग्रेशन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Operating Systems and File Management",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What does ‘GUI’ stand for in computer operating system context?",
+      "options_english": [
+        "Graphical User Interface",
+        "General User Information",
+        "Guided Utility Interface",
+        "Global User Integration"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "In computer operating systems, the acronym GUI stands for Graphical User Interface. A GUI enables users to interact with computing devices using visual elements such as windows, graphic icons, pop-up menus, buttons, and mouse pointers rather than entering text commands into command prompts. This graphical visual representation makes computing accessible, intuitive, and efficient for non-technical users across modern desktop and mobile platforms.",
+      "explanation_hindi": "सही उत्तर (a) है। कंप्यूटर ऑपरेटिंग सिस्टम में, GUI का संक्षिप्त रूप ग्राफिकल यूजर इंटरफेस है। एक GUI उपयोगकर्ताओं को विंडोज़, ग्राफ़िक आइकन, पॉप-अप मेनू, बटन और माउस पॉइंटर्स जैसे दृश्य तत्वों का उपयोग करके कंप्यूटिंग उपकरणों के साथ बातचीत करने की अनुमति देता है, बजाय इसके कि वे कमांड प्रॉम्प्ट में पाठ आदेश दर्ज करें। यह ग्राफिकल दृश्य प्रतिनिधित्व कंप्यूटिंग को आधुनिक डेस्कटॉप और मोबाइल प्लेटफार्मों पर गैर-तकनीकी उपयोगकर्ताओं के लिए सुलभ, सहज और कुशल बनाता है।",
+      "topic": "Operating Systems and File Management",
+      "difficulty": "easy",
+      "key_facts": [
+        "GUI enhances user interaction with computers.",
+        "It includes visual elements like windows and icons.",
+        "Printed answer key: (A) Graphical User Interface"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

@@ -1,0 +1,802 @@
+{
+  "test_id": "de934cdf-d057-4ede-b2ba-1199118d1e28",
+  "test_name": "Topic Test: WORD_PROCESSING_AND_SPREADSHEET_APPLICATIONS - Part 3",
+  "type": "topic_wise",
+  "topic": "word_processing_and_spreadsheet_applications",
+  "created_at": "2026-10-28T18:55:06.929407",
+  "questions": [
+    {
+      "id": "523392dc-0820-46b1-8592-b8008b5d1071",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) के रूप में लेबल किया गया है\nऔर दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): स्पेल चेक उपकरण सभी\nसंदर्भ में गलत शब्दों के उपयोग को स्वचालित रूप से पहचानते हैं।\nकारण (R): स्पेल चेक उपकरण शब्दों की तुलना\nबिल्ट-इन डिक्शनरी डेटाबेस के खिलाफ करते हैं।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R गलत है।",
+        "A गलत है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): Spell check tools detect all contextually incorrect word usages automatically. Reason (R): Spell check tools compare words against built-in dictionary databases.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Spell check utilities detect typographical errors by comparing document words against built-in dictionary databases. However, spell check tools cannot automatically identify all contextually incorrect word usages when a typed word is spelled correctly but used inappropriately in context, such as confusing 'their' with 'there'. Therefore, while the underlying dictionary evaluation mechanism is true, the assertion claiming complete automated detection of contextual errors is false.",
+      "explanation_hindi": "सही उत्तर (d) है। स्पेल चेक उपयोगिताएँ टाइपोग्राफिकल त्रुटियों का पता लगाने के लिए दस्तावेज़ के शब्दों की तुलना बिल्ट-इन डिक्शनरी डेटाबेस के खिलाफ करती हैं। हालाँकि, स्पेल चेक उपकरण सभी संदर्भ में गलत शब्दों के उपयोग को स्वचालित रूप से पहचान नहीं सकते हैं जब एक टाइप किया गया शब्द सही ढंग से लिखा गया हो लेकिन संदर्भ में अनुपयुक्त रूप से उपयोग किया गया हो, जैसे 'their' और 'there' के बीच भ्रम। इसलिए, जबकि अंतर्निहित डिक्शनरी मूल्यांकन तंत्र सत्य है, संदर्भात्मक त्रुटियों की पूर्ण स्वचालित पहचान का दावा करने वाला कथन गलत है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Spell check tools compare words against built-in dictionary databases.",
+        "They cannot detect all contextually incorrect usages.",
+        "Printed answer key: (D) A is false but R is true.",
+        "Contextual errors can occur even with correctly spelled words."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "16517452-6f20-48a6-9b54-5a0e52c3c54c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "74. जब एक उपयोगकर्ता स्प्रेडशीट में “शीर्ष पंक्ति को फ्रीज़ करें” लागू करता है, तो क्या होता है?",
+      "options_hindi": [
+        "पंक्ति 1 स्क्रॉल करते समय शीर्ष पर स्थिर रहती है",
+        "पंक्ति 1 सभी सक्रिय कार्यपत्र सूत्र गणनाओं से स्थायी रूप से हटा दी जाती है",
+        "पंक्ति 1 स्वचालित रूप से एक स्वतंत्र पोर्टेबल पीडीएफ दस्तावेज़ फ़ाइल में परिवर्तित हो जाती है",
+        "पंक्ति 1 दृश्य स्क्रीन प्रदर्शन और प्रिंट लेआउट से स्थायी रूप से छिपी हुई है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What happens when a user applies “Freeze Top Row” in a spreadsheet?",
+      "options_english": [
+        "Row 1 stays fixed at top while scrolling",
+        "Row 1 is permanently deleted from all active worksheet formula calculations",
+        "Row 1 is automatically converted into a standalone portable PDF document file",
+        "Row 1 is hidden permanently from visual screen display and print layouts"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "In spreadsheet management, large datasets spanning hundreds of rows can cause column header labels to disappear off screen during vertical scrolling. Applying the “Freeze Top Row” display command locks Row 1 permanently at the top of the worksheet window. As the user scrolls downward through data records, Row 1 remains fully visible, providing persistent visual column context without modifying underlying data or calculation logic.",
+      "explanation_hindi": "सही उत्तर (a) है। स्प्रेडशीट प्रबंधन में, सैकड़ों पंक्तियों में फैले बड़े डेटा सेट कॉलम शीर्षक लेबल को ऊर्ध्वाधर स्क्रॉलिंग के दौरान स्क्रीन से गायब कर सकते हैं। “शीर्ष पंक्ति को फ्रीज़ करें” प्रदर्शन आदेश लागू करने से पंक्ति 1 को कार्यपत्र विंडो के शीर्ष पर स्थायी रूप से लॉक कर दिया जाता है। जैसे-जैसे उपयोगकर्ता डेटा रिकॉर्ड के माध्यम से नीचे स्क्रॉल करता है, पंक्ति 1 पूरी तरह से दृश्य रहती है, जो अंतर्निहित डेटा या गणना तर्क को संशोधित किए बिना निरंतर दृश्य कॉलम संदर्भ प्रदान करती है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Freezing rows helps maintain visibility of headers during scrolling.",
+        "Row 1 remains fixed at the top of the worksheet.",
+        "Printed answer key: (A) Row 1 stays fixed at top while scrolling"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e6ec755c-82df-4be9-a0e8-30d0948336d8",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "56. शब्द प्रसंस्करण में टाइपोग्राफी और प्रारूपण के संबंध में निम्नलिखित कथनों पर विचार करें:\nकथन A: बोल्ड शैली शीर्षकों को उजागर करने के लिए फ़ॉन्ट स्ट्रोक वजन बढ़ाती है।\nकथन B: अंडरलाइन शैली हाइलाइट किए गए पाठ के नीचे एक रेखा खींचती है।\nकथन C: स्ट्राइकथ्रू पाठ को प्रदर्शित करता है।",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding typography and formatting in word processing:\nStatement A: Bold style increases font stroke weight to emphasize headings.\nStatement B: Underline style draws a line beneath highlighted text.\nStatement C: Strikethrough displays text with a horizontal line across it.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Typography and formatting parameters provide detailed control over character aesthetics and readability in word processing documents. Bold style increases character stroke weight for heading emphasis. Underline draws a continuous line beneath selected text. Strikethrough renders a horizontal line directly across characters to signal edits or obsolete text. Font size is universally measured using typographic points, where one point equals 1/72 of an inch.",
+      "explanation_hindi": "सही उत्तर (a) है। टाइपोग्राफी और प्रारूपण पैरामीटर शब्द प्रसंस्करण दस्तावेज़ों में वर्णनात्मक सौंदर्य और पठनीयता पर विस्तृत नियंत्रण प्रदान करते हैं। बोल्ड शैली शीर्षकों को उजागर करने के लिए वर्ण स्ट्रोक वजन बढ़ाती है। अंडरलाइन चयनित पाठ के नीचे एक निरंतर रेखा खींचती है। स्ट्राइकथ्रू वर्णों के पार एक क्षैतिज रेखा को प्रदर्शित करता है ताकि संपादनों या अप्रचलित पाठ का संकेत दिया जा सके। फ़ॉन्ट आकार को सार्वभौमिक रूप से टाइपोग्राफ़िक बिंदुओं में मापा जाता है, जहाँ एक बिंदु 1/72 इंच के बराबर होता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Bold style increases font stroke weight for emphasis.",
+        "Underline style draws a line beneath text.",
+        "Printed answer key: (A) A, B, C and D",
+        "Strikethrough indicates edits or obsolete text."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "97517468-aaa3-4f92-9952-8bf6aee65f42",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "75. वित्तीय बजट ट्रैकिंग स्प्रेडशीट में, शेष बजट भिन्नता की गणना करने के लिए कौन सा सूत्र है जब कुल आवंटन सेल B5 में है और व्यय C5 में हैं?",
+      "options_hindi": [
+        "=B5+C5",
+        "=B5/C5",
+        "=B5*C5",
+        "=B5-C5"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In financial budget tracking spreadsheets, what formula calculates remaining budget variance when Total Allocation is in cell B5 and Expenses are in C5?",
+      "options_english": [
+        "=B5+C5",
+        "=B5/C5",
+        "=B5*C5",
+        "=B5-C5"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Calculating remaining budget variance in financial spreadsheets involves basic subtraction arithmetic between allocated funds and actual operational expenses. When total budget allocation is stored in cell B5 and cumulative expenses in C5, the correct formula to find the remaining budget is =B5-C5. This formula effectively shows how much budget remains after accounting for expenses.",
+      "explanation_hindi": "सही उत्तर (d) है। वित्तीय स्प्रेडशीट में शेष बजट भिन्नता की गणना करने के लिए आवंटित धन और वास्तविक व्यय के बीच मूल घटाव गणित का उपयोग किया जाता है। जब कुल बजट आवंटन सेल B5 में और व्यय C5 में होते हैं, तो शेष बजट ज्ञात करने के लिए सही सूत्र =B5-C5 है। यह सूत्र यह दर्शाता है कि व्यय के बाद कितना बजट शेष है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "Budget variance is calculated by subtracting expenses from total allocation.",
+        "In Excel, the formula for subtraction is represented by the '-' operator.",
+        "Understanding budget tracking is essential for effective financial management.",
+        "Printed answer key: (D) =B5-C5"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "80e0ba00-ba86-4c09-83ef-d0dbd145ed8b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "55. कौन सा नामकरण प्रथा फ़ाइल पुनर्प्राप्ति सटीकता में सुधार करती है?",
+      "options_hindi": [
+        "विवरणात्मक परियोजना नाम, तिथियाँ, और संस्करण टैग शामिल करना",
+        "सभी विभागीय फ़ाइलों को सामान्य रूप से \"Document1.docx\" या \"Book1.xlsx\" के रूप में नामित करना",
+        "बेतरतीब विशेष वर्ण, विराम चिह्न, और गैर-मानक प्रतीकों का विशेष रूप से उपयोग करना",
+        "ऑपरेटिंग सिस्टम में फ़ाइल एक्सटेंशन को मैन्युअल रूप से बदलना बिना प्रारूपों को परिवर्तित किए"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What naming convention practice improves organizational file retrieval accuracy?",
+      "options_english": [
+        "Including descriptive project names, dates, and version tags",
+        "Naming all departmental files generically as 'Document1.docx' or 'Book1.xlsx'",
+        "Using random special characters, punctuation, and non-standard symbols exclusively",
+        "Changing file extensions manually in operating systems without converting formats"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Standardized file naming conventions are essential for maintaining organized digital archives and ensuring rapid document retrieval. Incorporating descriptive project names, standardized date formats, and clear version identifiers into file titles enables personnel to quickly determine document contents and revision states without opening files. This systematic indexing approach minimizes file duplication, prevents data loss, and streamlines collaborative record management across organizational departments.",
+      "explanation_hindi": "सही उत्तर (a) है। मानकीकृत फ़ाइल नामकरण प्रथाएँ संगठित डिजिटल अभिलेखागार बनाए रखने और त्वरित दस्तावेज़ पुनर्प्राप्ति सुनिश्चित करने के लिए आवश्यक हैं। विवरणात्मक परियोजना नाम, मानकीकृत तिथि प्रारूप, और स्पष्ट संस्करण पहचानकर्ताओं को फ़ाइल शीर्षकों में शामिल करने से कर्मचारियों को फ़ाइलें खोले बिना दस्तावेज़ की सामग्री और संशोधन स्थितियों का त्वरित निर्धारण करने में मदद मिलती है। यह प्रणालीगत अनुक्रमण दृष्टिकोण फ़ाइल डुप्लिकेशन को कम करता है, डेटा हानि को रोकता है, और संगठनात्मक विभागों के बीच सहयोगात्मक रिकॉर्ड प्रबंधन को सरल बनाता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Standardized file naming conventions enhance retrieval accuracy.",
+        "Descriptive names help in identifying document contents quickly.",
+        "Printed answer key: (A) Including descriptive project names, dates, and version tags",
+        "Organized digital archives prevent data loss."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "58277ee8-f4de-41b9-8fd3-bf5501813e6d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "45. नीचे दो कथन दिए गए हैं: एक को आश्वासन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है। \nआश्वासन (A): स्प्रेडशीट में डेटा को क्रमबद्ध करना निर्दिष्ट कॉलम मानों के आधार पर पंक्तियों को पुनर्व्यवस्थित करता है। \nकारण (R): डेटा को फ़िल्टर करना उन पंक्तियों को स्थायी रूप से हटा देता है जो निर्दिष्ट मानदंडों को पूरा नहीं करती हैं।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): Sorting data in a spreadsheet rearranges rows based on specified column values. Reason (R): Filtering data permanently deletes rows that do not meet specified criteria.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Data sorting rearranges worksheet rows logically according to specified column criteria, such as ascending alphabetical or descending numeric order. Conversely, filtering temporarily hides rows that do not match specified search criteria without deleting underlying data records. Filtering is completely non-destructive, allowing users to remove filter parameters at any time and restore full visibility of original datasets, rendering claims of permanent deletion false.",
+      "explanation_hindi": "सही उत्तर (c) है। डेटा क्रमबद्ध करना स्प्रेडशीट में निर्दिष्ट कॉलम मानों के अनुसार पंक्तियों को तार्किक रूप से पुनर्व्यवस्थित करता है, जैसे कि आरोही वर्णानुक्रम या अवरोही संख्यात्मक क्रम। इसके विपरीत, फ़िल्टरिंग उन पंक्तियों को अस्थायी रूप से छिपा देती है जो निर्दिष्ट खोज मानदंडों से मेल नहीं खाती हैं, बिना अंतर्निहित डेटा रिकॉर्ड को हटाए। फ़िल्टरिंग पूरी तरह से गैर-विनाशकारी है, जिससे उपयोगकर्ता किसी भी समय फ़िल्टर पैरामीटर को हटा सकते हैं और मूल डेटा सेट की पूर्ण दृश्यता को पुनर्स्थापित कर सकते हैं, जिससे स्थायी हटाने के दावों को गलत साबित किया जा सकता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "डेटा क्रमबद्ध करना पंक्तियों को पुनर्व्यवस्थित करता है।",
+        "फ़िल्टरिंग डेटा को स्थायी रूप से नहीं हटाता है।",
+        "Printed answer key: (C) A is true but R is false."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "0fe61e57-4bf2-432f-964f-56c3739119fa",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "18. कौन सा स्प्रेडशीट ऑपरेशन चयनित कॉलम में वर्णानुक्रमिक या संख्यात्मक क्रम के आधार पर डेटा पंक्तियों को पुनर्व्यवस्थित करता है?",
+      "options_hindi": [
+        "क्रमबद्ध करना",
+        "छानना",
+        "फ्रीज़ करना",
+        "मर्ज करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What spreadsheet operation rearranges data rows based on alphabetical or numerical order in selected columns?",
+      "options_english": [
+        "Sorting",
+        "Filtering",
+        "Freezing",
+        "Merging"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Data organization within spreadsheets frequently requires rearranging tabular records according to specific operational priorities. Sorting rearranges complete rows of data based on alphabetical or numerical criteria evaluated within chosen target columns. Datasets can be ordered in ascending or descending direction, allowing administrative personnel to group identical records, highlight extreme values, or structure financial and academic records in a standardized sequential layout.",
+      "explanation_hindi": "सही उत्तर (a) है। स्प्रेडशीट में डेटा संगठन अक्सर विशिष्ट संचालन प्राथमिकताओं के अनुसार तालिका रिकॉर्ड को पुनर्व्यवस्थित करने की आवश्यकता होती है। क्रमबद्ध करना चयनित लक्षित कॉलम में मूल्यांकित वर्णानुक्रमिक या संख्यात्मक मानदंड के आधार पर डेटा की पूरी पंक्तियों को पुनर्व्यवस्थित करता है। डेटा सेट को आरोही या अवरोही दिशा में क्रमबद्ध किया जा सकता है, जिससे प्रशासनिक कर्मियों को समान रिकॉर्ड को समूहित करने, चरम मानों को उजागर करने या वित्तीय और शैक्षणिक रिकॉर्ड को मानकीकृत अनुक्रमित लेआउट में संरचना करने की अनुमति मिलती है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "क्रमबद्ध करना डेटा पंक्तियों को पुनर्व्यवस्थित करता है।",
+        "डेटा सेट को आरोही या अवरोही क्रम में व्यवस्थित किया जा सकता है।",
+        "Printed answer key: (A) Sorting"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f62d3e81-5397-4e6f-b7e4-de6015aaee50",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "31. एक वर्ड प्रोसेसर में कौन-सी विशेषता उपयोगकर्ता को एक विशिष्ट शब्द खोजने और उसे दस्तावेज़ में अन्य शब्द से बदलने की अनुमति देती है?",
+      "options_hindi": [
+        "खोजें और बदलें",
+        "ट्रैक परिवर्तन मार्कअप",
+        "मेल मर्ज स्वचालन",
+        "पृष्ठ सेटअप प्रारूपण"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which feature in a word processor allows a user to search for a specific word and replace it with another throughout the document?",
+      "options_english": [
+        "Find & Replace",
+        "Track Changes markup",
+        "Mail Merge automation",
+        "Page Setup formatting"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Editing long documents efficiently requires specialized text manipulation tools within word processing software. The Find and Replace feature allows users to search for every instance of a specific word, string, or formatting style across a document and automatically substitute it with designated replacement text. This utility eliminates manual search effort, reduces editing oversights, and accelerates document updates across extensive institutional reports.",
+      "explanation_hindi": "सही उत्तर (a) है। लंबे दस्तावेज़ों को कुशलता से संपादित करने के लिए वर्ड प्रोसेसिंग सॉफ़्टवेयर में विशेषीकृत पाठ हेरफेर उपकरणों की आवश्यकता होती है। खोजें और बदलें सुविधा उपयोगकर्ताओं को दस्तावेज़ में एक विशिष्ट शब्द, स्ट्रिंग, या प्रारूपण शैली के हर उदाहरण को खोजने और स्वचालित रूप से इसे निर्दिष्ट प्रतिस्थापन पाठ से बदलने की अनुमति देती है। यह उपयोगिता मैनुअल खोज प्रयास को समाप्त करती है, संपादन में चूक को कम करती है, और व्यापक संस्थागत रिपोर्ट में दस्तावेज़ अपडेट को तेज करती है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "खोजें और बदलें सुविधा दस्तावेज़ संपादन के लिए आवश्यक है।",
+        "यह मैनुअल खोज प्रयास को समाप्त करता है।",
+        "यह संपादन में चूक को कम करता है।",
+        "Printed answer key: (A) Find & Replace"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f150f798-1aa2-45f0-8452-578407fc7720",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "30. संस्थागत रिकॉर्ड-कीपिंग में मानक संस्करण नियंत्रण (जैसे, Draft_v1.0, Final_v2.0) क्यों आवश्यक है?",
+      "options_hindi": [
+        "यह नेटवर्क फ़ाइल साझा करते समय जटिल फ़ाइल एन्क्रिप्शन गणितीय कठिनाई को कम करता है",
+        "यह आधुनिक सूट में स्वचालित रूप से पुराने गैर-समर्थित दस्तावेज़ फ़ाइल स्वरूप खोलने में सक्षम बनाता है",
+        "यह जटिल कस्टम डेटा मान्यता नियमों को परिभाषित करने की प्रशासनिक आवश्यकता को समाप्त करता है",
+        "मास्टर डेटा को अधिलेखित करने से रोकने और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Why is standard version control (e.g., Draft_v1.0, Final_v2.0) essential in institutional record-keeping?",
+      "options_english": [
+        "It decreases complex file encryption mathematical difficulty during network file sharing",
+        "It enables legacy non-supported document file formats to open automatically in modern suites",
+        "It removes the administrative necessity of defining complex custom data validation rules",
+        "To prevent overwriting master data and"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Maintaining strict version control practices using systematic file naming conventions is essential for administrative record-keeping and audit trailing. Assigning clear version tags to successive document drafts prevents team members from accidentally overwriting critical master data. Furthermore, version control preserves a continuous historical archive of document revisions, allowing personnel to track editing trajectories, restore historical data points, and coordinate collaborative drafting workflows.",
+      "explanation_hindi": "सही उत्तर (d) है। मानक संस्करण नियंत्रण प्रथाओं को बनाए रखना, प्रणालीगत फ़ाइल नामकरण सम्मेलनों का उपयोग करते हुए, प्रशासनिक रिकॉर्ड-कीपिंग और ऑडिट ट्रेलिंग के लिए आवश्यक है। दस्तावेज़ ड्राफ्ट के लिए स्पष्ट संस्करण टैग असाइन करना टीम के सदस्यों को महत्वपूर्ण मास्टर डेटा को गलती से अधिलेखित करने से रोकता है। इसके अलावा, संस्करण नियंत्रण दस्तावेज़ संशोधनों का एक निरंतर ऐतिहासिक अभिलेख बनाए रखता है, जिससे कर्मियों को संपादन की प्रवृत्तियों को ट्रैक करने, ऐतिहासिक डेटा बिंदुओं को पुनर्स्थापित करने और सहयोगात्मक ड्राफ्टिंग कार्यप्रवाहों का समन्वय करने की अनुमति मिलती है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "संस्करण नियंत्रण प्रथाएँ रिकॉर्ड-कीपिंग में महत्वपूर्ण हैं।",
+        "स्पष्ट संस्करण टैग मास्टर डेटा को अधिलेखित करने से रोकते हैं।",
+        "संशोधन का ऐतिहासिक अभिलेख बनाए रखना आवश्यक है।",
+        "Printed answer key: (D) To prevent overwriting master data and"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "cf62d1c9-3857-4845-854d-e7ac46a90110",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "19. जब स्प्रेडशीट डेटा से प्लॉट किया जाता है, तो एक रेखा चार्ट क्या प्राथमिक अंतर्दृष्टि प्रदान करता है?",
+      "options_hindi": [
+        "एकल स्थिर कुल डेटा सेट का अनुपातात्मक प्रतिशत संरचना विभाजन",
+        "भौगोलिक मानचित्रण समन्वय संस्थागत भौतिक सर्वर सुविधाओं के",
+        "समय के साथ संख्यात्मक मूल्यों में प्रवृत्तियाँ और परिवर्तन",
+        "कई सहेजे गए फ़ाइलों में पासवर्ड एन्क्रिप्शन ताकत सत्यापन स्तर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What primary insight does a line chart provide when plotted from spreadsheet data?",
+      "options_english": [
+        "Proportional percentage composition breakdown of a single static total dataset",
+        "Geographic mapping coordinates of institutional physical server facilities",
+        "Trends and changes in numerical values over time",
+        "Password encryption strength verification levels across multiple saved files"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Line charts are powerful data visualization tools in spreadsheet applications, designed primarily to plot continuous datasets across sequential intervals. By connecting individual data points with continuous line segments, line charts visually highlight overall trends, fluctuations, trajectories, and temporal patterns in numerical values over time. This functionality makes line charts particularly effective for analyzing financial expenditures, longitudinal research data, and performance metrics across successive operational periods.",
+      "explanation_hindi": "सही उत्तर (c) है। रेखा चार्ट स्प्रेडशीट अनुप्रयोगों में शक्तिशाली डेटा दृश्यता उपकरण होते हैं, जो मुख्य रूप से अनुक्रमिक अंतराल के पार निरंतर डेटा सेट को प्लॉट करने के लिए डिज़ाइन किए गए हैं। व्यक्तिगत डेटा बिंदुओं को निरंतर रेखा खंडों के साथ जोड़कर, रेखा चार्ट समय के साथ संख्यात्मक मूल्यों में समग्र प्रवृत्तियों, उतार-चढ़ाव, पथ और अस्थायी पैटर्न को दृश्य रूप से उजागर करते हैं। यह कार्यक्षमता रेखा चार्ट को वित्तीय व्यय, दीर्घकालिक अनुसंधान डेटा और लगातार संचालन अवधि के दौरान प्रदर्शन मैट्रिक्स का विश्लेषण करने के लिए विशेष रूप से प्रभावी बनाती है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Line charts connect data points to show trends over time.",
+        "They are useful for analyzing financial and performance data.",
+        "Printed answer key: (C) Trends and changes in numerical values over time."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "26a81ac3-8e3f-4ee5-929d-3b0499e76f4b",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "26. एक कार्यपत्र को पासवर्ड से सुरक्षित करने के लिए निम्नलिखित अनुक्रम पर विचार करें:",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following sequence for protecting a worksheet with a password:",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Securing spreadsheet workbooks using password protection requires following a systematic administrative workflow. First, the user navigates to the Review or File menu tab on the application ribbon. Second, the user selects the Protect Sheet or Protect Workbook option. Third, the user inputs the desired administrative password and confirms it. Fourth, the user saves the updated workbook file to enforce active security encryption.",
+      "explanation_hindi": "सही उत्तर (a) है। स्प्रेडशीट कार्यपुस्तकों को पासवर्ड सुरक्षा का उपयोग करके सुरक्षित करने के लिए एक प्रणालीबद्ध प्रशासनिक कार्यप्रवाह का पालन करना आवश्यक है। पहले, उपयोगकर्ता एप्लिकेशन रिबन पर समीक्षा या फ़ाइल मेनू टैब पर जाता है। दूसरे, उपयोगकर्ता 'Protect Sheet' या 'Protect Workbook' विकल्प का चयन करता है। तीसरे, उपयोगकर्ता इच्छित प्रशासनिक पासवर्ड दर्ज करता है और इसकी पुष्टि करता है। चौथे, उपयोगकर्ता सक्रिय सुरक्षा एन्क्रिप्शन को लागू करने के लिए अपडेट की गई कार्यपुस्तिका फ़ाइल को सहेजता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Password protection is essential for securing sensitive data in spreadsheets.",
+        "The Protect Sheet and Protect Workbook options are found in the Review or File menu.",
+        "Users must confirm their password to ensure security.",
+        "Printed answer key: (A) 1 → 2 → 3 → 4"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d507b588-aa0b-4964-9787-767f35a5037d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कौन सा शब्द उस प्राथमिक ग्रिड संरचना का वर्णन करता है\nजो स्प्रेडशीट सॉफ़्टवेयर में डेटा को पंक्तियों और स्तंभों में व्यवस्थित करने के लिए उपयोग किया जाता है?",
+      "options_hindi": [
+        "प्रस्तुति स्लाइड",
+        "पाठ कैनवास",
+        "दस्तावेज़ ड्राफ्ट",
+        "कार्यपत्र"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which term describes the primary grid structure used to organize data into rows and columns in spreadsheet software?",
+      "options_english": [
+        "Presentation slide",
+        "Text canvas",
+        "Document draft",
+        "Worksheet"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Spreadsheet applications organize numerical and textual data using a structured grid canvas composed of horizontal rows and vertical columns. This fundamental grid layout is termed a worksheet. Within a worksheet, individual data elements are systematically entered, arranged, and manipulated inside intersecting cell units. Worksheets provide the primary workspace for executing mathematical computations, organizing complex datasets, creating structured financial models, and generating detailed data visualizations.",
+      "explanation_hindi": "सही उत्तर (d) है। स्प्रेडशीट अनुप्रयोग संख्यात्मक और पाठ डेटा को एक संरचित ग्रिड कैनवास का उपयोग करके व्यवस्थित करते हैं, जो क्षैतिज पंक्तियों और ऊर्ध्वाधर स्तंभों से बना होता है। इस मौलिक ग्रिड लेआउट को कार्यपत्र कहा जाता है। कार्यपत्र के भीतर, व्यक्तिगत डेटा तत्वों को व्यवस्थित रूप से दर्ज, व्यवस्थित और इंटरसेक्टिंग सेल इकाइयों के भीतर हेरफेर किया जाता है। कार्यपत्र गणितीय गणनाओं, जटिल डेटा सेट को व्यवस्थित करने, संरचित वित्तीय मॉडल बनाने और विस्तृत डेटा विज़ुअलाइज़ेशन उत्पन्न करने के लिए प्राथमिक कार्यक्षेत्र प्रदान करते हैं।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "Spreadsheet applications utilize a grid structure for data organization.",
+        "A worksheet is the primary workspace in spreadsheet software.",
+        "Printed answer key: (D) Worksheet"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "571c58a4-5940-4e41-b655-fdf53f7d88ee",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "54. संस्थागत कार्यप्रवाह में स्प्रेडशीट के लिए सहयोगात्मक संपादन प्लेटफार्मों का प्राथमिक उद्देश्य क्या है?",
+      "options_hindi": [
+        "सभी प्रशासनिक कर्मचारियों को फ़ाइलों तक एक साथ पहुँचने से रोकना",
+        "एक साथ कई उपयोगकर्ताओं के लिए वास्तविक समय में संपादन सक्षम करना",
+        "सभी पाठ प्रविष्टियों को स्वचालित रूप से एन्क्रिप्टेड बाइनरी सुरक्षा कोड में परिवर्तित करना",
+        "जब भी परिवर्तन सहेजे जाते हैं, भौतिक हार्ड कॉपी दस्तावेज़ों को स्वचालित रूप से प्रिंट करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "54. What is the primary purpose of collaborative editing platforms for spreadsheets in institutional workflows?",
+      "options_english": [
+        "To restrict all administrative staff members from accessing files simultaneously",
+        "To enable real-time concurrent editing for multiple users",
+        "To convert all text entries into encrypted binary security code automatically",
+        "To automatically print physical hard copy documents whenever changes are saved"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Cloud-based collaborative spreadsheet platforms enhance institutional operational efficiency by permitting multiple authorized users to access, view, and edit shared workbooks simultaneously in real time. Concurrent editing eliminates the administrative overhead of managing multiple disparate email attachments, prevents version control conflicts, provides centralized revision tracking, and accelerates decision-making across inter-departmental teams working on complex financial budgets or operational schedules.",
+      "explanation_hindi": "सही उत्तर (b) है। क्लाउड-आधारित सहयोगात्मक स्प्रेडशीट प्लेटफार्म संस्थागत संचालन की दक्षता को बढ़ाते हैं क्योंकि वे कई अधिकृत उपयोगकर्ताओं को एक साथ साझा कार्यपुस्तकों तक पहुँचने, देखने और संपादित करने की अनुमति देते हैं। वास्तविक समय में समवर्ती संपादन कई अलग-अलग ईमेल अटैचमेंट्स को प्रबंधित करने की प्रशासनिक ओवरहेड को समाप्त करता है, संस्करण नियंत्रण संघर्षों को रोकता है, केंद्रीकृत संशोधन ट्रैकिंग प्रदान करता है, और जटिल वित्तीय बजट या संचालन कार्यक्रमों पर काम कर रहे अंतर-विभागीय टीमों के बीच निर्णय लेने की प्रक्रिया को तेज करता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Collaborative platforms allow real-time editing by multiple users.",
+        "They enhance operational efficiency in institutional workflows.",
+        "Concurrent editing prevents version control conflicts.",
+        "Printed answer key: (B) To enable real-time concurrent editing for"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "648ead84-419b-4f4a-98f0-fd79e342a2e0",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "53. एक स्प्रेडशीट में डेटा सेट को फ़िल्टर करने के लिए निम्नलिखित चरणों पर विचार करें:\nI. डेटा सेट तालिका की शीर्षक पंक्ति का चयन करें\nII. डेटा मेनू रिबन पर फ़िल्टर बटन पर क्लिक करें\nIII. इच्छित कॉलम शीर्षक पर फ़िल्टर ड्रॉप-डाउन तीर पर क्लिक करें\nIV. अवांछित मानों को अनचेक करें और फ़िल्टर किए गए उपसमुच्चय को देखने के लिए OK पर क्लिक करें\nनिम्नलिखित में से कौन सा सही अनुक्रमिक क्रम का प्रतिनिधित्व करता है?",
+      "options_hindi": [
+        "I, II, III, IV",
+        "II, I, IV, III",
+        "III, I, II, IV",
+        "IV, III, II, I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "53. Consider the following steps for filtering a dataset in a spreadsheet:\nI. Select header row of the dataset table\nII. Click Filter button on Data menu ribbon\nIII. Click filter drop-down arrow on desired column header\nIV. Uncheck undesired values and click OK to view filtered subset\nWhich of the following represents the correct sequential order?",
+      "options_english": [
+        "I, II, III, IV",
+        "II, I, IV, III",
+        "III, I, II, IV",
+        "IV, III, II, I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Filtering datasets within spreadsheet applications requires executing a structured multi-step procedure. First, the user highlights the dataset header row. Second, the user clicks the Filter command button on the Data menu tab to activate header drop-down arrows. Third, the drop-down menu on a target column header is opened. Fourth, undesired filter values are unchecked to display the filtered record subset.",
+      "explanation_hindi": "सही उत्तर (a) है। स्प्रेडशीट अनुप्रयोगों में डेटा सेट को फ़िल्टर करने के लिए एक संरचित बहु-चरण प्रक्रिया का पालन करना आवश्यक है। पहले, उपयोगकर्ता डेटा सेट की शीर्षक पंक्ति को हाइलाइट करता है। दूसरे, उपयोगकर्ता डेटा मेनू टैब पर फ़िल्टर कमांड बटन पर क्लिक करता है ताकि शीर्षक ड्रॉप-डाउन तीर सक्रिय हो जाएं। तीसरे, लक्षित कॉलम शीर्षक पर ड्रॉप-डाउन मेनू खोला जाता है। चौथे, अवांछित फ़िल्टर मानों को अनचेक किया जाता है ताकि फ़िल्टर किए गए रिकॉर्ड उपसमुच्चय को प्रदर्शित किया जा सके।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Filtering datasets involves a multi-step process.",
+        "The Filter command is found in the Data menu tab.",
+        "Users can uncheck values to refine their dataset view.",
+        "Printed answer key: (A) I, II, III, IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2652297f-3219-4801-a933-0f87fc1d97cf",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "14. एक स्प्रेडशीट में, एक व्यक्तिगत सेल का पता सही ढंग से कैसे निर्दिष्ट किया जाता है?",
+      "options_hindi": [
+        "पंक्ति संख्या के बाद कॉलम अक्षर (जैसे, 5A)",
+        "वर्कबुक नाम के बाद ग्रिड अनुभाग (जैसे, SheetA)",
+        "सूत्र बार समन्वय (जैसे, Center5)",
+        "कॉलम अक्षर के बाद पंक्ति संख्या (जैसे, A5)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In a spreadsheet, how is an individual cell address correctly designated?",
+      "options_english": [
+        "By the row number followed by the column letter (e.g., 5A)",
+        "By the workbook name followed by the grid section (e.g., SheetA)",
+        "By the formula bar coordinates (e.g., Center5)",
+        "By the column letter followed by the row number (e.g., A5)"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "In spreadsheet software, cell navigation and formula construction rely on an absolute coordinate system across the grid canvas. Each individual cell is assigned a unique alphanumeric address formed by combining the column letter with the row number in sequential order. For instance, coordinate A5 refers precisely to the cell positioned at the intersection of column A and row 5, providing unambiguous location references for calculation.",
+      "explanation_hindi": "सही उत्तर (d) है। स्प्रेडशीट सॉफ़्टवेयर में, सेल नेविगेशन और सूत्र निर्माण ग्रिड कैनवास के पार एक निरपेक्ष समन्वय प्रणाली पर निर्भर करते हैं। प्रत्येक व्यक्तिगत सेल को एक अद्वितीय अल्फ़ान्यूमेरिक पता सौंपा जाता है जो क्रम में कॉलम अक्षर और पंक्ति संख्या को मिलाकर बनाया जाता है। उदाहरण के लिए, समन्वय A5 ठीक उसी सेल को संदर्भित करता है जो कॉलम A और पंक्ति 5 के चौराहे पर स्थित है, जो गणना के लिए स्पष्ट स्थान संदर्भ प्रदान करता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "Cell addresses are formed by combining column letters and row numbers.",
+        "A5 refers to the intersection of column A and row 5.",
+        "Spreadsheet software uses an absolute coordinate system.",
+        "Printed answer key: (D) By the column letter followed by the row number"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f25f5a46-d61e-4975-b96f-e03a53c6dae4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "20. नीचे दो कथन दिए गए हैं: एक को कथन (A) के रूप में लेबल किया गया है और दूसरे को कारण (R) के रूप में लेबल किया गया है। \nकथन (A): एक बड़े स्प्रेडशीट में पैन को फ्रीज़ करना निर्धारित पंक्ति या कॉलम शीर्षकों को स्क्रॉल करते समय दृश्यमान रखता है। \nकारण (R): फ्रीज़ पैन पूरे कार्यपुस्तिका को लॉक करता है ताकि कोई संख्यात्मक मान संपादित न किया जा सके।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R, A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R, A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). \nAssertion (A): Freezing panes in a large spreadsheet keeps designated row or column headers visible while scrolling. \nReason (R): Freeze panes locks the entire workbook so that no numerical values can be edited.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Freezing panes in large spreadsheets locks specified header rows or left columns on screen, ensuring key descriptive labels remain fully visible while users scroll through extensive datasets. However, freeze panes acts purely as a display view control and does not apply administrative security restrictions or lock cell contents. Users retain full editing permissions to modify numerical values, formulas, and formatting across frozen and unfrozen worksheet areas.",
+      "explanation_hindi": "सही उत्तर (c) है। बड़े स्प्रेडशीट में पैन को फ्रीज़ करना निर्दिष्ट शीर्षक पंक्तियों या बाईं कॉलमों को स्क्रीन पर लॉक करता है, यह सुनिश्चित करते हुए कि प्रमुख वर्णनात्मक लेबल उपयोगकर्ताओं द्वारा व्यापक डेटा सेट के माध्यम से स्क्रॉल करते समय पूरी तरह से दृश्यमान रहते हैं। हालाँकि, फ्रीज़ पैन केवल एक दृश्य नियंत्रण के रूप में कार्य करता है और प्रशासनिक सुरक्षा प्रतिबंधों को लागू नहीं करता है या सेल की सामग्री को लॉक नहीं करता है। उपयोगकर्ता फ्रीज़ और अनफ्रीज़ किए गए कार्यपत्रक क्षेत्रों में संख्यात्मक मान, सूत्र और स्वरूपण को संशोधित करने के लिए पूर्ण संपादन अनुमतियाँ बनाए रखते हैं।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Freezing panes keeps headers visible while scrolling.",
+        "It does not lock the workbook or restrict editing.",
+        "Printed answer key: (C) A is true but R is false."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1520eeb4-c721-4d75-940d-a0cf5338d818",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II से मिलाएँ:\nसूची I: (दस्तावेज़ विशेषता)\nP. परिवर्तनों का ट्रैक\nQ. मेल मर्ज\nR. डेटा मान्यता\nS. पैन को फ्रीज़ करें\nसूची II: (प्रशासनिक उपयोगिता)\nI. कुशलता से व्यक्तिगत पत्राचार का बड़े पैमाने पर उत्पादन करता है\nII. स्प्रेडशीट में मान्य डेटा इनपुट बाधाओं को लागू करता है\nIII. लंबी सूचियों को स्क्रॉल करते समय संदर्भ हेडर को दृश्य में रखता है\nIV. साझा दस्तावेज़ समीक्षाओं में संपादन और संशोधनों का ऑडिट करता है",
+      "options_hindi": [
+        "P-IV, Q-I, R-II, S-III",
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-III, R-IV, S-I",
+        "P-III, Q-IV, R-I, S-II"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (Document Feature)\nP. Track Changes\nQ. Mail Merge\nR. Data Validation\nS. Freeze Panes\nList II: (Administrative Utility)\nI. Generates bulk personalized correspondence efficiently\nII. Enforces valid data input constraints in spreadsheets\nIII. Keeps reference headers visible while scrolling long lists\nIV. Audits edits and revisions in shared document reviews",
+      "options_english": [
+        "P-IV, Q-I, R-II, S-III",
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-III, R-IV, S-I",
+        "P-III, Q-IV, R-I, S-II"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Document features fulfill essential administrative functions across office applications. Track changes audits edits and redline revisions during collaborative document review. Mail merge generates personalized bulk letters and circulars efficiently by combining templates with data sources. Data validation enforces data entry constraints within spreadsheet inputs to prevent input errors. Freeze panes locks header rows on screen, keeping reference labels visible while scrolling extensive datasets.",
+      "explanation_hindi": "सही उत्तर (a) है। दस्तावेज़ विशेषताएँ कार्यालय अनुप्रयोगों में आवश्यक प्रशासनिक कार्यों को पूरा करती हैं। परिवर्तनों का ट्रैक साझा दस्तावेज़ समीक्षा के दौरान संपादनों और संशोधनों का ऑडिट करता है। मेल मर्ज व्यक्तिगत बड़े पैमाने पर पत्र और परिपत्र कुशलता से उत्पन्न करता है, जो टेम्पलेट्स को डेटा स्रोतों के साथ जोड़ता है। डेटा मान्यता स्प्रेडशीट इनपुट में डेटा प्रविष्टि की बाधाएँ लागू करती है ताकि इनपुट त्रुटियों को रोका जा सके। पैन को फ्रीज़ करना स्क्रीन पर हेडर पंक्तियों को लॉक करता है, जिससे संदर्भ लेबल लंबी डेटा सेट को स्क्रॉल करते समय दृश्य में रहते हैं।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "Track Changes is essential for collaborative document editing.",
+        "Mail Merge allows for efficient bulk correspondence.",
+        "Data Validation ensures accuracy in data entry.",
+        "Printed answer key: (A) P-IV, Q-I, R-II, S-III"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "548d231d-0882-4c25-9fdf-a0c12af1a7db",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I को सूची II के साथ मिलाएं:\nसूची I: (स्प्रेडशीट त्रुटि)\nP. #####\nQ. #REF!\nR. #NAME?\nS. #VALUE!\nसूची II: (आधारभूत कारण)\nI. कॉलम चौड़ाई प्रारूपित संख्या को प्रदर्शित करने के लिए बहुत संकीर्ण है\nII. सेल संदर्भ अमान्य है क्योंकि सेल को हटा दिया गया था\n\nU",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match List I with List II:\nList I: (Spreadsheet Error)\nP. #####\nQ. #REF!\nR. #NAME?\nS. #VALUE!\nList II: (Underlying Cause)\nI. Column width is too narrow to display the formatted number\nII. Cell reference is invalid because cell was deleted\n\nU",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Spreadsheet error codes provide specific diagnostic indications regarding underlying calculation or structural failures. The error ##### signifies insufficient column width to display formatted numerical values. #REF! indicates an invalid cell reference resulting from deleted cells. #NAME? points to an unrecognized function name or spelling error within a formula. Finally, #VALUE! appears when a formula encounters inappropriate data types during evaluation.",
+      "explanation_hindi": "सही उत्तर (a) है। स्प्रेडशीट त्रुटि कोड विशिष्ट निदान संकेत प्रदान करते हैं जो अंतर्निहित गणना या संरचनात्मक विफलताओं के बारे में जानकारी देते हैं। त्रुटि ##### प्रारूपित संख्यात्मक मानों को प्रदर्शित करने के लिए अपर्याप्त कॉलम चौड़ाई को दर्शाती है। #REF! एक अमान्य सेल संदर्भ को इंगित करता है जो हटाए गए सेल के परिणामस्वरूप होता है। #NAME? एक फ़ंक्शन नाम या फ़ॉर्मूला के भीतर वर्तनी त्रुटि को दर्शाता है। अंत में, #VALUE! तब प्रकट होता है जब कोई फ़ॉर्मूला मूल्यांकन के दौरान अनुपयुक्त डेटा प्रकारों का सामना करता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "स्प्रेडशीट त्रुटि कोड विशिष्ट गणना या संरचनात्मक विफलताओं को दर्शाते हैं।",
+        "त्रुटि ##### कॉलम चौड़ाई की कमी को दर्शाती है।",
+        "#REF! एक अमान्य सेल संदर्भ को इंगित करता है।",
+        "Printed answer key: (A) P-I, Q-II, R-III, S-IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "647a7d0d-d51b-4b7d-942b-76eca5f6a25a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "80. स्प्रेडशीट सूत्रों में, कौन सा प्रतीक पंक्ति और कॉलम दोनों के लिए निरंतर सेल संदर्भ को इंगित करता है?",
+      "options_hindi": [
+        "ऐम्परसेंड (&)",
+        "डॉलर साइन ($)",
+        "ऐस्टेरिस्क (*)",
+        "एट साइन (@)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "In spreadsheet formulas, what symbol indicates absolute cell referencing for both row and column?",
+      "options_english": [
+        "Ampersand (&)",
+        "Dollar sign ($)",
+        "Asterisk (*)",
+        "At sign (@)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Absolute cell referencing in spreadsheet formulas prevents column letters and row numbers from changing when formulas are copied across different cells. The dollar sign ($) symbol is used specifically as the reference locking operator. Placing a dollar sign before both the column letter and row number (e.g., $A$1) locks both coordinates completely, ensuring the formula always targets that precise cell regardless of destination.",
+      "explanation_hindi": "सही उत्तर (b) है। स्प्रेडशीट सूत्रों में निरंतर सेल संदर्भ का उपयोग कॉलम अक्षरों और पंक्ति संख्याओं को बदलने से रोकता है जब सूत्रों को विभिन्न कोशिकाओं में कॉपी किया जाता है। डॉलर साइन ($) प्रतीक विशेष रूप से संदर्भ लॉकिंग ऑपरेटर के रूप में उपयोग किया जाता है। कॉलम अक्षर और पंक्ति संख्या के पहले डॉलर साइन लगाने (जैसे, $A$1) से दोनों निर्देशांक पूरी तरह से लॉक हो जाते हैं, यह सुनिश्चित करते हुए कि सूत्र हमेशा उस सटीक सेल को लक्षित करता है, चाहे गंतव्य कुछ भी हो।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "easy",
+      "key_facts": [
+        "Absolute cell referencing locks both row and column references.",
+        "The dollar sign ($) is the operator used for locking references.",
+        "Printed answer key: (B) Dollar sign ($)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e4537e9c-5947-427c-b3a2-5f336f4787f5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "76. स्प्रेडशीट में सेल समायोजन और मर्जिंग के संबंध में निम्नलिखित कथनों पर विचार करें:\nकथन A: ऑटोफिट कॉलम चौड़ाई स्वचालित रूप से सबसे लंबे सेल प्रविष्टि के अनुसार कॉलम चौड़ाई को समायोजित करता है।\nकथन B: मर्जिंग सेल चयनित निकटवर्ती कोशिकाओं को एकल बड़े सेल में जोड़ता है।\nकथन C: एक रेंज में सेल मर्जिंग सभी मर्ज की गई रेंज में प्रत्येक सेल के मान को बिना डेटा हानि के बनाए रखती है।\nउपर्युक्त में से कौन सा कथन सही है?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Word Processing and Spreadsheet Applications",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding cell adjustments and merging in spreadsheets:\nStatement A: AutoFit Column Width adjusts column width to fit longest cell entry automatically.\nStatement B: Merging cells combines selected adjacent cells into single larger cell.\nStatement C: Merging cells in a range retains all values from every cell in merged range without data loss.\nWhich of the statement(s) given above is/are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Spreadsheet cell formatting tools optimize tabular layout and presentation clarity. AutoFit Column Width automatically resizes column boundaries to accommodate the longest cell entry. Merging cells combines adjacent cells across highlighted ranges into a single continuous cell block. However, merging cells retains only the upper-left cell value while discarding data from other merged cells, rendering claims of full data retention completely false.",
+      "explanation_hindi": "सही उत्तर (a) है। स्प्रेडशीट सेल फ़ॉर्मेटिंग उपकरण तालिका के लेआउट और प्रस्तुति की स्पष्टता को अनुकूलित करते हैं। ऑटोफिट कॉलम चौड़ाई स्वचालित रूप से सबसे लंबे सेल प्रविष्टि के अनुसार कॉलम सीमाओं को समायोजित करता है। मर्जिंग सेल निकटवर्ती कोशिकाओं को एकल निरंतर सेल ब्लॉक में जोड़ता है। हालाँकि, मर्जिंग सेल केवल ऊपरी-बाएँ सेल मान को बनाए रखता है जबकि अन्य मर्ज की गई कोशिकाओं से डेटा को हटा देता है, जिससे पूर्ण डेटा संरक्षण के दावों को पूरी तरह से गलत साबित कर देता है।",
+      "topic": "Word Processing and Spreadsheet Applications",
+      "difficulty": "medium",
+      "key_facts": [
+        "AutoFit Column Width adjusts column width based on the longest entry.",
+        "Merging cells retains only the upper-left cell value.",
+        "Merging does not retain data from other cells in the merged range.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

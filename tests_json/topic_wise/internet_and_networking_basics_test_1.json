@@ -1,0 +1,795 @@
+{
+  "test_id": "99bb27a0-284a-40d6-8ff8-b3a5cc6958c9",
+  "test_name": "Topic Test: INTERNET_AND_NETWORKING_BASICS - Part 1",
+  "type": "topic_wise",
+  "topic": "internet_and_networking_basics",
+  "created_at": "2026-10-28T18:55:06.731497",
+  "questions": [
+    {
+      "id": "037b56d6-f30d-4d23-aca0-29dcfbc6eaa5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "50. कौन सा खोज तकनीक ऑपरेटर परिणामों को किसी विशेष डोमेन या वेबसाइट एक्सटेंशन (जैसे, शैक्षणिक संस्थानों के भीतर सख्ती से खोज करना) तक सीमित करता है?",
+      "options_hindi": [
+        "`site:.edu`",
+        "`file:.edu`",
+        "`locate:.edu`",
+        "`domain=.edu`"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which search technique operator restricts results to a specific domain or website extension (e.g., searching strictly within educational institutions)?",
+      "options_english": [
+        "`site:.edu`",
+        "`file:.edu`",
+        "`locate:.edu`",
+        "`domain=.edu`"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The search query syntax operator `site:` restricts search engine results strictly to a specified domain name or top-level domain extension. By entering `site:.edu` alongside query keywords, the search engine filters out all commercial, generic, and non-educational websites, delivering results solely hosted on authenticated educational institution domain names ending in `.edu`, thereby refining search accuracy for academic research.",
+      "explanation_hindi": "सही उत्तर (a) है। खोज क्वेरी सिंटैक्स ऑपरेटर `site:` खोज इंजन परिणामों को सख्ती से एक निर्दिष्ट डोमेन नाम या शीर्ष स्तर के डोमेन एक्सटेंशन तक सीमित करता है। जब आप खोज कीवर्ड के साथ `site:.edu` दर्ज करते हैं, तो खोज इंजन सभी वाणिज्यिक, सामान्य और गैर-शैक्षणिक वेबसाइटों को बाहर कर देता है, केवल उन शैक्षणिक संस्थानों के डोमेन नामों पर होस्ट की गई परिणामों को प्रदान करता है जो `.edu` पर समाप्त होते हैं, इस प्रकार शैक्षणिक अनुसंधान के लिए खोज की सटीकता को सुधारता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "The `site:` operator is used to restrict search results to a specific domain.",
+        "Educational institutions typically use the `.edu` domain extension.",
+        "Printed answer key: (A) site:.edu"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "49759293-2832-449c-bcca-4ecc2826a52f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को\nअसर्शन (A) के रूप में और दूसरे को\nकारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): मेष नेटवर्क टोपोलॉजी उच्च\nदोष सहिष्णुता और विश्वसनीयता प्रदर्शित करती है।\nकारण (R): पूर्ण मेष टोपोलॉजी में, प्रत्येक नोड\nप्रत्यक्ष रूप से प्रत्येक अन्य नोड से जुड़ा होता है,\nजो कई अतिरिक्त ट्रांसमिशन पथ प्रदान करता है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही\nव्याख्या है।",
+        "दोनों A और R सत्य हैं लेकिन R A का\nसही व्याख्या नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): Mesh network topology exhibits high fault tolerance and reliability. Reason (R): In a full mesh topology, every node is connected directly to every other node, providing multiple redundant transmission paths.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Mesh network topology offers exceptional fault tolerance and network reliability. In a full mesh architecture, every network node is connected directly to every other node via dedicated point-to-point physical links. If an individual cable link or node fails, network traffic is instantly rerouted through alternative redundant interconnected pathways without interrupting communication across the remaining operational nodes in the network system.",
+      "explanation_hindi": "सही उत्तर (a) है। मेष नेटवर्क टोपोलॉजी उत्कृष्ट दोष सहिष्णुता और नेटवर्क विश्वसनीयता प्रदान करती है। पूर्ण मेष आर्किटेक्चर में, प्रत्येक नेटवर्क नोड प्रत्यक्ष रूप से प्रत्येक अन्य नोड से समर्पित बिंदु-से-बिंदु भौतिक लिंक के माध्यम से जुड़ा होता है। यदि कोई व्यक्तिगत केबल लिंक या नोड विफल हो जाता है, तो नेटवर्क ट्रैफ़िक तुरंत वैकल्पिक अतिरिक्त इंटरकनेक्टेड पथों के माध्यम से पुनः मार्गनिर्देशित किया जाता है, जिससे नेटवर्क प्रणाली में शेष कार्यात्मक नोड्स के बीच संचार बाधित नहीं होता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Mesh topology provides high fault tolerance and reliability.",
+        "In full mesh topology, every node is directly connected to every other node.",
+        "If one link fails, traffic is rerouted through alternative paths.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "81db7d66-c6f2-4dd6-9ea2-2030fd207015",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "4.\n\nकौन सा संगठन 1994 में टिम बर्नर्स-ली द्वारा स्थापित किया गया था ताकि विश्वव्यापी वेब के लिए खुले मानकों का विकास किया जा सके?",
+      "options_hindi": [
+        "इंटरनेट इंजीनियरिंग टास्क फोर्स (IETF)",
+        "इंटरनेट कॉर्पोरेशन फॉर असाइनड नेम्स (ICANN)",
+        "इलेक्ट्रिकल और इलेक्ट्रॉनिक्स इंजीनियर्स संस्थान (IEEE)",
+        "विश्वव्यापी वेब कंसोर्टियम (W3C)"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which organization was founded by Tim Berners-Lee in 1994 to develop open standards for the World Wide Web?",
+      "options_english": [
+        "Internet Engineering Task Force (IETF)",
+        "Internet Corporation for Assigned Names and Numbers (ICANN)",
+        "Institute of Electrical and Electronics Engineers (IEEE)",
+        "World Wide Web Consortium (W3C)"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The World Wide Web Consortium was established in October 1994 by Tim Berners-Lee at the Massachusetts Institute of Technology in collaboration with CERN. It functions as an international standards organization dedicated to developing open, non-proprietary technical specifications and guidelines for web technologies, including HTML, CSS, and XML. These open standards ensure full interoperability, accessibility, compatibility, and long-term evolutionary growth across diverse web software, hardware platforms, browsers, and global devices.",
+      "explanation_hindi": "सही उत्तर (d) है। विश्वव्यापी वेब कंसोर्टियम अक्टूबर 1994 में टिम बर्नर्स-ली द्वारा मैसाचुसेट्स इंस्टीट्यूट ऑफ टेक्नोलॉजी में CERN के सहयोग से स्थापित किया गया था। यह एक अंतरराष्ट्रीय मानक संगठन के रूप में कार्य करता है जो वेब प्रौद्योगिकियों के लिए खुले, गैर-स्वामित्व वाले तकनीकी विनिर्देशों और दिशानिर्देशों के विकास के लिए समर्पित है, जिसमें HTML, CSS और XML शामिल हैं। ये खुले मानक विविध वेब सॉफ़्टवेयर, हार्डवेयर प्लेटफ़ॉर्म, ब्राउज़रों और वैश्विक उपकरणों के बीच पूर्ण अंतःक्रियाशीलता, पहुँच, संगतता और दीर्घकालिक विकास सुनिश्चित करते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "W3C develops open standards for web technologies.",
+        "Tim Berners-Lee founded W3C in 1994.",
+        "Printed answer key: (D) World Wide Web Consortium (W3C)"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ef643930-97bc-4828-b30f-51347e2adfab",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नेटवर्क स्विच और राउटर के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. एक स्विच एकल स्थानीय क्षेत्र नेटवर्क (LAN) के भीतर उपकरणों को जोड़ता है।\nB. एक राउटर विभिन्न नेटवर्कों को जोड़ता है, जैसे कि LAN को WAN/इंटरनेट से जोड़ना।\nC. एक स्विच स्थानीय नेटवर्क के बाहर वैश्विक IP बैकबोन के माध्यम से डेटा पैकेट्स को रूट करता है।\nD. स्विच और राउटर दोनों आधुनिक उद्यम डेटा नेटवर्किंग में महत्वपूर्ण भूमिका निभाते हैं।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और D",
+        "केवल B, C और D",
+        "केवल A, C और D",
+        "केवल A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding\nNetwork Switches and Routers:\nA. A switch connects devices together within a\nsingle local area network (LAN).\nB. A router connects different networks\ntogether, such as connecting a LAN to the\nWAN/Internet.\nC. A switch routes data packets across global\nIP backbones outside local networks.\nD. Both switches and routers play crucial roles\nin modern enterprise data networking.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and D only",
+        "B, C and D only",
+        "A, C and D only",
+        "A, B and C only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Network switches connect local endpoints within a single Local Area Network by forwarding frames to destination MAC addresses. Routers interconnect separate networks, such as linking a LAN to the global Internet, by routing packets using IP addresses. Both devices are crucial in network architecture. However, switches handle local intra-network traffic, while routers handle inter-network routing across WAN backbones.",
+      "explanation_hindi": "सही उत्तर (a) है। नेटवर्क स्विच एकल स्थानीय क्षेत्र नेटवर्क के भीतर स्थानीय अंत बिंदुओं को जोड़ता है, गंतव्य MAC पते पर फ्रेम को अग्रेषित करके। राउटर अलग-अलग नेटवर्कों को आपस में जोड़ता है, जैसे कि LAN को वैश्विक इंटरनेट से जोड़ना, IP पते का उपयोग करके पैकेट्स को रूट करके। दोनों उपकरण नेटवर्क आर्किटेक्चर में महत्वपूर्ण भूमिका निभाते हैं। हालांकि, स्विच स्थानीय अंतःनेटवर्क ट्रैफ़िक को संभालते हैं, जबकि राउटर WAN बैकबोन के पार अंतःनेटवर्क रूटिंग को संभालते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "स्विच एकल LAN के भीतर उपकरणों को जोड़ते हैं।",
+        "राउटर विभिन्न नेटवर्कों को जोड़ते हैं, जैसे LAN को इंटरनेट से।",
+        "स्विच स्थानीय ट्रैफ़िक को संभालते हैं, जबकि राउटर अंतःनेटवर्क रूटिंग करते हैं।",
+        "Printed answer key: (A) A, B and D only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "0e223ca0-a79c-4d5b-a7a1-c15341e3090f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "15. खोज तकनीकों और खोज इंजनों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. खोज प्रश्नों में उद्धरण चिह्न (“ “) का उपयोग एक सटीक वाक्यांश खोजने के लिए किया जाता है।\nB. एक खोज इंजन एक डेटाबेस अनुक्रमणिका बनाए रखता है जो वेब क्रॉलर द्वारा निर्मित होती है।\nC. एक कीवर्ड के पहले माइनस चिह्न (-) का उपयोग उस कीवर्ड को अनिवार्य खोज परिणामों में शामिल करने के लिए किया जाता है।\nD. फ़िल्टर उपयोगकर्ताओं को समय, फ़ाइल प्रकार या क्षेत्र द्वारा खोज परिणामों को सीमित करने की अनुमति देते हैं।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और D",
+        "केवल A, B और C",
+        "केवल B, C और D",
+        "केवल A, C और D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding search techniques and search engines:\nA. Quotation marks (“ “) are used in search queries to search for an exact phrase.\nB. A search engine maintains a database index constructed by web crawlers.\nC. Using the MINUS sign (-) before a keyword includes that keyword in mandatory search results.\nD. Filters allow users to restrict search results by time, file type, or region.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and D only",
+        "A, B and C only",
+        "B, C and D only",
+        "A, C and D only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Enclosing terms in quotation marks forces search engines to match exact phrase order in queries. Web crawlers construct structured indexes stored in search engine databases to enable rapid content retrieval. Search filters refine results by parameter limits such as date, location, or file type. Placing a minus sign directly before a keyword excludes that specific term from search results rather than mandating inclusion.",
+      "explanation_hindi": "सही उत्तर (a) है। उद्धरण चिह्नों में शब्दों को शामिल करने से खोज इंजनों को प्रश्नों में सटीक वाक्यांश क्रम से मेल खाने के लिए मजबूर किया जाता है। वेब क्रॉलर संरचित अनुक्रमणिकाएँ बनाते हैं जो खोज इंजन डेटाबेस में संग्रहीत होती हैं ताकि सामग्री की त्वरित पुनर्प्राप्ति संभव हो सके। खोज फ़िल्टर परिणामों को तिथि, स्थान या फ़ाइल प्रकार जैसे पैरामीटर सीमाओं द्वारा परिष्कृत करते हैं। एक कीवर्ड के ठीक पहले माइनस चिह्न लगाने से उस विशेष शब्द को खोज परिणामों से बाहर किया जाता है, न कि अनिवार्य रूप से शामिल किया जाता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Quotation marks are used for exact phrase searches.",
+        "Web crawlers create indexes for search engines.",
+        "Filters help refine search results.",
+        "Printed answer key: (A) A, B and D only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e8c94eff-e590-42b8-9f86-0315329a85b9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सुरक्षित ब्राउज़िंग प्रथाओं के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. ब्राउज़र एड्रेस बार में पैड लॉक आइकन देखना HTTPS कनेक्शनों की पहचान करने में मदद करता है।\nB. निष्पादन योग्य फ़ाइलें (.exe) अविश्वसनीय वेबसाइटों से एंटी-मैलवेयर उपकरणों के साथ स्कैन की जानी चाहिए।\nC. बिना पासवर्ड प्रमाणीकरण वाले सार्वजनिक वाई-फाई नेटवर्क स्वाभाविक रूप से निजी घरेलू नेटवर्क के रूप में सुरक्षित होते हैं।\nD. वेब ब्राउज़रों को अपडेट रखना ज्ञात सुरक्षा कमजोरियों से बचाता है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A, B और D",
+        "केवल B, C और D",
+        "केवल A, C और D",
+        "केवल A, B और C"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding secure browsing practices:\nA. Looking for a padlock icon in the browser address bar helps identify HTTPS connections.\nB. Executable files (.exe) from untrusted websites should be scanned with anti-malware tools.\nC. Public Wi-Fi networks without password authentication are inherently as secure as private home networks.\nD. Keeping web browsers updated protects against known security vulnerabilities.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A, B and D only",
+        "B, C and D only",
+        "A, C and D only",
+        "A, B and C only"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A padlock icon in the browser address bar confirms an active, encrypted HTTPS connection. Downloaded executable files from untrusted sources should be thoroughly scanned with security software to catch malicious code. Keeping browsers updated patches known software vulnerabilities. However, public Wi-Fi networks without password authentication are inherently unencrypted and insecure, exposing data traffic to potential eavesdropping compared to secured private home networks.",
+      "explanation_hindi": "सही उत्तर (a) है। ब्राउज़र एड्रेस बार में पैड लॉक आइकन एक सक्रिय, एन्क्रिप्टेड HTTPS कनेक्शन की पुष्टि करता है। अविश्वसनीय स्रोतों से डाउनलोड की गई निष्पादन योग्य फ़ाइलों को सुरक्षा सॉफ़्टवेयर के साथ पूरी तरह से स्कैन किया जाना चाहिए ताकि दुर्भावनापूर्ण कोड को पकड़ा जा सके। ब्राउज़रों को अपडेट रखना ज्ञात सॉफ़्टवेयर कमजोरियों को पैच करता है। हालाँकि, बिना पासवर्ड प्रमाणीकरण वाले सार्वजनिक वाई-फाई नेटवर्क स्वाभाविक रूप से अनएन्क्रिप्टेड और असुरक्षित होते हैं, जो सुरक्षित निजी घरेलू नेटवर्क की तुलना में डेटा ट्रैफ़िक को संभावित ईव्सड्रॉपिंग के लिए उजागर करते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "A padlock icon indicates a secure HTTPS connection.",
+        "Executable files from untrusted sources should be scanned for malware.",
+        "Keeping browsers updated protects against vulnerabilities.",
+        "Printed answer key: (A) A, B and D only."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "ff5c063c-7e46-4b19-b793-527a34581a96",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I में नेटवर्क शब्दों को सूची II में उनके विवरणों से मिलाएं:\nसूची I: (इंटरनेट / नेटवर्क शब्द)\nP. ब्राउज़र कैश\nQ. बुकमार्क\nR. आईपी पता\nS. फ़ायरवॉल\nसूची II: (मुख्य विवरण)\nI. बाद में तेज़, आसान पहुँच के लिए एक विशिष्ट वेब पृष्ठ का सहेजा गया लिंक",
+      "options_hindi": [
+        "P-III, Q-I, R-IV, S-II",
+        "P-I, Q-III, R-II, S-IV",
+        "P-II, Q-IV, R-I, S-III",
+        "P-IV, Q-II, R-III, S-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match the network terms in List I with their descriptions in List II:\nList I: (Internet / Network Terms)\nP. Browser Cache\nQ. Bookmark\nR. IP Address\nS. Firewall\nList II: (Core Descriptions)\nI. Saved link to a specific web page for fast, easy access later",
+      "options_english": [
+        "P-III, Q-I, R-IV, S-II",
+        "P-I, Q-III, R-II, S-IV",
+        "P-II, Q-IV, R-I, S-III",
+        "P-IV, Q-II, R-III, S-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A browser cache temporarily stores downloaded static web assets locally to accelerate page loading on subsequent visits. Bookmarks save specific web page addresses for convenient access later. An IP address provides a unique numerical identification assigned to every device connected to a computer network. A firewall functions as a security barrier between a trusted internal network and untrusted external networks.",
+      "explanation_hindi": "सही उत्तर (a) है। एक ब्राउज़र कैश अस्थायी रूप से डाउनलोड किए गए स्थिर वेब संपत्तियों को स्थानीय रूप से संग्रहीत करता है ताकि बाद में पृष्ठ लोडिंग को तेज किया जा सके। बुकमार्क विशिष्ट वेब पृष्ठों के पते को सुविधाजनक पहुँच के लिए सहेजते हैं। एक आईपी पता हर डिवाइस को एक अद्वितीय संख्यात्मक पहचान प्रदान करता है जो कंप्यूटर नेटवर्क से जुड़ा होता है। एक फ़ायरवॉल एक विश्वसनीय आंतरिक नेटवर्क और अविश्वसनीय बाहरी नेटवर्क के बीच सुरक्षा बाधा के रूप में कार्य करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Browser cache improves loading speed by storing static assets.",
+        "Bookmarks provide quick access to frequently visited pages.",
+        "Printed answer key: (A) P-III, Q-I, R-IV, S-II"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6a6280ee-4903-4c15-9984-17d24b97adc7",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "56. कौन सा विकल्प एक शीर्ष-स्तरीय डोमेन का प्रतिनिधित्व करता है जो विशेष रूप से व्यावसायिक संगठनों के लिए आरक्षित है?",
+      "options_hindi": [
+        "`.com`",
+        "`.gov`",
+        "`.edu`",
+        "`.mil`"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which option represents a top-level domain reserved exclusively for commercial organizations?",
+      "options_english": [
+        ".com",
+        ".gov",
+        ".edu",
+        ".mil"
+      ],
+      "correct_answer": "a",
+      "explanation_english": ".com is a generic top-level domain in the Domain Name System created specifically for commercial entities and business enterprises. Established during the early structure of the Internet, .com has grown into the most widely used top-level domain worldwide. Other extensions like .gov, .edu, and .mil are strictly reserved for government entities, accredited educational institutions, and military branches.",
+      "explanation_hindi": "सही उत्तर (a) है। .com एक सामान्य शीर्ष-स्तरीय डोमेन है जो विशेष रूप से व्यावसायिक संस्थाओं और व्यापारिक उद्यमों के लिए बनाया गया था। इंटरनेट की प्रारंभिक संरचना के दौरान स्थापित, .com दुनिया भर में सबसे अधिक उपयोग किया जाने वाला शीर्ष-स्तरीय डोमेन बन गया है। अन्य एक्सटेंशन जैसे .gov, .edu, और .mil विशेष रूप से सरकारी संस्थाओं, मान्यता प्राप्त शैक्षणिक संस्थानों और सैन्य शाखाओं के लिए आरक्षित हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        ".com is reserved for commercial organizations.",
+        ".gov is for government entities.",
+        ".edu is for educational institutions.",
+        "Printed answer key: (A) .com"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "502ca007-c28c-4020-9ef3-edd54599b7f5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "19. किस प्रकार का हाइपरलिंक एक ही वेबपृष्ठ के भीतर एक विशिष्ट\nअनुभाग या एंकर पर नेविगेट करता है?",
+      "options_hindi": [
+        "सापेक्ष बाहरी नेटवर्क लिंक",
+        "डोमेन ट्रांसफर संसाधन लिंक",
+        "आंतरिक या बुकमार्क लिंक",
+        "आउटबाउंड प्रोटोकॉल वेब लिंक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What type of hyperlink navigates to a specific section or anchor within the exact same webpage?",
+      "options_english": [
+        "Relative external network link",
+        "Domain transfer resource link",
+        "Internal or bookmark link",
+        "Outbound protocol web link"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "An internal link, also known as a bookmark link or anchor link, targets a specific HTML element or named anchor located within the very same webpage. By utilizing element identifiers in the hyperlinked address, clicking the link causes the web browser to scroll directly to that specific section, enabling smooth internal page navigation without making additional server requests to load new external pages.",
+      "explanation_hindi": "सही उत्तर (c) है। एक आंतरिक लिंक, जिसे बुकमार्क लिंक या एंकर लिंक भी कहा जाता है, उसी वेबपृष्ठ के भीतर एक विशिष्ट HTML तत्व या नामित एंकर को लक्षित करता है। हाइपरलिंक किए गए पते में तत्व पहचानकर्ताओं का उपयोग करके, लिंक पर क्लिक करने से वेब ब्राउज़र सीधे उस विशिष्ट अनुभाग पर स्क्रॉल करता है, जिससे बिना नए बाहरी पृष्ठों को लोड करने के लिए अतिरिक्त सर्वर अनुरोध किए बिना आंतरिक पृष्ठ नेविगेशन सुगम होता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "Internal links facilitate navigation within the same webpage.",
+        "They use element identifiers to scroll to specific sections.",
+        "Printed answer key: (C) Internal or bookmark link"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "decc0319-816a-46b8-b065-dc6fb5cf1d40",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "55. आधुनिक वेब ब्राउज़रों में \"इंकॉग्निटो\" या \"प्राइवेट ब्राउज़िंग\" मोड का कार्य क्या है?",
+      "options_hindi": [
+        "यह उस डिवाइस पर ब्राउज़िंग इतिहास, खोज लॉग और कुकीज़ को स्थानीय रूप से सहेजने से रोकता है",
+        "यह आईएसपी, सरकारी निगरानी और देखी गई वेब सर्वरों से पूर्ण परिचालन गुमनामी की गारंटी देता है",
+        "यह प्रदाताओं द्वारा निर्धारित बैंडविड्थ सीमाओं को बायपास करके इंटरनेट कनेक्शन की गति को स्वचालित रूप से तेज करता है",
+        "यह स्थानीय राउटर से निकलने वाले सभी नेटवर्क डेटा पैकेट्स को सार्वजनिक टेलीफोन लाइनों पर पहुंचने से पहले एन्क्रिप्ट करता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the function of the “Incognito” or “Private Browsing” mode in modern web browsers?",
+      "options_english": [
+        "It prevents saving browsing history, search logs, and cookies locally on that device",
+        "It guarantees complete operational anonymity from ISPs, government surveillance, and visited web servers",
+        "It automatically accelerates internet connection speeds by bypassing bandwidth limits set by providers",
+        "It encrypts all network data packets leaving the local router before hitting public telephone lines"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Incognito or private browsing mode prevents web browsers from storing local browsing records on the user device. During private sessions, the browser does not log visited web addresses, search history, or form inputs, and automatically deletes temporary session cookies upon closing the window. However, private browsing does not hide user activity from Internet Service Providers, network administrators, or external visited websites.",
+      "explanation_hindi": "सही उत्तर (a) है। इंकॉग्निटो या प्राइवेट ब्राउज़िंग मोड उपयोगकर्ता डिवाइस पर स्थानीय ब्राउज़िंग रिकॉर्ड को सहेजने से रोकता है। निजी सत्रों के दौरान, ब्राउज़र देखी गई वेब पते, खोज इतिहास या फॉर्म इनपुट को लॉग नहीं करता है, और विंडो बंद करने पर अस्थायी सत्र कुकीज़ को स्वचालित रूप से हटा देता है। हालाँकि, प्राइवेट ब्राउज़िंग इंटरनेट सेवा प्रदाताओं, नेटवर्क प्रशासकों या बाहरी देखी गई वेबसाइटों से उपयोगकर्ता की गतिविधि को छिपाती नहीं है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Incognito mode does not save browsing history or cookies.",
+        "It does not provide anonymity from ISPs or network administrators.",
+        "Printed answer key: (A) It prevents saving browsing history, search"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d165f53a-1540-4152-904b-7fa485dc946c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "41. निम्नलिखित में से कौन-सी प्रथा इंटरनेट से फ़ाइलें डाउनलोड करते समय गलत मानी जाती है?",
+      "options_hindi": [
+        "फ़ाइल स्रोत, प्रकाशक डिजिटल हस्ताक्षर और डाउनलोड लिंक की सुरक्षा की पुष्टि करना",
+        "फ़ाइल एक्सटेंशन को ध्यान से जांचना ताकि यह सुनिश्चित हो सके कि वे अपेक्षित मानक दस्तावेज़ प्रारूपों से मेल खाते हैं",
+        "असत्यापित तृतीय-पक्ष वेबसाइटों से निष्पादन योग्य (.exe) फ़ाइलें डाउनलोड करना बिना सुरक्षा स्कैन के",
+        "सभी डाउनलोड की गई फ़ाइल सामग्री को स्वचालित रूप से स्कैन करने के लिए एक अद्यतन एंटी-मैलवेयर सॉफ़्टवेयर सूट का उपयोग करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following is considered an incorrect practice when downloading files from the Internet?",
+      "options_english": [
+        "Verifying the file source, publisher digital signature, and download link safety before clicking",
+        "Checking file extensions carefully to ensure they match expected standard document formats",
+        "Downloading executable (.exe) files from unverified third-party websites without security scans",
+        "Utilizing an updated anti-malware software suite to automatically scan all downloaded file contents"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Downloading executable files directly from unverified third-party websites without security scans poses severe cybersecurity hazards. Executable files contain executable system code that can secretly install malware, spyware, trojans, or ransomware onto the user operating system. Safe browsing practices mandate downloading software strictly from verified official sources, verifying digital signatures, checking file extensions, and running automated anti-malware scans on downloaded content.",
+      "explanation_hindi": "सही उत्तर (c) है। असत्यापित तृतीय-पक्ष वेबसाइटों से निष्पादन योग्य फ़ाइलें बिना सुरक्षा स्कैन के डाउनलोड करना गंभीर साइबर सुरक्षा खतरों को जन्म देता है। निष्पादन योग्य फ़ाइलों में निष्पादन योग्य सिस्टम कोड होता है जो उपयोगकर्ता ऑपरेटिंग सिस्टम पर गुप्त रूप से मैलवेयर, स्पाइवेयर, ट्रोजन, या रैनसमवेयर स्थापित कर सकता है। सुरक्षित ब्राउज़िंग प्रथाएँ सॉफ़्टवेयर को केवल सत्यापित आधिकारिक स्रोतों से डाउनलोड करने, डिजिटल हस्ताक्षरों की पुष्टि करने, फ़ाइल एक्सटेंशन की जांच करने और डाउनलोड की गई सामग्री पर स्वचालित एंटी-मैलवेयर स्कैन चलाने की अनिवार्यता करती हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "hard",
+      "key_facts": [
+        "Downloading executable files from unverified sources can lead to malware infections.",
+        "Always verify the source and check digital signatures before downloading.",
+        "Printed answer key: (C) Downloading executable (.exe) files from unverified third-party websites without security scans."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2569e811-6a6f-4c7d-92d4-2c1086caefd5",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "28. \"मोबाइल डेटा टेथरिंग\" क्या है?",
+      "options_hindi": [
+        "दो अलग-अलग इंटरनेट सेवा प्रदाता नेटवर्क को जोड़ने के लिए आवश्यक एक भौतिक केबलिंग कनेक्शन",
+        "अन्य उपकरणों के साथ मोबाइल डिवाइस के सेलुलर डेटा कनेक्शन को साझा करना, वाई-फाई, ब्लूटूथ, या यूएसबी के माध्यम से",
+        "स्थायी ब्राउज़र कुकीज़ को मोबाइल सिम कार्ड पर संग्रहीत करना ताकि स्थानीय वेबसाइट लोडिंग समय को तेज किया जा सके",
+        "एक पुराने 3जी वायरलेस कनेक्शन को सीधे उच्च गति फाइबर-ऑप्टिक ट्रांसमिशन लाइन में अपग्रेड करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is “mobile data tethering”?",
+      "options_english": [
+        "A physical cabling connection required to link two distinct Internet Service Provider networks together",
+        "Sharing a mobile device’s cellular data connection with other devices via Wi-Fi, Bluetooth, or USB",
+        "Storing persistent browser cookies on a mobile SIM card to accelerate local website loading times",
+        "Upgrading a legacy 3G wireless connection directly into a high-speed fiber-optic transmission line"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Mobile data tethering is a networking feature that allows a cellular device, such as a smartphone, to share its active mobile internet connection with other computing devices like laptops or tablets. The tethering host device acts as a portable wireless access point, modem, or router, transmitting data between connected devices and the mobile carrier network via Wi-Fi hotspots, Bluetooth, or USB cabling.",
+      "explanation_hindi": "सही उत्तर (b) है। मोबाइल डेटा टेथरिंग एक नेटवर्किंग सुविधा है जो एक सेलुलर डिवाइस, जैसे स्मार्टफोन, को अन्य कंप्यूटिंग उपकरणों जैसे लैपटॉप या टैबलेट के साथ अपनी सक्रिय मोबाइल इंटरनेट कनेक्शन साझा करने की अनुमति देती है। टेथरिंग होस्ट डिवाइस एक पोर्टेबल वायरलेस एक्सेस पॉइंट, मोडेम, या राउटर के रूप में कार्य करता है, जो जुड़े उपकरणों और मोबाइल कैरियर नेटवर्क के बीच डेटा का संचार करता है वाई-फाई हॉटस्पॉट, ब्लूटूथ, या यूएसबी केबलिंग के माध्यम से।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Mobile data tethering allows sharing of internet connection.",
+        "It can be done via Wi-Fi, Bluetooth, or USB.",
+        "Printed answer key: (B) Sharing a mobile device’s cellular data"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b51136ec-44c9-48cd-b210-c035deae569e",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "54. नीचे दो कथन दिए गए हैं: एक को असर्शन (A) और दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): डायनामिक IP एड्रेसिंग का व्यापक रूप से ISP द्वारा आवासीय इंटरनेट ग्राहकों के लिए उपयोग किया जाता है।\nकारण (R): डायनामिक IP एड्रेसिंग ISP को DHCP का उपयोग करके उपलब्ध IP पतों को कुशलता से पुनः असाइन करने की अनुमति देती है, जिससे पते की बर्बादी कम होती है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R असत्य है।",
+        "A असत्य है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): Dynamic IP addressing is widely used by ISPs for residential internet customers. Reason (R): Dynamic IP addressing allows ISPs to efficiently reassign available IP addresses from a pool using DHCP, reducing address waste.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Internet Service Providers extensively deploy dynamic IP address allocation for residential internet subscribers. Dynamic addressing allows ISPs to automatically allocate available IP addresses from a centralized pool using Dynamic Host Configuration Protocol. Because not all subscriber devices are connected simultaneously, dynamic assignment maximizes IP address utilization efficiency, reduces static address administrative overhead, and conserves limited public IP address allocations.",
+      "explanation_hindi": "सही उत्तर (a) है। इंटरनेट सेवा प्रदाता आवासीय इंटरनेट ग्राहकों के लिए डायनामिक IP एड्रेस आवंटन का व्यापक रूप से उपयोग करते हैं। डायनामिक एड्रेसिंग ISP को केंद्रीयकृत पूल से उपलब्ध IP पतों को स्वचालित रूप से आवंटित करने की अनुमति देती है। चूंकि सभी ग्राहक उपकरण एक साथ जुड़े नहीं होते हैं, डायनामिक असाइनमेंट IP पते के उपयोग की दक्षता को अधिकतम करता है, स्थिर पते के प्रशासनिक ओवरहेड को कम करता है, और सीमित सार्वजनिक IP पते के आवंटनों को संरक्षित करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "डायनामिक IP एड्रेसिंग ISP द्वारा आवासीय ग्राहकों के लिए उपयोग की जाती है।",
+        "डायनामिक एड्रेसिंग DHCP का उपयोग करके IP पतों को पुनः असाइन करती है।",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9de5a3ee-b5ff-4aa3-8827-cea2611f7d84",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक पैकेट फ़िल्टरिंग फ़ायरवॉल द्वारा इनकमिंग डेटा पैकेट प्राप्त करते समय उठाए गए निम्नलिखित कदमों को व्यवस्थित करें:\nI. फ़ायरवॉल सार्वजनिक नेटवर्क से इनकमिंग डेटा पैकेट प्राप्त करता है\nII. फ़ायरवॉल पैकेट हेडर (स्रोत IP, गंतव्य IP, पोर्ट) को नियमों के खिलाफ जांचता है\nIII. फ़ायरवॉल तय करता है कि पैकेट को अनुमति दी जाए या ब्लॉक किया जाए\nIV. अनुमत पैकेट को स्थानीय नेटवर्क पर लक्ष्य डिवाइस की ओर अग्रेषित किया जाता है",
+      "options_hindi": [
+        "I, II, III, IV",
+        "II, I, III, IV",
+        "I, III, II, IV",
+        "IV, III, II, I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following steps taken by a packet filtering Firewall when receiving incoming data packets:\nI. Firewall receives incoming data packet from public network\nII. Firewall checks packet headers (source IP, destination IP, port) against rules\nIII. Firewall decides whether to allow or block packet\nIV. Allowed packet is forwarded to target device on local network",
+      "options_english": [
+        "I, II, III, IV",
+        "II, I, III, IV",
+        "I, III, II, IV",
+        "IV, III, II, I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A packet-filtering firewall evaluates incoming network traffic through a systematic sequence. First, the firewall intercepts an incoming data packet from an external network connection. It then inspects the packet header details, including source IP address, destination IP address, and port numbers, against configured rule sets. The firewall decides whether to permit or drop the packet, forwarding allowed packets to local target devices.",
+      "explanation_hindi": "सही उत्तर (a) है। एक पैकेट-फ़िल्टरिंग फ़ायरवॉल इनकमिंग नेटवर्क ट्रैफ़िक का मूल्यांकन एक व्यवस्थित अनुक्रम के माध्यम से करता है। सबसे पहले, फ़ायरवॉल एक बाहरी नेटवर्क कनेक्शन से एक इनकमिंग डेटा पैकेट को इंटरसेप्ट करता है। इसके बाद, यह पैकेट हेडर विवरणों की जांच करता है, जिसमें स्रोत IP पता, गंतव्य IP पता, और पोर्ट नंबर शामिल होते हैं, जो निर्धारित नियम सेट के खिलाफ होते हैं। फ़ायरवॉल तय करता है कि पैकेट को अनुमति दी जाए या गिराया जाए, और अनुमत पैकेट को स्थानीय लक्ष्य उपकरणों की ओर अग्रेषित करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Packet-filtering firewalls evaluate incoming packets based on predefined rules.",
+        "Allowed packets are forwarded to the local network devices.",
+        "Printed answer key: (A) I, II, III, IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "30f7ea60-289c-4bf9-abb5-5b75a94d5073",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से कौन सा इंटरनेट को सबसे अच्छी तरह परिभाषित करता है?",
+      "options_hindi": [
+        "एक केंद्रीकृत डेटाबेस सर्वर जो एक\nएकल कॉर्पोरेट इकाई द्वारा प्रबंधित किया जाता है जो वेब पृष्ठों को रखता है",
+        "मानकीकृत प्रोटोकॉल के माध्यम से संवाद करने वाले\nजुड़े हुए नेटवर्कों का वैश्विक प्रणाली",
+        "स्थानीय कंप्यूटरों पर स्थापित सॉफ़्टवेयर एप्लिकेशन\nजो ऑफ़लाइन डिजिटल दस्तावेज़ों को ब्राउज़ करता है",
+        "एक निजी नेटवर्क जो केवल आवाज़ रूटिंग के लिए\nटेलीकम्युनिकेशन कंपनियों के स्वामित्व में है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following best defines the Internet?",
+      "options_english": [
+        "Centralized database server managed by a single corporate entity holding web pages",
+        "Global system of interconnected networks communicating via standardized protocols",
+        "Software application installed on local computers to browse offline digital documents",
+        "Private network owned by telecommunication companies exclusively for voice routing"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The Internet is a vast, decentralized global system composed of interconnected computer networks that communicate using standardized communication protocols, primarily the Transmission Control Protocol and Internet Protocol suite. It enables millions of private, public, academic, business, and government networks to seamlessly exchange data, support communication services, and share digital resources worldwide, serving as the physical and logical foundation for modern global digital communications and online applications.",
+      "explanation_hindi": "सही उत्तर (b) है। इंटरनेट एक विशाल, विकेन्द्रीकृत वैश्विक प्रणाली है जो जुड़े हुए कंप्यूटर नेटवर्कों से मिलकर बनी है, जो मानकीकृत संचार प्रोटोकॉल का उपयोग करके संवाद करती है। यह लाखों निजी, सार्वजनिक, शैक्षणिक, व्यावसायिक और सरकारी नेटवर्कों को डेटा का निर्बाध आदान-प्रदान करने, संचार सेवाओं का समर्थन करने और डिजिटल संसाधनों को साझा करने में सक्षम बनाता है, जो आधुनिक वैश्विक डिजिटल संचार और ऑनलाइन अनुप्रयोगों के लिए भौतिक और तार्किक आधार के रूप में कार्य करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "The Internet is a decentralized network of networks.",
+        "It uses standardized protocols for communication.",
+        "Printed answer key: (B) Global system of interconnected networks"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a630ea30-48c2-49c3-941c-0e7169d60df9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "78. नीचे दिए गए दो कथन हैं: एक को\nअसर्शन (A) के रूप में लेबल किया गया है\nऔर दूसरे को कारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): सार्वजनिक स्कूलों के कंप्यूटर प्रयोगशालाओं\nको अपने इंटरनेट नेटवर्क पर वेब सामग्री फ़िल्टर लागू करने\nचाहिए।\nकारण (R): सामग्री फ़िल्टरिंग अनुपयुक्त, दुर्भावनापूर्ण,\nया गैर-शैक्षिक सामग्री तक पहुँच को प्रतिबंधित करती है,\nबैंडविड्थ को संरक्षित करती है और छात्रों की सुरक्षा करती है।",
+      "options_hindi": [
+        "दोनों A और R सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "दोनों A और R सत्य हैं लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है लेकिन R गलत है।",
+        "A गलत है लेकिन R सत्य है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled\nas Assertion (A) and the other is labelled as\nReason (R).\nAssertion (A): Public school computer labs\nshould implement web content filters on their\ninternet network.\nReason (R): Content filtering restricts access\nto inappropriate, malicious, or non-educational\ncontent, conserving bandwidth and safeguarding\nstudents.",
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not the correct explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Educational institutions should deploy web\ncontent filtering systems across computer\nlaboratory networks. Content filtering software\nautomatically inspects network traffic and\nblocks user access to objectionable, malicious,\nor non-educational websites. By restricting\ninappropriate online destinations, content filters\nprotect students from web hazards, prevent\nmalware infections, enforce acceptable internet\nuse policies, and preserve critical network\nbandwidth for educational tasks.",
+      "explanation_hindi": "सही उत्तर (a) है। शैक्षणिक संस्थानों को कंप्यूटर\nप्रयोगशाला नेटवर्क पर वेब सामग्री फ़िल्टरिंग सिस्टम\nलागू करना चाहिए। सामग्री फ़िल्टरिंग सॉफ़्टवेयर\nस्वचालित रूप से नेटवर्क ट्रैफ़िक का निरीक्षण करता है और\nअनुचित, दुर्भावनापूर्ण, या गैर-शैक्षिक वेबसाइटों तक\nउपयोगकर्ता की पहुँच को अवरुद्ध करता है। अनुचित ऑनलाइन\nगंतव्यों को प्रतिबंधित करके, सामग्री फ़िल्टर छात्रों को\nवेब खतरों से बचाते हैं, मैलवेयर संक्रमण को रोकते हैं,\nस्वीकृत इंटरनेट उपयोग नीतियों को लागू करते हैं, और\nशैक्षणिक कार्यों के लिए महत्वपूर्ण नेटवर्क बैंडविड्थ को\nसंरक्षित करते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Content filtering protects students from inappropriate content.",
+        "Content filters help conserve bandwidth for educational tasks.",
+        "Printed answer key: (A) Both A and R are true and R is the correct explanation of A."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "296dd17f-8223-4936-b708-1640ff5dbb59",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "67. निम्नलिखित में से कौन सा प्रोटोकॉल और डिफ़ॉल्ट मुख्य कार्य का गलत युग्मन दर्शाता है?",
+      "options_hindi": [
+        "HTTP — असुरक्षित वेब सामग्री का स्थानांतरण",
+        "HTTPS — सुरक्षित और एन्क्रिप्टेड वेब सामग्री का स्थानांतरण",
+        "DNS — भौतिक स्विचों को MAC पते सौंपना",
+        "FTP — होस्ट और क्लाइंट के बीच फ़ाइलों का स्थानांतरण"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which of the following represents an incorrect pairing of protocol and default core function?",
+      "options_english": [
+        "HTTP — Unencrypted web content transfer",
+        "HTTPS — Encrypted and secure web content transfer",
+        "DNS — Assigning MAC addresses to physical switches",
+        "FTP — Transferring files between host and client"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The primary function of the Domain Name System is translating human-readable domain names into numerical IP addresses, not assigning physical MAC addresses to hardware switches. In contrast, HTTP handles unencrypted web document transfers, HTTPS provides encrypted web data communication using SSL/TLS protocols, and FTP facilitates uploading and downloading files between client computers and remote storage servers across network connections.",
+      "explanation_hindi": "सही उत्तर (c) है। डोमेन नाम प्रणाली का मुख्य कार्य मानव-पठनीय डोमेन नामों को संख्यात्मक IP पतों में अनुवाद करना है, न कि भौतिक स्विचों को MAC पते सौंपना। इसके विपरीत, HTTP असुरक्षित वेब दस्तावेज़ स्थानांतरण को संभालता है, HTTPS SSL/TLS प्रोटोकॉल का उपयोग करके एन्क्रिप्टेड वेब डेटा संचार प्रदान करता है, और FTP क्लाइंट कंप्यूटरों और दूरस्थ संग्रहण सर्वरों के बीच फ़ाइलों को अपलोड और डाउनलोड करने की सुविधा प्रदान करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "डोमेन नाम प्रणाली (DNS) का कार्य मानव-पठनीय नामों को IP पतों में अनुवाद करना है।",
+        "HTTP असुरक्षित वेब सामग्री का स्थानांतरण करता है।",
+        "HTTPS एन्क्रिप्टेड वेब डेटा संचार के लिए SSL/TLS का उपयोग करता है।",
+        "Printed answer key: (C) DNS — Assigning MAC addresses to physical switches"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "2a693b02-655b-44cc-8b67-bfbcf7fb2ced",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नेटवर्क टोपोलॉजी के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. रिंग टोपोलॉजी में, डेटा एकल दिशा (या द्वि-दिशा) में उपकरण से उपकरण तक यात्रा करता है।\nB. बस टोपोलॉजी में, मुख्य केंद्रीय केबल में एक विफलता पूरे नेटवर्क खंड को गिरा देती है।\nC. स्टार टोपोलॉजी में, यदि एक केंद्रीय स्विच विफल हो जाता है, तो केवल एकल परिधीय कंप्यूटर कनेक्टिविटी खोता है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Network Topologies:\nA. In a Ring topology, data travels in a single direction (or dual direction) from device to device.\nB. In a Bus topology, a failure in the main central cable collapses the entire network segment.\nC. In a Star topology, if one central switch fails, only a single peripheral computer loses connectivity.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "In a ring topology, data frames travel sequentially from node to node around a circular path. In a bus topology, a physical fault or break in the central backbone cable disrupts signal transmission and collapses the entire network segment. In a star topology, if the central switch fails, the entire network connected to that switch loses connectivity, not just a single computer.",
+      "explanation_hindi": "सही उत्तर (a) है। रिंग टोपोलॉजी में, डेटा फ्रेम एक गोलाकार पथ के चारों ओर नोड से नोड तक क्रमिक रूप से यात्रा करते हैं। बस टोपोलॉजी में, केंद्रीय बैकबोन केबल में भौतिक दोष या टूटने से सिग्नल ट्रांसमिशन बाधित होता है और पूरे नेटवर्क खंड को गिरा देता है। स्टार टोपोलॉजी में, यदि केंद्रीय स्विच विफल हो जाता है, तो उस स्विच से जुड़े पूरे नेटवर्क को कनेक्टिविटी खोनी पड़ती है, केवल एकल कंप्यूटर को नहीं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "In a ring topology, data travels in a circular path.",
+        "A bus topology fails if the central cable is broken.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "442f77e6-34cb-49ac-83e4-d7ddb8400806",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "12. विश्वव्यापी वेब (WWW) के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. यह इंटरनेट पर हाइपरलिंक किए गए दस्तावेज़ों को स्थानांतरित करने के लिए HTTP प्रोटोकॉल पर निर्भर करता है।\nB. इसे टिम बर्नर्स-ली द्वारा CERN में काम करते समय आविष्कार किया गया था।\nC. यह इंटरनेट के भौतिक हार्डवेयर कैबिलिंग के समानार्थक है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the World Wide Web (WWW):\nA. It relies on the HTTP protocol to transfer hyperlinked documents across the Internet.\nB. It was invented by Tim Berners-Lee while working at CERN.\nC. It is synonymous with the physical hardware cabling of the Internet.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The World Wide Web relies on the Hypertext Transfer Protocol to transmit formatted markup documents and hyperlinked content across connected networks. Tim Berners-Lee invented the World Wide Web while working at CERN in 1989. However, the Web is an application service operating on top of the Internet rather than being synonymous with physical hardware cabling, routers, switches, or underlying transmission line infrastructure.",
+      "explanation_hindi": "सही उत्तर (a) है। विश्वव्यापी वेब हाइपरटेक्स्ट ट्रांसफर प्रोटोकॉल पर निर्भर करता है ताकि जुड़े हुए नेटवर्क के बीच स्वरूपित मार्कअप दस्तावेज़ और हाइपरलिंक सामग्री को प्रसारित किया जा सके। टिम बर्नर्स-ली ने 1989 में CERN में काम करते समय विश्वव्यापी वेब का आविष्कार किया। हालाँकि, वेब एक एप्लिकेशन सेवा है जो इंटरनेट के शीर्ष पर कार्य करती है, न कि भौतिक हार्डवेयर कैबिलिंग, राउटर, स्विच या अंतर्निहित ट्रांसमिशन लाइन अवसंरचना के समानार्थक है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "The World Wide Web uses HTTP for document transfer.",
+        "Tim Berners-Lee invented the WWW at CERN in 1989.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6de67a8e-f65c-4014-b615-3e2ed136d2b8",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "क्लाइंट और सर्वर के बीच सुरक्षित HTTPS कनेक्शन स्थापित करने के लिए निम्नलिखित चरणों को क्रम में व्यवस्थित करें:\nI. क्लाइंट सुरक्षित सर्वर से कनेक्ट करने के लिए अनुरोध भेजता है\nII. सर्वर अपने SSL/TLS प्रमाणपत्र के साथ प्रतिक्रिया करता है\nIII. क्लाइंट प्रमाणपत्र को प्रमाणन प्राधिकरण (CA) के साथ सत्यापित करता है\nIV. सुरक्षित डेटा विनिमय के लिए एन्क्रिप्टेड सममित सत्र कुंजी स्थापित की जाती है",
+      "options_hindi": [
+        "I, II, III, IV",
+        "II, I, IV, III",
+        "I, III, II, IV",
+        "IV, III, II, I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following steps in establishing a secure HTTPS connection between client and server:\nI. Client sends request to connect to secure server\nII. Server responds with its SSL/TLS certificate\nIII. Client verifies certificate with Certificate Authority (CA)\nIV. Encrypted symmetric session key is established for secure data exchange",
+      "options_english": [
+        "I, II, III, IV",
+        "II, I, IV, III",
+        "I, III, II, IV",
+        "IV, III, II, I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Establishing a secure HTTPS connection requires a structured handshake sequence between client and server. The client browser initiates communication by requesting a secure session. The server responds by transmitting its SSL/TLS certificate containing its public key. The client verifies the certificate with a trusted Certificate Authority. Once verified, an encrypted symmetric session key is generated to protect subsequent data exchanges.",
+      "explanation_hindi": "सही उत्तर (a) है। सुरक्षित HTTPS कनेक्शन स्थापित करने के लिए क्लाइंट और सर्वर के बीच एक संरचित हैंडशेक अनुक्रम की आवश्यकता होती है। क्लाइंट ब्राउज़र सुरक्षित सत्र के लिए अनुरोध करके संचार शुरू करता है। सर्वर अपने सार्वजनिक कुंजी के साथ SSL/TLS प्रमाणपत्र भेजकर प्रतिक्रिया करता है। क्लाइंट प्रमाणपत्र को विश्वसनीय प्रमाणन प्राधिकरण के साथ सत्यापित करता है। सत्यापन के बाद, डेटा विनिमय की सुरक्षा के लिए एक एन्क्रिप्टेड सममित सत्र कुंजी उत्पन्न की जाती है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "HTTPS connections use SSL/TLS for secure communication.",
+        "The client verifies the server's certificate with a Certificate Authority.",
+        "Printed answer key: (A) I, II, III, IV"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

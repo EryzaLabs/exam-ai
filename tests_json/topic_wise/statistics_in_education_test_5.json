@@ -1,0 +1,785 @@
+{
+  "test_id": "f1e862f0-1410-44b8-bda7-8a7c8b131202",
+  "test_name": "Topic Test: STATISTICS_IN_EDUCATION - Part 5",
+  "type": "topic_wise",
+  "topic": "statistics_in_education",
+  "created_at": "2026-10-28T18:55:06.900697",
+  "questions": [
+    {
+      "id": "38764060-f5a0-4595-b6b1-6f3c8bf3ffa4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कौन सा विविधता का माप है जो प्रत्येक स्कोर के औसत से निरपेक्ष अंतर के औसत को लेकर गणना किया जाता है?",
+      "options_hindi": [
+        "माध्य विचलन",
+        "मानक विचलन",
+        "क्वारटाइल विचलन",
+        "वैरिएंस"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Which measure of variability is calculated by taking the average of the absolute differences of each score from the mean?",
+      "options_english": [
+        "Mean Deviation",
+        "Standard Deviation",
+        "Quartile Deviation",
+        "Variance"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Mean deviation measures dispersion by calculating the average of the absolute differences between individual scores and the arithmetic mean. By ignoring positive and negative algebraic signs during summation, it quantifies average absolute distance from the center, providing a straightforward summary of dataset variability.",
+      "explanation_hindi": "सही उत्तर (a) है। माध्य विचलन विविधता को मापता है, जो व्यक्तिगत स्कोर और अंकगणितीय माध्य के बीच निरपेक्ष अंतर के औसत की गणना करके किया जाता है। सकारात्मक और नकारात्मक बीजगणितीय संकेतों को समावेश करते हुए, यह केंद्र से औसत निरपेक्ष दूरी को मापता है, जो डेटा सेट की विविधता का एक सीधा सारांश प्रदान करता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "easy",
+      "key_facts": [
+        "माध्य विचलन औसत निरपेक्ष अंतर को मापता है।",
+        "यह डेटा सेट की विविधता का सारांश प्रदान करता है।",
+        "Printed answer key: (A) Mean Deviation"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "282fe906-8b04-4f71-9a61-db2ee0f986c9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "मानक स्कोर के बारे में निम्नलिखित कथनों पर विचार करें:\nI. ये विभिन्न परीक्षणों के स्कोर की अर्थपूर्ण तुलना की अनुमति देते हैं।\nII. ये मूल कच्चे स्कोर वितरण के मौलिक आकार को बदल देते हैं।\nIII. ये समूह में किसी व्यक्ति की सापेक्ष स्थिति को निर्दिष्ट करते हैं।\nIV. टी-स्कोर ज़ेड-स्कोर में अक्सर पाए जाने वाले नकारात्मक चिह्नों को समाप्त कर देते हैं।\nकौन सा संयोजन सही है?",
+      "options_hindi": [
+        "केवल I, II और III",
+        "केवल I, III और IV",
+        "केवल II, III और IV",
+        "केवल I, II और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Consider the following statements about standard scores:\nI. They allow for the meaningful comparison of scores from different tests.\nII. They alter the fundamental shape of the original raw score distribution.\nIII. They specify an individual's relative position in a group.\nIV. T-scores eliminate negative signs often found in Z-scores.\nWhich combination of statements is correct?",
+      "options_english": [
+        "I, II, and III only",
+        "I, III, and IV only",
+        "II, III, and IV only",
+        "I, II, and IV only"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Standard scores allow comparison across different tests by expressing performance relative to group norms. T-scores rescale Z-scores to eliminate negative numbers and decimals. However, standard linear transformations preserve the original distribution shape rather than altering it, making statement II incorrect while statements I, III, and IV accurately describe standard scores.",
+      "explanation_hindi": "सही उत्तर (b) है। मानक स्कोर विभिन्न परीक्षणों के बीच तुलना की अनुमति देते हैं, क्योंकि ये प्रदर्शन को समूह मानकों के सापेक्ष व्यक्त करते हैं। टी-स्कोर ज़ेड-स्कोर को नकारात्मक संख्याओं और दशमलवों को समाप्त करने के लिए फिर से स्केल करते हैं। हालाँकि, मानक रैखिक परिवर्तन मूल वितरण के आकार को बनाए रखते हैं, इसे बदलते नहीं हैं, जिससे कथन II गलत हो जाता है जबकि कथन I, III, और IV मानक स्कोर का सही वर्णन करते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Standard scores allow for meaningful comparisons across different tests.",
+        "T-scores eliminate negative signs found in Z-scores.",
+        "Printed answer key: (B) I, III, and IV only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7b2c8a1d-85aa-4c25-8b99-cb1af5286686",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से कौन-सा ग्राफ कक्षा अंतरालों के मध्य बिंदुओं के खिलाफ आवृत्तियों को प्लॉट करके और बिंदुओं को सीधी रेखाओं से जोड़कर बनाया जाता है?",
+      "options_hindi": [
+        "आवृत्ति बहुभुज",
+        "स्तंभ हिस्टोग्राम आरेख",
+        "संचयी ओगिव वक्र",
+        "वृत्तीय क्षेत्र पाई चार्ट"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Which of the following graphs is formed by plotting the frequencies against the midpoints of the class intervals and joining the points with straight lines?",
+      "options_english": [
+        "Frequency Polygon",
+        "Column Histogram Diagram",
+        "Cumulative Ogive Curve",
+        "Circular Sector Pie Chart"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A frequency polygon is constructed by placing class interval midpoints along the horizontal axis and plotting corresponding class frequencies along the vertical axis. Connecting these sequential coordinate points with straight line segments creates a closed geometric figure that effectively illustrates the overall shape and trend of a continuous frequency distribution.",
+      "explanation_hindi": "सही उत्तर (a) है। आवृत्ति बहुभुज को कक्षा अंतरालों के मध्य बिंदुओं को क्षैतिज अक्ष पर रखकर और संबंधित कक्षा आवृत्तियों को ऊर्ध्वाधर अक्ष पर प्लॉट करके बनाया जाता है। इन अनुक्रमिक समन्वय बिंदुओं को सीधी रेखा खंडों से जोड़ने से एक बंद ज्यामितीय आकृति बनती है, जो लगातार आवृत्ति वितरण के समग्र आकार और प्रवृत्ति को प्रभावी ढंग से दर्शाती है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Frequency polygons connect midpoints of class intervals.",
+        "They illustrate trends in continuous frequency distributions.",
+        "Printed answer key: (A) Frequency Polygon"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "a5b648e4-f3a7-4ccd-8208-0dcefae92401",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "आवृत्ति बहुभुज बनाने के लिए निम्नलिखित चरणों के अनुक्रम पर विचार करें:\nI. X-अक्ष पर वर्ग अंतराल के मध्य बिंदुओं को चिह्नित करें।\nII. दोनों छोर पर मान्य शून्य वर्गों के मध्य बिंदुओं पर X-अक्ष तक रेखाएँ बढ़ाकर बहुभुज को बंद करें।\nIII. Y-अक्ष पर संबंधित मध्य बिंदुओं के खिलाफ आवृत्तियों को प्लॉट करें।\nIV. प्लॉट किए गए बिंदुओं को सीधी रेखाओं से जोड़ें।\nइन चरणों का सही तार्किक क्रम क्या है?",
+      "options_hindi": [
+        "I, III, IV, II",
+        "III, I, II, IV",
+        "I, IV, III, II",
+        "III, IV, I, II"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Consider the following sequence of steps for constructing a frequency polygon:\nI. Mark the midpoints of the class intervals on the X-axis.\nII. Close the polygon by extending lines to the X-axis at the midpoints of assumed empty classes at both ends.\nIII. Plot the frequencies on the Y-axis against the respective midpoints.\nIV. Join the plotted points with straight lines.\nWhat is the correct logical order of these steps?",
+      "options_english": [
+        "I, III, IV, II",
+        "III, I, II, IV",
+        "I, IV, III, II",
+        "III, IV, I, II"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Constructing a frequency polygon follows a logical sequence: first, identify class midpoints along the horizontal axis; second, plot frequencies against these midpoints; third, connect adjacent points with straight line segments; and finally, extend the lines to the horizontal axis at midpoints of empty outer classes to close the polygon figure.",
+      "explanation_hindi": "सही उत्तर (a) है। आवृत्ति बहुभुज बनाने की प्रक्रिया एक तार्किक अनुक्रम का पालन करती है: पहले, क्षैतिज अक्ष पर वर्ग के मध्य बिंदुओं की पहचान करें; दूसरे, इन मध्य बिंदुओं के खिलाफ आवृत्तियों को प्लॉट करें; तीसरे, निकटवर्ती बिंदुओं को सीधी रेखा खंडों से जोड़ें; और अंत में, बहुभुज आकृति को बंद करने के लिए शून्य बाहरी वर्गों के मध्य बिंदुओं पर रेखाएँ बढ़ाएँ।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Constructing a frequency polygon involves marking midpoints, plotting frequencies, connecting points, and closing the polygon.",
+        "Printed answer key: (A) I, III, IV, II"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "f9216343-9fd6-4438-85e0-34ac6cf78eae",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सापेक्ष ग्रेडिंग विधि का उपयोग करते हुए ग्रेड की गणना के लिए निम्नलिखित चरणों को सही क्रम में व्यवस्थित करें:\nI. औसत और मानक विचलन की गणना करें",
+      "options_hindi": [
+        "सही उत्तर",
+        "गलत उत्तर",
+        "अज्ञात उत्तर",
+        "अन्य उत्तर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Arrange the following steps in the correct sequence for calculating grades using a relative grading method based on the Normal Probability Curve:\nI. Calculate the mean and standard deviation",
+      "options_english": [
+        "Correct answer",
+        "Incorrect answer",
+        "Unknown answer",
+        "Other answer"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The arithmetic mean functions as the balance point of a frequency distribution. Mathematically, the sum of positive deviations for scores above the mean is equal in magnitude to the sum of negative deviations for scores below it. Consequently, summing the algebraic deviations of all individual raw scores from their arithmetic mean always yields a total value of zero.",
+      "explanation_hindi": "सही उत्तर (a) है। गणितीय औसत आवृत्ति वितरण का संतुलन बिंदु के रूप में कार्य करता है। गणितीय रूप से, औसत से ऊपर के स्कोर के लिए सकारात्मक विचलनों का योग नकारात्मक विचलनों के योग के समान होता है। इसलिए, सभी व्यक्तिगत कच्चे स्कोर के औसत से उनके बीजगणितीय विचलनों का योग हमेशा शून्य होता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The arithmetic mean is the balance point of a frequency distribution.",
+        "Printed answer key: (A) Correct answer"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "08617cfb-5117-4cd3-ab6b-77ab93a8b633",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "स्पीयरमैन के रैंक सहसंबंध के सूत्र में:\n6 / D2, D का क्या अर्थ है?\nρ = 1−\nN (N2 − 1)",
+      "options_hindi": [
+        "दोनों वितरणों में सभी कच्चे स्कोर का कुल मानक विचलन",
+        "प्रत्येक कच्चे स्कोर का अंकगणितीय माध्य से व्यक्तिगत विचलन",
+        "डेटासेट के लिए कुल सांख्यिकीय स्वतंत्रता की डिग्री",
+        "प्रत्येक व्यक्ति के लिए युग्मित रैंक के बीच का अंतर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "In the formula for Spearman's Rank Correlation: 6 / D2, what does D represent? ρ = 1− N (N2 − 1)",
+      "options_english": [
+        "The total standard deviation of all raw scores in both distributions",
+        "The individual deviation of each raw score from the arithmetic mean",
+        "The total statistical degrees of freedom calculated for the dataset",
+        "The difference between paired ranks for each individual"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "In Spearman's rank correlation formula, the symbol D represents the arithmetic difference between the two assigned ranks for each paired observation. Squaring these rank differences, summing them across all cases, and applying the formula quantifies the degree of ordinal association between two ranked variables.",
+      "explanation_hindi": "सही उत्तर (d) है। स्पीयरमैन के रैंक सहसंबंध के सूत्र में, D प्रतीक उन युग्मित अवलोकनों के लिए दो निर्धारित रैंक के बीच का अंकगणितीय अंतर दर्शाता है। इन रैंक के अंतर को वर्गित करना, सभी मामलों में उनका योग करना और सूत्र को लागू करना दो रैंक वाले चर के बीच क्रमिक संबंध की डिग्री को मापता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "D represents the difference between paired ranks in Spearman's correlation.",
+        "Printed answer key: (D) The difference between paired ranks for each individual"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1fc66df0-bd6c-4d61-af6a-277a56081b61",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक संचयी आवृत्ति वक्र (ओगिव) को निम्नलिखित के खिलाफ संचयी आवृत्तियों को प्लॉट करके बनाया जाता है:",
+      "options_hindi": [
+        "कक्षा अंतराल के मध्य बिंदु",
+        "कक्षा अंतराल की सटीक निचली सीमाएँ",
+        "कक्षा अंतराल की सटीक ऊपरी सीमाएँ",
+        "कक्षा अंतराल की निर्धारित ऊपरी सीमाएँ"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A cumulative frequency curve (Ogive) is constructed by plotting cumulative frequencies against the:",
+      "options_english": [
+        "Midpoints of class intervals",
+        "Exact lower limits of class intervals",
+        "Exact upper limits of class intervals",
+        "Stated upper limits of class intervals"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Constructing a standard less-than cumulative frequency curve, or ogive, requires plotting cumulative frequencies on the vertical axis against the exact upper limits of class intervals on the horizontal axis. Connecting these sequential points generates a smooth S-shaped curve that illustrates the accumulation of scores across upper class limits.",
+      "explanation_hindi": "सही उत्तर (c) है। एक मानक कम से कम संचयी आवृत्ति वक्र, या ओगिव, को संचयी आवृत्तियों को ऊर्ध्वाधर अक्ष पर कक्षा अंतराल की सटीक ऊपरी सीमाओं के खिलाफ प्लॉट करके बनाया जाता है। इन अनुक्रमिक बिंदुओं को जोड़ने से एक चिकनी S-आकार का वक्र उत्पन्न होता है जो ऊपरी कक्षा सीमाओं के पार स्कोर के संचय को दर्शाता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "An ogive is constructed by plotting cumulative frequencies against the exact upper limits of class intervals.",
+        "Connecting points generates a smooth S-shaped curve.",
+        "Printed answer key: (C) Exact upper limits of class intervals"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b0fef90d-e6fc-416a-9a5a-9ef11cea3420",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "स्पीयर्मन का रैंक अंतर विधि सहसंबंध की गणना के लिए सबसे उपयुक्त है जब डेटा:",
+      "options_hindi": [
+        "निरंतर चर जो सामान्य बेल के आकार के वितरण का पालन करते हैं",
+        "विशिष्ट नाममात्र वर्गीकरण में समूहित श्रेणीगत डेटा",
+        "विशुद्ध रूप से सापेक्ष अनुपात या प्रतिशत के रूप में व्यक्त डेटा",
+        "रैंक के क्रम पर मापे गए डेटा"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Spearman's Rank Difference method for calculating correlation is best suited for data that are:",
+      "options_english": [
+        "Continuous variables following a normal bell-shaped distribution",
+        "Categorical data grouped into distinct nominal classifications",
+        "Data exclusively expressed as relative proportions or percentages",
+        "Data measured on an ordinal scale of ranks"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Spearman rank-difference correlation is a non-parametric statistical procedure designed specifically for ordinal scale data or ranked scores. It calculates the association between two ranked series without requiring normal distribution assumptions or interval scale measurements, making it ideal for evaluation metrics presented as relative positional ranks rather than precise raw measurements.",
+      "explanation_hindi": "सही उत्तर (d) है। स्पीयर्मन रैंक अंतर सहसंबंध एक गैर-पैरामीट्रिक सांख्यिकीय प्रक्रिया है जो विशेष रूप से क्रमांकित स्केल डेटा या रैंक किए गए स्कोर के लिए डिज़ाइन की गई है। यह दो रैंक की श्रृंखलाओं के बीच संबंध की गणना करता है बिना सामान्य वितरण की धारणा या अंतराल स्केल माप की आवश्यकता के, जिससे यह सापेक्ष स्थिति रैंक के रूप में प्रस्तुत मूल्यांकन मैट्रिक्स के लिए आदर्श बनता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Spearman's method is non-parametric.",
+        "It is suitable for ordinal data.",
+        "Does not require normal distribution assumptions.",
+        "Printed answer key: (D) Data measured on an ordinal scale of ranks"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8ea6d781-7b66-438a-8a4b-6b8d3e7ffead",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "समूहित डेटा के लिए माध्यिका की गणना\nमानती है कि:",
+      "options_hindi": [
+        "सभी व्यक्तिगत आवृत्तियाँ कक्षा के मध्य बिंदुओं पर सख्ती से केंद्रित हैं",
+        "आधारभूत जनसंख्या वितरण को पूरी तरह से सममित माना गया है",
+        "डेटासेट में कोई अत्यधिक उच्च या निम्न स्कोर आउटलेयर नहीं हैं",
+        "प्रत्येक कक्षा अंतराल के भीतर स्कोर समान रूप से वितरित हैं"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "The calculation of the Median for grouped data assumes that:",
+      "options_english": [
+        "All individual frequencies are strictly concentrated at class midpoints",
+        "The underlying population distribution is assumed perfectly symmetrical",
+        "There are no extreme high or low score outliers present in the dataset",
+        "Scores within each class interval are evenly distributed throughout"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Calculating the median from grouped frequency distributions relies on the theoretical assumption that scores within each class interval are evenly distributed. This assumption is crucial because if the scores are not evenly distributed, the median may not accurately represent the central tendency of the data. Therefore, for the median to be a reliable measure, it is essential that the distribution of scores within each interval is uniform.",
+      "explanation_hindi": "सही उत्तर (d) है। समूहित आवृत्ति वितरण से माध्यिका की गणना इस सैद्धांतिक धारणा पर निर्भर करती है कि प्रत्येक कक्षा अंतराल के भीतर स्कोर समान रूप से वितरित हैं। यह धारणा महत्वपूर्ण है क्योंकि यदि स्कोर समान रूप से वितरित नहीं हैं, तो माध्यिका डेटा की केंद्रीय प्रवृत्ति का सही प्रतिनिधित्व नहीं कर सकती है। इसलिए, माध्यिका को एक विश्वसनीय माप बनने के लिए, यह आवश्यक है कि प्रत्येक अंतराल के भीतर स्कोर का वितरण समान हो।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The median is a measure of central tendency.",
+        "Assumptions about data distribution are critical for accurate statistical analysis.",
+        "Printed answer key: (D) Scores within each class interval are evenly distributed throughout"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "12ff2419-860d-4a76-93b7-b6dba4f71653",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निरंतर और विविक्त चर के बारे में निम्नलिखित कथनों पर विचार करें:\nI. कक्षा में छात्रों की संख्या एक निरंतर चर है।\nII. एक छात्र की ऊँचाई एक विविक्त चर है।\nIII. निरंतर चर किसी दिए गए सीमा के भीतर कोई भी मान ले सकते हैं।\nIV. विविक्त चर आमतौर पर मापने के बजाय गिनने द्वारा प्राप्त होते हैं।\nकौन सा संयोजन सही है?",
+      "options_hindi": [
+        "केवल I और II",
+        "केवल III और IV",
+        "केवल I, III और IV",
+        "केवल II, III और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Consider the following statements about\ncontinuous and discrete variables:\nI. The number of students in a classroom is a\ncontinuous variable.\nII. A student's height is a discrete variable.\nIII. Continuous variables can take any value\nwithin a given range.\nIV. Discrete variables are typically obtained by\ncounting rather than measuring.\nWhich combination of statements is correct?",
+      "options_english": [
+        "I and II only",
+        "III and IV only",
+        "I, III, and IV only",
+        "II, III, and IV only"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Continuous variables can assume any real numeric value within a given range, such as height, whereas discrete variables consist of distinct, countable units, such as student counts. Student counts are discrete variables, and heights are continuous variables, making statements III and IV correct descriptions of variable types.",
+      "explanation_hindi": "सही उत्तर (b) है। निरंतर चर किसी दिए गए सीमा के भीतर कोई भी वास्तविक संख्यात्मक मान ले सकते हैं, जैसे कि ऊँचाई, जबकि विविक्त चर विशिष्ट, गिनने योग्य इकाइयों से मिलकर बनते हैं, जैसे कि छात्रों की संख्या। छात्रों की संख्या विविक्त चर है, और ऊँचाई निरंतर चर है, जिससे कथन III और IV चर प्रकारों का सही विवरण बनते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Continuous variables can take any value within a range.",
+        "Discrete variables are countable and distinct.",
+        "Printed answer key: (B) III and IV only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "bfdebfbe-9497-4628-9ea6-f673158b5cd6",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक प्रधान अर्थशास्त्र में कक्षा XI के दो अनुभागों का मूल्यांकन करता है। अनुभाग A का औसत 60 और मानक विचलन 4 है। अनुभाग B का औसत 60 और मानक विचलन 12 है। प्रधान एक अनुभाग का चयन करना चाहता है जो अंतर-विद्यालय शैक्षणिक डेकैथलन में भाग ले, जिसमें सभी टीम सदस्यों से सुसंगत आधारभूत ज्ञान की आवश्यकता होती है। प्रधान को कौन सा अनुभाग चुनना चाहिए और क्यों?",
+      "options_hindi": [
+        "अनुभाग B, क्योंकि उच्च मानक विचलन यह दर्शाता है कि उनके पास महत्वपूर्ण रूप से अधिक प्रतिभाशाली उच्च-प्रदर्शन करने वाले छात्र हैं।",
+        "अनुभाग A, क्योंकि निम्न मानक विचलन अधिक समान छात्र प्रदर्शन को दर्शाता है।",
+        "कोई भी अनुभाग, क्योंकि दोनों अनुभागों के बीच उनके कुल अंक औसत स्कोर पूरी तरह से समान हैं।",
+        "अनुभाग B, क्योंकि बड़े नमूना विचलन का सीधा संबंध उच्चतम व्यक्तिगत शैक्षणिक उपलब्धि से है।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A Principal evaluates two sections of Class XI in Economics. Section A has a mean of 60 and a standard deviation of 4. Section B has a mean of 60 and a standard deviation of 12. The Principal wants to select a section to participate in an inter-school academic decathlon that requires consistent baseline knowledge from all team members. Which section should the Principal choose and why?",
+      "options_english": [
+        "Section B, because the higher standard deviation indicates they have significantly more gifted high-performing students.",
+        "Section A, because the lower standard deviation indicates more uniform student performance.",
+        "Either section, because their overall arithmetic mean scores across both sections are completely identical.",
+        "Section B, because a larger sample variance directly correlates with superior peak individual academic achievement."
+      ],
+      "correct_answer": "b",
+      "explanation_english": "When choosing a class requiring consistent baseline knowledge, lower variability is preferable. Section A and Section B share an identical mean of 60, but Section A's smaller standard deviation of 4 reflects tighter clustering around the mean, demonstrating greater academic consistency among students than Section B's standard deviation of 12.",
+      "explanation_hindi": "सही उत्तर (b) है। जब एक कक्षा का चयन किया जाता है जिसमें सुसंगत आधारभूत ज्ञान की आवश्यकता होती है, तो कम विविधता वांछनीय होती है। अनुभाग A और अनुभाग B का औसत 60 समान है, लेकिन अनुभाग A का छोटा मानक विचलन 4 यह दर्शाता है कि छात्रों का प्रदर्शन औसत के चारों ओर अधिक संगठित है, जो अनुभाग B के मानक विचलन 12 की तुलना में छात्रों के बीच अधिक शैक्षणिक स्थिरता को दर्शाता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Lower standard deviation indicates more uniform student performance.",
+        "Higher standard deviation reflects greater variability in student scores.",
+        "Printed answer key: (B) Section A, because the lower standard deviation indicates more uniform student performance."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8c70764f-92c5-4a9c-bdec-84befe22ab6f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "शैक्षिक सांख्यिकी में, \"सहसंबंध\" का मुख्य उपयोग किसके निर्धारण के लिए किया जाता है:",
+      "options_hindi": [
+        "दो चर के बीच मौजूदा प्रत्यक्ष कारण-और-प्रभाव संबंध",
+        "चर के बीच संबंध की मात्रा और दिशा",
+        "एक एकल पृथक चर की केंद्रीय प्रवृत्ति और फैलाव",
+        "दो समूहों के औसत के बीच सांख्यिकीय रूप से महत्वपूर्ण अंतर"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "In educational statistics, \"Correlation\" is primarily used to determine:",
+      "options_english": [
+        "The direct cause-and-effect relationship existing between two variables",
+        "The magnitude and direction of association between variables",
+        "The central tendency and dispersion of a single isolated variable",
+        "The statistically significant difference between means of two groups"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Correlation analysis evaluates the statistical relationship between two or more continuous variables. It quantifies both the strength and direction of mutual co-variation without implying direct cause-and-effect relationships. This technique allows educational researchers to assess how changes in one variable systematically correspond to observable changes in another related educational measure.",
+      "explanation_hindi": "सही उत्तर (b) है। सहसंबंध विश्लेषण दो या अधिक निरंतर चर के बीच सांख्यिकीय संबंध का मूल्यांकन करता है। यह आपसी सह-परिवर्तन की ताकत और दिशा को मापता है बिना प्रत्यक्ष कारण-और-प्रभाव संबंध का संकेत दिए। यह तकनीक शैक्षिक शोधकर्ताओं को यह आकलन करने की अनुमति देती है कि एक चर में परिवर्तन कैसे व्यवस्थित रूप से दूसरे संबंधित शैक्षिक माप में अवलोकनीय परिवर्तनों के साथ मेल खाता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "सहसंबंध विश्लेषण दो या अधिक निरंतर चर के बीच संबंध का मूल्यांकन करता है।",
+        "यह प्रत्यक्ष कारण-और-प्रभाव संबंध का संकेत नहीं देता है।",
+        "Printed answer key: (B) The magnitude and direction of association"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6877346c-7902-4a39-bf1f-edc6622cfd79",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "शैक्षिक सांख्यिकी में असमानता का अर्थ है:",
+      "options_hindi": [
+        "आवृत्ति वितरण में असमर्थता",
+        "आवृत्ति वितरण की चोटी या सपाटता",
+        "डेटासेट का केंद्रीय प्रवृत्ति का माप",
+        "दो चर के बीच संबंध"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Skewness in educational statistics refers to:",
+      "options_english": [
+        "The lack of symmetry in a frequency distribution",
+        "The peakedness or flatness of a frequency distribution",
+        "The measure of central tendency of a dataset",
+        "The correlation between two variables"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Skewness quantifies the degree of asymmetry present in a frequency distribution curve. While a normal curve exhibits perfect bilateral symmetry around its central mean, a skewed distribution displays an asymmetrical, elongated tail toward either the lower or higher end of the score scale, indicating an uneven concentration of student marks.",
+      "explanation_hindi": "सही उत्तर (a) है। असमानता आवृत्ति वितरण वक्र में उपस्थित असमर्थता के स्तर को मापता है। जबकि एक सामान्य वक्र अपने केंद्रीय औसत के चारों ओर पूर्ण द्विपक्षीय समरूपता प्रदर्शित करता है, एक असमान वितरण एक असमर्थ, लम्बी पूंछ को निम्न या उच्च स्कोर के अंत की ओर प्रदर्शित करता है, जो छात्रों के अंकों का असमान संकेंद्रण दर्शाता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Skewness indicates the asymmetry of a distribution.",
+        "A normal distribution has perfect symmetry.",
+        "Printed answer key: (A) The lack of symmetry in a frequency"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "388fcc19-17ad-4cba-8990-84da5d664e59",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक पाई चार्ट में वार्षिक विद्यालय बजट का कुल क्षेत्रफल 100% का प्रतिनिधित्व करता है। यदि बजट का 25% पुस्तकालय को आवंटित किया गया है, तो पुस्तकालय बजट का प्रतिनिधित्व करने वाले क्षेत्र का केंद्रीय कोण क्या होगा?",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "In a Pie Chart representing the annual school budget, the total area of the circle represents 100%. If 25% of the budget is allocated to the library, what is the central angle of the sector representing the library budget?",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "A circular pie chart represents a complete dataset totaling 100 percent, corresponding to a central angle of 360 degrees. To determine the sector angle for an allocation of 25 percent, multiply 360 degrees by 0.25. This calculation yields a central angle of exactly 90 degrees for the library budget sector.",
+      "explanation_hindi": "सही उत्तर (b) है। एक वृत्ताकार पाई चार्ट एक पूर्ण डेटा सेट का प्रतिनिधित्व करता है जो 100 प्रतिशत के बराबर होता है, जो 360 डिग्री के केंद्रीय कोण के अनुरूप होता है। 25 प्रतिशत के आवंटन के लिए क्षेत्र के कोण को निर्धारित करने के लिए, 360 डिग्री को 0.25 से गुणा करें। यह गणना पुस्तकालय बजट क्षेत्र के लिए ठीक 90 डिग्री का केंद्रीय कोण देती है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "A pie chart represents 100% of data.",
+        "Central angle for 25% allocation is 90 degrees.",
+        "Printed answer key: (B) 90 degrees"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "9589e8c0-3b8d-415b-b386-927c1fa40ae2",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "राष्ट्रीय शिक्षा नीति (NEP) 2020 द्वारा अनुशंसित समग्र प्रगति कार्ड (HPC) के संबंध में निम्नलिखित कथनों पर विचार करें:\nI. यह संज्ञानात्मक, भावनात्मक और मनोमोटर क्षेत्रों को दर्शाने वाली एक बहुआयामी रिपोर्ट है।\nII. यह वस्तुनिष्ठता सुनिश्चित करने के लिए केवल शिक्षक मूल्यांकन पर निर्भर करता है।\nIII. इसमें आत्म-मूल्यांकन और सहकर्मी मूल्यांकन घटक शामिल हैं।\nIV. यह वर्षों में प्रगति को ट्रैक करने के लिए डिज़ाइन किया गया है न कि एक बार के निर्णय के लिए।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल I, II और III",
+        "केवल I, III और IV",
+        "केवल II, III और IV",
+        "I, II, III और IV"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding the Holistic Progress Card (HPC) recommended by National Education Policy (NEP) 2020:\nI. It is a multidimensional report reflecting cognitive, affective, and psychomotor domains.\nII. It exclusively relies on teacher assessment to ensure objectivity.\nIII. It incorporates self-assessment and peer assessment components.\nIV. It is designed to track progress over the years rather than providing a one-time judgment.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "I, II, and III only",
+        "I, III, and IV only",
+        "II, III, and IV only",
+        "I, II, III, and IV"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "When a dataset contains extreme low scores that threaten to distort summary statistics, the median is the most appropriate measure of central tendency. The median identifies the physical midpoint of ranked observations, ensuring that isolated outlying values do not unduly pull the representative central value away from the core cluster of student marks.",
+      "explanation_hindi": "सही उत्तर (c) है। जब किसी डेटा सेट में अत्यधिक निम्न स्कोर होते हैं जो सारांश सांख्यिकी को विकृत करने का खतरा पैदा करते हैं, तो मध्यिका केंद्रीय प्रवृत्ति का सबसे उपयुक्त माप होती है। मध्यिका रैंक की गई अवलोकनों के भौतिक मध्य बिंदु की पहचान करती है, यह सुनिश्चित करते हुए कि अलग-थलग बाहर के मान प्रतिनिधि केंद्रीय मान को छात्र अंकों के मुख्य समूह से दूर नहीं खींचते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "The median is the most appropriate measure of central tendency in the presence of extreme values.",
+        "Printed answer key: (C) Median"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "99815caf-1c11-4251-826c-919ad6654b1c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "एक वार्षिक प्रदर्शन समीक्षा के दौरान, एक\nप्रधानाचार्य नोट करते हैं कि कक्षा IX के गणित\nके अंक का औसत 45 और मानक विचलन 8 है,\nजबकि विज्ञान के अंक का औसत 60 और मानक\nविचलन 12 है। छात्र X ने गणित में 53 और\nविज्ञान में 72 अंक प्राप्त किए। छात्र X ने\nकिस विषय में अपेक्षाकृत बेहतर प्रदर्शन किया?",
+      "options_hindi": [
+        "गणित, क्योंकि Z-स्कोर (+1.0) विज्ञान Z-स्कोर (+1.0) के बराबर है, जिसका अर्थ है कि प्रदर्शन कक्षा के सापेक्ष बिल्कुल समान है।",
+        "विज्ञान, क्योंकि कच्चा स्कोर (72) अधिक है।",
+        "गणित, क्योंकि Z-स्कोर (+1.0) विज्ञान Z-स्कोर (+1.0) से अधिक है।",
+        "विज्ञान, क्योंकि कक्षा का औसत अधिक था।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "During an annual performance review, a Principal notes that the mathematics marks for Class IX have a mean of 45 and an SD of 8, while the science marks have a mean of 60 and an SD of 12. Student X scored 53 in math and 72 in science. Which subject did Student X relatively perform better in?",
+      "options_english": [
+        "Mathematics, because the Z-score (+1.0) is equal to the science Z-score (+1.0), meaning performance is exactly equivalent relative to the class.",
+        "Science, because the raw score (72) is higher.",
+        "Mathematics, because the Z-score (+1.0) is higher than the science Z-score (+1.0).",
+        "Science, because the class mean was higher."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct answer is a. Evaluating relative performance across different tests requires transforming raw marks into standardized Z-scores. For mathematics, subtracting the mean of 45 from 53 and dividing by 8 gives a Z-score of +1.0. For science, subtracting 60 from 72 and dividing by 12 also yields +1.0, demonstrating identical relative performance across both subjects.",
+      "explanation_hindi": "सही उत्तर (a) है। विभिन्न परीक्षणों में सापेक्ष प्रदर्शन का मूल्यांकन करने के लिए कच्चे अंकों को मानकीकृत Z-स्कोर में परिवर्तित करना आवश्यक है। गणित के लिए, 53 में से 45 घटाकर और 8 से विभाजित करने पर Z-स्कोर +1.0 मिलता है। विज्ञान के लिए, 72 में से 60 घटाकर और 12 से विभाजित करने पर भी +1.0 मिलता है, जो दोनों विषयों में समान सापेक्ष प्रदर्शन को दर्शाता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Z-scores allow for comparison of scores from different distributions.",
+        "Printed answer key: (A) Mathematics, because the Z-score (+1.0) is equal to the science Z-score (+1.0), meaning performance is exactly equivalent relative to the class."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "6cdf2cca-9135-4086-a028-d0f405f7a530",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "स्कूल प्रशासकों द्वारा सांख्यिकीय व्याख्या में एक सामान्य त्रुटि है सहसंबंध को:",
+      "options_hindi": [
+        "कारणता",
+        "विस्थापन",
+        "केंद्रीय प्रवृत्ति",
+        "विश्वसनीयता"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "A common error in statistical interpretation by school administrators is confusing correlation with:",
+      "options_english": [
+        "Causation",
+        "Dispersion",
+        "Central tendency",
+        "Reliability"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "A common error in statistical interpretation among educational administrators is confusing correlation with causation. While a high correlation coefficient indicates that two variables change together systematically, it does not prove that changes in one variable directly cause changes in the other, as unmeasured third variables may drive the observed relationship.",
+      "explanation_hindi": "सही उत्तर (a) है। स्कूल प्रशासकों के बीच सांख्यिकीय व्याख्या में एक सामान्य त्रुटि सहसंबंध को कारणता के साथ भ्रमित करना है। जबकि एक उच्च सहसंबंध गुणांक यह संकेत करता है कि दो चर व्यवस्थित रूप से एक साथ बदलते हैं, यह साबित नहीं करता है कि एक चर में परिवर्तन सीधे दूसरे में परिवर्तन का कारण बनता है, क्योंकि अव्यवस्थित तीसरे चर इस देखी गई संबंध को प्रभावित कर सकते हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Correlation does not imply causation.",
+        "Printed answer key: (A) Causation"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "8c17ae9c-77c7-4ba5-9c8c-1a5978e7f5f8",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "नीचे दिए गए दो कथन हैं: एक को\nअसर्शन (A) के रूप में लेबल किया गया है और दूसरे को\nकारण (R) के रूप में लेबल किया गया है।\nअसर्शन (A): विभिन्न विषयों (जैसे, गणित और\nअंग्रेजी) के कच्चे स्कोर की सीधी तुलना सांख्यिकीय\nरूप से अमान्य है।\nकारण (R): विभिन्न विषयों के विभिन्न औसत,\nमानक विचलन और स्कोर वितरण होते हैं,\nजिससे कच्चे स्कोर की तुलना नहीं की जा सकती।\n(A) A और R दोनों सत्य हैं और R सही है।",
+      "options_hindi": [
+        "A और R दोनों सत्य हैं और R सही है।",
+        "A सत्य है, लेकिन R गलत है।",
+        "R सत्य है, लेकिन A गलत है।",
+        "A और R दोनों गलत हैं।"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Given below are two statements: one is labelled\nas Assertion (A) and the other is labelled as\nReason (R).\nAssertion (A): Comparing raw scores from\ndifferent subjects (e.g., Mathematics and\nEnglish) directly is statistically invalid.\nReason (R): Different subjects have different\nmeans, standard deviations, and score\ndistributions, making raw scores non-comparable.\n(A) Both A and R are true and R is the correct.",
+      "options_english": [
+        "Both A and R are true and R is the correct",
+        "A is true, but R is false.",
+        "R is true, but A is false.",
+        "Both A and R are false."
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Comparing raw scores across different academic subjects directly is statistically invalid because test distributions vary in means, dispersions, and overall difficulty levels. A raw mark in one subject may reflect a completely different relative performance level than the same score in another subject, requiring score standardization before making meaningful comparisons.",
+      "explanation_hindi": "सही उत्तर (a) है। विभिन्न शैक्षणिक विषयों के बीच कच्चे स्कोर की सीधी तुलना सांख्यिकीय रूप से अमान्य है क्योंकि परीक्षण वितरण में औसत, फैलाव और समग्र कठिनाई स्तर भिन्न होते हैं। एक विषय में कच्चा अंक दूसरे विषय में समान अंक की तुलना में पूरी तरह से अलग सापेक्ष प्रदर्शन स्तर को दर्शा सकता है, जिससे अर्थपूर्ण तुलना करने से पहले स्कोर मानकीकरण की आवश्यकता होती है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Comparing raw scores across subjects requires standardization.",
+        "Different subjects have varying means and standard deviations.",
+        "Printed answer key: (A) Both A and R are true and R is the correct."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "c2ac5fde-d8ca-424e-af8b-ae684403f3d4",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "शिक्षण सांख्यिकी में चर के संबंध में निम्नलिखित कथनों पर विचार करें:\nI. स्वतंत्र चर को उसके प्रभाव का अवलोकन करने के लिए नियंत्रित किया जाता है।\nII. आश्रित चर वह परिणाम है जिसे मापा जाता है।\nIII. बाहरी चर को नियंत्रित किया जाना चाहिए।",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding variables in educational statistics:\nI. An independent variable is manipulated to observe its effect.\nII. A dependent variable is the outcome being measured.\nIII. Extraneous variables must be controlled to prevent confounding.",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "I, II, and III"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Experimental and descriptive research designs rely on distinct variable roles. Independent variables are intentionally manipulated or controlled to observe their direct effect on outcomes. Dependent variables represent the measured variables that reflect these changes. Extraneous variables must be rigorously identified and controlled during testing to prevent confounding, ensuring that observed variations in dependent variables stem solely from independent variables.",
+      "explanation_hindi": "सही उत्तर (d) है। प्रयोगात्मक और वर्णात्मक अनुसंधान डिज़ाइन विशिष्ट चर भूमिकाओं पर निर्भर करते हैं। स्वतंत्र चर को परिणामों पर उनके प्रत्यक्ष प्रभाव का अवलोकन करने के लिए जानबूझकर नियंत्रित या परिवर्तित किया जाता है। आश्रित चर वे मापे गए चर होते हैं जो इन परिवर्तनों को दर्शाते हैं। बाहरी चर को परीक्षण के दौरान सख्ती से पहचाना और नियंत्रित किया जाना चाहिए ताकि भ्रमित करने से बचा जा सके, यह सुनिश्चित करते हुए कि आश्रित चर में देखी गई भिन्नताएँ केवल स्वतंत्र चर से उत्पन्न होती हैं।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "Independent variables are manipulated to observe effects.",
+        "Dependent variables are the outcomes being measured.",
+        "Extraneous variables must be controlled to prevent confounding.",
+        "Printed answer key: (D) I, II, and III"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "02c3cd57-28ec-4d0e-a8b3-44a82d2b6be7",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "निम्नलिखित में से कौन सा सापेक्ष फैलाव का एक माप है, जो विभिन्न माप इकाइयों वाले डेटा सेट के बीच भिन्नता की तुलना के लिए उपयोगी है?",
+      "options_hindi": [
+        "सापेक्ष स्कोर रेंज",
+        "मानक विचलन सूचकांक",
+        "अर्ध-इंटरक्वारटाइल विचलन रेंज",
+        "विविधता गुणांक"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Statistics in Education",
+      "subject": "Educational Policies & Measurement",
+      "language": "bilingual",
+      "question_english": "Which of the following is a measure of relative dispersion, useful for comparing variability between datasets with different units of measurement?",
+      "options_english": [
+        "Absolute Score Range",
+        "Standard Deviation Index",
+        "Semi-Interquartile Deviation Range",
+        "Variation Coefficient"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The coefficient of variation is a relative measure of dispersion calculated by expressing the standard deviation as a percentage of the arithmetic mean. Because it is dimensionless, it allows researchers to compare variability between different datasets that use different units of measurement or have vastly different mean magnitudes, overcoming the limitations of absolute dispersion metrics.",
+      "explanation_hindi": "सही उत्तर (d) है। विविधता गुणांक एक सापेक्ष फैलाव का माप है, जिसे मानक विचलन को अंकगणितीय माध्य के प्रतिशत के रूप में व्यक्त करके गणना किया जाता है। चूंकि यह आयाम रहित है, यह शोधकर्ताओं को विभिन्न माप इकाइयों वाले डेटा सेट के बीच भिन्नता की तुलना करने की अनुमति देता है, जो कि पूर्ण फैलाव मेट्रिक्स की सीमाओं को पार करता है।",
+      "topic": "Statistics in Education",
+      "difficulty": "medium",
+      "key_facts": [
+        "विविधता गुणांक एक सापेक्ष माप है।",
+        "यह मानक विचलन को माध्य के प्रतिशत के रूप में व्यक्त करता है।",
+        "Printed answer key: (d) Variation Coefficient"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}

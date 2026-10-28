@@ -1,0 +1,799 @@
+{
+  "test_id": "b112bdde-bf91-42e1-b692-ff2da9ef68ac",
+  "test_name": "Topic Test: INTERNET_AND_NETWORKING_BASICS - Part 5",
+  "type": "topic_wise",
+  "topic": "internet_and_networking_basics",
+  "created_at": "2026-10-28T18:55:06.734859",
+  "questions": [
+    {
+      "id": "04754194-5e93-43b1-bd6e-36ddf1091b60",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "98. डायनामिक होस्ट कॉन्फ़िगरेशन प्रोटोकॉल (DHCP) की भूमिका क्या है?",
+      "options_hindi": [
+        "क्लाइंट उपकरणों को गतिशील IP पते और नेटवर्क पैरामीटर असाइन करना",
+        "केंद्रीय प्रणाली डेटाबेस में उपयोगकर्ता पासवर्ड और संवेदनशील टोकन को एन्क्रिप्ट करना",
+        "नेटवर्क के पार डोमेन नामों को सीधे भौतिक हार्डवेयर MAC पते में अनुवाद करना",
+        "ऑनलाइन वेब दस्तावेज़ों और मीडिया फ़ाइलों को खोज प्लेटफ़ॉर्म के लिए व्यवस्थित रूप से अनुक्रमित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the role of Dynamic Host Configuration Protocol (DHCP)?",
+      "options_english": [
+        "Assigning dynamic IP addresses and network parameters to client devices",
+        "Encrypting user passwords and sensitive tokens within central system databases",
+        "Translating domain names directly into physical hardware MAC addresses across networks",
+        "Systematically indexing online web documents and media files for search platforms"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Dynamic Host Configuration Protocol is a network management protocol that automates the configuration of network devices. When a client connects to a network, the DHCP server dynamically allocates an available IP address from a configured address pool, along with essential network configuration settings such as default gateway addresses, subnet masks, and Domain Name System server addresses, preventing manual address conflicts.",
+      "explanation_hindi": "सही उत्तर (a) है। डायनामिक होस्ट कॉन्फ़िगरेशन प्रोटोकॉल एक नेटवर्क प्रबंधन प्रोटोकॉल है जो नेटवर्क उपकरणों की कॉन्फ़िगरेशन को स्वचालित करता है। जब एक क्लाइंट नेटवर्क से जुड़ता है, तो DHCP सर्वर एक निर्धारित पते के पूल से एक उपलब्ध IP पता गतिशील रूप से आवंटित करता है, साथ ही आवश्यक नेटवर्क कॉन्फ़िगरेशन सेटिंग्स जैसे डिफ़ॉल्ट गेटवे पते, उप-नेट मास्क और डोमेन नाम प्रणाली सर्वर पते प्रदान करता है, जिससे मैनुअल पते के संघर्षों को रोका जा सके।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "Dynamic Host Configuration Protocol (DHCP) automates IP address assignment.",
+        "DHCP prevents manual address conflicts.",
+        "Printed answer key: (A) Assigning dynamic IP addresses and network parameters to client devices."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "510108c2-51ed-43c3-9711-6e0c054949bb",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "डोमेन नाम `www.sub.example.com` में `sub` का घटक कौन सा है?",
+      "options_hindi": [
+        "शीर्ष-स्तरीय डोमेन",
+        "पोर्ट नंबर",
+        "उपडोमेन",
+        "डोमेन नाम"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which component of a domain name in `www.sub.example.com` is `sub`?",
+      "options_english": [
+        "Top-Level Domain",
+        "Port Number",
+        "Subdomain",
+        "Domain Name"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "In the domain name structure `www.sub.example.com`, `sub` represents a subdomain created under the main domain `example.com`. Subdomains act as domain extensions used to categorize, organize, and navigate distinct operational sections or distinct web services within a primary website hierarchy without requiring the registration of an entirely new top-level domain name with domain registrars.",
+      "explanation_hindi": "सही उत्तर (c) है। डोमेन नाम संरचना `www.sub.example.com` में, `sub` मुख्य डोमेन `example.com` के तहत बनाए गए उपडोमेन का प्रतिनिधित्व करता है। उपडोमेन डोमेन एक्सटेंशन के रूप में कार्य करते हैं जो प्राथमिक वेबसाइट पदानुक्रम के भीतर विभिन्न परिचालन अनुभागों या विभिन्न वेब सेवाओं को वर्गीकृत, व्यवस्थित और नेविगेट करने के लिए उपयोग किए जाते हैं, बिना डोमेन रजिस्ट्रारों के साथ पूरी तरह से नए शीर्ष-स्तरीय डोमेन नाम के पंजीकरण की आवश्यकता के।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Subdomains help in organizing web services.",
+        "They do not require a new top-level domain registration.",
+        "Printed answer key: (C) Subdomain",
+        "Subdomains can enhance website navigation."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "b1b316c9-da9e-4921-bb95-27fb05a79806",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "सूची I में शीर्ष स्तर के डोमेन को सूची II में उनके उद्देश्य से मिलाएँ:\nसूची I: (शीर्ष स्तर का डोमेन)\nP. `.edu`\nQ. `.gov`\nR. `.mil`\nS. `.org`\nसूची II: (उद्देश्य)\nI. सैन्य संगठन\nII. गैर-लाभकारी संगठन\nIII. शैक्षणिक संस्थान\nIV. सरकारी संस्थाएँ",
+      "options_hindi": [
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-III, R-II, S-I",
+        "P-III, Q-I, R-IV, S-II",
+        "P-I, Q-IV, R-III, S-II"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match the top-level domains in List I with their intended purposes in List II:\nList I: (Top-Level Domain)\nP. `.edu`\nQ. `.gov`\nR. `.mil`\nS. `.org`\nList II: (Intended Entity / Purpose)\nI. Military organizations\nII. Non-profit organizations\nIII. Educational institutions\nIV. Government entities",
+      "options_english": [
+        "P-III, Q-IV, R-I, S-II",
+        "P-IV, Q-III, R-II, S-I",
+        "P-III, Q-I, R-IV, S-II",
+        "P-I, Q-IV, R-III, S-II"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Top-Level Domains categorize internet domain names by organization type. The `.edu` extension is restricted to accredited educational institutions. The `.gov` extension is reserved exclusively for government bodies and administrative agencies. The `.mil` extension is allocated to military departments and defense organizations. The `.org` extension traditionally serves non-profit organizations, public interest groups, and non-commercial entities across the global domain namespace.",
+      "explanation_hindi": "सही उत्तर (a) है। शीर्ष स्तर के डोमेन इंटरनेट डोमेन नामों को संगठन के प्रकार के अनुसार वर्गीकृत करते हैं। `.edu` एक्सटेंशन केवल मान्यता प्राप्त शैक्षणिक संस्थानों के लिए आरक्षित है। `.gov` एक्सटेंशन विशेष रूप से सरकारी निकायों और प्रशासनिक एजेंसियों के लिए आरक्षित है। `.mil` एक्सटेंशन सैन्य विभागों और रक्षा संगठनों को आवंटित किया गया है। `.org` एक्सटेंशन पारंपरिक रूप से गैर-लाभकारी संगठनों, सार्वजनिक हित समूहों, और गैर-व्यावसायिक संस्थाओं की सेवा करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Top-Level Domains classify internet domain names.",
+        "`.edu` is for educational institutions, `.gov` for government entities.",
+        "Printed answer key: (A) P-III, Q-IV, R-I, S-II",
+        "`.mil` is for military organizations, `.org` for non-profits."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "20b3d01a-f547-479d-ac1e-c2bddbe9205d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "फाइबर ऑप्टिक कनेक्शन क्या है?",
+      "options_hindi": [
+        "फाइबर ऑप्टिक कनेक्शन",
+        "डिजिटल सब्सक्राइबर लाइन (DSL)",
+        "डायल-अप कनेक्शन",
+        "कोएक्सियल केबल कनेक्शन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is a Fibre Optic Connection?",
+      "options_english": [
+        "Fibre Optic Connection",
+        "Digital Subscriber Line (DSL)",
+        "Dial-up Connection",
+        "Coaxial Cable Connection"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Fibre optic technology utilizes flexible strands of high-purity glass or plastic to transmit digital data using light pulses generated by lasers or light-emitting diodes. By employing total internal reflection, optical signals travel long distances at extremely high speeds with minimal signal attenuation or electromagnetic interference. This media offers exceptionally high data bandwidth and transmission reliability.",
+      "explanation_hindi": "सही उत्तर (a) है। फाइबर ऑप्टिक तकनीक उच्च-शुद्धता कांच या प्लास्टिक के लचीले तारों का उपयोग करती है ताकि लेजर या प्रकाश उत्सर्जक डायोड द्वारा उत्पन्न प्रकाश पुंजों का उपयोग करके डिजिटल डेटा को संचारित किया जा सके। कुल आंतरिक परावर्तन का उपयोग करके, ऑप्टिकल संकेत लंबी दूरी पर अत्यधिक उच्च गति से यात्रा करते हैं, जिसमें न्यूनतम सिग्नल क्षीणन या विद्युत चुम्बकीय हस्तक्षेप होता है। यह मीडिया असाधारण रूप से उच्च डेटा बैंडविड्थ और ट्रांसमिशन विश्वसनीयता प्रदान करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "फाइबर ऑप्टिक कनेक्शन डेटा को प्रकाश पुंजों के रूप में संचारित करता है।",
+        "यह तकनीक उच्च गति और न्यूनतम सिग्नल क्षीणन प्रदान करती है।",
+        "Printed answer key: (A) Fibre Optic Connection"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e964c6a9-6062-4c57-8379-cf8198e6519d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "96. वेब ब्राउज़िंग इतिहास के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. ब्राउज़र इतिहास उपयोगकर्ता द्वारा देखी गई वेब पते की एक अनुक्रमिक सूची बनाए रखता है।\nB. ब्राउज़र इतिहास को साफ़ करने से स्थानीय हार्ड ड्राइव से सहेजे गए फ़ाइलें हटा दी जाती हैं लेकिन बाहरी सर्वर एक्सेस लॉग अपरिवर्तित रहते हैं।\nC. ब्राउज़र इतिहास को उपयोगकर्ता द्वारा चयनात्मक रूप से हटाया या प्रबंधित नहीं किया जा सकता।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding Web Browsing History:\nA. Browser history maintains a sequential list of web addresses visited by the user.\nB. Clearing browser history deletes saved files from local hard drives but keeps external server access logs unchanged.\nC. Browser history cannot be selectively deleted or managed by the user.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Browser history maintains a chronological log of web page addresses visited on a local device. Clearing local browser history deletes stored address records from local drive storage, though external server logs maintained by ISPs or visited websites remain unaffected. However, users can easily view, search, manage, and selectively delete individual entries or specific date ranges from their browser history log.",
+      "explanation_hindi": "सही उत्तर (a) है। ब्राउज़र इतिहास स्थानीय डिवाइस पर देखे गए वेब पृष्ठों के पते का कालानुक्रमिक लॉग बनाए रखता है। स्थानीय ब्राउज़र इतिहास को साफ़ करने से स्थानीय ड्राइव स्टोरेज से सहेजे गए पते के रिकॉर्ड हटा दिए जाते हैं, जबकि आईएसपी या देखी गई वेबसाइटों द्वारा बनाए रखे गए बाहरी सर्वर लॉग अपरिवर्तित रहते हैं। हालांकि, उपयोगकर्ता आसानी से अपने ब्राउज़र इतिहास लॉग से व्यक्तिगत प्रविष्टियों या विशिष्ट तिथि रेंज को देख, खोज, प्रबंधित और चयनात्मक रूप से हटा सकते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Browser history maintains a chronological log of visited web addresses.",
+        "Clearing browser history does not affect external server logs.",
+        "Users can manage and selectively delete entries from browser history.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "71131953-f2c1-4eb0-9fac-106371bd28fb",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "77. उस सॉफ़्टवेयर प्रोग्राम को कौन सा शब्द वर्णित करता है जो कंप्यूटर पर चलता है और एक दूरस्थ सर्वर से सामग्री का अनुरोध करता है?",
+      "options_hindi": [
+        "वेब होस्ट",
+        "DNS रूट",
+        "क्लाइंट",
+        "प्रॉक्सी गेटवे"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which term describes the software program running on a computer that requests content from a remote server?",
+      "options_english": [
+        "Web Host",
+        "DNS Root",
+        "Client",
+        "Proxy Gateway"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "In client-server network architecture, a client is a computing device or software program, such as a web browser, that requests services, files, or resources from a central server. The client sends network requests across connected pathways, processes responses received from the remote server, and displays content or executes applications locally for end-user interaction within distributed software environments.",
+      "explanation_hindi": "सही उत्तर (c) है। क्लाइंट-सर्वर नेटवर्क आर्किटेक्चर में, क्लाइंट एक कंप्यूटिंग डिवाइस या सॉफ़्टवेयर प्रोग्राम है, जैसे कि एक वेब ब्राउज़र, जो एक केंद्रीय सर्वर से सेवाएँ, फ़ाइलें या संसाधन अनुरोध करता है। क्लाइंट जुड़े हुए रास्तों के माध्यम से नेटवर्क अनुरोध भेजता है, दूरस्थ सर्वर से प्राप्त प्रतिक्रियाओं को संसाधित करता है, और अंत उपयोगकर्ता इंटरैक्शन के लिए स्थानीय रूप से सामग्री प्रदर्शित करता है या अनुप्रयोगों को निष्पादित करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "A client requests resources from a server in a network.",
+        "Clients can be software programs like web browsers.",
+        "Printed answer key: (C) Client"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "1faf7d6b-f783-4367-9748-1497fd5b59e2",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "76. कौन सी खोज तकनीक \"electric\" के लिए खोज करते समय \"vehicles\" शब्द वाले पृष्ठों को सख्ती से बाहर कर देगी?",
+      "options_hindi": [
+        "`electric + vehicles`",
+        "`electric -vehicles`",
+        "`electric AND vehicles`",
+        "`electric OR vehicles`"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which search technique will strictly exclude pages containing the word “vehicles” when searching for “electric”?",
+      "options_english": [
+        "`electric + vehicles`",
+        "`electric -vehicles`",
+        "`electric AND vehicles`",
+        "`electric OR vehicles`"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "In web search syntax, attaching a minus sign directly before a search term acts as a negative operator that excludes pages containing that specific keyword. By querying `electric -vehicles`, the search engine searches for pages containing “electric” while strictly filtering out any web documents that include the word “vehicles”, thereby narrowing search results to alternate contexts such as power grids.",
+      "explanation_hindi": "सही उत्तर (b) है। वेब खोज सिंटैक्स में, खोज शब्द के ठीक पहले माइनस साइन लगाना एक नकारात्मक ऑपरेटर के रूप में कार्य करता है जो उस विशेष कीवर्ड वाले पृष्ठों को बाहर करता है। `electric -vehicles` का उपयोग करके, खोज इंजन \"electric\" वाले पृष्ठों की खोज करता है जबकि \"vehicles\" शब्द वाले किसी भी वेब दस्तावेज़ को सख्ती से फ़िल्टर करता है, जिससे खोज परिणामों को वैकल्पिक संदर्भों जैसे कि पावर ग्रिड तक सीमित किया जा सकता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "Negative operators in search queries help refine results.",
+        "Using `-` before a term excludes it from search results.",
+        "Printed answer key: (B) `electric -vehicles`"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "7863c780-99f2-448e-b0ab-b2e1fc87f84d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कौन सा नेटवर्क उपकरण विभिन्न आईपी उपनेटवर्क के बीच ट्रैफ़िक को रूट करता है, नेटवर्क परत आईपी रूटिंग तालिकाओं का उपयोग करते हुए?",
+      "options_hindi": [
+        "दोहराने वाला",
+        "नेटवर्क स्विच",
+        "राउटर",
+        "निष्क्रिय हब"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which network device routes traffic between different IP subnetworks using network layer IP routing tables?",
+      "options_english": [
+        "Repeater",
+        "Network Switch",
+        "Router",
+        "Passive Hub"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "A router is a network layer device that inspects IP packet headers and forwards data between separate subnetworks using logical network addressing. By maintaining internal routing tables and running dynamic routing protocols, routers determine the optimal transmission path for data packets across interconnected networks, effectively directing traffic between local networks and the global Wide Area Network internet backbone.",
+      "explanation_hindi": "सही उत्तर (c) है। राउटर एक नेटवर्क परत उपकरण है जो आईपी पैकेट हेडर की जांच करता है और तार्किक नेटवर्क पते का उपयोग करके अलग-अलग उपनेटवर्क के बीच डेटा को अग्रेषित करता है। आंतरिक रूटिंग तालिकाओं को बनाए रखकर और गतिशील रूटिंग प्रोटोकॉल चलाकर, राउटर डेटा पैकेट्स के लिए इष्टतम संचरण पथ निर्धारित करते हैं, प्रभावी रूप से स्थानीय नेटवर्क और वैश्विक वाइड एरिया नेटवर्क इंटरनेट बैकबोन के बीच ट्रैफ़िक को निर्देशित करते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Routers inspect IP packet headers.",
+        "They maintain routing tables for optimal paths.",
+        "They connect local networks to the internet.",
+        "Printed answer key: (C) Router"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "0fae3795-a021-4d0c-b9b1-47a9d45c5932",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "IPv6 का IPv4 पर एक प्रमुख लाभ क्या है?",
+      "options_hindi": [
+        "IPv6 भौतिक रूटिंग उपकरणों की संचालन आवश्यकता को पूरी तरह से हटा देता है",
+        "IPv6 केंद्रीकृत डोमेन नाम प्रणालियों पर निर्भर किए बिना निर्बाध रूप से कार्य करता है",
+        "IPv6 ऑप्टिकल फाइबर अवसंरचना स्थापित करने की पूंजी लागत को महत्वपूर्ण रूप से कम करता है",
+        "IPv6 128-बिट पते का उपयोग करता है, जो IP पतों का एक विशाल पूल प्रदान करता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is a key advantage of IPv6 over IPv4?",
+      "options_english": [
+        "IPv6 completely removes the operational requirement for physical routing devices",
+        "IPv6 functions seamlessly without relying on centralized domain name systems",
+        "IPv6 significantly lowers the capital cost of installing optical fiber infrastructure",
+        "IPv6 uses 128-bit addressing, providing a vastly larger pool of IP addresses"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The primary advantage of IPv6 over IPv4 is its massive address capacity. IPv4 utilizes 32-bit addresses, yielding approximately 4.3 billion unique network addresses, which have become exhausted due to global internet growth. IPv6 employs 128-bit hierarchical addressing, generating over 340 undecillion unique addresses, ensuring virtually limitless IP allocation for connected devices, smartphones, and Internet of Things hardware globally.",
+      "explanation_hindi": "सही उत्तर (d) है। IPv6 का IPv4 पर प्रमुख लाभ इसकी विशाल पते की क्षमता है। IPv4 32-बिट पते का उपयोग करता है, जो लगभग 4.3 अरब अद्वितीय नेटवर्क पते उत्पन्न करता है, जो वैश्विक इंटरनेट वृद्धि के कारण समाप्त हो गए हैं। IPv6 128-बिट पदानुक्रमित पते का उपयोग करता है, जो 340 अंडेकिलियन से अधिक अद्वितीय पते उत्पन्न करता है, जिससे जुड़े उपकरणों, स्मार्टफोनों और इंटरनेट ऑफ थिंग्स हार्डवेयर के लिए लगभग असीमित IP आवंटन सुनिश्चित होता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "IPv4 utilizes 32-bit addresses, yielding approximately 4.3 billion unique addresses.",
+        "IPv6 employs 128-bit hierarchical addressing, generating over 340 undecillion unique addresses.",
+        "Printed answer key: (D) IPv6 uses 128-bit addressing, providing a vastly larger pool of IP addresses."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "3b6e1351-d4d8-42d7-81f3-235ebef8df08",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "कौन सा कनेक्शन प्रकार डेटा को लंबे दूरी पर अत्यधिक उच्च बैंडविड्थ पर प्रकाश के पुंजों के रूप में संचारित करने के लिए कांच या प्लास्टिक के तारों का उपयोग करता है?",
+      "options_hindi": [
+        "फाइबर ऑप्टिक कनेक्शन",
+        "डिजिटल सब्सक्राइबर लाइन (DSL)",
+        "डायल-अप कनेक्शन",
+        "कोएक्सियल केबल कनेक्शन"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which connection type uses glass or plastic strands to transmit data as pulses of light over long distances at extremely high bandwidths?",
+      "options_english": [
+        "Fibre Optic Connection",
+        "Digital Subscriber Line (DSL)",
+        "Dial-up Connection",
+        "Coaxial Cable Connection"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Fibre optic technology utilizes flexible strands of high-purity glass or plastic to transmit digital data using light pulses generated by lasers or light-emitting diodes. By employing total internal reflection, optical signals travel long distances at extremely high speeds with minimal signal attenuation or electromagnetic interference. This media offers exceptionally high data bandwidth and transmission reliability.",
+      "explanation_hindi": "सही उत्तर (a) है। फाइबर ऑप्टिक तकनीक उच्च-शुद्धता कांच या प्लास्टिक के लचीले तारों का उपयोग करती है ताकि लेजर या प्रकाश उत्सर्जक डायोड द्वारा उत्पन्न प्रकाश पुंजों का उपयोग करके डिजिटल डेटा को संचारित किया जा सके। कुल आंतरिक परावर्तन का उपयोग करके, ऑप्टिकल संकेत लंबी दूरी पर अत्यधिक उच्च गति से यात्रा करते हैं, जिसमें न्यूनतम सिग्नल क्षीणन या विद्युत चुम्बकीय हस्तक्षेप होता है। यह मीडिया असाधारण रूप से उच्च डेटा बैंडविड्थ और ट्रांसमिशन विश्वसनीयता प्रदान करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "फाइबर ऑप्टिक कनेक्शन डेटा को प्रकाश पुंजों के रूप में संचारित करता है।",
+        "यह तकनीक उच्च गति और न्यूनतम सिग्नल क्षीणन प्रदान करती है।",
+        "Printed answer key: (A) Fibre Optic Connection"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "deb7f866-407b-4df8-b040-fdb01bb80034",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "23. निम्नलिखित संग्रहण/कैशिंग स्थानों को उपयोगकर्ता के वेब ब्राउज़र रेंडरिंग इंजन के निकटता के क्रम में व्यवस्थित करें (सबसे निकट/आंतरिक से सबसे दूर/बाहरी तक):\nI. डोमेन नाम प्रणाली (DNS) रूट सर्वर\nII. स्थानीय ब्राउज़र कैश\nIII. स्थानीय ऑपरेटिंग सिस्टम DNS कैश\nIV. ISP पुनरावर्ती DNS सर्वर",
+      "options_hindi": [
+        "II, III, IV, I",
+        "I, IV, III, II",
+        "III, II, I, IV",
+        "II, IV, III, I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Arrange the following storage/caching locations in order of proximity to the user’s web browser rendering engine (from closest/internal to farthest/external):\nI. Domain Name System (DNS) Root Server\nII. Local Browser Cache\nIII. Local Operating System DNS Cache\nIV. ISP Recursive DNS Server",
+      "options_english": [
+        "II, III, IV, I",
+        "I, IV, III, II",
+        "III, II, I, IV",
+        "II, IV, III, I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Domain name resolution checks storage locations in increasing physical and network distance from the browser engine. The local browser cache is checked first within the browser process. If unmapped, the local operating system DNS cache on the user host machine is consulted. Next, the request reaches the ISP recursive DNS server across the network. If unresolved, the request escalates outward to global DNS root servers.",
+      "explanation_hindi": "सही उत्तर (a) है। डोमेन नाम समाधान भंडारण स्थानों की जांच करता है जो ब्राउज़र इंजन से भौतिक और नेटवर्क दूरी में बढ़ते हैं। सबसे पहले स्थानीय ब्राउज़र कैश की जांच की जाती है। यदि मानचित्रित नहीं है, तो उपयोगकर्ता होस्ट मशीन पर स्थानीय ऑपरेटिंग सिस्टम DNS कैश की जांच की जाती है। इसके बाद, अनुरोध नेटवर्क के पार ISP पुनरावर्ती DNS सर्वर तक पहुँचता है। यदि अनसुलझा है, तो अनुरोध वैश्विक DNS रूट सर्वरों की ओर बढ़ता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Local Browser Cache is the first checked location.",
+        "ISP Recursive DNS Server is consulted after local caches.",
+        "Printed answer key: (A) II, III, IV, I"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "d22cb642-e704-4986-b691-fb46648d1fa9",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "22. जब एक वेब ब्राउज़र URL प्रविष्टि के माध्यम से एक वेबसाइट लोड करता है, तो शामिल चरणों का सही अनुक्रम चुनें:",
+      "options_hindi": [
+        "उपयोगकर्ता URL दर्ज करता है → DNS डोमेन को IP पते में अनुवाद करता है → ब्राउज़र IP को HTTP अनुरोध भेजता है → वेब सर्वर डेटा भेजता है → ब्राउज़र पृष्ठ प्रस्तुत करता है",
+        "उपयोगकर्ता URL दर्ज करता है → ब्राउज़र पृष्ठ प्रस्तुत करता है → DNS डोमेन को IP पते में अनुवाद करता है → वेब सर्वर डेटा भेजता है",
+        "DNS डोमेन को IP पते में अनुवाद करता है → उपयोगकर्ता URL दर्ज करता है → वेब सर्वर डेटा भेजता है → ब्राउज़र पृष्ठ प्रस्तुत करता है",
+        "उपयोगकर्ता URL दर्ज करता है → वेब सर्वर डेटा भेजता है → DNS डोमेन को IP पते में अनुवाद करता है → ब्राउज़र प्रस्तुत करता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Select the correct sequence of steps involved when a web browser loads a website via URL entry:",
+      "options_english": [
+        "User enters URL → DNS translates domain to IP address → Browser sends HTTP request to IP → Web server sends data → Browser renders page",
+        "User enters URL → Browser renders page → DNS translates domain to IP address → Web server sends data",
+        "DNS translates domain to IP address → User enters URL → Web server sends data → Browser renders page",
+        "User enters URL → Web server sends data → DNS translates domain to IP address → Browser renders"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Loading a website begins when a user submits a Uniform Resource Locator in the address bar. The browser requests Domain Name System resolution to map the domain name to its corresponding numerical IP address. The browser then sends an HTTP or HTTPS request to that target IP address, after which the web server processes the request, returns the file data, and the browser renders it.",
+      "explanation_hindi": "सही उत्तर (a) है। एक वेबसाइट को लोड करना तब शुरू होता है जब उपयोगकर्ता पता पट्टी में एक यूनिफ़ॉर्म रिसोर्स लोकेटर प्रस्तुत करता है। ब्राउज़र डोमेन नाम को उसके संबंधित संख्यात्मक IP पते में मैप करने के लिए डोमेन नाम प्रणाली का समाधान मांगता है। इसके बाद, ब्राउज़र उस लक्षित IP पते पर HTTP या HTTPS अनुरोध भेजता है, जिसके बाद वेब सर्वर अनुरोध को संसाधित करता है, फ़ाइल डेटा लौटाता है, और ब्राउज़र इसे प्रस्तुत करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "The process begins with the user entering a URL.",
+        "DNS translates the domain name to an IP address.",
+        "The browser sends an HTTP request to the web server.",
+        "Printed answer key: (A) User enters URL → DNS translates domain"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e298fd10-e8ea-4b58-9c6b-b611e1bbf367",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "14. एक सर्च इंजन क्रॉलर (या स्पाइडर) की प्राथमिक भूमिका क्या है?",
+      "options_hindi": [
+        "स्थानीय डेस्कटॉप क्लाइंट कंप्यूटरों पर ग्राफिकल वेब पृष्ठों और उपयोगकर्ता इंटरफ़ेस तत्वों को प्रस्तुत करना",
+        "डेटा के संचरण को एन्क्रिप्ट करना और वेब क्लाइंट और बैकएंड सर्वरों के बीच संचार चैनलों को सुरक्षित करना",
+        "कॉर्पोरेट नेटवर्क सुरक्षा सीमाओं पर अनधिकृत इनबाउंड पैकेट ट्रैफ़िक को फ़िल्टर और अवरुद्ध करना",
+        "व्यवस्थित रूप से वेब ब्राउज़ करना और सर्च इंजन डेटाबेस के लिए वेब पृष्ठ की सामग्री को अनुक्रमित करना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What is the primary role of a Search Engine crawler (or spider)?",
+      "options_english": [
+        "To render graphical web pages and user interface elements on local desktop client computers",
+        "To encrypt transmission data and secure communication channels between web clients and backend servers",
+        "To filter and block unauthorized inbound packet traffic on corporate network security boundaries",
+        "To systematically browse the web and index web page contents for search engine databases"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Search engine crawlers, commonly known as spiders or bots, are automated software programs that systematically browse the World Wide Web. They discover web pages by traversing hyperlinks from one page to another, downloading page content, and gathering textual and structural data. This information is subsequently processed, indexed, and stored in central search engine databases to enable efficient query matching and user web searching.",
+      "explanation_hindi": "सही उत्तर (d) है। सर्च इंजन क्रॉलर, जिन्हें सामान्यतः स्पाइडर या बॉट कहा जाता है, स्वचालित सॉफ़्टवेयर प्रोग्राम हैं जो व्यवस्थित रूप से विश्वव्यापी वेब को ब्राउज़ करते हैं। वे एक पृष्ठ से दूसरे पृष्ठ तक हाइपरलिंक्स के माध्यम से वेब पृष्ठों को खोजते हैं, पृष्ठ की सामग्री डाउनलोड करते हैं, और पाठ्य और संरचनात्मक डेटा एकत्र करते हैं। इस जानकारी को बाद में संसाधित, अनुक्रमित और केंद्रीय सर्च इंजन डेटाबेस में संग्रहीत किया जाता है ताकि कुशल प्रश्न मिलान और उपयोगकर्ता वेब खोज की अनुमति मिल सके।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "सर्च इंजन क्रॉलर वेब पृष्ठों को अनुक्रमित करने के लिए व्यवस्थित रूप से वेब ब्राउज़ करते हैं।",
+        "वे हाइपरलिंक्स के माध्यम से पृष्ठों को खोजते हैं और डेटा एकत्र करते हैं।",
+        "Printed answer key: (D) To systematically browse the web and index"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "429e469b-056b-4ad9-93b3-166d8b3c3c1d",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "21. सूची I में नेटवर्क प्रकारों को सूची II में उनके संबंधित लक्षणों के साथ मिलाएं:\nसूची I: (नेटवर्क प्रकार)\nP. LAN\nQ. MAN\nR. WAN\nS. PAN\nसूची II:\n(भौगोलिक / परिचालन लक्षण)\nI. एक उपकरण के चारों ओर एक व्यक्ति के व्यक्तिगत कार्यक्षेत्र को फैलाता है\nII. एक छोटे स्थानीय क्षेत्र जैसे एक ही भवन या कमरे के भीतर कंप्यूटरों को जोड़ता है\nIII. शहरों, देशों या वैश्विक स्तर पर कंप्यूटर नेटवर्क को जोड़ता है\nIV. एक पूरे शहर या कस्बे जैसे बड़े भौगोलिक क्षेत्र को कवर करता है",
+      "options_hindi": [
+        "P-II, Q-IV, R-III, S-I",
+        "P-IV, Q-II, R-I, S-III",
+        "P-II, Q-I, R-III, S-IV",
+        "P-III, Q-IV, R-II, S-I"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match the network types in List I with their corresponding characteristics in List II:\nList I: (Network Types)\nP. LAN\nQ. MAN\nR. WAN\nS. PAN\nList II:\n(Geographical / Operational Characteristics)\nI. Spans a single individual’s personal workspace around a device\nII. Connects computers within a small localized area like a single building or room\nIII. Connects computer networks across cities, countries, or globally\nIV. Covers a larger geographic area such as an entire city or town",
+      "options_english": [
+        "P-II, Q-IV, R-III, S-I",
+        "P-IV, Q-II, R-I, S-III",
+        "P-II, Q-I, R-III, S-IV",
+        "P-III, Q-IV, R-II, S-I"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Local Area Networks connect computers within constrained localized spaces such as individual rooms or single office buildings. Metropolitan Area Networks cover larger geographical spans, extending across entire towns or municipal cities. Wide Area Networks span across vast regions, state borders, national territories, or global boundaries. Personal Area Networks operate within a small personal workspace around an individual user’s personal electronic devices.",
+      "explanation_hindi": "सही उत्तर (a) है। स्थानीय क्षेत्र नेटवर्क छोटे स्थानीय स्थानों जैसे व्यक्तिगत कमरों या कार्यालय भवनों के भीतर कंप्यूटरों को जोड़ते हैं। महानगरीय क्षेत्र नेटवर्क बड़े भौगोलिक क्षेत्रों को कवर करते हैं, जो पूरे शहरों या नगरों में फैले होते हैं। व्यापक क्षेत्र नेटवर्क विशाल क्षेत्रों, राज्य सीमाओं, राष्ट्रीय क्षेत्रों या वैश्विक सीमाओं में फैले होते हैं। व्यक्तिगत क्षेत्र नेटवर्क एक व्यक्ति के व्यक्तिगत इलेक्ट्रॉनिक उपकरणों के चारों ओर एक छोटे व्यक्तिगत कार्यक्षेत्र के भीतर कार्य करते हैं।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Local Area Networks (LAN) connect computers within a limited area.",
+        "Metropolitan Area Networks (MAN) cover larger geographical areas.",
+        "Wide Area Networks (WAN) span across vast regions.",
+        "Printed answer key: (A) P-II, Q-IV, R-III, S-I"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "5e9a9837-0b95-4d73-b127-785b5d46f01c",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "36. वेब ब्राउज़रों और खोज इंजनों के संबंध में निम्नलिखित कथनों पर विचार करें:\nA. गूगल क्रोम और मोज़िला फ़ायरफ़ॉक्स वेब पृष्ठों को प्रदर्शित करने के लिए उपयोग किए जाने वाले वेब ब्राउज़र हैं।\nB. गूगल और बिंग वेब सामग्री को अनुक्रमित और खोजने के लिए उपयोग किए जाने वाले खोज इंजन हैं।\nC. एक वेब ब्राउज़र तब तक कार्य नहीं कर सकता जब तक कि एक विशिष्ट खोज इंजन को इसके डिफ़ॉल्ट होम पृष्ठ के रूप में सेट नहीं किया गया है।\nउपरोक्त में से कौन से कथन सही हैं?",
+      "options_hindi": [
+        "केवल A और B",
+        "केवल B और C",
+        "केवल A और C",
+        "A, B और"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Consider the following statements regarding\nWeb Browsers and Search Engines:\nA. Google Chrome and Mozilla Firefox are web\nbrowsers used to display web pages.\nB. Google and Bing are search engines used to\nindex and search web content.\nC. A web browser cannot function unless a\nspecific search engine is set as its default\nhome page.\nWhich of the statements given above are correct?",
+      "options_english": [
+        "A and B only",
+        "B and C only",
+        "A and C only",
+        "A, B and"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Google Chrome and Mozilla Firefox are client\nsoftware applications classified as web browsers\nused to render and view web content. Google\nand Bing are web search engines designed to\nindex websites and search online information.\nA web browser functions independently and can\nload web pages directly via URL entry without\nrequiring any specific search engine to be set as\nits default home page.",
+      "explanation_hindi": "सही उत्तर (a) है। गूगल क्रोम और मोज़िला फ़ायरफ़ॉक्स क्लाइंट सॉफ़्टवेयर अनुप्रयोग हैं जिन्हें वेब ब्राउज़र के रूप में वर्गीकृत किया गया है, जो वेब सामग्री को प्रस्तुत और देखने के लिए उपयोग किए जाते हैं। गूगल और बिंग वेब खोज इंजन हैं जो वेबसाइटों को अनुक्रमित करने और ऑनलाइन जानकारी खोजने के लिए डिज़ाइन किए गए हैं। एक वेब ब्राउज़र स्वतंत्र रूप से कार्य करता है और किसी विशिष्ट खोज इंजन को डिफ़ॉल्ट होम पृष्ठ के रूप में सेट किए बिना सीधे URL प्रविष्टि के माध्यम से वेब पृष्ठों को लोड कर सकता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "Google Chrome and Mozilla Firefox are web browsers.",
+        "Google and Bing are search engines.",
+        "A web browser can function without a default search engine.",
+        "Printed answer key: (A) A and B only"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "e1603fa3-4764-4782-98f2-af09e05bc31f",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "जब एक उपयोगकर्ता वेब ब्राउज़र में \"बुकमार्क\" बनाता है, तो क्या होता है?",
+      "options_hindi": [
+        "पूरी वेबसाइट की ग्राफिकल छवियाँ और HTML स्रोत कोड ऑफ़लाइन संग्रह में डाउनलोड किया जाता है",
+        "वेब पता (URL) ब्राउज़र के भीतर एक त्वरित पहुँच शॉर्टकट सूची में सहेजा जाता है",
+        "वेबसाइट का डोमेन नाम उपयोगकर्ता के नाम के तहत ICANN के साथ स्थायी रूप से पंजीकृत किया जाता है",
+        "दूरस्थ सर्वर डेटा का एक भौतिक बैकअप बनाया जाता है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What happens when a user creates a “Bookmark” in a web browser?",
+      "options_english": [
+        "The entire website’s graphical images and HTML source code are downloaded to offline storage",
+        "The web address (URL) is saved in a fast-access shortcut list within the browser",
+        "The website’s domain name is permanently registered with ICANN under the user’s name",
+        "A physical backup of the remote server data is created"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Creating a browser bookmark saves the Uniform Resource Locator of a web page into a quick-access shortcut menu within the browser interface. Bookmarking allows users to easily revisit favorite or frequently accessed websites without needing to retype full web addresses or re-run web searches. It stores only the address link locally, rather than downloading the website’s complete media assets or text.",
+      "explanation_hindi": "सही उत्तर (b) है। एक ब्राउज़र बुकमार्क बनाने से एक वेब पृष्ठ का यूनिफॉर्म रिसोर्स लोकेटर एक त्वरित पहुँच शॉर्टकट मेनू में सहेजा जाता है। बुकमार्किंग उपयोगकर्ताओं को पसंदीदा या अक्सर देखी जाने वाली वेबसाइटों पर आसानी से वापस जाने की अनुमति देती है, बिना पूर्ण वेब पते को फिर से टाइप किए या वेब खोजों को फिर से चलाए। यह केवल पते के लिंक को स्थानीय रूप से सहेजता है, न कि वेबसाइट की पूरी मीडिया संपत्तियों या पाठ को डाउनलोड करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "Creating a bookmark saves the URL of a web page.",
+        "Bookmarks allow quick access to frequently visited sites.",
+        "Only the address is stored, not the entire website.",
+        "Printed answer key: (B) The web address (URL) is saved in a fast-access shortcut list within the browser"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "cefc01cc-8813-4c1b-b029-bedd4c4a1641",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "जब एक उपयोगकर्ता अपने ब्राउज़र कैश को साफ करता है, तो क्या होता है?",
+      "options_hindi": [
+        "सभी सहेजे गए ब्राउज़र बुकमार्क, ब्राउज़िंग इतिहास और व्यक्तिगत लेआउट सेटिंग्स स्थायी रूप से हटा दिए जाते हैं",
+        "अस्थायी वेब संसाधन हटा दिए जाते हैं, जिससे अगले दौरे पर सर्वरों से नए डाउनलोड की आवश्यकता होती है",
+        "स्थानीय कंप्यूटर का गतिशील आईपी पता आवंटन नेटवर्क प्रदाता द्वारा स्थायी रूप से रीसेट कर दिया जाता है",
+        "होस्ट ऑपरेटिंग सिस्टम फ़ायरवॉल कॉन्फ़िगरेशन स्वचालित रूप से स्थानीय संग्रहण से अनइंस्टॉल कर दी जाती है"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "What happens when a user clears their browser cache?",
+      "options_english": [
+        "All saved browser bookmarks, browsing history, and personalized layout settings are permanently deleted",
+        "Temporary web assets are removed, requiring fresh downloads from servers on the next visit",
+        "The local computer’s dynamic IP address allocation is permanently reset by the network provider",
+        "The host operating system firewall configuration is automatically uninstalled from local storage"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "Clearing the browser cache removes stored temporary files, such as cached web page images, stylesheets, and scripts, from local storage. While this action frees up local disk space and resolves page display errors, it means the browser must download fresh copies of those static assets from remote web servers upon visiting those websites again, slightly increasing initial load times.",
+      "explanation_hindi": "सही उत्तर (b) है। ब्राउज़र कैश को साफ करने से अस्थायी फ़ाइलें, जैसे कैश की गई वेब पृष्ठ छवियाँ, स्टाइलशीट और स्क्रिप्ट, स्थानीय संग्रहण से हटा दी जाती हैं। जबकि यह क्रिया स्थानीय डिस्क स्थान को मुक्त करती है और पृष्ठ प्रदर्शन त्रुटियों को हल करती है, इसका अर्थ है कि ब्राउज़र को उन स्थिर संसाधनों की नई प्रतियाँ दूरस्थ वेब सर्वरों से डाउनलोड करनी होंगी, जिससे उन वेबसाइटों पर फिर से जाने पर प्रारंभिक लोड समय थोड़ा बढ़ जाता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "Clearing browser cache can resolve display issues.",
+        "Fresh downloads of web assets may increase initial load times.",
+        "Printed answer key: (B) Temporary web assets are removed, requiring"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "73c6521a-2a01-46fc-8092-055713206260",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "URL घटकों को सूची I में उनके संबंधित उदाहरणों के साथ सूची II में मिलाएं:\nसूची I: (URL घटक)\nP. योजना / प्रोटोकॉल\nQ. उपडोमेन\nR. द्वितीय-स्तरीय डोमेन\nS. शीर्ष-स्तरीय डोमेन\nसूची II: (संबंधित उदाहरण)\nI. `blog` में `blog.example.com`\nII. `https`\nIII. `.com`\nIV. `example` में `example.com`",
+      "options_hindi": [
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-IV, R-I, S-III",
+        "P-III, Q-I, R-IV, S-II"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Match the URL components in List I with their corresponding examples in List II:\nList I: (URL Component)\nP. Scheme / Protocol\nQ. Subdomain\nR. Second-Level Domain\nS. Top-Level Domain\nList II: (Corresponding Example)\nI. `blog` in `blog.example.com`\nII. `https`\nIII. `.com`\nIV. `example` in `example.com`",
+      "options_english": [
+        "P-II, Q-I, R-IV, S-III",
+        "P-I, Q-II, R-III, S-IV",
+        "P-II, Q-IV, R-I, S-III",
+        "P-III, Q-I, R-IV, S-II"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "In URL component analysis, `https` denotes the communication protocol scheme used to establish secure data transfer. In `blog.example.com`, `blog` serves as the subdomain prefix designating a specific section. In `example.com`, `example` represents the registered Second-Level Domain name. The `.com` segment constitutes the Top-Level Domain extension categorized within the global Domain Name System namespace hierarchy.",
+      "explanation_hindi": "सही उत्तर (a) है। URL घटक विश्लेषण में, `https` संचार प्रोटोकॉल योजना को दर्शाता है जिसका उपयोग सुरक्षित डेटा स्थानांतरण स्थापित करने के लिए किया जाता है। `blog.example.com` में, `blog` उपडोमेन उपसर्ग के रूप में कार्य करता है जो एक विशिष्ट अनुभाग को निर्दिष्ट करता है। `example.com` में, `example` पंजीकृत द्वितीय-स्तरीय डोमेन नाम का प्रतिनिधित्व करता है। `.com` खंड शीर्ष-स्तरीय डोमेन एक्सटेंशन का निर्माण करता है जो वैश्विक डोमेन नाम प्रणाली नामस्थान पदानुक्रम में वर्गीकृत होता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "HTTPS is a secure communication protocol.",
+        "Subdomains help organize web content.",
+        "Printed answer key: (A) P-II, Q-I, R-IV, S-III"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "fbd394eb-261d-416b-961f-2755349294ac",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "37. कौन सा प्रोटोकॉल उपसर्ग यह संकेत करता है कि एक वेबसाइट डिजिटल प्रमाणपत्रों और क्रिप्टोग्राफिक एन्क्रिप्शन का उपयोग करके उपयोगकर्ता डेटा की सुरक्षा करती है?",
+      "options_hindi": [
+        "विकल्प A",
+        "विकल्प B",
+        "विकल्प C",
+        "विकल्प D"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which protocol prefix indicates that a website\nuses digital certificates and cryptographic\nencryption to safeguard user data?",
+      "options_english": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The prefix `https://` indicates that a web\nconnection utilizes Hypertext Transfer Protocol\nSecure. This security protocol incorporates\ncryptographic encryption protocols, specifically\nSSL or TLS, to encrypt data transmitted\nbetween the client browser and the host web\nserver.\nEncrypted\ntransmission\nprevents\neavesdropping, data interception, and man-in-the-middle attacks, ensuring secure handling of\nconfidential information such as passwords and\nfinancial details.",
+      "explanation_hindi": "सही उत्तर (c) है। उपसर्ग `https://` यह संकेत करता है कि एक वेब कनेक्शन हाइपरटेक्स्ट ट्रांसफर प्रोटोकॉल सुरक्षित का उपयोग करता है। यह सुरक्षा प्रोटोकॉल क्रिप्टोग्राफिक एन्क्रिप्शन प्रोटोकॉल, विशेष रूप से SSL या TLS को शामिल करता है, ताकि क्लाइंट ब्राउज़र और होस्ट वेब सर्वर के बीच भेजे गए डेटा को एन्क्रिप्ट किया जा सके। एन्क्रिप्टेड ट्रांसमिशन ईव्सड्रॉपिंग, डेटा इंटरसेप्शन और मैन-इन-द-मिडल हमलों को रोकता है, जिससे पासवर्ड और वित्तीय विवरण जैसी संवेदनशील जानकारी का सुरक्षित प्रबंधन सुनिश्चित होता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "medium",
+      "key_facts": [
+        "The prefix https:// indicates a secure connection.",
+        "It uses SSL or TLS for encryption.",
+        "Prevents eavesdropping and data interception.",
+        "Printed answer key: (C) https://"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    },
+    {
+      "id": "45b643f1-03ed-434f-b9e4-eb650364052a",
+      "created_at": "2026-10-27T00:00:00.000+00:00",
+      "question_hindi": "68. URL में कौन सा घटक लक्षित वेब सर्वर पर होस्ट किए गए फ़ोल्डर या फ़ाइल के लिए विशिष्ट पथ की पहचान करता है?",
+      "options_hindi": [
+        "संचार प्रोटोकॉल योजना",
+        "लक्षित होस्ट डोमेन नाम",
+        "नेटवर्क कनेक्शन पोर्ट संख्या",
+        "पथ / निर्देशिका संरचना"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "source": "AI-generated from supplied reference material; Internet and Networking Basics",
+      "subject": "Digital Literacy",
+      "language": "bilingual",
+      "question_english": "Which component in a URL identifies the specific path to a folder or file hosted on the target web server?",
+      "options_english": [
+        "Communication Protocol Scheme",
+        "Target Host Domain Name",
+        "Network Connection Port Number",
+        "Path / Directory structure"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The path component of a URL specifies the exact location of a target directory, file, or resource residing on the remote web server’s file system. Situated after the domain name and port number, the directory path guides the server software to locate, retrieve, and serve the requested web page, image, or document file back to the client browser.",
+      "explanation_hindi": "सही उत्तर (d) है। URL का पथ घटक लक्षित निर्देशिका, फ़ाइल, या संसाधन के सटीक स्थान को निर्दिष्ट करता है जो दूरस्थ वेब सर्वर की फ़ाइल प्रणाली में स्थित है। डोमेन नाम और पोर्ट संख्या के बाद स्थित, निर्देशिका पथ सर्वर सॉफ़्टवेयर को अनुरोधित वेब पृष्ठ, छवि, या दस्तावेज़ फ़ाइल को खोजने, पुनः प्राप्त करने और क्लाइंट ब्राउज़र को वापस सेवा देने के लिए मार्गदर्शन करता है।",
+      "topic": "Internet and Networking Basics",
+      "difficulty": "easy",
+      "key_facts": [
+        "URL का पथ घटक लक्षित फ़ोल्डर या फ़ाइल के स्थान को निर्दिष्ट करता है।",
+        "पथ घटक डोमेन नाम और पोर्ट संख्या के बाद आता है।",
+        "यह सर्वर सॉफ़्टवेयर को संसाधनों को खोजने और सेवा देने में मदद करता है।",
+        "Printed answer key: (D) Path / Directory structure"
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-27T00:00:00.000+00:00"
+    }
+  ]
+}
