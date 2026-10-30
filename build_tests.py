@@ -47,14 +47,49 @@ TOPIC_DISPLAY_NAMES = {
     'bharat-innovates-2026': 'Bharat Innovates Science & Innovation',
     'bhartiya-bhasha-summer-camp': 'Bhartiya Bhasha Summer Camps',
     'career-cards': 'Career Cards & Vocational Guidance',
-    'pmrc': 'PMRC Administrative Guidelines',
+    'effective-leader-vs-successful-leader': 'School Leadership: Effective vs. Successful Leader',
+    'effective_leader_vs_successful_leader': 'School Leadership: Effective vs. Successful Leader',
+    'transformational-leadership': 'Transformational & Instructional Leadership',
+    'transformational_leadership': 'Transformational & Instructional Leadership',
+    'school-development-plan': 'School Development Plan (SDP) & Planning',
+    'school_development_plan': 'School Development Plan (SDP) & Planning',
+    'ccs-cca-rules-1965': 'CCS (CCA) Rules, 1965: Disciplinary Procedures',
+    'ccs_cca_rules_1965': 'CCS (CCA) Rules, 1965: Disciplinary Procedures',
+    'ccs-conduct-rules-1964': 'CCS (Conduct) Rules, 1964: Civil Services Code',
+    'ccs_conduct_rules_1964': 'CCS (Conduct) Rules, 1964: Civil Services Code',
+    'ccs-nps': 'National Pension System (NPS) & Retirement Rules',
+    'ccs_nps': 'National Pension System (NPS) & Retirement Rules',
+    'ccs-leave-rules-1972': 'CCS (Leave) Rules, 1972: Leave Entitlements',
+    'ccs_leave_rules_1972': 'CCS (Leave) Rules, 1972: Leave Entitlements',
+    'ccs-pension-rules': 'CCS (Pension) Rules: Service Pension & Gratuity',
+    'ccs_pension_rules': 'CCS (Pension) Rules: Service Pension & Gratuity',
+    'general-financial-rules-2017': 'General Financial Rules (GFR) 2017 & Public Procurement',
+    'general_financial_rules_2017': 'General Financial Rules (GFR) 2017 & Public Procurement',
+    'fundamental-rules-supplementary-rules': 'Fundamental Rules & Supplementary Rules (FR & SR)',
+    'fundamental_rules_supplementary_rules': 'Fundamental Rules & Supplementary Rules (FR & SR)',
+    'rte-2009': 'RTE Act 2009: Free & Compulsory Education',
+    'rte_2009': 'RTE Act 2009: Free & Compulsory Education',
+    'cce': 'Continuous & Comprehensive Evaluation (CCE)',
+    'continuous-and-comprehensive-evaluation': 'Continuous & Comprehensive Evaluation (CCE)',
+    'continuous_and_comprehensive_evaluation': 'Continuous & Comprehensive Evaluation (CCE)',
+    'pmrc': 'PMRC Administrative Guidelines for Principals',
 }
 
 def format_topic_test_name(topic_slug, part_num):
-    display = TOPIC_DISPLAY_NAMES.get(topic_slug)
+    display = TOPIC_DISPLAY_NAMES.get(topic_slug) or TOPIC_DISPLAY_NAMES.get(topic_slug.replace('_', '-'))
     if not display:
-        display = ' '.join(w.capitalize() for w in topic_slug.replace('-', ' ').split())
-    return f"{display} • Practice Set {part_num}"
+        words = topic_slug.replace('_', ' ').replace('-', ' ').split()
+        acronyms = {'ccs', 'cca', 'gfr', 'nps', 'cce', 'nep', 'ncf', 'cbse', 'ncert', 'kvs', 'jnv', 'emrs', 'cabe', 'scert', 'diet', 'ugc', 'nios', 'fln', 'nipun', 'rpwd', 'pwd', 'cwsn', 'pm', 'shri', 'kgbv', 'smc', 'pta', 'pmrc', 'ict', 'ai', 'rte', 'pocso', 'fr', 'sr'}
+        formatted = []
+        for w in words:
+            if w.lower() in acronyms:
+                formatted.append(w.upper())
+            elif w.lower() in ('vs', 'v'):
+                formatted.append('vs.')
+            else:
+                formatted.append(w.capitalize())
+        display = ' '.join(formatted)
+    return f"{display} • Practice Set {part_num:02d}"
 
 def format_mock_test_name(mock_num):
     return f"UPSC Principal Full Mock Test {mock_num:02d} • Complete CBT Exam"

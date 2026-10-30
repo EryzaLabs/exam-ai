@@ -61,50 +61,207 @@ interface ServerPaper {
 }
 
 export const TOPIC_METADATA_CLIENT: Record<string, { name: string; category: string }> = {
+  // Leadership & Administration
+  'effective-leader-vs-successful-leader': { name: 'School Leadership: Effective vs. Successful Leader', category: 'Administration & Governance' },
+  'effective_leader_vs_successful_leader': { name: 'School Leadership: Effective vs. Successful Leader', category: 'Administration & Governance' },
+  'transformational-leadership': { name: 'Transformational & Instructional Leadership', category: 'Administration & Governance' },
+  'transformational_leadership': { name: 'Transformational & Instructional Leadership', category: 'Administration & Governance' },
+  'school-development-plan': { name: 'School Development Plan (SDP) & Planning', category: 'Administration & Governance' },
+  'school_development_plan': { name: 'School Development Plan (SDP) & Planning', category: 'Administration & Governance' },
+
+  // Service Rules & Administration
+  'ccs-cca-rules-1965': { name: 'CCS (CCA) Rules, 1965: Disciplinary Procedures', category: 'Administration & Governance' },
+  'ccs_cca_rules_1965': { name: 'CCS (CCA) Rules, 1965: Disciplinary Procedures', category: 'Administration & Governance' },
+  'ccs-conduct-rules-1964': { name: 'CCS (Conduct) Rules, 1964: Civil Services Code', category: 'Administration & Governance' },
+  'ccs_conduct_rules_1964': { name: 'CCS (Conduct) Rules, 1964: Civil Services Code', category: 'Administration & Governance' },
+  'ccs-nps': { name: 'National Pension System (NPS) & Retirement Rules', category: 'Administration & Governance' },
+  'ccs_nps': { name: 'National Pension System (NPS) & Retirement Rules', category: 'Administration & Governance' },
+  'ccs-leave-rules-1972': { name: 'CCS (Leave) Rules, 1972: Leave Entitlements', category: 'Administration & Governance' },
+  'ccs_leave_rules_1972': { name: 'CCS (Leave) Rules, 1972: Leave Entitlements', category: 'Administration & Governance' },
+  'ccs-pension-rules': { name: 'CCS (Pension) Rules: Service Pension & Gratuity', category: 'Administration & Governance' },
+  'ccs_pension_rules': { name: 'CCS (Pension) Rules: Service Pension & Gratuity', category: 'Administration & Governance' },
+  'general-financial-rules-2017': { name: 'General Financial Rules (GFR) 2017 & Public Procurement', category: 'Administration & Governance' },
+  'general_financial_rules_2017': { name: 'General Financial Rules (GFR) 2017 & Public Procurement', category: 'Administration & Governance' },
+  'fundamental-rules-supplementary-rules': { name: 'Fundamental Rules & Supplementary Rules (FR & SR)', category: 'Administration & Governance' },
+  'fundamental_rules_supplementary_rules': { name: 'Fundamental Rules & Supplementary Rules (FR & SR)', category: 'Administration & Governance' },
+  'smc-2026': { name: 'School Management Committees (SMC & PTA)', category: 'Administration & Governance' },
+  'smc_2026': { name: 'School Management Committees (SMC & PTA)', category: 'Administration & Governance' },
+  'smc': { name: 'School Management Committees (SMC & PTA)', category: 'Administration & Governance' },
+  'pmrc': { name: 'PMRC Administrative Guidelines for Principals', category: 'Administration & Governance' },
+
+  // Policies & Acts
   'nep-2020': { name: 'NEP 2020 (National Education Policy)', category: 'Policies & Acts' },
+  'nep_2020': { name: 'NEP 2020 (National Education Policy)', category: 'Policies & Acts' },
   'ncf-2023': { name: 'NCF 2023 (School Education)', category: 'Policies & Acts' },
+  'ncf_2023': { name: 'NCF 2023 (School Education)', category: 'Policies & Acts' },
   'ncf-2005': { name: 'NCF 2005 (Curriculum Framework)', category: 'Policies & Acts' },
+  'ncf_2005': { name: 'NCF 2005 (Curriculum Framework)', category: 'Policies & Acts' },
   'pocso': { name: 'POCSO Act 2012 & Child Rights', category: 'Policies & Acts' },
+  'pocso-act': { name: 'POCSO Act 2012 & Child Rights', category: 'Policies & Acts' },
+  'pocso_act': { name: 'POCSO Act 2012 & Child Rights', category: 'Policies & Acts' },
+  'rte-2009': { name: 'RTE Act 2009: Free & Compulsory Education', category: 'Policies & Acts' },
+  'rte_2009': { name: 'RTE Act 2009: Free & Compulsory Education', category: 'Policies & Acts' },
+  'right-to-education-act-2009': { name: 'RTE Act 2009: Free & Compulsory Education', category: 'Policies & Acts' },
+  'right_to_education_act_2009': { name: 'RTE Act 2009: Free & Compulsory Education', category: 'Policies & Acts' },
+
+  // Institutions & Boards
   'cbse': { name: 'CBSE Affiliation & Examination Bye-Laws', category: 'Institutions & Boards' },
   'ncert': { name: 'NCERT Mandate, Structure & Curriculum', category: 'Institutions & Boards' },
   'kvs': { name: 'Kendriya Vidyalaya Sangathan (KVS) Rules', category: 'Institutions & Boards' },
   'navodaya-jnv': { name: 'Navodaya Vidyalaya Samiti (NVS / JNV)', category: 'Institutions & Boards' },
+  'navodaya_jnv': { name: 'Navodaya Vidyalaya Samiti (NVS / JNV)', category: 'Institutions & Boards' },
+  'jnv': { name: 'Navodaya Vidyalaya Samiti (NVS / JNV)', category: 'Institutions & Boards' },
   'emrs': { name: 'Eklavya Model Residential Schools (EMRS)', category: 'Institutions & Boards' },
   'cabe': { name: 'Central Advisory Board of Education (CABE)', category: 'Institutions & Boards' },
   'scert': { name: 'SCERT & DIET Structure & Functions', category: 'Institutions & Boards' },
   'ugc': { name: 'University Grants Commission (UGC)', category: 'Institutions & Boards' },
   'nios': { name: 'National Institute of Open Schooling (NIOS)', category: 'Institutions & Boards' },
   'open-university': { name: 'Open & Distance Learning (ODL / IGNOU)', category: 'Institutions & Boards' },
+  'open_university': { name: 'Open & Distance Learning (ODL / IGNOU)', category: 'Institutions & Boards' },
+
+  // Pedagogy & Assessment
   'parakh': { name: 'PARAKH National Assessment Centre', category: 'Pedagogy & Assessment' },
   'nipun-bharat': { name: 'NIPUN Bharat & FLN Mission', category: 'Pedagogy & Assessment' },
+  'nipun_bharat': { name: 'NIPUN Bharat & FLN Mission', category: 'Pedagogy & Assessment' },
   'assessment': { name: 'School Assessment, Standards & Rubrics', category: 'Pedagogy & Assessment' },
   'evaluation': { name: 'Continuous & Comprehensive Evaluation (CCE)', category: 'Pedagogy & Assessment' },
+  'cce': { name: 'Continuous & Comprehensive Evaluation (CCE)', category: 'Pedagogy & Assessment' },
+  'continuous-and-comprehensive-evaluation': { name: 'Continuous & Comprehensive Evaluation (CCE)', category: 'Pedagogy & Assessment' },
+  'continuous_and_comprehensive_evaluation': { name: 'Continuous & Comprehensive Evaluation (CCE)', category: 'Pedagogy & Assessment' },
   'measurement': { name: 'Educational Measurement & Psychometrics', category: 'Pedagogy & Assessment' },
   'inclusive-education': { name: 'Inclusive Education & Special Needs', category: 'Pedagogy & Assessment' },
+  'inclusive_education': { name: 'Inclusive Education & Special Needs', category: 'Pedagogy & Assessment' },
   'specially-abled-children': { name: 'RPwD Act & Specially Abled Children', category: 'Pedagogy & Assessment' },
+  'specially_abled_children': { name: 'RPwD Act & Specially Abled Children', category: 'Pedagogy & Assessment' },
+  'career-cards': { name: 'Career Cards & Vocational Guidance', category: 'Pedagogy & Assessment' },
+  'career_cards': { name: 'Career Cards & Vocational Guidance', category: 'Pedagogy & Assessment' },
+
+  // Schemes & Initiatives
   'pm-poshan': { name: 'PM POSHAN (Mid-Day Meal Scheme)', category: 'Schemes & Initiatives' },
+  'pm_poshan': { name: 'PM POSHAN (Mid-Day Meal Scheme)', category: 'Schemes & Initiatives' },
   'pm-shri-cm-shri': { name: 'PM SHRI & CM SHRI Exemplary Schools', category: 'Schemes & Initiatives' },
+  'pm_shri_cm_shri': { name: 'PM SHRI & CM SHRI Exemplary Schools', category: 'Schemes & Initiatives' },
   'pm-vidya-laxmi': { name: 'PM Vidya Laxmi Education Scheme', category: 'Schemes & Initiatives' },
+  'pm_vidya_laxmi': { name: 'PM Vidya Laxmi Education Scheme', category: 'Schemes & Initiatives' },
   'ai-in-education': { name: 'AI & ICT in Modern Classrooms', category: 'Schemes & Initiatives' },
+  'ai_in_education': { name: 'AI & ICT in Modern Classrooms', category: 'Schemes & Initiatives' },
   'vidyanjali': { name: 'Vidyanjali 2.0 Community Participation', category: 'Schemes & Initiatives' },
   'yuva-sangam': { name: 'Yuva Sangam (Ek Bharat Shreshtha Bharat)', category: 'Schemes & Initiatives' },
-  'smc-2026': { name: 'School Management Committees (SMC & PTA)', category: 'Administration & Governance' },
+  'yuva_sangam': { name: 'Yuva Sangam (Ek Bharat Shreshtha Bharat)', category: 'Schemes & Initiatives' },
   'kasturba-gandhi-balika-vidyalaya': { name: 'Kasturba Gandhi Balika Vidyalaya (KGBV)', category: 'Schemes & Initiatives' },
+  'kasturba_gandhi_balika_vidyalaya': { name: 'Kasturba Gandhi Balika Vidyalaya (KGBV)', category: 'Schemes & Initiatives' },
+  'kgbv': { name: 'Kasturba Gandhi Balika Vidyalaya (KGBV)', category: 'Schemes & Initiatives' },
   'sadhana-saptah-2026': { name: 'Sadhana Saptah Pedagogical Week', category: 'Schemes & Initiatives' },
+  'sadhana_saptah_2026': { name: 'Sadhana Saptah Pedagogical Week', category: 'Schemes & Initiatives' },
   'sakura-science-2026': { name: 'Sakura Science High School Exchange', category: 'Schemes & Initiatives' },
+  'sakura_science_2026': { name: 'Sakura Science High School Exchange', category: 'Schemes & Initiatives' },
   'nasha-mukt-abhiyan': { name: 'Nasha Mukt Bharat Abhiyan in Schools', category: 'Schemes & Initiatives' },
+  'nasha_mukt_abhiyan': { name: 'Nasha Mukt Bharat Abhiyan in Schools', category: 'Schemes & Initiatives' },
   'bharat-innovates-2026': { name: 'Bharat Innovates Science & Innovation', category: 'Schemes & Initiatives' },
+  'bharat_innovates_2026': { name: 'Bharat Innovates Science & Innovation', category: 'Schemes & Initiatives' },
   'bhartiya-bhasha-summer-camp': { name: 'Bhartiya Bhasha Summer Camps', category: 'Schemes & Initiatives' },
-  'career-cards': { name: 'Career Cards & Vocational Guidance', category: 'Pedagogy & Assessment' },
-  'pmrc': { name: 'PMRC Administrative Guidelines', category: 'Administration & Governance' },
+  'bhartiya_bhasha_summer_camp': { name: 'Bhartiya Bhasha Summer Camps', category: 'Schemes & Initiatives' },
 };
+
+const ACRONYMS: Record<string, string> = {
+  ccs: 'CCS',
+  cca: 'CCA',
+  gfr: 'GFR',
+  nps: 'NPS',
+  cce: 'CCE',
+  nep: 'NEP',
+  ncf: 'NCF',
+  cbse: 'CBSE',
+  ncert: 'NCERT',
+  kvs: 'KVS',
+  jnv: 'JNV',
+  nvs: 'NVS',
+  emrs: 'EMRS',
+  cabe: 'CABE',
+  scert: 'SCERT',
+  diet: 'DIET',
+  ugc: 'UGC',
+  nios: 'NIOS',
+  odl: 'ODL',
+  ignou: 'IGNOU',
+  parakh: 'PARAKH',
+  fln: 'FLN',
+  nipun: 'NIPUN',
+  rpwd: 'RPwD',
+  pwd: 'PwD',
+  cwsn: 'CWSN',
+  pm: 'PM',
+  shri: 'SHRI',
+  kgbv: 'KGBV',
+  smc: 'SMC',
+  pta: 'PTA',
+  pmrc: 'PMRC',
+  ict: 'ICT',
+  ai: 'AI',
+  stem: 'STEM',
+  atl: 'ATL',
+  rte: 'RTE',
+  pocso: 'POCSO',
+  poshan: 'POSHAN',
+  mdm: 'MDM',
+  fr: 'FR',
+  sr: 'SR',
+  gem: 'GeM',
+};
+
+const LOWERCASE_WORDS = new Set(['of', 'and', '&', 'in', 'to', 'for', 'the', 'on', 'with', 'from', 'by', 'at']);
+
+export function formatTopicDisplayName(rawSlug: string): string {
+  if (!rawSlug) return 'General Topic';
+  const clean = rawSlug.trim().toLowerCase();
+  const canonical = clean.replace(/_/g, '-');
+
+  if (TOPIC_METADATA_CLIENT[canonical]) return TOPIC_METADATA_CLIENT[canonical].name;
+  if (TOPIC_METADATA_CLIENT[clean]) return TOPIC_METADATA_CLIENT[clean].name;
+
+  const words = clean.split(/[\s_\-]+/).filter(Boolean);
+  if (words.length === 0) return 'Practice Test';
+
+  const formattedWords = words.map((w, idx) => {
+    if (ACRONYMS[w]) return ACRONYMS[w];
+    if (w === 'vs' || w === 'v') return 'vs.';
+    if (/^\d+$/.test(w)) return w;
+    if (idx > 0 && LOWERCASE_WORDS.has(w)) return w;
+    return w.charAt(0).toUpperCase() + w.slice(1);
+  });
+
+  return formattedWords.join(' ');
+}
 
 // Reddit-style semantic knowledge graph for broad dynamic searching
 export const SEARCH_SEMANTIC_ALIASES: Record<string, string[]> = {
+  // Leadership & Planning
+  'effective-leader-vs-successful-leader': ['leadership', 'effective leader', 'successful leader', 'school leadership', 'headmaster', 'principal role', 'leadership styles', 'effective vs successful'],
+  'effective_leader_vs_successful_leader': ['leadership', 'effective leader', 'successful leader', 'school leadership', 'headmaster', 'principal role', 'leadership styles', 'effective vs successful'],
+  'transformational-leadership': ['transformational', 'instructional leadership', 'distributed leadership', 'educational leadership', 'school climate'],
+  'school-development-plan': ['sdp', 'school development plan', 'institutional planning', 'school improvement', 'annual plan'],
+
+  // Service Rules & Administration
+  'ccs-cca-rules-1965': ['ccs cca', 'cca rules', 'disciplinary proceedings', 'penalties', 'minor penalty', 'major penalty', 'suspension', 'inquiry officer', 'charge sheet', 'rule 14', 'rule 16', 'ccs cca rules 1965'],
+  'ccs_cca_rules_1965': ['ccs cca', 'cca rules', 'disciplinary proceedings', 'penalties', 'minor penalty', 'major penalty', 'suspension', 'inquiry officer', 'charge sheet', 'rule 14', 'rule 16', 'ccs cca rules 1965'],
+  'ccs-conduct-rules-1964': ['ccs conduct', 'conduct rules', 'code of conduct', 'gifts', 'private trade', 'movable property', 'immovable property', 'ethics', 'government servant conduct'],
+  'ccs_conduct_rules_1964': ['ccs conduct', 'conduct rules', 'code of conduct', 'gifts', 'private trade', 'movable property', 'immovable property', 'ethics', 'government servant conduct'],
+  'ccs-nps': ['nps', 'national pension system', 'pran', 'pension fund', 'tier 1', 'tier 2', 'pfrda', 'retirement benefits', 'ccs nps'],
+  'ccs_nps': ['nps', 'national pension system', 'pran', 'pension fund', 'tier 1', 'tier 2', 'pfrda', 'retirement benefits', 'ccs nps'],
+  'ccs-leave-rules-1972': ['leave rules', 'ccs leave', 'earned leave', 'half pay leave', 'commuted leave', 'maternity leave', 'paternity leave', 'child care leave', 'ccl'],
+  'ccs_leave_rules_1972': ['leave rules', 'ccs leave', 'earned leave', 'half pay leave', 'commuted leave', 'maternity leave', 'paternity leave', 'child care leave', 'ccl'],
+  'general-financial-rules-2017': ['gfr', 'gfr 2017', 'financial rules', 'public procurement', 'gem portal', 'tender', 'quotation', 'concurrence', 'drawing and disbursing officer', 'ddo'],
+  'general_financial_rules_2017': ['gfr', 'gfr 2017', 'financial rules', 'public procurement', 'gem portal', 'tender', 'quotation', 'concurrence', 'drawing and disbursing officer', 'ddo'],
+  'fundamental-rules-supplementary-rules': ['fr sr', 'fundamental rules', 'supplementary rules', 'pay fixation', 'ta rules', 'joining time', 'foreign service', 'lien'],
+
+  // Policies & Acts
   'nep-2020': ['nep', 'nep2020', 'national education policy', '5+3+3+4', 'fln', 'foundational literacy', 'kothari', 'higher education commission', 'heci', 'parakh', 'school education', 'balvatika', 'curriculum change'],
   'ncf-2023': ['ncf', 'ncf2023', 'national curriculum framework', 'panchakosha', 'pedagogical framework', 'curriculum', 'school education framework'],
   'ncf-2005': ['ncf2005', 'yashpal', 'learning without burden', 'constructivism', 'curriculum 2005'],
   'pocso': ['pocso', 'child rights', 'child protection', 'sexual offences', 'juvenile', 'child safety', 'child abuse', 'special courts', 'section 43', 'section 19', 'mandatory reporting', 'protection of children'],
+  'rte-2009': ['rte', 'rte 2009', 'right to education', 'section 12 1 c', 'neighbourhood school', 'pupil teacher ratio', 'ptr', 'compulsory education', 'no detention'],
+
+  // Institutions & Boards
   'cbse': ['cbse', 'affiliation', 'exam bye laws', 'bye-laws', 'examination', 'board exam', 'central board', 'circulars', 'loc', 'passing criteria', 'bye laws', 'affiliation bye-laws'],
   'ncert': ['ncert', 'textbooks', 'curriculum', 'dsel', 'ciet', 'rie', 'national council', 'pedagogical material'],
   'kvs': ['kvs', 'kendriya vidyalaya', 'sangathan', 'kvs rules', 'transfer policy', 'education code', 'vidyalaya', 'central school'],
@@ -115,13 +272,18 @@ export const SEARCH_SEMANTIC_ALIASES: Record<string, string[]> = {
   'ugc': ['ugc', 'university grants', 'higher education', 'net exam', 'college', 'commission'],
   'nios': ['nios', 'open school', 'distance learning', 'on demand exam', 'obe', 'open basic education'],
   'open-university': ['ignou', 'open university', 'odl', 'distance education', 'correspondence', 'open learning'],
+
+  // Pedagogy & Assessment
+  'cce': ['cce', 'continuous and comprehensive evaluation', 'continuous comprehensive evaluation', 'formative assessment', 'summative assessment', 'school based assessment', 'cce rubrics', 'holistic assessment', 'grading scale'],
+  'evaluation': ['evaluation', 'cce', 'continuous comprehensive evaluation', 'grading system', 'grading', 'marks', 'scholastic', 'co-scholastic', 'assessment of learning', 'assessment for learning'],
   'parakh': ['parakh', 'assessment centre', 'standard setting', 'holistic progress card', 'hpc', 'nas', 'benchmarks', 'evaluation center', 'national assessment'],
   'nipun-bharat': ['nipun', 'nipun bharat', 'fln', 'foundational literacy', 'numeracy', 'vidyapravesh', 'balvatika', 'mission', 'fln mission'],
   'assessment': ['assessment', 'formative', 'summative', 'diagnostic', 'rubrics', 'testing', 'benchmarking', 'standardized testing', 'grades'],
-  'evaluation': ['evaluation', 'cce', 'continuous comprehensive evaluation', 'grading system', 'grading', 'marks', 'scholastic', 'co-scholastic'],
   'measurement': ['measurement', 'psychometrics', 'item response', 'validity', 'reliability', 'difficulty index', 'discrimination index', 'statistics', 'testing measurement'],
   'inclusive-education': ['inclusive', 'inclusion', 'cwsn', 'children with special needs', 'iep', 'accessible', 'special education', 'barrier-free'],
   'specially-abled-children': ['specially abled', 'divyang', 'rpwd', 'pwd', 'disabilities', 'handicapped', 'autism', 'dyslexia', 'adhd', 'blindness', 'rights of persons', 'rpwd act 2016'],
+
+  // Schemes & Initiatives
   'pm-poshan': ['pm poshan', 'poshan', 'mid day meal', 'midday meal', 'mdm', 'school lunch', 'nutrition', 'tithi bhojan', 'kitchen garden', 'food', 'hot cooked meal'],
   'pm-shri-cm-shri': ['pm shri', 'cm shri', 'exemplary schools', 'model school', 'smart schools', 'green school', 'pilot school', 'exemplary'],
   'pm-vidya-laxmi': ['vidya laxmi', 'vidyalaxmi', 'education loan', 'scholarship', 'financial assistance', 'student loan', 'higher education funding'],
@@ -140,7 +302,22 @@ export const SEARCH_SEMANTIC_ALIASES: Record<string, string[]> = {
   'full_mocks': ['full mock', 'full test', 'complete test', 'cbt exam', '120 questions', '300 marks', 'general studies', 'admin and finance', 'grand test', 'mock test', 'cbt', 'mock'],
 };
 
-// Fast typo-tolerant fuzzy matching
+// Word boundary matching to prevent short acronyms from falsely matching inside unrelated English words
+// (e.g. "cce" must NEVER match inside "successful", and "ccs" must NEVER match inside "access")
+export function matchWordOrPhrase(queryTerm: string, text: string): boolean {
+  if (!text || !queryTerm) return false;
+  const lowerText = text.toLowerCase();
+  const lowerQuery = queryTerm.toLowerCase();
+
+  if (lowerQuery.length <= 4) {
+    const escaped = lowerQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(^|[\\s_\\-\\(\\[/.,:;])${escaped}([\\s_\\-\\)\\]/.,:;]|$)`, 'i');
+    return regex.test(lowerText);
+  }
+  return lowerText.includes(lowerQuery);
+}
+
+// Fast typo-tolerant fuzzy matching (Strictly restricted to words of 5+ characters)
 export function levenshteinDistance(s1: string, s2: string): number {
   if (s1 === s2) return 0;
   if (!s1.length) return s2.length;
@@ -165,16 +342,16 @@ export function levenshteinDistance(s1: string, s2: string): number {
 
 export function isFuzzyMatch(token: string, candidate: string): boolean {
   if (!candidate || !token) return false;
-  if (candidate.includes(token)) return true;
-  if (token.length >= 3 && candidate.length >= 3) {
-    const maxDist = token.length >= 7 ? 2 : 1;
-    const words = candidate.split(/[\s\-_\/]+/);
-    for (const w of words) {
-      if (w.length >= 3) {
-        if (w.startsWith(token) || token.startsWith(w)) return true;
-        if (Math.abs(w.length - token.length) <= maxDist) {
-          if (levenshteinDistance(token, w) <= maxDist) return true;
-        }
+  // Strict rule: tokens of 4 or fewer characters MUST NOT fuzzy-match!
+  // In exam terminology, CCE != CCS, NCF != NCP, KVS != NVS.
+  if (token.length <= 4) return false;
+
+  const maxDist = token.length >= 7 ? 2 : 1;
+  const words = candidate.toLowerCase().split(/[\s\-_\/]+/);
+  for (const w of words) {
+    if (w.length >= 5) {
+      if (Math.abs(w.length - token.length) <= maxDist) {
+        if (levenshteinDistance(token.toLowerCase(), w) <= maxDist) return true;
       }
     }
   }
@@ -185,7 +362,7 @@ export const formatDisplayTitle = (title: string, filename: string): string => {
   if (!filename) return title || 'UPSC Principal Test';
 
   if (filename.includes('full_mocks/')) {
-    const match = filename.match(/mock_test_(\d+)\.json/);
+    const match = filename.match(/mock_test_(\d+)\.json/i);
     if (match) {
       const num = parseInt(match[1], 10);
       const padded = num < 10 ? `0${num}` : `${num}`;
@@ -199,13 +376,13 @@ export const formatDisplayTitle = (title: string, filename: string): string => {
 
   if (filename.includes('topic_wise/')) {
     const base = filename.replace('topic_wise/', '').replace('.json', '');
-    const match = base.match(/^(.+)_test_(\d+)$/);
+    const match = base.match(/^(.+?)_test_(\d+)$/i);
     if (match) {
-      const slug = match[1].toLowerCase();
-      const partNum = match[2];
-      const meta = TOPIC_METADATA_CLIENT[slug];
-      const topicName = meta ? meta.name : slug.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
-      return `${topicName} • Practice Set ${partNum}`;
+      const slug = match[1];
+      const partNum = parseInt(match[2], 10);
+      const paddedPart = partNum < 10 ? `0${partNum}` : `${partNum}`;
+      const topicName = formatTopicDisplayName(slug);
+      return `${topicName} • Practice Set ${paddedPart}`;
     }
   }
 
@@ -213,11 +390,10 @@ export const formatDisplayTitle = (title: string, filename: string): string => {
   const legacyMatch = title?.match(/Topic Test:\s*(.+?)\s*-\s*Part\s*(\d+)/i);
   if (legacyMatch) {
     const rawTopic = legacyMatch[1].trim();
-    const partNum = legacyMatch[2];
-    const slug = rawTopic.toLowerCase().replace(/\s+/g, '-');
-    const meta = TOPIC_METADATA_CLIENT[slug];
-    const topicName = meta ? meta.name : rawTopic.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
-    return `${topicName} • Practice Set ${partNum}`;
+    const partNum = parseInt(legacyMatch[2], 10);
+    const paddedPart = partNum < 10 ? `0${partNum}` : `${partNum}`;
+    const topicName = formatTopicDisplayName(rawTopic);
+    return `${topicName} • Practice Set ${paddedPart}`;
   }
 
   return title || 'UPSC Principal Test';
@@ -367,21 +543,30 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const getTopicSlugFromFilename = (filename: string): string => {
     if (!filename.includes('topic_wise/')) return '';
     const base = filename.split('topic_wise/')[1];
-    return base.split('_test_')[0].toLowerCase();
+    const match = base.match(/^(.+?)_test_\d+/i);
+    return match ? match[1].toLowerCase() : base.replace('.json', '').toLowerCase();
   };
 
   const getTopicFromFilename = (filename: string): string | null => {
     if (!filename.includes('topic_wise/')) return null;
     const base = filename.split('topic_wise/')[1];
-    const slug = base.split('_test_')[0].toLowerCase();
-    const meta = TOPIC_METADATA_CLIENT[slug];
-    if (meta) return meta.name;
-    return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    const match = base.match(/^(.+?)_test_\d+/i);
+    const slug = match ? match[1].toLowerCase() : base.replace('.json', '').toLowerCase();
+    return formatTopicDisplayName(slug);
   };
 
   const getCategoryForTopicSlug = (slug: string): string => {
+    const meta = TOPIC_METADATA_CLIENT[slug] || TOPIC_METADATA_CLIENT[slug.replace(/_/g, '-')];
+    if (meta) {
+      for (const cat of SYLLABUS_CATEGORIES) {
+        if (cat.name === meta.category || meta.category.includes(cat.name)) {
+          return cat.id;
+        }
+      }
+    }
+    const clean = slug.replace(/_/g, '-');
     for (const cat of SYLLABUS_CATEGORIES) {
-      if (cat.keywords.some(k => slug.includes(k))) {
+      if (cat.keywords.some(k => clean.includes(k) || slug.includes(k))) {
         return cat.id;
       }
     }
@@ -525,41 +710,41 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
       let score = 0;
 
-      // 1. Exact phrase matches (highest priority)
-      if (cleanTitle.includes(trimmedQuery)) score += 200;
-      if (lowerTopic.includes(trimmedQuery)) score += 160;
-      if (aliases.some(a => a.includes(trimmedQuery) || trimmedQuery.includes(a))) score += 140;
-      if (lowerCat.includes(trimmedQuery)) score += 80;
-      if (rawFilename.includes(trimmedQuery)) score += 60;
+      // 1. Phrase / word boundary matches (highest priority)
+      if (matchWordOrPhrase(trimmedQuery, cleanTitle)) score += 200;
+      if (matchWordOrPhrase(trimmedQuery, lowerTopic)) score += 160;
+      if (aliases.some(a => matchWordOrPhrase(trimmedQuery, a) || (trimmedQuery.length > 4 && a.includes(trimmedQuery)))) score += 140;
+      if (matchWordOrPhrase(trimmedQuery, lowerCat)) score += 80;
+      if (matchWordOrPhrase(trimmedQuery, rawFilename)) score += 60;
 
       // 2. Tokenized multi-term matches (broad match)
       let matchedTokens = 0;
       for (const token of tokens) {
         let tokenFound = false;
 
-        if (cleanTitle.includes(token)) {
+        if (matchWordOrPhrase(token, cleanTitle)) {
           score += 45;
           tokenFound = true;
         }
-        if (lowerTopic.includes(token)) {
+        if (matchWordOrPhrase(token, lowerTopic)) {
           score += 40;
           tokenFound = true;
         }
-        if (aliases.some(a => a.includes(token))) {
+        if (aliases.some(a => matchWordOrPhrase(token, a) || (token.length > 4 && a.includes(token)))) {
           score += 35;
           tokenFound = true;
         }
-        if (lowerCat.includes(token)) {
+        if (matchWordOrPhrase(token, lowerCat)) {
           score += 25;
           tokenFound = true;
         }
-        if (rawFilename.includes(token)) {
+        if (matchWordOrPhrase(token, rawFilename)) {
           score += 20;
           tokenFound = true;
         }
 
-        // Fuzzy match for typos if token is >= 3 chars
-        if (!tokenFound && token.length >= 3) {
+        // Fuzzy match for typos ONLY if token is >= 5 chars
+        if (!tokenFound && token.length >= 5) {
           if (
             isFuzzyMatch(token, cleanTitle) ||
             isFuzzyMatch(token, lowerTopic) ||
@@ -1137,15 +1322,23 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
       const lowerCat = cat ? cat.name.toLowerCase() : '';
       const aliases = (SEARCH_SEMANTIC_ALIASES[t.slug] || []).map(a => a.toLowerCase());
 
-      if (lowerName.includes(lowerQuery) || aliases.some(a => a.includes(lowerQuery) || lowerQuery.includes(a)) || lowerCat.includes(lowerQuery)) {
+      if (
+        matchWordOrPhrase(lowerQuery, lowerName) ||
+        aliases.some(a => matchWordOrPhrase(lowerQuery, a)) ||
+        matchWordOrPhrase(lowerQuery, lowerCat)
+      ) {
         return true;
       }
 
       for (const tok of tokens) {
-        if (lowerName.includes(tok) || aliases.some(a => a.includes(tok)) || lowerCat.includes(tok)) {
+        if (
+          matchWordOrPhrase(tok, lowerName) ||
+          aliases.some(a => matchWordOrPhrase(tok, a)) ||
+          matchWordOrPhrase(tok, lowerCat)
+        ) {
           return true;
         }
-        if (tok.length >= 3 && (isFuzzyMatch(tok, lowerName) || aliases.some(a => isFuzzyMatch(tok, a)))) {
+        if (tok.length >= 5 && (isFuzzyMatch(tok, lowerName) || aliases.some(a => isFuzzyMatch(tok, a)))) {
           return true;
         }
       }
