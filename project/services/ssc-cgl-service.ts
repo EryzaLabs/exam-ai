@@ -273,13 +273,29 @@ class SSCCGLService {
     const totalQuestions = parsedQuestions.length;
     const totalMarks = totalQuestions * 2.5; // 120 questions * 2.5 = 300 marks
 
+    const isTopicWise = (filename && filename.includes('topic_wise')) || 
+                        (paper.type === 'topic_wise') ||
+                        (testName && testName.toLowerCase().includes('topic')) ||
+                        (totalQuestions <= 30 && paper.type !== 'full_mock');
+    const defaultDuration = isTopicWise ? 1200 : 7200; // 20 mins for topic tests, 2 hours for full mocks
+    const defaultMarks = parsedQuestions.length * 2.5;
+
+    let finalDuration = defaultDuration;
+    if (paper.duration_minutes) {
+      finalDuration = paper.duration_minutes * 60;
+    } else if (paper.duration && (!isTopicWise || paper.duration <= 1800)) {
+      finalDuration = paper.duration;
+    } else {
+      finalDuration = defaultDuration;
+    }
+
     const mockTest: ParsedMockTest = {
       id: testId,
       title: testName,
       examType: 'UPSC Principal',
-      duration: paper.duration || (paper.duration_minutes ? paper.duration_minutes * 60 : 7200),
+      duration: finalDuration,
       totalQuestions,
-      totalMarks,
+      totalMarks: paper.total_marks || defaultMarks,
       sections,
       metadata: this.extractMetadata(testName),
     };

@@ -8,7 +8,7 @@ const { width } = Dimensions.get('window');
 
 export default function TestInstructionsScreen() {
   const { requireAuth } = useAuth();
-  const { testId } = useLocalSearchParams();
+  const { testId, filename } = useLocalSearchParams();
   const [language, setLanguage] = useState<'english' | 'hindi'>('english');
   const [agreed, setAgreed] = useState(false);
 
@@ -21,7 +21,7 @@ export default function TestInstructionsScreen() {
       
       router.replace({
         pathname: '/mock-test',
-        params: { testId, lang: language },
+        params: { testId, filename, lang: language },
       });
     }, {
       title: 'Sign In to Begin Test',
