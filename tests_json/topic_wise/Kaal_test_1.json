@@ -1,0 +1,794 @@
+{
+  "test_id": "2f56d4e5-c4ae-4b7d-a3aa-24ddfb393238",
+  "test_name": "Topic Test: KAAL - Part 1",
+  "type": "topic_wise",
+  "topic": "Kaal",
+  "created_at": "2026-10-30T05:34:12.859604",
+  "questions": [
+    {
+      "id": "e1c2b3d4-5f6a-7b8c-9d0e-f1a2b3c4d5e6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "In the general past tense of a transitive verb, when the agent is accompanied by 'ने' as a prefix, according to what does the form of the verb change?",
+      "question_hindi": "सकर्मक क्रिया के सामान्य भूतकाल में कर्ता के साथ 'ने' परसर्ग का प्रयोग होने पर क्रिया का रूप किसके अनुसार परिवर्तित होता है?",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "According to the gender and number of the object",
+        "According to the gender and number of the subject",
+        "Always masculine singular according to the mood",
+        "The verb always remains indeclinable"
+      ],
+      "options_hindi": [
+        "कर्म के लिं ग और वचन के अनुसार",
+        "कर्ता के लिं ग और वचन के अनुसार",
+        "भाव के अनुसार सर्वदा पुल्लिंग एकवचन",
+        "क्रिया सर्वदा अव्यय बनी रहती है"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "According to the gender and number of the object. According to the rules of Hindi grammar, when a transitive verb is used in the general past tense, the prefix 'ने' is added to the subject. Upon adding 'ने', the verb does not change according to the subject but changes according to the gender and number of the object. For example, in 'राम ने रोटी खाई', since 'रोटी' is the object, the verb is used in the feminine form.",
+      "explanation_hindi": "कर्म के लिं ग और वचन के अनुसार। हिंदी व्याकरण के नियमानुसार, जब सामान्य भूतकाल में सकर्मक क्रिया का प्रयोग होता है, तो कर्ता पद के साथ 'ने' परसर्ग जोड़ा जाता है। 'ने' परसर्ग लगते ही क्रिया कर्ता के अनुसार न बदलकर कर्म के लिं ग और वचन के अनुसार परिवर्तित होती है। उदाहरणार्थ, \"राम ने रोटी खाई\" में 'रोटी' कर्म होने से क्रिया भी स्त्रीलिं ग प्रयुक्त हुई है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Transitive verbs change form based on the object when 'ने' is used.",
+        "The prefix 'ने' indicates the subject in the past tense.",
+        "The verb agrees with the object in gender and number."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:02Z"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "What type of tense relationship is visible between the antecedent and consequent phrases in the sentence: 'When he arrived at the station, the train had already left'?",
+      "question_hindi": "\"जब वह स्टेशन पहुँचा, तब गाड़ी छू ट चुकी थी।\" वाक्य में पूर्ववर्ती वाक्यांश और परवर्ती वाक्यांश के बीच काल की कौन-सी संगति दृश्यमान है?",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Simple past and perfect past",
+        "Recent past and imperfect past",
+        "Ambiguous past and simple past",
+        "Simple present and simple past"
+      ],
+      "options_hindi": [
+        "सामान्य भूतकाल और पूर्ण भूतकाल",
+        "आसन्न भूतकाल और अपूर्ण भूतकाल",
+        "संदिग्ध भूतकाल और सामान्य भूतकाल",
+        "सामान्य वर्तमान काल और सामान्य भूतकाल"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The relationship is between simple past and perfect past. The antecedent phrase 'arrived' indicates simple past, while the consequent phrase 'had already left' indicates perfect past, as the action of leaving was completed before the arrival.",
+      "explanation_hindi": "सामान्य भूतकाल और पूर्ण भूतकाल। वाक्य के पूर्ववर्ती वाक्यांश में 'पहुँचा' क्रिया सामान्य भूतकाल को दर्शाती है, जो अतीत के समय का बोध कराती है। इसके परवर्ती वाक्यांश में 'छू ट चुकी थी' क्रिया पूर्ण भूतकाल को दर्शाती है, क्योंकि स्टेशन पहुँचने से पूर्व ही गाड़ी छू टने का कार्य पूर्णतः संपन्न हो चुका था। अतः यहाँ सामान्य भूतकाल और पूर्ण भूतकाल की व्याकरणिक संगति स्पष्ट रूप से दृश्यमान है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Understanding the relationship between different tenses is essential.",
+        "The perfect past tense indicates an action completed before another past action.",
+        "Simple past tense indicates an action that occurred in the past."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:02Z"
+    },
+    {
+      "id": "b2c3d4e5-f6a7-8b9c-d0e1-f2g3h4i5j6k7",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "Both A and R are true, and R is the correct interpretation of A. In the grammatical structure of the imminent past tense, the main verb is in the past tense form while the auxiliary verb 'is/are' is in the present tense. The fundamental reason for this is that the imminent past indicates that an action that began in the past has just been completed right before the present. Therefore, the presence of the present auxiliary verb scientifically supports this proximity, and both statements are logical.",
+      "question_hindi": "A और R दोनों सत्य हैं तथा R, A की सही व्याख्या है। आसन्न भूतकाल की व्याकरणिक क्रिया-संरचना में मुख्य क्रिया भूतकालिक धातु रूप में होती है जबकि सहायक क्रिया 'है/हैं' वर्तमानकालिक होती है। इसका मूल कारण यह है कि आसन्न भूतकाल यह दर्शाता है कि अतीत में आरम्भ हुआ कार्य वर्तमान काल से ठीक पहले ही संपन्न हुआ है। अतः वर्तमानकालिक सहायक क्रिया की उपस्थिति इस निकटता का वैज्ञानिक आधार प्रस्तुत करती है और दोनों कथन तर्क संगत हैं।",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "True",
+        "False",
+        "Cannot be determined",
+        "None of the above"
+      ],
+      "options_hindi": [
+        "सत्य",
+        "असत्य",
+        "निर्धारित नहीं किया जा सकता",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct option is A because both statements A and R are logically consistent and true. The explanation provided clarifies the grammatical structure of the imminent past tense and its relationship with the present tense auxiliary verb, which supports the truth of both statements. Options B, C, and D do not accurately reflect the relationship between the statements.",
+      "explanation_hindi": "सही विकल्प A है क्योंकि दोनों कथन A और R तार्किक रूप से संगत और सत्य हैं। प्रदान की गई व्याख्या आसन्न भूतकाल की व्याकरणिक संरचना और वर्तमानकालिक सहायक क्रिया के साथ इसके संबंध को स्पष्ट करती है, जो दोनों कथनों की सत्यता का समर्थन करती है। विकल्प B, C, और D कथनों के बीच संबंध को सही ढंग से नहीं दर्शाते हैं।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Imminent past tense indicates an action completed just before the present.",
+        "Main verb in past tense, auxiliary verb in present tense.",
+        "Logical consistency between statements A and R.",
+        "Grammatical structure supports the truth of both statements."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:30:01Z"
+    },
+    {
+      "id": "f8c9e1b5-3e2c-4f8e-8c3f-3e1e4e7c3c1",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "\"I have just eaten fruit.\" — Which tense does the verb in this sentence indicate?",
+      "question_hindi": "\"मैंने अभी-अभी फल खाया है।\" — इस वाक्य की क्रिया किस काल का बोध कराती है?",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Simple Past",
+        "Perfect Past",
+        "Imperfect Past",
+        "Recent Past"
+      ],
+      "options_hindi": [
+        "सामान्य भूतकाल",
+        "पूर्ण भूतकाल",
+        "अपूर्ण भूतकाल",
+        "आसन्न भूतकाल"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "Recent Past indicates that the action started in the past and has just recently completed. The structure of this tense combines the past tense main verb with the present tense auxiliary verb 'है/हूँ/हैं'. The phrase 'अभी-अभी' and the verb form 'खाया है' provide clear evidence of the action being completed very recently.",
+      "explanation_hindi": "आसन्न भूतकाल क्रिया के जिस रूप से यह स्पष्ट बोध होता है कि कार्य भूतकाल में प्रारम्भ होकर अभी-अभी या निकटतम अतीत में ही समाप्त हुआ है, उसे आसन्न भूतकाल कहते हैं। इस काल की संरचना में भूतकालिक मुख्य क्रिया के साथ वर्तमानकालिक सहायक क्रिया 'है/हूँ/हैं' का संयोजन किया जाता है। यहाँ 'अभी-अभी' शब्द और 'खाया है' क्रिया-रूप कार्य के तुरंत पूरा होने की प्रामाणिक सूचना प्रदान करते हैं।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Recent Past indicates actions completed in the very recent past.",
+        "Uses auxiliary verbs from the present tense.",
+        "Key indicators include phrases like 'अभी-अभी'."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:30:01Z"
+    },
+    {
+      "id": "f3e4d5b6-7c8d-4e9a-9c3f-8b1e2f3a4b5c",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "In the indirect statement, 'The officer said that the work must have been completed.' What is the tense of the phrase 'must have been completed'?",
+      "question_hindi": "\"अधिकारी ने कहा कि कार्य पूर्ण हो चुका होगा।\" — अप्रत्यक्ष कथन में प्रयुक्त 'कार्य पूर्ण हो चुका होगा' वाक्यांश का काल क्या है?",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Suspicious Present",
+        "Probable Future Tense",
+        "Suspicious Past Tense",
+        "Perfect Present"
+      ],
+      "options_hindi": [
+        "संदिग्ध वर्तमान",
+        "सम्भाव्य भविष्यकाल",
+        "संदिग्ध भूतकाल",
+        "पूर्ण वर्तमान"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The phrase 'must have been completed' indicates a form of the verb that expresses doubt or conjecture about the completion of an action in the past. In indirect speech, when the past perfect participle 'चुका' is combined with the auxiliary verb 'होगा', it conveys uncertainty regarding the completion of the action in the past. Therefore, this verb form represents the suspicious past tense.",
+      "explanation_hindi": "संदिग्ध भूतकाल\nअप्रत्यक्ष कथन के वाक्यांश में 'हो चुका होगा' क्रिया-रूप प्रयुक्त हुआ है। जब भूतकालिक पूर्णता सूचक कृदंत 'चुका' के साथ 'होगा' सहायक क्रिया जुड़ती है, तो वह अतीत में कार्य के पूर्ण होने के विषय में संदेह या अनुमान को व्यक्त करती है। अतः यह क्रिया-रूप संदिग्ध भूतकाल का प्रतिनिधित्व करता है, जहाँ कार्य की पूर्णता में संदेह विद्यमान है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Indirect speech often alters the tense of the original statement.",
+        "The combination of 'चुका' and 'होगा' indicates a past action with uncertainty.",
+        "Suspicious past tense is used to express doubt about past actions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:53Z"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "Which tense is primarily used to depict the continuous flow of past events in narrative literature and story writing?",
+      "question_hindi": "कथा-साहित्य एवं वृत्तान्त लेखन में अतीत की घटनाओं के निरंतर प्रवाह को दर्शाने के लिए मुख्य रूप से किस काल का प्रयोग किया जाता है?",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Simple Present Tense",
+        "Causal Past Tense",
+        "Potential Future Tense",
+        "Imperfect Past Tense"
+      ],
+      "options_hindi": [
+        "सामान्य वर्तमान काल",
+        "हेतुहेतुमद् भूतकाल",
+        "सम्भाव्य भविष्यकाल",
+        "अपूर्ण भूतकाल"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The Imperfect Past Tense is primarily used in narrative literature, stories, and accounts to vividly present the continuous flow of past events, scenes, or backgrounds. This tense portrays past actions as if they are continuously occurring, maintaining the flow and interest in the narration.",
+      "explanation_hindi": "अपूर्ण भूतकाल कथा-साहित्य, कहानी तथा वृत्तान्त लेखन में अतीत की घटनाओं के निरंतर दृश्य, वातावरण या पृष्ठभूमि के निरंतर प्रवाह को जीवंत रूप में प्रस्तुत करने के लिए मुख्य रूप से प्रयोग किया जाता है। यह काल पाठकों के समक्ष अतीत की क्रियाओं को निरंतर घटित होता हुआ दिखाता है, जिससे वर्णन में प्रवाह और रोचकता बनी रहती है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Imperfect Past Tense is used for continuous past actions.",
+        "It enhances the narrative flow in storytelling.",
+        "This tense keeps the reader engaged with the unfolding events."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:53Z"
+    },
+    {
+      "id": "d4e8b1a2-8d3f-4b9e-8f3e-0c5b8a3b8f3d",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "Identify the sentence with a tense-related error among the following:",
+      "question_hindi": "निम्नलिखित वाक्यों में से काल सम्बन्धी अशुद्धि वाले वाक्य को पहचानिए:",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "I went to Jaipur yesterday and returned home today.",
+        "He has taken the exam yesterday and the result will come tomorrow.",
+        "He was ill for the entire last week, but now he is healthy.",
+        "If you had come on time, we would have all gone together."
+      ],
+      "options_hindi": [
+        "मैं कल जयपुर गया था और आज ही घर वापस लौटा हूँ।",
+        "उसने कल परीक्षा दी है और परिणाम कल आएगा।",
+        "वह पिछले पूरे सप्ताह बीमार था, पर अब स्वस्थ है।",
+        "यदि तुम समय पर आते, तो हम सब साथ चलते।"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The sentence 'He has taken the exam yesterday and the result will come tomorrow.' contains a tense-related error. The word 'yesterday' indicates a past time, which should be paired with a simple past tense verb 'took' instead of the present perfect 'has taken'. Therefore, the correct form should be 'He took the exam yesterday and the result will come tomorrow.' This makes the sentence grammatically incorrect.",
+      "explanation_hindi": "उसने कल परीक्षा दी है और परिणाम कल आएगा। वाक्य में काल सम्बन्धी अशुद्धि विद्यमान है। बीता हुआ कालबिं दु ('कल') सामान्य भूतकाल को सूचित करता है, जिसके साथ आसन्न भूतकाल की क्रिया 'दी है' का प्रयोग व्याकरणिक दृष्टि से अनुचित माना जाता है। इसके स्थान पर सामान्य भूतकाल की क्रिया \"दी\" का प्रयोग होना चाहिए था (जैसे: \"उसने कल परीक्षा दी और परिणाम कल आएगा\")। अतः यह वाक्य व्याकरणिक दृष्टि से अशुद्ध है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Past time indicators require past tense verbs.",
+        "Present perfect tense is not suitable for past events.",
+        "Correct tense usage is essential for clarity."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:02Z"
+    },
+    {
+      "id": "f1e4e1c7-7f3c-4c5f-9f1f-1a1e8e8c1b8d",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "The boy has drunk milk. The imminent past tense indicates that the action has started in the past and has just been completed right before the present time. When a transitive sentence in the simple present tense is transformed into the imminent past tense, the subject is accompanied by the postposition 'ने' and the verb takes the past tense root along with the present tense auxiliary verb 'है', forming a pure structure.",
+      "question_hindi": "बालक ने दूध पिया है। आसन्न भूतकाल में यह दर्शाया जाता है कि कार्य अतीत में प्रारम्भ होकर वर्तमान समय से ठीक पहले या अभी-अभी समाप्त हुआ है। जब सामान्य वर्तमान काल के सकर्मक वाक्य को आसन्न भूतकाल में रूपांतरित किया जाता है, तो कर्ता के साथ 'ने' परसर्ग जुड़ता है तथा क्रिया भूतकालिक धातु के साथ वर्तमानकालिक सहायक क्रिया 'है' से युक्त होकर शुद्ध रूप धारण करती है।",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Correct",
+        "Incorrect",
+        "Not Applicable",
+        "Uncertain"
+      ],
+      "options_hindi": [
+        "सही",
+        "गलत",
+        "अप्रासंगिक",
+        "अनिश्चित"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct option is 'A' because the sentence correctly illustrates the imminent past tense structure, where the action has just been completed. The use of 'ने' with the subject and the auxiliary verb 'है' with the past tense root is appropriate. Other options do not apply as they do not reflect the grammatical structure discussed.",
+      "explanation_hindi": "सही विकल्प 'A' है क्योंकि वाक्य आसन्न भूतकाल की संरचना को सही ढंग से दर्शाता है, जहाँ कार्य अभी-अभी समाप्त हुआ है। कर्ता के साथ 'ने' का प्रयोग और भूतकालिक धातु के साथ 'है' का सहायक क्रिया के रूप में उपयोग उचित है। अन्य विकल्प लागू नहीं होते क्योंकि वे चर्चा की गई व्याकरणिक संरचना को नहीं दर्शाते।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Imminent past tense indicates actions completed just before the present.",
+        "The subject takes 'ने' and the verb combines with 'है'.",
+        "Transitive sentences in present tense transform into imminent past correctly.",
+        "Understanding tense transformations is crucial for grammatical accuracy."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:30:01Z"
+    },
+    {
+      "id": "f7g8h9i0-j1k2-l3m4-n5o6-p7q8r9s0t1u2",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "What tense distinction is indicated by the use of 'ता/ती/ते' suffix with 'है/हूँ/हैं' in the structure of present tense verbs?",
+      "question_hindi": "वर्तमान काल की क्रिया-रचना में 'ता/ती/ते' प्रत्यय के साथ 'है/हूँ/हैं' का प्रयोग किस काल-भेद का लक्षण है?",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Imperfect Present Tense",
+        "Doubtful Present Tense",
+        "Probable Present Tense",
+        "General Present Tense"
+      ],
+      "options_hindi": [
+        "अपूर्ण वर्तमान काल",
+        "संदिग्ध वर्तमान काल",
+        "सम्भाव्य वर्तमान काल",
+        "सामान्य वर्तमान काल"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The use of 'ता/ती/ते' with 'है/हूँ/हैं' indicates the General Present Tense, which describes actions that are currently happening or are habitual. The other options do not accurately describe this structure.",
+      "explanation_hindi": "यहाँ 'ता/ती/ते' के साथ 'है/हूँ/हैं' का प्रयोग सामान्य वर्तमान काल को दर्शाता है, जो वर्तमान में हो रही या नियमित क्रियाओं का वर्णन करता है। अन्य विकल्प इस संरचना का सही वर्णन नहीं करते हैं।",
+      "difficulty": "medium",
+      "key_facts": [
+        "General Present Tense describes ongoing or habitual actions.",
+        "The suffixes 'ता/ती/ते' are key indicators of this tense.",
+        "Understanding verb structures is essential for tense identification."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:02Z"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "Identify the tense used in the administrative and office Hindi sentence \"The decision will be taken on time.\"",
+      "question_hindi": "प्रशासनिक एवं कार्यालयी हिन्दी के वाक्य \"निर्णय यथासमय लिया जाएगा।\" में प्रयुक्त काल-रूप की पहचान कीजिए:",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "General Future Tense (Passive Voice)",
+        "Probable Future Tense (Active Voice)",
+        "Causal Future Tense (Passive Voice)",
+        "General Present Tense (Impersonal Voice)"
+      ],
+      "options_hindi": [
+        "सामान्य भविष्यकाल (कर्मवाच्य)",
+        "सम्भाव्य भविष्यकाल (कर्तृवाच्य)",
+        "हेतुहेतुमद् भविष्यकाल (कर्मवाच्य)",
+        "सामान्य वर्तमान काल (भाववाच्य)"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "General Future Tense (Passive Voice). The verb 'will be taken' in the sentence indicates that the action will be completed in the upcoming general time (future). Additionally, the structure of the sentence is in the passive voice, where the action ('decision') is emphasized and the doer is omitted. Therefore, this sentence accurately represents the general future tense in a passive voice structure.",
+      "explanation_hindi": "सामान्य भविष्यकाल (कर्मवाच्य)। कार्यालयी हिन्दी के वाक्य में क्रिया 'लिया जाएगा' से यह स्पष्ट है कि कार्य आने वाले सामान्य समय (भविष्य) में संपन्न होगा। साथ ही वाक्य की संरचना कर्मवाच्य में है, जहाँ कर्म ('निर्णय') प्रधान है और कर्ता लुप्त है। अतः यह वाक्य सामान्य भविष्यकाल और कर्मवाच्य संरचना का एक सटीक एवं मानक व्याकरणिक रूप प्रस्तु करने का कार्य करता है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Future tense indicates actions that will occur.",
+        "Passive voice emphasizes the action rather than the doer.",
+        "Administrative Hindi often uses formal structures."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:53Z"
+    },
+    {
+      "id": "k8l9m0n1-o2p3-q4r5-s6t7-u8v9w0x1y2z3",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "\"The postman must have delivered the letter.\" — Which tense is associated with the verb in this sentence?",
+      "question_hindi": "\"डाकिया पत्र दे चुका होगा।\" — इस वाक्य की क्रिया किस काल से सम्बद्ध है?",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Dubious Past Tense",
+        "Dubious Present Tense",
+        "Probable Future Tense",
+        "Causal Past Tense"
+      ],
+      "options_hindi": [
+        "संदिग्ध भूतकाल",
+        "संदिग्ध वर्तमान काल",
+        "सम्भाव्य भविष्यकाल",
+        "हेतुहेतुमद् भूतकाल"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Dubious Past Tense indicates uncertainty or doubt about the completion of an action in the past. The structure of this tense combines past verbs or participles with auxiliary forms like 'होगा, होगी, होंगे'. Here, it expresses uncertainty about whether the action of delivering the letter was completed in the past.",
+      "explanation_hindi": "संदिग्ध भूतकाल क्रिया के जिस रूप से अतीत में कार्य के पूर्ण होने में संदेह या अनिश्चय का बोध होता है, उसे संदिग्ध भूतकाल कहा जाता है। इस काल की क्रिया-संरचना में भूतकालिक क्रिया या कृदंत के साथ 'होगा, होगी, होंगे' जैसे सहायक क्रिया-रूप संयोजित किए जाते हैं। यहाँ पत्र देने का कार्य अतीत में संपन्न हुआ या नहीं, इस विषय में अनुमानित संदेह प्रकट किया जा रहा है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Dubious Past Tense indicates uncertainty about past actions.",
+        "Uses auxiliary forms like 'होगा, होगी, होंगे'.",
+        "Expresses doubt regarding the completion of the action."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:30:01Z"
+    },
+    {
+      "id": "d1e2f3a4-b5c6-7d8e-9f0a-b1c2d3e4f5g6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "Which of the following pairs is correctly matched?",
+      "question_hindi": "निम्नलिखित में से कौन-सा युग्म सही सुमेलित है?",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Complete past - He must have bought a book from the market.",
+        "Causal past - It might rain heavily this evening.",
+        "Immediate past - Ram had killed Ravana in the war.",
+        "Dubious present tense - Mother must be cooking at home."
+      ],
+      "options_hindi": [
+        "पूर्ण भूतकाल - उसने बाज़ार से पुस्तक खरीदी होगी।",
+        "हेतुहेतुमद् भूतकाल - शायद आज शाम को तीव्र वर्षा होगी।",
+        "आसन्न भूतकाल - राम ने युद्ध में रावण का वध किया था।",
+        "संदिग्ध वर्तमान काल - माता जी घर पर खाना बना रही होंगी।"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The correct option is D because it accurately describes the dubious present tense, indicating an ongoing action that is uncertain. The other options incorrectly match the tenses with their respective descriptions.",
+      "explanation_hindi": "सही विकल्प D है क्योंकि यह संदिग्ध वर्तमान काल का सही वर्णन करता है, जो एक अनिश्चित चल रही क्रिया को दर्शाता है। अन्य विकल्प अपने-अपने वर्णनों के साथ कालों का गलत मेल करते हैं।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Understanding the nuances of different tenses is crucial.",
+        "Correct matching of tense with its description is essential for clarity.",
+        "Dubious present tense indicates uncertainty in ongoing actions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:02Z"
+    },
+    {
+      "id": "d5f3b1a8-7f3e-4b8e-9c4d-3f4c7c5c1e1e",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "According to which criterion is the tense of the verb in 'Karmavachya' determined?",
+      "question_hindi": "\"कर्मवाच्य\" की क्रिया का काल-निर्धारण किसके अनुसार होता है?",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Primarily according to the tense perception of the subject",
+        "According to the tense forms of the auxiliary and main verb",
+        "According to the verb always being in the future tense",
+        "It is not possible to determine the tense in Karmavachya sentences"
+      ],
+      "options_hindi": [
+        "मुख्य रूप से केवल कर्ता के काल-बोध के अनुसार",
+        "सहायक एवं मुख्य क्रिया के काल-रूप के अनुसार",
+        "क्रिया के सर्वदा केवल भविष्यकाल में होने के अनुसार",
+        "कर्मवाच्य के वाक्यों में काल का निर्धारण सम्भव नहीं"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The tense of the verb in Karmavachya sentences is determined according to the tense forms of the auxiliary and main verb. Although the gender and number of the verb are determined according to the object, the tense is determined by the form of the main verb and the auxiliary verb used with it. For example, in 'पत्र लिखा जाता है', the auxiliary verb determines the tense.",
+      "explanation_hindi": "सहायक एवं मुख्य क्रिया के काल-रूप के अनुसार कर्मवाच्य के वाक्यों में क्रिया का लिं ग और वचन यद्यपि कर्म पद के अनुसार निर्धारित होता है, परन्तु क्रिया के काल का निर्धारण मुख्य क्रिया के कृदंत रूप और उसके साथ प्रयुक्त होने वाली 'जाना' रंजक क्रिया तथा सहायक क्रिया के काल-रूप के अनुसार किया जाता है। जैसे \"पत्र लिखा जाता है\" में सहायक क्रिया काल को तय करती है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Karmavachya sentences depend on auxiliary and main verb tenses.",
+        "Gender and number are determined by the object.",
+        "Tense is influenced by the main verb's form.",
+        "Example: 'पत्र लिखा जाता है' shows auxiliary verb's role."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:53Z"
+    },
+    {
+      "id": "t7u8v9w0-x1y2-z3a4-b5c6-d7e8f9g0h1i2",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "What is the main basis for differentiating between 'immediate past' and 'perfect past'?",
+      "question_hindi": "'आसन्न भूतकाल' और 'पूर्ण भूतकाल' के मध्य मुख्य अं तर किस आधार पर किया जाता है?",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Based on the proximity or distance of the action from the present time",
+        "Based on whether the verb used is intransitive or transitive",
+        "Based on the presence or absence of the postposition 'ने' in the subject",
+        "Based on the structure of the sentence being simple, compound, or mixed"
+      ],
+      "options_hindi": [
+        "वर्तमान समय से क्रिया की समीपता अथवा सुदूरता के आधार पर",
+        "वाक्य में प्रयुक्त क्रिया के केवल अकर्मक या सकर्मक होने के आधार पर",
+        "कर्ता पद में 'ने' परसर्ग की उपस्थिति या अनुपस्थिति के आधार पर",
+        "वाक्य की संरचना के सरल, संयुक्त अथवा मिश्रित होने के आधार पर"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The main basis for differentiating between immediate past and perfect past is the proximity or distance of the action from the present time. Immediate past indicates that the action has just been completed or is very close to the present time, while perfect past indicates that the action was completed a long time ago in the distant past.",
+      "explanation_hindi": "वर्तमान समय से क्रिया की समीपता अथवा सुदूरता के आधार पर\nआसन्न भूतकाल और पूर्ण भूतकाल में मुख्य अं तर क्रिया के संपन्न होने के समय की वर्तमान से दूरी के आधार पर किया जाता है। आसन्न भूतकाल यह व्यक्त करता है कि कार्य वर्तमान समय के बिल्कु ल निकट या अभी-अभी समाप्त हुआ है (जैसे— आया है)। इसके विपरीत, पूर्ण भूतकाल यह दर्शाता है कि कार्य बहुत समय पूर्व सुदूर अतीत में ही पूर्ण हो चुका था।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Immediate past indicates actions completed very recently.",
+        "Perfect past indicates actions completed long ago.",
+        "Understanding the nuances of tense is essential for clarity."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:02Z"
+    },
+    {
+      "id": "f1e9c0b6-1f3f-4b7f-8f8c-3f4c6e8b8b5d",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "Choose the correct tense used in the sentence: \"Rohan must be traveling by train at this time.\"",
+      "question_hindi": "\"रोहन इस समय ट्रेन में यात्रा कर रहा होगा।\" — वाक्य में प्रयुक्त काल का सही भेद चुनिए:",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Probable Future Tense",
+        "Dubious Past Tense",
+        "Dubious Present Tense",
+        "Simple Present Tense"
+      ],
+      "options_hindi": [
+        "सम्भाव्य भविष्यकाल",
+        "संदिग्ध भूतकाल",
+        "संदिग्ध वर्तमान काल",
+        "सामान्य वर्तमान काल"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "The correct answer is Dubious Present Tense. This tense indicates uncertainty or doubt about an action occurring in the present time. The phrase 'रहा होगा' suggests that there is an assumption about the action of traveling, but there is a clear lack of certainty regarding it.",
+      "explanation_hindi": "संदिग्ध वर्तमान काल। क्रिया के जिस रूप से वर्तमान समय में कार्य के होने या करने में संदेह या अनिश्चय का बोध हो, उसे संदिग्ध वर्तमान काल कहते हैं। इस प्रकार की वाक्य-संरचना में 'रहा होगा', 'रही होगी' या 'रहे होंगे' जैसी क्रियात्मक शब्दावली का प्रयोग किया जाता है। यहाँ वर्तमान समय में यात्रा करने की स्थिति का अनुमान तो लगाया जा रहा है, किन्तु निश्चितता का अभाव स्पष्ट रूप से दिखाई देता है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Dubious Present Tense indicates uncertainty.",
+        "Used with phrases like 'रहा होगा'.",
+        "Reflects an assumption about present actions."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:30:01Z"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "Which of the following sentences contains a tense-related error?",
+      "question_hindi": "निम्नलिखित में से किस वाक्य में काल-सम्बन्धी अशुद्धि है?",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "I came to your house yesterday, but you were not there.",
+        "Ram said that he will not come today.",
+        "He will go to Kolkata next Sunday.",
+        "If you had called, he would have definitely come."
+      ],
+      "options_hindi": [
+        "मैं कल आपके घर आया था, किंतु आप नहीं मिले।",
+        "राम ने कहा कि वह आज नहीं आवेगा।",
+        "वह अगले रविवार को कोलकाता जाएगा।",
+        "यदि तुम बुलाते, तो वह अवश्य आता।"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The correct option is B because the sentence 'Ram said that he will not come today' contains a tense inconsistency; it uses future tense ('will not come') instead of the past tense that should align with the reporting verb 'said'. Options A, C, and D are correctly structured in terms of tense.",
+      "explanation_hindi": "सही विकल्प B है क्योंकि वाक्य 'राम ने कहा कि वह आज नहीं आवेगा' में काल की असंगति है; इसमें भविष्यकाल ('नहीं आवेगा') का प्रयोग किया गया है जबकि यह 'कहा' क्रिया के साथ भूतकाल में होना चाहिए। विकल्प A, C, और D काल के संदर्भ में सही संरचना में हैं।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Tense consistency is crucial in reported speech.",
+        "Past tense should align with the reporting verb.",
+        "Future tense cannot be used when the reporting verb is in the past."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:53Z"
+    },
+    {
+      "id": "c3d4e5f6-g7h8-9i0j-k1l2-m3n4o5p6q7r8",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "Both A and R are true, and R is the correct interpretation of A. The inability to execute an action in the past tense or to fail is expressed because the fundamental characteristic of this tense is that the occurrence of the action depends on a prior condition in the past that was not fulfilled in time. The causal statement (R) completely clarifies the grammatical and logical reasons for the failure of the assertion (A). Therefore, both statements are true.",
+      "question_hindi": "A और R दोनों सत्य हैं तथा R, A की सही व्याख्या है। हेतुहेतुमद् भूतकाल में कार्य का निष्पादित न हो पाना या असफल रहना व्यक्त होता है, क्योंकि इस काल की मूल विशेषता यह है कि कार्य का होना अतीत की किसी ऐसी पूर्व शर्त पर निर्भर करता है जो समय पर पूरी नहीं हो सकी। कारण कथन (R) अभिकथन (A) की असफलता के मूल व्याकरणिक एवं तार्कि क कारण को पूरी तरह स्पष्ट करता है। अतः दोनों कथन सत्य हैं।",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "True",
+        "False",
+        "Cannot be determined",
+        "None of the above"
+      ],
+      "options_hindi": [
+        "सत्य",
+        "असत्य",
+        "निर्धारित नहीं किया जा सकता",
+        "उपर्युक्त में से कोई नहीं"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct option is A because both statements A and R are logically consistent and true. The explanation provided clarifies the grammatical structure of the past tense and its relationship with the conditions that were not fulfilled, which supports the truth of both statements. Options B, C, and D do not accurately reflect the relationship between the statements.",
+      "explanation_hindi": "सही विकल्प A है क्योंकि दोनों कथन A और R तार्किक रूप से संगत और सत्य हैं। प्रदान की गई व्याख्या भूतकाल की व्याकरणिक संरचना और उन शर्तों के साथ इसके संबंध को स्पष्ट करती है जो पूरी नहीं हुईं, जो दोनों कथनों की सत्यता का समर्थन करती है। विकल्प B, C, और D कथनों के बीच संबंध को सही ढंग से नहीं दर्शाते हैं।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Past tense indicates actions dependent on prior conditions.",
+        "Inability to execute an action reflects failure.",
+        "Logical consistency between statements A and R.",
+        "Grammatical structure supports the truth of both statements."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:30:01Z"
+    },
+    {
+      "id": "f2g3h4i5-6j7k-8l9m-n0o1-p2q3r4s5t6u7",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "What is the fundamental difference in tense between the sentences 'He must have eaten food.' and 'Perhaps he will eat food.'?",
+      "question_hindi": "\"उसने खाना खाया होगा।\" और \"शायद वह खाना खाए।\" — इन दोनों वाक्यों के काल में मूल अंतर क्या है?",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "The first is a doubtful present tense and the second is a possible past tense.",
+        "The first is a doubtful past tense and the second is a possible future tense.",
+        "The first is a possible future tense and the second is a doubtful past tense.",
+        "Both sentences are in the doubtful present tense."
+      ],
+      "options_hindi": [
+        "प्रथम संदिग्ध वर्तमान काल है तथा द्वितीय सम्भाव्य भूतकाल है।",
+        "प्रथम संदिग्ध भूतकाल है तथा द्वितीय सम्भाव्य भविष्यकाल है।",
+        "प्रथम सम्भाव्य भविष्यकाल है तथा द्वितीय संदिग्ध भूतकाल है।",
+        "दोनों वाक्य संदिग्ध वर्तमान काल के हैं।"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The first is a doubtful past tense and the second is a possible future tense. In the sentence 'उसने खाना खाया होगा', doubt is expressed regarding the completion of an action in the past, making it a doubtful past tense. Conversely, in 'शायद वह खाना खाए', only the possibility of the action occurring in the future is indicated, thus it is an example of a possible future tense. There is a temporal distinction between the two sentences.",
+      "explanation_hindi": "प्रथम संदिग्ध भूतकाल है तथा द्वितीय सम्भाव्य भविष्यकाल है। \"उसने खाना खाया होगा\" वाक्य में अतीत में निष्पादित क्रिया के सम्पादन पर संदेह व्यक्त किया गया है, इसलिए यह संदिग्ध भूतकाल का रूप है। इसके विपरीत, \"शायद वह खाना खाए\" वाक्य में आने वाले समय में क्रिया के घटित होने की केवल संभावना प्रकट की गई है, अतः यह सम्भाव्य भविष्यकाल का उदाहरण है। दोनों वाक्यों में समय-बिंदु का अंतर है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Doubtful past tense indicates uncertainty about past actions.",
+        "Possible future tense expresses likelihood of future actions.",
+        "Understanding tense differences is crucial for accurate communication."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:02Z"
+    },
+    {
+      "id": "a1b2c3d4-5e6f-7g8h-9i0j-k1l2m3n4o5p6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "What will be the sentence when the statement 'The gardener is watering the plants.' is converted into the simple future tense?",
+      "question_hindi": "\"माली पौधों को पानी दे रहा है।\" वाक्य को सामान्य भविष्यकाल में रूपांतरित करने पर प्राप्त वाक्य होगा:",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Perhaps the gardener waters the plants.",
+        "The gardener will water the plants.",
+        "The gardener must have watered the plants.",
+        "If the gardener came, he would water the plants."
+      ],
+      "options_hindi": [
+        "शायद माली पौधों को पानी दे।",
+        "माली पौधों को पानी देगा।",
+        "माली पौधों को पानी दे चुका होगा।",
+        "यदि माली आता, तो पौधों को पानी देता।"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The correct transformation of the present continuous tense 'is watering' into the simple future tense is 'will water'. In simple future tense, the verb form should indicate the action that will take place in the future. The suffix 'एगा' is added to the verb root, thus 'दे रहा है' transforms into 'देगा', resulting in a grammatically correct sentence.",
+      "explanation_hindi": "माली पौधों को पानी देगा।\nअपूर्ण वर्तमान काल के वाक्य को जब सामान्य भविष्यकाल में रूपांतरित किया जाता है, तो क्रिया का रूप ऐसा बनना चाहिए जो आने वाले सामान्य समय में कार्य के निष्पादन को दर्शाए। सामान्य भविष्यकाल में धातु के साथ 'एगा' प्रत्यय जुड़ता है। अतः 'दे रहा है' का सामान्य भविष्यकालिक रूप 'देगा' बनकर शुद्ध वाक्य रूप निर्मित एवं प्राप्त होता है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "The simple future tense indicates actions that will occur.",
+        "The suffix 'एगा' is used for future tense verbs.",
+        "Transforming present continuous to future tense requires changing the verb form."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:53Z"
+    },
+    {
+      "id": "a1b2c3d4-5e6f-7g8h-9i0j-k1l2m3n4o5p6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General Hindi",
+      "topic": "Kaal",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Kaal",
+      "question_english": "Match List I with List II:\nList I\nP. Simple present tense\nQ. Imperfect present tense\nR. Perfect past tense\nS. Probable future tense\nList II\nI. has been / is\nII. was / were + verb\nIII. is / are\nIV. perhaps + will",
+      "question_hindi": "List I को List II से सुमेलित कीजिए:\nList I\nP. सामान्य वर्तमान काल\nQ. अपूर्ण वर्तमान काल\nR. पूर्ण भूतकाल\nS. सम्भाव्य भविष्यकाल\nList II\nI. रहा है / रही है\nII. आ/ई/ए + था/थी/थे\nIII. ता है / ती है\nIV. शायद + एँ /एगा",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "P-III, Q-I, R-II, S-IV",
+        "P-I, Q-III, R-IV, S-II",
+        "P-III, Q-II, R-I, S-IV",
+        "P-IV, Q-I, R-II, S-III"
+      ],
+      "options_hindi": [
+        "P-III, Q-I, R-II, S-IV",
+        "P-I, Q-III, R-IV, S-II",
+        "P-III, Q-II, R-I, S-IV",
+        "P-IV, Q-I, R-II, S-III"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct option is 'P-III, Q-I, R-II, S-IV' as it correctly matches the tenses with their respective forms. The other options do not accurately reflect the correct tense associations as outlined in the question.",
+      "explanation_hindi": "सही विकल्प 'P-III, Q-I, R-II, S-IV' है क्योंकि यह कालों को उनके संबंधित रूपों के साथ सही ढंग से मिलाता है। अन्य विकल्प प्रश्न में दिए गए सही काल संघों को सही ढंग से नहीं दर्शाते।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Simple present tense is indicated by 'is/are'.",
+        "Imperfect present tense uses 'has been'.",
+        "Perfect past tense is formed with 'was/were + verb'.",
+        "Probable future tense uses 'perhaps + will'."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-29T16:31:02Z"
+    }
+  ]
+}
