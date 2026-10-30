@@ -340,8 +340,6 @@ export default function ProgressScreen() {
       .sort((a, b) => b.attempted - a.attempted);
   }, [filteredHistory]);
 
-  };
-
   const getRecentTestsData = () => {
     const recent = filteredHistory.slice(0, 7).reverse();
     return {
@@ -883,13 +881,6 @@ const styles = StyleSheet.create({
     color: '#666',
     textAlign: 'center',
     paddingHorizontal: 20,
-  },
-  statCard: {
-    flex: 1,
-    minWidth: '45%',
-    borderRadius: 12,
-    overflow: 'hidden',
-    marginBottom: 8,
   },
   statGradient: {
     padding: 16,
