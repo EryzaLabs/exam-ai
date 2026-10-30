@@ -331,9 +331,12 @@ class SSCCGLService {
     };
     (mockTest as any).filename = filename || (paper as any).filename;
 
-    this.papers.set(mockTest.id, mockTest);
-    if (filename) {
-      this.papers.set(filename, mockTest);
+    // Only cache if the paper actually has questions, preventing empty metadata stubs from poisoning memory
+    if (parsedQuestions.length > 0) {
+      this.papers.set(mockTest.id, mockTest);
+      if (filename) {
+        this.papers.set(filename, mockTest);
+      }
     }
     return mockTest;
   }

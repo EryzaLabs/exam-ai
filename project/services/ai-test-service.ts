@@ -88,6 +88,32 @@ class AiTestService {
    * Register the generated AI paper into active memory so mock test engine starts immediately
    */
   async prepareAndCachePaper(paperData: any, filename?: string): Promise<ParsedMockTest> {
+    const rawQuestions = paperData?.questions || paperData?.data?.questions;
+    if (Array.isArray(rawQuestions) && rawQuestions.length > 0) {
+      return SSCCGLService.loadPaper(paperData, undefined, filename);
+    }
+
+    // If paperData lacks questions, fetch full paper content from server
+    if (filename) {
+      try {
+        return await SSCCGLService.fetchPaper(filename);
+      } catch (e) {
+        console.warn('prepareAndCachePaper: fetchPaper by filename failed:', e);
+      }
+    }
+
+    const testId = paperData?.test_id || paperData?.id;
+    if (testId) {
+      try {
+        const fetched = await SSCCGLService.fetchPaperById(testId);
+        if (fetched && fetched.sections.some(s => s.questions.length > 0)) {
+          return fetched;
+        }
+      } catch (e) {
+        console.warn('prepareAndCachePaper: fetchPaperById failed:', e);
+      }
+    }
+
     return SSCCGLService.loadPaper(paperData, undefined, filename);
   }
 }

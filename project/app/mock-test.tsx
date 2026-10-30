@@ -190,9 +190,10 @@ export default function MockTestScreen() {
       }
 
       let paper = SSCCGLService.getPaper(testId);
+      const hasQuestions = (p: any) => p && Array.isArray(p.sections) && p.sections.some((s: any) => Array.isArray(s.questions) && s.questions.length > 0);
 
-      // If paper is not loaded in memory yet (e.g. fresh reload or direct resume), retrieve it
-      if (!paper) {
+      // If paper is not loaded in memory yet or has 0 questions, retrieve it
+      if (!paper || !hasQuestions(paper)) {
         let cachedPaper = await TestSeriesService.getTestPaperFromCache(testId);
 
         if (!cachedPaper) {
@@ -204,13 +205,18 @@ export default function MockTestScreen() {
           paper = SSCCGLService.getPaper(testId);
         }
 
-        if (!paper) {
+        if (!paper || !hasQuestions(paper)) {
           const targetFilename = (params.filename as string) || savedState?.filename;
           if (targetFilename) {
-            paper = await SSCCGLService.fetchPaper(targetFilename);
-          } else {
+            try {
+              paper = await SSCCGLService.fetchPaper(targetFilename);
+            } catch (err) {
+              console.warn('mock-test: fetchPaper by targetFilename failed:', err);
+            }
+          }
+          if (!paper || !hasQuestions(paper)) {
             paper = await SSCCGLService.fetchPaperById(testId);
-            if (!paper) {
+            if (!paper || !hasQuestions(paper)) {
               const papers = await SSCCGLService.fetchPapersList();
               const paperInfo = papers.find((p: any) => p.id === testId || p.testId === testId);
               if (paperInfo && paperInfo.filename) {
@@ -221,8 +227,8 @@ export default function MockTestScreen() {
         }
       }
 
-      if (!paper) {
-        Alert.alert('Error', 'Test paper could not be loaded');
+      if (!paper || !hasQuestions(paper)) {
+        Alert.alert('Error', 'Test paper could not be loaded or has no questions');
         router.back();
         return;
       }

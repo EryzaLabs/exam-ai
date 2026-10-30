@@ -245,12 +245,7 @@ router.get('/status/:jobId', (req: Request, res: Response) => {
     error: job.error,
     testId: job.testId,
     filename: job.filename,
-    paper: job.paper ? {
-      test_id: job.paper.test_id,
-      test_name: job.paper.test_name,
-      total_questions: job.paper.questions?.length,
-      duration: job.paper.duration,
-    } : undefined,
+    paper: job.paper || undefined,
   });
 });
 
