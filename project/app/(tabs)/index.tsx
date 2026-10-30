@@ -14,6 +14,7 @@ import { TestProgressService } from '@/services/test-progress-service';
 import PaperService from '@/services/paper-service';
 import { auth } from '@/services/firebaseConfig';
 import { useAuth } from '@/context/auth-context';
+import { extractTestTopicAndSubject } from '@/utils/topic-resolver';
 
 interface DashboardStats {
   questionsAttempted: number;
@@ -86,35 +87,88 @@ export default function EnhancedHomeScreen() {
       };
 
       let timeSpentSeconds = 0;
-      let topics: Record<string, any> = {};
       let totalQuestionsAttempted = 0;
       let totalCorrectAnswers = 0;
-      
-      history.forEach(test => {
-          timeSpentSeconds += test.timeTaken || 0;
-          if (test.sectionAnalytics) {
-              test.sectionAnalytics.forEach(sec => {
-                  totalQuestionsAttempted += sec.attempted || 0;
-                  totalCorrectAnswers += sec.correct || 0;
 
-                  if (!topics[sec.sectionTitle]) {
-                      topics[sec.sectionTitle] = { attempted: 0, correct: 0 };
-                  }
-                  topics[sec.sectionTitle].attempted += sec.attempted || 0;
-                  topics[sec.sectionTitle].correct += sec.correct || 0;
-              });
+      const topicWiseMap: Record<string, { topic: string; subject: string; attempted: number; correct: number }> = {};
+      const subjectWiseMap: Record<string, { subject: string; attempted: number; correct: number }> = {};
+
+      history.forEach(test => {
+        timeSpentSeconds += test.timeTaken || 0;
+        const resolved = extractTestTopicAndSubject(test);
+
+        let testAttempted = 0;
+        let testCorrect = 0;
+
+        if (test.sectionAnalytics && test.sectionAnalytics.length > 0) {
+          test.sectionAnalytics.forEach(sec => {
+            testAttempted += sec.attempted || 0;
+            testCorrect += sec.correct || 0;
+          });
+        } else if ((test as any).answers && Array.isArray((test as any).answers)) {
+          testAttempted = (test as any).answers.length;
+          testCorrect = (test as any).answers.filter((a: any) => a.isCorrect).length;
+        } else {
+          testAttempted = (test as any).totalQuestions || (test as any).questionsAttempted || 0;
+          if (test.accuracy !== undefined) {
+            testCorrect = Math.round((testAttempted * test.accuracy) / 100);
           }
-      });
-      
-      const subjectWisePerformance: Record<string, any> = {};
-      let masteredTopics = 0;
-      Object.keys(topics).forEach(key => {
-          const acc = topics[key].attempted > 0 ? (topics[key].correct / topics[key].attempted) * 100 : 0;
-          if (acc > 80) masteredTopics++;
-          subjectWisePerformance[key] = {
-              subject: key,
-              accuracy: acc,
+        }
+
+        totalQuestionsAttempted += testAttempted;
+        totalCorrectAnswers += testCorrect;
+
+        // Group by Topic
+        const topicKey = resolved.topic;
+        if (!topicWiseMap[topicKey]) {
+          topicWiseMap[topicKey] = {
+            topic: topicKey,
+            subject: resolved.subject,
+            attempted: 0,
+            correct: 0,
           };
+        }
+        topicWiseMap[topicKey].attempted += testAttempted;
+        topicWiseMap[topicKey].correct += testCorrect;
+
+        // Group by Subject Category
+        const subjectKey = resolved.subject;
+        if (!subjectWiseMap[subjectKey]) {
+          subjectWiseMap[subjectKey] = {
+            subject: subjectKey,
+            attempted: 0,
+            correct: 0,
+          };
+        }
+        subjectWiseMap[subjectKey].attempted += testAttempted;
+        subjectWiseMap[subjectKey].correct += testCorrect;
+      });
+
+      const topicWisePerformance: Record<string, any> = {};
+      let masteredTopics = 0;
+      Object.keys(topicWiseMap).forEach(key => {
+        const item = topicWiseMap[key];
+        const acc = item.attempted > 0 ? (item.correct / item.attempted) * 100 : 0;
+        if (acc >= 75) masteredTopics++;
+        topicWisePerformance[key] = {
+          topic: item.topic,
+          subject: item.subject,
+          attempted: item.attempted,
+          correct: item.correct,
+          accuracy: acc,
+        };
+      });
+
+      const subjectWisePerformance: Record<string, any> = {};
+      Object.keys(subjectWiseMap).forEach(key => {
+        const item = subjectWiseMap[key];
+        const acc = item.attempted > 0 ? (item.correct / item.attempted) * 100 : 0;
+        subjectWisePerformance[key] = {
+          subject: item.subject,
+          attempted: item.attempted,
+          correct: item.correct,
+          accuracy: acc,
+        };
       });
 
       const overallAccuracy = totalQuestionsAttempted > 0 ? (totalCorrectAnswers / totalQuestionsAttempted) * 100 : 0;
@@ -168,7 +222,7 @@ export default function EnhancedHomeScreen() {
           streak: currentStreak,
           rank: calculateRank(overallAccuracy),
           weeklyImprovement: 0,
-          totalTopics: Object.keys(topics).length,
+          totalTopics: Object.keys(topicWiseMap).length,
           masteredTopics,
           userName: profile?.displayName || user.displayName || (user.email ? user.email.split('@')[0] : undefined),
           photoURL: profile?.photoURL || user.photoURL || null,
@@ -178,6 +232,7 @@ export default function EnhancedHomeScreen() {
       });
 
       setPerformance({
+          topicWisePerformance,
           subjectWisePerformance,
           recentTests: history.map(h => ({
               id: h.attemptId,

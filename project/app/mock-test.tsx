@@ -61,6 +61,7 @@ interface QuestionState {
   marked: boolean;
   selectedOption: number | null;
   timeTaken: number;
+  visited?: boolean;
 }
 
 export default function MockTestScreen() {
@@ -92,6 +93,7 @@ export default function MockTestScreen() {
   const [questionStates, setQuestionStates] = useState<Map<string, QuestionState>>(new Map());
   const [timeRemaining, setTimeRemaining] = useState(0);
   const [showQuestionPalette, setShowQuestionPalette] = useState(false);
+  const [paletteFilter, setPaletteFilter] = useState<'all' | 'answered' | 'not-answered' | 'marked' | 'not-visited'>('all');
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
   const [showBackConfirm, setShowBackConfirm] = useState(false);
   const [questionStartTime, setQuestionStartTime] = useState(Date.now());
@@ -331,13 +333,14 @@ export default function MockTestScreen() {
 
       // Initialize question states
       const states = new Map<string, QuestionState>();
-      shuffledPaper.sections.forEach((section) => {
-        section.questions.forEach((q) => {
+      shuffledPaper.sections.forEach((section, sIdx) => {
+        section.questions.forEach((q, qIdx) => {
           states.set(q.id, {
             answered: false,
             marked: false,
             selectedOption: null,
             timeTaken: 0,
+            visited: sIdx === 0 && qIdx === 0,
           });
         });
       });
@@ -548,13 +551,35 @@ export default function MockTestScreen() {
     return questions[currentQuestionIndex] || null;
   };
 
+  // Mark current question as visited whenever it changes
+  useEffect(() => {
+    const q = getCurrentQuestion();
+    if (q) {
+      setQuestionStates((prev) => {
+        const cur = prev.get(q.id);
+        if (!cur || !cur.visited) {
+          const next = new Map(prev);
+          next.set(q.id, {
+            answered: cur?.answered || false,
+            marked: cur?.marked || false,
+            selectedOption: cur?.selectedOption ?? null,
+            timeTaken: cur?.timeTaken || 0,
+            visited: true,
+          });
+          return next;
+        }
+        return prev;
+      });
+    }
+  }, [currentQuestionIndex, test]);
+
   const handleOptionSelect = (optionIndex: number) => {
     if (isSubmitting) return; // Prevent interaction while submitting
     
     const question = getCurrentQuestion();
     if (!question) return;
 
-    const timeTaken = Math.floor((Date.now() - questionStartTime) / 1000);
+    const timeTaken = Math.max(0, Math.floor((Date.now() - questionStartTime) / 1000));
 
     // Update question state
     const newStates = new Map(questionStates);
@@ -563,9 +588,11 @@ export default function MockTestScreen() {
       marked: false,
       selectedOption: null,
       timeTaken: 0,
+      visited: true,
     };
 
     state.answered = true;
+    state.visited = true;
     state.selectedOption = optionIndex;
     state.timeTaken += timeTaken;
     newStates.set(question.id, state);
@@ -596,15 +623,54 @@ export default function MockTestScreen() {
       marked: false,
       selectedOption: null,
       timeTaken: 0,
+      visited: true,
     };
 
     state.marked = !state.marked;
+    state.visited = true;
     newStates.set(question.id, state);
     setQuestionStates(newStates);
   };
 
   const navigateToQuestion = (index: number) => {
-    if (index >= 0 && index < getAllQuestions().length) {
+    const questions = getAllQuestions();
+    if (index >= 0 && index < questions.length) {
+      const curQ = questions[currentQuestionIndex];
+      const timeSpent = Math.max(0, Math.floor((Date.now() - questionStartTime) / 1000));
+      
+      setQuestionStates((prev) => {
+        const next = new Map(prev);
+        if (curQ) {
+          const curState = next.get(curQ.id) || {
+            answered: false,
+            marked: false,
+            selectedOption: null,
+            timeTaken: 0,
+            visited: true,
+          };
+          next.set(curQ.id, {
+            ...curState,
+            visited: true,
+            timeTaken: curState.timeTaken + timeSpent,
+          });
+        }
+        const targetQ = questions[index];
+        if (targetQ) {
+          const targetState = next.get(targetQ.id) || {
+            answered: false,
+            marked: false,
+            selectedOption: null,
+            timeTaken: 0,
+            visited: true,
+          };
+          next.set(targetQ.id, {
+            ...targetState,
+            visited: true,
+          });
+        }
+        return next;
+      });
+
       setCurrentQuestionIndex(index);
       setQuestionStartTime(Date.now());
       setShowQuestionPalette(false);
@@ -663,17 +729,58 @@ export default function MockTestScreen() {
       .padStart(2, '0')}`;
   };
 
+  const getQuestionStatus = (qId: string, globalIdx: number): 'answered' | 'not-answered' | 'marked' | 'answered-marked' | 'not-visited' => {
+    const state = questionStates.get(qId);
+    const isCurrent = globalIdx === currentQuestionIndex;
+    const isVisited = !!state?.visited || isCurrent || (state?.timeTaken ? state.timeTaken > 0 : false) || !!state?.answered || !!state?.marked;
+    const isAnswered = !!state?.answered && state.selectedOption !== null && state.selectedOption !== undefined && state.selectedOption !== -1;
+    const isMarked = !!state?.marked;
+
+    if (isAnswered && isMarked) {
+      return 'answered-marked';
+    }
+    if (isMarked) {
+      return 'marked';
+    }
+    if (isAnswered) {
+      return 'answered';
+    }
+    if (isVisited) {
+      return 'not-answered';
+    }
+    return 'not-visited';
+  };
+
   const getQuestionStats = () => {
     const questions = getAllQuestions();
-    const answered = Array.from(questionStates.values()).filter((s) => s.answered).length;
-    const marked = Array.from(questionStates.values()).filter((s) => s.marked).length;
-    const notVisited = questions.length - answered;
+    let answered = 0;
+    let notAnswered = 0;
+    let marked = 0;
+    let answeredAndMarked = 0;
+    let notVisited = 0;
 
-    return { answered, marked, notVisited, total: questions.length };
+    questions.forEach((q, idx) => {
+      const status = getQuestionStatus(q.id, idx);
+      if (status === 'answered') answered++;
+      else if (status === 'not-answered') notAnswered++;
+      else if (status === 'marked') marked++;
+      else if (status === 'answered-marked') answeredAndMarked++;
+      else if (status === 'not-visited') notVisited++;
+    });
+
+    return {
+      answered,
+      notAnswered,
+      marked,
+      answeredAndMarked,
+      notVisited,
+      total: questions.length,
+    };
   };
 
   const renderQuestionPalette = () => {
     const questions = getAllQuestions();
+    const stats = getQuestionStats();
     let sectionStartIndex = 0;
 
     return (
@@ -683,52 +790,233 @@ export default function MockTestScreen() {
         presentationStyle="pageSheet"
         onRequestClose={() => setShowQuestionPalette(false)}
       >
-        <ResponsiveContainer>
-          <SafeAreaView style={[styles.paletteContainer, { backgroundColor: colors.surface }]}>
+        <ResponsiveContainer maxWidth={680}>
+          <SafeAreaView style={[styles.paletteContainer, { backgroundColor: colors.surface }]} edges={['top', 'bottom']}>
+            {/* Header */}
             <View style={[styles.paletteHeader, { borderBottomColor: colors.border }]}>
-              <Text style={[styles.paletteTitle, { color: colors.textPrimary }]}>Question Palette</Text>
-              <TouchableOpacity
-                style={styles.paletteCloseButton}
-                onPress={() => setShowQuestionPalette(false)}
-              >
-                <X size={24} color={colors.textPrimary} />
-              </TouchableOpacity>
+              <View style={styles.paletteHeaderLeft}>
+                <Text style={[styles.paletteTitle, { color: colors.textPrimary }]}>Question Palette</Text>
+                <Text style={[styles.paletteSubtitle, { color: colors.textSecondary }]} numberOfLines={1}>
+                  {test?.title || 'Mock Test'}
+                </Text>
+              </View>
+              <View style={styles.paletteHeaderRight}>
+                <View style={[styles.paletteTimerBadge, { backgroundColor: isDark ? 'rgba(59,130,246,0.15)' : '#EFF6FF', borderColor: isDark ? '#1E40AF' : '#BFDBFE' }]}>
+                  <Clock size={13} color="#3B82F6" />
+                  <Text style={styles.paletteTimerText}>{formatTime(timeRemaining)}</Text>
+                </View>
+                <TouchableOpacity
+                  style={[styles.paletteCloseButton, { backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9' }]}
+                  onPress={() => setShowQuestionPalette(false)}
+                  hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+                >
+                  <X size={20} color={colors.textPrimary} />
+                </TouchableOpacity>
+              </View>
             </View>
 
-            <ScrollView style={styles.paletteContent}>
-              {test?.sections.map((section, sectionIdx) => {
+            {/* Status Summary Dashboard (Metric Strip) */}
+            <View style={[styles.paletteSummaryContainer, { borderBottomColor: colors.border }]}>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.paletteSummaryScroll}>
+                <TouchableOpacity
+                  style={[
+                    styles.summaryCard,
+                    { backgroundColor: isDark ? 'rgba(22,163,74,0.15)' : '#DCFCE7', borderColor: '#16A34A' },
+                    paletteFilter === 'answered' && styles.summaryCardActive,
+                  ]}
+                  onPress={() => setPaletteFilter((prev) => (prev === 'answered' ? 'all' : 'answered'))}
+                  activeOpacity={0.7}
+                >
+                  <Text style={[styles.summaryCardValue, { color: '#16A34A' }]}>{stats.answered}</Text>
+                  <Text style={[styles.summaryCardLabel, { color: isDark ? '#86EFAC' : '#15803D' }]}>Answered</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={[
+                    styles.summaryCard,
+                    { backgroundColor: isDark ? 'rgba(239,68,68,0.15)' : '#FEE2E2', borderColor: '#EF4444' },
+                    paletteFilter === 'not-answered' && styles.summaryCardActive,
+                  ]}
+                  onPress={() => setPaletteFilter((prev) => (prev === 'not-answered' ? 'all' : 'not-answered'))}
+                  activeOpacity={0.7}
+                >
+                  <Text style={[styles.summaryCardValue, { color: '#EF4444' }]}>{stats.notAnswered}</Text>
+                  <Text style={[styles.summaryCardLabel, { color: isDark ? '#FCA5A5' : '#991B1B' }]}>Not Answered</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={[
+                    styles.summaryCard,
+                    { backgroundColor: isDark ? 'rgba(139,92,246,0.15)' : '#F3E8FF', borderColor: '#8B5CF6' },
+                    paletteFilter === 'marked' && styles.summaryCardActive,
+                  ]}
+                  onPress={() => setPaletteFilter((prev) => (prev === 'marked' ? 'all' : 'marked'))}
+                  activeOpacity={0.7}
+                >
+                  <Text style={[styles.summaryCardValue, { color: '#8B5CF6' }]}>{stats.marked}</Text>
+                  <Text style={[styles.summaryCardLabel, { color: isDark ? '#D8B4FE' : '#7E22CE' }]}>Marked</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={[
+                    styles.summaryCard,
+                    { backgroundColor: isDark ? 'rgba(124,58,237,0.15)' : '#EDE9FE', borderColor: '#7C3AED' },
+                    paletteFilter === 'marked' && styles.summaryCardActive,
+                  ]}
+                  onPress={() => setPaletteFilter((prev) => (prev === 'marked' ? 'all' : 'marked'))}
+                  activeOpacity={0.7}
+                >
+                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+                    <Text style={[styles.summaryCardValue, { color: '#7C3AED' }]}>{stats.answeredAndMarked}</Text>
+                    <View style={styles.summaryBadgeMiniDot} />
+                  </View>
+                  <Text style={[styles.summaryCardLabel, { color: isDark ? '#C4B5FD' : '#6D28D9' }]}>Ans & Marked</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={[
+                    styles.summaryCard,
+                    { backgroundColor: isDark ? '#1E293B' : '#F1F5F9', borderColor: isDark ? '#334155' : '#CBD5E1' },
+                    paletteFilter === 'not-visited' && styles.summaryCardActive,
+                  ]}
+                  onPress={() => setPaletteFilter((prev) => (prev === 'not-visited' ? 'all' : 'not-visited'))}
+                  activeOpacity={0.7}
+                >
+                  <Text style={[styles.summaryCardValue, { color: isDark ? '#94A3B8' : '#64748B' }]}>{stats.notVisited}</Text>
+                  <Text style={[styles.summaryCardLabel, { color: isDark ? '#64748B' : '#475569' }]}>Not Visited</Text>
+                </TouchableOpacity>
+              </ScrollView>
+            </View>
+
+            {/* Filter Pills Bar */}
+            <View style={[styles.paletteFilterBar, { borderBottomColor: colors.border }]}>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.paletteFilterScroll}>
+                {[
+                  { key: 'all', label: 'All', count: stats.total },
+                  { key: 'answered', label: 'Answered', count: stats.answered },
+                  { key: 'not-answered', label: 'Not Answered', count: stats.notAnswered },
+                  { key: 'marked', label: 'Marked', count: stats.marked + stats.answeredAndMarked },
+                  { key: 'not-visited', label: 'Not Visited', count: stats.notVisited },
+                ].map((tab) => {
+                  const isActive = paletteFilter === tab.key;
+                  return (
+                    <TouchableOpacity
+                      key={tab.key}
+                      style={[
+                        styles.filterChip,
+                        {
+                          borderColor: isActive ? '#3B82F6' : colors.border,
+                          backgroundColor: isActive
+                            ? isDark
+                              ? '#1E3A8A'
+                              : '#EFF6FF'
+                            : isDark
+                            ? colors.surfaceHighlight
+                            : '#F8FAFC',
+                        },
+                      ]}
+                      onPress={() => setPaletteFilter(tab.key as any)}
+                      activeOpacity={0.7}
+                    >
+                      <Text
+                        style={[
+                          styles.filterChipText,
+                          {
+                            color: isActive ? '#2563EB' : colors.textSecondary,
+                            fontWeight: isActive ? '700' : '500',
+                          },
+                        ]}
+                      >
+                        {tab.label}
+                      </Text>
+                      <View
+                        style={[
+                          styles.filterChipBadge,
+                          {
+                            backgroundColor: isActive
+                              ? '#2563EB'
+                              : isDark
+                              ? '#334155'
+                              : '#E2E8F0',
+                          },
+                        ]}
+                      >
+                        <Text
+                          style={[
+                            styles.filterChipBadgeText,
+                            {
+                              color: isActive ? '#fff' : isDark ? '#CBD5E1' : '#64748B',
+                            },
+                          ]}
+                        >
+                          {tab.count}
+                        </Text>
+                      </View>
+                    </TouchableOpacity>
+                  );
+                })}
+              </ScrollView>
+            </View>
+
+            {/* Questions Grid ScrollView */}
+            <ScrollView style={styles.paletteContent} contentContainerStyle={styles.paletteContentContainer}>
+              {test?.sections.map((section) => {
                 const sectionStart = sectionStartIndex;
                 sectionStartIndex += section.questions.length;
 
                 return (
                   <View key={section.id} style={styles.paletteSection}>
-                    <Text style={styles.paletteSectionTitle}>{section.title}</Text>
+                    <View style={styles.paletteSectionHeader}>
+                      <Text style={[styles.paletteSectionTitle, { color: colors.textPrimary }]}>{section.title}</Text>
+                      <Text style={[styles.paletteSectionCount, { color: colors.textSecondary }]}>
+                        {section.questions.length} Questions
+                      </Text>
+                    </View>
                     <View style={styles.paletteGrid}>
                       {section.questions.map((q, idx) => {
                         const globalIdx = sectionStart + idx;
-                        const state = questionStates.get(q.id);
+                        const status = getQuestionStatus(q.id, globalIdx);
                         const isCurrent = globalIdx === currentQuestionIndex;
+
+                        let matchesFilter = true;
+                        if (paletteFilter === 'answered') matchesFilter = status === 'answered';
+                        else if (paletteFilter === 'not-answered') matchesFilter = status === 'not-answered';
+                        else if (paletteFilter === 'marked') matchesFilter = status === 'marked' || status === 'answered-marked';
+                        else if (paletteFilter === 'not-visited') matchesFilter = status === 'not-visited';
 
                         return (
                           <TouchableOpacity
                             key={q.id}
                             style={[
                               styles.paletteButton,
-                              state?.answered && styles.paletteButtonAnswered,
-                              state?.marked && styles.paletteButtonMarked,
-                              !state?.answered && !state?.marked && styles.paletteButtonNotVisited,
+                              status === 'answered' && styles.paletteButtonAnswered,
+                              status === 'not-answered' && styles.paletteButtonNotAnswered,
+                              status === 'marked' && styles.paletteButtonMarked,
+                              status === 'answered-marked' && styles.paletteButtonAnsweredMarked,
+                              status === 'not-visited' && (isDark ? styles.paletteButtonNotVisitedDark : styles.paletteButtonNotVisitedLight),
                               isCurrent && styles.paletteButtonCurrent,
+                              !matchesFilter && styles.paletteButtonDimmed,
                             ]}
                             onPress={() => navigateToQuestion(globalIdx)}
+                            activeOpacity={0.7}
                           >
                             <Text
                               style={[
                                 styles.paletteButtonText,
+                                status === 'not-visited' && (isDark ? styles.paletteButtonTextNotVisitedDark : styles.paletteButtonTextNotVisitedLight),
                                 isCurrent && styles.paletteButtonTextCurrent,
                               ]}
                             >
                               {globalIdx + 1}
                             </Text>
+
+                            {status === 'answered-marked' && (
+                              <View style={styles.paletteAnsweredMarkedDot} />
+                            )}
+
+                            {isCurrent && (
+                              <View style={styles.paletteActiveIndicator} />
+                            )}
                           </TouchableOpacity>
                         );
                       })}
@@ -738,29 +1026,63 @@ export default function MockTestScreen() {
               })}
             </ScrollView>
 
-            <View style={styles.paletteLegend}>
-              <View style={styles.legendItem}>
-                <View style={[styles.legendBox, styles.legendAnswered]} />
-                <Text style={styles.legendText}>Answered</Text>
+            {/* Interactive Legend */}
+            <View style={[styles.paletteLegend, { backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC', borderTopColor: colors.border }]}>
+              <View style={styles.legendRow}>
+                <View style={styles.legendItem}>
+                  <View style={[styles.legendBox, styles.legendAnswered]} />
+                  <Text style={[styles.legendText, { color: colors.textSecondary }]}>Answered</Text>
+                </View>
+                <View style={styles.legendItem}>
+                  <View style={[styles.legendBox, styles.legendNotAnswered]} />
+                  <Text style={[styles.legendText, { color: colors.textSecondary }]}>Not Answered</Text>
+                </View>
+                <View style={styles.legendItem}>
+                  <View style={[styles.legendBox, styles.legendMarked]} />
+                  <Text style={[styles.legendText, { color: colors.textSecondary }]}>Marked</Text>
+                </View>
               </View>
-              <View style={styles.legendItem}>
-                <View style={[styles.legendBox, styles.legendMarked]} />
-                <Text style={styles.legendText}>Marked</Text>
-              </View>
-              <View style={styles.legendItem}>
-                <View style={[styles.legendBox, styles.legendNotVisited]} />
-                <Text style={styles.legendText}>Not Visited</Text>
+              <View style={styles.legendRow}>
+                <View style={styles.legendItem}>
+                  <View style={[styles.legendBox, styles.legendAnsweredMarked]}>
+                    <View style={styles.legendMiniBadge} />
+                  </View>
+                  <Text style={[styles.legendText, { color: colors.textSecondary }]}>Ans & Marked</Text>
+                </View>
+                <View style={styles.legendItem}>
+                  <View style={[styles.legendBox, isDark ? styles.legendNotVisitedDark : styles.legendNotVisitedLight]} />
+                  <Text style={[styles.legendText, { color: colors.textSecondary }]}>Not Visited</Text>
+                </View>
+                <View style={styles.legendItem}>
+                  <View style={[styles.legendBox, styles.legendCurrent]} />
+                  <Text style={[styles.legendText, { color: colors.textSecondary }]}>Current</Text>
+                </View>
               </View>
             </View>
 
+            {/* Submit Test CTA */}
             <TouchableOpacity 
               style={styles.paletteSubmitButton}
               onPress={() => {
                 setShowQuestionPalette(false);
                 setShowSubmitConfirm(true);
               }}
+              activeOpacity={0.85}
             >
-              <Text style={styles.paletteSubmitButtonText}>Submit Test</Text>
+              <LinearGradient
+                colors={['#2563EB', '#1D4ED8']}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 0 }}
+                style={styles.paletteSubmitGradient}
+              >
+                <Send size={18} color="#fff" />
+                <Text style={styles.paletteSubmitButtonText}>Submit Test</Text>
+                <View style={styles.paletteSubmitBadge}>
+                  <Text style={styles.paletteSubmitBadgeText}>
+                    {stats.answered}/{stats.total} Answered
+                  </Text>
+                </View>
+              </LinearGradient>
             </TouchableOpacity>
           </SafeAreaView>
         </ResponsiveContainer>
@@ -846,16 +1168,20 @@ export default function MockTestScreen() {
               return (
                 <>
                   <View style={styles.submitStatItem}>
-                    <Text style={styles.submitStatValue}>{stats.answered}</Text>
+                    <Text style={[styles.submitStatValue, { color: '#16A34A' }]}>{stats.answered}</Text>
                     <Text style={styles.submitStatLabel}>Answered</Text>
                   </View>
                   <View style={styles.submitStatItem}>
-                    <Text style={styles.submitStatValue}>{stats.notVisited}</Text>
-                    <Text style={styles.submitStatLabel}>Not Attempted</Text>
+                    <Text style={[styles.submitStatValue, { color: '#EF4444' }]}>{stats.notAnswered}</Text>
+                    <Text style={styles.submitStatLabel}>Not Answered</Text>
                   </View>
                   <View style={styles.submitStatItem}>
-                    <Text style={styles.submitStatValue}>{stats.marked}</Text>
+                    <Text style={[styles.submitStatValue, { color: '#8B5CF6' }]}>{stats.marked + stats.answeredAndMarked}</Text>
                     <Text style={styles.submitStatLabel}>Marked</Text>
+                  </View>
+                  <View style={styles.submitStatItem}>
+                    <Text style={[styles.submitStatValue, { color: '#64748B' }]}>{stats.notVisited}</Text>
+                    <Text style={styles.submitStatLabel}>Not Visited</Text>
                   </View>
                 </>
               );
@@ -964,12 +1290,12 @@ export default function MockTestScreen() {
           </View>
           <View style={styles.statDivider} />
           <View style={styles.statItem}>
-            <Text style={styles.statValue}>{stats.notVisited}</Text>
-            <Text style={styles.statLabel}>Not Attempted</Text>
+            <Text style={styles.statValue}>{stats.notAnswered}</Text>
+            <Text style={styles.statLabel}>Not Answered</Text>
           </View>
           <View style={styles.statDivider} />
           <View style={styles.statItem}>
-            <Text style={styles.statValue}>{stats.marked}</Text>
+            <Text style={styles.statValue}>{stats.marked + stats.answeredAndMarked}</Text>
             <Text style={styles.statLabel}>Marked</Text>
           </View>
         </View>
@@ -1380,119 +1706,326 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   paletteContainer: {
-    width: width * 0.9,
-    maxHeight: '90%',
     flex: 1,
+    width: '100%',
     backgroundColor: '#fff',
-    borderRadius: 16,
-    overflow: 'hidden',
   },
   paletteHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 16,
+    paddingHorizontal: 18,
+    paddingVertical: 14,
     borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
+  },
+  paletteHeaderLeft: {
+    flex: 1,
+    marginRight: 12,
   },
   paletteTitle: {
     fontSize: 18,
     fontWeight: '700',
-    color: '#333',
+  },
+  paletteSubtitle: {
+    fontSize: 12,
+    marginTop: 2,
+  },
+  paletteHeaderRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  paletteTimerBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 14,
+    borderWidth: 1,
+  },
+  paletteTimerText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#2563EB',
+  },
+  paletteCloseButton: {
+    width: 34,
+    height: 34,
+    borderRadius: 17,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  paletteSummaryContainer: {
+    paddingVertical: 10,
+    borderBottomWidth: 1,
+  },
+  paletteSummaryScroll: {
+    paddingHorizontal: 16,
+    gap: 8,
+  },
+  summaryCard: {
+    minWidth: 88,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    borderRadius: 10,
+    borderWidth: 1.5,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  summaryCardActive: {
+    borderWidth: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.15,
+    shadowRadius: 3,
+    elevation: 2,
+  },
+  summaryCardValue: {
+    fontSize: 18,
+    fontWeight: '800',
+  },
+  summaryCardLabel: {
+    fontSize: 11,
+    fontWeight: '600',
+    marginTop: 2,
+  },
+  summaryBadgeMiniDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: '#22C55E',
+  },
+  paletteFilterBar: {
+    paddingVertical: 8,
+    borderBottomWidth: 1,
+  },
+  paletteFilterScroll: {
+    paddingHorizontal: 16,
+    gap: 8,
+  },
+  filterChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 20,
+    borderWidth: 1,
+  },
+  filterChipText: {
+    fontSize: 13,
+  },
+  filterChipBadge: {
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 10,
+  },
+  filterChipBadgeText: {
+    fontSize: 11,
+    fontWeight: '700',
   },
   paletteContent: {
     flex: 1,
+  },
+  paletteContentContainer: {
     padding: 16,
+    paddingBottom: 24,
   },
   paletteSection: {
-    marginBottom: 24,
+    marginBottom: 20,
+  },
+  paletteSectionHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 12,
   },
   paletteSectionTitle: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#666',
-    marginBottom: 12,
+    fontSize: 15,
+    fontWeight: '700',
+  },
+  paletteSectionCount: {
+    fontSize: 12,
+    fontWeight: '500',
   },
   paletteGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 8,
-    justifyContent: 'center', // Center items
+    gap: 10,
+    justifyContent: 'flex-start',
   },
   paletteButton: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
+    width: 50,
+    height: 46,
+    borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f0f0f0',
-    borderWidth: 1,
-    borderColor: '#e0e0e0',
+    position: 'relative',
   },
   paletteButtonAnswered: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#16A34A',
+  },
+  paletteButtonNotAnswered: {
+    backgroundColor: '#EF4444',
   },
   paletteButtonMarked: {
-    backgroundColor: '#FF9800',
+    backgroundColor: '#8B5CF6',
   },
-  paletteButtonNotVisited: {
-    backgroundColor: '#e0e0e0',
+  paletteButtonAnsweredMarked: {
+    backgroundColor: '#7C3AED',
+  },
+  paletteButtonNotVisitedLight: {
+    backgroundColor: '#F1F5F9',
+    borderWidth: 1,
+    borderColor: '#CBD5E1',
+  },
+  paletteButtonNotVisitedDark: {
+    backgroundColor: '#1E293B',
+    borderWidth: 1,
+    borderColor: '#334155',
   },
   paletteButtonCurrent: {
-    borderWidth: 3,
-    borderColor: '#4A90E2',
+    borderWidth: 2.5,
+    borderColor: '#2563EB',
+    shadowColor: '#2563EB',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.35,
+    shadowRadius: 4,
+    elevation: 4,
+  },
+  paletteButtonDimmed: {
+    opacity: 0.22,
   },
   paletteButtonText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#fff',
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#FFFFFF',
+  },
+  paletteButtonTextNotVisitedLight: {
+    color: '#334155',
+  },
+  paletteButtonTextNotVisitedDark: {
+    color: '#94A3B8',
   },
   paletteButtonTextCurrent: {
-    color: '#333',
+    color: '#FFFFFF',
+    fontWeight: '800',
+  },
+  paletteAnsweredMarkedDot: {
+    position: 'absolute',
+    top: 3,
+    right: 3,
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#22C55E',
+    borderWidth: 1.5,
+    borderColor: '#FFFFFF',
+  },
+  paletteActiveIndicator: {
+    position: 'absolute',
+    bottom: 3,
+    width: 12,
+    height: 3,
+    borderRadius: 1.5,
+    backgroundColor: '#FFFFFF',
   },
   paletteLegend: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    paddingVertical: 16,
-    paddingHorizontal: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
     borderTopWidth: 1,
-    borderTopColor: '#e0e0e0',
+  },
+  legendRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginVertical: 4,
   },
   legendItem: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
+    flex: 1,
   },
   legendBox: {
-    width: 20,
-    height: 20,
+    width: 15,
+    height: 15,
     borderRadius: 4,
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
   },
   legendAnswered: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#16A34A',
+  },
+  legendNotAnswered: {
+    backgroundColor: '#EF4444',
   },
   legendMarked: {
-    backgroundColor: '#FF9800',
+    backgroundColor: '#8B5CF6',
   },
-  legendNotVisited: {
-    backgroundColor: '#e0e0e0',
+  legendAnsweredMarked: {
+    backgroundColor: '#7C3AED',
+  },
+  legendMiniBadge: {
+    width: 5,
+    height: 5,
+    borderRadius: 2.5,
+    backgroundColor: '#22C55E',
+  },
+  legendNotVisitedLight: {
+    backgroundColor: '#F1F5F9',
+    borderWidth: 1,
+    borderColor: '#CBD5E1',
+  },
+  legendNotVisitedDark: {
+    backgroundColor: '#1E293B',
+    borderWidth: 1,
+    borderColor: '#334155',
+  },
+  legendCurrent: {
+    backgroundColor: '#F1F5F9',
+    borderWidth: 2,
+    borderColor: '#2563EB',
   },
   legendText: {
-    fontSize: 12,
-    color: '#666',
+    fontSize: 11,
+    fontWeight: '600',
   },
   paletteSubmitButton: {
-    backgroundColor: '#FF6B35',
     marginHorizontal: 16,
+    marginTop: 10,
     marginBottom: 16,
-    marginTop: 8,
-    paddingVertical: 14,
-    borderRadius: 8,
+    borderRadius: 12,
+    overflow: 'hidden',
+    shadowColor: '#2563EB',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.25,
+    shadowRadius: 5,
+    elevation: 3,
+  },
+  paletteSubmitGradient: {
+    flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 14,
+    gap: 10,
   },
   paletteSubmitButtonText: {
     color: '#fff',
     fontSize: 16,
+    fontWeight: '700',
+  },
+  paletteSubmitBadge: {
+    backgroundColor: 'rgba(255,255,255,0.22)',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 12,
+  },
+  paletteSubmitBadgeText: {
+    color: '#fff',
+    fontSize: 12,
     fontWeight: '700',
   },
   submitConfirmContainer: {

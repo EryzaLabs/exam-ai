@@ -38,6 +38,7 @@ import UserService, { UserStats, UserProfile } from '@/services/user-service';
 import { TestProgressService, TestResult } from '@/services/test-progress-service';
 import TestSeriesService from '@/services/testseries-service';
 import DesktopDashboard from '@/components/DesktopDashboard';
+import { extractTestTopicAndSubject } from '@/utils/topic-resolver';
 
 const { width } = Dimensions.get('window');
 
@@ -300,6 +301,47 @@ export default function ProgressScreen() {
     streak: userStats?.streak || 0,
   };
 
+  const topicBreakdown = React.useMemo(() => {
+    const map: Record<string, { topic: string; subject: string; attempted: number; correct: number }> = {};
+    filteredHistory.forEach(test => {
+      const resolved = extractTestTopicAndSubject(test);
+      let testAttempted = 0;
+      let testCorrect = 0;
+      if (test.sectionAnalytics && test.sectionAnalytics.length > 0) {
+        test.sectionAnalytics.forEach(sec => {
+          testAttempted += sec.attempted || 0;
+          testCorrect += sec.correct || 0;
+        });
+      } else {
+        testAttempted = (test as any).totalQuestions || 0;
+        if (test.accuracy !== undefined) {
+          testCorrect = Math.round((testAttempted * test.accuracy) / 100);
+        }
+      }
+
+      if (!map[resolved.topic]) {
+        map[resolved.topic] = {
+          topic: resolved.topic,
+          subject: resolved.subject,
+          attempted: 0,
+          correct: 0,
+        };
+      }
+      map[resolved.topic].attempted += testAttempted;
+      map[resolved.topic].correct += testCorrect;
+    });
+
+    return Object.values(map)
+      .filter(t => t.topic.toLowerCase() !== 'general' || Object.keys(map).length === 1)
+      .map(item => ({
+        ...item,
+        accuracy: item.attempted > 0 ? (item.correct / item.attempted) * 100 : 0,
+      }))
+      .sort((a, b) => b.attempted - a.attempted);
+  }, [filteredHistory]);
+
+  };
+
   const getRecentTestsData = () => {
     const recent = filteredHistory.slice(0, 7).reverse();
     return {
@@ -466,6 +508,59 @@ export default function ProgressScreen() {
                 </View>
                 <Text style={styles.chartDescription}>Your accuracy over recent tests</Text>
                 {renderSimpleChart(accuracyData, recentData.labels, '#007AFF')}
+              </Card>
+            )}
+
+            {/* Topic Performance */}
+            {topicBreakdown.length > 0 && (
+              <Card>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+                  <View>
+                    <Text style={[styles.cardTitle, { marginBottom: 2 }]}>Topic Performance</Text>
+                    <Text style={{ fontSize: 13, color: '#64748B' }}>Breakdown across syllabus topics you have practiced</Text>
+                  </View>
+                  <View style={{ backgroundColor: '#EFF6FF', paddingHorizontal: 10, paddingVertical: 4, borderRadius: 12 }}>
+                    <Text style={{ fontSize: 12, fontWeight: '700', color: '#2563EB' }}>
+                      {topicBreakdown.length} Topics
+                    </Text>
+                  </View>
+                </View>
+
+                <View style={{ gap: 12 }}>
+                  {topicBreakdown.map((item, idx) => {
+                    const colorsArr = ['#10B981', '#3B82F6', '#F59E0B', '#7C3AED', '#EF4444'];
+                    const barColor = colorsArr[idx % colorsArr.length];
+                    const isMastered = item.accuracy >= 75;
+
+                    return (
+                      <View key={idx} style={{ padding: 12, backgroundColor: '#F8FAFC', borderRadius: 12, borderWidth: 1, borderColor: '#F1F5F9' }}>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
+                          <View style={{ flex: 1, marginRight: 12 }}>
+                            <Text style={{ fontSize: 14, fontWeight: '700', color: '#1E293B' }}>
+                              {item.topic}
+                            </Text>
+                            {item.subject && item.subject !== item.topic && item.subject !== 'General' && (
+                              <Text style={{ fontSize: 12, color: '#64748B', marginTop: 2 }}>
+                                {item.subject}
+                              </Text>
+                            )}
+                          </View>
+                          <View style={{ alignItems: 'flex-end' }}>
+                            <Text style={{ fontSize: 15, fontWeight: '800', color: isMastered ? '#16A34A' : '#2563EB' }}>
+                              {item.accuracy.toFixed(1)}%
+                            </Text>
+                            <Text style={{ fontSize: 11, color: '#94A3B8' }}>
+                              {item.correct}/{item.attempted} Qs
+                            </Text>
+                          </View>
+                        </View>
+                        <View style={{ height: 6, width: '100%', backgroundColor: '#E2E8F0', borderRadius: 3, overflow: 'hidden' }}>
+                          <View style={{ height: '100%', width: `${Math.min(100, Math.max(0, item.accuracy))}%`, backgroundColor: barColor, borderRadius: 3 }} />
+                        </View>
+                      </View>
+                    );
+                  })}
+                </View>
               </Card>
             )}
 

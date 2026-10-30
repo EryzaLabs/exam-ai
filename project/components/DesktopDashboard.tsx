@@ -709,17 +709,17 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           </View>
           
           <View style={styles.topicsList}>
-             {(!performance?.subjectWisePerformance || Object.keys(performance.subjectWisePerformance).length === 0) ? (
+             {(!performance?.topicWisePerformance && !performance?.subjectWisePerformance) || (Object.keys(performance?.topicWisePerformance || performance?.subjectWisePerformance || {}).length === 0) ? (
                <Text style={{ color: colors.textSecondary, textAlign: 'center', marginVertical: 16 }}>Play some tests to see your topic performance!</Text>
              ) : (
-               Object.values(performance.subjectWisePerformance)
+               Object.values(performance?.topicWisePerformance || performance?.subjectWisePerformance || {}).filter((t: any) => (t.topic || t.subject || '').toLowerCase() !== 'general' || Object.keys(performance?.topicWisePerformance || performance?.subjectWisePerformance || {}).length === 1)
                  .slice(0, 5)
                  .map((topic: any, i) => {
                    const colorsArr = ['#10B981', '#3B82F6', '#F59E0B', '#7C3AED', '#EF4444'];
                    return (
                      <View key={i} style={styles.topicRow}>
                         <View style={[styles.topicIconB, { backgroundColor: `${colorsArr[i % 5]}15` }]}><Library size={18} color={colorsArr[i % 5]} /></View>
-                        <Text style={[styles.topicName, { color: colors.textSecondary }]} numberOfLines={2}>{topic.subject || 'Subject'}</Text>
+                        <View style={{ flex: 1, minWidth: 0, marginRight: 8 }}><Text style={[styles.topicName, { color: colors.textPrimary }]} numberOfLines={1}>{topic.topic || topic.subject || 'Topic'}</Text>{topic.subject && topic.subject !== topic.topic && topic.subject !== 'General' && (<Text style={{ fontSize: 11, color: colors.textTertiary, marginTop: 1 }} numberOfLines={1}>{topic.subject}</Text>)}</View>
                         <View style={[styles.topicBarBg, { backgroundColor: colors.progressBarBg }]}>
                            <View style={[styles.topicBarFill, { width: `${topic.accuracy || 0}%`, backgroundColor: colorsArr[i % 5] }]} />
                         </View>

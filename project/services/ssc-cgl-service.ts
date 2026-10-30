@@ -4,6 +4,7 @@
  */
 
 import { Platform } from 'react-native';
+import { extractTestTopicAndSubject } from '@/utils/topic-resolver';
 
 const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://astra-backend.eryzalabs.cloud/api';
 
@@ -118,6 +119,8 @@ export interface ParsedQuestion {
   };
   metadata?: {
     language?: string;
+    topic?: string;
+    subject?: string;
   };
 }
 
@@ -280,21 +283,30 @@ class SSCCGLService {
     
     const parsedQuestions = rawQuestions.map((q: any) => this.parseQuestion(q, 'main'));
 
+    const totalQuestions = parsedQuestions.length;
+    const isTopicWise = (filename && filename.includes('topic_wise')) || 
+                        (paper.type === 'topic_wise') ||
+                        (testName && testName.toLowerCase().includes('topic')) ||
+                        (totalQuestions <= 30 && paper.type !== 'full_mock');
+
+    const resolvedTopic = extractTestTopicAndSubject({
+      testTitle: testName,
+      filename: effectiveFilename,
+    });
+
+    const sectionTitle = isTopicWise 
+      ? resolvedTopic.topic 
+      : (paper.type === 'full_mock' || effectiveFilename.includes('full_mock') ? 'Full Mock CBT' : 'General');
+
     const section = {
       id: 'main',
-      title: 'General',
+      title: sectionTitle,
       questionCount: parsedQuestions.length,
       questions: parsedQuestions
     };
 
     const sections = [section];
-    const totalQuestions = parsedQuestions.length;
     const totalMarks = totalQuestions * 2.5; // 120 questions * 2.5 = 300 marks
-
-    const isTopicWise = (filename && filename.includes('topic_wise')) || 
-                        (paper.type === 'topic_wise') ||
-                        (testName && testName.toLowerCase().includes('topic')) ||
-                        (totalQuestions <= 30 && paper.type !== 'full_mock');
     const defaultDuration = isTopicWise ? 1200 : 7200; // 20 mins for topic tests, 2 hours for full mocks
     const defaultMarks = parsedQuestions.length * 2.5;
 
@@ -414,6 +426,8 @@ class SSCCGLService {
       },
       metadata: {
         language: 'en',
+        topic: question.topic || '',
+        subject: question.subject || '',
       },
     };
   }
