@@ -1,0 +1,798 @@
+{
+  "test_id": "3a375c73-1a9d-4c79-af2c-10463cd97c57",
+  "test_name": "Topic Test: SPOTTING_ERRORS - Part 1",
+  "type": "topic_wise",
+  "topic": "spotting_errors",
+  "created_at": "2026-10-30T08:17:58.888537",
+  "questions": [
+    {
+      "id": "b1c2d3e4-f5g6-7h8i-9j0k-l1m2n3o4p5q6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Read the following segmented sentence and select the segment containing a modal verb error: “Had you told me earlier, I might help you resolve the dispute. No error”",
+      "question_hindi": "निम्नलिखित खंडित वाक्य को पढ़ें और उस खंड का चयन करें जिसमें एक मौडल क्रिया की त्रुटि है: “यदि आपने मुझे पहले बताया होता, तो मैं आपकी मदद कर सकता था विवाद को सुलझाने में। कोई त्रुटि नहीं”",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "options_hindi": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "(B) Inverted conditional structures starting with past perfect auxiliary verbs like 'had' express unrealized past conditions. Such conditional clauses must pair with perfect modal verb phrases in the main clause, consisting of a modal auxiliary followed by 'have' and a past participle. Substituting a simple present modal construction like 'might help' breaks temporal alignment, requiring replacement with 'might have helped' for correct syntax.",
+      "explanation_hindi": "(B) 'यदि' जैसे भूतकाल के पूर्ण सहायक क्रियाओं से शुरू होने वाली उलटी शर्त संरचनाएँ अवास्तविक भूतकाल की स्थितियों को व्यक्त करती हैं। ऐसी शर्तीय उपवाक्य मुख्य उपवाक्य में पूर्ण मौडल क्रिया वाक्यांशों के साथ जोड़े जाने चाहिए, जिसमें एक मौडल सहायक 'have' और एक भूतकालीन क्रिया का उपयोग किया जाता है। 'might help' जैसे सरल वर्तमान मौडल निर्माण का प्रतिस्थापन काल की संरेखण को तोड़ता है, जिसके लिए सही व्याकरण के लिए 'might have helped' से प्रतिस्थापन की आवश्यकता होती है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Inverted conditionals require perfect modal verbs.",
+        "Correct syntax maintains temporal alignment in sentences."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:56:55Z"
+    },
+    {
+      "id": "c3b8e5e7-5f9e-4b6e-8b0e-5c5c7e4d2a1f",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Read the following segmented sentence and identify the segment containing an article error: '(A) He was appointed as / (B) a chairman of the newly constituted / (C) administrative board. / (D) No error'",
+      "question_hindi": "निम्नलिखित खंडित वाक्य को पढ़ें और उस खंड की पहचान करें जिसमें एक लेख त्रुटि है: '(A) उसे / (B) एक अध्यक्ष के रूप में नियुक्त किया गया / (C) नई गठित प्रशासनिक / (D) कोई त्रुटि नहीं'",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "options_hindi": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The error is in segment (A) where 'as' is incorrectly used. The correct phrase should be 'appointed chairman' without the preposition 'as'. The other segments are grammatically correct.",
+      "explanation_hindi": "त्रुटि खंड (A) में है जहाँ 'as' का गलत उपयोग किया गया है। सही वाक्यांश 'अध्यक्ष के रूप में नियुक्त' होना चाहिए, जिसमें पूर्वसर्ग 'as' नहीं होना चाहिए। अन्य खंड व्याकरणिक रूप से सही हैं।",
+      "difficulty": "easy",
+      "key_facts": [
+        "The use of 'as' in appointments is often incorrect.",
+        "Articles must be used correctly to maintain grammatical accuracy.",
+        "Identifying article errors is crucial in error analysis.",
+        "Segmented sentences require careful examination for errors."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:55:54Z"
+    },
+    {
+      "id": "f3e1c2b4-9c8e-4e0c-8c9e-1f2b3d4e5f6a",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Identify the error in the following sentence: If he had known about the meeting, he would have attended.",
+      "question_hindi": "निम्नलिखित वाक्य में त्रुटि पहचानें: यदि उसे बैठक के बारे में पता होता, तो वह उपस्थित होता।",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "The use of 'had known' is correct.",
+        "The modal 'would have attended' is incorrect.",
+        "The structure is appropriate for a conditional sentence.",
+        "There is no error in the sentence."
+      ],
+      "options_hindi": [
+        "'had known' का उपयोग सही है।",
+        "'would have attended' का मौडल गलत है।",
+        "यह संरचना एक शर्तीय वाक्य के लिए उपयुक्त है।",
+        "वाक्य में कोई त्रुटि नहीं है।"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "(B) Conditional sentence structures expressing unfulfilled or hypothetical conditions in the past require a past perfect tense verb in the conditional clause paired with a perfect modal construction in the main clause. The main clause modal verb must combine with have and a past participle. Substituting a simple present modal form breaks temporal alignment across clauses, disrupting the conditional framework required for past unfulfilled scenarios.",
+      "explanation_hindi": "(B) अतीत में अव्यवस्थित या काल्पनिक स्थितियों को व्यक्त करने वाले शर्तीय वाक्य संरचनाओं में शर्तीय उपवाक्य में एक भूतकालीन पूर्ण काल का क्रिया और मुख्य उपवाक्य में एक पूर्ण मौडल निर्माण की आवश्यकता होती है। मुख्य उपवाक्य का मौडल क्रिया 'have' और एक भूतकालीन भागीदारी के साथ मिलकर बनता है। सरल वर्तमान मौडल रूप का प्रतिस्थापन उपवाक्यों के बीच कालिक संरेखण को तोड़ता है, जो अतीत की अव्यवस्थित स्थितियों के लिए आवश्यक शर्तीय ढांचे को बाधित करता है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Conditional sentences require specific tense structures.",
+        "Past perfect tense is used for unreal past conditions.",
+        "Modal verbs must align with the perfect aspect.",
+        "Temporal alignment is crucial in conditional frameworks."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:54:55Z"
+    },
+    {
+      "id": "f3e8a1a6-3c4e-4c4b-9b6f-1f3c5e4e7c3d",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Which one of the following sentences exhibits structural correctness in parallelism? (1) The candidate is proficient not only in written English but also in spoken French. (2) The candidate is not only proficient in written English but also in spoken French. (3) The candidate not only is proficient in spoken French but also in written English.",
+      "question_hindi": "निम्नलिखित में से कौन सा वाक्य समानांतरता में संरचनात्मक सहीता प्रदर्शित करता है? (1) उम्मीदवार न केवल लिखित अंग्रेजी में बल्कि मौखिक फ्रेंच में भी कुशल है। (2) उम्मीदवार न केवल लिखित अंग्रेजी में कुशल है बल्कि मौखिक फ्रेंच में भी। (3) उम्मीदवार न केवल मौखिक फ्रेंच में कुशल है बल्कि लिखित अंग्रेजी में भी।",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "The candidate is proficient not only in written English but also in spoken French.",
+        "The candidate is not only proficient in written English but also in spoken French.",
+        "The candidate not only is proficient in spoken French but also in written English.",
+        "No error"
+      ],
+      "options_hindi": [
+        "उम्मीदवार न केवल लिखित अंग्रेजी में बल्कि मौखिक फ्रेंच में भी कुशल है।",
+        "उम्मीदवार न केवल लिखित अंग्रेजी में कुशल है बल्कि मौखिक फ्रेंच में भी।",
+        "उम्मीदवार न केवल मौखिक फ्रेंच में कुशल है बल्कि लिखित अंग्रेजी में भी।",
+        "कोई त्रुटि नहीं"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The candidate is proficient not only in written English but also in spoken French. Parallel construction requires that correlative conjunctions such as not only and but also connect grammatically identical elements. Placing not only directly before a prepositional phrase requires but also to precede an equivalent prepositional phrase. Structuring both clauses with matching prepositions creates symmetrical balance across the comparative units, maintaining exact parallelism and ensuring that the sentence adheres strictly to established standard syntactic rules.",
+      "explanation_hindi": "उम्मीदवार न केवल लिखित अंग्रेजी में बल्कि मौखिक फ्रेंच में भी कुशल है। समानांतर निर्माण की आवश्यकता होती है कि सहसंबंधी संयोजक जैसे न केवल और बल्कि भी व्याकरणिक रूप से समान तत्वों को जोड़ें। किसी पूर्वसर्गीय वाक्यांश के ठीक पहले न केवल रखने से यह आवश्यक होता है कि लेकिन भी एक समान पूर्वसर्गीय वाक्यांश के पहले आए। दोनों खंडों को मिलते हुए पूर्वसर्गों के साथ संरचना करना तुलनात्मक इकाइयों के बीच सममित संतुलन बनाता है, सटीक समानांतरता बनाए रखता है और सुनिश्चित करता है कि वाक्य स्थापित मानक वाक्यविज्ञान नियमों का सख्ती से पालन करता है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Parallelism requires grammatical symmetry in sentence structure.",
+        "Correlative conjunctions must connect identical grammatical elements.",
+        "Correct placement of conjunctions is essential for clarity.",
+        "Maintaining balance enhances readability and comprehension."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:54:55Z"
+    },
+    {
+      "id": "r1s2t3u4-v5w6-x7y8-z9a0-b1c2d3e4f5g6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Read the following segmented sentence and identify the segment containing an error in modal verb usage: “(A) Prior to his appointment as principal, / (B) he was used to teach / (C) advanced English literature. / (D) No error.”",
+      "question_hindi": "निम्नलिखित खंडित वाक्य को पढ़ें और उस खंड की पहचान करें जिसमें मौडल क्रिया के उपयोग में त्रुटि है: “(A) प्रधान के रूप में उनकी नियुक्ति से पहले, / (B) वह पढ़ाने के लिए उपयोग किया जाता था / (C) उन्नत अंग्रेजी साहित्य। / (D) कोई त्रुटि नहीं।”",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "options_hindi": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "(B) Expressing habitual past actions requires the semi-modal construction used to followed by a base verb. Alternatively, the phrase be used to signifies custom or familiarity and must be followed by a gerund. Combining the passive auxiliary was with used to and a base verb creates an ungrammatical hybrid structure. Removing the auxiliary verb restores the correct semi-modal form describing past habitual activity.",
+      "explanation_hindi": "(B) आदतन अतीत की क्रियाओं को व्यक्त करने के लिए 'used to' का अर्ध-मौडल निर्माण आवश्यक है, जिसके बाद एक मूल क्रिया आती है। वैकल्पिक रूप से, 'be used to' वाक्यांश प्रथा या परिचय को दर्शाता है और इसके बाद एक क्रिया-विशेषण आना चाहिए। 'was' के साथ 'used to' और एक मूल क्रिया को मिलाना एक व्याकरणिक दृष्टि से गलत संरचना बनाता है। सहायक क्रिया को हटाने से अतीत की आदतन गतिविधियों का सही अर्ध-मौडल रूप बहाल होता है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Modal verbs indicate necessity or possibility.",
+        "The structure 'used to' requires a base verb.",
+        "The phrase 'be used to' requires a gerund.",
+        "Correct usage is essential for grammatical accuracy."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:55:54Z"
+    },
+    {
+      "id": "c1a2b3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Read the following segmented sentence and identify the segment containing an embedded spelling error: “The dean’s complimentary remarks were appreciated by all staff members, proximity rule governs only specific disjunctive structures like either-or rather than all subject constructions, validating the latter three statements.",
+      "question_hindi": "निम्नलिखित खंडित वाक्य को पढ़ें और उस खंड की पहचान करें जिसमें एक अंतर्निहित वर्तनी त्रुटि है: “डीन की प्रशंसात्मक टिप्पणियाँ सभी कर्मचारियों द्वारा सराही गईं, निकटता नियम केवल विशिष्ट विभाजक संरचनाओं को नियंत्रित करता है जैसे कि या-या, न कि सभी विषय निर्माण, अंतिम तीन कथनों को मान्य करता है।",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_hindi": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "No error. The adjective complimentary correctly describes remarks that express praise or admiration, fitting the context perfectly. Subject-verb agreement between the plural noun remarks and the plural verb were is maintained, and the subordinate clause uses appropriate pronoun reference and tense alignment. Because all segments conform strictly to standard orthographic, semantic, and syntactical rules, the sentence contains no grammatical errors.",
+      "explanation_hindi": "कोई त्रुटि नहीं। विशेषण प्रशंसात्मक उन टिप्पणियों का सही वर्णन करता है जो प्रशंसा या प्रशंसा व्यक्त करती हैं, जो संदर्भ में पूरी तरह से फिट बैठती हैं। बहुवचन संज्ञा टिप्पणियाँ और बहुवचन क्रिया थीं के बीच विषय-क्रिया का समझौता बनाए रखा गया है, और अधीनस्थ क्लॉज उपयुक्त सर्वनाम संदर्भ और काल संरेखण का उपयोग करता है। चूंकि सभी खंड मानक वर्तनी, अर्थ और वाक्य रचना के नियमों के अनुसार सख्ती से अनुपालन करते हैं, वाक्य में कोई व्याकरणिक त्रुटियाँ नहीं हैं।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Complimentary remarks express praise.",
+        "Subject-verb agreement is maintained.",
+        "No grammatical errors present in the sentence."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:56:55Z"
+    },
+    {
+      "id": "c3b2a1f4-5e6d-4c8b-9c7e-3b5d6e2c1b3f",
+      "created_at": "2026-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "In error-spotting tests, what characterises a “grammatically valid but contextually wrong” trap pattern?",
+      "question_hindi": "त्रुटि पहचानने वाले परीक्षणों में, “व्याकरणिक रूप से मान्य लेकिन संदर्भ में गलत” जाल पैटर्न की विशेषता क्या है?",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "The sentence violates standard orthography while retaining its clear semantic meaning.",
+        "The sentence uses archaic subject-verb inversion that is incorrect in written English.",
+        "The sentence omits required auxiliary verbs in subordinate passive clauses in standard prose.",
+        "The sentence is syntactically correct, but uses a word that violates contextual meaning."
+      ],
+      "options_hindi": [
+        "वाक्य मानक वर्तनी का उल्लंघन करता है जबकि इसका स्पष्ट अर्थ बना रहता है।",
+        "वाक्य प्राचीन विषय-क्रिया उलटाव का उपयोग करता है जो लिखित अंग्रेजी में गलत है।",
+        "वाक्य आवश्यक सहायक क्रियाओं को उपवाक्यात्मक निष्क्रिय उपवाक्यों में छोड़ देता है।",
+        "वाक्य व्याकरणिक रूप से सही है, लेकिन एक ऐसा शब्द उपयोग करता है जो संदर्भात्मक अर्थ का उल्लंघन करता है।"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "The sentence is syntactically correct, but uses a word that violates contextual meaning. Contextual trap patterns occur when a sentence follows all rules of syntax, tense, and agreement, yet incorporates a word that contradicts the intended semantic context. This often involves malapropisms, homophones, or confusing vocabulary pairs where the term chosen is grammatically permissible but logically absurd. Identifying such errors requires candidates to evaluate contextual meaning alongside purely structural and grammatical parameters during analysis.",
+      "explanation_hindi": "वाक्य व्याकरणिक रूप से सही है, लेकिन एक ऐसा शब्द उपयोग करता है जो संदर्भात्मक अर्थ का उल्लंघन करता है। संदर्भात्मक जाल पैटर्न तब उत्पन्न होते हैं जब एक वाक्य सभी व्याकरण, काल, और सहमति के नियमों का पालन करता है, फिर भी एक ऐसा शब्द शामिल करता है जो इच्छित अर्थ के संदर्भ का विरोध करता है। इसमें अक्सर गलत शब्दों का उपयोग, समान ध्वनि वाले शब्द, या भ्रमित करने वाले शब्दावली जोड़े शामिल होते हैं जहाँ चुना गया शब्द व्याकरणिक रूप से स्वीकार्य होता है लेकिन तार्किक रूप से असंगत होता है। ऐसी त्रुटियों की पहचान करने के लिए उम्मीदवारों को विश्लेषण के दौरान केवल संरचनात्मक और व्याकरणिक मानकों के साथ संदर्भात्मक अर्थ का मूल्यांकन करना आवश्यक है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Contextual trap patterns involve correct syntax but incorrect meaning.",
+        "Malapropisms and homophones can create contextual errors.",
+        "Identifying such errors requires understanding of context.",
+        "Grammatical correctness does not guarantee contextual appropriateness."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:54:55Z"
+    },
+    {
+      "id": "b2d3e4f5-6a7b-8c9d-0e1f-2g3h4i5j6k7l",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Identify the segment containing a grammatical error in the following sentence: (A) Neither of the candidates who / (B) were interviewed yesterday / (C) was found suitable for the administrative position. / (D) No error.",
+      "question_hindi": "निम्नलिखित वाक्य में व्याकरणिक त्रुटि वाले खंड की पहचान करें: (A) जिन उम्मीदवारों का साक्षात्कार लिया गया था / (B) कल / (C) प्रशासनिक पद के लिए उपयुक्त नहीं पाए गए। / (D) कोई त्रुटि नहीं।",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Neither of the candidates who",
+        "were interviewed yesterday",
+        "was found suitable for the administrative position.",
+        "No error"
+      ],
+      "options_hindi": [
+        "जिन उम्मीदवारों का साक्षात्कार लिया गया था",
+        "कल",
+        "प्रशासनिक पद के लिए उपयुक्त नहीं पाए गए।",
+        "कोई त्रुटि नहीं"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct answer is (A) because 'Neither' is a singular subject, and thus it should be followed by 'was' instead of 'were'. The phrase 'Neither of the candidates who were interviewed yesterday' incorrectly uses 'were', which is plural. Therefore, the correct form should be 'Neither of the candidates who was interviewed yesterday'.",
+      "explanation_hindi": "सही उत्तर (A) है क्योंकि 'Neither' एक एकवचन विषय है, और इसलिए इसके बाद 'was' आना चाहिए न कि 'were'। वाक्यांश 'जिन उम्मीदवारों का साक्षात्कार लिया गया था' में 'were' का उपयोग गलत है, जो बहुवचन है। इसलिए, सही रूप होना चाहिए 'जिन उम्मीदवारों का साक्षात्कार लिया गया था'।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Singular subjects require singular verbs.",
+        "The word 'neither' is always treated as singular.",
+        "Correct verb agreement is crucial for grammatical accuracy.",
+        "Identifying subject-verb agreement errors is essential."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:54:55Z"
+    },
+    {
+      "id": "b1c2d3e4-f5a6-7b8c-9d0e-f1a2b3c4d5e6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Identify the grammatical errors present in the following sentence: Subject-verb agreement errors occur when plural verbs follow singular head nouns like list. Dangling modifiers arise when participial phrases lack logical human subjects in main clauses. Redundancy occurs when words like mutually repeat concepts contained in phrases like each other. Faulty inversion involves omitting auxiliary verb transposition after negative introductory adverbs like no sooner.",
+      "question_hindi": "निम्नलिखित वाक्य में व्याकरण संबंधी त्रुटियों की पहचान करें: विषय-क्रिया सहमति की त्रुटियाँ तब होती हैं जब बहुवचन क्रियाएँ एकवचन मुख्य संज्ञाओं जैसे सूची का पालन करती हैं। लटकते संशोधक तब उत्पन्न होते हैं जब भागीदार वाक्यांशों में मुख्य वाक्य में तार्किक मानव विषयों की कमी होती है। पुनरावृत्ति तब होती है जब शब्द जैसे आपसी वाक्यांशों में निहित अवधारणाओं को दोहराते हैं। दोषपूर्ण उलटफेर में नकारात्मक प्रारंभिक क्रियाविशेषणों जैसे 'कोई पहले' के बाद सहायक क्रिया का स्थानांतरण छोड़ना शामिल है।",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "P-II, Q-I, R-IV, S-III",
+        "Subject-verb agreement errors",
+        "Dangling modifiers",
+        "No error"
+      ],
+      "options_hindi": [
+        "P-II, Q-I, R-IV, S-III",
+        "विषय-क्रिया सहमति की त्रुटियाँ",
+        "लटकते संशोधक",
+        "कोई त्रुटि नहीं"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct option is A, as it identifies the grammatical classifications and their corresponding examples. Subject-verb agreement errors occur when plural verbs follow singular head nouns. Dangling modifiers arise when participial phrases lack logical human subjects. Redundancy occurs when words repeat concepts. Faulty inversion involves omitting auxiliary verb transposition after negative introductory adverbs. Understanding these classifications helps in resolving structural alignment.",
+      "explanation_hindi": "सही विकल्प A है, क्योंकि यह व्याकरण संबंधी वर्गीकरणों और उनके संबंधित उदाहरणों की पहचान करता है। विषय-क्रिया सहमति की त्रुटियाँ तब होती हैं जब बहुवचन क्रियाएँ एकवचन मुख्य संज्ञाओं का पालन करती हैं। लटकते संशोधक तब उत्पन्न होते हैं जब भागीदार वाक्यांशों में तार्किक मानव विषयों की कमी होती है। पुनरावृत्ति तब होती है जब शब्द अवधारणाओं को दोहराते हैं। दोषपूर्ण उलटफेर में नकारात्मक प्रारंभिक क्रियाविशेषणों के बाद सहायक क्रिया का स्थानांतरण छोड़ना शामिल है। इन वर्गीकरणों को समझना संरचनात्मक संरेखण को हल करने में मदद करता है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Subject-verb agreement errors involve mismatched singular and plural forms.",
+        "Dangling modifiers lack clear subjects, leading to ambiguity.",
+        "Redundancy occurs when similar concepts are unnecessarily repeated.",
+        "Faulty inversion affects sentence structure after negative adverbs."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:54:55Z"
+    },
+    {
+      "id": "r7s8t9u0-v1w2-x3y4-z5a6-b7c8d9e0f1g2",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Read the following segmented sentence and identify the segment containing an error in the degree of comparison: “Shakespeare is greater than any playwright in English literary history. No error”",
+      "question_hindi": "निम्नलिखित खंडित वाक्य को पढ़ें और तुलना के डिग्री में त्रुटि वाले खंड की पहचान करें: “शेक्सपियर किसी भी नाटककार से बड़ा है। कोई त्रुटि नहीं”",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "options_hindi": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "(B) When using the comparative degree to compare a subject against other members of the same category, the subject must be excluded from the comparison group using the word other. Stating any playwright includes Shakespeare himself in the group he is being compared to, resulting in an illogical comparison. Inserting other after any creates the correct phrase any other playwright, ensuring proper exclusion.",
+      "explanation_hindi": "(B) जब तुलना के डिग्री का उपयोग करते हुए किसी विषय की तुलना उसी श्रेणी के अन्य सदस्यों से की जाती है, तो विषय को तुलना समूह से 'अन्य' शब्द का उपयोग करके बाहर किया जाना चाहिए। 'किसी भी नाटककार' का उल्लेख करने से शेक्सपियर स्वयं उस समूह में शामिल हो जाते हैं, जिससे एक तर्कहीन तुलना होती है। 'किसी' के बाद 'अन्य' जोड़ने से सही वाक्यांश 'किसी अन्य नाटककार' बनता है, जो उचित बहिष्कार सुनिश्चित करता है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Comparative degree requires exclusion of the subject from the comparison group.",
+        "Using 'any playwright' incorrectly includes Shakespeare in the comparison.",
+        "The correct phrase is 'any other playwright' for logical comparison."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:56:55Z"
+    },
+    {
+      "id": "f3b4c5d6-e7f8-9a0b-c1d2-e3f4g5h6i7j8",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Read the following segmented sentence and identify the segment containing a Subject-Verb Agreement error: “The director, along with the senior professors and administrative staff, are attending the annual summit. No error”",
+      "question_hindi": "निम्नलिखित खंडित वाक्य को पढ़ें और उस खंड की पहचान करें जिसमें विषय-क्रिया सहमति की त्रुटि है: “निदेशक, वरिष्ठ प्रोफेसरों और प्रशासनिक कर्मचारियों के साथ, वार्षिक शिखर सम्मेलन में भाग ले रहे हैं। कोई त्रुटि नहीं”",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "options_hindi": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "(C) Parenthetical prepositional phrases introduced by terms such as along with, together with, as well as, or in addition to do not alter the grammatical number of the subject. The primary subject remains the singular noun director, while the accompanying nouns within the prepositional phrase function merely as modifiers. Therefore, using the plural auxiliary verb are creates an agreement error that requires substitution with is.",
+      "explanation_hindi": "(C) ऐसे पैरेंटेथिकल प्रीपोजिशनल वाक्यांश जो 'साथ में', 'एक साथ', 'इसके अलावा' या 'इसके साथ' जैसे शब्दों द्वारा प्रस्तुत किए जाते हैं, वे विषय की व्याकरणिक संख्या को नहीं बदलते हैं। प्राथमिक विषय एकवचन संज्ञा 'निदेशक' है, जबकि प्रीपोजिशनल वाक्यांश में शामिल संज्ञाएँ केवल संशोधक के रूप में कार्य करती हैं। इसलिए, बहुवचन सहायक क्रिया 'हैं' का उपयोग एक सहमति की त्रुटि उत्पन्न करता है, जिसे 'है' से प्रतिस्थापित करने की आवश्यकता है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Subject-verb agreement rules dictate that the verb must agree in number with the subject.",
+        "Parenthetical phrases do not affect the grammatical number of the subject.",
+        "The singular subject requires a singular verb form."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:55:54Z"
+    },
+    {
+      "id": "a1b2c3d4-5e6f-7g8h-9i0j-k1l2m3n4o5p6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Read the following segmented sentence and evaluate its correctness: “(A) Having completed the administrative audit, / (B) the committee submitted its findings / (C) to the governing body. / (D) No error”",
+      "question_hindi": "निम्नलिखित खंडित वाक्य को पढ़ें और इसकी सहीता का मूल्यांकन करें: “(A) प्रशासनिक ऑडिट पूरा करने के बाद, / (B) समिति ने अपनी रिपोर्ट प्रस्तुत की / (C) शासी निकाय को। / (D) कोई त्रुटि नहीं”",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Segment (A) contains an error involving a dangling modifier phrase.",
+        "The sentence is grammatically correct, making option (D) correct.",
+        "Segment (B) contains an incorrect possessive pronoun error in “its”.",
+        "Segment (C) contains an improper preposition usage error in “to”."
+      ],
+      "options_hindi": [
+        "खंड (A) में एक लटकते संशोधक वाक्यांश से संबंधित त्रुटि है।",
+        "वाक्य व्याकरणिक रूप से सही है, जिससे विकल्प (D) सही है।",
+        "खंड (B) में “its” में एक गलत स्वामित्व सर्वनाम त्रुटि है।",
+        "खंड (C) में “to” में एक गलत पूर्वसर्ग उपयोग त्रुटि है।"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "The sentence is grammatically correct, making option (D) correct. The introductory participial phrase logically modifies the main clause subject committee, avoiding any dangling modifier error. The singular collective noun committee properly agrees with the singular possessive pronoun its, and the preposition to correctly indicates the recipient of the submitted findings. Since all syntax, agreement, modifier, and prepositional structures are correct, the sentence contains no grammatical flaws, confirming option D.",
+      "explanation_hindi": "वाक्य व्याकरणिक रूप से सही है, जिससे विकल्प (D) सही है। प्रारंभिक भागीदारी वाक्यांश तार्किक रूप से मुख्य उपवाक्य विषय समिति को संशोधित करता है, जिससे कोई लटकता संशोधक त्रुटि नहीं होती। एकवचन सामूहिक संज्ञा समिति एकवचन स्वामित्व सर्वनाम its के साथ सही ढंग से सहमत होती है, और पूर्वसर्ग to सही ढंग से प्रस्तुत निष्कर्षों के प्राप्तकर्ता को इंगित करता है। चूंकि सभी वाक्य रचना, सहमति, संशोधक और पूर्वसर्ग संरचनाएँ सही हैं, वाक्य में कोई व्याकरणिक दोष नहीं है, जिससे विकल्प D की पुष्टि होती है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "A dangling modifier occurs when a descriptive phrase does not clearly refer to a subject.",
+        "Collective nouns can take singular or plural verbs depending on context.",
+        "Possessive pronouns must agree in number with their antecedents.",
+        "Prepositions must accurately convey relationships between elements in a sentence."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:56:55Z"
+    },
+    {
+      "id": "b2f3d1e5-2c3d-4b5e-8c3e-8e1f6c4f5e1f",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Identify the error in the following sentence: Having finished the project, the deadline was met.",
+      "question_hindi": "निम्नलिखित वाक्य में त्रुटि पहचानें: परियोजना समाप्त करने के बाद, समय सीमा पूरी की गई।",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Having finished",
+        "the",
+        "deadline",
+        "was met"
+      ],
+      "options_hindi": [
+        "समाप्त करना",
+        "का",
+        "समय सीमा",
+        "पूरा किया गया"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "Introductory participial phrases function as adjectival modifiers that must logically attach to the noun immediately following the comma. When an action described in an introductory participle cannot reasonably be performed by the subject of the main clause, a dangling modifier error results. In inanimate subject constructions, modifying phrases require restructuring to ensure the true human agent is clearly identified as the modifier’s subject.",
+      "explanation_hindi": "प्रारंभिक भागीदारी वाक्यांश विशेषण संशोधक के रूप में कार्य करते हैं जो तार्किक रूप से उस संज्ञा से जुड़े होते हैं जो अल्पविराम के तुरंत बाद आती है। जब किसी प्रारंभिक भागीदारी में वर्णित क्रिया मुख्य वाक्य के विषय द्वारा उचित रूप से नहीं की जा सकती, तो एक लटकता संशोधक त्रुटि उत्पन्न होती है। निर्जीव विषय संरचनाओं में, संशोधक वाक्यांशों को पुनर्गठन की आवश्यकता होती है ताकि यह सुनिश्चित किया जा सके कि सही मानव एजेंट को स्पष्ट रूप से संशोधक के विषय के रूप में पहचाना जाए।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Dangling modifiers can lead to confusion in sentences.",
+        "Introductory phrases must logically connect to the subject.",
+        "Restructuring may be necessary to clarify meaning."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:54:55Z"
+    },
+    {
+      "id": "c3b2a1d4-5e6f-4b8c-8b2e-1e4f3c5b2e9f",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Given below are two statements: one is labelled as Assertion (A) and the other is labelled as Reason (R). Assertion (A): An introductory participial phrase in a segmented sentence must immediately precede or clearly refer to the noun or pronoun that performs the action. Reason (R): If an introductory participial phrase lacks a logical subject in the main clause, it creates a dangling modifier error.",
+      "question_hindi": "नीचे दो कथन दिए गए हैं: एक को कथन (A) के रूप में लेबल किया गया है और दूसरे को कारण (R) के रूप में लेबल किया गया है। कथन (A): एक खंडित वाक्य में प्रारंभिक भागीदारी वाक्यांश को उस संज्ञा या सर्वनाम के तुरंत पहले होना चाहिए जो क्रिया करता है। कारण (R): यदि प्रारंभिक भागीदारी वाक्यांश में मुख्य वाक्य में कोई तार्किक विषय नहीं है, तो यह एक लटकते संशोधक की त्रुटि उत्पन्न करता है।",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true, but R is NOT the correct explanation of A.",
+        "A is true, but R is false.",
+        "A is false, but R is true."
+      ],
+      "options_hindi": [
+        "A और R दोनों सत्य हैं और R A का सही स्पष्टीकरण है।",
+        "A और R दोनों सत्य हैं, लेकिन R A का सही स्पष्टीकरण नहीं है।",
+        "A सत्य है, लेकिन R असत्य है।",
+        "A असत्य है, लेकिन R सत्य है।"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "The correct option is (A) because both statements are true, and the reason provided explains the assertion accurately. The assertion discusses the placement of participial phrases, while the reason clarifies the consequence of improper placement, thus making them logically connected.",
+      "explanation_hindi": "सही विकल्प (A) है क्योंकि दोनों कथन सत्य हैं, और दिया गया कारण कथन को सही ढंग से स्पष्ट करता है। कथन भागीदारी वाक्यांशों के स्थान के बारे में चर्चा करता है, जबकि कारण अनुचित स्थान के परिणाम को स्पष्ट करता है, जिससे वे तार्किक रूप से जुड़े होते हैं।",
+      "difficulty": "medium",
+      "key_facts": [
+        "An introductory participial phrase must refer to the subject.",
+        "Dangling modifiers can lead to confusion in sentences.",
+        "Understanding the relationship between assertion and reason is crucial."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:55:54Z"
+    },
+    {
+      "id": "b1c2d3e4-f5g6-7h8i-9j0k-l1m2n3o4p5q6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Read the following sentence divided into four segments and identify the segment containing the grammatical error: '(A) Neither the chairman nor the executive directors / (B) was present at the extraordinary meeting / (C) convened to deliberate upon the merger proposal. / (D) No error'",
+      "question_hindi": "निम्नलिखित वाक्य को चार खंडों में विभाजित पढ़ें और उस खंड की पहचान करें जिसमें व्याकरणिक त्रुटि है: '(A) न तो अध्यक्ष और न ही कार्यकारी निदेशक / (B) असाधारण बैठक में उपस्थित थे / (C) विलय प्रस्ताव पर विचार करने के लिए बुलाया गया। / (D) कोई त्रुटि नहीं'",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "options_hindi": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "(B) When subject nouns are linked by the correlative conjunction pair neither nor, the verb must agree in number with the subject noun nearest to it. Since executive directors is a plural noun structure located closer to the verb phrase, the plural auxiliary verb were is required instead of the singular form was. Applying singular verbs near plural subjects violates standard subject-verb agreement principles.",
+      "explanation_hindi": "(B) जब विषय संज्ञाएँ सहसंबंधी संयोजन युग्म न तो और न ही द्वारा जोड़ी जाती हैं, तो क्रिया को उस विषय संज्ञा के निकटतम संख्या के साथ सहमत होना चाहिए। चूंकि कार्यकारी निदेशक एक बहुवचन संज्ञा संरचना है जो क्रिया वाक्यांश के निकट स्थित है, इसलिए बहुवचन सहायक क्रिया 'थे' की आवश्यकता है, न कि एकवचन रूप 'था'। एकवचन क्रियाओं को बहुवचन विषयों के निकट लागू करना मानक विषय-क्रिया सहमति के सिद्धांतों का उल्लंघन करता है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Subject-verb agreement is crucial when using correlative conjunctions.",
+        "The verb must agree with the nearest subject noun in number.",
+        "In this case, 'executive directors' is plural, requiring a plural verb."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:54:55Z"
+    },
+    {
+      "id": "r7s8t9u0-v1w2-x3y4-z5a6-b7c8d9e0f1g2",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Read the following segmented sentence and determine which segment contains an article-related error: “(A) The principal delivered an inspiring address / (B) to the students, emphasizing that / (C) the knowledge is the most powerful weapon in life. / (D) No error”",
+      "question_hindi": "निम्नलिखित खंडित वाक्य को पढ़ें और निर्धारित करें कि कौन सा खंड लेख से संबंधित त्रुटि है: “(A) प्रधान ने छात्रों को प्रेरणादायक भाषण दिया / (B) यह बताते हुए कि / (C) ज्ञान जीवन में सबसे शक्तिशाली हथियार है। / (D) कोई त्रुटि नहीं”",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "options_hindi": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "(C) Abstract nouns such as knowledge, wisdom, truth, or courage do not take the definite article when used in a general or universal sense. Inserting the definite article before an abstract noun restricts its scope unnecessarily unless a specific context or defining phrase follows it. Omitting the article restores proper grammatical syntax, ensuring the abstract concept functions correctly as a general uncountable noun.",
+      "explanation_hindi": "(C) ज्ञान, बुद्धिमत्ता, सत्य, या साहस जैसे अमूर्त संज्ञाएँ सामान्य या सार्वभौमिक अर्थ में उपयोग किए जाने पर निश्चित लेख नहीं लेती हैं। अमूर्त संज्ञा के पहले निश्चित लेख डालने से इसके दायरे को अनावश्यक रूप से सीमित कर दिया जाता है जब तक कि इसके बाद एक विशिष्ट संदर्भ या परिभाषित वाक्यांश न हो। लेख को छोड़ने से उचित व्याकरणिक वाक्यविन्यास बहाल होता है, यह सुनिश्चित करते हुए कि अमूर्त अवधारणा सामान्य अगणनीय संज्ञा के रूप में सही ढंग से कार्य करती है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Abstract nouns do not take definite articles in general contexts.",
+        "Definite articles restrict the meaning of abstract nouns.",
+        "Understanding article usage is essential for grammatical accuracy.",
+        "Correct article usage enhances clarity in writing."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:54:55Z"
+    },
+    {
+      "id": "f1e2d3c4-b5a6-7e8f-9a0b-c1d2e3f4g5h6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Read the following segmented sentence and identify the segment containing a passive voice error: “(A) An unprecedented event / (B) was occurred during / (C) the annual general body meeting. / (D) No error”",
+      "question_hindi": "निम्नलिखित खंडित वाक्य को पढ़ें और उस खंड की पहचान करें जिसमें एक निष्क्रिय वाणी की त्रुटि है: “(A) एक अभूतपूर्व घटना / (B) हुई थी / (C) वार्षिक आम बैठक के दौरान। / (D) कोई त्रुटि नहीं”",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "options_hindi": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "(B) Intransitive verbs such as occur, happen, arrive, or lapse do not take direct objects and cannot be formatted in the passive voice. Attempting to construct a passive verb phrase using an auxiliary verb with an intransitive verb results in a voice error. Removing the passive auxiliary verb was allows the intransitive verb to function correctly in the simple past active tense.",
+      "explanation_hindi": "(B) अव्यक्त क्रियाएँ जैसे कि होना, घटित होना, आना, या समाप्त होना प्रत्यक्ष वस्तुओं को नहीं लेती हैं और निष्क्रिय वाणी में नहीं ढाली जा सकतीं। अव्यक्त क्रिया के साथ सहायक क्रिया का उपयोग करके निष्क्रिय क्रियात्मक वाक्यांश बनाने का प्रयास एक वाणी त्रुटि का परिणाम देता है। निष्क्रिय सहायक क्रिया 'हुई थी' को हटाने से अव्यक्त क्रिया को सरल भूतकाल सक्रिय काल में सही तरीके से कार्य करने की अनुमति मिलती है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Intransitive verbs cannot be used in passive voice.",
+        "Passive voice requires a direct object.",
+        "Removing the auxiliary verb corrects the error."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:55:54Z"
+    },
+    {
+      "id": "f1b2c3d4-e5f6-7a8b-9c0d-e1f2g3h4i5j6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Read the following segmented sentence and identify the segment containing an incorrect past participle form in passive voice: “(A) The newly printed certificates / (B) were severely damaged / (C) and had to be re-written. / (D) No error”",
+      "question_hindi": "निम्नलिखित खंडित वाक्य को पढ़ें और उस खंड की पहचान करें जिसमें निष्क्रिय स्वरूप में गलत भूतकालीन भिन्न रूप है: “(A) नए मुद्रित प्रमाणपत्र / (B) गंभीर रूप से क्षतिग्रस्त थे / (C) और फिर से लिखे जाने की आवश्यकता थी। / (D) कोई त्रुटि नहीं”",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "options_hindi": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "correct_answer": "d",
+      "explanation_english": "No error. The sentence employs passive voice constructions across both coordinated predicate clauses. The plural subject certificates agrees with the plural verb were damaged, and the modal passive infinitive to be re-written correctly utilizes the appropriate past participle form. Tense consistency, prepositional usage, and spelling are fully maintained throughout all segments, making option D the correct choice for this error-free sentence.",
+      "explanation_hindi": "कोई त्रुटि नहीं। वाक्य में दोनों समन्वित क्रियापद खंडों में निष्क्रिय स्वरूप की संरचनाएँ हैं। बहुवचन विषय प्रमाणपत्र बहुवचन क्रिया 'were damaged' के साथ सहमत है, और 'to be re-written' का मौडल निष्क्रिय अनंत सही भूतकालीन भिन्न रूप का उपयोग करता है। सभी खंडों में काल की संगति, पूर्वसर्ग का उपयोग और वर्तनी पूरी तरह से बनाए रखी गई है, जिससे विकल्प D इस त्रुटि-रहित वाक्य के लिए सही विकल्प बनता है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Passive voice requires correct past participle forms.",
+        "Subject-verb agreement is crucial in passive constructions.",
+        "Tense consistency must be maintained across segments."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:56:55Z"
+    },
+    {
+      "id": "b1c2d3e4-f5g6-7h8i-9j0k-l1m2n3o4p5q6",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Read the following segmented sentence and select the segment containing a conjunction error: “Walk carefully lest you should not fall into the pit. No error”",
+      "question_hindi": "निम्नलिखित खंडित वाक्य को पढ़ें और संयोजन की त्रुटि वाले खंड का चयन करें: “सावधानी से चलें, नहीं तो आप गड्ढे में गिर सकते हैं। कोई त्रुटि नहीं”",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "Walk carefully",
+        "lest you should not fall",
+        "into the pit.",
+        "No error"
+      ],
+      "options_hindi": [
+        "सावधानी से चलें",
+        "नहीं तो आप गिर न जाएं",
+        "गड्ढे में।",
+        "कोई त्रुटि नहीं"
+      ],
+      "correct_answer": "b",
+      "explanation_english": "(B) The conjunction 'lest' expresses negative purpose, meaning 'for fear that' or 'so that not'. Because negative meaning is already built into the term, inserting an additional negative word like 'not' in the dependent clause creates an improper double negative. The modal auxiliary 'should' must be followed directly by the affirmative base verb, making the presence of the negative particle grammatically incorrect and unnecessary.",
+      "explanation_hindi": "(B) संयोजन 'lest' नकारात्मक उद्देश्य को व्यक्त करता है, जिसका अर्थ है 'डर से कि' या 'ताकि न हो'। चूंकि नकारात्मक अर्थ पहले से ही शब्द में निहित है, इसलिए निर्भर क्लॉज में 'not' जैसे अतिरिक्त नकारात्मक शब्द को डालना एक गलत डबल नकारात्मक बनाता है। क्रियापद सहायक 'should' को सीधे सकारात्मक मूल क्रिया द्वारा अनुसरण किया जाना चाहिए, जिससे नकारात्मक कण की उपस्थिति व्याकरणिक रूप से गलत और अनावश्यक हो जाती है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "The conjunction 'lest' indicates a negative purpose.",
+        "Avoid double negatives in English.",
+        "Modal verbs should be followed by base forms."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:55:54Z"
+    },
+    {
+      "id": "f4e5d6c7-8b9a-4c3d-bc1e-4f5e6d7c8b9a",
+      "created_at": "2023-10-29T21:00:00Z",
+      "subject": "General English",
+      "topic": "Spotting Errors",
+      "language": "bilingual",
+      "source": "AI-generated from supplied reference material; Spotting Errors",
+      "question_english": "Read the following segmented sentence and select the segment containing a punctuation error: “(A) The vice chancellor introduced the speaker, / (B) he is a renowned authority / (C) on postcolonial literature. / (D) No error”",
+      "question_hindi": "निम्नलिखित खंडित वाक्य को पढ़ें और उस खंड का चयन करें जिसमें विराम चिह्न की त्रुटि है: “(A) उपकुलपति ने वक्ता का परिचय दिया, / (B) वह एक प्रसिद्ध विशेषज्ञ है / (C) उपनिवेशोत्तर साहित्य पर। / (D) कोई त्रुटि नहीं”",
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "options_english": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "options_hindi": [
+        "(A)",
+        "(B)",
+        "(C)",
+        "(D)"
+      ],
+      "correct_answer": "a",
+      "explanation_english": "(A) Connecting two independent clauses using only a comma without a coordinating conjunction creates a comma splice punctuation error. Each independent clause contains a distinct subject and finite verb, requiring separation by a period, semicolon, or coordinating conjunction, or transformation of the second clause into a relative subordinate clause. Replacing the comma with appropriate punctuation or a relative pronoun eliminates the structural punctuation defect.",
+      "explanation_hindi": "(A) केवल एक अलंकारिक संयोजक के बिना दो स्वतंत्र उपवाक्यों को केवल एक अलंकारिक चिह्न का उपयोग करके जोड़ना एक अलंकारिक चिह्न की त्रुटि उत्पन्न करता है। प्रत्येक स्वतंत्र उपवाक्य में एक विशिष्ट विषय और सीमित क्रिया होती है, जिसे एक पूर्ण विराम, सेमीकोलन, या संयोजक द्वारा अलग करने की आवश्यकता होती है, या दूसरे उपवाक्य को एक सापेक्ष अधीनस्थ उपवाक्य में बदलने की आवश्यकता होती है। अलंकारिक चिह्न को उचित विराम चिह्न या सापेक्ष सर्वनाम से बदलने से संरचनात्मक विराम चिह्न की त्रुटि समाप्त हो जाती है।",
+      "difficulty": "medium",
+      "key_facts": [
+        "Comma splices occur when independent clauses are improperly connected.",
+        "Each independent clause must be properly punctuated or connected.",
+        "Using a coordinating conjunction can prevent comma splices.",
+        "Transforming clauses can also resolve punctuation issues."
+      ],
+      "ai_processed": true,
+      "processed_at": "2026-10-30T05:56:55Z"
+    }
+  ]
+}
