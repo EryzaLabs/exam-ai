@@ -20,6 +20,74 @@ export function invalidatePapersCache() {
   cachedPapersList = null;
 }
 
+export const TOPIC_METADATA: Record<string, { name: string; category: string }> = {
+  'nep-2020': { name: 'NEP 2020 (National Education Policy)', category: 'Policies & Acts' },
+  'ncf-2023': { name: 'NCF 2023 (School Education)', category: 'Policies & Acts' },
+  'ncf-2005': { name: 'NCF 2005 (Curriculum Framework)', category: 'Policies & Acts' },
+  'pocso': { name: 'POCSO Act 2012 & Child Rights', category: 'Policies & Acts' },
+  'cbse': { name: 'CBSE Affiliation & Examination Bye-Laws', category: 'Institutions & Boards' },
+  'ncert': { name: 'NCERT Mandate, Structure & Curriculum', category: 'Institutions & Boards' },
+  'kvs': { name: 'Kendriya Vidyalaya Sangathan (KVS) Rules', category: 'Institutions & Boards' },
+  'navodaya-jnv': { name: 'Navodaya Vidyalaya Samiti (NVS / JNV)', category: 'Institutions & Boards' },
+  'emrs': { name: 'Eklavya Model Residential Schools (EMRS)', category: 'Institutions & Boards' },
+  'cabe': { name: 'Central Advisory Board of Education (CABE)', category: 'Institutions & Boards' },
+  'scert': { name: 'SCERT & DIET Structure & Functions', category: 'Institutions & Boards' },
+  'ugc': { name: 'University Grants Commission (UGC)', category: 'Institutions & Boards' },
+  'nios': { name: 'National Institute of Open Schooling (NIOS)', category: 'Institutions & Boards' },
+  'open-university': { name: 'Open & Distance Learning (ODL / IGNOU)', category: 'Institutions & Boards' },
+  'parakh': { name: 'PARAKH National Assessment Centre', category: 'Pedagogy & Assessment' },
+  'nipun-bharat': { name: 'NIPUN Bharat & FLN Mission', category: 'Pedagogy & Assessment' },
+  'assessment': { name: 'School Assessment, Standards & Rubrics', category: 'Pedagogy & Assessment' },
+  'evaluation': { name: 'Continuous & Comprehensive Evaluation (CCE)', category: 'Pedagogy & Assessment' },
+  'measurement': { name: 'Educational Measurement & Psychometrics', category: 'Pedagogy & Assessment' },
+  'inclusive-education': { name: 'Inclusive Education & Special Needs', category: 'Pedagogy & Assessment' },
+  'specially-abled-children': { name: 'RPwD Act & Specially Abled Children', category: 'Pedagogy & Assessment' },
+  'pm-poshan': { name: 'PM POSHAN (Mid-Day Meal Scheme)', category: 'Schemes & Initiatives' },
+  'pm-shri-cm-shri': { name: 'PM SHRI & CM SHRI Exemplary Schools', category: 'Schemes & Initiatives' },
+  'pm-vidya-laxmi': { name: 'PM Vidya Laxmi Education Scheme', category: 'Schemes & Initiatives' },
+  'ai-in-education': { name: 'AI & ICT in Modern Classrooms', category: 'Schemes & Initiatives' },
+  'vidyanjali': { name: 'Vidyanjali 2.0 Community Participation', category: 'Schemes & Initiatives' },
+  'yuva-sangam': { name: 'Yuva Sangam (Ek Bharat Shreshtha Bharat)', category: 'Schemes & Initiatives' },
+  'smc-2026': { name: 'School Management Committees (SMC & PTA)', category: 'Administration & Governance' },
+  'kasturba-gandhi-balika-vidyalaya': { name: 'Kasturba Gandhi Balika Vidyalaya (KGBV)', category: 'Schemes & Initiatives' },
+  'sadhana-saptah-2026': { name: 'Sadhana Saptah Pedagogical Week', category: 'Schemes & Initiatives' },
+  'sakura-science-2026': { name: 'Sakura Science High School Exchange', category: 'Schemes & Initiatives' },
+  'nasha-mukt-abhiyan': { name: 'Nasha Mukt Bharat Abhiyan in Schools', category: 'Schemes & Initiatives' },
+  'bharat-innovates-2026': { name: 'Bharat Innovates Science & Innovation', category: 'Schemes & Initiatives' },
+  'bhartiya-bhasha-summer-camp': { name: 'Bhartiya Bhasha Summer Camps', category: 'Schemes & Initiatives' },
+  'career-cards': { name: 'Career Cards & Vocational Guidance', category: 'Pedagogy & Assessment' },
+  'pmrc': { name: 'PMRC Administrative Guidelines', category: 'Administration & Governance' },
+};
+
+export function formatPaperTitle(rawTitle: string | undefined, filename: string, topic?: string): string {
+  if (filename.includes('full_mocks/')) {
+    const match = filename.match(/mock_test_(\d+)\.json/);
+    if (match) {
+      const num = parseInt(match[1], 10);
+      const padded = num < 10 ? `0${num}` : `${num}`;
+      return `UPSC Principal Full Mock Test ${padded} • Complete CBT Exam`;
+    }
+    return rawTitle || 'UPSC Principal Full Mock Test';
+  }
+
+  if (filename.includes('topic_wise/')) {
+    const base = filename.replace('topic_wise/', '').replace('.json', '');
+    const match = base.match(/^(.+)_test_(\d+)$/);
+    if (match) {
+      const slug = match[1].toLowerCase();
+      const partNum = match[2];
+      const meta = TOPIC_METADATA[slug];
+      const topicName = meta ? meta.name : slug.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
+      return `${topicName} • Practice Set ${partNum}`;
+    }
+    if (topic && TOPIC_METADATA[topic]) {
+      return `${TOPIC_METADATA[topic].name} • Practice Set`;
+    }
+  }
+
+  return rawTitle || 'UPSC Principal Test';
+}
+
 function loadAllPapersList(): any[] {
   const fullMockDir = path.join(TESTS_DIR, 'full_mocks');
   const topicWiseDir = path.join(TESTS_DIR, 'topic_wise');
@@ -46,18 +114,22 @@ function loadAllPapersList(): any[] {
   return allFiles.map((fileObj) => {
     let title = "UPSC Principal Test";
     let testId = fileObj.filename;
+    let topic = "";
     try {
       const fileData = JSON.parse(fs.readFileSync(fileObj.fullPath, 'utf8'));
       title = fileData.test_name || title;
+      topic = fileData.topic || "";
       if (fileData.test_id) {
         testId = fileData.test_id;
       }
     } catch (e) {}
+
+    const cleanTitle = formatPaperTitle(title, fileObj.filename, topic);
     
     return {
       id: fileObj.filename,
       testId: testId,
-      title: title,
+      title: cleanTitle,
       filename: fileObj.filename,
       hasAnswers: true
     };
@@ -85,45 +157,6 @@ if (!fs.existsSync(CUSTOM_MOCKS_DIR)) {
     fs.mkdirSync(CUSTOM_MOCKS_DIR, { recursive: true });
   } catch (e) {}
 }
-
-const TOPIC_METADATA: Record<string, { name: string; category: string }> = {
-  'nep-2020': { name: 'NEP 2020 (National Education Policy)', category: 'Policies & Acts' },
-  'ncf-2023': { name: 'NCF 2023 (School Education)', category: 'Policies & Acts' },
-  'ncf-2005': { name: 'NCF 2005', category: 'Policies & Acts' },
-  'pocso': { name: 'POCSO Act 2012 & Child Rights', category: 'Policies & Acts' },
-  'cbse': { name: 'CBSE Affiliation & Examination Bye-Laws', category: 'Institutions & Boards' },
-  'ncert': { name: 'NCERT Structure & Mandate', category: 'Institutions & Boards' },
-  'kvs': { name: 'Kendriya Vidyalaya Sangathan (KVS)', category: 'Institutions & Boards' },
-  'navodaya-jnv': { name: 'Jawahar Navodaya Vidyalaya (JNV)', category: 'Institutions & Boards' },
-  'emrs': { name: 'Eklavya Model Residential Schools (EMRS)', category: 'Institutions & Boards' },
-  'cabe': { name: 'Central Advisory Board of Education (CABE)', category: 'Institutions & Boards' },
-  'scert': { name: 'SCERT & DIET Structure', category: 'Institutions & Boards' },
-  'ugc': { name: 'University Grants Commission (UGC)', category: 'Institutions & Boards' },
-  'nios': { name: 'National Institute of Open Schooling (NIOS)', category: 'Institutions & Boards' },
-  'open-university': { name: 'Open & Distance Learning Universities', category: 'Institutions & Boards' },
-  'parakh': { name: 'PARAKH (National Assessment Centre)', category: 'Pedagogy & Assessment' },
-  'nipun-bharat': { name: 'NIPUN Bharat (FLN Mission)', category: 'Pedagogy & Assessment' },
-  'assessment': { name: 'School Assessment & Evaluation', category: 'Pedagogy & Assessment' },
-  'evaluation': { name: 'Continuous & Comprehensive Evaluation (CCE)', category: 'Pedagogy & Assessment' },
-  'measurement': { name: 'Educational Measurement, Testing & Psychometrics', category: 'Pedagogy & Assessment' },
-  'inclusive-education': { name: 'Inclusive Education & CWSN', category: 'Pedagogy & Assessment' },
-  'specially-abled-children': { name: 'Rights of Persons with Disabilities (RPwD)', category: 'Pedagogy & Assessment' },
-  'pm-poshan': { name: 'PM POSHAN Scheme (Mid-Day Meal)', category: 'Schemes & Initiatives' },
-  'pm-shri-cm-shri': { name: 'PM SHRI & CM SHRI Exemplary Schools', category: 'Schemes & Initiatives' },
-  'pm-vidya-laxmi': { name: 'PM Vidya Laxmi Education Scheme', category: 'Schemes & Initiatives' },
-  'ai-in-education': { name: 'AI & ICT in Modern Classrooms', category: 'Schemes & Initiatives' },
-  'vidyanjali': { name: 'Vidyanjali 2.0 Community Participation', category: 'Schemes & Initiatives' },
-  'yuva-sangam': { name: 'Yuva Sangam (Ek Bharat Shreshtha Bharat)', category: 'Schemes & Initiatives' },
-  'smc-2026': { name: 'School Management Committees (SMC) & PTA', category: 'Administration & Governance' },
-  'kasturba-gandhi-balika-vidyalaya': { name: 'Kasturba Gandhi Balika Vidyalaya (KGBV)', category: 'Schemes & Initiatives' },
-  'sadhana-saptah-2026': { name: 'Sadhana Saptah Pedagogical Week', category: 'Schemes & Initiatives' },
-  'sakura-science-2026': { name: 'Sakura Science High School Exchange', category: 'Schemes & Initiatives' },
-  'nasha-mukt-abhiyan': { name: 'Nasha Mukt Bharat Abhiyan in Schools', category: 'Schemes & Initiatives' },
-  'bharat-innovates-2026': { name: 'Bharat Innovates Science & Innovation', category: 'Schemes & Initiatives' },
-  'bhartiya-bhasha-summer-camp': { name: 'Bhartiya Bhasha Summer Camps', category: 'Schemes & Initiatives' },
-  'career-cards': { name: 'Career Cards & Vocational Guidance', category: 'Pedagogy & Assessment' },
-  'pmrc': { name: 'PMRC Administrative Guidelines', category: 'Administration & Governance' },
-};
 
 // GET /api/papers/custom/topics - List all topics with question counts and categories
 router.get('/custom/topics', (req: Request, res: Response) => {

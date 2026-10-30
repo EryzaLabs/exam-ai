@@ -43,6 +43,7 @@ import {
   Target,
   PlayCircle,
   Check,
+  X,
 } from 'lucide-react-native';
 import SSCCGLService, { ParsedMockTest } from '@/services/ssc-cgl-service';
 import { TestProgressService, SavedTestState, TestResult } from '@/services/test-progress-service';
@@ -58,6 +59,181 @@ interface ServerPaper {
   filename: string;
   hasAnswers: boolean;
 }
+
+export const TOPIC_METADATA_CLIENT: Record<string, { name: string; category: string }> = {
+  'nep-2020': { name: 'NEP 2020 (National Education Policy)', category: 'Policies & Acts' },
+  'ncf-2023': { name: 'NCF 2023 (School Education)', category: 'Policies & Acts' },
+  'ncf-2005': { name: 'NCF 2005 (Curriculum Framework)', category: 'Policies & Acts' },
+  'pocso': { name: 'POCSO Act 2012 & Child Rights', category: 'Policies & Acts' },
+  'cbse': { name: 'CBSE Affiliation & Examination Bye-Laws', category: 'Institutions & Boards' },
+  'ncert': { name: 'NCERT Mandate, Structure & Curriculum', category: 'Institutions & Boards' },
+  'kvs': { name: 'Kendriya Vidyalaya Sangathan (KVS) Rules', category: 'Institutions & Boards' },
+  'navodaya-jnv': { name: 'Navodaya Vidyalaya Samiti (NVS / JNV)', category: 'Institutions & Boards' },
+  'emrs': { name: 'Eklavya Model Residential Schools (EMRS)', category: 'Institutions & Boards' },
+  'cabe': { name: 'Central Advisory Board of Education (CABE)', category: 'Institutions & Boards' },
+  'scert': { name: 'SCERT & DIET Structure & Functions', category: 'Institutions & Boards' },
+  'ugc': { name: 'University Grants Commission (UGC)', category: 'Institutions & Boards' },
+  'nios': { name: 'National Institute of Open Schooling (NIOS)', category: 'Institutions & Boards' },
+  'open-university': { name: 'Open & Distance Learning (ODL / IGNOU)', category: 'Institutions & Boards' },
+  'parakh': { name: 'PARAKH National Assessment Centre', category: 'Pedagogy & Assessment' },
+  'nipun-bharat': { name: 'NIPUN Bharat & FLN Mission', category: 'Pedagogy & Assessment' },
+  'assessment': { name: 'School Assessment, Standards & Rubrics', category: 'Pedagogy & Assessment' },
+  'evaluation': { name: 'Continuous & Comprehensive Evaluation (CCE)', category: 'Pedagogy & Assessment' },
+  'measurement': { name: 'Educational Measurement & Psychometrics', category: 'Pedagogy & Assessment' },
+  'inclusive-education': { name: 'Inclusive Education & Special Needs', category: 'Pedagogy & Assessment' },
+  'specially-abled-children': { name: 'RPwD Act & Specially Abled Children', category: 'Pedagogy & Assessment' },
+  'pm-poshan': { name: 'PM POSHAN (Mid-Day Meal Scheme)', category: 'Schemes & Initiatives' },
+  'pm-shri-cm-shri': { name: 'PM SHRI & CM SHRI Exemplary Schools', category: 'Schemes & Initiatives' },
+  'pm-vidya-laxmi': { name: 'PM Vidya Laxmi Education Scheme', category: 'Schemes & Initiatives' },
+  'ai-in-education': { name: 'AI & ICT in Modern Classrooms', category: 'Schemes & Initiatives' },
+  'vidyanjali': { name: 'Vidyanjali 2.0 Community Participation', category: 'Schemes & Initiatives' },
+  'yuva-sangam': { name: 'Yuva Sangam (Ek Bharat Shreshtha Bharat)', category: 'Schemes & Initiatives' },
+  'smc-2026': { name: 'School Management Committees (SMC & PTA)', category: 'Administration & Governance' },
+  'kasturba-gandhi-balika-vidyalaya': { name: 'Kasturba Gandhi Balika Vidyalaya (KGBV)', category: 'Schemes & Initiatives' },
+  'sadhana-saptah-2026': { name: 'Sadhana Saptah Pedagogical Week', category: 'Schemes & Initiatives' },
+  'sakura-science-2026': { name: 'Sakura Science High School Exchange', category: 'Schemes & Initiatives' },
+  'nasha-mukt-abhiyan': { name: 'Nasha Mukt Bharat Abhiyan in Schools', category: 'Schemes & Initiatives' },
+  'bharat-innovates-2026': { name: 'Bharat Innovates Science & Innovation', category: 'Schemes & Initiatives' },
+  'bhartiya-bhasha-summer-camp': { name: 'Bhartiya Bhasha Summer Camps', category: 'Schemes & Initiatives' },
+  'career-cards': { name: 'Career Cards & Vocational Guidance', category: 'Pedagogy & Assessment' },
+  'pmrc': { name: 'PMRC Administrative Guidelines', category: 'Administration & Governance' },
+};
+
+// Reddit-style semantic knowledge graph for broad dynamic searching
+export const SEARCH_SEMANTIC_ALIASES: Record<string, string[]> = {
+  'nep-2020': ['nep', 'nep2020', 'national education policy', '5+3+3+4', 'fln', 'foundational literacy', 'kothari', 'higher education commission', 'heci', 'parakh', 'school education', 'balvatika', 'curriculum change'],
+  'ncf-2023': ['ncf', 'ncf2023', 'national curriculum framework', 'panchakosha', 'pedagogical framework', 'curriculum', 'school education framework'],
+  'ncf-2005': ['ncf2005', 'yashpal', 'learning without burden', 'constructivism', 'curriculum 2005'],
+  'pocso': ['pocso', 'child rights', 'child protection', 'sexual offences', 'juvenile', 'child safety', 'child abuse', 'special courts', 'section 43', 'section 19', 'mandatory reporting', 'protection of children'],
+  'cbse': ['cbse', 'affiliation', 'exam bye laws', 'bye-laws', 'examination', 'board exam', 'central board', 'circulars', 'loc', 'passing criteria', 'bye laws', 'affiliation bye-laws'],
+  'ncert': ['ncert', 'textbooks', 'curriculum', 'dsel', 'ciet', 'rie', 'national council', 'pedagogical material'],
+  'kvs': ['kvs', 'kendriya vidyalaya', 'sangathan', 'kvs rules', 'transfer policy', 'education code', 'vidyalaya', 'central school'],
+  'navodaya-jnv': ['jnv', 'navodaya', 'nvs', 'jawahar navodaya', 'samiti', 'residential school', 'migration scheme', 'rural talent'],
+  'emrs': ['emrs', 'eklavya', 'tribal', 'ashram', 'tribal affairs', 'residential school', 'model residential', 'tribal education'],
+  'cabe': ['cabe', 'central advisory board', 'advisory council', 'education advisory'],
+  'scert': ['scert', 'diet', 'district institute', 'state council', 'teacher training', 'in-service training'],
+  'ugc': ['ugc', 'university grants', 'higher education', 'net exam', 'college', 'commission'],
+  'nios': ['nios', 'open school', 'distance learning', 'on demand exam', 'obe', 'open basic education'],
+  'open-university': ['ignou', 'open university', 'odl', 'distance education', 'correspondence', 'open learning'],
+  'parakh': ['parakh', 'assessment centre', 'standard setting', 'holistic progress card', 'hpc', 'nas', 'benchmarks', 'evaluation center', 'national assessment'],
+  'nipun-bharat': ['nipun', 'nipun bharat', 'fln', 'foundational literacy', 'numeracy', 'vidyapravesh', 'balvatika', 'mission', 'fln mission'],
+  'assessment': ['assessment', 'formative', 'summative', 'diagnostic', 'rubrics', 'testing', 'benchmarking', 'standardized testing', 'grades'],
+  'evaluation': ['evaluation', 'cce', 'continuous comprehensive evaluation', 'grading system', 'grading', 'marks', 'scholastic', 'co-scholastic'],
+  'measurement': ['measurement', 'psychometrics', 'item response', 'validity', 'reliability', 'difficulty index', 'discrimination index', 'statistics', 'testing measurement'],
+  'inclusive-education': ['inclusive', 'inclusion', 'cwsn', 'children with special needs', 'iep', 'accessible', 'special education', 'barrier-free'],
+  'specially-abled-children': ['specially abled', 'divyang', 'rpwd', 'pwd', 'disabilities', 'handicapped', 'autism', 'dyslexia', 'adhd', 'blindness', 'rights of persons', 'rpwd act 2016'],
+  'pm-poshan': ['pm poshan', 'poshan', 'mid day meal', 'midday meal', 'mdm', 'school lunch', 'nutrition', 'tithi bhojan', 'kitchen garden', 'food', 'hot cooked meal'],
+  'pm-shri-cm-shri': ['pm shri', 'cm shri', 'exemplary schools', 'model school', 'smart schools', 'green school', 'pilot school', 'exemplary'],
+  'pm-vidya-laxmi': ['vidya laxmi', 'vidyalaxmi', 'education loan', 'scholarship', 'financial assistance', 'student loan', 'higher education funding'],
+  'ai-in-education': ['ai', 'ict', 'artificial intelligence', 'digital learning', 'smart classrooms', 'diksha', 'swayam', 'technology', 'computer education'],
+  'vidyanjali': ['vidyanjali', 'volunteer', 'community participation', 'school adoption', 'csr', 'alumni', 'community support'],
+  'yuva-sangam': ['yuva sangam', 'ek bharat', 'shreshtha bharat', 'ebsb', 'student exchange', 'interstate', 'cultural exchange'],
+  'smc-2026': ['smc', 'school management committee', 'pta', 'parent teacher', 'school development plan', 'sdp', 'community', 'rte smc', 'school development'],
+  'kasturba-gandhi-balika-vidyalaya': ['kgbv', 'kasturba gandhi', 'balika', 'girls school', 'residential girl', 'gender equity', 'girl education'],
+  'sadhana-saptah-2026': ['sadhana saptah', 'pedagogical week', 'experiential learning', 'activity based'],
+  'sakura-science-2026': ['sakura', 'science exchange', 'japan exchange', 'stem'],
+  'nasha-mukt-abhiyan': ['nasha mukt', 'substance abuse', 'drug free', 'anti drug', 'tobacco free', 'wellness'],
+  'bharat-innovates-2026': ['bharat innovates', 'innovation', 'atal tinkering', 'atl', 'science exhibition'],
+  'bhartiya-bhasha-summer-camp': ['bhartiya bhasha', 'indian languages', 'multilingualism', 'summer camp', 'language learning', 'mother tongue'],
+  'career-cards': ['career cards', 'vocational guidance', 'counselling', 'counseling', 'aptitude', 'career guidance', 'vocational'],
+  'pmrc': ['pmrc', 'administrative guidelines', 'principal manual', 'ccs rules', 'gfr', 'financial powers', 'office procedure', 'service rules', 'frsr', 'procurement', 'leave rules'],
+  'full_mocks': ['full mock', 'full test', 'complete test', 'cbt exam', '120 questions', '300 marks', 'general studies', 'admin and finance', 'grand test', 'mock test', 'cbt', 'mock'],
+};
+
+// Fast typo-tolerant fuzzy matching
+export function levenshteinDistance(s1: string, s2: string): number {
+  if (s1 === s2) return 0;
+  if (!s1.length) return s2.length;
+  if (!s2.length) return s1.length;
+
+  const d: number[][] = [];
+  for (let i = 0; i <= s1.length; i++) d[i] = [i];
+  for (let j = 0; j <= s2.length; j++) d[0][j] = j;
+
+  for (let i = 1; i <= s1.length; i++) {
+    for (let j = 1; j <= s2.length; j++) {
+      const cost = s1[i - 1] === s2[j - 1] ? 0 : 1;
+      d[i][j] = Math.min(
+        d[i - 1][j] + 1,
+        d[i][j - 1] + 1,
+        d[i - 1][j - 1] + cost
+      );
+    }
+  }
+  return d[s1.length][s2.length];
+}
+
+export function isFuzzyMatch(token: string, candidate: string): boolean {
+  if (!candidate || !token) return false;
+  if (candidate.includes(token)) return true;
+  if (token.length >= 3 && candidate.length >= 3) {
+    const maxDist = token.length >= 7 ? 2 : 1;
+    const words = candidate.split(/[\s\-_\/]+/);
+    for (const w of words) {
+      if (w.length >= 3) {
+        if (w.startsWith(token) || token.startsWith(w)) return true;
+        if (Math.abs(w.length - token.length) <= maxDist) {
+          if (levenshteinDistance(token, w) <= maxDist) return true;
+        }
+      }
+    }
+  }
+  return false;
+}
+
+export const formatDisplayTitle = (title: string, filename: string): string => {
+  if (!filename) return title || 'UPSC Principal Test';
+
+  if (filename.includes('full_mocks/')) {
+    const match = filename.match(/mock_test_(\d+)\.json/);
+    if (match) {
+      const num = parseInt(match[1], 10);
+      const padded = num < 10 ? `0${num}` : `${num}`;
+      return `UPSC Principal Full Mock Test ${padded} • Complete CBT Exam`;
+    }
+    if (title && !title.toLowerCase().includes('.json')) {
+      return title;
+    }
+    return 'UPSC Principal Full Mock Test';
+  }
+
+  if (filename.includes('topic_wise/')) {
+    const base = filename.replace('topic_wise/', '').replace('.json', '');
+    const match = base.match(/^(.+)_test_(\d+)$/);
+    if (match) {
+      const slug = match[1].toLowerCase();
+      const partNum = match[2];
+      const meta = TOPIC_METADATA_CLIENT[slug];
+      const topicName = meta ? meta.name : slug.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
+      return `${topicName} • Practice Set ${partNum}`;
+    }
+  }
+
+  // Handle legacy title patterns like "Topic Test: X - Part Y"
+  const legacyMatch = title?.match(/Topic Test:\s*(.+?)\s*-\s*Part\s*(\d+)/i);
+  if (legacyMatch) {
+    const rawTopic = legacyMatch[1].trim();
+    const partNum = legacyMatch[2];
+    const slug = rawTopic.toLowerCase().replace(/\s+/g, '-');
+    const meta = TOPIC_METADATA_CLIENT[slug];
+    const topicName = meta ? meta.name : rawTopic.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+    return `${topicName} • Practice Set ${partNum}`;
+  }
+
+  return title || 'UPSC Principal Test';
+};
+
+const SEARCH_SUGGESTIONS = [
+  { label: 'NEP 2020', query: 'nep 2020' },
+  { label: 'POCSO Act', query: 'pocso' },
+  { label: 'Mid-Day Meal', query: 'pm poshan' },
+  { label: 'CBSE Rules', query: 'cbse' },
+  { label: 'Full Mocks', query: 'full mock' },
+  { label: 'CWSN & RPwD', query: 'specially abled' },
+  { label: 'FLN / NIPUN', query: 'nipun' },
+  { label: 'CCE & Rubrics', query: 'cce' },
+  { label: 'KVS & JNV', query: 'kvs' },
+];
 
 // Syllabus Category Definitions for Topic-Wise Tests
 const SYLLABUS_CATEGORIES: {
@@ -197,8 +373,10 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const getTopicFromFilename = (filename: string): string | null => {
     if (!filename.includes('topic_wise/')) return null;
     const base = filename.split('topic_wise/')[1];
-    const topicId = base.split('_test_')[0];
-    return topicId.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    const slug = base.split('_test_')[0].toLowerCase();
+    const meta = TOPIC_METADATA_CLIENT[slug];
+    if (meta) return meta.name;
+    return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
   };
 
   const getCategoryForTopicSlug = (slug: string): string => {
@@ -284,7 +462,12 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     setLoading(true);
     try {
       const availablePapers = await SSCCGLService.fetchPapersList();
-      const withAnswers = availablePapers.filter((p: ServerPaper) => p.hasAnswers);
+      const withAnswers = availablePapers
+        .filter((p: ServerPaper) => p.hasAnswers)
+        .map((p: ServerPaper) => ({
+          ...p,
+          title: formatDisplayTitle(p.title, p.filename),
+        }));
       setTests(withAnswers);
       setFilteredTests(withAnswers);
     } catch (error) {
@@ -295,34 +478,133 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   };
 
   const filterTests = () => {
-    let filtered = [...tests];
-
-    if (category === 'full') {
-      filtered = filtered.filter(t => t.filename.includes('full_mocks/'));
-    } else if (category === 'topic') {
-      filtered = filtered.filter(t => t.filename.includes('topic_wise/'));
-      if (selectedTopic) {
-        filtered = filtered.filter(t => getTopicFromFilename(t.filename) === selectedTopic);
-      } else if (selectedTopicCategory !== 'all') {
-        filtered = filtered.filter(t => {
-          const slug = getTopicSlugFromFilename(t.filename);
-          return getCategoryForTopicSlug(slug) === selectedTopicCategory;
-        });
-      }
-    }
+    let baseList = [...tests];
 
     if (attemptFilter === 'attempted') {
-      filtered = filtered.filter(t => !!getAttemptForTest(t));
+      baseList = baseList.filter(t => !!getAttemptForTest(t));
     } else if (attemptFilter === 'unattempted') {
-      filtered = filtered.filter(t => !getAttemptForTest(t));
+      baseList = baseList.filter(t => !getAttemptForTest(t));
     }
 
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
-      filtered = filtered.filter((test) => test.title.toLowerCase().includes(query));
+    const trimmedQuery = searchQuery.trim().toLowerCase();
+
+    if (!trimmedQuery) {
+      let filtered = baseList;
+      if (category === 'full') {
+        filtered = filtered.filter(t => t.filename.includes('full_mocks/'));
+      } else if (category === 'topic') {
+        filtered = filtered.filter(t => t.filename.includes('topic_wise/'));
+        if (selectedTopic) {
+          filtered = filtered.filter(t => getTopicFromFilename(t.filename) === selectedTopic);
+        } else if (selectedTopicCategory !== 'all') {
+          filtered = filtered.filter(t => {
+            const slug = getTopicSlugFromFilename(t.filename);
+            return getCategoryForTopicSlug(slug) === selectedTopicCategory;
+          });
+        }
+      }
+      setFilteredTests(filtered);
+      return;
     }
 
-    setFilteredTests(filtered);
+    // Dynamic Reddit-style broad semantic search
+    const tokens = trimmedQuery.split(/[\s,]+/).filter(Boolean);
+
+    const scoreTest = (t: ServerPaper): number => {
+      const slug = getTopicSlugFromFilename(t.filename) || (t.filename.includes('full_mocks') ? 'full_mocks' : '');
+      const topicName = getTopicFromFilename(t.filename) || (t.filename.includes('full_mocks') ? 'Full Length CBT Mock Test' : '');
+      const catId = getCategoryForTopicSlug(slug);
+      const catObj = SYLLABUS_CATEGORIES.find(c => c.id === catId);
+      const categoryName = catObj ? catObj.name : '';
+      
+      const cleanTitle = (t.title || '').toLowerCase();
+      const rawFilename = (t.filename || '').toLowerCase();
+      const lowerTopic = topicName.toLowerCase();
+      const lowerCat = categoryName.toLowerCase();
+      const aliases = (SEARCH_SEMANTIC_ALIASES[slug] || []).map(a => a.toLowerCase());
+
+      let score = 0;
+
+      // 1. Exact phrase matches (highest priority)
+      if (cleanTitle.includes(trimmedQuery)) score += 200;
+      if (lowerTopic.includes(trimmedQuery)) score += 160;
+      if (aliases.some(a => a.includes(trimmedQuery) || trimmedQuery.includes(a))) score += 140;
+      if (lowerCat.includes(trimmedQuery)) score += 80;
+      if (rawFilename.includes(trimmedQuery)) score += 60;
+
+      // 2. Tokenized multi-term matches (broad match)
+      let matchedTokens = 0;
+      for (const token of tokens) {
+        let tokenFound = false;
+
+        if (cleanTitle.includes(token)) {
+          score += 45;
+          tokenFound = true;
+        }
+        if (lowerTopic.includes(token)) {
+          score += 40;
+          tokenFound = true;
+        }
+        if (aliases.some(a => a.includes(token))) {
+          score += 35;
+          tokenFound = true;
+        }
+        if (lowerCat.includes(token)) {
+          score += 25;
+          tokenFound = true;
+        }
+        if (rawFilename.includes(token)) {
+          score += 20;
+          tokenFound = true;
+        }
+
+        // Fuzzy match for typos if token is >= 3 chars
+        if (!tokenFound && token.length >= 3) {
+          if (
+            isFuzzyMatch(token, cleanTitle) ||
+            isFuzzyMatch(token, lowerTopic) ||
+            aliases.some(a => isFuzzyMatch(token, a))
+          ) {
+            score += 20;
+            tokenFound = true;
+          }
+        }
+
+        if (tokenFound) matchedTokens++;
+      }
+
+      if (tokens.length > 1 && matchedTokens === tokens.length) {
+        score += 80; // All tokens matched
+      } else if (matchedTokens > 0) {
+        score += matchedTokens * 10;
+      }
+
+      return score;
+    };
+
+    // First try filtering within current category/topic
+    let scopedList = baseList;
+    if (category === 'full') {
+      scopedList = scopedList.filter(t => t.filename.includes('full_mocks/'));
+    } else if (category === 'topic' && selectedTopic) {
+      scopedList = scopedList.filter(t => getTopicFromFilename(t.filename) === selectedTopic);
+    }
+
+    const scoredScoped = scopedList
+      .map(t => ({ test: t, score: scoreTest(t) }))
+      .filter(x => x.score > 0)
+      .sort((a, b) => b.score - a.score);
+
+    // If scoped results found, display them. If 0 found in active sub-scope, fallback to search ALL tests!
+    if (scoredScoped.length > 0) {
+      setFilteredTests(scoredScoped.map(x => x.test));
+    } else {
+      const scoredAll = baseList
+        .map(t => ({ test: t, score: scoreTest(t) }))
+        .filter(x => x.score > 0)
+        .sort((a, b) => b.score - a.score);
+      setFilteredTests(scoredAll.map(x => x.test));
+    }
   };
 
   const handleTestSelect = async (paper: ServerPaper) => {
@@ -845,9 +1127,28 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
   const ContainerComponent = isLargeScreen ? View : SafeAreaView;
 
-  // Filter topics for the topic grid
+  // Filter topics for the topic grid with dynamic Reddit-style matching
   const visibleTopics = uniqueTopics.filter(t => {
-    if (searchQuery && !t.topicName.toLowerCase().includes(searchQuery.toLowerCase())) {
+    if (searchQuery.trim()) {
+      const lowerQuery = searchQuery.toLowerCase().trim();
+      const tokens = lowerQuery.split(/[\s,]+/).filter(Boolean);
+      const lowerName = t.topicName.toLowerCase();
+      const cat = SYLLABUS_CATEGORIES.find(c => c.id === t.categoryId);
+      const lowerCat = cat ? cat.name.toLowerCase() : '';
+      const aliases = (SEARCH_SEMANTIC_ALIASES[t.slug] || []).map(a => a.toLowerCase());
+
+      if (lowerName.includes(lowerQuery) || aliases.some(a => a.includes(lowerQuery) || lowerQuery.includes(a)) || lowerCat.includes(lowerQuery)) {
+        return true;
+      }
+
+      for (const tok of tokens) {
+        if (lowerName.includes(tok) || aliases.some(a => a.includes(tok)) || lowerCat.includes(tok)) {
+          return true;
+        }
+        if (tok.length >= 3 && (isFuzzyMatch(tok, lowerName) || aliases.some(a => isFuzzyMatch(tok, a)))) {
+          return true;
+        }
+      }
       return false;
     }
     if (selectedTopicCategory !== 'all' && t.categoryId !== selectedTopicCategory) {
@@ -911,11 +1212,16 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             <Search size={18} color={colors.textTertiary} />
             <TextInput
               style={[styles.searchInputField, { color: colors.textPrimary }]}
-              placeholder="Search tests, topics, laws, acts..."
+              placeholder="Search tests, topics, laws, acts, CBT mocks..."
               value={searchQuery}
               onChangeText={setSearchQuery}
               placeholderTextColor={colors.textTertiary}
             />
+            {searchQuery.length > 0 && (
+              <TouchableOpacity onPress={() => setSearchQuery('')} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }} style={{ padding: 4 }}>
+                <X size={16} color={colors.textTertiary} />
+              </TouchableOpacity>
+            )}
           </View>
 
           {/* Quick Segmented Toggle (All / Full / Topic) */}
@@ -942,6 +1248,32 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             </TouchableOpacity>
           </View>
         </View>
+
+        {/* Quick Search Suggestions or Active Search Result Feedback */}
+        {!searchQuery ? (
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.searchSuggestionsContent}>
+            <Text style={[styles.quickSearchLabel, { color: colors.textTertiary }]}>Popular:</Text>
+            {SEARCH_SUGGESTIONS.map(s => (
+              <TouchableOpacity
+                key={s.label}
+                style={[styles.searchSuggestionChip, { backgroundColor: colors.surfaceHighlight, borderColor: colors.border }]}
+                onPress={() => setSearchQuery(s.query)}
+                activeOpacity={0.7}
+              >
+                <Text style={[styles.searchSuggestionText, { color: colors.textSecondary }]}>{s.label}</Text>
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
+        ) : (
+          <View style={styles.searchActiveSummaryRow}>
+            <Text style={[styles.searchActiveSummaryText, { color: colors.textSecondary }]}>
+              Found <Text style={{ fontWeight: '800', color: colors.accent }}>{filteredTests.length}</Text> tests matching "{searchQuery}"
+            </Text>
+            <TouchableOpacity onPress={() => setSearchQuery('')} style={styles.clearSearchBtnSmall} activeOpacity={0.7}>
+              <Text style={styles.clearSearchBtnText}>Clear Search</Text>
+            </TouchableOpacity>
+          </View>
+        )}
 
         {/* Attempt Status Chips */}
         <View style={styles.statusChipsRow}>
@@ -1038,7 +1370,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         </View>
 
         {/* Grid Display: Either Topic Cards or Test Cards */}
-        {category === 'topic' && !selectedTopic ? (
+        {category === 'topic' && !selectedTopic && !searchQuery ? (
           visibleTopics.length === 0 ? (
             <View style={styles.emptyState}>
               <Folder size={48} color={colors.textTertiary} />
@@ -1055,17 +1387,42 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             <FileText size={48} color={colors.textTertiary} />
             <Text style={[styles.emptyStateTitle, { color: colors.textPrimary }]}>No tests found</Text>
             <Text style={[styles.emptyStateText, { color: colors.textSecondary }]}>
-              {searchQuery ? 'Try adjusting your search keywords' : 'No tests found in this category.'}
+              {searchQuery ? `No tests matching "${searchQuery}". Try broader keywords like "NEP", "POCSO", "CBSE", "Mid-Day Meal", or "FLN".` : 'No tests found in this category.'}
             </Text>
           </View>
         ) : (
-          <View style={[styles.testsGrid, width > 768 && styles.testsGridWeb]}>
-            {filteredTests.map((test) => (
-              <View key={test.id} style={width > 768 ? styles.testCardWrapperWeb : undefined}>
-                {renderTestCard(test)}
+          <>
+            {/* If searching and matching topics exist, show a quick horizontal strip of matching topics */}
+            {searchQuery && visibleTopics.length > 0 && (
+              <View style={styles.matchingTopicsStrip}>
+                <Text style={[styles.matchingTopicsLabel, { color: colors.textSecondary }]}>
+                  Topics matching "{searchQuery}":
+                </Text>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.matchingTopicsContent}>
+                  {visibleTopics.map(t => (
+                    <TouchableOpacity
+                      key={t.slug}
+                      style={[styles.matchingTopicChip, { backgroundColor: colors.surfaceHighlight, borderColor: colors.border }]}
+                      onPress={() => {
+                        setSelectedTopic(t.topicName);
+                        setSearchQuery('');
+                      }}
+                    >
+                      <BookOpen size={12} color={colors.accent} style={{ marginRight: 5 }} />
+                      <Text style={[styles.matchingTopicChipText, { color: colors.textPrimary }]}>{t.topicName}</Text>
+                    </TouchableOpacity>
+                  ))}
+                </ScrollView>
               </View>
-            ))}
-          </View>
+            )}
+            <View style={[styles.testsGrid, width > 768 && styles.testsGridWeb]}>
+              {filteredTests.map((test) => (
+                <View key={test.id} style={width > 768 ? styles.testCardWrapperWeb : undefined}>
+                  {renderTestCard(test)}
+                </View>
+              ))}
+            </View>
+          </>
         )}
       </ScrollView>
     </ContainerComponent>
@@ -1776,5 +2133,76 @@ const styles = StyleSheet.create({
     fontSize: 13,
     textAlign: 'center',
     maxWidth: 280,
+  },
+  searchSuggestionsContent: {
+    paddingVertical: 4,
+    alignItems: 'center',
+    gap: 8,
+    marginBottom: 8,
+  },
+  quickSearchLabel: {
+    fontSize: 11,
+    fontWeight: '700',
+    marginRight: 2,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+  },
+  searchSuggestionChip: {
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 12,
+    borderWidth: 1,
+  },
+  searchSuggestionText: {
+    fontSize: 11,
+    fontWeight: '600',
+  },
+  searchActiveSummaryRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 6,
+    paddingHorizontal: 2,
+    marginBottom: 6,
+  },
+  searchActiveSummaryText: {
+    fontSize: 12,
+    flex: 1,
+  },
+  clearSearchBtnSmall: {
+    backgroundColor: '#EF4444',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 6,
+    marginLeft: 8,
+  },
+  clearSearchBtnText: {
+    color: '#fff',
+    fontSize: 11,
+    fontWeight: '700',
+  },
+  matchingTopicsStrip: {
+    marginBottom: 14,
+  },
+  matchingTopicsLabel: {
+    fontSize: 12,
+    fontWeight: '700',
+    marginBottom: 6,
+  },
+  matchingTopicsContent: {
+    gap: 8,
+    paddingBottom: 2,
+  },
+  matchingTopicChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 10,
+    borderWidth: 1,
+  },
+  matchingTopicChipText: {
+    fontSize: 12,
+    fontWeight: '600',
   },
 });

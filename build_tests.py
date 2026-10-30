@@ -11,6 +11,54 @@ TESTS_DIR = "tests_json"
 TOPIC_TEST_SIZE = 20  # 20 questions per topic-wise test
 FULL_TEST_SIZE = 120  # 120 questions per full mock test
 
+TOPIC_DISPLAY_NAMES = {
+    'nep-2020': 'NEP 2020 (National Education Policy)',
+    'ncf-2023': 'NCF 2023 (School Education)',
+    'ncf-2005': 'NCF 2005 (Curriculum Framework)',
+    'pocso': 'POCSO Act 2012 & Child Protection',
+    'cbse': 'CBSE Affiliation & Examination Bye-Laws',
+    'ncert': 'NCERT Mandate, Structure & Curriculum',
+    'kvs': 'Kendriya Vidyalaya Sangathan (KVS) Rules',
+    'navodaya-jnv': 'Navodaya Vidyalaya Samiti (NVS / JNV)',
+    'emrs': 'Eklavya Model Residential Schools (EMRS)',
+    'cabe': 'Central Advisory Board of Education (CABE)',
+    'scert': 'SCERT & DIET Structure & Functions',
+    'ugc': 'University Grants Commission (UGC)',
+    'nios': 'National Institute of Open Schooling (NIOS)',
+    'open-university': 'Open & Distance Learning (ODL / IGNOU)',
+    'parakh': 'PARAKH National Assessment Centre',
+    'nipun-bharat': 'NIPUN Bharat & FLN Mission',
+    'assessment': 'School Assessment, Standards & Rubrics',
+    'evaluation': 'Continuous & Comprehensive Evaluation (CCE)',
+    'measurement': 'Educational Measurement & Psychometrics',
+    'inclusive-education': 'Inclusive Education & Special Needs',
+    'specially-abled-children': 'RPwD Act & Specially Abled Children',
+    'pm-poshan': 'PM POSHAN (Mid-Day Meal Scheme)',
+    'pm-shri-cm-shri': 'PM SHRI & CM SHRI Exemplary Schools',
+    'pm-vidya-laxmi': 'PM Vidya Laxmi Education Scheme',
+    'ai-in-education': 'AI & ICT in Modern Classrooms',
+    'vidyanjali': 'Vidyanjali 2.0 Community Participation',
+    'yuva-sangam': 'Yuva Sangam (Ek Bharat Shreshtha Bharat)',
+    'smc-2026': 'School Management Committees (SMC & PTA)',
+    'kasturba-gandhi-balika-vidyalaya': 'Kasturba Gandhi Balika Vidyalaya (KGBV)',
+    'sadhana-saptah-2026': 'Sadhana Saptah Pedagogical Week',
+    'sakura-science-2026': 'Sakura Science High School Exchange',
+    'nasha-mukt-abhiyan': 'Nasha Mukt Bharat Abhiyan in Schools',
+    'bharat-innovates-2026': 'Bharat Innovates Science & Innovation',
+    'bhartiya-bhasha-summer-camp': 'Bhartiya Bhasha Summer Camps',
+    'career-cards': 'Career Cards & Vocational Guidance',
+    'pmrc': 'PMRC Administrative Guidelines',
+}
+
+def format_topic_test_name(topic_slug, part_num):
+    display = TOPIC_DISPLAY_NAMES.get(topic_slug)
+    if not display:
+        display = ' '.join(w.capitalize() for w in topic_slug.replace('-', ' ').split())
+    return f"{display} • Practice Set {part_num}"
+
+def format_mock_test_name(mock_num):
+    return f"UPSC Principal Full Mock Test {mock_num:02d} • Complete CBT Exam"
+
 def get_q_key(q):
     """Returns a unique stable key for a question."""
     if isinstance(q, dict):
@@ -160,7 +208,7 @@ def build_tests(force_rebuild=False):
 
             test_data = {
                 "test_id": str(uuid.uuid4()),
-                "test_name": f"Topic Test: {topic_name.replace('-', ' ').upper()} - Part {part_num}",
+                "test_name": format_topic_test_name(topic_name, part_num),
                 "type": "topic_wise",
                 "topic": topic_name,
                 "created_at": datetime.utcnow().isoformat(),
@@ -200,7 +248,7 @@ def build_tests(force_rebuild=False):
 
             test_data = {
                 "test_id": str(uuid.uuid4()),
-                "test_name": f"UPSC Principal Mock Test {mock_num}",
+                "test_name": format_mock_test_name(mock_num),
                 "type": "full_mock",
                 "created_at": datetime.utcnow().isoformat(),
                 "questions": chunk

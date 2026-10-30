@@ -254,7 +254,25 @@ class SSCCGLService {
     const paper = paperData.data || paperData;
     
     // Fallbacks for the new schema
-    const testName = paper.test_name || 'UPSC Principal Exam Mock Test';
+    let testName = paper.test_name || 'UPSC Principal Exam Mock Test';
+    const effectiveFilename = filename || (paper as any).filename || '';
+    if (effectiveFilename.includes('full_mocks/')) {
+      const match = effectiveFilename.match(/mock_test_(\d+)\.json/);
+      if (match) {
+        const num = parseInt(match[1], 10);
+        const padded = num < 10 ? `0${num}` : `${num}`;
+        testName = `UPSC Principal Full Mock Test ${padded} • Complete CBT Exam`;
+      }
+    } else if (effectiveFilename.includes('topic_wise/')) {
+      const base = effectiveFilename.replace('topic_wise/', '').replace('.json', '');
+      const match = base.match(/^(.+)_test_(\d+)$/);
+      if (match) {
+        const slug = match[1].toLowerCase();
+        const partNum = match[2];
+        const displayTopic = slug.split('-').map((s: string) => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
+        testName = `${displayTopic} • Practice Set ${partNum}`;
+      }
+    }
     const testId = paper.test_id || paper.id || 'unknown_id';
     
     // New schema doesn't have sections, just a flat array of questions
