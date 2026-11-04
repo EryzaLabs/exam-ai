@@ -434,15 +434,6 @@ const SEARCH_SUGGESTIONS = [
   { label: 'CCE & Rubrics', query: 'cce' },
   { label: 'KVS & JNV', query: 'kvs' },
 ];
-  { label: 'POCSO Act', query: 'pocso' },
-  { label: 'Mid-Day Meal', query: 'pm poshan' },
-  { label: 'CBSE Rules', query: 'cbse' },
-  { label: 'Full Mocks', query: 'full mock' },
-  { label: 'CWSN & RPwD', query: 'specially abled' },
-  { label: 'FLN / NIPUN', query: 'nipun' },
-  { label: 'CCE & Rubrics', query: 'cce' },
-  { label: 'KVS & JNV', query: 'kvs' },
-];
 
 // Syllabus Category Definitions for Topic-Wise Tests
 const SYLLABUS_CATEGORIES: {

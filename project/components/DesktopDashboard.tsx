@@ -540,7 +540,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
               <View style={{ gap: 10, marginTop: 12 }}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: colors.borderLight }}>
                   <Text style={{ fontSize: 12, color: colors.textSecondary }}>Target Exam</Text>
-                  <Text style={{ fontSize: 12, fontWeight: '700', color: colors.textPrimary }}>UPSC Principal / VP</Text>
+                  <Text style={{ fontSize: 12, fontWeight: '700', color: colors.textPrimary }}>{examInfo.shortName}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: colors.borderLight }}>
                   <Text style={{ fontSize: 12, color: colors.textSecondary }}>Questions / Marks</Text>
