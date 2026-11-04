@@ -38,6 +38,8 @@ import {
   Moon,
 } from 'lucide-react-native';
 import { useAuth } from '@/context/auth-context';
+import { useExam } from '@/context/exam-context';
+import ExamSelector from '@/components/ExamSelector';
 import { TestProgressService, SavedTestState } from '@/services/test-progress-service';
 
 export default function MobileDashboard({
@@ -50,6 +52,7 @@ export default function MobileDashboard({
   const [searchQuery, setSearchQuery] = React.useState('');
   const [activeTest, setActiveTest] = React.useState<SavedTestState | null>(null);
   const { user, isSubscribed: authSubscribed, isSubscriptionLoading } = useAuth();
+  const { examMode, examInfo } = useExam();
   const isSubscribed = authSubscribed || dashboardStats?.isSubscribed === true;
 
   const loadActiveTest = React.useCallback(async () => {
@@ -121,7 +124,7 @@ export default function MobileDashboard({
                   )}
                 </View>
                 <Text style={styles.headerSubtitle}>
-                  {isSubscribed ? '👑 Premium Member • All Tests Unlocked' : user ? 'Practice. Analyze. Improve.' : `Explore ${dashboardStats?.totalAvailableTests || 190}+ AI Tests & Analytics`}
+                  {isSubscribed ? `👑 Premium Member • ${examInfo.shortName} Unlocked` : user ? examInfo.fullName : `Explore ${dashboardStats?.totalAvailableTests || 190}+ Tests for ${examInfo.shortName}`}
                 </Text>
               </View>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
@@ -158,6 +161,10 @@ export default function MobileDashboard({
 
         {/* MAIN CONTENT AREA */}
         <View style={styles.contentArea}>
+          {/* EXAM TARGET SELECTOR */}
+          <View style={{ paddingHorizontal: 16, marginBottom: 12 }}>
+            <ExamSelector compact={false} showTagline={true} />
+          </View>
 
           {/* FLOATING SEARCH BAR */}
           <View style={styles.searchWrapper}>
@@ -326,9 +333,9 @@ export default function MobileDashboard({
                   </View>
                 </View>
 
-                <Text style={styles.premiumBannerTitle}>UPSC Principal 2026 Test Series</Text>
+                <Text style={styles.premiumBannerTitle}>UPSC & UP Principal 2026 Test Series</Text>
                 <Text style={styles.premiumBannerSubtitle}>
-                  Unlock 26 Full Mocks • 158 Topic Tests • Daily New Tests Added
+                  Unlock 26 Full Mocks • 158 Topic Tests • Covers UPSC & UP Principal
                 </Text>
 
                 <View style={styles.premiumBannerFooter}>
@@ -369,7 +376,7 @@ export default function MobileDashboard({
               />
               <View style={styles.featuredTagsRow}>
                 <View style={styles.featuredTagBg}>
-                  <Text style={styles.featuredTagTxt}>UPSC Principal</Text>
+                  <Text style={styles.featuredTagTxt}>{examInfo.shortName}</Text>
                 </View>
                 <View style={[styles.featuredTagBg, { flexDirection: 'row', alignItems: 'center', gap: 4 }]}>
                   <Star size={12} color="#F59E0B" fill="#F59E0B" />
@@ -379,8 +386,8 @@ export default function MobileDashboard({
 
               <View style={styles.featuredTitleRow}>
                 <View style={{ flex: 1 }}>
-                  <Text style={styles.featuredTitle}>UPSC Principal Test Series</Text>
-                  <Text style={styles.featuredDesc}>Complete mock test series for comprehensive preparation.</Text>
+                  <Text style={styles.featuredTitle}>{examInfo.shortName} Test Series</Text>
+                  <Text style={styles.featuredDesc}>{examInfo.tagline}</Text>
                 </View>
                 <View style={styles.featuredArrowBtn}>
                   <ChevronRight size={24} color="#fff" />

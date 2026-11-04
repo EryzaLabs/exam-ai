@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import {
   View,
   Text,
@@ -14,6 +14,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
+import DesktopDashboard from '@/components/DesktopDashboard';
 import {
   ArrowLeft,
   Crown,
@@ -31,9 +32,16 @@ import {
   ShieldAlert,
   HelpCircle,
   X,
+  Sun,
+  Moon,
+  Tag,
+  CreditCard,
 } from 'lucide-react-native';
 import AiTestService from '@/services/ai-test-service';
+import SSCCGLService from '@/services/ssc-cgl-service';
 import { useAuth } from '@/context/auth-context';
+import { useTheme } from '@/context/theme-context';
+import { initiatePayment } from '@/utils/cashfree';
 
 const QUICK_TOPIC_SUGGESTIONS = [
   'AI & Machine Learning in Education',
@@ -55,8 +63,10 @@ const DIFFICULTY_OPTIONS = [
 export default function CustomAiTestScreen() {
   const { user, isSubscribed: authSubscribed, isSubscriptionLoading } = useAuth();
   const isSubscribed = authSubscribed;
+  const { isDark, colors, toggleTheme } = useTheme();
 
   const [topic, setTopic] = useState('');
+  const [testTitle, setTestTitle] = useState('');
   const [questionCount, setQuestionCount] = useState(10);
   const [durationMinutes, setDurationMinutes] = useState(20);
   const [difficulty, setDifficulty] = useState('medium');
@@ -64,6 +74,9 @@ export default function CustomAiTestScreen() {
   // Daily quota state
   const [checkingQuota, setCheckingQuota] = useState(true);
   const [canGenerateToday, setCanGenerateToday] = useState(true);
+  const [freeUsed, setFreeUsed] = useState(false);
+  const [paidCredits, setPaidCredits] = useState(0);
+  const [isPaying, setIsPaying] = useState(false);
   const [dailyStatusMessage, setDailyStatusMessage] = useState('');
 
   // Generation progress state
@@ -83,6 +96,7 @@ export default function CustomAiTestScreen() {
   const etaTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const { width: windowWidth } = useWindowDimensions();
+  const isLargeScreen = windowWidth >= 1024;
 
   useEffect(() => {
     checkDailyQuota();
@@ -98,9 +112,10 @@ export default function CustomAiTestScreen() {
       const userId = user?.uid || 'anonymous';
       const status = await AiTestService.checkDailyQuota(userId);
       setCanGenerateToday(status.canGenerate);
+      setFreeUsed(Boolean(status.freeUsed));
+      setPaidCredits(status.paidCredits || 0);
       setDailyStatusMessage(status.message);
     } catch (e) {
-      // In case of network check failure, default to allow
       setCanGenerateToday(true);
     } finally {
       setCheckingQuota(false);
@@ -115,7 +130,25 @@ export default function CustomAiTestScreen() {
     }, 1000);
   };
 
-  const handleStartGeneration = async () => {
+  const suggestedDefaultTitle = useMemo(() => {
+    if (!topic.trim()) return 'AI Practice Test';
+    const cleanTopic = topic.trim().replace(/[_\-]+/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase());
+    return `${cleanTopic} • AI Practice Test (${questionCount} Qs)`;
+  }, [topic, questionCount]);
+
+  const titleSuggestions = useMemo(() => {
+    if (!topic.trim()) return [];
+    const cleanTopic = topic.trim().replace(/[_\-]+/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase());
+    return [
+      `${cleanTopic} • AI Practice Test (${questionCount} Qs)`,
+      `${cleanTopic} • UP Principal Practice Drill`,
+      `${cleanTopic} • UPSC Principal Prep Series`,
+      `${cleanTopic} • Conceptual Mastery Drill`,
+      `Speed Practice: ${cleanTopic} (${durationMinutes}m)`,
+    ];
+  }, [topic, questionCount, durationMinutes]);
+
+  const handleStartGeneration = async (orderId?: string) => {
     if (!isSubscribed) {
       router.push('/premium');
       return;
@@ -126,11 +159,8 @@ export default function CustomAiTestScreen() {
       return;
     }
 
-    if (!canGenerateToday) {
-      Alert.alert(
-        'Daily Limit Reached',
-        'You have already generated your 1 custom AI test for today. Resets tomorrow at midnight!'
-      );
+    if (!canGenerateToday && !orderId && paidCredits <= 0) {
+      handlePaidTestCheckout();
       return;
     }
 
@@ -142,9 +172,13 @@ export default function CustomAiTestScreen() {
       setGeneratedPaperInfo(null);
 
       const userId = user?.uid || 'anonymous';
+      const finalTitle = testTitle.trim() || suggestedDefaultTitle;
+
       const res = await AiTestService.startGeneration({
         userId,
         topic: topic.trim(),
+        title: finalTitle,
+        orderId,
         questionCount,
         durationMinutes,
         difficulty,
@@ -166,6 +200,48 @@ export default function CustomAiTestScreen() {
         'Generation Busy',
         'AI generator service is currently busy or out of credits. Please try again later.'
       );
+    }
+  };
+
+  const handlePaidTestCheckout = async () => {
+    if (!topic.trim()) {
+      Alert.alert('Topic Required', 'Please enter a topic before generating your test.');
+      return;
+    }
+
+    try {
+      setIsPaying(true);
+      const userId = user?.uid || 'anonymous';
+      const userName = user?.displayName || 'Student';
+      const userEmail = user?.email || 'student@exam-ai.com';
+
+      await initiatePayment(
+        async () => {
+          setIsPaying(false);
+          try {
+            await AiTestService.unlockPaidCredit(userId);
+            setPaidCredits((prev) => prev + 1);
+            setCanGenerateToday(true);
+          } catch (e) {
+            console.warn('Unlock credit notice:', e);
+          }
+          await handleStartGeneration('cf_order_paid');
+        },
+        (errMsg) => {
+          setIsPaying(false);
+          Alert.alert('Payment Incomplete', errMsg || 'Payment was cancelled or failed. Please try again.');
+        },
+        {
+          userId,
+          userName,
+          userEmail,
+          amountInRupees: 9,
+          planId: 'ai_test',
+        }
+      );
+    } catch (e: any) {
+      setIsPaying(false);
+      Alert.alert('Payment Error', e.message || 'Could not initiate checkout.');
     }
   };
 
@@ -211,7 +287,6 @@ export default function CustomAiTestScreen() {
     if (!generatedPaperInfo) return;
 
     try {
-      // Pre-load paper into service memory
       if (generatedPaperInfo.paper) {
         await AiTestService.prepareAndCachePaper(
           generatedPaperInfo.paper,
@@ -245,16 +320,52 @@ export default function CustomAiTestScreen() {
     setGeneratedPaperInfo(null);
   };
 
-  // 1. LOCKED VIEW: User is not subscribed
-  if (!isSubscriptionLoading && !isSubscribed) {
+  const handleBack = () => {
+    if (router.canGoBack()) {
+      router.back();
+    } else if (Platform.OS === 'web' && typeof window !== 'undefined' && window.history.length > 1) {
+      window.history.back();
+    } else {
+      router.replace('/(tabs)/practice');
+    }
+  };
+
+  // 0. LOADING VIEW: Subscription or quota check in progress
+  if (isSubscriptionLoading || checkingQuota) {
+    const loadingView = (
+      <View style={[styles.loadingContainer, { backgroundColor: colors.background }]}>
+        <ActivityIndicator size="large" color="#6366F1" />
+        <Text style={[styles.loadingText, { color: colors.textSecondary }]}>Loading Custom AI Studio...</Text>
+      </View>
+    );
+
+    if (isLargeScreen) {
+      return <DesktopDashboard>{loadingView}</DesktopDashboard>;
+    }
+
     return (
-      <SafeAreaView style={styles.container}>
-        <View style={styles.header}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-            <ArrowLeft size={22} color="#1E293B" />
+      <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
+        {loadingView}
+      </SafeAreaView>
+    );
+  }
+
+  // 1. LOCKED VIEW: User is not subscribed
+  if (!isSubscribed) {
+    const lockedView = (
+      <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
+        <View style={[styles.header, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
+          <TouchableOpacity onPress={handleBack} style={[styles.backButton, { backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9' }]}>
+            <ArrowLeft size={22} color={colors.textPrimary} />
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>Custom AI Test</Text>
-          <View style={{ width: 40 }} />
+          <Text style={[styles.headerTitle, { color: colors.textPrimary }]}>Custom AI Test</Text>
+          <TouchableOpacity
+            style={[styles.themeToggleButton, { backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9', borderColor: colors.border }]}
+            onPress={toggleTheme}
+            accessibilityLabel="Toggle Dark Mode"
+          >
+            {isDark ? <Sun size={18} color="#FBBF24" /> : <Moon size={18} color="#475569" />}
+          </TouchableOpacity>
         </View>
 
         <ScrollView contentContainerStyle={styles.lockedScrollContent} showsVerticalScrollIndicator={false}>
@@ -317,33 +428,47 @@ export default function CustomAiTestScreen() {
         </ScrollView>
       </SafeAreaView>
     );
+
+    if (isLargeScreen) {
+      return <DesktopDashboard disableScroll={false}>{lockedView}</DesktopDashboard>;
+    }
+    return lockedView;
   }
 
   // 2. ACTIVE GENERATION VIEW (Background job running, error, or completed)
   if (isGenerating) {
-    return (
-      <SafeAreaView style={styles.container}>
-        <View style={styles.header}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-            <ArrowLeft size={22} color="#1E293B" />
+    const generatingView = (
+      <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
+        <View style={[styles.header, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
+          <TouchableOpacity onPress={handleBack} style={[styles.backButton, { backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9' }]}>
+            <ArrowLeft size={22} color={colors.textPrimary} />
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>AI Generator Pipeline</Text>
-          <View style={{ width: 40 }} />
+          <View style={{ flex: 1, marginLeft: 10 }}>
+            <Text style={[styles.headerTitle, { color: colors.textPrimary }]}>AI Generator Pipeline</Text>
+            <Text style={[styles.headerSubtitle, { color: colors.textSecondary }]}>Assembling your custom mock test</Text>
+          </View>
+          <TouchableOpacity
+            style={[styles.themeToggleButton, { backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9', borderColor: colors.border }]}
+            onPress={toggleTheme}
+            accessibilityLabel="Toggle Dark Mode"
+          >
+            {isDark ? <Sun size={18} color="#FBBF24" /> : <Moon size={18} color="#475569" />}
+          </TouchableOpacity>
         </View>
 
         <View style={styles.generatingContainer}>
           {/* FAILED STATE */}
           {generationError ? (
-            <View style={styles.statusBox}>
+            <View style={[styles.statusBox, { backgroundColor: colors.surface, borderColor: colors.border }]}>
               <View style={styles.errorIconCircle}>
                 <AlertTriangle size={36} color="#DC2626" />
               </View>
               <Text style={styles.errorTitle}>Generation Failed</Text>
-              <Text style={styles.errorSubtitle}>{generationError}</Text>
+              <Text style={[styles.errorSubtitle, { color: colors.textSecondary }]}>{generationError}</Text>
 
-              <View style={styles.quotaPreservedNote}>
+              <View style={[styles.quotaPreservedNote, isDark && { backgroundColor: 'rgba(5, 150, 105, 0.15)', borderColor: 'rgba(5, 150, 105, 0.3)' }]}>
                 <ShieldAlert size={16} color="#059669" />
-                <Text style={styles.quotaPreservedText}>
+                <Text style={[styles.quotaPreservedText, isDark && { color: '#6EE7B7' }]}>
                   Your daily test generation quota has NOT been deducted. You can try again anytime.
                 </Text>
               </View>
@@ -355,27 +480,27 @@ export default function CustomAiTestScreen() {
             </View>
           ) : generatedPaperInfo ? (
             /* COMPLETED SUCCESS STATE */
-            <View style={styles.statusBox}>
+            <View style={[styles.statusBox, { backgroundColor: colors.surface, borderColor: colors.border }]}>
               <View style={styles.successIconCircle}>
                 <CheckCircle2 size={44} color="#059669" />
               </View>
-              <Text style={styles.successTitle}>Test Generated Successfully! 🎉</Text>
-              <Text style={styles.successSubtitle}>
-                Your custom mock test on <Text style={{ fontWeight: '700', color: '#1E293B' }}>"{topic}"</Text> is assembled and added to your available tests.
+              <Text style={[styles.successTitle, isDark && { color: '#34D399' }]}>Test Generated Successfully! 🎉</Text>
+              <Text style={[styles.successSubtitle, { color: colors.textSecondary }]}>
+                Your custom mock test on <Text style={{ fontWeight: '700', color: colors.textPrimary }}>"{topic}"</Text> is assembled and ready.
               </Text>
 
-              <View style={styles.testMetaCard}>
+              <View style={[styles.testMetaCard, { backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC', borderColor: colors.border }]}>
                 <View style={styles.testMetaItem}>
                   <BookOpen size={16} color="#4F46E5" />
-                  <Text style={styles.testMetaText}>{questionCount} Questions</Text>
+                  <Text style={[styles.testMetaText, { color: colors.textPrimary }]}>{questionCount} Questions</Text>
                 </View>
                 <View style={styles.testMetaItem}>
                   <Clock size={16} color="#4F46E5" />
-                  <Text style={styles.testMetaText}>{durationMinutes} Minutes</Text>
+                  <Text style={[styles.testMetaText, { color: colors.textPrimary }]}>{durationMinutes} Minutes</Text>
                 </View>
                 <View style={styles.testMetaItem}>
                   <Brain size={16} color="#4F46E5" />
-                  <Text style={styles.testMetaText}>{questionCount * 2.5} Marks</Text>
+                  <Text style={[styles.testMetaText, { color: colors.textPrimary }]}>{questionCount * 2.5} Marks</Text>
                 </View>
               </View>
 
@@ -399,37 +524,37 @@ export default function CustomAiTestScreen() {
               </TouchableOpacity>
             </View>
           ) : (
-            /* IN PROGRESS STATE (Real-time progress, percentage & ETA) */
-            <View style={styles.statusBox}>
-              <View style={styles.generatingAnimationCircle}>
-                <Brain size={40} color="#6366F1" />
+            /* ACTIVE RUNNING PROGRESS */
+            <View style={[styles.statusBox, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+              <View style={[styles.generatingAnimationCircle, { backgroundColor: isDark ? '#312E81' : '#EEF2FF' }]}>
+                <ActivityIndicator size="large" color="#4F46E5" />
               </View>
 
-              <Text style={styles.generatingHeading}>Generating AI Mock Test</Text>
+              <Text style={[styles.generatingHeading, { color: colors.textPrimary }]}>AI Engine Working</Text>
               <Text style={styles.generatingTopic} numberOfLines={2}>
-                Topic: "{topic}"
+                "{topic}"
               </Text>
 
               {/* Progress Bar */}
               <View style={styles.progressContainer}>
-                <View style={styles.progressBarBackground}>
+                <View style={[styles.progressBarBackground, { backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9' }]}>
                   <View style={[styles.progressBarFill, { width: `${progress}%` }]} />
                 </View>
                 <View style={styles.progressStatsRow}>
-                  <Text style={styles.progressPercentText}>{progress}% Complete</Text>
-                  <Text style={styles.etaText}>
-                    {etaSeconds > 0 ? `ETA: ~${etaSeconds}s remaining` : 'Finalizing...'}
+                  <Text style={styles.progressPercentText}>{Math.round(progress)}% Complete</Text>
+                  <Text style={[styles.etaText, { color: colors.textSecondary }]}>
+                    {etaSeconds > 0 ? `~${etaSeconds}s remaining` : 'Finalizing...'}
                   </Text>
                 </View>
               </View>
 
-              {/* Dynamic Step description */}
-              <View style={styles.stepBox}>
-                <ActivityIndicator size="small" color="#6366F1" />
-                <Text style={styles.stepText}>{stepMessage || 'Processing question pipeline...'}</Text>
+              {/* Real-time step status message */}
+              <View style={[styles.stepBox, { backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC' }]}>
+                <Sparkles size={16} color="#6366F1" />
+                <Text style={[styles.stepText, { color: colors.textPrimary }]}>{stepMessage || 'Initializing generation...'}</Text>
               </View>
 
-              <Text style={styles.backgroundHint}>
+              <Text style={[styles.backgroundHint, { color: colors.textTertiary }]}>
                 Running securely in background. Your questions are being generated and verified with bilingual options.
               </Text>
             </View>
@@ -437,63 +562,139 @@ export default function CustomAiTestScreen() {
         </View>
       </SafeAreaView>
     );
+
+    if (isLargeScreen) {
+      return <DesktopDashboard disableScroll={false}>{generatingView}</DesktopDashboard>;
+    }
+    return generatingView;
   }
 
   // 3. DEFAULT FORM VIEW: Topic Input & Configuration
-  return (
-    <SafeAreaView style={styles.container}>
+  const formView = (
+    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
       {/* Header */}
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <ArrowLeft size={22} color="#1E293B" />
+      <View style={[styles.header, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
+        <TouchableOpacity onPress={handleBack} style={[styles.backButton, { backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9' }]}>
+          <ArrowLeft size={22} color={colors.textPrimary} />
         </TouchableOpacity>
         <View style={{ flex: 1, marginLeft: 10 }}>
-          <Text style={styles.headerTitle}>Custom AI Test Studio</Text>
-          <Text style={styles.headerSubtitle}>Any topic in the world • AI Question Generator</Text>
+          <Text style={[styles.headerTitle, { color: colors.textPrimary }]}>Custom AI Test Studio</Text>
+          <Text style={[styles.headerSubtitle, { color: colors.textSecondary }]}>Any topic in the world • AI Question Generator</Text>
         </View>
-        <View style={styles.premiumPill}>
+
+        {/* Theme Toggle Button */}
+        <TouchableOpacity
+          style={[styles.themeToggleButton, { backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9', borderColor: colors.border }]}
+          onPress={toggleTheme}
+          accessibilityLabel="Toggle Dark Mode"
+        >
+          {isDark ? <Sun size={18} color="#FBBF24" /> : <Moon size={18} color="#475569" />}
+        </TouchableOpacity>
+
+        <View style={[styles.premiumPill, isDark && { backgroundColor: 'rgba(245, 158, 11, 0.2)', borderColor: 'rgba(245, 158, 11, 0.4)', borderWidth: 1 }]}>
           <Crown size={12} color="#F59E0B" />
-          <Text style={styles.premiumPillText}>PREMIUM</Text>
+          <Text style={[styles.premiumPillText, isDark && { color: '#FDE68A' }]}>PREMIUM</Text>
         </View>
       </View>
 
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         {/* Daily Quota Notice Card */}
-        <View style={[styles.quotaCard, !canGenerateToday && styles.quotaCardUsed]}>
-          <View style={styles.quotaIconBox}>
-            {canGenerateToday ? (
+        <View
+          style={[
+            styles.quotaCard,
+            paidCredits > 0
+              ? isDark
+                ? { backgroundColor: 'rgba(245, 158, 11, 0.15)', borderColor: 'rgba(245, 158, 11, 0.3)' }
+                : { backgroundColor: '#FEF3C7', borderColor: '#FDE68A' }
+              : !freeUsed
+              ? isDark
+                ? { backgroundColor: 'rgba(5, 150, 105, 0.15)', borderColor: 'rgba(5, 150, 105, 0.3)' }
+                : styles.quotaCard
+              : isDark
+              ? { backgroundColor: 'rgba(217, 119, 6, 0.15)', borderColor: 'rgba(217, 119, 6, 0.3)' }
+              : styles.quotaCardUsed,
+          ]}
+        >
+          <View style={[styles.quotaIconBox, { backgroundColor: isDark ? colors.surfaceHighlight : '#FFFFFF' }]}>
+            {paidCredits > 0 ? (
+              <Crown size={20} color="#F59E0B" />
+            ) : !freeUsed ? (
               <Zap size={20} color="#059669" />
             ) : (
-              <Clock size={20} color="#D97706" />
+              <Sparkles size={20} color="#D97706" />
             )}
           </View>
           <View style={{ flex: 1, marginLeft: 10 }}>
-            <Text style={[styles.quotaTitle, !canGenerateToday && styles.quotaTitleUsed]}>
-              {canGenerateToday ? 'Daily Quota: 1 Generation Available' : 'Daily Quota Claimed (1/1 Today)'}
-            </Text>
-            <Text style={styles.quotaSubtitle}>
-              {canGenerateToday
-                ? 'Each account gets 1 free custom AI-generated mock exam per day.'
-                : 'You have generated 1 custom AI exam today. Quota resets tomorrow at midnight!'}
+            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 6 }}>
+              <Text
+                style={[
+                  styles.quotaTitle,
+                  paidCredits > 0
+                    ? { color: '#B45309' }
+                    : !freeUsed
+                    ? isDark
+                      ? { color: '#34D399' }
+                      : styles.quotaTitle
+                    : isDark
+                    ? { color: '#FBBF24' }
+                    : styles.quotaTitleUsed,
+                ]}
+              >
+                {paidCredits > 0
+                  ? `Paid Credit: ${paidCredits} Extra Test${paidCredits > 1 ? 's' : ''} Ready`
+                  : !freeUsed
+                  ? 'Daily Quota: 1 Free AI Test Available'
+                  : 'Daily Free Test Used (1/1 Today)'}
+              </Text>
+              {freeUsed && paidCredits === 0 && (
+                <View style={[styles.microPriceTag, { backgroundColor: isDark ? '#92400E' : '#FEF3C7', borderColor: '#F59E0B' }]}>
+                  <Text style={[styles.microPriceText, { color: isDark ? '#FDE68A' : '#92400E' }]}>₹9 / test</Text>
+                </View>
+              )}
+            </View>
+            <Text
+              style={[
+                styles.quotaSubtitle,
+                isDark && {
+                  color: paidCredits > 0 ? '#FDE68A' : !freeUsed ? '#A7F3D0' : '#FDE68A',
+                },
+              ]}
+            >
+              {paidCredits > 0
+                ? `You have ${paidCredits} purchased AI test credit(s). Ready to generate immediately!`
+                : !freeUsed
+                ? 'Each account gets 1 complimentary AI custom test every day. Resets tonight at midnight.'
+                : 'Need another mock test right away? Build additional custom AI tests on any topic for just ₹9!'}
             </Text>
           </View>
         </View>
 
         {/* Step 1: Input Any Topic */}
-        <View style={styles.card}>
+        <View style={[styles.card, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.cardHeader}>
-            <View style={styles.stepNumberBadge}><Text style={styles.stepNumberText}>1</Text></View>
+            <View style={[styles.stepNumberBadge, { backgroundColor: isDark ? '#312E81' : '#EEF2FF', borderColor: isDark ? '#4338CA' : '#C7D2FE' }]}>
+              <Text style={[styles.stepNumberText, { color: isDark ? '#A5B4FC' : '#4F46E5' }]}>1</Text>
+            </View>
             <View style={{ flex: 1 }}>
-              <Text style={styles.cardTitle}>Enter Any Topic</Text>
-              <Text style={styles.cardSubtitle}>Literally anything from syllabus, science, history, or current affairs</Text>
+              <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>Enter Any Topic</Text>
+              <Text style={[styles.cardSubtitle, { color: colors.textSecondary }]}>
+                Literally anything from syllabus, science, history, or current affairs
+              </Text>
             </View>
           </View>
 
           <View style={styles.topicInputWrapper}>
             <TextInput
-              style={styles.topicInput}
+              style={[
+                styles.topicInput,
+                {
+                  backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC',
+                  borderColor: colors.border,
+                  color: colors.textPrimary,
+                },
+              ]}
               placeholder="e.g., Quantum Computing, NEP 2020 Holistic Progress Card, POCSO 2012, Medieval Architecture..."
-              placeholderTextColor="#94A3B8"
+              placeholderTextColor={colors.textTertiary}
               value={topic}
               onChangeText={setTopic}
               multiline
@@ -501,34 +702,44 @@ export default function CustomAiTestScreen() {
             />
             {topic.length > 0 && (
               <TouchableOpacity style={styles.clearTopicBtn} onPress={() => setTopic('')}>
-                <X size={16} color="#94A3B8" />
+                <X size={16} color={colors.textTertiary} />
               </TouchableOpacity>
             )}
           </View>
 
           {/* Quick Suggestions */}
-          <Text style={styles.suggestionsHeading}>Quick Ideas & In-demand Topics:</Text>
+          <Text style={[styles.suggestionsHeading, { color: colors.textSecondary }]}>Quick Ideas & In-demand Topics:</Text>
           <View style={styles.suggestionsWrap}>
             {QUICK_TOPIC_SUGGESTIONS.map((item, idx) => (
               <TouchableOpacity
                 key={idx}
-                style={styles.suggestionPill}
+                style={[
+                  styles.suggestionPill,
+                  {
+                    backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9',
+                    borderColor: colors.border,
+                  },
+                ]}
                 onPress={() => setTopic(item)}
                 activeOpacity={0.7}
               >
-                <Text style={styles.suggestionPillText}>{item}</Text>
+                <Text style={[styles.suggestionPillText, { color: isDark ? '#CBD5E1' : '#334155' }]}>{item}</Text>
               </TouchableOpacity>
             ))}
           </View>
         </View>
 
         {/* Step 2: Number of Questions */}
-        <View style={styles.card}>
+        <View style={[styles.card, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.cardHeader}>
-            <View style={styles.stepNumberBadge}><Text style={styles.stepNumberText}>2</Text></View>
+            <View style={[styles.stepNumberBadge, { backgroundColor: isDark ? '#312E81' : '#EEF2FF', borderColor: isDark ? '#4338CA' : '#C7D2FE' }]}>
+              <Text style={[styles.stepNumberText, { color: isDark ? '#A5B4FC' : '#4F46E5' }]}>2</Text>
+            </View>
             <View style={{ flex: 1 }}>
-              <Text style={styles.cardTitle}>Number of Questions</Text>
-              <Text style={styles.cardSubtitle}>Target Marks: {questionCount * 2.5} Marks (2.5 marks each)</Text>
+              <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>Number of Questions</Text>
+              <Text style={[styles.cardSubtitle, { color: colors.textSecondary }]}>
+                Target Marks: {questionCount * 2.5} Marks (2.5 marks each)
+              </Text>
             </View>
           </View>
 
@@ -539,9 +750,27 @@ export default function CustomAiTestScreen() {
                 <TouchableOpacity
                   key={count}
                   onPress={() => setQuestionCount(count)}
-                  style={[styles.optionPill, active && styles.optionPillActive]}
+                  style={[
+                    styles.optionPill,
+                    {
+                      backgroundColor: active
+                        ? isDark
+                          ? '#312E81'
+                          : '#EEF2FF'
+                        : isDark
+                        ? colors.surfaceHighlight
+                        : '#F8FAFC',
+                      borderColor: active ? '#4F46E5' : colors.border,
+                    },
+                  ]}
                 >
-                  <Text style={[styles.optionPillText, active && styles.optionPillTextActive]}>
+                  <Text
+                    style={[
+                      styles.optionPillText,
+                      { color: active ? (isDark ? '#A5B4FC' : '#4F46E5') : colors.textSecondary },
+                      active && styles.optionPillTextActive,
+                    ]}
+                  >
                     {count} Qs
                   </Text>
                 </TouchableOpacity>
@@ -551,12 +780,16 @@ export default function CustomAiTestScreen() {
         </View>
 
         {/* Step 3: Test Duration */}
-        <View style={styles.card}>
+        <View style={[styles.card, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.cardHeader}>
-            <View style={styles.stepNumberBadge}><Text style={styles.stepNumberText}>3</Text></View>
+            <View style={[styles.stepNumberBadge, { backgroundColor: isDark ? '#312E81' : '#EEF2FF', borderColor: isDark ? '#4338CA' : '#C7D2FE' }]}>
+              <Text style={[styles.stepNumberText, { color: isDark ? '#A5B4FC' : '#4F46E5' }]}>3</Text>
+            </View>
             <View style={{ flex: 1 }}>
-              <Text style={styles.cardTitle}>Time Limit</Text>
-              <Text style={styles.cardSubtitle}>Pace: ~{(durationMinutes / questionCount).toFixed(1)} mins per question</Text>
+              <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>Time Limit</Text>
+              <Text style={[styles.cardSubtitle, { color: colors.textSecondary }]}>
+                Pace: ~{(durationMinutes / questionCount).toFixed(1)} mins per question
+              </Text>
             </View>
           </View>
 
@@ -567,9 +800,27 @@ export default function CustomAiTestScreen() {
                 <TouchableOpacity
                   key={dur}
                   onPress={() => setDurationMinutes(dur)}
-                  style={[styles.optionPill, active && styles.optionPillActive]}
+                  style={[
+                    styles.optionPill,
+                    {
+                      backgroundColor: active
+                        ? isDark
+                          ? '#312E81'
+                          : '#EEF2FF'
+                        : isDark
+                        ? colors.surfaceHighlight
+                        : '#F8FAFC',
+                      borderColor: active ? '#4F46E5' : colors.border,
+                    },
+                  ]}
                 >
-                  <Text style={[styles.optionPillText, active && styles.optionPillTextActive]}>
+                  <Text
+                    style={[
+                      styles.optionPillText,
+                      { color: active ? (isDark ? '#A5B4FC' : '#4F46E5') : colors.textSecondary },
+                      active && styles.optionPillTextActive,
+                    ]}
+                  >
                     {dur} mins
                   </Text>
                 </TouchableOpacity>
@@ -579,12 +830,16 @@ export default function CustomAiTestScreen() {
         </View>
 
         {/* Step 4: Difficulty */}
-        <View style={styles.card}>
+        <View style={[styles.card, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.cardHeader}>
-            <View style={styles.stepNumberBadge}><Text style={styles.stepNumberText}>4</Text></View>
+            <View style={[styles.stepNumberBadge, { backgroundColor: isDark ? '#312E81' : '#EEF2FF', borderColor: isDark ? '#4338CA' : '#C7D2FE' }]}>
+              <Text style={[styles.stepNumberText, { color: isDark ? '#A5B4FC' : '#4F46E5' }]}>4</Text>
+            </View>
             <View style={{ flex: 1 }}>
-              <Text style={styles.cardTitle}>Difficulty Level</Text>
-              <Text style={styles.cardSubtitle}>Adjust analytical depth and distractor complexity</Text>
+              <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>Difficulty Level</Text>
+              <Text style={[styles.cardSubtitle, { color: colors.textSecondary }]}>
+                Adjust analytical depth and distractor complexity
+              </Text>
             </View>
           </View>
 
@@ -595,12 +850,30 @@ export default function CustomAiTestScreen() {
                 <TouchableOpacity
                   key={opt.id}
                   onPress={() => setDifficulty(opt.id)}
-                  style={[styles.difficultyRow, active && styles.difficultyRowActive]}
+                  style={[
+                    styles.difficultyRow,
+                    {
+                      backgroundColor: active
+                        ? isDark
+                          ? '#312E81'
+                          : '#EEF2FF'
+                        : isDark
+                        ? colors.surfaceHighlight
+                        : '#F8FAFC',
+                      borderColor: active ? '#6366F1' : colors.border,
+                    },
+                  ]}
                 >
-                  <View style={[styles.radioCircle, active && styles.radioCircleActive]}>
+                  <View style={[styles.radioCircle, { borderColor: isDark ? '#475569' : '#94A3B8' }, active && styles.radioCircleActive]}>
                     {active && <View style={styles.radioInner} />}
                   </View>
-                  <Text style={[styles.difficultyLabel, active && styles.difficultyLabelActive]}>
+                  <Text
+                    style={[
+                      styles.difficultyLabel,
+                      { color: active ? (isDark ? '#E0E7FF' : '#1E1B4B') : colors.textPrimary },
+                      active && styles.difficultyLabelActive,
+                    ]}
+                  >
                     {opt.label}
                   </Text>
                 </TouchableOpacity>
@@ -609,36 +882,156 @@ export default function CustomAiTestScreen() {
           </View>
         </View>
 
-        {/* Generate CTA Button */}
-        <TouchableOpacity
-          style={[styles.generateButton, (!canGenerateToday || !topic.trim()) && styles.generateButtonDisabled]}
-          onPress={handleStartGeneration}
-          disabled={!canGenerateToday || !topic.trim()}
-          activeOpacity={0.88}
-        >
-          <LinearGradient
-            colors={canGenerateToday && topic.trim() ? ['#4F46E5', '#6366F1'] : ['#94A3B8', '#CBD5E1']}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 0 }}
-            style={styles.generateButtonGradient}
+        {/* Step 5: Professional Test Name */}
+        <View style={[styles.card, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+          <View style={styles.cardHeader}>
+            <View style={[styles.stepNumberBadge, { backgroundColor: isDark ? '#312E81' : '#EEF2FF', borderColor: isDark ? '#4338CA' : '#C7D2FE' }]}>
+              <Text style={[styles.stepNumberText, { color: isDark ? '#A5B4FC' : '#4F46E5' }]}>5</Text>
+            </View>
+            <View style={{ flex: 1 }}>
+              <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>Test Title (Optional)</Text>
+              <Text style={[styles.cardSubtitle, { color: colors.textSecondary }]}>
+                Leave blank to use auto-generated title
+              </Text>
+            </View>
+          </View>
+
+          <View style={[styles.titleInputWrapper, { backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC', borderColor: colors.border }]}>
+            <TextInput
+              style={[styles.titleInput, { color: colors.textPrimary }]}
+              placeholder={suggestedDefaultTitle}
+              placeholderTextColor={colors.textTertiary}
+              value={testTitle}
+              onChangeText={setTestTitle}
+            />
+            {testTitle.length > 0 && (
+              <TouchableOpacity onPress={() => setTestTitle('')} style={{ padding: 4 }}>
+                <X size={16} color={colors.textTertiary} />
+              </TouchableOpacity>
+            )}
+          </View>
+
+          {/* Smart Title Suggestions */}
+          {titleSuggestions.length > 0 && (
+            <View style={{ marginTop: 12 }}>
+              <Text style={[styles.titleSuggestionsLabel, { color: colors.textTertiary }]}>Suggested Names:</Text>
+              <View style={styles.titleSuggestionsWrap}>
+                {titleSuggestions.map((suggestion, sIdx) => (
+                  <TouchableOpacity
+                    key={sIdx}
+                    style={[
+                      styles.titleSuggestionChip,
+                      {
+                        backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9',
+                        borderColor: testTitle === suggestion ? '#6366F1' : colors.border,
+                      },
+                      testTitle === suggestion && { backgroundColor: isDark ? '#312E81' : '#EEF2FF' },
+                    ]}
+                    onPress={() => setTestTitle(suggestion)}
+                    activeOpacity={0.7}
+                  >
+                    <Tag size={12} color={testTitle === suggestion ? '#6366F1' : colors.textTertiary} />
+                    <Text
+                      style={[
+                        styles.titleSuggestionText,
+                        { color: testTitle === suggestion ? (isDark ? '#A5B4FC' : '#4F46E5') : colors.textSecondary },
+                        testTitle === suggestion && { fontWeight: '700' },
+                      ]}
+                    >
+                      {suggestion}
+                    </Text>
+                  </TouchableOpacity>
+                ))}
+              </View>
+            </View>
+          )}
+        </View>
+
+        {/* Generate / Pay & Build CTA Button */}
+        {freeUsed && paidCredits === 0 ? (
+          <View style={{ gap: 8, marginTop: 8 }}>
+            <TouchableOpacity
+              style={[styles.generateButton, (!topic.trim() || isPaying) && styles.generateButtonDisabled]}
+              onPress={handlePaidTestCheckout}
+              disabled={!topic.trim() || isPaying}
+              activeOpacity={0.88}
+            >
+              <LinearGradient
+                colors={topic.trim() && !isPaying ? ['#F59E0B', '#D97706'] : ['#94A3B8', '#CBD5E1']}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 0 }}
+                style={styles.generateButtonGradient}
+              >
+                {isPaying ? (
+                  <ActivityIndicator size="small" color="#FFFFFF" />
+                ) : (
+                  <>
+                    <Zap size={20} color="#FFFFFF" fill="#FFFFFF" />
+                    <Text style={styles.generateButtonText}>Pay ₹9 & Build AI Test</Text>
+                    <View style={styles.paidBadge}>
+                      <Text style={styles.paidBadgeText}>Instant</Text>
+                    </View>
+                  </>
+                )}
+              </LinearGradient>
+            </TouchableOpacity>
+
+            <View style={styles.guaranteeRow}>
+              <Sparkles size={13} color="#F59E0B" />
+              <Text style={[styles.guaranteeText, { color: colors.textTertiary }]}>
+                Instant Cashfree UPI/Cards · Bilingual questions · Complete explanations & solutions
+              </Text>
+            </View>
+          </View>
+        ) : (
+          <TouchableOpacity
+            style={[styles.generateButton, (!canGenerateToday || !topic.trim()) && styles.generateButtonDisabled]}
+            onPress={() => handleStartGeneration()}
+            disabled={!canGenerateToday || !topic.trim()}
+            activeOpacity={0.88}
           >
-            <Brain size={20} color="#FFFFFF" />
-            <Text style={styles.generateButtonText}>
-              {canGenerateToday ? 'Generate Custom AI Mock Test ✨' : 'Daily Limit Reached (Come back tomorrow)'}
-            </Text>
-          </LinearGradient>
-        </TouchableOpacity>
+            <LinearGradient
+              colors={canGenerateToday && topic.trim() ? ['#4F46E5', '#6366F1'] : ['#94A3B8', '#CBD5E1']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+              style={styles.generateButtonGradient}
+            >
+              <Brain size={20} color="#FFFFFF" />
+              <Text style={styles.generateButtonText}>
+                {paidCredits > 0
+                  ? `Generate Custom AI Mock Test (1 Credit) ✨`
+                  : `Generate Custom AI Mock Test (Free) ✨`}
+              </Text>
+            </LinearGradient>
+          </TouchableOpacity>
+        )}
 
         <View style={{ height: 40 }} />
       </ScrollView>
     </SafeAreaView>
   );
+
+  if (isLargeScreen) {
+    return <DesktopDashboard disableScroll={false}>{formView}</DesktopDashboard>;
+  }
+  return formView;
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F8FAFC',
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 24,
+  },
+  loadingText: {
+    marginTop: 14,
+    fontSize: 15,
+    fontWeight: '500',
   },
   header: {
     flexDirection: 'row',
@@ -666,6 +1059,15 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#64748B',
     marginTop: 2,
+  },
+  themeToggleButton: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 8,
+    borderWidth: 1,
   },
   premiumPill: {
     flexDirection: 'row',
@@ -873,6 +1275,46 @@ const styles = StyleSheet.create({
     color: '#1E1B4B',
     fontWeight: '700',
   },
+  titleInputWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#F8FAFC',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#CBD5E1',
+    paddingHorizontal: 12,
+  },
+  titleInput: {
+    flex: 1,
+    paddingVertical: 10,
+    fontSize: 14,
+    color: '#0F172A',
+  },
+  titleSuggestionsLabel: {
+    fontSize: 11,
+    fontWeight: '600',
+    marginBottom: 6,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+  },
+  titleSuggestionsWrap: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 6,
+  },
+  titleSuggestionChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 8,
+    borderWidth: 1,
+  },
+  titleSuggestionText: {
+    fontSize: 12,
+    fontWeight: '500',
+  },
   generateButton: {
     borderRadius: 14,
     overflow: 'hidden',
@@ -894,6 +1336,41 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 10,
     paddingVertical: 16,
+  },
+  paidBadge: {
+    backgroundColor: 'rgba(255, 255, 255, 0.25)',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 8,
+  },
+  paidBadgeText: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: '#FFFFFF',
+    textTransform: 'uppercase',
+  },
+  microPriceTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 6,
+    borderWidth: 1,
+  },
+  microPriceText: {
+    fontSize: 11,
+    fontWeight: '700',
+  },
+  guaranteeRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    paddingHorizontal: 8,
+    marginTop: 2,
+  },
+  guaranteeText: {
+    fontSize: 11,
+    textAlign: 'center',
+    lineHeight: 16,
   },
   generateButtonText: {
     fontSize: 16,

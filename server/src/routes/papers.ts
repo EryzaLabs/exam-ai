@@ -410,9 +410,18 @@ router.post('/custom/create', (req: Request, res: Response) => {
       ? topics.map(t => TOPIC_METADATA[t]?.name || formatTopicDisplayName(t)).join(', ')
       : 'All UPSC Syllabus Topics';
 
+    let defaultTitle = `UPSC Principal • Custom Mock Test (${pickedQuestions.length} Qs • ${durationMins}m)`;
+    if (Array.isArray(topics) && topics.length === 1 && !topics.includes('all')) {
+      const singleTopicName = TOPIC_METADATA[topics[0]]?.name || formatTopicDisplayName(topics[0]);
+      defaultTitle = `${singleTopicName} • Practice Set (${pickedQuestions.length} Qs)`;
+    } else if (Array.isArray(topics) && topics.length > 1 && topics.length <= 3 && !topics.includes('all')) {
+      const topicNames = topics.map(t => TOPIC_METADATA[t]?.name || formatTopicDisplayName(t)).join(' & ');
+      defaultTitle = `${topicNames} • Custom Set (${pickedQuestions.length} Qs)`;
+    }
+
     const testName = title && title.trim()
       ? title.trim()
-      : `Custom Mock Test: ${pickedQuestions.length} Questions (${durationMins}m)`;
+      : defaultTitle;
 
     const customPaper = {
       test_id: testId,

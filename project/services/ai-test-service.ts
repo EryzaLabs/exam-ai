@@ -12,12 +12,18 @@ export interface AiDailyStatus {
   canGenerate: boolean;
   today: string;
   limit: number;
+  freeUsed?: boolean;
+  paidCredits?: number;
+  allowPaidOption?: boolean;
+  paidTestPrice?: number;
   message: string;
 }
 
 export interface StartAiTestParams {
   userId: string;
   topic: string;
+  title?: string;
+  orderId?: string;
   questionCount: number;
   durationMinutes: number;
   difficulty?: string;
@@ -70,6 +76,22 @@ class AiTestService {
       );
     }
 
+    return response.json();
+  }
+
+  /**
+   * Unlock a paid AI test credit after successful ₹9 payment
+   */
+  async unlockPaidCredit(userId: string, orderId?: string): Promise<{ success: boolean; paidCredits: number }> {
+    const cleanUid = userId || 'anonymous';
+    const response = await fetch(`${API_URL}/ai-tests/unlock-paid`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId: cleanUid, orderId }),
+    });
+    if (!response.ok) {
+      throw new Error(`Failed to unlock paid credit: ${response.status}`);
+    }
     return response.json();
   }
 

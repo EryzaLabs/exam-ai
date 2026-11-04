@@ -39,10 +39,12 @@ import { TestProgressService, TestResult } from '@/services/test-progress-servic
 import TestSeriesService from '@/services/testseries-service';
 import DesktopDashboard from '@/components/DesktopDashboard';
 import { extractTestTopicAndSubject } from '@/utils/topic-resolver';
+import { useTheme } from '@/context/theme-context';
 
 const { width } = Dimensions.get('window');
 
 export default function ProgressScreen() {
+  const { isDark, colors } = useTheme();
   const [selectedPeriod, setSelectedPeriod] = useState<'week' | 'month' | 'year'>('week');
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -351,10 +353,10 @@ export default function ProgressScreen() {
 
   if (loading) {
     return (
-      <SafeAreaView style={styles.container} edges={['bottom']}>
-        <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#667eea" />
-          <Text style={styles.loadingText}>Loading your progress...</Text>
+      <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]} edges={['bottom']}>
+        <View style={[styles.loadingContainer, { backgroundColor: colors.background }]}>
+          <ActivityIndicator size="large" color={colors.accent || '#667eea'} />
+          <Text style={[styles.loadingText, { color: colors.textSecondary }]}>Loading your progress...</Text>
         </View>
       </SafeAreaView>
     );
@@ -377,33 +379,34 @@ export default function ProgressScreen() {
   const questionsData = recentData.questions;
 
   const content = (
-    <SafeAreaView style={[styles.container, isLargeScreen && { flex: undefined, minHeight: 600 }]}>
+    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }, isLargeScreen && { flex: undefined, minHeight: 600 }]}>
       {/* Header */}
-      <View style={styles.headerNew}>
+      <View style={[styles.headerNew, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
         <View style={styles.headerLeft}>
-          <View style={styles.progressIconNew}>
-            <TrendUp size={24} color="#2563EB" />
+          <View style={[styles.progressIconNew, { backgroundColor: isDark ? colors.surfaceHighlight : '#EFF6FF' }]}>
+            <TrendUp size={24} color={colors.accent} />
           </View>
           <View>
-            <Text style={styles.headerTitleNew}>Progress</Text>
-            <Text style={styles.headerSubtitleNew}>Track your learning journey</Text>
+            <Text style={[styles.headerTitleNew, { color: colors.textPrimary }]}>Progress</Text>
+            <Text style={[styles.headerSubtitleNew, { color: colors.textSecondary }]}>Track your learning journey</Text>
           </View>
         </View>
       </View>
 
       {/* Period Selector */}
-      <View style={styles.periodSelector}>
+      <View style={[styles.periodSelector, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
         {(['week', 'month', 'year'] as const).map((period) => (
           <TouchableOpacity
             key={period}
             style={[
               styles.periodButton,
-              selectedPeriod === period && styles.periodButtonActive
+              selectedPeriod === period && [styles.periodButtonActive, { backgroundColor: colors.accent }]
             ]}
             onPress={() => setSelectedPeriod(period)}
           >
             <Text style={[
               styles.periodText,
+              { color: colors.textSecondary },
               selectedPeriod === period && styles.periodTextActive
             ]}>
               {period.charAt(0).toUpperCase() + period.slice(1)}
@@ -420,9 +423,9 @@ export default function ProgressScreen() {
         {testHistory.length === 0 ? (
           <Card>
             <View style={styles.emptyState}>
-              <Trophy size={64} color="#ccc" />
-              <Text style={styles.emptyTitle}>No Progress Yet</Text>
-              <Text style={styles.emptyText}>
+              <Trophy size={64} color={colors.textTertiary} />
+              <Text style={[styles.emptyTitle, { color: colors.textPrimary }]}>No Progress Yet</Text>
+              <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
                 Take your first test this {selectedPeriod} to start tracking your progress!
               </Text>
             </View>
@@ -431,48 +434,48 @@ export default function ProgressScreen() {
           <>
             {/* Overall Stats Grid */}
             <View style={styles.statsGrid}>
-              <View style={[styles.statCardNew, { backgroundColor: '#F0F9FF', borderColor: '#BAE6FD' }]}>
-                <View style={[styles.statIconBox, { backgroundColor: '#DBEAFE' }]}>
+              <View style={[styles.statCardNew, { backgroundColor: isDark ? colors.surfaceHighlight : '#F0F9FF', borderColor: colors.border }]}>
+                <View style={[styles.statIconBox, { backgroundColor: isDark ? '#1E3A5F' : '#DBEAFE' }]}>
                   <Target size={20} color="#2563EB" />
                 </View>
                 <View style={{ marginTop: 12 }}>
-                  <Text style={styles.statValueNew}>{displayStats.accuracy.toFixed(1)}%</Text>
-                  <Text style={styles.statLabelNew}>Overall Accuracy</Text>
-                  <Text style={styles.statRankNew}>{calculateRank(displayStats.accuracy)}</Text>
+                  <Text style={[styles.statValueNew, { color: colors.textPrimary }]}>{displayStats.accuracy.toFixed(1)}%</Text>
+                  <Text style={[styles.statLabelNew, { color: colors.textSecondary }]}>Overall Accuracy</Text>
+                  <Text style={[styles.statRankNew, { color: colors.accent }]}>{calculateRank(displayStats.accuracy)}</Text>
                 </View>
               </View>
               
-              <View style={[styles.statCardNew, { backgroundColor: '#FFF7ED', borderColor: '#FED7AA' }]}>
-                <View style={[styles.statIconBox, { backgroundColor: '#FFEDD5' }]}>
+              <View style={[styles.statCardNew, { backgroundColor: isDark ? colors.surfaceHighlight : '#FFF7ED', borderColor: colors.border }]}>
+                <View style={[styles.statIconBox, { backgroundColor: isDark ? '#422006' : '#FFEDD5' }]}>
                   <Zap size={20} color="#EA580C" />
                 </View>
                 <View style={{ marginTop: 12 }}>
-                  <Text style={styles.statValueNew}>{displayStats.streak}</Text>
-                  <Text style={styles.statLabelNew}>Day Streak</Text>
+                  <Text style={[styles.statValueNew, { color: colors.textPrimary }]}>{displayStats.streak}</Text>
+                  <Text style={[styles.statLabelNew, { color: colors.textSecondary }]}>Day Streak</Text>
                 </View>
               </View>
               
               <TouchableOpacity 
-                style={[styles.statCardNew, { backgroundColor: '#F0FDF4', borderColor: '#BBF7D0' }]}
+                style={[styles.statCardNew, { backgroundColor: isDark ? colors.surfaceHighlight : '#F0FDF4', borderColor: colors.border }]}
                 onPress={() => router.push('/test-history')}
                 activeOpacity={0.7}
               >
-                <View style={[styles.statIconBox, { backgroundColor: '#DCFCE7' }]}>
+                <View style={[styles.statIconBox, { backgroundColor: isDark ? '#064E3B' : '#DCFCE7' }]}>
                   <BookOpen size={20} color="#16A34A" />
                 </View>
                 <View style={{ marginTop: 12 }}>
-                  <Text style={styles.statValueNew}>{displayStats.questionsAttempted}</Text>
-                  <Text style={styles.statLabelNew}>Questions</Text>
+                  <Text style={[styles.statValueNew, { color: colors.textPrimary }]}>{displayStats.questionsAttempted}</Text>
+                  <Text style={[styles.statLabelNew, { color: colors.textSecondary }]}>Questions</Text>
                 </View>
               </TouchableOpacity>
               
-              <View style={[styles.statCardNew, { backgroundColor: '#FAF5FF', borderColor: '#E9D5FF' }]}>
-                <View style={[styles.statIconBox, { backgroundColor: '#F3E8FF' }]}>
+              <View style={[styles.statCardNew, { backgroundColor: isDark ? colors.surfaceHighlight : '#FAF5FF', borderColor: colors.border }]}>
+                <View style={[styles.statIconBox, { backgroundColor: isDark ? '#421245' : '#F3E8FF' }]}>
                   <Trophy size={20} color="#9333EA" />
                 </View>
                 <View style={{ marginTop: 12 }}>
-                  <Text style={styles.statValueNew}>{displayStats.totalTests}</Text>
-                  <Text style={styles.statLabelNew}>Tests Taken</Text>
+                  <Text style={[styles.statValueNew, { color: colors.textPrimary }]}>{displayStats.totalTests}</Text>
+                  <Text style={[styles.statLabelNew, { color: colors.textSecondary }]}>Tests Taken</Text>
                 </View>
               </View>
             </View>
@@ -480,14 +483,14 @@ export default function ProgressScreen() {
             {/* Exam-Specific Rankings */}
             {userProfile && Object.keys(examRankings).length > 0 && (
               <Card>
-                <Text style={styles.cardTitle}>Exam Rankings</Text>
-                <Text style={styles.cardSubtitle}>Your performance by exam type</Text>
+                <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>Exam Rankings</Text>
+                <Text style={[styles.cardSubtitle, { color: colors.textSecondary }]}>Your performance by exam type</Text>
                 <View style={styles.rankingsContainer}>
                   {Object.entries(examRankings).map(([exam, rank]) => (
-                    <View key={exam} style={styles.rankingItem}>
+                    <View key={exam} style={[styles.rankingItem, { backgroundColor: isDark ? colors.surfaceHighlight : '#F8F9FA' }]}>
                       <View style={styles.rankingLeft}>
-                        <Award size={18} color="#667eea" />
-                        <Text style={styles.rankingExam}>{exam}</Text>
+                        <Award size={18} color={colors.accent} />
+                        <Text style={[styles.rankingExam, { color: colors.textPrimary }]}>{exam}</Text>
                       </View>
                       <View style={[styles.rankingBadge, { backgroundColor: getRankColor(rank) }]}>
                         <Text style={styles.rankingText}>{rank}</Text>
@@ -502,10 +505,10 @@ export default function ProgressScreen() {
             {accuracyData.length > 0 && (
               <Card style={styles.chartCard}>
                 <View style={styles.chartHeader}>
-                  <Text style={styles.cardTitle}>Accuracy Trend</Text>
+                  <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>Accuracy Trend</Text>
                 </View>
-                <Text style={styles.chartDescription}>Your accuracy over recent tests</Text>
-                {renderSimpleChart(accuracyData, recentData.labels, '#007AFF')}
+                <Text style={[styles.chartDescription, { color: colors.textSecondary }]}>Your accuracy over recent tests</Text>
+                {renderSimpleChart(accuracyData, recentData.labels, colors.accent || '#007AFF')}
               </Card>
             )}
 
@@ -514,11 +517,11 @@ export default function ProgressScreen() {
               <Card>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
                   <View>
-                    <Text style={[styles.cardTitle, { marginBottom: 2 }]}>Topic Performance</Text>
-                    <Text style={{ fontSize: 13, color: '#64748B' }}>Breakdown across syllabus topics you have practiced</Text>
+                    <Text style={[styles.cardTitle, { color: colors.textPrimary, marginBottom: 2 }]}>Topic Performance</Text>
+                    <Text style={{ fontSize: 13, color: colors.textSecondary }}>Breakdown across syllabus topics you have practiced</Text>
                   </View>
-                  <View style={{ backgroundColor: '#EFF6FF', paddingHorizontal: 10, paddingVertical: 4, borderRadius: 12 }}>
-                    <Text style={{ fontSize: 12, fontWeight: '700', color: '#2563EB' }}>
+                  <View style={{ backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF', paddingHorizontal: 10, paddingVertical: 4, borderRadius: 12 }}>
+                    <Text style={{ fontSize: 12, fontWeight: '700', color: colors.accent }}>
                       {topicBreakdown.length} Topics
                     </Text>
                   </View>
@@ -531,28 +534,28 @@ export default function ProgressScreen() {
                     const isMastered = item.accuracy >= 75;
 
                     return (
-                      <View key={idx} style={{ padding: 12, backgroundColor: '#F8FAFC', borderRadius: 12, borderWidth: 1, borderColor: '#F1F5F9' }}>
+                      <View key={idx} style={{ padding: 12, backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC', borderRadius: 12, borderWidth: 1, borderColor: colors.border }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
                           <View style={{ flex: 1, marginRight: 12 }}>
-                            <Text style={{ fontSize: 14, fontWeight: '700', color: '#1E293B' }}>
+                            <Text style={{ fontSize: 14, fontWeight: '700', color: colors.textPrimary }}>
                               {item.topic}
                             </Text>
                             {item.subject && item.subject !== item.topic && item.subject !== 'General' && (
-                              <Text style={{ fontSize: 12, color: '#64748B', marginTop: 2 }}>
+                              <Text style={{ fontSize: 12, color: colors.textSecondary, marginTop: 2 }}>
                                 {item.subject}
                               </Text>
                             )}
                           </View>
                           <View style={{ alignItems: 'flex-end' }}>
-                            <Text style={{ fontSize: 15, fontWeight: '800', color: isMastered ? '#16A34A' : '#2563EB' }}>
+                            <Text style={{ fontSize: 15, fontWeight: '800', color: isMastered ? '#16A34A' : colors.accent }}>
                               {item.accuracy.toFixed(1)}%
                             </Text>
-                            <Text style={{ fontSize: 11, color: '#94A3B8' }}>
+                            <Text style={{ fontSize: 11, color: colors.textTertiary }}>
                               {item.correct}/{item.attempted} Qs
                             </Text>
                           </View>
                         </View>
-                        <View style={{ height: 6, width: '100%', backgroundColor: '#E2E8F0', borderRadius: 3, overflow: 'hidden' }}>
+                        <View style={{ height: 6, width: '100%', backgroundColor: isDark ? colors.surface : '#E2E8F0', borderRadius: 3, overflow: 'hidden' }}>
                           <View style={{ height: '100%', width: `${Math.min(100, Math.max(0, item.accuracy))}%`, backgroundColor: barColor, borderRadius: 3 }} />
                         </View>
                       </View>
@@ -565,16 +568,16 @@ export default function ProgressScreen() {
             {/* Recent Tests */}
             <Card>
               <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-                <Text style={[styles.cardTitle, { marginBottom: 0 }]}>Recent Tests</Text>
+                <Text style={[styles.cardTitle, { color: colors.textPrimary, marginBottom: 0 }]}>Recent Tests</Text>
                 <TouchableOpacity onPress={() => router.push('/test-history')}>
-                  <Text style={{ color: '#2563EB', fontWeight: '600' }}>View All →</Text>
+                  <Text style={{ color: colors.accent, fontWeight: '600' }}>View All →</Text>
                 </TouchableOpacity>
               </View>
               <View style={styles.testsContainer}>
                 {filteredHistory.slice(0, 5).map((test, index) => (
                   <TouchableOpacity 
                     key={index} 
-                    style={styles.testItem}
+                    style={[styles.testItem, { backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC' }]}
                     onPress={() => {
                       // Check if evaluation is complete
                       if (test.evaluationStatus === 'pending') {
@@ -596,6 +599,43 @@ export default function ProgressScreen() {
                         });
                       }
                     }}
+                  >
+                    <View style={styles.testInfo}>
+                      <Text style={[styles.testTitle, { color: colors.textPrimary }]} numberOfLines={1}>
+                        {test.testTitle || 'Test'}
+                      </Text>
+                      <Text style={[styles.testDate, { color: colors.textSecondary }]}>
+                        {new Date(test.date).toLocaleDateString()}
+                      </Text>
+                      {test.evaluationStatus === 'pending' && (
+                        <View style={styles.pendingBadge}>
+                          <ActivityIndicator size="small" color="#FF9500" />
+                          <Text style={styles.pendingText}>Evaluating...</Text>
+                        </View>
+                      )}
+                    </View>
+                    {test.evaluationStatus === 'completed' ? (
+                      <View style={styles.testStats}>
+                        <Text style={[styles.testAccuracy, { color: colors.accent }]}>{test.accuracy.toFixed(1)}%</Text>
+                        <Text style={[styles.testScore, { color: colors.textSecondary }]}>
+                          {Number(test.overallScore).toFixed(1)}/{test.totalMarks} Marks
+                        </Text>
+                      </View>
+                    ) : (
+                      <View style={styles.testStats}>
+                        <Text style={styles.pendingStatusText}>Pending</Text>
+                      </View>
+                    )}
+                  </TouchableOpacity>
+                ))}
+              </View>
+            </Card>
+          </>
+        )}
+
+      </ScrollView>
+    </SafeAreaView>
+  );
                   >
                     <View style={styles.testInfo}>
                       <Text style={styles.testTitle} numberOfLines={1}>

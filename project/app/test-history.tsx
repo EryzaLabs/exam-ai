@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { View, Text, FlatList, TouchableOpacity, StyleSheet, TextInput, useWindowDimensions, ActivityIndicator } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, StyleSheet, TextInput, useWindowDimensions, ActivityIndicator, Platform } from 'react-native';
 import { useRouter } from 'expo-router';
 import { TestProgressService, TestResult } from '@/services/test-progress-service';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -111,10 +111,20 @@ export default function TestHistoryScreen() {
         });
     };
 
+    const handleBack = () => {
+        if (router.canGoBack()) {
+            router.back();
+        } else if (Platform.OS === 'web' && typeof window !== 'undefined' && window.history.length > 1) {
+            window.history.back();
+        } else {
+            router.replace('/(tabs)');
+        }
+    };
+
     const content = (
         <SafeAreaView style={[styles.container, isLargeScreen && { flex: undefined, minHeight: 600 }]} edges={['bottom']}>
             <View style={styles.header}>
-                <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+                <TouchableOpacity onPress={handleBack} style={styles.backButton}>
                     <ArrowLeft size={24} color="#1E293B" />
                 </TouchableOpacity>
                 <Text style={styles.headerTitle}>Test History</Text>

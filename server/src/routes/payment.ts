@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import crypto from 'crypto';
 import { recordBackendSubscription, getLocalSubscriptions, saveLocalSubscription, getFirebaseAdmin, getFirestoreAdmin } from '../firebase-admin';
+import { addPaidAiCredit } from './ai-tests';
 
 
 const router = Router();
@@ -50,6 +51,16 @@ export interface SubscriptionPlan {
 }
 
 export const SUBSCRIPTION_PLANS: Record<string, SubscriptionPlan> = {
+  ai_test: {
+    id: 'ai_test',
+    name: 'AI Custom Mock Test',
+    tagline: '1 Instant AI Custom Mock Test',
+    price: 9,
+    originalPrice: 29,
+    durationLabel: '1 Test',
+    periodDays: 1,
+    badge: 'Extra AI Test',
+  },
   daily: {
     id: 'daily',
     name: 'Daily Pass',
@@ -399,6 +410,9 @@ router.post('/verify', async (req: Request, res: Response) => {
             planId: plan.id,
             planName: plan.name,
           });
+          if (plan.id === 'ai_test' || Number(plan.price) === 9) {
+            addPaidAiCredit(uid, 1);
+          }
         }
         return res.json({
           success: true,
@@ -436,6 +450,10 @@ router.post('/verify', async (req: Request, res: Response) => {
           planId: plan.id,
           planName: plan.name,
         });
+
+        if (plan.id === 'ai_test' || Number(data.order_amount) === 9) {
+          addPaidAiCredit(targetUid, 1);
+        }
       }
     }
 

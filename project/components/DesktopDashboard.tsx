@@ -32,6 +32,8 @@ import {
 } from 'lucide-react-native';
 import { router, usePathname, useLocalSearchParams } from 'expo-router';
 import { useAuth } from '@/context/auth-context';
+import { useExam } from '@/context/exam-context';
+import ExamSelector from '@/components/ExamSelector';
 import { useTheme } from '@/context/theme-context';
 import { useDashboardData } from '@/hooks/useDashboardData';
 import { signOut } from 'firebase/auth';
@@ -43,6 +45,7 @@ import Svg, { Circle } from 'react-native-svg';
 export default function DesktopDashboard({ performance: propPerformance, dashboardStats: propDashboardStats, children, disableScroll }: any) {
   const { isDark, colors, toggleTheme } = useTheme();
   const { user, isSubscribed: authSubscribed, isSubscriptionLoading, requireAuth } = useAuth();
+  const { examMode, examInfo } = useExam();
   const [searchQuery, setSearchQuery] = React.useState('');
   const pathname = usePathname();
   const searchParams = useLocalSearchParams<{ category?: string }>();
@@ -246,6 +249,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
             />
           </View>
           <View style={styles.topBarRight}>
+            <ExamSelector compact={true} style={{ marginRight: 14 }} />
             <TouchableOpacity 
               style={[styles.bellBtn, { borderColor: colors.border, backgroundColor: colors.surface, marginRight: 12 }]} 
               onPress={toggleTheme}
@@ -380,7 +384,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           <View style={styles.sectionHeader}>
             <View style={{flexDirection: 'row', alignItems: 'center', gap: 8}}>
                <BookOpen size={20} color="#F97316" />
-               <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>UPSC Principal Mock Tests</Text>
+               <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>{examInfo.shortName} Mock Tests</Text>
             </View>
             <TouchableOpacity onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}>
               <Text style={styles.viewAll}>View All →</Text>
@@ -402,8 +406,8 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                    <Star size={12} color="#F59E0B" fill="#F59E0B" />
                    <Text style={styles.featuredBadgeText}>Featured</Text>
                 </View>
-                <Text style={styles.featuredTitle}>UPSC Principal Test Series</Text>
-                <Text style={styles.featuredDesc}>Complete mock test series for comprehensive preparation</Text>
+                <Text style={styles.featuredTitle}>{examInfo.shortName} Test Series</Text>
+                <Text style={styles.featuredDesc}>{examInfo.tagline}</Text>
                 
                 <View style={styles.featuredPerks}>
                    <View style={styles.perk}><Clock size={14} color="#fff" /><Text style={styles.perkText}>Timed Tests</Text></View>

@@ -23,6 +23,7 @@ import UserService, { UserProfile, UserStats } from '@/services/user-service';
 import { router } from 'expo-router';
 import * as WebBrowser from 'expo-web-browser';
 import DesktopDashboard from '@/components/DesktopDashboard';
+import ExamSelector from '@/components/ExamSelector';
 import { useWindowDimensions } from 'react-native';
 
 // 7-day streak calendar days
@@ -189,28 +190,28 @@ export default function ProfileScreen() {
 
   if (!user) {
     const guestView = (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24, minHeight: 480 }}>
-        <View style={{ width: 72, height: 72, borderRadius: 36, backgroundColor: '#EFF6FF', justifyContent: 'center', alignItems: 'center', marginBottom: 20 }}>
-          <User size={36} color="#3B82F6" />
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24, minHeight: 480, backgroundColor: colors.background }}>
+        <View style={{ width: 72, height: 72, borderRadius: 36, backgroundColor: isDark ? colors.surfaceHighlight : '#EFF6FF', justifyContent: 'center', alignItems: 'center', marginBottom: 20 }}>
+          <User size={36} color={colors.accent} />
         </View>
-        <Text style={{ fontSize: 24, fontWeight: '800', color: '#0F172A', marginBottom: 8, textAlign: 'center' }}>
+        <Text style={{ fontSize: 24, fontWeight: '800', color: colors.textPrimary, marginBottom: 8, textAlign: 'center' }}>
           Guest Explorer
         </Text>
-        <Text style={{ fontSize: 14, color: '#64748B', textAlign: 'center', maxWidth: 360, lineHeight: 22, marginBottom: 28 }}>
+        <Text style={{ fontSize: 14, color: colors.textSecondary, textAlign: 'center', maxWidth: 360, lineHeight: 22, marginBottom: 28 }}>
           Sign in or create a free Astra Exam AI account to track your test history, view rank analytics, and manage your subscription.
         </Text>
         <View style={{ width: '100%', maxWidth: 320, gap: 12 }}>
           <TouchableOpacity
-            style={{ backgroundColor: '#3B82F6', paddingVertical: 14, borderRadius: 14, alignItems: 'center', shadowColor: '#3B82F6', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.2, shadowRadius: 8, elevation: 3 }}
+            style={{ backgroundColor: colors.accent, paddingVertical: 14, borderRadius: 14, alignItems: 'center', shadowColor: colors.accent, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.2, shadowRadius: 8, elevation: 3 }}
             onPress={() => router.push('/(auth)/signup')}
           >
             <Text style={{ color: '#FFFFFF', fontWeight: '700', fontSize: 15 }}>Create Free Account</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            style={{ backgroundColor: '#EFF6FF', paddingVertical: 12, borderRadius: 14, alignItems: 'center', borderWidth: 1, borderColor: '#DBEAFE' }}
+            style={{ backgroundColor: isDark ? colors.surfaceHighlight : '#EFF6FF', paddingVertical: 12, borderRadius: 14, alignItems: 'center', borderWidth: 1, borderColor: colors.border }}
             onPress={() => router.push('/(auth)/login')}
           >
-            <Text style={{ color: '#1D4ED8', fontWeight: '600', fontSize: 14 }}>Sign In</Text>
+            <Text style={{ color: colors.accent, fontWeight: '600', fontSize: 14 }}>Sign In</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -225,7 +226,7 @@ export default function ProfileScreen() {
     }
 
     return (
-      <SafeAreaView style={styles.container} edges={['top']}>
+      <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]} edges={['top']}>
         {guestView}
       </SafeAreaView>
     );
@@ -235,9 +236,9 @@ export default function ProfileScreen() {
 
   if (isPageLoading) {
     const loadingView = (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#4A90E2" />
-        <Text style={styles.loadingText}>Loading profile & verifying account...</Text>
+      <View style={[styles.loadingContainer, { backgroundColor: colors.background }]}>
+        <ActivityIndicator size="large" color={colors.accent || '#4A90E2'} />
+        <Text style={[styles.loadingText, { color: colors.textSecondary }]}>Loading profile & verifying account...</Text>
       </View>
     );
 
@@ -250,19 +251,19 @@ export default function ProfileScreen() {
     }
 
     return (
-      <SafeAreaView style={styles.container} edges={['top']}>
+      <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]} edges={['top']}>
         {loadingView}
       </SafeAreaView>
     );
   }
 
   const content = (
-    <SafeAreaView style={styles.container} edges={['top']}>
+    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]} edges={['top']}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.contentWrapper}>
         {/* Profile Header */}
         <LinearGradient
-          colors={['#4A90E2', '#357ABD', '#2B6CB0']}
+          colors={isDark ? ['#172554', '#1E3A8A', '#1E293B'] : ['#4A90E2', '#357ABD', '#2B6CB0']}
           style={styles.headerGradient}
         >
           <View style={styles.headerContent}>
@@ -295,41 +296,41 @@ export default function ProfileScreen() {
 
         {/* Stats Cards */}
         <View style={styles.statsRow}>
-          <View style={styles.statCard}>
-            <View style={[styles.statIconCircle, { backgroundColor: '#EBF5FF' }]}>
+          <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+            <View style={[styles.statIconCircle, { backgroundColor: isDark ? '#1E3A5F' : '#EBF5FF' }]}>
               <TrendingUp size={20} color="#4A90E2" />
             </View>
-            <Text style={styles.statValue}>{userStats?.streak || 0}</Text>
-            <Text style={styles.statLabel}>Day Streak</Text>
+            <Text style={[styles.statValue, { color: colors.textPrimary }]}>{userStats?.streak || 0}</Text>
+            <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Day Streak</Text>
           </View>
-          <View style={styles.statCard}>
-            <View style={[styles.statIconCircle, { backgroundColor: '#F0FFF4' }]}>
+          <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+            <View style={[styles.statIconCircle, { backgroundColor: isDark ? '#064E3B' : '#F0FFF4' }]}>
               <Target size={20} color="#48BB78" />
             </View>
-            <Text style={styles.statValue}>{userStats?.accuracy?.toFixed(0) || 0}%</Text>
-            <Text style={styles.statLabel}>Accuracy</Text>
+            <Text style={[styles.statValue, { color: colors.textPrimary }]}>{userStats?.accuracy?.toFixed(0) || 0}%</Text>
+            <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Accuracy</Text>
           </View>
-          <View style={styles.statCard}>
-            <View style={[styles.statIconCircle, { backgroundColor: '#FFF5F5' }]}>
+          <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+            <View style={[styles.statIconCircle, { backgroundColor: isDark ? '#450A0A' : '#FFF5F5' }]}>
               <Award size={20} color="#F56565" />
             </View>
-            <Text style={styles.statValue}>{userStats?.totalTests || 0}</Text>
-            <Text style={styles.statLabel}>Tests</Text>
+            <Text style={[styles.statValue, { color: colors.textPrimary }]}>{userStats?.totalTests || 0}</Text>
+            <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Tests</Text>
           </View>
-          <View style={styles.statCard}>
-            <View style={[styles.statIconCircle, { backgroundColor: '#FFFFF0' }]}>
+          <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+            <View style={[styles.statIconCircle, { backgroundColor: isDark ? '#422006' : '#FFFFF0' }]}>
               <BookOpen size={20} color="#ECC94B" />
             </View>
-            <Text style={styles.statValue}>{userStats?.questionsAttempted || 0}</Text>
-            <Text style={styles.statLabel}>Questions</Text>
+            <Text style={[styles.statValue, { color: colors.textPrimary }]}>{userStats?.questionsAttempted || 0}</Text>
+            <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Questions</Text>
           </View>
         </View>
 
         {/* Weekly Streak / Activity Goal */}
-        <View style={styles.sectionCard}>
+        <View style={[styles.sectionCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
           <View style={styles.sectionHeader}>
-            <Text style={styles.sectionTitle}>This Week's Goal</Text>
-            <Text style={styles.streakStatus}>
+            <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>This Week's Goal</Text>
+            <Text style={[styles.streakStatus, isDark && { color: '#FB923C' }]}>
               {userStats?.streak && userStats.streak > 0
                 ? `${userStats.streak} Day Streak! 🔥`
                 : 'Start your streak today'}
@@ -343,11 +344,12 @@ export default function ProfileScreen() {
 
               return (
                 <View key={i} style={styles.calendarDay}>
-                  <Text style={[styles.dayLabel, i === currentDayIndex && styles.dayLabelToday]}>{day}</Text>
+                  <Text style={[styles.dayLabel, { color: colors.textTertiary }, i === currentDayIndex && styles.dayLabelToday]}>{day}</Text>
                   <View style={[
                     styles.dayCircle,
+                    { backgroundColor: isDark ? colors.surfaceHighlight : '#F7FAFC', borderColor: colors.border },
                     isFilled && styles.dayCircleFilled,
-                    i === currentDayIndex && !isFilled && styles.dayCircleToday
+                    i === currentDayIndex && !isFilled && [styles.dayCircleToday, { borderColor: colors.accent }]
                   ]}>
                     {isFilled && <Text style={styles.checkText}>✓</Text>}
                   </View>
@@ -359,61 +361,68 @@ export default function ProfileScreen() {
 
         {/* Exam Preferences & Context */}
         {userProfile && (
-          <View style={styles.sectionCard}>
+          <View style={[styles.sectionCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
             <View style={styles.sectionHeader}>
-              <Text style={styles.sectionTitle}>Preparation Profile</Text>
+              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Preparation Profile</Text>
               <TouchableOpacity onPress={() => router.push('/profile-setup')}>
-                <Text style={styles.editText}>Edit</Text>
+                <Text style={[styles.editText, { color: colors.accent }]}>Edit</Text>
               </TouchableOpacity>
             </View>
 
-            <View style={styles.infoRow}>
-              <Text style={styles.infoLabel}>Target Cadre</Text>
-              <View style={styles.badge}>
-                <Text style={styles.badgeText}>{userProfile.targetCadre || 'UPSC'}</Text>
+            <View style={[styles.infoRow, { borderBottomColor: isDark ? colors.border : '#F7FAFC' }]}>
+              <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>Target Cadre</Text>
+              <View style={[styles.badge, { backgroundColor: isDark ? '#1E3A5F' : '#EBF5FF' }]}>
+                <Text style={[styles.badgeText, { color: isDark ? '#93C5FD' : '#4A90E2' }]}>{userProfile.targetCadre || 'UPSC'}</Text>
               </View>
             </View>
 
-            <View style={styles.infoRow}>
-              <Text style={styles.infoLabel}>Current Designation</Text>
-              <Text style={styles.infoValue}>{userProfile.currentDesignation || 'Teacher'}</Text>
+            <View style={[styles.infoRow, { borderBottomColor: isDark ? colors.border : '#F7FAFC' }]}>
+              <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>Target Exam</Text>
+              <View style={{ flex: 1, alignItems: 'flex-end' }}>
+                <ExamSelector compact={true} />
+              </View>
             </View>
 
-            <View style={styles.infoRow}>
-              <Text style={styles.infoLabel}>Language</Text>
-              <Text style={styles.infoValue}>{userProfile.languagePreference || 'English'}</Text>
+            <View style={[styles.infoRow, { borderBottomColor: isDark ? colors.border : '#F7FAFC' }]}>
+              <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>Current Designation</Text>
+              <Text style={[styles.infoValue, { color: colors.textPrimary }]}>{userProfile.currentDesignation || 'Teacher'}</Text>
+            </View>
+
+            <View style={[styles.infoRow, { borderBottomColor: isDark ? colors.border : '#F7FAFC' }]}>
+              <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>Language</Text>
+              <Text style={[styles.infoValue, { color: colors.textPrimary }]}>{userProfile.languagePreference || 'English'}</Text>
             </View>
 
             {/* Weakest Subject Breakdown */}
-            <View style={styles.weakAreaContainer}>
-              <Text style={styles.weakAreaTitle}>Focus Area (Weakest Subject)</Text>
-              <View style={styles.weakAreaCard}>
+            <View style={[styles.weakAreaContainer, { backgroundColor: isDark ? 'rgba(239, 68, 68, 0.12)' : '#FFF5F5', borderColor: isDark ? 'rgba(239, 68, 68, 0.25)' : '#FED7D7' }]}>
+              <Text style={[styles.weakAreaTitle, { color: isDark ? '#FCA5A5' : '#C53030' }]}>Focus Area (Weakest Subject)</Text>
+              <View style={[styles.weakAreaCard, { backgroundColor: isDark ? colors.surfaceHighlight : '#fff', borderColor: isDark ? 'rgba(239, 68, 68, 0.25)' : '#FED7D7' }]}>
                 <Target size={16} color="#F56565" style={{ marginRight: 8 }} />
-                <Text style={styles.weakAreaText}>{userProfile.weakestSubject || 'General Knowledge'}</Text>
+                <Text style={[styles.weakAreaText, { color: colors.textPrimary }]}>{userProfile.weakestSubject || 'General Knowledge'}</Text>
               </View>
-              <Text style={styles.helperText}>We prioritize this subject in diagnostic tests and generated quizzes.</Text>
+              <Text style={[styles.helperText, { color: isDark ? '#F87171' : '#E53E3E' }]}>We prioritize this subject in diagnostic tests and generated quizzes.</Text>
             </View>
           </View>
         )}
 
         {/* Quick Links */}
-        <View style={styles.sectionCard}>
-          <Text style={styles.sectionTitle}>Quick Links</Text>
+        <View style={[styles.sectionCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+          <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Quick Links</Text>
 
-          <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/test-history')}>
-            <View style={[styles.menuIconCircle, { backgroundColor: '#EBF5FF' }]}>
+          <TouchableOpacity style={[styles.menuItem, { borderBottomColor: isDark ? colors.border : '#F7FAFC' }]} onPress={() => router.push('/test-history')}>
+            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#1E3A5F' : '#EBF5FF' }]}>
               <History size={20} color="#4A90E2" />
             </View>
-            <Text style={styles.menuLabel}>Test History</Text>
-            <ChevronRight size={20} color="#CBD5E0" />
+            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Test History</Text>
+            <ChevronRight size={20} color={colors.textTertiary} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/bookmarks')}>
-            <View style={[styles.menuIconCircle, { backgroundColor: '#FFFFF0' }]}>
+          <TouchableOpacity style={[styles.menuItem, { borderBottomColor: isDark ? colors.border : '#F7FAFC' }]} onPress={() => router.push('/bookmarks')}>
+            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#422006' : '#FFFFF0' }]}>
               <BookOpen size={20} color="#ECC94B" />
             </View>
-            <Text style={styles.menuLabel}>Bookmarks</Text>
-            <ChevronRight size={20} color="#CBD5E0" />
+            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Bookmarks</Text>
+            <ChevronRight size={20} color={colors.textTertiary} />
           </TouchableOpacity>
         </View>
 
@@ -474,18 +483,18 @@ export default function ProfileScreen() {
 
         {/* Danger Zone */}
         <View style={styles.dangerZone}>
-          <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
+          <TouchableOpacity style={[styles.logoutButton, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]} onPress={handleLogout}>
             <LogOut size={20} color="#F56565" />
             <Text style={styles.logoutText}>Log Out</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.deleteButton} onPress={handleDeleteAccount}>
+          <TouchableOpacity style={[styles.deleteButton, { borderColor: isDark ? '#7F1D1D' : '#FED7D7' }]} onPress={handleDeleteAccount}>
             <Trash2 size={20} color="#E53E3E" />
             <Text style={styles.deleteText}>Delete Account</Text>
           </TouchableOpacity>
         </View>
 
-        <Text style={styles.versionText}>Version 1.0.1</Text>
+        <Text style={[styles.versionText, { color: colors.textTertiary }]}>Version 1.0.1</Text>
         </View>
       </ScrollView>
     </SafeAreaView>

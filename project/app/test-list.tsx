@@ -51,6 +51,8 @@ import userService from '@/services/user-service';
 import { initiatePayment } from '@/utils/cashfree';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/context/theme-context';
+import { useExam, ExamTarget } from '@/context/exam-context';
+import ExamSelector from '@/components/ExamSelector';
 
 interface ServerPaper {
   id: string; // filename or identifier
@@ -299,7 +301,7 @@ export const SEARCH_SEMANTIC_ALIASES: Record<string, string[]> = {
   'bhartiya-bhasha-summer-camp': ['bhartiya bhasha', 'indian languages', 'multilingualism', 'summer camp', 'language learning', 'mother tongue'],
   'career-cards': ['career cards', 'vocational guidance', 'counselling', 'counseling', 'aptitude', 'career guidance', 'vocational'],
   'pmrc': ['pmrc', 'administrative guidelines', 'principal manual', 'ccs rules', 'gfr', 'financial powers', 'office procedure', 'service rules', 'frsr', 'procurement', 'leave rules'],
-  'full_mocks': ['full mock', 'full test', 'complete test', 'cbt exam', '120 questions', '300 marks', 'general studies', 'admin and finance', 'grand test', 'mock test', 'cbt', 'mock'],
+  'full_mocks': ['full mock', 'full test', 'complete test', 'cbt exam', '120 questions', '300 marks', 'general studies', 'admin and finance', 'grand test', 'mock test', 'cbt', 'mock', 'upsc', 'uppsc', 'up principal', 'upsc principal', 'uttar pradesh', 'up vacancy'],
 };
 
 // Word boundary matching to prevent short acronyms from falsely matching inside unrelated English words
@@ -358,20 +360,35 @@ export function isFuzzyMatch(token: string, candidate: string): boolean {
   return false;
 }
 
-export const formatDisplayTitle = (title: string, filename: string): string => {
-  if (!filename) return title || 'UPSC Principal Test';
+export const formatDisplayTitle = (title: string, filename: string, examMode: ExamTarget = 'all'): string => {
+  const getPrefix = () => {
+    if (examMode === 'uppsc') return 'UP Principal';
+    if (examMode === 'upsc') return 'UPSC Principal';
+    return 'UPSC & UP Principal';
+  };
+
+  if (!filename) {
+    if (title) {
+      if (examMode === 'uppsc') return title.replace(/UPSC Principal/gi, 'UP Principal');
+      if (examMode === 'all') return title.replace(/UPSC Principal/gi, 'UPSC & UP Principal');
+      return title;
+    }
+    return `${getPrefix()} Test`;
+  }
 
   if (filename.includes('full_mocks/')) {
     const match = filename.match(/mock_test_(\d+)\.json/i);
     if (match) {
       const num = parseInt(match[1], 10);
       const padded = num < 10 ? `0${num}` : `${num}`;
-      return `UPSC Principal Full Mock Test ${padded} • Complete CBT Exam`;
+      return `${getPrefix()} Full Mock Test ${padded} • Complete CBT Exam`;
     }
     if (title && !title.toLowerCase().includes('.json')) {
+      if (examMode === 'uppsc') return title.replace(/UPSC Principal/gi, 'UP Principal');
+      if (examMode === 'all') return title.replace(/UPSC Principal/gi, 'UPSC & UP Principal');
       return title;
     }
-    return 'UPSC Principal Full Mock Test';
+    return `${getPrefix()} Full Mock Test`;
   }
 
   if (filename.includes('topic_wise/')) {
@@ -396,11 +413,27 @@ export const formatDisplayTitle = (title: string, filename: string): string => {
     return `${topicName} • Practice Set ${paddedPart}`;
   }
 
-  return title || 'UPSC Principal Test';
+  if (title) {
+    if (examMode === 'uppsc') return title.replace(/UPSC Principal/gi, 'UP Principal');
+    if (examMode === 'all') return title.replace(/UPSC Principal/gi, 'UPSC & UP Principal');
+  }
+
+  return title || `${getPrefix()} Test`;
 };
 
 const SEARCH_SUGGESTIONS = [
+  { label: '🏫 UP Principal', query: 'up principal' },
+  { label: '🏛️ UPSC Principal', query: 'full mock' },
   { label: 'NEP 2020', query: 'nep 2020' },
+  { label: 'POCSO Act', query: 'pocso' },
+  { label: 'Mid-Day Meal', query: 'pm poshan' },
+  { label: 'CBSE Rules', query: 'cbse' },
+  { label: 'Full Mocks', query: 'full mock' },
+  { label: 'CWSN & RPwD', query: 'specially abled' },
+  { label: 'FLN / NIPUN', query: 'nipun' },
+  { label: 'CCE & Rubrics', query: 'cce' },
+  { label: 'KVS & JNV', query: 'kvs' },
+];
   { label: 'POCSO Act', query: 'pocso' },
   { label: 'Mid-Day Meal', query: 'pm poshan' },
   { label: 'CBSE Rules', query: 'cbse' },
@@ -478,6 +511,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const [localSubscribed, setLocalSubscribed] = useState<boolean | null>(null);
   const isSubscribed = localSubscribed !== null ? localSubscribed : authSubscribed;
   const [checkingSubscription, setCheckingSubscription] = useState(true);
+  const { examMode, examInfo } = useExam();
 
   const { width } = useWindowDimensions();
   const isLargeScreen = width >= 1024;
@@ -1175,6 +1209,30 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                 </Text>
               </View>
 
+              <View
+                style={[
+                  styles.examBadgePill,
+                  {
+                    backgroundColor: examMode === 'uppsc'
+                      ? (isDark ? '#064E3B' : '#ECFDF5')
+                      : examMode === 'upsc'
+                      ? (isDark ? '#1E3A5F' : '#EFF6FF')
+                      : (isDark ? '#312E81' : '#EEF2FF'),
+                  }
+                ]}
+              >
+                <Text
+                  style={[
+                    styles.examBadgePillText,
+                    {
+                      color: examMode === 'uppsc' ? '#059669' : examMode === 'upsc' ? '#2563EB' : '#4F46E5',
+                    }
+                  ]}
+                >
+                  {examMode === 'uppsc' ? 'UP Principal' : examMode === 'upsc' ? 'UPSC Principal' : 'UPSC • UP'}
+                </Text>
+              </View>
+
               {test.hasAnswers && (
                 <View style={[styles.solutionBadge, { backgroundColor: isDark ? '#273549' : '#F1F5F9' }]}>
                   <Check size={11} color="#10B981" style={{ marginRight: 3 }} />
@@ -1202,7 +1260,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         </View>
 
         <Text style={[styles.modernTestTitle, { color: colors.textPrimary }]} numberOfLines={2}>
-          {test.title}
+          {formatDisplayTitle(test.title, test.filename, examMode)}
         </Text>
 
         <View style={[styles.modernTestFooter, { borderTopColor: colors.borderLight }]}>
@@ -1305,6 +1363,8 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     }
     if (router.canGoBack()) {
       router.back();
+    } else if (Platform.OS === 'web' && typeof window !== 'undefined' && window.history.length > 1) {
+      window.history.back();
     } else {
       router.replace('/');
     }
@@ -1357,16 +1417,16 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         <View style={[styles.desktopHeaderRow, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
           <View style={{ flex: 1, minWidth: 260, marginRight: 16 }}>
             <Text style={[styles.desktopHeaderTitle, { color: colors.textPrimary }]}>
-              {category === 'full' ? 'Full Mock Tests' : category === 'topic' ? (selectedTopic || 'Topic-Wise Tests') : 'Test Center'}
+              {category === 'full' ? `${examInfo.shortName} Full Mocks` : category === 'topic' ? (selectedTopic || `${examInfo.shortName} Topic Tests`) : `${examInfo.shortName} Test Center`}
             </Text>
             <Text style={[styles.desktopHeaderSubtitle, { color: colors.textSecondary }]}>
               {category === 'full'
-                ? `${fullMockCount} Full Length Tests (120 Qs, 300 Marks, 2 Hours CBT)`
+                ? `${fullMockCount} Full Length Tests for ${examInfo.shortName} (120 Qs, 300 Marks, 2 Hours CBT)`
                 : category === 'topic'
                 ? selectedTopic
                   ? `Topic Tests for ${selectedTopic}`
                   : `${uniqueTopics.length} Syllabus Topics (${topicTestCount} Tests)`
-                : `${fullMockCount} Full Mocks • ${topicTestCount} Topic Tests`}
+                : `${examInfo.fullName} • ${fullMockCount} Full Mocks • ${topicTestCount} Topic Tests`}
             </Text>
           </View>
         </View>
@@ -1387,9 +1447,9 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             <View style={{ flex: 1 }}>
               <View style={styles.heroBadgeRow}>
                 <Sparkles size={13} color="#FDE047" />
-                <Text style={styles.heroBadgeText}>UPSC PRINCIPAL EXAM 2026</Text>
+                <Text style={styles.heroBadgeText}>{examInfo.badge}</Text>
               </View>
-              <Text style={styles.mobileHeroTitle}>Test Center</Text>
+              <Text style={styles.mobileHeroTitle}>{examInfo.shortName}</Text>
               <Text style={styles.mobileHeroSubtitle}>
                 {fullMockCount} Full Mocks • {topicTestCount} Topic Tests
               </Text>
@@ -1400,6 +1460,11 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
       {/* Search Bar & Status Filter */}
       <View style={[styles.searchControlsWrapper, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
+        {/* Exam Target Switcher */}
+        <View style={{ marginBottom: 10 }}>
+          <ExamSelector compact={true} />
+        </View>
+
         <View style={styles.searchBarRow}>
           <View style={[styles.searchBarInputContainer, { backgroundColor: colors.surfaceHighlight, borderColor: colors.border }]}>
             <Search size={18} color={colors.textTertiary} />
@@ -2105,6 +2170,15 @@ const styles = StyleSheet.create({
   },
   testTypeBadgeText: {
     fontSize: 11,
+    fontWeight: '700',
+  },
+  examBadgePill: {
+    paddingHorizontal: 7,
+    paddingVertical: 3,
+    borderRadius: 6,
+  },
+  examBadgePillText: {
+    fontSize: 10,
     fontWeight: '700',
   },
   solutionBadge: {

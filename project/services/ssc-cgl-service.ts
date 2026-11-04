@@ -4,6 +4,7 @@
  */
 
 import { Platform } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { extractTestTopicAndSubject } from '@/utils/topic-resolver';
 
 const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://astra-backend.eryzalabs.cloud/api';
@@ -257,14 +258,21 @@ class SSCCGLService {
     const paper = paperData.data || paperData;
     
     // Fallbacks for the new schema
-    let testName = paper.test_name || 'UPSC Principal Exam Mock Test';
+    let examPrefix = 'UPSC & UP Principal';
+    try {
+      const savedTarget = await AsyncStorage.getItem('@astra_exam_target');
+      if (savedTarget === 'uppsc') examPrefix = 'UP Principal';
+      else if (savedTarget === 'upsc') examPrefix = 'UPSC Principal';
+    } catch {}
+
+    let testName = paper.test_name || `${examPrefix} Mock Test`;
     const effectiveFilename = filename || (paper as any).filename || '';
     if (effectiveFilename.includes('full_mocks/')) {
       const match = effectiveFilename.match(/mock_test_(\d+)\.json/);
       if (match) {
         const num = parseInt(match[1], 10);
         const padded = num < 10 ? `0${num}` : `${num}`;
-        testName = `UPSC Principal Full Mock Test ${padded} • Complete CBT Exam`;
+        testName = `${examPrefix} Full Mock Test ${padded} • Complete CBT Exam`;
       }
     } else if (effectiveFilename.includes('topic_wise/')) {
       const base = effectiveFilename.replace('topic_wise/', '').replace('.json', '');

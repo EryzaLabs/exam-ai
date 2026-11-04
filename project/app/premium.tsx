@@ -438,7 +438,7 @@ export default function PremiumScreen() {
     },
     {
       q: 'How does this compare to apps like Testbook or Adda247?',
-      a: 'Generic test apps focus on mass exams (SSC, Railways, Clerk) with recycled question banks. Our platform is 100% purpose-built for the UPSC Principal & Vice-Principal exam. All questions are crafted at the gazetted officer level with verified Swamy’s Handbook service rule citations (CCS Rules, GFR 2017, POCSO, RTE, FR-SR) and fresh tests built every day.',
+      a: 'Generic test apps focus on mass exams (SSC, Railways, Clerk) with recycled question banks. Our platform is 100% purpose-built for the UPSC & UP Principal exams. All questions are crafted at the gazetted officer level with verified Swamy’s Handbook service rule citations (CCS Rules, GFR 2017, POCSO, RTE, FR-SR) and fresh tests built every day.',
     },
     {
       q: 'How long is the Premium subscription valid?',
@@ -453,8 +453,8 @@ export default function PremiumScreen() {
       a: 'Yes, unlimited re-attempts are included. The platform tracks your score progression, accuracy trends, and speed improvements across attempts without erasing your past test history.',
     },
     {
-      q: 'Is this test series relevant for both GNCTD and KVS Principal exams?',
-      a: 'Yes. The syllabus for UPSC Principal (Delhi GNCTD), Vice-Principal, and KVS/NVS Principal is over 90% overlapping in Educational Administration, Service Rules (CCS), Financial Management (GFR), and Child Protection Laws.',
+      q: 'Is this test series relevant for both UPSC and UP Principal exams?',
+      a: 'Yes! The syllabus for UPSC Principal, the newly released UP Principal (UPPSC) vacancy, and KVS/NVS Principal is over 90% overlapping in Educational Administration, Service Rules (CCS), Financial Management (GFR), NEP 2020, and Child Protection Laws.',
     },
     {
       q: 'Can I access the tests on both Mobile and Laptop/Desktop?',
@@ -491,7 +491,7 @@ export default function PremiumScreen() {
             </View>
             <View style={styles.heroVerifiedBadge}>
               <CheckCircle2 size={12} color="#34D399" />
-              <Text style={styles.heroVerifiedText}>UPSC PRINCIPAL & VICE-PRINCIPAL</Text>
+              <Text style={styles.heroVerifiedText}>UPSC & UP PRINCIPAL 2026</Text>
             </View>
           </View>
 

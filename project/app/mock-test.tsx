@@ -379,7 +379,17 @@ export default function MockTestScreen() {
     } catch (error) {
       console.error('Error loading test:', error);
       Alert.alert('Error', 'Failed to load test');
+      exitTestScreen();
+    }
+  };
+
+  const exitTestScreen = () => {
+    if (router.canGoBack()) {
       router.back();
+    } else if (Platform.OS === 'web' && typeof window !== 'undefined' && window.history.length > 1) {
+      window.history.back();
+    } else {
+      router.replace('/(tabs)/practice');
     }
   };
 
@@ -1120,7 +1130,7 @@ export default function MockTestScreen() {
               onPress={async () => {
                 setShowBackConfirm(false);
                 await saveProgress();
-                router.back();
+                exitTestScreen();
               }}
             >
               <Text style={styles.confirmButtonText}>Pause for Later</Text>
@@ -1131,7 +1141,7 @@ export default function MockTestScreen() {
               onPress={async () => {
                 setShowBackConfirm(false);
                 await TestProgressService.clearTestProgress(testId);
-                router.back();
+                exitTestScreen();
               }}
             >
               <Text style={styles.confirmButtonText}>Cancel Test (Reset)</Text>
@@ -1220,8 +1230,9 @@ export default function MockTestScreen() {
 
   if (!test || !attempt) {
     return (
-      <View style={styles.loadingContainer}>
-        <Text style={styles.loadingText}>Loading test...</Text>
+      <View style={[styles.loadingContainer, { backgroundColor: colors.background }]}>
+        <ActivityIndicator size="large" color={colors.accent || '#4A90E2'} />
+        <Text style={[styles.loadingText, { color: colors.textSecondary, marginTop: 12 }]}>Loading test...</Text>
       </View>
     );
   }

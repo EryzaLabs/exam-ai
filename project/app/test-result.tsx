@@ -459,6 +459,8 @@ export default function TestResultScreen() {
   const handleBackToTests = () => {
     if (router.canGoBack()) {
       router.back();
+    } else if (Platform.OS === 'web' && typeof window !== 'undefined' && window.history.length > 1) {
+      window.history.back();
     } else {
       router.replace('/test-list');
     }
@@ -1273,8 +1275,9 @@ export default function TestResultScreen() {
 
   if (!analytics || !test) {
     return (
-      <View style={styles.loadingContainer}>
-        <Text style={styles.loadingText}>Loading results...</Text>
+      <View style={[styles.loadingContainer, { backgroundColor: colors.background }]}>
+        <ActivityIndicator size="large" color={colors.accent || '#2563EB'} />
+        <Text style={[styles.loadingText, { color: colors.textSecondary, marginTop: 12 }]}>Loading results...</Text>
       </View>
     );
   }

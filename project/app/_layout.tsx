@@ -18,6 +18,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AuthProvider } from '@/context/auth-context';
 import { SubscriptionProvider } from '@/context/subscription-context';
 import { ThemeProvider } from '@/context/theme-context';
+import { ExamProvider } from '@/context/exam-context';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -55,14 +56,14 @@ export default function RootLayout() {
       };
 
       setMetaTag('name', 'description', 'Astra Exam AI is your all-in-one AI-driven preparation platform for competitive exams. Practice full mocks, analyze your weaknesses, and master your syllabus.');
-      setMetaTag('name', 'keywords', 'Astra Exam AI, UPSC, SSC CGL, competitive exams, mock tests, AI study assistant, question bank');
+      setMetaTag('name', 'keywords', 'Astra Exam AI, UPSC Principal, UP Principal, UPPSC, competitive exams, mock tests, AI study assistant, question bank');
       setMetaTag('name', 'author', 'Eryza Labs');
       setMetaTag('property', 'og:title', 'Astra Exam AI');
       setMetaTag('property', 'og:description', 'Master competitive exams with AI-powered mock tests, performance analytics, and personalized learning.');
       setMetaTag('property', 'og:type', 'website');
       setMetaTag('property', 'og:site_name', 'Astra Exam AI');
-      setMetaTag('property', 'twitter:title', 'Astra Exam AI');
-      setMetaTag('property', 'twitter:description', 'Master competitive exams with AI-powered mock tests, performance analytics, and personalized learning.');
+      setMetaTag('twitter:title', 'Astra Exam AI');
+      setMetaTag('twitter:description', 'Master competitive exams with AI-powered mock tests, performance analytics, and personalized learning.');
     }
   }, []);
 
@@ -72,20 +73,22 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider>
-    <SafeAreaProvider>
-      <AuthProvider>
-      <SubscriptionProvider>
-        <ResponsiveContainer>
-          <Stack screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-            <Stack.Screen name="+not-found" />
-          </Stack>
-          <StatusBar style="auto" backgroundColor="transparent" translucent={true} />
-        </ResponsiveContainer>
-      </SubscriptionProvider>
-    </AuthProvider>
-    </SafeAreaProvider>
+      <SafeAreaProvider>
+        <AuthProvider>
+          <SubscriptionProvider>
+            <ExamProvider>
+              <ResponsiveContainer>
+                <Stack screenOptions={{ headerShown: false }}>
+                  <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                  <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+                  <Stack.Screen name="+not-found" />
+                </Stack>
+                <StatusBar style="auto" backgroundColor="transparent" translucent={true} />
+              </ResponsiveContainer>
+            </ExamProvider>
+          </SubscriptionProvider>
+        </AuthProvider>
+      </SafeAreaProvider>
     </ThemeProvider>
   );
 }

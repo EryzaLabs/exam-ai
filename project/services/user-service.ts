@@ -9,6 +9,7 @@ export interface UserProfile {
   photoURL?: string | null;
   phoneNumber?: string | null;
   targetCadre: string; // e.g., 'KVS', 'NVS', 'UPSC', 'State Dept'
+  targetExam?: string; // e.g., 'all', 'upsc', 'uppsc'
   currentDesignation: string; // e.g., 'Teacher', 'Vice Principal', 'Other'
   weakestSubject: string; // e.g., 'Education Policy', 'Service Matters', etc.
   languagePreference: 'English' | 'Hindi';

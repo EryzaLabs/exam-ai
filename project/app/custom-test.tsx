@@ -14,6 +14,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
+import DesktopDashboard from '@/components/DesktopDashboard';
 import {
   ArrowLeft,
   Crown,
@@ -35,9 +36,13 @@ import {
   RotateCcw,
   Brain,
   ChevronRight,
+  Sun,
+  Moon,
+  Tag,
 } from 'lucide-react-native';
 import SSCCGLService from '@/services/ssc-cgl-service';
 import { useAuth } from '@/context/auth-context';
+import { useTheme } from '@/context/theme-context';
 
 interface TopicItem {
   id: string;
@@ -53,6 +58,7 @@ const DURATION_PRESETS = [15, 30, 45, 60, 90, 120];
 export default function CustomTestScreen() {
   const { user, isSubscribed: authSubscribed, isSubscriptionLoading } = useAuth();
   const isSubscribed = authSubscribed;
+  const { isDark, colors, toggleTheme } = useTheme();
 
   const [loading, setLoading] = useState(true);
   const [topics, setTopics] = useState<TopicItem[]>([]);
@@ -144,6 +150,42 @@ export default function CustomTestScreen() {
     return durationMinutes;
   }, [durationMinutes, customDurationMinutes]);
 
+  // Dynamic professional test title preview / fallback
+  const suggestedDefaultTitle = useMemo(() => {
+    if (selectedTopics.length === 1) {
+      const single = topics.find((t) => t.id === selectedTopics[0]);
+      return single ? `${single.name} • Practice Set (${effectiveQuestionCount} Qs)` : `Topic Practice (${effectiveQuestionCount} Qs)`;
+    }
+    if (selectedTopics.length > 1 && selectedTopics.length <= 3) {
+      const names = selectedTopics.map((id) => topics.find((t) => t.id === id)?.name || id).join(' & ');
+      return `${names} • Practice Set (${effectiveQuestionCount} Qs)`;
+    }
+    if (selectedTopics.length > 3) {
+      return `Custom Mock (${selectedTopics.length} Topics • ${effectiveQuestionCount} Qs • ${effectiveDurationMinutes}m)`;
+    }
+    return `UPSC & UP Principal Comprehensive Mock (${effectiveQuestionCount} Qs • ${effectiveDurationMinutes}m)`;
+  }, [selectedTopics, topics, effectiveQuestionCount, effectiveDurationMinutes]);
+
+  const titleSuggestions = useMemo(() => {
+    const list: string[] = [];
+    if (selectedTopics.length === 1) {
+      const single = topics.find((t) => t.id === selectedTopics[0]);
+      if (single) {
+        list.push(`${single.name} • Intensive Practice`);
+        list.push(`${single.name} • Speed Test (${effectiveQuestionCount} Qs)`);
+      }
+    } else if (selectedTopics.length > 1) {
+      list.push(`Custom Multi-Topic Drill (${selectedTopics.length} Topics)`);
+      list.push(`Targeted Revision Exam (${effectiveQuestionCount} Qs)`);
+    } else {
+      list.push(`UPSC & UP Principal Full Mock (${effectiveQuestionCount} Qs)`);
+      list.push(`UP Principal Targeted Practice (${effectiveDurationMinutes}m)`);
+      list.push(`UPSC Principal CBT Simulation (${effectiveQuestionCount} Qs)`);
+    }
+    list.push(`Executive Principal Exam Drill • Set 1`);
+    return list;
+  }, [selectedTopics, topics, effectiveQuestionCount, effectiveDurationMinutes]);
+
   const handleCreateTest = async () => {
     if (!isSubscribed) {
       router.push('/premium');
@@ -154,18 +196,13 @@ export default function CustomTestScreen() {
       setIsGenerating(true);
 
       const targetTopics = selectedTopics.length > 0 ? selectedTopics : ['all'];
-      const defaultTitle =
-        selectedTopics.length === 1
-          ? `Mock: ${topics.find((t) => t.id === selectedTopics[0])?.name || selectedTopics[0]}`
-          : selectedTopics.length > 1
-          ? `Custom Test (${selectedTopics.length} Topics • ${effectiveQuestionCount} Qs)`
-          : `Custom Comprehensive Mock (${effectiveQuestionCount} Qs)`;
+      const finalTitle = testTitle.trim() || suggestedDefaultTitle;
 
       const response = await SSCCGLService.createCustomTest({
         topics: targetTopics,
         questionCount: effectiveQuestionCount,
         durationMinutes: effectiveDurationMinutes,
-        title: testTitle.trim() || defaultTitle,
+        title: finalTitle,
       });
 
       if (!response.success || !response.paper) {
@@ -191,27 +228,53 @@ export default function CustomTestScreen() {
     }
   };
 
+  const handleBack = () => {
+    if (router.canGoBack()) {
+      router.back();
+    } else if (Platform.OS === 'web' && typeof window !== 'undefined' && window.history.length > 1) {
+      window.history.back();
+    } else {
+      router.replace('/(tabs)/practice');
+    }
+  };
+
   // If loading subscription status or topics initially
   if (isSubscriptionLoading || loading) {
-    return (
-      <SafeAreaView style={styles.loadingContainer}>
+    const loadingView = (
+      <View style={[styles.loadingContainer, { backgroundColor: colors.background }]}>
         <ActivityIndicator size="large" color="#6366F1" />
-        <Text style={styles.loadingText}>Loading Custom Test Studio...</Text>
+        <Text style={[styles.loadingText, { color: colors.textSecondary }]}>Loading Custom Test Studio...</Text>
+      </View>
+    );
+
+    if (isLargeScreen) {
+      return <DesktopDashboard>{loadingView}</DesktopDashboard>;
+    }
+
+    return (
+      <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
+        {loadingView}
       </SafeAreaView>
     );
   }
 
   // 1. LOCKED VIEW: User is not subscribed
   if (!isSubscribed) {
-    return (
-      <SafeAreaView style={styles.container}>
+    const lockedView = (
+      <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
         {/* Header */}
-        <View style={styles.header}>
-          <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-            <ArrowLeft size={22} color="#1E293B" />
+        <View style={[styles.header, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
+          <TouchableOpacity onPress={handleBack} style={[styles.backButton, { backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9' }]}>
+            <ArrowLeft size={22} color={colors.textPrimary} />
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>Custom Test Studio</Text>
-          <View style={{ width: 40 }} />
+          <Text style={[styles.headerTitle, { color: colors.textPrimary }]}>Custom Test Studio</Text>
+          <TouchableOpacity
+            style={[styles.themeToggleButton, { backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9', borderColor: colors.border }]}
+            onPress={toggleTheme}
+            accessibilityLabel="Toggle Dark Mode"
+          >
+            {isDark ? <Sun size={18} color="#FBBF24" /> : <Moon size={18} color="#475569" />}
+          </TouchableOpacity>
         </View>
 
         <ScrollView contentContainerStyle={styles.lockedScrollContent} showsVerticalScrollIndicator={false}>
@@ -276,23 +339,41 @@ export default function CustomTestScreen() {
         </ScrollView>
       </SafeAreaView>
     );
+
+    if (isLargeScreen) {
+      return <DesktopDashboard disableScroll={false}>{lockedView}</DesktopDashboard>;
+    }
+    return lockedView;
   }
 
   // 2. UNLOCKED VIEW: Premium Member Builder
-  return (
-    <SafeAreaView style={styles.container}>
+  const builderView = (
+    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
       {/* Top App Bar */}
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <ArrowLeft size={22} color="#1E293B" />
+      <View style={[styles.header, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
+        <TouchableOpacity
+          onPress={handleBack}
+          style={[styles.backButton, { backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9' }]}
+        >
+          <ArrowLeft size={22} color={colors.textPrimary} />
         </TouchableOpacity>
-        <View style={{ flex: 1, marginLeft: 8 }}>
-          <Text style={styles.headerTitle}>Custom Test Builder</Text>
-          <Text style={styles.headerSubtitle}>Design your personalized practice session</Text>
+        <View style={{ flex: 1, marginLeft: 10 }}>
+          <Text style={[styles.headerTitle, { color: colors.textPrimary }]}>Custom Test Builder</Text>
+          <Text style={[styles.headerSubtitle, { color: colors.textSecondary }]}>Design your personalized practice session</Text>
         </View>
-        <View style={styles.premiumPill}>
+
+        {/* Theme Toggle Button */}
+        <TouchableOpacity
+          style={[styles.themeToggleButton, { backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9', borderColor: colors.border }]}
+          onPress={toggleTheme}
+          accessibilityLabel="Toggle Dark Mode"
+        >
+          {isDark ? <Sun size={18} color="#FBBF24" /> : <Moon size={18} color="#475569" />}
+        </TouchableOpacity>
+
+        <View style={[styles.premiumPill, isDark && { backgroundColor: 'rgba(245, 158, 11, 0.2)', borderColor: 'rgba(245, 158, 11, 0.4)', borderWidth: 1 }]}>
           <Crown size={12} color="#F59E0B" />
-          <Text style={styles.premiumPillText}>PREMIUM</Text>
+          <Text style={[styles.premiumPillText, isDark && { color: '#FDE68A' }]}>PREMIUM</Text>
         </View>
       </View>
 
@@ -326,25 +407,28 @@ export default function CustomTestScreen() {
         </TouchableOpacity>
 
         {/* Step 1: Topics Selection */}
-        <View style={styles.sectionContainer}>
+        <View style={[styles.sectionContainer, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.sectionHeaderRow}>
-            <View style={styles.stepBadge}>
-              <Text style={styles.stepBadgeText}>1</Text>
+            <View style={[styles.stepBadge, { backgroundColor: isDark ? '#312E81' : '#EEF2FF', borderColor: isDark ? '#4338CA' : '#C7D2FE' }]}>
+              <Text style={[styles.stepBadgeText, { color: isDark ? '#A5B4FC' : '#4F46E5' }]}>1</Text>
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={styles.sectionTitle}>Select Topics</Text>
-              <Text style={styles.sectionSubtitle}>
+              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Select Topics</Text>
+              <Text style={[styles.sectionSubtitle, { color: colors.textSecondary }]}>
                 {selectedTopics.length === 0
                   ? `All Topics included (${totalPoolQuestions} questions pool)`
                   : `${selectedTopics.length} selected (${totalPoolQuestions} questions pool)`}
               </Text>
             </View>
             <View style={styles.selectionActions}>
-              <TouchableOpacity onPress={selectAllFiltered} style={styles.actionSmallBtn}>
-                <Text style={styles.actionSmallBtnText}>Select All</Text>
+              <TouchableOpacity
+                onPress={selectAllFiltered}
+                style={[styles.actionSmallBtn, { backgroundColor: isDark ? colors.surfaceHighlight : '#EEF2FF' }]}
+              >
+                <Text style={[styles.actionSmallBtnText, { color: isDark ? '#A5B4FC' : '#4F46E5' }]}>Select All</Text>
               </TouchableOpacity>
               {selectedTopics.length > 0 && (
-                <TouchableOpacity onPress={clearSelection} style={[styles.actionSmallBtn, { backgroundColor: '#FEE2E2' }]}>
+                <TouchableOpacity onPress={clearSelection} style={[styles.actionSmallBtn, { backgroundColor: isDark ? 'rgba(239,68,68,0.2)' : '#FEE2E2' }]}>
                   <Text style={[styles.actionSmallBtnText, { color: '#DC2626' }]}>Clear</Text>
                 </TouchableOpacity>
               )}
@@ -352,18 +436,18 @@ export default function CustomTestScreen() {
           </View>
 
           {/* Search Bar */}
-          <View style={styles.searchBar}>
-            <Search size={18} color="#94A3B8" />
+          <View style={[styles.searchBar, { backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC', borderColor: colors.border }]}>
+            <Search size={18} color={colors.textTertiary} />
             <TextInput
-              style={styles.searchInput}
+              style={[styles.searchInput, { color: colors.textPrimary }]}
               placeholder="Search topics (e.g., NEP, POCSO, CBSE)..."
-              placeholderTextColor="#94A3B8"
+              placeholderTextColor={colors.textTertiary}
               value={searchQuery}
               onChangeText={setSearchQuery}
             />
             {searchQuery.length > 0 && (
               <TouchableOpacity onPress={() => setSearchQuery('')}>
-                <X size={16} color="#94A3B8" />
+                <X size={16} color={colors.textTertiary} />
               </TouchableOpacity>
             )}
           </View>
@@ -376,9 +460,28 @@ export default function CustomTestScreen() {
                 <TouchableOpacity
                   key={cat}
                   onPress={() => setSelectedCategory(cat)}
-                  style={[styles.categoryChip, active && styles.categoryChipActive]}
+                  style={[
+                    styles.categoryChip,
+                    {
+                      backgroundColor: active
+                        ? '#4F46E5'
+                        : isDark
+                        ? colors.surfaceHighlight
+                        : '#F1F5F9',
+                      borderColor: active ? '#4F46E5' : colors.border,
+                      borderWidth: isDark && !active ? 1 : 0,
+                    },
+                  ]}
                 >
-                  <Text style={[styles.categoryChipText, active && styles.categoryChipTextActive]}>{cat}</Text>
+                  <Text
+                    style={[
+                      styles.categoryChipText,
+                      { color: active ? '#FFFFFF' : colors.textSecondary },
+                      active && styles.categoryChipTextActive,
+                    ]}
+                  >
+                    {cat}
+                  </Text>
                 </TouchableOpacity>
               );
             })}
@@ -392,21 +495,45 @@ export default function CustomTestScreen() {
                 <TouchableOpacity
                   key={topic.id}
                   onPress={() => toggleTopic(topic.id)}
-                  style={[styles.topicCard, isSelected && styles.topicCardSelected]}
+                  style={[
+                    styles.topicCard,
+                    {
+                      backgroundColor: isSelected
+                        ? isDark
+                          ? 'rgba(99, 102, 241, 0.2)'
+                          : '#EEF2FF'
+                        : isDark
+                        ? colors.surfaceHighlight
+                        : '#F8FAFC',
+                      borderColor: isSelected ? '#6366F1' : colors.border,
+                    },
+                  ]}
                   activeOpacity={0.7}
                 >
                   <View style={styles.topicCheckRow}>
-                    <View style={[styles.checkbox, isSelected && styles.checkboxSelected]}>
+                    <View
+                      style={[
+                        styles.checkbox,
+                        { borderColor: isDark ? '#475569' : '#CBD5E1' },
+                        isSelected && styles.checkboxSelected,
+                      ]}
+                    >
                       {isSelected && <Check size={14} color="#FFFFFF" strokeWidth={3} />}
                     </View>
-                    <View style={styles.topicMetaBadge}>
-                      <Text style={styles.topicMetaText}>{topic.questionCount} Qs</Text>
+                    <View style={[styles.topicMetaBadge, { backgroundColor: isDark ? '#0F172A' : '#E2E8F0' }]}>
+                      <Text style={[styles.topicMetaText, { color: colors.textSecondary }]}>{topic.questionCount} Qs</Text>
                     </View>
                   </View>
-                  <Text style={[styles.topicName, isSelected && styles.topicNameSelected]} numberOfLines={2}>
+                  <Text
+                    style={[
+                      styles.topicName,
+                      { color: isSelected ? (isDark ? '#A5B4FC' : '#312E81') : colors.textPrimary },
+                    ]}
+                    numberOfLines={2}
+                  >
                     {topic.name}
                   </Text>
-                  <Text style={styles.topicCategoryLabel}>{topic.category}</Text>
+                  <Text style={[styles.topicCategoryLabel, { color: colors.textTertiary }]}>{topic.category}</Text>
                 </TouchableOpacity>
               );
             })}
@@ -414,14 +541,14 @@ export default function CustomTestScreen() {
         </View>
 
         {/* Step 2: Number of Questions */}
-        <View style={styles.sectionContainer}>
+        <View style={[styles.sectionContainer, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.sectionHeaderRow}>
-            <View style={styles.stepBadge}>
-              <Text style={styles.stepBadgeText}>2</Text>
+            <View style={[styles.stepBadge, { backgroundColor: isDark ? '#312E81' : '#EEF2FF', borderColor: isDark ? '#4338CA' : '#C7D2FE' }]}>
+              <Text style={[styles.stepBadgeText, { color: isDark ? '#A5B4FC' : '#4F46E5' }]}>2</Text>
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={styles.sectionTitle}>Number of Questions</Text>
-              <Text style={styles.sectionSubtitle}>
+              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Number of Questions</Text>
+              <Text style={[styles.sectionSubtitle, { color: colors.textSecondary }]}>
                 Total Marks: {effectiveQuestionCount * 2.5} Marks (2.5 marks per question)
               </Text>
             </View>
@@ -437,20 +564,47 @@ export default function CustomTestScreen() {
                     setCustomQuestionCount('');
                     setQuestionCount(count);
                   }}
-                  style={[styles.presetChip, active && styles.presetChipActive]}
+                  style={[
+                    styles.presetChip,
+                    {
+                      backgroundColor: active
+                        ? isDark
+                          ? '#312E81'
+                          : '#EEF2FF'
+                        : isDark
+                        ? colors.surfaceHighlight
+                        : '#F8FAFC',
+                      borderColor: active ? '#6366F1' : colors.border,
+                    },
+                  ]}
                 >
-                  <Text style={[styles.presetChipText, active && styles.presetChipTextActive]}>{count} Qs</Text>
+                  <Text
+                    style={[
+                      styles.presetChipText,
+                      { color: active ? (isDark ? '#A5B4FC' : '#4F46E5') : colors.textSecondary },
+                      active && styles.presetChipTextActive,
+                    ]}
+                  >
+                    {count} Qs
+                  </Text>
                 </TouchableOpacity>
               );
             })}
           </View>
 
-          <View style={styles.customInputRow}>
-            <Text style={styles.customInputLabel}>Or enter custom count (5 - 120):</Text>
+          <View style={[styles.customInputRow, { borderTopColor: colors.border }]}>
+            <Text style={[styles.customInputLabel, { color: colors.textSecondary }]}>Or enter custom count (5 - 120):</Text>
             <TextInput
-              style={styles.customNumberInput}
+              style={[
+                styles.customNumberInput,
+                {
+                  backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC',
+                  borderColor: colors.border,
+                  color: colors.textPrimary,
+                },
+              ]}
               placeholder="e.g. 25"
-              placeholderTextColor="#94A3B8"
+              placeholderTextColor={colors.textTertiary}
               keyboardType="number-pad"
               maxLength={3}
               value={customQuestionCount}
@@ -463,14 +617,14 @@ export default function CustomTestScreen() {
         </View>
 
         {/* Step 3: Test Duration */}
-        <View style={styles.sectionContainer}>
+        <View style={[styles.sectionContainer, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.sectionHeaderRow}>
-            <View style={styles.stepBadge}>
-              <Text style={styles.stepBadgeText}>3</Text>
+            <View style={[styles.stepBadge, { backgroundColor: isDark ? '#312E81' : '#EEF2FF', borderColor: isDark ? '#4338CA' : '#C7D2FE' }]}>
+              <Text style={[styles.stepBadgeText, { color: isDark ? '#A5B4FC' : '#4F46E5' }]}>3</Text>
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={styles.sectionTitle}>Time Limit</Text>
-              <Text style={styles.sectionSubtitle}>
+              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Time Limit</Text>
+              <Text style={[styles.sectionSubtitle, { color: colors.textSecondary }]}>
                 Pace: ~{(effectiveDurationMinutes / effectiveQuestionCount).toFixed(1)} mins per question
               </Text>
             </View>
@@ -486,20 +640,47 @@ export default function CustomTestScreen() {
                     setCustomDurationMinutes('');
                     setDurationMinutes(dur);
                   }}
-                  style={[styles.presetChip, active && styles.presetChipActive]}
+                  style={[
+                    styles.presetChip,
+                    {
+                      backgroundColor: active
+                        ? isDark
+                          ? '#312E81'
+                          : '#EEF2FF'
+                        : isDark
+                        ? colors.surfaceHighlight
+                        : '#F8FAFC',
+                      borderColor: active ? '#6366F1' : colors.border,
+                    },
+                  ]}
                 >
-                  <Text style={[styles.presetChipText, active && styles.presetChipTextActive]}>{dur} mins</Text>
+                  <Text
+                    style={[
+                      styles.presetChipText,
+                      { color: active ? (isDark ? '#A5B4FC' : '#4F46E5') : colors.textSecondary },
+                      active && styles.presetChipTextActive,
+                    ]}
+                  >
+                    {dur} mins
+                  </Text>
                 </TouchableOpacity>
               );
             })}
           </View>
 
-          <View style={styles.customInputRow}>
-            <Text style={styles.customInputLabel}>Or enter custom minutes (5 - 180):</Text>
+          <View style={[styles.customInputRow, { borderTopColor: colors.border }]}>
+            <Text style={[styles.customInputLabel, { color: colors.textSecondary }]}>Or enter custom minutes (5 - 180):</Text>
             <TextInput
-              style={styles.customNumberInput}
+              style={[
+                styles.customNumberInput,
+                {
+                  backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC',
+                  borderColor: colors.border,
+                  color: colors.textPrimary,
+                },
+              ]}
               placeholder="e.g. 40"
-              placeholderTextColor="#94A3B8"
+              placeholderTextColor={colors.textTertiary}
               keyboardType="number-pad"
               maxLength={3}
               value={customDurationMinutes}
@@ -511,38 +692,80 @@ export default function CustomTestScreen() {
           </View>
         </View>
 
-        {/* Step 4: Optional Title */}
-        <View style={styles.sectionContainer}>
+        {/* Step 4: Professional Test Name */}
+        <View style={[styles.sectionContainer, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.sectionHeaderRow}>
-            <View style={styles.stepBadge}>
-              <Text style={styles.stepBadgeText}>4</Text>
+            <View style={[styles.stepBadge, { backgroundColor: isDark ? '#312E81' : '#EEF2FF', borderColor: isDark ? '#4338CA' : '#C7D2FE' }]}>
+              <Text style={[styles.stepBadgeText, { color: isDark ? '#A5B4FC' : '#4F46E5' }]}>4</Text>
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={styles.sectionTitle}>Test Title (Optional)</Text>
-              <Text style={styles.sectionSubtitle}>Give your custom test a memorable name</Text>
+              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Test Title (Optional)</Text>
+              <Text style={[styles.sectionSubtitle, { color: colors.textSecondary }]}>
+                Leave blank to use smart generated title
+              </Text>
             </View>
           </View>
 
-          <TextInput
-            style={styles.titleInput}
-            placeholder="e.g., NEP 2020 & School Leadership Revision"
-            placeholderTextColor="#94A3B8"
-            value={testTitle}
-            onChangeText={setTestTitle}
-          />
+          <View style={[styles.titleInputWrapper, { backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC', borderColor: colors.border }]}>
+            <TextInput
+              style={[styles.titleInput, { color: colors.textPrimary }]}
+              placeholder={suggestedDefaultTitle}
+              placeholderTextColor={colors.textTertiary}
+              value={testTitle}
+              onChangeText={setTestTitle}
+            />
+            {testTitle.length > 0 && (
+              <TouchableOpacity onPress={() => setTestTitle('')} style={{ padding: 4 }}>
+                <X size={16} color={colors.textTertiary} />
+              </TouchableOpacity>
+            )}
+          </View>
+
+          {/* Smart Title Suggestions */}
+          <View style={{ marginTop: 12 }}>
+            <Text style={[styles.titleSuggestionsLabel, { color: colors.textTertiary }]}>Suggested Names:</Text>
+            <View style={styles.titleSuggestionsWrap}>
+              {titleSuggestions.map((suggestion, sIdx) => (
+                <TouchableOpacity
+                  key={sIdx}
+                  style={[
+                    styles.titleSuggestionChip,
+                    {
+                      backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9',
+                      borderColor: testTitle === suggestion ? '#6366F1' : colors.border,
+                    },
+                    testTitle === suggestion && { backgroundColor: isDark ? '#312E81' : '#EEF2FF' },
+                  ]}
+                  onPress={() => setTestTitle(suggestion)}
+                  activeOpacity={0.7}
+                >
+                  <Tag size={12} color={testTitle === suggestion ? '#6366F1' : colors.textTertiary} />
+                  <Text
+                    style={[
+                      styles.titleSuggestionText,
+                      { color: testTitle === suggestion ? (isDark ? '#A5B4FC' : '#4F46E5') : colors.textSecondary },
+                      testTitle === suggestion && { fontWeight: '700' },
+                    ]}
+                  >
+                    {suggestion}
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          </View>
         </View>
 
         <View style={{ height: 120 }} />
       </ScrollView>
 
       {/* Floating Bottom Action Bar */}
-      <View style={styles.bottomBarContainer}>
+      <View style={[styles.bottomBarContainer, { backgroundColor: colors.surface, borderTopColor: colors.border }]}>
         <View style={styles.bottomSummary}>
-          <Text style={styles.bottomSummaryTitle}>
-            {selectedTopics.length === 0 ? 'All Topics' : `${selectedTopics.length} Topics`} • {effectiveQuestionCount} Qs
+          <Text style={[styles.bottomSummaryTitle, { color: colors.textPrimary }]} numberOfLines={1}>
+            {testTitle.trim() || suggestedDefaultTitle}
           </Text>
-          <Text style={styles.bottomSummarySubtitle}>
-            Duration: {effectiveDurationMinutes} Mins • {effectiveQuestionCount * 2.5} Marks
+          <Text style={[styles.bottomSummarySubtitle, { color: colors.textSecondary }]}>
+            {selectedTopics.length === 0 ? 'All Topics' : `${selectedTopics.length} Topics`} • {effectiveQuestionCount} Qs • {effectiveDurationMinutes}m • {effectiveQuestionCount * 2.5} Marks
           </Text>
         </View>
 
@@ -571,6 +794,11 @@ export default function CustomTestScreen() {
       </View>
     </SafeAreaView>
   );
+
+  if (isLargeScreen) {
+    return <DesktopDashboard disableScroll={false}>{builderView}</DesktopDashboard>;
+  }
+  return builderView;
 }
 
 const styles = StyleSheet.create({
@@ -582,7 +810,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F8FAFC',
+    padding: 24,
   },
   loadingText: {
     marginTop: 12,
@@ -616,6 +844,15 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#64748B',
     marginTop: 2,
+  },
+  themeToggleButton: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 8,
+    borderWidth: 1,
   },
   premiumPill: {
     flexDirection: 'row',
@@ -874,15 +1111,45 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#0F172A',
   },
-  titleInput: {
+  titleInputWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: '#F8FAFC',
     borderRadius: 10,
     borderWidth: 1,
     borderColor: '#CBD5E1',
-    paddingHorizontal: 14,
+    paddingHorizontal: 12,
+  },
+  titleInput: {
+    flex: 1,
     paddingVertical: 10,
     fontSize: 14,
     color: '#0F172A',
+  },
+  titleSuggestionsLabel: {
+    fontSize: 11,
+    fontWeight: '600',
+    marginBottom: 6,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+  },
+  titleSuggestionsWrap: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 6,
+  },
+  titleSuggestionChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 8,
+    borderWidth: 1,
+  },
+  titleSuggestionText: {
+    fontSize: 12,
+    fontWeight: '500',
   },
   bottomBarContainer: {
     position: 'absolute',
