@@ -8,6 +8,7 @@ import {
   ActivityIndicator,
   Platform,
   useWindowDimensions,
+  Image,
   ImageBackground,
   Modal,
   TextInput,
@@ -485,6 +486,11 @@ export default function PremiumScreen() {
         />
         <View style={styles.heroContent}>
           <View style={styles.heroTagsRow}>
+            <Image
+              source={require('@/assets/images/logo.png')}
+              style={{ width: 28, height: 28, borderRadius: 6, marginRight: 4 }}
+              resizeMode="contain"
+            />
             <View style={styles.heroTagBadge}>
               <Crown size={12} color="#F59E0B" />
               <Text style={styles.heroTagText}>ALL-ACCESS PASS • 2026 EDITION</Text>

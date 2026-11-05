@@ -9,6 +9,7 @@ import {
   TextInput,
   RefreshControl,
   Platform,
+  Image,
   ImageBackground,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -118,6 +119,7 @@ export default function MobileDashboard({
             <View style={styles.headerTop}>
               <View style={{ flex: 1, paddingRight: 12 }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
+                  <Image source={require('@/assets/images/logo.png')} style={{ width: 30, height: 30, borderRadius: 8 }} resizeMode="contain" />
                   <Text style={styles.headerTitle}>Astra Exam AI</Text>
                   {isSubscribed && (
                     <Crown size={22} color="#F59E0B" fill="#F59E0B" />

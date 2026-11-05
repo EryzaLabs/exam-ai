@@ -191,9 +191,11 @@ export default function ProfileScreen() {
   if (!user) {
     const guestView = (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24, minHeight: 480, backgroundColor: colors.background }}>
-        <View style={{ width: 72, height: 72, borderRadius: 36, backgroundColor: isDark ? colors.surfaceHighlight : '#EFF6FF', justifyContent: 'center', alignItems: 'center', marginBottom: 20 }}>
-          <User size={36} color={colors.accent} />
-        </View>
+        <Image
+          source={require('@/assets/images/logo.png')}
+          style={{ width: 80, height: 80, borderRadius: 20, marginBottom: 20 }}
+          resizeMode="contain"
+        />
         <Text style={{ fontSize: 24, fontWeight: '800', color: colors.textPrimary, marginBottom: 8, textAlign: 'center' }}>
           Guest Explorer
         </Text>

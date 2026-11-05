@@ -101,15 +101,21 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       {/* LEFT SIDEBAR */}
       <View style={[styles.sidebar, { backgroundColor: colors.sidebarBg, borderColor: colors.sidebarBorder }]}>
-        <View style={styles.logoContainer}>
-          <View style={styles.logoIcon}>
-            <BookOpen size={24} color="#fff" />
-          </View>
+        <TouchableOpacity 
+          style={styles.logoContainer}
+          onPress={() => router.push('/')}
+          activeOpacity={0.8}
+        >
+          <Image
+            source={require('@/assets/images/logo.png')}
+            style={styles.logoImage}
+            resizeMode="contain"
+          />
           <View>
             <Text style={[styles.logoText, { color: colors.textPrimary }]}>Astra</Text>
             <Text style={[styles.logoSubtext, { color: colors.textSecondary }]}>Exam AI</Text>
           </View>
-        </View>
+        </TouchableOpacity>
 
         <ScrollView style={styles.navMenu} showsVerticalScrollIndicator={false}>
           <TouchableOpacity 
@@ -798,6 +804,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 40,
+  },
+  logoImage: {
+    width: 42,
+    height: 42,
+    borderRadius: 10,
+    marginRight: 12,
   },
   logoIcon: {
     width: 40,

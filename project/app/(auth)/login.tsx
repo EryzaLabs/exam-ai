@@ -226,12 +226,18 @@ export default function LoginScreen() {
                 <View style={styles.blurOrb} />
 
                 {/* Brand Header */}
-                <View style={styles.brandBadge}>
-                  <View style={styles.brandIconBox}>
-                    <View style={styles.brandDiamond} />
-                  </View>
-                  <Text style={styles.brandText}>Exam AI</Text>
-                </View>
+                <TouchableOpacity 
+                  style={styles.brandBadge}
+                  onPress={() => router.push('/')}
+                  activeOpacity={0.8}
+                >
+                  <Image
+                    source={require('@/assets/images/logo.png')}
+                    style={{ width: 36, height: 36, borderRadius: 8 }}
+                    resizeMode="contain"
+                  />
+                  <Text style={styles.brandText}>Astra Exam AI</Text>
+                </TouchableOpacity>
 
                 {/* Hero Headline */}
                 <View style={styles.headlineContainer}>
@@ -263,12 +269,18 @@ export default function LoginScreen() {
             <View style={[styles.formPanel, isDesktop ? styles.formPanelDesktop : styles.formPanelMobile]}>
               {/* Mobile Brand Header */}
               {!isDesktop && (
-                <View style={styles.mobileBrandHeader}>
-                  <View style={styles.brandIconBoxMobile}>
-                    <View style={styles.brandDiamondMobile} />
-                  </View>
-                  <Text style={styles.brandTextMobile}>Exam AI</Text>
-                </View>
+                <TouchableOpacity 
+                  style={styles.mobileBrandHeader}
+                  onPress={() => router.push('/')}
+                  activeOpacity={0.8}
+                >
+                  <Image
+                    source={require('@/assets/images/logo.png')}
+                    style={{ width: 36, height: 36, borderRadius: 8 }}
+                    resizeMode="contain"
+                  />
+                  <Text style={styles.brandTextMobile}>Astra Exam AI</Text>
+                </TouchableOpacity>
               )}
 
               <View style={styles.formHeader}>
