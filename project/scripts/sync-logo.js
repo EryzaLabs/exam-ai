@@ -11,25 +11,39 @@ if (!fs.existsSync(assetsImagesDir)) {
   fs.mkdirSync(assetsImagesDir, { recursive: true });
 }
 
-let sourceFile = null;
+// 1. Check if user's local Downloads has the high-res Astra logo
 if (fs.existsSync(downloadLogoPath)) {
-  sourceFile = downloadLogoPath;
-} else if (fs.existsSync(projectLogoPath)) {
-  sourceFile = projectLogoPath;
+  try {
+    fs.copyFileSync(downloadLogoPath, projectLogoPath);
+    fs.copyFileSync(downloadLogoPath, projectFaviconPath);
+    fs.copyFileSync(downloadLogoPath, projectIconPath);
+    console.log('✅ Astra logo synced successfully from Downloads to project assets!');
+  } catch (err) {
+    console.warn('⚠️ Warning syncing from Downloads:', err.message);
+  }
 }
 
-if (sourceFile) {
-  try {
-    fs.copyFileSync(sourceFile, projectLogoPath);
-    fs.copyFileSync(sourceFile, projectFaviconPath);
-    fs.copyFileSync(sourceFile, projectIconPath);
-    console.log(`✅ Astra logo synced successfully from ${sourceFile} to:`);
-    console.log(`   - ${projectLogoPath}`);
-    console.log(`   - ${projectFaviconPath}`);
-    console.log(`   - ${projectIconPath}`);
-  } catch (err) {
-    console.error('❌ Failed to copy Astra logo files:', err);
+// 2. Ensure projectLogoPath ALWAYS exists so Metro bundler never fails on Netlify or CI
+if (!fs.existsSync(projectLogoPath)) {
+  if (fs.existsSync(projectFaviconPath)) {
+    try {
+      fs.copyFileSync(projectFaviconPath, projectLogoPath);
+      console.log('✅ Generated logo.png from favicon.png for build resolution.');
+    } catch (e) {}
+  } else if (fs.existsSync(projectIconPath)) {
+    try {
+      fs.copyFileSync(projectIconPath, projectLogoPath);
+      console.log('✅ Generated logo.png from icon.png for build resolution.');
+    } catch (e) {}
+  } else {
+    // Write 1x1 transparent fallback PNG so Metro never fails
+    const fallbackPng = Buffer.from(
+      'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==',
+      'base64'
+    );
+    try {
+      fs.writeFileSync(projectLogoPath, fallbackPng);
+      console.log('✅ Created fallback logo.png to ensure bundle stability.');
+    } catch (e) {}
   }
-} else {
-  console.warn('⚠️ No source Astra logo found to sync.');
 }

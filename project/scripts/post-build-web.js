@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-// 1. Sync Logo from Downloads or assets
+// 1. Ensure logo sync runs first
 try {
   require('./sync-logo.js');
 } catch (err) {
-  console.warn('Could not run sync-logo:', err.message);
+  console.warn('⚠️ Warning in sync-logo:', err.message);
 }
 
 const distDir = path.resolve(__dirname, '..', 'dist');
@@ -13,12 +13,14 @@ const distIndexPath = path.resolve(distDir, 'index.html');
 const assetsImagesDir = path.resolve(__dirname, '..', 'assets', 'images');
 const projectLogoPath = path.resolve(assetsImagesDir, 'logo.png');
 const projectFaviconPath = path.resolve(assetsImagesDir, 'favicon.png');
+const projectIconPath = path.resolve(assetsImagesDir, 'icon.png');
 
 if (fs.existsSync(distDir)) {
   const logoSource = [
     '/home/aloo/Downloads/Astra Exam App Logo.png',
     projectLogoPath,
     projectFaviconPath,
+    projectIconPath,
   ].find(p => fs.existsSync(p));
 
   if (logoSource) {
@@ -26,7 +28,7 @@ if (fs.existsSync(distDir)) {
       fs.copyFileSync(logoSource, path.resolve(distDir, 'favicon.png'));
       fs.copyFileSync(logoSource, path.resolve(distDir, 'favicon.ico'));
       fs.copyFileSync(logoSource, path.resolve(distDir, 'logo.png'));
-      
+
       const distAssetsDir = path.resolve(distDir, 'assets', 'images');
       if (!fs.existsSync(distAssetsDir)) {
         fs.mkdirSync(distAssetsDir, { recursive: true });
