@@ -636,43 +636,6 @@ export default function ProgressScreen() {
       </ScrollView>
     </SafeAreaView>
   );
-                  >
-                    <View style={styles.testInfo}>
-                      <Text style={styles.testTitle} numberOfLines={1}>
-                        {test.testTitle || 'Test'}
-                      </Text>
-                      <Text style={styles.testDate}>
-                        {new Date(test.date).toLocaleDateString()}
-                      </Text>
-                      {test.evaluationStatus === 'pending' && (
-                        <View style={styles.pendingBadge}>
-                          <ActivityIndicator size="small" color="#FF9500" />
-                          <Text style={styles.pendingText}>Evaluating...</Text>
-                        </View>
-                      )}
-                    </View>
-                    {test.evaluationStatus === 'completed' ? (
-                      <View style={styles.testStats}>
-                        <Text style={styles.testAccuracy}>{test.accuracy.toFixed(1)}%</Text>
-                        <Text style={styles.testScore}>
-                          {Number(test.overallScore).toFixed(1)}/{test.totalMarks} Marks
-                        </Text>
-                      </View>
-                    ) : (
-                      <View style={styles.testStats}>
-                        <Text style={styles.pendingStatusText}>Pending</Text>
-                      </View>
-                    )}
-                  </TouchableOpacity>
-                ))}
-              </View>
-            </Card>
-          </>
-        )}
-
-      </ScrollView>
-    </SafeAreaView>
-  );
 
   if (isLargeScreen) {
     return <DesktopDashboard>{content}</DesktopDashboard>;
