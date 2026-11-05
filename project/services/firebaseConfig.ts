@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { initializeAuth, getReactNativePersistence, getAuth, Auth } from 'firebase/auth';
-import { initializeFirestore, persistentLocalCache, persistentMultipleTabManager, Firestore } from 'firebase/firestore';
+import { getFirestore, initializeFirestore, persistentLocalCache, persistentMultipleTabManager, Firestore } from 'firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 
@@ -32,7 +32,6 @@ let auth: Auth;
 if (Platform.OS === 'web') {
   auth = getAuth(app);
 } else {
-  // Try to use AsyncStorage, but wrap in try-catch in case getReactNativePersistence is undefined on web bundler
   try {
     auth = initializeAuth(app, {
       persistence: getReactNativePersistence(AsyncStorage)
@@ -42,16 +41,20 @@ if (Platform.OS === 'web') {
   }
 }
 
-// Initialize Firestore with modern persistent cache (eliminates deprecation warning)
+// Initialize Firestore safely across web, node bundler, and native
 let db: Firestore;
 try {
-  db = initializeFirestore(app, {
-    localCache: persistentLocalCache({
-      tabManager: persistentMultipleTabManager()
-    })
-  });
-} catch {
-  db = initializeFirestore(app, {});
+  if (Platform.OS === 'web' && typeof window !== 'undefined' && typeof indexedDB !== 'undefined') {
+    db = initializeFirestore(app, {
+      localCache: persistentLocalCache({
+        tabManager: persistentMultipleTabManager()
+      })
+    });
+  } else {
+    db = getFirestore(app);
+  }
+} catch (e) {
+  db = getFirestore(app);
 }
 
 export { auth, db };

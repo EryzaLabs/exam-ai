@@ -439,53 +439,53 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
 
           <View style={styles.practiceModesRow}>
              <TouchableOpacity style={styles.modeCardWrapper} onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-ai-test' : '/premium'), { title: 'Sign In to Generate AI Tests', feature: 'Custom AI Tests' })}>
-               <LinearGradient colors={['#FEACA1', '#FEACA1']} style={styles.modeCard}>
-                  <View style={{ flex: 1 }}>
-                     <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
-                     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 6 }}>
-                       <Text style={styles.modeTitle}>AI Test</Text>
-                       <Crown size={14} color="#F59E0B" />
-                     </View>
-                     <Text style={styles.modeDesc}>Any topic in the world generated with AI (1/day)</Text>
-                  </View>
-                  <View style={styles.modeArrow}><ArrowRight size={16} color="#DC2626" /></View>
-               </LinearGradient>
+                <LinearGradient colors={['#FEACA1', '#FEACA1']} style={styles.modeCard}>
+                   <View style={{ flex: 1 }}>
+                      <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
+                      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+                        <Text style={styles.modeTitle}>AI Test</Text>
+                        <Crown size={14} color="#F59E0B" />
+                      </View>
+                      <Text style={styles.modeDesc}>Any topic in the world generated with AI (1/day)</Text>
+                   </View>
+                   <View style={styles.modeArrow}><ArrowRight size={16} color="#DC2626" /></View>
+                </LinearGradient>
              </TouchableOpacity>
              
              <TouchableOpacity style={styles.modeCardWrapper} onPress={() => requireAuth(() => router.push('/practice'), { title: 'Sign In for Practice Mode', feature: 'Practice Mode' })}>
-               <LinearGradient colors={['#A7F3D0', '#A7F3D0']} style={styles.modeCard}>
-                  <View style={{ flex: 1 }}>
-                     <View style={styles.modeIconGreen}><Zap size={24} color="#059669" /></View>
-                     <Text style={styles.modeTitle}>Quick Practice</Text>
-                     <Text style={styles.modeDesc}>Random questions from all topics</Text>
-                  </View>
-                  <View style={styles.modeArrow}><ArrowRight size={16} color="#059669" /></View>
-               </LinearGradient>
+                <LinearGradient colors={['#A7F3D0', '#A7F3D0']} style={styles.modeCard}>
+                   <View style={{ flex: 1 }}>
+                      <View style={styles.modeIconGreen}><Zap size={24} color="#059669" /></View>
+                      <Text style={styles.modeTitle}>Quick Practice</Text>
+                      <Text style={styles.modeDesc}>Random questions from all topics</Text>
+                   </View>
+                   <View style={styles.modeArrow}><ArrowRight size={16} color="#059669" /></View>
+                </LinearGradient>
              </TouchableOpacity>
 
              <TouchableOpacity style={styles.modeCardWrapper} onPress={() => router.push({ pathname: '/test-list', params: { category: 'topic' } })}>
-               <LinearGradient colors={['#E9D5FF', '#E9D5FF']} style={styles.modeCard}>
-                  <View style={{ flex: 1 }}>
-                     <View style={styles.modeIconPurple}><Library size={24} color="#7C3AED" /></View>
-                     <Text style={styles.modeTitle}>Topic Wise</Text>
-                     <Text style={styles.modeDesc}>Focus on specific topics and weak areas</Text>
-                  </View>
-                  <View style={styles.modeArrow}><ArrowRight size={16} color="#7C3AED" /></View>
-               </LinearGradient>
+                <LinearGradient colors={['#E9D5FF', '#E9D5FF']} style={styles.modeCard}>
+                   <View style={{ flex: 1 }}>
+                      <View style={styles.modeIconPurple}><Library size={24} color="#7C3AED" /></View>
+                      <Text style={styles.modeTitle}>Topic Wise</Text>
+                      <Text style={styles.modeDesc}>Focus on specific topics and weak areas</Text>
+                   </View>
+                   <View style={styles.modeArrow}><ArrowRight size={16} color="#7C3AED" /></View>
+                </LinearGradient>
              </TouchableOpacity>
 
              <TouchableOpacity style={styles.modeCardWrapper} onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-test' : '/premium'), { title: 'Sign In for Custom Test Builder', feature: 'Custom Test Builder' })}>
-               <LinearGradient colors={['#C7D2FE', '#E0E7FF']} style={styles.modeCard}>
-                  <View style={{ flex: 1 }}>
-                     <View style={styles.modeIconIndigo}><SlidersHorizontal size={24} color="#4F46E5" /></View>
-                     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 6 }}>
-                       <Text style={styles.modeTitle}>Custom Test</Text>
-                       <Crown size={14} color="#F59E0B" />
-                     </View>
-                     <Text style={styles.modeDesc}>Custom topics, question counts & duration</Text>
-                  </View>
-                  <View style={styles.modeArrow}><ArrowRight size={16} color="#4F46E5" /></View>
-               </LinearGradient>
+                <LinearGradient colors={['#C7D2FE', '#E0E7FF']} style={styles.modeCard}>
+                   <View style={{ flex: 1 }}>
+                      <View style={styles.modeIconIndigo}><SlidersHorizontal size={24} color="#4F46E5" /></View>
+                      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+                        <Text style={styles.modeTitle}>Custom Test</Text>
+                        <Crown size={14} color="#F59E0B" />
+                      </View>
+                      <Text style={styles.modeDesc}>Custom topics, question counts & duration</Text>
+                   </View>
+                   <View style={styles.modeArrow}><ArrowRight size={16} color="#4F46E5" /></View>
+                </LinearGradient>
              </TouchableOpacity>
           </View>
 
@@ -510,11 +510,11 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                  <View key={i} style={[styles.recentTestCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
                     <View style={styles.rtcHeader}>
                        <View style={[styles.rtcIcon, { backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF' }]}><FileText size={18} color="#3B82F6" /></View>
-                       <View style={{ flex: 1 }}>
-                          <Text style={[styles.rtcTitle, { color: colors.textPrimary }]}>{test.title || `Test ${i+1}`}</Text>
+                       <View style={{ flex: 1, minWidth: 100 }}>
+                          <Text style={[styles.rtcTitle, { color: colors.textPrimary }]} numberOfLines={2}>{test.title || `Test ${i+1}`}</Text>
                           <Text style={[styles.rtcDate, { color: colors.textSecondary }]}>{test.date || 'Recently'} • {test.type || 'Practice'}</Text>
                        </View>
-                       <View style={[styles.rtcStatus, test.status === 'in-progress' && styles.rtcStatusProgress]}>
+                       <View style={[styles.rtcStatus, test.status === 'in-progress' && styles.rtcStatusProgress, { marginLeft: 8 }]}>
                           <Text style={[styles.rtcStatusText, test.status === 'in-progress' && styles.rtcStatusTextProgress]}>
                              {test.status === 'in-progress' ? 'In Progress' : 'Completed'}
                           </Text>
@@ -781,11 +781,9 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontSize: 14,
   },
-
   container: {
-    flexDirection: 'row',
     flex: 1,
-
+    flexDirection: 'row',
     backgroundColor: '#F8FAFC',
   },
   sidebar: {
@@ -798,7 +796,6 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     flexDirection: 'row',
-
     alignItems: 'center',
     marginBottom: 40,
   },
@@ -825,7 +822,6 @@ const styles = StyleSheet.create({
   },
   navItem: {
     flexDirection: 'row',
-
     alignItems: 'center',
     paddingVertical: 12,
     paddingHorizontal: 16,
@@ -870,25 +866,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#F8FAFC',
   },
   topBar: {
+    minHeight: 76,
     flexDirection: 'row',
-    gap: 12,
-    height: 80,
-
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 32,
+    paddingHorizontal: 24,
     borderBottomWidth: 1,
     borderColor: '#E2E8F0',
     backgroundColor: '#fff',
+    gap: 12,
   },
   searchContainer: {
     flexDirection: 'row',
-
     alignItems: 'center',
     backgroundColor: '#F1F5F9',
     borderRadius: 24,
     paddingHorizontal: 16,
-    height: 48,
+    height: 46,
     flex: 1,
     maxWidth: 360,
     minWidth: 160,
@@ -900,29 +894,25 @@ const styles = StyleSheet.create({
     color: '#0F172A',
   },
   topBarRight: {
-
+    flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    gap: 10,
     flexShrink: 0,
   },
-
-
-    alignItems: 'center',
-  },
   bellBtn: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     borderWidth: 1,
     borderColor: '#E2E8F0',
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 10,
+    marginRight: 8,
   },
   notificationDot: {
     position: 'absolute',
     top: 10,
-    right: 12,
+    right: 10,
     width: 8,
     height: 8,
     borderRadius: 4,
@@ -932,13 +922,12 @@ const styles = StyleSheet.create({
   },
   userProfile: {
     flexDirection: 'row',
-
     alignItems: 'center',
   },
   avatar: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     backgroundColor: '#475569',
     alignItems: 'center',
     justifyContent: 'center',
@@ -947,36 +936,57 @@ const styles = StyleSheet.create({
   avatarImage: {
     width: '100%',
     height: '100%',
-    borderRadius: 22,
+    borderRadius: 20,
   },
   avatarText: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '700',
   },
   userName: {
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: '700',
     color: '#0F172A',
   },
   userRole: {
-    fontSize: 13,
+    fontSize: 12,
     color: '#64748B',
   },
   logoutIconBtn: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     borderWidth: 1,
     borderColor: '#FEE2E2',
     backgroundColor: '#FEF2F2',
     alignItems: 'center',
     justifyContent: 'center',
-    marginLeft: 16,
-    cursor: 'pointer',
+    marginLeft: 10,
+    cursor: 'pointer' as any,
   },
   scrollContent: {
-    padding: 32,
+    padding: 28,
+  },
+  examTargetBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 18,
+    borderRadius: 20,
+    borderWidth: 1,
+    marginBottom: 24,
+    gap: 16,
+    flexWrap: 'wrap',
+  },
+  examTargetSub: {
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 1,
+    marginBottom: 4,
+  },
+  examTargetMain: {
+    fontSize: 18,
+    fontWeight: '800',
   },
   heroBanner: {
     borderRadius: 24,
@@ -1008,12 +1018,10 @@ const styles = StyleSheet.create({
   heroStatsRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-
     gap: 16,
   },
   heroStatBadge: {
     flexDirection: 'row',
-
     alignItems: 'center',
     backgroundColor: '#fff',
     paddingHorizontal: 16,
@@ -1044,7 +1052,6 @@ const styles = StyleSheet.create({
   },
   sectionHeader: {
     flexDirection: 'row',
-
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 16,
@@ -1061,10 +1068,9 @@ const styles = StyleSheet.create({
     color: '#3B82F6',
   },
   featuredBanner: {
-    flexDirection: 'row',
     borderRadius: 24,
     padding: 24,
-
+    flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 32,
@@ -1075,7 +1081,6 @@ const styles = StyleSheet.create({
   },
   featuredBadge: {
     flexDirection: 'row',
-
     alignItems: 'center',
     backgroundColor: 'rgba(255,255,255,0.2)',
     paddingHorizontal: 10,
@@ -1103,12 +1108,10 @@ const styles = StyleSheet.create({
   },
   featuredPerks: {
     flexDirection: 'row',
-
     gap: 16,
   },
   perk: {
     flexDirection: 'row',
-
     alignItems: 'center',
     gap: 6,
   },
@@ -1130,7 +1133,6 @@ const styles = StyleSheet.create({
   practiceModesRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-
     gap: 16,
     marginBottom: 32,
   },
@@ -1139,42 +1141,74 @@ const styles = StyleSheet.create({
     minWidth: 180,
   },
   modeCard: {
-    flexDirection: 'row',
     flex: 1,
-    borderRadius: 24,
-    padding: 24,
-
+    borderRadius: 20,
+    padding: 20,
+    flexDirection: 'row',
   },
   modeIconRed: {
-    width: 48, height: 48, borderRadius: 24, backgroundColor: '#FEE2E2', alignItems: 'center', justifyContent: 'center', marginBottom: 16,
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: '#FEE2E2',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 16,
   },
   modeIconGreen: {
-    width: 48, height: 48, borderRadius: 24, backgroundColor: '#D1FAE5', alignItems: 'center', justifyContent: 'center', marginBottom: 16,
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: '#D1FAE5',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 16,
   },
   modeIconPurple: {
-    width: 48, height: 48, borderRadius: 24, backgroundColor: '#F3E8FF', alignItems: 'center', justifyContent: 'center', marginBottom: 16,
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: '#F3E8FF',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 16,
   },
   modeIconIndigo: {
-    width: 48, height: 48, borderRadius: 24, backgroundColor: '#EEF2FF', alignItems: 'center', justifyContent: 'center', marginBottom: 16,
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: '#EEF2FF',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 16,
   },
   modeTitle: {
-    fontSize: 18, fontWeight: '700', color: '#1E293B', marginBottom: 6,
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#1E293B',
+    marginBottom: 6,
   },
   modeDesc: {
-    fontSize: 13, color: '#475569', lineHeight: 18,
+    fontSize: 13,
+    color: '#475569',
+    lineHeight: 18,
   },
   modeArrow: {
-    width: 32, height: 32, borderRadius: 16, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center',
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   recentTestsRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-
     gap: 16,
   },
   recentTestCard: {
-    minWidth: 260,
     flex: 1,
+    minWidth: 260,
     backgroundColor: '#fff',
     borderRadius: 20,
     padding: 20,
@@ -1186,23 +1220,39 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     justifyContent: 'space-between',
     gap: 10,
-
-    marginBottom: 20,
+    marginBottom: 16,
   },
   rtcIcon: {
-    width: 40, height: 40, borderRadius: 12, backgroundColor: '#EFF6FF', alignItems: 'center', justifyContent: 'center', marginRight: 12,
+    width: 40,
+    height: 40,
+    borderRadius: 12,
+    backgroundColor: '#EFF6FF',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 12,
   },
   rtcTitle: {
-    fontSize: 15, fontWeight: '700', color: '#0F172A', marginBottom: 4,
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#0F172A',
+    marginBottom: 4,
   },
   rtcDate: {
-    fontSize: 12, color: '#64748B',
+    fontSize: 12,
+    color: '#64748B',
   },
   rtcStatus: {
-    paddingHorizontal: 8, paddingVertical: 4, borderRadius: 8, backgroundColor: '#D1FAE5', height: 24, justifyContent: 'center',
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 8,
+    backgroundColor: '#D1FAE5',
+    height: 24,
+    justifyContent: 'center',
   },
   rtcStatusText: {
-    fontSize: 11, fontWeight: '600', color: '#059669',
+    fontSize: 11,
+    fontWeight: '600',
+    color: '#059669',
   },
   rtcStatusProgress: {
     backgroundColor: '#FEF3C7',
@@ -1212,7 +1262,6 @@ const styles = StyleSheet.create({
   },
   rtcMetrics: {
     flexDirection: 'row',
-
     gap: 16,
     alignItems: 'center',
     paddingTop: 16,
@@ -1221,10 +1270,13 @@ const styles = StyleSheet.create({
   },
   rtcMetric: {
     flexDirection: 'row',
- alignItems: 'center', gap: 6,
+    alignItems: 'center',
+    gap: 6,
   },
   rtcMetricTxt: {
-    fontSize: 12, color: '#475569', fontWeight: '500'
+    fontSize: 12,
+    color: '#475569',
+    fontWeight: '500',
   },
   rightSidebar: {
     width: 340,
@@ -1248,17 +1300,17 @@ const styles = StyleSheet.create({
   },
   widgetHeader: {
     flexDirection: 'row',
-
     alignItems: 'center',
     gap: 10,
     marginBottom: 20,
   },
   widgetTitle: {
-    fontSize: 16, fontWeight: '700', color: '#0F172A',
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#0F172A',
   },
   progressBody: {
     flexDirection: 'row',
-
     alignItems: 'center',
     gap: 20,
   },
@@ -1284,11 +1336,13 @@ const styles = StyleSheet.create({
     color: '#64748B',
   },
   progressStats: {
-    flex: 1, gap: 16,
+    flex: 1,
+    gap: 16,
   },
   pStatItem: {
     flexDirection: 'row',
- alignItems: 'center', gap: 12,
+    alignItems: 'center',
+    gap: 12,
   },
   pStatIconB: { width: 32, height: 32, borderRadius: 8, backgroundColor: '#EFF6FF', alignItems: 'center', justifyContent: 'center' },
   pStatIconP: { width: 32, height: 32, borderRadius: 8, backgroundColor: '#F3E8FF', alignItems: 'center', justifyContent: 'center' },
@@ -1310,25 +1364,4 @@ const styles = StyleSheet.create({
   topicBarBg: { width: 60, height: 6, borderRadius: 3, backgroundColor: '#F1F5F9' },
   topicBarFill: { height: '100%', borderRadius: 3 },
   topicPct: { width: 32, textAlign: 'right', fontSize: 13, fontWeight: '600', color: '#0F172A' },
-  examTargetBanner: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: 18,
-    borderRadius: 20,
-    borderWidth: 1,
-    marginBottom: 24,
-    gap: 16,
-    flexWrap: 'wrap',
-  },
-  examTargetSub: {
-    fontSize: 11,
-    fontWeight: '800',
-    letterSpacing: 1,
-    marginBottom: 4,
-  },
-  examTargetMain: {
-    fontSize: 18,
-    fontWeight: '800',
-  },
 });
