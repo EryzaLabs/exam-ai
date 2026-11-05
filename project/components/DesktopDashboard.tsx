@@ -249,7 +249,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
             />
           </View>
           <View style={styles.topBarRight}>
-            <ExamSelector compact={true} style={{ marginRight: 14 }} />
+            <ExamSelector compact={true} style={{ flexShrink: 0, minWidth: 260 }} />
             <TouchableOpacity 
               style={[styles.bellBtn, { borderColor: colors.border, backgroundColor: colors.surface, marginRight: 12 }]} 
               onPress={toggleTheme}
@@ -324,6 +324,15 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           <ScrollView style={styles.scrollContent} showsVerticalScrollIndicator={false}>
             {children || (
               <>
+              {/* EXAM TARGET SWITCHER BANNER */}
+              <View style={[styles.examTargetBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+                <View style={{ flex: 1, minWidth: 200 }}>
+                  <Text style={[styles.examTargetSub, { color: colors.textSecondary }]}>TARGET EXAM</Text>
+                  <Text style={[styles.examTargetMain, { color: colors.textPrimary }]}>{examInfo.fullName}</Text>
+                </View>
+                <ExamSelector compact={false} />
+              </View>
+
               {/* HERO BANNER */}
               <ImageBackground
             source={require('@/assets/images/upsc-bg.png')}
@@ -429,7 +438,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           </View>
 
           <View style={styles.practiceModesRow}>
-             <TouchableOpacity style={{ flex: 1 }} onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-ai-test' : '/premium'), { title: 'Sign In to Generate AI Tests', feature: 'Custom AI Tests' })}>
+             <TouchableOpacity style={styles.modeCardWrapper} onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-ai-test' : '/premium'), { title: 'Sign In to Generate AI Tests', feature: 'Custom AI Tests' })}>
                <LinearGradient colors={['#FEACA1', '#FEACA1']} style={styles.modeCard}>
                   <View style={{ flex: 1 }}>
                      <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
@@ -443,7 +452,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                </LinearGradient>
              </TouchableOpacity>
              
-             <TouchableOpacity style={{ flex: 1 }} onPress={() => requireAuth(() => router.push('/practice'), { title: 'Sign In for Practice Mode', feature: 'Practice Mode' })}>
+             <TouchableOpacity style={styles.modeCardWrapper} onPress={() => requireAuth(() => router.push('/practice'), { title: 'Sign In for Practice Mode', feature: 'Practice Mode' })}>
                <LinearGradient colors={['#A7F3D0', '#A7F3D0']} style={styles.modeCard}>
                   <View style={{ flex: 1 }}>
                      <View style={styles.modeIconGreen}><Zap size={24} color="#059669" /></View>
@@ -454,7 +463,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                </LinearGradient>
              </TouchableOpacity>
 
-             <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push({ pathname: '/test-list', params: { category: 'topic' } })}>
+             <TouchableOpacity style={styles.modeCardWrapper} onPress={() => router.push({ pathname: '/test-list', params: { category: 'topic' } })}>
                <LinearGradient colors={['#E9D5FF', '#E9D5FF']} style={styles.modeCard}>
                   <View style={{ flex: 1 }}>
                      <View style={styles.modeIconPurple}><Library size={24} color="#7C3AED" /></View>
@@ -465,7 +474,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                </LinearGradient>
              </TouchableOpacity>
 
-             <TouchableOpacity style={{ flex: 1 }} onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-test' : '/premium'), { title: 'Sign In for Custom Test Builder', feature: 'Custom Test Builder' })}>
+             <TouchableOpacity style={styles.modeCardWrapper} onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-test' : '/premium'), { title: 'Sign In for Custom Test Builder', feature: 'Custom Test Builder' })}>
                <LinearGradient colors={['#C7D2FE', '#E0E7FF']} style={styles.modeCard}>
                   <View style={{ flex: 1 }}>
                      <View style={styles.modeIconIndigo}><SlidersHorizontal size={24} color="#4F46E5" /></View>
@@ -774,8 +783,9 @@ const styles = StyleSheet.create({
   },
 
   container: {
-    flex: 1,
     flexDirection: 'row',
+    flex: 1,
+
     backgroundColor: '#F8FAFC',
   },
   sidebar: {
@@ -788,6 +798,7 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     flexDirection: 'row',
+
     alignItems: 'center',
     marginBottom: 40,
   },
@@ -814,6 +825,7 @@ const styles = StyleSheet.create({
   },
   navItem: {
     flexDirection: 'row',
+
     alignItems: 'center',
     paddingVertical: 12,
     paddingHorizontal: 16,
@@ -858,8 +870,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#F8FAFC',
   },
   topBar: {
-    height: 80,
     flexDirection: 'row',
+    gap: 12,
+    height: 80,
+
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 32,
@@ -869,12 +883,15 @@ const styles = StyleSheet.create({
   },
   searchContainer: {
     flexDirection: 'row',
+
     alignItems: 'center',
     backgroundColor: '#F1F5F9',
     borderRadius: 24,
     paddingHorizontal: 16,
     height: 48,
-    flex: 0.6,
+    flex: 1,
+    maxWidth: 360,
+    minWidth: 160,
   },
   searchInput: {
     flex: 1,
@@ -883,7 +900,13 @@ const styles = StyleSheet.create({
     color: '#0F172A',
   },
   topBarRight: {
-    flexDirection: 'row',
+
+    alignItems: 'center',
+    gap: 8,
+    flexShrink: 0,
+  },
+
+
     alignItems: 'center',
   },
   bellBtn: {
@@ -894,7 +917,7 @@ const styles = StyleSheet.create({
     borderColor: '#E2E8F0',
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 24,
+    marginRight: 10,
   },
   notificationDot: {
     position: 'absolute',
@@ -909,6 +932,7 @@ const styles = StyleSheet.create({
   },
   userProfile: {
     flexDirection: 'row',
+
     alignItems: 'center',
   },
   avatar: {
@@ -983,10 +1007,13 @@ const styles = StyleSheet.create({
   },
   heroStatsRow: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
+
     gap: 16,
   },
   heroStatBadge: {
     flexDirection: 'row',
+
     alignItems: 'center',
     backgroundColor: '#fff',
     paddingHorizontal: 16,
@@ -1017,6 +1044,7 @@ const styles = StyleSheet.create({
   },
   sectionHeader: {
     flexDirection: 'row',
+
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 16,
@@ -1033,9 +1061,10 @@ const styles = StyleSheet.create({
     color: '#3B82F6',
   },
   featuredBanner: {
+    flexDirection: 'row',
     borderRadius: 24,
     padding: 24,
-    flexDirection: 'row',
+
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 32,
@@ -1046,6 +1075,7 @@ const styles = StyleSheet.create({
   },
   featuredBadge: {
     flexDirection: 'row',
+
     alignItems: 'center',
     backgroundColor: 'rgba(255,255,255,0.2)',
     paddingHorizontal: 10,
@@ -1073,10 +1103,12 @@ const styles = StyleSheet.create({
   },
   featuredPerks: {
     flexDirection: 'row',
+
     gap: 16,
   },
   perk: {
     flexDirection: 'row',
+
     alignItems: 'center',
     gap: 6,
   },
@@ -1097,14 +1129,21 @@ const styles = StyleSheet.create({
   },
   practiceModesRow: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
+
     gap: 16,
     marginBottom: 32,
   },
+  modeCardWrapper: {
+    flex: 1,
+    minWidth: 180,
+  },
   modeCard: {
+    flexDirection: 'row',
     flex: 1,
     borderRadius: 24,
     padding: 24,
-    flexDirection: 'row',
+
   },
   modeIconRed: {
     width: 48, height: 48, borderRadius: 24, backgroundColor: '#FEE2E2', alignItems: 'center', justifyContent: 'center', marginBottom: 16,
@@ -1129,9 +1168,12 @@ const styles = StyleSheet.create({
   },
   recentTestsRow: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
+
     gap: 16,
   },
   recentTestCard: {
+    minWidth: 260,
     flex: 1,
     backgroundColor: '#fff',
     borderRadius: 20,
@@ -1141,6 +1183,10 @@ const styles = StyleSheet.create({
   },
   rtcHeader: {
     flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    gap: 10,
+
     marginBottom: 20,
   },
   rtcIcon: {
@@ -1166,6 +1212,7 @@ const styles = StyleSheet.create({
   },
   rtcMetrics: {
     flexDirection: 'row',
+
     gap: 16,
     alignItems: 'center',
     paddingTop: 16,
@@ -1173,7 +1220,8 @@ const styles = StyleSheet.create({
     borderColor: '#F1F5F9',
   },
   rtcMetric: {
-    flexDirection: 'row', alignItems: 'center', gap: 6,
+    flexDirection: 'row',
+ alignItems: 'center', gap: 6,
   },
   rtcMetricTxt: {
     fontSize: 12, color: '#475569', fontWeight: '500'
@@ -1200,6 +1248,7 @@ const styles = StyleSheet.create({
   },
   widgetHeader: {
     flexDirection: 'row',
+
     alignItems: 'center',
     gap: 10,
     marginBottom: 20,
@@ -1209,6 +1258,7 @@ const styles = StyleSheet.create({
   },
   progressBody: {
     flexDirection: 'row',
+
     alignItems: 'center',
     gap: 20,
   },
@@ -1237,7 +1287,8 @@ const styles = StyleSheet.create({
     flex: 1, gap: 16,
   },
   pStatItem: {
-    flexDirection: 'row', alignItems: 'center', gap: 12,
+    flexDirection: 'row',
+ alignItems: 'center', gap: 12,
   },
   pStatIconB: { width: 32, height: 32, borderRadius: 8, backgroundColor: '#EFF6FF', alignItems: 'center', justifyContent: 'center' },
   pStatIconP: { width: 32, height: 32, borderRadius: 8, backgroundColor: '#F3E8FF', alignItems: 'center', justifyContent: 'center' },
@@ -1259,4 +1310,25 @@ const styles = StyleSheet.create({
   topicBarBg: { width: 60, height: 6, borderRadius: 3, backgroundColor: '#F1F5F9' },
   topicBarFill: { height: '100%', borderRadius: 3 },
   topicPct: { width: 32, textAlign: 'right', fontSize: 13, fontWeight: '600', color: '#0F172A' },
+  examTargetBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 18,
+    borderRadius: 20,
+    borderWidth: 1,
+    marginBottom: 24,
+    gap: 16,
+    flexWrap: 'wrap',
+  },
+  examTargetSub: {
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 1,
+    marginBottom: 4,
+  },
+  examTargetMain: {
+    fontSize: 18,
+    fontWeight: '800',
+  },
 });

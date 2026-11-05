@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { initializeAuth, getReactNativePersistence, getAuth, Auth } from 'firebase/auth';
-import { getFirestore, Firestore, enableIndexedDbPersistence, initializeFirestore, CACHE_SIZE_UNLIMITED } from 'firebase/firestore';
+import { initializeFirestore, persistentLocalCache, persistentMultipleTabManager, Firestore } from 'firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 
@@ -42,20 +42,16 @@ if (Platform.OS === 'web') {
   }
 }
 
-// Initialize Firestore with offline persistence
-const db: Firestore = initializeFirestore(app, {
-  cacheSizeBytes: CACHE_SIZE_UNLIMITED
-});
-
-// Enable offline persistence for web
-if (typeof window !== 'undefined') {
-  enableIndexedDbPersistence(db).catch((err) => {
-    if (err.code === 'failed-precondition') {
-      console.log('Persistence failed: Multiple tabs open');
-    } else if (err.code === 'unimplemented') {
-      console.log('Persistence not available');
-    }
+// Initialize Firestore with modern persistent cache (eliminates deprecation warning)
+let db: Firestore;
+try {
+  db = initializeFirestore(app, {
+    localCache: persistentLocalCache({
+      tabManager: persistentMultipleTabManager()
+    })
   });
+} catch {
+  db = initializeFirestore(app, {});
 }
 
 export { auth, db };

@@ -95,6 +95,7 @@ export default function ExamSelector({ compact = false, showTagline = false, sty
 const styles = StyleSheet.create({
   container: {
     marginVertical: 4,
+    flexShrink: 0,
   },
   scrollContent: {
     flexDirection: 'row',
@@ -110,6 +111,7 @@ const styles = StyleSheet.create({
     paddingVertical: 7,
     borderRadius: 20,
     borderWidth: 1,
+    cursor: 'pointer' as any,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.05,

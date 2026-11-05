@@ -46,13 +46,18 @@ export default function RootLayout() {
       document.title = 'Astra Exam AI';
 
       const setMetaTag = (attr: 'name' | 'property', key: string, content: string) => {
-        let el = document.querySelector(`meta[${attr}="${key}"]`);
-        if (!el) {
-          el = document.createElement('meta');
-          el.setAttribute(attr, key);
-          document.head.appendChild(el);
+        try {
+          const selector = `meta[${attr}="${key.replace(/"/g, '\\"')}"]`;
+          let el = document.querySelector(selector);
+          if (!el) {
+            el = document.createElement('meta');
+            el.setAttribute(attr, key);
+            document.head.appendChild(el);
+          }
+          el.setAttribute('content', content);
+        } catch {
+          // Ignore DOM meta selector errors on web
         }
-        el.setAttribute('content', content);
       };
 
       setMetaTag('name', 'description', 'Astra Exam AI is your all-in-one AI-driven preparation platform for competitive exams. Practice full mocks, analyze your weaknesses, and master your syllabus.');
@@ -62,8 +67,8 @@ export default function RootLayout() {
       setMetaTag('property', 'og:description', 'Master competitive exams with AI-powered mock tests, performance analytics, and personalized learning.');
       setMetaTag('property', 'og:type', 'website');
       setMetaTag('property', 'og:site_name', 'Astra Exam AI');
-      setMetaTag('twitter:title', 'Astra Exam AI');
-      setMetaTag('twitter:description', 'Master competitive exams with AI-powered mock tests, performance analytics, and personalized learning.');
+      setMetaTag('name', 'twitter:title', 'Astra Exam AI');
+      setMetaTag('name', 'twitter:description', 'Master competitive exams with AI-powered mock tests, performance analytics, and personalized learning.');
     }
   }, []);
 
