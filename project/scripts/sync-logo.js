@@ -23,7 +23,15 @@ if (fs.existsSync(downloadLogoPath)) {
   }
 }
 
-// 2. Ensure projectLogoPath ALWAYS exists so Metro bundler never fails on Netlify or CI
+// 2. Try removing black background to create transparent PNG
+try {
+  const { main: makeTransparent } = require('./make-logo-transparent.js');
+  makeTransparent().catch(err => console.warn('Background removal note:', err.message));
+} catch (e) {
+  // If @napi-rs/canvas is not loaded in current environment, proceed
+}
+
+// 3. Ensure projectLogoPath ALWAYS exists so Metro bundler never fails on Netlify or CI
 if (!fs.existsSync(projectLogoPath)) {
   if (fs.existsSync(projectFaviconPath)) {
     try {

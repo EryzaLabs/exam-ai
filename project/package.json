@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "expo start",
+    "make-transparent": "node scripts/make-logo-transparent.js",
     "prebuild:web": "node scripts/sync-logo.js",
     "build:web": "node scripts/sync-logo.js && expo export --platform web && node scripts/post-build-web.js",
     "lint": "expo lint",
