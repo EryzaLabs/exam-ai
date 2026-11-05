@@ -165,7 +165,6 @@ export default function TestInstructionsScreen() {
       </View>
     </SafeAreaView>
   );
-  );
 }
 
 const styles = StyleSheet.create({
