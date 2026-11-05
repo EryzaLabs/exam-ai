@@ -106,11 +106,16 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           onPress={() => router.push('/')}
           activeOpacity={0.8}
         >
-          <Image
-            source={require('@/assets/images/logo.png')}
-            style={styles.logoImage}
-            resizeMode="contain"
-          />
+          <View style={[
+            styles.logoBadge,
+            { backgroundColor: isDark ? 'rgba(139, 92, 246, 0.14)' : '#0A0915' }
+          ]}>
+            <Image
+              source={require('@/assets/images/logo.png')}
+              style={styles.logoImage}
+              resizeMode="contain"
+            />
+          </View>
           <View>
             <Text style={[styles.logoText, { color: colors.textPrimary }]}>Astra</Text>
             <Text style={[styles.logoSubtext, { color: colors.textSecondary }]}>Exam AI</Text>
@@ -805,11 +810,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 40,
   },
-  logoImage: {
-    width: 42,
-    height: 42,
-    borderRadius: 10,
+  logoBadge: {
+    width: 52,
+    height: 52,
+    borderRadius: 14,
+    alignItems: 'center',
+    justifyContent: 'center',
     marginRight: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(139, 92, 246, 0.35)',
+  },
+  logoImage: {
+    width: 44,
+    height: 44,
   },
   logoIcon: {
     width: 40,

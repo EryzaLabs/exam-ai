@@ -119,7 +119,23 @@ export default function MobileDashboard({
             <View style={styles.headerTop}>
               <View style={{ flex: 1, paddingRight: 12 }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
-                  <Image source={require('@/assets/images/logo.png')} style={{ width: 30, height: 30, borderRadius: 8 }} resizeMode="contain" />
+                  <View style={{
+                    width: 44,
+                    height: 44,
+                    borderRadius: 12,
+                    backgroundColor: isDark ? 'rgba(139, 92, 246, 0.16)' : '#0A0915',
+                    borderWidth: 1,
+                    borderColor: 'rgba(139, 92, 246, 0.35)',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginRight: 4,
+                  }}>
+                    <Image
+                      source={require('@/assets/images/logo.png')}
+                      style={{ width: 38, height: 38 }}
+                      resizeMode="contain"
+                    />
+                  </View>
                   <Text style={styles.headerTitle}>Astra Exam AI</Text>
                   {isSubscribed && (
                     <Crown size={22} color="#F59E0B" fill="#F59E0B" />

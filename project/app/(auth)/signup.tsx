@@ -231,11 +231,22 @@ export default function SignupScreen() {
                   onPress={() => router.push('/')}
                   activeOpacity={0.8}
                 >
-                  <Image
-                    source={require('@/assets/images/logo.png')}
-                    style={{ width: 36, height: 36, borderRadius: 8 }}
-                    resizeMode="contain"
-                  />
+                  <View style={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: 14,
+                    backgroundColor: 'rgba(10, 9, 21, 0.75)',
+                    borderWidth: 1,
+                    borderColor: 'rgba(168, 85, 247, 0.4)',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}>
+                    <Image
+                      source={require('@/assets/images/logo.png')}
+                      style={{ width: 40, height: 40 }}
+                      resizeMode="contain"
+                    />
+                  </View>
                   <Text style={styles.brandText}>Astra Exam AI</Text>
                 </TouchableOpacity>
 
@@ -274,11 +285,22 @@ export default function SignupScreen() {
                   onPress={() => router.push('/')}
                   activeOpacity={0.8}
                 >
-                  <Image
-                    source={require('@/assets/images/logo.png')}
-                    style={{ width: 36, height: 36, borderRadius: 8 }}
-                    resizeMode="contain"
-                  />
+                  <View style={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: 14,
+                    backgroundColor: '#0A0915',
+                    borderWidth: 1,
+                    borderColor: 'rgba(168, 85, 247, 0.35)',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}>
+                    <Image
+                      source={require('@/assets/images/logo.png')}
+                      style={{ width: 40, height: 40 }}
+                      resizeMode="contain"
+                    />
+                  </View>
                   <Text style={styles.brandTextMobile}>Astra Exam AI</Text>
                 </TouchableOpacity>
               )}

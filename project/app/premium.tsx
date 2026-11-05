@@ -486,11 +486,23 @@ export default function PremiumScreen() {
         />
         <View style={styles.heroContent}>
           <View style={styles.heroTagsRow}>
-            <Image
-              source={require('@/assets/images/logo.png')}
-              style={{ width: 28, height: 28, borderRadius: 6, marginRight: 4 }}
-              resizeMode="contain"
-            />
+            <View style={{
+              width: 36,
+              height: 36,
+              borderRadius: 10,
+              backgroundColor: '#0A0915',
+              borderWidth: 1,
+              borderColor: 'rgba(168, 85, 247, 0.4)',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginRight: 6,
+            }}>
+              <Image
+                source={require('@/assets/images/logo.png')}
+                style={{ width: 30, height: 30 }}
+                resizeMode="contain"
+              />
+            </View>
             <View style={styles.heroTagBadge}>
               <Crown size={12} color="#F59E0B" />
               <Text style={styles.heroTagText}>ALL-ACCESS PASS • 2026 EDITION</Text>
