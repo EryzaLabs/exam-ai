@@ -38,7 +38,7 @@ const getCashfreeConfig = () => {
 // SUBSCRIPTION PLANS CONFIGURATION
 // ==============================================================================
 export interface SubscriptionPlan {
-  id: 'daily' | 'weekly' | 'monthly' | 'lifetime';
+  id: 'daily' | 'weekly' | 'monthly' | 'lifetime' | 'ai_test' | 'tgt-series' | 'pgt-series';
   name: string;
   tagline: string;
   price: number;
@@ -60,6 +60,26 @@ export const SUBSCRIPTION_PLANS: Record<string, SubscriptionPlan> = {
     durationLabel: '1 Test',
     periodDays: 1,
     badge: 'Extra AI Test',
+  },
+  'tgt-series': {
+    id: 'tgt-series',
+    name: 'TGT Subject Pass',
+    tagline: 'Complete TGT Subject Series Access',
+    price: 199,
+    originalPrice: 999,
+    durationLabel: 'Lifetime',
+    periodDays: 36500,
+    badge: 'TGT Special',
+  },
+  'pgt-series': {
+    id: 'pgt-series',
+    name: 'PGT Subject Pass',
+    tagline: 'Complete PGT Subject Series Access',
+    price: 199,
+    originalPrice: 999,
+    durationLabel: 'Lifetime',
+    periodDays: 36500,
+    badge: 'PGT Special',
   },
   daily: {
     id: 'daily',

@@ -484,8 +484,9 @@ router.get('/find/:identifier', (req: Request, res: Response) => {
     const fullMockDir = path.join(TESTS_DIR, 'full_mocks');
     const topicWiseDir = path.join(TESTS_DIR, 'topic_wise');
     const customMockDir = path.join(TESTS_DIR, 'custom_mocks');
+    const tgtPgtDir = path.join(TESTS_DIR, 'tgt_pgt');
 
-    const searchDirs = [fullMockDir, topicWiseDir, customMockDir];
+    const searchDirs = [fullMockDir, topicWiseDir, customMockDir, tgtPgtDir];
     for (const dir of searchDirs) {
       if (!fs.existsSync(dir)) continue;
       const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));

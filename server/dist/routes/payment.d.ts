@@ -1,6 +1,6 @@
 declare const router: import("express-serve-static-core").Router;
 export interface SubscriptionPlan {
-    id: 'daily' | 'weekly' | 'monthly' | 'lifetime';
+    id: 'daily' | 'weekly' | 'monthly' | 'lifetime' | 'ai_test' | 'tgt-series' | 'pgt-series';
     name: string;
     tagline: string;
     price: number;

@@ -3,6 +3,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.addPaidAiCredit = addPaidAiCredit;
+exports.getPaidAiCredits = getPaidAiCredits;
+exports.consumePaidAiCredit = consumePaidAiCredit;
 const express_1 = require("express");
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
@@ -12,6 +15,7 @@ const DATA_ROOT = path_1.default.resolve(__dirname, '../../../');
 const TESTS_DIR = path_1.default.join(DATA_ROOT, 'tests_json');
 const CUSTOM_MOCKS_DIR = path_1.default.join(TESTS_DIR, 'custom_mocks');
 const LIMITS_FILE = path_1.default.join(DATA_ROOT, 'server', 'data', 'ai_test_limits.json');
+const PAID_CREDITS_FILE = path_1.default.join(DATA_ROOT, 'server', 'data', 'ai_paid_credits.json');
 // Ensure directories exist
 if (!fs_1.default.existsSync(CUSTOM_MOCKS_DIR)) {
     try {
@@ -25,6 +29,40 @@ if (!fs_1.default.existsSync(dataDir)) {
         fs_1.default.mkdirSync(dataDir, { recursive: true });
     }
     catch (e) { }
+}
+// Helper for local paid credits persistence
+function loadPaidCredits() {
+    try {
+        if (fs_1.default.existsSync(PAID_CREDITS_FILE)) {
+            return JSON.parse(fs_1.default.readFileSync(PAID_CREDITS_FILE, 'utf8'));
+        }
+    }
+    catch (e) { }
+    return {};
+}
+function savePaidCredits(credits) {
+    try {
+        fs_1.default.writeFileSync(PAID_CREDITS_FILE, JSON.stringify(credits, null, 2), 'utf8');
+    }
+    catch (e) { }
+}
+function addPaidAiCredit(userId, count = 1) {
+    const credits = loadPaidCredits();
+    credits[userId] = (credits[userId] || 0) + count;
+    savePaidCredits(credits);
+}
+function getPaidAiCredits(userId) {
+    const credits = loadPaidCredits();
+    return credits[userId] || 0;
+}
+function consumePaidAiCredit(userId) {
+    const credits = loadPaidCredits();
+    if ((credits[userId] || 0) > 0) {
+        credits[userId] -= 1;
+        savePaidCredits(credits);
+        return true;
+    }
+    return false;
 }
 const jobs = new Map();
 // Cleanup old jobs after 1 hour
@@ -90,6 +128,11 @@ async function hasUserReachedDailyLimit(userId) {
  * Record today's generation for the user
  */
 async function recordUserDailyGeneration(userId) {
+    // If user has paid credit, consume that credit instead of deducting free daily quota
+    if (consumePaidAiCredit(userId)) {
+        console.log(`[AI Test] Consumed 1 paid credit for user ${userId}. Remaining: ${getPaidAiCredits(userId)}`);
+        return;
+    }
     const today = getTodayString();
     const localLimits = loadDailyLimits();
     localLimits[userId] = today;
@@ -110,21 +153,49 @@ async function recordUserDailyGeneration(userId) {
     }
 }
 /**
+ * POST /api/ai-tests/unlock-paid
+ * Grants 1 paid AI test generation credit after a successful ₹9 payment
+ */
+router.post('/unlock-paid', (req, res) => {
+    try {
+        const { userId = 'anonymous', orderId } = req.body;
+        addPaidAiCredit(userId, 1);
+        const credits = getPaidAiCredits(userId);
+        console.log(`[AI Test] Added 1 paid AI test credit for user: ${userId} (Order: ${orderId || 'direct'}), total: ${credits}`);
+        res.json({
+            success: true,
+            paidCredits: credits,
+            message: '1 Paid AI mock test credit unlocked successfully!',
+        });
+    }
+    catch (e) {
+        res.status(500).json({ error: e.message });
+    }
+});
+/**
  * GET /api/ai-tests/daily-status/:userId
- * Check if user can generate a test today
+ * Check if user can generate a test today (free or via ₹9 paid credit)
  */
 router.get('/daily-status/:userId', async (req, res) => {
     try {
         const userId = req.params.userId || 'anonymous';
-        const reached = await hasUserReachedDailyLimit(userId);
+        const freeReached = await hasUserReachedDailyLimit(userId);
+        const paidCredits = getPaidAiCredits(userId);
+        const canGenerate = !freeReached || paidCredits > 0;
         const today = getTodayString();
         res.json({
-            canGenerate: !reached,
+            canGenerate,
             today,
             limit: 1,
-            message: reached
-                ? 'Daily limit reached. You can generate 1 custom AI test per day. Resets tomorrow at midnight.'
-                : 'You have 1 custom AI test generation available for today.',
+            freeUsed: freeReached,
+            paidCredits,
+            allowPaidOption: true,
+            paidTestPrice: 9,
+            message: freeReached && paidCredits === 0
+                ? "You've used today's free AI test. Build an extra test for just ₹9!"
+                : (paidCredits > 0
+                    ? `You have ${paidCredits} paid AI test credit(s) available!`
+                    : "You have 1 free custom AI test generation available today."),
         });
     }
     catch (error) {
@@ -138,15 +209,21 @@ router.get('/daily-status/:userId', async (req, res) => {
  */
 router.post('/generate', async (req, res) => {
     try {
-        const { userId = 'anonymous', topic, questionCount = 10, durationMinutes = 20, difficulty = 'medium', } = req.body;
+        const { userId = 'anonymous', topic, title, orderId, questionCount = 10, durationMinutes = 20, difficulty = 'medium', } = req.body;
         if (!topic || !topic.trim()) {
             return res.status(400).json({ error: 'Please enter a valid topic name.' });
         }
-        // 1. Verify Daily Limit (1 per account per day)
+        // 1. Verify Daily Limit (1 free per account per day, or via ₹9 paid credit)
+        if (orderId) {
+            addPaidAiCredit(userId, 1);
+        }
+        const paidCredits = getPaidAiCredits(userId);
         const reached = await hasUserReachedDailyLimit(userId);
-        if (reached) {
+        if (reached && paidCredits <= 0) {
             return res.status(403).json({
-                error: 'Daily limit reached: You can generate 1 custom AI test per day. Please try again tomorrow!',
+                error: 'Daily limit reached: You can generate 1 free custom AI test per day or build an additional test for ₹9!',
+                allowPaidOption: true,
+                price: 9,
             });
         }
         const cleanCount = Math.max(5, Math.min(25, parseInt(questionCount) || 10));
@@ -156,6 +233,7 @@ router.post('/generate', async (req, res) => {
             id: jobId,
             userId,
             topic: topic.trim(),
+            title: title && typeof title === 'string' && title.trim() ? title.trim() : undefined,
             questionCount: cleanCount,
             durationMinutes: cleanDuration,
             difficulty: difficulty || 'medium',
@@ -203,12 +281,7 @@ router.get('/status/:jobId', (req, res) => {
         error: job.error,
         testId: job.testId,
         filename: job.filename,
-        paper: job.paper ? {
-            test_id: job.paper.test_id,
-            test_name: job.paper.test_name,
-            total_questions: job.paper.questions?.length,
-            duration: job.paper.duration,
-        } : undefined,
+        paper: job.paper || undefined,
     });
 });
 /**
@@ -371,7 +444,9 @@ CRITICAL REQUIREMENTS:
             };
         });
         const testId = `ai_custom_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
-        const testName = `AI Test: ${job.topic} (${formattedQuestions.length} Qs)`;
+        const cleanTopic = job.topic.replace(/[_\-]+/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        const defaultTestName = `${cleanTopic} • AI Practice Test (${formattedQuestions.length} Qs)`;
+        const testName = job.title && job.title.trim() ? job.title.trim() : defaultTestName;
         const filename = `custom_mocks/${testId}.json`;
         const paper = {
             test_id: testId,

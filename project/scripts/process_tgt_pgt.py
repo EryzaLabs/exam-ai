@@ -22,6 +22,7 @@ except ImportError:
 
 SOURCE_DIR = Path("/home/aloo/Downloads/TGT⁄PGT")
 DATA_DIR = Path("/home/aloo/exam-ai/project/data/tgt_pgt")
+TESTS_DIR = Path("/home/aloo/exam-ai/tests_json/tgt_pgt")
 
 # Map filenames to exam type, subject track, and medium
 PDF_CATALOG = [
@@ -58,7 +59,7 @@ PDF_CATALOG = [
         "exam": "pgt",
         "subject": "Economics",
         "title": "PGT Economics Solved Papers",
-        "medium": "bilingual"
+        "medium": "hindi"
     },
     {
         "filename": "MadXAbhi_DSSSB_PGT_GEOGRAPHY_Solved_Papers_by_MadXAbhi_Robot.pdf",
@@ -72,7 +73,7 @@ PDF_CATALOG = [
         "exam": "pgt",
         "subject": "History",
         "title": "PGT History Solved Papers",
-        "medium": "hindi"
+        "medium": "bilingual"
     },
     {
         "filename": "MadXAbhi_DSSSB_PGT_PHYSICS_Solved_Papers_ENGLISH_MEDIUM_by_MadXAbhi.pdf",
@@ -132,31 +133,76 @@ PDF_CATALOG = [
     }
 ]
 
+APS_SIGNATURES = [
+    "efkeâ", "keâe", "keâer", "ceW", "nw~", "nQ~", "heefj", "ØeLece", "JÙeeKÙee",
+    "efvecve", "FmeceW", "ßesCeer", "efJe", "kegâue", "veeR", "DeLe&", "he$e", "hejer#ee",
+    "ßes", "Øekeâej", "›eâce", "Deveg›eâce", "mener", "meeFb", "Glheefòe", "Meyo", "ngF&"
+]
+
 def is_aps_font_encoded(text: str) -> bool:
     """Checks if text contains signatures of APS-DV legacy font."""
-    signatures = ["efkeâ", "keâe", "keâer", "ceW", "nw~", "nQ~", "heefj", "ØeLece", "JÙeeKÙee", "efvecve", "FmeceW"]
-    return any(sig in text for sig in signatures)
+    if not text:
+        return False
+    return any(sig in text for sig in APS_SIGNATURES) or any(128 <= ord(c) <= 255 for c in text)
 
-def clean_text_field(text: str, medium: str) -> str:
+def clean_text_field(text: str, is_aps: bool = False) -> str:
     """Cleans text field, converts APS font if needed, or preserves English."""
     if not text:
         return ""
-    
     text = text.strip()
-    
-    # If English medium and contains slash with legacy font, extract English part
-    if medium == "english" and "/" in text:
-        parts = text.split("/")
-        if len(parts[0].strip()) > 3:
-            text = parts[0].strip()
-            
-    # Check if text is APS-DV encoded
-    if is_aps_font_encoded(text) or medium == "hindi":
+    if is_aps:
         text = convert_aps_to_unicode(text)
-        
-    # Remove redundant linebreaks inside sentence
+    # Remove redundant linebreaks & multiple spaces inside sentences
     text = re.sub(r"\s+", " ", text).strip()
     return text
+
+def parse_text_medium(text: str, medium: str):
+    """
+    Separates and cleans text into (english_text, hindi_unicode_text).
+    Guarantees English words are not corrupted by APS font conversion.
+    """
+    if not text:
+        return "", ""
+    text = text.strip()
+
+    if medium == "hindi":
+        # Pure Hindi track: convert entire text with authentic APS converter
+        hi = clean_text_field(text, is_aps=True)
+        return hi, hi
+
+    if "/" in text:
+        parts = text.split("/", 1)
+        en_part = clean_text_field(parts[0], is_aps=False)
+        hi_part = clean_text_field(parts[1], is_aps=is_aps_font_encoded(parts[1]))
+        if not hi_part:
+            hi_part = en_part
+        return en_part, hi_part
+
+    lines = [l.strip() for l in text.split("\n") if l.strip()]
+    if len(lines) == 1:
+        if medium == "english":
+            return clean_text_field(lines[0], is_aps=False), clean_text_field(lines[0], is_aps=False)
+        return clean_text_field(lines[0], is_aps=True), clean_text_field(lines[0], is_aps=True)
+
+    en_lines, hi_lines = [], []
+    switched = False
+    for l in lines:
+        if is_aps_font_encoded(l):
+            switched = True
+        if switched:
+            hi_lines.append(l)
+        else:
+            en_lines.append(l)
+
+    en_res = clean_text_field(" ".join(en_lines), is_aps=False)
+    hi_res = clean_text_field(" ".join(hi_lines), is_aps=True) if hi_lines else ""
+
+    if not en_res and hi_res:
+        en_res = hi_res
+    if not hi_res and en_res:
+        hi_res = en_res
+
+    return en_res, hi_res
 
 def parse_pdf_questions(doc: pymupdf.Document, book_meta: dict):
     """Parses questions, options, answer keys, and explanations from PDF."""
@@ -206,8 +252,8 @@ def parse_pdf_questions(doc: pymupdf.Document, book_meta: dict):
         expl_raw = rest[m_ans.end():].strip()
         before_ans = rest[:m_ans.start()]
         
-        # Extract options (a), (b), (c), (d)
-        opt_matches = list(re.finditer(r"\(([a-dA-D1-4])\)\s*([^\n\(]+)", before_ans))
+        # Extract options (a), (b), (c), (d) using DOTALL to capture multi-line options
+        opt_matches = list(re.finditer(r"\(([a-dA-D1-4])\)\s*(.*?)(?=\([a-dA-D1-4]\)|\Z)", before_ans, re.DOTALL))
         options_dict = {}
         q_text_raw = before_ans
         
@@ -217,34 +263,59 @@ def parse_pdf_questions(doc: pymupdf.Document, book_meta: dict):
                 opt_key = norm_map.get(om.group(1).upper(), om.group(1).upper())
                 options_dict[opt_key] = om.group(2).strip()
                 
-        # Clean question and explanation
-        clean_q = clean_text_field(q_text_raw, book_meta["medium"])
-        clean_expl = clean_text_field(expl_raw, book_meta["medium"])
+        # Parse question text
+        q_en, q_hi = parse_text_medium(q_text_raw, book_meta["medium"])
         
-        # Ensure 4 options exist
-        clean_opts = []
-        for opt_label in ["A", "B", "C", "D"]:
-            raw_val = options_dict.get(opt_label, f"Option {opt_label}")
-            clean_val = clean_text_field(raw_val, book_meta["medium"])
-            clean_opts.append({"prompt": clean_val, "value": opt_label})
-            
-        if not clean_q or len(clean_q) < 5:
+        if not q_en and not q_hi:
+            continue
+        if len(q_en or q_hi) < 5:
             continue
             
+        # Parse explanation
+        expl_en, expl_hi = parse_text_medium(expl_raw, book_meta["medium"])
+        if not expl_en and not expl_hi:
+            default_expl = f"Correct answer is Option ({correct_answer}). Verified from official answer key."
+            expl_en, expl_hi = default_expl, default_expl
+            
+        # Parse options
+        opts_en = []
+        opts_hi = []
+        clean_opts_legacy = []
+        
+        for idx, opt_label in enumerate(["A", "B", "C", "D"]):
+            raw_val = options_dict.get(opt_label, f"Option {opt_label}")
+            o_en, o_hi = parse_text_medium(raw_val, book_meta["medium"])
+            opts_en.append(o_en or o_hi)
+            opts_hi.append(o_hi or o_en)
+            clean_opts_legacy.append({"prompt": o_en or o_hi, "value": opt_label})
+            
+        q_id = f"{book_meta['exam']}_{book_meta['subject'].lower().replace(' ', '_')}_q{len(questions)+1}"
+        
         q_obj = {
-            "_id": f"{book_meta['exam']}_{book_meta['subject'].lower().replace(' ', '_')}_q{len(questions)+1}",
+            "id": q_id,
+            "_id": q_id,
             "type": "single",
             "posMarks": 1.0,
             "negMarks": 0.25,
+            "question_english": q_en,
+            "question_hindi": q_hi,
+            "options_english": opts_en,
+            "options_hindi": opts_hi,
+            "correct_answer": correct_answer.lower(),
+            "explanation_english": expl_en,
+            "explanation_hindi": expl_hi,
+            "topic": book_meta["subject"],
+            "subject": book_meta["subject"],
+            "language": "hi" if book_meta["medium"] == "hindi" else ("en" if book_meta["medium"] == "english" else "bilingual"),
             "en": {
-                "value": clean_q,
-                "options": clean_opts
+                "value": q_en or q_hi,
+                "options": clean_opts_legacy
             },
             "ai_generated": {
                 "english": {
-                    "question_id": f"{book_meta['exam']}_{book_meta['subject'].lower().replace(' ', '_')}_q{len(questions)+1}",
+                    "question_id": q_id,
                     "correct_answer": correct_answer,
-                    "explanation": clean_expl or f"Correct answer is Option ({correct_answer}). Verified from official answer key.",
+                    "explanation": expl_en or expl_hi,
                     "key_concepts": [book_meta["subject"], f"{book_meta['exam'].upper()} Series"]
                 }
             }
@@ -272,19 +343,27 @@ def create_mock_papers(questions: list, book_meta: dict, questions_per_paper: in
         
         paper_doc = {
             "_id": paper_id,
+            "test_id": paper_id,
+            "id": paper_id,
             "title": paper_title,
+            "test_name": paper_title,
             "course": f"{exam.upper()} Series",
             "subject": subject,
             "exam": exam,
+            "type": "full_mock",
             "price": 199,
             "originalPrice": 999,
-            "duration": max(60, len(paper_qs)),
+            "duration": 7200,
+            "duration_minutes": 120,
+            "total_marks": len(paper_qs) * 1.0,
+            "questions": paper_qs,
             "sections": [
                 {
                     "_id": f"sec_{paper_id}",
+                    "id": f"sec_{paper_id}",
                     "title": f"{subject} Section",
                     "qCount": len(paper_qs),
-                    "time": max(60, len(paper_qs)),
+                    "time": 7200,
                     "questions": paper_qs
                 }
             ]
@@ -299,6 +378,7 @@ def run():
     print("=" * 65)
     
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+    TESTS_DIR.mkdir(parents=True, exist_ok=True)
     
     series_catalog = {
         "tgt": {},
@@ -341,31 +421,34 @@ def run():
             
         for p in papers:
             filename = f"{p['_id']}.json"
-            out_path = DATA_DIR / filename
-            with open(out_path, "w", encoding="utf-8") as f:
-                json.dump(p, f, indent=2, ensure_ascii=False)
+            # Write to both project and server static directory
+            for target_dir in [DATA_DIR, TESTS_DIR]:
+                out_path = target_dir / filename
+                with open(out_path, "w", encoding="utf-8") as f:
+                    json.dump(p, f, indent=2, ensure_ascii=False)
                 
             series_catalog[exam_key][subject_key].append({
                 "id": p["_id"],
                 "title": p["title"],
                 "filename": filename,
-                "questionsCount": len(p["sections"][0]["questions"]),
+                "questionsCount": len(p["questions"]),
                 "price": 199,
                 "originalPrice": 999
             })
             
-        print(f"   ✅ Created {len(papers)} test papers in {DATA_DIR}")
+        print(f"   ✅ Created {len(papers)} test papers in {DATA_DIR} & {TESTS_DIR}")
 
-    # Write overall series catalog manifest
-    catalog_path = DATA_DIR / "series_catalog.json"
-    with open(catalog_path, "w", encoding="utf-8") as f:
-        json.dump(series_catalog, f, indent=2, ensure_ascii=False)
+    # Write overall series catalog manifest to both destinations
+    for target_dir in [DATA_DIR, TESTS_DIR]:
+        catalog_path = target_dir / "series_catalog.json"
+        with open(catalog_path, "w", encoding="utf-8") as f:
+            json.dump(series_catalog, f, indent=2, ensure_ascii=False)
         
     print("\n" + "=" * 65)
     print(f"🎉 Complete Ingestion Finished!")
     print(f"📊 Total Questions Extracted Across All Books: {total_extracted_all:,}")
     print(f"📑 Total Test Sets Generated: {total_papers_all}")
-    print(f"📋 Master Catalog Saved: {catalog_path}")
+    print(f"📋 Master Catalog Saved to DATA_DIR & TESTS_DIR")
     print("=" * 65)
 
 if __name__ == "__main__":

@@ -335,7 +335,7 @@ class SSCCGLService {
       else if (savedTarget === 'upsc') examPrefix = 'UPSC Principal';
     } catch {}
 
-    let testName = paper.test_name || `${examPrefix} Mock Test`;
+    let testName = paper.test_name || paper.title || `${examPrefix} Mock Test`;
     const effectiveFilename = filename || (paper as any).filename || '';
     if (effectiveFilename.includes('full_mocks/')) {
       const match = effectiveFilename.match(/mock_test_(\d+)\.json/);
@@ -354,10 +354,15 @@ class SSCCGLService {
         testName = `${displayTopic} • Practice Set ${partNum}`;
       }
     }
-    const testId = paper.test_id || paper.id || 'unknown_id';
+    const testId = paper.test_id || paper.id || paper._id || 'unknown_id';
     
-    // New schema doesn't have sections, just a flat array of questions
-    const rawQuestions = paper.questions || [];
+    // Support both flat questions array and sections array
+    let rawQuestions: any[] = [];
+    if (Array.isArray(paper.questions) && paper.questions.length > 0) {
+      rawQuestions = paper.questions;
+    } else if (Array.isArray(paper.sections) && paper.sections.length > 0) {
+      rawQuestions = paper.sections.flatMap((s: any) => s.questions || []);
+    }
     
     const parsedQuestions = rawQuestions.map((q: any) => this.parseQuestion(q, 'main'));
 
@@ -374,7 +379,7 @@ class SSCCGLService {
 
     const sectionTitle = isTopicWise 
       ? resolvedTopic.topic 
-      : (paper.type === 'full_mock' || effectiveFilename.includes('full_mock') ? 'Full Mock CBT' : 'General');
+      : (paper.type === 'full_mock' || effectiveFilename.includes('full_mock') ? 'Full Mock CBT' : (paper.subject || 'General'));
 
     const section = {
       id: 'main',
@@ -400,7 +405,7 @@ class SSCCGLService {
     const mockTest: ParsedMockTest = {
       id: testId,
       title: testName,
-      examType: 'UPSC Principal',
+      examType: paper.exam ? `${paper.exam.toUpperCase()} Series` : 'UPSC Principal',
       duration: finalDuration,
       totalQuestions,
       totalMarks: paper.total_marks || defaultMarks,
@@ -473,40 +478,98 @@ class SSCCGLService {
     question: any,
     sectionId: string
   ): ParsedQuestion {
-    const optionsEn = question.options_english || [];
-    const options = optionsEn.map((opt: string) => this.processContent(opt));
-    
-    let correctAnswerIndex = 0;
-    if (typeof question.correct_answer === 'string') {
-        const labels = ['a', 'b', 'c', 'd'];
-        correctAnswerIndex = labels.indexOf(question.correct_answer.toLowerCase());
-        if (correctAnswerIndex === -1) correctAnswerIndex = 0;
-    } else if (typeof question.correct_answer === 'number') {
-        correctAnswerIndex = question.correct_answer;
+    // 1. Extract raw options (handles both UPSC array of strings and TGT/PGT object options)
+    let rawOptionsEn: string[] = [];
+    if (Array.isArray(question.options_english)) {
+      rawOptionsEn = question.options_english;
+    } else if (question.en && Array.isArray(question.en.options)) {
+      rawOptionsEn = question.en.options.map((opt: any) => typeof opt === 'string' ? opt : (opt.prompt || opt.value || ''));
+    } else if (Array.isArray(question.options)) {
+      rawOptionsEn = question.options.map((opt: any) => typeof opt === 'string' ? opt : (opt.prompt || opt.text || opt.value || ''));
     }
 
-    const correctAnswerText = options[correctAnswerIndex] || '';
+    let rawOptionsHi: string[] = [];
+    if (Array.isArray(question.options_hindi)) {
+      rawOptionsHi = question.options_hindi;
+    } else if (question.hi && Array.isArray(question.hi.options)) {
+      rawOptionsHi = question.hi.options.map((opt: any) => typeof opt === 'string' ? opt : (opt.prompt || opt.value || ''));
+    }
+
+    const options = rawOptionsEn.map((opt: string) => this.processContent(opt));
+    const optionsHindi = rawOptionsHi.map((opt: string) => this.processContent(opt));
+
+    // 2. Extract correct answer index
+    let rawCorrect = question.correct_answer;
+    if (rawCorrect === undefined && question.ai_generated?.english?.correct_answer) {
+      rawCorrect = question.ai_generated.english.correct_answer;
+    }
+    if (rawCorrect === undefined && question.correct_option) {
+      rawCorrect = question.correct_option;
+    }
+
+    let correctAnswerIndex = 0;
+    if (typeof rawCorrect === 'string') {
+      const labels = ['a', 'b', 'c', 'd'];
+      correctAnswerIndex = labels.indexOf(rawCorrect.toLowerCase().trim());
+      if (correctAnswerIndex === -1) {
+        const num = parseInt(rawCorrect, 10);
+        if (!isNaN(num) && num >= 1 && num <= 4) correctAnswerIndex = num - 1;
+        else correctAnswerIndex = 0;
+      }
+    } else if (typeof rawCorrect === 'number') {
+      correctAnswerIndex = rawCorrect >= 1 && rawCorrect <= 4 ? rawCorrect - 1 : rawCorrect;
+    }
+
+    const correctAnswerText = options[correctAnswerIndex] || (optionsHindi && optionsHindi[correctAnswerIndex]) || '';
+
+    // 3. Extract question text
+    let qTextEn = question.question_english || '';
+    if (!qTextEn && question.en?.value) qTextEn = question.en.value;
+    if (!qTextEn && typeof question.question === 'string') qTextEn = question.question;
+
+    let qTextHi = question.question_hindi || '';
+    if (!qTextHi && question.hi?.value) qTextHi = question.hi.value;
+
+    // For single-language Hindi questions, ensure text is available in both slots
+    if (!qTextEn && qTextHi) qTextEn = qTextHi;
+    if (qTextEn && !qTextHi && /[\u0900-\u097F]/.test(qTextEn)) {
+      qTextHi = qTextEn;
+    }
+
+    // 4. Extract explanations
+    let explEn = question.explanation_english;
+    if (!explEn && question.ai_generated?.english?.explanation) explEn = question.ai_generated.english.explanation;
+    if (!explEn && typeof question.explanation === 'string') explEn = question.explanation;
+
+    let explHi = question.explanation_hindi;
+    if (!explHi && question.ai_generated?.hindi?.explanation) explHi = question.ai_generated.hindi.explanation;
+
+    // 5. Extract key concepts
+    let keyConcepts = question.key_facts || [];
+    if (!keyConcepts.length && question.ai_generated?.english?.key_concepts) {
+      keyConcepts = question.ai_generated.english.key_concepts;
+    }
 
     return {
-      id: question.id || String(Math.random()),
+      id: question._id || question.id || String(Math.random()),
       sectionId,
-      questionText: this.processContent(question.question_english || ''),
+      questionText: this.processContent(qTextEn),
       options,
-      questionTextHindi: this.processContent(question.question_hindi || ''),
-      optionsHindi: (question.options_hindi || []).map((opt: string) => this.processContent(opt)),
+      questionTextHindi: this.processContent(qTextHi),
+      optionsHindi,
       correctAnswerIndex,
       correctAnswerText,
       explanation: {
-        english: this.processContent(question.explanation_english || 'No explanation available'),
-        hindi: this.processContent(question.explanation_hindi || ''),
+        english: this.processContent(explEn || 'No explanation available'),
+        hindi: this.processContent(explHi || ''),
       },
-      keyConcepts: question.key_facts || [],
+      keyConcepts,
       marks: {
-        positive: 2.5,
-        negative: 0.833, // 33.33% of 2.5 marks
+        positive: Number(question.posMarks) || 2.5,
+        negative: Number(question.negMarks) || 0.833, // 33.33% of pos marks
       },
       metadata: {
-        language: 'en',
+        language: question.language || 'en',
         topic: question.topic || '',
         subject: question.subject || '',
       },

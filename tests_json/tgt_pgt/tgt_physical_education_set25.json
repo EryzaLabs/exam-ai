@@ -1,29 +1,177 @@
 {
   "_id": "tgt_physical_education_set25",
+  "test_id": "tgt_physical_education_set25",
+  "id": "tgt_physical_education_set25",
   "title": "TGT Physical Education • Mock Test Set 25 (2 MCQs)",
+  "test_name": "TGT Physical Education • Mock Test Set 25 (2 MCQs)",
   "course": "TGT Series",
   "subject": "Physical Education",
   "exam": "tgt",
+  "type": "full_mock",
   "price": 199,
   "originalPrice": 999,
-  "duration": 60,
+  "duration": 7200,
+  "duration_minutes": 120,
+  "total_marks": 2.0,
+  "questions": [
+    {
+      "id": "tgt_physical_education_q2401",
+      "_id": "tgt_physical_education_q2401",
+      "type": "single",
+      "posMarks": 1.0,
+      "negMarks": 0.25,
+      "question_english": "नीचे दिये गये कथन",
+      "question_hindi": "नीचे दिये गये कथन",
+      "options_english": [
+        "गलत है तथा (R) सही हैं। (ळउण् र्‍Eऊ झ्aज्ी घ्घ् अम्. २००८)",
+        "",
+        "",
+        ""
+      ],
+      "options_hindi": [
+        "गलत है तथा (R) सही हैं। (ळउण् र्‍Eऊ झ्aज्ी घ्घ् अम्. २००८)",
+        "",
+        "",
+        ""
+      ],
+      "correct_answer": "a",
+      "explanation_english": "कथन (A) एवं तर्क (R) दोनों सही हैं।",
+      "explanation_hindi": "कथन (A) एवं तर्क (R) दोनों सही हैं।",
+      "topic": "Physical Education",
+      "subject": "Physical Education",
+      "language": "hi",
+      "en": {
+        "value": "नीचे दिये गये कथन",
+        "options": [
+          {
+            "prompt": "गलत है तथा (R) सही हैं। (ळउण् र्‍Eऊ झ्aज्ी घ्घ् अम्. २००८)",
+            "value": "A"
+          },
+          {
+            "prompt": "",
+            "value": "B"
+          },
+          {
+            "prompt": "",
+            "value": "C"
+          },
+          {
+            "prompt": "",
+            "value": "D"
+          }
+        ]
+      },
+      "ai_generated": {
+        "english": {
+          "question_id": "tgt_physical_education_q2401",
+          "correct_answer": "A",
+          "explanation": "कथन (A) एवं तर्क (R) दोनों सही हैं।",
+          "key_concepts": [
+            "Physical Education",
+            "TGT Series"
+          ]
+        }
+      }
+    },
+    {
+      "id": "tgt_physical_education_q2402",
+      "_id": "tgt_physical_education_q2402",
+      "type": "single",
+      "posMarks": 1.0,
+      "negMarks": 0.25,
+      "question_english": "निम्नलिखित खिलाड़ियों को उनसे संबंधित खेलों से मिलाइये : सूची-घ् सूची-घ्घ्",
+      "question_hindi": "निम्नलिखित खिलाड़ियों को उनसे संबंधित खेलों से मिलाइये : सूची-घ् सूची-घ्घ्",
+      "options_english": [
+        "(ग्ग्ग्) (ग्न्) (न्) (ग्ग्)",
+        "(ग्ग्ग्) (ग्ग्) (ग्न्) (ग्)",
+        "(ग्ग्ग्) (ग्न्) (न्) (ग्)",
+        "(ग्ग्) (ग्न्) (ग्ग्) (ग्)"
+      ],
+      "options_hindi": [
+        "(ग्ग्ग्) (ग्न्) (न्) (ग्ग्)",
+        "(ग्ग्ग्) (ग्ग्) (ग्न्) (ग्)",
+        "(ग्ग्ग्) (ग्न्) (न्) (ग्)",
+        "(ग्ग्) (ग्न्) (ग्ग्) (ग्)"
+      ],
+      "correct_answer": "c",
+      "explanation_english": "Correct answer is Option (C). Verified from official answer key.",
+      "explanation_hindi": "Correct answer is Option (C). Verified from official answer key.",
+      "topic": "Physical Education",
+      "subject": "Physical Education",
+      "language": "hi",
+      "en": {
+        "value": "निम्नलिखित खिलाड़ियों को उनसे संबंधित खेलों से मिलाइये : सूची-घ् सूची-घ्घ्",
+        "options": [
+          {
+            "prompt": "(ग्ग्ग्) (ग्न्) (न्) (ग्ग्)",
+            "value": "A"
+          },
+          {
+            "prompt": "(ग्ग्ग्) (ग्ग्) (ग्न्) (ग्)",
+            "value": "B"
+          },
+          {
+            "prompt": "(ग्ग्ग्) (ग्न्) (न्) (ग्)",
+            "value": "C"
+          },
+          {
+            "prompt": "(ग्ग्) (ग्न्) (ग्ग्) (ग्)",
+            "value": "D"
+          }
+        ]
+      },
+      "ai_generated": {
+        "english": {
+          "question_id": "tgt_physical_education_q2402",
+          "correct_answer": "C",
+          "explanation": "Correct answer is Option (C). Verified from official answer key.",
+          "key_concepts": [
+            "Physical Education",
+            "TGT Series"
+          ]
+        }
+      }
+    }
+  ],
   "sections": [
     {
       "_id": "sec_tgt_physical_education_set25",
+      "id": "sec_tgt_physical_education_set25",
       "title": "Physical Education Section",
       "qCount": 2,
-      "time": 60,
+      "time": 7200,
       "questions": [
         {
+          "id": "tgt_physical_education_q2401",
           "_id": "tgt_physical_education_q2401",
           "type": "single",
           "posMarks": 1.0,
           "negMarks": 0.25,
+          "question_english": "नीचे दिये गये कथन",
+          "question_hindi": "नीचे दिये गये कथन",
+          "options_english": [
+            "गलत है तथा (R) सही हैं। (ळउण् र्‍Eऊ झ्aज्ी घ्घ् अम्. २००८)",
+            "",
+            "",
+            ""
+          ],
+          "options_hindi": [
+            "गलत है तथा (R) सही हैं। (ळउण् र्‍Eऊ झ्aज्ी घ्घ् अम्. २००८)",
+            "",
+            "",
+            ""
+          ],
+          "correct_answer": "a",
+          "explanation_english": "कथन (A) एवं तर्क (R) दोनों सही हैं।",
+          "explanation_hindi": "कथन (A) एवं तर्क (R) दोनों सही हैं।",
+          "topic": "Physical Education",
+          "subject": "Physical Education",
+          "language": "hi",
           "en": {
             "value": "नीचे दिये गये कथन",
             "options": [
               {
-                "prompt": "गलत है तथा",
+                "prompt": "गलत है तथा (R) सही हैं। (ळउण् र्‍Eऊ झ्aज्ी घ्घ् अम्. २००८)",
                 "value": "A"
               },
               {
@@ -53,27 +201,48 @@
           }
         },
         {
+          "id": "tgt_physical_education_q2402",
           "_id": "tgt_physical_education_q2402",
           "type": "single",
           "posMarks": 1.0,
           "negMarks": 0.25,
+          "question_english": "निम्नलिखित खिलाड़ियों को उनसे संबंधित खेलों से मिलाइये : सूची-घ् सूची-घ्घ्",
+          "question_hindi": "निम्नलिखित खिलाड़ियों को उनसे संबंधित खेलों से मिलाइये : सूची-घ् सूची-घ्घ्",
+          "options_english": [
+            "(ग्ग्ग्) (ग्न्) (न्) (ग्ग्)",
+            "(ग्ग्ग्) (ग्ग्) (ग्न्) (ग्)",
+            "(ग्ग्ग्) (ग्न्) (न्) (ग्)",
+            "(ग्ग्) (ग्न्) (ग्ग्) (ग्)"
+          ],
+          "options_hindi": [
+            "(ग्ग्ग्) (ग्न्) (न्) (ग्ग्)",
+            "(ग्ग्ग्) (ग्ग्) (ग्न्) (ग्)",
+            "(ग्ग्ग्) (ग्न्) (न्) (ग्)",
+            "(ग्ग्) (ग्न्) (ग्ग्) (ग्)"
+          ],
+          "correct_answer": "c",
+          "explanation_english": "Correct answer is Option (C). Verified from official answer key.",
+          "explanation_hindi": "Correct answer is Option (C). Verified from official answer key.",
+          "topic": "Physical Education",
+          "subject": "Physical Education",
+          "language": "hi",
           "en": {
             "value": "निम्नलिखित खिलाड़ियों को उनसे संबंधित खेलों से मिलाइये : सूची-घ् सूची-घ्घ्",
             "options": [
               {
-                "prompt": "",
+                "prompt": "(ग्ग्ग्) (ग्न्) (न्) (ग्ग्)",
                 "value": "A"
               },
               {
-                "prompt": "",
+                "prompt": "(ग्ग्ग्) (ग्ग्) (ग्न्) (ग्)",
                 "value": "B"
               },
               {
-                "prompt": "",
+                "prompt": "(ग्ग्ग्) (ग्न्) (न्) (ग्)",
                 "value": "C"
               },
               {
-                "prompt": "",
+                "prompt": "(ग्ग्) (ग्न्) (ग्ग्) (ग्)",
                 "value": "D"
               }
             ]

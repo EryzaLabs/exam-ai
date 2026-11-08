@@ -8,6 +8,7 @@ exports.resolvePlanAndPeriod = resolvePlanAndPeriod;
 const express_1 = require("express");
 const crypto_1 = __importDefault(require("crypto"));
 const firebase_admin_1 = require("../firebase-admin");
+const ai_tests_1 = require("./ai-tests");
 const router = (0, express_1.Router)();
 // Cashfree Gateway Configuration
 const getCashfreeConfig = () => {
@@ -32,6 +33,36 @@ const getCashfreeConfig = () => {
     };
 };
 exports.SUBSCRIPTION_PLANS = {
+    ai_test: {
+        id: 'ai_test',
+        name: 'AI Custom Mock Test',
+        tagline: '1 Instant AI Custom Mock Test',
+        price: 9,
+        originalPrice: 29,
+        durationLabel: '1 Test',
+        periodDays: 1,
+        badge: 'Extra AI Test',
+    },
+    'tgt-series': {
+        id: 'tgt-series',
+        name: 'TGT Subject Pass',
+        tagline: 'Complete TGT Subject Series Access',
+        price: 199,
+        originalPrice: 999,
+        durationLabel: 'Lifetime',
+        periodDays: 36500,
+        badge: 'TGT Special',
+    },
+    'pgt-series': {
+        id: 'pgt-series',
+        name: 'PGT Subject Pass',
+        tagline: 'Complete PGT Subject Series Access',
+        price: 199,
+        originalPrice: 999,
+        durationLabel: 'Lifetime',
+        periodDays: 36500,
+        badge: 'PGT Special',
+    },
     daily: {
         id: 'daily',
         name: 'Daily Pass',
@@ -326,6 +357,9 @@ router.post('/verify', async (req, res) => {
                         planId: plan.id,
                         planName: plan.name,
                     });
+                    if (plan.id === 'ai_test' || Number(plan.price) === 9) {
+                        (0, ai_tests_1.addPaidAiCredit)(uid, 1);
+                    }
                 }
                 return res.json({
                     success: true,
@@ -358,6 +392,9 @@ router.post('/verify', async (req, res) => {
                     planId: plan.id,
                     planName: plan.name,
                 });
+                if (plan.id === 'ai_test' || Number(data.order_amount) === 9) {
+                    (0, ai_tests_1.addPaidAiCredit)(targetUid, 1);
+                }
             }
         }
         res.json({
