@@ -896,7 +896,7 @@ export const INITIAL_TGT_PGT_PAPERS: ServerPaper[] = [
     "gender": "Female",
     "tier": "CBT Tier-I (Official Paper)",
     "isPYQ": true,
-    "totalQuestions": 99,
+    "totalQuestions": 192,
     "price": 199,
     "originalPrice": 999
   },
@@ -915,7 +915,7 @@ export const INITIAL_TGT_PGT_PAPERS: ServerPaper[] = [
     "gender": "Male",
     "tier": "CBT Tier-I (Official Paper)",
     "isPYQ": true,
-    "totalQuestions": 99,
+    "totalQuestions": 192,
     "price": 199,
     "originalPrice": 999
   },
