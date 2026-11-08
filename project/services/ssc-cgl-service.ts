@@ -207,14 +207,30 @@ class SSCCGLService {
    */
   async fetchPaper(filename: string): Promise<ParsedMockTest> {
     const cleanFilename = filename.startsWith('/') ? filename.slice(1) : filename;
-    try {
-      const response = await fetch(`${API_URL}/papers/${cleanFilename}`);
-      if (response.ok) {
-        const paperData = await response.json();
-        return this.loadPaper(paperData, undefined, cleanFilename);
+    
+    // 1. Try remote API endpoints
+    const endpoints = [
+      `${API_URL}/papers/${cleanFilename}`,
+      `${API_URL}/papers/find/${encodeURIComponent(cleanFilename)}`,
+    ];
+
+    if (Platform.OS === 'web') {
+      endpoints.push(`/${cleanFilename}`);
+      endpoints.push(`/data/${cleanFilename}`);
+    }
+
+    for (const url of endpoints) {
+      try {
+        const response = await fetch(url);
+        if (response.ok) {
+          const paperData = await response.json();
+          if (paperData && (Array.isArray(paperData.questions) || Array.isArray(paperData.sections))) {
+            return this.loadPaper(paperData, undefined, cleanFilename);
+          }
+        }
+      } catch (e) {
+        // continue to next endpoint
       }
-    } catch (e) {
-      console.warn('Network issue fetching paper from API, attempting local fallback:', e);
     }
 
     // Fallback for TGT/PGT papers

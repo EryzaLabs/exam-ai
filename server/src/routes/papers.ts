@@ -280,6 +280,7 @@ function loadAllPapersList(): any[] {
         gender: fileData.gender,
         tier: fileData.tier,
         isPYQ: fileData.isPYQ ?? true,
+        totalQuestions: fileData.totalQuestions || (Array.isArray(fileData.questions) ? fileData.questions.length : 200),
       };
     }
 

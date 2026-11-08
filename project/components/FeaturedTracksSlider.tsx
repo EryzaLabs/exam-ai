@@ -57,11 +57,11 @@ const FEATURED_ITEMS: FeaturedTrackItem[] = [
   {
     id: 'tgt-series',
     examTarget: 'tgt',
-    badge: '🎯 TGT SERIES • 132 PAPERS',
-    title: 'TGT Official Question Papers Series',
-    subtitle: '12,867 questions across 132 official question papers: Hindi, Maths, Natural Science, Social Science, English, PE, Drawing',
-    metrics: '132 Official Papers • 12,867 Questions',
-    perks: ['100 Qs / Paper', '7 Subject Tracks', 'Only ₹199 / Subject'],
+    badge: '🎯 TGT SERIES • 200 QUESTIONS CBT',
+    title: 'DSSSB TGT Official Exam Papers',
+    subtitle: 'Complete 200 Questions CBT Papers (Section A: 100 Qs General + Section B: 100 Qs Subject) across English, Hindi, Maths, Natural Science, Social Studies, Special Education & CS',
+    metrics: '200 Qs / 200 Marks • 2h CBT',
+    perks: ['200 Qs Official Paper', '10-11 Exam Sections', 'Official Verified Keys'],
     gradient: ['#7C2D12', '#C2410C', '#EA580C'],
     accentColor: '#FDBA74',
     icon: BookOpen,
@@ -70,11 +70,11 @@ const FEATURED_ITEMS: FeaturedTrackItem[] = [
   {
     id: 'pgt-series',
     examTarget: 'pgt',
-    badge: '🎓 PGT SERIES • 101 PAPERS',
-    title: 'PGT Official Question Papers Series',
-    subtitle: '9,645 questions across 101 official question papers: Commerce, Physics, Chemistry, Biology, History, Economics, Geography, PolSci',
-    metrics: '101 Official Papers • 9,645 Questions',
-    perks: ['100 Qs / Paper', '8 Subject Tracks', 'Only ₹199 / Subject'],
+    badge: '🎓 PGT SERIES • 300 QUESTIONS CBT',
+    title: 'DSSSB PGT Official Exam Papers',
+    subtitle: 'Complete 300 Questions CBT Papers (Section A: 100 Qs General + Section B: 200 Qs Subject) across Commerce, Economics, History, PolSci, Geography, Sociology, Physics, Biology, Fine Arts & Music',
+    metrics: '300 Qs / 300 Marks • 3h CBT',
+    perks: ['300 Qs Official Paper', '15 Exam Sections', 'Official Verified Keys'],
     gradient: ['#581C87', '#7E22CE', '#9333EA'],
     accentColor: '#D8B4FE',
     icon: Award,
@@ -113,7 +113,7 @@ interface FeaturedTracksSliderProps {
 
 export default function FeaturedTracksSlider({ compact = false }: FeaturedTracksSliderProps) {
   const { width } = useWindowDimensions();
-  const { setExamMode } = useExam();
+  const { examMode, setExamMode } = useExam();
   const { isDark } = useTheme();
   const { isSubscribed, requireAuth } = useAuth();
 
@@ -159,6 +159,7 @@ export default function FeaturedTracksSlider({ compact = false }: FeaturedTracks
       >
         {FEATURED_ITEMS.map((item) => {
           const IconComp = item.icon;
+          const isActive = item.examTarget === examMode;
 
           return (
             <TouchableOpacity
@@ -167,6 +168,7 @@ export default function FeaturedTracksSlider({ compact = false }: FeaturedTracks
                 styles.card,
                 { width: cardWidth },
                 compact && styles.cardCompact,
+                isActive && { borderColor: '#FDE047', borderWidth: 2, transform: [{ scale: 1.01 }] }
               ]}
               onPress={() => handleSelect(item)}
               activeOpacity={0.92}
@@ -179,9 +181,11 @@ export default function FeaturedTracksSlider({ compact = false }: FeaturedTracks
               >
                 {/* Header Row: Badge & Metric */}
                 <View style={styles.cardHeaderRow}>
-                  <View style={styles.badgeContainer}>
-                    <IconComp size={13} color="#FFFFFF" />
-                    <Text style={styles.badgeText}>{item.badge}</Text>
+                  <View style={[styles.badgeContainer, isActive && { backgroundColor: 'rgba(253, 224, 71, 0.25)', borderColor: '#FDE047', borderWidth: 1 }]}>
+                    <IconComp size={13} color={isActive ? '#FEF08A' : '#FFFFFF'} />
+                    <Text style={[styles.badgeText, isActive && { color: '#FEF08A', fontWeight: '800' }]}>
+                      {isActive ? `★ ACTIVE • ${item.badge}` : item.badge}
+                    </Text>
                   </View>
                   <View style={styles.metricPill}>
                     <Text style={styles.metricPillText}>{item.metrics}</Text>

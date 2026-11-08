@@ -87,3 +87,23 @@ if (fs.existsSync(distIndexPath)) {
 } else {
   console.log('⚠️ dist/index.html not found, skipping post-build injection');
 }
+
+// Copy TGT/PGT and mock papers into dist/ for direct static web serving
+const dataTgtPgtDir = path.resolve(__dirname, '..', 'data', 'tgt_pgt');
+if (fs.existsSync(dataTgtPgtDir) && fs.existsSync(distDir)) {
+  try {
+    const distTgtPgt = path.resolve(distDir, 'tgt_pgt');
+    const distDataTgtPgt = path.resolve(distDir, 'data', 'tgt_pgt');
+    fs.mkdirSync(distTgtPgt, { recursive: true });
+    fs.mkdirSync(distDataTgtPgt, { recursive: true });
+
+    const files = fs.readdirSync(dataTgtPgtDir).filter(f => f.endsWith('.json'));
+    for (const f of files) {
+      fs.copyFileSync(path.join(dataTgtPgtDir, f), path.join(distTgtPgt, f));
+      fs.copyFileSync(path.join(dataTgtPgtDir, f), path.join(distDataTgtPgt, f));
+    }
+    console.log(`✅ Copied ${files.length} official TGT/PGT papers to dist/tgt_pgt/ and dist/data/tgt_pgt/`);
+  } catch (err) {
+    console.warn('⚠️ Warning copying papers to dist:', err.message);
+  }
+}

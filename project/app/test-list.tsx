@@ -55,6 +55,7 @@ import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/context/theme-context';
 import { useExam, ExamTarget } from '@/context/exam-context';
 import ExamSelector from '@/components/ExamSelector';
+import FeaturedTracksSlider from '@/components/FeaturedTracksSlider';
 
 interface ServerPaper {
   id: string; // filename or identifier
@@ -438,6 +439,7 @@ export const formatDisplayTitle = (title: string, filename: string, examMode: Ex
     .replace(/\s*•\s*Mock Test Set\s*(\d+)\s*\([^)]*\)/gi, ' • Official Paper $1')
     .replace(/\s+Solved Set/gi, ' Official Paper')
     .replace(/\s+Solved Paper/gi, ' Official Paper')
+    .replace(/\s*Solved MCQs/gi, ' Official Questions')
     .replace(/\s*\(\s*\d+\s*MCQs?\s*\)/gi, '')
     .trim();
 };
@@ -909,7 +911,13 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
     if (examMode === 'tgt' || examMode === 'pgt') {
       if (selectedSubject !== 'all') {
-        baseList = baseList.filter(t => (t.subject || '').toLowerCase() === selectedSubject.toLowerCase());
+        const subjectFiltered = baseList.filter(t => (t.subject || '').toLowerCase() === selectedSubject.toLowerCase());
+        if (subjectFiltered.length > 0) {
+          baseList = subjectFiltered;
+        } else {
+          // If no tests match this specific subject track, fallback to all subjects
+          baseList = baseList;
+        }
       }
     }
 
@@ -1216,153 +1224,13 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     });
   };
 
-  // Hero Section with Category Navigation Cards
+  // Hero Section with Category Navigation Cards / Slider
   const renderHeroCategoryCards = () => {
-    if (examMode === 'tgt' || examMode === 'pgt') {
-      const isTgt = examMode === 'tgt';
-      return (
-        <View style={styles.heroSection}>
-          <View style={[styles.seriesHeroBanner, { borderColor: isTgt ? '#F97316' : '#A855F7' }]}>
-            <LinearGradient
-              colors={isTgt ? ['#7C2D12', '#C2410C', '#EA580C'] : ['#581C87', '#7E22CE', '#9333EA']}
-              start={{ x: 0, y: 0 }}
-              end={{ x: 1, y: 1 }}
-              style={styles.seriesHeroGradient}
-            >
-              <View style={styles.seriesHeroBadgeRow}>
-                <Sparkles size={13} color="#FDE047" />
-                <Text style={[styles.seriesHeroBadge, { color: '#FEF08A' }]}>
-                  {isTgt ? '🎯 TGT SERIES • 132 OFFICIAL PAPERS' : '🎓 PGT SERIES • 101 OFFICIAL PAPERS'}
-                </Text>
-              </View>
-              <Text style={styles.seriesHeroTitle}>
-                {isTgt ? 'TGT Official Previous Year Papers' : 'PGT Official Previous Year Papers'}
-              </Text>
-              <Text style={styles.seriesHeroSubtitle}>
-                {isTgt
-                  ? '132 official exam question papers (12,867 questions) with authentic shift & date metadata and bilingual explanations.'
-                  : '101 official exam question papers (9,645 questions) with authentic shift & date metadata and bilingual explanations.'}
-              </Text>
-              <View style={styles.seriesHeroPerksRow}>
-                <View style={styles.seriesHeroPerk}>
-                  <HelpCircle size={13} color="#fff" />
-                  <Text style={styles.seriesHeroPerkText}>100 Questions / Paper</Text>
-                </View>
-                <View style={styles.seriesHeroPerk}>
-                  <Clock size={13} color="#fff" />
-                  <Text style={styles.seriesHeroPerkText}>2 Hours CBT</Text>
-                </View>
-                <View style={styles.seriesHeroPerk}>
-                  <BookOpen size={13} color="#fff" />
-                  <Text style={styles.seriesHeroPerkText}>
-                    {isTgt ? '7 Subject Tracks' : '8 Subject Tracks'}
-                  </Text>
-                </View>
-                <View style={styles.seriesHeroPerk}>
-                  <Award size={13} color="#fff" />
-                  <Text style={styles.seriesHeroPerkText}>₹199 / Subject</Text>
-                </View>
-              </View>
-            </LinearGradient>
-          </View>
-
-          {/* Custom Test Prompt Banner */}
-          <TouchableOpacity
-            style={[styles.customBanner, { backgroundColor: isDark ? '#1E293B' : '#FFFFFF', borderColor: isDark ? '#3B82F6' : '#93C5FD' }]}
-            onPress={() => router.push(isSubscribed ? '/custom-test' : '/premium')}
-            activeOpacity={0.85}
-          >
-            <LinearGradient
-              colors={isDark ? ['#1E1B4B', '#1E293B'] : ['#EEF2FF', '#F8FAFC']}
-              start={{ x: 0, y: 0 }}
-              end={{ x: 1, y: 0 }}
-              style={styles.customBannerGradient}
-            >
-              <View style={styles.customBannerLeft}>
-                <View style={styles.customBannerIcon}>
-                  <Zap size={20} color="#6366F1" />
-                </View>
-                <View>
-                  <View style={styles.customBannerTagRow}>
-                    <Text style={styles.customBannerTag}>AI BUILDER</Text>
-                    <Text style={styles.customBannerPremium}>👑 PREMIUM</Text>
-                  </View>
-                  <Text style={[styles.customBannerTitle, { color: colors.textPrimary }]}>Build a Custom Test</Text>
-                  <Text style={[styles.customBannerSub, { color: colors.textSecondary }]}>Pick any mix of topics, question count (10-120), and timer.</Text>
-                </View>
-              </View>
-              <ChevronRight size={20} color={colors.accent} />
-            </LinearGradient>
-          </TouchableOpacity>
-        </View>
-      );
-    }
-
     return (
       <View style={styles.heroSection}>
-        <View style={styles.heroGrid}>
-          {/* Full Mock Card */}
-          <TouchableOpacity
-            style={[
-              styles.heroCard,
-              { backgroundColor: colors.surface, borderColor: category === 'full' ? '#3B82F6' : colors.border },
-              category === 'full' && (isDark ? styles.heroCardActiveDark : styles.heroCardActiveLight),
-            ]}
-            onPress={() => {
-              setCategory('full');
-              setSelectedTopic(null);
-            }}
-            activeOpacity={0.8}
-          >
-            <LinearGradient
-              colors={category === 'full' ? ['#2563EB', '#1D4ED8'] : isDark ? ['#1E3A5F', '#172554'] : ['#EFF6FF', '#DBEAFE']}
-              style={styles.heroCardIconBox}
-            >
-              <Clock size={22} color={category === 'full' ? '#fff' : '#2563EB'} />
-            </LinearGradient>
-            <View style={styles.heroCardTextBox}>
-              <View style={styles.heroCardTitleRow}>
-                <Text style={[styles.heroCardTitle, { color: colors.textPrimary }]}>Full Mocks</Text>
-                <View style={[styles.heroCardBadge, { backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF' }]}>
-                  <Text style={[styles.heroCardBadgeText, { color: '#3B82F6' }]}>{fullMockCount}</Text>
-                </View>
-              </View>
-              <Text style={[styles.heroCardSub, { color: colors.textSecondary }]}>
-                120 Qs • 300 Marks • 2h CBT
-              </Text>
-            </View>
-          </TouchableOpacity>
-
-          {/* Topic-Wise Card */}
-          <TouchableOpacity
-            style={[
-              styles.heroCard,
-              { backgroundColor: colors.surface, borderColor: category === 'topic' ? '#10B981' : colors.border },
-              category === 'topic' && (isDark ? styles.heroCardActiveDarkEmerald : styles.heroCardActiveLightEmerald),
-            ]}
-            onPress={() => {
-              setCategory('topic');
-            }}
-            activeOpacity={0.8}
-          >
-            <LinearGradient
-              colors={category === 'topic' ? ['#059669', '#047857'] : isDark ? ['#064E3B', '#022C22'] : ['#ECFDF5', '#D1FAE5']}
-              style={styles.heroCardIconBox}
-            >
-              <BookOpen size={22} color={category === 'topic' ? '#fff' : '#059669'} />
-            </LinearGradient>
-            <View style={styles.heroCardTextBox}>
-              <View style={styles.heroCardTitleRow}>
-                <Text style={[styles.heroCardTitle, { color: colors.textPrimary }]}>Topic Tests</Text>
-                <View style={[styles.heroCardBadge, { backgroundColor: isDark ? '#064E3B' : '#ECFDF5' }]}>
-                  <Text style={[styles.heroCardBadgeText, { color: '#10B981' }]}>{topicTestCount}</Text>
-                </View>
-              </View>
-              <Text style={[styles.heroCardSub, { color: colors.textSecondary }]}>
-                20 Qs • 50 Marks • 20m
-              </Text>
-            </View>
-          </TouchableOpacity>
+        {/* Featured Exam Series Horizontal Slider (UPSC -> TGT -> PGT -> UPPSC -> AI) */}
+        <View style={{ marginBottom: 12 }}>
+          <FeaturedTracksSlider />
         </View>
 
         {/* Custom Test Prompt Banner */}
@@ -1594,9 +1462,9 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const renderTestCard = (test: ServerPaper) => {
     const isTgtPgt = test.filename.includes('tgt_pgt') || test.series === 'tgt' || test.series === 'pgt';
     const isMock = test.filename.includes('full_mocks') || isTgtPgt;
-    const totalQuestions = isTgtPgt ? 100 : isMock ? 120 : 20;
-    const duration = isTgtPgt ? 7200 : isMock ? 7200 : 1200; // 20 mins for topics, 2 hours for full mocks and TGT/PGT
-    const totalMarks = isTgtPgt ? 200 : isMock ? 300 : 50;
+    const totalQuestions = test.totalQuestions || (test.series === 'pgt' ? 300 : isTgtPgt ? 200 : isMock ? 120 : 20);
+    const duration = test.series === 'pgt' ? 10800 : (isTgtPgt || isMock) ? 7200 : 1200; // 3 hours for PGT, 2 hours for TGT & full mocks, 20 mins for topics
+    const totalMarks = test.totalQuestions ? test.totalQuestions * 1.0 : (test.series === 'pgt' ? 300 : isTgtPgt ? 200 : isMock ? 300 : 50);
     const isFirstTest = tests.length > 0 && tests[0].id === test.id;
     const isLocked = !isPaperUnlocked(test);
     const attempt = getAttemptForTest(test);
@@ -1762,6 +1630,11 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                 <Text style={[styles.pyqChipText, { color: '#4F46E5', fontWeight: '700' }]}>🎯 {test.tier}</Text>
               </View>
             )}
+            <View style={[styles.pyqChip, { backgroundColor: isDark ? '#14532D' : '#F0FDF4', borderColor: isDark ? '#16A34A' : '#BBF7D0' }]}>
+              <Text style={[styles.pyqChipText, { color: '#16A34A', fontWeight: '700' }]}>
+                ✓ {test.series === 'pgt' ? '15 Sections (GS + Subject)' : '10-11 Sections (GS + Subject)'}
+              </Text>
+            </View>
           </View>
         )}
 

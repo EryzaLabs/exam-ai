@@ -273,6 +273,7 @@ function loadAllPapersList() {
                 gender: fileData.gender,
                 tier: fileData.tier,
                 isPYQ: fileData.isPYQ ?? true,
+                totalQuestions: fileData.totalQuestions || (Array.isArray(fileData.questions) ? fileData.questions.length : 200),
             };
         }
         const cleanTitle = formatPaperTitle(title, fileObj.filename, topic);
