@@ -11,7 +11,9 @@ import {
   TextInput,
   useWindowDimensions,
   Platform,
+  Modal,
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router, useLocalSearchParams, useFocusEffect } from 'expo-router';
 import DesktopDashboard from '@/components/DesktopDashboard';
@@ -513,6 +515,14 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const [selectedSubject, setSelectedSubject] = useState<string>('all');
   const [displayLimit, setDisplayLimit] = useState<number>(30);
 
+  // Preference & Subject Purchase States
+  const [userPurchasedSubjects, setUserPurchasedSubjects] = useState<string[]>([]);
+  const [userPurchasedSeries, setUserPurchasedSeries] = useState<string[]>([]);
+  const [userPurchasedOnlySubject, setUserPurchasedOnlySubject] = useState<string | null>(null);
+  const [showSubjectModal, setShowSubjectModal] = useState<boolean>(false);
+  const [unlockTargetPaper, setUnlockTargetPaper] = useState<ServerPaper | null>(null);
+  const [isProcessingUnlock, setIsProcessingUnlock] = useState<boolean>(false);
+
   const [history, setHistory] = useState<TestResult[]>([]);
   const [activeTests, setActiveTests] = useState<SavedTestState[]>([]);
   const { user, isSubscribed: authSubscribed, isSubscriptionLoading, refreshSubscription } = useAuth();
@@ -525,9 +535,85 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const isLargeScreen = width >= 1024;
 
   useEffect(() => {
-    setSelectedSubject('all');
-    setDisplayLimit(30);
-  }, [examMode]);
+    let isCancelled = false;
+
+    const checkPreferencesAndPurchases = async () => {
+      if (examMode !== 'tgt' && examMode !== 'pgt') {
+        setSelectedSubject('all');
+        setUserPurchasedOnlySubject(null);
+        setDisplayLimit(30);
+        return;
+      }
+
+      setDisplayLimit(30);
+
+      try {
+        const profile = await userService.getUserProfile(user?.uid);
+        const cloudSubscribed = profile?.isSubscribed === true || localSubscribed === true || authSubscribed;
+        const planId = (profile as any)?.subscriptionPlanId || '';
+        const purchasedSeries = profile?.purchasedSeries || [];
+        const purchasedSubs = profile?.purchasedSubjects || [];
+
+        // Check if user has full premium (lifetime, monthly, weekly, daily, etc.)
+        const isFull = cloudSubscribed && (
+          !planId ||
+          ['lifetime', 'monthly', 'weekly', 'daily'].includes(planId)
+        );
+
+        if (!isCancelled) {
+          setUserPurchasedSeries(purchasedSeries);
+          setUserPurchasedSubjects(purchasedSubs);
+        }
+
+        // Check if user bought only a specific subject in TGT/PGT
+        const examPrefix = examMode === 'tgt' ? 'tgt-' : 'pgt-';
+        const singleSubs = [
+          ...purchasedSubs,
+          ...purchasedSeries
+            .filter(s => s.startsWith(examPrefix) && s !== `${examMode}-series`)
+            .map(s => s.replace(examPrefix, ''))
+        ];
+
+        // If user has only purchased a single subject and NOT full premium:
+        if (!isFull && singleSubs.length > 0) {
+          const onlySub = singleSubs[0];
+          if (!isCancelled) {
+            setUserPurchasedOnlySubject(onlySub);
+            setSelectedSubject(onlySub);
+          }
+          return;
+        }
+
+        if (!isCancelled) {
+          setUserPurchasedOnlySubject(null);
+        }
+
+        // Full premium user or general browsing -> check preference
+        const savedPref = await userService.getPreferredSubject(examMode);
+        if (savedPref && savedPref !== 'all') {
+          if (!isCancelled) {
+            setSelectedSubject(savedPref);
+          }
+        } else if (isFull) {
+          // First time entering TGT/PGT with premium -> prompt subject modal!
+          const promptKey = `@astra_pref_prompted_${examMode}_${user?.uid || 'guest'}`;
+          const prompted = await AsyncStorage.getItem(promptKey);
+          if (!prompted && !isCancelled) {
+            setShowSubjectModal(true);
+            AsyncStorage.setItem(promptKey, 'true').catch(() => {});
+          }
+        }
+      } catch (e) {
+        console.warn('Error checking subject preferences:', e);
+      }
+    };
+
+    checkPreferencesAndPurchases();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [examMode, user?.uid, isSubscribed]);
 
   useEffect(() => {
     if (typeof params.q === 'string') setSearchQuery(params.q);
@@ -735,6 +821,40 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     }
     return SEARCH_SUGGESTIONS;
   }, [examMode]);
+
+  const isPaperUnlocked = useCallback((paper: ServerPaper): boolean => {
+    // First test in tests is always free demo
+    if (tests.length > 0 && tests[0].id === paper.id) return true;
+
+    // Full premium unlocks EVERYTHING (unless user only purchased a specific subject)
+    if (isSubscribed && !userPurchasedOnlySubject) {
+      return true;
+    }
+
+    // Check if user purchased this series (e.g. 'tgt-series' or 'pgt-series')
+    if (paper.series && userPurchasedSeries.includes(`${paper.series}-series`)) {
+      return true;
+    }
+
+    const paperSub = (paper.subject || '').toLowerCase();
+    const subSlug = paperSub.replace(/\s+/g, '-');
+
+    // If single purchased subject matches
+    if (userPurchasedOnlySubject && paperSub === userPurchasedOnlySubject.toLowerCase()) {
+      return true;
+    }
+
+    // If subject in purchased list
+    if (
+      userPurchasedSubjects.some(s => s.toLowerCase() === paperSub) ||
+      userPurchasedSeries.includes(`tgt-${subSlug}`) ||
+      userPurchasedSeries.includes(`pgt-${subSlug}`)
+    ) {
+      return true;
+    }
+
+    return false;
+  }, [tests, isSubscribed, userPurchasedOnlySubject, userPurchasedSeries, userPurchasedSubjects]);
 
   useEffect(() => {
     filterTests();
@@ -959,14 +1079,50 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     }
   };
 
-  const handleTestSelect = async (paper: ServerPaper) => {
-    const isFirstTest = tests.length > 0 && tests[0].id === paper.id;
-    const verifiedProfile = await userService.getUserProfile(user?.uid);
-    const hasActiveSubscription = verifiedProfile?.isSubscribed === true;
+  const handlePurchaseSubject = (paper: ServerPaper) => {
+    const subSlug = (paper.subject || '').toLowerCase().replace(/\s+/g, '-');
+    const planId = `${paper.series || 'tgt'}-${subSlug}`;
+    setIsProcessingUnlock(true);
 
-    if (!hasActiveSubscription && !isFirstTest) {
-      setLocalSubscribed(false);
-      router.push('/premium');
+    initiatePayment(
+      () => {
+        setIsProcessingUnlock(false);
+        setUnlockTargetPaper(null);
+        const subjectName = paper.subject || '';
+        setUserPurchasedSubjects(prev => [...prev, subjectName]);
+        setUserPurchasedOnlySubject(subjectName);
+        setSelectedSubject(subjectName);
+        if (paper.series === 'tgt' || paper.series === 'pgt') {
+          userService.savePreferredSubject(paper.series, subjectName);
+        }
+        refreshSubscription();
+      },
+      (error) => {
+        setIsProcessingUnlock(false);
+        console.warn('Payment failed/cancelled:', error);
+      },
+      {
+        planId,
+        amountInRupees: 199,
+        subject: paper.subject,
+        userId: user?.uid,
+        userEmail: user?.email || '',
+        userName: user?.displayName || '',
+      }
+    );
+  };
+
+  const handleTestSelect = async (paper: ServerPaper) => {
+    const isUnlocked = isPaperUnlocked(paper);
+
+    if (!isUnlocked) {
+      const isTgtPgt = paper.filename.includes('tgt_pgt') || paper.series === 'tgt' || paper.series === 'pgt';
+      if (isTgtPgt && paper.subject) {
+        setUnlockTargetPaper(paper);
+      } else {
+        setLocalSubscribed(false);
+        router.push('/premium');
+      }
       return;
     }
 
@@ -1238,38 +1394,75 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   // Subject Filter Pills for TGT / PGT Mode
   const renderSubjectPills = () => {
     if (examMode !== 'tgt' && examMode !== 'pgt') return null;
+    const isSinglePurchased = userPurchasedOnlySubject !== null;
+
     return (
-      <View style={[styles.syllabusPillContainer, { borderBottomColor: colors.borderLight }]}>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.syllabusPillsContent}>
-          {availableSubjects.map(sub => {
-            const isSelected = selectedSubject === sub.id;
-            const activeColor = examMode === 'tgt' ? '#EA580C' : '#9333EA';
-            return (
-              <TouchableOpacity
-                key={sub.id}
-                style={[
-                  styles.syllabusPill,
-                  { backgroundColor: colors.surfaceHighlight, borderColor: colors.border },
-                  isSelected && [styles.syllabusPillActive, { backgroundColor: activeColor, borderColor: activeColor }]
-                ]}
-                onPress={() => {
-                  setSelectedSubject(sub.id);
-                  setDisplayLimit(30);
-                }}
-              >
-                <Text
+      <View style={{ backgroundColor: colors.surface }}>
+        {/* Preference / Purchase Status Bar */}
+        <View style={[styles.activePreferenceBanner, { backgroundColor: isDark ? '#1E293B' : '#F8FAFC', borderBottomColor: colors.borderLight }]}>
+          <View style={styles.activePrefLeft}>
+            <View style={[styles.activePrefIconBg, { backgroundColor: examMode === 'tgt' ? (isDark ? '#431407' : '#FFEDD5') : (isDark ? '#3B0764' : '#F3E8FF') }]}>
+              <Target size={16} color={examMode === 'tgt' ? '#EA580C' : '#9333EA'} />
+            </View>
+            <View style={{ flex: 1 }}>
+              <Text style={[styles.activePrefLabel, { color: colors.textSecondary }]}>
+                {isSinglePurchased ? 'PURCHASED SUBJECT ACCESS' : 'YOUR ACTIVE SUBJECT TRACK'}
+              </Text>
+              <Text style={[styles.activePrefTitle, { color: colors.textPrimary }]} numberOfLines={1}>
+                {selectedSubject === 'all' ? 'All Subjects' : selectedSubject}
+              </Text>
+            </View>
+          </View>
+          {!isSinglePurchased && (
+            <TouchableOpacity
+              style={[styles.changePrefButton, { borderColor: colors.border, backgroundColor: colors.surface }]}
+              onPress={() => setShowSubjectModal(true)}
+              activeOpacity={0.8}
+            >
+              <SlidersHorizontal size={13} color={colors.accent} />
+              <Text style={[styles.changePrefButtonText, { color: colors.accent }]}>Change Subject</Text>
+            </TouchableOpacity>
+          )}
+        </View>
+
+        {/* Scrollable Subject Pills */}
+        <View style={[styles.syllabusPillContainer, { borderBottomColor: colors.borderLight }]}>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.syllabusPillsContent}>
+            {availableSubjects.map(sub => {
+              const isSelected = selectedSubject.toLowerCase() === sub.id.toLowerCase();
+              const activeColor = examMode === 'tgt' ? '#EA580C' : '#9333EA';
+              const isPurchasedSubject = isSinglePurchased && sub.id.toLowerCase() === userPurchasedOnlySubject?.toLowerCase();
+
+              return (
+                <TouchableOpacity
+                  key={sub.id}
                   style={[
-                    styles.syllabusPillText,
-                    { color: colors.textSecondary },
-                    isSelected && styles.syllabusPillTextActive
+                    styles.syllabusPill,
+                    { backgroundColor: colors.surfaceHighlight, borderColor: colors.border },
+                    isSelected && [styles.syllabusPillActive, { backgroundColor: activeColor, borderColor: activeColor }]
                   ]}
+                  onPress={() => {
+                    setSelectedSubject(sub.id);
+                    setDisplayLimit(30);
+                    if (sub.id !== 'all') {
+                      userService.savePreferredSubject(examMode as 'tgt' | 'pgt', sub.id);
+                    }
+                  }}
                 >
-                  {sub.name} ({sub.count})
-                </Text>
-              </TouchableOpacity>
-            );
-          })}
-        </ScrollView>
+                  <Text
+                    style={[
+                      styles.syllabusPillText,
+                      { color: colors.textSecondary },
+                      isSelected && styles.syllabusPillTextActive
+                    ]}
+                  >
+                    {isPurchasedSubject ? '⭐ ' : ''}{sub.name} ({sub.count})
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
+          </ScrollView>
+        </View>
       </View>
     );
   };
@@ -1399,7 +1592,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     const duration = isTgtPgt ? 7200 : isMock ? 7200 : 1200; // 20 mins for topics, 2 hours for full mocks and TGT/PGT
     const totalMarks = isTgtPgt ? 200 : isMock ? 300 : 50;
     const isFirstTest = tests.length > 0 && tests[0].id === test.id;
-    const isLocked = !isSubscribed && !isFirstTest;
+    const isLocked = !isPaperUnlocked(test);
     const attempt = getAttemptForTest(test);
     const isAttempted = !!attempt;
     const subjectName = test.subject || (test.series === 'tgt' ? 'TGT Mock' : test.series === 'pgt' ? 'PGT Mock' : 'Full Mock');
@@ -1511,7 +1704,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
               <View style={styles.premiumBadge}>
                 <Text style={styles.premiumBadgeText}>Premium</Text>
               </View>
-            ) : isFirstTest && !isSubscribed ? (
+            ) : isFirstTest && !isSubscribed && !userPurchasedOnlySubject ? (
               <View style={styles.freeBadge}>
                 <Text style={styles.freeBadgeText}>✨ Free Demo</Text>
               </View>
@@ -1627,7 +1820,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                   ? 'Loading...'
                   : isLocked
                   ? 'Unlock'
-                  : isFirstTest && !isSubscribed
+                  : isFirstTest && !isSubscribed && !userPurchasedOnlySubject
                   ? 'Free Demo'
                   : 'Start Test'}
               </Text>
@@ -1712,6 +1905,200 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     }
     return true;
   });
+
+  const renderSubjectSelectionModal = () => {
+    if (examMode !== 'tgt' && examMode !== 'pgt') return null;
+
+    const subjectsList = availableSubjects.filter(s => s.id !== 'all');
+    const activeColor = examMode === 'tgt' ? '#EA580C' : '#9333EA';
+
+    return (
+      <Modal
+        visible={showSubjectModal}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setShowSubjectModal(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={[styles.subjectModalCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+            <View style={styles.subjectModalHeader}>
+              <View style={{ flex: 1 }}>
+                <View style={[styles.subjectModalBadge, { backgroundColor: examMode === 'tgt' ? '#FFEDD5' : '#F3E8FF' }]}>
+                  <Sparkles size={12} color={activeColor} />
+                  <Text style={[styles.subjectModalBadgeText, { color: activeColor }]}>
+                    {examMode === 'tgt' ? 'TGT TEST SERIES 2026' : 'PGT TEST SERIES 2026'}
+                  </Text>
+                </View>
+                <Text style={[styles.subjectModalTitle, { color: colors.textPrimary }]}>
+                  Which subject are you preparing for?
+                </Text>
+                <Text style={[styles.subjectModalSubtitle, { color: colors.textSecondary }]}>
+                  Choose your primary subject track. You have access to all subjects and can switch anytime.
+                </Text>
+              </View>
+              <TouchableOpacity
+                onPress={() => setShowSubjectModal(false)}
+                style={[styles.modalCloseBtn, { backgroundColor: isDark ? '#334155' : '#F1F5F9' }]}
+              >
+                <X size={18} color={colors.textPrimary} />
+              </TouchableOpacity>
+            </View>
+
+            <ScrollView style={styles.subjectModalList} showsVerticalScrollIndicator={false}>
+              {subjectsList.map((sub) => {
+                const isCurrent = selectedSubject.toLowerCase() === sub.id.toLowerCase();
+
+                return (
+                  <TouchableOpacity
+                    key={sub.id}
+                    style={[
+                      styles.subjectOptionCard,
+                      { backgroundColor: isDark ? '#1E293B' : '#F8FAFC', borderColor: isCurrent ? activeColor : colors.border },
+                      isCurrent && { borderWidth: 2 }
+                    ]}
+                    onPress={() => {
+                      setSelectedSubject(sub.id);
+                      setDisplayLimit(30);
+                      userService.savePreferredSubject(examMode as 'tgt' | 'pgt', sub.id);
+                      setShowSubjectModal(false);
+                    }}
+                    activeOpacity={0.8}
+                  >
+                    <View style={[styles.subjectOptionIconBg, { backgroundColor: isCurrent ? activeColor : (isDark ? '#334155' : '#E2E8F0') }]}>
+                      <BookOpen size={18} color={isCurrent ? '#FFFFFF' : (isDark ? '#94A3B8' : '#475569')} />
+                    </View>
+                    <View style={{ flex: 1, marginLeft: 12 }}>
+                      <Text style={[styles.subjectOptionName, { color: colors.textPrimary, fontWeight: isCurrent ? '800' : '600' }]}>
+                        {sub.name}
+                      </Text>
+                      <Text style={[styles.subjectOptionMeta, { color: colors.textSecondary }]}>
+                        {sub.count} Full Sets • {sub.count * 100} Solved MCQs
+                      </Text>
+                    </View>
+                    {isCurrent ? (
+                      <View style={[styles.selectedCheckBadge, { backgroundColor: activeColor }]}>
+                        <Check size={14} color="#FFFFFF" strokeWidth={3} />
+                      </View>
+                    ) : (
+                      <ChevronRight size={18} color={colors.textSecondary} />
+                    )}
+                  </TouchableOpacity>
+                );
+              })}
+
+              <TouchableOpacity
+                style={[styles.browseAllSubjectsBtn, { borderColor: colors.border }]}
+                onPress={() => {
+                  setSelectedSubject('all');
+                  setDisplayLimit(30);
+                  setShowSubjectModal(false);
+                }}
+                activeOpacity={0.8}
+              >
+                <Text style={[styles.browseAllSubjectsText, { color: colors.textSecondary }]}>
+                  Browse All Subjects ({scopedTests.length} Total Sets)
+                </Text>
+              </TouchableOpacity>
+            </ScrollView>
+          </View>
+        </View>
+      </Modal>
+    );
+  };
+
+  const renderUnlockModal = () => {
+    if (!unlockTargetPaper) return null;
+    const isTgt = unlockTargetPaper.series === 'tgt';
+    const activeColor = isTgt ? '#EA580C' : '#9333EA';
+
+    return (
+      <Modal
+        visible={!!unlockTargetPaper}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setUnlockTargetPaper(null)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={[styles.unlockModalCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+            <View style={styles.subjectModalHeader}>
+              <View style={{ flex: 1 }}>
+                <View style={[styles.subjectModalBadge, { backgroundColor: '#FEF3C7' }]}>
+                  <Text style={[styles.subjectModalBadgeText, { color: '#B45309' }]}>🔒 PREMIUM TEST</Text>
+                </View>
+                <Text style={[styles.subjectModalTitle, { color: colors.textPrimary }]}>
+                  Unlock {unlockTargetPaper.subject || 'Subject'}
+                </Text>
+                <Text style={[styles.subjectModalSubtitle, { color: colors.textSecondary }]}>
+                  Choose a pass to continue practicing official PYQs and mock tests:
+                </Text>
+              </View>
+              <TouchableOpacity
+                onPress={() => setUnlockTargetPaper(null)}
+                style={[styles.modalCloseBtn, { backgroundColor: isDark ? '#334155' : '#F1F5F9' }]}
+              >
+                <X size={18} color={colors.textPrimary} />
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.unlockOptionsContainer}>
+              {/* Option 1: Subject Only */}
+              <TouchableOpacity
+                style={[styles.unlockOptionBox, { backgroundColor: isDark ? '#2A1B0B' : '#FFF7ED', borderColor: activeColor }]}
+                onPress={() => handlePurchaseSubject(unlockTargetPaper)}
+                disabled={isProcessingUnlock}
+                activeOpacity={0.9}
+              >
+                <View style={styles.unlockOptionHeader}>
+                  <Text style={[styles.unlockOptionTitle, { color: colors.textPrimary }]}>
+                    {unlockTargetPaper.subject} Subject Only
+                  </Text>
+                  <View style={[styles.unlockPriceBadge, { backgroundColor: activeColor }]}>
+                    <Text style={styles.unlockPriceText}>₹199</Text>
+                  </View>
+                </View>
+                <Text style={[styles.unlockOptionDesc, { color: colors.textSecondary }]}>
+                  Complete access to all {unlockTargetPaper.subject} official solved papers, answer keys & pedagogical explanations.
+                </Text>
+                <View style={[styles.unlockActionBtn, { backgroundColor: activeColor }]}>
+                  <Text style={styles.unlockActionBtnText}>
+                    {isProcessingUnlock ? 'Opening Gateway...' : `Unlock ${unlockTargetPaper.subject} • ₹199`}
+                  </Text>
+                </View>
+              </TouchableOpacity>
+
+              {/* Option 2: Lifetime All-Access */}
+              <TouchableOpacity
+                style={[styles.unlockOptionBox, { backgroundColor: isDark ? '#1E1B4B' : '#EEF2FF', borderColor: '#6366F1' }]}
+                onPress={() => {
+                  setUnlockTargetPaper(null);
+                  router.push('/premium');
+                }}
+                activeOpacity={0.9}
+              >
+                <View style={styles.unlockOptionHeader}>
+                  <View>
+                    <Text style={[styles.unlockOptionTitle, { color: colors.textPrimary }]}>
+                      All-Access Lifetime Pass
+                    </Text>
+                    <Text style={{ fontSize: 10, color: '#16A34A', fontWeight: '800' }}>⭐ BEST VALUE • EVERYTHING INCLUDED</Text>
+                  </View>
+                  <View style={[styles.unlockPriceBadge, { backgroundColor: '#4F46E5' }]}>
+                    <Text style={[styles.unlockPriceText, { color: '#fff' }]}>₹499</Text>
+                  </View>
+                </View>
+                <Text style={[styles.unlockOptionDesc, { color: colors.textSecondary }]}>
+                  Lifetime access to UPSC Principal, UP Principal, all 7 TGT subjects, all 8 PGT subjects + Unlimited AI tests.
+                </Text>
+                <View style={[styles.unlockActionBtn, { backgroundColor: '#4F46E5' }]}>
+                  <Text style={styles.unlockActionBtnText}>Get Lifetime Access • ₹499</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
+    );
+  };
 
   const content = (
     <ContainerComponent style={[styles.container, { backgroundColor: colors.background, flex: 1 }]} edges={isLargeScreen ? [] : ['top']}>
@@ -2030,6 +2417,9 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           </>
         )}
       </ScrollView>
+
+      {renderSubjectSelectionModal()}
+      {renderUnlockModal()}
     </ContainerComponent>
   );
 
@@ -2910,5 +3300,209 @@ const styles = StyleSheet.create({
   },
   pyqChipText: {
     fontSize: 11,
+  },
+  activePreferenceBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderBottomWidth: 1,
+  },
+  activePrefLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    flex: 1,
+    marginRight: 10,
+  },
+  activePrefIconBg: {
+    width: 32,
+    height: 32,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  activePrefLabel: {
+    fontSize: 9,
+    fontWeight: '800',
+    letterSpacing: 0.6,
+  },
+  activePrefTitle: {
+    fontSize: 14,
+    fontWeight: '800',
+  },
+  changePrefButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 8,
+    borderWidth: 1,
+  },
+  changePrefButtonText: {
+    fontSize: 11,
+    fontWeight: '700',
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.65)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 16,
+  },
+  subjectModalCard: {
+    width: '100%',
+    maxWidth: 520,
+    borderRadius: 20,
+    borderWidth: 1,
+    padding: 20,
+    maxHeight: '85%',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.25,
+    shadowRadius: 20,
+    elevation: 10,
+  },
+  subjectModalHeader: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    marginBottom: 16,
+  },
+  subjectModalBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 6,
+    alignSelf: 'flex-start',
+    marginBottom: 6,
+  },
+  subjectModalBadgeText: {
+    fontSize: 10,
+    fontWeight: '800',
+    letterSpacing: 0.5,
+  },
+  subjectModalTitle: {
+    fontSize: 18,
+    fontWeight: '800',
+    marginBottom: 4,
+  },
+  subjectModalSubtitle: {
+    fontSize: 12,
+    lineHeight: 18,
+  },
+  modalCloseBtn: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 12,
+  },
+  subjectModalList: {
+    marginTop: 8,
+  },
+  subjectOptionCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 14,
+    borderRadius: 12,
+    borderWidth: 1,
+    marginBottom: 10,
+  },
+  subjectOptionIconBg: {
+    width: 36,
+    height: 36,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  subjectOptionName: {
+    fontSize: 14,
+    marginBottom: 2,
+  },
+  subjectOptionMeta: {
+    fontSize: 11,
+  },
+  selectedCheckBadge: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  browseAllSubjectsBtn: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    borderRadius: 10,
+    borderWidth: 1,
+    marginTop: 6,
+    marginBottom: 8,
+  },
+  browseAllSubjectsText: {
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  unlockModalCard: {
+    width: '100%',
+    maxWidth: 480,
+    borderRadius: 20,
+    borderWidth: 1,
+    padding: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.25,
+    shadowRadius: 20,
+    elevation: 10,
+  },
+  unlockOptionsContainer: {
+    gap: 12,
+    marginTop: 10,
+  },
+  unlockOptionBox: {
+    padding: 16,
+    borderRadius: 14,
+    borderWidth: 1.5,
+  },
+  unlockOptionHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 6,
+  },
+  unlockOptionTitle: {
+    fontSize: 15,
+    fontWeight: '800',
+  },
+  unlockPriceBadge: {
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 8,
+  },
+  unlockPriceText: {
+    color: '#fff',
+    fontSize: 13,
+    fontWeight: '800',
+  },
+  unlockOptionDesc: {
+    fontSize: 12,
+    lineHeight: 18,
+    marginBottom: 12,
+  },
+  unlockActionBtn: {
+    paddingVertical: 10,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  unlockActionBtnText: {
+    color: '#fff',
+    fontSize: 13,
+    fontWeight: '700',
   },
 });

@@ -46,6 +46,7 @@ export interface InitiatePaymentOptions {
   amountInRupees?: number;
   couponCode?: string;
   planId?: string;
+  subject?: string;
 }
 
 /**
@@ -114,6 +115,7 @@ export const initiatePayment = async (
         currency: 'INR',
         uid: currentUid,
         plan_id: optionsInput?.planId || 'lifetime',
+        subject: optionsInput?.subject,
         customer_name: optionsInput?.userName || 'Aspirant',
         customer_email: optionsInput?.userEmail || 'aspirant@exam-ai.com',
         customer_phone: userPhone || '9999999999',
@@ -139,7 +141,7 @@ export const initiatePayment = async (
         const verifyResponse = await fetch(`${API_BASE_URL}/payment/verify`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ order_id, uid: currentUid, plan_id: optionsInput?.planId }),
+          body: JSON.stringify({ order_id, uid: currentUid, plan_id: optionsInput?.planId, subject: optionsInput?.subject }),
         });
         const verifyData = await verifyResponse.json();
         if (verifyData.success) {
@@ -185,7 +187,7 @@ export const initiatePayment = async (
           const verifyResponse = await fetch(`${API_BASE_URL}/payment/verify`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ order_id, uid: currentUid, plan_id: optionsInput?.planId }),
+            body: JSON.stringify({ order_id, uid: currentUid, plan_id: optionsInput?.planId, subject: optionsInput?.subject }),
           });
 
           const verifyData = await verifyResponse.json();

@@ -20,6 +20,7 @@ export declare const orderPlansCache: Record<string, {
     plan: SubscriptionPlan;
     periodDays: number;
     uid?: string;
+    subject?: string;
 }>;
 export interface CouponDefinition {
     code: string;

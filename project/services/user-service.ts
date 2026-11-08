@@ -20,6 +20,9 @@ export interface UserProfile {
   profileCompleted?: boolean;
   isSubscribed?: boolean;
   purchasedSeries?: string[]; // e.g. ['tgt-series', 'pgt-series', 'tgt-hindi']
+  purchasedSubjects?: string[]; // e.g. ['Hindi', 'Mathematics', 'Commerce']
+  preferredTgtSubject?: string;
+  preferredPgtSubject?: string;
 }
 
 export interface TopicStats {
@@ -190,6 +193,39 @@ class UserService {
     } catch (error) {
       console.error('Error updating user profile:', error);
       throw error;
+    }
+  }
+
+  /**
+   * Save user preferred subject for TGT or PGT
+   */
+  async savePreferredSubject(exam: 'tgt' | 'pgt', subject: string): Promise<void> {
+    try {
+      await AsyncStorage.setItem(`@astra_pref_subject_${exam}`, subject).catch(() => {});
+      const userId = auth.currentUser?.uid;
+      if (userId) {
+        await AsyncStorage.setItem(`@astra_pref_subject_${exam}_${userId}`, subject).catch(() => {});
+        const field = exam === 'tgt' ? 'preferredTgtSubject' : 'preferredPgtSubject';
+        await setDoc(doc(db, 'users', userId), { [field]: subject, updatedAt: new Date().toISOString() }, { merge: true }).catch(() => {});
+      }
+    } catch (e) {
+      console.warn('Error saving preferred subject:', e);
+    }
+  }
+
+  /**
+   * Get user preferred subject for TGT or PGT
+   */
+  async getPreferredSubject(exam: 'tgt' | 'pgt'): Promise<string | null> {
+    try {
+      const userId = auth.currentUser?.uid;
+      if (userId) {
+        const userPref = await AsyncStorage.getItem(`@astra_pref_subject_${exam}_${userId}`);
+        if (userPref) return userPref;
+      }
+      return await AsyncStorage.getItem(`@astra_pref_subject_${exam}`);
+    } catch (e) {
+      return null;
     }
   }
 

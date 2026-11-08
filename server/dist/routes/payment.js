@@ -247,6 +247,7 @@ router.post('/create-order', async (req, res) => {
             plan,
             periodDays: plan.periodDays,
             uid: customerId,
+            subject: req.body.subject,
         };
         const cleanPhone = (customer_phone || '').toString().replace(/\D/g, '').slice(-10);
         const validPhone = cleanPhone.length === 10 ? cleanPhone : '9999999999';
@@ -356,6 +357,7 @@ router.post('/verify', async (req, res) => {
                         periodDays,
                         planId: plan.id,
                         planName: plan.name,
+                        subject: cachedPlan?.subject || req.body.subject,
                     });
                     if (plan.id === 'ai_test' || Number(plan.price) === 9) {
                         (0, ai_tests_1.addPaidAiCredit)(uid, 1);
@@ -391,6 +393,7 @@ router.post('/verify', async (req, res) => {
                     periodDays,
                     planId: plan.id,
                     planName: plan.name,
+                    subject: cachedPlan?.subject || req.body.subject,
                 });
                 if (plan.id === 'ai_test' || Number(data.order_amount) === 9) {
                     (0, ai_tests_1.addPaidAiCredit)(targetUid, 1);

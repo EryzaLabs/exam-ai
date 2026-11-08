@@ -126,6 +126,7 @@ export async function recordBackendSubscription({
   periodDays = 365,
   planId = 'lifetime',
   planName = 'Lifetime Pass',
+  subject,
 }: {
   uid: string;
   orderId: string;
@@ -136,6 +137,7 @@ export async function recordBackendSubscription({
   periodDays?: number;
   planId?: string;
   planName?: string;
+  subject?: string;
 }): Promise<boolean> {
   try {
     const now = Date.now();
@@ -180,24 +182,33 @@ export async function recordBackendSubscription({
             customerEmail: customerEmail || '',
             customerPhone: customerPhone || '',
             paymentGateway: 'cashfree',
+            subject: subject || null,
             activatedAt: FieldValue.serverTimestamp(),
             updatedAt: FieldValue.serverTimestamp(),
           },
           { merge: true }
         );
 
-        await db.doc(`users/${uid}`).set(
-          {
-            isSubscribed: true,
-            subscriptionStatus: 'active',
-            subscriptionPlanId: planId,
-            subscriptionPlanName: planName,
-            subscriptionOrderId: orderId,
-            subscriptionPeriodEnd: periodEndTimestamp,
-            updatedAt: FieldValue.serverTimestamp(),
-          },
-          { merge: true }
-        );
+        const userUpdates: any = {
+          isSubscribed: true,
+          subscriptionStatus: 'active',
+          subscriptionPlanId: planId,
+          subscriptionPlanName: planName,
+          subscriptionOrderId: orderId,
+          subscriptionPeriodEnd: periodEndTimestamp,
+          updatedAt: FieldValue.serverTimestamp(),
+        };
+
+        if (planId.startsWith('tgt-') || planId.startsWith('pgt-')) {
+          userUpdates.purchasedSeries = FieldValue.arrayUnion(planId);
+        }
+        if (subject) {
+          userUpdates.purchasedSubjects = FieldValue.arrayUnion(subject);
+          const field = planId.startsWith('pgt') ? 'preferredPgtSubject' : 'preferredTgtSubject';
+          userUpdates[field] = subject;
+        }
+
+        await db.doc(`users/${uid}`).set(userUpdates, { merge: true });
 
         console.log(`[Firebase Admin] Successfully synced to Firestore for UID: ${uid}`);
       } catch (fErr: any) {

@@ -139,7 +139,7 @@ export function resolvePlanAndPeriod(planId?: string, amount?: number): { plan: 
 }
 
 // In-memory cache for recent order plan metadata
-export const orderPlansCache: Record<string, { plan: SubscriptionPlan; periodDays: number; uid?: string }> = {};
+export const orderPlansCache: Record<string, { plan: SubscriptionPlan; periodDays: number; uid?: string; subject?: string }> = {};
 
 // ==============================================================================
 // COUPON CODES CONFIGURATION
@@ -297,6 +297,7 @@ router.post('/create-order', async (req: Request, res: Response) => {
       plan,
       periodDays: plan.periodDays,
       uid: customerId,
+      subject: req.body.subject,
     };
 
     const cleanPhone = (customer_phone || '').toString().replace(/\D/g, '').slice(-10);
@@ -429,6 +430,7 @@ router.post('/verify', async (req: Request, res: Response) => {
             periodDays,
             planId: plan.id,
             planName: plan.name,
+            subject: cachedPlan?.subject || req.body.subject,
           });
           if (plan.id === 'ai_test' || Number(plan.price) === 9) {
             addPaidAiCredit(uid, 1);
@@ -469,6 +471,7 @@ router.post('/verify', async (req: Request, res: Response) => {
           periodDays,
           planId: plan.id,
           planName: plan.name,
+          subject: cachedPlan?.subject || req.body.subject,
         });
 
         if (plan.id === 'ai_test' || Number(data.order_amount) === 9) {

@@ -147,7 +147,7 @@ export default function PremiumScreen() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   // Plan Selection State
-  const [selectedPlanId, setSelectedPlanId] = useState<'daily' | 'weekly' | 'monthly' | 'lifetime'>('lifetime');
+  const [selectedPlanId, setSelectedPlanId] = useState<'daily' | 'weekly' | 'monthly' | 'lifetime' | 'tgt-series' | 'pgt-series'>('lifetime');
   const selectedPlan = PLANS.find((p) => p.id === selectedPlanId) || PLANS[3];
 
   // Interactive Live Preview State

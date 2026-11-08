@@ -120,7 +120,7 @@ function saveLocalSubscription(uid, data) {
  * Backend function to write subscription status using Firebase Admin SDK.
  * Bypasses Firestore Security Rules completely.
  */
-async function recordBackendSubscription({ uid, orderId, amount, currency = 'INR', customerEmail, customerPhone, periodDays = 365, planId = 'lifetime', planName = 'Lifetime Pass', }) {
+async function recordBackendSubscription({ uid, orderId, amount, currency = 'INR', customerEmail, customerPhone, periodDays = 365, planId = 'lifetime', planName = 'Lifetime Pass', subject, }) {
     try {
         const now = Date.now();
         const periodEnd = now + periodDays * 24 * 60 * 60 * 1000;
@@ -159,10 +159,11 @@ async function recordBackendSubscription({ uid, orderId, amount, currency = 'INR
                     customerEmail: customerEmail || '',
                     customerPhone: customerPhone || '',
                     paymentGateway: 'cashfree',
+                    subject: subject || null,
                     activatedAt: firestore_1.FieldValue.serverTimestamp(),
                     updatedAt: firestore_1.FieldValue.serverTimestamp(),
                 }, { merge: true });
-                await db.doc(`users/${uid}`).set({
+                const userUpdates = {
                     isSubscribed: true,
                     subscriptionStatus: 'active',
                     subscriptionPlanId: planId,
@@ -170,7 +171,16 @@ async function recordBackendSubscription({ uid, orderId, amount, currency = 'INR
                     subscriptionOrderId: orderId,
                     subscriptionPeriodEnd: periodEndTimestamp,
                     updatedAt: firestore_1.FieldValue.serverTimestamp(),
-                }, { merge: true });
+                };
+                if (planId.startsWith('tgt-') || planId.startsWith('pgt-')) {
+                    userUpdates.purchasedSeries = firestore_1.FieldValue.arrayUnion(planId);
+                }
+                if (subject) {
+                    userUpdates.purchasedSubjects = firestore_1.FieldValue.arrayUnion(subject);
+                    const field = planId.startsWith('pgt') ? 'preferredPgtSubject' : 'preferredTgtSubject';
+                    userUpdates[field] = subject;
+                }
+                await db.doc(`users/${uid}`).set(userUpdates, { merge: true });
                 console.log(`[Firebase Admin] Successfully synced to Firestore for UID: ${uid}`);
             }
             catch (fErr) {
