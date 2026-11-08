@@ -189,10 +189,25 @@ export default function MockTestScreen() {
         savedState = await TestProgressService.getTestProgress(testId);
       }
 
-      let paper = SSCCGLService.getPaper(testId);
+      const targetFilename = (params.filename as string) || savedState?.filename;
+      let paper: ParsedMockTest | null = null;
       const hasQuestions = (p: any) => p && Array.isArray(p.sections) && p.sections.some((s: any) => Array.isArray(s.questions) && s.questions.length > 0);
 
-      // If paper is not loaded in memory yet or has 0 questions, retrieve it
+      // 1. If targetFilename is provided, fetch canonical paper directly from source
+      if (targetFilename) {
+        try {
+          paper = await SSCCGLService.fetchPaper(targetFilename);
+        } catch (err) {
+          console.warn('mock-test: fetchPaper by targetFilename failed:', err);
+        }
+      }
+
+      // 2. If not fetched by filename, retrieve from in-memory cache
+      if (!paper || !hasQuestions(paper)) {
+        paper = SSCCGLService.getPaper(testId);
+      }
+
+      // 3. Fallback to AsyncStorage cache or global server search
       if (!paper || !hasQuestions(paper)) {
         let cachedPaper = await TestSeriesService.getTestPaperFromCache(testId);
 
@@ -204,25 +219,16 @@ export default function MockTestScreen() {
           await SSCCGLService.storePaperInMemory(cachedPaper);
           paper = SSCCGLService.getPaper(testId);
         }
+      }
 
+      // 4. Final fallbacks by ID or papers list
+      if (!paper || !hasQuestions(paper)) {
+        paper = await SSCCGLService.fetchPaperById(testId);
         if (!paper || !hasQuestions(paper)) {
-          const targetFilename = (params.filename as string) || savedState?.filename;
-          if (targetFilename) {
-            try {
-              paper = await SSCCGLService.fetchPaper(targetFilename);
-            } catch (err) {
-              console.warn('mock-test: fetchPaper by targetFilename failed:', err);
-            }
-          }
-          if (!paper || !hasQuestions(paper)) {
-            paper = await SSCCGLService.fetchPaperById(testId);
-            if (!paper || !hasQuestions(paper)) {
-              const papers = await SSCCGLService.fetchPapersList();
-              const paperInfo = papers.find((p: any) => p.id === testId || p.testId === testId);
-              if (paperInfo && paperInfo.filename) {
-                paper = await SSCCGLService.fetchPaper(paperInfo.filename);
-              }
-            }
+          const papers = await SSCCGLService.fetchPapersList();
+          const paperInfo = papers.find((p: any) => p.id === testId || p.testId === testId);
+          if (paperInfo && paperInfo.filename) {
+            paper = await SSCCGLService.fetchPaper(paperInfo.filename);
           }
         }
       }
@@ -234,8 +240,13 @@ export default function MockTestScreen() {
       }
       
       // Check if we are resuming
-      if (resume && savedState) {
-        console.log("Resuming test...");
+      const paperTotalQuestions = paper.sections.reduce((sum, s) => sum + s.questions.length, 0);
+      const isSavedStateValid = savedState && 
+        savedState.questionOrder && 
+        savedState.questionOrder.length === paperTotalQuestions;
+
+      if (resume && isSavedStateValid) {
+        console.log("Resuming test with valid question state...");
              
              // Restore shuffled question order
              let restoredPaper = paper;
@@ -320,26 +331,33 @@ export default function MockTestScreen() {
              return; 
         }
 
+      if (savedState && !isSavedStateValid) {
+        console.log(`Saved state has ${savedState.questionOrder?.length || 0} questions but paper has ${paperTotalQuestions}. Resetting stale attempt to load full paper.`);
+        await TestProgressService.clearTestProgress(testId);
+      }
+
       // Start Fresh
       setTimeRemaining(paper.duration);
       
-      // Shuffle questions within each section
-      const shuffledPaper = {
+      // Preserve official question order for official PYQ exams, shuffle only custom practice sets
+      const isOfficialPaper = (paper as any).isPYQ || 
+                              ((paper as any).filename && ((paper as any).filename.includes('tgt_pgt') || (paper as any).filename.includes('official')));
+      const activePaper = {
         ...paper,
         sections: paper.sections.map(section => ({
           ...section,
-          questions: shuffleArray(section.questions)
+          questions: isOfficialPaper ? [...section.questions] : shuffleArray(section.questions)
         }))
       };
       
-      setTest(shuffledPaper);
+      setTest(activePaper);
       
       const newAttempt = SSCCGLService.startTestAttempt(testId, 'user_' + Date.now());
       setAttempt(newAttempt);
 
       // Initialize question states
       const states = new Map<string, QuestionState>();
-      shuffledPaper.sections.forEach((section, sIdx) => {
+      activePaper.sections.forEach((section, sIdx) => {
         section.questions.forEach((q, qIdx) => {
           states.set(q.id, {
             answered: false,
@@ -358,22 +376,22 @@ export default function MockTestScreen() {
         statesObj[key] = value;
       });
       
-      // Get shuffled question order
-      const questionOrder = shuffledPaper.sections.flatMap(section => section.questions.map(q => q.id));
+      // Get active question order
+      const questionOrder = activePaper.sections.flatMap(section => section.questions.map(q => q.id));
       
       // Save initial state
       await TestProgressService.saveCurrentTest({
-          testId: shuffledPaper.id,
+          testId: activePaper.id,
           attemptId: newAttempt.id!,
           currentQuestionIndex: 0,
-          timeRemaining: shuffledPaper.duration,
+          timeRemaining: activePaper.duration,
           questionStates: statesObj,
           answers: {},
           lastUpdated: Date.now(),
           questionOrder,
-          testTitle: shuffledPaper.title,
-          totalQuestions: shuffledPaper.sections.reduce((sum, s) => sum + s.questions.length, 0),
-          filename: (params.filename as string) || (shuffledPaper as any).filename,
+          testTitle: activePaper.title,
+          totalQuestions: activePaper.sections.reduce((sum, s) => sum + s.questions.length, 0),
+          filename: (params.filename as string) || (activePaper as any).filename,
       });
 
     } catch (error) {

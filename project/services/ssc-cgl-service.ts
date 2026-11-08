@@ -372,15 +372,58 @@ class SSCCGLService {
     }
     const testId = paper.test_id || paper.id || paper._id || 'unknown_id';
     
-    // Support both flat questions array and sections array
-    let rawQuestions: any[] = [];
-    if (Array.isArray(paper.questions) && paper.questions.length > 0) {
-      rawQuestions = paper.questions;
-    } else if (Array.isArray(paper.sections) && paper.sections.length > 0) {
-      rawQuestions = paper.sections.flatMap((s: any) => s.questions || []);
+    // Support both multi-section structures (e.g. DSSSB 10/15 sections) and flat question arrays
+    let sections: ParsedSection[] = [];
+    let parsedQuestions: ParsedQuestion[] = [];
+
+    const hasValidSections = Array.isArray(paper.sections) && 
+      paper.sections.length > 0 && 
+      paper.sections.some((s: any) => Array.isArray(s.questions) && s.questions.length > 0);
+
+    if (hasValidSections) {
+      sections = paper.sections.map((s: any, idx: number) => {
+        const sId = s.id || s._id || `section_${idx + 1}`;
+        const sTitle = s.title || s.name || `Section ${idx + 1}`;
+        const sQuestions = (s.questions || []).map((q: any) => this.parseQuestion(q, sId));
+        return {
+          id: sId,
+          title: sTitle,
+          questionCount: sQuestions.length,
+          questions: sQuestions,
+        };
+      });
+      parsedQuestions = sections.flatMap((s) => s.questions);
+    } else {
+      let rawQuestions: any[] = [];
+      if (Array.isArray(paper.questions) && paper.questions.length > 0) {
+        rawQuestions = paper.questions;
+      } else if (Array.isArray(paper.sections) && paper.sections.length > 0) {
+        rawQuestions = paper.sections.flatMap((s: any) => s.questions || []);
+      }
+      
+      parsedQuestions = rawQuestions.map((q: any) => this.parseQuestion(q, 'main'));
+
+      const isTopicWiseFallback = (filename && filename.includes('topic_wise')) || 
+                                  (paper.type === 'topic_wise') ||
+                                  (testName && testName.toLowerCase().includes('topic')) ||
+                                  (parsedQuestions.length <= 30 && paper.type !== 'full_mock');
+
+      const resolvedTopic = extractTestTopicAndSubject({
+        testTitle: testName,
+        filename: effectiveFilename,
+      });
+
+      const sectionTitle = isTopicWiseFallback 
+        ? resolvedTopic.topic 
+        : (paper.type === 'full_mock' || effectiveFilename.includes('full_mock') ? 'Full Mock CBT' : (paper.subject || 'General'));
+
+      sections = [{
+        id: 'main',
+        title: sectionTitle,
+        questionCount: parsedQuestions.length,
+        questions: parsedQuestions,
+      }];
     }
-    
-    const parsedQuestions = rawQuestions.map((q: any) => this.parseQuestion(q, 'main'));
 
     const totalQuestions = parsedQuestions.length;
     const isTopicWise = (filename && filename.includes('topic_wise')) || 
@@ -388,26 +431,12 @@ class SSCCGLService {
                         (testName && testName.toLowerCase().includes('topic')) ||
                         (totalQuestions <= 30 && paper.type !== 'full_mock');
 
-    const resolvedTopic = extractTestTopicAndSubject({
-      testTitle: testName,
-      filename: effectiveFilename,
-    });
+    const isDsssbOrTgtPgt = effectiveFilename.includes('tgt_pgt') || 
+                            effectiveFilename.includes('dsssb') || 
+                            (paper.exam && paper.exam.toLowerCase().includes('dsssb'));
 
-    const sectionTitle = isTopicWise 
-      ? resolvedTopic.topic 
-      : (paper.type === 'full_mock' || effectiveFilename.includes('full_mock') ? 'Full Mock CBT' : (paper.subject || 'General'));
-
-    const section = {
-      id: 'main',
-      title: sectionTitle,
-      questionCount: parsedQuestions.length,
-      questions: parsedQuestions
-    };
-
-    const sections = [section];
-    const totalMarks = totalQuestions * 2.5; // 120 questions * 2.5 = 300 marks
     const defaultDuration = isTopicWise ? 1200 : 7200; // 20 mins for topic tests, 2 hours for full mocks
-    const defaultMarks = parsedQuestions.length * 2.5;
+    const defaultMarks = isDsssbOrTgtPgt ? totalQuestions * 1.0 : totalQuestions * 2.5;
 
     let finalDuration = defaultDuration;
     if (paper.duration_minutes) {
