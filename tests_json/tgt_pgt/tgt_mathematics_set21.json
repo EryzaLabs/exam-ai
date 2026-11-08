@@ -1,0 +1,3820 @@
+{
+  "_id": "tgt_mathematics_set21",
+  "title": "TGT Mathematics • Mock Test Set 21 (100 MCQs)",
+  "course": "TGT Series",
+  "subject": "Mathematics",
+  "exam": "tgt",
+  "price": 199,
+  "originalPrice": 999,
+  "duration": 100,
+  "sections": [
+    {
+      "_id": "sec_tgt_mathematics_set21",
+      "title": "Mathematics Section",
+      "qCount": 100,
+      "time": 100,
+      "questions": [
+        {
+          "_id": "tgt_mathematics_q2001",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If (x, y) = x3–3xy2 of an analytic function f(z) = u + iv, then - Ùeefo (x, y) = x3–3xy2 Skeâ efJeMuesef<ekeâ heâueve f(z) = u + iv lees-",
+            "options": [
+              {
+                "prompt": "–v is its harmonic conjugate and v",
+                "value": "A"
+              },
+              {
+                "prompt": "v is its harmonic conjugate and v",
+                "value": "B"
+              },
+              {
+                "prompt": "v is its harmonic conjugate and v",
+                "value": "C"
+              },
+              {
+                "prompt": "–v is its harmonic conjugate and v",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2001",
+              "correct_answer": "B",
+              "explanation": "If u(x, y) = x3 – 3xy2 Cauchy-Riemann equation ( ) ( ) u v x y ∂ ∂ = ∂ ∂ ( ) ( ) u v y x ∂ ∂ = − ∂ ∂ Using the first we have: ( ) ( ) 2 2 v u 3x 3y y x ∂ ∂ = = − ∂ ∂ ( ) 2 2 v 3x 3y y ∂ = − ∂ Integrate this partially w.r.t.y v(x,y) = 3yx2–y3 + f(x) Using the second CR equation on this to f(x). we get v(x,y) = 3yx2–y3 + c where C is real constant.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2002",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप न्aत्ल दf ूप ग्हूाुraत् ∫ २ र्२ै २ र्म् ै ा र््ैर् ै +१ , ैप्ीा म् ग्े a म्ग्rम्तर् ै २ ृ ग्े - समाकलन ∫ २ र्२ै २ र्म् ै ा र््ैर् ै +१ जहाँ ण् एक वृत्त हैर् ै २ ृ है, का मान है-",
+            "options": [
+              {
+                "prompt": "–2π.i",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "–2π.i. sin2",
+                "value": "C"
+              },
+              {
+                "prompt": "2π.i. sin2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2002",
+              "correct_answer": "C",
+              "explanation": "2 2z 2 c z e dz z 1 + ∫ c is circle | z | = 2 ⇒ z2 + 1 = 0 ⇒ z = ± i R1 = ( ) ( ) ( ) ( )( ) 2 2z 2 2z 2 z i z i z i z e z i z e dz dz z i z i z 1 lim lim → → − − = + − + R1 = 2i 1 ie 2 .....(i) R2 = ( ) ( ) ( ) ( )( ) 2 2z 2 2z 2 z i z i z i z e z i z e dz dz z i z i z 1 lim lim →− →− + + = + − + R2 = – 2i 1 e 2 − ⇒ 2 2z 2 c z e dz z 1 + ∫ = 2πi (R1 + R2) = 2π i 2i 2i 1 1 ie ie 2 2 − −       = ( ) ( ) ( ) cos2 isin2 i 2 i cos 2 isin 2 2 + π − − = – π 2isin2 = –2π isin2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2003",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दf ूप fदत्त्दैग्हु ग्े हदू ूrल? निम्नलिखित में से कौन-सा सत्य नहीं है?",
+            "options": [
+              {
+                "prompt": "If f",
+                "value": "A"
+              },
+              {
+                "prompt": "If f",
+                "value": "B"
+              },
+              {
+                "prompt": "If a function does not satisfy Cauchy -",
+                "value": "C"
+              },
+              {
+                "prompt": "If u and v are both harmonic functions then",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2003",
+              "correct_answer": "D",
+              "explanation": "Option (a)→ If f (z) = u + i.v is an analytic function, then u v u v & x y y x ∂ ∂ ∂ ∂ = = − ∂ ∂ ∂ ∂ Now 2 2 2 u u u u v v y x x y y y y y x x     ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂     + = + = + −         ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂         2 2 2 2 v v v v u u x x y y x y y x x y     ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂     + = + = − +         ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂         Both u and v satisfying Laplace's equation (∇2f = 0). ∴ Both u and v are harmonic functions. Option (b)→ If f (z) = u + i.v is an analytic function, then the curves u(x,y) = C1 and v(x,y) = C2 cut are orthogonally. Option (d)→ If u and v are both harmonic function then f (z) = u + i.v is not an analytic. so, option d is correct",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2004",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप न्aत्ल दf ूप ग्हूाुraत् ( ) २ ३ र्म् ैा र््ैर् ै –१ ∫ , ैप्ीा म् ग्े a म्ग्rम्तर् ै २ ृ ग्े - समाकलन ( ) २ ३ र्म् ैा र््ैर् ै –१ ∫ , जहाँ ण् एक वृत्त हैर् ै २ ृ , का मान है- भ्Eझ् ३४४ भ्ण्ऊ",
+            "options": [
+              {
+                "prompt": "3π.i.e",
+                "value": "A"
+              },
+              {
+                "prompt": "2 ie",
+                "value": "B"
+              },
+              {
+                "prompt": "πie",
+                "value": "C"
+              },
+              {
+                "prompt": "2πie",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2004",
+              "correct_answer": "A",
+              "explanation": "z = 1 order → 3 ( ) ( ) ( ) 3 z 2 2 3 z 1 z 1 ze 1 d R lim 3 1 ! dz z 1 → − = − − ( ) 2 z 2 z 1 1 d R lim ze 2! dz → = ( ) z z z z 1 1 R lim e ze e 2 → = + + 3e R 2 = ( ) z 3 C ze dz 2 iR z 1 = π − ∫ 3e 2 i 2 = π 3 ie = π",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2005",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "थूर् ें ां a म्दस्ज्तूा सूrग्म् ेज्aम ूपह हद हदह- ाहूrब् दजह ेल्ं-ोू दfर् ें ग्े दf fग्rेू म्aूाुदrब्. ेंप्ग्म्प् ूपदrास् ेूaूो ूप्ग्े? मान लीजिए किर् ें एक पूर्ण वृत्तात्मक स्थान है, तोर् ें का कोई भी अरिक्त उपसमुच्चय पहली श्रेणी का नहीं है। यह कथन किस प्रमेय में बताया गया है?",
+            "options": [
+              {
+                "prompt": "Bolzano - Weiestrass Theorem",
+                "value": "A"
+              },
+              {
+                "prompt": "ण्aल्म्प्ब्'े ऊपदrास्/कौशी की प्रमेय",
+                "value": "B"
+              },
+              {
+                "prompt": "The Baire category Theorem/yesÙej ßesCeer ØecesÙe",
+                "value": "C"
+              },
+              {
+                "prompt": "Intermediate Value Theorem/ceOÙeJeleea cetuÙe ØecesÙe",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2005",
+              "correct_answer": "C",
+              "explanation": "Baire's category theorem, also known as Baire's theorem and the category theorem, is a result in analysis and set theory which roughly states that in certain spaces, the Inter section of any countable collection of \"large\" sets remains \"large\". The appearance of \"category\" in the name refers to the Interplay of the theorem with the notions of sets of first and second category. Precisely stated, the theorem says that if a space S is either a complete metric space or a locally compact T2 - space, then the Intersection of every countable collection of dense open subsets of S is necessarily dense in S.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2006",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "[A ∪ (B ∪ C)] ∩ [A' ∩ (B' ∩ C')] is equal to - [A ∪ (B ∪ C)] ∩ [A' ∩ (B' ∩ C')] _______kesâ yejeyej nw-",
+            "options": [
+              {
+                "prompt": "null set/efjòeâ mecegÛÛeÙe",
+                "value": "A"
+              },
+              {
+                "prompt": "Universal set/mece<šerÙe mecegÛÛeÙe",
+                "value": "B"
+              },
+              {
+                "prompt": "A ∩",
+                "value": "C"
+              },
+              {
+                "prompt": "A' ∩",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2006",
+              "correct_answer": "A",
+              "explanation": "Let { } S 1,2,3,4,5,6,7,8 = { } A 1,2,3,4 = { } A' 5,6,7,8 = { } B 3,4,5,6 = { } B' 1,2,7,8 = { } C 5,6,7,8 = { } C' 1,2,3,4 = { } B C 3,4,5,6,7,8 ∪ = { } B' C' 1,2 ∩ = ( ) ( ) A B C A' B' C' ∪ ∪ ∩ ∩ ∩         { } { } { } { } 1,2,3,4 3,4,5,6,7,8 5,6,7,8 1,2   = ∪ ∩ ∩    { } { } 1,2,3,4,5,6,7,8 = ∩φ { } = φ Hence option (a) correct.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2007",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दf ूप fदत्त्दैग्हु rाज्rोाहूे अ श्दrुaह'े थ्aै? निम्नलिखित में से कौन-सा डी मॉर्गन के नियम का प्रतिनिधित्व करता है?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2007",
+              "correct_answer": "A",
+              "explanation": "De Morgan's First Law is (A∪B)' = A' ∩ B' Let { } S 1,2,3,4,5,6,7,8 = { } A 3,4,5 = { } B 4,5,6 = L.H.S { } { } A B 3,4,5 4,5,6 ∪ = ∪ { } A B 3,4,5,6 ∪ = Hence, ( ) { } A B ' 1,2,7,8 ∪ = R.H.S We know that { } A 3,4,5 = Hence, { } A' 1,2,6,7,8 = Similarly, { } B 4,5,6 = Thus, { } B' 1,2,3,7,8 = Therefore, { } { } A' B' 1,2,6,7,8 1,2,3,7,8 ∩ = ∩ { } A' B' 1,2,7,8 ∩ = Thus, L.H.S = R.H.S Hence, ( ) A B ' A' B' ∪ = ∩ is proved.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2008",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a set A = φ, then how many elements are there in P",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "र्‍द ातसहू/कोई तत्व नहीं",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2008",
+              "correct_answer": "C",
+              "explanation": "We know that If A is a set with m elements. n(A) = m, Then, ( ) m n P A 2 =     If A = φ then n(A) = 0 ∴ ( ) n P A 2 1 = ° =     Hence, P(A) has one element.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2009",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f ूप्rाा हदह-ास्ज्ूब् ोूे A, ँ, ण् arा प्aन्ग्हु rात्aूग्दह A ∩ ँ ृ A ∩ ण् aह् A ∪ ँ ृ A ∪ ण्, ूपह - यदि तीन अतिरिक्त समुच्चय A, ँ, ण् का संबंध A ∩ ँ ृ A ∩ ण् और A ∪ ँ ृ A ∪ ण् से है तो-",
+            "options": [
+              {
+                "prompt": "A = B = C",
+                "value": "A"
+              },
+              {
+                "prompt": "A = B",
+                "value": "B"
+              },
+              {
+                "prompt": "A = C",
+                "value": "C"
+              },
+              {
+                "prompt": "B = C",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2009",
+              "correct_answer": "D",
+              "explanation": "Let x∈C Suppose x ∈ A Here, x is common element of A and C. Therefore, x∈ A∩C Given: A∩B = A∩C x ∈ A∩B (∵x∈ A∩C) Thus, x ∈ B ∴ B = C Again, Let x ∈ C Suppose x ∉ A Therefore, x ∈ A∪C Given: A∪B = A∪C x ∈ A∪B (∵ x ∈ A∪C) Thus, x∈ B Hence C ⊆ B ...(i) Similarly, we can show that C ⊆ A ...(ii) Form (i) and (ii) we get B = C",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2010",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If Z1 = {3x : x ∈ Z} Z2 = {3x+1 : x ∈ Z} Z3 = {3x+2 : x ∈ Z} then - Ùeefo Z1 = {3x : x ∈ Z} Z2 = {3x+1 : x ∈ Z} Z3 = {3x+2 : x ∈ Z} lees -",
+            "options": [
+              {
+                "prompt": "Z1 ∩ Z2 ∩ Z3 = Z",
+                "value": "A"
+              },
+              {
+                "prompt": "Z1, Z2, Z3 form a group under multiplication",
+                "value": "B"
+              },
+              {
+                "prompt": "Z1, Z2, Z3 form a partition of R",
+                "value": "C"
+              },
+              {
+                "prompt": "Z1, Z2, Z3 form a partition of Z",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2010",
+              "correct_answer": "D",
+              "explanation": "Z = –∞ ........–3, –2,– 1, 0, 1, 2, 3, ........∞ Z1 = {3x : x ∈ z}, x = –1, 1, –2, 2, –3, 3 Z1 = {3, 3 –6, 6, –9, 9.............} Z2 = {3x+1: x∈z}, x = –1, 1, –2, 2, –3, 3 Z2 = {–2, 4, –5, 7, –8, 10...........} Z3 = {3x +2 : x ∈ z}, x = –1, 1, –2, 2, –3, 3 Z3 = {–1, 5, –4, 8, –7, 11...........} ∵ We get that Z1, Z2, Z3 form a partition of z.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2011",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If U = {1, 2, 3, 4, 5, 6, 7, 8, 9} A = {1, 2, 3, 4} B = {2, 4, 6, 8}, then (A ∪ B)' is - Ùeefo U = {1, 2, 3, 4, 5, 6, 7, 8, 9} A = {1, 2, 3, 4} B = {2, 4, 6, 8}, leye (A ∪ B)' nw -",
+            "options": [
+              {
+                "prompt": "{1, 3, 5, 7, 9}",
+                "value": "A"
+              },
+              {
+                "prompt": "{2, 4, 6, 8}",
+                "value": "B"
+              },
+              {
+                "prompt": "{1, 2, 3, 4, 6, 8}",
+                "value": "C"
+              },
+              {
+                "prompt": "{5, 7, 9}",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2011",
+              "correct_answer": "D",
+              "explanation": "U = {1,2,3,4,5,6,7,8,9} A = {1,2,3,4} B = {2,4,6,8} A∪B = {1,2,3,4,6,8} (A∪B)' = {U} – {1,2,3,4,6,8} (A∪B)' = {1,2,3,4,5,6,7,8,9}–{1,2,3,4,6,8} (A∪B)' = {5,7,9}",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2012",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If X and Y are two non-empty sets such that n(X) = 17, n(Y)= 23 and n(X U Y) = 38, then n (X ∩ Y) nw - Ùeefo X Deewj Y oes Deefleefjòeâ mecegÛÛeÙe nQ, pewmes n(X) = 17, n(Y)= 23 and n(X U Y) = 38, leye n (X ∩ Y) nesiee-",
+            "options": [
+              {
+                "prompt": "6",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "16",
+                "value": "C"
+              },
+              {
+                "prompt": "10",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2012",
+              "correct_answer": "B",
+              "explanation": "Given : n (x) = 17 n (y) = 23 n (x∪y) = 38 n(x∪y) = n(x) + n(y) – n(x∩y) 38 = 17 + 23 – n(x∩y) 38 = 40 – n(x∩y) n(x∩y) = 40 – 38 n(x∩y) = 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2013",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्ह a ुrदल्ज् दf ४०० ज्त्aब्ीे, २५० ज्त्aब् fददूंaत्त् aह् २०० ज्त्aब् म्rग्म्वू, ूपह प्दै स्aहब् जदज्त ज्त्aब् ंदूप् ूप ुaसे? /४०० खिलाड़ियों के समूह में २५० लोग फुटबॉल खेलते हैं, और २०० लोग क्रिकेट खेलते हैं। तो कितने लोग दोनों खेल खेलते हैं?",
+            "options": [
+              {
+                "prompt": "200",
+                "value": "A"
+              },
+              {
+                "prompt": "250",
+                "value": "B"
+              },
+              {
+                "prompt": "50",
+                "value": "C"
+              },
+              {
+                "prompt": "100",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2013",
+              "correct_answer": "C",
+              "explanation": "n(F) = 250 n(C) = 200 YEP 346 YCT n(F∪C) = 400 n(F∩C) = ? n(F∪C) = n(F) + n(C) – n(F∩C) 400 = 250 + 200 – n(F∩C) n(F∩C) = 450 – 400 n(F∩C) = 50",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2014",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दहा दf ूप fदत्त्दैग्हु ग्े ूrल? निम्नलिखित में से कौन-सा सत्य है",
+            "options": [
+              {
+                "prompt": "A ×",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "A ×",
+                "value": "C"
+              },
+              {
+                "prompt": "A ×",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2014",
+              "correct_answer": "B",
+              "explanation": "Let set A = {1, 2} B = {2, 3} C = {3, 4} A × B = {(1, 2) (1, 3) (2, 2) (2, 3)} B × C = {(2, 3) (2, 4) (3, 3) (3, 4)} A × C = {(1, 3) (1, 4) (2, 3) (2, 4)} Option (a) A × (B ∪ C) = (A × B) ∩ (A × C) {(1,2)}× {2,3,4} = {(1,2) (1,3) (2,2) (2,3)} ∩ {(1,3) (1,4) (2,3) (2,4)} {(1,2) (1,3) (1,4) (2,2) (2,3) (2,4)}≠{ (1,3) (2,3)} Option (b) (A – B) × C = (A × C) – (B × C) {1}×{3,4}={(1,3) (1,4)} ⇒ {(1,3) (1,4)}= {(1,3) (1,4)} is right. Hence option (b) is correct.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2015",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप aहुत ाूंौाह ूप त्ग्हो rाज्rोाहूा् ंर्ब् े२ – र्२ेब् – ब्२ + र्२े + ३ब् – १ ृ ०, ग्े - र् े२ – र्२ेब् – ब्२ + र्२े + ३ब् – १ ृ ० के द्वारा दर्शाये गये रेखाओं के बीच का कोण है-",
+            "options": [
+              {
+                "prompt": "4",
+                "value": "A"
+              },
+              {
+                "prompt": "tan–1",
+                "value": "B"
+              },
+              {
+                "prompt": "tan–1",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2015",
+              "correct_answer": "D",
+              "explanation": "Given that x2– 2xy – y2 + 2x + 3y – 1= 0 General equation of pair of straight line ax2 + by2 + 2hxy + 2xg + 2fy + c = 0 Compare above equation we get a = 1, b = –1, 2h = –2, f = 1.5, c = –1, g = 1 Angle between straight line 2 2 h ab tan a b − θ = + ( ) ( ) 2 2 1 1 1 1 1 − −× − = − tanθ = ∞ θ = tan–1 (∞) θ = tan–1 (tan 2 π ) θ = 2 π",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2016",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The equation xy – ax – by + ab = 0 represents- meceerkeâjCe xy – ax – by + ab = 0 oMee&lee nw-",
+            "options": [
+              {
+                "prompt": "a circle/Skeâ Je=òe",
+                "value": "A"
+              },
+              {
+                "prompt": "a ज्aग्r दf ेूraग्ुप्ू त्ग्हो/सरल रेखाओं का युग्म",
+                "value": "B"
+              },
+              {
+                "prompt": "an ellipse/Skeâ oerIe&Je=òe",
+                "value": "C"
+              },
+              {
+                "prompt": "a hyperbola/Skeâ DeeflehejJeueÙe",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2016",
+              "correct_answer": "B",
+              "explanation": "Given equation xy–ax–by+ab = 0 We know that general straight line equation ax2+by2+2hxy+2gx+2fy+c = 0 Compare both equation we get a = 0, b = 0, 2h = 1 ⇒ h = 1 2 , 2g = –a ⇒ g = a , 2 − 2f= – b ⇒ f = b , 2 − c = ab ∆ = abc + 2fgh – af2 – bg2 – ch2 = 0 + 2× b 2 −       a 2 −      × 1 2 – 0 – 0 – ab 1 4 ab ab 4 4 = − ∆ = 0 So, we can say that a pair of straight lines.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2017",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If lx + my + n = 0 be the normal to the circle x2+y2 = a2 then - Ùeefo lx + my + n = 0, Skeâ Je=òe x2+y2 = a2 , kesâ efueS DeefYeuebye nes lees efheâj -",
+            "options": [
+              {
+                "prompt": "n = a2",
+                "value": "A"
+              },
+              {
+                "prompt": "n = 0",
+                "value": "B"
+              },
+              {
+                "prompt": "n = a",
+                "value": "C"
+              },
+              {
+                "prompt": "n = 1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2017",
+              "correct_answer": "B",
+              "explanation": "Given the line lx + my + n = 0 Normal to circle x2 + y2 = a2 then n = ? line lx + my + n is passes through the circle centre (0,0) point. Hence l×0+m.0+n = 0 n = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2018",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इrदस् a प्ब्ज्ींदत्a दr ात्त्ग्ज्ो प्दै स्aहब् हदrस्aत्े म्aह ां ्raैह? एक अतिपरवलय या दीर्घवृत्त से कितने अभिलंब निकाले जा सकते हैं?",
+            "options": [
+              {
+                "prompt": "One/Skeâ",
+                "value": "A"
+              },
+              {
+                "prompt": "Two/oes",
+                "value": "B"
+              },
+              {
+                "prompt": "Three/leerve",
+                "value": "C"
+              },
+              {
+                "prompt": "Four/Ûeej",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2018",
+              "correct_answer": "D",
+              "explanation": "The equation of normals of slope m to the ellipse 2 2 2 2 x y 1 a b + = Hence ( ) 2 2 2 2 2 m a b y mx a b m − = ± + at points 2 2 2 2 2 2 2 2 a mb , a b m a b m   ± ±     + +   Therefore, Number of normals can be drawn from any point to an ellipse are 4. YEP 347 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2019",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the normals at the point       1 1 c ct , t on the hyperbola xy = c2 meets it again at the point       2 2 c ct , t then- Ùeefo DeeflehejJeueÙe xy = c2 kesâ efyebog       1 1 c ct , t hej DeefYeuebye efheâj mes efyebog       2 2 c ct , t hej efceueles nQ, lees",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2019",
+              "correct_answer": "A",
+              "explanation": "Given Hyperbola xy = C2 and normal point 1 1 1 c P ct , t       2 2 2 c P ct , t       Normal at t1 meets curve again at t2 So, the Normal passes through 1 1 c ct , t       and 2 2 c ct , t       Also equation of Normal at t1 is 3 4 1 1 1 xt yt ct c 0 − − + = Slope of Normal 2 1 1 2 1 t t t = = − ∴ 3 1 2 t t 1 = −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2020",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f aहब् ूaहुाहूे ूद ूप ात्त्ग्ज्ो २ २ २ २र् े ब् + ृ १ a ं स्aवे ग्हूीमज्ूे दf तहुूप्े प् aह् व् दह ूप र्aेग्े, ूपह - यदि एक दीर्घवृत्त २ २ २ २र् े ब् + ृ १ a ं पर कोई स्पर्शरेखा अक्ष पर लंबाई प् और व् का अंत:खंड बनाती है, तो -",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2020",
+              "correct_answer": "A",
+              "explanation": "Given ellipse 2 2 2 2 x y + = 1 a b Let point be P(a cos θ, b sin θ) = (x1, y1) Equation of tangent to ellipse 2 2 2 2 x y 1 a b + = at point (x1, y1) lies 1 1 2 2 x x y y 1 a b + = , x1 = a cos θ y1 = b sin θ 2 2 x a cos ybsin 1 a b θ θ + = For x-axis intercept, y = 0 (x = h) 2 ha cos 0 1 a θ + = h cos 1 a θ = a cos h θ = ...(i) For y-axis intercept, x = 0 (y = k) 2 k bsin 0 1 b θ + = ksin 1 b θ = Sin θ = b k ...(ii) Equation (i) and (ii) Squaring both side and adding we get 2 2 2 2 a b cos sin h k     + = θ + θ         2 2 2 2 a b 1 h k + =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2021",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "थू त् ां ूप fदम्aत् म्प्दr् दf a ज्araंदत्a aह् ् ां ूप ्ग्ेूaहम frदस् नर््ीूो, ूपह- मान लीजिए त् एक परवलय की केन्द्रीय जीवा है और ् शीर्ष से दूरी है, तो -",
+            "options": [
+              {
+                "prompt": "l ∝ d2",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "l ∝ d",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2021",
+              "correct_answer": "C",
+              "explanation": "Given, Distance = d OP d sin OS a θ = = a cosec d θ = Length of focal chord = 4a cosec2θ 2 a 4 a d   = × ×    ⇒ l ∝ 2 1 d",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2022",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ज्दत्ar म्द-दr्ग्हaूा दf a महूrा दf ूप म्ग्rम्त r ृ ४.म्देθ + ३.ेग्हθ ग्े - वृत्त r ृ ४.म्देθ + ३.ेग्हθ के केन्द्र का ध्रुर्वीय निर्देशांक है-",
+            "options": [
+              {
+                "prompt": "–1 3",
+                "value": "A"
+              },
+              {
+                "prompt": "–1",
+                "value": "B"
+              },
+              {
+                "prompt": "–1",
+                "value": "C"
+              },
+              {
+                "prompt": "–1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2022",
+              "correct_answer": "B",
+              "explanation": "Given centre of circle r = 4cosθ + 3sinθ 4 3 r 5 cos sin 5 5   = θ + θ     Let 4 3 cos ,sin 5 5 φ = φ = ∵ ( ) ( ) 1 34 3 r 5 cos cos sin .sin , tan tan 4 − = φ θ + φ θ φ = ⇒φ = ⇒ r = 5cos (θ – φ) This equation is a standard form of circle in polar coordinate r = 2a cos (φ-ψ) have center at (a, ψ) So, the centre of given circle is at ( ) 1 34 5 ,tan 2 −      ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2023",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ाम्महूrग्म्ग्ूब् aह् ोस्ग्- त्aूल्े rाम्ूल्स् दf ूप म्ल्rन १ ृ ८ + ५.म्देθ r , arा rोजम्ूग्नत्ब् - वक्र १ ृ ८ + ५.म्देθ r की उत्केन्द्रता (Eम्महूrग्म्ग्ूब्) और अर्ध-नाभि लम्ब (एास्ग्-त्aूल्े rाम्ूल्स्) क्रमश: हैं-",
+            "options": [
+              {
+                "prompt": "1 5",
+                "value": "A"
+              },
+              {
+                "prompt": "5 1",
+                "value": "B"
+              },
+              {
+                "prompt": "5 ,8",
+                "value": "C"
+              },
+              {
+                "prompt": "1 ,8",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2023",
+              "correct_answer": "B",
+              "explanation": "Given curve 1 8 5 r = + cos θ both side divided by 8 we get 1 8 5 cos 8r 8 8 = + θ 1 5 1 cos 8r 8 = + θ We know that 1 1 ecos r = + θ Compare both equation, we have Semi-latus rectum = 1 8 = ℓ Eccentricity 5 e 8 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2024",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप म्दहरल्ुaूा ्ग्aसूीे दf ूप प्ब्ज्ींदत्a arा ेल्म्प् ूप्aू - अतिपरवलय की दो संयुग्मी व्यास इस प्रकार है कि -",
+            "options": [
+              {
+                "prompt": "Both meet the curve at imaginary points",
+                "value": "A"
+              },
+              {
+                "prompt": "One meets the curve at real point and another",
+                "value": "B"
+              },
+              {
+                "prompt": "Both meet the curve at real point",
+                "value": "C"
+              },
+              {
+                "prompt": "They meet the curve at infinity",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2024",
+              "correct_answer": "A",
+              "explanation": "Diameters of the hyperbola are conjugate when each bisects all chords parallel to the other. * In this case both the hyperbola and its conjugate are sources for the chords and diameters. * In the case of rectangular hyperbola, its conjugate is the reflection across an asymptote.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2025",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ल्aिूग्दह दf ूप ज्त्aहा ूप्rदल्ुप् ूप ज्दग्हू (१, २, –३) aह् हदrस्aत् ूद ूप ेूraग्ुप्ू त्ग्हा रदग्हग्हु ूप ज्दग्हूे (–१, ३, ४) aह् (५, २, –१) ग्े- बिन्दु (१, २, –३) के माध्यम से गुजरने वाली और बिन्दुओं (–१, ३, ४) और (५, २, –१) को जोड़ने वाली सीधी रेखा के अभिलंब समतल का समीकरण होगा-",
+            "options": [
+              {
+                "prompt": "x – 2y – 3z – 17 = 0",
+                "value": "A"
+              },
+              {
+                "prompt": "6x – y – 5z – 19 = 0",
+                "value": "B"
+              },
+              {
+                "prompt": "6x – y + 5z + 19 = 0",
+                "value": "C"
+              },
+              {
+                "prompt": "3x – 2y – 5z – 9 = 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2025",
+              "correct_answer": "B",
+              "explanation": "Given the point ( ) A 1,3,4 = − and ( ) B 5,2, 1 = − AB B A = − \u0003\u0003\u0003\u0004 \u0003\u0004 \u0003\u0004 = (5,2,–1) (–1,3,4) 6i j 5k = −− ɵ ɵ AB \u0003\u0003\u0003\u0004 is normal (⊥) to the required plane durations of normal (6, –1, –5) Therefore equation 6x–y–5z = ρ ...(i) Point (1,2,–3) passes through the plane, 6×1–2+15 = ρ ρ = 19 Putting the value of ρ in equation (i) we get 6x–y–5z = 19 6x–y–5z – 19 = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2026",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ुाहीaत् ल्aिूग्दह दf ूप म्दहा ैप्ग्म्प् ज्aेो ूप्rदल्ुप् ूप म्द-दr्ग्हaूा र्aेो ग्े- निर्देशांक अक्षों से गुजरने वाले शंकु का सामान्य समीकरण है-",
+            "options": [
+              {
+                "prompt": "x2y2+y2z2+z2x2 = 0",
+                "value": "A"
+              },
+              {
+                "prompt": "hxy + fyz + gzx = 0",
+                "value": "B"
+              },
+              {
+                "prompt": "xy + yz – zx = 0",
+                "value": "C"
+              },
+              {
+                "prompt": "ax2 + b2 + cz2 + 2hxy + 2fyz + 2gzx = 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2026",
+              "correct_answer": "B",
+              "explanation": "ax2 + by2 + cz2 + 2hxy + 2fyz + 2gzx+d = 0 General equation of the cone with vertex at origin (0, 0) and passing through a = b = c = 0 Coordinate axis is hxy + gzx + fyz = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2027",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ेल्rfaम दf rान्दत्ल्ूग्दह दf ूप ेूraग्ुप्ू त्ग्हार् ै२ ृ ब्,र् े ृ ० aंदल्ू ूप ब् र्aेग्े ग्े - भ् अक्ष पर सीधी रेखार् ै२ ृ ब्,र् े ृ ० की भ्रमण सतह (ेल्rfaम दf rान्दत्ल्ूग्दह) है -",
+            "options": [
+              {
+                "prompt": "x2 + z2 = y",
+                "value": "A"
+              },
+              {
+                "prompt": "y4 = x2 + z2",
+                "value": "B"
+              },
+              {
+                "prompt": "z4 = x2 + y2",
+                "value": "C"
+              },
+              {
+                "prompt": "y2 + z2 = x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2027",
+              "correct_answer": "A",
+              "explanation": "The surface of revolution of straight line z2 = y, x = 0 about y - axis z2 = y which axis are revolution then these axis of power always one and x, z - axis are two point then x, z axis power two so, equation is x2 + z2 = y",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2028",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ेप्दrूोू ्ग्ेूaहम ाूंौाह ूपर् ै-र्aेग्े aह् ूप त्ग्हार् े – २ ब् –१र् ै +१ ृ ृ १ २ २ ग्े - र् ैं-अक्ष और रेखार् े – २ ब् –१र् ै +१ ृ ृ १ २ २ के बीच की न्यूनतम दूरी है-",
+            "options": [
+              {
+                "prompt": "5",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "3 5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2028",
+              "correct_answer": "C",
+              "explanation": "Given line equation x 2 y 1 z 1 1 2 2 − − + = = Equation of z – axis ( ) ( ) ( ) ( ) a 0,0,1 ,b 0,0,1 ,c 2,1, 1 , d 1,2,2 = = = − = \u0004 \u0004 \u0004 \u0004 Shortest distance between two line ( )( ) a c b d b d − × = × \u0004 \u0004 \u0004 \u0004 \u0004 \u0004 ɵ ( ) ɵ ( ) b d 0i 0j 1k 1i 2j 2k j 2i × = + + × + + = − \u0004 \u0004 ɵ ɵ ɵ ɵ ɵ ɵ ( ) ( ) 2 2 b d 1 2 5 × = + − = \u0004 \u0004 ( ) ( ) a c 0,0,1 2,1, 1 − = − − \u0004 \u0004 ɵ 2i j k = − −+ ɵ ɵ ( ) ( ) ( ) ( ) a c b d 2i j k 2i j − ⋅ × = − −+ ⋅− + \u0004 \u0004 \u0004 \u0004 ɵ ɵ ɵ ɵ = 4 – 1 = 3 Shortest distance between two line ( )( ) a c b d b d − × = × \u0004 \u0004 \u0004 \u0004 \u0004 \u0004 3 5 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2029",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ल्aिूग्दह र्aे२+ंब्२+मर््ै२+२लर््े+२न्ब्+र्२ैै+् ृ ०, rाज्rोाहूे a म्दहा ग्f - समीकरण र्aे२+ंब्२+मर््ै२+२लर््े+२न्ब्+र्२ैै+् ृ ० एक शंकु का प्रतिनिधित्व करेगा, यदि -",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "bcu + acv + abw = d",
+                "value": "B"
+              },
+              {
+                "prompt": "au2 + bv2 + cw2 = d",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2029",
+              "correct_answer": "D",
+              "explanation": "ax2 + by2 + cz2 + 2ux + 2vy + 2wz + d = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2030",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्ह ूप्rाा ्ग्सहेग्दह, ूप ल्aिूग्दहर् े२ ृ २.λ.ब्, λ ≠ ० rाज्rोाहूे - त्री-विमीय में समीकरणर् े२ ृ २.λ.ब्, λ ≠ ० दर्शाता है-",
+            "options": [
+              {
+                "prompt": "a parabolic cylinder/Skeâ hejJeueefÙekeâ yesueve",
+                "value": "A"
+              },
+              {
+                "prompt": "a hyperbolic cylinder/Skeâ DehejJeefueÙekeâ yesueve",
+                "value": "B"
+              },
+              {
+                "prompt": "an elliptic cylinder/Skeâ oerIe&Je=òeerÙe yesueve",
+                "value": "C"
+              },
+              {
+                "prompt": "a cylinder/Skeâ yesueve",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2030",
+              "correct_answer": "A",
+              "explanation": "equation x2 = 2λy, λ ≠ 0 λ is constant in - 3 dimension then equation x2 = 2λy represent a Parabolic cylinder",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2031",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ग्स्aुा दf ूप ज्दग्हू (–३, ८, ४) ग्ह ूप ज्त्aहा र्६े – ३ब् – र्२ै + १ ृ ०, ग्े - समतल र्६े – ३ब् – र्२ै + १ ृ ० पर स्थित बिंदु (–३, ८, ४) का प्रतिबिम्ब है -",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2031",
+              "correct_answer": "D",
+              "explanation": "Given the point P(–3, 8, 4) and plane 6x–3y– 2z+1 = 0 Equation of the plane YEP 350 YCT 1 1 1 x x y y z z a b c − − − = = x 3 y 8 z 4 k 6 3 2 + − − = = = − − ...(i) Solving equation (i) we get x = 6k–3, y = –3k+8, z = –2k+4 Putting is above equation, we get 6x–3y–2z+1 = 0 6(6k–3)–3(–3k+8)–2(–2k+4)+1 = 0 36k–18+9k–24+4k–8+1 = 0 49k–49 = 0 49 K 1 49 = = x = 6×1–3 = 3, y = –3×1+8 = 5, z = –2×1+4 =2 Midpoint 1 1 1 3 x 8 y 4 z 3 , 5 , 2 2 2 2 −+ + + = = = ⇒ x1 = 9 ⇒ y1 = 2 ⇒ z1 = 0 Hence image of plane (9, 2, 0)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2032",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f ए१ ृ ० aह् ए२ ृ ० arा ूप ल्aिूग्दहे दf a ेज्प्ीा, ूपह ए१+λ. ए२ ृ ० rाज्rोाहूे - यदि ए१ ृ ० और ए२ ृ ० एक गोले का समीकरण है, तो ए१ + λ.ए२ ृ ० दर्शाता है-",
+            "options": [
+              {
+                "prompt": "a circle/Skeâ Je=òe",
+                "value": "A"
+              },
+              {
+                "prompt": "a sphere passing through the circle of",
+                "value": "B"
+              },
+              {
+                "prompt": "a plane/Skeâ melen",
+                "value": "C"
+              },
+              {
+                "prompt": "a sphere passing through the plane of",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2032",
+              "correct_answer": "B",
+              "explanation": "Given S1 = 0, S2 = 0 A sphere passing through the circle of intersection of the sphere.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2033",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्त्aहा ज्aेो ूप्rदल्ुप् a ज्दग्हू (१, –२, १) aह् ग्े ज्ीजह्ग्म्ल्त्ar दf ूैद ज्त्aहो र्२े – २ब् +र् ै ृ ० aह् र् े – ब् + र्२ै ृ ४. ऊप ्ग्ेूaहम दf ूप ज्त्aहा frदस् ूप ज्दग्हू (१, २, २) ग्े - एक सतह बिंदु (१, –२, १) से गुजरता है और दो समतल र्२े – २ब् +र् ै ृ ० एवंर् े – ब् + र्२ै ृ ४ के लंबवत है। बिन्दु (१, २, २) से समतल की दूरी है-",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2 2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2033",
+              "correct_answer": "C",
+              "explanation": "Given two plane, 2x–2y+z = 0 and x – y + 2z = 0 and passing through point (1, –2, 1) The equation of planes passing through (1, –2, 1) is a(x–1)+b(y+2)+c(z–1) = 0 ...(i) ⊥ to 2x–2y+z = 0 and x–y+2z = 4 ∴, 2a–2b+c = 0 and a–b+2c = 0 ⇒ a b c 4 1 4 1 2 2 − = = −+ − −+ ⇒ a b c 3 3 0 = = − − On substituting the values of a, b and c in equation (i) we get ( ) ( ) ( ) 3 x 1 3 y 2 0 z 1 0 − − − + + − = ⇒ x+y+1 = 0 Distance of this planes from (1,2,2) is given by 1 2 1 4 2 2 2 d 1 1 2 2 2 + + × = = = × + 2 2 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2034",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Eqल्aूग्दह दf ूप ेज्प्ीा ूप्aू ज्aेो ूप्rदल्ुप् ूप ज्दग्हूे (०, ०, ०), (a, ०, ०), (०, ं, ०), (०, ०, म्) ग्े - उस गोले का समीकरण क्या होगा, जो बिंदु (०, ०, ०), (a, ०, ०), (०, ं, ०), (०, ०, म्) से होकर गुजरता है?",
+            "options": [
+              {
+                "prompt": "x2 + y2 + z2 = a2 + b2 + c2",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2034",
+              "correct_answer": "B",
+              "explanation": "We know that Equation of sphere x2+y2+z2+2ux+2vy+2wz+d = 0 ...(i) Passing through point (0, 0,0) in equation (i) we get d = 0, x2+y2+z2+2ux+2vy+2wz = 0 ...(ii) Similarly passing through (a, 0, 0) we get a2+0+0+2ua+0+0 = 0 a u 2 = − Similarly point (0, b, 0) and point (0,0,c) passing through in equation (ii) we get b v 2 = − c w 2 = − Putting the values of u, v, and w is equation (ii) we get x2+y2+z2–ax–by–cz = 0 We can write ( ) 2 2 2 2 2 2 a b c 1 x y z a b c 2 2 2 4       − + − + − = + +            ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2035",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f             –१ –१ ज् q म्दे + म्दे ृ α, a ं ूपह २ २ २ २ २ ज् q + व्म्देα + ृ ेग्ह α a ं ैप्ीा व् ग्े ल्aित् ूद: भ्Eझ् ३५१ भ्ण्ऊ यदि             –१ –१ ज् q म्दे + म्दे ृ α, a ं तो २ २ २ २ २ ज् q + व्म्देα + ृ ेग्ह α a ं तो व् का मान किसके बराबर है?",
+            "options": [
+              {
+                "prompt": "2pq",
+                "value": "A"
+              },
+              {
+                "prompt": "2pq",
+                "value": "B"
+              },
+              {
+                "prompt": "pq",
+                "value": "C"
+              },
+              {
+                "prompt": "pq",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2035",
+              "correct_answer": "B",
+              "explanation": "Given If 1 1 p q cos cos , a b − −     + = α         Then 2 2 2 2 2 p q K cos sin a b + α + = α ⇒ 2 2 1 2 2 p q p q cos . 1 1 a b a b −      − − ⋅ − = α               ⇒ 2 2 2 2 pq p q 1 1 cos ab a b    − − − = α       ⇒ 2 2 2 2 pq p q cos 1 1 ab a b    − α = − −       Squaring both side, we get ⇒ 2 2 2 2 2 2 pq p q cos 1 1 ab a b          − α = − −                 2 2 2 2 2 2 2 2 2 2 2 2 2 p q 2pq p q p q cos cos 1 ab a b a b a b + α − α = − − + ⇒ 2 2 2 2 2 p 2pq p cos 1 cos ab a b − α + = − α ⇒ 2 2 2 2 2 p 2pq q cos sin ab a b − α + = α Compare 2 2 2 2 2 p q kcos sin a b + α + = α Hence 2pq k ab = −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2036",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f म्दोम् α + म्दू α ृ २ + ५ , ूपह न्aत्ल दf म्दे α ग्े- यदि म्दोम् α + म्दू α ृ २ + ५ है, तो, म्दे α का मान होगा-",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "5",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2036",
+              "correct_answer": "B",
+              "explanation": "Given that cosec α + cot α = 2 + 5 ...(i) cos α = ? We know that cosec2 α – cot2 α = 1 (cosec α + cot α) (cosec α – cot α) = 1 ( )( ) 2 5 cosec cot 1 + α − α = 1 2 5 cosec cot 2 5 2 5 − α − α = × + − 2 5 cosec cot 5 2 1 − α − α = = − − cosec cot 5 2 α − α = − ...(ii) Equation (i) + (ii) adding we get cosec cot cosec cot 2 5 5 2 α + α + α − α = + + − 2cosec 2 5 α = cosec 5 α = Putting the value of cosec α in equation (i) 5 cot 2 5 + α = + cot α = 2 ⇒ cos cos sin cosec α α = α⋅ α cot = cosec α α 2 cos = 5 α",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2037",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इग्ह् ूप न्aत्ल दf : ( ) ( ) ोम्८A ूaह१०A + ूaह६A ४ ूaह१०A – ूaह६A ( ) ( ) ोम्८A ूaह१०A + ूaह६A ४ ूaह१०A – ूaह६A का मान ज्ञात करें:",
+            "options": [
+              {
+                "prompt": "sin 4A",
+                "value": "A"
+              },
+              {
+                "prompt": "cos 4A",
+                "value": "B"
+              },
+              {
+                "prompt": "tan 4A",
+                "value": "C"
+              },
+              {
+                "prompt": "sin 2A",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2037",
+              "correct_answer": "B",
+              "explanation": "Given ( ) ( ) sec8A tan10A + tan6A 4 tan10A – tan6A sin10A sin 6A 1 cos10A cos6A sin10A sin6A 4cos8A cos10A cos6A   +     =   −     ( ) ( ) sin10A cos6A sin6A cos10A 1 4cos8A sin10A cos6A sin6A cos10A ⋅ + ⋅ = ⋅ − ⋅ ( ) ( ) sin 10A 6A 1 4cos8A sin 10A 6A + = − 1 sin16A 4cos8A sin4A = ( ) sin2 8A 4cos8A sin4A = ⋅ YEP 352 YCT 2 sin8A cos8A 4cos8A sin4A ⋅ = ⋅ ( ) sin2 4A 2 sin4A = ⋅ 2 sin4A cos4A 2 sin4A ⋅ = = cos 4A",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2038",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f A त्गे ग्ह ूप fग्rेू qल्a्raहू aह् २ २ २ ३ेग्हAम्देA ृ म्दे A – ेग्ह A , ूपह ूप न्aत्ल दf म्देAम्दे(A/२)ेग्ह(A/२) ग्े : यदि A पहले चतुर्थांश पर है और २ २ २ ३ेग्हAम्देA ृ म्दे A – ेग्ह A , है तो म्देAम्दे(A/२)ेग्ह(A/२) का मान क्या होगा?",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "8",
+                "value": "C"
+              },
+              {
+                "prompt": "4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2038",
+              "correct_answer": "B",
+              "explanation": "Given that 2 2 2 3sin A cos A cos A sin A ⋅ = − ( ) 3 2sin A cos A cos 2A ⋅ = ( ) 3 sin 2A cos2A = ⇒ sin 2A 1 cos2A 3 = ⇒ tan 2A = tan 30 2A = 30 The value of A A cosA cos sin 2 2 ⋅ ⋅ 2 A A cosA cos sin 2 2 2 = ⋅ ⋅ ⋅ 1 A A 2sin cos cos A 2 2 2   = ⋅ ⋅     1 sin A cosA 2 = ⋅ 2 1 sin A cosA 2 2 = × ⋅ 1 sin 2A 4 = 1 1 1 1 sin30 4 4 2 8 = × = × =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2039",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप न्aत्ल दf ३ेग्ह१०ड्ढ ग्े ल्aित् ूद - ३ेग्ह१०ड्ढ का मान ञ्ञ्ञ्ञ्ञ्ञ्ञ्ञ् के बराबर है-",
+            "options": [
+              {
+                "prompt": "sin20º + sin40º",
+                "value": "A"
+              },
+              {
+                "prompt": "cos50º – cos70º",
+                "value": "B"
+              },
+              {
+                "prompt": "cos50º – cos70º",
+                "value": "C"
+              },
+              {
+                "prompt": "sin70º + sin50º",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2039",
+              "correct_answer": "B",
+              "explanation": "Given 3sin10° Multiplaying and dividing by 2. We get = 2 3sin10 2 ° = 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2040",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इग्ह् ूप न्aत्ल दf ( ) ३ २ ३ ६ ६ म्दू २A + ३म्दू२Aम्दोम् २A म्दोम् २A म्दे A – ेग्ह A ( ) ३ २ ३ ६ ६ म्दू २A + ३म्दू२Aम्दोम् २A म्दोम् २A म्दे A – ेग्ह A का मान ज्ञात करें:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2040",
+              "correct_answer": "C",
+              "explanation": "( ) 3 2 3 6 6 cot 2A +3cot2Acosec 2A cosec 2A cos A – sin A ( ) ( )( ) 2 2 2 2 2 4 4 2 2 cot 2A cot 2A 3cosec 2A cosec 2A cos A sin A cos A sin A cos Asin A sin2A + = − + + = ( ) ( ) 2 2 2 2 cot 2A cos ec 2A 1 3cos ec 2A cos ec 2A 4 sin 2A cos 2A sin 2A 4 −+ −       = ( ) ( ) 2 2 2 4 4cos ec 2A 1 cos ec 2A 4 sin 2A − − = ( ) ( ) 2 2 4 4cos ec 2A 1 4cos ec 2A 1 − − = 4",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2041",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्fर् ें ृ ण्दूθ + ण्देθ aह् भ् ृ ण्दूθ – ण्देθ, ूपह fग्ह् ूप न्aत्ल दf २ २र् ें – र्भ् ेंभ् . यदिर् ें ृ ण्दूθ + ण्देθ और भ् ृ ण्दूθ – ण्देθ, तो २ २र् ें – र्भ् ेंभ् का मान ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2041",
+              "correct_answer": "C",
+              "explanation": "X = Cotθ + Cosθ Y = Cotθ – Cosθ Then ( ) ( ) ( ) ( ) 2 2 2 2 cot cos cot cos X Y XY cot cos cot cos θ + θ − θ − θ − = θ + θ ⋅ θ − θ 2 2 2 2 cot cos 2 cot cos cot cos 2cot cos 2 2 cot cos θ + θ+ θ⋅ θ− θ + θ+ θ⋅ θ = θ− θ 2 2 2 4 cot cos cos cos sin θ⋅ θ = θ − θ θ YEP 353 YCT 2 2 4 cot cos 1 sin cos sin θ⋅ θ = − θ θ θ 2 2 4 cot cos cos cos sin θ⋅ θ = θ θ θ 4 cot cos cos cot θ⋅ θ = θ⋅ θ = 4",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2042",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "एग्ह६ड्ढ. ेग्ह६६ड्ढ ग्े - एग्ह६ड्ढ. ेग्ह६६ड्ढ का मान है-",
+            "options": [
+              {
+                "prompt": "5 –1",
+                "value": "A"
+              },
+              {
+                "prompt": "3 –",
+                "value": "B"
+              },
+              {
+                "prompt": "3 –",
+                "value": "C"
+              },
+              {
+                "prompt": "5 –1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2042",
+              "correct_answer": "C",
+              "explanation": "Given Sin6º. Sin66º Dividing Multiply by 2 we get 2 sin66 .sin 6 2 = ° ° 1 (2sin 66 .sin 6 ) 2 = ° ° ( ) ( ) { } 2sin A sin B cos A B cos A B ⋅ = − − + ∵ ( ) ( ) 1 cos 66 6 cos 66 6 2 = °−° − ° + °     [ ] 1 cos60 cos72 2 = ° − ° ( ) 1 1 cos 90 18 2 2   = − ° − °     ( ) 1 1 sin 18 2 2   = − °     1 1 5 1 2 2 4   − = −     5 1 sin18 4   −   ° =       ∵ 3 5 8 − =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2043",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "न्न्aत्ल दf       ड्ढ १ म्दू ७ २ ग्े -       ड्ढ १ म्दू ७ २ का मान होगा -",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2043",
+              "correct_answer": "A",
+              "explanation": "Given 1 cot 7 2 °       15 cot 2 °   =     15 cos 2 15 sin 2 °       = °       15 2cos 2 15 2sin 2 °       = °       2 15 2cos 1 cos15 2 15 15 sin15 2sin .cos 2 2 °     + °   = = ° ° °             We know that ( ) 1 cos15 6 2 4 ° = + 2 2 2cos 1 cos2 2 θ   = + θ     ( ) 1 sin15 6 2 4 ° = − 2sin cos sin 2 2 θ θ   = θ     ( ) ( ) 1 1 6 2 4 1 6 2 4 + + = − ( ) 4 6 2 4 6 2 4 + + = − 4 6 2 6 2 + + = − ( ) ( ) ( ) ( ) 4 6 2 6 2 6 2 6 2 + + + = × − + 4 6 4 2 6 12 12 2 6 2 + + + + + = − 4 6 4 2 8 2 3 2 3 4 + + + + = 8 4 2 4 3 4 6 4 4 4 4 = + + + 2 2 3 6 = + + +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2044",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f ेग्ह ३A ृ म्दे (A–३०), ैप्ीा ३A aह् (A–३०) arा aम्ल्ूा aहुते, fग्ह् ूप न्aत्ल दf (ेग्ह २A + म्दे २A) यदि ेग्ह ३A ृ म्दे (A–३०) है, जहाँ ३A और (A–३०) न्यून कोण हैं, तो (ेग्ह २A + म्दे २A) का मान ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "3 –1",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "3 –1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2044",
+              "correct_answer": "B",
+              "explanation": "Given If sin3A = cos(A–30°) ( ) { } sin3A sin 90 A 30 = ° − − ° ( ) { } sin3A sin 90 A 30 = ° − + ° ( ) sin3A sin 120 A = ° − 3A = 120° – A 3A = 120° A = 30° Given now, sin2A + cos2A = sin(2×30) + cos (2×30) = sin 60 + cos 60 3 1 2 2 = + 3 1 2 + =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2045",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ( ) ɺɺ P r is a point on a surface, then P will be singularity of the surface if - ceeve ueerefpeS ( ) ɺɺ P r , Skeâ melen hej Skeâ efyebog nw, lees Gme melen hej P Skeâ efJeue#eCelee nesiee, Ùeefo -",
+            "options": [
+              {
+                "prompt": "r1 = r2/r1 = r2 nes",
+                "value": "A"
+              },
+              {
+                "prompt": "r1 × r2 = 0/r1 × r2 = 0 nes",
+                "value": "B"
+              },
+              {
+                "prompt": "r1 = r2 = 0/r1 = r2 = 0 nes",
+                "value": "C"
+              },
+              {
+                "prompt": "r1 × r2 ≠ 0/r1 × r2 ≠ 0 nes",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2045",
+              "correct_answer": "B",
+              "explanation": "An ordinary point is defined as r1× r2 ≠ 0 A Point which is not an ordinary point is called A singularity at a singularity r1× r2 = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2046",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ध्ह ूप ेल्rfaमर् ेबर््ै ृ ४, ैप्aू ेप्aत्त् ां ूप ल्aिूग्दह दf ूप ूaहुाहू ज्त्aहा aू ूप ज्दग्हू (१, २, २) ? सतहर् ेबर््ै ृ ४ पर बिंदु (१, २, २) पर स्पर्श रेखा का समीकरण क्या होगा?",
+            "options": [
+              {
+                "prompt": "2x+y+z = 6",
+                "value": "A"
+              },
+              {
+                "prompt": "x–2y–z+1 = 0",
+                "value": "B"
+              },
+              {
+                "prompt": "x+2y+z–1 = 0",
+                "value": "C"
+              },
+              {
+                "prompt": "x+2y+z = 2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2046",
+              "correct_answer": "A",
+              "explanation": "Given Surface xyz = 4 and Tangent point (1,2,2) r = xi+yj+zk R = i+2j+2k f = xyz–4 = 0 f f f f i j k yzi xz j xyk x y z ∂ ∂ ∂ ∇= + + = + + ∂ ∂ ∂ ( ) 1,2,2 f 4i 2j 2k ∇ = + + Equation of the tangent plane, ( ) R r f 0 − ⋅∇= ⇒ ( ) ( ) ( ) i 2j 2k xi yj zk 4i 2j 2k 0 + + − + + ⋅ + + =     ⇒ ( ) ( ) ( ) ( ) 1 x i 2 y j 2 z k 4i 2j 2k 0 − + − + − ⋅ + + =     ⇒ ( ) ( ) ( ) 4 1 x 2 2 y 2 2 z 0 − + − + − = ⇒ 4 4x 4 2y 4 2z 0 − + − + − = ⇒ 2x+y+z = 6",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2047",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "थू ूप्ीा ां a ेल्rfaम,र् े ृ ल्म्देन्, ब् ृ ल्ेग्हन्,र् ै ृ म्न्. ऊप fग्rेू fल्ह्aसहूaत् म्दfिग्म्गहूे arा rोजम्ूग्नत्ब् - मान लीजिए कि एक सतह है,र् े ृ ल्म्देन्, ब् ृ ल्ेग्हन्, र् ै ृ म्न् हो, तो प्रथम मूलभूत मौलिक गुणांक क्रमश: हैं-",
+            "options": [
+              {
+                "prompt": "0, 0, u2 + c2",
+                "value": "A"
+              },
+              {
+                "prompt": "1, 0,",
+                "value": "B"
+              },
+              {
+                "prompt": "1, 0, u2+c2",
+                "value": "C"
+              },
+              {
+                "prompt": "cosv, sinv, u2 +1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2047",
+              "correct_answer": "C",
+              "explanation": "Given Surface x = u cos v y = u sin v z = cv r = (u cos v, u sin v, cv) r1 = (cos v, sin v, 0) r2 = (– u sin v, u cos v, c) E = r1 2 = (cos v, sin v, 0)⋅ (cos v, sin v, 0) = sin2 v + cos2 v = 1 F = r1.r2 = (cos v, sin v, 0)⋅ (–u sin v, ucos v, c) =–u cos v sin v + u sin v cos v + 0 = 0 F = 0 G = r2 2 = (– u sin v, u cos v, c). (– u sin v, u cos v, c) = u2 sin2 v + u2 cos2 v + c2 = u2 (sin2 v + cos2) + c2 = u2 × 1 + c2 = u2 + c2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2048",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्aू ेप्aत्त् ां ूप aज्ज्rदज्rग्aूा स्aूrगर््े दf ूप म्दfिग्म्गहू दf इrाहाू-एीrाू fदrस्ल्त्a? प्रâेनेट-सेरेट फॉर्मूला के गुणांक का उपयुक्त आव्यूह कौन-सा है?",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2048",
+              "correct_answer": "C",
+              "explanation": "Serret-Frenet formula in matrix form- ɵ t ' kn = ɵ ɵ ɵ b' n = −τ ɵ ɵ n' b kt = τ −ɵ ɵ t ' n ' b'      =       ɵ 0 k 0 k 0 0 0     − τ     −τ  ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2049",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "र्Eेज्rो ूप rात्aूग्दह ाूंौाह ra्ग्ल्े दf ेज्प्ीग्म्aत्-म्ल्rन्aूल्rा R aह् ूप ra्ग्ल्े दf म्ल्rन्aूल्rा ρ दf ूप म्ल्rन झ् aह् σ (ूप rाम्ग्ज्rदम्aत् दf ूप ूदrेग्दह). भ्Eझ् ३५५ भ्ण्ऊ वक्र झ् और σ (मरोड़ का व्युत्क्रम) की गोलाकार वक्रता की त्रिज्या R और वक्रता त्रिज्या ρ के बीच सम्बन्ध ज्ञात कीजिए।",
+            "options": [
+              {
+                "prompt": "R2 = σ2 +",
+                "value": "A"
+              },
+              {
+                "prompt": "R2 = ρ2 +",
+                "value": "B"
+              },
+              {
+                "prompt": "R2 = ρ'2 +",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2049",
+              "correct_answer": "B",
+              "explanation": "Radius of spherical curvature = R Radius of curvature = ρ Torsion = σ Relation between radius of spherical-curvature R and ρ 2 2 2 2 R ' = ρ + ρ σ R2 = ρ2 + (ρ' σ)2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2050",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इदr a म्ल्rन ूद ां a पत्गर््े ैप्ग्म्प् दf ूप fदत्त्दैग्हु ेप्दल्त्् ां ूप स्देू हामेarब् aह् ेल्ffग्म्गहू म्दह्ग्ूग्दह? वक्र के कुंडलित वक्रता (हेलिक्स) होने के लिए आवश्यक और पर्याप्त शर्त यह है कि -",
+            "options": [
+              {
+                "prompt": "The curvature is constant/Je›eâlee efmLej nw",
+                "value": "A"
+              },
+              {
+                "prompt": "The torsion is constant/cejesÌ[",
+                "value": "B"
+              },
+              {
+                "prompt": "The ratio of the curvature and the torsion is",
+                "value": "C"
+              },
+              {
+                "prompt": "The product of the curvature and the torsion",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2050",
+              "correct_answer": "C",
+              "explanation": "A curve is a general helix if and only if the ratio of curvature and torsion is constant.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2051",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ातसहू दf ेल्rfaम ्े ग्े ुग्नह ंब्- सतह ्े का अवयव किसके द्वारा दिया गया है?",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "ds = H2dudv",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "ds = H.dudv",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2051",
+              "correct_answer": "D",
+              "explanation": "The element of surface ds = | r1du × r2 dv| = |r1 × r2| du.dv = H du.dv i.e. ds = H du. dv",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2052",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्aू ेप्दल्त्् ां a हामेarब् aह् ेल्ffग्म्गहू म्दह्ग्ूग्दह fदr ूप म्ल्rन न् ृ म्दहेूaहू ूद ां a उादेग्म् दह ूप ुाहीaत् ेल्rfaम? सामान्य सतह पर वक्र न् ृ स्थिरांक (अचर), को अल्पान्तरी (जियोडेसिक) होने के लिए आवश्यक और पर्याप्त शर्त क्या होनी चाहिए?",
+            "options": [
+              {
+                "prompt": "EE2+FE1–2EF1 = 0",
+                "value": "A"
+              },
+              {
+                "prompt": "EE2 + FE1+2EF1 = 0",
+                "value": "B"
+              },
+              {
+                "prompt": "EE2 – FE1–2EF1 = 0",
+                "value": "C"
+              },
+              {
+                "prompt": "EE2 – FE1–2EF1 = 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2052",
+              "correct_answer": "A",
+              "explanation": "For geodesic on the general surface EE2 + FE1 – 2EF1 = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2053",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Eqल्aूग्दह दf aेब्स्ज्ूदूग्म् त्ग्हो ग्े ुग्नह ंब्- स्पर्शोन्मुख रेखाओं का समीकरण किसके द्वारा दिया जाता है?",
+            "options": [
+              {
+                "prompt": "Ldu2 + 2M dudv + Ndv2 = 0",
+                "value": "A"
+              },
+              {
+                "prompt": "Ldu2 – Ndv2 = 0",
+                "value": "B"
+              },
+              {
+                "prompt": "M dudv = 0",
+                "value": "C"
+              },
+              {
+                "prompt": "–Ldu2 – 2M dudv + Ndv2 = 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2053",
+              "correct_answer": "A",
+              "explanation": "An asymptotic line is given by the differential equation second (II) = Ldu2 + 2M du.dv + Ndv2 = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2054",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इदr a ज्araंदत्दग्् दf rान्दत्ल्ूग्दहर् ै ृर् े२+ब्२, ूप aेब्स्ज्ूदूग्म् त्ग्हो ग्े ुग्नह ंब्- परिक्रमण-परवलयजर् ै ृर् े२+ब्२ (ठोस अनुवृत्त या पैराबोलोयड) की स्पर्शोन्मुख रेखाएँ किसके द्वारा दी जाती हैं?",
+            "options": [
+              {
+                "prompt": "du2 + dv2 = 0",
+                "value": "A"
+              },
+              {
+                "prompt": "du2 + u2dv2 = 0",
+                "value": "B"
+              },
+              {
+                "prompt": "u2du2 + v2dv2 = 0",
+                "value": "C"
+              },
+              {
+                "prompt": "du2 – dv2 = 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2054",
+              "correct_answer": "B",
+              "explanation": "Paraboloid of revolution z = x2 + y2 Representation of surface in term of two parameters u & v x (u, v) = u cos v y (u, v) = u sin v z (u, v) = u2 Derivations with respect to u & v x cosv u x usin v v ∂ = ∂ ∂ = − ∂ , y sin v u y u cos v v ∂ = ∂ ∂ = ∂ z 2u u z 0 v ∂= ∂ ∂= ∂ The coefficient of the first fundamental from E = 2 2 2 2 x y cos v sin v 1 u u ∂ ∂ + = + = ∂ ∂ F = x x y y u v u v ∂ ∂ ∂ ∂ × + × ∂ ∂ ∂ ∂ = – ucosv sinv + ucosv sinv = 0 G = 2 2 2 2 2 2 2 x y u sin v u cos v u v v ∂ ∂     + = + =     ∂ ∂     equation for asymptotic line is given by Edu2 + 2 Fdu dv + Gdv2 = 0 ⇒ 1du2 + 2 × 0 du dv + u2 dv2 = 0 ⇒ du2 + u2 dv2 = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2055",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ब्(ू) ग्े a र्rीत् न्aत्ल् fल्हम्ूग्दह दf a र्rीत् न्arग्aंत ैग्ूप् ज्ीग्द् ऊ. घ्ूे ूrग्ुदहदसूrग्म् इदल्rग्ी ेीगे र् ोज्aहेग्दह म्दहूaग्हे हद ूीस्े दf frलिहम्ब्       २व् ै ृ २π ,व् ृ १,२, ऊ ...... Aत्ेद हद ूीस्े arा ज्rोाहू. ऊपह ब्(ू) ेaूग्ेfगे ूप ल्aिूग्दह: भ्Eझ् ३५६ भ्ण्ऊ ब्(ू) अवधि ऊ के साथ एक वास्तविक चर का एक वास्तविक मान फलन है। इसकी त्रिकोणमितीय फारियर शृंखला के विस्तार र्(ोज्aहेग्दह) में आवृत्ति       २व् ै ृ २π ,व् ृ १,२,..... ऊ का कोई पद नहीं है। इसके अलावा कोई शर्तें मौजूद नहीं हैं। तब ब्(ू) समीकरण को संतुष्ट करता है:",
+            "options": [
+              {
+                "prompt": "y",
+                "value": "A"
+              },
+              {
+                "prompt": "y",
+                "value": "B"
+              },
+              {
+                "prompt": "y",
+                "value": "C"
+              },
+              {
+                "prompt": "y",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2055",
+              "correct_answer": "B",
+              "explanation": "Since, the Fourier expansion of y (t) Contains no term present Therefore, y (t) = y (– t) or y (t) = y (T – t) as y (t) is periodic with T Now, as signal y (t) contains odd harmonics Then T y(t) = y t 2   − −     T y(t) = y{T t} = y t 2   − − −     no sign considered T y(t) = y{T t} = y t 2   − −     Hence option (b) is correct.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2056",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The running integrator given by ( ) ( ) ∞ ∞∫ – y t = x t dt : ( ) ( ) ∞ ∞∫ – y t = x t dt Éeje efoÙee ieÙee mebÛeeueve meceekeâueve (jefvebie Fbšer«esšj):",
+            "options": [
+              {
+                "prompt": "Produces a bounded output for every",
+                "value": "A"
+              },
+              {
+                "prompt": "Has no finite zeros in its double-sided",
+                "value": "B"
+              },
+              {
+                "prompt": "Has no finite singularities in its double sided",
+                "value": "C"
+              },
+              {
+                "prompt": "Produces a bounded output for every causal",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2056",
+              "correct_answer": "D",
+              "explanation": "Given y(t) = x(t)dt ∞ −∞∫ The running integrator t x(t)dt = 0 −∞∫ For every casual system. As casual system have no memory and the intial value is zero, the output is fallowed by input. So y(t) will always be bounded if this function is causal bounded system.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2057",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप इदल्rग्ी ेीगे fदr ूप fल्हम्ूग्दह fर्(े) ृ ेग्ह२र्(े) ग्े : फलन fर्(े) ृ ेग्ह२र्(े) के लिए फूरियर शृंखला (इदल्rग्ी ेीगे) कौन-सा है?",
+            "options": [
+              {
+                "prompt": "0.5 – 0.5 cos 2x",
+                "value": "A"
+              },
+              {
+                "prompt": "0.5 + 0.5 sin 2x",
+                "value": "B"
+              },
+              {
+                "prompt": "0.5 – 0.5 sin 2x",
+                "value": "C"
+              },
+              {
+                "prompt": "0.5 + 0.5 cos 2x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2057",
+              "correct_answer": "A",
+              "explanation": "Given that function f(x) = sin2x fourier series in [– π, π] interval According to fourier series o n n n 1 a f(x) (a cos nx + b sin nx) 2 ∞ = = +∑ sin2(x) is even function so, bn = 0, only we need to calculate ao and an o n n 1 a f(x) = a cosnx 2 = ∞ +∑ o 1 a = f(x)dx π −π π ∫ 2 1 = sin xdx π −π π ∫ 2 0 2 = sin xdx π π ∫ 0 2 1 cos2x = dx 2 π −     π   ∫ 2 1 cos2x sin x = 2 −             ∵ 0 1 = (1 cos2x)dx π − π∫ 0 0 1 1 = 1dx cos2xdx π π − π π ∫ ∫ o 0 1 1 sin 2x = [x] 2 π π   −   π π   1 1 = [ ] [0] 2 π − π π = 1 – 0 ao = 1 n 1 a = f(x)cos(nx)dx π −π π ∫ 2 1 = sin x cos(nx)dx π −π π ∫ 2 0 2 = sin (x)cos(nx)dx π π∫ 2 0 2 1 cos2x 1 cos 2x = cos(nx)dx sin x = 2 2 π − −         π     ∫ YEP 357 YCT { } 0 1 = 1 cos(2x) cos(nx)dx π − π ∫ 0 0 1 1 = cos(nx)dx cos(2x)cosnx dx π π − π π ∫ ∫ { } 2cos(m ).cos(n ) = cos(m n) cos(m n) θ θ + θ + − θ ∵ 0 0 1 1 = cos(nx)dx 2cos(2x)cos nxdx 2 π π − π π ∫ ∫ 0 0 1 1 = cosnxdx cos(2 n)x cos(n x)dx 2 π π − + + − π π ∫ ∫ 0 0 1 sin nx 1 sin(2 n)x sin(2 n) = n 2 2 n 2 n π π + −     − +     π   π  + −  an = 0, where n > 2 for, n = 1 and 2 same as process a1 = 0 and 2 1 a = 2 − o n n 1 a f(x) = (a cosnx) 2 = ∞ +∑ o 1 2 3 a = a cos x a cos2x a cos3x ...... 2 + + + + o 2 a = a cos 2x 2 + 1 1 = cos2x 2 2 − = 0.5 – 0.5 cos 2x",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2058",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप म्दहूग्हल्दल्े ूग्स ेब्ेूास् ेम्rग्ां् ंब् ूप ल्aिूग्दह ब्(ू) ृर् े(ू२) म्दसे ल्ह्ी ूप म्aूाुदrब् दf - समीकरण ब्(ू) ृर् े(ू२) द्वारा वर्णित निरंतर समय प्रणाली कौन-सी श्रेणी के अंतर्गत आता है?",
+            "options": [
+              {
+                "prompt": "Causal, linear and time-varying",
+                "value": "A"
+              },
+              {
+                "prompt": "Non-causal, linear and time-variant",
+                "value": "B"
+              },
+              {
+                "prompt": "Non-casual, non-linear and time-variant",
+                "value": "C"
+              },
+              {
+                "prompt": "Casual, non-linear and time-varying",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2058",
+              "correct_answer": "B",
+              "explanation": "Given the continuous - time system described by y (t) = x (t2) • The system depends on the future inputs and hence it is non-casual. • A time shift of t(o) in the input does not give the t(o) shift in the output and hence it is time-variant. • As there are no non-linear operators present it is linear. Therefore, the given system is non-causal linear and time-variant.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2059",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The system characterized by the differential equation ( ) ( ) ( ) 2 2 d y t dy – – 2y t = x t dt dt is - DeJekeâue meceerkeâjCe ( ) ( ) ( ) 2 2 d y t dy – – 2y t = x t dt dt Éeje JeefCe&le ØeCeeueer nw–",
+            "options": [
+              {
+                "prompt": "Linear and stable/jwefKekeâ Deewj efmLej",
+                "value": "A"
+              },
+              {
+                "prompt": "Linear and unstable/jwefKekeâ Deewj DeefmLej",
+                "value": "B"
+              },
+              {
+                "prompt": "Non-linear and unstable/DejsKeerÙe Deewj DeefmLej",
+                "value": "C"
+              },
+              {
+                "prompt": "Non-linear and stable/DejsKeerÙe Deewj efmLej",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2059",
+              "correct_answer": "B",
+              "explanation": "Given that, ( ) ( ) ( ) 2 2 d y t dy – – 2y t = x t dt dt differential equation Now, x(t) > h(t) so, the system is linear. Again, taking Laplaces transform with zero. Intial condition, we get s2y(s) – sy(s) – 2y(s) = x(s) or 2 Y(S) 1 1 H(s) = = = X(S) (s 2)(s 1) s s 2 − + −− Since pole is at s = ± 2 the system is unstable.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2060",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ण्ऊइऊ दf a म्दहूग्हल्दल्े ूग्स ेग्ुहaत् ( ) –A ूर् े ू ृ ा ,A ्न ० ग्े ञ्ञ्ञ्ञ्ञ्ञ्ञ्ञ्ञ्. एक सतत समय संकेत ( ) –A ूर् े ू ृ ा ,A ्न ० सी.टी.एफ.टी. (ण्ऊइऊ) की है:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2060",
+              "correct_answer": "A",
+              "explanation": "Given CTFT A|t| x(t) = e ,A 0 − > j t CTFT{x(t)} = x(j ) = x (t)e dt −ω − ∞ ∞ ω ∫ A|t| j t = e .e dt − −ω − ∞ ∞∫ A( t) j t At. j t 0 0 = e .e dt e e dt − − −ω − −ω − ∞ ∞ + ∫ ∫ 0 At j t At j t 0 = e .e dt e .e dt −ω − −ω − ∞ ∞ + ∫ ∫ 0 (A j )t (A j )t e 0 = .dt e .dt −ω − + ω − ∞ ∞ + ∫ ∫ 0 (A j )t (A j )t 0 1 1 = e .e A j (A j ) ∞ −ω − + ω ∞     × +     −ω − + ω     2 2 2A = A + ω 2 2 2A x(j ) = A ω + ω YEP 358 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2061",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ेग्ुहaत् र् े (ू) ग्े ुग्नह ंब् र् े(ू) ृ ( )  ≤    ≤    –ऊ ३ऊ १, ष् ू ४ ४ ३ऊ ७ऊ १, ष् ू ४ ४ र्–े ू + ऊ ेंप्ग्म्प् aस्दहु ूप fदत्त्दैग्हु ुग्ने ूप fल्ह्aसहूaत् इदल्rग्ी ूीस्े दfर् े(ू)? एक संकेतर् े(ू) ृ ( )  ≤    ≤    –ऊ ३ऊ १, ष् ू ४ ४ ३ऊ ७ऊ १, ष् ू ४ ४ र्–े ू + ऊ द्वारा दिया जाता है। निम्नलिखित में कौन-सार् े(ू) के मौलिक फॉरियर पद देता है?",
+            "options": [
+              {
+                "prompt": "4",
+                "value": "A"
+              },
+              {
+                "prompt": "4",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2061",
+              "correct_answer": "B",
+              "explanation": "Given signal ( ) –T 3T 1, < t 4 4 3T 7T 1, < t 4 4 –x t + T  ≤    ≤    Now by property of symmetry of Fourier transform of x(t), we get the fundamental Fourier term as, 4 t sin T 4 π π   −   π  ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2062",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "(98)5 5 > 9500000000",
+            "options": [
+              {
+                "prompt": "Only 1/kesâJeue 1",
+                "value": "A"
+              },
+              {
+                "prompt": "Only 2/kesâJeue 2",
+                "value": "B"
+              },
+              {
+                "prompt": "Both 1 and 2/oesveeW 1 Deewj 2",
+                "value": "C"
+              },
+              {
+                "prompt": "Neither 1 nor 2/vee lees 1 vee ner 2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2062",
+              "correct_answer": "C",
+              "explanation": "By Binomial Theorem (1.01)1000000 = (1+ 0.01)1000000 = 1 + 1000000 c1 (0.01 + other positive term = 1 + 1000000 × 0.01 + other positive term = 1 + 10000 + other positive term = Hence (1.01)1000000 > 10000 (98)5 = (100 – 2)5 we know that, n n r h r r r r 0 (x a) = ( 1) C (x) a − = − − ∑ , x = 100, a = 2, n = 5 5 5 5 4 5 3 2 5 2 3 5 1 4 5 5 0 1 2 3 4 5 = C 100 C 100 .2 C 100 2 C 100 2 C 100 2 C 2 − + − + − = 1010 – 109 + (4 × 107) – 8 × 105 + 8 × 103 – 32 = 9039207968 Hence (98)5 5 > 9500000000 (98)5 > 1900000000 Hence option (c) is correct.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2063",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Rददू दf ूप हल्स्ंी ( ) ६ + ४ ३ ( ) ६ + ४ ३ संख्या का मूल है-",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2063",
+              "correct_answer": "A",
+              "explanation": "Given (6 + 4 3) = (2×3+ 4 3) = (2× 3× 3 + 4 3) = 3(2 3 + 4) = 3(2 3 +3+1) = 3(3+1+ 2 3) 2 = 3( 3 +1)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2064",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इग्ह् ंब् ल्ेग्हु ंग्हदस्ग्aत् ूपदrास् (२३ह–७ह–१) ग्े ्ग्न्ग्ेग्ंत ंब् ैप्ग्म्प् दf ूप fदत्त्दैग्हु हल्स्ंीे? द्विपद प्रमेय का उपयोग करके ज्ञात करें कि (२३ह–७ह– १) किससे विभाज्य है?",
+            "options": [
+              {
+                "prompt": "7",
+                "value": "A"
+              },
+              {
+                "prompt": "49",
+                "value": "B"
+              },
+              {
+                "prompt": "15",
+                "value": "C"
+              },
+              {
+                "prompt": "27",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2064",
+              "correct_answer": "B",
+              "explanation": "Given that Binomial theorem (23n – 7n – 1), we get putting n =1 23 – 7 – 1 = 0 divisible by all positive integer putting n = 2 we get 23n – 7n – 1 26 – 14 – 1 = 49 Let p (n) : 23n – 7n – 1 is divisible by 49 p (2) is true Assume p (k) is true 23k – 7 k – 1 = 49 m Putting k + 1 in place of n, we get 23k+3 – 7 (k + 1) – 1 YEP 359 YCT = 8.23k – 7 k – 8 = 8 (23k – 7k – 1) + 7.7k = 49 (8m + k) → divisible by 49 p (k + 1) is true.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2065",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप स्ग्््त ूीस् ग्ह ूप र् ोज्aहेग्दह दf       ह २ २ १र् े + + २र् े ग्े:       ह २ २ १र् े + + २र् े के प्रसार में मध्य पद है:",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2065",
+              "correct_answer": "D",
+              "explanation": "Given expression is n 2 2 1 x 2 x   + +     n 2 1 = x x       +           2n 1 = x x   +     The binomial contains (2n + 1) term in its expansion Therefore, the middle term is Tn + 1 n 2n 2n n n 1 n 1 T = c x x − +       2n n = c 2 2n 2n = = 2n n n ( n) −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2066",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप त्arुोू म्दfिग्म्गहू दf र्(े + १)२० ग्े: र्(े + १)२० का सबसे बड़ा गुणांक है:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2066",
+              "correct_answer": "C",
+              "explanation": "Given term (1 + x)20 Total No. of term T = n + 1 = 20 + 1 = 21 Now, the largest cofficient takes place at the middle. The middle term of its expansion is Middle term T +1 21+1 22 = = = = 11 2 2 2 11th term of the expansion 20 r r+1 r T = C x 20 10 10+1 10 T = C x 20 10 11 10 T = C x Thus 20 10 C is the largest coefficient since n r n c = n r r − 20 10 2 2 20 20 20! C = = or 20 10 10 (10) (10!) −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2067",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप rास्aग्ह्ी ैपह ७५ ७५ ७५ ग्े ्ग्न्ग्् ंब् ३७: यदि ७५ ७५ ७५ को ३७ से विभाजित किया जाता है, तो शेषफल क्या होगा?",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "5",
+                "value": "C"
+              },
+              {
+                "prompt": "7",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2067",
+              "correct_answer": "B",
+              "explanation": "According to the question, 75 75 75 = 37 75×75 75 = 37 We know that n 75×75 (x + a) (74 +1) = x 37 n 75×75 (a) (1) 1 = = = x 37 37 Remainder is 1.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2068",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इग्ह् ूप rास्aग्ह्ी ैपह २५२ २ ग्े ्ग्न्ग्् ंब् २१०? जब २२५२ को २१० से विभाजित किया जाए तो शेषफल ज्ञात कीजिए।",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "106",
+                "value": "B"
+              },
+              {
+                "prompt": "141",
+                "value": "C"
+              },
+              {
+                "prompt": "208",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2068",
+              "correct_answer": "B",
+              "explanation": "2252 divided by 210 Euler's theorem aφ(n) ≡ 1 (modn) ⇒ 252 251 251 2 2 2 2 210 2 105 105 × = = × we know that (a, n) gcd = 1 gcd (2, 105) = 1 φ (105) = 105 × 2 4 6 3 5 7 × × φ (105) = 48 2φ(105) ≡ 1 (mod 105) 248 ≡ 1 (mod 105) (248)5 ≡ (1)5 (mod 105) 2240 ≡ 1 (mod 105) 2240 × 211 ≡ 211 × 1 (mod 105) 2251 ≡ 2048 (mod 105) 251 2 105 remainder is 53 252 2 210 = 106 remainder YEP 360 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2069",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इग्ह् ूप ेल्स् दf म्दfिग्म्गहू दf ूपर् ोज्aहेग्दह (१र्+े–र्३े२)४१६५ (१र्+े–र्३े२)४१६५ इनके विस्तार (आयाम) का गुणांक का योग ज्ञात करें–",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "–1",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2069",
+              "correct_answer": "C",
+              "explanation": "Given expression (1 + x – 3x2)4165 (x + a)n = n 0 n n n 1 o 1 c x a c xa ....... − + + Put x = 1 (1 + 1 – 3)4165 = ao + a1 + a2 + .......... + an (–1)4165 = ao + a1 + a2 + .......... + an ⇒ ao + a1 + a2 + ..........+an = – 1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2070",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f (a + ं) ृ २, ूपह ूप न्aत्ल दf ∑ r ह r ह–r म् rृ०ह a ं यदि (a + ं) ृ २ है तो, ∑ r ह r ह–r म् rृ०ह a ं का मान है-",
+            "options": [
+              {
+                "prompt": "2n",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "–2n",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2070",
+              "correct_answer": "A",
+              "explanation": "Give that n n r n r r r=0 (a + b) = 2, c a b − ∑ n n r n r r r 0 c .a .b − =∑ Put n = 3 n n r n r 3 o 3 0 3 2 3 2 3 3 r o 1 2 3 r 0 c a .b = c .a .b c .a.b c .a .b c a − − = + + + ∑ = b3 + 3ab2 + 3a2b + a3 = (a + b)3 = (2)3 = 8 Hence 2n is correct i.e. option (a).",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2071",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दf ूप fदत्त्दैग्हु ग्े ूrल? निम्नलिखित में कौन-सा सत्य है?",
+            "options": [
+              {
+                "prompt": "Every discontinuous function is integrable",
+                "value": "A"
+              },
+              {
+                "prompt": "Every integrable function is continuous",
+                "value": "B"
+              },
+              {
+                "prompt": "Every monotone function is integrable",
+                "value": "C"
+              },
+              {
+                "prompt": "Every",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2071",
+              "correct_answer": "C",
+              "explanation": "Ist note that if f is monotonically decreasing then f (b) ≤ f (x) ≤ f (a) for all x∈ [a, b] so, f is bounded on [a, b] Denote by pn the partition of [a, b] into n equal intervals. n k b a b a b a b a P = a a a 2 ....... x = a k ..... a n = a n n n n − − − −   < + < + < < + < < +     We compute, k k 1 b a b a b a x x = a k a (k 1) = n n n − − − −   − + − + −     Since f is monotonic mk = inf {(f(x) | xk –1 ≤ f(x) ≤ xk} = f (xk) n n n k k k 1 k k 1 k 1 b a L(f,p ) = m (x x ) = f (x ) n − = = − − ∑ ∑ n n n k k k 1 k 1 k 1 k 1 b a (f,p ) = m (x x ) = (x ) n − − = = − ∪ − ∑ ∑ n n n) n k 1 k k 1 k 1 b a b a (f,p L(f,p ) = f (x ) f (x ) n n − = = − − ∪ − − ∑ ∑ n 1 n k 1 k k 0 k 1 b a = f (x ) f(x ) n − − = = −   −     ∑ ∑ { } o n b a = f(x ) f (x ) n − − { } b a = f (b) f(a) n − − Therefore, n n x n (b a){f(a) f(b)} lim (f,p ) L(f,p ) = lim = 0 n →∞ →∞ − − ∪ − Hence every monotons function is integrable.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2072",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f f ग्े a म्दहूग्हल्दल्े fल्हम्ूग्दह, ूपह ह–१ r ० ह १ r त्ग्स् f ह ह ृ →∞       ∑ म्aह ांर् ोज्rोा् aे– एक f एक सतत फलन है, तो ह–१ r ० ह १ r त्ग्स् f ह ह ृ →∞       ∑ को ञ्ञ्ञ्ञ्ञ्ञ्रूप में व्यक्त किया जा सकता है- भ्Eझ् ३६१ भ्ण्ऊ",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2072",
+              "correct_answer": "D",
+              "explanation": "Given continuous function n 1 n r 0 1 r f(x) = lim f n n − →∞ =       ∑ n 1 n r 0 1 r lim f n n − →∞ =       ∑ 1 r dx, x, n n → → Upper limit, n n lim = 1 n →∞ Lower limit n 0 = lim = 0 n →∞ ∴ 1 0 f (x)dx ∫",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2073",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दहा दf ूप ग्हल्aित्ग्ूब् ग्े ूrल? कौन-सी असमानता सत्य है?",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2073",
+              "correct_answer": "C",
+              "explanation": "For 0 < x < 1, we have 0 < x2 < 1 ⇒ 2 0 x 1 e e e < < ⇒ 2 x 1 e e < < ⇒ 2 1 1 1 x 0 0 o 1dx e dx edx < < ∫ ∫ ∫ ⇒ 2 1 x o 1 e dx e < < ∫",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2074",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ग्हूाुraत् १ ०∫ ३र् े म्देर्३े २ +र् े त्गे ाूंौाह? समाकलन १ ०∫ ३र् े म्देर्३े २ +र् े ञ्ञ्ञ्ञ्ञ्ञ्के बीच स्थित है।",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "–1 and 1/–1 Deewj 1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2074",
+              "correct_answer": "D",
+              "explanation": "Given that 3 1 2 0 x cos3x I = dx 2 x + ∫ We know that, – 1≤ cos 3x ≤1 ⇒ – x3 ≤ x3 cos 3x ≤ x3 ⇒ 3 3 3 2 2 2 x x cos3x x 2 x 2 x 2 x − ≤ ≤ + + + For x∈ (0, 1) ⇒ 3 3 3 3 3 2 2 2 x x x cos3x x x x x 2 x 2 x 2 x − − ≤ ≤ ≤ < + + + ⇒ 3 3 3 2 x x cos3x x x x 2 x − < < + Taking integration from 0 to 1. ⇒ 1 1 2 2 0 0 x dx I x dx − < < ∫ ∫ ⇒ 1 1 3 3 0 0 x x I 3 3     − < <         ⇒ 1 1 I 3 3 − < <",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2075",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "थू घ्ह ृ ( ) ∫ ह ५ ५ ४ ६ ूaहर् ेर््े, ह ्न १ .घ् + घ् ृ aूaहर् े +र् ें + म्, ैप्ीा म् ग्े a म्दहेूaहू दf ग्हूाुraूग्दह, ूपह ूप दr्ी ज्aग्r (a, ं) ग्े ल्aित् ूद- मान लीजिए घ्ह ृ ( ) ∫ ह ५ ५ ४ ६ ूaहर् ेर््े, ह ्न १ .घ् + घ् ृ aूaहर् े +र् ें + म् है, जहाँ म् समाकलन का एक स्थिरांक एकीकरण है, तो क्रम युग्म (a, ं) ञ्ञ्ञ्ञ्ञ्ञ्ञ् के बराबर है-",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1 4",
+                "value": "B"
+              },
+              {
+                "prompt": "1 ,0",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2075",
+              "correct_answer": "C",
+              "explanation": "Given, In=∫ tann x dx n > 1 & I4 + I6 = a tan5 x + bx5 + c ... (i) I4 + I6 = ∫(tan4x + tan6x) dx YEP 362 YCT = ∫tan4x (1 + tan2x) dx = ∫tan4x. sec2 x dx = ∫t4 dt Let tanx = t 5 4 6 tan x I + I = + c 5 sec2x dx = dt On comparing with (i) value of a, b we, get 1 a = ,b = 0 5",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2076",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दf ूप fदत्त्दैग्हु ग्स्ज्rदज्ी ग्हूाुraत् ग्े म्दहन्ीुाहू? निम्नलिखित में से कौन-सा अनुचित समाकलन (ग्स्ज्rदज्ी ग्हूाुraत्) अभिसारी है-",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2076",
+              "correct_answer": "D",
+              "explanation": "If the limit exists as a real number, then the improper integral is called convergent. 1 0 1 dx x (x 1) + ∫ is a improper integral convergent.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2077",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If In = / 2 n 0 x sin xdx,n 1, π > ∫ then In + n(n–1) In–2 is equal to : Ùeefo In = / 2 n 0 x sin xdx,n 1, π > ∫ then In + n(n–1) In–2 kesâ yejeyej nw ______",
+            "options": [
+              {
+                "prompt": "n–1",
+                "value": "A"
+              },
+              {
+                "prompt": "n–1",
+                "value": "B"
+              },
+              {
+                "prompt": "n",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2077",
+              "correct_answer": "B",
+              "explanation": "Given If / 2 n n 0 I = x .sin xdx n 1 π > ∫ Now apply the integration by parts formula x /2 n. n 0 I x sin xdx = ∫ [ ] x/2 x/2 n–1 n 0 0 I = – xn cosx + n x cosx dx ∫ x/2 n 1 0 = 0+n x cosx dx − ∫ x/2 x /2 n–1 n 2 0 0 = nsinx.x x sin x dx −   −   ∫ n 1 n–2 I= –n (n–1)I n 2 − π   +     n 1 n n 2 I n(n 1)I = n 2 − − π   + −    ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2078",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f fर्(े) ृर् ेर् े , ूपह fदr aहब् र्rीत् हल्स्ंीे a aह् ं ैग्ूप् a ष् ं, ूप न्aत्ल दf ( ) ∫ ं a fर् े र््े ल्aित्े - यदि fर्(े) ृर् ेर् े हो, तो किसी भी वास्तविक संख्या a और ं, जहाँ a ष् ं हो, के लिए ∫ ं a fर्(े)र््े होगा-",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2078",
+              "correct_answer": "B",
+              "explanation": "Given f(x) = x |x| a < b b a I = f(x)dx ∫ b a = x x dx ∫ Case I : a, b < 0 3 3 b 2 a (b a ) I x dx 3 − = − = − ∫ Case II when a < 0, b > 0 3 3 3 3 0 b 2 2 a 0 a b a b I = x dx x dx = = 3 3 3 + − + + ∫ ∫ Case III: when a, b > 0 3 3 b 2 a b a I = x dx = 3 − ∫ So all these can be written as 3 3 1 I = ( b a ) 3 − Now, when a, b< 0, { } 3 3 3 3 1 b a I ( b) ( a) = 3 3 − − = − −− when a < 0 & b > 0 3 3 3 3 3 3 1 1 b a I = {b a } = {(b) ( a) } = 3 3 3 + − −− when a, b > 0 3 3 3 3 1 1 I = ( b a ) = ( b a ) 3 3 − − Hence answer is 3 3 1 ( b a ) 3 − YEP 363 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2079",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ँब् स्aूपस्aूग्म्aत् aेमह्ग्हु सूप्द् ूप न्aत्ल दf १ + २ + ३ +......... + ह ग्े ञ्ञ्ञ्ञ्ञ्ञ्ञ्ञ्. गणितीय आरोही विधि से १ + २ + ३ + ...........+ह का मान ञ्ञ्ञ्ञ्ञ्ञ्ञ् है-",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2079",
+              "correct_answer": "B",
+              "explanation": "Given that series 1 + 2 + 3 + .......... + n This is arthimetic series We know that a = 1 d = 2 –1 = 1 Sum n n s = [2a (n 1)d] 2 + − n = [2 1 (n 1) 1] 2 × + − × n = [2 n 1] 2 + − n n s = (n 1) 2 +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2080",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "( ) 2n+1 n+2 3 + 2 is divisible by ( ) 2n+1 n+2 3 + 2 _______ mes efJeYeepÙe nw-",
+            "options": [
+              {
+                "prompt": "7",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "5",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2080",
+              "correct_answer": "A",
+              "explanation": "p(n) = 32n+1 + 2n+2 If n = 0 & n = 1 then P(0) = 32n+1 + 2n+2 P(1) = 35 ∵ P (n) is divided by 7 If n = K+1 then P (K + 1) = 32K+3 + 2K + 3 = 9.32K+1 + 2.2K+2 P (K + 1) = 2 (3K+1 +2K+2) + 7.32K+1 Then 3m+1 + 2n+2 always divided by 7.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2081",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इदr ैप्aू न्aत्ल दf ह, ूप ेूaूासहू झ्(ह):       ह +१ ह! ष् ×ह २ , ग्े ूrल? ेंप्ीा ह ग्े a ज्देग्ूग्न ैप्दत हल्स्ंी. ह के किस मान के लिए कथन झ्(ह) :       ह +१ ह! ष् ×ह २ सत्य है? जहाँ ह एक धनात्मक पूर्णांक संख्या है।",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2081",
+              "correct_answer": "C",
+              "explanation": "Given statement n 1 p(n) : n! n 2 +   <     n > 0 n = 1, p (1) : 1 < 1 n = 2, 2 +1 p(2) : 2!< ×2 2       2 < 3 n = 3, 3+1 p(3) :3!< ×3 2       4 3×2×1 < ×3 2 6 < 6 n = 4, 4 +1 p(4) : 4!< ×4 2       4 × 3 × 2 < 10 24 < 10 Hence option (c) is correct.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2082",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "P(n) : 1.1! + 2.2! + 3.3! + ..........+ n.n! = (n + 1)! – 1, then P(n) statement is true- P(n) : 1.1! + 2.2! + 3.3! +........+ n.n! = (n + 1)! – 1, lees keâLeve P(n) melÙe nw -",
+            "options": [
+              {
+                "prompt": "For n > 1/n > 1 kesâ efueS",
+                "value": "A"
+              },
+              {
+                "prompt": "For all values of n/n kesâ meYeer ceeve kesâ efueS",
+                "value": "B"
+              },
+              {
+                "prompt": "For n > 4/n > 4 kesâ efueÙes",
+                "value": "C"
+              },
+              {
+                "prompt": "For all negative values of n/n kesâ meYeer $e+Ceelcekeâ",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2082",
+              "correct_answer": "B",
+              "explanation": "Given P(n) : 1.1! + 2.2! + 3.3! +........+ n.n! = (n +1)! – 1 P (1) : 1.1! = 2! –1 P (2) : 1.1! + 2.2! = 3! – 1 P (3) : 1.1! + 2.2! + 3.3! = 4! – 1 : : P(n) : 1.1! + 2.2! + 3.3! +.........+ n.n! = (n + 1)! – 1 Therefore P(n) satisfies for all values of n.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2083",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ेूaूासहू र्(ेह – ब्ह) ग्े ्ग्न्ग्ेग्ंत ंब्- कथन र्(ेह – ब्ह) ञ्ञ्ञ्ञ्ञ्ञ् से विभाजित है।",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2083",
+              "correct_answer": "B",
+              "explanation": "Given statement Let P (n) = (xn – yn) n = 1, P (1) = (x – y) n = 2, P (2) = (x2 – y2) = (x + 1) (x – y) n = 3, P (3) = x3 – y3 = (x – y) (x2 + y2 + xy) : : : : : : n = k p(k) = xk – yk Now, p (k + 1) = xk+1 – yk+1 ⇒ xk+1 – yk+1 = xk+1 – xyk + xyk – yk+1 = x (xk –yk) + yk (x – y) since (xk –yk) and (x – y) are both divisible by (x – y) YEP 364 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2084",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The statement (52n–1) is always divisible by- keâLeve (52n–1)______mes ncesMee efJeYeeefpele neslee nw–",
+            "options": [
+              {
+                "prompt": "42",
+                "value": "A"
+              },
+              {
+                "prompt": "24",
+                "value": "B"
+              },
+              {
+                "prompt": "15",
+                "value": "C"
+              },
+              {
+                "prompt": "25",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2084",
+              "correct_answer": "B",
+              "explanation": "Let p(n) = 52n – 1 n = 1, P(1) = 52 – 1 = 24 ⋮ n = k, p (k) = 52k – 1 divisible by 24 ⇒ 52k – 1 = 24λ ...(i) Now, n = K + 1, = 52 (k+ 1) –1 = 52k. 52 – 1 = 25.52k – 1 = 25 (52K – 1) + 24 Then (52n – 1) is always divisible by 24.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2085",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इग्ह् ूप न्aत्ल दf ेूaूासहू झ्(ह) : १.६ + २.९ + ३.१२ + ......... +ह(३ह+३) झ्(ह) : १.६ + २.९ + ३.१२ + ......... +ह(३ह+३) कथन का मान ज्ञात करें–",
+            "options": [
+              {
+                "prompt": "n",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "n",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2085",
+              "correct_answer": "A",
+              "explanation": "Given statement p(n) : 1.6 + 2.9 + 3.12 + ......... + n (3n + 3) Let n n r=0 a = n (3n +3) ∑ If n = 3 = 1.6 + 2.9 + 3.12 = 6 + 18 + 36 = 24 + 36 = 60 Hence option (a) satisfy n = 3, n (n + 1) (n + 2) is correct answer.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2086",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "उाहीaत् fदrस् दf ूप ेूaूासहू ग्े                     १ १ १ १ १+ १+ १+ ....... १+ १ २ ३ ह ग्े - कथन                     १ १ १ १ १+ १+ १+ ....... १+ १ २ ३ ह का सामान्य रूप है-",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2086",
+              "correct_answer": "A",
+              "explanation": "Given statement 1 1 1 1 1+ 1+ 1+ ......... 1+ 1 2 3 n                     3 4 5 n (n +1) = 2. . . ....... × 2 3 4 (n –1) n = (n + 1)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2087",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ेदत्ल्ूग्दह दf ूप ्ग्ffीाहूग्aत् ल्aिूग्दह २ २ २ ् र्ब् ्ब् े – र्३े + ४ब् ृ ० र््े र््े ग्े: अवकलन समीकरण २ २ २ ् र्ब् ्ब् े – र्३े + ४ब् ृ ० र््े र््े का हल है-",
+            "options": [
+              {
+                "prompt": "y =",
+                "value": "A"
+              },
+              {
+                "prompt": "y =",
+                "value": "B"
+              },
+              {
+                "prompt": "y =",
+                "value": "C"
+              },
+              {
+                "prompt": "y =",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2087",
+              "correct_answer": "C",
+              "explanation": "Given differential equation 2 2 2 d y dy x 3x 4y = 0 dx dx − + ...(i) It is a Cauchy Euler differential equation of form: f(x) = an xn yn + an–1 xn–1 y(n –1)+........ + a2x2 y\" + a1 xy' + aoy For the solution of f(x) = 0, we can y = xm Then y' = mxm–1 y\" = m (m –1) xm–2 Putting y' and y\" in equation (1), we get x2 {m (m – 1) xm–2} – 3x {m xm–1} + 4xm = 0 xm {m (m – 1) – 3m + 4} = 0 m2 – 4m + 4 = 0 (m – 2)2 = 0 m = 2, 2 So it has a repeated root of m = 2 From the general theory of Cauchy-Euler equation, we have general solution y = c1 xm + c2 xm log x y = c1 x2 + c2 x2 log x = x2 (c1 + c2 log x) YEP 365 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2088",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ेदत्ल्ूग्दह दf ूप ्ग्ffीाहूग्aत् ल्aिूग्दह (२D+१)२ब् ृ ० ग्े - अवकलन समीकरण (२D+१)२ब् ृ ० का हल है–",
+            "options": [
+              {
+                "prompt": "y =",
+                "value": "A"
+              },
+              {
+                "prompt": "y =",
+                "value": "B"
+              },
+              {
+                "prompt": "y =",
+                "value": "C"
+              },
+              {
+                "prompt": "y = Ae–x/2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2088",
+              "correct_answer": "D",
+              "explanation": "Given differential equation (2D + 1) 2y = 0 ∴ d D = dx (4D + 2) y = 0 Auxilary equation D = m 4m + 2 = 0 2 1 m = = 4 2 − − Solution y = Ae–x/2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2089",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ज्arूग्म्ल्त्ar ग्हूाुraत् दf (D२ + a२)ब् ृ ेग्ह र्aे   ≡     ् D र््े ग्े - (D२ + a२)ब् ृ ेग्ह र्aे   ≡     ् D र््े का विशेष समाकल है।",
+            "options": [
+              {
+                "prompt": "x",
+                "value": "A"
+              },
+              {
+                "prompt": "xa cosax",
+                "value": "B"
+              },
+              {
+                "prompt": "x cosax",
+                "value": "C"
+              },
+              {
+                "prompt": "xa",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2089",
+              "correct_answer": "A",
+              "explanation": "(D2 + a2) y = sin ax y = C.F. + P.F. f(D) = 0 f(D) = D2 + a2 = 0 D2 = – a2 D = ± ai C.F c1 cos ax + c2 sin ax 2 2 1 P.I = sin ax (D a ) + 1 x sinak 2D = x sinak 2 = ∫ x cosak 2 a −   =     1 [2cosax]x 4a = − 1 x cosax 2a = −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2090",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ेदत्ल्ूग्दह दf ूप ्ग्ffीाहूग्aत् ल्aिूग्दह ग्े २ र्३े २ ् ब् ्ब् – ३ + २ब् ृ ा र््े र््े ग्े- अवकलन समीकरण २ र्३े २ ् ब् ्ब् – ३ + २ब् ृ ा र््े र््े का हल है-",
+            "options": [
+              {
+                "prompt": "–x",
+                "value": "A"
+              },
+              {
+                "prompt": "x",
+                "value": "B"
+              },
+              {
+                "prompt": "x",
+                "value": "C"
+              },
+              {
+                "prompt": "x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2090",
+              "correct_answer": "D",
+              "explanation": "2 3x 2 d y dy 3 2y = e dx dx − + y = C.F. + P.I. F(D) = 0 (D2 – 3D + 2) y = 0 Auxilary equation m2 – 3m + 2 = 0 (m – 1) (m – 2) = 0 m = 1, 2 C.F = c1 ex + c2e2x P.I = f(D).e3x 3x 2 1 = e D 3D 2 − + 3x 1 = e (D 1)(D 2) − − 3x 3x 1 1 = e = e (3 1)(3 2) 2 − − y = C.F + P.I y x 2x 3x 1 2 1 = c e c e e 2 + + YEP 366 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2091",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्arूग्म्ल्त्ar ेदत्ल्ूग्दह दf ्ग्ffीाहूग्aत् ल्aिूग्दह २ २ ् ब् ्ब् – – २ब् ृ र्म्दे + ३ र््े र््े ेग्हर् े ग्े - २ २ ् ब् ्ब् – – २ब् ृ र्म्दे + ३ र््े र््े ेग्हर् े अवकलन समीकरण का एक विशेष हल है-",
+            "options": [
+              {
+                "prompt": "–cos x",
+                "value": "A"
+              },
+              {
+                "prompt": "sin x",
+                "value": "B"
+              },
+              {
+                "prompt": "–sin x",
+                "value": "C"
+              },
+              {
+                "prompt": "cos x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2091",
+              "correct_answer": "C",
+              "explanation": "2 2 d y dy 2y = cos x 3sin x dx dx − − + y = C.F + P.I Auxilary equation m2 – m – 2 = 0 m2 – 2m + m – 2 = 0 ⇒ m (m – 2) + 1 (m – 2) = 0 (m + 1) (m – 2) = 0 m = – 1, 2 C.F = C1e–x + C2e2x 2 1 P.I = (cos x 3sin x) D D 2 + − − 2 2 1 3sin x P.I = cos x (D D 2) D D 2 + − − − − cos x sin x = 3 (D 3) (D 3) + − + − + 2 2 (D 3)cos x (D 3)sin x = 3 (D 9) (D 9) − − + − − − − (D 3)cos x (D 3) = 3 sin x 10 10 − − + { } 2 D 1 = − ∵ 1 = [ sin x 3cos x 3cos x 9sin x) 10 − − + − P .I = – sinx",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2092",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ुाहीaत् ेदत्ल्ूग्दह दf ूप ्ग्ffीाहूग्aत् ल्aिूग्दह २र् े २ ् ब् ्ब् + २ + ब् ृ ा र्म्दे र््े र््े ग्े २र् े २ ् ब् ्ब् + २ + ब् ृ ा र्म्दे र््े र््े अवकल समीकरण का सामान्य हल है-",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2092",
+              "correct_answer": "C",
+              "explanation": "C.F. of 2 x 2 d y 2dy y e cosx 2dx dx = + + = ( ) 2 d m 2m 1 y 0 m dx   + + = =     ∵ (M + 1)2 = 0 ⇒ m = 1, 1 C.F. = (c1 + c2x) c-x PI when Q = eax cosax then, y = ( ) ( ) ax e v x f D y = eax ( ) ( ) v x f D a       +   Here, Q = ex cosx y = ex ( ) cos x f D 1       +   y = ex ( ) ( ) 2 cosx D 1 2 D 1 1       + + + +   y = ex 2 cosx D 2D 1 2D 2 1     + + + + +   y = ex 2 cos x D 4D 4     + +   y = ex cos x 1 4D 4     −+ +   y = ex ( ) ( )( ) 4D 3 cos x 4D 3 4D 3   −     − +   y = ex ( ) 2 4D 3 cos x 16D 9 −     −   y = ex ( ) 4D 3cos x 16 1 9   −     − −   y = ex ( ) ( ) 4D 3 cos x 1 16 9   −     − +   y = ex ( ) x 4sin x 3cos x e 4sin x 3cos x 25 25 − −  = +   −   General Solution = C.F. + P.I. = (c1 + c2x) e–x + ex 25 (4sinx + 3cosx)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2093",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्fर् े ृ A म्दे (स्ू – α), ूपह ूप ्ग्ffीाहूग्aत् ल्aिूग्दह ेaूग्ेfब्ग्हु ूप rात्aूग्दह ग्े - यदिर् े ृ A म्दे (स्ू – α) हो, तो इस संबंध को संतुष्ट करने वाला अवकल समीकरण है- भ्Eझ् ३६७ भ्ण्ऊ",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2093",
+              "correct_answer": "A",
+              "explanation": "x = A cos (mt – α) dx = Asin(mt )(m) dt − −α dx = Amsin(mt ) dt − −α 2 2 d x = A.mcos(mt )m dt − −α 2 = Am cos(mt ) − −α 2 2 2 d x = m x dt −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2094",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप र्त्ग्हीrत्ब् ग्हजहहू ेदत्ल्ूग्दहे दf ूप ्ग्ffीाहूग्aत् ल्aिूग्दह २ २ ् ब् ्ब् ४ + ४ + ५ब् ृ ० र््े र््े ग्े- अवकल समीकरण २ २ ् ब् ्ब् ४ + ४ + ५ब् ृ ० र््े र््े का रैखिक रूप में स्वतंत्र समाधान है-",
+            "options": [
+              {
+                "prompt": "–x / 2",
+                "value": "A"
+              },
+              {
+                "prompt": "–x / 2",
+                "value": "B"
+              },
+              {
+                "prompt": "x / 2",
+                "value": "C"
+              },
+              {
+                "prompt": "x / 2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2094",
+              "correct_answer": "C",
+              "explanation": "2 2 d y dy 4 5y = 0 dx dx + 4 + 2 d y dy 4 4 5y = 0 dx dx + + ⇒ 2 4D 4D 5 = 0 + + 4 16 4×4×5 D = 2×4 −± − 4 16 16×5 = 8 −± − 4 4(2 ) = 8 −± i 1 = – 2 ±i x / 2 CF = e (cos x sin x) − + x / 2 x / 2 = e cos x,e sin x − −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2095",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f ब् ृर् े ग्े a ेदत्ल्ूग्दह दf ूप ्ग्ffीाहूग्aत् ल्aिूग्दह र् े२ ब्ठ +र् ेब्' – ब् ृ ०, ूपह ूप ोम्दह् र्त्ग्हीrत्ब् ग्हजहहू ेदत्ल्ूग्दह दf ूप aंदन ल्aिूग्दह ग्े - यदि अवकल समीकरणर् े२ ब्ठ +र् ेब्' – ब् ृ ०, का समाधान ब् ृर् े है, तो दिये गए समीकरण का द्वितीय रैखिक रूप से स्वतंत्र समाधान है–",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "x–2",
+                "value": "B"
+              },
+              {
+                "prompt": "x2",
+                "value": "C"
+              },
+              {
+                "prompt": "x3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2095",
+              "correct_answer": "A",
+              "explanation": "We have x2 y'' + xy' – y = 0 ....(i) compare this with P(x) y\" + q(x) y' + r(x) = 0, Then we have P(x) = x2, q(x) = x and given y = x is a solution of (i) Then it's 2nd L.I. solution = x q(x)dx p(x) 2 e dx x −∫ ∫ = 1 dx x 2 e x dx x −∫ ∫ = log x 2 e x dx x − ∫ = 2 1 x dx x.x ∫ = 3 1 x dx x∫ = 3 1 x x 3 1 −+ −+ = 2 x x 2 − − = 1 x 2 − − = 1 1 . 2 x − 1 { constant remove} x = ∵",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2096",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दf ूप fदत्त्दैग्हु ग्े हदू ूrल? निम्नलिखित में से कौन-सा सत्य नहीं है।",
+            "options": [
+              {
+                "prompt": "Every commutative subgroup of a group is",
+                "value": "A"
+              },
+              {
+                "prompt": "If H is normal subgroup of a finite group G,",
+                "value": "B"
+              },
+              {
+                "prompt": "Let G be a group in which",
+                "value": "C"
+              },
+              {
+                "prompt": "Let G is non-commutative group of order 2p,",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2096",
+              "correct_answer": "B",
+              "explanation": "H is normal subgroup of finite group G, then [G : H] = 2 Case-I a∈x therefore aH = H = Ha (i) We can say that aH = H because H is subgroup and is closed, and we have to conclude that H = Ha, again because H is closed So the trial coset is always normal. (ii) We have shown that H is normal, but did not use the fact of the index. Case-2 If a∉H then time cosets of H is G are {H, aH} or {H, Ha} but because there are only 2 cosets it must be such that aH = Ha",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2097",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "थू प् ां a ेल्ुंrदल्ज् दf a ुrदल्ज् उ aह् ख् ां a हदrस्aत् ेल्ुंrदल्ज् दf a ुrदल्ज् उ, ूपह - मान लीजिए कि प्, समूह उ का उपसमूह है और ख्, समूह उ का सामान्य उपसमूह है, तो",
+            "options": [
+              {
+                "prompt": "ख् ग्े हदू a हदrस्aत् ेल्ुंrदल्ज् दf प्ख्/ख्, प्ख् का",
+                "value": "A"
+              },
+              {
+                "prompt": "K is normal subgroup of HK ∩ KH/K, HK ∩",
+                "value": "B"
+              },
+              {
+                "prompt": "ख् ग्े हदrस्aत् ेल्ुंrदल्ज् दf ख्प्/ख्, ख्प् का एक",
+                "value": "C"
+              },
+              {
+                "prompt": "ख् ग्े a हदrस्aत् ेल्ुंrदल्ज् दf प्ख्/ख्, प्ख् का एक",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2097",
+              "correct_answer": "D",
+              "explanation": "To show that, K is normal subgroup of HK, we need to prove that for any h ∈ H k∈K, bkb–1 ∈K Let' consider an arbitrary element hK ∈ HK, h∈H & k∈K ∵K is a normal subgroup of G. ⇒ for any g ∈ G",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2098",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let (G, o) and (G', *) be two groups and f : G → G' be a homomorphism, then f (G) ceeve ueerefpeS (G, o) Deewj (G', *) oes mecetn nw Deewj f : G → G' Skeâ mece™helee (homomorphism) nw, lees f (G)",
+            "options": [
+              {
+                "prompt": "Is a cyclic subgroup of G' if G may not be",
+                "value": "A"
+              },
+              {
+                "prompt": "घ्े a म्ब्म्त्ग्म् ेल्ुंrदल्ज् दf उ'/उ' का चक्रीय उपसमूह",
+                "value": "B"
+              },
+              {
+                "prompt": "घ्े हदू a म्ब्म्त्ग्म् ेल्ुंrदल्ज् दf उ' ग्े म्ब्म्त्ग्म्/उ' का",
+                "value": "C"
+              },
+              {
+                "prompt": "Is a cyclic subgroup of G' is commutative/G'",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2098",
+              "correct_answer": "A",
+              "explanation": "(G, o) and (G', *) be two groups and f : G → G' be a homomorophism, then f(G) is a cyclic subgroup of G', if G may not be cyclic.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2099",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "थू (उ, द) aह् (उ', ङ) ां ूैद fग्हग्ूा ुrदल्ज्े aह् φ : उ → उ' ां aह ाज्ग्स्दrज्प्ग्ेस् ूपह- मान लीजिए (उ, द) aह् (उ', ङ) दो परिमित (सीमित) समूह है और φ : उ → उ' एक आच्छादक समाकारिता (ाज्ग्स्दrज्प्ग्ेस्) है, तो–",
+            "options": [
+              {
+                "prompt": "O",
+                "value": "A"
+              },
+              {
+                "prompt": "O",
+                "value": "B"
+              },
+              {
+                "prompt": "O",
+                "value": "C"
+              },
+              {
+                "prompt": "O",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2099",
+              "correct_answer": "B",
+              "explanation": "Let (G, O) and (G', *) be two finite groups and G → G' be an emimorphism then O (G') is a divisor of O (G).",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2100",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "थू (उ, द) aह् (उ', ङ) ां ूैद ुrदल्ज्े aह् φ : उ → उ' ां a ाज्ग्स्दrज्प्ग्ेस्. ऊपह φ ग्े aह ग्ेदस्दrज्प्ग्ेस् ग्f aह् दहत्ब् ग्f - मान लीजिए (उ, द) और (उ', ङ) दो समूह है और φ : उ → उ' एक आच्छादक समाकारिता (ाज्ग्स्ग्दrज्प्ग्ेस्) है। तो φ समरूप समाकृतिक (ग्ेदस्दrज्प्ग्ेस्) है यदि और केवल यदि -",
+            "options": [
+              {
+                "prompt": "Ker φ ⊂ {eG}/Ker φ ⊂ {eG} nes lees",
+                "value": "A"
+              },
+              {
+                "prompt": "Ker φ ⊂ {eG'}/Ker φ ⊂ {eG'} nes lees",
+                "value": "B"
+              },
+              {
+                "prompt": "Ker φ ⊂ {eG}/Ker φ ⊂ {eG} nes lees",
+                "value": "C"
+              },
+              {
+                "prompt": "Ker φ ⊂ {eG'}/Ker φ ⊂ {eG'} nes lees",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2100",
+              "correct_answer": "C",
+              "explanation": "Let (G, o) and (G' *) be two group and φ : G → G' be a epimorphism, then φ is an isomorphism if and only if ker φ = {eG}",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

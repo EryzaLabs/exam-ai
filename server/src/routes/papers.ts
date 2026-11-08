@@ -223,6 +223,7 @@ function loadAllPapersList(): any[] {
   const fullMockDir = path.join(TESTS_DIR, 'full_mocks');
   const topicWiseDir = path.join(TESTS_DIR, 'topic_wise');
   const customMockDir = path.join(TESTS_DIR, 'custom_mocks');
+  const tgtPgtDir = path.join(TESTS_DIR, 'tgt_pgt');
   
   let allFiles: { filename: string, fullPath: string }[] = [];
   
@@ -241,19 +242,39 @@ function loadAllPapersList(): any[] {
     files.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
     allFiles.push(...files.map(f => ({ filename: `custom_mocks/${f}`, fullPath: path.join(customMockDir, f) })));
   }
+  if (fs.existsSync(tgtPgtDir)) {
+    const files = fs.readdirSync(tgtPgtDir).filter(f => f.endsWith('.json') && f !== 'series_catalog.json');
+    files.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+    allFiles.push(...files.map(f => ({ filename: `tgt_pgt/${f}`, fullPath: path.join(tgtPgtDir, f) })));
+  }
 
   return allFiles.map((fileObj) => {
     let title = "UPSC Principal Test";
     let testId = fileObj.filename;
     let topic = "";
+    let fileData: any = {};
     try {
-      const fileData = JSON.parse(fs.readFileSync(fileObj.fullPath, 'utf8'));
-      title = fileData.test_name || title;
+      fileData = JSON.parse(fs.readFileSync(fileObj.fullPath, 'utf8'));
+      title = fileData.test_name || fileData.title || title;
       topic = fileData.topic || "";
-      if (fileData.test_id) {
-        testId = fileData.test_id;
+      if (fileData.test_id || fileData._id) {
+        testId = fileData.test_id || fileData._id;
       }
     } catch (e) {}
+
+    if (fileObj.filename.startsWith('tgt_pgt/')) {
+      return {
+        id: fileData._id || testId,
+        testId: fileData._id || testId,
+        title: fileData.title || title,
+        filename: fileObj.filename,
+        hasAnswers: true,
+        series: fileData.exam || (fileObj.filename.includes('pgt_') ? 'pgt' : 'tgt'),
+        subject: fileData.subject || '',
+        price: fileData.price || 199,
+        originalPrice: fileData.originalPrice || 999
+      };
+    }
 
     const cleanTitle = formatPaperTitle(title, fileObj.filename, topic);
     

@@ -1,6 +1,7 @@
 /**
  * Paper Service
  * Manages test papers, full mocks, topic-wise tests, and custom tests for Astra Exam AI.
+ * Includes UPSC Principal, UP Principal, TGT Series, and PGT Series Solved Papers.
  */
 
 const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://astra-backend.eryzalabs.cloud/api';
@@ -11,20 +12,2376 @@ export interface ServerPaper {
   title: string;
   filename: string;
   hasAnswers: boolean;
+  series?: 'upsc' | 'uppsc' | 'tgt' | 'pgt';
+  subject?: string;
+  year?: string;
+  price?: number;
+  originalPrice?: number;
 }
+
+export const INITIAL_TGT_PGT_PAPERS: ServerPaper[] = [
+  {
+    "id": "tgt_drawing_teacher_set1",
+    "title": "TGT Drawing Teacher \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_drawing_teacher_set1.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Drawing Teacher",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_drawing_teacher_set2",
+    "title": "TGT Drawing Teacher \u2022 Mock Test Set 2 (70 MCQs)",
+    "filename": "tgt_pgt/tgt_drawing_teacher_set2.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Drawing Teacher",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set1",
+    "title": "TGT Hindi \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set1.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set2",
+    "title": "TGT Hindi \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set2.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set3",
+    "title": "TGT Hindi \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set3.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set4",
+    "title": "TGT Hindi \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set4.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set5",
+    "title": "TGT Hindi \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set5.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set6",
+    "title": "TGT Hindi \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set6.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set7",
+    "title": "TGT Hindi \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set7.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set8",
+    "title": "TGT Hindi \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set8.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set9",
+    "title": "TGT Hindi \u2022 Mock Test Set 9 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set9.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set10",
+    "title": "TGT Hindi \u2022 Mock Test Set 10 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set10.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set11",
+    "title": "TGT Hindi \u2022 Mock Test Set 11 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set11.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set12",
+    "title": "TGT Hindi \u2022 Mock Test Set 12 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set12.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set13",
+    "title": "TGT Hindi \u2022 Mock Test Set 13 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set13.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set14",
+    "title": "TGT Hindi \u2022 Mock Test Set 14 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set14.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set15",
+    "title": "TGT Hindi \u2022 Mock Test Set 15 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set15.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set16",
+    "title": "TGT Hindi \u2022 Mock Test Set 16 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set16.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set17",
+    "title": "TGT Hindi \u2022 Mock Test Set 17 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set17.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set18",
+    "title": "TGT Hindi \u2022 Mock Test Set 18 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set18.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set19",
+    "title": "TGT Hindi \u2022 Mock Test Set 19 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set19.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set20",
+    "title": "TGT Hindi \u2022 Mock Test Set 20 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set20.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set21",
+    "title": "TGT Hindi \u2022 Mock Test Set 21 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set21.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set22",
+    "title": "TGT Hindi \u2022 Mock Test Set 22 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set22.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set23",
+    "title": "TGT Hindi \u2022 Mock Test Set 23 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set23.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set24",
+    "title": "TGT Hindi \u2022 Mock Test Set 24 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set24.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set25",
+    "title": "TGT Hindi \u2022 Mock Test Set 25 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set25.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set26",
+    "title": "TGT Hindi \u2022 Mock Test Set 26 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set26.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set27",
+    "title": "TGT Hindi \u2022 Mock Test Set 27 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set27.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set28",
+    "title": "TGT Hindi \u2022 Mock Test Set 28 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set28.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set29",
+    "title": "TGT Hindi \u2022 Mock Test Set 29 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set29.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set30",
+    "title": "TGT Hindi \u2022 Mock Test Set 30 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set30.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set31",
+    "title": "TGT Hindi \u2022 Mock Test Set 31 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set31.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set32",
+    "title": "TGT Hindi \u2022 Mock Test Set 32 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set32.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set33",
+    "title": "TGT Hindi \u2022 Mock Test Set 33 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set33.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set34",
+    "title": "TGT Hindi \u2022 Mock Test Set 34 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set34.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_hindi_set35",
+    "title": "TGT Hindi \u2022 Mock Test Set 35 (3 MCQs)",
+    "filename": "tgt_pgt/tgt_hindi_set35.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Hindi",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set1",
+    "title": "TGT English \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set1.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set2",
+    "title": "TGT English \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set2.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set3",
+    "title": "TGT English \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set3.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set4",
+    "title": "TGT English \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set4.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set5",
+    "title": "TGT English \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set5.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set6",
+    "title": "TGT English \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set6.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set7",
+    "title": "TGT English \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set7.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set8",
+    "title": "TGT English \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set8.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set9",
+    "title": "TGT English \u2022 Mock Test Set 9 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set9.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set10",
+    "title": "TGT English \u2022 Mock Test Set 10 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set10.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set11",
+    "title": "TGT English \u2022 Mock Test Set 11 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set11.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set12",
+    "title": "TGT English \u2022 Mock Test Set 12 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set12.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set13",
+    "title": "TGT English \u2022 Mock Test Set 13 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set13.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set14",
+    "title": "TGT English \u2022 Mock Test Set 14 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set14.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set15",
+    "title": "TGT English \u2022 Mock Test Set 15 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set15.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_english_set16",
+    "title": "TGT English \u2022 Mock Test Set 16 (98 MCQs)",
+    "filename": "tgt_pgt/tgt_english_set16.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "English",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set1",
+    "title": "TGT Natural Science \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set1.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set2",
+    "title": "TGT Natural Science \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set2.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set3",
+    "title": "TGT Natural Science \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set3.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set4",
+    "title": "TGT Natural Science \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set4.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set5",
+    "title": "TGT Natural Science \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set5.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set6",
+    "title": "TGT Natural Science \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set6.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set7",
+    "title": "TGT Natural Science \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set7.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set8",
+    "title": "TGT Natural Science \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set8.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set9",
+    "title": "TGT Natural Science \u2022 Mock Test Set 9 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set9.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set10",
+    "title": "TGT Natural Science \u2022 Mock Test Set 10 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set10.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set11",
+    "title": "TGT Natural Science \u2022 Mock Test Set 11 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set11.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set12",
+    "title": "TGT Natural Science \u2022 Mock Test Set 12 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set12.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set13",
+    "title": "TGT Natural Science \u2022 Mock Test Set 13 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set13.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_natural_science_set14",
+    "title": "TGT Natural Science \u2022 Mock Test Set 14 (91 MCQs)",
+    "filename": "tgt_pgt/tgt_natural_science_set14.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Natural Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set1",
+    "title": "TGT Mathematics \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set1.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set2",
+    "title": "TGT Mathematics \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set2.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set3",
+    "title": "TGT Mathematics \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set3.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set4",
+    "title": "TGT Mathematics \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set4.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set5",
+    "title": "TGT Mathematics \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set5.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set6",
+    "title": "TGT Mathematics \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set6.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set7",
+    "title": "TGT Mathematics \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set7.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set8",
+    "title": "TGT Mathematics \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set8.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set9",
+    "title": "TGT Mathematics \u2022 Mock Test Set 9 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set9.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set10",
+    "title": "TGT Mathematics \u2022 Mock Test Set 10 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set10.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set11",
+    "title": "TGT Mathematics \u2022 Mock Test Set 11 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set11.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set12",
+    "title": "TGT Mathematics \u2022 Mock Test Set 12 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set12.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set13",
+    "title": "TGT Mathematics \u2022 Mock Test Set 13 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set13.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set14",
+    "title": "TGT Mathematics \u2022 Mock Test Set 14 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set14.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set15",
+    "title": "TGT Mathematics \u2022 Mock Test Set 15 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set15.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set16",
+    "title": "TGT Mathematics \u2022 Mock Test Set 16 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set16.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set17",
+    "title": "TGT Mathematics \u2022 Mock Test Set 17 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set17.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set18",
+    "title": "TGT Mathematics \u2022 Mock Test Set 18 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set18.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set19",
+    "title": "TGT Mathematics \u2022 Mock Test Set 19 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set19.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set20",
+    "title": "TGT Mathematics \u2022 Mock Test Set 20 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set20.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set21",
+    "title": "TGT Mathematics \u2022 Mock Test Set 21 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set21.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set22",
+    "title": "TGT Mathematics \u2022 Mock Test Set 22 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set22.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set23",
+    "title": "TGT Mathematics \u2022 Mock Test Set 23 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set23.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_mathematics_set24",
+    "title": "TGT Mathematics \u2022 Mock Test Set 24 (1 MCQs)",
+    "filename": "tgt_pgt/tgt_mathematics_set24.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Mathematics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set1",
+    "title": "TGT Social Science \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set1.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set2",
+    "title": "TGT Social Science \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set2.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set3",
+    "title": "TGT Social Science \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set3.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set4",
+    "title": "TGT Social Science \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set4.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set5",
+    "title": "TGT Social Science \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set5.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set6",
+    "title": "TGT Social Science \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set6.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set7",
+    "title": "TGT Social Science \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set7.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set8",
+    "title": "TGT Social Science \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set8.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set9",
+    "title": "TGT Social Science \u2022 Mock Test Set 9 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set9.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set10",
+    "title": "TGT Social Science \u2022 Mock Test Set 10 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set10.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set11",
+    "title": "TGT Social Science \u2022 Mock Test Set 11 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set11.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set12",
+    "title": "TGT Social Science \u2022 Mock Test Set 12 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set12.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set13",
+    "title": "TGT Social Science \u2022 Mock Test Set 13 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set13.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set14",
+    "title": "TGT Social Science \u2022 Mock Test Set 14 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set14.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set15",
+    "title": "TGT Social Science \u2022 Mock Test Set 15 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set15.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set16",
+    "title": "TGT Social Science \u2022 Mock Test Set 16 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set16.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_social_science_set17",
+    "title": "TGT Social Science \u2022 Mock Test Set 17 (7 MCQs)",
+    "filename": "tgt_pgt/tgt_social_science_set17.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Social Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set1",
+    "title": "TGT Physical Education \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set1.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set2",
+    "title": "TGT Physical Education \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set2.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set3",
+    "title": "TGT Physical Education \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set3.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set4",
+    "title": "TGT Physical Education \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set4.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set5",
+    "title": "TGT Physical Education \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set5.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set6",
+    "title": "TGT Physical Education \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set6.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set7",
+    "title": "TGT Physical Education \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set7.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set8",
+    "title": "TGT Physical Education \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set8.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set9",
+    "title": "TGT Physical Education \u2022 Mock Test Set 9 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set9.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set10",
+    "title": "TGT Physical Education \u2022 Mock Test Set 10 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set10.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set11",
+    "title": "TGT Physical Education \u2022 Mock Test Set 11 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set11.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set12",
+    "title": "TGT Physical Education \u2022 Mock Test Set 12 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set12.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set13",
+    "title": "TGT Physical Education \u2022 Mock Test Set 13 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set13.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set14",
+    "title": "TGT Physical Education \u2022 Mock Test Set 14 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set14.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set15",
+    "title": "TGT Physical Education \u2022 Mock Test Set 15 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set15.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set16",
+    "title": "TGT Physical Education \u2022 Mock Test Set 16 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set16.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set17",
+    "title": "TGT Physical Education \u2022 Mock Test Set 17 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set17.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set18",
+    "title": "TGT Physical Education \u2022 Mock Test Set 18 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set18.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set19",
+    "title": "TGT Physical Education \u2022 Mock Test Set 19 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set19.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set20",
+    "title": "TGT Physical Education \u2022 Mock Test Set 20 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set20.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set21",
+    "title": "TGT Physical Education \u2022 Mock Test Set 21 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set21.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set22",
+    "title": "TGT Physical Education \u2022 Mock Test Set 22 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set22.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set23",
+    "title": "TGT Physical Education \u2022 Mock Test Set 23 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set23.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set24",
+    "title": "TGT Physical Education \u2022 Mock Test Set 24 (100 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set24.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "tgt_physical_education_set25",
+    "title": "TGT Physical Education \u2022 Mock Test Set 25 (2 MCQs)",
+    "filename": "tgt_pgt/tgt_physical_education_set25.json",
+    "hasAnswers": true,
+    "series": "tgt",
+    "subject": "Physical Education",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set1",
+    "title": "PGT Commerce \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set1.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set2",
+    "title": "PGT Commerce \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set2.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set3",
+    "title": "PGT Commerce \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set3.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set4",
+    "title": "PGT Commerce \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set4.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set5",
+    "title": "PGT Commerce \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set5.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set6",
+    "title": "PGT Commerce \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set6.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set7",
+    "title": "PGT Commerce \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set7.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set8",
+    "title": "PGT Commerce \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set8.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set9",
+    "title": "PGT Commerce \u2022 Mock Test Set 9 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set9.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set10",
+    "title": "PGT Commerce \u2022 Mock Test Set 10 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set10.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set11",
+    "title": "PGT Commerce \u2022 Mock Test Set 11 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set11.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set12",
+    "title": "PGT Commerce \u2022 Mock Test Set 12 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set12.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set13",
+    "title": "PGT Commerce \u2022 Mock Test Set 13 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set13.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set14",
+    "title": "PGT Commerce \u2022 Mock Test Set 14 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set14.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set15",
+    "title": "PGT Commerce \u2022 Mock Test Set 15 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set15.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set16",
+    "title": "PGT Commerce \u2022 Mock Test Set 16 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set16.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set17",
+    "title": "PGT Commerce \u2022 Mock Test Set 17 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set17.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set18",
+    "title": "PGT Commerce \u2022 Mock Test Set 18 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set18.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set19",
+    "title": "PGT Commerce \u2022 Mock Test Set 19 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set19.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set20",
+    "title": "PGT Commerce \u2022 Mock Test Set 20 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set20.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set21",
+    "title": "PGT Commerce \u2022 Mock Test Set 21 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set21.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set22",
+    "title": "PGT Commerce \u2022 Mock Test Set 22 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set22.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set23",
+    "title": "PGT Commerce \u2022 Mock Test Set 23 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set23.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set24",
+    "title": "PGT Commerce \u2022 Mock Test Set 24 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set24.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set25",
+    "title": "PGT Commerce \u2022 Mock Test Set 25 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set25.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set26",
+    "title": "PGT Commerce \u2022 Mock Test Set 26 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set26.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set27",
+    "title": "PGT Commerce \u2022 Mock Test Set 27 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set27.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set28",
+    "title": "PGT Commerce \u2022 Mock Test Set 28 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set28.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set29",
+    "title": "PGT Commerce \u2022 Mock Test Set 29 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set29.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set30",
+    "title": "PGT Commerce \u2022 Mock Test Set 30 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set30.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set31",
+    "title": "PGT Commerce \u2022 Mock Test Set 31 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set31.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_commerce_set32",
+    "title": "PGT Commerce \u2022 Mock Test Set 32 (45 MCQs)",
+    "filename": "tgt_pgt/pgt_commerce_set32.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Commerce",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_biology_set1",
+    "title": "PGT Biology \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_biology_set1.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Biology",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_biology_set2",
+    "title": "PGT Biology \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_biology_set2.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Biology",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_biology_set3",
+    "title": "PGT Biology \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_biology_set3.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Biology",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_biology_set4",
+    "title": "PGT Biology \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_biology_set4.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Biology",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_biology_set5",
+    "title": "PGT Biology \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_biology_set5.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Biology",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_biology_set6",
+    "title": "PGT Biology \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_biology_set6.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Biology",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_biology_set7",
+    "title": "PGT Biology \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_biology_set7.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Biology",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_biology_set8",
+    "title": "PGT Biology \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_biology_set8.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Biology",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_biology_set9",
+    "title": "PGT Biology \u2022 Mock Test Set 9 (38 MCQs)",
+    "filename": "tgt_pgt/pgt_biology_set9.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Biology",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_chemistry_set1",
+    "title": "PGT Chemistry \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_chemistry_set1.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Chemistry",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_chemistry_set2",
+    "title": "PGT Chemistry \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_chemistry_set2.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Chemistry",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_chemistry_set3",
+    "title": "PGT Chemistry \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_chemistry_set3.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Chemistry",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_chemistry_set4",
+    "title": "PGT Chemistry \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_chemistry_set4.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Chemistry",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_chemistry_set5",
+    "title": "PGT Chemistry \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_chemistry_set5.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Chemistry",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_chemistry_set6",
+    "title": "PGT Chemistry \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_chemistry_set6.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Chemistry",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_chemistry_set7",
+    "title": "PGT Chemistry \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_chemistry_set7.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Chemistry",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_chemistry_set8",
+    "title": "PGT Chemistry \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_chemistry_set8.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Chemistry",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_chemistry_set9",
+    "title": "PGT Chemistry \u2022 Mock Test Set 9 (27 MCQs)",
+    "filename": "tgt_pgt/pgt_chemistry_set9.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Chemistry",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_economics_set1",
+    "title": "PGT Economics \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_economics_set1.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Economics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_economics_set2",
+    "title": "PGT Economics \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_economics_set2.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Economics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_economics_set3",
+    "title": "PGT Economics \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_economics_set3.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Economics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_economics_set4",
+    "title": "PGT Economics \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_economics_set4.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Economics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_economics_set5",
+    "title": "PGT Economics \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_economics_set5.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Economics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_economics_set6",
+    "title": "PGT Economics \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_economics_set6.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Economics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_economics_set7",
+    "title": "PGT Economics \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_economics_set7.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Economics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_economics_set8",
+    "title": "PGT Economics \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_economics_set8.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Economics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_economics_set9",
+    "title": "PGT Economics \u2022 Mock Test Set 9 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_economics_set9.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Economics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_economics_set10",
+    "title": "PGT Economics \u2022 Mock Test Set 10 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_economics_set10.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Economics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_economics_set11",
+    "title": "PGT Economics \u2022 Mock Test Set 11 (6 MCQs)",
+    "filename": "tgt_pgt/pgt_economics_set11.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Economics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_geography_set1",
+    "title": "PGT Geography \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_geography_set1.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Geography",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_geography_set2",
+    "title": "PGT Geography \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_geography_set2.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Geography",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_geography_set3",
+    "title": "PGT Geography \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_geography_set3.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Geography",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_geography_set4",
+    "title": "PGT Geography \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_geography_set4.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Geography",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_geography_set5",
+    "title": "PGT Geography \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_geography_set5.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Geography",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_geography_set6",
+    "title": "PGT Geography \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_geography_set6.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Geography",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_geography_set7",
+    "title": "PGT Geography \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_geography_set7.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Geography",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_geography_set8",
+    "title": "PGT Geography \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_geography_set8.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Geography",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_geography_set9",
+    "title": "PGT Geography \u2022 Mock Test Set 9 (13 MCQs)",
+    "filename": "tgt_pgt/pgt_geography_set9.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Geography",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_history_set1",
+    "title": "PGT History \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_history_set1.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "History",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_history_set2",
+    "title": "PGT History \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_history_set2.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "History",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_history_set3",
+    "title": "PGT History \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_history_set3.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "History",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_history_set4",
+    "title": "PGT History \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_history_set4.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "History",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_history_set5",
+    "title": "PGT History \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_history_set5.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "History",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_history_set6",
+    "title": "PGT History \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_history_set6.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "History",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_history_set7",
+    "title": "PGT History \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_history_set7.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "History",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_history_set8",
+    "title": "PGT History \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_history_set8.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "History",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_history_set9",
+    "title": "PGT History \u2022 Mock Test Set 9 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_history_set9.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "History",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_history_set10",
+    "title": "PGT History \u2022 Mock Test Set 10 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_history_set10.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "History",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_history_set11",
+    "title": "PGT History \u2022 Mock Test Set 11 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_history_set11.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "History",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_history_set12",
+    "title": "PGT History \u2022 Mock Test Set 12 (87 MCQs)",
+    "filename": "tgt_pgt/pgt_history_set12.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "History",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_physics_set1",
+    "title": "PGT Physics \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_physics_set1.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Physics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_physics_set2",
+    "title": "PGT Physics \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_physics_set2.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Physics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_physics_set3",
+    "title": "PGT Physics \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_physics_set3.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Physics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_physics_set4",
+    "title": "PGT Physics \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_physics_set4.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Physics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_physics_set5",
+    "title": "PGT Physics \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_physics_set5.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Physics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_physics_set6",
+    "title": "PGT Physics \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_physics_set6.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Physics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_physics_set7",
+    "title": "PGT Physics \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_physics_set7.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Physics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_physics_set8",
+    "title": "PGT Physics \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_physics_set8.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Physics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_physics_set9",
+    "title": "PGT Physics \u2022 Mock Test Set 9 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_physics_set9.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Physics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_physics_set10",
+    "title": "PGT Physics \u2022 Mock Test Set 10 (83 MCQs)",
+    "filename": "tgt_pgt/pgt_physics_set10.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Physics",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_political_science_set1",
+    "title": "PGT Political Science \u2022 Mock Test Set 1 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_political_science_set1.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Political Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_political_science_set2",
+    "title": "PGT Political Science \u2022 Mock Test Set 2 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_political_science_set2.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Political Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_political_science_set3",
+    "title": "PGT Political Science \u2022 Mock Test Set 3 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_political_science_set3.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Political Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_political_science_set4",
+    "title": "PGT Political Science \u2022 Mock Test Set 4 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_political_science_set4.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Political Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_political_science_set5",
+    "title": "PGT Political Science \u2022 Mock Test Set 5 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_political_science_set5.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Political Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_political_science_set6",
+    "title": "PGT Political Science \u2022 Mock Test Set 6 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_political_science_set6.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Political Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_political_science_set7",
+    "title": "PGT Political Science \u2022 Mock Test Set 7 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_political_science_set7.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Political Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_political_science_set8",
+    "title": "PGT Political Science \u2022 Mock Test Set 8 (100 MCQs)",
+    "filename": "tgt_pgt/pgt_political_science_set8.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Political Science",
+    "price": 199,
+    "originalPrice": 999
+  },
+  {
+    "id": "pgt_political_science_set9",
+    "title": "PGT Political Science \u2022 Mock Test Set 9 (49 MCQs)",
+    "filename": "tgt_pgt/pgt_political_science_set9.json",
+    "hasAnswers": true,
+    "series": "pgt",
+    "subject": "Political Science",
+    "price": 199,
+    "originalPrice": 999
+  }
+];
 
 class PaperService {
   /**
-   * Fetch list of all available papers / tests from server
+   * Fetch list of all available papers / tests from server merged with TGT/PGT catalog
    */
   async fetchPapersList(): Promise<ServerPaper[]> {
     try {
       const response = await fetch(`${API_URL}/papers`);
-      if (!response.ok) throw new Error(`Failed to fetch papers list: ${response.status}`);
-      return await response.json();
+      let serverPapers: ServerPaper[] = [];
+      if (response.ok) {
+        serverPapers = await response.json();
+      }
+
+      // Merge server papers and ensure TGT/PGT papers are present without duplicate IDs
+      const existingIds = new Set(serverPapers.map(p => p.id));
+      const additional = INITIAL_TGT_PGT_PAPERS.filter(p => !existingIds.has(p.id));
+
+      return [...serverPapers, ...additional];
     } catch (error) {
-      console.error('Error fetching papers list:', error);
-      return [];
+      console.warn('Network issue fetching server papers list, falling back to bundled catalog:', error);
+      return INITIAL_TGT_PGT_PAPERS;
     }
   }
 
@@ -34,9 +2391,9 @@ class PaperService {
   async getAvailableTestsCount(): Promise<number> {
     try {
       const papers = await this.fetchPapersList();
-      return papers && papers.length > 0 ? papers.length : 0;
+      return papers && papers.length > 0 ? papers.length : INITIAL_TGT_PGT_PAPERS.length;
     } catch {
-      return 0;
+      return INITIAL_TGT_PGT_PAPERS.length;
     }
   }
 }

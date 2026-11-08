@@ -364,6 +364,8 @@ export const formatDisplayTitle = (title: string, filename: string, examMode: Ex
   const getPrefix = () => {
     if (examMode === 'uppsc') return 'UP Principal';
     if (examMode === 'upsc') return 'UPSC Principal';
+    if (examMode === 'tgt') return 'TGT Series';
+    if (examMode === 'pgt') return 'PGT Series';
     return 'UPSC & UP Principal';
   };
 
@@ -422,6 +424,8 @@ export const formatDisplayTitle = (title: string, filename: string, examMode: Ex
 };
 
 const SEARCH_SUGGESTIONS = [
+  { label: '🎯 TGT Series', query: 'tgt' },
+  { label: '🎓 PGT Series', query: 'pgt' },
   { label: '🏫 UP Principal', query: 'up principal' },
   { label: '🏛️ UPSC Principal', query: 'full mock' },
   { label: 'NEP 2020', query: 'nep 2020' },
@@ -647,7 +651,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
   useEffect(() => {
     filterTests();
-  }, [searchQuery, category, selectedTopic, selectedTopicCategory, tests, attemptFilter, getAttemptForTest]);
+  }, [searchQuery, category, selectedTopic, selectedTopicCategory, tests, attemptFilter, getAttemptForTest, examMode]);
 
   useFocusEffect(
     useCallback(() => {
@@ -689,6 +693,14 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
   const filterTests = () => {
     let baseList = [...tests];
+
+    if (examMode === 'tgt') {
+      baseList = baseList.filter(t => t.filename?.toLowerCase().includes('tgt') || t.title?.toLowerCase().includes('tgt'));
+    } else if (examMode === 'pgt') {
+      baseList = baseList.filter(t => t.filename?.toLowerCase().includes('pgt') || t.title?.toLowerCase().includes('pgt'));
+    } else if (examMode === 'upsc' || examMode === 'uppsc') {
+      baseList = baseList.filter(t => !t.filename?.toLowerCase().includes('tgt_pgt'));
+    }
 
     if (attemptFilter === 'attempted') {
       baseList = baseList.filter(t => !!getAttemptForTest(t));

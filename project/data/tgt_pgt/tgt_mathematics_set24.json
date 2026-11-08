@@ -1,0 +1,58 @@
+{
+  "_id": "tgt_mathematics_set24",
+  "title": "TGT Mathematics • Mock Test Set 24 (1 MCQs)",
+  "course": "TGT Series",
+  "subject": "Mathematics",
+  "exam": "tgt",
+  "price": 199,
+  "originalPrice": 999,
+  "duration": 60,
+  "sections": [
+    {
+      "_id": "sec_tgt_mathematics_set24",
+      "title": "Mathematics Section",
+      "qCount": 1,
+      "time": 60,
+      "questions": [
+        {
+          "_id": "tgt_mathematics_q2301",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "थू ह ां a fगर््ेा् हaूल्raत् हल्स्ंी. ऊप्ल्े, ूप ेीगे ( ) ≥∑ स् स् ह –१ स् ग्े– मान लीजिए ह एक निश्चित प्राकृत संख्या है। अत: श्रेणी ( ) ≥∑ स् स् ह –१ स् है–",
+            "options": [
+              {
+                "prompt": "Absolutely convergent if n > 100",
+                "value": "A"
+              },
+              {
+                "prompt": "Divergent/Dehemeejer",
+                "value": "B"
+              },
+              {
+                "prompt": "Convergent/DeefYemeejer",
+                "value": "C"
+              },
+              {
+                "prompt": "Absolutely convergent/efvejhes#e DeefYemeejer",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2301",
+              "correct_answer": "C",
+              "explanation": "m m n (–1) m ≥∑ Let n = 1 1 2 3 4 (–1) (–1) (–1) (–1) .............. 1 2 3 4 = + + + + 1 1 1 1 –1 – – .............. 2 3 4 5 = + + + n 1 n a 1 a + < |an + 1| < |an| So, Series is convergent. YEP Powered by TCPDF (www.tcpdf.org)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

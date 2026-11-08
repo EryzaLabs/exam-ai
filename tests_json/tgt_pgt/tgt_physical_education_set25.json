@@ -1,0 +1,96 @@
+{
+  "_id": "tgt_physical_education_set25",
+  "title": "TGT Physical Education • Mock Test Set 25 (2 MCQs)",
+  "course": "TGT Series",
+  "subject": "Physical Education",
+  "exam": "tgt",
+  "price": 199,
+  "originalPrice": 999,
+  "duration": 60,
+  "sections": [
+    {
+      "_id": "sec_tgt_physical_education_set25",
+      "title": "Physical Education Section",
+      "qCount": 2,
+      "time": 60,
+      "questions": [
+        {
+          "_id": "tgt_physical_education_q2401",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "नीचे दिये गये कथन",
+            "options": [
+              {
+                "prompt": "गलत है तथा",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_physical_education_q2401",
+              "correct_answer": "A",
+              "explanation": "कथन (A) एवं तर्क (R) दोनों सही हैं।",
+              "key_concepts": [
+                "Physical Education",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_physical_education_q2402",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "निम्नलिखित खिलाड़ियों को उनसे संबंधित खेलों से मिलाइये : सूची-घ् सूची-घ्घ्",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_physical_education_q2402",
+              "correct_answer": "C",
+              "explanation": "Correct answer is Option (C). Verified from official answer key.",
+              "key_concepts": [
+                "Physical Education",
+                "TGT Series"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

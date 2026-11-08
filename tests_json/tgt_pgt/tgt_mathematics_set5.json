@@ -1,0 +1,3820 @@
+{
+  "_id": "tgt_mathematics_set5",
+  "title": "TGT Mathematics • Mock Test Set 5 (100 MCQs)",
+  "course": "TGT Series",
+  "subject": "Mathematics",
+  "exam": "tgt",
+  "price": 199,
+  "originalPrice": 999,
+  "duration": 100,
+  "sections": [
+    {
+      "_id": "sec_tgt_mathematics_set5",
+      "title": "Mathematics Section",
+      "qCount": 100,
+      "time": 100,
+      "questions": [
+        {
+          "_id": "tgt_mathematics_q401",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If tanA + sinA = m and tanA – sinA = n then:",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q401",
+              "correct_answer": "C",
+              "explanation": "We have tanA+sinA = m –––(i) and tanA–sinA = n ––––(ii) 2 2 2 2 m n tan A sin A 2tan Asin A − = + + − ( ) 2 2 tan A sin A 2tanAsinA + − 4tan AsinA = ––––(iii) Now, multiplying equation (i) & (ii) then- mn = (tan A + sin A) (tan A – sin A) mn = tan2A – sin2A mn = 2 2 2 sin A sin A cos A − = 2 2 2 2 sin A sin Acos A cos A − = ( ) 2 2 2 sin A 1 cos A cos A − = 2 2 2 sin Asin A cos A {∵sin2A = 1–cos2A} mn = sin2 A tan2A ⇒ mn = SinA tanA ––––––(iv) From equation (iii) & (iv) we obtain 2 2 m n 4 mn − = Thus option (c) is correct answer.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q402",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If 2 sinx = cos x, then ( ) 2 2 cos x 1+ cos x is equal to:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "None of these",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q402",
+              "correct_answer": "A",
+              "explanation": "Given that sinx = cos2x Square both side then- sin2x = cos4x ⇒ 1– cos2x = cos4x (∵sin2x = 1 – cos2x) ⇒ cos2x+cos4x = 1 ⇒ cos2x(1+cos2x) = 1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q403",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the roots of quadratic equation 2 x + px + q = 0 are tan30º and tan15º respectively, then the value of 2+ q – p is:",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q403",
+              "correct_answer": "C",
+              "explanation": "We have- sum of roots = tan30º tan15º p + = − ––––(i) & product of roots = tan30º tan15º q = –––(ii) since , we know that tan(A+B) = tanA tan B 1 tan AtanB + − Then, tan30º tan15º tan 45º 1 tan30º tan15º + = − , A 30 B 15 ∠ = °     ∠ = °   ∵ from equation (i) & (ii) then we get ⇒ p 1 1 q − = − ⇒ 1– q = – p ⇒ q – p = 1 So, ⇒ 2 p q 3 − + = .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q404",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The area of the triangle with vertices at the points ( ) ( ) ( ) a,b +c , b,c + a , c,a+ b is:",
+            "options": [
+              {
+                "prompt": "ab",
+                "value": "A"
+              },
+              {
+                "prompt": "None of these",
+                "value": "B"
+              },
+              {
+                "prompt": "a",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q404",
+              "correct_answer": "D",
+              "explanation": "Since we know that are of triangle is Ar = ( ) ( ) ( ) 1 2 3 2 3 1 3 1 2 1 x y y x y y x y y 2 − + − + −     ( ) ( ) ( ) 1 a c a a b b a b b c c b c c a 2 = + − − + + − − + + −−     ( ) ( ) ( ) 1 a c b b a c c b a 2 = − + − + −     Ar. [ ] 1 ca ab ab bc bc ac 2 = − + − + − 0 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q405",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ( ) –4,0 and ( ) 1, –1 are two vertices of a triangle of area 4 units, then its third vertex lie on:",
+            "options": [
+              {
+                "prompt": "None of these",
+                "value": "A"
+              },
+              {
+                "prompt": "x",
+                "value": "B"
+              },
+              {
+                "prompt": "5x",
+                "value": "C"
+              },
+              {
+                "prompt": "y",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q405",
+              "correct_answer": "B",
+              "explanation": "Let the third vertex be (x, y). Area of triangle = ( ) ( ) ( ) 1 2 3 2 3 1 3 1 2 1 x y y x y y x y y 2 − + − + −     Given, x1 = –4, x2 = 1, x3 = x y1 = 0, y2 = –1, y3 = y Then, area of triangle ( ) 1 4 1 y y x 2 = − −− + +     ⇒ [ ] 1 4 4 4y y x 2 = + + + ⇒ x 5y 4 0 + − =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q406",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let x and y be real numbers such that sinx = 3 siny and . cosx 1 = cosy 2 Then the value of sin2x cos2x + sin2y cos2y is:",
+            "options": [
+              {
+                "prompt": "None of these",
+                "value": "A"
+              },
+              {
+                "prompt": "51",
+                "value": "B"
+              },
+              {
+                "prompt": "49",
+                "value": "C"
+              },
+              {
+                "prompt": "41",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q406",
+              "correct_answer": "C",
+              "explanation": "Given that sin x cosx 1 3, sin y cos y 2 = = sin 2x sin xcosx sin2y sin ycos y = sin2x 3 sin2y 2 ⇒ = YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-II) 75 YCT According to question, 1 sin x 3sin y & cos x cos y 2 = = Add by square, 2 2 2 2 1 sin x cos x 9sin y cos y 4 + = + ⇒ 2 2 1 9sin y cos y 1 4 + = ⇒ ( ) 2 2 1 9sin y 1 sin y 1 4 + − = ⇒ 2 2 1 1 9sin y sin y 1 4 4 − = − ⇒ 2 35 3 sin y 4 4 = ⇒ 35 sin2y = 3 ⇒ 2 3 sin y 35 = ∴ 2 2 27 sin x 9sin y 35 = = Therefore, 2 2 27 1 2 cos2x 1 2sin x 19 35 3 cos2y 1 2sin y 29 1 2 35 −× − = = = − − − × ∴ sin 2x cos 2x 3 19 49 sin 2y cos2y 2 29 58 + = − =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q407",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A metallic cone of diameter 32 cm and height 9 cm is melted and made into identical spheres each of radius 2 cm. How many such spheres can be made?",
+            "options": [
+              {
+                "prompt": "72",
+                "value": "A"
+              },
+              {
+                "prompt": "52",
+                "value": "B"
+              },
+              {
+                "prompt": "64",
+                "value": "C"
+              },
+              {
+                "prompt": "48",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q407",
+              "correct_answer": "A",
+              "explanation": "Required number of spheres The volume of cone The volume of a sphere = ( ) ( ) ( ) 2 3 1 16 9 3 4 2 3 π = π = 16 16 9 4 8 × × × 72 = Section : Discipline-3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q408",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "X is a non-negative integer valued random variable with ( ) ( )     x+2 , x +1 P X = x = x = 0, 1, 2... 2 otherwise 0, Then, mean and variance of X are respectively",
+            "options": [
+              {
+                "prompt": "2 & 2",
+                "value": "A"
+              },
+              {
+                "prompt": "2 & 3",
+                "value": "B"
+              },
+              {
+                "prompt": "4 & 2",
+                "value": "C"
+              },
+              {
+                "prompt": "2 & 4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q408",
+              "correct_answer": "D",
+              "explanation": "Mean ( ) x 2 x i 0 i 0 x 1 x 1 x x 2 4.2 ∞ ∞ + = = + +     µ = =         ∑ ∑ 2 2 x x x i 0 i 0 i 0 1 x x 1 x x 4 4 2 2 2 ∞ ∞ ∞ = = =       +   = = +                 ∑ ∑ ∑ [ ] 1 6 2 4 = + 2 = & Variance ( ) 2 2 2 x 2 i 0 x 1 x 2 2 ∞ = +   σ = −µ     ∑ ( ) 3 2 2 x i 0 1 x x 2 4 2 ∞ =   + = −     ∑ 3 2 x x i 0 i 0 1 x x 4 4 2 2 ∞ ∞ = =       = + −             ∑ ∑ [ ] 1 26 6 4 4 4 = + − =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q409",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For what values of m the equations 2x + 3y = 2 and ( ) ( ) ( ) m + 2 x + 2m +1 y = 2 m – 1 have infinitely many solutions:",
+            "options": [
+              {
+                "prompt": "4",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "5",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q409",
+              "correct_answer": "A",
+              "explanation": "Given pair of linear equations in x and y have infinitely many solutions if 1 1 1 2 2 2 a b c a b c = = Given, a1 = 2 , a2 = (m + 2) b1 = 3,, b2 = (2m + 1) c1 = 2, c2 = 2(m –1) Now, ( ) 2 3 2 m 2 2m 1 2 m 1 = = + + − Now, ( ) 2 2 m 2 2 m 1 = + − 2m–2 = m+2 m = 2+2 = 4 ⇒ m = 4",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q410",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let Sn denote the sum of the first n terms of an AP. If S2n = 3Sn, then S3n : Sn is equal to:",
+            "options": [
+              {
+                "prompt": "6",
+                "value": "A"
+              },
+              {
+                "prompt": "8",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "10",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q410",
+              "correct_answer": "A",
+              "explanation": "a, a + d, a + 2d, ..., a + (n – 1) d be the arithmetic progression. Then ( ) n n S 2a n 1 d , 2 = + −     ( ) 2n 2n S 2a 2n 1 d , 2 = + −    & ( ) 3n 3n S 2a 3n 1 d 2 = + −     Now 2n n S 3S = gives ( ) ( ) 2n 3n 2a 2n 1 d 2a n 1 d 2 2 + − = + −         YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-II) 76 YCT ⇒ 2a nd d = + –––––––(i) and ( ) ( ) 3n n 3n 2a 3n 1 d S 2 n S 2a n 1 d 2 + −     = + −     ⇒ [ ] [ ] 3n n 3 nd d 3nd d S S nd d nd d + + − = + + − 6 1 = = 6, from equation (i)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q411",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "P (3, 1), Q (6, 5) and R (x, y) are three points such that the angle ∠PRQ is a right angle and the area ∆RQP = 7, then the number of such points R is:",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q411",
+              "correct_answer": "B",
+              "explanation": "Since we know that m1m2 = –1 y 1 5 y 1 x 3 6 x − −     × = −     − −     (y – 1) (5 – y) = (3 – x) (6 – x) 5y–y2 – 5 + y = 18 – 3x – 6x + x2 –y2 + 6y –5 = x2 – 9x + 18 x2 + y2 – 9x – 6y + 23 = 0 ... (i) & ( ) ( ) ( ) 1 3 y 5 x 5 1 6 1 y 7 2 − + − + − = 4x – 3y – 9 = 14 4x – 3y = 23 ...(ii) putting value of eqn (ii) in eqn (i)- x2 + y2 – 9x – 6y + 4x – 3y= 0 x2 + y2 – 5x – 9y = 0 Since, x and y are in quadratic form, thus, we will get two values. Therefore, there are two such points.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q412",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If X is a Poisson random variate with mean 3, then P (|X – 3| < 1) will be:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q412",
+              "correct_answer": "A",
+              "explanation": "For a Poisson distribution we have ( ) x P X x e x! −µ µ = = ; where µ is the mean of the distribution. Therefore, ( ) ( ) ( ) 3 9e P | X 3| 1 P 2 X 4 P X 3 2 − − < = < < = = =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q413",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Given that ( ) x + 2 and ( ) x + 3 are factors of 3 x + ax + b, the values of a and b and the remaining factor is:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q413",
+              "correct_answer": "D",
+              "explanation": "Given that, (x+2) and (x+3) are factors, Then x+2 = 0 , x+3 = 0 x = –2 , x = –3 We must have 2a b 8 − = −& 3a b 27 − = − ⇒ a 19 = − and b 30 = − Now, let α be the third root of the given polynomial. Then, sum of roots = – 5 + α = 0 ⇒ α = 5 Therefore, (x – 5) is the remaining factor.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q414",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If r S denotes the sum of the first r terms of an AP then, 3r r–1 2r 2r–1 S – S S – S is equal to:",
+            "options": [
+              {
+                "prompt": "2r",
+                "value": "A"
+              },
+              {
+                "prompt": "2r",
+                "value": "B"
+              },
+              {
+                "prompt": "2r",
+                "value": "C"
+              },
+              {
+                "prompt": "4r",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q414",
+              "correct_answer": "A",
+              "explanation": "We have- ( ) ( ) 2r 2r 1 2r 2r 1 S S 2a 2r 1 d 2a 2r 2 d 2 2 − − − = + − − + −         ( ) ( ) 2a 2r 1 d = + − ––––––(i) & ( ) ( ) 3r r 1 3r r 1 S S 2a 3r 1 d 2a r 2 d 2 2 − − − = + − − + −         ( ) ( ) ( ) 2r 1 2a 2r 1 d = + + − ––––(ii) Taking ratio of equation (i) and (ii), then, ( ) ( ) ( ) ( ) ( ) ( ) 3r r 1 2r 2r 1 2r 1 2a 2r 1 d S S 2r 1 S S 2a 2r 1 d − − + + − − = = + − + −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q415",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The graph of the in-equation 2x – 5y 5 ≤ in Cartesian plane is:",
+            "options": [
+              {
+                "prompt": "On and below the line 2x",
+                "value": "A"
+              },
+              {
+                "prompt": "On and above the line 2x",
+                "value": "B"
+              },
+              {
+                "prompt": "Below the line 2x",
+                "value": "C"
+              },
+              {
+                "prompt": "Above the line 2x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q415",
+              "correct_answer": "B",
+              "explanation": "Therefore, 2x 5y 5 − ≤ in Cartesian plane is on and above the line 2x 5y 5 − = YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-II) 77 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q416",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If 6 4x + = 15 y and 8 6x – = 14, y then the value of p in y = px –2 is:",
+            "options": [
+              {
+                "prompt": "4",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q416",
+              "correct_answer": "C",
+              "explanation": "We have 6 4x 15 y + = ......(i) 8 6x 14 y − = ........(ii) Now, equation (i) multiply by 3- then, 18 12x 45 y + = .........(iii) equation (ii) multiply by 2 16 12x 28 y − = ...............(iv) subtracting eqn (iii) and (iv) 34 17 y 2 y = ⇒ = Substituting the value of y in equation (iii) 12x = 45–9 ⇒ x = 3 Therefore , if y = px – 2 then y 2 2 2 4 p x 3 3 + + = = = .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q417",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ( ) a = P X 3 ≥ then ( ) P X 3 ≤ equals:",
+            "options": [
+              {
+                "prompt": "1–2a",
+                "value": "A"
+              },
+              {
+                "prompt": "1– a",
+                "value": "B"
+              },
+              {
+                "prompt": "2a",
+                "value": "C"
+              },
+              {
+                "prompt": "a",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q417",
+              "correct_answer": "A",
+              "explanation": "For a normal distribution we have mean 0 = µ = & variance 2 9 = σ = Now, standard deviation- 3 σ = and therefore, x 3 Z 1 3 −µ = = = σ (Z - transform) (Symmetry of normal distribution about mean.) Hence, ( ) ( ) P X 3 P X 3 a ≥ = ≤ = Thus ( ) P(X 3) P 3 X 3 P(X 3) 1 ≤ + −≤ ≤ + ≥ = ⇒ ( ) a P X 3 a 1 + ≤ + = ⇒ ( ) P X 3 1 2a ≤ = −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q418",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let A and B be two events such that ( ) ( ) P , 1 1 A B = P A B = 6 4 ∪ ∩ ∪ ∩ ∪ ∩ ∪ ∩ and ( ) P 1 A = , 4 where A stands for complement of event A. Then, events A and B are:",
+            "options": [
+              {
+                "prompt": "Equally likely but not independent",
+                "value": "A"
+              },
+              {
+                "prompt": "Mutually exclusive and independent",
+                "value": "B"
+              },
+              {
+                "prompt": "Independent but not equally likely",
+                "value": "C"
+              },
+              {
+                "prompt": "Equally likely and mutually exclusive",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q418",
+              "correct_answer": "C",
+              "explanation": "If ( ) ( ) 1 1 P A B ,P A 6 4 ∪ = = & P(A∩B) = 1 4 then, ( ) ( ) 5 3 P A B & P A 6 4 ∪ = = ( ) ( ) { } P A 1 P A = − ∵ Therefore, ( ) ( ) ( ) ( ) P A B P A P B P A B ∪ = + − ∩ gives ( ) ( ) ( ) ( ) P B P A P A B P A = ∪ + ∩ − B 5 1 3 6 4 4 = + − 10 3 9 1 12 3 + − = = Thus, we have ( ) ( ) ( ) 1 P A P B P A B 4 ⋅ = = ∩ (Independency) but ( ) ( ) P A P B ≠ (Not equally likely)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q419",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let tr denote the th r term of an arithmetic progression. If m 1 t = n and n 1 t = , m then mn t equals:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "4",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q419",
+              "correct_answer": "D",
+              "explanation": "Let a and d be the first term and common difference of arithmetic progression respectively. Then ( ) m 1 t a m 1 d n = + − = & ( ) n 1 t a n 1 d m = + − = –––(i) ⇒ ( ) 1 1 m n m n d n m mn − − = − = ⇒ 1 d mn = Now, ( ) mn t a mn 1 d = + − ( ) a mn n n 1 d = + − + − ( ) ( ) a n 1 d mn n d = + − + −     ( ) n mn n t mn − = + ( ) { } nt a n 1 d = + −     ∵ ( ) n n m 1 t mn − = + n m 1 t m − = + 1 1 1 m m = + − , From equation (i) 1 = YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-II) 78 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q420",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The system of equations 2x + 4y = 6 and 4x + 8y = 6 has:",
+            "options": [
+              {
+                "prompt": "exactly two solutions",
+                "value": "A"
+              },
+              {
+                "prompt": "no solution",
+                "value": "B"
+              },
+              {
+                "prompt": "a unique solution",
+                "value": "C"
+              },
+              {
+                "prompt": "infinitely many solutions",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q420",
+              "correct_answer": "B",
+              "explanation": "Since 2 4 6 4 8 6 − = ≠− , 1 1 1 2 2 2 a b c a b c   = ≠     ∵ given pair of equations represents a pair of parallel lines and hence have no solution.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q421",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The nth terms of the two series 3 +10 +17 + ... and 63 + 65 + 67 + ... are equal, then the value of n is:",
+            "options": [
+              {
+                "prompt": "None of these",
+                "value": "A"
+              },
+              {
+                "prompt": "9",
+                "value": "B"
+              },
+              {
+                "prompt": "13",
+                "value": "C"
+              },
+              {
+                "prompt": "19",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q421",
+              "correct_answer": "C",
+              "explanation": "nth term of 3, 10, 17, ... is 3 + (n – 1) × 7 = 7n – 4, {∵ a1 =3 , d1 = 7} & nth term of 63, 65, 67, ... is 63 + (n – 1) × 2 = 2n + 61, {∵ a2 =63 , d2 = 2} According to question , 7n – 4 = 2n + 61 n 13 ⇒ =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q422",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If in an AP, Sn= p.n2 and Sm = p.m2, where Sr denotes the sum of first r terms of the AP, then Sp is equal to:",
+            "options": [
+              {
+                "prompt": "p3",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "mnp",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q422",
+              "correct_answer": "A",
+              "explanation": "We have 2 n S n p = ⇒ ( ) 2 n 2a n 1 d n p 2 + − =     ⇒ ( ) 2a 2np n 1 d = − − ––––(i) and 2 m S m p = ⇒ ( ) 2 m 2a m 1 m p 2 + − =     ⇒ ( ) 2a 2mp m 1 d = − − ––––(ii) Now, from equation (i) and (ii) we get- ( ) ( ) 2np n 1 d 2mp m 1 d − − = − − ⇒ d 2p a p =   =  ... (iii) Therefore, ( ) ( ) p p p S 2a p 1 d 2p p 1 2p 2 2 = + − = + −         = P2+P3–P2 3 p =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q423",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the value of a if the polynomials 3 2 2x + ax + 3x – 5 and 3 2 x + x – 4x – a leave the same remainder when divided by (x–1)",
+            "options": [
+              {
+                "prompt": "a = –1",
+                "value": "A"
+              },
+              {
+                "prompt": "a = 1",
+                "value": "B"
+              },
+              {
+                "prompt": "a = 2",
+                "value": "C"
+              },
+              {
+                "prompt": "a = –2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q423",
+              "correct_answer": "A",
+              "explanation": "Remainder theorem dictates that remainders, when (x–1) divides polynomials 3 2 2x ax 3x 5 + + −and 3 2 x x 4x a + − − are Given, x–1 = 0 ⇒ x= 1 Then, 2+a+3–5 = 1+1–4–a 2a = –2 a = –1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q424",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The base of a triangle is smaller than its altitude. If its area is 2 1 3 x + 2x + , 2 2 its base is,",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q424",
+              "correct_answer": "D",
+              "explanation": "Area of the triangle = ( ) 2 2 1 3 1 x 2x x 4x 3 2 2 2 + + = + + ( )( ) 1 x 3 x 1 2 = + + Since, base of the triangle is smaller than its altitude we have that base of the triangle is x + 1.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q425",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The number of values of k for which the system of equations x + y = 2, kx + y = 4, x + ky = 5 has at least one solution is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q425",
+              "correct_answer": "A",
+              "explanation": "Given, x + y = 2....(i) kx + y = 4....(ii) x + ky = 5 ....(iii) After adding equation (ii) & (iii). We have kx + y + x + ky= 9 (k+1)(x+y) = 9 ⇒ (k+1)2= 9 2 ⇒ 9 7 k 1 3.5 2 2 = −= = .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q426",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Events A, B and C are mutually exclusive events such that ( ) ( ) 3x +1 1– x P A = ,P B = 3 4 and ( ) 1 – 2x P C = 4 . The set of possible values of x are in the interval",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "[",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q426",
+              "correct_answer": "B",
+              "explanation": "For events A, B and C we must have ( ) ( ) 0 P A 1, 0 P B 1 ≤ ≤ ≤ ≤, ( ) 0 P C 1 ≤ ≤ & ( ) ( ) ( ) 0 P A P B P C 1 ≤ + + ≤ . Now, if ( ) 3x 1 P A 2 + = , ( ) 1 x P B 4 − = & ( ) 1 2x P C 4 − = then 3x 1 0 1 2 + ≤ ≤ 1 1 x 3 3 ⇒− ≤ ≤ , 1 x 0 1 4 − ≤ ≤ 1 x 3 ⇒−≤ ≤ , & 1 2x 0 1 4 − ≤ ≤ 1 3 x 2 2 ⇒− ≤ ≤ and therefore, 3x 1 1 x 1 2x 0 1 3 4 4 + − − ≤ + + ≤ gives 10 2 x 3 3 − ≤ ≤ Therefore, the set of possible values of x 1 1 10 2 3 2 max , 1, , x min , 3, , 3 2 3 3 2 3 −     − ≤ ≤         ⇒ 1 2 x 3 3 ≤ ≤",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q427",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ( ) 2x – 3 is a factor of ( ) 3 2 f x = 2x – x + px + 6, then the value of p is:",
+            "options": [
+              {
+                "prompt": "4",
+                "value": "A"
+              },
+              {
+                "prompt": "–3",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "–7",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q427",
+              "correct_answer": "D",
+              "explanation": "If ( ) 2x 3 − is a factor of ( ) 3 2 f x 2x x px 6 = − + + then we have 3 f 0 2  =     3 2 3 3 3p 2 6 0 2 2 2     ⇒ − + + =         27 9 3p 6 0 4 4 2 ⇒ − + + = ⇒ 27 9 24 3p 4 2 − + − = ⇒ 42 3p 4 2 − = ⇒ p 7 = − Section : Discipline-4",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q428",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ( ) –xcosy dy siny + e = c,then at 1,π dx is:",
+            "options": [
+              {
+                "prompt": "– x cos y",
+                "value": "A"
+              },
+              {
+                "prompt": "sin y – x cos y",
+                "value": "B"
+              },
+              {
+                "prompt": "e",
+                "value": "C"
+              },
+              {
+                "prompt": "sin y",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q428",
+              "correct_answer": "C",
+              "explanation": "Given that, xcosy sin y e c − + = On differentiating above w.r.t 'x' we get xcosy dy dy cosy e cosy xsin y 0 dx dx −   + − + =     ⇒ ( ) x cos y x cos y dy cos y e xsin y e cos y dx − − + = ⇒ x cos y x cos y dy e cos y dx cos y e xsin y − − = + Therefore, ( ) cos cos 1, dy e cos e dx cos e sin − π − π π π = = π + π , cos 9 sin π = −     π = 0   ∵",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q429",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ( ) ( ) ' f 4 = 4,f 4 = 1, then ( ) 2 – f x lim 2 – x x → 4 → 4 → 4 → 4 is equal to:",
+            "options": [
+              {
+                "prompt": "–2",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "–1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q429",
+              "correct_answer": "C",
+              "explanation": "Given that ( ) x 4 2 f x lim 2 x → − − , From 0 0       using L'Hospital's rule then- ( ) ( ) x 4 1 0 f ' x 2 f x lim 1 0 2 x → − = − ( ) ( ) x 4 f ' x lim x f x → = taking limit then- ( ) ( ) f ' 4 4 f 4 = ⋅ ⇒ 1 4 4 × = 1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q430",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let f be a differentiable function defined for all x R ∈ , such that ( ) 3 5 f x = x for all ∈ x R , x 0 ≠ . Then the value of ( ) df 8 is : dx",
+            "options": [
+              {
+                "prompt": "5",
+                "value": "A"
+              },
+              {
+                "prompt": "None of these",
+                "value": "B"
+              },
+              {
+                "prompt": "20",
+                "value": "C"
+              },
+              {
+                "prompt": "20",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q430",
+              "correct_answer": "D",
+              "explanation": "Given that, f(x3) = x5 Differentiating with respect to x, 3 5 d d f(x ) x dx dx = We have – ( ) 3 2 4 f ' x 3x 5x ⋅ = ⇒ ( ) 3 2 5 f ' x x 3 = –––––(i) YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-II) 80 YCT Putting x = 2- in equation (i) then, ⇒ ( ) 5 20 f ' 8 4 3 3 = ⋅ =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q431",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If m >1 and n N ∈ , such that m m m 1 + 2 + 3       m m n +1 +....+n n k ≥ then k = ?",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "m",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "n",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q431",
+              "correct_answer": "C",
+              "explanation": "Given, 1m + 2m + 3m + ......+nm m n 1 n k +   ≥     and m > 1, n ∈Ν checking by options- (a) k = 1 and assuming m = 2 12 + 22 + 32 + ......... + n2 ≥ 2 n 1 n 1 +       we know- ( )( ) ( ) 2 n n 1 2n 1 n n 1 6 + + ≥ + ⇒ (2n + 1) ≥ 6(n + 1) ⇒ n ≤ 5 4 − but n ∈ N; contradiction. (b) putting k = m and m = 2 12 + 22 + 32 + ......... + n2 ≥ ( ) 2 n n 1 m + ( )( ) ( ) 2 2 n n 1 2n 1 n n 1 6 m + + + ≥ ⇒ (2n + 1) ≥ ( ) 2 6 n 1 m × + ⇒ n ≥ 2 2 6 m 2m 6 − − ; contradiction (c) putting k = 2, m = 2 ⇒ ( )( ) ( ) 2 n n 1 2n 1 n n 1 6 4 + + + ≥ ⇒ ( ) ( ) 2n 1 n 1 3 2 + + ≥ ⇒ 2n n 1 1 3 2 2 3 − ≥ − ⇒ n 1 n 1 6 6 ≥ ⇒ ≥ ⇒ n ≥ 1 Thus, required value is 2.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q432",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a, b, c are positive real numbers such that a + b + c = 16, then abc will be greatest when:",
+            "options": [
+              {
+                "prompt": "a ≠ b ≠ c",
+                "value": "A"
+              },
+              {
+                "prompt": "a ≠ b = c",
+                "value": "B"
+              },
+              {
+                "prompt": "a = b ≠ c",
+                "value": "C"
+              },
+              {
+                "prompt": "a = b = c",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q432",
+              "correct_answer": "D",
+              "explanation": "By AM-GM inequality we have that if a, b, c are positive real numbers then 3 a b c 3 abc + + ≥ with equality only when a = b = c Therefore, abc will be greatest when a = b = c.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q433",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A welfare organization introduced an education scholarship scheme for the school going children of a backward village. The rates of scholarships were fixed as given: Age Group Amount of scholarship per month 5-7 30 8-10 40 11-13 50 14-16 60 17-19 70 The ages (years) of 30 school going children are noted as 11, 8, 10, 5, 7, 12, 7, 17, 5, 13, 9, 8, 10, 15, 7, 12, 6, 7, 8, 11, 14, 18, 6, 13, 9, 10, 6, 15, 13, 5 years respectively. Find out the total monthly scholarship amount being paid to the students",
+            "options": [
+              {
+                "prompt": "1200",
+                "value": "A"
+              },
+              {
+                "prompt": "1300",
+                "value": "B"
+              },
+              {
+                "prompt": "1390",
+                "value": "C"
+              },
+              {
+                "prompt": "1290",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q433",
+              "correct_answer": "D",
+              "explanation": "The total monthly scholarship amount being paid to the students = Total number of children aged 5 to 7 years × Amount of scholarship per month = 10×30 = 300 Similarly, 8 to 10 years = 8×40 = 320 11 to 13 years = 7×50 = 350 14 to 16 years = 3×60 = 180 17 to 19 years = 2×70 = 140, Then, 300 350 320 180 140 1290 = + + + + =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q434",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a, b > 0, then the maximum value of ( ) 3 4 a b a + b is:",
+            "options": [
+              {
+                "prompt": "27",
+                "value": "A"
+              },
+              {
+                "prompt": "81",
+                "value": "B"
+              },
+              {
+                "prompt": "81",
+                "value": "C"
+              },
+              {
+                "prompt": "27",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q434",
+              "correct_answer": "D",
+              "explanation": "By AM-GM inequality we have 3 4 a a a 3b a 3b 4 + + + ≥ ⋅ ⇒ ( ) 4 4 3 3 a b 3a b 4   + ≥     = ( ) 4 3 81 a b 3a b 256 + ≥ ⇒ ( ) 3 4 a b 27 256 a b ≤ +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q435",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let ( ) ( ) { } S = –1,0,1 , 2,1,4 . The value of k for which the vector ( ) 3k + 2, 3, 10 belongs to the linear span of S is:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "–2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "8",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q435",
+              "correct_answer": "C",
+              "explanation": "We must have 1 0 1 2 1 4 0 3k 2 3 10 − = + (Linear dependency) –1(10 – 12) – 0[20 – 4(3k + 2)] + (6 – 3k – 2) = 0 2 + 0 + 4 – 3k = 0 ⇒3k 6 = ⇒k 2 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q436",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A, B, C are three sets of values of x: A: 2, 3, 7, 1, 3, 2, 3 B: 7, 5, 9, 12, 5, 3, 8 C: 4, 4, 11, 7, 2, 3, 4 Select the correct statement from among the following",
+            "options": [
+              {
+                "prompt": "Mean, Median and Mode of A are same",
+                "value": "A"
+              },
+              {
+                "prompt": "Mean of C is equal to Median of B",
+                "value": "B"
+              },
+              {
+                "prompt": "Median of B is equal to Mode of A",
+                "value": "C"
+              },
+              {
+                "prompt": "Mean of A is equal to Mode of C",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q436",
+              "correct_answer": "A",
+              "explanation": "Let us rearrange the given sets on increasing order as below, A: 1,2,2,3,3,3,7, B: 3,5,5,7,8,9,1,2 C: 2,3,4,4,4,7,11 Mode of A = 3 Median of A = th th th n 1 7 1 4 2 2 + +     ⇒ ⇒         Then, = 3 mean of A, ⇒ sumof the terms Numberof terms = 21 3 7 = Hence option (a) is correct",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q437",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The minimum value of the sum of real numbers 8 –5 –4 –3 10 a , a , 3a , 1,a and a with a > 0 is:",
+            "options": [
+              {
+                "prompt": "9",
+                "value": "A"
+              },
+              {
+                "prompt": "7",
+                "value": "B"
+              },
+              {
+                "prompt": "8",
+                "value": "C"
+              },
+              {
+                "prompt": "6",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q437",
+              "correct_answer": "C",
+              "explanation": "By AM-GM inequality, if a > 0, 1 8 5 4 3 3 3 8 10 8 10 5 3 3 3 4 a a a a a 1 a a a a 8 a a a a a − − − − −   + + + + + + + × ≥    8 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q438",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ∫ 2 e 1 e dx I = logx and ∫ x 2 2 1 e I = dx, x then",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q438",
+              "correct_answer": "A",
+              "explanation": "We have- 2 e 1 e dx I dx log x = ∫ on putting log x = z, ⇒ x = xz {∵ when x = e then z=1 & when x = e2 then z = 2} I1 z 2 1 e z = ∫ dz Therefore, we get x 2 1 1 e I dx x = ∫ = I2 ( ) ( ) { } b b a a x dx f t dt = ∫ ∫ ∵ YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-II) 82 YCT Such that ⇒ I1 = I2 ⇒ I1 – I2 = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q439",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ( ) ( ) ( ) ∫ 2 –1 2 2 x – 1 dx = tan x + g x + k, x +1 then g(x) =",
+            "options": [
+              {
+                "prompt": "None of these",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "1 x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q439",
+              "correct_answer": "C",
+              "explanation": "We have ( ) ( ) ( ) 2 2 2 2 2 2 x 1 1 2x I dx dx dx x 1 x 1 x 1 − = = − + + + ∫ ∫ ∫ 1 2 1 tan x k x 1 − = + + + Therefore, if ( ) 1 I tan x g x k − = + + then, by comparing we get- ( ) 2 1 g x x 1 = +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q440",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The characteristic polynomial of 3×3 matrix A is = 3 2 A – I + 3 + 4 + 3, λ λ λ λ λ λ λ λ λ λ λ λ λ λ λ λ Let x = trace",
+            "options": [
+              {
+                "prompt": "x = 3 , y = –3",
+                "value": "A"
+              },
+              {
+                "prompt": "x = y = –3",
+                "value": "B"
+              },
+              {
+                "prompt": "x",
+                "value": "C"
+              },
+              {
+                "prompt": "x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q440",
+              "correct_answer": "B",
+              "explanation": "For a 3×3 matrix A, we have- ( ) [ ] 3 2 11 12 13 A I tr A A A A det A −λ = λ − λ + + + λ − where A11, A12, and A13 are cofactors of respective elements. Thus, if 3 2 A I 3 4 3 −λ = λ + λ + λ + then we get on comparison that ( ) x tr A 3 = = −and ( ) y det A 3 = = −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q441",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Calculate the mode from the following data Class 50- 60 60- 70 70- 80 80- 90 90- 100 100- 110 110- 120 Frequency 8 10 16 14 10 5 2",
+            "options": [
+              {
+                "prompt": "67.5",
+                "value": "A"
+              },
+              {
+                "prompt": "77.5",
+                "value": "B"
+              },
+              {
+                "prompt": "87.5",
+                "value": "C"
+              },
+              {
+                "prompt": "76",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q441",
+              "correct_answer": "B",
+              "explanation": "From the table we have 0 1 2 3 L 70,f 10,f 16,f 14,f 10,h 70 80 10 = = = = = = − = Therefore, 1 0 1 0 2 f f Mode L h 2f f f   − = + ×   − −   gives 16 10 Mode 70 10 32 24 −   = ×   −   70 7.5 77.5 = + =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q442",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Calculate median for the following data Class 0-4 4-6 6-8 8-12 12-18 18- 20 Frequency 4 6 8 12 7 2",
+            "options": [
+              {
+                "prompt": "7.5",
+                "value": "A"
+              },
+              {
+                "prompt": "9",
+                "value": "B"
+              },
+              {
+                "prompt": "8",
+                "value": "C"
+              },
+              {
+                "prompt": "8.5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q442",
+              "correct_answer": "D",
+              "explanation": "Class Frequency (f) Cumulative frequency (C) 0 - 4 4 4 4 - 6 6 10 6 - 8 8 18 8 - 12 12 30 12 - 18 7 37 18 - 20 2 39 Total N = 39 Clearly, 8-12 is the median class since N 39 19.5 2 2 = = . Hence, we have using the formula Median = L + N C 2 h f − × where L = 8, f = 12, h = 4 and C = 18 ⇒ Median = 8 + 39 18 2 4 12 − × ⇒ Median = 8.5 Hence, the median of data will be 8.5.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q443",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For Binomial distribution, n = 10 and p = 0.6, E(X2) (second moment about origin) is:",
+            "options": [
+              {
+                "prompt": "30",
+                "value": "A"
+              },
+              {
+                "prompt": "38.4",
+                "value": "B"
+              },
+              {
+                "prompt": "8",
+                "value": "C"
+              },
+              {
+                "prompt": "38",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q443",
+              "correct_answer": "B",
+              "explanation": "For a Binomial distribution B (n, p) we have that the second moment about origin is ( ) ( ) 2 2 E X n n 1 p np = − + –––(i) Now, putting n = 1 & p = 0.6 in equation (i) then ( ) ( ) 2 2 E X 10 9 0.6 10 0.6 = × + × 10 9 0.36 6 = × × + 38.4 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q444",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the anti derivative of 3x x 4x 2x e + e e – e +1 is ( ) x –x f e – e + C, then f(x) is equal to:",
+            "options": [
+              {
+                "prompt": "tan–1 x",
+                "value": "A"
+              },
+              {
+                "prompt": "tan x",
+                "value": "B"
+              },
+              {
+                "prompt": "cos–1x",
+                "value": "C"
+              },
+              {
+                "prompt": "sinx",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q444",
+              "correct_answer": "A",
+              "explanation": "We must have ( ) ( ) x 2x 3x x 4x 2x 4x 2x 2x e e 1 e e I dx dx e e 1 e 2e 1 3e + + = = − + + + − ∫ ∫ ( ) ( ) ( ) x 2x 2 2 2x x e e 1 dx e 1 3e + = + − ∫ Now, putting ex = t ⇒ ex dx = dt then we get- ( ) ( ) ( ) 2 2 2 2 t 1 dt I dt t 1 3t + = + − ∫ YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-II) 83 YCT ( ) ( )( ) 2 2 2 t 1 dt dt t 1 3t t 1 3t + = + + + − ∫ ( ) ( )( ) 2 2 2 2 t 1 dt 1 2 t 1 3t t 1 3t + = + + + − ∫ ( ) ( ) ( )( ) 2 2 2 2 t 1 3t t 1 3t dt 1 2 t 1 3t t 1 3t   + + + + −   = + + + − ∫ 2 2 1 dt dt 2 t 3t 1 t 3t 1   = +   + + − +   ∫ ∫ 2 2 2 2 1 dt dt 2 3 1 3 1 t t 2 2 2 2       = +             + + − +                         ∫ ∫ ( ) ( ) 1 1 tan 2t 3 tan 2t 3 c − − = + + − + ( )( ) 1 2t 3 2t 3 tan c 1 2t 3 2t 3 − + + − = + − + − 1 2 t tan c 1 t − = + − x 1 2x e tan c 1 e − = + − ( ) 1 x x tan e e c − − = − + This clearly shows that ( ) 1 f x tan x − = .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q445",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ia > 0 for , i = 1,2,3 ...,n and 1 2 3 n a a a ...a = 1 then the greatest value of ( ) 1 1+ a ( ) 2 1+ a ... ( ) n 1+ a is:",
+            "options": [
+              {
+                "prompt": "2n",
+                "value": "A"
+              },
+              {
+                "prompt": "n",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "n",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q445",
+              "correct_answer": "B",
+              "explanation": "by AM-GM inequality- 1 2 n 1 2 n 1 2 n 1 a 1 a 1 a ... a a ... a a a ...a 1 2 2 2 + + + ≥ = = ⇒ ( )( )( ) ( ) n 1 2 3 n 1+ a 1+ a 1+ a ... 1+ a 2 = Section : Discipline-5",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q446",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The set of all x R ∈ for which the vectors ( ) ( ) 2 1,x,0 , 0,x ,1 and ( ) 0,1,x are linearly independent in R3 is:",
+            "options": [
+              {
+                "prompt": "{",
+                "value": "A"
+              },
+              {
+                "prompt": "{",
+                "value": "B"
+              },
+              {
+                "prompt": "{",
+                "value": "C"
+              },
+              {
+                "prompt": "{",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q446",
+              "correct_answer": "D",
+              "explanation": "We must have 2 1 x 0 0 x 1 0 0 1 x ≠ ⇒ 3 x 1 0 −≠ ⇒ x 1 ≠ Hence option (d) is correct = {x∈R: x ≠1}",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q447",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "What is the dimension of the vector space formed by the solution of the system of following equations? 1 2 3 1 2 2 3 x + x + x = 0;x + 2x = 0;x – x = 0",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q447",
+              "correct_answer": "D",
+              "explanation": "We have 2 2 1 R R R 1 1 1 1 1 1 1 2 0 0 1 1 0 1 1 0 1 1 → −         → −         − −     3 3 2 R R R 1 1 1 0 1 1 0 0 0 → −     → −       This shows that the rank of the matrix is 2. Therefore, the dimension of solution space is 3–2 =1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q448",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If V is the real vector space of all mapping from R to R, V1 = ( ) ( ) { } f V : f –x = f x ∈ and ( ) ( ) { } 2 V = f V : f –x = –f x , ∈ then which one of the following is correct?",
+            "options": [
+              {
+                "prompt": "Neither V1 nor V2 are subspaces of V",
+                "value": "A"
+              },
+              {
+                "prompt": "V1 is a subspace of V, but V2 is not a",
+                "value": "B"
+              },
+              {
+                "prompt": "Both V1 and V2 are subspaces of V",
+                "value": "C"
+              },
+              {
+                "prompt": "V1 is not a subspace of V, but V2 is a",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q448",
+              "correct_answer": "C",
+              "explanation": "For ( ) ( ) { } 1 V f V : f x f x = ∈ − = we note that for any 1 f,g V ∈ we have ( )( ) ( ) ( ) f g x f x g x α +β − = α − +β − ( ) ( ) f x g x = α +β ( )( ) f g x = α +β This clearly shows that V1 is a subspace of V. Similarly it can be shown that V2 is a subspace of V as well.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q449",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If n pigeons are assigned to m pigeonholes then one of the pigeonholes must contain at least_____ pigeons.",
+            "options": [
+              {
+                "prompt": "n",
+                "value": "A"
+              },
+              {
+                "prompt": "n",
+                "value": "B"
+              },
+              {
+                "prompt": "n",
+                "value": "C"
+              },
+              {
+                "prompt": "n",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q449",
+              "correct_answer": "A",
+              "explanation": "We have that given n pigeons within m pigeonholes, at least 1 hole contains n 1 1 m −  +     pigeons. If, on the contrary, every hole contained at most n 1 m −       pigeons, Number of pigeons ≤ n 1 m n 1 n m −  = −<     YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-II) 84 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q450",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The lines representing the linear equations 2x – y = 3 and – 4x y = 5.",
+            "options": [
+              {
+                "prompt": "intersect at a point",
+                "value": "A"
+              },
+              {
+                "prompt": "are coincident",
+                "value": "B"
+              },
+              {
+                "prompt": "intersect at exactly two points",
+                "value": "C"
+              },
+              {
+                "prompt": "are parallel",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q450",
+              "correct_answer": "A",
+              "explanation": "Given, 2x–y = 3 4x–y = 5 We have 4x y 2x y 5 3 − − + = − 2x 2 ⇒ = x 1 ⇒ = & y 1 = − Therefore, the lines intersect at a point (1,–1).",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q451",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the number of integers between 1 and 250, that are divisible by any of the integer 2, 3 and 7.",
+            "options": [
+              {
+                "prompt": "179",
+                "value": "A"
+              },
+              {
+                "prompt": "182",
+                "value": "B"
+              },
+              {
+                "prompt": "170",
+                "value": "C"
+              },
+              {
+                "prompt": "185",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q451",
+              "correct_answer": "A",
+              "explanation": "Let A, B, and C be the sets of integers between 1 and 250 divisible by 2, 3, and 7 respectively. Then by Principle of Inclusion-Exclusion we have n(A B C) n(A) n(B) n(C) n(A B) n(A C) n(B C) n(A B C) ∪ ∪ = + + − ∩ − ∩ − ∩ + ∩ ∩ = 250 250 250 250 250 250 250 2 3 7 6 21 14 42               + + − − − +                             = 125 + 83 + 35 – 41 – 11 –17 + 5 = 179",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q452",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The value of 5 r 1 = +∑ 47 52–r 4 3 C C is equal to:",
+            "options": [
+              {
+                "prompt": "52",
+                "value": "A"
+              },
+              {
+                "prompt": "51",
+                "value": "B"
+              },
+              {
+                "prompt": "51",
+                "value": "C"
+              },
+              {
+                "prompt": "None of these",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q452",
+              "correct_answer": "A",
+              "explanation": "We have, 5 47 52 r 4 3 r 1 C C − = +∑ 47 51 50 49 48 47 4 3 3 3 3 3 C C C C C C = + + + + + ( ) 4 3 3 3 3 3 47 47 48 49 50 51 C C C C C C = + + + + + ( ) ( ) ( ) { } n 1 n n r r 1 r 1 c c c + + + = + ∵ ( ) 4 3 3 3 3 48 48 49 51 50 C C C C C = + + + + ( ) 4 3 3 3 49 49 50 51 C C C C = + + + ( ) 4 3 3 50 50 51 C C C = + + 4 3 51 51 C C = + 4 52 C =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q453",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the rth term in the expansion of       10 2 x 2 – 3 x contains x4, then r is equal to:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "None of these",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q453",
+              "correct_answer": "A",
+              "explanation": "rth term in the expansion of 10 2 x 2 3 x   −     is ( ) r 1 10 r 1 r 1 10 2 x 2 C 3 x − − − − −             and if the term contains x4 then we must have 13 3r 4 r 3 − = ⇒ =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q454",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The value of k for which the pair of linear equations 4x + 6y – 1 = 0 and 2x + ky – 7 = 0 represents parallel lines is:",
+            "options": [
+              {
+                "prompt": "k",
+                "value": "A"
+              },
+              {
+                "prompt": "k",
+                "value": "B"
+              },
+              {
+                "prompt": "k",
+                "value": "C"
+              },
+              {
+                "prompt": "k",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q454",
+              "correct_answer": "D",
+              "explanation": "Given that, 4x+ 6y –1 = 0 ......(i) 2x+ky –7 = 0 .........(ii) We know that. y = mx + c After arranging the given equation (i) & (ii) 6y = –4x + 1 y = 4 1 x 6 6 − + ..........(iii) ky = –2x+7 y = 2 7 x k k − + .........(iv) After comparing with standard equation (iii) & (iv) m1 = 4 6 − , m2 = 2 k − Since these lines are parallel. Then, So, m1 = m2 i.e. 4 2 6 k − = − ⇒ k 3 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q455",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The recurrence ( ) ( ) T n = 2T n – 1 + n, for n 2 ≥ and ( ) T 1 = 1 evaluates to:",
+            "options": [
+              {
+                "prompt": "n",
+                "value": "A"
+              },
+              {
+                "prompt": "n 1",
+                "value": "B"
+              },
+              {
+                "prompt": "n",
+                "value": "C"
+              },
+              {
+                "prompt": "n 1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q455",
+              "correct_answer": "B",
+              "explanation": "since we know that, ( ) ( ) T n = 2T n –1 + n, n 2 ≥ –––––(i) Putting n =2 in equation (i) we have ( ) ( ) T 2 2T 1 2 4 = + = , Putting n = 3 in equation (i) then we have T(3) = 2T(2) +3 T(3) =11 Putting n = 4 in equation (i) then we have T(4) = 2T(3)+4 ( ) T 4 26 = Therefore, ( ) n 1 T n 2 n 2 + = − − YEP DSSSB (TGT-Math) 2018 (18.11.2018, Shift-III) 85 YCT DSSSB TRAINED GRADUATE TEACHER (TGT) 2018 MATH Solved Paper Section : Discipline-1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q456",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If 'p' is a prime. then the congruence x2 + 1 ≡ 0 (mod p) has a solution if and only if:",
+            "options": [
+              {
+                "prompt": "p = 1 or p ≡ 1",
+                "value": "A"
+              },
+              {
+                "prompt": "p ≠ 2 or p ≡ 1",
+                "value": "B"
+              },
+              {
+                "prompt": "p = 2 or p ≡ 1",
+                "value": "C"
+              },
+              {
+                "prompt": "p = –2 or p ≡ 2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q456",
+              "correct_answer": "C",
+              "explanation": "If x = 1 then we must have p|2 which is only possible when p = 2. Now, by Euler's criterion p | x2 + 1 if and only if p 1 2 ( 1) 1(mod)p −       − ≡ ⇒ p 1 2m 2 − = , for some integer m ⇒ p = 4 m + 1 ⇒ p ≡ 1 (mod 4)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q457",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let A denote the set of all polynomials P(x) of degree less than or equal to 2 such that P",
+            "options": [
+              {
+                "prompt": "A = {",
+                "value": "A"
+              },
+              {
+                "prompt": "A is empty",
+                "value": "B"
+              },
+              {
+                "prompt": "A = {",
+                "value": "C"
+              },
+              {
+                "prompt": "A = {",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q457",
+              "correct_answer": "A",
+              "explanation": "Let the polynomial be P(x) = ax2 + bx + c Now P(1) = 1 and P(0) = 0 given, c = 0 & a + b = 1 Thus, P(x) = (1 – a) x2 + ax and P' (x) > 0 for all x∈ [0 , 1] gives that a ∈ (0 , 2)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q458",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For any positive integers 'a' and 3, there exist unique 'q' and 'r' such that a = 3q + r, where r must satisfy:",
+            "options": [
+              {
+                "prompt": "1 < r < 3",
+                "value": "A"
+              },
+              {
+                "prompt": "0 < r < 3",
+                "value": "B"
+              },
+              {
+                "prompt": "0 ≤ r < 3",
+                "value": "C"
+              },
+              {
+                "prompt": "0 < r ≤ 3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q458",
+              "correct_answer": "C",
+              "explanation": "Euclid's Division lemma- If we have two positive integers a and b, then there exist unique integers q and r which satisfies the condition a = bq + r where, 0 ≤ r < b. Therefore, Euclid's Division lemma dictates that we must have 0 ≤ r < 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q459",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following set of vectors x = (x1, x2, x3) and R3 is a subspace of R3?",
+            "options": [
+              {
+                "prompt": "all x such that x2 is rational",
+                "value": "A"
+              },
+              {
+                "prompt": "all x such that x1 + 3x2 = x3",
+                "value": "B"
+              },
+              {
+                "prompt": "all x such that x1 ≥ 0",
+                "value": "C"
+              },
+              {
+                "prompt": "all x such that x2 = x1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q459",
+              "correct_answer": "B",
+              "explanation": "If we choose a scalar α such that αx2 is irrational. Clearly, 0∈W = {(x1, x2, x3): x1 + 3x2 = x3}. Now let x = (x1, x2, x3), y = (y1, y2, y3) in W then, αx + βy = α( x1, x2, x3) + β (y1, y2, y3): α,β ∈ F = (αx1 + βy1, αx2 + βy2, αx3 + βy3) & αx1 + βy1+ 3αx2 + 3βy2 – αx3 – βy3 = α(x1 + 3x2 – x3) + β( y1+ 3y2– y3) = 0 Therefore, W is a subspace of R3. Consider negative scalars. Consider negative scalars since x2 is always a positive real.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q460",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For what values of a, the vectors (0, 0, 1, 0), (a, 0, 0, 8), (2, 0, 0, a) and (1, 2, 9, 8) are linearly independent?",
+            "options": [
+              {
+                "prompt": "±4",
+                "value": "A"
+              },
+              {
+                "prompt": "–1",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "±2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q460",
+              "correct_answer": "A",
+              "explanation": "We must have 0 0 1 0 0 a 0 0 8 0 2 0 0 a 0 1 2 9 8 0 α       β    =    γ    δ    where α, β, γ, δ are scalars. Now, 4 1 4 3 0 0 1 0 1 2 9 8 a 0 0 8 a 0 0 8 R R 2 0 0 a 0 0 1 0 R R 1 2 9 8 2 0 0 a         ↔         ↔         2 1 2 1 2 9 8 0 2a 9a 8a 8 R aR R 0 0 1 0 2 0 0 a     −   → −       \u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0002 , [Exam Date : 18/11/2018, Shift-I Female YEP DSSSB (TGT-Math) 2018 (18.11.2018, Shift-III) 86 YCT 2 2 1 2 9 8 9 4 0 1 4 1 R R 2 a 2a 0 0 1 0 2 0 0 a       −   →              \u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0002 4 1 4 1 2 9 8 9 4 0 1 4 R 2R R 2 a 0 0 1 0 0 4 18 16 a       − → −       −     \u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0002 4 2 4 2 1 2 9 8 9 4 0 1 4 2 a R 4R R 0 0 1 0 a 16 0 0 0 a       −   → −       −     \u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0002 Therefore, 2 a 16 0 a − = ⇒a = ± 4",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q461",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The matrix representation of T on R2 defined by T(x, y) = (2y, 3x – y) relative to the basis {(1, 3), (2, 5)} is:",
+            "options": [
+              {
+                "prompt": "30",
+                "value": "A"
+              },
+              {
+                "prompt": "31",
+                "value": "B"
+              },
+              {
+                "prompt": "30",
+                "value": "C"
+              },
+              {
+                "prompt": "30",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q461",
+              "correct_answer": "C",
+              "explanation": "T(V1) = aV1 + bV2 T(V2) = cV1 + dV2 matrix a c b d       T(x, y) = (2y, 3x – y) Basis (V1, V2) = [(1, 3), (2, 5)] T (1, 3) = (6, 0) T(2, 5) = (10, 1) T (1, 3) = a (1, 3) + b(2, 5) 6, 0 = a(1, 3) + b(2, 5) a + 2b = 6 .......(i) 3a + 5b = 0 .......(ii) on solving (i) and (ii) b = 18 a = -30 T (2, 5) = c (1,3) + d (2, 5) (10, 1) = c (1, 3) + d (2, 5) c + 2d = 10 ........(iii) 3c + 5d = 1 ....... (iv) on solving (iii) and (iv) d = 29 c = –48 Hence required matrix is = a c b d       = 30 48 18 29 − −      ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q462",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For a positive integer n, by using Chinese Remainder Theorem, the number of solutions of the congruence x2 ≡ 1 (mod n) ,whe e ≥3 is :",
+            "options": [
+              {
+                "prompt": "2k + 1",
+                "value": "A"
+              },
+              {
+                "prompt": "2k + 1",
+                "value": "B"
+              },
+              {
+                "prompt": "2k + 2",
+                "value": "C"
+              },
+              {
+                "prompt": "2k",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q462",
+              "correct_answer": "C",
+              "explanation": "Chinese Remainder Theorem dictates that the number of solutions of the congruence x2 ≡ 1(mod n) is 2k + 2 (since n = 1 2 k a a a 1 2 k p p ...p ).",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q463",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The decimal expansion of number 2 3 441 2 5 7 × × –",
+            "options": [
+              {
+                "prompt": "is non-terminating but repeating",
+                "value": "A"
+              },
+              {
+                "prompt": "terminates after two places of decimal",
+                "value": "B"
+              },
+              {
+                "prompt": "has a terminating decimal",
+                "value": "C"
+              },
+              {
+                "prompt": "is non-terminating and non-repeating",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q463",
+              "correct_answer": "C",
+              "explanation": "given number 2 3 441 441 0.252 1750 2 5 7 = = × × ⇒ The given number has a terminating decimal.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q464",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The HCF of 4052 and 12576 is:",
+            "options": [
+              {
+                "prompt": "4",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "6",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q464",
+              "correct_answer": "A",
+              "explanation": "We have 12576 = (4052×3) + 420 ⇒ 4052 = (420×9) + 272 ⇒ 420 = (272×1)+148 ⇒ 272 = 148 + 124 ⇒ 148 = 124 + 24 ⇒ 124 = 24 × 5 + 4 ⇒ 24 = 4×6+0 Therefore, HCF (12576, 4052) = 4",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q465",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If two zeroes of the polynomial x4 – 6x3 – 26x2 + 138x – 35 are 2 ± 3 , then other zeroes are:",
+            "options": [
+              {
+                "prompt": "2 and 5",
+                "value": "A"
+              },
+              {
+                "prompt": "7 and –5",
+                "value": "B"
+              },
+              {
+                "prompt": "5 and 8",
+                "value": "C"
+              },
+              {
+                "prompt": "3 and –10",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q465",
+              "correct_answer": "B",
+              "explanation": "We have ( ) ( ) 2 2 2 (x 2 3 )(x 2 3 ) (x 2) ( 3) x 4x 1 − + − − = − − = − + Now, 4 3 2 2 2 x 6x 26x 138x 35 (x 2x 35)(x 4x 1) − − + − = − − − + and 2 x 2x 35 (x 7)(x 5) − − = − + which gives x = 7 & x = –5 as other required roots. YEP DSSSB (TGT-Math) 2018 (18.11.2018, Shift-III) 87 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q466",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let W be the set of all triples (x1, x2, x3) of real numbers that satisfy the equation 2x1 – x2 + 3x3 = k. If W is to be a vector space then the value of k is",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "–1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q466",
+              "correct_answer": "B",
+              "explanation": "For W to be a subspace of R3, W must contain additive identity (0,0,0). Thus, we must have 2(0) –0 + 3(0) = 0 = k",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q467",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "By applying Euclid's division lemma, the cube of any positive integer is of the form",
+            "options": [
+              {
+                "prompt": "9 m, 9 m + 2 or 9 m + 7",
+                "value": "A"
+              },
+              {
+                "prompt": "9 m, 9 m +1 or 9 m + 8",
+                "value": "B"
+              },
+              {
+                "prompt": "9 m, 9 m + 4 or 9 m + 5",
+                "value": "C"
+              },
+              {
+                "prompt": "9 m, 9 m + 3 or 9 m + 6",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q467",
+              "correct_answer": "B",
+              "explanation": "Any positive integer is of the form 3m, 3m + 1 or 3m + 2 for some positive integer m. Therefore, (3m)3 = 9(3m3), (3m + 1)3 = 9(3m3 + 3m2 + m) + 1 & (3m + 2)3 = 9(3m3 + 6m2 + 4m) + 8 This shows that cube of any positive integer is of the form 9m, 9m + 1 or 9m + 8.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q468",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The order of 2 modulo 101 is:",
+            "options": [
+              {
+                "prompt": "100",
+                "value": "A"
+              },
+              {
+                "prompt": "98",
+                "value": "B"
+              },
+              {
+                "prompt": "99",
+                "value": "C"
+              },
+              {
+                "prompt": "97",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q468",
+              "correct_answer": "A",
+              "explanation": "Let φ (n) denote the Euler's Totient function. Then we have, 2φ(101) ≡ 1 (mod 101) , 2100 ≡ 1 (mod 101) Therefore, order of 2 mod 101 is 100.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q469",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For what least value of n, the natural number (24)n is divisible by 8 ?",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "No value of n is possible",
+                "value": "C"
+              },
+              {
+                "prompt": "–1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q469",
+              "correct_answer": "A",
+              "explanation": "For (24)n the least possible value of n is 1 where n is a natural number Now, substituting n = 1 in (24)n we get 24 Here, The factor of 24 is 24 = 2×2×2×3 = 23×3 24 = 8×3 ∵ 24 is divisible by 8. So, the least value of n is 1. Therefore, option (a) is correct answer.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q470",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The quotients are q2 = 3, q3 = 2 and q4 = 2. Which of the following is correct?",
+            "options": [
+              {
+                "prompt": "gcd",
+                "value": "A"
+              },
+              {
+                "prompt": "gcd",
+                "value": "B"
+              },
+              {
+                "prompt": "gcd",
+                "value": "C"
+              },
+              {
+                "prompt": "gcd",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q470",
+              "correct_answer": "D",
+              "explanation": "If Xt = qt + 1 X t + 1 + X t + 2, t = 1, 2, 3 then, X1 = q2 X2 + X3, X2 = q3 X3 + X4, and X3 = q4 X 4 + X5 X3 = 2X4+ 0 = 2X4 {∵ x5 = 0} X2 = 2X3 + X4 = 2(2X4) + X4 = 5X4 X1 = 3X2 + X3 = 3(5X4) + 2(X4) = 17X4 ⇒ gcd (X1, X2) = gcd (17X4, 5X4) = X4 ⇒ gcd (X1, X2) = X4 = –34X4 + 35X4 = –2(17X4) + 7(5X4) = –2X1 + 7X2 The Euclidean Algorithm State that if a = bq + r where q and r some integers then, the gcd of two numbers is given as gcd(a, b) = gcd(q, r) Now, if q2 = 3, q3 = 2 and q4 = 2 and x5 = 0 then we get gcd (X1 , X2) = –2 X1 + 7 X2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q471",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For the operator T on R3 defined by T(x, y, z) = (x – y, 2x + 3y + 2z, x + y + 2z), all eigenvalues and a basis for each eigenspace as",
+            "options": [
+              {
+                "prompt": "λ1 = 1,",
+                "value": "A"
+              },
+              {
+                "prompt": "λ1 = 1,",
+                "value": "B"
+              },
+              {
+                "prompt": "λ1 = 1,",
+                "value": "C"
+              },
+              {
+                "prompt": "λ1 = 1,",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q471",
+              "correct_answer": "B",
+              "explanation": "We have T = 1 1 0 2 3 2 1 1 2 −           Now, T–λI = 1 1 0 2 3 2 0 1 1 2 −λ −     −λ =     −λ   gives [1 – λ] [λ2 – 5λ + 6] = 0 ⇒ λ1 = 1, λ2 = 2 and λ3 = 3 Let X = 1 2 3 x x x           be an eigen vector. YEP DSSSB (TGT-Math) 2018 (18.11.2018, Shift-III) 88 YCT Suppose (A-λ1Ι).X = 0 1 1 1 2 1 3 1 1 0 x 0 2 3 2 x 0 1 1 2 x 0 −λ −           −λ =           −λ      ......(i) Putting λ1 = 1 in equation (i) then ⇒ 1 2 3 0 1 0 x 0 2 2 2 x 0 1 1 1 x 0 −           =                ⇒ – x2 = 0, 2x1 +2x2+2x3 = 0 & x1+x2+x3 = 0 ⇒ x2 = 0 so, we have x1+x3 = 0 ∵ x1 and x3 are dependent to each other Therefore, Let x1 = 1 then x3 = –1 So, eigen space is (1,0,–1) corresponding to λ1 = 1. Similarly, For λ2 = 2 the eigen space will (2,-2,-1) and For λ3 = 3 the eigen space will (1,-2,-1) Thus, the option (b) is correct answer.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q472",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A number 2.35 is:",
+            "options": [
+              {
+                "prompt": "a rational number",
+                "value": "A"
+              },
+              {
+                "prompt": "an irrational number",
+                "value": "B"
+              },
+              {
+                "prompt": "a rational number and a prime number",
+                "value": "C"
+              },
+              {
+                "prompt": "a prime number",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q472",
+              "correct_answer": "A",
+              "explanation": "if and only if the decimal representation of a number is terminating or repeating then such number is \" rational\". Here, 2.35 is repeating decimal because it can be written as 2. 35 = 2.35353535............. Therefore, 2.35 is rational number.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q473",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Wilson's Theorem states that if 'p' is a prime, then:",
+            "options": [
+              {
+                "prompt": "p! = –1",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q473",
+              "correct_answer": "D",
+              "explanation": "Wilson Theorem - Wilson theorem that a natural number p > 1 is a prime number iff the product of all the positive integers less than n is one less than a multiple of p. i.e. (p – 1)! = 1 × 2 × 3 × .............. × (p – 1) satisfies (p –1)! ≡ – (mod p) (p – 1)! ≡ – 1 (mod p) for all primes p.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q474",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following statements is true?",
+            "options": [
+              {
+                "prompt": "A number is rational if and only if its square",
+                "value": "A"
+              },
+              {
+                "prompt": "A number n is odd if and only if n",
+                "value": "B"
+              },
+              {
+                "prompt": "An integer n is odd if and only if n2 + 2n is",
+                "value": "C"
+              },
+              {
+                "prompt": "A number is irrational if and only if its square",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q474",
+              "correct_answer": "C",
+              "explanation": "(a) 2 is an irrational number however 2 ( 2) 2 = is a rational number. (b) If n (n + 1) is even then either n is even and n + 1 is odd or n is odd and n + 1 is even. (c) n2 + 2n = n(n + 2). Now if n is odd then n(n + 2) is odd and conversely if n(n + 2) is odd then n and (n + 2) both are odd. (d) Consider an irrational number 2 whose square is 2, a rational number",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q475",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The value of λ for which the system of equation 2x – y – z = 2, x – 2y + z = –4, x + y + λz = 4 has no solution is :",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "–2",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "–3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q475",
+              "correct_answer": "B",
+              "explanation": "We must have 2 1 1 1 2 1 0 1 1 − − − = λ Extension along R1 - ⇒ 2(– 2λ – 1) + (λ – 1) –1(1+2) = 0 ⇒ – 4λ – 2+λ – 1– 3 = 0 ⇒ – 3λ – 6 = 0 ⇒ 3λ = – 6 ⇒ λ= – 2 Section : Discipline-2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q476",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The zeroes of the quadratic polynomial, the sum and product of whose zeroes are 2 and 3 2 −, respectively, are:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q476",
+              "correct_answer": "B",
+              "explanation": "We know that if α and β are the roots of a quadratic polynomial then quadratic polynomial is x2 – (α + β)x + αβ = 0 Therefore, if sum and product of roots are 2 and 3 2 − respectively, then we must have– x2 – 2 x – 3 2 = 0 ⇒ 2x2 – 2 2x 3 0 − = ⇒ ( 2x 1)( 2x 3) 0 + − = ⇒ 1 3 x , x 2 2 = − = as the required roots. Note : We can find right answer by checking options one by one as per question's requirement too. YEP DSSSB (TGT-Math) 2018 (18.11.2018, Shift-III) 89 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q477",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A manufacturer has 600 L of a 12% solution of acid. How many liters of a 30% acid solution must be added to it such that acid content in the resulting mixture will be more than 15% but less than 18%?",
+            "options": [
+              {
+                "prompt": "more than 120 L but less than 300 L",
+                "value": "A"
+              },
+              {
+                "prompt": "more than 140 L but less than 320 L",
+                "value": "B"
+              },
+              {
+                "prompt": "more than 110 L but less than 290 L",
+                "value": "C"
+              },
+              {
+                "prompt": "more than 220 L but less than 300 L",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q477",
+              "correct_answer": "A",
+              "explanation": "Let x litres was added to the 600 L solution. Then, 15 12 30 18 (600 x) (600) x (600 x) 100 100 100 100 + < + < + ⇒ 9000 + 15x < 7200 + 30x < 10800 + 18x ⇒ 15x > 1800 and 12x < 3600 ⇒ x > 120 and x < 300",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q478",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let Tr be the rth term of an A.P. for r = 1,2,3,… If for some positive integers m and n, we have Tm = n 1 1 and T n m = then Tmn equals:",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q478",
+              "correct_answer": "D",
+              "explanation": "We have if a is the first term and d is the common difference then 1 1 a (m 1)d and a (n 1)d n m = + − = + − ⇒ 1 1 (m 1)d (n 1)d n m − = − − − ⇒ 1 1 d & a mn mn = = Therefore, mn 1 1 T (mn 1) mn mn = + − = 1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q479",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If x = 2 is a solution of a quadratic equation 3x2 – 2kx + 5 = 0 then value of 'k' is:",
+            "options": [
+              {
+                "prompt": "17",
+                "value": "A"
+              },
+              {
+                "prompt": "7",
+                "value": "B"
+              },
+              {
+                "prompt": "17",
+                "value": "C"
+              },
+              {
+                "prompt": "4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q479",
+              "correct_answer": "A",
+              "explanation": "By Factor theorem we must have 3(2)2 – 2k (2) + 5 = 0 ⇒ k = 17 4",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q480",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The solution of a quadratic equation x2 + 4 2x +6 = 0 is:",
+            "options": [
+              {
+                "prompt": "2, 18",
+                "value": "A"
+              },
+              {
+                "prompt": "2, 18",
+                "value": "B"
+              },
+              {
+                "prompt": "2, – 18",
+                "value": "C"
+              },
+              {
+                "prompt": "2, – 18",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q480",
+              "correct_answer": "C",
+              "explanation": "We have x = ( ) 2 4 2 4 2 24 2 − ± − = 4 2 8 2 − ± x = 2 2 2 − ±",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q481",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For what value of k the linear equations (3k + 1)x + 3y = 2, (k2 + 1)x + (k – 2)y = 5 have no solution?",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "–1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q481",
+              "correct_answer": "D",
+              "explanation": "We must have – 2 3k 1 3 2 k 2 5 k 1 + − = ≠ − − + 2 3k 1 3 k 2 k 1 + = − + ⇒ (3k+1)(k–2) = 3(k2+1) ⇒ 3k2–5k –2 = 3k2+3 ⇒ for k = –1, linear equations have no solutions.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q482",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the two of the zeroes of the cubic polynomial ax3 + bx2 + cx + d are 0, then the third zero is:",
+            "options": [
+              {
+                "prompt": "b",
+                "value": "A"
+              },
+              {
+                "prompt": "d",
+                "value": "B"
+              },
+              {
+                "prompt": "b",
+                "value": "C"
+              },
+              {
+                "prompt": "c",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q482",
+              "correct_answer": "A",
+              "explanation": "Let the third zero be α. Then we have Sum of zeroes b a − = ⇒ 0 + 0 + α = b a − ⇒ α = b a −.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q483",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Reduce the pair of equations 10 2 15 5 4, 2 x y x y x y x y + = − = − + − + − into a pair of linear equations. Then find its solution from the following options:",
+            "options": [
+              {
+                "prompt": "x = 3, y = 2",
+                "value": "A"
+              },
+              {
+                "prompt": "x = –3, y = –2",
+                "value": "B"
+              },
+              {
+                "prompt": "x = –3, y = 2",
+                "value": "C"
+              },
+              {
+                "prompt": "x = 3, y = –2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q483",
+              "correct_answer": "A",
+              "explanation": "Let 1 1 uand v x y x y = = + − . Then we have 10u + 2v = 4 & 15u –5v = –2 ⇒ 1 u and v 1 5 = = ⇒ x + y = 5 and x – y = 1 ⇒ x = 3, y = 2 YEP DSSSB (TGT-Math) 2018 (18.11.2018, Shift-III) 90 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q484",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The solution of quadratic equation x 1 x 1 10 x 1 x 1 3 + − + = − + is:",
+            "options": [
+              {
+                "prompt": "–2, 3",
+                "value": "A"
+              },
+              {
+                "prompt": "–2, 2",
+                "value": "B"
+              },
+              {
+                "prompt": "–4, 4",
+                "value": "C"
+              },
+              {
+                "prompt": "2, 4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q484",
+              "correct_answer": "B",
+              "explanation": "We have ( )( ) ( )( ) 2 x 1 x 1 x 1 x 1 10 3 x 1 + + + − − = − ⇒ ( ) ( ) 2 2 2 x 1 x 1 10 3 x 1 + + − = − ⇒ 3(x2 + 1 +2x + x2 + 1 –2x) = 10x2 – 10 ⇒ 6x2 + 6 = 10x2 – 10 ⇒ x2 = 4 ⇒ x = –2, 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q485",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The solution of |x2 – 1| + (x – 1)2 + 2 x 3x 2 0 : − + =",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "does not exist",
+                "value": "B"
+              },
+              {
+                "prompt": "–1",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q485",
+              "correct_answer": "A",
+              "explanation": "Since, x2 – 3x + 2 = (x – 1) (x – 2) |x2 – 1| = |(x – 1) (x + 1)| and (x – 1)2 = (x – 1) (x –1) Clearly, for x = 1 equation will satisfy. Hence, x = 1 is the required solution.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q486",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The diagonal of a rectangular plot is 60 m more than the shorter side 'b'. If the longer side 'a' is 30 m more than the shorter side, then the size 'a × b' of the plot is:",
+            "options": [
+              {
+                "prompt": "90 m × 60 m",
+                "value": "A"
+              },
+              {
+                "prompt": "120 m × 90 m",
+                "value": "B"
+              },
+              {
+                "prompt": "60 m × 30 m",
+                "value": "C"
+              },
+              {
+                "prompt": "180 m × 150 m",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q486",
+              "correct_answer": "B",
+              "explanation": "By Pythagoras Theorem, we have (b + 60)2 = b2 + (b + 30)2 ⇒ b2 + 3600 + 120b = b2+ b2 + 900 + 60b ⇒ b2 – 60b – 2700 = 0 ⇒ (b – 90) (b + 30) = 0 ⇒ b = 90m ⇒ a = 120m {Here a = b + 30} Therefore, size of plot is a×b = 120m×90m",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q487",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The solution of pair of linear equations 3x – 5y = 4, 9x – 2y = 7 by the substitution method, is:",
+            "options": [
+              {
+                "prompt": "9",
+                "value": "A"
+              },
+              {
+                "prompt": "9",
+                "value": "B"
+              },
+              {
+                "prompt": "9",
+                "value": "C"
+              },
+              {
+                "prompt": "9",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q487",
+              "correct_answer": "A",
+              "explanation": "We have 3x – 5y = 4 ...(i) 9x – 2y = 7 ...(ii) Then on substituting x = 4 5y 3 + in (ii) we get 9(4 5y) 2y 7 3 + − = ⇒ 12 + 15y –2y = 7 ⇒ 5 y 13 − = and hence, x = 9 13",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q488",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For what value of k, the system of linear equation 2x – y = 3, 4x + ky = 4 has no solution?",
+            "options": [
+              {
+                "prompt": "–4",
+                "value": "A"
+              },
+              {
+                "prompt": "–2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "–1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q488",
+              "correct_answer": "B",
+              "explanation": "We must have 2 1 3 4 k 4 − = ≠ ⇒ for k 2 = −, system of linear equation has no solution.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q489",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the zeroes of the polynomial x3 – 3x2 + x + 1 are a – b, a and a + b respectively, then the values of 'a' and 'b' are respectively.",
+            "options": [
+              {
+                "prompt": "1, ±",
+                "value": "A"
+              },
+              {
+                "prompt": "3, –",
+                "value": "B"
+              },
+              {
+                "prompt": "–1,",
+                "value": "C"
+              },
+              {
+                "prompt": "1, ±",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q489",
+              "correct_answer": "A",
+              "explanation": "We have Sum of zeroes – 3a = 3 ⇒ a = 1 & hence product of zeroes = (a2 – b2)a = –1 ⇒ 1 – b2 = –1 ⇒ b2 = 2 ⇒ b = ± 2 .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q490",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The sum of the first '2n' terms of the A.P. 2, 5, 8,... is equal to the sum of the first 'n' terms of the A.P. 57, 59, 61… then 'n' equals:",
+            "options": [
+              {
+                "prompt": "12",
+                "value": "A"
+              },
+              {
+                "prompt": "13",
+                "value": "B"
+              },
+              {
+                "prompt": "10",
+                "value": "C"
+              },
+              {
+                "prompt": "11",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q490",
+              "correct_answer": "D",
+              "explanation": "We have 2n n [2(2) (2n 1)3] [2(57) (n 1)2] 2 2 + − = + − ⇒ n(6n + 1) = n(56 + n) ⇒ 5n = 55 ⇒ n = 11. YEP DSSSB (TGT-Math) 2018 (18.11.2018, Shift-III) 91 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q491",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A train travels 360 km at a uniform speed. If the speed had been 5 km/h more, it would have taken 1 hour less for the same journey, then the speed of the train is:",
+            "options": [
+              {
+                "prompt": "30 km/h",
+                "value": "A"
+              },
+              {
+                "prompt": "50 km/h",
+                "value": "B"
+              },
+              {
+                "prompt": "45 km/h",
+                "value": "C"
+              },
+              {
+                "prompt": "40 km/h",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q491",
+              "correct_answer": "D",
+              "explanation": "Let the speed of the train be x km/hr. Then we must have 360 360 1 x x 5 − = + ⇒ x2 + 5x – 1800 = 0 ⇒ (x – 40) (x + 45) = 0 ⇒ x = 40.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q492",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If α, β, γ are zeroes of cubic polynomial kx3 – 5x + 9, and if α3 + β3 + γ3 = 27, then the value of k is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "–1",
+                "value": "C"
+              },
+              {
+                "prompt": "–2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q492",
+              "correct_answer": "C",
+              "explanation": "We have Sum of roots = α + β + γ = 0 Then, α3 + β3 + γ3 = 3αβγ ⇒ αβγ = 9 k − ⇒ k = –1.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q493",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For what value of k, the system of linear equations 3x + 4y = 12, x + ky = 4 has infinitely many solution?",
+            "options": [
+              {
+                "prompt": "4",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q493",
+              "correct_answer": "A",
+              "explanation": "We must have 3 4 12 1 k 4 = = 1 1 1 2 2 2 a b c a b c   = =     ∵ ⇒ k = 4 3 .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q494",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Sum to 'n' terms of the series 1 3 5 7 ... 1.2.3 2.3.4 3.4.5 4.5.6 + + + + is:",
+            "options": [
+              {
+                "prompt": "n",
+                "value": "A"
+              },
+              {
+                "prompt": "n",
+                "value": "B"
+              },
+              {
+                "prompt": "n",
+                "value": "C"
+              },
+              {
+                "prompt": "n",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q494",
+              "correct_answer": "A",
+              "explanation": "We have n r 1 2r 1 r(r 1)(r 2) = − + + ∑ n r 1 2 1 (r 1)(r 2) r(r 1)(r 2) = = − + + + + ∑ = n n r 1 r 1 (r 2) (r 1) 1 1 1 2 (r 1)(r 2) 2 r(r 1) (r 1)(r 2) = =   + − + − −   + + + + +   ∑ ∑ = n n n r 1 r 1 r 1 1 1 1 1 1 1 1 1 2 (r 1) (r 2) 2 r (r 1) 2 r 1 r 2 = = =       − − − + −       + + + + +       ∑ ∑ ∑ = 1 1 1 1 1 1 1 2 1 2 n 2 2 n 1 2 2 n 2       − − − + −       + + +       = n n n n 2 2(n 2) 4(n 2) − + + + + = n(3n 1) . 4(n 1)(n 2) + + +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q495",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The solution of pair of linear equations 1 2 1 x y 1,x y 3 2 3 3 + = − − = ,by the elimination method is:",
+            "options": [
+              {
+                "prompt": "x = 2, y = 3",
+                "value": "A"
+              },
+              {
+                "prompt": "x = –2, y = –3",
+                "value": "B"
+              },
+              {
+                "prompt": "x = –2, y = 3",
+                "value": "C"
+              },
+              {
+                "prompt": "x = 2; y = –3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q495",
+              "correct_answer": "D",
+              "explanation": "Given that, x 2y –1 2 3 + = –––– (i) & y x 3 3 − = ––––(ii) ⇒ 1 y 3 x 2 2 3 2 − = × x y 3 2 6 2 ⇒ − = ––– (iii) Subtract equation (iii) from equation (i) then, x 2y –1 2 3 + = x y 3 2 6 2 − = ⇒ 2y y 3 1 3 6 2 + = −− ⇒ 5 5 y 6 2 = − ⇒ y = –3 Put y = –3 in equation (ii) We get x = 2. Section : Discipline-3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q496",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "How many numbers must be selected form the set {1, 2, 3, 4, 5, 6} to guarantee that at least one pair of these numbers add up to 7?",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q496",
+              "correct_answer": "C",
+              "explanation": "At least 4 numbers must be selected from the set{1, 2, 3, 4, 5, 6} to make sure that at least one pair of these numbers add up to 7.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q497",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "How many positive integers less than 200 are NOT divisible by three or more primes?",
+            "options": [
+              {
+                "prompt": "168",
+                "value": "A"
+              },
+              {
+                "prompt": "122",
+                "value": "B"
+              },
+              {
+                "prompt": "197",
+                "value": "C"
+              },
+              {
+                "prompt": "65",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q497",
+              "correct_answer": "A",
+              "explanation": "Required number = number of positive integers less than 200 – number of composite integers less than 200 having at least 3 different prime factors = 199 – ( ) ( ) ( ) 199 199 199 lcm 2,3,5 lcm 2,3,7 lcm 2,3,11       + +                    ( ) ( ) ( ) 199 199 199 lcm 2,3,13 lcm 2,3,17 lcm 2,3,19       + + +                   ( ) ( ) ( ) 199 199 199 lcm 2,3,23 lcm 2,3,29 lcm 2,3,31       + + +                   ( ) ( ) ( ) 199 199 199 lcm 3,5,7 lcm 3,5,11 lcm 3,5,13        + + +                    ( ) ( ) ( ) 199 199 199 lcm 2,5,7 lcm 2,5,11 lcm 2,5,13       + + +                   ( ) ( ) ( ) 199 199 199 lcm 2,5,17 lcm 2,5,19 lcm 2,5,11       + + +                   + ( ) 199 lcm 2,5,13           = 199 – (6 + 4 + 3 + 2 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 2 + 1 + 1 + 1 + 1 + 1 + 1) = 199 – 31 = 168.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q498",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "What is the coefficient of x101y99 in the expansion of (2x – 3y)200 ?",
+            "options": [
+              {
+                "prompt": "101",
+                "value": "A"
+              },
+              {
+                "prompt": "101",
+                "value": "B"
+              },
+              {
+                "prompt": "101",
+                "value": "C"
+              },
+              {
+                "prompt": "101",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q498",
+              "correct_answer": "A",
+              "explanation": "Since we know that Tr+1 = nCr(a)r(x)n-r For the expansion of (a+x)n. Tr+1 = 200 r C (2x)r (–3y)200–r Now if r = 101 then, we have T102 = 200 101 99 101 C (2x) ( 3y) − = 200 101 99 101 99 101 C (2) ( 3) x y − Thus, the required coefficient = 200 101 99 101 C 2 3 − or 200 101 99 99 C 2 3 − .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q499",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The value of the integral ∫ xe (1+ sinx) dx 1+ cosx is:",
+            "options": [
+              {
+                "prompt": "sin",
+                "value": "A"
+              },
+              {
+                "prompt": "ex tan x",
+                "value": "B"
+              },
+              {
+                "prompt": "log |tan x| + C",
+                "value": "C"
+              },
+              {
+                "prompt": "ex cot x + C",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q499",
+              "correct_answer": "B",
+              "explanation": "We have 2 2 1 sin x 1 sin x x x 1 cos x 2cos 2cos 2 2 + = + +             {∵ cosx = 2cos x 1 2 −} 2 1 x tan x 2 2cos 2   = +           {∵sinx x x 2sin cos 2 2 = } YEP DSSSB (TGT-Math) 2018 (18.11.2018, Shift-III) 93 YCT 2 1 x x sec tan 2 2 2     = +         Therefore, x x 2 1 sin x 1 x x e dx e sec tan dx 1 cos x 2 2 2 +       = +       +       ∫ ∫ ⇒ x x e tan C. 2  +     ( ) { } x f '(x)dx f(x) + = ∫ ∵",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q500",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For proving that a quadrilateral is a parallelogram, prove any of the following valid conditions:",
+            "options": [
+              {
+                "prompt": "It is both a Rhombus and a Rectangle.",
+                "value": "A"
+              },
+              {
+                "prompt": "Its diagonals are perpendicular.",
+                "value": "B"
+              },
+              {
+                "prompt": "All 4 angles are congruent.",
+                "value": "C"
+              },
+              {
+                "prompt": "Both pairs of opposite angles are congruent.",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q500",
+              "correct_answer": "D",
+              "explanation": "Both pairs of opposite angles are congruent i.e. equal.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

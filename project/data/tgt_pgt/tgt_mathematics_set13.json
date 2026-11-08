@@ -1,0 +1,3820 @@
+{
+  "_id": "tgt_mathematics_set13",
+  "title": "TGT Mathematics • Mock Test Set 13 (100 MCQs)",
+  "course": "TGT Series",
+  "subject": "Mathematics",
+  "exam": "tgt",
+  "price": 199,
+  "originalPrice": 999,
+  "duration": 100,
+  "sections": [
+    {
+      "_id": "sec_tgt_mathematics_set13",
+      "title": "Mathematics Section",
+      "qCount": 100,
+      "time": 100,
+      "questions": [
+        {
+          "_id": "tgt_mathematics_q1201",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the prism volume in the order dz dy dx (six orders are possible)-",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1201",
+              "correct_answer": "B",
+              "explanation": "To find those limits on z integral, follow a line in the z direction. It enters the prism at z = 0 and exist at sloping face y + 3z = 3. That give upper limit z = 3 y 3 − . YEP DSSSB (TGT-Math) 2021 (13.9.2021, Shift-I-Female) 201 YCT This section writes out dz ∫ for the height, but a quitter solution start at double interruption. The number 3/2 in last integral is the area of a vertical slice, cut by plane x = constant. Prism volume = ( ) 2 3 3 y /3 0 0 0 dzdydx − ∫∫∫ = [ ] 3–y 2 3 3 0 0 0 z dydx ∫∫ = 2 3 0 0 3 – y dydx 3       ∫∫ = 3 2 2 0 0 3 y y – dx 3 2 3     ×   ∫ = 2 2 0 3 3 – dx 2 3     ×   ∫ = 2 0 3 dx 2∫ = [ ] 2 0 3 x 2 = [ ] 3 2 – 0 2 = 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1202",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Taylor expansion of ex :",
+            "options": [
+              {
+                "prompt": "1 + x +",
+                "value": "A"
+              },
+              {
+                "prompt": "1 + x +",
+                "value": "B"
+              },
+              {
+                "prompt": "1 + x +",
+                "value": "C"
+              },
+              {
+                "prompt": "1 + x +",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1202",
+              "correct_answer": "B",
+              "explanation": "Taylor series – Assume f(x) be real or composite function. f(x) ( ) ( ) ( ) ( ) ( )( ) ' '' ''' 2 3 f a f a f a x a x a x a ... 1! 2! 3! = − + − + − + Expansion of ex – ex = 2 3 4 x x x 1 x ... 2! 3! 4! + + + + + ∞",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1203",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Determine the domain of the following function, f (x,y,z) = 2 2 2 1/ (x + y + z – 16)",
+            "options": [
+              {
+                "prompt": "x2 + y2 + z2 < 16",
+                "value": "A"
+              },
+              {
+                "prompt": "All R",
+                "value": "B"
+              },
+              {
+                "prompt": "x2 + y2 + z2 > 16",
+                "value": "C"
+              },
+              {
+                "prompt": "x2 + y2 + z2 > –16",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1203",
+              "correct_answer": "C",
+              "explanation": "f(x, y, z) = 2 2 2 1 x y z 16 + + − We must have 2 2 2 x y z 16 0 + + − > ⇒ 2 2 2 x y z 16 + + >",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1204",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The maximum always occurs at a :",
+            "options": [
+              {
+                "prompt": "rough point",
+                "value": "A"
+              },
+              {
+                "prompt": "critical point",
+                "value": "B"
+              },
+              {
+                "prompt": "end point",
+                "value": "C"
+              },
+              {
+                "prompt": "Stationary point",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1204",
+              "correct_answer": "B",
+              "explanation": "For any function y = f(x) Condition for maximum or minimum; dy 0 dx = from here we gets critical points. For maximum 2 2 critical polnt d y 0 dx  <     For minimum 2 2 critical polnt d y 0 dx  >    ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1205",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the volume ∫∫∫ dx dy dz inside the unit sphere x2 + y2 + z2 = 1.",
+            "options": [
+              {
+                "prompt": "4π",
+                "value": "A"
+              },
+              {
+                "prompt": "2π ÷ 3",
+                "value": "B"
+              },
+              {
+                "prompt": "2π",
+                "value": "C"
+              },
+              {
+                "prompt": "4π ÷ 3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1205",
+              "correct_answer": "D",
+              "explanation": "Sphere x2 +y2 +z2 =1 In Cartesian coordinates, solving for z gives – 2 2 2 2 1 x y z 1 x y − − − ≤ ≤ − − . Then the projection of the sphere onto the x-y plane. (i.e. the equation you get when z = 0 in the sphere equation) is just the circle x2 + y2 = 1. Now we must describe this with inequalities. All together the solid can be described by the inequalities –1 ≤ x ≤ 1, 2 2 2 2 2 2 1 x y 1 x , 1 x y z 1 x y . − − ≤ ≤ − − − − ≤ ≤ − − So we find volume 2 2 2 2 2 2 1 1 x 1 1 x 2 2 –1 1 x 1 1 x 2 2 – 1– x – y V 1.dzdydx 2 1 x y dyd 1– x – y − − − − − − − = = − − ∫∫ ∫ ∫∫ = ( ) 1 2 1 1 2 4 2 1 x dx 2 2 3 3 −   × π − =π − = π     ∫",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1206",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which one is not the method to recognize whether this function is discontinuous or not?",
+            "options": [
+              {
+                "prompt": "Prove by contradiction by relating it to a",
+                "value": "A"
+              },
+              {
+                "prompt": "Show that the function fails the ε-δ definition.",
+                "value": "B"
+              },
+              {
+                "prompt": "Show that the function fails the sequence",
+                "value": "C"
+              },
+              {
+                "prompt": "Decomposing",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1206",
+              "correct_answer": "D",
+              "explanation": "A discontinuous function is a function that has a point where either the function is not defined at the point or the left hand limit and right hand limit are equal but not equal to the value of the function at that point or limit of the function does not exist at the given point. We can also say that if a function is not continuous then it is called a discontinuous function. A discontinuous function has breaks or gap on its graph. Method to recognize function to be discontinuous it decomposing function into simple discontinuous function.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1207",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which operator is used in Stokes' theorem",
+            "options": [
+              {
+                "prompt": "Curl",
+                "value": "A"
+              },
+              {
+                "prompt": "set",
+                "value": "B"
+              },
+              {
+                "prompt": "logical",
+                "value": "C"
+              },
+              {
+                "prompt": "open",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1207",
+              "correct_answer": "A",
+              "explanation": "Stokes theorem- The Stoke's theorem states that \" The surface integral of curl of a function over a surface bounded by a closed surface is equal to the line integral of particular vector function around that surface. ( ) s F.dr F .ds = ∇× ∫ ∫∫ \u0002 \u0002 \u0002 \u0002 \u0003 YEP DSSSB (TGT-Math) 2021 (13.9.2021, Shift-I-Female) 202 YCT where. c → A closed curve F → A vector field Stokes theorem can also be expressed- s s curl F.ds F.dr = ∫∫ ∫ \u0002 \u0002 \u0002 \u0002",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1208",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which composition of elementary function is not as considered derivable?",
+            "options": [
+              {
+                "prompt": "exponential",
+                "value": "A"
+              },
+              {
+                "prompt": "injective",
+                "value": "B"
+              },
+              {
+                "prompt": "trigonometric",
+                "value": "C"
+              },
+              {
+                "prompt": "polynomial",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1208",
+              "correct_answer": "B",
+              "explanation": "Injective function – An injective function (Also known as one-one function) is a function f that maps distinct elements to distinct elements. A function f : x → y is injection if f (x) = f (y) ⇒ x = y Every value in the co domain that has something mapped to it has only one value from the domain mapped to it. Injection function is not considered as derivable.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1209",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The function f(x) = x–x (x∈R) attains maximum at x =?",
+            "options": [
+              {
+                "prompt": "–1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1/e",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1209",
+              "correct_answer": "C",
+              "explanation": "Function y = x–x taking log – log y = – x log x for maxima and minima; dy 0 dx = So differentiating– ( ) 1 dy 1 . x log x 1 y dx x = −× + − [ ] dy y 1 log x dx = −− for critical pts. dy 0 dx = ⇒ y (–1– log x) = 0 1 + log x = 0 log x = –1 x = e–1 x= 1e 11.What is the intermediate value of this function :f(x) = (x2 – 2x + 2) ÷ (x4 + 1) (a) 1÷ 2 (b) 1 (c) 3 ÷ 4 (d) 2 Ans. (c) : ( ) 2 4 x – 2x 2 f x x 1 + = + ( ) ( ) 2 4 x –1 1 f x 0 x 1 + = > + i.e. f(x) > 0 ; ∀x f(0)=2 ( ) 1 f 1 2 = ( ) 5 f –1 2 = = 2.5 ( ) 10 f –2 17 = ( ) 2 f 2 17 = ( ) 17 f –3 81 1 = + f(x) will be always +ve so they do not cross the x-axis so There will be no intermediate value",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1210",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The total flux ˆ ∫F.n \u0001\u0002 ds through every closed curve is",
+            "options": [
+              {
+                "prompt": "∞",
+                "value": "A"
+              },
+              {
+                "prompt": "π ÷ 2",
+                "value": "B"
+              },
+              {
+                "prompt": "π",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1210",
+              "correct_answer": "D",
+              "explanation": "Total flux ˆ F.nds ∫ \u0002 through every closed curve is zero.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1211",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "This function is : f(x) = (x2 – 2x + 2) ÷ (x4 + 1)",
+            "options": [
+              {
+                "prompt": "Linear",
+                "value": "A"
+              },
+              {
+                "prompt": "Continuous",
+                "value": "B"
+              },
+              {
+                "prompt": "Discontinuous",
+                "value": "C"
+              },
+              {
+                "prompt": "Non Linear",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1211",
+              "correct_answer": "B",
+              "explanation": "Clearly ( ) 2 4 x 2x 2 f x x 1 − + = + is a continuous function since a rational polynomial function is continuous everywhere in its domain of definition.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1212",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which is not the way to write Taylor expansion:",
+            "options": [
+              {
+                "prompt": "onto",
+                "value": "A"
+              },
+              {
+                "prompt": "constant",
+                "value": "B"
+              },
+              {
+                "prompt": "cubic",
+                "value": "C"
+              },
+              {
+                "prompt": "quadratic",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1212",
+              "correct_answer": "A",
+              "explanation": "Taylor's expansion about x = a is given by. f(x) = ( ) ( )( ) ( ) ( ) 2 x a f a f ' a x a f '' a ... 2! − + − + + Onto function – onto function could be explained by considering two sets. Set A and Set B, which consist of elements. It for every elements of B, there is at least one or more than one element matching with A, then the function is said to be onto function. So onto is not the way to write Taylor's expansion.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1213",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Green's theorem is–",
+            "options": [
+              {
+                "prompt": "A double integral around a simple closed",
+                "value": "A"
+              },
+              {
+                "prompt": "The surface integral of the curl of a function",
+                "value": "B"
+              },
+              {
+                "prompt": "A line integral around a simple closed curve",
+                "value": "C"
+              },
+              {
+                "prompt": "A line integral around a simple closed curve",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1213",
+              "correct_answer": "D",
+              "explanation": "Green theorem is a line integral around a simple closed curve C to a double integral over the plane region line is bounded by C.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1214",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Solve: → x -2 lim (2x3 + 4x2 + 8x + 10)",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "–6",
+                "value": "B"
+              },
+              {
+                "prompt": "58",
+                "value": "C"
+              },
+              {
+                "prompt": "infinity",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1214",
+              "correct_answer": "B",
+              "explanation": "F(x) = ( ) 3 2 x 2 lim 2x 4x 8x 10 →− + + + = 2 × (–2)3 + 4 (–2)2 + 8 (–2) + 10 = –16 + 16 – 16 + 10 = – 6",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1215",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Is the derivability of a function x2 possible? If yes then what is the range?",
+            "options": [
+              {
+                "prompt": "yes 0< x <1",
+                "value": "A"
+              },
+              {
+                "prompt": "no",
+                "value": "B"
+              },
+              {
+                "prompt": "yes at x= 0",
+                "value": "C"
+              },
+              {
+                "prompt": "yes at x = 1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1215",
+              "correct_answer": "C",
+              "explanation": "y = x2 A function f(x) is said to be differentiable at point x = a if the derivative f '(a) exists at every point in its domain. at that point vice versa is not always true. Function y = x2 is derivable. at x = 0, y = x2 is derivable as LHD = ( ) ( ) x 0 f a h f a lim 0 h − → − − = − RHD = ( ) ( ) x 0 f a h f a lim 0 h + → + − =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1216",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In sin(h) = h + O (h3); what is the value of O(h3)?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "–",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1216",
+              "correct_answer": "D",
+              "explanation": "sin (h) = h + O (h3) O (h3) = sin (h) – h = 3 h h ... h 3!   − + −     ⇒ ( ) 3 3 h O h = h ... h 3!   − −     = 3 h 3! −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1217",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Every Cauchy sequence in a metric space is ____ and not a_____",
+            "options": [
+              {
+                "prompt": "Homeomorphism, convergent",
+                "value": "A"
+              },
+              {
+                "prompt": "Topological, Homeomorphism",
+                "value": "B"
+              },
+              {
+                "prompt": "Convergent, topological",
+                "value": "C"
+              },
+              {
+                "prompt": "Topological, convergent",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1217",
+              "correct_answer": "C",
+              "explanation": "Cauchy sequence – A sequence {xn} is said to be a Cauchy sequence if given any ε > 0, there is a natural number 'N' such that V m, n; n ≥ n0 ⇒ d (xm, xn) < ε Cauchy sequence suggests that your points in sequence are getting arbitrarily closed together. Therefore Cauchy sequence in a metric space is convergent not topological.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1218",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "→∞ xlim (In x ÷ x)?",
+            "options": [
+              {
+                "prompt": "0 converges",
+                "value": "A"
+              },
+              {
+                "prompt": "0 diverges",
+                "value": "B"
+              },
+              {
+                "prompt": "∞ converges",
+                "value": "C"
+              },
+              {
+                "prompt": "∞ diverges",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1218",
+              "correct_answer": "A",
+              "explanation": "x ln x lim x →∞       ln x = x 1 1.dt x 1 x = −≤ ∫ ⇒ ln x ≤ x for all x ≥ 1 So, x ln x lim , x →∞ at x = 0 converges. Alternative method , x ln x lim , x →∞ form ( ∞/ ∞) So, Using L'Hospital's rule ( ) x d ln x dx lim , d(x) dx →∞ x 1/ x lim 1 →∞ x 1 lim x →∞ Taking limit then, 1 ∞ = 0 Therefore, we say x ln x lim x →∞ converges to zero.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1219",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f: [a, b] → R is bounded and P, Q are partitions of [a, b],",
+            "options": [
+              {
+                "prompt": "L",
+                "value": "A"
+              },
+              {
+                "prompt": "L",
+                "value": "B"
+              },
+              {
+                "prompt": "U",
+                "value": "C"
+              },
+              {
+                "prompt": "L",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1219",
+              "correct_answer": "D",
+              "explanation": "Let R = P ∪ Q be the so-called common refinement of P and Q. Because R ⊆ P and R ⊆ Q, it follows that L(f,P) L(f,R) U(f,R) U(f,Q) ≤ ≤ ≤ Therefore, if P and Q are any two partitions of [a, b] then L (f, P) ≤ U(f, Q).",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1220",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The series ∑((x – 5)n) ÷ n2) has radius r =1 around its base point a = 5. What is the interval of convergence?",
+            "options": [
+              {
+                "prompt": "0 < x < n",
+                "value": "A"
+              },
+              {
+                "prompt": "0 < x < 1",
+                "value": "B"
+              },
+              {
+                "prompt": "0 < x < 2",
+                "value": "C"
+              },
+              {
+                "prompt": "4 < x < 6",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1220",
+              "correct_answer": "D",
+              "explanation": "Interval of Convergence:- The Interval of convergence of the power series: ( ) n x 0 x a ∞ = − ∑ is the interval of n-values that can be plugged into the power series to give a convergent series. The center of the interval of convergence is always the another point of the power series a. Here, the interval of convergence having two end points. (x = a – R and x = a + R) may or may not port of convergence. So, the interval of convergence is (a – R, a + R); where R is radius of convergence. Now, For the series ∑ (x – 5)n) ÷ n2 Given radius R = 1 and base point a = 5 ∴ The interval of convergence is (a – R, a + R) = (5 – 1, 5 + 1) = (4, 6) Therefore, 4 < x < 6 is the interval of convergence series ∑ (x – 5)n) ÷ n2.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1221",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Suppose that f: [a, b] → R is bounded, P is partitions of [a, b] and Q is refinement of P. Then which one is true: Statement 1 : U (f;Q) ≤ U(f;P) Statement 2 : L(f;P) ≤ L(f;Q)",
+            "options": [
+              {
+                "prompt": "Both statements are false",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "Both statements are true",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1221",
+              "correct_answer": "D",
+              "explanation": "f : [a, b] → R, P → Partition of [a, b] Q → Refinement of P ⇒ U (f, Q) ≥ L (f, P) ⇒ U (f, Q) ≤ U (f, P) ⇒ L (f, P) ≤ L (f, Q)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1222",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Every metric space is:",
+            "options": [
+              {
+                "prompt": "Congruent",
+                "value": "A"
+              },
+              {
+                "prompt": "Topological",
+                "value": "B"
+              },
+              {
+                "prompt": "Continuous",
+                "value": "C"
+              },
+              {
+                "prompt": "Normed space",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1222",
+              "correct_answer": "D",
+              "explanation": "A metric space is very special type of topological space with nice geometric properties. This is because the topology is given by a distance function, Note – Official answer is given option (d) i.e. Normed space but correct answer should be option (b) i.e. Topological space.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1223",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which function is not the Riemann integrable",
+            "options": [
+              {
+                "prompt": "bounded",
+                "value": "A"
+              },
+              {
+                "prompt": "discontinuous",
+                "value": "B"
+              },
+              {
+                "prompt": "continuous",
+                "value": "C"
+              },
+              {
+                "prompt": "unbounded",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1223",
+              "correct_answer": "D",
+              "explanation": "Unbounded functions are not Riemann integrable. Bounded and continuous, bounded and discontinuous (set of points of discontinuity must be of measure zero) functions are Riemann integrable.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1224",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Solve : ( ) ( ) →∫ + ε 0 lim 1÷ 2 x dx; with0 < ε < 1",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1224",
+              "correct_answer": "A",
+              "explanation": "0 1 lim dx 2 x + ε→∫ (0 < ε < 1) = 1 1/ 2 0 1 x dx 2 − ∫ = 12 1 1 0 1 x dx dx 1 2 1 2 +     −   +   = 12 1 1/ 2 0 1 x 1 0 1 1 2 2    = − =    ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1225",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The intersection of finitely many open sets is – and union of finitely many closed sets is",
+            "options": [
+              {
+                "prompt": "Closed, closed",
+                "value": "A"
+              },
+              {
+                "prompt": "Open, open",
+                "value": "B"
+              },
+              {
+                "prompt": "Open, closed",
+                "value": "C"
+              },
+              {
+                "prompt": "closed, open",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1225",
+              "correct_answer": "C",
+              "explanation": "The intersection of finitely many open sets is open and union of finitely many closed sets is closed.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1226",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If {Fn} converges uniformly to F on S; then {Fn} converges _____ to F on S.",
+            "options": [
+              {
+                "prompt": "Integer",
+                "value": "A"
+              },
+              {
+                "prompt": "Constant",
+                "value": "B"
+              },
+              {
+                "prompt": "Closed subset",
+                "value": "C"
+              },
+              {
+                "prompt": "Point wise",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1226",
+              "correct_answer": "C",
+              "explanation": "A sequence of function Fn converges uniformly to F on S, if for each ε > 0, There is N such that ( ) ( ) nF w F w − ≤ε for all w∈ s, when n ≥ N • If point wise convergence, N can depend on w and ε. • In uniform convergence, N depends only on ε not on w. So if {Fn} converges uniformly to f on s, then {Fn} converges closed subset to f on S.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1227",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Solve : ∫ 1 ÷ t dt with 0 < t < x",
+            "options": [
+              {
+                "prompt": "1 ÷ x",
+                "value": "A"
+              },
+              {
+                "prompt": "1 ÷ x2",
+                "value": "B"
+              },
+              {
+                "prompt": "1 ÷ t2",
+                "value": "C"
+              },
+              {
+                "prompt": "ln x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1227",
+              "correct_answer": "D",
+              "explanation": "f (t) 1.dt t = ∫ with 0 < t < x ⇒ f (t) = t x t 0 1.dt t = =∫ = [ ] x 0 ln t = ln x",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1228",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The convergence of the series ( ) ∑ n x ÷ n! is",
+            "options": [
+              {
+                "prompt": "ε",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "–1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1228",
+              "correct_answer": "C",
+              "explanation": "Let n n x a n! = ( ) n 1 n 1 x a n 1 ! + + = + ( ) n 1 n 1 n n a x n! a n 1 !x + + = × + n 1 n a x a n 1 + = + As n → ∞, n 1 n a 0 a + → (converges to zero)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1229",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which one of following has topological property?",
+            "options": [
+              {
+                "prompt": "Path compactness",
+                "value": "A"
+              },
+              {
+                "prompt": "Near connectedness",
+                "value": "B"
+              },
+              {
+                "prompt": "Near compactness",
+                "value": "C"
+              },
+              {
+                "prompt": "Path connectedness",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1229",
+              "correct_answer": "D",
+              "explanation": "A topological space is said to be path connected or arc-wise connected if given only two points on topological space, there is a path (or an arc) starting at one point and ending at the other. Definition with symbols– A topological space X is said to be path connected or arc wise connected if for any two points a, b ∈ X there is a continuous map f : [0, 1] → X such that f (0) = and f (1) = b.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1230",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The function fj (x) = xj ; j ≥ 0; define the infinite series. The nth partial sum of the series is:",
+            "options": [
+              {
+                "prompt": "fn",
+                "value": "A"
+              },
+              {
+                "prompt": "fj",
+                "value": "B"
+              },
+              {
+                "prompt": "fj",
+                "value": "C"
+              },
+              {
+                "prompt": "fn",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1230",
+              "correct_answer": "D",
+              "explanation": "Function f j (x) : xj; j ≥ 0 The nth partial sum of the series is- fn(x) = n n n n 0 x = =∑ fn (x) = 1 + x1 +x2 + x4 + ...+ xn. YEP DSSSB (TGT-Math) 2021 (13.9.2021, Shift-I-Female) 206 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1231",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If T is compact, then T is ––– and –––",
+            "options": [
+              {
+                "prompt": "Closed and bounded",
+                "value": "A"
+              },
+              {
+                "prompt": "Bounded and open",
+                "value": "B"
+              },
+              {
+                "prompt": "Closed and unbounded",
+                "value": "C"
+              },
+              {
+                "prompt": "Unbounded and open",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1231",
+              "correct_answer": "A",
+              "explanation": "In functional analysis, a branch of mathematics, a compact operator is a linear operator T : X → Y, where X, Y are normed vector space with the property that T maps bounded subsets of X to relatively compact subset of Y. Such an operator is necessarily a bounded operator and so continuous.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1232",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A set is ––– if and only if it contains all its limit points :",
+            "options": [
+              {
+                "prompt": "Closed",
+                "value": "A"
+              },
+              {
+                "prompt": "Joint",
+                "value": "B"
+              },
+              {
+                "prompt": "open",
+                "value": "C"
+              },
+              {
+                "prompt": "disjoint",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1232",
+              "correct_answer": "A",
+              "explanation": "In geometry, topology and related branches of mathematics, a closed set is a set whose complement is an open set. In topological space a closed set can be defined as a set which contains all its limits points. In a complete metric space, a closed set is a set which is closed under the limit operations. This should not be confused with a closed manifolds.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1233",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Topological space is––– a metric apace",
+            "options": [
+              {
+                "prompt": "never",
+                "value": "A"
+              },
+              {
+                "prompt": "Vice-versa",
+                "value": "B"
+              },
+              {
+                "prompt": "Sometimes",
+                "value": "C"
+              },
+              {
+                "prompt": "Always",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1233",
+              "correct_answer": "C",
+              "explanation": "A topological space is a geometrical space in which closeness is defined but can not necessarily be measured by a numeric distance. More specifically a topological space is a set whose elements are called point. A topological space is most general type of mathematics space that allows for the definition of limits, continuity and connectedness common type of topological space include Euclidean spaces, metric spaces and manifold. Not every topological space is a metric space. However, every metric space is a topological space with the topology being all the open set of the metric space",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1234",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If P and π are equivalent metrics on a set A; then (A, p) and (A, π) π) π) π) have the ––– and–––– sets",
+            "options": [
+              {
+                "prompt": "Open, different",
+                "value": "A"
+              },
+              {
+                "prompt": "Different, closed",
+                "value": "B"
+              },
+              {
+                "prompt": "Closed, same",
+                "value": "C"
+              },
+              {
+                "prompt": "Same, open",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1234",
+              "correct_answer": "D",
+              "explanation": "P and π are equivalent metrics on set A; Two metrics are equivalent if they define the same open set, that is, if a set is open with respect to the first metric whenever it is open with respect to the second.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1235",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A set T is compact if it has the property",
+            "options": [
+              {
+                "prompt": "Jaein-borel",
+                "value": "A"
+              },
+              {
+                "prompt": "Heine-corel",
+                "value": "B"
+              },
+              {
+                "prompt": "Uniqued",
+                "value": "C"
+              },
+              {
+                "prompt": "Heine-borel",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1235",
+              "correct_answer": "D",
+              "explanation": "A set is compact if it has the Heine Borel property. Heine-Borel Theorem – If a set S of real numbers is closed and bounded, then the set S is compact. That is if a set S of real number is closed and bounded then open over of set S has finite sub cover.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1236",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If all convergent sequences are mapped to convergent sequences then the function is–––",
+            "options": [
+              {
+                "prompt": "Continuous",
+                "value": "A"
+              },
+              {
+                "prompt": "not defined",
+                "value": "B"
+              },
+              {
+                "prompt": "differentiated",
+                "value": "C"
+              },
+              {
+                "prompt": "Discontinuous",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1236",
+              "correct_answer": "A",
+              "explanation": "Continuous function map convergent sequence to convergent sequences. Formally if f : x → y is a map between metric space which is continuous and (an) is a sequence in x which is Convergent to point p = X, then, (f(an)) is a sequence in y convergent to f (p). Converse – If all convergent sequences are mapped to convergent sequences then the function is continuous. Section Discipline-5",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1237",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A group G is complete if g → ig : G → Aut (g) is :",
+            "options": [
+              {
+                "prompt": "hetromorphism",
+                "value": "A"
+              },
+              {
+                "prompt": "Homomorphism",
+                "value": "B"
+              },
+              {
+                "prompt": "Automorphism",
+                "value": "C"
+              },
+              {
+                "prompt": "Isomorphism",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1237",
+              "correct_answer": "D",
+              "explanation": "A group G is complete if ig : G → Aut (g) is Isomorphism. Isomorphism, in modern algebra, a one to one correspondence (mapping) between two set that preserves binary relationship between elements of set. For example, the set of natural number can be mapped onto the set of even natural numbers by multiplying each natural number by2.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1238",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let G be a finite group, and let ( ) ( ) r G = p ×m with m not divisible by p. The properties don't fit for the condition:",
+            "options": [
+              {
+                "prompt": "Every p-subgroup of G is contained in a",
+                "value": "A"
+              },
+              {
+                "prompt": "Let s",
+                "value": "B"
+              },
+              {
+                "prompt": "Any two Sylow p-subgroup are conjugate.",
+                "value": "C"
+              },
+              {
+                "prompt": "A Sylow p-subgroup is normal if and only if",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1238",
+              "correct_answer": "D",
+              "explanation": "Sylow’s Theorem: Let G be a group of order pr m, where p is a prime, r ≥1 and p does not divide m then (i) Sylow p (G) ≠0 i.e. Sylow p-subgroups exist (ii) All Sylow p-subgroups are conjugate in G, i.e. if p1 and p2 are both Sylow p-subgroups. Then, there is some g ∈ G such that p1= g p1g–1. In Particular, np(G)= (G:NG/p) (iii) Any p subgroup of G is contained in a Sylow p- subgroup (iv) np(G) ≡ 1 mod p YEP DSSSB (TGT-Math) 2021 (13.9.2021, Shift-I-Female) 207 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1239",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let Hi ≤ G for i ∈ {1,……,n}. Then which of the following sets doesn't satisfy the IDP properties?",
+            "options": [
+              {
+                "prompt": "h1… hn = x1….xn, with hi xi ∈ Hi",
+                "value": "A"
+              },
+              {
+                "prompt": "Hi ∈G, for all i",
+                "value": "B"
+              },
+              {
+                "prompt": "Hi def = H1…. Hi-1. Hi+1…. Hn, Hi ∩ Hi = {1}",
+                "value": "C"
+              },
+              {
+                "prompt": "G = H1…. Hn = {h1….hn : hi ∈ Hi}",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1239",
+              "correct_answer": "A",
+              "explanation": "Let Hi ≤ G for i ∈ (1, ……n) Then the sets Hi satisfy the IDP Properties if (i) Hi < G for all i (ii) G = H1 …..Hn { } 1 n i i def h .....h : h H ∈ (iii) if Hi 1 i–1 i 1 n def H .....H .H ......H , + Then Hi { } iˆH 1 ∩ = {Note that if n=2, then 1 2 ˆH H = and H2 = H1}",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1240",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which is not the level transitive of conjugative classes :",
+            "options": [
+              {
+                "prompt": "Transitive",
+                "value": "A"
+              },
+              {
+                "prompt": "inverse transitive",
+                "value": "B"
+              },
+              {
+                "prompt": "double transitive",
+                "value": "C"
+              },
+              {
+                "prompt": "fold transitive",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1240",
+              "correct_answer": "B",
+              "explanation": "Conjugate Elements – If a, b ∈ G, Then b is said to be a conjugate of a in G if there exist an element x ∈ G such that b = x–1ax. Symbolically, we shall write a ∼ b for this and shall refer to this relation as conjugacy. Then b ∼ a ⇒ b = x–1ax for same x ∈ g. Theorem – Conjugacy is an equivalence relation in group. That is, relation of conjugacy is reflexivity, symmetric and transitivity.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1241",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A finite group G is a –– if and only if every element has order a power of p.",
+            "options": [
+              {
+                "prompt": "Dihedral group",
+                "value": "A"
+              },
+              {
+                "prompt": "cyclic group",
+                "value": "B"
+              },
+              {
+                "prompt": "p-group",
+                "value": "C"
+              },
+              {
+                "prompt": "conjugative group",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1241",
+              "correct_answer": "C",
+              "explanation": "A finite group G is a p-group and if its order (the number of its elements) is a power of p (prime). A p group is a group in which the order of every element is a power of p.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1242",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Every nontrivial finite p-group has ––– centre.",
+            "options": [
+              {
+                "prompt": "graphical",
+                "value": "A"
+              },
+              {
+                "prompt": "nodal",
+                "value": "B"
+              },
+              {
+                "prompt": "radial",
+                "value": "C"
+              },
+              {
+                "prompt": "non trivial",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1242",
+              "correct_answer": "D",
+              "explanation": "Every p-group has non- trivial centre. Proof– Suppose G is a p- group, say G = pn, n > 0 By the class equation- ( ) ( ) ( ) k G G G 2 G ....... z a z a = + + + . pn ( ) ( ) G G : z a . z a = =     ( ) ( ) G G : z a z a = = order of conjugacy class of Gi >1 pn = z ( ) 1 k r r G p .......... P + + + p z ( ) G , So z ( ) G ≠1 So z ( ) G >1 ⇒ Centre is non-trivial.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1243",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A–––– of a group G is a subgroup H such that αH = H for all automorphisms α of G.",
+            "options": [
+              {
+                "prompt": "Augmented subgroup",
+                "value": "A"
+              },
+              {
+                "prompt": "General subgroup",
+                "value": "B"
+              },
+              {
+                "prompt": "Characteristic subgroup",
+                "value": "C"
+              },
+              {
+                "prompt": "Normal subgroup",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1243",
+              "correct_answer": "C",
+              "explanation": "A subgroup H of a group G is called a characteristic subgroup if for every automorphism φ of G, one has α H ≤ H, Then write H the stronger It would be equivalent to require the stronger condition α H = H for every automorphism α of G, because α−1(H) ≤ H implies the reverse inclusion H ≤ α H",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1244",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which condition is not equivalent regarding the group theory?",
+            "options": [
+              {
+                "prompt": "a∈G for all x ∈ G",
+                "value": "A"
+              },
+              {
+                "prompt": "G1 α1 ∩ G2α1 is a singleton {d1}",
+                "value": "B"
+              },
+              {
+                "prompt": "G1α1 = G1",
+                "value": "C"
+              },
+              {
+                "prompt": "G2α1 is a singleton {d1} with d1α1 = d1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1244",
+              "correct_answer": "A",
+              "explanation": "Group theory in mathematics refers to the study of a set of different elements present in a group. A Group is said to be collection of several elements or objects which are consolidated together for performing some operation on them. Properties of Group Theory– Consider dot (⋅) to be on operation and G to be a group closer – if x and y are two different elements in group G then x.y also be part to group G. Associativity – x. (y.z) = (x.y)z Invertibiltiy – x.y = y.x Indentity – x.I = I.x",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1245",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which condition is not used satisfy an internal direct product:",
+            "options": [
+              {
+                "prompt": "G1α1 = G1",
+                "value": "A"
+              },
+              {
+                "prompt": "2 1",
+                "value": "B"
+              },
+              {
+                "prompt": "Every element of G1 commutes with every",
+                "value": "C"
+              },
+              {
+                "prompt": "G has a neutral identity element.",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1245",
+              "correct_answer": "A",
+              "explanation": "Internal Direct Product (IDP) Let H1, H2..., Hn be a distinct normal subgroup of G then G is said to be Internal direct product of H1, H2, ..., Hn G = H1. H2.H3...Hn Theorem– Let H1 and H2 be normal in G then G is an IDP of H1 & H2 if and only if i) G = H1.H2 ii) H1 ∩ H2 = {e} YEP DSSSB (TGT-Math) 2021 (13.09.2021) (Shift-II) Female 208 YCT DSSSB TRAINED GRADUATE TEACHER (TGT) 2021 MATH Solved Paper Section : Discipline-1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1246",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The points a, b, c, d taken in that order, in the complex plane are the vertices of a parallelogram if_?",
+            "options": [
+              {
+                "prompt": "a – b = b – c",
+                "value": "A"
+              },
+              {
+                "prompt": "a + c = b + d",
+                "value": "B"
+              },
+              {
+                "prompt": "a + b = c + d",
+                "value": "C"
+              },
+              {
+                "prompt": "a + b = b + c",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1246",
+              "correct_answer": "B",
+              "explanation": "Suppose complex numbers a, b, c and d are the vertices of quadrilateral ABCD in the complex plane. Now, the midpoint of diagonal AC \u0001\u0001\u0001\u0002 is a c 2 + and the midpoint of diagonal BD \u0001\u0001\u0001\u0002 is b d 2 + . Since, ABCD is a parallelogram. So diagonals of ABCD bisect each other and their midpoints of AC \u0001\u0001\u0001\u0002 and BD \u0001\u0001\u0001\u0002 are same. i.e. a c 2 + = b d 2 + ⇒ a + c = b + d Therefore option (b) is correct.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1247",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "When is a curve said to be symmetric about the pole or origin?",
+            "options": [
+              {
+                "prompt": "if curve changes when r is replaced by 2r",
+                "value": "A"
+              },
+              {
+                "prompt": "if curve doesn't change when r is replaced by",
+                "value": "B"
+              },
+              {
+                "prompt": "if curve doesn't change when r is replaced by",
+                "value": "C"
+              },
+              {
+                "prompt": "if curve changes when r is replaced by –r",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1247",
+              "correct_answer": "C",
+              "explanation": "The curve is symmetric about the pole if for every point (r, θ) on the graph, the point (r, π+θ) is also on the graph. Similarly, the equation r = f (θ) is unchanged when replacing r with –r or θ with π + θ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1248",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The surface area of a sphere of radius a is",
+            "options": [
+              {
+                "prompt": "4πa",
+                "value": "A"
+              },
+              {
+                "prompt": "4πa2",
+                "value": "B"
+              },
+              {
+                "prompt": "–4πa2",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1248",
+              "correct_answer": "B",
+              "explanation": "A sphere is surface of revolution and whose radius is R = a. If we revolve the semi circle y = 2 2 R x − i.e. y = 2 2 a x − about the x-axis, we get a sphere of radius R = a. The formula for the area of a surface of revolution about the x-axis is 2 b a dy 2 y 1 dx dx   π +     ∫ Given y = 2 2 a x − {where a = –a & b = a } ⇒ 2 2 dy x dx a x − = − Now, surface area = 2 a 2 2 a 2 2 x 2 a x 1 dx a x −     −   π − +     −       ∫ = ( ) 2 2 2 a 2 2 2 2 a a x x 2 a x dx a x −   − +   π −   −   ∫ = 2 a 2 2 a 2 2 a 2 a x dx a x −   π −     −   ∫ = a 0 4 a dx π∫ ( ) ( ) { } a a a 0 f x dx 2 f x dx − = ∫ ∫ ∵ = a 0 4 a 1 dx π ∫ = [ ] a 0 4 a x π = 4πa (a – 0) = 4 πa2 Therefore, surface area of sphere = 4 πa2 Thus, option (b) is correct.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1249",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the number of anti symmetric relations on set A having 2 elements?",
+            "options": [
+              {
+                "prompt": "16",
+                "value": "A"
+              },
+              {
+                "prompt": "10",
+                "value": "B"
+              },
+              {
+                "prompt": "14",
+                "value": "C"
+              },
+              {
+                "prompt": "12",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1249",
+              "correct_answer": "D",
+              "explanation": "Number of anti-symmetric relations on a set with n elements is ( ) n 1 n n 2 2 .3 − . Now if n = 2 then number of anti symmetric relations = (2 1)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1250",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which theorem states that \"Every bounded sequence has at least one limit point\"?",
+            "options": [
+              {
+                "prompt": "Bolzano Weierstrass theorem",
+                "value": "A"
+              },
+              {
+                "prompt": "Initial Value problem",
+                "value": "B"
+              },
+              {
+                "prompt": "Sandwich theorem",
+                "value": "C"
+              },
+              {
+                "prompt": "Representation theorem",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1250",
+              "correct_answer": "A",
+              "explanation": "Bolzano Weierstrass theorem:- Every bounded sequence has at least one limit point.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1251",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "What condition holds for perpendicularity of two vectors?",
+            "options": [
+              {
+                "prompt": "one of the two vectors is zero",
+                "value": "A"
+              },
+              {
+                "prompt": "their cross product is zero",
+                "value": "B"
+              },
+              {
+                "prompt": "the vectors are equal",
+                "value": "C"
+              },
+              {
+                "prompt": "their dot product is zero",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1251",
+              "correct_answer": "D",
+              "explanation": "Let A \u0001\u0002 and B \u0001\u0002 be two vectors then dot product of A \u0001\u0002 and B \u0001\u0002 is A.B A.Bcos = θ \u0001\u0002 \u0001\u0002 Now if they are perpendicular vectors to each other then θ = 90° So, A.B A.Bcos90 = ° \u0001\u0002 \u0001\u0002 {∵ cos90° = 0} = A.B × 0 A.B \u0001\u0002 \u0001\u0002 = 0 Thus, if two vectors are perpendicular to each other then their dot product is zero. Therefore, option (d) is correct answer.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1252",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following is not included in general method to draw a algebraic curve for tracing?",
+            "options": [
+              {
+                "prompt": "orthogonality",
+                "value": "A"
+              },
+              {
+                "prompt": "region",
+                "value": "B"
+              },
+              {
+                "prompt": "tangent to the curve",
+                "value": "C"
+              },
+              {
+                "prompt": "symmetry",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1252",
+              "correct_answer": "A",
+              "explanation": "General procedure for tracing the algebraic curve consists of the study of the following characteristics of the curve: • Symmetry • Region • Origin • Tangents • Maxima and Minima • Sign of the first derivative • Sign of the second derivative • Inflection Point But orthogonality is not characteristics for tracing the curve. So, option (a) is correct answer.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1253",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The congruence relation ax ≡ b (mod m) has a unique solution if?",
+            "options": [
+              {
+                "prompt": "gcd",
+                "value": "A"
+              },
+              {
+                "prompt": "gcd",
+                "value": "B"
+              },
+              {
+                "prompt": "gcd",
+                "value": "C"
+              },
+              {
+                "prompt": "gcd",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1253",
+              "correct_answer": "B",
+              "explanation": "We have that the linear congruence ax ≡ b (mod n) has a solution if and only if d|b, where d = gcd(a, n). If d|b, then it has it has d mutually incongruent solutions modulo n. This dictates if gcd(a, n) = 1, then the linear congruence ax ≡ b (mod m) has a unique solution modulo m.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1254",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The graph of a quadratic equation y = ax2 + bx + c is a parabola, when it will be upwards and downwards curve?",
+            "options": [
+              {
+                "prompt": "it will never be open downwards",
+                "value": "A"
+              },
+              {
+                "prompt": "it will never be open upwards",
+                "value": "B"
+              },
+              {
+                "prompt": "it will be open upwards if a<0 and",
+                "value": "C"
+              },
+              {
+                "prompt": "it will be open upwards if a>0 and",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1254",
+              "correct_answer": "D",
+              "explanation": "y = ax2 + bx + c Standard form y = f(x) = a(x – h)2 + k, a≠ 0 Therefore, if a > 0, then the parabola open upward else the parabola is downward.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1255",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The inverse of 3 modulo 7 is _____?",
+            "options": [
+              {
+                "prompt": "–2",
+                "value": "A"
+              },
+              {
+                "prompt": "–1",
+                "value": "B"
+              },
+              {
+                "prompt": "–3",
+                "value": "C"
+              },
+              {
+                "prompt": "–4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1255",
+              "correct_answer": "A",
+              "explanation": "Since (3,7) = 1, So an inverse of 3 modulo 7 exists. Thus 7 = 2 × 3 + 1 ⇒ 1 = 7 – 2×3 This shows that –2 and 1 are the Bezout coefficient of 3 and 7. We get that –2 is an inverse of 3 modulo 7.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1256",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following is correct for the function f (x) = x3 – 3x2 – 9x – 1?",
+            "options": [
+              {
+                "prompt": "it neither has local maximum not local",
+                "value": "A"
+              },
+              {
+                "prompt": "it has local maximum at –1 and local",
+                "value": "B"
+              },
+              {
+                "prompt": "it has local maximum at 3 but has no local",
+                "value": "C"
+              },
+              {
+                "prompt": "it has local maximum at 3 and local minimum",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1256",
+              "correct_answer": "B",
+              "explanation": "f(x) = x3 – 3x2 – 9x – 1 Now f'(x) = 3x2 – 6x – 9 & f\"(x) = 6x – 6 For maxima & minima f '(x) = 0 ⇒ 3x2 – 6x – 9 = 0 ⇒ 3 (x2 – 2x – 3) = 0 ⇒ x2 – 3x + x – 3 = 0 ⇒ (x – 3) (x + 1) = 0 ⇒ x = 3, –1 Put x = 3 in f \"(x) then f \"(3) = 6 × 3 – 6 = 12 (+) ve thus it has local minima at x = 3. And again, put x = –1 in f \"(x) then f \"(–1) = 6 (–1) – 6 = –12 (–) ve thus it has local maxima at x = –1 So, option (b) is correct answer. YEP DSSSB (TGT-Math) 2021 (13.9.2021, Shift-II-Female) 210 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1257",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "When the fluid (F) is incompressible then which of the following condition holds?",
+            "options": [
+              {
+                "prompt": "div",
+                "value": "A"
+              },
+              {
+                "prompt": "div",
+                "value": "B"
+              },
+              {
+                "prompt": "F = 0",
+                "value": "C"
+              },
+              {
+                "prompt": "Scalar product vanishes",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1257",
+              "correct_answer": "A",
+              "explanation": "If div (F) = 0, then we say that F and therefore the Fluid as well, is incompressible.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1258",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A real number sequence <fn> is said be oscillating finitely if?",
+            "options": [
+              {
+                "prompt": "it is not convergent",
+                "value": "A"
+              },
+              {
+                "prompt": "it is not bounded; it is not convergent; it is not",
+                "value": "B"
+              },
+              {
+                "prompt": "it is not divergent",
+                "value": "C"
+              },
+              {
+                "prompt": "it is not bounded",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1258",
+              "correct_answer": "A",
+              "explanation": "A sequence which is neither convergent nor- divergent is called oscillatory sequence. And, A bounded sequence <fn> which is not convergent is called finitely oscillatory sequence. Thus, we say the finite oscillatory sequence <fn> is not convergent. So, option (a) is correct answer. *According to commission option (c) is right answer.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1259",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If A = 2i + j + k, B = 4i + j – k find A.B?",
+            "options": [
+              {
+                "prompt": "10",
+                "value": "A"
+              },
+              {
+                "prompt": "8",
+                "value": "B"
+              },
+              {
+                "prompt": "11",
+                "value": "C"
+              },
+              {
+                "prompt": "9",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1259",
+              "correct_answer": "B",
+              "explanation": "A = 2i + j + K B = 4i + j – K ⇒ A.B. = (2i + j + K).(4i + j – k) = 2.4 + 1.1 + 1.(–1) = 8 + 1 – 1 = 8",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1260",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Euler function is:",
+            "options": [
+              {
+                "prompt": "onto but not one one",
+                "value": "A"
+              },
+              {
+                "prompt": "onto",
+                "value": "B"
+              },
+              {
+                "prompt": "neither one one nor onto",
+                "value": "C"
+              },
+              {
+                "prompt": "one one",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1260",
+              "correct_answer": "C",
+              "explanation": "For n ≥ 1, Euler's function φ(n) denotes the number of positive integers not exceeding n that are relatively prime to n. Since for the first few positive integers, we have φ(1) = 1, φ(2) = 1, φ(3) = 2, φ(4) = 2, φ(5) = 4, φ(6) = 2, φ(7) = 6,... which clearly shows non-injectivity (not one one) of Euler's function. Now if a prime p |n, then p – 1| φ(n). If φ (n) = 14, then since the divisors of 14 are {1, 2, 7, 14}, p ∈ {2, 3}, Thus, n = 2a3b and φ(n) is of the form 2j3k. However, there is no factor of 7 in 2j3k. This shows that there is no integer n with φ(n) = 14 proving the non surjectivity of Euler's function.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1261",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Identify the set in which supremum of set is equal to infimum of the set?",
+            "options": [
+              {
+                "prompt": "empty",
+                "value": "A"
+              },
+              {
+                "prompt": "{a, b}",
+                "value": "B"
+              },
+              {
+                "prompt": "{1, 2, 3}",
+                "value": "C"
+              },
+              {
+                "prompt": "{a}",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1261",
+              "correct_answer": "D",
+              "explanation": "Any set A in R in which supremum of set is equal to infimum must have only one element. So, options {d} is correct.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1262",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "To reduce the matrix to row echelon form the leading entry to each row must be?",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "–1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1262",
+              "correct_answer": "C",
+              "explanation": "The first number in the row (called a leading coefficient) is 1 i.e. option C is correct",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1263",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let A be an n × m matrix with each entry equal to +1, –1 or 0 such that every column has exactly one +1 and exactly one –1 then what can u say about rank of the matrix?",
+            "options": [
+              {
+                "prompt": "<= n – 1",
+                "value": "A"
+              },
+              {
+                "prompt": "rank",
+                "value": "B"
+              },
+              {
+                "prompt": "rank",
+                "value": "C"
+              },
+              {
+                "prompt": "rank",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1263",
+              "correct_answer": "D",
+              "explanation": "A typical matrix would look like n m 1 0 0 1 1 0 A 0 1 0 1 1 ×     −     =       − −   ⋯ ⋯ ⋮ ⋮ Clearly rank (A) ≤ n – 1.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1264",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If |A|=4, find the number of partitions of A?",
+            "options": [
+              {
+                "prompt": "15",
+                "value": "A"
+              },
+              {
+                "prompt": "20",
+                "value": "B"
+              },
+              {
+                "prompt": "10",
+                "value": "C"
+              },
+              {
+                "prompt": "25",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1264",
+              "correct_answer": "A",
+              "explanation": "Let S(n, K) denote the number of way to separate n-objects into K partitions. Now S(4, 1) = 1, S(4, 2) = 7, S(4, 3) = 6 and S (4, 4). Therefore, total number of ways = 1 + 7 + 6 + 1 = 15. YEP DSSSB (TGT-Math) 2021 (13.09.2021) (Shift-II) Female 211 YCT Section : Discipline-2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1265",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For what value of K does the function f(x, y) = 3xy, where (x, y) is not equal to (2, 3) and k whenever (x, y) = (2, 3)?",
+            "options": [
+              {
+                "prompt": "6",
+                "value": "A"
+              },
+              {
+                "prompt": "8",
+                "value": "B"
+              },
+              {
+                "prompt": "18",
+                "value": "C"
+              },
+              {
+                "prompt": "12",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1265",
+              "correct_answer": "C",
+              "explanation": "f (x,y) = 3 xy if (x,y) = (2,3) then f (x,y) = K K = 3.2.3 K = 18",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1266",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Logistic growth equation is given by?",
+            "options": [
+              {
+                "prompt": "rN/K",
+                "value": "A"
+              },
+              {
+                "prompt": "rN/",
+                "value": "B"
+              },
+              {
+                "prompt": "rN",
+                "value": "C"
+              },
+              {
+                "prompt": "rN",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1266",
+              "correct_answer": "C",
+              "explanation": "The logistic growth equation can be given as ( ) dN rN K N / K dt = − Where, r = intrinsic rate of growth, N = the number of organisms in population, and K = the carrying capacity. Remark:- The logistic growth curve (J- shaped curve) shows population growth where resources are limited. The carrying capacity is the maximum size of population of a species that a certain environment can support for an extended period of time.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1267",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the limit of the function f(n) = 1/n where n approaches infinity",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1267",
+              "correct_answer": "B",
+              "explanation": "1 f (n) n = ⇒ n n 1 lim f (n) lim n →∞ →∞ = = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1268",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Pick the true statement",
+            "options": [
+              {
+                "prompt": "Every convergent sequence is Cauchy sequence",
+                "value": "A"
+              },
+              {
+                "prompt": "Series always converges to a finite number",
+                "value": "B"
+              },
+              {
+                "prompt": "No Cauchy sequence is convergent",
+                "value": "C"
+              },
+              {
+                "prompt": "Every convergent sequence is not bounded",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1268",
+              "correct_answer": "A",
+              "explanation": "Every convergent sequence (an) is a bounded sequence since infinite many terms of the sequence (an) are in ε neighborhood l. Now since every real Cauchy sequence is bounded, Bolzano Weierstrass theorem dictates the existence of a convergent subsequence k n (a ) of the sequence (an). We have Let ε > 0. Because (an) is Cauchy, there exists N such that n m a a 2 ε − < whenever m, n ≥ N. Now, we also know that ( ) k n a → a, so choose a term in this subsequence, call it k n a , with nK ≥ N and k n a a 2 ε − < To see that nk has the desired property (for the original sequence (an)), observe that if n ≥ nk, then k k n n n n a a a a a a − = − + − ≤ k k n n n a a a a − + − < 2 2 ε ε + = ε",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1269",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the limit point of the sequence < 1 + 1/n > ?",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "–1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1269",
+              "correct_answer": "C",
+              "explanation": "1 1 n < + > Sequence = 1 1 1 1 {1 ,1 ,1 ,....,1 ,...} 1 2 3 n + + + + Clearly, the limit point is 1.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1270",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let A is a subset of R and f:A to R is given by f(x) = x2, then f is uniformly continuous if?",
+            "options": [
+              {
+                "prompt": "A is bounded subset of R",
+                "value": "A"
+              },
+              {
+                "prompt": "A is dense subset of R",
+                "value": "B"
+              },
+              {
+                "prompt": "A is unbounded",
+                "value": "C"
+              },
+              {
+                "prompt": "A is open",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1270",
+              "correct_answer": "A",
+              "explanation": "f : A →R defined by f (x) = x2 for every x ∈A is uniformly continuous if A is bounded.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1271",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Many scientists use mathematical model to convert data into ______?",
+            "options": [
+              {
+                "prompt": "model",
+                "value": "A"
+              },
+              {
+                "prompt": "raw form",
+                "value": "B"
+              },
+              {
+                "prompt": "passage",
+                "value": "C"
+              },
+              {
+                "prompt": "system",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1271",
+              "correct_answer": "A",
+              "explanation": "Mathematical modeling is a cyclical process in which real-life problems are translated into mathematical language, solved within a symbolic system, and the solutions tested back within the real-life system.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1272",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The infinite series –1, –3, –5, –7,... diverges to?",
+            "options": [
+              {
+                "prompt": "one",
+                "value": "A"
+              },
+              {
+                "prompt": "infinity",
+                "value": "B"
+              },
+              {
+                "prompt": "zero",
+                "value": "C"
+              },
+              {
+                "prompt": "negative of infinity",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1272",
+              "correct_answer": "D",
+              "explanation": "The infinite series –1, –3, –5, –7, ...,– ∞ diverges to negative infinity.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1273",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let A = {z∈C : |z| > 1},B = {z∈C :z is not equal to 0} then which is the false statement?",
+            "options": [
+              {
+                "prompt": "there is a non constant Analytic function f:A",
+                "value": "A"
+              },
+              {
+                "prompt": "there is a continuous onto function f:A → B",
+                "value": "B"
+              },
+              {
+                "prompt": "there is a non constant Analytic function from",
+                "value": "C"
+              },
+              {
+                "prompt": "there is a continuous function one to one",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1273",
+              "correct_answer": "C",
+              "explanation": "(a) There exists an inclusion map f from A to B which is non constant and analytic. (b & d) Now topologically both the sets A and B are connected, non compact, open and that the punctured plane is homeomorphic to the compliment of closed unit disc clearly establishes the existence of such one one and onto functions. (c) If there exists a non constant analytic function f from B to A then clearly the function has either pole or essential singularity at 0 which is a contradiction to function being non constant using Picard's and Casorati- Weierstrass theorem.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1274",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Function f(x, y) is said to be continuous at (a, b) whenever |f(x, y) – f(a, b) |< ε if?",
+            "options": [
+              {
+                "prompt": "no such function exists",
+                "value": "A"
+              },
+              {
+                "prompt": "|x – a| < δ, |y – b| < δ both",
+                "value": "B"
+              },
+              {
+                "prompt": "|x – a| < δ",
+                "value": "C"
+              },
+              {
+                "prompt": "|y – b| < δ",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1274",
+              "correct_answer": "B",
+              "explanation": "f(x, y) is continuous at (a, b) if for every ε > 0, there exists a positive number δ such that |f(x, y) – f(a, b)| < ε for all points (x, y) in the square a – δ ≤ x ≤ a + δ, b – δ ≤ y ≤ b + δ.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1275",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "(B(x, y) symmetric group of order n) is a closed subspace of (B(x, y) group of order n) for what value of n?",
+            "options": [
+              {
+                "prompt": "for n having zero value",
+                "value": "A"
+              },
+              {
+                "prompt": "n having infinite value",
+                "value": "B"
+              },
+              {
+                "prompt": "for n ≥ 2",
+                "value": "C"
+              },
+              {
+                "prompt": "for n = 1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1275",
+              "correct_answer": "C",
+              "explanation": "B(x, y) symmetric group of orders n is a closed subspace of B (x, y) group of order n if n ≥ 2.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1276",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "What will we do to make the given differential equation exact?",
+            "options": [
+              {
+                "prompt": "we bipolarate the same",
+                "value": "A"
+              },
+              {
+                "prompt": "we do integration on both sides",
+                "value": "B"
+              },
+              {
+                "prompt": "we divide it by its derivatives",
+                "value": "C"
+              },
+              {
+                "prompt": "we multiply it with integrating factor",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1276",
+              "correct_answer": "D",
+              "explanation": "To make exact differential equation we multiply it with integrating factor.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1277",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The solution of the initial value problem xy' – y = 0 with y",
+            "options": [
+              {
+                "prompt": "y = 2x – 1",
+                "value": "A"
+              },
+              {
+                "prompt": "y = 1/x",
+                "value": "B"
+              },
+              {
+                "prompt": "y = 1/",
+                "value": "C"
+              },
+              {
+                "prompt": "y = x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1277",
+              "correct_answer": "D",
+              "explanation": "x y' – y = 0 with (y (1)) = 1 ⇒ x = 1, y = 1 ⇒ y' 1 y x = ⇒ dy dx y x = ∫ ∫ ln (y) = ln (x) + C ln (1) = ln (1) + C {∵ ln (1) = 0} ⇒ C = 0 ln (y) = ln (x) ⇒ x = y",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1278",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Change in number of individuals in population over a period of time is called_____",
+            "options": [
+              {
+                "prompt": "logistic growth",
+                "value": "A"
+              },
+              {
+                "prompt": "sigmoid growth",
+                "value": "B"
+              },
+              {
+                "prompt": "exponential growth",
+                "value": "C"
+              },
+              {
+                "prompt": "population growth",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1278",
+              "correct_answer": "D",
+              "explanation": "Population growth = Change in number of individuals in population over a time period.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1279",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the limit of function f(x, y) = x + 2y as(x, y) → (1, 2)?",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "4",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1279",
+              "correct_answer": "D",
+              "explanation": "f (x, y) = x + 2y, (x, y) → (1, 2) ( ) ( ) ( ) limf x, y x,y 1,2 → = ( ) ( ) ( ) lim x 2y x,y 1,2 + → = 1 + 2.2 = 5",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1280",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If L be a limit point of the sequence < A > then there exists a subsequence < B > of the sequence < A > which converges to?",
+            "options": [
+              {
+                "prompt": "2L",
+                "value": "A"
+              },
+              {
+                "prompt": "4L",
+                "value": "B"
+              },
+              {
+                "prompt": "3L",
+                "value": "C"
+              },
+              {
+                "prompt": "L",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1280",
+              "correct_answer": "D",
+              "explanation": "We have that subsequences of a convergent sequence converge to the same limit as the original sequence. This dictates that if L be a limit point of the sequence < A > then there exists a subsequence < B > of the sequence < A > which converges to L.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1281",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which rule is used to calculate limits when the function reaches to indeterminate forms?",
+            "options": [
+              {
+                "prompt": "C and D rule",
+                "value": "A"
+              },
+              {
+                "prompt": "L' Hospital's rule",
+                "value": "B"
+              },
+              {
+                "prompt": "Leibnitz rule",
+                "value": "C"
+              },
+              {
+                "prompt": "Cinco rule",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1281",
+              "correct_answer": "B",
+              "explanation": "(L' Hospital's Rule). Assume f and g are con- tinuous functions defined on an interval containing a, and assume that f and g are differentiable on this YEP DSSSB (TGT-Math) 2021 (13.09.2021) (Shift-II) Female 213 YCT interval, with the possible exception of the point a. If f(a) = 0 or x a limf (x) → = ∞ and g(a) = 0 or x a limg(x) → = ∞, then x a x a f '(x) f (x) lim L implies lim L g'(x) g(x) → → = =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1282",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Local minimizer u of J is isolated if there exists p>0 and for u in S we have?",
+            "options": [
+              {
+                "prompt": "J",
+                "value": "A"
+              },
+              {
+                "prompt": "J",
+                "value": "B"
+              },
+              {
+                "prompt": "J",
+                "value": "C"
+              },
+              {
+                "prompt": "J",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1282",
+              "correct_answer": "A",
+              "explanation": "u of J is an isolated local minimizer if there is a neighborhood v of J such that u is the only local minimizer in J i.e. J(u) < J (v)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1283",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The infinite series ∑cos (1/n) where n goes from 1 to infinity is?",
+            "options": [
+              {
+                "prompt": "oscillates finitely",
+                "value": "A"
+              },
+              {
+                "prompt": "divergent",
+                "value": "B"
+              },
+              {
+                "prompt": "finite",
+                "value": "C"
+              },
+              {
+                "prompt": "convergent",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1283",
+              "correct_answer": "B",
+              "explanation": "Infinite Series n 1 1 cos( ) n ∞ =∑ = n 1 lim cos( ) n →∞ as n → ∞ then 1 0 n → = cos (0) = 1 ≠ 0 So, the series diverges. Section : Discipline-3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1284",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the value of f(x, y)=8x + 5y – 7 at (x, y) = (1, 2)",
+            "options": [
+              {
+                "prompt": "11",
+                "value": "A"
+              },
+              {
+                "prompt": "13",
+                "value": "B"
+              },
+              {
+                "prompt": "12",
+                "value": "C"
+              },
+              {
+                "prompt": "14",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1284",
+              "correct_answer": "A",
+              "explanation": "f (x,y) = 8x + 5y – 7 at (x, y) = (1, 2) f (1,2) = 8 × 1 + 5 × 2 – 7 = 8 + 10 – 7 = 11",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1285",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The divergence of a vector field A is always equal to zero if the vector field A can be expressed as?",
+            "options": [
+              {
+                "prompt": "the divergence of vector field",
+                "value": "A"
+              },
+              {
+                "prompt": "the curl of any vector field",
+                "value": "B"
+              },
+              {
+                "prompt": "divergence of any scalar field",
+                "value": "C"
+              },
+              {
+                "prompt": "gradient of any scalar field",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1285",
+              "correct_answer": "B",
+              "explanation": "Let 1 2 3 ˆ ˆ ˆ A a i a j a k = + + \u0002 Then, curl 1 2 3 ˆ ˆ ˆ i j k A A x y z a a a ∂ ∂ ∂ = ∇× = ∂ ∂ ∂ \u0002 \u0002 3 2 1 3 2 1 ˆ ˆ ˆ i a a j a a k a a y z z z x y     ∂ ∂ ∂ ∂ ∂ ∂   = − + − + −       ∂ ∂ ∂ ∂ ∂ ∂       Now div curl A \u0002 = 3 2 ˆ ˆ ˆ ˆ i j k . i a a x y z y z       ∂ ∂ ∂ ∂ ∂ + + −       ∂ ∂ ∂ ∂ ∂       1 3 2 1 ˆ ˆ j a a k a a z x x y   ∂ ∂ ∂ ∂   + − + −     ∂ ∂ ∂ ∂     3 1 2 1 3 2 a a a a a a x y z y z x z x y ∂     ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂   = − + − + −       ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂ ∂       = 0 Therefore, if divergence of a vector field vanishes then the vector field can be expressed as curl of any vector field.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1286",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Evaluate the double integral xsin(x+y)dxdy over R= [0,π:0,π/2]?",
+            "options": [
+              {
+                "prompt": "π – 2",
+                "value": "A"
+              },
+              {
+                "prompt": "– 2π",
+                "value": "B"
+              },
+              {
+                "prompt": "π + 2",
+                "value": "C"
+              },
+              {
+                "prompt": "2π",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1286",
+              "correct_answer": "A",
+              "explanation": "/ 2 0 0 xsin(x y)dxdy π π + ∫∫ x = 0, x = π y = 0, y = 2 π = / 2 0 0 [ xcos(x y)] dx π π − + ∫ = 0 [ xcos(x ) xcos(x 0)]dx 2 π π − + + + ∫ = 0 [xsin x xcosx]dx π + ∫ = 0 x(sin x cosx)dx π + ∫ = 0 x( cosx sin x) 1.( cosx sin x)dx π   − + − − +   ∫ = [ ]0 x( cos x sin x) ( sin x cos x) π − + −− − = [ ] ( cos sin ) (sin cos ) 0 sin0 cos0 π − π+ π + π+ π −− − = π (–(–1)+0) + (0+(–1) –1) = π – 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1287",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For the function to be Riemann integrable YEP DSSSB (TGT-Math) 2021 (13.9.2021, Shift-II-Female) 214 YCT what will be the condition in terms of affecting the power series?",
+            "options": [
+              {
+                "prompt": "lower integral is less then upper integral",
+                "value": "A"
+              },
+              {
+                "prompt": "upper integral does not exist",
+                "value": "B"
+              },
+              {
+                "prompt": "lower integral is same as upper integral",
+                "value": "C"
+              },
+              {
+                "prompt": "lower integral does not exist",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1287",
+              "correct_answer": "C",
+              "explanation": "For the function to be Riemann integrable, lower integral must be same as upper integral",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1288",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the interior of {1, 2, 3, 4}?",
+            "options": [
+              {
+                "prompt": "{3}",
+                "value": "A"
+              },
+              {
+                "prompt": "{1}",
+                "value": "B"
+              },
+              {
+                "prompt": "{2}",
+                "value": "C"
+              },
+              {
+                "prompt": "empty",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1288",
+              "correct_answer": "D",
+              "explanation": "Set (E) ={ } 1,2,3,4, Let c > 0 , c R ∈ take any x E ∈ Consider the interval ( ) x c,x c − + . Since that interval contains rational and irrational number then ( ) x c,x c E − + ⊄ . So x is not interior point of E, therefore no interior points in E and set of interior points of E is the empty set φ.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1289",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If R is the position vector, then divR is equal to",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1289",
+              "correct_answer": "B",
+              "explanation": "R is the Position Vector R = xi + yj + zk div R = ( ) i j k xi yj zk x y z ∂ ∂ ∂   + + + +   ∂ ∂ ∂   = x y z x y z ∂ ∂ ∂ + + ∂ ∂ ∂ = 1 + 1 + 1 ⇒ div R = 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1290",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The limit points of < 1,0,2,1,0,2,1,0,2...> Is/are:",
+            "options": [
+              {
+                "prompt": "2 only",
+                "value": "A"
+              },
+              {
+                "prompt": "0 only",
+                "value": "B"
+              },
+              {
+                "prompt": "1 only",
+                "value": "C"
+              },
+              {
+                "prompt": "1,0,2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1290",
+              "correct_answer": "D",
+              "explanation": "We have < 1, 0, 2, 1, 0, 2, 1, 0, 2 ...>. Clearly 1, 0 and 2 are limit points.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1291",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The line integrals can be converted to surface integral using ...... in multiple connected domain?",
+            "options": [
+              {
+                "prompt": "Riemann equation",
+                "value": "A"
+              },
+              {
+                "prompt": "Sandwich theorem",
+                "value": "B"
+              },
+              {
+                "prompt": "Green's theorem",
+                "value": "C"
+              },
+              {
+                "prompt": "Baire's Sandwich theorem",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1291",
+              "correct_answer": "C",
+              "explanation": "Let R be a closed bounded region in the xy- plane whose boundary C consists of finitely many smooth curves. Let F1(x, y) and F2(x, y) be functions that are continuous and have continuous partial derivatives ∂F1/∂y and ∂F2/∂x everywhere in some domain containing R. Then ( ) 2 1 1 2 R C F F dxdy Fdx F dy x y   ∂ ∂ − = +   ∂ ∂   ∫∫ ∫\u0006",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1292",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In which case improper integral becomes equal to Riemann integrable?",
+            "options": [
+              {
+                "prompt": "as a special case of Lebesgue integral",
+                "value": "A"
+              },
+              {
+                "prompt": "sometimes differentiable",
+                "value": "B"
+              },
+              {
+                "prompt": "never possible",
+                "value": "C"
+              },
+              {
+                "prompt": "occurs somehow",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1292",
+              "correct_answer": "A",
+              "explanation": "In case of Lebesgue integral improper integral becomes equal to Riemann integral.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1293",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following function contains odd terms in the expansion of Taylor's series?",
+            "options": [
+              {
+                "prompt": "cos",
+                "value": "A"
+              },
+              {
+                "prompt": "sin",
+                "value": "B"
+              },
+              {
+                "prompt": "sin",
+                "value": "C"
+              },
+              {
+                "prompt": "cos",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1293",
+              "correct_answer": "C",
+              "explanation": "Since we know that, sin x = 3 5 x x x 3! 5! − + − ...(i) Replace x by x3 in equation (i) then sin (x3) = 9 15 3 x x x ... 3! 5! − + − Here, series contains all odd terms.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1294",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A function is said to be Riemann integrable of over [a, b] s, t any number L lying between L (f, P) and U(f, P) for ε > 0 s. t?",
+            "options": [
+              {
+                "prompt": "contractive",
+                "value": "A"
+              },
+              {
+                "prompt": "|U",
+                "value": "B"
+              },
+              {
+                "prompt": "|U",
+                "value": "C"
+              },
+              {
+                "prompt": "|L – L",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1294",
+              "correct_answer": "C",
+              "explanation": "A function (f) is said to be Riemann integrable over [a, b] if for every ε > 0 we have |U (f, P) – L| < ε and |L – L(f, P)| < ε",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1295",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find radius of convergence of ( ) ∞ ∑ (n+1) n n=0 x – 7 n ?",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "infinity",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1295",
+              "correct_answer": "D",
+              "explanation": "Radius of convergence = n 1 n n a lim a + →∞ n nlim a →∞ = n 1 n n 0 (x 7) n + ∞ = − ∑ & ( ) ( ) ( )( ) (n+2) n+1 n+1 n n=0 n – 7 lim a = n +1 ∞ →∞ ∑ = n 2 n n 1 n 1 n (x 7) n lim . (n 1) (x 7) + + + →∞ − + − = n n 2 n 1 n n 1 n 1 n lim(x 7) . 1 n (1 ) n + −− →∞ + + − + = n n n n 1 n lim(x 7) 1 n .n(1 ) n →∞ + − + YEP DSSSB (TGT-Math) 2021 (13.09.2021) (Shift-II) Female 215 YCT = n n 1 1 lim(x 7). 1 n(1 ) n →∞ + − + = ( ) ( ) 1 x 7 . x 7 0 − = − × ∞ = 0 < 1 i.e. Radius of convergence (R)= ∞",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1296",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The necessary and sufficient condition for Taylor's theorem is that?",
+            "options": [
+              {
+                "prompt": "f is continuous",
+                "value": "A"
+              },
+              {
+                "prompt": "f should exist",
+                "value": "B"
+              },
+              {
+                "prompt": "f has higher derivatives",
+                "value": "C"
+              },
+              {
+                "prompt": "f is not differentiable",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1296",
+              "correct_answer": "C",
+              "explanation": "The necessary and sufficient condition for Taylor's theoren ⇒ Any function which is infinitely differentiable at a point a has a Taylor Series at that point.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1297",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The area bounded by the curve y = 2√x and y = – x between x = 1 and x = 4 is given by?",
+            "options": [
+              {
+                "prompt": "25",
+                "value": "A"
+              },
+              {
+                "prompt": "101/6",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1297",
+              "correct_answer": "B",
+              "explanation": "y 2 x = y = –x, x =1 and x = 4 Area = 4 1 (2 x ( x))dx −− ∫ = 4 1 (2 x x)dx + ∫ = 4 1 1 2 2 1 2.x x 1 2 1 2 +     +   +     = 3 2 2 2 2.2 4 2.1 1 3 3 2 2 2 2 × + − − = 32 4 1 8 3 3 2 + − − = 101 6",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1298",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Function f:[a, b] → R,P and Q are partition of [a, b] s.t. P is contained in Q then?",
+            "options": [
+              {
+                "prompt": "L",
+                "value": "A"
+              },
+              {
+                "prompt": "L",
+                "value": "B"
+              },
+              {
+                "prompt": "one is true other is false",
+                "value": "C"
+              },
+              {
+                "prompt": "both never hold",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1298",
+              "correct_answer": "A",
+              "explanation": "Let f : [a,b]→ R, P, Q are partition of [a,b] s.t . P ⊆ Q then (i) L (P, f) ≤ L (Q, f) (ii) U (P, f) ≥ L (Q , f)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1299",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If p and q are positive number and p2 + q2 = 1 then maximum value of p + q is?",
+            "options": [
+              {
+                "prompt": "14",
+                "value": "A"
+              },
+              {
+                "prompt": "√3",
+                "value": "B"
+              },
+              {
+                "prompt": "√2",
+                "value": "C"
+              },
+              {
+                "prompt": "infinity",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1299",
+              "correct_answer": "C",
+              "explanation": "p2 + q2 = 1 Given that (p+q)max = 1/ 2 2 2 p q p q 2 2   + +  ≤         2 2 1/ 2 2 p q .(p q ) 2 + ≤ + {Put p2 + q2 = 1} 1/ 2 2(1) ≤ p + q ≤ 2 (p + q)max = 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1300",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The set of limit points of a sequence is:",
+            "options": [
+              {
+                "prompt": "open",
+                "value": "A"
+              },
+              {
+                "prompt": "closed set",
+                "value": "B"
+              },
+              {
+                "prompt": "neither open nor closed",
+                "value": "C"
+              },
+              {
+                "prompt": "both open and closed",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1300",
+              "correct_answer": "B",
+              "explanation": "The set of Limit points of sequence is closed set. Let E' be the set of all Limit Points of a Set E. Prove that E' is closed. If x is a Limit Point of E', then every neighborhood of x contains Some y ∈ E', and every neighborhood of y contains some z ∈ E. Therefore every neighborhood of x contains some z ∈ E, and so x is a Limit point of E. Then x ∈ E', So E' is closed.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

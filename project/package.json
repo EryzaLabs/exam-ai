@@ -5,6 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "expo start",
+    "scan:tgt-pgt": "python3 scripts/scan_and_process_tgt_pgt.py",
+    "process:tgt-pgt": "python3 scripts/process_tgt_pgt.py",
     "make-transparent": "node scripts/make-logo-transparent.js",
     "prebuild:web": "node scripts/sync-logo.js",
     "build:web": "node scripts/sync-logo.js && expo export --platform web && node scripts/post-build-web.js",

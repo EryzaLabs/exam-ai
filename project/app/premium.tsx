@@ -50,7 +50,7 @@ import { initiatePayment } from '@/utils/cashfree';
 import DesktopDashboard from '@/components/DesktopDashboard';
 
 export interface PlanTier {
-  id: 'daily' | 'weekly' | 'monthly' | 'lifetime';
+  id: 'daily' | 'weekly' | 'monthly' | 'lifetime' | 'tgt-series' | 'pgt-series';
   name: string;
   durationLabel: string;
   periodDays: number;
@@ -62,6 +62,7 @@ export interface PlanTier {
   description: string;
 }
 
+// Dynamic Plan Tiers
 export const PLANS: PlanTier[] = [
   {
     id: 'daily',
@@ -73,6 +74,7 @@ export const PLANS: PlanTier[] = [
     badge: 'Quick Revision',
     description: '1 day full access to all mock tests & AI analytics',
   },
+
   {
     id: 'weekly',
     name: 'Weekly Pass',
@@ -83,6 +85,7 @@ export const PLANS: PlanTier[] = [
     badge: 'Sprint Week',
     description: '7 days complete access to all full mocks & topic tests',
   },
+
   {
     id: 'monthly',
     name: 'Monthly Pass',
@@ -94,17 +97,40 @@ export const PLANS: PlanTier[] = [
     popular: true,
     description: '30 days intensive preparation with full explanations',
   },
+
   {
     id: 'lifetime',
-    name: 'Lifetime Pass',
+    name: 'Master All-Access Lifetime Pass',
     durationLabel: 'Forever',
     periodDays: 36500,
     price: 499,
     originalPrice: 1499,
-    badge: 'Best Value',
+    badge: 'UNLIMITED EVERYTHING',
     bestValue: true,
-    description: 'Unlimited lifetime access to all tests & new daily additions',
+    description: 'Lifetime access to EVERYTHING: UPSC Principal, UP Principal, all TGT Subjects, all PGT Subjects, and Custom AI Tests',
   },
+  {
+    id: 'tgt-series',
+    name: 'TGT Test Series (All Subjects)',
+    durationLabel: '2026 Cycle',
+    periodDays: 365,
+    price: 199,
+    originalPrice: 999,
+    badge: '80% OFF',
+    popular: true,
+    description: 'Complete access to TGT Solved PYQs & Mocks: Hindi, Maths, Science, Social Science, English & Sanskrit',
+  },
+  {
+    id: 'pgt-series',
+    name: 'PGT Test Series (All Subjects)',
+    durationLabel: '2026 Cycle',
+    periodDays: 365,
+    price: 199,
+    originalPrice: 999,
+    badge: '80% OFF',
+    description: 'Complete access to PGT Solved PYQs & Mocks: Hindi, Maths, Physics, Chemistry, Biology, History & Economics',
+  },
+
 ];
 
 const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000/api';
@@ -164,7 +190,7 @@ export default function PremiumScreen() {
     }
   };
 
-  const handleSelectPlan = (planId: 'daily' | 'weekly' | 'monthly' | 'lifetime') => {
+  const handleSelectPlan = (planId: 'daily' | 'weekly' | 'monthly' | 'lifetime' | 'tgt-series' | 'pgt-series') => {
     setSelectedPlanId(planId);
     const plan = PLANS.find((p) => p.id === planId) || PLANS[3];
     if (appliedCoupon?.code) {
@@ -218,7 +244,8 @@ export default function PremiumScreen() {
 
   useEffect(() => {
     checkSubscriptionStatus();
-  }, [user]);
+  },
+ [user]);
 
   const checkSubscriptionStatus = async () => {
     setCheckingStatus(true);
@@ -336,6 +363,7 @@ export default function PremiumScreen() {
           console.error('Error in subscription callback:', e);
         }
       },
+
       (error) => {
         setLoading(false);
         if (error !== 'Payment cancelled by user') {
@@ -347,6 +375,7 @@ export default function PremiumScreen() {
           }
         }
       },
+
       {
         userName: user?.displayName || (user?.email ? user.email.split('@')[0] : 'Aspirant'),
         userEmail: user?.email || '',
@@ -373,6 +402,7 @@ export default function PremiumScreen() {
         'Correct Answer: (A). Rule 3(2)(i) of the CCS (Conduct) Rules 1964 explicitly mandates: "Every Government servant holding a supervisory post shall take all possible steps to ensure the integrity and devotion to duty of all government servants for the time being under his control and authority."',
       topic: 'Service Rules & CCS Conduct Rules 1964',
     },
+
     hi: {
       question:
         'केंद्रीय सिविल सेवा (आचरण) नियम 1964 के नियम 3(1) के अंतर्गत, एक शैक्षणिक संस्थान में पर्यवेक्षी या प्रशासनिक प्रभार संभालने वाले सरकारी कर्मचारी के लिए निम्नलिखित में से क्या अनिवार्य है?',
@@ -387,6 +417,7 @@ export default function PremiumScreen() {
         'सही उत्तर: (A)। सीसीएस (आचरण) नियम 1964 के नियम 3(2)(i) में स्पष्ट रूप से प्रावधान है कि पर्यवेक्षी पद धारण करने वाले प्रत्येक सरकारी कर्मचारी का यह कर्तव्य है कि वह अपने नियंत्रण में कार्यरत सभी कर्मचारियों की सत्यनिष्ठा और कर्तव्यनिष्ठा सुनिश्चित करने हेतु सभी आवश्यक कदम उठाए।',
       topic: 'सेवा नियम और सीसीएस आचरण नियम 1964',
     },
+
   };
 
   const syllabusModules = [
@@ -398,6 +429,7 @@ export default function PremiumScreen() {
       iconBg: '#DBEAFE',
       iconColor: '#2563EB',
     },
+
     {
       title: 'Service & Conduct Rules (Swamy’s Handbook)',
       tests: '12 Topic Tests',
@@ -406,6 +438,7 @@ export default function PremiumScreen() {
       iconBg: '#D1FAE5',
       iconColor: '#059669',
     },
+
     {
       title: 'Financial Administration & Accounts',
       tests: '10 Topic Tests',
@@ -414,6 +447,7 @@ export default function PremiumScreen() {
       iconBg: '#FFEDD5',
       iconColor: '#EA580C',
     },
+
     {
       title: 'Child Rights, Protection & Acts',
       tests: '8 Topic Tests',
@@ -422,6 +456,7 @@ export default function PremiumScreen() {
       iconBg: '#EDE9FE',
       iconColor: '#7C3AED',
     },
+
     {
       title: 'General Studies & Government Initiatives',
       tests: '10 Full Mocks',
@@ -430,6 +465,7 @@ export default function PremiumScreen() {
       iconBg: '#FCE7F3',
       iconColor: '#DB2777',
     },
+
   ];
 
   const faqs = [
@@ -437,34 +473,42 @@ export default function PremiumScreen() {
       q: 'Do you add new tests every day?',
       a: 'Yes! We actively research, create, and upload new mock tests and topic-wise practice papers every single day. As a Premium Pass holder, every newly released test is added to your account immediately with zero extra cost.',
     },
+
     {
       q: 'How does this compare to apps like Testbook or Adda247?',
       a: 'Generic test apps focus on mass exams (SSC, Railways, Clerk) with recycled question banks. Our platform is 100% purpose-built for the UPSC & UP Principal exams. All questions are crafted at the gazetted officer level with verified Swamy’s Handbook service rule citations (CCS Rules, GFR 2017, POCSO, RTE, FR-SR) and fresh tests built every day.',
     },
+
     {
       q: 'How long is the Premium subscription valid?',
       a: 'We offer 4 flexible passes tailored to your needs: Daily Pass (₹9 for 24 hours), Weekly Pass (₹49 for 7 days), Monthly Pass (₹199 for 30 days), and Lifetime Pass (₹499 for unlimited lifetime access through the entire 2026 UPSC exam cycle and beyond). All passes are one-time payments with zero auto-debit renewals.',
     },
+
     {
       q: 'Are all test papers available in both Hindi & English?',
       a: 'Yes! Every single question, multiple-choice option, and detailed pedagogical rationale is 100% bilingual. You can switch between English and Hindi (A/अ) with a single tap during the live exam and while reviewing solutions.',
     },
+
     {
       q: 'Can I re-attempt mock tests?',
       a: 'Yes, unlimited re-attempts are included. The platform tracks your score progression, accuracy trends, and speed improvements across attempts without erasing your past test history.',
     },
+
     {
       q: 'Is this test series relevant for both UPSC and UP Principal exams?',
       a: 'Yes! The syllabus for UPSC Principal, the newly released UP Principal (UPPSC) vacancy, and KVS/NVS Principal is over 90% overlapping in Educational Administration, Service Rules (CCS), Financial Management (GFR), NEP 2020, and Child Protection Laws.',
     },
+
     {
       q: 'Can I access the tests on both Mobile and Laptop/Desktop?',
       a: 'Yes! Your account seamlessly syncs between your smartphone, tablet, and desktop browser. You can take tests on your laptop for real exam-day simulation and revise solutions on your mobile on the go.',
     },
+
     {
       q: 'What payment methods are supported?',
       a: 'We support all secure payment methods via Cashfree: UPI (Google Pay, PhonePe, Paytm, BHIM, CRED), Credit/Debit Cards (Visa, Mastercard, RuPay), NetBanking from 50+ banks, and Wallets.',
     },
+
   ];
 
   const activeQuestion = sampleQuestion[sampleLang];
@@ -1623,21 +1667,25 @@ const styles = StyleSheet.create({
     padding: 14,
     marginBottom: 16,
   },
+
   couponHeader: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
     marginBottom: 10,
   },
+
   couponHeaderText: {
     fontSize: 13,
     fontWeight: '600',
     color: '#475569',
   },
+
   couponInputRow: {
     flexDirection: 'row',
     gap: 8,
   },
+
   couponInput: {
     flex: 1,
     height: 42,
@@ -1651,6 +1699,7 @@ const styles = StyleSheet.create({
     color: '#0F172A',
     letterSpacing: 0.5,
   },
+
   applyCouponBtn: {
     backgroundColor: '#2563EB',
     borderRadius: 10,
@@ -1658,20 +1707,24 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
   applyCouponBtnDisabled: {
     backgroundColor: '#94A3B8',
   },
+
   applyCouponBtnText: {
     color: '#FFFFFF',
     fontWeight: '700',
     fontSize: 13,
   },
+
   couponErrorText: {
     fontSize: 12,
     color: '#DC2626',
     marginTop: 6,
     fontWeight: '500',
   },
+
   appliedCouponBadge: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1682,38 +1735,45 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
   },
+
   appliedCouponCode: {
     fontSize: 14,
     fontWeight: '700',
     color: '#15803D',
     letterSpacing: 0.5,
   },
+
   appliedPill: {
     backgroundColor: '#DCFCE7',
     paddingHorizontal: 6,
     paddingVertical: 2,
     borderRadius: 4,
   },
+
   appliedPillText: {
     fontSize: 10,
     fontWeight: '800',
     color: '#16A34A',
   },
+
   appliedCouponDesc: {
     fontSize: 12,
     color: '#166534',
     marginTop: 2,
     fontWeight: '500',
   },
+
   removeCouponBtn: {
     paddingHorizontal: 10,
     paddingVertical: 4,
   },
+
   removeCouponText: {
     fontSize: 12,
     fontWeight: '600',
     color: '#DC2626',
   },
+
 
   pageWrapper: {
     padding: 16,
@@ -1721,10 +1781,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: '100%',
   },
+
   mobileSafeArea: {
     flex: 1,
     backgroundColor: '#3B82F6',
   },
+
   mobileTopBar: {
     height: 52,
     flexDirection: 'row',
@@ -1733,6 +1795,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     backgroundColor: '#3B82F6',
   },
+
   mobileBackBtn: {
     width: 36,
     height: 36,
@@ -1741,38 +1804,46 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
   mobileHeaderCenter: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
   },
+
   mobileHeaderTitle: {
     color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '800',
   },
+
   mobileHelpBtn: {
     paddingHorizontal: 8,
     paddingVertical: 4,
   },
+
   mobileHelpText: {
     color: 'rgba(255, 255, 255, 0.85)',
     fontSize: 13,
     fontWeight: '600',
   },
+
   mobileScrollView: {
     flex: 1,
     backgroundColor: '#F8FAFC',
   },
+
   heroBanner: {
     borderRadius: 24,
     padding: 24,
     marginBottom: 24,
     overflow: 'hidden',
   },
+
   heroContent: {
     zIndex: 2,
   },
+
   heroTagsRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1780,6 +1851,7 @@ const styles = StyleSheet.create({
     gap: 8,
     marginBottom: 12,
   },
+
   heroTagBadge: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1789,12 +1861,14 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     borderRadius: 12,
   },
+
   heroTagText: {
     color: '#FFFFFF',
     fontSize: 11,
     fontWeight: '800',
     letterSpacing: 0.5,
   },
+
   heroVerifiedBadge: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1804,11 +1878,13 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     borderRadius: 12,
   },
+
   heroVerifiedText: {
     color: '#34D399',
     fontSize: 11,
     fontWeight: '800',
   },
+
   heroTitle: {
     fontSize: 26,
     fontWeight: '900',
@@ -1816,6 +1892,7 @@ const styles = StyleSheet.create({
     lineHeight: 34,
     marginBottom: 8,
   },
+
   heroDesc: {
     fontSize: 14,
     color: 'rgba(255, 255, 255, 0.9)',
@@ -1823,11 +1900,13 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     maxWidth: 720,
   },
+
   heroMetricsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 12,
   },
+
   heroMetricItem: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1843,6 +1922,7 @@ const styles = StyleSheet.create({
     elevation: 2,
     minWidth: 130,
   },
+
   statIconBox: {
     width: 36,
     height: 36,
@@ -1850,16 +1930,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
   metricVal: {
     fontSize: 15,
     fontWeight: '800',
     color: '#0F172A',
   },
+
   metricLbl: {
     fontSize: 11,
     color: '#64748B',
     fontWeight: '600',
   },
+
   activePlanCard: {
     backgroundColor: '#FFFFFF',
     borderRadius: 20,
@@ -1873,10 +1956,12 @@ const styles = StyleSheet.create({
     shadowRadius: 12,
     elevation: 3,
   },
+
   activePlanHeader: {
     flexDirection: 'row',
     alignItems: 'center',
   },
+
   activeCheckCircle: {
     width: 48,
     height: 48,
@@ -1885,34 +1970,40 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
   activePlanTitle: {
     fontSize: 18,
     fontWeight: '800',
     color: '#0F172A',
     marginBottom: 2,
   },
+
   activePlanSub: {
     fontSize: 13,
     color: '#475569',
     lineHeight: 18,
   },
+
   activePlanActions: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 12,
     marginTop: 18,
   },
+
   exploreTestsBtn: {
     backgroundColor: '#3B82F6',
     paddingHorizontal: 18,
     paddingVertical: 10,
     borderRadius: 12,
   },
+
   exploreTestsBtnText: {
     color: '#FFFFFF',
     fontSize: 13,
     fontWeight: '700',
   },
+
   pricingSectionCard: {
     backgroundColor: '#FFFFFF',
     borderRadius: 24,
@@ -1926,20 +2017,25 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     elevation: 2,
   },
+
   pricingLayout: {
     gap: 24,
   },
+
   pricingLayoutDesktop: {
     flexDirection: 'row',
     gap: 36,
   },
+
   pricingLeftCol: {
     flex: 1.2,
   },
+
   pricingRightCol: {
     flex: 0.9,
     justifyContent: 'center',
   },
+
   launchOfferTag: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1951,38 +2047,45 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     marginBottom: 10,
   },
+
   launchOfferTagText: {
     color: '#B45309',
     fontSize: 11,
     fontWeight: '800',
   },
+
   pricingPlanName: {
     fontSize: 22,
     fontWeight: '900',
     color: '#0F172A',
     marginBottom: 4,
   },
+
   pricingPlanSub: {
     fontSize: 13,
     color: '#64748B',
     lineHeight: 18,
     marginBottom: 16,
   },
+
   anchorPriceBlock: {
     alignItems: 'center',
     marginBottom: 16,
   },
+
   anchorPriceRow: {
     flexDirection: 'row',
     alignItems: 'flex-start',
     justifyContent: 'center',
   },
+
   anchorCurrency: {
     fontSize: 28,
     fontWeight: '800',
     color: '#0F172A',
     marginTop: 4,
   },
+
   anchorAmount: {
     fontSize: 54,
     fontWeight: '900',
@@ -1990,6 +2093,7 @@ const styles = StyleSheet.create({
     lineHeight: 58,
     letterSpacing: -1,
   },
+
   anchorDiscountRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1997,12 +2101,14 @@ const styles = StyleSheet.create({
     marginTop: 4,
     marginBottom: 6,
   },
+
   anchorOriginalPrice: {
     fontSize: 18,
     color: '#94A3B8',
     textDecorationLine: 'line-through',
     fontWeight: '700',
   },
+
   anchorSavePill: {
     backgroundColor: '#DCFCE7',
     paddingHorizontal: 8,
@@ -2011,35 +2117,42 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#BBF7D0',
   },
+
   anchorSavePillText: {
     color: '#15803D',
     fontSize: 12,
     fontWeight: '800',
   },
+
   anchorTermsText: {
     fontSize: 12,
     color: '#64748B',
     fontWeight: '600',
     marginTop: 2,
   },
+
   checklist: {
     gap: 10,
   },
+
   checkItem: {
     flexDirection: 'row',
     alignItems: 'flex-start',
     gap: 10,
   },
+
   checkText: {
     flex: 1,
     fontSize: 13,
     color: '#334155',
     lineHeight: 18,
   },
+
   boldText: {
     fontWeight: '800',
     color: '#0F172A',
   },
+
   checkoutActionBox: {
     backgroundColor: '#F8FAFC',
     borderRadius: 20,
@@ -2048,6 +2161,7 @@ const styles = StyleSheet.create({
     borderColor: '#E2E8F0',
     alignItems: 'center',
   },
+
   trustShieldPill: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -2060,15 +2174,18 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#A7F3D0',
   },
+
   trustShieldText: {
     color: '#047857',
     fontSize: 11,
     fontWeight: '700',
   },
+
   planSelectorHeader: {
     width: '100%',
     marginBottom: 12,
   },
+
   planSelectorTitle: {
     fontSize: 14,
     fontWeight: '800',
@@ -2077,16 +2194,19 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
     marginBottom: 2,
   },
+
   planSelectorSubtitle: {
     fontSize: 12,
     color: '#64748B',
     fontWeight: '500',
   },
+
   planSelectorGrid: {
     width: '100%',
     gap: 8,
     marginBottom: 18,
   },
+
   planCard: {
     backgroundColor: '#FFFFFF',
     borderRadius: 14,
@@ -2096,6 +2216,7 @@ const styles = StyleSheet.create({
     borderColor: '#E2E8F0',
     position: 'relative',
   },
+
   planCardSelected: {
     borderColor: '#2563EB',
     backgroundColor: '#EFF6FF',
@@ -2105,6 +2226,7 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 2,
   },
+
   planBadge: {
     position: 'absolute',
     top: -9,
@@ -2115,29 +2237,35 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     zIndex: 1,
   },
+
   planBadgeSelected: {
     backgroundColor: '#2563EB',
   },
+
   planBadgeText: {
     color: '#FFFFFF',
     fontSize: 9,
     fontWeight: '800',
     letterSpacing: 0.3,
   },
+
   planBadgeTextSelected: {
     color: '#FFFFFF',
   },
+
   planCardTopRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
+
   planCardLeft: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
     flex: 1,
   },
+
   planRadio: {
     width: 18,
     height: 18,
@@ -2147,52 +2275,63 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
   planRadioSelected: {
     borderColor: '#2563EB',
   },
+
   planRadioInner: {
     width: 8,
     height: 8,
     borderRadius: 4,
     backgroundColor: '#2563EB',
   },
+
   planName: {
     fontSize: 14,
     fontWeight: '700',
     color: '#1E293B',
   },
+
   planNameSelected: {
     color: '#1D4ED8',
     fontWeight: '800',
   },
+
   planDuration: {
     fontSize: 11,
     color: '#64748B',
     fontWeight: '500',
     marginTop: 1,
   },
+
   planPriceCol: {
     alignItems: 'flex-end',
   },
+
   planPriceRow: {
     flexDirection: 'row',
     alignItems: 'baseline',
     gap: 6,
   },
+
   planPrice: {
     fontSize: 16,
     fontWeight: '900',
     color: '#0F172A',
   },
+
   planPriceSelected: {
     color: '#1D4ED8',
   },
+
   planOriginalPrice: {
     fontSize: 12,
     color: '#94A3B8',
     textDecorationLine: 'line-through',
     fontWeight: '500',
   },
+
   payNowBtn: {
     width: '100%',
     borderRadius: 14,
@@ -2204,9 +2343,11 @@ const styles = StyleSheet.create({
     elevation: 3,
     marginBottom: 8,
   },
+
   payNowBtnDisabled: {
     opacity: 0.6,
   },
+
   payNowGradient: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -2215,28 +2356,33 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     gap: 8,
   },
+
   payNowBtnText: {
     color: '#FFFFFF',
     fontSize: 15,
     fontWeight: '800',
   },
+
   clarityPointsList: {
     width: '100%',
     gap: 8,
     marginTop: 8,
     marginBottom: 16,
   },
+
   clarityPoint: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
   },
+
   clarityPointText: {
     fontSize: 11,
     color: '#475569',
     fontWeight: '600',
     flex: 1,
   },
+
   cleanTrustRow: {
     width: '100%',
     paddingTop: 12,
@@ -2244,18 +2390,21 @@ const styles = StyleSheet.create({
     borderTopColor: '#E2E8F0',
     alignItems: 'center',
   },
+
   cleanTrustText: {
     fontSize: 11,
     fontWeight: '700',
     color: '#64748B',
     marginBottom: 6,
   },
+
   cleanPayBadges: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: 6,
   },
+
   cleanPayBadge: {
     fontSize: 10,
     fontWeight: '700',
@@ -2267,13 +2416,16 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#E2E8F0',
   },
+
   beforePurchasingGrid: {
     gap: 12,
   },
+
   beforePurchasingGridDesktop: {
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
+
   beforePurchasingCard: {
     flex: 1,
     minWidth: 240,
@@ -2288,17 +2440,20 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 1,
   },
+
   bpCardQuestion: {
     fontSize: 14,
     fontWeight: '800',
     color: '#0F172A',
     marginBottom: 6,
   },
+
   bpCardAnswer: {
     fontSize: 12,
     color: '#64748B',
     lineHeight: 18,
   },
+
   reportTag: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -2310,11 +2465,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#BFDBFE',
   },
+
   reportTagText: {
     color: '#1E40AF',
     fontSize: 11,
     fontWeight: '700',
   },
+
   sampleReportCard: {
     backgroundColor: '#FFFFFF',
     borderRadius: 20,
@@ -2327,6 +2484,7 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 2,
   },
+
   reportCardHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -2338,22 +2496,26 @@ const styles = StyleSheet.create({
     borderBottomColor: '#F1F5F9',
     marginBottom: 16,
   },
+
   reportExamName: {
     fontSize: 15,
     fontWeight: '800',
     color: '#0F172A',
     marginBottom: 2,
   },
+
   reportScoreText: {
     fontSize: 13,
     color: '#64748B',
     fontWeight: '600',
   },
+
   reportScoreHighlight: {
     fontSize: 16,
     fontWeight: '900',
     color: '#2563EB',
   },
+
   percentileBadge: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -2365,17 +2527,20 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#A7F3D0',
   },
+
   percentileBadgeText: {
     color: '#047857',
     fontSize: 12,
     fontWeight: '800',
   },
+
   reportMetricsRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 10,
     marginBottom: 20,
   },
+
   reportMetricBox: {
     flex: 1,
     minWidth: 110,
@@ -2385,59 +2550,71 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#E2E8F0',
   },
+
   reportMetricLabel: {
     fontSize: 11,
     color: '#64748B',
     fontWeight: '600',
     marginBottom: 2,
   },
+
   reportMetricVal: {
     fontSize: 20,
     fontWeight: '900',
     marginBottom: 2,
   },
+
   reportMetricSub: {
     fontSize: 10,
     color: '#94A3B8',
     fontWeight: '600',
   },
+
   reportSectionTitle: {
     fontSize: 13,
     fontWeight: '800',
     color: '#0F172A',
     marginBottom: 12,
   },
+
   reportBarsList: {
     gap: 12,
     marginBottom: 18,
   },
+
   reportBarItem: {
     gap: 4,
   },
+
   reportBarLabelRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+
   reportBarTopic: {
     fontSize: 12,
     fontWeight: '700',
     color: '#334155',
   },
+
   reportBarPct: {
     fontSize: 11,
     fontWeight: '800',
   },
+
   progressBarTrack: {
     height: 8,
     borderRadius: 4,
     backgroundColor: '#F1F5F9',
     overflow: 'hidden',
   },
+
   progressBarFill: {
     height: '100%',
     borderRadius: 4,
   },
+
   aiAlertBox: {
     backgroundColor: '#FFFBEB',
     borderRadius: 14,
@@ -2445,36 +2622,43 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#FDE68A',
   },
+
   aiAlertHeader: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
     marginBottom: 4,
   },
+
   aiAlertTitle: {
     fontSize: 12,
     fontWeight: '800',
     color: '#92400E',
   },
+
   aiAlertText: {
     fontSize: 12,
     color: '#78350F',
     lineHeight: 18,
   },
+
   sectionBlock: {
     marginBottom: 28,
   },
+
   sectionHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 14,
   },
+
   sectionTitle: {
     fontSize: 18,
     fontWeight: '800',
     color: '#0F172A',
   },
+
   interactiveHeaderRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -2483,17 +2667,20 @@ const styles = StyleSheet.create({
     gap: 10,
     marginBottom: 14,
   },
+
   bilingualToggle: {
     flexDirection: 'row',
     backgroundColor: '#E2E8F0',
     borderRadius: 10,
     padding: 3,
   },
+
   toggleBtn: {
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 8,
   },
+
   toggleBtnActive: {
     backgroundColor: '#FFFFFF',
     shadowColor: '#000',
@@ -2502,15 +2689,18 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     elevation: 2,
   },
+
   toggleBtnText: {
     fontSize: 12,
     fontWeight: '600',
     color: '#64748B',
   },
+
   toggleBtnTextActive: {
     color: '#1E40AF',
     fontWeight: '800',
   },
+
   sampleQuestionCard: {
     backgroundColor: '#FFFFFF',
     borderRadius: 20,
@@ -2523,28 +2713,33 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 2,
   },
+
   sampleCardTop: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 12,
   },
+
   topicBadge: {
     backgroundColor: '#EFF6FF',
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 8,
   },
+
   topicBadgeText: {
     color: '#1E40AF',
     fontSize: 11,
     fontWeight: '700',
   },
+
   marksBadgeText: {
     fontSize: 11,
     color: '#64748B',
     fontWeight: '600',
   },
+
   sampleQuestionText: {
     fontSize: 14,
     fontWeight: '700',
@@ -2552,10 +2747,12 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     marginBottom: 16,
   },
+
   optionsList: {
     gap: 8,
     marginBottom: 14,
   },
+
   optionItem: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -2566,18 +2763,22 @@ const styles = StyleSheet.create({
     borderColor: '#E2E8F0',
     backgroundColor: '#FFFFFF',
   },
+
   optionItemSelected: {
     borderColor: '#3B82F6',
     backgroundColor: '#EFF6FF',
   },
+
   optionItemCorrect: {
     borderColor: '#10B981',
     backgroundColor: '#ECFDF5',
   },
+
   optionItemWrong: {
     borderColor: '#EF4444',
     backgroundColor: '#FEF2F2',
   },
+
   optionLetterCircle: {
     width: 24,
     height: 24,
@@ -2586,26 +2787,32 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
   optionLetterCircleSelected: {
     backgroundColor: '#3B82F6',
   },
+
   optionLetterCircleCorrect: {
     backgroundColor: '#10B981',
   },
+
   optionLetterCircleWrong: {
     backgroundColor: '#EF4444',
   },
+
   optionLetterText: {
     fontSize: 11,
     fontWeight: '800',
     color: '#475569',
   },
+
   optionContentText: {
     flex: 1,
     fontSize: 12,
     color: '#334155',
     lineHeight: 17,
   },
+
   explanationBox: {
     backgroundColor: '#F0FDF4',
     borderRadius: 12,
@@ -2613,38 +2820,46 @@ const styles = StyleSheet.create({
     borderLeftWidth: 4,
     borderLeftColor: '#10B981',
   },
+
   explanationTitleRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
     marginBottom: 4,
   },
+
   explanationTitle: {
     fontSize: 12,
     fontWeight: '800',
     color: '#065F46',
   },
+
   explanationText: {
     fontSize: 12,
     color: '#047857',
     lineHeight: 18,
   },
+
   revealHintBtn: {
     alignItems: 'center',
     paddingVertical: 8,
   },
+
   revealHintText: {
     fontSize: 12,
     fontWeight: '700',
     color: '#2563EB',
   },
+
   modulesGrid: {
     gap: 12,
   },
+
   modulesGridDesktop: {
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
+
   moduleCard: {
     backgroundColor: '#FFFFFF',
     borderRadius: 18,
@@ -2652,15 +2867,18 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#E2E8F0',
   },
+
   moduleCardDesktop: {
     width: '48.8%',
   },
+
   moduleCardHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 10,
   },
+
   moduleCountBadge: {
     backgroundColor: '#F8FAFC',
     paddingHorizontal: 8,
@@ -2669,21 +2887,25 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#E2E8F0',
   },
+
   moduleCountText: {
     fontSize: 11,
     fontWeight: '800',
   },
+
   moduleTitle: {
     fontSize: 15,
     fontWeight: '800',
     color: '#0F172A',
     marginBottom: 4,
   },
+
   moduleHighlights: {
     fontSize: 12,
     color: '#64748B',
     lineHeight: 17,
   },
+
   comparisonTable: {
     backgroundColor: '#FFFFFF',
     borderRadius: 18,
@@ -2691,6 +2913,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#E2E8F0',
   },
+
   compTableHeader: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -2698,11 +2921,13 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#E2E8F0',
   },
+
   compHeaderTitle: {
     fontSize: 12,
     fontWeight: '800',
     color: '#475569',
   },
+
   compHeaderHighlight: {
     backgroundColor: '#EFF6FF',
     flexDirection: 'row',
@@ -2710,6 +2935,7 @@ const styles = StyleSheet.create({
     gap: 4,
     justifyContent: 'center',
   },
+
   compTableRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -2717,6 +2943,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#F1F5F9',
     paddingVertical: 12,
   },
+
   compColFeature: {
     flex: 1.4,
     paddingHorizontal: 16,
@@ -2724,6 +2951,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#1E293B',
   },
+
   compColFree: {
     flex: 1,
     paddingHorizontal: 8,
@@ -2731,6 +2959,7 @@ const styles = StyleSheet.create({
     color: '#64748B',
     textAlign: 'center',
   },
+
   compColPremium: {
     flex: 1.2,
     paddingHorizontal: 8,
@@ -2738,12 +2967,15 @@ const styles = StyleSheet.create({
     color: '#1E40AF',
     textAlign: 'center',
   },
+
   compBold: {
     fontWeight: '800',
   },
+
   faqList: {
     gap: 10,
   },
+
   faqCard: {
     backgroundColor: '#FFFFFF',
     borderRadius: 14,
@@ -2751,11 +2983,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#E2E8F0',
   },
+
   faqHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+
   faqQuestion: {
     flex: 1,
     fontSize: 14,
@@ -2763,6 +2997,7 @@ const styles = StyleSheet.create({
     color: '#0F172A',
     paddingRight: 8,
   },
+
   faqAnswer: {
     fontSize: 12,
     color: '#475569',
@@ -2772,6 +3007,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: '#F1F5F9',
   },
+
   bottomCtaBanner: {
     borderRadius: 24,
     padding: 24,
@@ -2779,10 +3015,12 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     marginBottom: 20,
   },
+
   bottomCtaContent: {
     alignItems: 'center',
     zIndex: 2,
   },
+
   bottomTag: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -2793,11 +3031,13 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     marginBottom: 10,
   },
+
   bottomTagText: {
     color: '#FFFFFF',
     fontSize: 11,
     fontWeight: '800',
   },
+
   bottomTitle: {
     fontSize: 22,
     fontWeight: '900',
@@ -2805,6 +3045,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 6,
   },
+
   bottomSub: {
     fontSize: 13,
     color: 'rgba(255, 255, 255, 0.9)',
@@ -2813,6 +3054,7 @@ const styles = StyleSheet.create({
     lineHeight: 19,
     marginBottom: 18,
   },
+
   bottomBtn: {
     backgroundColor: '#FFFFFF',
     paddingHorizontal: 24,
@@ -2825,15 +3067,18 @@ const styles = StyleSheet.create({
     elevation: 3,
     marginBottom: 8,
   },
+
   bottomBtnText: {
     color: '#1E40AF',
     fontSize: 15,
     fontWeight: '900',
   },
+
   bottomFootnote: {
     fontSize: 10,
     color: 'rgba(255, 255, 255, 0.75)',
   },
+
   supportBox: {
     backgroundColor: '#FFFFFF',
     borderRadius: 18,
@@ -2843,17 +3088,20 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#E2E8F0',
   },
+
   supportTitle: {
     fontSize: 14,
     fontWeight: '800',
     color: '#0F172A',
     marginBottom: 2,
   },
+
   supportDesc: {
     fontSize: 12,
     color: '#64748B',
     lineHeight: 17,
   },
+
   stickyMobileBar: {
     position: 'absolute',
     bottom: 0,
@@ -2873,27 +3121,32 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     elevation: 8,
   },
+
   stickyPriceRow: {
     flexDirection: 'row',
     alignItems: 'baseline',
     gap: 6,
   },
+
   stickyPrice: {
     fontSize: 22,
     fontWeight: '900',
     color: '#0F172A',
   },
+
   stickyPriceCut: {
     fontSize: 13,
     color: '#94A3B8',
     textDecorationLine: 'line-through',
     fontWeight: '600',
   },
+
   stickyPeriod: {
     fontSize: 10,
     color: '#64748B',
     fontWeight: '600',
   },
+
   stickyBuyBtn: {
     backgroundColor: '#2563EB',
     paddingHorizontal: 22,
@@ -2905,11 +3158,13 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 3,
   },
+
   stickyBuyBtnText: {
     color: '#FFFFFF',
     fontSize: 14,
     fontWeight: '800',
   },
+
   modalOverlay: {
     flex: 1,
     backgroundColor: 'rgba(15, 23, 42, 0.65)',
@@ -2917,6 +3172,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 20,
   },
+
   modalContent: {
     backgroundColor: '#FFFFFF',
     borderRadius: 20,
@@ -2930,6 +3186,7 @@ const styles = StyleSheet.create({
     shadowRadius: 25,
     elevation: 10,
   },
+
   modalHeaderIcon: {
     width: 52,
     height: 52,
@@ -2939,6 +3196,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginBottom: 16,
   },
+
   modalTitle: {
     fontSize: 20,
     fontWeight: '800',
@@ -2946,6 +3204,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     textAlign: 'center',
   },
+
   modalSubtitle: {
     fontSize: 13,
     color: '#64748B',
@@ -2953,6 +3212,7 @@ const styles = StyleSheet.create({
     lineHeight: 19,
     marginBottom: 20,
   },
+
   phoneInputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -2964,9 +3224,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#F8FAFC',
     overflow: 'hidden',
   },
+
   phoneInputContainerError: {
     borderColor: '#EF4444',
   },
+
   phoneCountryPrefix: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -2977,14 +3239,17 @@ const styles = StyleSheet.create({
     borderRightColor: '#E2E8F0',
     gap: 6,
   },
+
   phoneCountryFlag: {
     fontSize: 16,
   },
+
   phoneCountryCode: {
     fontSize: 14,
     fontWeight: '700',
     color: '#334155',
   },
+
   phoneTextInput: {
     flex: 1,
     paddingHorizontal: 14,
@@ -2993,6 +3258,7 @@ const styles = StyleSheet.create({
     color: '#0F172A',
     height: '100%',
   },
+
   phoneErrorText: {
     fontSize: 12,
     color: '#EF4444',
@@ -3000,6 +3266,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     fontWeight: '500',
   },
+
   modalSubmitBtn: {
     backgroundColor: '#2563EB',
     width: '100%',
@@ -3014,23 +3281,28 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 3,
   },
+
   modalSubmitBtnDisabled: {
     backgroundColor: '#94A3B8',
     shadowOpacity: 0,
     elevation: 0,
   },
+
   modalSubmitBtnText: {
     color: '#FFFFFF',
     fontSize: 15,
     fontWeight: '800',
   },
+
   modalCancelBtn: {
     marginTop: 12,
     paddingVertical: 8,
   },
+
   modalCancelBtnText: {
     color: '#64748B',
     fontSize: 14,
     fontWeight: '600',
   },
+
 });

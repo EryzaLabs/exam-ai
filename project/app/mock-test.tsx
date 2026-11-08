@@ -1241,6 +1241,10 @@ export default function MockTestScreen() {
   const questions = getAllQuestions();
   const stats = getQuestionStats();
   const currentState = currentQuestion ? questionStates.get(currentQuestion.id) : null;
+  const hasDualLanguage = !!(currentQuestion && (
+    (currentQuestion.questionTextHindi && currentQuestion.questionText && currentQuestion.questionTextHindi !== currentQuestion.questionText) ||
+    (currentQuestion.optionsHindi && currentQuestion.optionsHindi.length > 0 && currentQuestion.options && currentQuestion.options.length > 0)
+  ));
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
@@ -1277,20 +1281,22 @@ export default function MockTestScreen() {
             >
               {isDark ? <Sun size={18} color="#FBBF24" /> : <Moon size={18} color="#fff" />}
             </TouchableOpacity>
-            <TouchableOpacity
-              style={{
-                backgroundColor: 'rgba(255,255,255,0.2)',
-                paddingHorizontal: 12,
-                paddingVertical: 6,
-                borderRadius: 16,
-                marginRight: 12
-              }}
-              onPress={() => setLanguage(l => l === 'english' ? 'hindi' : 'english')}
-            >
-              <Text style={{color: '#fff', fontWeight: 'bold', fontSize: 13}}>
-                {language === 'english' ? 'A/अ' : 'अ/A'}
-              </Text>
-            </TouchableOpacity>
+            {hasDualLanguage && (
+              <TouchableOpacity
+                style={{
+                  backgroundColor: 'rgba(255,255,255,0.2)',
+                  paddingHorizontal: 12,
+                  paddingVertical: 6,
+                  borderRadius: 16,
+                  marginRight: 12
+                }}
+                onPress={() => setLanguage(l => l === 'english' ? 'hindi' : 'english')}
+              >
+                <Text style={{color: '#fff', fontWeight: 'bold', fontSize: 13}}>
+                  {language === 'english' ? 'A/अ' : 'अ/A'}
+                </Text>
+              </TouchableOpacity>
+            )}
             <TouchableOpacity
               style={styles.headerRight}
               onPress={() => setShowQuestionPalette(true)}

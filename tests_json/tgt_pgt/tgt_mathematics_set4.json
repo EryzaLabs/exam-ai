@@ -1,0 +1,3820 @@
+{
+  "_id": "tgt_mathematics_set4",
+  "title": "TGT Mathematics • Mock Test Set 4 (100 MCQs)",
+  "course": "TGT Series",
+  "subject": "Mathematics",
+  "exam": "tgt",
+  "price": 199,
+  "originalPrice": 999,
+  "duration": 100,
+  "sections": [
+    {
+      "_id": "sec_tgt_mathematics_set4",
+      "title": "Mathematics Section",
+      "qCount": 100,
+      "time": 100,
+      "questions": [
+        {
+          "_id": "tgt_mathematics_q301",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Two candidates attempted the problem, 2 x + px + q = 0. One started with a wrong value of p and got the roots –1 and –9, whereas the other started with an incorrect value of q and get the roots 2 and 8. Find the correct roots",
+            "options": [
+              {
+                "prompt": "9 and –2",
+                "value": "A"
+              },
+              {
+                "prompt": "8 and –9",
+                "value": "B"
+              },
+              {
+                "prompt": "–1 and 2",
+                "value": "C"
+              },
+              {
+                "prompt": "1 and 9",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q301",
+              "correct_answer": "D",
+              "explanation": "Given quadratic is 2 x px q 0 + + = Now we must have sum of roots = p = 2 + 8 = 10 & product of roots = q = (–1) × (–9) = 9 Therefore, x2 – 10x + 9 = 0 is the required quadratic and its roots are 1 and 9.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q302",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If there are m arithmetic progressions with the first term of each being unity and common differences as 1, 2, 3...m respectively, then the sum of their nth terms is:",
+            "options": [
+              {
+                "prompt": "n",
+                "value": "A"
+              },
+              {
+                "prompt": "m",
+                "value": "B"
+              },
+              {
+                "prompt": "n",
+                "value": "C"
+              },
+              {
+                "prompt": "m",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q302",
+              "correct_answer": "D",
+              "explanation": "nth terms of each arithmetic progression with first term unity and common difference 1,2,..,m respectively are n, 2n – 1, 3n – 2, ... , mn – m + 1 respectively which is an arithmetic progression with common difference n – 1 and m terms. Therefore, the required sum is [ ] m mn m n 1 2 − + +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q303",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If A (6, 3), B (–3, 5), C (4, –2) and D (x, 3x) are four points with Area(∆DBC) Area(∆ABC) 3 = 2 , then the value of x is:",
+            "options": [
+              {
+                "prompt": "23",
+                "value": "A"
+              },
+              {
+                "prompt": "177",
+                "value": "B"
+              },
+              {
+                "prompt": "173",
+                "value": "C"
+              },
+              {
+                "prompt": "25",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q303",
+              "correct_answer": "D",
+              "explanation": "Given, A (6, 3), B (–3, 5), C (4, –2) and D (x, 3x) By using area of triangle = ( ) ( ) ( ) 1 2 3 2 3 1 3 1 2 1 x y y x y y x y y 2 − + − + −     Area of ∆DBC = ( ) ( )( ) ( ) x 5 2 3 2 3x 4 3x 5 2 + + − −− + − = 7x 6 9x 12x 20 28x 14 2 2 + + + − − = Area of ∆ABC = ( ) ( )( ) ( ) 6 5 2 3 2 3 4 3 5 2 + + − −− + − = 42 15 8 49 2 2 + − = Given: Area of DBC 3 Area of ABC 2 ∆ = ∆ = 28x 14 3 2 49 2 2 − = YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-I-Male) 57 YCT ⇒ 56x – 28 = 147 ⇒ 56x = 175 ⇒ x = 28 5 .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q304",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Consider three quadratic equations, 2 x + ax + bc = 0 , 2 x + bx + ca = 0 , 2 x + cx + ab = 0 . If each pair of these equations has a common root, then the sum and product of these common roots are:",
+            "options": [
+              {
+                "prompt": "sum =",
+                "value": "A"
+              },
+              {
+                "prompt": "sum =",
+                "value": "B"
+              },
+              {
+                "prompt": "sum = a",
+                "value": "C"
+              },
+              {
+                "prompt": "sum = a",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q304",
+              "correct_answer": "B",
+              "explanation": "If each pair of 2 x + ax + bc = 0 , 2 x + bx + ca = 0 , and 2 x + cx + ab = 0 has a common root then let (α, β), (α, γ), and (γ, β) be the roots of each equation respectively. Now we have a, b, and c α +β = − α + γ = − γ +β = − & bc, αβ = ca αγ = , and ab γβ = ⇒ ( ) a b c 2 + + α +β + γ = − and abc αβγ =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q305",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a1, a2, b1, b2, are non - zero real numbers, then which of the inequalities is true?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q305",
+              "correct_answer": "C",
+              "explanation": "(Cauchy - Schwarz) For any real numbers 1 2 1 2 a ,a ,b ,b we have ( )( ) 2 2 2 2 1 2 1 2 a a b b + + ≥( ) 2 1 1 2 2 a b a b + ⇒ 2 2 2 2 2 2 2 2 1 1 2 2 1 1 1 2 2 1 2 2 a b a b a b a b a b a b + ≤ + + +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q306",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Consider the quadratic equation ax2 + bx + c = 0, where a, b, c ∈ C. Which of the following statements is true for this equation?",
+            "options": [
+              {
+                "prompt": "Roots will not exist",
+                "value": "A"
+              },
+              {
+                "prompt": "Roots will be complex and exist in conjugate",
+                "value": "B"
+              },
+              {
+                "prompt": "Roots will be complex and need not be in",
+                "value": "C"
+              },
+              {
+                "prompt": "Roots will be complex and equal",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q306",
+              "correct_answer": "C",
+              "explanation": "For a quadratic equation ax2 + bx + c = 0 where a, b, c ∈ C , roots are complex and need not be in conjugate pair and if a, b, c ∈ R then, roots are complex and will be in conjugate pair.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q307",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The sum of n terms of four arithmetical progressions are S1, S2, S3, and S4, with the first term of each as 2 and the common differences as 1, 3, 5 and 7 respectively. Then:",
+            "options": [
+              {
+                "prompt": "S4 + S3 = S1 + S2",
+                "value": "A"
+              },
+              {
+                "prompt": "S4 + S2 = S1 + S3",
+                "value": "B"
+              },
+              {
+                "prompt": "S4 + S1+ S2 = 2S3",
+                "value": "C"
+              },
+              {
+                "prompt": "S4 + S1 = S2 + S3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q307",
+              "correct_answer": "D",
+              "explanation": "a = 2, d1 = 1 l1 = 2 + (n – 1)1 = 2+(n–1)1= 2 + n – 1 = n + 1 [ ] 1 1 n S a 2 = + ℓ ( ) 1 n S 2 n 1 2 = + +     [ ] n n 3 2 = + ----(i) a = 2, d2 = 3, l2 = 2 + (n – 1)3 = 3n – 1 [ ] 2 2 n S a 2 = + ℓ [ ] 2 n S 2 3n 1 2 = + − [ ] n 3n 1 2 = + -----(ii) a = 2,d3 = 5, l3 = 2 + (n – 1) 5 = 5n – 3 [ ] 3 3 n S a 2 = + ℓ [ ] 3 n S 2 5n 3 2 = + − = [ ] n 5n 1 2 − ---(iii) a = 2,d4 = 7, l4 = 2 + (n – 1) 7 = 7n – 5 [ ] 4 4 n S a 2 = + ℓ [ ] 4 n S 2 7n 5 2 = + − = [ ] n 7n 3 2 − .....(iv) Adding equation (i) and (iv) then, ( ) ( ) 1 4 n n S S n 3 7n 3 2 2 + = + + − = [ ] ( ) 2 n n n 3 7n 3 8n 4n 2 2 + + − = = ......(v) Adding equation (ii) and (iii) then ( ) ( ) 2 3 n n S S 3n 1 5n 1 2 2 + = + + − = ( ) 2 n 8n.n 3n 5n 4n 2 2 + = = ..........(vi) From equation (v) and (vi) we get So, S1 + S4 = S2 + S3 Thus, option (d) is correct answer",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q308",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The prove anything with the pigeon - hole principle, we must have :",
+            "options": [
+              {
+                "prompt": "more pigeons than holes",
+                "value": "A"
+              },
+              {
+                "prompt": "same number of pigeons and holes",
+                "value": "B"
+              },
+              {
+                "prompt": "less pigeons than holes",
+                "value": "C"
+              },
+              {
+                "prompt": "either pigeons or holes",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q308",
+              "correct_answer": "A",
+              "explanation": "Pigeonhole Principle: If n items are put into m containers with n > m, then at least on container must contain more than one item. Hence, more pigeons than holes.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q309",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The ends of one diagonal of a parallelogram are the points (–6, 2) and (2, –4). Third vertex is the point (5, 2). Then the coordinates of the fourth vertex are:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q309",
+              "correct_answer": "A",
+              "explanation": "Let the fourth vertex of the parallelogram be (x, y). Now since diagonals of parallelogram bisect each other and mid - point of the diagonal whose ends are (– 6, 2) and (2, –4) is (–2, –1), we have 5 x 2 y 2 and 1 2 2 + + −= −= ⇒ x = –9 and y = –4",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q310",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f(x) is a periodic function and α is a positive real number such that f (x + 2α) + f(x) = 0 for all x ∈ R, then the period of f (x) is :",
+            "options": [
+              {
+                "prompt": "4α",
+                "value": "A"
+              },
+              {
+                "prompt": "2α",
+                "value": "B"
+              },
+              {
+                "prompt": "α",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q310",
+              "correct_answer": "A",
+              "explanation": "We have ( ) ( ) f x 2 f x 0 : x R, 0 R......(i) + α + = ∈ α > ∈ Replace x by x+2α then equation (i) becomes ⇒ ( ) ( ) f x 4 f x 2 0 + α + + α = .....(ii) Subtract equation (i) from equation (ii) we get ⇒ ( ) ( ) f x 4 f x 0 + α − = ⇒ ( ) ( ) f x 4 f x + α = This clearly shows that the period of f is 4α.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q311",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The distance of the highest point on the graph of the function y = 3cosx sin x + from the x - axis is :",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q311",
+              "correct_answer": "D",
+              "explanation": "We have y = 3cosx sin x + = 3 1 2 cosx sin x 2 2   +       = 2 sin cosx cos sin x 3 3 π π   +     {∵ sin(A+B)= sinA.cosB+cosA.sinB } = 2sin x 3 π   +     = 2×1 = 2 Max. valueof sin x 1 3  π    + =         ∵ whose maximum value is 2. Thus the distance of the highest point on the graph of the function y = 3cosx sin x + from x - axis is 2.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q312",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If (a, b), (x1, y1) and (x2, y2) are the vertices of a triangle such that the x - coordinates a, x1, x2 are in geometric progression with common ratio r and y - coordinates b, y1, y2 are also in geometric progression with common ratio s, then the area of the triangle is :",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q312",
+              "correct_answer": "A",
+              "explanation": "We have x1 = ar and x2 = ar2 , r is the common ratio & y1 = bs and y2 = bs2, s is the common ratio Thus, the area of the triangle is Ar = 2 2 a b 1 1 ar bs 1 2 ar bs 1 2 2 1 1 1 1 ab r s 1 2 r s 1 = By 2 2 1 3 3 2 c c c ,c c c → − → − ( ) ( ) ( ) 2 2 2 2 1 0 0 1 ab r (s r) 1 s 2 r s r 1 s = − − − − Ar ( ) ( ) 2 1 0 0 1 ab(s r)(1 s) r 1 1 2 r s r 1 s = − − + + Expanding along R1 ( )( ) ( ) ( ) { } 1 ab s r 1 s 1 1 s s r 2   = − − + − +   ( )( )[ ] 1 ab s r 1 s 1 s s r 2 = − − + −− ( )( )( ) 1 ab s r 1 s 1 r 2 = − − − = ( )( )( ) 1 ab r 1 s 1 s r 2 − − −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q313",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Roots of the quadratic equation 2 x – 2ix + 3 = 0 are:",
+            "options": [
+              {
+                "prompt": "3i, –i",
+                "value": "A"
+              },
+              {
+                "prompt": "3i, i",
+                "value": "B"
+              },
+              {
+                "prompt": "± 3i",
+                "value": "C"
+              },
+              {
+                "prompt": "–3i, –i",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q313",
+              "correct_answer": "A",
+              "explanation": "Roots of the quadratic equation 2 x 2ix 3 0 − + = are given by YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-I-Male) 59 YCT 2 2i 4i 12 x 2 ± − = 2 B B 4AC x 2A   − ± −   =       ∵ 2i 4i x 2 ± = x 3i, i = −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q314",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "How many cards must be picked from a standard pack of 52 cards to surely get 2 cards of the same suit? (Club, Diamond, Heart and Spade are the suits.)",
+            "options": [
+              {
+                "prompt": "4",
+                "value": "A"
+              },
+              {
+                "prompt": "5",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q314",
+              "correct_answer": "B",
+              "explanation": "Peigon rule : Suit n 1 1 p   − +     = Number of cards drawn Where, Pigeons mean 4 holes represent 4 suits and n pigeons are a number of cards to be drawn n 1 1 2 p   − + =     n 1 2 1 1 4 − = −= ⇒ n = 4 + 1 = 5",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q315",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Among any group of 11 integers, the number of integers with the same remainder when they are divided by 10 is:",
+            "options": [
+              {
+                "prompt": "atleast 2",
+                "value": "A"
+              },
+              {
+                "prompt": "atleast 5",
+                "value": "B"
+              },
+              {
+                "prompt": "atmost 5",
+                "value": "C"
+              },
+              {
+                "prompt": "exactly 3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q315",
+              "correct_answer": "A",
+              "explanation": "Among any group of 11 integers, the number of integers with same remainder when they are divided by 10 is at least 2 by pigeonhole principle.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q316",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A1 (x1, y1), A2(x2, y2), A3(x3, y3), and A4(x4, y4) are 4 points , P1 divides A1A2 in the ratio 1 : 1 P2 divides P1A3 in the ratio 1 : 2, P3 divides P2A4 in the ratio 1 : 3. Then the coordinates of P3 are :",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q316",
+              "correct_answer": "A",
+              "explanation": "Since P1 divides A1A2 in the ratio 1:1, we have that 1 2 2 1 x x y y , 2 2 + +       are coordinates of P1. Similarly, we get that coordinates of P2 and P3 are 1 2 3 1 2 3 x x x y y y , 3 3 + + + +       and 1 2 3 4 1 2 3 4 x x x x y y y y , 4 4 + + + + + +       respectively.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q317",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a, b, c ∈ R+ and are in arithmetic progression, then the roots of the quadratic equation ax2 + bx + c = 0 are imaginary for:",
+            "options": [
+              {
+                "prompt": "c",
+                "value": "A"
+              },
+              {
+                "prompt": "c",
+                "value": "B"
+              },
+              {
+                "prompt": "c",
+                "value": "C"
+              },
+              {
+                "prompt": "c",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q317",
+              "correct_answer": "D",
+              "explanation": "Given that a, b, c are in arithmetic progression. Now, if roots of ax2 + bx + c = 0 are imaginary then we must have 2 b 4ac 0 − < ⇒ 2 a c 4ac 0 2 +  − <     {∵ a c b 2 + = ; a, b, c are in AP} ⇒ 2 2 a c 14ac 0 + − < ⇒ 2 c 14c 1 0 a a  + + <     ⇒ 2 c 7 48 a   − <     ⇒ c 7 4 3 a − < Section : Discipline-3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q318",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following equations is a linear equation in two variables?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "2x – 3y + 7 = 0",
+                "value": "B"
+              },
+              {
+                "prompt": "7x – 3y + 2z = 0",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q318",
+              "correct_answer": "B",
+              "explanation": "An equation of the form ax + by + c = 0, where a, b, c are real numbers and a and b are not both zero, is called a linear equation in two variables. Now, clearly 2x – 3y + 7 = 0 is an equation which is linear in two variables.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q319",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The function f (x) =  ≠   2 x ,x 0 3x – 5x 0, x = 0 is not continuous at x = 0, because",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q319",
+              "correct_answer": "A",
+              "explanation": "Given that, f(x) = 2 x ,x ¹ 0 3x – 5x 0, x = 0   Since We know that, x ;x 0 x x ;x 0 ≥  = − <  ⇒ f(x) = 2 2 x ;x³0 3x – 5x x ;x < 0 3x 5x   −   −  YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-I-Male) 60 YCT L.H.L 2 x 0 x 0 x 1 lim f(x) lim 5 3x 5x − − → → − = = − & R.H.L. 2 x 0 x 0 x 1 lim f(x) lim 5 3x 5x + + → → = = − − ∵ L.H.S. ≠ R.H.S. Therefore, the required limit for the continuity of f at x = 0 is not equal to f(0).",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q320",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A pair of linear equations in two variables x and y b1x + c1y = a1, c2x + a2y = b2 has infinite number of possible solutions if :",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q320",
+              "correct_answer": "D",
+              "explanation": "If a pair of linear equations in two variable i.e. b1x + c1y = a1 c2x + a2y = b2 has infinite number of solutions then the lines represented by both the equations are coincident lines and hence we have 1 1 1 2 2 2 a b c b c a = =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q321",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a pair of equations in two variables x and y is represented graphically by two straight lines L1 and L2 intersecting each other at the point       a + b ,2ab 2 then a solution of given equations will be:",
+            "options": [
+              {
+                "prompt": "a",
+                "value": "A"
+              },
+              {
+                "prompt": "x = 2ab, y = a",
+                "value": "B"
+              },
+              {
+                "prompt": "x =",
+                "value": "C"
+              },
+              {
+                "prompt": "x = a + b, y = ab",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q321",
+              "correct_answer": "A",
+              "explanation": "If the lines represented by the pair of linear equations in two variables intersect at a point then that point gives the unique solution of the pair of linear equations. Therefore, if L1 and L2 intersect at a b ,2ab 2 +       then a solution of the pair of linear equations in x and y represented graphically by lines L1 and L2 is x = a b , 2 + y = 2ab.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q322",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find out the fallacy if any in the statement : \"The mean and the variance of a binomial distribution is 16.2 and 29.4 respectively.\"",
+            "options": [
+              {
+                "prompt": "q = 49",
+                "value": "A"
+              },
+              {
+                "prompt": "The statement is true.",
+                "value": "B"
+              },
+              {
+                "prompt": "p = 47",
+                "value": "C"
+              },
+              {
+                "prompt": "p = 49",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q322",
+              "correct_answer": "A",
+              "explanation": "For a Binomial distribution B(n, p) with n Bernoulli trails and probability of success p, we have Mean = np = 16.2 & variance = np(1 – p) = 29.4 ⇒ 1 – p = q = 49 1 27 > This is clearly not possible.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q323",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f(x) = ( ) ∑ 2k n 2 n n n=0 a x + b sin x , where ia 's and ib 's (0 ≤ i ≤ k) are real constants, then f(x) is:",
+            "options": [
+              {
+                "prompt": "differentiable at x = 0 for all a2m+1 = 0,",
+                "value": "A"
+              },
+              {
+                "prompt": "differentiable at x = 0 for all a2m = 0, 0≤m≤k",
+                "value": "B"
+              },
+              {
+                "prompt": "not differentiable at x = 0 for all real",
+                "value": "C"
+              },
+              {
+                "prompt": "differentiable at x = 0 for all real",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q323",
+              "correct_answer": "A",
+              "explanation": "If f(x) = ( ) 2k n 2 n n n 0 a x b sin x = + ∑ where ia 's and ib 's ( ) 0 i k ≤≤ are real constants then we can write ( ) ( ) 2k 2k n 2 n n n 0 n 0 2k 2k n 2 n n n 0 n 0 a x b sin x, x 0 f x a x b sin x,x 0 = = = =  + ≥ ∑ ∑  =   − + < ∑ ∑  ( ) ( ) n 2 2 2 0 1 n 0 1 n n 2 2 2 0 1 n 0 1 n a a x ... a x b sin x b sin x ... b sin x,x 0 f x a a x ... a x b sin x b sin x ... b sin x, x 0  + + + + + + + ≥  =  − + + − + + + + <  Which is clearly differentiable at x = 0 if a1 = 0, a3 = 0, a5 = 0 and so on because sin2x is differentiable everywhere. Therefore, f(x) is differentiable at x = 0 for all a2m + 1 = 0, 0 ≤ m≤ k – 1.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q324",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If 3 hen together are worth Rs 21 and 5 chicks together are worth Rs 20, then how many hen and chicks, cannot be bought for Rs 100?",
+            "options": [
+              {
+                "prompt": "12 hen and 4 chicks",
+                "value": "A"
+              },
+              {
+                "prompt": "16 hen and 2 chicks",
+                "value": "B"
+              },
+              {
+                "prompt": "4 hen and 18 chicks",
+                "value": "C"
+              },
+              {
+                "prompt": "8 hen and 11 chicks",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q324",
+              "correct_answer": "B",
+              "explanation": "We have that 3 hens are worth Rs 21 and 5 chicks are worth Rs 20 then 1 hen is worth Rs 7 and 1 chick is worth Rs 4. Therefore, the cost of 12 hens and 4 chicks = 100, 8 hens and 11 chicks = 100 16 hens and 2 chicks=120, &4 hens and 18 chicks=100 Clearly, the trade of 16 hens and 2 chicks is not possible.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q325",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If X is a random variable that takes on any of the values xi, i ≥ 1 with respective probabilities p (xi), and E[X] denote the expected value of X, then E[ax2 + bx + c] is :",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q325",
+              "correct_answer": "A",
+              "explanation": "We have for the random variable X that ( ) ( ) 2 2 E ax bx c aE x bE(x) E c   + + = + +   = ( ) ( ) ( ) 2 i i i i i i 1 i 1 i 1 ax p x bx p x cp x = = = + + ∑ ∑ ∑ = ( ) ( ) n 2 i i i i 1 ax bx c p x = + + ∑",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q326",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following equations do not have the solution (7, –9)?",
+            "options": [
+              {
+                "prompt": "6y –3x + 75 = 0",
+                "value": "A"
+              },
+              {
+                "prompt": "7y – 9x + 1 = 0",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "2x + 3y + 13 = 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q326",
+              "correct_answer": "B",
+              "explanation": "7y – 9x + 1 = 0 does not have the solution (7, –9) since 7 (–9) – 9 (7) + 1 = –125 ≠ 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q327",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If x is a random variable with Mean µ then the variance of X, denoted by Var (X) is given by :",
+            "options": [
+              {
+                "prompt": "Var",
+                "value": "A"
+              },
+              {
+                "prompt": "Var",
+                "value": "B"
+              },
+              {
+                "prompt": "Var",
+                "value": "C"
+              },
+              {
+                "prompt": "Var",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q327",
+              "correct_answer": "C",
+              "explanation": "If X is a random variable with mean µ , then the variance of X, denoted by Var(X) is given by Var(X) = E[(X – µ)]2 where µ = E(X)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q328",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The antiderivative F (x) of the function ( ) ( ) ( ) 2 1 f x = + log logx logx such that F (e) = e, will be:",
+            "options": [
+              {
+                "prompt": "xlog",
+                "value": "A"
+              },
+              {
+                "prompt": "xlog",
+                "value": "B"
+              },
+              {
+                "prompt": "log",
+                "value": "C"
+              },
+              {
+                "prompt": "log",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q328",
+              "correct_answer": "A",
+              "explanation": "Let I = f(x)dx ∫ So, ( ) ( ) 2 1 I log log x dx log x     = + ∫    ( ) ( ) 2 1 dx log log x dx log x = + ∫ ∫ ––––(i) since, ( ) ( ) 1 log log x dx xlog log x dx log x = − ∫ ∫ (by using integration by part formula) ( ) ( ) 2 x 1 xlog log x dx log x log x = − −∫ Now equation (i) becomes- I = ( ) ( ) ( ) 2 2 dx x 1 x log log x dx c log x log x log x + − − + ∫ ∫ I= x x log(log x) c F(x) log x − + = ( ) ( ) { } f x dx F x = ∫ ∵ x F(x) x log(log x) c log x = − + -----(ii) Putting x = e in equation (ii) then F(e) = e log(loge) – e c log(e) + {∵ F(e) = e given} e = e log1 –e+c {∵loge = 1, log1 = 0} e = e×0–e+c c = 2e Putting c = 2e in equation (ii) then F(x) = x log (logx) – x 2e log x + ⇒ 1 f (x)dx x log(log x) x 2e log x   = − +     ∫",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q329",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the straight line L having y - intercept as 1 2 passes through the solution of the pair of equations in two variables x and y given as, 3x + 4y –11, 7x – 2y = 3, then the angle made by the straight line L with the positive direction of x – axis is :",
+            "options": [
+              {
+                "prompt": "45º",
+                "value": "A"
+              },
+              {
+                "prompt": "tan-1 3",
+                "value": "B"
+              },
+              {
+                "prompt": "tan–1 1",
+                "value": "C"
+              },
+              {
+                "prompt": "30º",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q329",
+              "correct_answer": "B",
+              "explanation": "We have that the solution of equations 3x + 4y = 11, 7x – 2y = 3 is (1, 2). Therefore, for the line L passing through (1, 2) and having y - intercept 1 2 we have ( ) 1 2 m 1 0 2   − = −     ⇒ 3 m 2 = = tan θ ⇒ 1 3 tan 2 −  θ =    ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q330",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "What should be the value of k so that the linear equation in two variables x and y, 31x+124y = k has integer valued solutions?",
+            "options": [
+              {
+                "prompt": "103",
+                "value": "A"
+              },
+              {
+                "prompt": "134",
+                "value": "B"
+              },
+              {
+                "prompt": "155",
+                "value": "C"
+              },
+              {
+                "prompt": "72",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q330",
+              "correct_answer": "C",
+              "explanation": "Since the given equation in two variable is 31x+124y = k .........(i) Such type of question we solve with the help of given option. Now, Let x = 1 and y = 1 then the value of k is 103 From equation(i) i.e. 31×1+124×1 = 103 ⇒ 155≠ 103 ⇒ LHS. ≠ RHS. So, k ≠ 103 Again, taking second option k = 134 then equation (i) becomes 31×1+124×1 = 134 ⇒ 155≠134 YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-I-Male) 62 YCT ⇒ LHS ≠ RHS So, k ≠ 134 Now, again taking third option k = 155 then equation (i) becomes ⇒ 31×1+124×1 = 155 ⇒ 155 = 155 i.e. LHS = RHS So, k = 155 Now, again taking fourth option k = 72 then equation (i) becomes ⇒ 31×1+124×1 = 72 ⇒ 155 ≠ 72 i.e. LHS ≠ RHS So, k ≠72 Since, K = 155 satisfied the equation (1) for integer value x = 1 and y = 1 Therefore, k = 155 is correct answer.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q331",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the given equations in variables x and y has integer - valued solutions?",
+            "options": [
+              {
+                "prompt": "12x + 16y = 8",
+                "value": "A"
+              },
+              {
+                "prompt": "12x + 16y = 5",
+                "value": "B"
+              },
+              {
+                "prompt": "12x + 16y = 6",
+                "value": "C"
+              },
+              {
+                "prompt": "12x + 16y = 7",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q331",
+              "correct_answer": "A",
+              "explanation": "The equation where, x = 2, y = –1 12x + 16y = 8 has the integer valued solution.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q332",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In a game there are three rooms - I, II and III. Room I contains 2 boxes having gift items and 3 empty boxes, room II contains 3 boxes having gift items and 2 empty boxes, and room III contains 4 boxes having gift items and one empty box respectively. There is equal probability of each room being chosen by a player. Mr. John selects one box from a room chosen at random. The probability that Mr. John wins a box having gift items is :",
+            "options": [
+              {
+                "prompt": "4",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q332",
+              "correct_answer": "C",
+              "explanation": "There are three Rooms I, II, III. The room I → 2 gift box and 3 empty box The room II → 3 gift box and 2 empty box The room III → 4 gift box and 1 empty box Probability of choosing either, Room I or Room II or Room III = 1 3 Mr. John select one box from the chosen room, then the probability that Mr. John wins a box having gift items = chooses room I and selects gift box + chooses room II and select box + chooses room III and selects gift box. The required probability 1 2 1 3 1 4 1 9 3 P 3 5 3 5 3 5 3 5 5 = × + × + × = × =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q333",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a rectangle has perimeter 96 meters and its length is three times its breadth, then the area of the rectangle is :",
+            "options": [
+              {
+                "prompt": "436 cubic meters",
+                "value": "A"
+              },
+              {
+                "prompt": "436 sq. meters",
+                "value": "B"
+              },
+              {
+                "prompt": "432 sq. meters",
+                "value": "C"
+              },
+              {
+                "prompt": "432 cubic meters",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q333",
+              "correct_answer": "C",
+              "explanation": "Let the length and breadth of the rectangle be l and b units respectively then we have ( ) 2 b 96 + = l and because l = 3b we get 8b = 96 ⇒ b = 12 m & l = 36m Therefore, the area of the rectangle is 12×36 = 432 sq m.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q334",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If xlim →∞  = ∞       2 x + 5 – ax – b 2x + 3 , then the values of a and b are",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q334",
+              "correct_answer": "B",
+              "explanation": "We have 2 x x 5 lim ax b 2x 3 →∞   + − −     +   = 0 ⇒ ( ) ( ) 2 x 1 2a x 2b 3a x 3b 5 lim 2x 3 →∞   − − + − + = ∞     +   This clearly shows that 1 a 2 ≠ and b ∈ R.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q335",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ( ) ( ) + ∫ sinx dx = Ax + Blog sec x – a C cos x – a where A, B and C are real constants, then:",
+            "options": [
+              {
+                "prompt": "A = sin a, B ∈ R, C = cos a",
+                "value": "A"
+              },
+              {
+                "prompt": "A = cos a, B = sin a, C ∈ R",
+                "value": "B"
+              },
+              {
+                "prompt": "A ∈ R, B = cos a, C = sin a",
+                "value": "C"
+              },
+              {
+                "prompt": "A = sin a, B = cos a, C ∈ R",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q335",
+              "correct_answer": "D",
+              "explanation": "We have using the substitution t = x – a ( ) ( ) sin t a sin x dx dt cos x a cos t + = ∫ ∫ − = sin t cosa costsina dt cost cost ×   + ∫    = cosa tant dt tsina C + + ∫ = cosa log |sect| + t sina + C = cosa log |sec (x – a)| + sina (x – a) + C = x sina + cosa log |sec (x – a)| + C – a sina This on comparison gives A = sina, B = cosa and C ∈ R",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q336",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A student solved 30 questions of Algebra and Analysis for 2 hours 40 minutes. If each question of Algebra and Analysis takes 5 minutes and 6 minutes respectively, then the student has solved :",
+            "options": [
+              {
+                "prompt": "Algebra: 15 questions, Analysis: 15 questions",
+                "value": "A"
+              },
+              {
+                "prompt": "Algebra: 10 questions, Analysis: 20 questions",
+                "value": "B"
+              },
+              {
+                "prompt": "Algebra: 16 questions, Analysis: 14 questions",
+                "value": "C"
+              },
+              {
+                "prompt": "Algebra: 20 questions, Analysis: 10 questions",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q336",
+              "correct_answer": "D",
+              "explanation": "Let the student solved x questions of algebra and y questions of analysis. Therefore, we have YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-I-Male) 63 YCT x + y = 30 & 5x + 6y = 160 after solving, ⇒ x = 20 and y = 10",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q337",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If two straight lines in xy – plane representing a pair of linear equations in two variables x and y overlap each other, then the pair of equations representing these lines will:",
+            "options": [
+              {
+                "prompt": "have infinite many solutions",
+                "value": "A"
+              },
+              {
+                "prompt": "have no possible solution",
+                "value": "B"
+              },
+              {
+                "prompt": "be inconsistent",
+                "value": "C"
+              },
+              {
+                "prompt": "have a unique solution",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q337",
+              "correct_answer": "A",
+              "explanation": "The lines are coincident lines and hence the pair of linear equations in two variables will have infinite many solutions. Section : Discipline-4",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q338",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Any positive integer is of the form:",
+            "options": [
+              {
+                "prompt": "6q or 6q + 2 or 6q + 4, where q is some non -",
+                "value": "A"
+              },
+              {
+                "prompt": "3q or 3q + 1 or 3q + 2, where q is some non -",
+                "value": "B"
+              },
+              {
+                "prompt": "6q + 1 or 6q + 3 or 6q + 5, where q is some",
+                "value": "C"
+              },
+              {
+                "prompt": "6q or 6q + 1 or 6q + 2, where q is some non -",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q338",
+              "correct_answer": "B",
+              "explanation": "Euclid's Division lemma states that any positive integer is of the form 3q or 3q + 1 or 3q + 2 where q is some non - negative integer.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q339",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The general values of x for which sinx + cosx = min {1, a2 – 4a + 7} are given as:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "2n",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q339",
+              "correct_answer": "A",
+              "explanation": "We have ( ) 2 2 2 a 4a 7 a 4a 4 3 a 2 − + = − + + = − + 3 Hence, the minimum value of a2 – 4a + 7 is 3. Thus min { } 2 1, a 4a 7 1 − + = Now if sinx + cosx = 1 then sin x sin 4 4 π π   + =     ⇒ ( ) n x n 1 4 4 π π   + = π + −     ⇒ ( ) { } n x n 1 1 4 π = π + − − This describes the general value of x for given equation.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q340",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The number 19.999... in the form p , q where p and q are integers and q ≠ 0, can be written as :",
+            "options": [
+              {
+                "prompt": "199",
+                "value": "A"
+              },
+              {
+                "prompt": "1999",
+                "value": "B"
+              },
+              {
+                "prompt": "20",
+                "value": "C"
+              },
+              {
+                "prompt": "81",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q340",
+              "correct_answer": "C",
+              "explanation": "Given that x 19.999... = --------(i) ⇒ 10x = 199.999... -------(ii) Subtract equation (i) from equation (ii) We get- ⇒ 10x – x = 199.999... –19.999... ⇒ 9x = 180 ⇒ 180 x 20 9 = = ⇒ x = 20",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q341",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Two hotels stand 25m apart. One of them is 70m high and the angle of depression of the top of other as observed from the top of this hotel is 45º. Height of the other hotel is:",
+            "options": [
+              {
+                "prompt": "46 m",
+                "value": "A"
+              },
+              {
+                "prompt": "44 m",
+                "value": "B"
+              },
+              {
+                "prompt": "43 m",
+                "value": "C"
+              },
+              {
+                "prompt": "45 m",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q341",
+              "correct_answer": "D",
+              "explanation": "As in figure, let h be the height of other hotel. Now in PWT ∆ ⇒ 70 h tan45º 25 − = ⇒ 70 h 25 − = ⇒ h = 45m",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q342",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In a ABC ∆ , let D, E, F be the points on lines BC, CA and AB respectively such that lines AD, BE and CF are concurrent. If CE 3 BD 5 , EA 5 DC 7 = = , and side AB has length 14 cm, then the lengths of AF and FB will be :",
+            "options": [
+              {
+                "prompt": "AF = 3 cm, FB = 7 cm",
+                "value": "A"
+              },
+              {
+                "prompt": "AF = 7 cm, FB = 7 cm",
+                "value": "B"
+              },
+              {
+                "prompt": "AF = 9.8 cm, FB = 4.2 cm",
+                "value": "C"
+              },
+              {
+                "prompt": "AF = 9 cm, FB = 5 cm",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q342",
+              "correct_answer": "C",
+              "explanation": "By Ceva's theorem in ∆ABC we have AF BD CE 1 FB DC EA × × = Now if CE 3 BD 5 , EA 5 DC 7 = = then we get AF 7 FB 3 = and since AB = 14 cm, we have AF = 9.8 cm & FB = 4.2 cm YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-I-Male) 64 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q343",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Consider a population with is finite and sampling is with replacement. If the variance of the population is 2176.8 with sample size of 16, then the variance of the sampling distribution of means is:",
+            "options": [
+              {
+                "prompt": "137.04",
+                "value": "A"
+              },
+              {
+                "prompt": "135.21",
+                "value": "B"
+              },
+              {
+                "prompt": "136.05",
+                "value": "C"
+              },
+              {
+                "prompt": "134.12",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q343",
+              "correct_answer": "C",
+              "explanation": "We have that the variance of the sampling distribution of the mean 2 m σ is the variance of the population 2 σ divided by population size N i.e. 2 2 m N σ σ = Now if the variance of the population (σ)2 is 2176.8 and sample size (N) is 16 then the variance of the sampling distribution of the mean is given by ⇒ 2 m 2176.8 136.05 16 σ = =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q344",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The median for a moderately asymmetrical series having mode and mean as 125 km and 130.7 km respectively is:",
+            "options": [
+              {
+                "prompt": "129.7 m",
+                "value": "A"
+              },
+              {
+                "prompt": "128.8 m",
+                "value": "B"
+              },
+              {
+                "prompt": "124.8 m",
+                "value": "C"
+              },
+              {
+                "prompt": "128.8 km",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q344",
+              "correct_answer": "D",
+              "explanation": "We have the empirical formula Mode = 3 Median – 2 Mean ⇒ Median = Mode + 2Mean 3 ⇒ Median = 125 2 130.7 3 + × = 128.8 km",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q345",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following is a rational number?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q345",
+              "correct_answer": "C",
+              "explanation": "(a) ( )( ) ( ) 2 4 5 4 5 4 5 16 5 8 5 + + = + = + + 21 8 5 = + is irrational (b) ( )( ) 4 5 4 5 − − = ( ) 2 4 5 16 5 8 5 − = + − 21 8 5 = − is irrational (c) ( )( ) 4 5 4 5 + − = 16 – 5 = 11 is rational (d) ( ) ( ) 4 5 4 5 + − − = 2 5 is irrational",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q346",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For 4 data points of two correlated variables x and y, it is given that ∑x = 24, ∑y = 11, ∑x2 = 202, ∑xy = 84, ∑y2 = 39. Fit a least square line to this data using x as independent variable",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q346",
+              "correct_answer": "D",
+              "explanation": "We have the slope of the line (m) and the intercept made by the line (c) are given by m = ( ) ( ) 2 2 N xy x y N x x − ∑ ∑∑ − ∑ ∑ and c= y m x N − ∑ ∑ respectively. Therefore, ( ) ( ) ( ) ( ) 2 4 84 24 11 72 m 232 4 202 24 × − × = = × − & 72 24 11 11 24m 232 c 4 4 × − − = = 824 232 4 = × Therefore, the required line is y = mx+c which becomes 72 824 y x 232 4 232 = + × ⇒ ( ) 1 y 103 36x 116 = +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q347",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the given relation is true?",
+            "options": [
+              {
+                "prompt": "cos1º < cos1",
+                "value": "A"
+              },
+              {
+                "prompt": "cos1º = cos1",
+                "value": "B"
+              },
+              {
+                "prompt": "cos1º > cos1",
+                "value": "C"
+              },
+              {
+                "prompt": "cos1º =",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q347",
+              "correct_answer": "C",
+              "explanation": "We have 1 Radian = 57.296° and hence cos1º > cos1 because cos θ decreases in 0, 2 π       .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q348",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "What should be filled at the places of 1, 2 and 3 to make the statement correct? Histogram is a set of adjacent",
+            "options": [
+              {
+                "prompt": "rectangles; areas; frequencies",
+                "value": "A"
+              },
+              {
+                "prompt": "triangles; parameters; frequencies",
+                "value": "B"
+              },
+              {
+                "prompt": "triangles; areas; item size",
+                "value": "C"
+              },
+              {
+                "prompt": "rectangles; parameters; item size",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q348",
+              "correct_answer": "A",
+              "explanation": "Histogram is a set of adjacent rectangles whose areas are proportional to the frequencies.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q349",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A vertical pole AB has two marks at C and D such that AC, AD and AB subtend angles α, β, γ from a point on the ground which is at a distance of x from the pole. If AC = a, AD = b, AB = c and α + β + γ = 180º, then x is equal to:",
+            "options": [
+              {
+                "prompt": "abc",
+                "value": "A"
+              },
+              {
+                "prompt": "abc",
+                "value": "B"
+              },
+              {
+                "prompt": "abc",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q349",
+              "correct_answer": "B",
+              "explanation": "In ∆OAC, tanα = a/x In ∆OAD, tanβ = b/x In ∆OAB, tanγ = c/x We have, if α + β + γ = 180º, then tan tan tan tan tan tan α + β + γ = α β γ ----(i) and therefore, equation (i) becomes- a b c a b c x x x x x x + + = ⋅ ⋅ ⇒ 3 a b c abc x x + + = ⇒ x2 = ( ) abc a b c + + ⇒ x = abc a b c + +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q350",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Consider a straight line L. The number of straight lines passing through a point P which are parallel to L is:",
+            "options": [
+              {
+                "prompt": "Infinite",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q350",
+              "correct_answer": "B",
+              "explanation": "There is only one line parallel to L passing through P.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q351",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Simplify : 5 7 2 9 7 +",
+            "options": [
+              {
+                "prompt": "5",
+                "value": "A"
+              },
+              {
+                "prompt": "5",
+                "value": "B"
+              },
+              {
+                "prompt": "7",
+                "value": "C"
+              },
+              {
+                "prompt": "5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q351",
+              "correct_answer": "C",
+              "explanation": "5 7 7 5 2 9 9 2 7 7 7 + = ⋅ (Since, am+n = am.an)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q352",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In the given figure, BC ǁ RS, BAC ∠ = ∠ RAQ SAD 52º, ∠ = then the value of x is :",
+            "options": [
+              {
+                "prompt": "64º",
+                "value": "A"
+              },
+              {
+                "prompt": "26º",
+                "value": "B"
+              },
+              {
+                "prompt": "38º",
+                "value": "C"
+              },
+              {
+                "prompt": "52º",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q352",
+              "correct_answer": "A",
+              "explanation": "We have BAR 52º ∠ = (Vertically opposite angles) ⇒ 52º 2 BAC 180º + ∠ = BAC 64º ⇒∠ = (∠ABC =52º, Internal angles on the same side) Now In ABC ∆ we have BCA BAC 52º 180º ∠ + ∠ + = ⇒ BCA 64º ∠ =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q353",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For a given series of items, if we subtract 'a' from every item and divide every item by 'b', then arithmetic mean of the series:",
+            "options": [
+              {
+                "prompt": "increases by 'a' and divided by 'b'",
+                "value": "A"
+              },
+              {
+                "prompt": "diminishes by 'a' and multiplied by 'b'",
+                "value": "B"
+              },
+              {
+                "prompt": "increases by 'a' and multiplied 'b'",
+                "value": "C"
+              },
+              {
+                "prompt": "diminishes by 'a' and divided by 'b'",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q353",
+              "correct_answer": "D",
+              "explanation": "Let the given series of items be a1, a2, ..., an and thus mean (µ) = 1 2 n a a .... a n + + + Now we have 1 2 3 n 1 2 n (a a a ...a ) na a a a ... a a a bn nb b + + − − + + + − µ − = =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q354",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A circle has :",
+            "options": [
+              {
+                "prompt": "no two chords of equal length",
+                "value": "A"
+              },
+              {
+                "prompt": "infinite number of equal chords",
+                "value": "B"
+              },
+              {
+                "prompt": "exactly two chords of equal length",
+                "value": "C"
+              },
+              {
+                "prompt": "finite number of equal chords",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q354",
+              "correct_answer": "B",
+              "explanation": "A circle has infinite number of equal chords.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q355",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The curves that occur for a distribution in which class - frequencies go on decreasing symmetrically on either side of central value, are called :",
+            "options": [
+              {
+                "prompt": "moderately asymmetrical curves",
+                "value": "A"
+              },
+              {
+                "prompt": "U - shaped curves",
+                "value": "B"
+              },
+              {
+                "prompt": "extremely asymmetrical curves",
+                "value": "C"
+              },
+              {
+                "prompt": "symmetrical curves",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q355",
+              "correct_answer": "D",
+              "explanation": "The curve that occur for a distribution in which class frequencies go on decreasing symmetrically on either side of the central value are called symmetrical curves.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q356",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For two correlated variables x and y, if coefficient of correlation between x and y is 0.8014, variance of x and y are 16 and 25 respectively. Then the covariance between x and y is: YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-I-Male) 66 YCT",
+            "options": [
+              {
+                "prompt": "162.08",
+                "value": "A"
+              },
+              {
+                "prompt": "16.028",
+                "value": "B"
+              },
+              {
+                "prompt": "160.28",
+                "value": "C"
+              },
+              {
+                "prompt": "16.208",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q356",
+              "correct_answer": "B",
+              "explanation": "We have Coefficient of correlation r(x, y) = ( ) ( ) ( ) Cov x, y x y σ σ ⇒ Cov (x, y) = r(x, y) × σ (x) × σ (y) = 0.8014×5×4 = 16.028",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q357",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If sin–1                     2 -1 -1 2 2 2 2a 1 – b 2x – cos = tan 1+ a 1+ b 1 – x then the value of x is:",
+            "options": [
+              {
+                "prompt": "a",
+                "value": "A"
+              },
+              {
+                "prompt": "a",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1 ab",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q357",
+              "correct_answer": "A",
+              "explanation": "We have 2 –1 –1 –1 2 2 2 2a 1– b 2x sin – cos = tan 1+ a 1+ b 1– x                     ⇒ 1 1 1 2tan a 2tan b 2tan x − − − − = ⇒ 1 1 1 tan a tan b tan x − − − − = ⇒ 1 1 a b tan tan x 1 ab − − −  =   +   ⇒ a b x 1 ab − = + Section : Discipline-5",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q358",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "An equilateral triangle of side 10 m is to be painted on a wall. If the cost of painting is ` 15 per m2, then the cost to paint the triangle is :",
+            "options": [
+              {
+                "prompt": "` 549.5",
+                "value": "A"
+              },
+              {
+                "prompt": "` 559.5",
+                "value": "B"
+              },
+              {
+                "prompt": "` 659.5",
+                "value": "C"
+              },
+              {
+                "prompt": "` 649.5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q358",
+              "correct_answer": "D",
+              "explanation": "Area of the equilateral triangle = 2 3 10 43.30 4 × = m2 Therefore, the total cost = 43.30 × 15 = ` 649.51",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q359",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the two numbers whose sum is 30 and product of whose HCF and LCM is 224",
+            "options": [
+              {
+                "prompt": "13, 17",
+                "value": "A"
+              },
+              {
+                "prompt": "14, 16",
+                "value": "B"
+              },
+              {
+                "prompt": "11, 19",
+                "value": "C"
+              },
+              {
+                "prompt": "12, 18",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q359",
+              "correct_answer": "B",
+              "explanation": "Let the numbers be x and 30 – x. Then we have x (30 – x) = 224 ⇒ x2 – 30x + 224 = 0 ⇒ x = 14, 16 Therefore, the numbers are 14 and 16.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q360",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The volume of an open cubical box having surface area 125 m2 is:",
+            "options": [
+              {
+                "prompt": "625 m3",
+                "value": "A"
+              },
+              {
+                "prompt": "125 m3",
+                "value": "B"
+              },
+              {
+                "prompt": "125 m2",
+                "value": "C"
+              },
+              {
+                "prompt": "625 m2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q360",
+              "correct_answer": "B",
+              "explanation": "The surface area of open cubical surface = 5 × side2 We must have 5 × (side of the cube) 2 = 125 m2 ⇒ Side of the cube = 5m Therefore, the required volume = (5)3m3 = 125m3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q361",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The area of quadrilateral ABCD with AB = 12 cm, BC = 17 cm, AC = 25 cm, AD = 24 cm, ∠CAD = 90º will be:",
+            "options": [
+              {
+                "prompt": "300 cm2",
+                "value": "A"
+              },
+              {
+                "prompt": "410 cm2",
+                "value": "B"
+              },
+              {
+                "prompt": "390 cm2",
+                "value": "C"
+              },
+              {
+                "prompt": "180 cm2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q361",
+              "correct_answer": "C",
+              "explanation": "area (∆ACD) = 2 1 25 24 300cm 2 × × = Now, in ∆ABC we have Semi perimeter (s) = 12 17 25 27cm 2 + + = therefore, ar (∆ABC) = ( )( )( ) 27 27 12 27 17 27 25 − − − = 27 15 10 2 × × × = 90 cm2 The area of quadrilateral ABCD = area (∆ACD) + area (∆ABC) = 300cm2 + 90cm2 = 390cm2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q362",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If x + 5 is a factor of the polynomial x3 + ax2 + ax – 15, then the value of a is:",
+            "options": [
+              {
+                "prompt": "–9",
+                "value": "A"
+              },
+              {
+                "prompt": "7",
+                "value": "B"
+              },
+              {
+                "prompt": "9",
+                "value": "C"
+              },
+              {
+                "prompt": "8",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q362",
+              "correct_answer": "B",
+              "explanation": "If x + 5 is a factor of x3 + ax2 + ax – 15 then we must have ( ) ( ) 3 2 5 a 5 5a 15 0 − + − − − = ⇒ 20a = 140 ⇒ a = 7",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q363",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following is not a polynomial in one variable?",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q363",
+              "correct_answer": "C",
+              "explanation": "(a) 1 1 1 3 2 2 2 2 x x x x −       + −       = ( ) 1 x x x.x x   + −     = ( )( ) x 1 x 1 x x + − = 2 x 1 − + , which is a polynomial in one variable. (b) 3 3 2 2 x 2 x 2       − +       = ( ) 2 3 2 2 x 2    −     = 3 x 2 −, which is polynomial in one variable. (c) 3 1 1 5 2 2 2 2 x x x x − −       − −       ( ) 2 1 1 x x x x x x   − +     ( )( ) 2 1 x 1 x x − + = 2 1 x x 1 x , − − + −+ which is not a polynomial. (d) 3 5 2 2 x 2 x x     +     = ( )( ) 2 x x 2 x x x + = x4 + 2x3, which is a polynomial in one variable.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q364",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "At how many points does the polynomial x3 – x2 + x – 1 intersects the x – axis?",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q364",
+              "correct_answer": "C",
+              "explanation": "We have , ( )( ) 3 2 2 x x x 1 x 1 x 1 − + −= − + Now, x2 + 1 does not have real roots. Therefore, the polynomial x3 – x2 + x – 1 cuts the x - axis only once.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q365",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If (x + a) is the greatest common divisior of x2 – qx + p and x2 + mx – n, then the value of 'a' is given as :",
+            "options": [
+              {
+                "prompt": "p",
+                "value": "A"
+              },
+              {
+                "prompt": "n",
+                "value": "B"
+              },
+              {
+                "prompt": "q",
+                "value": "C"
+              },
+              {
+                "prompt": "p",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q365",
+              "correct_answer": "B",
+              "explanation": "If (x + a) is the greatest common divisor of 2 x qx p − + and x2 + mx – n then we must have a2 + qa + p = 0 & a2 – am – n = 0 ⇒ a = n p q m −− +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q366",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following is a binomial in one variable of degree 5?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q366",
+              "correct_answer": "C",
+              "explanation": "(a) (x5 – 1)2 – (x5 + 1)2 + 5x5 = ( ) 10 5 10 5 5 x 2x 1 x 2x 1 5x − + − + + + = x5; monomial with degree 5. (b) ( ) ( ) 2 2 5 5 x 1 x 1 + + − = 10 5 10 5 x 2x 1 x 2x 1 + + + − + = 2x10 + 2; binomial with degree 10. (c) ( ) ( ) ( ) 2 2 5 5 10 5 x 1 x 1 2 x x + + − − − = 10 5 10 5 10 5 x 2x 1 x 2x 1 2x 2x + + + − + − + = 5 2x 2 + ; binomial with degree 5. (d) ( )( ) 5 5 x 1 x 1 − + = x10 – 1; binomial with degree 10.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q367",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Consider a frustum of a right circular cone such that its lateral surface area is 337 cm3 and sum of squared radii of lower and upper base is 154 cm. The total surface area of the frustum is:",
+            "options": [
+              {
+                "prompt": "491 cm2",
+                "value": "A"
+              },
+              {
+                "prompt": "821 cm2",
+                "value": "B"
+              },
+              {
+                "prompt": "941 cm2",
+                "value": "C"
+              },
+              {
+                "prompt": "812 cm2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q367",
+              "correct_answer": "B",
+              "explanation": "Given that, 2 2 R r 154 + = and ( ) R r 337 π + = ℓ Hence, total surface area A = ( ) 2 2 R r R r π + + π + π ℓ = ( ) 2 2 337 R r + π + = ( ) 22 337 154 7 + = 821 cm2 YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-II) 68 YCT DSSSB TRAINED GRADUATE TEACHER (TGT) 2018 MATH Solved Paper Section : Discipline-1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q368",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A chord of a circle subtends an angle 60º at the centre of the circle. If the length of the chord is 10 cm. then the area of the major segment is ( ) Given π = 3.14 and 3 = 1.732",
+            "options": [
+              {
+                "prompt": "335 cm2",
+                "value": "A"
+              },
+              {
+                "prompt": "310 cm2",
+                "value": "B"
+              },
+              {
+                "prompt": "295 cm2",
+                "value": "C"
+              },
+              {
+                "prompt": "305 cm2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q368",
+              "correct_answer": "D",
+              "explanation": "Let OM be the perpendicular to the chord AB from the centre O. Then AOB OAB OBA 60º ∠ = ∠ = ∠ = , (by congruency of ∆OMA and ∆OMB which makes OAB ∆ an equilateral triangle). Therefore, OA AB OB 10cm = = = = Radius of the circle Now, area of the major segment AQB = area of the circle – area of the segment APB ( ) 2 10 = π −(area of the sector OAPB – area of OAB ∆ ) ( ) 2 60 3 100 100 10 360 4 = π − π× + 50 100 25 3 3 π = π − + 250 25 3 3 π = + 261.6666... 43.3 = + 2 305 cm ≈",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q369",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Apply Chinese Remainder theorem to solve x ≡ 3 (mod 9), x ≡ 7 (mod 13). The common solution is:",
+            "options": [
+              {
+                "prompt": "x ≡ 107",
+                "value": "A"
+              },
+              {
+                "prompt": "x ≡ 103",
+                "value": "B"
+              },
+              {
+                "prompt": "x ≡ 111",
+                "value": "C"
+              },
+              {
+                "prompt": "x ≡ 105",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q369",
+              "correct_answer": "C",
+              "explanation": "We have x 3 ≡ (mod 9), x 7 ≡ (mod 13) Now, n 9.13 117 = = and 1 2 117 117 N 13, N 9 9 13 = = = = Now, the linear congruences 13x ≡ 1 (mod 9), 9x ≡ 1 (mod 13) are satisfied by x1= 7, x2 = 3, respectively. Thus, a solution of the system is given by x 7.13.3 3.9.7 462 = + = we get the unique solution x 462 111 (mod 117) ≡ ≡ .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q370",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A non-terminating but recurring decimal is:",
+            "options": [
+              {
+                "prompt": "A natural number",
+                "value": "A"
+              },
+              {
+                "prompt": "An integer",
+                "value": "B"
+              },
+              {
+                "prompt": "A whole number",
+                "value": "C"
+              },
+              {
+                "prompt": "A rational number",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q370",
+              "correct_answer": "D",
+              "explanation": "Rational Number- A number can be expressed in the form p/q, where p and q are integers and q≠0, is called a rational number. All integers and fractions are rational numbers Ex. i.e 0.777.........., 0.131313........... These numbers are also written in the form of p/q i.e. 0.777 = 7/9, 0.1313 = 13/99 etc.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q371",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Number of positive integers, which are less than 108 and prime to 108, is",
+            "options": [
+              {
+                "prompt": "15",
+                "value": "A"
+              },
+              {
+                "prompt": "18",
+                "value": "B"
+              },
+              {
+                "prompt": "17",
+                "value": "C"
+              },
+              {
+                "prompt": "36",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q371",
+              "correct_answer": "D",
+              "explanation": "For n 1, ≥ Euler's Phi-function (n) φ denotes the number of positive integers not exceeding n that are relatively prime to n and if the integer n 1 > has the prime factorization 1 2 n k k k 1 2 n n p p ...p = then, ( ) 1 2 n 1 1 1 n n 1 1 ... 1 p p p      φ = − − −           Now, if n = 108 we have 2 3 108 2 3 = therefore ( ) 1 1 108 108 1 1 36 2 3    φ = − − =       Note:- Official Answer is (c).",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q372",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "3 3 3 2 32 – 3 4 + 500 is equal to:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "3 24",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q372",
+              "correct_answer": "C",
+              "explanation": "We have 3 3 3 2 32 3 4 500 − + 3 3 3 4 4 3 4 5 4 = − + 3 6 4 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q373",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In the following figure (not to scale) AB is the common tangent to the circles C1 and C2, where C1 and C2 are touching externally at C. AD and DC are two chords of the circle C1 and BE and EC are the two chords of the circle C2. Find the measure of ∠ ∠ ADC + BEC? [Exam Date : 23/09/2018, Shift-II (Male YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-II) 69 YCT",
+            "options": [
+              {
+                "prompt": "120º",
+                "value": "A"
+              },
+              {
+                "prompt": "100º",
+                "value": "B"
+              },
+              {
+                "prompt": "60º",
+                "value": "C"
+              },
+              {
+                "prompt": "90º",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q373",
+              "correct_answer": "D",
+              "explanation": "Let O and O' be the centers of the circles C1 and C2 respectively. Now, C lies on the line OO' and therefore, in the quadrilateral AOO'B we have We know that, ∠ A = 90° ∠B = 90° Then, ∠A +∠B = 180° ∠AOC +∠BO'C = 180° ∠AOC = 2∠ADC ∠BO'C = 2∠BEC Now, 2∠ADC +2∠BEC = 180° ∠ADC + ∠ BEC = 90°",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q374",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "PQ is the direct common tangent of two circles (S, 9 cm) and (R, 4 cm) which touch each other externally. Find the area of the quadrilateral PQRS (in cm2)?",
+            "options": [
+              {
+                "prompt": "72",
+                "value": "A"
+              },
+              {
+                "prompt": "69",
+                "value": "B"
+              },
+              {
+                "prompt": "78",
+                "value": "C"
+              },
+              {
+                "prompt": "65",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q374",
+              "correct_answer": "C",
+              "explanation": "We have Then, the area of the trapezium PQRS 1 2 = × (Sum of lengths of parallel sides)×height ( ) 1 9 4 12 2 = × + × 2 78 cm . = Note :- Official Answer is (a)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q375",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "When 31513 and 34369 are divided by a certain three digit number, the remainders are equal. Find the remainder.",
+            "options": [
+              {
+                "prompt": "98",
+                "value": "A"
+              },
+              {
+                "prompt": "97",
+                "value": "B"
+              },
+              {
+                "prompt": "95",
+                "value": "C"
+              },
+              {
+                "prompt": "96",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q375",
+              "correct_answer": "B",
+              "explanation": "Let d be the three digit common divisor of 31513 and 34369. Then Euclid's Division lemma gives 1 31513 dq r = + & 2 34369 dq r = + ⇒ ( ) 2 1 2856 d q q = − and since 2856 = 24×119 , 12×238 , 6×476 , 3×952 , 4×714, the possible values of d are 119, 238, 476, 952 and 714. Moreover, 31513 and 34369 both leave remainder 97 when divided by each value of d.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q376",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "( ) 0.11+0.22 ×3 is equal to:",
+            "options": [
+              {
+                "prompt": "0.3",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1.9",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q376",
+              "correct_answer": "B",
+              "explanation": "We have ( ) 0.11 0.22 3 + × = 11 22 1 2 3 3 3 3 1 99 99 9 9 9     + × ⇒ + × ⇒ × =        ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q377",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A fraction whose denominator is 30 and between 5 7 and 8 11 is:",
+            "options": [
+              {
+                "prompt": "20",
+                "value": "A"
+              },
+              {
+                "prompt": "18",
+                "value": "B"
+              },
+              {
+                "prompt": "21",
+                "value": "C"
+              },
+              {
+                "prompt": "19",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q377",
+              "correct_answer": "D",
+              "explanation": "We have LCM (8, 11, 30) = 1320 Now let 5 x 7 8 30 11 < < Thus, we get 5 165 44x 7 120 1320 1320 1320 × × < < ⇒ 825 44x 840 < < From option- x 19 = Therefore, the required fraction is 19 30 .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q378",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the remainder when 3215 is divided by 43",
+            "options": [
+              {
+                "prompt": "35",
+                "value": "A"
+              },
+              {
+                "prompt": "30",
+                "value": "B"
+              },
+              {
+                "prompt": "28",
+                "value": "C"
+              },
+              {
+                "prompt": "33",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q378",
+              "correct_answer": "C",
+              "explanation": "By Fermat theorem, ap–1 ≡ 1 (mod p) and (a,p) = 1 ⇒ 342 ≡ 1 (mod 43) taking power of '5' both sides- (342)5 ≡ 15 (mod 43) (as a ≡ b (mod m) ⇒ an ≡ bn (mod m)) ⇒ 3210 ≡ 1 (mod 43) multiplying by 35 to both sides- ⇒ 3210 × 35 ≡ 35 (mod 43) (as a ≡ b (mod m) ⇒ ac ≡ bc (mod m)) ⇒ 3215 ≡ 35 (mod 43) ⇒ 3215 ≡ 243 (mod 43) ⇒ 3215 ≡ 28 (mod 43).",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q379",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The sum of the length, breadth and depth of a cuboid is 19cm and its diagonal is 5 5cm. Its surface area is",
+            "options": [
+              {
+                "prompt": "361 cm2",
+                "value": "A"
+              },
+              {
+                "prompt": "250 cm2",
+                "value": "B"
+              },
+              {
+                "prompt": "236 cm2",
+                "value": "C"
+              },
+              {
+                "prompt": "275 cm2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q379",
+              "correct_answer": "C",
+              "explanation": "For a cuboid with length l, breadth b and height h, diagonal is 2 2 2 l b h + + . Therefore, we get ( ) 2 2 2 2 l b h 5 5 + + = l2 +b2+h2 = 125 Given that, l + b + h = 19 Square both the side, (l +b +h )2 = 361 l2 + b2 + h2 + 2(lb + bh + hl) = 361 125 +2(lb + bh + hl) = 361 2(lb + bh + hl) = 361–125 2(lb + bh + hl) = 236 which is the required surface area of cuboid.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q380",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Euclid's Postulate III is:",
+            "options": [
+              {
+                "prompt": "All right angles are equal to one another",
+                "value": "A"
+              },
+              {
+                "prompt": "A terminal line can be produced indefinitely",
+                "value": "B"
+              },
+              {
+                "prompt": "A straight line may be drawn from any point",
+                "value": "C"
+              },
+              {
+                "prompt": "A circle can be drawn with any centre any",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q380",
+              "correct_answer": "D",
+              "explanation": "Euclid's postulate III : A circle can be drawn with any centre and any radius.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q381",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the number of ways in which 8064 can be resolved as the product of two factors?",
+            "options": [
+              {
+                "prompt": "26",
+                "value": "A"
+              },
+              {
+                "prompt": "24",
+                "value": "B"
+              },
+              {
+                "prompt": "22",
+                "value": "C"
+              },
+              {
+                "prompt": "20",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q381",
+              "correct_answer": "B",
+              "explanation": "We have 7 2 8069 2 3 7 = ⋅ ⋅ Now, number of divisors = (7+1) (2+1) (1+1) = 48 Therefore, number of ways to resolve 8069 in two factors is 48 2 = 24 ways.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q382",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In the following figure, ABCD is a quadrilateral. BE||AC, BE meets DC (produced) at E. AE and BC intersects at O. Which one is the correct answer from the following?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "ABEC is parallelogram",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q382",
+              "correct_answer": "B",
+              "explanation": "We have ( ) ( ) ar ACE ar ACB ∆ = ∆ since triangles on the same base (AC) and between the same parallels (AC and BE) have equal areas ( ) ( ) ( ) ( ) ar AOC ar OAB ar AOC ar OCE ⇒ ∆ + ∆ = ∆ + ∆ ( ) ( ) ar OAB ar OCE ⇒ ∆ = ∆",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q383",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In the following figure PQ is parallel to BC and PQ :BC =1 : 3. If the area of the triangle ABC is 144 cm2, then what is the area of the ∆APQ",
+            "options": [
+              {
+                "prompt": "16 cm2",
+                "value": "A"
+              },
+              {
+                "prompt": "9 cm2",
+                "value": "B"
+              },
+              {
+                "prompt": "36 cm2",
+                "value": "C"
+              },
+              {
+                "prompt": "18 cm2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q383",
+              "correct_answer": "A",
+              "explanation": "Given that PQ:BC = 1:3 ⇒ PQ 1 BC 3  =     & PQ || BC & area ∆ ABC = 144cm2 since we know that in ABC ∆ and APQ ∆ So, ( ) ( ) 2 ar APQ PQ 1 ar ABC BC 9 ∆   = =   ∆   ⇒ ( ) 2 144 ar APQ 16 cm 9 ∆ = =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q384",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The following sentences are steps involved in finding the H.C.F. of 29 and 24 by using Euclid's Division algorithm. Arrange them in sequential order from first to last",
+            "options": [
+              {
+                "prompt": "B, C, A",
+                "value": "A"
+              },
+              {
+                "prompt": "B, A, C",
+                "value": "B"
+              },
+              {
+                "prompt": "A, B, C",
+                "value": "C"
+              },
+              {
+                "prompt": "C, A, B",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q384",
+              "correct_answer": "A",
+              "explanation": "We have by Euclid's Division algorithm ⇒ 29 = 24×1+5 ⇒ 24 5 4 4 = × + ⇒ 24 = 5×4+1+3 ⇒ 5 = 1×5+0 Therefore, the correct order is B, C, A.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q385",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A number of three digits in scale of 7 when expressed in scale of 9 has its digits reversed in order. Find the number expressed in scale of 10",
+            "options": [
+              {
+                "prompt": "247",
+                "value": "A"
+              },
+              {
+                "prompt": "246",
+                "value": "B"
+              },
+              {
+                "prompt": "245",
+                "value": "C"
+              },
+              {
+                "prompt": "248",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q385",
+              "correct_answer": "D",
+              "explanation": "Let the three-digit number be xyz. Then we have When the base is 7 (x y z)7 = 49x+7y+z –––––––(i) When the base is 9 (z y x)9 = 81z + 9y + x ––––––– (ii) Now, (xyz)7 = (zyx)9 ⇒ 49x 7y z 81z 9y x + + = + + ⇒ ( ) y 8 3x 5z = − Now, since we must have y < 7, y = 0 & 3x = 5z ⇒ x = 5 and z = 3. Therefore, (x y z)10 = 49 × 5 + 0 × 7 + 3 × 1 = 248 or (81 × 3) + (9 × 0) + (5 × 1) = 248 ( ) ( ) ( ) 7 10 9 503 248 305 = = YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-II) 71 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q386",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "      2 1 1 + + 5 + 3 6 – 3 6 + 5 is equal to:",
+            "options": [
+              {
+                "prompt": "3 3",
+                "value": "A"
+              },
+              {
+                "prompt": "2 5",
+                "value": "B"
+              },
+              {
+                "prompt": "4 6",
+                "value": "C"
+              },
+              {
+                "prompt": "2 6",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q386",
+              "correct_answer": "C",
+              "explanation": "We have 2 1 1 5 3 6 3 6 5   + +   + − +   6 3 5 3 6 5 3 + = − + + − 3 5 3 3 6 3 3 6 3 5 3 − + + + − = 4 6 2 3 3 − =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q387",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If three concurrent straight lines AD, BE and CF are drawn from the angular points of a triangle ∆ ABC to meet the opposite sides such that AF 1 BD 2 = , = , FB 2 DC 3 then by applying Ceva's theorem, EA EC is equal to:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q387",
+              "correct_answer": "A",
+              "explanation": "Ceva's Theorem :- If three cevians AD, BE, CF, one through each vertex of a triangle ABC, are concurrent, then BD CE AF 1 DC AE BF ⋅ ⋅ = ––––(i) Given that, AF 1 BD 2 , BF 2 DC 3 = = then, equation becomes 2 1 CE 1 3 2 AE ⋅ ⋅ = ⇒ CE 3 AE = AE 1 CE 3 ⇒ = Section : Discipline-2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q388",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If α,β are the roots of the equation ( )( ) ( ) = x – a x – b + c 0 c 0 , ≠ then the roots of the equation ( )( ) x – c – α x – c – β = c are:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "a and b",
+                "value": "B"
+              },
+              {
+                "prompt": "a and",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q388",
+              "correct_answer": "A",
+              "explanation": "We have (x – a) (x – b) + c = 0 ⇒ x2 – (a + b) x + ab + c = 0 ⇒ α + β = a + b & αβ = ab + c Now, (x – c –α ) (x – c – β) – c = 0 ⇒ x2 – (2c + α + β)x + c2 + c (α + β) + αβ – c = 0 ⇒ x2 – x[(a + c) + (b + c)] + (a + c) (b + c) = 0 ⇒ [x – (a + c)][x – (b + c)] = 0 Therefore, (a + c) and (b + c) are the roots of given equation.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q389",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A 6 feet tall man finds that the angle of elevation of the top of a 24 feet height pillar and the angle of depression of its base are complementary angles. The distance of the man from the pillar is:",
+            "options": [
+              {
+                "prompt": "2 3 feet",
+                "value": "A"
+              },
+              {
+                "prompt": "6 3 feet",
+                "value": "B"
+              },
+              {
+                "prompt": "8 3 feet",
+                "value": "C"
+              },
+              {
+                "prompt": "None of these",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q389",
+              "correct_answer": "B",
+              "explanation": "As in figure, let AB be the pillar of height 24 feet and CD be the 6 feet tall man. Let the distance between man and pillar BC be x. Now, in BCD ∆ we have- ( ) DC tan 90º x −θ = ⇒ DC x DC tan 6tan cot = = θ = θ θ –––––(i) and in AMD ∆ we have- 18 tan x θ = ⇒ 18 x tan = θ –––––(ii) From equation (i) and (ii) we get 18 6tan tan = θ θ tan2θ = 2 18 tan 3 6 ⇒ θ = tan 3 ⇒ θ = Therefore, x 6 3 feet. =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q390",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Two hemispherical vessels can hold 10.8 liters and 50 liters of liquid respectively. The ratio of their minor curved surface area is:",
+            "options": [
+              {
+                "prompt": "4 : 3",
+                "value": "A"
+              },
+              {
+                "prompt": "9 : 25",
+                "value": "B"
+              },
+              {
+                "prompt": "25 : 9",
+                "value": "C"
+              },
+              {
+                "prompt": "16 : 25",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q390",
+              "correct_answer": "B",
+              "explanation": "We have Volume of a hemisphere of radius r = 3 2 πr 3 & curved surface area of hemisphere of radius r = 2πr2 YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-II) 72 YCT Now, let the hemispherical vessels be of radii r1 and r2. Then- 3 1 3 2 2 r 108 27 3 2 500 125 r 3 π = = π 3 1 3 2 r 27 r 125 ⇒ = 1 2 r 3 r 5 ⇒ = Therefore, the required ratio is 2 2 1 1 2 2 2 2 2 r r 9 2 r r 25 π = = π",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q391",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The number of real solutions of equation 2 x – 3 | x | +2 = 0 is:",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "4",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q391",
+              "correct_answer": "B",
+              "explanation": "Since we know that x ; x 0 x –x ; x<0 ≥  =   Now, if x 0 ≥ we have 2 x 3 x 2 0 − + = 2 x x 2 x 2 0 − − + = ( ) ( ) x x 1 2 x 1 0 − − − = ( )( ) x 1 x 2 0 − − = x = ±1, x =±2 which has two solutions namely 1 and 2 if x < 0 we have 2 x 3x 2 0 + + = which has two solutions namely –1 and –2.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q392",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The value of m for which one of the roots of 2 x – 3x + 2m = 0 is double of the root of 2 x – x + m = 0 is:",
+            "options": [
+              {
+                "prompt": "0, –2",
+                "value": "A"
+              },
+              {
+                "prompt": "0, 1",
+                "value": "B"
+              },
+              {
+                "prompt": "None of these",
+                "value": "C"
+              },
+              {
+                "prompt": "2, 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q392",
+              "correct_answer": "A",
+              "explanation": "Let α be a root of 2 x x m 0 − + = then 2α is a root of 2 x 3x 2m 0 − + = . Therefore, we get 2 m 0 α −α + = ––––(i) & 2 4 6 2m 0 α −α + = –––(ii) Solve equation (i) & (ii) then we get - ⇒ m α = − & 2 2m α = − Therefore, 2 m 2m 0 + = ⇒ ( ) m m 2 0 + = ⇒ m 0 or m 2 = = −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q393",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "5π π 5π π tan – tan – 3tan .tan 12 12 12 12 is equal to:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q393",
+              "correct_answer": "A",
+              "explanation": "We have 5 tan tan 12 12 3 π π π     − =         ⇒ 5 tan tan 12 12 5 1 tan tan 12 12 π π − π π + = 3 , ( ) tan A B tanA tanB 1 tanA tan B  −      − =   −   ∵ ⇒ 5 5 3 1 tan tan tan tan 12 12 12 12 π π π π   + = −     ⇒ 5 5 tan tan 3 tan tan 3 12 12 12 12 π π π π − − =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q394",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If 3sinθ + 5cosθ = 5, then the value of 5sinθ – 3cosθ is equal to:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "4",
+                "value": "B"
+              },
+              {
+                "prompt": "None of these",
+                "value": "C"
+              },
+              {
+                "prompt": "5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q394",
+              "correct_answer": "A",
+              "explanation": "We have 3sin 5cos 5 θ + θ = Squaring both side then - ⇒ ( ) 2 3sin 5cos 25 θ+ θ = ⇒ 2 2 9sin 25cos 30sin cos 25 θ + θ + θ θ = ⇒( ) ( ) 2 2 9 1 cos θ 25 1 sin θ 30sinθcosθ 25 − + − + = {∵ sin2θ+cos2θ= 1} ⇒ 2 2 25sin 9cos 30sin cos 9 θ + θ − θ θ = ⇒ ( ) 2 5sin 3cos 9 θ − θ = ⇒ 5sin 3cos 3 θ − θ =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q395",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The diameters of the top and the bottom portions of a bucket are 42 cm and 28 cm. If the height of the bucket is 24 cm, find the area of outer curved surface?",
+            "options": [
+              {
+                "prompt": "2625 cm2",
+                "value": "A"
+              },
+              {
+                "prompt": "2750 cm2",
+                "value": "B"
+              },
+              {
+                "prompt": "2675 cm2",
+                "value": "C"
+              },
+              {
+                "prompt": "2725 cm2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q395",
+              "correct_answer": "B",
+              "explanation": "The bucket is in the form of a frustum of cone. Therefore, the required total curved surface area = ( ) 1 2 r r π + × Slant height Given, r1 = 42 21cm 2 = (radius of top of bucket) r2 = 28 14cm 2 = (radius of bottom of bucket) h = 24cm Then, l = ( ) ( ) 2 4 2 1 2 h r r 576 21 14 + − = + − l 576 49 625 = + = = 25 ⇒ curved surface area = π(r1 + r2) × l = 22 7 (21+14) × 25 = 2750cm2. YEP DSSSB (TGT-Math) 2018 (23.9.2018, Shift-II) 73 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q396",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the roots of the quadratic equation ( ) 2 2 2 x – xln a – 3a + 2 + a – 4 = 0 are of opposite signs, then",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q396",
+              "correct_answer": "D",
+              "explanation": "If the roots of the quadratic equation ( ) 2 2 2 x xln a 3a 2 a 4 0 − − + + − = are of opposite sign then product of roots = 2 a 4 0 − < ⇒ ( ) a 2,2 ∈− Also, we must have 2 a 3a 2 0 − + > ⇒ ( )( ) a 1 a 2 0 − − > ⇒ a2– 2a – a + 2 > 0 ⇒ a(a–2) –1(a – 2) > 0 ⇒ ( ) ( ) a 2, ∈ ∞ ∞ ∪- ,1 Therefore, we get ( ) a 2,1 ∈− Note:- Official answer is (b)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q397",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The ratio of the radius of two cylinders is 2:3 and the ratio of their heights is 5:3. The ratio of their volumes will be:",
+            "options": [
+              {
+                "prompt": "9 : 4",
+                "value": "A"
+              },
+              {
+                "prompt": "27 : 20",
+                "value": "B"
+              },
+              {
+                "prompt": "4 : 9",
+                "value": "C"
+              },
+              {
+                "prompt": "20 :27",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q397",
+              "correct_answer": "D",
+              "explanation": "The volume of the cylinder 2r h = π ; where r and h are radius and height of the cylinder respectively. Then, the required ratio is ( ) ( ) ( ) ( ) 2 2 2r 5h 20 27 3r 3h π = π",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q398",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "An equilateral triangle has each side equal to a. If the co-ordinates of its vertices are ( ) ( ) ( ) , , 1 1 2 2 3 3 x , y x , y x , y , then square of the determinant 1 1 2 2 3 3 x y 1 x y 1 x y 1 equals:",
+            "options": [
+              {
+                "prompt": "None of these",
+                "value": "A"
+              },
+              {
+                "prompt": "4a4",
+                "value": "B"
+              },
+              {
+                "prompt": "3a4",
+                "value": "C"
+              },
+              {
+                "prompt": "4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q398",
+              "correct_answer": "D",
+              "explanation": "Area of the equilateral triangle = 1 1 2 2 2 3 3 x y 1 1 3a x y 1 2 4 x y 1 = Square both the side, ⇒ 2 1 1 4 2 2 3 3 x y 1 1 3a x y 1 4 16 x y 1 = ⇒ 2 1 1 4 2 2 3 3 x y 1 3a x y 1 4 x y 1 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q399",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If A and B are two points having co-ordinates (3, 4) and (5, –2) respectively and P is a point such that PA = PB and area of triangle PAB = 10 . sq units, then the co-ordinates of P are:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "None of these",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q399",
+              "correct_answer": "D",
+              "explanation": "Let P( ) x, y be the point. Then PA PB = gives ( ) ( ) ( ) ( ) 2 2 2 2 x 3 y 4 x 5 y 2 − + − = − + + ⇒ x 3y 1 − = ... (i) & ( ) ar PAB ∆ 1 x( 2 4) 5(4 y) 3(y ( 2)) 10 sq.unit 2 = −− + − + −− = ± ⇒ either 3x y 3 or 3x y 23 + = + = ... (ii) solving (i) and (ii) ⇒ ( ) ( ) ( ) ( ) x,y 1,0 or x,y 7,2 = =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q400",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If cos25º+sin25º= k, then cos20º is equal to:",
+            "options": [
+              {
+                "prompt": "k",
+                "value": "A"
+              },
+              {
+                "prompt": "k",
+                "value": "B"
+              },
+              {
+                "prompt": "k",
+                "value": "C"
+              },
+              {
+                "prompt": "None of these",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q400",
+              "correct_answer": "A",
+              "explanation": "Given that- cos25º sin 25º k + = ––– (i) Both side multiply by 1 2 in equation (i) Then, 1 1 k cos 25 sin 25 2 2 2 ° + ° = ⇒ k cos45ºcos25º sin 45ºsin 25º 2 + = ⇒ ( ) k cos 45º 25º 2 − = {∵ cosAcosB+sinAsinB = cos(A–B)} ⇒ k cos20º 2 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

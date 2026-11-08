@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export type ExamTarget = 'all' | 'upsc' | 'uppsc';
+export type ExamTarget = 'all' | 'upsc' | 'uppsc' | 'tgt' | 'pgt';
 
 export interface ExamInfo {
   id: ExamTarget;
@@ -10,15 +10,19 @@ export interface ExamInfo {
   tagline: string;
   badge: string;
   pillLabel: string;
+  isIndividualPurchasable?: boolean;
+  price?: number;
+  originalPrice?: number;
+  subjects?: string[];
 }
 
 export const EXAMS: Record<ExamTarget, ExamInfo> = {
   all: {
     id: 'all',
-    shortName: 'UPSC & UP Principal',
-    fullName: 'UPSC & UP Principal Exams 2026',
-    tagline: 'Comprehensive CBT Mocks & Topic Tests for Both Vacancies',
-    badge: 'UPSC & UP PRINCIPAL 2026',
+    shortName: 'All Teaching Exams',
+    fullName: 'UPSC Principal, UP Principal, TGT & PGT 2026',
+    tagline: 'Comprehensive CBT Mocks, Solved PYQs & Topic Tests across All Vacancies',
+    badge: 'ALL-ACCESS PASS 2026',
     pillLabel: '✨ All Exams',
   },
   upsc: {
@@ -36,6 +40,30 @@ export const EXAMS: Record<ExamTarget, ExamInfo> = {
     tagline: 'Uttar Pradesh Principal & Headmaster Recruitment 2026',
     badge: 'UP PRINCIPAL 2026',
     pillLabel: '🏫 UP Principal',
+  },
+  tgt: {
+    id: 'tgt',
+    shortName: 'TGT Test Series',
+    fullName: 'TGT (Trained Graduate Teacher) Solved Papers & Mocks',
+    tagline: 'Subject Tracks: Hindi, Mathematics, Science, Social Science, English, Sanskrit',
+    badge: 'TGT 2026',
+    pillLabel: '🎯 TGT Series',
+    isIndividualPurchasable: true,
+    price: 199,
+    originalPrice: 999,
+    subjects: ['Hindi', 'Mathematics', 'Science', 'Social Science', 'English', 'Sanskrit'],
+  },
+  pgt: {
+    id: 'pgt',
+    shortName: 'PGT Test Series',
+    fullName: 'PGT (Post Graduate Teacher) Solved Papers & Mocks',
+    tagline: 'Subject Tracks: Hindi, Mathematics, Physics, Chemistry, Biology, History, Geography, Commerce, Economics, English',
+    badge: 'PGT 2026',
+    pillLabel: '🎓 PGT Series',
+    isIndividualPurchasable: true,
+    price: 199,
+    originalPrice: 999,
+    subjects: ['Hindi', 'Mathematics', 'Physics', 'Chemistry', 'Biology', 'History', 'Geography', 'Commerce', 'Economics', 'English'],
   },
 };
 
@@ -62,7 +90,7 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     AsyncStorage.getItem(STORAGE_KEY).then((saved) => {
-      if (saved && (saved === 'all' || saved === 'upsc' || saved === 'uppsc')) {
+      if (saved && (saved === 'all' || saved === 'upsc' || saved === 'uppsc' || saved === 'tgt' || saved === 'pgt')) {
         setExamModeState(saved as ExamTarget);
       }
     }).catch(() => {});
@@ -77,9 +105,16 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
     if (!filename) {
       if (title) {
         if (examMode === 'uppsc') return title.replace(/UPSC Principal/gi, 'UP Principal');
-        if (examMode === 'all') return title.replace(/UPSC Principal/gi, 'UPSC & UP Principal');
+        if (examMode === 'tgt') return title.replace(/UPSC Principal/gi, 'TGT');
+        if (examMode === 'pgt') return title.replace(/UPSC Principal/gi, 'PGT');
+        if (examMode === 'all') return title;
       }
-      return title || (examMode === 'uppsc' ? 'UP Principal Test' : examMode === 'all' ? 'UPSC & UP Principal Test' : 'UPSC Principal Test');
+      return title || (examMode === 'uppsc' ? 'UP Principal Test' : examMode === 'tgt' ? 'TGT Solved Paper' : examMode === 'pgt' ? 'PGT Solved Paper' : 'Exam Test');
+    }
+
+    if (filename.includes('tgt_pgt/') || filename.includes('tgt/') || filename.includes('pgt/')) {
+      const clean = filename.replace(/^.*\//, '').replace(/\.json$/i, '').replace(/[_\-]+/g, ' ');
+      return clean.replace(/\b\w/g, (c) => c.toUpperCase());
     }
 
     if (filename.includes('full_mocks/')) {
@@ -89,6 +124,12 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
 
       if (examMode === 'uppsc') {
         return `UP Principal Full Mock Test ${padded} • Complete CBT Exam`;
+      }
+      if (examMode === 'tgt') {
+        return `TGT Comprehensive Mock Test ${padded} • Solved Paper`;
+      }
+      if (examMode === 'pgt') {
+        return `PGT Comprehensive Mock Test ${padded} • Solved Paper`;
       }
       if (examMode === 'all') {
         return `UPSC & UP Principal Full Mock ${padded} • Complete CBT Exam`;
@@ -110,8 +151,11 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
         if (examMode === 'uppsc') {
           return `${cleanName} • UP Principal Set ${paddedPart}`;
         }
-        if (examMode === 'all') {
-          return `${cleanName} • Practice Set ${paddedPart}`;
+        if (examMode === 'tgt') {
+          return `${cleanName} • TGT Practice Set ${paddedPart}`;
+        }
+        if (examMode === 'pgt') {
+          return `${cleanName} • PGT Practice Set ${paddedPart}`;
         }
         return `${cleanName} • Practice Set ${paddedPart}`;
       }
@@ -120,10 +164,11 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
     // Fallback title transform
     if (title) {
       if (examMode === 'uppsc') return title.replace(/UPSC Principal/gi, 'UP Principal');
-      if (examMode === 'all') return title.replace(/UPSC Principal/gi, 'UPSC & UP Principal');
+      if (examMode === 'tgt') return title.replace(/UPSC Principal/gi, 'TGT');
+      if (examMode === 'pgt') return title.replace(/UPSC Principal/gi, 'PGT');
     }
 
-    return title || (examMode === 'uppsc' ? 'UP Principal Test' : 'UPSC Principal Test');
+    return title || 'Mock Test';
   };
 
   return (

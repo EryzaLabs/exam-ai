@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 import { useExam, EXAMS, ExamTarget } from '@/context/exam-context';
 import { useTheme } from '@/context/theme-context';
-import { Sparkles, Building2, GraduationCap } from 'lucide-react-native';
+import { Sparkles, Building2, GraduationCap, BookOpen, Award } from 'lucide-react-native';
 
 interface ExamSelectorProps {
   compact?: boolean;
@@ -18,6 +18,8 @@ export default function ExamSelector({ compact = false, showTagline = false, sty
     { id: 'all', label: 'All Exams', icon: Sparkles },
     { id: 'upsc', label: 'UPSC Principal', icon: Building2 },
     { id: 'uppsc', label: 'UP Principal', icon: GraduationCap },
+    { id: 'tgt', label: 'TGT Series', icon: BookOpen },
+    { id: 'pgt', label: 'PGT Series', icon: Award },
   ];
 
   return (

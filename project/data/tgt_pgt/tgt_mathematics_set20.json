@@ -1,0 +1,3820 @@
+{
+  "_id": "tgt_mathematics_set20",
+  "title": "TGT Mathematics • Mock Test Set 20 (100 MCQs)",
+  "course": "TGT Series",
+  "subject": "Mathematics",
+  "exam": "tgt",
+  "price": 199,
+  "originalPrice": 999,
+  "duration": 100,
+  "sections": [
+    {
+      "_id": "sec_tgt_mathematics_set20",
+      "title": "Mathematics Section",
+      "qCount": 100,
+      "time": 100,
+      "questions": [
+        {
+          "_id": "tgt_mathematics_q1901",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The relation sin x + 2 sin 2x = 3x, 0 ≤ x ≤ 2π has:",
+            "options": [
+              {
+                "prompt": "one solution in each quadrant",
+                "value": "A"
+              },
+              {
+                "prompt": "two solutions in the first quadrant",
+                "value": "B"
+              },
+              {
+                "prompt": "no solution in any quadrant",
+                "value": "C"
+              },
+              {
+                "prompt": "one solution in the second quadrant",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1901",
+              "correct_answer": "C",
+              "explanation": "We have sinx + 2sin2x – sin3x = 3 ⇒ sinx + 4 sinx cosx – 3 sinx + 4 sin3x = 3 ⇒ sinx [–2 + 4 cosx + 4(1 – cos2x)] = 3 ⇒ sinx [2 – (4 cos2x – 4cosx + 1) + 1] = 3 ⇒ sinx [3 – (2cosx – 1)2] = 3 ⇒ sinx = 1 and 2cosx – 1 = 0 ⇒ x and x 2 3 π π = = This is not possible simultaneously.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1902",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In a triangle ABC, if cos A cos B + sinA sinB sinC = 1, then the triangle is a/an:",
+            "options": [
+              {
+                "prompt": "isosceles",
+                "value": "A"
+              },
+              {
+                "prompt": "equilateral",
+                "value": "B"
+              },
+              {
+                "prompt": "obtuse-angled isosceles",
+                "value": "C"
+              },
+              {
+                "prompt": "right-angled isosceles",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1902",
+              "correct_answer": "D",
+              "explanation": "We have cosA cosB + sinB sinB sinC = 1 ⇒ 2 cosA cosB + 2sinA sinB sinC = 2 ⇒ 2 cosA cosB + 2 sinA sinB sinC = sin2A + cos2A + sin2B + cos2B ⇒ (cosA – cosB)2 + (sinA – sinB)2 + 2 sinA sinB (1 – sinC) = 0 which contains all positive terms and hence we must have cosA – cosB = 0, sinA – sinB = 0 and 1 – sinC = 0 ⇒ cosA = cosB, sinA = sinB and C 2 π = This is an isosceles right angled triangle.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1903",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If in a triangle ABC, sines of angles A and B satisfy the equation 4x2 – ( ) 2 6 x + 1 = 0, then cos(A – B) is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1903",
+              "correct_answer": "A",
+              "explanation": "We have 2 6 8 6 2 3 1 x 8 4 2 2 ± ± ± = = = ⇒ sinA = 3 1 3 1 and sin B 2 2 2 2 + − = ⇒ A = 75° and B = 15° ⇒ cos(A – B) = cos(75° – 15°) = cos60° = 1 2 YEP DSSSB (TGT-Math) 2018 (08.07.2018) 324 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1904",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ladder of length 6 m makes an angle of 45° with the floor while leaning against one wall of a room. If the foot of the ladder is kept fixed on the floor and it is made to lean against the opposite wall of the room, it makes an angle of 60° with the floor. What is the distance between these two walls of the room?",
+            "options": [
+              {
+                "prompt": "2 3m",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "3 2m",
+                "value": "C"
+              },
+              {
+                "prompt": "3m",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1904",
+              "correct_answer": "B",
+              "explanation": "In ∆ABC we have cos60° = x 6 and cos45° = y 6 in ∆CDE ; hence x = 3, y = 3 2 ⇒ x + y = ( ) ( ) 3 3 2 m 3 1 2 m + = +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1905",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The angle of elevation of a stationary cloud from a point 2500 m above a lake is 15° and the angle of depression of its reflection in the lake is 45°. The height of the cloud above the lake level is:",
+            "options": [
+              {
+                "prompt": "7500 m",
+                "value": "A"
+              },
+              {
+                "prompt": "2500 m",
+                "value": "B"
+              },
+              {
+                "prompt": "2500 3m",
+                "value": "C"
+              },
+              {
+                "prompt": "1250 3m",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1905",
+              "correct_answer": "C",
+              "explanation": "Let A be the point of observation and B be the position of the cloud and PQ be the surface of lake. Then C is the reflection of cloud, and AP = 2500m, ∠ BAD = 15° and ∠ DAC = 45°. Let BD = x then DQ = AP = 2500m and QC = BQ = BD + DQ = 2500 + x. Also DC = DQ + QC = 2500 + x + 2500 = 5000 + x and in ∆ADC tan 45° = DC AD ⇒ 1 = 5000 x AD + ⇒ AD = 5000 + x Now tan15° = tan (45 – 30) = tan 45 tan 30 3 1 1 tan 45tan30 3 1 − − = + + and thus in ∆ABD tan15° = BD 3 1 x AD 5000 x 3 1 − ⇒ = + + ⇒ x = 2500 ( ) 3 1 − Now BQ = BD + DQ = 2500 3 m",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1906",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The number of positive integral pairs (a, b) satisfying the equation tan–1",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "infinite",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1906",
+              "correct_answer": "A",
+              "explanation": "tan–1(a) + tan–1(b) = tan–1(7) ⇒ tan–1 a b 1 ab +     −   = tan–1(7) ⇒ a + b + 7ab = 7 ⇒ (a, b) ≡ (7, 0) or (a, b) ≡ (0, 7)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1907",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "When       1 5 x + = , x 2 then the principal value of sin–1 (x) is:",
+            "options": [
+              {
+                "prompt": "4",
+                "value": "A"
+              },
+              {
+                "prompt": "6",
+                "value": "B"
+              },
+              {
+                "prompt": "5",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1907",
+              "correct_answer": "B",
+              "explanation": "We have 1 5 x x 2 + = ⇒ 2x2 – 5x + 2 = 0 ⇒ 2x2 – 4x – x + 2 = 0 ⇒ (x – 2) (2x – 1) = 0 ⇒ x = 1 2 ⇒ sin–1(x) = 6 π",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1908",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If tan–1             –1 a b π + tan = x x 2 , then the value of x is:",
+            "options": [
+              {
+                "prompt": "a",
+                "value": "A"
+              },
+              {
+                "prompt": "b",
+                "value": "B"
+              },
+              {
+                "prompt": "ab",
+                "value": "C"
+              },
+              {
+                "prompt": "ab",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1908",
+              "correct_answer": "D",
+              "explanation": "We have tan–1 a b x x a b 1 x x   +       −     ⇒ 2 a b x tan ab 2 1 x + π = − ⇒ ( ) 2 x a b x ab + − tan 2 π = ⇒ x2 – ab = 0 ⇒ x = ab",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1909",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "When cos–1 (x) + cos–1 (y) = π 2 and tan–1 (x) – tan–1 (y) = 0, then x2 + y2 + xy is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1909",
+              "correct_answer": "C",
+              "explanation": "We must have tan–1(x) – tan–1(y) = 0 ⇒ x = y ⇒ cos–1(x) + cos–1(y) = 2 π ⇒ 2cos–1(x) = 2 π ⇒ x = 1 2 ⇒ x2 + y2 + xy = 3x2 = 3 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1910",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If α = sin (cot–1(x)) and β = cot (sin–1(x)), where x > 0, then x–2 – x2 = ?",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1910",
+              "correct_answer": "A",
+              "explanation": "We have α = sin (cot–1(x)) and β = cot (sin–1(x)) Now sin(cot–1(x)) = 2 1 1 x + and cot (sin–1(x)) = 2 1 x x − ⇒ α = 2 1 1 x + and β = 2 1 x x − ⇒ x–2 – x2 = 2 β     α  ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1911",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If tan–1 ( )           2 1+ x – 1 x = 4, then the value of x is:",
+            "options": [
+              {
+                "prompt": "tan",
+                "value": "A"
+              },
+              {
+                "prompt": "tan",
+                "value": "B"
+              },
+              {
+                "prompt": "tan",
+                "value": "C"
+              },
+              {
+                "prompt": "tan 1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1911",
+              "correct_answer": "C",
+              "explanation": "We have tan–1 2 1 x 1 4 x   + −  =     ⇒ 2 1 x 1 tan 4 x + −= ⇒ 2 1 x + = xtan 4 + 1 ⇒ 1 + x2 = x2 tan2 4 + 1 + 2x tan4 ⇒ (1 – tan24)x2 – (2 tan4) x = 0 ⇒ x = 2 2 tan 4 1 tan 4 − ⇒ x = tan8",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1912",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If → 3 asinx – sin2x lim x 0 tan x , then the values of a and b are respectively:",
+            "options": [
+              {
+                "prompt": "–1 and 2",
+                "value": "A"
+              },
+              {
+                "prompt": "2 and 3",
+                "value": "B"
+              },
+              {
+                "prompt": "2 and 1",
+                "value": "C"
+              },
+              {
+                "prompt": "1 and 3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1912",
+              "correct_answer": "C",
+              "explanation": "We have 3 2 2 x 0 x 0 a sin x sin 2x a cos x 2cos2x a 2 lim lim 0 tan x 3tan x.sec x → → − − − = = which is finite if a – 2 = 0 ⇒ a = 2 and thus b = 1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1913",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Using Rolle's theorem for a function f(x) = x (x + 1) (x + 2) (x + 3), f'(x) = 0 has:",
+            "options": [
+              {
+                "prompt": "three real roots",
+                "value": "A"
+              },
+              {
+                "prompt": "four real roots",
+                "value": "B"
+              },
+              {
+                "prompt": "two real roots",
+                "value": "C"
+              },
+              {
+                "prompt": "two real roots and a complex root",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1913",
+              "correct_answer": "A",
+              "explanation": "f(x) = x(x + 1) (x + 2) (x + 3) has four real roots. Therefore f'(x) must have three real roots using Rolle's Theorem.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1914",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Applying Lagrange's Mean Value theorem to the function f(x) = x +       1 x in [0.5, 3], the value of c between 0.5 and 3 is:",
+            "options": [
+              {
+                "prompt": "0.5",
+                "value": "A"
+              },
+              {
+                "prompt": "1.5",
+                "value": "B"
+              },
+              {
+                "prompt": "1.25",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1914",
+              "correct_answer": "B",
+              "explanation": "Lagrange's Mean value Theorem dictates the existence of c∈1 ,3 2       such that YEP DSSSB (TGT-Math) 2018 (08.07.2018) 326 YCT f'(c) = 2 1 f (3) f 2 1 3 2 1 1 c   −    − − = = 1 1 3 2 3 2 1 3 2     + − +         − = 1 3 ⇒ 2 1 1 1 3 c − = ⇒ 3c2 – c2 = 3 ⇒ c = 3/ 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1915",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the derivative of the function y = f(x) is zero always, then y is:",
+            "options": [
+              {
+                "prompt": "an increasing function",
+                "value": "A"
+              },
+              {
+                "prompt": "a decreasing function",
+                "value": "B"
+              },
+              {
+                "prompt": "neither",
+                "value": "C"
+              },
+              {
+                "prompt": "not stationary",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1915",
+              "correct_answer": "C",
+              "explanation": "If the derivative of the function y = f(x) is zero always then f(x) is a constant function. Therefore f(x) is neither an increasing function nor a decreasing function.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1916",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the normal to the curve y2 = 5x – 1 at the point (1, – 2) is of the form ax – 5y + b = 0, then the values of a and b are respectively:",
+            "options": [
+              {
+                "prompt": "4, 14",
+                "value": "A"
+              },
+              {
+                "prompt": "–4, 14",
+                "value": "B"
+              },
+              {
+                "prompt": "–4, –14",
+                "value": "C"
+              },
+              {
+                "prompt": "4, – 14",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1916",
+              "correct_answer": "D",
+              "explanation": "We have 2y dy dy 5 5 dx dx 2y = ⇒ = ⇒ Slope of normal to the curve = 2y 5 − which is 4 5 at (1, – 2). Thus, the required normal is y + 2 = ( ) 4 x 1 5 − ⇒ 4x – 5y – 14 = 0 Which on comparison with ax – 5y + b = 0 gives a = 4 and b = – 14",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1917",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The extreme value of f(x) = ( ) 1 x x is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "e",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1917",
+              "correct_answer": "B",
+              "explanation": "Given f(x) = 1 x x Taking log on both sides, we get log f(x) = 1 x logx On differentiating w.r.t.x, we get 2 2 1 1 1 f '(x) log x f(x) x x − = + ⇒ f'(x) = f(x) 2 1 (1 log x) x − ⇒ f'(x) = 1 x 2 2 1 1 x logx x x   −     ⇒ f'(x) 1 x 2 1 logx x x −   =     For a local maxima or minima. f'(x) = 0 ⇒ (1 – logx) = 0 ⇒ logx = 1 ⇒ x = e Now f\"(x) = 2 1 1 x x 2 2 3 3 1 1 3 2 x logx x logx x x x x     − + − +         Which if x = e gives f\"(e) = 2 1 1 e e 2 2 3 3 1 1 3 2 e loge e loge e e e e     − + − +         = 1 e 3 1 e 0 e   − <     So, x = e is a point of maxima ∴ Maximum value = f(e) = 1 ee",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1918",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The value of the integral ( ) ∫ 1 -1 2– | x | dx is:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1918",
+              "correct_answer": "A",
+              "explanation": "We have ( ) ( ) ( ) 1 0 1 1 1 0 2 | x | dx 2 x dx 2 x dx − − − = + + − ∫ ∫ ∫ = 0 1 2 2 1 0 x x 2x 2x 2 2 −     + + −         = 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1919",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The average value of f(x) = 2 4 – x on [–2, 2] is:",
+            "options": [
+              {
+                "prompt": "4",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1919",
+              "correct_answer": "C",
+              "explanation": "We have average value = 2 2 2 1 4 x dx 4 − − ∫ = 2 2 1 2 1 x x 4 x 2sin 4 2 2 − −     − +         = [ ] 1 2 4 π = 2 π",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1920",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The area of the region enclosed by the parabola y = 2 – x2 and the straight line y = – x is equal to:",
+            "options": [
+              {
+                "prompt": "4",
+                "value": "A"
+              },
+              {
+                "prompt": "4.5",
+                "value": "B"
+              },
+              {
+                "prompt": "5",
+                "value": "C"
+              },
+              {
+                "prompt": "3.5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1920",
+              "correct_answer": "C",
+              "explanation": "For the intersection points of y = 2 – x2 and y = – x we have x2 – x – 2 = 0 ⇒ x = + 2 and x = – 1 ⇒ Required area = ( ) 2 2 1 2 x x dx − − + ∫ = 2 3 2 1 x x 2x 3 2 −   − +     = 8 1 1 4 2 2 3 3 2     − + + −−+ +         = 4.5",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1921",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Using the Fundamental theorem, determine the value of the integral ∫ 2 x 1 cost dt.",
+            "options": [
+              {
+                "prompt": "2x cos x",
+                "value": "A"
+              },
+              {
+                "prompt": "x cos x2",
+                "value": "B"
+              },
+              {
+                "prompt": "3x cos x2",
+                "value": "C"
+              },
+              {
+                "prompt": "2x cos x2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1921",
+              "correct_answer": "D",
+              "explanation": "Correct answer is Option (D). Verified from official answer key.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1922",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The volume of the solid generated by revolving the region between the y-axis and the curve x = 2 y , 1 ≤ y ≤ 4 about the y-axis is:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "3π",
+                "value": "B"
+              },
+              {
+                "prompt": "2π",
+                "value": "C"
+              },
+              {
+                "prompt": "π",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1922",
+              "correct_answer": "B",
+              "explanation": "Required volume = b 2 a x dy π∫ = 4 2 1 4 dy y π∫ = 4 1 1 4 y   π −     = 3 4 4 π = 3π",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1923",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The value of the integral ∫ π 2 0 sinx dx sinx + cosx is:",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1923",
+              "correct_answer": "C",
+              "explanation": "We have / 2 0 sin x I dx sin x cos x π = + ∫ / 2 0 cos x I dx sin x cos x π = + ∫ ⇒ 2I = / 2 0 dx π∫ ⇒ I = 4 π",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1924",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The order and degree of the differential equation                     3 2 2 2 2 d y dy = 1+ dx dx are respectively:",
+            "options": [
+              {
+                "prompt": "2 and 1",
+                "value": "A"
+              },
+              {
+                "prompt": "2 and 3",
+                "value": "B"
+              },
+              {
+                "prompt": "1 and 2",
+                "value": "C"
+              },
+              {
+                "prompt": "2 and 2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1924",
+              "correct_answer": "D",
+              "explanation": "We have 3 2 2 2 2 d y dy 1 dx dx       = +               ⇒ order = 2 and degree = 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1925",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The solution of the differential equation (y2 – xy) dx + x2 dy is:",
+            "options": [
+              {
+                "prompt": "y",
+                "value": "A"
+              },
+              {
+                "prompt": "x",
+                "value": "B"
+              },
+              {
+                "prompt": "x",
+                "value": "C"
+              },
+              {
+                "prompt": "y",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1925",
+              "correct_answer": "C",
+              "explanation": "We have (y2 – xy)dx + x2 dy Which is a homogeneous differential equation of degree 2 Let y = vx ⇒ dy = vdx + xdv ⇒ [(vx)2 – x2v]dx + x2(vdx + xdv) = 0 ⇒ v2 dx + xdv = 0 ⇒ lnx – 1 v = C ⇒ lnx – x y = C",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1926",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The solution of the equation cos (x + y)dy = dx is given by:",
+            "options": [
+              {
+                "prompt": "y = tan x",
+                "value": "A"
+              },
+              {
+                "prompt": "y = cot x",
+                "value": "B"
+              },
+              {
+                "prompt": "y = tan x",
+                "value": "C"
+              },
+              {
+                "prompt": "y = tan x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1926",
+              "correct_answer": "A",
+              "explanation": "We have cos(x + y) dy = dx ⇒ ( ) dy 1 dx cos x y = + Let x + y = t ∴ dy dt 1 dx dx + = ∴ dt 1 1 dx cos t −= ⇒ dt 1 1 dx cos t = + ⇒ dt 1 cos t dx cos t + = ⇒ cos t dt dx 1 cos t = + ⇒ cos t dt dx 1 cos t = + ∫ ∫ ⇒ ( ) 2 cos t 1 cos t dt x c sin t − = + ∫ ⇒ ( ) 2 cosect. cott cot t dt x c − = + ∫ ⇒ –cosec t + cot t + t = x + c ⇒ cos t 1 t x c sin t sin t − + = + ⇒ –tan x y 2 +       + x + y = x + c ⇒ – tan x y y c x +  + =     ⇒ y = tan x y c 2 +  +    ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1927",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The solution of the equation (x + 1)       dy dx – y = ex (x + 1)2 is:",
+            "options": [
+              {
+                "prompt": "y",
+                "value": "A"
+              },
+              {
+                "prompt": "y",
+                "value": "B"
+              },
+              {
+                "prompt": "y",
+                "value": "C"
+              },
+              {
+                "prompt": "y",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1927",
+              "correct_answer": "C",
+              "explanation": "We have ( ) dy y dx x 1 − + = ex (x + 1) Now, an integrating factor = 1 dx x 1 1 e x 1 − + ∫ = + Therefore, a solution is given by x y e x 1 = + ∫ ⇒ x y e c x 1 = + +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1928",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The solution of the differential equation (xy sin xy + cos xy)y dx + (xy sin xy – cos xy)x dy = 0 is:",
+            "options": [
+              {
+                "prompt": "x cos xy = Cyx",
+                "value": "A"
+              },
+              {
+                "prompt": "x cos xy = y + C",
+                "value": "B"
+              },
+              {
+                "prompt": "y cos xy = C + x",
+                "value": "C"
+              },
+              {
+                "prompt": "y cos xy = Cx",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1928",
+              "correct_answer": "D",
+              "explanation": "We have (xy sin xy + cos xy)ydx + (xy sinxy – cosxy)xdy = 0 Make the substitution u = xy, so that du dy y x dx dx = + = y + x ( ) ( ) y xysin xy cos xy x xysin xy cos xy − + − = u usinu cosu 1 x usinu cosu +   −   −   = 2 ucosu x cosu usinu − Separating variables, integrating, and exponentiation give | ucosu | = Cx2 ⇒ | xy cosxy | = Cx2 ⇒ y cosxy = C| x |",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1929",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If       dy dx + 2y tan x = sin x, y       π 3 = 0 then the maximum value of y is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1929",
+              "correct_answer": "A",
+              "explanation": "We have dy 2y tan x sin x ;y 0 dx 3 π   + = =     ⇒ An integrating factor = 2 tan xdx 2 e sec x ∫ = Therefore, a solution is given by ysec2x = 2 sin xsec xdx ∫ ⇒ ysec2x = sec x + c ⇒ y = cos x + c cos2x ⇒ c = – 2 for y 0 3 π  =     ⇒ y = cos x – 2 cos2x Now y' = –sinx + 4 cosx sinx ⇒ y' = 0 gives either sinx = 0 or cosx = 1 4 and y\" = – cosx + 4cos2x – 4sin2x is > 0 at sinx = 0 < 0 at cosx = 1 4 ⇒ Maximum of y = cosx – 2cos2x occurs at cossx = 1 4 and is 1 8 YEP DSSSB (TGT-Math) 2018 (08.07.2018) 329 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1930",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The differential equation (ay2 + x + x8)dx + (y8 – y + bxy)dy = 0 is exact if:",
+            "options": [
+              {
+                "prompt": "a = 1, b = 3",
+                "value": "A"
+              },
+              {
+                "prompt": "a = b",
+                "value": "B"
+              },
+              {
+                "prompt": "a = 2, b = 1",
+                "value": "C"
+              },
+              {
+                "prompt": "b = 2a",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1930",
+              "correct_answer": "D",
+              "explanation": "A differential equation Mdx + Ndy = 0 is exact if M N y x ∂ ∂ = ∂ ∂ Now ( ) ( ) 2 8 8 ay x x dx y y bxy dy 0 + + + − + = is exact if ( ) ( ) 2 8 8 ay x x y y bxy y x ∂ + + ∂ − + = ∂ ∂ ⇒ 2ay = by ⇒ b = 2a",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1931",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ˆ ˆ ˆ ˆ ˆ ˆ a = 2i – j – 8k and b = i + 3j – 4k, \u0004 \u0004 then the direction cosines of the vector a – 2b \u0004 \u0004 is given by:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "1, 0, 1",
+                "value": "B"
+              },
+              {
+                "prompt": "0, –1, 0",
+                "value": "C"
+              },
+              {
+                "prompt": "0, 0, 1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1931",
+              "correct_answer": "C",
+              "explanation": "We have ( ) ( ) ˆ ˆ ˆ ˆ ˆ ˆ a 2b 2i j 8k 2 i 3j 4k − = −− − + − \u0004 \u0004 = ˆ 7j − Therefore, direction cosines of the vector a 2b − \u0004 \u0004 are 0, – 1, 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1932",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The projection of the vector ˆ ˆ ˆ ˆ ˆ ˆ i – 2j+ k on4i – 4j+ 7k is:",
+            "options": [
+              {
+                "prompt": "19",
+                "value": "A"
+              },
+              {
+                "prompt": "4",
+                "value": "B"
+              },
+              {
+                "prompt": "7",
+                "value": "C"
+              },
+              {
+                "prompt": "8",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1932",
+              "correct_answer": "A",
+              "explanation": "The projection = ( )( ) ˆ ˆ ˆ ˆ ˆ ˆ i 2j k 4i 4j 7k 16 16 49 − + − + + + = 4 8 7 19 9 9 + + =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1933",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The angle between the vectors ˆ ˆ ˆ ˆ ˆ ˆ 2i + 6j+ 3k and 12i – 4j+ 3k is:",
+            "options": [
+              {
+                "prompt": "cos–1",
+                "value": "A"
+              },
+              {
+                "prompt": "cos–1",
+                "value": "B"
+              },
+              {
+                "prompt": "cos–1",
+                "value": "C"
+              },
+              {
+                "prompt": "cos–1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1933",
+              "correct_answer": "B",
+              "explanation": "We have ( )( ) ˆ ˆ ˆ ˆ ˆ ˆ 2i 6j 3k 12i 4j 3k 4 36 9 144 16 9 cos + + − + = + + + + θ ⇒ cosθ = 9 9 91 49 169 = ⇒ θ = cos–1 9 91      ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1934",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The unit vector perpendicular to both the vectors ˆ ˆ ˆ ˆ ˆ ˆ 2i + j– k and i – j+ 2k is:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1934",
+              "correct_answer": "D",
+              "explanation": "The vector perpendicular to both the vectors ˆ ˆ ˆ 2i j k + − and ˆ ˆ ˆ i j 2k −+ is ( ) ( ) ˆ ˆ ˆ i j k ˆ ˆ ˆ ˆ ˆ ˆ 2i j k i j 2k 2 1 1 1 1 2 + − × −+ = − − = ˆ ˆ ˆ i 5j 3k − − Thus, unit vector = ( ) ˆ ˆ ˆ i 5j 3k 1 ˆ ˆ ˆ i 5j 3k 35 1 25 9 − − = − − + +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1935",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the vectors ˆ ˆ ˆ ˆ ˆ a = i + j+ k,b = 2i – 4k and \u0004 \u0004 ˆ ˆ ˆ c = i + λj+ 3k \u0004 are coplanar, then the value of λ is:",
+            "options": [
+              {
+                "prompt": "–4",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "5",
+                "value": "C"
+              },
+              {
+                "prompt": "5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1935",
+              "correct_answer": "C",
+              "explanation": "We must have 1 1 1 2 0 4 0 1 3 − = λ ⇒ 4λ – 10 + 2λ = 0 ⇒ 6λ – 10 = 0 ⇒ λ = 5 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1936",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a + b = 60, a – b = 40 and b \u0004 \u0004 \u0004 \u0004 \u0004 = 46, then a\u0004 is equal to:",
+            "options": [
+              {
+                "prompt": "22",
+                "value": "A"
+              },
+              {
+                "prompt": "12",
+                "value": "B"
+              },
+              {
+                "prompt": "21",
+                "value": "C"
+              },
+              {
+                "prompt": "24",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1936",
+              "correct_answer": "A",
+              "explanation": "We have 2 2 a b 2 a b cos 3600 + + θ = \u0004 \u0004 \u0004 \u0004 and 2 2 a b 2 a b cos 1600 + − θ = \u0004 \u0004 \u0004 \u0004 ⇒ 2 2 2 a 2 b 5200 + = \u0004 \u0004 ⇒ 2 2 a 5200 4232 968 = − = \u0004 ⇒ a 484 22 = = \u0004",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1937",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the scalar product of ˆ ˆ ˆ i + j+ k with the unit vector parallel to the sum of ˆ ˆ ˆ ˆ ˆ ˆ 2i + 4j – 5k and λi + 2j+ 3k is equal to unity, then the value of λ is: YEP DSSSB (TGT-Math) 2018 (08.07.2018) 330 YCT",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "11",
+                "value": "B"
+              },
+              {
+                "prompt": "38",
+                "value": "C"
+              },
+              {
+                "prompt": "–5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1937",
+              "correct_answer": "A",
+              "explanation": "Unit vector parallel to the( ) ( ) ˆ ˆ ˆ ˆ ˆ ˆ 2i 4j 5k i 2j 3k + − + λ + + = ( )ˆ ˆ ˆ 2 i 6j 2k + λ + − is ( ) ( ) 2 ˆ ˆ ˆ 2 i 6j 2k 2 36 4 + λ + − + λ + + Now ( ) ( ) 2 2 6 2 1 2 36 4 + λ + − = + λ + + ⇒ (6 + λ)2 = (2 + λ)2 + 40 ⇒ λ = 1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1938",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the distance between two points (x, –8, 4) and (3, – 5, 4) is 5, then the positive value of x is:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "7",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1938",
+              "correct_answer": "B",
+              "explanation": "We have (x – 3)2 + (–8 + 5)2 = 25 ⇒ x2 + 18 – 6x = 25 ⇒ x2 – 6x – 7 = 0 ⇒ x2 – 7x + x – 7 = 0 ⇒ (x – 7) (x + 1) = 0 ⇒ x = 7",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1939",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "What are the co-ordinates of a point which divides the line joining the points (2, –4, 3) and (–4, 5, –6) in the ratio 1 : –4?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1939",
+              "correct_answer": "B",
+              "explanation": "We have (1)( 4) (2)( 4) x 4 1 4 − + − = = − y = (1)(5) ( 4)( 4) 7 1 4 + − − = − − z = (1)( 6) ( 4)(3) 6 1 4 − + − = −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1940",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The direction cosines of the joining the points (4, 3, –5) and (–2, 1, –8) are:",
+            "options": [
+              {
+                "prompt": "6, 2, 3",
+                "value": "A"
+              },
+              {
+                "prompt": "–6, –2, –3",
+                "value": "B"
+              },
+              {
+                "prompt": "7 7 7",
+                "value": "C"
+              },
+              {
+                "prompt": "6 2 3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1940",
+              "correct_answer": "D",
+              "explanation": "The direction ratios are (–2–4, 1 – 3, – 8 + 5) ≡ (–6, –2, –3) ∴ The direction cosines are 6 2 3 , , 36 4 9 36 4 9 36 4 9 − − − + + + + + + = 6 2 3 , , 7 7 7 − − −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1941",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The distance of the point (1, –2, 3) from the plane x – y + z – 5 = 0 measured parallel to the line x y z = = 2 3 –6 is:",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "5",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1941",
+              "correct_answer": "B",
+              "explanation": "The direction ratios of the line are 2, 3, –6 Thus, the line parallel to the given line and passing through (1, –2, 3) is x 1 y 2 z 3 2 3 6 − + − = = = λ − On which coordinates of any point is of the form ( ) 2 1,3 2,3 6 λ + λ − −λ which if lies on the plane x – y + z = 5 then we have ( ) ( ) ( ) 2 1 3 2 3 6 5 λ + − λ − + −λ = ⇒ 1 7 λ = ⇒ Coordinates of the point on the line is 9 11 15 , , 7 7 7   −     ∴ Required distance 2 2 2 9 11 15 1 2 3 7 7 7       − + − + + −             = 1 unit.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1942",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The perpendicular distance from the point (1, 0, –3) to the straight line x – 2 y – 3 z – 4 = = 3 4 5 is:",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "4",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1942",
+              "correct_answer": "C",
+              "explanation": "The coordinates of a general point on the given line is (3λ + 2, 4λ + 3, 5λ + 4) Let the coordinates of L be (3λ + 2, 4λ + 3, 5λ + 4) The direction ratios of PL are proportional to (3λ + 1, 4λ + 3, 5λ + 7) ∴ We must have 3(3λ + 1) + 4(4λ + 3) + 5(5λ + 7) = 0 ⇒ 50λ + 50 = 0 ⇒ λ = –1 ∴ L ≡ (–1, –1, –1) ∴ Required distance = 2 2 2 (2) (1) ( 2) 3 + + − = YEP DSSSB (TGT-Math) 2018 (08.07.2018) 331 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1943",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The equation of the plane in terms of the intercepts of a, b, c from the axes is of the form:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "x",
+                "value": "B"
+              },
+              {
+                "prompt": "ax + by + cz = 1",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1943",
+              "correct_answer": "B",
+              "explanation": "The required plane is x y z 1 a b c + + =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1944",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The equation straight line y = 0, z = 0 in symmetrical form is:",
+            "options": [
+              {
+                "prompt": "x",
+                "value": "A"
+              },
+              {
+                "prompt": "x",
+                "value": "B"
+              },
+              {
+                "prompt": "x",
+                "value": "C"
+              },
+              {
+                "prompt": "x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1944",
+              "correct_answer": "C",
+              "explanation": "Clearly x y z 1 0 0 = = is the equation in symmetrical form of y = 0 ; z = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1945",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The shortest distance between the lines x – 3 y – 8 z – 3 x – 3 y + 7 z – 6 = = and = = 3 –1 1 –3 2 4",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "13",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1945",
+              "correct_answer": "C",
+              "explanation": "The shortest distance is 13 30 5",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1946",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The angle between the plane x + 2y – 3z + 4 = 0 and the line whose direction cosine are 2 3 1 , , 14 14 14 is given by:",
+            "options": [
+              {
+                "prompt": "cos–1",
+                "value": "A"
+              },
+              {
+                "prompt": "sin–1",
+                "value": "B"
+              },
+              {
+                "prompt": "cos–1",
+                "value": "C"
+              },
+              {
+                "prompt": "sin–1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1946",
+              "correct_answer": "D",
+              "explanation": "We have ( ) ( ) 2 3 1 1 2 3 14 14 14 sin 1 4 9   + −    θ = + + ⇒ sinθ = 5 14 ⇒ θ = sin–1 5 14      ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1947",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A plane passes through a fixed point (a, b, c) and cuts the axes at A, B, C. Then the locus of the centre of the sphere OABC is:",
+            "options": [
+              {
+                "prompt": "x",
+                "value": "A"
+              },
+              {
+                "prompt": "a",
+                "value": "B"
+              },
+              {
+                "prompt": "x",
+                "value": "C"
+              },
+              {
+                "prompt": "a",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1947",
+              "correct_answer": "B",
+              "explanation": "Let the coordinates of A, B and C be (f, 0, 0), (0, g, 0) and (0, 0, h) respectively. Hence the equation of plane is x y z 1 f g h + + = since the given plane passes through (a, b, c) we get a b c 1 f g h + + = ...(i) The equation of the sphere passing through O, A, B and C is x2 + y2 + zz – fx – gy – hz = 0 Let (α, β, γ) be its centre. Thus. f g h , , 2 2 2 α = β = γ = ⇒ f = 2α, g = 2β, h = 2γ Which on putting in (i) gives a b c 1 a 2 2 + + = α β γ ⇒ a b c 2 + + = α β γ Hence the locus of the centre is a b c 2 x y z + + =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1948",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The equation of the sphere on the join of (1, 1, 1) and (–1, –1, –1) as diameter is:",
+            "options": [
+              {
+                "prompt": "x2 + y2 + z2 = 1",
+                "value": "A"
+              },
+              {
+                "prompt": "x2 + y2 + z2 + 1 = 0",
+                "value": "B"
+              },
+              {
+                "prompt": "x2 + y2 + z2 = 3",
+                "value": "C"
+              },
+              {
+                "prompt": "x2 + y2 + z2 + 3 = 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1948",
+              "correct_answer": "C",
+              "explanation": "Diameter = 2 2 2 (2) (2) (2) 12 2 3 + + = = ⇒ Radius = 3 and centre = (0, 0, 0) ∴ Equation x2 + y2 + z2 = ( ) 2 3 3 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1949",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A man travelled 12 hours at 4 m/h, and again 10 hours at 5 m/h. What is his average speed?",
+            "options": [
+              {
+                "prompt": "4.45 m/h",
+                "value": "A"
+              },
+              {
+                "prompt": "4.15 m/h",
+                "value": "B"
+              },
+              {
+                "prompt": "4.40 m/h",
+                "value": "C"
+              },
+              {
+                "prompt": "4.10 m/h",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1949",
+              "correct_answer": "A",
+              "explanation": "average speed = 48m 50m 4.5m / h 22h + = YEP DSSSB (TGT-Math) 2018 (08.07.2018) 332 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1950",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The numbers 3.2, 5.8, 7.9 and 4.5 have frequencies x, x + 2, x – 3 and x + 6. If the arithmetic mean is 4.876, then the value of x is:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "4",
+                "value": "B"
+              },
+              {
+                "prompt": "5",
+                "value": "C"
+              },
+              {
+                "prompt": "7",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1950",
+              "correct_answer": "C",
+              "explanation": "We have ( ) ( ) ( ) 3.2x x 2 5.8 x 3 7.9 x 6 4.5 4.876 x x 2 x 3 x 6 + + + − + + = + + + −+ + ⇒ 214x 149 4.876 40x 50 + = + ⇒ x = 5",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1951",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The weight of 11 forty-year-old men is 148, 158, 160, 161, 162, 166, 170, 182, 195 and 236 pounds. If the weight of the heaviest man is omitted, then the percentage change in the range is:",
+            "options": [
+              {
+                "prompt": "47%",
+                "value": "A"
+              },
+              {
+                "prompt": "42%",
+                "value": "B"
+              },
+              {
+                "prompt": "52%",
+                "value": "C"
+              },
+              {
+                "prompt": "44%",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1951",
+              "correct_answer": "C",
+              "explanation": "Percentage change = ( ) 88 47 100 47% 88 − × ≈",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1952",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The mean deviation of the values 8, 15, 53, 49, 19, 62, 7 , 15, 95, 77 about the median is:",
+            "options": [
+              {
+                "prompt": "26.1",
+                "value": "A"
+              },
+              {
+                "prompt": "25.1",
+                "value": "B"
+              },
+              {
+                "prompt": "27.2",
+                "value": "C"
+              },
+              {
+                "prompt": "21.7",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1952",
+              "correct_answer": "C",
+              "explanation": "We have 7, 8, 15, 15, 19, 49, 53, 62, 77, 95 Thus, median is 49 19 34 2 + = ∴ mean deviation = 27 26 19 19 15 15 28 19 43 61 10 + + + + + + + + + = 27.2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1953",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The mean and standard deviation of 20 items is found to be 10 and 2, respectively. At the time of checking, it was found that one item 8 was incorrect. If the item 8 is replaced by the correct one i.e. 12, then the correct mean and standard deviation are respectively:",
+            "options": [
+              {
+                "prompt": "10.11 and 1.997",
+                "value": "A"
+              },
+              {
+                "prompt": "10.01 and 1.917",
+                "value": "B"
+              },
+              {
+                "prompt": "10.01 and 1.097",
+                "value": "C"
+              },
+              {
+                "prompt": "10.2 and 1.99",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1953",
+              "correct_answer": "D",
+              "explanation": "We must have 20 i i 1 x 200 = = ∑ and i 20 2 i 1 x 2080 = = ∑ ⇒ Corrected sum = 200 – 8 + 12 = 204 ∴ Corrected mean = 204 10.2 20 = and Corrected sum of squares of observations = 2080 – 82 + 122 = 2160 ∴ Corrected standard deviation σ = ( ) 2 2 ix x n − ∑ = ( ) 2 2160 10.2 20 − = 108 104.4 − = 3.96 = 1.98",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1954",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The mean and standard deviation calculated from 20 observations are 15 and 10, respectively. If an additional observation 5, left out through oversight, is included in the calculations, then the corrected mean and the standard deviation are respectively:",
+            "options": [
+              {
+                "prompt": "14.83 and 9.78",
+                "value": "A"
+              },
+              {
+                "prompt": "14.52 and 9.99",
+                "value": "B"
+              },
+              {
+                "prompt": "12.26 and 9.19",
+                "value": "C"
+              },
+              {
+                "prompt": "8.36 and 9.91",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1954",
+              "correct_answer": "B",
+              "explanation": "We must have 20 20 2 i i i 1 i 1 x 300 and x 6500 = = = = ∑ ∑ ⇒ Corrected sum = 305 and sum of squares = 6525 ⇒ Corrected mean = 305 14.52 21 = and corrected standard deviation = ( ) 2 6525 14.52 9.99 21 − ≈",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1955",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Calculate the mean deviation about the mean for the data given below.",
+            "options": [
+              {
+                "prompt": "2.48",
+                "value": "A"
+              },
+              {
+                "prompt": "9.23",
+                "value": "B"
+              },
+              {
+                "prompt": "2.90",
+                "value": "C"
+              },
+              {
+                "prompt": "3.30",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1955",
+              "correct_answer": "C",
+              "explanation": "Class Mid-Point Frequency Frequency of the class 4-5 6-7 8-9 10-11 12-13 14-15 4.5 6.5 8.5 10.5 12.5 14.5 4 10 20 15 8 3 18 65 170 157.5 100 43.5 ∴ Mean = 18 65 170 157.5 100 43.5 60 + + + + + = 9.23 ∴ Mean deviation = 4.73 2.73 0.73 1.27 3.27 5.27 60 + + + + + = 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1956",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A lot contains 12 items, of which 4 are defective. Three items are drawn at random from the lot, one after the other. What is the probability that all three are non-defective? YEP DSSSB (TGT-Math) 2018 (08.07.2018) 333 YCT",
+            "options": [
+              {
+                "prompt": "14",
+                "value": "A"
+              },
+              {
+                "prompt": "16",
+                "value": "B"
+              },
+              {
+                "prompt": "12",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1956",
+              "correct_answer": "A",
+              "explanation": "Required probability = 8 3 12 3 C 14 55 C =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1957",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let A and B be any two events such that P",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1957",
+              "correct_answer": "C",
+              "explanation": "We have P(AC/BC) = ( ) ( ) C C C P A B P B ∩ = ( ) ( ) 1 P A B 1 P B − ∪ − = ( ) ( ) ( ) 1 P A P B P A B 0.7 − − + ∩ = 1 0.6 0.3 0.2 0.7 − − + = 0.3 0.7 = 3 7",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1958",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A box B contains 5 red marbles and 4 blue marbles, and another box C contains 3 red marbles and 2 blue marbles. A marble is drawn at random from each box. What is the probability that both marbles will be red?",
+            "options": [
+              {
+                "prompt": "5",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "8",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1958",
+              "correct_answer": "B",
+              "explanation": "Required probability = 5 3 1 1 9 5 1 1 C C 1 3 C C × =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1959",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "P(X = x) = 1/2X for x = 1, 2, 3, .... , then P(X ≥ 4)?",
+            "options": [
+              {
+                "prompt": "7",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1959",
+              "correct_answer": "D",
+              "explanation": "We must have x x 1 1 1 2 ∞ = = ∑ ⇒ x x 4 1 1 1 1 1 2 4 8 2 ∞ = + + + = ∑ ⇒ x x 4 1 7 1 1 8 8 2 ∞ = = − = ∑",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1960",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Suppose 300 misprints are distributed randomly throughout a book of 500 pages. What is the probability that a given page contains 2 or more misprints?",
+            "options": [
+              {
+                "prompt": "0.329",
+                "value": "A"
+              },
+              {
+                "prompt": "0.122",
+                "value": "B"
+              },
+              {
+                "prompt": "0.549",
+                "value": "C"
+              },
+              {
+                "prompt": "0.1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1960",
+              "correct_answer": "B",
+              "explanation": "We have the average number of times that the event occurs = λ = number of misprints 300 0.6 numberof pages 500 = = Now, the probability that misprints occur in the page x times is given by Poisson distribution is ( ) x e P X x x! −λλ = = ∴ P(X = 0) = 0.6 0.6 1 e e − = and P(X = 1) = ( ) 0.6 0.6 0.6 e 0.6 e − = Now, the probability that a given page contains 2 or more misprints = 0.6 0.6 1 0.6 1.6 1 1 1.222 e e +     − = − ≈        ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1961",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the probability density function f(x) of a continuous random variable X is given by f(x) = ≤ ≤    k if a x b 0 otherwise , then the mean X is:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1961",
+              "correct_answer": "A",
+              "explanation": "We must have b a f(x)dx 1 = ∫ ⇒ b a kdx 1 = ∫ ⇒ K (b – a) = 1 ⇒ K = 1 b a − Now, mean = b a xf(x)dx ∫ = b 2 a 1 x b a 2     −   = ( ) ( ) 2 2 b a 1 b a a − − = a b a +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1962",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A box contains 3 red marbles and 2 white marbles. A marble is drawn and replaced three times from the box. What is the probability that at least one red marble was drawn? YEP DSSSB (TGT-Math) 2018 (08.07.2018) 334 YCT",
+            "options": [
+              {
+                "prompt": "36",
+                "value": "A"
+              },
+              {
+                "prompt": "54",
+                "value": "B"
+              },
+              {
+                "prompt": "117",
+                "value": "C"
+              },
+              {
+                "prompt": "113",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1962",
+              "correct_answer": "C",
+              "explanation": "Possibilities are WWR, WRW, RWW or WRR, RWR, RRW or RRR ∴ Required probability 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2c 2c 3c 2c 3c 3c 3 3 5c 5c 5c 5c 5c 5c 3c 3c 3c 5c 5c 5c     = × × + × ×           + × ×     = 36 54 27 125 125 125 + + = 117 125",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1963",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Under which of the following conditions does the space ⊕⊗ R, , fail to be vector space under the operations ⊕ ⊗ and defined by ⊕ a b = ab and ⊗ k a = ka, where R denotes the set of all real numbers?",
+            "options": [
+              {
+                "prompt": "Addition is associative",
+                "value": "A"
+              },
+              {
+                "prompt": "Addition is not commutative",
+                "value": "B"
+              },
+              {
+                "prompt": "Additive inverse",
+                "value": "C"
+              },
+              {
+                "prompt": "Additive identity",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1963",
+              "correct_answer": "B",
+              "explanation": "Clearly a ⊕ b = ab ≠ ba = b ⊕ a",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1964",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following subset K of a vector space R2 is NOT a basis for R2?",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1964",
+              "correct_answer": "C",
+              "explanation": "For the vector space 2 ℝ, a set of vectors with more than 2 vectors must be linearly dependent and hence can not be a basis.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1965",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Identify that the function T from R2 to R2 defined below is NOT linear.",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "x",
+                "value": "B"
+              },
+              {
+                "prompt": "x",
+                "value": "C"
+              },
+              {
+                "prompt": "x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1965",
+              "correct_answer": "A",
+              "explanation": "Clearly 2 x x T y y      =           is not a linear map. T 1 2 1 2 1 2 1 2 x x x x T y y y y   α +β        α +β =           α +β           = ( ) 1 2 2 1 2 x x y y α +β     α +β     1 2 2 2 1 2 x x y y     ≠α +β        ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1966",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If A is a m × n matrix, then:",
+            "options": [
+              {
+                "prompt": "< m",
+                "value": "A"
+              },
+              {
+                "prompt": "rank",
+                "value": "B"
+              },
+              {
+                "prompt": "rank",
+                "value": "C"
+              },
+              {
+                "prompt": "rank",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1966",
+              "correct_answer": "B",
+              "explanation": "For a linear transformation n m T : → ℝ ℝ we get a matrix A of order m × n representing T. Therefore, Rank - Nullity theorem dictates that ranK(A) + nullity (A) = dim ( ) n n = ℝ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1967",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If λ is an eigenvalue of an invertible matrix A, then the eigenvalue of A–1 is:",
+            "options": [
+              {
+                "prompt": "λ",
+                "value": "A"
+              },
+              {
+                "prompt": "λ–1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1967",
+              "correct_answer": "B",
+              "explanation": "Eigenvalue of A–1 = 1 λ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1968",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let T be linear operator on R3 defined by T                          x x y = –y z z . Then the matrix of T relative to the standard basis for R3 is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1968",
+              "correct_answer": "A",
+              "explanation": "Standard basis of 3 ℝ is {(1, 0, 0), (0, 1, 0), (0, 0, 1)} and T(1, 0, 0) = (1, 0, 0) = 1(1, 0, 0) + 0(0, 1, 0) + 0(0, 0, 1) T(0, 1, 0) = (0, –1, 0) = 0(1, 0, 0) – 1(0, 1, 0) + 0(0, 0, 1) T(0, 0, 1) = 0(0, 0, 1) = 0(1, 0, 0) + 0(0, 1, 0) + 1(0, 0, 1) ∴ Required matrix = 1 0 0 0 1 0 0 0 1     −       YEP DSSSB (TGT-Math) 2018 (08.07.2018) 335 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1969",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If T : R4 → R5 and dim (R (T)) = 2, then dim (N(T)) = ?",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1969",
+              "correct_answer": "B",
+              "explanation": "Rank - Nullity theorem dictates that dim (NCT) = dim ( ) 4 ℝ – dim (R(T)) = 4 – 2 = 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1970",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The singular values of A =           1 1 0 1 1 0 is:",
+            "options": [
+              {
+                "prompt": "1, 3",
+                "value": "A"
+              },
+              {
+                "prompt": "1, 3",
+                "value": "B"
+              },
+              {
+                "prompt": "2, 3",
+                "value": "C"
+              },
+              {
+                "prompt": "1, 4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1970",
+              "correct_answer": "A",
+              "explanation": "We have T 1 0 1 A 1 1 0   =     ∴ AAT = 1 1 2 1 1 1 0 1 0 1 1 1 0 1 1 0 1 0 1 0 1           =                 Now 2 1 1 1 1 0 0 1 0 1 −λ −λ = −λ ⇒ (2 – λ) (1 – λ)2 – (1 – λ) + (λ – 1) = 0 ⇒ λ (λ2 – 4λ + 3) = 0 ⇒ λ = 0, 1, 3 ∴ Singular values of A are 1, 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1971",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The range of the function f(x) = [ ] [ ]  ∈   ∈  2 x if x -2,0 2 x if x 0,2 is given by:",
+            "options": [
+              {
+                "prompt": "[0, 1]",
+                "value": "A"
+              },
+              {
+                "prompt": "[–1, 4]",
+                "value": "B"
+              },
+              {
+                "prompt": "[–2, 2]",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1971",
+              "correct_answer": "B",
+              "explanation": "Range is [–1, 4]",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1972",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f: [–1, 1] → R is a function defined by f(x) =    1if xisrational 0if xisirrational , then → x 0 limf(x) :",
+            "options": [
+              {
+                "prompt": "is not equal to 0 and 1",
+                "value": "A"
+              },
+              {
+                "prompt": "is equal to 1",
+                "value": "B"
+              },
+              {
+                "prompt": "is equal to 0",
+                "value": "C"
+              },
+              {
+                "prompt": "does not exist",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1972",
+              "correct_answer": "D",
+              "explanation": "x 0 limf (x) → does not exits since both rationals and irrationals are dense in the set of real numbers.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1973",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The radius of convergence of the series 1 –                   2 3 x x x + – + 2 3 4 ... is:",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "–1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "–2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1973",
+              "correct_answer": "C",
+              "explanation": "We have ( ) n 1 2 3 n 1 1 x x x 1 ... x 2 3 n n + − −       − + − + =             ∑ and n 2 n 1 x 0 ( 1) / n 1 lim 1 ( 1) / n + + → − + = −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1974",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following functions is the only analytic function?",
+            "options": [
+              {
+                "prompt": "f",
+                "value": "A"
+              },
+              {
+                "prompt": "f",
+                "value": "B"
+              },
+              {
+                "prompt": "f",
+                "value": "C"
+              },
+              {
+                "prompt": "f",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1974",
+              "correct_answer": "B",
+              "explanation": "For the function R(iz) we have U(x, y) = – y and V(x, y) = 0 and Ux = 0, Uy = – 1, Vx = 0 = Vy. Since Cauchy - Riemann equations are never satisfied, the function is non-analytic. • For the function Im(z) ; we have U(x, y) = y and V(x, y) = 0 and Ux = 0, Uy = 1, Vx = 0 = Vy. Since Cauchy - Riemann equations are never satisfied, the function is non - analytic. • For the function f(z) = z x iy = − we have Ux = 1 and Vy = –1. Since the Cauchy - Riemann equations are never satisfied, the function is no where differentiable.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1975",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A Rात्aूग्दह ग्ह R ग्े ्ग्हिा् aे R ृ ( ) ≤ २ ढ a,ं : a ं लग्े ञ्ञ्ञ्ञ्ञ्ञ्ञ्. R ृ ( ) ≤ २ ढ a,ं : a ं ल द्बारा परिभाषित संबंध R ञ्ञ्ञ्ञ् है-",
+            "options": [
+              {
+                "prompt": "Reflexive/mJeleguÙe",
+                "value": "A"
+              },
+              {
+                "prompt": "Transitive/meb›eâecekeâ",
+                "value": "B"
+              },
+              {
+                "prompt": "Symmetric/meceefcele",
+                "value": "C"
+              },
+              {
+                "prompt": "Not an Equivalence Relation/leguÙe mebyebOe veneR",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1975",
+              "correct_answer": "D",
+              "explanation": "Given relation is { } 2 R a b :a b , = ≤ Reflexive: a ∈ real number aRa ⇒ a ≤ a2 but if a < 1 Let 1 a 2 = ⇒ 2 1 a 4 = a < a2 Hence R is not reflexive. Symmetry: Let a, b ∈ R (real number) 2 a b R a b ⇒ ≤ But then 2 b a ≤ is not true ∴ a b b a R R ≠ For example, let a = 3, b = 4 Then 3 ≤ 42 but 4 ≤ 32 is not true Hence R is not symmetric Transitive: Let a, b, c ∈ R (real number) 2 a b R a b ⇒ ≤ and 2 b c R b c ⇒ ≤ Considering aRb and bRc 2 a c a c R ≤ ≠ Hence R is not transitive If a = 3, b = –4, c = 1 a b R 3 16 ⇒ ≤ b c R 4 1 ⇒−≤ a c R 3 1 ⇒ ≤ is not true Hence option (d) is correct.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1976",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If S = {a, b, c, d} and P = {(a, a), (b, b), (c, c), (d, d), (a, b), (b, a), (b, c), (c, b)}, then P is - Ùeefo S = {a, b, c, d} Deewj P = {(a, a), (b, b), (c, c), (d, d), (a, b), (b, a), (b, c), (c, b)}, lees P nw-",
+            "options": [
+              {
+                "prompt": "Reflexive and transitive/mJeleguÙe Deewj meb›eâecekeâ",
+                "value": "A"
+              },
+              {
+                "prompt": "Symmetric and transitive/meceefcele Deewj meb›eâecekeâ",
+                "value": "B"
+              },
+              {
+                "prompt": "Reflexive and symmetric/mJeleguÙe Deewj meceefcele",
+                "value": "C"
+              },
+              {
+                "prompt": "Equivalence/leguÙelee mebyebOe",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1976",
+              "correct_answer": "C",
+              "explanation": "S = {a, b, c, d} P = {(a, a), (b, b), (c, c), (d, d), (a, b), (b, a), (b, c), (c, b)} Reflexive:- If (a, a) ∈ P ∀ a ∈ S if aPa for all a ∈ S therefore is reflexive. Symmetric:- (a, b) ∈ P ⇒ (b, a) ∈ R ∀ a, b ∈ S Therefore is symmetric. Transitive:- (a, b) ∈ P and (b, c) ∈ P ⇒ (a, c) ∉ R ∀a, b, c, ∈ S Therefore is not transitive.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1977",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "थू f : R → R ां ्ग्हिा् aे fर्(े) ृ र्८े. ण्प्ददो ूप म्दrrाम्ू aहेैी : मान लीजिये की fर्(े) ृ र्८े द्वारा परिभाषित फलन f : R → R है। सही उत्तर चुनिए-",
+            "options": [
+              {
+                "prompt": "f ग्े दहा-दहा दहूद/f एवैâकी आच्छादक है",
+                "value": "A"
+              },
+              {
+                "prompt": "f is many-one onto/f yengSkeâ DeeÛÚeokeâ nw",
+                "value": "B"
+              },
+              {
+                "prompt": "f is one-one but not onto",
+                "value": "C"
+              },
+              {
+                "prompt": "f is neither one-one nor onto",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1977",
+              "correct_answer": "A",
+              "explanation": "F:R → R is defined as f(x) = 8x Let x, y ⋅ ∈ R such that f(x) = f(y) ⇒ 8x = 8y x = y ∴ f is one-one Also, for any real number (y) in co-domain R, there exists y 8 in R such that y y F 8 y 8 8     = =         ∴ F is onto function. Hence, function f is one-one and onto.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1978",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f f : A → ँ aह् ु : ँ → ण् arा दहा-दहा, ूपह ुदf : A → ण् ग्े - यदि f : A → ँ और ु : ँ → ण् एवैâकी है, तो ुदf : A → ण् है-",
+            "options": [
+              {
+                "prompt": "One-one and onto both",
+                "value": "A"
+              },
+              {
+                "prompt": "ध्हा-दहा/एवैâकी",
+                "value": "B"
+              },
+              {
+                "prompt": "Onto/DeeÛÚeokeâ",
+                "value": "C"
+              },
+              {
+                "prompt": "Neither One-One, nor onto",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1978",
+              "correct_answer": "B",
+              "explanation": "Let x1, x2 ∈ A Now (g of) (x1) = (g of) (x2) g(f (x1)) = g(f (x2)) f (x1) = f (x2) [ ] gisone one − ∵ x1 = x2 [ ] f isone one − ∵ (g of) (x1) = (g of) (x2) ⇒ x1 = x2, ∀ x1, x2 ∈ A ∴ g of is one-one.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1979",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ुर्rीूोू ग्हूाुी fल्हम्ूग्दह f : R → R ुग्नह ंब् fर्(े) ृ र्डे़, (ैप्ीा र्डे़ हदूो ूप ुर्rीूोू ग्हूाुी), ग्े ञ्ञ्ञ्ञ्ञ्ञ्. fर्(े) ृ र्डे़ द्वारा प्रदत्त महत्तम पूर्णांक फलन f : R → R, (जहाँ र्डे़ महत्तम पूर्णांक को निरूपित करता है), ञ्ञ्ञ्ञ्ञ्ञ् है",
+            "options": [
+              {
+                "prompt": "ध्हा-ध्हा, दहूद/एवैâकी, आच्छादक",
+                "value": "A"
+              },
+              {
+                "prompt": "One-One, but not onto",
+                "value": "B"
+              },
+              {
+                "prompt": "Neither One-One nor onto",
+                "value": "C"
+              },
+              {
+                "prompt": "ध्हूद, ंल्ू हदू ध्हा-ध्हा/आच्छादक, पर एवैâकी नहीं",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1979",
+              "correct_answer": "C",
+              "explanation": "f : R → R given by f(x) = [x] We know that f (1.6) = [1⋅6] = 1, f (1⋅8) = [1⋅8] = 1 ∴ f (1⋅6) = f (1⋅8) , but 1⋅6 ≠ 1⋅8 ∴ f is not one-one. Now, consider 0⋅7 ∈ R. It is known that f (x) = [x] is always an Integer. Thus, there does not exist any element x ∈ R such. That f (x) = 0⋅7. ∴ f is not onto. Hence, the greatest Integer function is neither one-one nor onto.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1980",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f f : R → R ्ग्हिा् ंब् fर्(े) ृर् े२ – र्३े + २, ूपह f(fर्(े)) ृ यदि f : R → R fर्(े) ृर् े२ – र्३े + २, द्वारा परिभाषित है तो f(fर्(े)) ृ",
+            "options": [
+              {
+                "prompt": "x4+6x3+10x2+3x",
+                "value": "A"
+              },
+              {
+                "prompt": "x4–6x3+10x2–3x",
+                "value": "B"
+              },
+              {
+                "prompt": "x4–6x3–13x2+3x",
+                "value": "C"
+              },
+              {
+                "prompt": "x4+6x3–13x2+3x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1980",
+              "correct_answer": "B",
+              "explanation": "Given f (x) = x2 – 3x + 2 ∴ f (f(x)) = f(x2–3x+2) = (x2–3x+2)2 – 3(x2–3x+2)+2 f (f(x)) = x4+9x2+4 – 6x3–12x+4x2 – 3x2+9x–6+2 f (f(x)) = x4 – 6x3 + 10x2 – 3x",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1981",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f a ंग्हarब् दज्ीaूग्दह ङ दह र्‍ ग्े ्ग्हिा् aे a ङ ं ृ a३ + ं३, ूपह - यदि a ङ ं ृ a३ + ं३ प्रकार से परिभाषित, र्‍ में द्विआधारी संक्रिया ङ हो, तो -",
+            "options": [
+              {
+                "prompt": "* is both assciated and commutative",
+                "value": "A"
+              },
+              {
+                "prompt": "* is commutative but not associative",
+                "value": "B"
+              },
+              {
+                "prompt": "* is associative but not commutative",
+                "value": "C"
+              },
+              {
+                "prompt": "* is neither commutative nor associative",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1981",
+              "correct_answer": "B",
+              "explanation": "On N, the operation is defined as a∗b = a3+b3 For, a, b, ∈ N, We have: a∗b = a3+b3 = b3+a3 = b∗a [Addition is commutative in N] It can be observed that (1⋅2)⋅3 = (13+23)⋅3 = 9⋅3 = 93+33 = 729+27= 756 1⋅(2⋅3) = 1⋅(23+33) = 1⋅(8+27) = 13+353 = 1+353 = 1+42875 = 42876 ∴ (1∗2) ∗ 3 ≠ 1 ∗ (2∗3) ; Where 1, 2, 3 ∈ N Therefore, the operation ∗ is not associative. Hence, the operation ∗ is commutative, but not associative. Thus, the correct answer is (b).",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1982",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f : R → R and g : R → R are given by f(x) = cos x, and g(x) = 3x2, then - Ùeefo f : R → R Deewj g : R → R Deewj f(x) = cos x, Deewj g(x) = 3x2 Éeje efoÙee peelee nw, lees -",
+            "options": [
+              {
+                "prompt": "gof = fog",
+                "value": "A"
+              },
+              {
+                "prompt": "gof ≠ fog",
+                "value": "B"
+              },
+              {
+                "prompt": "gof and fog both do not exist",
+                "value": "C"
+              },
+              {
+                "prompt": "ण्aह'ू ां ूीस्ग्हा्/तय नहीं किया जा सकता",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1982",
+              "correct_answer": "B",
+              "explanation": "Given f(x) = cos x and g(x) = 3x2 Given f : R → R and g : R → R, ∴ fog : R → R and gof : R → R fog (x) = f (g(x)) = f(3x2) = cos (3x2) gof (x) = g (f(x)) = g(cos x) = 3 cos2x So, cos. (3x2) ≠ 3 cos2x ∴ gof ≠ fog",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1983",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दf ूप fदत्त्दैग्हु ग्े म्दrrाम्ू ग्f ूप aंदन ग्स्aुा rाज्rोाहूे ूप fल्हम्ूग्दहे f१ aह् f२? उपरोक्त छवि/चित्र में f१ और f२ के कार्यों का प्रतिनिधित्व करती है -",
+            "options": [
+              {
+                "prompt": "f1 is one-one, f2 is one-one",
+                "value": "A"
+              },
+              {
+                "prompt": "f1 is onto, f2 is onto",
+                "value": "B"
+              },
+              {
+                "prompt": "f1 is onto, f2 is one-one",
+                "value": "C"
+              },
+              {
+                "prompt": "f1 is one-one, f2 is not onto",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1983",
+              "correct_answer": "D",
+              "explanation": "Let's consider these two diagrams for diagram f1 we realize that 1 maps to a, 2 maps to b, 3 maps to c, 4 maps to d however for diagram f2 it is clear that 1 maps YEP 338 YCT to b, 2 maps to b, 3 maps to c, 4 maps to d since we have element in the domain corresponding to distinct values in the each domain for diagram f1 it makes the function one-one onto the other diagram f2 not one-one so f2 is many-one So, f is onto and f2 is not onto",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1984",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f f : R → R ुग्नह ंब् fर्(े) ृ र्४े + ३, ूपह ग्हन्ीो दf f ग्े यदि f : R → R द्वारा fर्(े) ृ र्४े + ३ दिया गया है, तो f का प्रतिलोम होगा-",
+            "options": [
+              {
+                "prompt": "–1",
+                "value": "A"
+              },
+              {
+                "prompt": "–1",
+                "value": "B"
+              },
+              {
+                "prompt": "–1",
+                "value": "C"
+              },
+              {
+                "prompt": "–1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1984",
+              "correct_answer": "A",
+              "explanation": "f : R → R f (x) = 4x+3 Let f (x) = y y = 4x+3 y –3 = 4x ( ) 1 y 3 x f y 4 − − = = There for ( ) 1 y 3 f y 4 − − =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1985",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f a ेलिहम २ ह ढa ल म्दहन्ीुो ूद a२, ूपह ूप ेलिहम (aह) म्दहन्ीुो ूद- यदि कोई अनुक्रम २ ह ढa ल का अभिसरण a२ होता है तो अनुक्रम ढaहल का अभिसरण क्या होगा?",
+            "options": [
+              {
+                "prompt": "a2",
+                "value": "A"
+              },
+              {
+                "prompt": "a",
+                "value": "B"
+              },
+              {
+                "prompt": "a",
+                "value": "C"
+              },
+              {
+                "prompt": "र्‍दू म्दहन्ीुाहू/कोई अभिसारी नहीं",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1985",
+              "correct_answer": "D",
+              "explanation": "Since 2 n {a } converges to a2 than n {a }will go towards ± a so it has two limits and If a sequence has two limit than it is not convergent. Hence, option (d) is correct.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1986",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The sequence {xn}, where xn = 1 1 1 1+ + + .........+ 3 5 2n – 1 is - Deveg›eâce {xn}, peneB xn = 1 1 1 1+ + + .........+ 3 5 2n – 1 , Jen -",
+            "options": [
+              {
+                "prompt": "र्‍दू ण्aल्म्प्ब् ेलिहम/कौशी अनुक्रम नही है",
+                "value": "A"
+              },
+              {
+                "prompt": "Oscillatory/oesueve nw",
+                "value": "B"
+              },
+              {
+                "prompt": "Convergent/DeefYemeejer",
+                "value": "C"
+              },
+              {
+                "prompt": "Monotonically decreasing",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1986",
+              "correct_answer": "A",
+              "explanation": "A sequence {xn} is considered a cauchy sequence if, for any positive ε, there exists a natural number N such that for all m, n greater than or equal to N, the absolute difference between Xm and Xn is less than ε. Now, let's analyze the given sequence {xn}: n 1 1 1 X 1 3 5 2n 1 ............ = + + + + − This sequence does not satisfy the cauchy criterion because it diverges. In other words, as you take more terms (n Increases), the sum of the sequence grows without bound. As a result, It fails to meet the condition that for any ε, there exists an N such that for all m, n ≥ N, the difference between Xm and Xn is less than ε. In mathematical terms, the series 1 1 1 1 3 5 2n 1 ............ + + + + − diverges, meaning it does not converge to finite limit. This divergence prevents the sequence from being a cauchy sequence.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1987",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The series ( ) ∑ n+1 1 –1 n is - ßesCeer ( ) ∑ n+1 1 –1 n , _____ nw -",
+            "options": [
+              {
+                "prompt": "Divergent/Dehemeejer",
+                "value": "A"
+              },
+              {
+                "prompt": "Absolutely convergent/hetCe& ™he mes DeefYemeejer",
+                "value": "B"
+              },
+              {
+                "prompt": "Unbounded/Demeerefcele",
+                "value": "C"
+              },
+              {
+                "prompt": "Conditionally Convergent/meMele& ™he mes DeefYemeejer",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1987",
+              "correct_answer": "D",
+              "explanation": "Let {an} be a positive sequence. An alternating series is a series of either the form ( ) n n n 1 1 a ∞ = − ∑ or ( ) n 1 n n 1 1 a ∞ + = − ∑ The terms or Harmonic series come from the Harmonic sequence {an} { } 1n = . An Important alternating series is the alternating Harmonic series. ( ) n 1 1 1 1 1 1 1 1 1 n 2 3 4 5 6 ........... + − = − + − + − + Geometric series can also be alternating series and conclude this series converges. While the test does not state what the series converges to, we will see later the ( ) n 1 n 1 1 1 n ∞ + = − = ∑ log2.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1988",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दf ूप fदत्त्दैग्हु ग्े ग्हम्दrrाम्ू? निम्नलिखित में से कौन-सा गलत है?",
+            "options": [
+              {
+                "prompt": "Every sequence has a limit point",
+                "value": "A"
+              },
+              {
+                "prompt": "Every sequence has a monotone subsequence",
+                "value": "B"
+              },
+              {
+                "prompt": "Every bounded sequence has a convergent",
+                "value": "C"
+              },
+              {
+                "prompt": "Every sequence has a countable number of",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1988",
+              "correct_answer": "A",
+              "explanation": "A sequence is a list of numbers written in a specific order. It can be finite or infinite. A limit point is a point that can be approached arbitrarily closely by an infinite number of terms in a sequence. In other words, it is a point where the terms of the sequence cluster around. The incorrect statement implies that every sequence has at least one limit point. However, this is not true. There are sequence that do not have any limit points, and therefore, option (a) is incorrect.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1989",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ्दस्aग्ह दf म्दहन्ीुाहम fदr र् ेर् ेर् ेर् े – – ...... २ ३ ४ + + ग्े र् ेर् ेर् ेर् े – – ...... २ ३ ४ + + के लिए अभिसरण का क्षेत्र होगा-",
+            "options": [
+              {
+                "prompt": "[–1, 1]",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "[–1, 1)",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1989",
+              "correct_answer": "D",
+              "explanation": "x x x x – – ...... 2 3 4 + + Let an = ( ) ( ) n 1 n 2 n 1 x x 1 , a 1 n n 1 + + + − = − + ( ) ( ) n 2 n 1 n 1 n n n 1 a 1 n R a n 1 1 lim lim + + + →∞ →∞ − = = × + − n 1 n 1 1 R n 1 n lim →∞ = = +       R = 1 For convergence | x | < R (–R < x < R) x ∈ (–1, 1) we check x = 1 1 1 1 1 2 3 4 − + − + ...... = ( ) n 1 n 1 1 1 1 n n n + ∞ = − = = ∑ ∑ ∑ apply p test p > 1 convergent p ≤ 1 divergent Σ 1 n – not convergent Using Leibnitz (i) an ≥ an+1 ∀n∈N (ii) n nlim a 0 →∞ = So, Σ 1 n = 0 convergent x ∈ (–1, 1]",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1990",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f ∑ २ ह a aह् ∑ २ ह ं arा म्दहन्ीुाहू ेीगे दf ज्देग्ूग्न र्rीत् हल्स्ंीे ूपह, ∑ ह ह a ×ं यदि ∑ २ ह a और ∑ २ ह ं धनात्मक वास्तविक संख्याओं की अभिसारी शृंखला है, तो ∑ ह ह a ×ं",
+            "options": [
+              {
+                "prompt": "is divergent/Dehemeejer nw",
+                "value": "A"
+              },
+              {
+                "prompt": "must be convergent/DeefYemeejer nesvee ÛeeefnS",
+                "value": "B"
+              },
+              {
+                "prompt": "may or may not be convergent",
+                "value": "C"
+              },
+              {
+                "prompt": "may be convergent/DeefYemeejer nes mekeâlee nw",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1990",
+              "correct_answer": "C",
+              "explanation": "case (i), an = 1 n and bn = 1 n 2 2 n n 2 2 1 1 a and b n n = = ∑ ∑ ∑ ∑ both are convergent but n n 2 1 1 a b n n = = ∑ ∑ ∑ is diveirgent by p test case (ii) an = n 2 2 1 1 and b n n = 2 2 n n 4 4 1 1 a and b n n = = ∑ ∑ ∑ ∑ both are convergent n n 4 2 1 1 a b n n = = ∑ ∑ ∑ is convergent ⇒ n n a b ∑ may or may not be convergent",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1991",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दहा दf ूप fदत्त्दैग्हु ेीगे ग्े ्ग्न्ीुाहू? निम्नलिखित में से कौन-सी शृंखला अपसारी है?",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1991",
+              "correct_answer": "B",
+              "explanation": "n 1 1 sin n ∞ =       ∑ , We have ( ) 1n x a sin = Let 1n x b = Then using limit comparison test ( ) x x lim lim x x 1 sin n 1n a b →∞ →∞ = 1 bx n x=1 x=1 since ∞ ∞ ∑ ∑ = is a harmonic series which is divergent Let 1 n = θ so. θ → 0 as. n →∞ Then x x lim lim x 0 sin 1 a b →∞ θ→ θ = θ = So x x lim x 1 0 a b →∞ > = So the series ( ) 1 sin n x=1 series ∞ ∑ is also divergent YEP 340 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1992",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f ळह ्न ० fदr aत्त् ह ∈ र्‍, ूपह १/ ह ह हत्ग्स् ळ →∞ ग्े ल्aित् ूद- यदि सभी ह ∈ र्‍, के लिए ळह ्न ०, तो १/ ह ह हत्ग्स् ळ →∞ किसके बराबर होगा?",
+            "options": [
+              {
+                "prompt": "n 1",
+                "value": "A"
+              },
+              {
+                "prompt": "n",
+                "value": "B"
+              },
+              {
+                "prompt": "n–1",
+                "value": "C"
+              },
+              {
+                "prompt": "n",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1992",
+              "correct_answer": "D",
+              "explanation": "Cauchy's second theorem on limits say that for a sequence {Un} of positive values, If n 1 n n U lim , U + →∞ = l then ( ) 1n n nlim U . →∞ = l n 1 n n U lim U + →∞ = l when Un+1 ≥ Un and option (d) n n n 1 U lim U →∞ − we konw that cauchy's second theorem Un+1 ≥ Un ⇒ Un ≥ Un–1 so ( ) 1 n n n n n n 1 U lim U lim U →∞ →∞ − = exist",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1993",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दहा दf ूप fदत्त्दैग्हु ूोूे ्दो हदू ुग्न aेंदत्ल्ूा म्दहन्ीुाहम दf a ेीगे? निम्नलिखित में से कौन-सा परीक्षण श्रेणियों के निरपेक्ष अभिसरण नहीं देता है?",
+            "options": [
+              {
+                "prompt": "Comparison Test/legueveelcekeâ hejer#eCe",
+                "value": "A"
+              },
+              {
+                "prompt": "Ratio Test/Devegheele hejer#eCe",
+                "value": "B"
+              },
+              {
+                "prompt": "Leibnitz's test/ueeFyeefvešdpe hejer#eCe",
+                "value": "C"
+              },
+              {
+                "prompt": "Root Test/™š hejer#eCe",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1993",
+              "correct_answer": "C",
+              "explanation": "\"Absolute convergence\" means a series will converge even when you take absolute value of each term, while \"conditional convergence\" means the series converges but not Absolutely. Therefore Leibnitz's test does not give absolute convergence of a series.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1994",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A conditionally convergent series is a series which is - Skeâ meMele& DeefYemejCe ßesCeer Skeâ Ssmeer ßesCeer nw pees-",
+            "options": [
+              {
+                "prompt": "Absolutely divergent/efvejhes#e Dehemeejer nw",
+                "value": "A"
+              },
+              {
+                "prompt": "Convergent but not absolutely",
+                "value": "B"
+              },
+              {
+                "prompt": "Absolutely Convergent/efvejhes#e DeefYemeejer nw",
+                "value": "C"
+              },
+              {
+                "prompt": "Not convergent but absolutely convergent",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1994",
+              "correct_answer": "B",
+              "explanation": "A series or Integral is said to be conditionally convergent if it convergens but it does not converge absolutely. Mathematically, a series is convergent If n S a = ∑ is finite but n S' a = ∑ is not finite. ⇒ Consider the series ( ) n 1 n 1 1 S n + ∞ = − = ∑ . This series converges to log 2. But the series ' n 1 1 S n ∞ = = ∑ is divergent. Hence the series ( ) n 1 n 1 1 S n + ∞ = − = ∑ is a conditionally convergent series.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1995",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If n is real number and f = ( ) n r cosnθ + i.sinnθ , then Ùeefo n Skeâ JeemleefJekeâ mebKÙee nes Deewj f = ( ) n r cosnθ + i.sinnθ , nes, lees -",
+            "options": [
+              {
+                "prompt": "f is analytic everywhere except possible at θ =",
+                "value": "A"
+              },
+              {
+                "prompt": "f is analytic nowhere/f keâneR Yeer efJeMuesef<ekeâ veneR nw",
+                "value": "B"
+              },
+              {
+                "prompt": "f is analytic everywhere except possible at r =",
+                "value": "C"
+              },
+              {
+                "prompt": "f is analytic everywhere/f nj peien efJeMuesef<ekeâ nw",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1995",
+              "correct_answer": "C",
+              "explanation": "Given the function f = ( ) nr cosnθ +isin nθ u + iv = ( ) nr cosnθ +isin nθ ⇒ u = rn cos n θ and v = rn sin nθ Now n 1 n 1 u v n r cosn n r sin n r r − − ∂ ∂ = θ = θ ∂ ∂ , and n n u v n r sin n n r cosn ∂ ∂ = − θ = θ ∂θ ∂θ , Here n 1 u n r cosn r − ∂ = θ ∂ ( ) n u 1 nr cosn r r ∂ = θ ∂ ⇒ ( ) n u 1 nr cosn r r ∂ = θ ∂ n V nr cosn ∂   = θ   ∂θ   ∵ ⇒ r 1 v u r ∂ = ∂θ This is a C - R equation Hence the given function is analytic. Now the derivative is df f dz x ∂ = ∂ df r df dr x d x ∂ ∂θ = ⋅ + ⋅ ∂ θ ∂ df sin f cos + dr r − θ ∂   = θ  ∂θ   df sin u v cos + i dr r − θ ∂ ∂    = θ + ⋅    ∂θ ∂θ    df sin v u cos r ir dr r r r θ ∂ ∂   = θ − − +   ∂ ∂   YEP 341 YCT ( ) df cos isin dr = θ − θ ( ) df f = cos – isin dz r ∂ θ θ ∂ ...(i) ∵ We have f = rn (cos nθ + i sin nθ) ⇒ ( ) n 1 df = nr cosn isin n dr − θ + θ Putting df dr in equation (i) we get; ( ) ( ) n 1 f cos isin nr cosn isin n z − ∂= θ − θ θ + θ ∂ n 1 i ni f nr e e z − −θ θ ∂= ⋅ ∂ ( ) n 1 i n 1 f nr e z − θ − ∂= ∂ ( ) ( ) n 1 f nr cos n 1 isin n 1 z − ∂= − θ + − θ     ∂ f z ∂ ∂ exist ∀ finite value of r Including zero, except when r = 0 and n ≤ 1.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1996",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "( ) ( ) ( ) ( )  ≠   z ,if Re z 0 If f z = Re z if Re z = 0 0 , then - Ùeefo ( ) ( ) ( ) ( )  ≠   z , Re z 0 If f z = Re z Re z = 0 0 Ùeefo Ùeefo , lees -",
+            "options": [
+              {
+                "prompt": "f is not continuous at 0/f, 0 hej meblele veneR nw",
+                "value": "A"
+              },
+              {
+                "prompt": "f is not continuous everwhere",
+                "value": "B"
+              },
+              {
+                "prompt": "f is not continuous everwhere",
+                "value": "C"
+              },
+              {
+                "prompt": "f is not continuous only at 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1996",
+              "correct_answer": "A",
+              "explanation": "(z) = x + iy z = x + iy ↓ ↓ Re (z) Im (z) 2 2 z x y = + ( ) Z 0 lim f x → = ( ) ( ) 2 2 x,y 0,0 x y lim x → + {let y = mx} = ( ) 2 2 2 x 0 x m x lim x → + = 2 x 0 x 1 m lim x → + = 2 x 0 lim 1 m → + limit depend on m Hence f is not continuous at 0.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1997",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f(z) = 2 z , then Ùeefo f(z) = 2 z , nw lees -",
+            "options": [
+              {
+                "prompt": "f is differentiable only at zero",
+                "value": "A"
+              },
+              {
+                "prompt": "f is differentiable everywhere except 0",
+                "value": "B"
+              },
+              {
+                "prompt": "f is differentiable everwhere",
+                "value": "C"
+              },
+              {
+                "prompt": "f is differentiable nowhere",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1997",
+              "correct_answer": "A",
+              "explanation": "The sufficient condition for a function f(z) = u + iv to be analytic at all the Points in region R are ( ) u v u v 1 , x y y x ∂ ∂ ∂ ∂ = = − ∂ ∂ ∂ ∂ ( ) u v u v 2 , , x y y x ∂ ∂ ∂ ∂ = ∂ ∂ ∂ ∂ are continuous functions of x and y in region R. ( ) 2 f z z = Let, z = x+iy f(z) = x2 + y2, But f(z) = u + iv u = x2 + y2, v = 0 u v 2x, 0 x y ∂ ∂ = = ∂ ∂ u v 2y, 0 y x ∂ ∂ = = ∂ ∂ If f(z) is differentiable then, u v x y ∂ ∂ = ∂ ∂ or 2x = 0, or x = 0 Cauchy Riemann equation is satisfied at (0, 0)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1998",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f(z) = u (x, y) + i.v (x, y) be analytic everywhere and u – v = (x – y). (x2 + 4xy + y2), then - Ùeefo f(z) = u (x, y) + i.v (x, y) nj peien efJeMuesef<ekeâ nes Deewj u – v = (x – y). (x2 + 4xy + y2) lees-",
+            "options": [
+              {
+                "prompt": "f",
+                "value": "A"
+              },
+              {
+                "prompt": "f",
+                "value": "B"
+              },
+              {
+                "prompt": "f",
+                "value": "C"
+              },
+              {
+                "prompt": "f",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1998",
+              "correct_answer": "D",
+              "explanation": "Given - u –v = (x–y) (x2+4xy+y2) = x3 + 3x2y – 3xy2 –y3 Differentiating above equation with respect to x & y partially, We get ux – vx = 3x2 + 6xy – 3y2 ...(i) uy – vy = 3x2 – 6xy – 3y2 ...(ii) From Cauchy - Riemann's equation s, we have uy = – vx and vy = ux substituting these conditions in equation (2), YEP 342 YCT We get – vx – ux = 3x2 – 6xy – 3y2 ...(iii) Solving equation (i) and (iii) for ux & vx We get (i) + (iii); – 2vx = 6(x2–y2) given vx = 3(y2–x2) (i) – (iii); – 2ux = 12xy gives ux = 6xy We know that, f '(z) = ux + ivx f '(z) = 6xy + i3 (y2–x2) Substituting x = z & y = 0 We get f '(z) = – 3iz2 Integrating f '(z) with respect to z, we get ∴ ( ) 2 f z 3iz dz c = − + ∫ ( ) 3 f z iz c, = − + c is arbitrary constant",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1999",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "थू fर्(ै) ृ १र् ै ,र् ै ≠ ०, ूपह मान लें कि fर्(ै) ृ १र् ै ,र् ै ≠ ०, तब -",
+            "options": [
+              {
+                "prompt": "f does not satisfy Cauchy – Riemann equation",
+                "value": "A"
+              },
+              {
+                "prompt": "f is analytic for all z ≠ 0",
+                "value": "B"
+              },
+              {
+                "prompt": "f",
+                "value": "C"
+              },
+              {
+                "prompt": "f satisfies Cauchy – Riemann equation, but",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1999",
+              "correct_answer": "B",
+              "explanation": "( ) 2 2 1 1 x iy x iy f z U iV z x iy x iy x y − − = = × = = + + − + 2 2 2 2 x y U , V x y x y = = − + + ( ) ( ) ( ) ( ) 2 2 2 2 2 2 2 2 2 2 x y 1 x 2x U y x x x y x y + − ∂ − = = ∂ + + ( ) ( ) ( )( ) ( ) ( ) 2 2 2 2 2 2 2 2 2 2 x y 1 y 2y V y x y x y x y + ⋅− −− ∂ − = = ∂ + + U V x y ∂ ∂ = ∂ ∂ ( ) ( ) 2 2 2 2 2 2 U 2xy V 2xy and y x x y x y ∂ − ∂ = = ∂ ∂ + + U V y x ∂ ∂ = − ∂ ∂ ⇒ 1 Z is analytic everywhere, z ≠ 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q2000",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ra्ग्ल्े दf म्दहन्ीुाहम दf ूप ज्दैी ेीगे ( ) २ ह ह ० ह!र् ै २ह! ∞ ृ∑ ग्े घात श्रेणी ( ) २ ह ह ० ह!र् ै २ह! ∞ ृ∑ की अभिसरण त्रिज्या-",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "1/2",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "1/4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q2000",
+              "correct_answer": "D",
+              "explanation": "( ) ( ) 2 n n 0 n! z 2n ! ∞ =∑ = n 1 x n a lim 1 a + →∞ = < l = ( ) ( ) ( ) ( ) ( ) ( ) 2 2 x n 1 ! 2n ! lim 2 n 1 ! n! →∞ + + = ( ) ( ) ( ) 2 x n 1 ! 2n ! lim n! 2n 2 ! →∞ +     +   = ( )( ) ( ) ( ) ( ) ( ) n! n n 1 n 2 .......... 3.2.1 n 1 ! n 1 .n n 1 .... 3.2.1 n 1 n! = − −     + = + −     = +   = ( ) ( ) ( ) 2 x n 1 2n ! lim 2n 2 ! →∞ + + = ( ) ( ) ( )( )( ) 2 x n 1 2n ! lim 2n 2 2n 2 –1 2n 2 2 ! →∞ + + + + − = ( ) ( ) ( )( )( ) 2 x n 1 2n ! lim 2 n 1 2n 1 2n ! →∞ + + + = ( ) ( ) x n 1 lim 2 2n 1 →∞ + + = x 1 n 1 n lim 1 2n 2 n →∞   +       +     = x 1 1 n lim 1 2 2 n →∞   +       +     = 1 4 { } 1 < ∵l",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

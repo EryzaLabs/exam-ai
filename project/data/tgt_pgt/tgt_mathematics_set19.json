@@ -1,0 +1,3820 @@
+{
+  "_id": "tgt_mathematics_set19",
+  "title": "TGT Mathematics • Mock Test Set 19 (100 MCQs)",
+  "course": "TGT Series",
+  "subject": "Mathematics",
+  "exam": "tgt",
+  "price": 199,
+  "originalPrice": 999,
+  "duration": 100,
+  "sections": [
+    {
+      "_id": "sec_tgt_mathematics_set19",
+      "title": "Mathematics Section",
+      "qCount": 100,
+      "time": 100,
+      "questions": [
+        {
+          "_id": "tgt_mathematics_q1801",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "280 students travel either by train or bus or both to get to school. 140 students travel by train and 50 travel by both train and bus. Find the number of students who travel by just one these transport.",
+            "options": [
+              {
+                "prompt": "200",
+                "value": "A"
+              },
+              {
+                "prompt": "220",
+                "value": "B"
+              },
+              {
+                "prompt": "230",
+                "value": "C"
+              },
+              {
+                "prompt": "240",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1801",
+              "correct_answer": "C",
+              "explanation": "Let B and T denote the set of students travelling by bus and train respectively. Now, n(B ∪T) = n(B) + n(T) – n(B ∩T) gives, 280 = n(B) + 140 – 50 ⇒ n(B) = 190 Now, number of students travelling only by train = n(T) – n(B ∩T) = 140 – 50 = 90 Similarly, number of students travelling only by bus = 140 Therefore, number of students travelling by just one of these transports = 140 + 90 = 230",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1802",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For the given set A = {0, {1}, 1 φ}, φ}, φ}, φ}, identify the statement which is INCORRECT.",
+            "options": [
+              {
+                "prompt": "φ ∈ Α",
+                "value": "A"
+              },
+              {
+                "prompt": "A",
+                "value": "B"
+              },
+              {
+                "prompt": "{1} ∈ A",
+                "value": "C"
+              },
+              {
+                "prompt": "0 ⊂ A",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1802",
+              "correct_answer": "D",
+              "explanation": "Clearly, 0, 1, {1} and φ are elements of the set A. Therefore, φ ∈ A, {1} ∈ A, and φ ⊂ A since empty set is a subset of every set.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1803",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let A = {x ∈ R : x2 = 9 and 2x = 4}. Then which of the following is true?",
+            "options": [
+              {
+                "prompt": "A = φ",
+                "value": "A"
+              },
+              {
+                "prompt": "A = {0}",
+                "value": "B"
+              },
+              {
+                "prompt": "A = {1}",
+                "value": "C"
+              },
+              {
+                "prompt": "A = R",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1803",
+              "correct_answer": "A",
+              "explanation": "We have, x2 = 9 ⇒ x = ± 3 and 2x = 4 ⇒ x = 2 ⇒ A = φ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1804",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If A = {n ∈ N: n divides 12}, then find the number of elements of P",
+            "options": [
+              {
+                "prompt": "8",
+                "value": "A"
+              },
+              {
+                "prompt": "16",
+                "value": "B"
+              },
+              {
+                "prompt": "32",
+                "value": "C"
+              },
+              {
+                "prompt": "64",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1804",
+              "correct_answer": "D",
+              "explanation": "A = {n ∈ N : n divides 12} = {1, 2, 3, 4, 6, 12} Therefore, n (P (A)) = 26 = 64.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1805",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let X be a universal set, A ⊂ X, B ⊂ X. Then which of following is INCORRECT?",
+            "options": [
+              {
+                "prompt": "A =",
+                "value": "A"
+              },
+              {
+                "prompt": "A ∩B = X\\[",
+                "value": "B"
+              },
+              {
+                "prompt": "A\\B =",
+                "value": "C"
+              },
+              {
+                "prompt": "A ∪B =",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1805",
+              "correct_answer": "D",
+              "explanation": "Clearly; A = (A\\B) ∪(A ∩B) & A∪B = (A\\B)∪(A∩B) ∪ (B\\A)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1806",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let X be a universal set, A ⊂ X, B ⊂ X and n(X) = 20, n",
+            "options": [
+              {
+                "prompt": "8",
+                "value": "A"
+              },
+              {
+                "prompt": "9",
+                "value": "B"
+              },
+              {
+                "prompt": "10",
+                "value": "C"
+              },
+              {
+                "prompt": "11",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1806",
+              "correct_answer": "D",
+              "explanation": "Clearly, n(A\\B) = n(A) – n(A ∩B) = 12 – 4 = 8 [Exam Date : 04/07/2018, (Female) YEP DSSSB (TGT-Math) 2018 (08.07.2018) 312 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1807",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Then n(Ac ∩Bc) is:",
+            "options": [
+              {
+                "prompt": "5",
+                "value": "A"
+              },
+              {
+                "prompt": "10",
+                "value": "B"
+              },
+              {
+                "prompt": "15",
+                "value": "C"
+              },
+              {
+                "prompt": "20",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1807",
+              "correct_answer": "A",
+              "explanation": "We have, n(Ac ∩Bc) = n(A ∪B)c = n(X) – n(A ∪B) = 70 – [n(A) + n(B) – n(A ∩B)] = 70 – [30 + 45 – 10] = 5",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1808",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If A has 5 elements and B has 7 elements, then the minimum number of elements that A ∪B can have is:",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "5",
+                "value": "B"
+              },
+              {
+                "prompt": "7",
+                "value": "C"
+              },
+              {
+                "prompt": "12",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1808",
+              "correct_answer": "C",
+              "explanation": "We have, min{n (A ∪B)} = max {n(A), n(B)} Therefore, min{n(A ∩B)} = max{5, 7} = 7",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1809",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If S = {1, 2} and T = {2, 3, 4}, then (S ∪T) × (S ∩T) is:",
+            "options": [
+              {
+                "prompt": "{",
+                "value": "A"
+              },
+              {
+                "prompt": "{",
+                "value": "B"
+              },
+              {
+                "prompt": "{",
+                "value": "C"
+              },
+              {
+                "prompt": "{",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1809",
+              "correct_answer": "A",
+              "explanation": "S = {1, 2} and T = {2, 3, 4,} then (S ∪T) × (S ∩T) = {1, 2, 3, 4} × {2} = {(1, 2), (2, 2), (3, 2), (4, 2)}",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1810",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The domain of the relation- {(x, y) : y = |x – 1|, x ∈ Z, |x| ≤ 2} is:",
+            "options": [
+              {
+                "prompt": "{3, 2, 1, 0}",
+                "value": "A"
+              },
+              {
+                "prompt": "{0,1, 2}",
+                "value": "B"
+              },
+              {
+                "prompt": "{3, –2, –1, 0, 1, 2, 3}",
+                "value": "C"
+              },
+              {
+                "prompt": "{–2, –1, 0, 1, 2}",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1810",
+              "correct_answer": "D",
+              "explanation": "Clearly, |x| ≤ 2 ⇒ –2 ≤ x ≤ 2 ⇒ x = {–2, –1, 0, 1, 2} which is clearly the domain.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1811",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let f: R → R be a function defined as f(x) = . 2 x + 2 x +1 Then f is:",
+            "options": [
+              {
+                "prompt": "one-one function",
+                "value": "A"
+              },
+              {
+                "prompt": "not well-defined",
+                "value": "B"
+              },
+              {
+                "prompt": "both one-one and onto",
+                "value": "C"
+              },
+              {
+                "prompt": "not onto",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1811",
+              "correct_answer": "B",
+              "explanation": "f : R → R defined as f(x) = 2 x 2 x 1 + + is not well defined since f is not defined at x = –1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1812",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f :Z → Z be a function defined as f(x) = 5x + 2 for all x ∈ Z, then f is:",
+            "options": [
+              {
+                "prompt": "onto",
+                "value": "A"
+              },
+              {
+                "prompt": "one-one",
+                "value": "B"
+              },
+              {
+                "prompt": "both one-one and onto",
+                "value": "C"
+              },
+              {
+                "prompt": "neither one-one nor onto",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1812",
+              "correct_answer": "B",
+              "explanation": "f : Z → Z defined by f(x) = 5x + 2 is one-one since 5x1 + 2 = 5x2 + 2 ; x1, x2 ∈ Z ⇒ x1 = x2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1813",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The domain of the function g(x) = ( ) 2 x – 3x + 2 is:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "[–1, ∞)",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1813",
+              "correct_answer": "D",
+              "explanation": "We must have, x2 – 3x + 2 ≥ 0 ⇒ (x – 1) (x – 2) ≥ 0 ⇒ x ∈ (– ∞, 1] ∪[2, ∞)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1814",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f(x) = x , x then value of |f",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1814",
+              "correct_answer": "C",
+              "explanation": "We have, ( ) 1 ;x 0 f x 1 ;x 0 ≥  = − <  Therefore, |f(2) – f(–2)| = 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1815",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let f : N → R be defined as f(x) = (3x – 1), g :R → R be defined as g(x) = 2 x . 2 Then (g º f) (0) =",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1815",
+              "correct_answer": "B",
+              "explanation": "g(f(0) = g(–1) = 1 2 .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1816",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f(x) = xn, n ∈ N and (g º f) (x) = ng (x), then g(x) can be:",
+            "options": [
+              {
+                "prompt": "n|x|",
+                "value": "A"
+              },
+              {
+                "prompt": "log|x|",
+                "value": "B"
+              },
+              {
+                "prompt": "ex",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1816",
+              "correct_answer": "B",
+              "explanation": "Since logxn = nlogx; g(x) can be log|x| .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1817",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the domain of the function f(x) is [0, 2], the domain of the function f (2x + 1) is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1 , 0",
+                "value": "C"
+              },
+              {
+                "prompt": "[0, 2]",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1817",
+              "correct_answer": "A",
+              "explanation": "We must have 0≤ 2x+1≤ 2 So that when f evaluates 2x+1, it is well defined. Hence, required domain is x∈ 1 1 , 2 2   −    ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1818",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the range of the function f(x) = |x – 1| + |x – 2|. x ∈ R",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "[1, ∞)",
+                "value": "C"
+              },
+              {
+                "prompt": "[1, 2]",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1818",
+              "correct_answer": "C",
+              "explanation": "Clearly, the minimum value of f(x) = |x – 1| + | x – 2|; x ∈ R is 1. Therefore, the required range is [1, ∞)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1819",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The graph of 3(x – 1)2 + 3, then f : R → R is symmetric about the line:",
+            "options": [
+              {
+                "prompt": "x = 1",
+                "value": "A"
+              },
+              {
+                "prompt": "x = 0",
+                "value": "B"
+              },
+              {
+                "prompt": "y = 1",
+                "value": "C"
+              },
+              {
+                "prompt": "y = 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1819",
+              "correct_answer": "A",
+              "explanation": "Clearly the vertex of the parabola 3(x – 1)2 + 3 is (1, 3). Therefore, the curve is symmetric about the line x = 1.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1820",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f(x) = x3 and g(x) = 3x are two real-valued functions, then the number of solutions of ( )( ) ( )( ) g f x f g x = \u0003 \u0003 is:",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1820",
+              "correct_answer": "D",
+              "explanation": "We must have ( ) 3 3 x x 3 3 = ⇒ 3 x 3x 3 3 = ⇒ x3 = 3x ⇒ x3 – 3x = 0 ⇒ x(x2 – 3) = 0 ⇒ x = 0, x = 3 ±",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1821",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f (x) = 2x, then:",
+            "options": [
+              {
+                "prompt": "f",
+                "value": "A"
+              },
+              {
+                "prompt": "f",
+                "value": "B"
+              },
+              {
+                "prompt": "f",
+                "value": "C"
+              },
+              {
+                "prompt": "f",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1821",
+              "correct_answer": "D",
+              "explanation": "We have, f(x + y) = 2x + y = 2x.2y = f(x).f(y) f(xy) = 2xy f(x) + f(y) = 2x + 2y = y x x x 2 2 2 2 + = 2x + 2x 2y – x = f(x) + f(x) f(y – x)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1822",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For a set of circles in a plane, the relation 'concentric' is a/an:",
+            "options": [
+              {
+                "prompt": "equivalence relation",
+                "value": "A"
+              },
+              {
+                "prompt": "reflexive only",
+                "value": "B"
+              },
+              {
+                "prompt": "symmetric only",
+                "value": "C"
+              },
+              {
+                "prompt": "not transitive",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1822",
+              "correct_answer": "A",
+              "explanation": "A circle is concentric to itself. If C1 is concentric to C2 then C2 is concentric to C1 as well. Now if C1 is concentric to C2 and C2 is concentric to C3 then C1 and C3 are concentric as well. Therefore, for a set of circles in a plane, the relation 'concentric' is an equivalence relation.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1823",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If {x} and [x] represent fractional and integral part of x, then the value of [x] + { } ∑ 1000 k=1 x + k is : 1000",
+            "options": [
+              {
+                "prompt": "1000x",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "x",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1823",
+              "correct_answer": "C",
+              "explanation": "Since, {x k} {x}fork Z+ + = ∈ ⇒ { } { } 1000 k 1 1000 x {x k} x 1000 1000 = + = = ∑ Therefore, [ ] { } [ ] { } 1000 k 1 x k x x x x 1000 + + + = + = ∑",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1824",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If [x] represent the integral part of x, then the range of the function y = [x2] – [x]2, x ∈ [0, 2] is:",
+            "options": [
+              {
+                "prompt": "{0}",
+                "value": "A"
+              },
+              {
+                "prompt": "{0, 1}",
+                "value": "B"
+              },
+              {
+                "prompt": "{0, 1, 2}",
+                "value": "C"
+              },
+              {
+                "prompt": "{1, 2}",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1824",
+              "correct_answer": "C",
+              "explanation": "Clearly, [x2] – [x]2 = 0 for x = 0, 1, 2 [x2] – [x]2 = 0 for x ∈ (0, 1) Now, [x2] ∈ , {1, 2, 3} and [x]2 ∈ {1} when x ∈ (1, 2) ⇒ [x2] – [x]2 ∈ {0, 1, 2} Therefore, the required range is {0, 1, 2}.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1825",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let P(n) : n(n + 1) (n + 2) is divisible by 12. Then which of the following is true?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "P",
+                "value": "B"
+              },
+              {
+                "prompt": "P",
+                "value": "C"
+              },
+              {
+                "prompt": "P",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1825",
+              "correct_answer": "B",
+              "explanation": "P(1) = 1.2.3 = 6; not divisible P(4) = 4.5.6 = 120; divisible P(5) = 5.6.7 = 210; not divisible P(9) = 9.10.11 = 990; not divisible",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1826",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If P(n): 4n + 3 is a prime number, then which of the following is INCORRECT?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1826",
+              "correct_answer": "C",
+              "explanation": "P(1) = 7; a prime P(2) = 11; a prime P(3) = 15; a composite P(4) = 19; a prime",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1827",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A student tried to prove a statement by induction. She proved that P",
+            "options": [
+              {
+                "prompt": "n ∈ N.",
+                "value": "A"
+              },
+              {
+                "prompt": "n ≥ 2.",
+                "value": "B"
+              },
+              {
+                "prompt": "n > 2.",
+                "value": "C"
+              },
+              {
+                "prompt": "n > 3.",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1827",
+              "correct_answer": "B",
+              "explanation": "If P(2) is true and P(n) is true implies P(n + 1) is true for n ∈ N then P(n) is true for all n ≥ 2.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1828",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the values of n ∈ N for which P (n) : 2n > n3",
+            "options": [
+              {
+                "prompt": "n ≥ 2",
+                "value": "A"
+              },
+              {
+                "prompt": "n ≥ 3",
+                "value": "B"
+              },
+              {
+                "prompt": "n ≥ 5",
+                "value": "C"
+              },
+              {
+                "prompt": "n ≥ 10",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1828",
+              "correct_answer": "D",
+              "explanation": "For n ≥ 2 ; P(2) : 4 >/ 8 n ≥ 3 ; P(3) : 8 >/ 27 n ≥ 5 ; P(5) : 32 >/ 125 n ≥ 10 ; P(10) : 1024 > 1000",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1829",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let P (n) : n2 – n + 41 is a prime number. Then which of the following is INCORRECT?",
+            "options": [
+              {
+                "prompt": "P",
+                "value": "A"
+              },
+              {
+                "prompt": "P",
+                "value": "B"
+              },
+              {
+                "prompt": "P",
+                "value": "C"
+              },
+              {
+                "prompt": "P",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1829",
+              "correct_answer": "D",
+              "explanation": "P(4) = 53 ; a prime P(5) = 61 ; a prime P(9) = 113 ; a prime P(41) = 1681 = (41)2 ; a composite",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1830",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If nCn–2 = 28, the value of n is:",
+            "options": [
+              {
+                "prompt": "6",
+                "value": "A"
+              },
+              {
+                "prompt": "7",
+                "value": "B"
+              },
+              {
+                "prompt": "8",
+                "value": "C"
+              },
+              {
+                "prompt": "9",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1830",
+              "correct_answer": "C",
+              "explanation": "n n 2 C 28 −= ⇒ ( ) n! 28 n 2 ! 2! = − ⇒ n(n – 1) = 56 ⇒ n2 – n – 56 = 0 ⇒ (n – 8) (n + 7) = 0 ⇒ n = 8",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1831",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If (n + 1) P5 = 18 × (n – 1) P4, then the value of n is:",
+            "options": [
+              {
+                "prompt": "4 or 5",
+                "value": "A"
+              },
+              {
+                "prompt": "6 or 7",
+                "value": "B"
+              },
+              {
+                "prompt": "8 or 9",
+                "value": "C"
+              },
+              {
+                "prompt": "10 or 11",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1831",
+              "correct_answer": "C",
+              "explanation": "( ) ( ) ( ) ( ) n 1 ! n 1 ! 18 n 4 ! n 5 ! + − = × − − ⇒ n(n + 1) = 18 × (n – 4) ⇒ n2 + n = 18n – 72 ⇒ n2 – 17n + 72 = 0 ⇒ (n – 8) (n – 9) = 0 ⇒ n = 8 or n = 9",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1832",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "How many diagonals are there in polygon of 15 sides?",
+            "options": [
+              {
+                "prompt": "90",
+                "value": "A"
+              },
+              {
+                "prompt": "105",
+                "value": "B"
+              },
+              {
+                "prompt": "120",
+                "value": "C"
+              },
+              {
+                "prompt": "135",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1832",
+              "correct_answer": "A",
+              "explanation": "Number of diagonals: 15 2 C 15 90 − =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1833",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In how many ways can 5 ladies and 5 gentlemen be seated at a round table so that no two ladies are next two each other?",
+            "options": [
+              {
+                "prompt": "24",
+                "value": "A"
+              },
+              {
+                "prompt": "120",
+                "value": "B"
+              },
+              {
+                "prompt": "720",
+                "value": "C"
+              },
+              {
+                "prompt": "2880",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1833",
+              "correct_answer": "C",
+              "explanation": "The required number of ways = 5! × 4! =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1834",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "5 balls of different colors are to be placed in 3 boxes of different sizes. Each box can hold 5 balls. In how many different ways can we place the balls so that no box remains empty?",
+            "options": [
+              {
+                "prompt": "60",
+                "value": "A"
+              },
+              {
+                "prompt": "90",
+                "value": "B"
+              },
+              {
+                "prompt": "150",
+                "value": "C"
+              },
+              {
+                "prompt": "210",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1834",
+              "correct_answer": "C",
+              "explanation": "The possibilities are 1, 1, 3 upto permutation and 2, 2, 1 upto permutation. Thus, total number of ways = 1 1 2 5 4 3 5 3 1 3 2 1 3 C . C . C 3 C . C . C     × +     = 150",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1835",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "How many different words can be formed using all the letters of the word ORDINATE so that the vowels occupy odd places?",
+            "options": [
+              {
+                "prompt": "400",
+                "value": "A"
+              },
+              {
+                "prompt": "441",
+                "value": "B"
+              },
+              {
+                "prompt": "484",
+                "value": "C"
+              },
+              {
+                "prompt": "576",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1835",
+              "correct_answer": "D",
+              "explanation": "Required number of ways = 4!. 4! = 576.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1836",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The number of terms in (5x + 7y – 8z)20 is :",
+            "options": [
+              {
+                "prompt": "210",
+                "value": "A"
+              },
+              {
+                "prompt": "231",
+                "value": "B"
+              },
+              {
+                "prompt": "253",
+                "value": "C"
+              },
+              {
+                "prompt": "276",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1836",
+              "correct_answer": "B",
+              "explanation": "The number of terms in the expansion of (x + y + z)n after combining is the number of ways to choose n elements with replacement in which order does not matter is ( )( ) 3 n 1 n 2 n n n 1 n 2 C C 2 + − + + + = = Thus, the required number of terms = 21 22",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1837",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The number of arrangements of the letters of the word BANANAS in which two N's do not appear adjacently is?",
+            "options": [
+              {
+                "prompt": "300",
+                "value": "A"
+              },
+              {
+                "prompt": "400",
+                "value": "B"
+              },
+              {
+                "prompt": "500",
+                "value": "C"
+              },
+              {
+                "prompt": "600",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1837",
+              "correct_answer": "A",
+              "explanation": "The required number of arrangements = 7! 6! 3!2! 3! − = 420 – 120 = 300",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1838",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For any complex number z, the minimum value of |z| + |z – 2i| is:",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1838",
+              "correct_answer": "C",
+              "explanation": "We have, for z ∈ C |2i| = |z +(2i – z)| ≤ |z| + |2i – z| ⇒ 2 ≤ |z| + |z– 2i| Thus, minimum value of |z | + |z – 2i| is 2 and is attained for any z lying on the segment joining z = 0 and z = 2i.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1839",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If z1, z2, z3 are complex number such that |z1| = |z2| = |z3| = 1 2 3 1 1 1 + + = 1, z z z then |z1 + z2 + z3| is:",
+            "options": [
+              {
+                "prompt": "equal to 1",
+                "value": "A"
+              },
+              {
+                "prompt": "less than 1",
+                "value": "B"
+              },
+              {
+                "prompt": "greater than 3",
+                "value": "C"
+              },
+              {
+                "prompt": "equal to 3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1839",
+              "correct_answer": "A",
+              "explanation": "We have, 1 2 3 1 1 1 1 z z z + + = ⇒ 1 2 3 1 2 3 z z z 1 z z z + + = ⇒ 1 2 3 1 2 3 z z z 1 z z z + + = ⇒ 1 2 3 z z z 1 + + = Since 1 2 3 z z z 1 = = =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1840",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The locus represented by |z – 1| = |z + i| is:",
+            "options": [
+              {
+                "prompt": "a circle of radius 1",
+                "value": "A"
+              },
+              {
+                "prompt": "an ellipse with foci at",
+                "value": "B"
+              },
+              {
+                "prompt": "a straight line through the origin",
+                "value": "C"
+              },
+              {
+                "prompt": "a circle on the line joining",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1840",
+              "correct_answer": "C",
+              "explanation": "Let, z = x + iy Then, |z – 1| = |z + i| ⇒ |(x – 1) + |y| = |x + i(y + 1) ⇒ (x – 1)2 + y2 = x2 + (y + 1)2 ⇒ x2 + 1 – 2x + y2 = x2 + y2 + 1 + xy ⇒ x + y = 0 which is straight line through origin.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1841",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The triangle formed by the points 1, ( ) 1+ i , 2 i as vertices in the Argand diagram is:",
+            "options": [
+              {
+                "prompt": "scalene",
+                "value": "A"
+              },
+              {
+                "prompt": "equilateral",
+                "value": "B"
+              },
+              {
+                "prompt": "isosceles",
+                "value": "C"
+              },
+              {
+                "prompt": "right-angled",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1841",
+              "correct_answer": "C",
+              "explanation": "We have, AC = 2 2 − BC = 2 2 − Therefore ∆ABC is an isosceles triangle.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1842",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ω3 = 1 and ω ≠ 1, then (1 + ω) (1 + ω2) ) ) ) (1 + ω (1 + ω (1 + ω (1 + ω4) ) ) ) (1 + ω8) = ?",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "–3",
+                "value": "B"
+              },
+              {
+                "prompt": "9",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1842",
+              "correct_answer": "D",
+              "explanation": "We have, (1 + ω) (1 + ω 2) (1 + ω 4) (1 + ω 8) = (–ω 2) (–ω) (–ω 2) (–ω) since 1 + ω + ω 2 = 0 = (–ω 3) (–ω 3) = 1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1843",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Consider a quadratic equation az2 + bz + c = 0, where a, b, c are complex number. The condition in which the equation has both real roots is:",
+            "options": [
+              {
+                "prompt": "a",
+                "value": "A"
+              },
+              {
+                "prompt": "a",
+                "value": "B"
+              },
+              {
+                "prompt": "a",
+                "value": "C"
+              },
+              {
+                "prompt": "a",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1843",
+              "correct_answer": "B",
+              "explanation": "Let z1 and z2 be real roots of az2 + bz + c = 0 Then z1 and z2 are roots of 2 2 az bz c 0 az bz c 0 + + = = + + = as well. Therefore, we get, a b c a c b = =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1844",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The square roots of the complex number 7 + 24i are:",
+            "options": [
+              {
+                "prompt": "4 – 3i, 4 + 3i",
+                "value": "A"
+              },
+              {
+                "prompt": "–4 – 3i, 4 + 3i",
+                "value": "B"
+              },
+              {
+                "prompt": "–4 + 3i, 4 – 3i",
+                "value": "C"
+              },
+              {
+                "prompt": "–4 – 3i, –4 + 3i",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1844",
+              "correct_answer": "B",
+              "explanation": "Let, 7 24i x iy,x,y iR + = + ∈ ⇒ ( ) ( ) 2 2 2 7 24i x iy x y i2xy + = + = − + ⇒ x2 – y2 = 7 and 2xy = 24 ⇒ x2 – 2 12 7 x  =     ⇒ 2 2 144 x 7 x − = ⇒ x4 –144 = 7x2 ⇒ x4 – 7x2 – 144 = 0 ⇒ (x2 – 16) (x2 + 9) = 0 ⇒ x2 = 16 or x2 = –9 ⇒ x = ± 4 ; y = ±3 ⇒ The square roots are 4 + 3i and –4 – 3i",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1845",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The sum of the first 20 terms of the series 2 3 1 2 3 + + +... i i i is:",
+            "options": [
+              {
+                "prompt": "10",
+                "value": "A"
+              },
+              {
+                "prompt": "20i",
+                "value": "B"
+              },
+              {
+                "prompt": "20",
+                "value": "C"
+              },
+              {
+                "prompt": "10i",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1845",
+              "correct_answer": "A",
+              "explanation": "We have, 2 3 4 20 1 2 3 4 20 ... i i i i i + + + + + = –i – 2 + 3i + 4 – 5i – 6 + 7i + 8 – 9i + ... + 19i + 20 = 10i + 10 = 10(i + 1)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1846",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Solve for x. 4x + 7 < 2x + 1",
+            "options": [
+              {
+                "prompt": "x < 1",
+                "value": "A"
+              },
+              {
+                "prompt": "x < –1",
+                "value": "B"
+              },
+              {
+                "prompt": "x < –3",
+                "value": "C"
+              },
+              {
+                "prompt": "x < 3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1846",
+              "correct_answer": "C",
+              "explanation": "4x + 7 < 2x + 1 ⇒ 2x < –6 ⇒ x < –3 YEP DSSSB (TGT-Math) 2018 (08.07.2018) 316 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1847",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a and b are positive, a > b, then which of the following is true?",
+            "options": [
+              {
+                "prompt": "b",
+                "value": "A"
+              },
+              {
+                "prompt": "b",
+                "value": "B"
+              },
+              {
+                "prompt": "b",
+                "value": "C"
+              },
+              {
+                "prompt": "a",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1847",
+              "correct_answer": "B",
+              "explanation": "We have, a + b > 2 ab ⇒ a a a b 2 ab < + ⇒ a 1 a b 2 < + and a > b ⇒ a b a b a b > + + ⇒ b 1 a b 2 < +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1848",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The area indicated by the shaded portion in the following figure is represented by:",
+            "options": [
+              {
+                "prompt": "x ≤ 2, y ≤ 2, 2x + 3y ≥ 6, x, y ≥ 0",
+                "value": "A"
+              },
+              {
+                "prompt": "x ≤ 2, y ≥ 2, 2x + 3y ≥6 , x, y ≥ 0",
+                "value": "B"
+              },
+              {
+                "prompt": "x ≤ 2, y ≥ 2, 2x + 3y ≤ 6, x, y ≥ 0",
+                "value": "C"
+              },
+              {
+                "prompt": "x ≥ 2, y ≥ 2, 2x + 3y ≥ 6, x, y ≥ 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1848",
+              "correct_answer": "A",
+              "explanation": "x ≤ 2 ; y ≤ 2 ; 2x + 3y ≥ 6, x, y ≥ 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1849",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The maximum of function f(x, y, z) = 5x – 6y + 7z on an ellipsoid 2x2 + 3y2 + 4z2 = 1 is",
+            "options": [
+              {
+                "prompt": "147",
+                "value": "A"
+              },
+              {
+                "prompt": "147",
+                "value": "B"
+              },
+              {
+                "prompt": "147",
+                "value": "C"
+              },
+              {
+                "prompt": "147",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1849",
+              "correct_answer": "B",
+              "explanation": "We have, [f(x, y, z)]2 = (5x – 6y + 7z)2 = 2 5 6 7 . 2x 3y 4z 2 3 4   − +     From Cauchy - Schwarz inequality ≤ ( ) ( ) ( ) 2 2 2 2 2 2 5 6 7 2x 3y 4z 2 3 4   −         + + + +                       = 2 2 2 25 36 49 2x 3y 4z 2 3 4    + + + +      ⇒ ( ) 2 25 36 49 147 f x, y,z 2 3 4 4 ≤ + + =     ⇒ ( ) 147 f x, y,z 2 ≤    ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1850",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Solve |4x + 2| ≤ 6",
+            "options": [
+              {
+                "prompt": "–1 ≤ x ≤ 2",
+                "value": "A"
+              },
+              {
+                "prompt": "–1 ≤ x ≤ 1",
+                "value": "B"
+              },
+              {
+                "prompt": "–2 ≤ x ≤ 3",
+                "value": "C"
+              },
+              {
+                "prompt": "–2 ≤ x ≤ 1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1850",
+              "correct_answer": "D",
+              "explanation": "We must have, –6 ≤ 4x + 2 ≤ 6 ⇒ –2 ≤ x ≤ 1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1851",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Solve: 2|x| – 3 ≥ |x – 1|",
+            "options": [
+              {
+                "prompt": "[2, ∞)",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1851",
+              "correct_answer": "C",
+              "explanation": "We must have, –2x – 3 ≥ –x + 1 ; x < 0 2x – 3 ≥ –x+1 ; 0 ≤ x < 1 2x – 3 ≥ x – 1 ; x ≥ 1 which give, x ≥ 2 and x ≤ –4",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1852",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The sum of the coefficients of the polynomial (1 + x – 3x2)2163 is:",
+            "options": [
+              {
+                "prompt": "–2",
+                "value": "A"
+              },
+              {
+                "prompt": "–1",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1852",
+              "correct_answer": "B",
+              "explanation": "Clearly, the sum of the coefficients of the polynomials = (1+1–3)2163 = (–1)2163 = –1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1853",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The coefficient of x99 in the polynomial (x – 1) (x – 2) ... (x – 100) is:",
+            "options": [
+              {
+                "prompt": "4050",
+                "value": "A"
+              },
+              {
+                "prompt": "–4050",
+                "value": "B"
+              },
+              {
+                "prompt": "5050",
+                "value": "C"
+              },
+              {
+                "prompt": "–5050",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1853",
+              "correct_answer": "D",
+              "explanation": "We have, (x – 1) (x – 2) ... (x – 100) = x100 – (1+2+3+...+100) x99+... ⇒ The coefficient = – ( ) 100 101 5050 2  = −    ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1854",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If (1 + αx)n = 1 + 8x + 24x2 + ..., then a is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1854",
+              "correct_answer": "B",
+              "explanation": "We must have, n n 2 1 2 C a 8and C a 24 = = ⇒ an = 8 and ( ) 2 n n 1 a 24 2 − = ⇒ ( ) 2 2 8 n and n n a 48 a = − = ⇒ 64 – 8a = 48 ⇒ a = 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1855",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let n be a positive integer. If the coefficients of 2nd, 3rd, and 4th terms in the expansion of (1 + x)n are in arithmetic progression, then the value of n is:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "5",
+                "value": "B"
+              },
+              {
+                "prompt": "6",
+                "value": "C"
+              },
+              {
+                "prompt": "7",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1855",
+              "correct_answer": "D",
+              "explanation": "We must have, n n n 1 3 2 C C C 2 + = ⇒ ( )( ) ( ) 6n n n 1 n 2 n n 1 12 2 + − − − = ⇒ 6n + n(n – 1) (n –2) = 6n(n –1) ⇒ 6 + (n –1)(n –2) = 6n –6 ⇒ n2 – 9n + 14 = 0 ⇒ n = 7 or n = 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1856",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In the binomial expansion of (a – b)n ; n ≥ 5, the sum of the 5th and 6th terms is zero. Then a b is:",
+            "options": [
+              {
+                "prompt": "n – 5",
+                "value": "A"
+              },
+              {
+                "prompt": "n – 4",
+                "value": "B"
+              },
+              {
+                "prompt": "n – 5",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1856",
+              "correct_answer": "B",
+              "explanation": "We must have n n 4 4 n n 5 5 4 5 C a b C a b − − = ⇒ ( ) ( ) n 4 4 n 5 5 n! n! a b a b n 4 4! n 5 !5! − − = − − ⇒ 5 b n 4 a = − ⇒ a n 4 b 5 − =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1857",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Coefficient of t24 in (1 + t2)12 ( 1 + t12) (1 + t24) is:",
+            "options": [
+              {
+                "prompt": "12C6",
+                "value": "A"
+              },
+              {
+                "prompt": "12C6 + 1",
+                "value": "B"
+              },
+              {
+                "prompt": "12C6 + 2",
+                "value": "C"
+              },
+              {
+                "prompt": "12C6 + 3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1857",
+              "correct_answer": "C",
+              "explanation": "We have, ( )( ) 12 12 2 12 24 12 24 36 0 1 12 C C t ... C t 1 t t t + + + + + + ⇒ The required coefficient = ( ) 12 12 6 6 1 1 C C 2 + + = +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1858",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If three positive real numbers a, b, c are in arithmetic progression such that abc = 4, then the minimum possible value of b is:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1858",
+              "correct_answer": "B",
+              "explanation": "We must have 2b = a + c and a + b + c ≥ 3 3 3 abc 3 4 = AM–GM inequality ⇒ ( ) 2 3 3b 3 2 ≥ ⇒ ( ) 2 3 b 2 ≥ Therefore, the minimum possible value of b is (2)2/3.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1859",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The value of y = (0.64)       0.25 2 3 1 1 1 log + + + ... 3 3 3 is:",
+            "options": [
+              {
+                "prompt": "0.9",
+                "value": "A"
+              },
+              {
+                "prompt": "0.8",
+                "value": "B"
+              },
+              {
+                "prompt": "0.6",
+                "value": "C"
+              },
+              {
+                "prompt": "0.25",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1859",
+              "correct_answer": "B",
+              "explanation": "Since, 2 2 1 1 1 1 1 3 ... 1 3 2 3 3 1 3 + + + = = − We have, ( ) 0.25 2 1 1 log ... 3 3 y 0.64   + +     = = ( ) 0.25 1 log 2 0.64             = ( ) ( ) 0.25 log 0.5 0.64     = ( ) 0.25 1 log 0.25 2 0.64       = 0.8",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1860",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If H1, H2, ..., Hn are n harmonic means between a and b (≠ a), then the value of 1 n 1 n H + a H + b + H – a H – b is equal to:",
+            "options": [
+              {
+                "prompt": "n + 1",
+                "value": "A"
+              },
+              {
+                "prompt": "n – 1",
+                "value": "B"
+              },
+              {
+                "prompt": "2n",
+                "value": "C"
+              },
+              {
+                "prompt": "2n + 3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1860",
+              "correct_answer": "C",
+              "explanation": "We have, 1 n 1 1 1 1 d and d H a H b = + = − where d is the common difference of the AP 1 2 n 1 1 1 1 1 , , ,..., , a H H H b Now, 1 n 1 n 1 n 1 n 1 1 1 1 H a H b a H b H 1 1 1 1 H a H b a H b H + + + + + = + − − − − = 2 2 d d a b d d + − + − = 2 2 a b 2 d + − = ( ) 2 n 1 d 2 d + − = 2n",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1861",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If three positive real numbers a, b, c (c > a) are in harmonic progression, then log (a + c) + log (a – 2b + c) is equal to:",
+            "options": [
+              {
+                "prompt": "2 log",
+                "value": "A"
+              },
+              {
+                "prompt": "2 log",
+                "value": "B"
+              },
+              {
+                "prompt": "2 log",
+                "value": "C"
+              },
+              {
+                "prompt": "loga + logb + logc",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1861",
+              "correct_answer": "C",
+              "explanation": "We have, 2 1 a 2ac b b a c a c = + ⇒ = + Now; log(a + c) + log 4ac a c a c   − +   +   YEP DSSSB (TGT-Math) 2018 (08.07.2018) 318 YCT = log(a + c) + log 2 2 a ac 4ac ac c a c   + − + +   +   = log (a+ c) + log 2 2 a c 2ac a c   + −   +   = log(a + c) + 2log (a – c) – log(a + c) = 2log (a – c)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1862",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Suppose a, b, c are in arithmetic progression and a2, b2 c2 are in geometric progression. If a < b < c and a + b + c = 3 , 2 then the value of a is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1862",
+              "correct_answer": "D",
+              "explanation": "We must have a + c = 1 ac = 1 4 ± Clearly, a and c must be roots of the quadratic equations 2 2 1 1 x x 0 and x x 0 4 4 − + = − − = ⇒ 4x2 – 4x + 1 = 0 and 4x2 – 4x – 1 = 0 ⇒ 1 1 1 x and x 2 2 2 = = ± Therefore, 1 1 a since a c 2 2 = − <",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1863",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the coefficient of x2 in the expansion of e2x+3",
+            "options": [
+              {
+                "prompt": "3e3",
+                "value": "A"
+              },
+              {
+                "prompt": "2e3",
+                "value": "B"
+              },
+              {
+                "prompt": "e3",
+                "value": "C"
+              },
+              {
+                "prompt": "3e2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1863",
+              "correct_answer": "B",
+              "explanation": "We have, e2x+3 = e3.e2x = ( ) n 2 3 2x 4x e . 1 2x ... 2! n!     + + + +     Therefore, the coefficient of 2 3 3 4 x e . 2e 2! = =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1864",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The number of solutions of log4(x – 1) = log2(x – 3)",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1864",
+              "correct_answer": "B",
+              "explanation": "log4(x – 1) = log2 (x – 3) ⇒ ( ) ( ) 2 2 1 log x 1 log x 3 2 − = −     ⇒ log2(x – 1) = log2 (x – 3)2 ⇒ x – 1 = x2 + 9 – 6x ⇒ x2 – 7x + 10 = 0 ⇒ x = 5, 2 But at x = 2, log2(x – 3) is not defined. Therefore, x = 5 is the only solution.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1865",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "What is the remainder when 1! + 2! + ... 100! is divided by 15?",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1865",
+              "correct_answer": "C",
+              "explanation": "We have, 1! = 1, 2! = 2, 3! = 6, 4! = 24, 5! = 120 = 15× 8, 6! = 6× 5! = 6 × 8 × 15 and so on. Therefore, the required remainder = (1 + 2 + 6 + 24)% 15 = 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1866",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "What is the remainder when 1653 is divided by 7?",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1866",
+              "correct_answer": "D",
+              "explanation": "We have, 1653 = (2 × 7 + 2)53 Thus, remainder when divided by 7 is 253. Now, 253 = 22.251 = 4(23)17 = 4(7 + 1)17 Thus, remainder is ( ) 17 4 4 7 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1867",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Consider the following: P(n): 1 + 3 + 5 + ... + (2n –1) = (n – 2)2. Then P(n) is true for:",
+            "options": [
+              {
+                "prompt": "all n ≥ 1",
+                "value": "A"
+              },
+              {
+                "prompt": "all n ≥ 2",
+                "value": "B"
+              },
+              {
+                "prompt": "n = 1 only",
+                "value": "C"
+              },
+              {
+                "prompt": "n = 2 only",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1867",
+              "correct_answer": "C",
+              "explanation": "P(n) = 1 + 3 + 5 + ... + (2n – 1) = (n – 2)2 is true for n = 1 but fails for n = 2.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1868",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The number of positive integers n ≤ 2076 and divisible by neither 4 nor 5 is:",
+            "options": [
+              {
+                "prompt": "1034",
+                "value": "A"
+              },
+              {
+                "prompt": "831",
+                "value": "B"
+              },
+              {
+                "prompt": "103",
+                "value": "C"
+              },
+              {
+                "prompt": "519",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1868",
+              "correct_answer": "A",
+              "explanation": "Let A = {x ∈ N : x ≤ 2076 is divisible by 4} and B = {x ∈ N : x ≤ 2076 is divisible by 5} Then, n(A ∪B) = n(A) + n(B) – n(A ∩B) = 2076 2076 2076 4 5 20       + −             = 519 + 415 – 103 = 831 Thus, among first 2076 positive integers, there are 2076 –831 = 1245 integers not divisible by 4 or 5.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1869",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which one of the following is NOT correct?",
+            "options": [
+              {
+                "prompt": "gcd",
+                "value": "A"
+              },
+              {
+                "prompt": "gcd",
+                "value": "B"
+              },
+              {
+                "prompt": "gcd",
+                "value": "C"
+              },
+              {
+                "prompt": "gcd",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1869",
+              "correct_answer": "B",
+              "explanation": "gcd (42, 12) = 6 Now, 3(42) + (12) (–10) = 6 –1(42) + 3 (12) = –6 –3(42) + (11) (12) = 6 and (–5) (42) + (18) (12) = 6",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1870",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following is true?",
+            "options": [
+              {
+                "prompt": "gcd",
+                "value": "A"
+              },
+              {
+                "prompt": "gcd",
+                "value": "B"
+              },
+              {
+                "prompt": "gcd",
+                "value": "C"
+              },
+              {
+                "prompt": "gcd",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1870",
+              "correct_answer": "D",
+              "explanation": "(a) gcd (p, p + 2) = 1 is not true, consider p = 2. (b) gcd (a, b) = gcd (a, a –2b) is not true. Consider a = 2, b = 3, gcd (2, 3) = 1 ≠ gcd (2, –4) = 2 (c) gcd (2, 3) = 1 = gcd (3, 4) but gcd (2, 4) = 2 (d) gcd (a, b) = gcd (a, a – b) Proof: Let d = gcd (a, b) then d/a, and d/b, So d/(a – b), and d/gcd (b, a – b) = d'. Also d'/b, and d'/(a – b), So d'/(b + (a – b)) = a and d'/gcd (a, b) = d so d = d'",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1871",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The number of positive integers that are less than 18 and are relatively prime to 18 is:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "4",
+                "value": "B"
+              },
+              {
+                "prompt": "5",
+                "value": "C"
+              },
+              {
+                "prompt": "7",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1871",
+              "correct_answer": "C",
+              "explanation": "φ(1) = φ(2.32) = 6",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1872",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a, b, c, ∈ R; a + b + c = 0, then the quadratic equation 3ax2 + 2bx + c = 0 has:",
+            "options": [
+              {
+                "prompt": "at least one root in [0.1]",
+                "value": "A"
+              },
+              {
+                "prompt": "at least one root in [1.2]",
+                "value": "B"
+              },
+              {
+                "prompt": "at least one root in 3 , 2",
+                "value": "C"
+              },
+              {
+                "prompt": "no real roots",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1872",
+              "correct_answer": "A",
+              "explanation": "Let f'(x) = 3ax2 + 2bx + c = 0 ⇒ f(x) = ax3 + bx2 + cx + d Now, Rolle's Theorem on (0,1) for f(x) clearly dictates the existence of at least one such c ∈ (0, 1) such that f ' (c) = 0. Therefore, f '(x) = 3ax2 + 2bx + c = 0 has at least one root in [0, 1].",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1873",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the product of the roots of the equation x2 – 3kx + 2e2 ln k – 1 = 0 is 7, then the roots are real for k =",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1873",
+              "correct_answer": "B",
+              "explanation": "We must have, 2e2lnk – 1 = 7 ⇒ 2k2 = 8 ⇒ k = ±2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1874",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the quadratic equations x2 + ax + b = 0 and x2 + bx + a = 0, a ≠ b, have a common root, then the numerical value of a + b is:",
+            "options": [
+              {
+                "prompt": "–1",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "–2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1874",
+              "correct_answer": "A",
+              "explanation": "Let α be the common root of x2 + ax + b = 0 and x2 + bx + a = 0 Then, a2 + aα + b = α2 + bα + a ⇒ α = 1 ⇒ 1 + a + b = 0 ⇒ a + b = –1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1875",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let a > 0, b > 0 and c > 0. Then both the roots of the equation ax2 + bx + c = 0.",
+            "options": [
+              {
+                "prompt": "are real and negative",
+                "value": "A"
+              },
+              {
+                "prompt": "have negative real parts",
+                "value": "B"
+              },
+              {
+                "prompt": "have positive real parts",
+                "value": "C"
+              },
+              {
+                "prompt": "are purely imaginary",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1875",
+              "correct_answer": "B",
+              "explanation": "Roots of the equation ax2 + bx + c = 0 is given by 2 b b 4ac 2a 2a − − ± Now, since a > 0, b > 0 and c > 0; both the roots have negative real parts.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1876",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a + b + c = 0, then the quadratic equation 3ax2 – 2bx + c = 0 has:",
+            "options": [
+              {
+                "prompt": "at least one root in",
+                "value": "A"
+              },
+              {
+                "prompt": "one root in",
+                "value": "B"
+              },
+              {
+                "prompt": "imaginary roots",
+                "value": "C"
+              },
+              {
+                "prompt": "at least one root in",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1876",
+              "correct_answer": "D",
+              "explanation": "Let f '(x) = 3ax2 – 2bx + c = 0 then f(x) = ax3 – bx2 + cx + d = 0 Now in [–1, 0] we have f(–1) = –a – b – c + d = d since a+b+c = 0 and f(0) = 0 Therefore, Rolle's Theorem clearly dictates the existence of at least one c ∈ (–1, 0) such that f '(c) = 0 ⇒ f '(x) = 3ax2 – 2bx + c = 0 has at least one root in (– 1, 0)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1877",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let α, β be the roots of the equation (x – a) (x – b) = c, c ≠ 0, then the roots of the equation (x – α) (x – β) + c = 0 are:",
+            "options": [
+              {
+                "prompt": "a, c",
+                "value": "A"
+              },
+              {
+                "prompt": "b, c",
+                "value": "B"
+              },
+              {
+                "prompt": "a, b",
+                "value": "C"
+              },
+              {
+                "prompt": "a + c, b + c",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1877",
+              "correct_answer": "C",
+              "explanation": "We have, (x – a) (x – b) –c = (x – α) (x – β) ⇒ (x – a) (x – b) = (x – α) (x – β) + c which clearly shows that a and b are the roots of (x – α) (x – β) + c.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1878",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the roots of the equation x2 – 2ax + a2 + a –3 = 0 are real and less than 3, then:",
+            "options": [
+              {
+                "prompt": "a < 2",
+                "value": "A"
+              },
+              {
+                "prompt": "2 ≤ a ≤ 3",
+                "value": "B"
+              },
+              {
+                "prompt": "3 < a ≤ 4",
+                "value": "C"
+              },
+              {
+                "prompt": "a > 4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1878",
+              "correct_answer": "A",
+              "explanation": "Let, f(x) = x2 – 2ax + a2 + a – 3 Since, both the roots are less than 3, we must have sum of roots 2a < 6 ⇒ a < 3 and product of roots a2 + a – 3 < 9 ⇒ a2 + a – 12 < 0 ⇒ –4 < a < 3 Again, discriminate D = b2 – 4ac ≥ 0 ⇒ (–2a)2 –4 (a2 + a – 3) ≥ 0 ⇒ a ≤ 3 and f(3) > 0 gives a2 – 5a + 6 > 0 ⇒ (a – 2) (a – 3) > 0 Therefore, we get – 4 < a < 2 YEP DSSSB (TGT-Math) 2018 (08.07.2018) 320 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1879",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The set of all real numbers x for which x2 – |x + 2| + x > 0 is:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1879",
+              "correct_answer": "A",
+              "explanation": "Since, x 2 ; x 2 x 2 x 2 ; x 2 + ≥  + = −− <  Thus, 2 2 2 2 x x 2 x x 2 ;x 2 x x 2 x x 2x 2 ; x 2  − − + = − ≥ − + + =  + + <  and x2 – 2 > 0 ⇒ ( ) ( ) x , 2 2, ∈−∞− ∞ ∪ x2 + 2x + 2 > 0 for every x ∈ R.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1880",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If A =       β 0 1 1 and B =       1 0 , 5 1 then value of β for which A2 = B is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "–1",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "no real values",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1880",
+              "correct_answer": "D",
+              "explanation": "We must have, 2 0 0 1 0 0 1 1 1 1 5 1 1 1 β β   β      = =        β +        ⇒ β2 = 1 and β + 1 = 5 ⇒ No real values.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1881",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If       3 β 2 A = and A = 125, 2 β then the value of β is:",
+            "options": [
+              {
+                "prompt": "±1",
+                "value": "A"
+              },
+              {
+                "prompt": "±2",
+                "value": "B"
+              },
+              {
+                "prompt": "±3",
+                "value": "C"
+              },
+              {
+                "prompt": "±5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1881",
+              "correct_answer": "C",
+              "explanation": "We have, |A| = β2 – 4 and |A3| = 125 ⇒ |A| = 5 ⇒ β2 – 4 = 5 ⇒ β2 = 9 ⇒ β = ± 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1882",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The system of equations ax + by + cz = q – r bx + cy + az = r – p cx + ay + bz = p – q Is:",
+            "options": [
+              {
+                "prompt": "consistent if p = q = r",
+                "value": "A"
+              },
+              {
+                "prompt": "inconsistent if a = b = c and p, q, r are distinct",
+                "value": "B"
+              },
+              {
+                "prompt": "consistent if a, b, c are distinct and a + b + c =",
+                "value": "C"
+              },
+              {
+                "prompt": "inconsistent if p ≠ q ≠ r",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1882",
+              "correct_answer": "A",
+              "explanation": "(a) If p = q = r then ax + by + cz = 0 bx + cy + az = 0 cx + ay + bz = 0 which is homogeneous system of equation which is always consistent. (b) If a = b = c and p, q, r, are distinct then the given system is inconsistent. (c) We have 3 3 3 a b c b c a 3abc a b c c a b = − − − which vanishes if a + b + c = 0 and thus the system is inconsistent.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1883",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ω is a complex cube root of unity, and A =       ω 0 , 0 ω then A100 is equal to:",
+            "options": [
+              {
+                "prompt": "A",
+                "value": "A"
+              },
+              {
+                "prompt": "–A",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "I",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1883",
+              "correct_answer": "A",
+              "explanation": "100 100 100 0 0 A A 0 0 ω   ω   = = =     ω ω    ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1884",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If P =       3 2 , 0 1 then P–3 is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1884",
+              "correct_answer": "C",
+              "explanation": "We have, det(P) = 3 ≠ 0 ⇒ ( ) ( ) 1 1 P adj P det P −= = 1 2 1 0 3 3 −       ⇒ 3 3 1 2 1 P 0 3 27 − −   =     = 1 26 1 0 27 27 −      ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1885",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The points A (2, 3), B(3, 5), C(7, 7) and D(4, 5) are such that:",
+            "options": [
+              {
+                "prompt": "ABCD is a parallelogram",
+                "value": "A"
+              },
+              {
+                "prompt": "A, B, C and D are collinear",
+                "value": "B"
+              },
+              {
+                "prompt": "D lies inside the triangle ABC",
+                "value": "C"
+              },
+              {
+                "prompt": "D lies on the boundary of the triangle ABC",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1885",
+              "correct_answer": "C",
+              "explanation": "D lies inside the triangle ABC.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1886",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the cirumcentre of triangle lies at the origin and the centroid is the middle point of the line joining the points (a2 + 1, a2 + 1) and (2a, –2a), then the orthocenter lies on the line",
+            "options": [
+              {
+                "prompt": "y =",
+                "value": "A"
+              },
+              {
+                "prompt": "y = 2ax",
+                "value": "B"
+              },
+              {
+                "prompt": "x + y = 0",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1886",
+              "correct_answer": "D",
+              "explanation": "We have, centroid = ( ) ( ) 2 2 2 2 a 1 a 1 a 1 2a a 1 2a , , 2 2 2 2   + −   + + + −   =         Now a line passing through origin and centroid is ( ) ( ) 2 2 a 1 y x a 1 − = + ⇒ (a – 1)2 x – (a + 1)2y = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1887",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The points (a, 2 –2a), (–a + 1, 2a) and (–4 – a, 6 – 2a) are collinear for:",
+            "options": [
+              {
+                "prompt": "all values of a",
+                "value": "A"
+              },
+              {
+                "prompt": "a = –1",
+                "value": "B"
+              },
+              {
+                "prompt": "a = 1",
+                "value": "C"
+              },
+              {
+                "prompt": "no value of a",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1887",
+              "correct_answer": "B",
+              "explanation": "Area of the triangle must vanish. Therefore, a 2 2a 1 a 1 2a 1 0 4 a 6 2a 1 − −+ = −− − ⇒ 6a2 – 2a – 2 – (–2a2 – 6a + 2) = 0 ⇒ 6a2 – 2a – 2 + 2a2 + 6a – 2 = 0 ⇒ 8a2 + 4a – 4 = 0 ⇒ 2a2 + a – 1 = 0 ⇒ (a + 1) (2a – 1) = 0 ⇒ a = –1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1888",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The points (p. q + r), (q, r + p) and (r, p + q) are:",
+            "options": [
+              {
+                "prompt": "vertices of an equilateral triangle",
+                "value": "A"
+              },
+              {
+                "prompt": "concyclic",
+                "value": "B"
+              },
+              {
+                "prompt": "vertices of a right angled triangle",
+                "value": "C"
+              },
+              {
+                "prompt": "collinear",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1888",
+              "correct_answer": "D",
+              "explanation": "We must have p q r 1 q r p 1 r p q 1 + + + = [q(p + q) –r(r + p)] – [p(p + q) – r(q + r) + [p(r + p) – q(q + r)] = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1889",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The equation of the line passing through the points of intersection of the circles 3x2 + 3y2 –2x + 12y – 9 = 0 and x2 + y2 + 6x + 2y – 15 = 0 is:",
+            "options": [
+              {
+                "prompt": "10x – 3y + 18 = 0",
+                "value": "A"
+              },
+              {
+                "prompt": "10x + 3y – 18 = 0",
+                "value": "B"
+              },
+              {
+                "prompt": "10x – 3y – 18 = 0",
+                "value": "C"
+              },
+              {
+                "prompt": "10x + 3y + 18 = 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1889",
+              "correct_answer": "C",
+              "explanation": "Given circles are S ≡ x2 + y2 – 2 x 4y 3 0 3 + − = and S' ≡ x2 + y2 + 6x + 2y – 15 = 0 Now, equation of straight line passing through intersection of S and S' is given by S – S' ≡ (x2 + y2 – 2 x 4y 3) 3 + − – (x2 + y2 + 6x + 2y – 15) = 0 ≡ 10x – 3y – 18 = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1890",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If x + y = k is normal to y2 = 12x, then k is:",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "9",
+                "value": "B"
+              },
+              {
+                "prompt": "–9",
+                "value": "C"
+              },
+              {
+                "prompt": "–3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1890",
+              "correct_answer": "B",
+              "explanation": "We have, y2 = 12x ⇒ dy 6 dx y = ⇒ Slope of normal = y 6 − and since x + y = k is normal to the curve we must have y 1 6 − = −⇒ y = 6 and hence x = 3. Therefore, k = 6 + 3 = 9",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1891",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let M be a variable point on the ellipse 2 2 2 2 x y + = 1 a b with foci F1 and F2. If A is the area of the triangle MF1F2, then the maximum value of A is:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1891",
+              "correct_answer": "A",
+              "explanation": "Given ellipse 2 2 2 2 x y 1 a b + = with foci F1 and F2 being (–ae, o) and (ae, o) respectively. Now let M(x, y) be any variable point on the ellipse. Now the area A of the ∆MF1F2 is given by x y 1 1 A ae 0 1 2 ae 0 1 = − = 2 2 x aeb 1 a − which is maximum when x = 0 i.e. abe = 2 2 b ab 1 a − = 2 2 b a b −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1892",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The equation 2 2 x y - = 1, r < 1 1-r 1+ r represents:",
+            "options": [
+              {
+                "prompt": "an ellipse",
+                "value": "A"
+              },
+              {
+                "prompt": "a hyperbola",
+                "value": "B"
+              },
+              {
+                "prompt": "a circle",
+                "value": "C"
+              },
+              {
+                "prompt": "a pair of straight lines",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1892",
+              "correct_answer": "B",
+              "explanation": "The equation 2 2 x y 1 ; r 1 1 r 1 r − = < − + represents a hyperbola.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1893",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "y = 10x is the reflection of y = log10x in the line whose equation is:",
+            "options": [
+              {
+                "prompt": "y = 10x",
+                "value": "A"
+              },
+              {
+                "prompt": "y = x",
+                "value": "B"
+              },
+              {
+                "prompt": "y = x + 10",
+                "value": "C"
+              },
+              {
+                "prompt": "x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1893",
+              "correct_answer": "B",
+              "explanation": "y = 10x is the reflection of y = log10x in the line y = x.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1894",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The equation of the common tangent of the curves y2 = 8x and xy = –1 is:",
+            "options": [
+              {
+                "prompt": "3y = 9x + 2",
+                "value": "A"
+              },
+              {
+                "prompt": "y = 2x + 1",
+                "value": "B"
+              },
+              {
+                "prompt": "2y = x + 8",
+                "value": "C"
+              },
+              {
+                "prompt": "y = x + 2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1894",
+              "correct_answer": "D",
+              "explanation": "Tangent to the curve y2 = 8x is y = 2 mx . m + This must satisfy xy = –1 ⇒ 2 x mx 1 m   + = −     ⇒ 2 2 mx x 1 0 m + + = which has equal roots, therefore, 2 4 4m 0 m − = ⇒ m = 1 Therefore, the required equation is y = x + 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1895",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A hyperbola, having the transverse axis of length 2 sin θ, θ, θ, θ, is confocal with the ellipse 3x2 + 4y2 = 12. Then its equation is:",
+            "options": [
+              {
+                "prompt": "x2 cosec2 θ – y2 sec2 θ = 1",
+                "value": "A"
+              },
+              {
+                "prompt": "x2 sec2 θ – y2 cosec2",
+                "value": "B"
+              },
+              {
+                "prompt": "x2 sin2 θ – y2 cos2 θ = 1",
+                "value": "C"
+              },
+              {
+                "prompt": "x2 cos2 θ – y2 sin2 θ = 1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1895",
+              "correct_answer": "A",
+              "explanation": "The given ellipse is 2 3 x y 1 4 3 + = which gives 3 = 4(1 – e2) ⇒ 1 e 2 = ∴ ae = 1 Therefore, the eccentricity e1 of the hyperbola is given by 1 = e1sinθ ⇒ e1 = cosec θ ⇒ b2 = sin2θ (cosec2θ – 1) = cos2θ ⇒ Hence, equation of hyperbola is 2 2 2 2 x y 1 sin cos − = θ θ ⇒ x2 cosec2θ – y2 sec2θ = 1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1896",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The value of cos (60º – θ) cosθ cos(60º + θ) is:",
+            "options": [
+              {
+                "prompt": "tan 3θ",
+                "value": "A"
+              },
+              {
+                "prompt": "3 tanθ",
+                "value": "B"
+              },
+              {
+                "prompt": "1 sin3",
+                "value": "C"
+              },
+              {
+                "prompt": "1 cos3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1896",
+              "correct_answer": "D",
+              "explanation": "We have (cos60º cosθ + sin60ºsinθ) cosθ (cos60ºcosθ – sin60sinθ) = ( ) ( ) 2 2 1 cos 3sin cos 4 θ − θ θ = 1 4 (cos2θ – 3sin2θ) cosθ = 1 4 (4 cos2θ – 3) cosθ = 1 4 (4 cos3θ –3cosθ) = 1 4 cos3θ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1897",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "2sinx cosx = α,then = ? 1+cosx +sinx 1+sinx",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1 – α",
+                "value": "B"
+              },
+              {
+                "prompt": "1 + α",
+                "value": "C"
+              },
+              {
+                "prompt": "α – 1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1897",
+              "correct_answer": "B",
+              "explanation": "We have α = ( ) ( ) 1 sin x cos x 2sin x 1 cos x sin x 1 sin x cos x + − × + + + − = ( ) ( ) 2 2 2sin x 1 sin x cosx 1 sin x cos x + −     + − = ( ) 2 2 2sin x 1 sin x cos x 1 sin x 2sin x cos x + −     + + − = ( ) 2 2sin x 1 sin x cos x 2sin x 2sin x + −     + = ( ) ( ) 2sin x 1 sin x cos x 2sin x 1 sin x + −     + = ( ) 1 sin x cosx 1 sin x + − + = 1 cos x sin x 1 sin x − + + ⇒ 1 – α = cos x 1 sin x +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1898",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If α = sin x + cos y and β = cos x + sin y, then tan       x – y = ? 2",
+            "options": [
+              {
+                "prompt": "α – β",
+                "value": "A"
+              },
+              {
+                "prompt": "α + β",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1898",
+              "correct_answer": "C",
+              "explanation": "We have sin x cos y cos x sin y α + = β + ⇒ sin x cos y cos x sin y sin x cos y cos x sin y α +β + + + = α −β + − − = ( ) ( ) ( ) ( ) sin x sin y cos x cos y sin x sin y cos y cos x + + + − + − = x y x y x y x y 2sin cos 2cos cos 2 2 2 2 x y x y x y x y 2cos sin 2sin sin 2 2 2 2 + − + −         +                 + − + −         +                 = x y cos 2 x y sin 2 −       −       ⇒ x y tan 2 α −β −   =   α +β  ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1899",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "When x + y = z, then cos2 x + cos2 y + cos2 z – 2cos x cos y cos z = ?",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "sin2z",
+                "value": "C"
+              },
+              {
+                "prompt": "cos2z",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1899",
+              "correct_answer": "B",
+              "explanation": "We have cos(x + y) = cosz ⇒ cosx cosy – sinx siny = cosz Then cos2x + cos2y + cos2z – 2cosx cosy cosz = cos2x + cos2y + cos2x cos2y + sin2x sin2y – 2 cosx cosy sinx siny – 2cosx cosy (cosx cosy – sinx siny) = cos2x + cos2y + cos2x cos2y + sin2x sin2y – 2 cos2x cos2y = cos2x + cos2y – cos2x cos2y + sin2x sin2y = cos2x (1 – cos2y) + cos2y + sin2x sin2y = (cos2x + sin2x) sin2y + cos2y = 1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q1900",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If α = cos x + cos y, β = sin x + sin y and x – y = 2θ then cos3θ = ? cosθ",
+            "options": [
+              {
+                "prompt": "α2 + β2 – 3",
+                "value": "A"
+              },
+              {
+                "prompt": "3 – α2 – β2",
+                "value": "B"
+              },
+              {
+                "prompt": "α2 + β2 – 1",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q1900",
+              "correct_answer": "A",
+              "explanation": "We have α2 = cos2x + cos2y + 2cosx cosy β2 = sin2x + sin2y + 2sinx siny ⇒ α2 + β2 = cos2x + sin2x + cos2y + sin2y + 2 [cosx cosy + sinx siny] ⇒ α2 + β2 = 2 + 2 cos2θ = 4 cos2θ Since x – y = 2θ ⇒ cosx cosy + sinx siny = cos2θ Now, 3 2 2 2 cos3 4cos 3cos 4cos 3 3 cos cos θ θ− θ = = θ− = α +β − θ θ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

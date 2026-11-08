@@ -1,0 +1,3820 @@
+{
+  "_id": "tgt_mathematics_set7",
+  "title": "TGT Mathematics • Mock Test Set 7 (100 MCQs)",
+  "course": "TGT Series",
+  "subject": "Mathematics",
+  "exam": "tgt",
+  "price": 199,
+  "originalPrice": 999,
+  "duration": 100,
+  "sections": [
+    {
+      "_id": "sec_tgt_mathematics_set7",
+      "title": "Mathematics Section",
+      "qCount": 100,
+      "time": 100,
+      "questions": [
+        {
+          "_id": "tgt_mathematics_q601",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Pick the correct statement?",
+            "options": [
+              {
+                "prompt": "Stoke's theorem is particular form of Green's",
+                "value": "A"
+              },
+              {
+                "prompt": "Green's theorem and Stoke's theorem are",
+                "value": "B"
+              },
+              {
+                "prompt": "Green's theorem and Stoke's theorem are",
+                "value": "C"
+              },
+              {
+                "prompt": "Green's theorem is particular form of Stoke's",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q601",
+              "correct_answer": "D",
+              "explanation": "Green's theorem relates a line integral around a simple closed curve C to a double integral over the plane region D bounded by C. It is two dimensional special case of Stoke's Theorem. Green's theorem is a particular form of Stokes' theorem. C S F.ds Curl F.ds = ∫ ∫∫ \u0001 \u0001",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q602",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Check about the nature of continuity of f(x) = x/(x + 1) in [0, 2].",
+            "options": [
+              {
+                "prompt": "not continuous",
+                "value": "A"
+              },
+              {
+                "prompt": "Continuous but not uniformly continuous",
+                "value": "B"
+              },
+              {
+                "prompt": "not uniformly continuous",
+                "value": "C"
+              },
+              {
+                "prompt": "uniformly continuous",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q602",
+              "correct_answer": "D",
+              "explanation": "Given that, f(x) = x x 1 + : x∈[0, 2] x c x lim x 1 → + ∵ = f(c) = [ ] c : c 0, 2 c 1 ∀∈ + f(x) is continuous in [0, 2]; a compact set (closed and bounded). Now, a function continuous on compact set [0, 2] is uniformly continuous on [0, 2]. YEP DSSSB (TGT-Math) 2021 (2.9.2021, Shift-I-Male) 111 YCT Section : Discipline-4",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q603",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the radius of convergence of series 1 + x + x2 + x3 +...?",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q603",
+              "correct_answer": "A",
+              "explanation": "Power series n n 0 x ∞ =∑ is a geometric series with common ratio x and hence converges for |x| < 1.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q604",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If U (8) = {1, 3, 5, 7} and U (10) = {1, 3, 7, 9}, then find how many element are there in U(8) × U(10)?",
+            "options": [
+              {
+                "prompt": "32",
+                "value": "A"
+              },
+              {
+                "prompt": "8",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "16",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q604",
+              "correct_answer": "D",
+              "explanation": "We have O(U(8)) = 4 and O(U(10)) = 4 then O(U(8) × (U(10)) = 16",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q605",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which property states that, \"A ⊆X be any subset and every finite sub-collection of A has non empty intersection?",
+            "options": [
+              {
+                "prompt": "Weierstrass property",
+                "value": "A"
+              },
+              {
+                "prompt": "Cantor property",
+                "value": "B"
+              },
+              {
+                "prompt": "Finite intersection property",
+                "value": "C"
+              },
+              {
+                "prompt": "Heine-Borel property",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q605",
+              "correct_answer": "C",
+              "explanation": "Finite intersection property: a family of sets F = { } i A | A ⊆ has finite intersection property iff for all finite Ai ⊂A, i∈∧ ∩Ai ≠ φ.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q606",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the cardinality of generating set for dihedral group",
+            "options": [
+              {
+                "prompt": "4",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q606",
+              "correct_answer": "C",
+              "explanation": "Generating set for dihedral group = {r, s} ; where r is the rotation and s is the reflection about line of symmetry ∴ |{r, s}| = 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q607",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find radius of convergence of 1 + x + x2/2! +...?",
+            "options": [
+              {
+                "prompt": "Infinite",
+                "value": "A"
+              },
+              {
+                "prompt": "10",
+                "value": "B"
+              },
+              {
+                "prompt": "5",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q607",
+              "correct_answer": "A",
+              "explanation": "Given, power series n n 0 x n! ∞ =∑ Let an = n x n! . then, n 1 n n a lim a + →∞ = ( ) n 1 n n x n! lim n 1 ! x + →∞   ⋅   +     = ( ) n x lim n 1 →∞ + = x ( ) n 1 lim n 1 →∞ + = x . 0 & |x| . 0 < 1 ∀x∈ (–∞, ∞) Thus, interval of convergence is (–∞, ∞) and hence, radius of convergence R = ∞.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q608",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Consider the following series < n2x/(1 + n2x2) >, and check whether the series is uniformly convergent on[0, 1]?",
+            "options": [
+              {
+                "prompt": "none of the above options hold",
+                "value": "A"
+              },
+              {
+                "prompt": "it is not uniformly continuous on [0, 1]",
+                "value": "B"
+              },
+              {
+                "prompt": "it is uniformly continuous on",
+                "value": "C"
+              },
+              {
+                "prompt": "it is uniformly continuous on [0, 1]",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q608",
+              "correct_answer": "B",
+              "explanation": "fn(x) = 2 2 2 n x 1 n x + ; x∈ [0, 1] Now; 2 n 2 2 n n n 2 2 n x x 1 lim f (x) lim lim 1 x 1 n x x n →∞ →∞ →∞ = = = + + is the point wise limit. To see whether the convergence is uniform on [0, 1], observe that nf (x) – f(x) 2 2 2 2 3 n x 1 1 x 1 n x x n x = − = + + In order to make nf (x) – f(x) <ε we must choose N ≥ 2 2 3 1 x x −ε ε which grows without bound as x → 0 for fixed ε > 0. Hence, the convergence is not uniform on [0, 1]",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q609",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The external direct product of two abelian group is abelian if and only if both are ....?",
+            "options": [
+              {
+                "prompt": "non abelian",
+                "value": "A"
+              },
+              {
+                "prompt": "finite",
+                "value": "B"
+              },
+              {
+                "prompt": "infinite",
+                "value": "C"
+              },
+              {
+                "prompt": "abelian",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q609",
+              "correct_answer": "D",
+              "explanation": "Let eG,eH be the identities of (G, ο) & (H, ∗) respectively. Then external direct product of G & H is a group (G × H, οp) with identity (eG, eH) Suppose (G, ο) and (H, ∗) are both abelian then in external direct product group (G × H, οp) we observe (g1, h1) οp (g2, h2) = (g1 ο g2, h1 ∗ h2) (by definition) = (g2 ο g1, h2 ∗ h1) (commutativity) = (g2, h2) οp (g1, h1) Thus, (G × H, οp) is abelian. Now, suppose that (G × H, οp) is abelian. Then (g1 ο g2, eH) = (g1 ο g2, eH ∗ eH) = (g1, eH) οp (g2, eH) = (g2, eH) οp (g1, eH) (commutativity) = (g2 ο g1, eH ∗ eH) = (g2 ο g1, eH) Thus, g1 ο g2 = g2 ο g1 and (G, ο) is abelian. Similarly, (H, ∗) is abelian. Therefore, if (G, ο) and (H, ∗) are two groups then external direct product (G × H, οp) is abelian if and only if both (G, ο) and (H, ∗) are abelian. YEP DSSSB (TGT-Math) 2021 (2.9.2021, Shift-I-Male) 112 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q610",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following represent triangular inequality?",
+            "options": [
+              {
+                "prompt": "d",
+                "value": "A"
+              },
+              {
+                "prompt": "d",
+                "value": "B"
+              },
+              {
+                "prompt": "d",
+                "value": "C"
+              },
+              {
+                "prompt": "d",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q610",
+              "correct_answer": "C",
+              "explanation": "Triangle inequality : d(x, z) ≤ d(x, y) + d(y, z)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q611",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find point wise limit of the series < x/(1 + nx) >?",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q611",
+              "correct_answer": "B",
+              "explanation": "( ) n n n x limf (x) lim 1 nx →∞ →∞ = + = 0 is the point wise limit.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q612",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following intervals are infinite?",
+            "options": [
+              {
+                "prompt": "[a, b]",
+                "value": "A"
+              },
+              {
+                "prompt": "[a, infinity)",
+                "value": "B"
+              },
+              {
+                "prompt": "[a, b)",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q612",
+              "correct_answer": "B",
+              "explanation": "[a, ∞)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q613",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "For a metric d on a non empty set X, the metric space is represented as...",
+            "options": [
+              {
+                "prompt": "[X, d)",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "[X, d]",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q613",
+              "correct_answer": "C",
+              "explanation": "Definition :- Given a nonempty set X, a function d : X × X → ℝ is a metric on X if for all x, y ∈ X : (i) d (x, y) ≥ 0 with d(x, y) = 0 if and only if x = y (ii) d (x, y) = d(y, x) and (iii) for all z ∈ X, d(x, y) ≤ d(x, z) + d(z, y). A metric space is a set X together with a metric d represented as (X, d).",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q614",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let D ⊆ R; f:D to R be sequence of bounded function and series f is uniformly continuous to some function g, then...",
+            "options": [
+              {
+                "prompt": "g is bounded",
+                "value": "A"
+              },
+              {
+                "prompt": "g is finite",
+                "value": "B"
+              },
+              {
+                "prompt": "g is infinite",
+                "value": "C"
+              },
+              {
+                "prompt": "g is unbounded",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q614",
+              "correct_answer": "A",
+              "explanation": "For each n∈ℕ. Let fn be a sequence of bounded functions defined on D ⊆ℝand assume n n 1 f ∞ =∑ converges uniformly on D to a function g. Then, sequence m n n 1 f =∑ ; m ∈{1, 2, ...} of partial sums converges uniformly to g on D. So, we get ∀ε > 0 ∃an n ∈ℕ such that ∀n ≥ N ∈ ℕ we must have m n n 1 f g : x D − − <ε ∀ ∈ ∑ or m m n n n 1 n 1 f g f : x D = = −ε + < < ε+ ∀∈ ∑ ∑ Because, m n n 1 f =∑ is bounded, that gives us that g is bounded as well.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q615",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let G be a multiplicative group defined by T(x) = x2; then T satisfies which of the following property?",
+            "options": [
+              {
+                "prompt": "automorphism",
+                "value": "A"
+              },
+              {
+                "prompt": "all of the three options",
+                "value": "B"
+              },
+              {
+                "prompt": "isomorphism",
+                "value": "C"
+              },
+              {
+                "prompt": "Homomorphism",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q615",
+              "correct_answer": "B",
+              "explanation": "All of the three options. T(x) = x2 Let x, y ∈ G For Homomorphism in multiplicative group T(x.y) = T(x) . T(y) (x.y)2 = x2 . y2 x2 y2 = x2 . y2 Satisfy So Group is Homomorphism T(x) = x2 is bijective So, An Homomorphism ; T : G → G are bijective than it will be automorphism and isomorphism also.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q616",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f(x) = 1/q for any rational number x and 0 otherwise, then find the lower integral?",
+            "options": [
+              {
+                "prompt": "6",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q616",
+              "correct_answer": "C",
+              "explanation": "Because f(x) = 0 for every rational and irrationals are dense in ℝ, it follows that L(f, P) = 0 for every partition P.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q617",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A topological space is ...if every point x of X has neighbourhood base consisting of compact neighbourhoods",
+            "options": [
+              {
+                "prompt": "finite metric",
+                "value": "A"
+              },
+              {
+                "prompt": "locally compact",
+                "value": "B"
+              },
+              {
+                "prompt": "compact",
+                "value": "C"
+              },
+              {
+                "prompt": "connected",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q617",
+              "correct_answer": "B",
+              "explanation": "Locally compact :- A topological space X is locally compact if every point has a neighborhood which is itself contained in a compact set. Any compact set is locally compact. Euclidean space is locally compact and Banach spaces of infinite dimensions is not locally compact.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q618",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "An automorphism is defined if it is...",
+            "options": [
+              {
+                "prompt": "isomorphism, one one, onto",
+                "value": "A"
+              },
+              {
+                "prompt": "isomorphism only",
+                "value": "B"
+              },
+              {
+                "prompt": "one one , onto",
+                "value": "C"
+              },
+              {
+                "prompt": "isomorphism but not one one and onto",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q618",
+              "correct_answer": "A",
+              "explanation": "Automorphism:– An automorphism is an isomorphism from an algebraic structure to itself. An automorphism is a bijective homomorphism of an algebraic structure with itself. YEP DSSSB (TGT-Math) 2021 (2.9.2021, Shift-I-Male) 113 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q619",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The usual topological space induced by usual metric is denoted by which of the following ?",
+            "options": [
+              {
+                "prompt": "d",
+                "value": "A"
+              },
+              {
+                "prompt": "d",
+                "value": "B"
+              },
+              {
+                "prompt": "d",
+                "value": "C"
+              },
+              {
+                "prompt": "d",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q619",
+              "correct_answer": "B",
+              "explanation": "Euclidean spaces n ℝ especially 1 ℝ(the real line) and 2 ℝ(the complex plane) ; the distance in n ℝis defined by d(x, y) = |x – y| ; (x, y ∈ n ℝ) induces usual metric space.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q620",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "C[a, b] i.e. the set of all continuous function from a to b is a subset of real valued ... function?",
+            "options": [
+              {
+                "prompt": "discontinuous",
+                "value": "A"
+              },
+              {
+                "prompt": "finite",
+                "value": "B"
+              },
+              {
+                "prompt": "bounded",
+                "value": "C"
+              },
+              {
+                "prompt": "infinite",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q620",
+              "correct_answer": "C",
+              "explanation": "[a, b] is a closed and bounded set and thus a compact set Since compactness of set is preserved by a continuous map f, f : [a, b] → ℝ is continuous, which implies f([a, b]) is compact as [a, b] is compact. Hence f is bounded. Thus, every continuous function on [a, b] is a bounded function i.e. C[a, b] is a subset of real valued bounded function.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q621",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The set S = {(0, y) : – 1 ≤ y ≤ 1}, U = {(x, sin (1/x)): x > 0} is...",
+            "options": [
+              {
+                "prompt": "infinite",
+                "value": "A"
+              },
+              {
+                "prompt": "connected",
+                "value": "B"
+              },
+              {
+                "prompt": "closed",
+                "value": "C"
+              },
+              {
+                "prompt": "≤",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q621",
+              "correct_answer": "B",
+              "explanation": "Let B = {(x, sin1/x) : x > 0} and x1, x2 be points in B. Consider f: [x1, x2] →ℝdefined by f(x) = sin 1 x       : x ∀ ∈[x1, x2]. f is well-defined and continuous map. Now, g: [x1, y1] → 2 ℝdefined by g(x) = (x, f(x)) gives a continuous path connecting 1 1 1 x ,sin x               and 2 2 1 x ,sin x               . ∴ B is path connected which implies B is connected. Now, closure of B i.e. B ={(0, g) : – 1 ≤ y ≤ 1} ∪ 1 x,sin : x 0 x     >         and because B is connected, we have that closure of B, B is connected as well.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q622",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "{x∈:(,y) ≤ r} defined in metric space is known as ... ball.",
+            "options": [
+              {
+                "prompt": "semi-open",
+                "value": "A"
+              },
+              {
+                "prompt": "semi-closed",
+                "value": "B"
+              },
+              {
+                "prompt": "open",
+                "value": "C"
+              },
+              {
+                "prompt": "closed",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q622",
+              "correct_answer": "D",
+              "explanation": "Given a metric space (X, d), x ∈ X and r > 0, define the closed ball of centre at x and radius r as the set ( ) B x, r = {x ∈ X, y ∈ X : d(x, y) ≤ r}. Section : Discipline-5",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q623",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the contour is closed and does not intersect itself, then it is called .... curve",
+            "options": [
+              {
+                "prompt": "open",
+                "value": "A"
+              },
+              {
+                "prompt": "ternary",
+                "value": "B"
+              },
+              {
+                "prompt": "Jordan",
+                "value": "C"
+              },
+              {
+                "prompt": "binary",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q623",
+              "correct_answer": "C",
+              "explanation": "Jordan curve or simple closed curve : A curve γ with parameter interval [a, b] is simple closed if γ(t1) ≠ γ(t2) unless t1 = a and t2 = b and thus non-self-intersection.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q624",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Check about continuity and analyticity of f(z) = cos(z)?",
+            "options": [
+              {
+                "prompt": "neither continuous nor analytic",
+                "value": "A"
+              },
+              {
+                "prompt": "Continuous but not analytic",
+                "value": "B"
+              },
+              {
+                "prompt": "analytic but not continuous",
+                "value": "C"
+              },
+              {
+                "prompt": "continuous and analytic everywhere",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q624",
+              "correct_answer": "D",
+              "explanation": "We have f(z) = cos(z) Let z = x + iy ; x, y ∈ℝ ⇒ cos(z) = iz iz e e 2 − + , hence, cos(z) is continuous everywhere. & cos(z) = cos(x + iy) = cosx cosh(y) – isinx sinh(y) So, u(x, y) = cosx cosh(y) & v(x, y) = – sinx sinh(y) Now, u x ∂ ∂ = – sinx coshy = – sinx cosh(y) = v y ∂ ∂ & v x ∂ ∂ = – cosx sinh(y) = – cosx sinh(y) = – u y ∂ ∂ ∴ Cauchy-Riemann equations are satisfied & first order partial derivatives all are continuous. Thus, we conclude the f(z) = cos(z) is analytic.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q625",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the number of subgroups of cyclic group of order 50",
+            "options": [
+              {
+                "prompt": "6",
+                "value": "A"
+              },
+              {
+                "prompt": "4",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "8",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q625",
+              "correct_answer": "A",
+              "explanation": "For a cyclic group of order 50, there exists a unique subgroup of order d, where d is a positive divisor of 50. Now ; 50 = (2)(5)(5) (prime factorization) Thus, number of subgroups = 6.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q626",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Evaluate∫zdz over (ab initio)?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "b2 + a2",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "b + a – 2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q626",
+              "correct_answer": "A",
+              "explanation": "Let I = c c f(z)dz zdz = ∫ ∫ n r n r 1 lim f(e ) →∞ = = ∑ r r 1 (z z ) − − ; zr–1 ≤ er ≤ zr ⇒ I = ( ) n r r r 1 n r 1 lim e z z − →∞ = − ∑ YEP DSSSB (TGT-Math) 2021 (2.9.2021, Shift-I-Male) 114 YCT = n r n r 1 lim z →∞ =∑ (zr – zr–1) ; taking er = zr Also, I = ( ) n r 1 r r 1 n r 1 lim z z z − − →∞ = − ∑ ; taking er = zr–1 Adding, I = ( ) n 2 2 r r 1 n r 1 1 lim z z 2 − →∞ = − ∑ = ( ) 2 2 n 0 n 1 lim z z 2 →∞ − = 2 2 b a 2 − (as ab initio)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q627",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a set G with binary operation satisfies closure property as well as associative property then it is called______.",
+            "options": [
+              {
+                "prompt": "quasiod",
+                "value": "A"
+              },
+              {
+                "prompt": "semigroup",
+                "value": "B"
+              },
+              {
+                "prompt": "group",
+                "value": "C"
+              },
+              {
+                "prompt": "monoid",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q627",
+              "correct_answer": "B",
+              "explanation": "Semigroup : A set G with one binary operation ο : G × G → G is semi group if (i) ∀(for every) g1 & g2 ∈ G we have 1g ο g2 ∈ G that is closure of binary operation. (ii) ( ) 1 2 g og o g3 = g1 o ( ) 2 3 g o g : for every g1, g2, g3 ∈ G i.e. associative binary operation.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q628",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which theorem states that ,\"if an entire function is bounded for all values of z, then it is constant\"?",
+            "options": [
+              {
+                "prompt": "Morera theorem",
+                "value": "A"
+              },
+              {
+                "prompt": "Liouville's theorem",
+                "value": "B"
+              },
+              {
+                "prompt": "Cauchy theorem",
+                "value": "C"
+              },
+              {
+                "prompt": "Fundamental theorem",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q628",
+              "correct_answer": "B",
+              "explanation": "Liouville's Theorem :- Let f be an entire function that is bounded then f is a constant function.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q629",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the residue f(z) = z + 1/z + 1/z3 + ... at z = infinity?",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "–1",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q629",
+              "correct_answer": "B",
+              "explanation": "Given that, f(z) = z + 2 1 1 ... z z + + or f(z) = z + n n 1 1.z ∞ − =∑ ...(i) Now; Res(f, ∞) = – c 1 f (z)dz 2 i π ∫ ...(ii) So, from (i), we have c c 1 f(z)dz dz z = ∫ ∫ , since all the other integrals vanish i 2 i 0 re id r.e θ π θ θ ∫ ; putting z = r eiθ ⇒ i dz ire d θ = θ = 2πi Then residue at infinity, Res (f, ∞) = – 1 from(ii)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q630",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let f (z) be single valued analytic function in a simple connected domain D, if a, b are in D, then ( ) ∫f(z)dz over the limits a and b = ______, where F(z) is an indefinite integral of f(z)?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "F",
+                "value": "C"
+              },
+              {
+                "prompt": "F",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q630",
+              "correct_answer": "B",
+              "explanation": "Suppose that γ is a contour with parameter interval [a, b] and that F is defined on an open set containing γ* = {γ(t) : a ≤ t ≤ b} and F'(z) exists, continuous at each point of γ*. Then F( (b)) F( (a)), in genenal F'(z)dz 0, if isclosed γ − γ  =  γ  ∫γ and hence b a f(z)dz F(b) F(a) = − ∫",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q631",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f(z) = u + iv is an analytic function, in domain D, then the curves u = constant, v = constant form two ... families?",
+            "options": [
+              {
+                "prompt": "parametric",
+                "value": "A"
+              },
+              {
+                "prompt": "orthogonal",
+                "value": "B"
+              },
+              {
+                "prompt": "diagnol",
+                "value": "C"
+              },
+              {
+                "prompt": "symmetric",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q631",
+              "correct_answer": "B",
+              "explanation": "f(z) = u + iv is an analytic function in region D. Consider u(x, y) = c1 and v(x, y) = c2 Differentiating u(x, y) = c1, we get dy dx = – u / x u / y ∂ ∂ ∂ ∂ = m1 (say) ...(i) & differentiating v(x, y) = c2, we get dy v/ x dx v / y ∂ ∂ = −∂ ∂ = m2 (say) ...(ii) ∵ Analyticity of f(z) implies satisfaction of Cauchy- Riemann equations i.e. u v v u and x y x y ∂ ∂ ∂ ∂ = = − ∂ ∂ ∂ ∂ Multiplying, we get u v u v . . 0 x x y y ∂ ∂ ∂ ∂ + = ∂ ∂ ∂ ∂ ⇒ m1m2 = – 1 (from (i) & (ii))",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q632",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a function f(z) is continuous on a contour of length l and if M is the upper bound of f(z) on C, then ≤ ∫f(z)dz ...?",
+            "options": [
+              {
+                "prompt": "Ml",
+                "value": "A"
+              },
+              {
+                "prompt": "M/l",
+                "value": "B"
+              },
+              {
+                "prompt": "l",
+                "value": "C"
+              },
+              {
+                "prompt": "M",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q632",
+              "correct_answer": "A",
+              "explanation": "Let γ be a continuous and smooth contour with parameter [a, b]. Let f(z) = u(x, y) + iv(x, y) be a continuous function on γ with |f(z)| ≤ M for all z ∈ γ* : γ* = {γ(t) : a ≤ t ≤ b} then ( ) b a f(z)dz f (t) '(t)dt = γ γ ∫ ∫ γ ≤ ( ) b a f (t) '(t) dt γ γ ∫ ≤ b b a a M '(t) dt M '(t) dt M. ( ) γ = γ = γ ∫ ∫ l ⇒ f(z)dz M ( ) ≤ γ ∫γ l , where l(γ) is the length of contour γ given by b a '(t)dt γ ∫ = b 2 2 a x '(t) y'(t) dt + ∫ YEP DSSSB (TGT-Math) 2021 (02.09.2021) (Shift-II) Male 115 YCT DSSSB TRAINED GRADUATE TEACHER (TGT) 2021 MATH Solved Paper",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q633",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "प्दै स्aहब् ूब्जे दf ग्हfतम्ूग्दह ज्दग्हूे arा ूप्ीा ग्ह fग्rेू aह् ोम्दह् ्ीग्न्aूग्ने? पहले और दूसरे अवकलज में कितने प्रकार के नीति परिवर्तन बिन्दु होते हैं?",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q633",
+              "correct_answer": "C",
+              "explanation": "Inflection points are points where the function changes concavity i.e. from being \"Concave up\" to being \"Concave down\" or vice-versa. By, considering the value of the first order derivative of the function, the point inflections can be categorized in the two types, as given below, if f'(x) is equal to zero. Then the point is a stationary point of inflection if f'(x) is not equal to zero, then the point is a non-stationary point of inflection.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q634",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्हfतम्ूग्दह ज्दग्हू fदr fर्(े) ृर् े४ – र्४े³ ग्े:- fर्(े) ृर् े४ – र्४े³ के लिए नीति परिवर्तन बिन्दु है:-",
+            "options": [
+              {
+                "prompt": "x = 1",
+                "value": "A"
+              },
+              {
+                "prompt": "x = 4",
+                "value": "B"
+              },
+              {
+                "prompt": "x = 0",
+                "value": "C"
+              },
+              {
+                "prompt": "x = 6",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q634",
+              "correct_answer": "C",
+              "explanation": "Given, f(x) = x4 – 4x3 the first derivative. f'(x) = 4x3 – 12x2 the second derivative of f(x) w.r to x we have f'' (x) = 12x2 – 24x The second derivative equal to 0 then 12x2 – 24x = 0 12x2 – 24 = 0 12x (x – 2) = 0 The final solution in all the values that make 12x (x – 2) = 0 x = 0 , x = 2 So inflection point is x = 0.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q635",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप fग्rेू ्ीग्न्aूग्न ूात्त्े ल्े aंदल्ू ञ्ञ्ञ्ञ्ञ्ञ्ञ्. पहला अवकलज हमें ञ्ञ्ञ्ञ्ञ्ञ् के बारे में बताया है।",
+            "options": [
+              {
+                "prompt": "concavity/DeJeleuelee",
+                "value": "A"
+              },
+              {
+                "prompt": "convexity/Gòeuelee",
+                "value": "B"
+              },
+              {
+                "prompt": "slope/{ueeve",
+                "value": "C"
+              },
+              {
+                "prompt": "parabolic property /hejJeueefÙekeâ iegCe",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q635",
+              "correct_answer": "C",
+              "explanation": "The first derivative of a function tells us about the slope of the tangent line for any point on the function. therefore, it tells when the function is increasing, decreasing or where it has a horizontal tangent. While the seconf derivative tells us if the first derivative is increasing or decreasing. If the second derivative is positive, there the first derivative is increasing.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q636",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इदr त्दम्aत् र्स्aेग्स्a ेग्ुह दf fग्rेू ्ीग्न्aूग्न म्प्aहुो frदस्ञ्ञ्ञ्ञ्ञ्ञ्. प्रथम अवकलज परिवर्तनों के स्थानीय उच्चिष्ट चिह्न ञ्ञ्ञ्ञ्ञ्ञ् से बदलते हैं।",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q636",
+              "correct_answer": "B",
+              "explanation": "If f'(x) changes from positive to negative at c, Then f (c) is a local maximum. If f' (x) changes from negative to positive at c, then f (c) is a local minimum. If f' (x) does not change sign at c, then f (c) is neither a local maximum or minimum.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q637",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप म्ल्rन ब् ृर् े³ – र्२े + ५ प्aेञ्ञ्ञ्ञ्ञ्ञ् वक्र ब् ृर् े³ – र्२े + ५ में ञ्ञ्ञ्ञ्ञ्ञ् है",
+            "options": [
+              {
+                "prompt": "ण्दहम्aन ल्ज् ेप्aज /ऊपर की तरफ अवतल आकार",
+                "value": "A"
+              },
+              {
+                "prompt": "Concave down shape",
+                "value": "B"
+              },
+              {
+                "prompt": "ण्दहर्ने ल्ज् ेप्aज /ऊपर की तरफ उत्तल आकार",
+                "value": "C"
+              },
+              {
+                "prompt": "ण्दहर्ने ्दैह ेप्aज /नीचे की तफर उत्तल आकार",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q637",
+              "correct_answer": "B",
+              "explanation": "Given, y = x3 – 2x + 5 put y = f (x) f (x) = x3 – 2x + 5 f' (x) = 3x2 – 2 f'' (x) = 6x Find x when f'' (x) = 0 0 = 6x x = 0 Concave down (–∞, 0) Since concave down shape.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q638",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इदrस्ल्त्a fदr rदूaूग्दह दf म्ल्rन aंदल्ूर् े-र्aेग्े ग्े:-र् े- अक्ष के परित: वक्र के घूर्णन का सूत्र है:-",
+            "options": [
+              {
+                "prompt": "v =",
+                "value": "A"
+              },
+              {
+                "prompt": "v =",
+                "value": "B"
+              },
+              {
+                "prompt": "v =",
+                "value": "C"
+              },
+              {
+                "prompt": "v = 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q638",
+              "correct_answer": "A",
+              "explanation": "The volume of solid generated by revolving around x-axis is 2 v x dy = π∫ • Similarly, The volume of solid generated by revolving around the y-axis is 2 v x dy = π∫",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q639",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इग्ह् ूप न्दत्ल्स दf ेदत्ग्् ुाहीaूा् ंब् rान्दत्ल्ूग्दह दf ूप त्ददज् aू ूप म्ल्rन aंदल्ू र् े-र्aेग्े:- ३aब्² ृर् ेर्(े – a)² र् े-अक्ष:- ३aब्² ृर् ेर्(े – a)² के परित: वक्र पर लूप के घूर्णन से उत्पन्न ठोस का आयतन ज्ञात करें",
+            "options": [
+              {
+                "prompt": "πa³/36",
+                "value": "A"
+              },
+              {
+                "prompt": "πa³/6",
+                "value": "B"
+              },
+              {
+                "prompt": "πa/36",
+                "value": "C"
+              },
+              {
+                "prompt": "πa/6",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q639",
+              "correct_answer": "A",
+              "explanation": "Given curve 3ay2 = x (x – a)2 at y = 0 x (x – a)2 = 0 x = 0, a The Volume formed by revolution of loop about the x- axis. b 2 a y dx π ∫ ( ) 2 a 0 x a x dx 3a − π ∫ = ( ) a 2 2 0 x x a 2ax dx 3a π + − ∫ = ( ) a 2 2 0 x x a 2ax dx 3a π + − ∫ = ( ) a 3 2 2 0 x a x 2ax dx 3a π + − ∫ = a 4 2 2 3 0 x a x 2ax 3a 4 2 3   π + −     = 4 4 4 a a 2a 0 3a 4 2 3   π + − −     = 4 4 4 3a 6a 8a 3a 12   π + −     = 4 a 3a 12 π × = 3 a 36 π",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q640",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् ग्े ूपर् ोaस्ज्त दf तनत् ेल्rfaम - समतल सतह का उदाहरण कौन सा है-",
+            "options": [
+              {
+                "prompt": "plane surface /meceleue melen",
+                "value": "A"
+              },
+              {
+                "prompt": "isothermal surface /meceleeheer melen",
+                "value": "B"
+              },
+              {
+                "prompt": "curved surface /Je›eâ melen",
+                "value": "C"
+              },
+              {
+                "prompt": "hyperbolic surface /DeeflehejJeueefÙekeâ melen",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q640",
+              "correct_answer": "B",
+              "explanation": "Any surface parallel to the mean spheroidal surface of the earth is called a level surface. Isothermal surface is an example of level surface. Any surface having of all point at the same temperature is called isothermal surface.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q641",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f fत्लर््े ाहूीग्हु aहब् ातसहू दf ेज्aम ग्े ूप ेaस aे ूप्aू दf तर््ीन्ग्हु ग्ू ग्.ा. Dग्न्. न् ृ ० ान्ीब्ैप्ीा, ूपह ेल्म्प् a नम्ूदr ज्दग्हू fल्हम्ूग्दह ग्े म्aत्त् - यदि समिष्ट के किसी भी एलिमेंट में प्रवेश करने वाला अभिवाह, इसे छोड़ने के समान है अर्थात हर जगह Dग्न्. न् ृ ०, तो ऐसे सदिश बिंदु फलन को कहा जाता है-",
+            "options": [
+              {
+                "prompt": "curl /keâue&",
+                "value": "A"
+              },
+              {
+                "prompt": "divergence /efJeÛeueve",
+                "value": "B"
+              },
+              {
+                "prompt": "solenoidal /meesuesveesFoue",
+                "value": "C"
+              },
+              {
+                "prompt": "gradient /ØeJeCelee",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q641",
+              "correct_answer": "C",
+              "explanation": "If flux entering any element of space is the same as that of leaving it i.e. div v = 0 everywhere, then such a vector point function is called solenoidal vector. ∇.V = ∂xv1 + ∂yv2 + ∂zv3 = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q642",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप म्दस्स्ल्ूaूग्न त्aै fदr aहब् ूैद म्दर्स्ज्ते हल्स्ंीेर् ै१ aर्ह् ै२: किन्ही दो समिश्र संख्याओंर् ै१ औरर् ै२ के लिए क्रमविनिमेय नियम:",
+            "options": [
+              {
+                "prompt": "z1 + z2 = z1 – z2",
+                "value": "A"
+              },
+              {
+                "prompt": "z1 + z2 = z2 + z1",
+                "value": "B"
+              },
+              {
+                "prompt": "z1 – z2 = z2 + z1",
+                "value": "C"
+              },
+              {
+                "prompt": "z1 – z2 = z2 – z1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q642",
+              "correct_answer": "B",
+              "explanation": "Let z1 = x1 + iy1 and z2 = x2 + iy2 The commutative law for any two complex numbers z1 and z2 Then z1 + z2 = z2 + z1 x1 + iy1 + x2+ iy2 = x2 + iy2 + x1 + iy1 x1 + x2 + i(y1+ y2) = x2 + x1 + i(y2 + y1) x1 + x2 + i(y1+ y2) = x1 + x2 + i(y1 + y2) Therefore cumulative law z1 + z2 = z2 + z1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q643",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ज्दत्ब्हदस्ग्aत् ल्aिूग्दह दf ह ुrाा प्aे ञ्ञ्ञ्ञ्ञ्ञ् rददूे. ह डिग्री वाले बहुपद समीकरण के ञ्ञ्ञ्ञ्ञ्ञ् मूल होते हैं।",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "n",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q643",
+              "correct_answer": "D",
+              "explanation": "A fundamental thearem of algebra says a polynomial of degree n has n roots. • A polynomial function in the variable x with degree n is defined as f(x) = anxn + an–1xn–1 + an–2 xn–2 + ..... a2x2 + a1 x + a0 where a1 ∈ℝ, an = 0 and n is a whole number.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q644",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A rात्aूग्दह ग्े ेaग्् ूद ां rर्तिेग्न ग्f ञ्ञ्ञ्ञ्ञ्. एक संबंध को स्वतुल्य (रफ्लेक्सिव) कहा जाता है यदि ञ्ञ्ञ्ञ्ञ् ।",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q644",
+              "correct_answer": "A",
+              "explanation": "A relation R is called reflexive on a set 'A'. If every element in A is related to itself. (a, a) ∈R, for every a∈A.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q645",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् ग्े हदू a ज्rदज्ीूब् दf ल्ग्न्aितहम rात्aूग्दह? कौन-सा तुल्यता संबंध (ए×िाâवैलेन्स रिलेशन) का गुण नहीं है?",
+            "options": [
+              {
+                "prompt": "associativity/menÛeeefjlee",
+                "value": "A"
+              },
+              {
+                "prompt": "reflexive /mJeleguÙe",
+                "value": "B"
+              },
+              {
+                "prompt": "symmetric /meceefcele",
+                "value": "C"
+              },
+              {
+                "prompt": "transitive /mekeâce&keâ",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q645",
+              "correct_answer": "A",
+              "explanation": "Associativity:- Assume we have three numbers a, b and c so the associativity property is. (a +b) + c = a + (b + c) and (a × b) × c = a × (b × c) associativily is not a property of equivalence relation. Equivalence Relation:- A relation R defined on a set A is called an equivalence relation if R satisfies the following • Reflexive:- (a, a) ∈R, for all a ∈A • Symmetric:- (a, b) ∈R ⇒ (b, a) ∈R, for all a, b ∈A • Transitive:- (a, b) ∈R and (b, c) ∈R ⇒ (a, c) ∈R for all a, b, c ∈A.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q646",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Aह ातसहू α दf a rग्हु ग्े ेaग्् ूद ां हग्त्ज्दूाहू ग्f ञ्ञ्ञ्ञ्ञ्ञ्./एक वलय के एलिमेंट α α α α को शून्यंभावी कहा जाता है यदि ञ्ञ्ञ्ञ्ञ्ञ्",
+            "options": [
+              {
+                "prompt": "α ᵐ =1 for some m >1/kegâÚ m >1 kesâ efueS α ᵐ =1",
+                "value": "A"
+              },
+              {
+                "prompt": "α ᵐ = 0 for some m > 1/kegâÚ m >1 kesâ efueS α ᵐ =0",
+                "value": "B"
+              },
+              {
+                "prompt": "α =1 for some n= 0/kegâÚ n = 0 kesâ efueS α ᵐ =1",
+                "value": "C"
+              },
+              {
+                "prompt": "α ᵐ = 2 for some m > 1/kegâÚ m >1 kesâ efueS αᵐ =2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q646",
+              "correct_answer": "B",
+              "explanation": "Let R be a ring we say that an element α∈R is nilpotent if for some m > 1 such that αm = 0.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q647",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "र्‍ल्स्ंी ूपदrब्, म्दहम्ीहा् ैग्ूप् ूप ज्rदज्ीूगे दf:-/संख्या सिद्धांत, निम्न के गुणों से संबंधित है:",
+            "options": [
+              {
+                "prompt": "negative integer /$e+Ceelcekeâ hetCeeËkeâ",
+                "value": "A"
+              },
+              {
+                "prompt": "positive integer /Oeveelcekeâ hetCeeËkeâ",
+                "value": "B"
+              },
+              {
+                "prompt": "ग्rraूग्दहaत् हल्स्ंी /अपरिमेय संख्या",
+                "value": "C"
+              },
+              {
+                "prompt": "both negative /oesveeW $e+Ceelcekeâ",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q647",
+              "correct_answer": "B",
+              "explanation": "Number theory is a branch of mathematics concerned with properties of the positive integers (1, 2, 3...)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q648",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "थू a, ं ां ग्हूाुी, हदू ंदूप् ०, ूपह ूप्ीा arा ग्हूाुीे ल्, न् ेल्म्प् ूप्aू:- मान लें कि a, ं पूर्णांक है, दोनों ० नहीं हैं, फिर पूर्णांक ल्,न् इस तरह से हैं कि–",
+            "options": [
+              {
+                "prompt": "gcd",
+                "value": "A"
+              },
+              {
+                "prompt": "gcd",
+                "value": "B"
+              },
+              {
+                "prompt": "gcd",
+                "value": "C"
+              },
+              {
+                "prompt": "gcd",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q648",
+              "correct_answer": "A",
+              "explanation": "a, b ∈I, and u, v∈I a, b ≠ 0 Existence of u and v identity since a and b are integer and not both 0. There exist integers u and v such that ua + vb = gcd (a, b).",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q649",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप स्aूrगर््े ग्े ेaग्् ूद ां ग्ह rा्ल्म् rदै ाम्पत्दह fदrस् ग्f ूप तर््ी्ग्हु म्दfिग्म्गहू ग्हर् ीम्प् rदै ग्े:- आव्यूह को समानीत रॉ सोपानक (एशेलान) रूप में कहा जाता है यदि प्रत्येक रॉ में अग्रणी गुणांक है:-",
+            "options": [
+              {
+                "prompt": "only non zero number /kesâJeue MetvÙeslej mebKÙee",
+                "value": "A"
+              },
+              {
+                "prompt": "zero /MetvÙe",
+                "value": "B"
+              },
+              {
+                "prompt": "aहब् न्arग्aंत /कोई भी चार",
+                "value": "C"
+              },
+              {
+                "prompt": "aहब् हल्स्ंी /कोई संख्या",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q649",
+              "correct_answer": "A",
+              "explanation": "If the leading coefficient in each row is the only non-zero number in tht column, the matrix is said to be in reduced row echelon form.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q650",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप rा्ल्म् rदै ाम्पत्दह fदrस् दf ान्ीब् स्aूrगर््े ग्े:- प्रत्येक आव्यूह का समानीत रॉ सोपानक (एशेलान) रूप है:-",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "infinite/Deveble",
+                "value": "C"
+              },
+              {
+                "prompt": "unique/DeefÉleerÙe",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q650",
+              "correct_answer": "D",
+              "explanation": "The process of reducing a matrix to its reduced row echelon form involves a series of elementary row operation and the order in which these operation are performed is unique.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q651",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दf ूप fदत्त्दैग्हु म्दह्ग्ूग्दह ग्े हदू ेaूग्ेfग् ंब् a स्aूrगर््े ग्ह rदै ाम्पत्दह fदrस्? निम्नलिखित में से कौन सी स्थिति रॉ सोपानक (एशेलान) रूप में एक आव्यूह द्वारा संतुष्ट नहीं होती है?",
+            "options": [
+              {
+                "prompt": "the first non zero element in each row , called",
+                "value": "A"
+              },
+              {
+                "prompt": "each leading entry is in the column to the",
+                "value": "B"
+              },
+              {
+                "prompt": "rows with all zero elements, if any, are below",
+                "value": "C"
+              },
+              {
+                "prompt": "rows with all zero elements , if any are below",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q651",
+              "correct_answer": "C",
+              "explanation": "We know that matrix in row echelon term. • The first non-zero element in each row, called the leading entry is 1. • Each leading entry is in the column to the right of leading entry in the previous row. • Rows with all zero elements, if any are below rows having a non-zero element. But Rows with all zero elements, if any are below rows having a zero element not satisfy row echelon form.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q652",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दf ूप fदत्त्दैग्हु ग्े हदू a झर््ीहदे ज्देूल्त्aूा? निम्नलिखित में से कौन पियानों अभ्युपगम नहीं है?",
+            "options": [
+              {
+                "prompt": "र्‍ ग्े ास्ज्ूब्./र्‍ खाली है।",
+                "value": "A"
+              },
+              {
+                "prompt": "Associated with each natural number n there is",
+                "value": "B"
+              },
+              {
+                "prompt": "There is a natural no. n that is not the",
+                "value": "C"
+              },
+              {
+                "prompt": "The only subset of N that contains x̅ and the",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q652",
+              "correct_answer": "A",
+              "explanation": "The peano postulates assert the existence of a non-empty of natural numbers. Therefore stating that \"N is empty\" contradicts the first peano postulate.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q653",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "तूर् े∈R ां हदह - हाुaूग्न. ऊपहर् े प्aे a ल्हग्qल हदह - हाुaूग्न ेqल्arा rददू, हदूा् र्√े, ैप्ग्म्प् ेaूग्ेfगे:- मान लें किर् े∈R ऋणेतर है। तोर् े का अद्वितीय ऋणेतर वर्गमूल है, जिसे र्√े के रूप में दर्शाया गया है, जो संतुष्ट करता है:-",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "x = 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q653",
+              "correct_answer": "A",
+              "explanation": "We know that 2 x | x | = But does ( ) 2 x x = because | x | = x x 0 x x 0 >  − <  Then x has unique non-negative because the square root function always select the positive root. 2 x x = for example- 23 9 3 = =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q654",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Eन्ीब् हदह-ास्ज्ूब् ोू ूप्aू ग्े ंदल्ह् aंदन प्aे:-/प्रत्येक अरिक्त समुच्चय जो ऊपर परिबद्ध है, उसमें निम्न होता है:-",
+            "options": [
+              {
+                "prompt": "unique greatest lower bound",
+                "value": "A"
+              },
+              {
+                "prompt": "unique least upper bound",
+                "value": "B"
+              },
+              {
+                "prompt": "दr्ी दf ेल्ज्rास्ल्स् /सर्वोच्च का क्रम",
+                "value": "C"
+              },
+              {
+                "prompt": "दr्ी दf ग्हfग्स्ल्स् /निम्नतम का क्रम।",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q654",
+              "correct_answer": "B",
+              "explanation": "Every non-empty set that is bounded above has a unique least upper bound. While every non-empty subset of R, which is bounded below has the greatest lower bound (Infimum).",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q655",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The golden ratio is:-/ieesu[ve jsMeerDeeW nw:-",
+            "options": [
+              {
+                "prompt": "φ – 1 = 1/ φ",
+                "value": "A"
+              },
+              {
+                "prompt": "φ + 1 = 1/φ",
+                "value": "B"
+              },
+              {
+                "prompt": "φ = 1/φ",
+                "value": "C"
+              },
+              {
+                "prompt": "φ + 2 = φ/2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q655",
+              "correct_answer": "A",
+              "explanation": "The Golden ratio denoted by the Greek numeral phi (φ) is an irrational number that represents a proportion that has been lauded as the most perfect and beautiful throughout history using a line segment as an example, the Golden Ratio would be attained when a a b for part a b b a + = > Using this segment representation and the quadratic formula φ con be derived as shown a b a a b + = = φ a b b 1 1 1 a a + = + = + φ a b  = φ  ∵ 1 + 1 = φ φ b 1 a  ∴ =  φ  φ – 1 = 1 φ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q656",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Eन्ीब् ंदल्ह् ेलिहम दf र्rीत् हल्स्ंीे प्aे a म्दहन्ीुाहू ेल्ेंलिहम. वास्तविक संख्याओं के प्रत्येक परिबद्ध अनुक्रम में एक अभिसरण परिणाम होता है।",
+            "options": [
+              {
+                "prompt": "ऊaब्त्दr'े ूपदrास् /टेलर का प्रमेय",
+                "value": "A"
+              },
+              {
+                "prompt": "Bolzano-Weierstrass theorem",
+                "value": "B"
+              },
+              {
+                "prompt": "Mean value theorem /ceeOÙe ceeve ØecesÙe",
+                "value": "C"
+              },
+              {
+                "prompt": "Theorem of continuity /meelelÙe ØecesÙe",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q656",
+              "correct_answer": "B",
+              "explanation": "Bolzano-weierstrass theorem:- Every bounded sequence {an} of real number has a convergent subsequence. Suppose (an) is a bounded sequence. Define A = {an : n ∈N} (The set of values of the sequence {an})",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q657",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दf ूप fदत्त्दैग्हु ग्े ूप ज्rदज्ीूब् दf त्ग्स्ग्ूे? निम्नलिखित में से कौन-सा सीमा का गुण है?",
+            "options": [
+              {
+                "prompt": "स्दहदूदहग्म्ग्ूब् /एकदिष्टता",
+                "value": "A"
+              },
+              {
+                "prompt": "associativity /mebyebælee",
+                "value": "B"
+              },
+              {
+                "prompt": "commutativity /›eâceefJeefvecesÙelee",
+                "value": "C"
+              },
+              {
+                "prompt": "closure /meceeheve",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q657",
+              "correct_answer": "A",
+              "explanation": "The property of limit among the option is monotonicity. Monotonicity:- A monotonic function is a function that is either always increasing or always decreasing",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q658",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "एलिहम ैप्दो ातसहूे ांम्दस arंग्ूrarब् म्त्दो ूदर् ीम्प् दूप्ी aे ूप ेलिहम ज्rदुrोो arा:- अनुक्रम जिसके एलिमेंट अनुक्रम के आगे बढ़ने पर एक दूसरे के निकट एकपक्षीय हो जाते है, वह है:-",
+            "options": [
+              {
+                "prompt": "स्दहदूदहा ेलिहम /एकदिष्ट",
+                "value": "A"
+              },
+              {
+                "prompt": "direct sequence /meerOee Deveg›eâce",
+                "value": "B"
+              },
+              {
+                "prompt": "म्aल्म्प्ब् ेलिहम /कौशी अनुक्रम",
+                "value": "C"
+              },
+              {
+                "prompt": "molecule /DeCeg",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q658",
+              "correct_answer": "C",
+              "explanation": "A Cauchy sequence is a sequence whose elements become arbitrary close to each others as the sequence progresses more precisely, given any small positive distance, all excluding a finite number of elements of the sequence are less than that given distance from each other.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q659",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Aह aत्ूीहaूग्हु ेीगे ैग्त्त् म्दहन्ीुो ग्f ूप ूीस्े aह म्दहन्ीुा ूद ञ्ञ्ञ्ञ्ञ् स्दहदूदहग्म्aत्त्ब्. एक प्रत्यावर्ती श्रंखला अभिसरण करेगा यदि पद aह एकदिष्टत रूप में ञ्ञ्ञ्ञ्ञ् में अभिसरण करते हैं।",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "–1",
+                "value": "C"
+              },
+              {
+                "prompt": "infinity/Deveble",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q659",
+              "correct_answer": "B",
+              "explanation": "The theorem known as \"Leibniz test or the alternating series test tells us that an alternating series will converge if the terms an converge to 0 monotonically.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q660",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f ूप त्ग्स्ग्ू दf ूप ेल्स्स्aह् ग्े ल्ह्ग्हिा् दr हदह र् ैीद, ूप ेीगे स्ल्ेू:- यदि योगखंड की सीमा अपरिभाषित या शून्येतर है, तो शृंखला को:-",
+            "options": [
+              {
+                "prompt": "diverge /Dehemeefjle",
+                "value": "A"
+              },
+              {
+                "prompt": "converge /DeefYemeefjle",
+                "value": "B"
+              },
+              {
+                "prompt": "remains constant /efveÙeleebkeâ jnlee nw",
+                "value": "C"
+              },
+              {
+                "prompt": "first diverges then converges",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q660",
+              "correct_answer": "A",
+              "explanation": "The series must diverge. In this sense, the partial sums are Cauchy only if this limit exists and is equal to zero. The test is inconclusive if the limit of the summand is zero. This is also known as the nth term test, test for divergence.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q661",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्aू ग्े ूप दr्ी दf ूप ्ग्ffीाहूग्aत् ल्aिूग्दह ब्' – ४ब् ृर् े – र्३े² + ४? अवकलन समीकरण ब्' – ४ब् ृर् े – र्३े² + ४ का क्रम क्या है?",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q661",
+              "correct_answer": "B",
+              "explanation": "The order of a differential equation is defined as the highest derivative that appears in the equation. In the given differential equation y' – 4y = x – 3x2 + 4, the highest derivative that appears is the first derivative of y, which is y'. Therefore the order of the differential equation is 1.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q662",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ज्arूग्म्ल्त्ar ेदत्ल्ूग्दह ूद ूप ्ग्ffीाहूग्aत् ल्aिूग्दह ब्' ृर्२े ज्aेग्हु ूप्rदल्ुप् (२, ७) ग्े ञ्ञ्ञ्ञ्ञ्ञ्ञ्. (२,७) से गुजरने वाले अवकल समीकरण ब्' ृर्२े का विशेष हल ञ्ञ्ञ्ञ्ञ् है।",
+            "options": [
+              {
+                "prompt": "y = x² + 2",
+                "value": "A"
+              },
+              {
+                "prompt": "y = 0",
+                "value": "B"
+              },
+              {
+                "prompt": "y = x² + 3",
+                "value": "C"
+              },
+              {
+                "prompt": "y = x² + 1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q662",
+              "correct_answer": "C",
+              "explanation": "Given, Differential equal y' = 2x passing through (2, 7) dy 2x dx = dy = 2xdx dy 2 xdx = ∫ ∫ y = 2 x 2 c 2 + y = x2 + c At passing through (2, 7) 7 = 4 + c c = 3 The particular solution y = x2 + 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q663",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Dग्ffीाहूग्aत् ल्aिूग्दह ेम्rग्ंग्हुर् ोज्दहाहूग्aत् ुrदैूप् ग्े :- चरघातांकीय वृद्धि क वर्णन करने वाला अवकल समीकरण है:-",
+            "options": [
+              {
+                "prompt": "dN ⁄dt = rN",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "dN ⁄ dt = r",
+                "value": "C"
+              },
+              {
+                "prompt": "dt ⁄ dN = rN",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q663",
+              "correct_answer": "A",
+              "explanation": "The formula of exponential growth is dN/dt = rN where dN/dt is the rate of change in population size, r is the biotic potential and N is the population size.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q664",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ्ग्ffीाहूग्aत् ल्aिूग्दह ूप्aू ग्हम्दrज्दraूो ंदूप् ूप ूप्rोप्दत्् ज्दज्ल्त्aूग्दह ऊ aह् म्arrब्ग्हु म्aज्aम्ग्ूब् . एक अवकल समीकरण जिसमें प्रभावसीमा जनसंख्या ऊ और वहन क्षमता दोनों शामिल हैं। भ्Eझ् Dएएएँ (ऊउऊ-श्aूप्) २०२१ (०२.०९.२०२१) (एप्ग्fू-घ्घ्) श्aत १२० भ्ण्ऊ",
+            "options": [
+              {
+                "prompt": "dp/dt = r P",
+                "value": "A"
+              },
+              {
+                "prompt": "dt/dp = r",
+                "value": "B"
+              },
+              {
+                "prompt": "dp/dt =",
+                "value": "C"
+              },
+              {
+                "prompt": "dp/dt = 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q664",
+              "correct_answer": "A",
+              "explanation": "The threshold population is defined to be the minimum population that is necessary for the species to survive we use the variable T to represent the threshold population. A differential equation that incorporates both threshold population T and carrying capacity K is dp P P rp 1 1 dt K T    = − −       Where r represents the growth rate, as before which is known as threshold population differential equation.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q665",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप म्दहेूaहू r ्न ० ग्ह ूपर् ोज्दहाहूग्aत् ुrदैूप् fल्हम्ूग्दह - ज्(ू) ृ ज्दीू चरघातांकीय वृद्धि फलन में नियतांक r ्न ० – ज्(ू) ृ ज्दीू",
+            "options": [
+              {
+                "prompt": "carrying capacity /Jenve #ecelee",
+                "value": "A"
+              },
+              {
+                "prompt": "growth rate /Je=efæ oj",
+                "value": "B"
+              },
+              {
+                "prompt": "phase line /ØeeJemLee jsKee",
+                "value": "C"
+              },
+              {
+                "prompt": "threshold population /ØeYeeJemeercee pevemebKÙee",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q665",
+              "correct_answer": "B",
+              "explanation": "The constant \"r\" in the exponential growth function p(t) = poert represents the growth rate. Growth rate:- A metric that is used to express the annual change in a variable, represented as a percentage.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q666",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "एदत्ल्ूग्दह दf ्ग्ffीाहूग्aत् ल्aिूग्दह ्²ब्/र््े² – ८ ्ब्/र््े + १५ ब् ृ ० ग्े ञ्ञ्ञ्ञ्ञ्ञ्ञ्. अवकल समीकरण ्²ब्/र््े² – ८ ्ब्/र््े + १५ ब् ृ ० का हल है- ञ्ञ्ञ्ञ्ञ्ञ्ञ्",
+            "options": [
+              {
+                "prompt": "y = e3x – e–3x",
+                "value": "A"
+              },
+              {
+                "prompt": "y = C1 e3x + C2e5x",
+                "value": "B"
+              },
+              {
+                "prompt": "y = C1e3x + C2 e5x",
+                "value": "C"
+              },
+              {
+                "prompt": "y = C1 e7x – C1e6x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q666",
+              "correct_answer": "B",
+              "explanation": "Given, Differential equation 2 2 d y 8dy 15y 0 dx dx − + = Auxiliary equation:- m2 – 8m + 15 = 0 m2 – 5m – 3m + 15 = 0 m (m – 5) – 3 (m – 5) = 0 (m –5) (m – 3) m = 5, 3 y = C1e3x + C2e5x",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q667",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "एदत्ल्ूग्दह दf ूप ्ग्ffीाहूग्aत् ल्aिूग्दह ्²ब्/र््े² + ्ब्/र््े – २ब् ृ ाˣ ग्े ञ्ञ्ञ्ञ्ञ्ञ्. अवकल समीकरण ्²ब्/र््े² + ्ब्/र््े – २ब् ृ ाˣ का हल है- ञ्ञ्ञ्ञ्ञ्ञ्",
+            "options": [
+              {
+                "prompt": "y = e–2x",
+                "value": "A"
+              },
+              {
+                "prompt": "y = eˣ + x eˣ ⁄ 3",
+                "value": "B"
+              },
+              {
+                "prompt": "y = c1 e–2x + c2 eˣ + xeˣ/3",
+                "value": "C"
+              },
+              {
+                "prompt": "y = xeˣ/3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q667",
+              "correct_answer": "C",
+              "explanation": "Given, differential equation 2 x 2 d y dy 2y e dx dx + − = (D2 + D – 2) y = ex Auxiliary equation m2 + m – 2 = 0 m2 + 2m – m – 2 = 0 m(m + 2) – 1 (m + 2) = 0 (m + 2) (m – 1) = 0 m = –2, 1 C.F = C1e–2x + C2ex P.I = x 2 1 .e D D 2 + − P.I = x x .e 2D 1 + P.I = x x e x e 2 1 1 3 = × + C.S = CF + P.I C1e–2x + C2ex + x x .e 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q668",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "एदत्ल्ूग्दह दf ्ग्ffीाहूग्aत् ल्aिूग्दह ब्' + ३ब् ृ र्६े + ११ ग्े:- अवकल समीकरण ब्' + ३ब् ृ र्६े + ११ का हल है:-",
+            "options": [
+              {
+                "prompt": "y = e–3x",
+                "value": "A"
+              },
+              {
+                "prompt": "y = e–3x + 2x + 3",
+                "value": "B"
+              },
+              {
+                "prompt": "y = 2x+ 3",
+                "value": "C"
+              },
+              {
+                "prompt": "y = e³ˣ +2x + 3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q668",
+              "correct_answer": "B",
+              "explanation": "Given, Differential equation y' + 3y = 6x + 11 dy 3y 6x 11 dx + = + Integrating factor = 3dx 3x e e ∫ = e3xy = ( ) 3x 6x 11 e dx + ∫ e3xy = 3x 3x 6xe dx 11e dx + ∫ ∫ e3xy = 6x 3x 3x 3x e d 6x e dx 11 e dx 3 dx   − +     ∫ ∫ ∫ e3xy = 3x 3x 3x 6xe 6.e e dx 11 C 3 3 3 − + + ∫ e3xy = 2xe3x – 3x 3x 2 11e e C 3 3 + + e3xy = 2xe3x + 3x 9 e C 3 + y = 2x + 3 + Ce–3x { } Constant C 1 = ∵ y = e–3x + 2x + 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q669",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ँीहदल्त्त्ग् ल्aिूग्दह प्aे ूप fदrस् ञ्ञ्ञ्ञ्ञ्ञ्. बर्नूली समीकरण का रूप ञ्ञ्ञ्ञ्ञ्ञ् है।",
+            "options": [
+              {
+                "prompt": "y' = a",
+                "value": "A"
+              },
+              {
+                "prompt": "y' = a",
+                "value": "B"
+              },
+              {
+                "prompt": "y' = b",
+                "value": "C"
+              },
+              {
+                "prompt": "y' = b",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q669",
+              "correct_answer": "C",
+              "explanation": "The Bernoulli equation is a first-order ordinary differential equation with a specific form. y' = b(t) yn – a (t)y • y is the dependent variable. • y' is the derivative of y with respect to the independent variable. • b (t) and a (t) are function of the independent variable usually representing coefficients. • n is a constant exponent.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q670",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् ग्े हदू a ज्rदज्ीूब् दf म्दहूग्हल्दल्े fल्हम्ूग्दहे दह म्त्दो् aह् ंदल्ह् ग्हूीन्aत्े? कौन-सा बंद (क्लोज्ड) और परिबद्ध अंतरालों पर निरंतर फलन का गुण नहीं है?",
+            "options": [
+              {
+                "prompt": "Uniform continuity",
+                "value": "A"
+              },
+              {
+                "prompt": "Non - uniform continuity criteria/iewj-meceeve",
+                "value": "B"
+              },
+              {
+                "prompt": "Uniform continuity theorem",
+                "value": "C"
+              },
+              {
+                "prompt": "Divergence criteria",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q670",
+              "correct_answer": "D",
+              "explanation": "Divergence criteria are not typically associated with properties of continuous function on closed and bounded intervals. The other options (a) uniform continuity, (b) non-uniform continuity. (c) Uniform continuity theorem are more directly related to the study of continuous function on such intervals.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q671",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f ौ प्aन a ेलिहम (ब्ह )∞ह ृ १ ग्ू सर््ीहे fदr ूप ेलिहम ूद प्aन a त्ग्स्ग्ू aे ह ूाह्े ूद ग्हfग्हग्ूब्. घ्ू म्aह ां ैrग्ूूाह aे ञ्ञ्ञ्ञ्ञ्ञ्. यदि हमारे पास अनुक्रम (ब्ह )∞ह ृ १ है, तो इसका अर्थ है कि अनुक्रम की एक सीमा है क्योंकि ह अनंत की ओर जाता है। इसे ञ्ञ्ञ्ञ्ञ्ञ् के रूप में लिखा जा सकता है।",
+            "options": [
+              {
+                "prompt": "yn → 1 as n → ∞",
+                "value": "A"
+              },
+              {
+                "prompt": "yn → 1 as n → 0",
+                "value": "B"
+              },
+              {
+                "prompt": "yn → n as n → 0",
+                "value": "C"
+              },
+              {
+                "prompt": "y1 → n as n → 1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q671",
+              "correct_answer": "A",
+              "explanation": "This statement suggests that of the index n approaches infinity. The sequence yn approaches the value 1. In mathematical terms, it implies that the elements of the sequence get closer and closer 1 as you consider larger and larger values of n the behavior indicates that the sequence has a limit of 1 as n tends to infinity.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q672",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Evaluate ( ) → 3 x 0 x cotx lim 1 – cosx cetuÙeebkeâve keâjW ( ) → 3 x 0 x cotx lim 1 – cosx",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q672",
+              "correct_answer": "C",
+              "explanation": "Given, ( ) 3 x 0 x cot x lim 1 cos x → − 3 x 0 x cot x 1 cos x lim1 cos x 1 cos x → + × − + = ( ) 3 2 x 0 x cot x 1 cos x lim 1 cos x → + − = ( ) 3 2 x 0 x cot x 1 cos x lim sin x → + = ( ) 3 2 x 0 x cos x 1 cos x lim sin x.sin x → + = ( ) 3 3 x 0 x cos x 1 cos x lim sin x → + ( ) 3 3 x 0 x 0 x 0 x lim limcos x lim 1 cos x sin x → → →  × × +     = ( ) 3 x 0 1 cos0 1 cos0 lim sin x x →   × × +        = 1 1 × 1 × (1 + 1) = 2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q673",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A म्दहूग्हल्दल्े fल्हम्ूग्दह न् ग्े ेaग्् ूद ां हाुaूग्न ्ग्हिग्ूा, ग्f ञ्ञ्ञ्ञ्ञ्ञ्ञ्. एक निरंतर फलन न् को ऋणात्मक निश्चित कहा जाता है, यदि ञ्ञ्ञ्ञ्ञ्ञ्ञ्",
+            "options": [
+              {
+                "prompt": "v is negative definite/v $e+Ceelcekeâ efveef§ele nw",
+                "value": "A"
+              },
+              {
+                "prompt": "v is positive definite/v Ieveelcekeâ efveef§ele nw",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q673",
+              "correct_answer": "C",
+              "explanation": "A continuous function v is said to be negative definite if –v is positive definite.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q674",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A म्दहूग्हल्दल्े fल्हम्ूग्दह न्: Rⁿ → R ग्े ेaग्् ूद ां ra्ग्aत्त्ब् ल्हंदल्ह् ग्f ञ्ञ्ञ्ञ्ञ्ञ्ञ्. एक निरंतर फलन न्: Rⁿ → R को त्रिज्यत: अपरिबद्ध कहा जाता है यदि ञ्ञ्ञ्ञ्ञ्ञ्ञ् ।",
+            "options": [
+              {
+                "prompt": "v",
+                "value": "A"
+              },
+              {
+                "prompt": "v",
+                "value": "B"
+              },
+              {
+                "prompt": "v",
+                "value": "C"
+              },
+              {
+                "prompt": "v",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q674",
+              "correct_answer": "B",
+              "explanation": "A continuous function v: Rⁿ → R is said to bev radially unbounded if v (0) = 0 v (0) = 0, ensures that the function value at the origin is zero, which is a condition often associated with radially unbounded functions if means that as you move away from the origin ||x|| > 0, the function value can increase without any upper bound, reflecting the concept of radially unbounded.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q675",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A fल्हम्ूग्दह fर्(े) ग्े ेaग्् ूद ां म्दहूग्हल्दल्े aू a ज्दग्हूर् े ृ म् ग्f ूप fदत्त्दैग्हु म्दह्ग्ूग्दह प्दत्् ूrल:/एक फलन fर्(े) को एक बिंदुर् े ृ म् पर निरंतर कहा जाता है यदि निम्नलिखित में स्थिति सही धारण की जाती है: भ्Eझ् Dएएएँ (ऊउऊ-श्aूप्) २०२१ (०२.०९.२०२१) (एप्ग्fू-घ्घ्) श्aत १२२ भ्ण्ऊ",
+            "options": [
+              {
+                "prompt": "f",
+                "value": "A"
+              },
+              {
+                "prompt": "f",
+                "value": "B"
+              },
+              {
+                "prompt": "f",
+                "value": "C"
+              },
+              {
+                "prompt": "x = c",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q675",
+              "correct_answer": "A",
+              "explanation": "Any function say f(x) is said to be continuous at a point say x = c if and only if the limit exists at point x = c and it will be equal to the value of that function at x = c.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q676",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Suppose that f(x) has a derivative on the interval (a, b), is continuous on the interval [a, b] and f",
+            "options": [
+              {
+                "prompt": "Rolle's theorem/je@ue ØecesÙe",
+                "value": "A"
+              },
+              {
+                "prompt": "Mean value theorem/ceeOÙeceeve ØecesÙe",
+                "value": "B"
+              },
+              {
+                "prompt": "Taylor's theorem/šsuej ØecesÙe",
+                "value": "C"
+              },
+              {
+                "prompt": "Newton's theorem/vÙetšve ØecesÙe",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q676",
+              "correct_answer": "B",
+              "explanation": "Mean value theorem:- Let given function f(x) has a derivative on the interval (a, b), is continuous on the interval [a, b] and f(a) = f(b) then at some value c∈ (a, b). F'(c) = [ ] f (b) f(a) (b a) − −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q677",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इल्हम्ूग्दहे ैप्ग्म्प् arा ग्हर्म्rीेग्हु aह् र्म्rीेग्हु ग्ह ूपग्r ्दस्aग्ह arा ेaग्् ूद ां ञ्ञ्ञ्ञ्ञ्ञ्. ऐसे फलन जो अपने प्रभावक्षेत्र में घटते-बढ़ते रहते हैं, उन्हें ञ्ञ्ञ्ञ्ञ्ञ् कहा जाता हैं।",
+            "options": [
+              {
+                "prompt": "स्दहदूदहग्म् /एकदिष्ट",
+                "value": "A"
+              },
+              {
+                "prompt": "हदह- स्दहदूदहग्म् /गैर एकदिष्ट",
+                "value": "B"
+              },
+              {
+                "prompt": "maxima /GefÛÛe‰",
+                "value": "C"
+              },
+              {
+                "prompt": "minima /efveefcve‰",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q677",
+              "correct_answer": "A",
+              "explanation": "Monotonic:- A function defined on a Subset of the real number with real values is called monotonic it and only if it is either entirely non-increasing or entirely non-decreasing.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q678",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Aत्त् दf म्दस्ज्ल्ूaूग्दहaत् ेम्गहम ग्े ंल्ग्त्ू दह ञ्ञ्ञ्ञ्ञ्ञ्ञ्. सभी परिकलन विज्ञान ञ्ञ्ञ्ञ्ञ्ञ्ञ् पर निर्मित है।",
+            "options": [
+              {
+                "prompt": "Rolle's theorem /je@ue ØecesÙe",
+                "value": "A"
+              },
+              {
+                "prompt": "Taylor's theorem /šsuej",
+                "value": "B"
+              },
+              {
+                "prompt": "mean value theorem /ØecesÙe",
+                "value": "C"
+              },
+              {
+                "prompt": "remainder theorem /ceeOÙeceeve ØecesÙe",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q678",
+              "correct_answer": "B",
+              "explanation": "Taylor's theorem is a fundamental theorem in mathematics, it's not accurate to say all of computational science is built solely on it. Computational science involves a broad range of mathematical concepts, algorithms, and numerical methods to model and solve real-world problems. Taylor's theorem is just one element as many among in this diverse field.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q679",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊaब्त्दr'े ूपदrास् ग्े हदू ल्ो् ूद ेूल््ब् ूप ज्rदज्ीूगे दf ञ्ञ्ञ्ञ्ञ्ञ्ञ्. टेलर प्रमेय का उपयोग ञ्ञ्ञ्ञ्ञ्ञ् के गुणों का अध्ययन करने के लिए नहीं किया जाता है।",
+            "options": [
+              {
+                "prompt": "evaluating definite integral",
+                "value": "A"
+              },
+              {
+                "prompt": "understanding asymptotic behaviour",
+                "value": "B"
+              },
+              {
+                "prompt": "understanding the growth of functions",
+                "value": "C"
+              },
+              {
+                "prompt": "on solving quadratic eqn.",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q679",
+              "correct_answer": "D",
+              "explanation": "Taylor's theorem is used to study evaluating definite integral, understanding the growth of functions, and understanding asymptotic behavior. Therefore, Taylor's theorem is not used to study the properties of on solving quadratic equation.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q680",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप श्aम्त्aल्rग्ह ेीगे arा ल्ो् ूद aज्ज्rर्देग्स्aूा ूप ञ्ञ्ञ्ञ्ञ्. मैक्लारिन्स शृंखला का उपयोग ञ्ञ्ञ्ञ्ञ् का अनुमान लगाने के लिए किया जाता है।",
+            "options": [
+              {
+                "prompt": "थ्दrार्हूै faम्ूदr α /लोरेंत़्ज कारक α",
+                "value": "A"
+              },
+              {
+                "prompt": "थ्दrार्हूै faम्ूदr γ/लोरेंत़्ज कारक γ",
+                "value": "B"
+              },
+              {
+                "prompt": "थ्दrार्हूै faम्ूदr δ/लोरेंत़्ज कारक δ",
+                "value": "C"
+              },
+              {
+                "prompt": "momentum /mebJesie",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q680",
+              "correct_answer": "B",
+              "explanation": "The Maclaurin series is used to approximate Lorentz factor γ γ(β) = γ(0) + βγ'(0) + ( ) 2 '' 0 .... 2! β γ +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q681",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप स्ल्त्ूग्न्arग्aंत म्प्aग्ह rल्त ग्े ञ्ञ्ञ्ञ्ञ्. बहुचरीय शृंखला नियम ञ्ञ्ञ्ञ्ञ्ञ् है।",
+            "options": [
+              {
+                "prompt": "df/dx =",
+                "value": "A"
+              },
+              {
+                "prompt": "df/dx =",
+                "value": "B"
+              },
+              {
+                "prompt": "dy/df =",
+                "value": "C"
+              },
+              {
+                "prompt": "dy/df =",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q681",
+              "correct_answer": "A",
+              "explanation": "The multivariable chain rule df df dt dx dt dx = ⋅",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q682",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If z = x4 e³ʸ. Find dz. Ùeefo z = x4 e³ʸ lees, dz keâjW~",
+            "options": [
+              {
+                "prompt": "dz = 4x³e³ʸ dx + 3x4e³ʸ dy",
+                "value": "A"
+              },
+              {
+                "prompt": "dz = 4x³e³ʸdy - 3x4e³ʸdy",
+                "value": "B"
+              },
+              {
+                "prompt": "dz = 4x³e³ʸ dx",
+                "value": "C"
+              },
+              {
+                "prompt": "dz = 3x4e³ʸdy",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q682",
+              "correct_answer": "A",
+              "explanation": "z = x4e3y dz dx = 4 3y 3y 4 d d dy x e e x dx dy dx + 3 3y 3y 4 dz dy 4x e e .3 x dx dx = + dz = 4x3e3y dx + 3x4e3y dy",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q683",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A नम्ूदr fगत्् ग्ह Rⁿ ग्े a fल्हम्ूग्दह:- Rⁿ में एक सदिश क्षेत्र एक फलन है:-",
+            "options": [
+              {
+                "prompt": "F vector : Rⁿ → Rⁿ/F meefoMe : Rⁿ → Rⁿ",
+                "value": "A"
+              },
+              {
+                "prompt": "F vector → Rⁿ : Rⁿ/F meefoMe → Rⁿ : Rⁿ",
+                "value": "B"
+              },
+              {
+                "prompt": "F vector → Rⁿ/F meefoMe → Rⁿ",
+                "value": "C"
+              },
+              {
+                "prompt": "F vector → 0/F meefoMe → 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q683",
+              "correct_answer": "A",
+              "explanation": "A vector field in Rn is a function F : Rn → Rn that assigns to each n x R ∈ a vector F(x).",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q684",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् दf ूप fदत्त्दैग्हु ग्े हदू ूप ज्rदज्ीूब् दf नम्ूदr fगत््?/निम्नलिखित में से कौन-सा सदिश क्षेत्र का गुण नहीं है?",
+            "options": [
+              {
+                "prompt": "radial fields/ef$epÙeerÙe #es$e",
+                "value": "A"
+              },
+              {
+                "prompt": "rotational fields/ IetCeea #es$e",
+                "value": "B"
+              },
+              {
+                "prompt": "electrical fields/efJeÅegle #es$e",
+                "value": "C"
+              },
+              {
+                "prompt": "gradient field/ØeJeCelee #es$e",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q684",
+              "correct_answer": "C",
+              "explanation": "Property of vector field – Radial fields – Rotational fields – Gradient field",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q685",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् ग्े हदू ूप ज्rदज्ीूब् दf ्दल्ंत ग्हूाुraत्े? कौन सा द्वि-समाकलन का गुण नहीं है?",
+            "options": [
+              {
+                "prompt": "commutativity/›eâceefJeefvecesÙelee",
+                "value": "A"
+              },
+              {
+                "prompt": "area property/#es$e iegCe",
+                "value": "B"
+              },
+              {
+                "prompt": "linearity/jwefKekeâlee",
+                "value": "C"
+              },
+              {
+                "prompt": "additivity/ÙeespÙelee",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q685",
+              "correct_answer": "A",
+              "explanation": "Commutative is not the property of double integrals. Commutativity refers to the property of being able to swap the order of the integration variables without changing the result, but in double integrals, the order of integration does mattar.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q686",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ूrग्ज्त ग्हूाुraत् दf a fल्हम्ूग्दह fर्(े) दन्ी a ूप्rाा ्ग्सहेग्दहaत् ेदत्ग्् ै ग्े ैrग्ूूाह aे ञ्ञ्ञ्ञ्ञ्. एक त्रिविमीय ठोस ै के ऊपर एक फलन fर्(े) का त्रिगुण समाकल ञ्ञ्ञ्ञ्ञ् के रूप मे लिखा जाता है।",
+            "options": [
+              {
+                "prompt": "∫∫f.dv",
+                "value": "A"
+              },
+              {
+                "prompt": "∫∫∫W f.dv",
+                "value": "B"
+              },
+              {
+                "prompt": "∫∫∫f.dv",
+                "value": "C"
+              },
+              {
+                "prompt": "∫w f.dv",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q686",
+              "correct_answer": "B",
+              "explanation": "The triple integral of a function f(x) over a three dimensional solid w is written as ∫∫∫W f.dv",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q687",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "उrााह'े ूपदrास् rात्aूो a ्दल्ंत ग्हूाुraत् दन्ी a rाुग्दह ूद a ञ्ञ्ञ्ञ्ञ्ञ्. ग्रीन प्रमेय एक क्षेत्र के दोहरे समाकलन को ञ्ञ्ञ्ञ्ञ् से संबंधित करता है।",
+            "options": [
+              {
+                "prompt": "surface integral/melen meceekeâueve",
+                "value": "A"
+              },
+              {
+                "prompt": "line integral/jsKee meceekeâueve",
+                "value": "B"
+              },
+              {
+                "prompt": "volume integral/DeeÙeleve meceekeâueve",
+                "value": "C"
+              },
+              {
+                "prompt": "indefinite integral/Deefveef§ele meceekeâueve",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q687",
+              "correct_answer": "B",
+              "explanation": "Green's theorem relates a double integral over a region to a line integral around the boundary of the region.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q688",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "उrााह'े ूपदrास् ेaब्े ूप्aू ूप ूदूaत् ठस्ग्म्rदेम्दज्ग्म् म्ग्rम्ल्त्aूग्दहठ ग्ह D ग्े ल्aित् ूद ूप म्ग्rम्ल्त्aूग्दह arदल्ह् ूप ंदल्ह्arब् म् ृ ्D̅ ग्रीन प्रमेय कहता है कि D में कुल ‘‘सूक्ष्म परिसंचरण’’ सीमा म् ृ ्D̅ के चारों ओर परिसंचरण के बराबर है।",
+            "options": [
+              {
+                "prompt": "F.ds",
+                "value": "A"
+              },
+              {
+                "prompt": "∫ F.ds",
+                "value": "B"
+              },
+              {
+                "prompt": "c F.ds",
+                "value": "C"
+              },
+              {
+                "prompt": "∫ –F.ds",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q688",
+              "correct_answer": "C",
+              "explanation": "Green's theorem says that the total \"microscopic circulation\" in D is equal to the circulation around the boundary c = dD̅ cf.ds ∫",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q689",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ेल्rfaम ग्हूाुraत् दf a नम्ूदr fगत्् A दन्ी a म्त्दो् ेल्rfaम ग्े ल्aित् ूद ूप न्दत्ल्स ग्हूाुraत् दf ूप ्ग्न्ीुाहम दf a नम्ूदr fगत्् A दन्ी ूप न्दत्ल्स(न्) ाहम्त्दो् ंब् ूप म्त्दो् ेल्rfaम, ग्े ञ्ञ्ञ्ञ्ञ्ञ्ञ्. एक बंद (क्लोज्ड) समह पर सदिश क्षेत्र A का पृष्ठीय समाकलन, बंद (क्लोज्ड) सतह से परिबद्ध आयतन (न्) के ऊपर एक सदिश क्षेत्र A के विचलन के आयतन समाकलन के बराबर है, वह ञ्ञ्ञ्ञ्ञ्ञ् है। भ्Eझ् Dएएएँ (ऊउऊ-श्aूप्) २०२१ (०२.०९.२०२१) (एप्ग्fू-घ्घ्) श्aत १२४ भ्ण्ऊ",
+            "options": [
+              {
+                "prompt": "उrााह'े ूपदrास्/ग्रीन का प्रमेय",
+                "value": "A"
+              },
+              {
+                "prompt": "Stoke's theorem/ mšeskeäme ØecesÙe",
+                "value": "B"
+              },
+              {
+                "prompt": "Gauss's theorem/ieeGme ØecesÙe",
+                "value": "C"
+              },
+              {
+                "prompt": "Taylor's theorem/šsuej ØecesÙe",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q689",
+              "correct_answer": "C",
+              "explanation": "Gauss's theorem:- The surface integral of a vector field A over a closed surface is equal to the volume integral of the divergence of a vector field A over the volume(v) enclosed by the closed surface. ( ) s v A.dS .A dv = ∇ ∫∫ ∫∫∫ \u0002\u0002\u0003 \u0003 \u0002\u0003 \u0002\u0003",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q690",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् ग्े हदू ूप ज्rदज्ीूब् दf Rगस्aहह ग्हूाुraत्? कौन सा रीमान समाकलन का गुण नहीं है?",
+            "options": [
+              {
+                "prompt": "Associativity/mebyebælee",
+                "value": "A"
+              },
+              {
+                "prompt": "Linearity/jwefKekeâlee",
+                "value": "B"
+              },
+              {
+                "prompt": "स्दहदूदहग्म्ग्ूब्/एकदिष्टता",
+                "value": "C"
+              },
+              {
+                "prompt": "additivity/ÙeespÙelee",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q690",
+              "correct_answer": "A",
+              "explanation": "Associativity is not the property of Riemann integral. While linearity, monotonicity and addiviytey are the property of Rieman integral. Rieman integral- As real valued bounded function f defined on a finite closed interval [a, b] is said to be Riemann Integranble or simply integrable on [a, b] if its upper and lower integrals are equal. b b a a fdx fdx = ∫ ∫",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q691",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Eन्ीब् म्दहूग्हल्दल्े र्rीत् - न्aत्ल् fल्हम्ूग्दह दह र् ीम्प् म्त्दो् ंदल्ह् ग्हूीन्aत् ग्े ञ्ञ्ञ्ञ्ञ्ञ्ञ्. प्रत्येक बंद (क्लोज्ड़) परिबद्ध अंतराल पर प्रत्येक सतत वास्तविक-मूल्यवान फलन ञ्ञ्ञ्ञ्ञ्ञ्ञ् होता है।",
+            "options": [
+              {
+                "prompt": "Riemann integrable/jerceeve meceekeâueve",
+                "value": "A"
+              },
+              {
+                "prompt": "Upper Riemann integral/Dehej jerceeve meceekeâueve",
+                "value": "B"
+              },
+              {
+                "prompt": "Upper Riemann integral/efveÛeuee jerceeve meceekeâueve",
+                "value": "C"
+              },
+              {
+                "prompt": "Riemann sums/jerceeve Ùeesie",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q691",
+              "correct_answer": "A",
+              "explanation": "Every continuous real- valued function on each closed bounded interval is Riemann integrable.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q692",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "एल्ज्ज्दो a म्त्दो् ग्हूीन्aत् डa, ं़ Є R. ऊप ज्arूग्ूग्दह दf ूप्ग्े ग्हूीन्aत् ग्े ेaग्् ूद ां a ेलिहम दf ूप fदत्त्दैग्हु fदrस्: मान लें कि एक बंद (क्लोज्ड) अंतराल ड a, ं ़ Є R है। इस अंतराल के विभाजन को निम्नलिखित रूप का एक क्रम कहा जाता है:",
+            "options": [
+              {
+                "prompt": "a = x0 + x1 + x2 ...xn",
+                "value": "A"
+              },
+              {
+                "prompt": "a = x0 < x1 < x2 <...xn",
+                "value": "B"
+              },
+              {
+                "prompt": "a = x0 > x2 ...... xn",
+                "value": "C"
+              },
+              {
+                "prompt": "a = x0 – x1 + ...xn",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q692",
+              "correct_answer": "B",
+              "explanation": "A closed interval [a, b] ∈ R. The partition of this interval is said to be sequence of the form- a = x0 < x1 < x2 <..........< xn = b.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q693",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्f ाग्ूप्ी त्ग्स्ग्ू दf a ्ग्हिग्ूा ग्हूाुraत् ग्े ग्हfग्हग्ूा दr ग्f ूप ग्हूाुraह् ग्े ग्हfग्हग्ूा aहब्ैप्ीा ग्हेग् ूप raहुा दf ग्हूाुraूग्दह, ूप ग्हूाुraत् ग्े ेaग्् ूद ांञ्ञ्ञ्ञ्ञ्ञ्ञ्. यदि किसी निश्चित समाकलन की सीमा अनंत है या समाकलन की सीमा के भीतर कहीं भी समाकल्य अनंत है, तो समाकलन को ञ्ञ्ञ्ञ्ञ्ञ् कहा जाता है।",
+            "options": [
+              {
+                "prompt": "Proper integral/GefÛele meceekeâueve",
+                "value": "A"
+              },
+              {
+                "prompt": "Improper integral/DevegefÛele meceekeâueve",
+                "value": "B"
+              },
+              {
+                "prompt": "Lower Riemann integral/efveÛeuee jerceeve meceekeâueve",
+                "value": "C"
+              },
+              {
+                "prompt": "Upper Riemann integral/Dehej jerceeve meceekeâueve",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q693",
+              "correct_answer": "B",
+              "explanation": "Improper integral:- The definite integral b a f (x)dx ∫ is called an improper integral if a or b is infinite or, f(x) has one or more points of discontinuity in the interval [a, b].",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q694",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इग्ह् ूप न्aत्ल दf ग्स्ज्rदज्ी ग्हूाुraत् अनुचित समाकलन का मान ज्ञात करें ० ∞∫ र्-े ा र््े",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "–1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q694",
+              "correct_answer": "C",
+              "explanation": "a x x 0 0 a e dx lim e dx ∞ − − →∞ = ∫ ∫ = ( ) a x 0 alim e− →∞− = ( ) ( ) a 0 alim e e − →∞− −− = 0 – (–1) = 1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q695",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ेीगे दf fल्हम्ूग्दहे दf fदrस् − हर् ेृ१ ह ए a र्(े a) ∞ ग्े म्aत्त् a ञ्ञ्ञ्ञ्ञ्. − हर् ेृ१ ह ए a र्(े a) ∞ के रूप के फलन की एक शृंखला को ञ्ञ्ञ्ञ्ञ्ञ् कहा जाता है।",
+            "options": [
+              {
+                "prompt": "Weierstrass criterion/JeeF&Mš^eme ceeveob[",
+                "value": "A"
+              },
+              {
+                "prompt": "Power series/Ieele ßesCeer",
+                "value": "B"
+              },
+              {
+                "prompt": "Alternating series/ØelÙeeJeleea ßesCeer",
+                "value": "C"
+              },
+              {
+                "prompt": "Uniform convergence/Skeâmeceeve DeefYemejCe",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q695",
+              "correct_answer": "B",
+              "explanation": "A series of the form ( ) n n n 0 a x a ∞ = − ∑ is known as real infinite power series. ( ) n n n 0 a x a ∞ = − ∑ = a0 + a1(x – a)1 + a2 (x – a)2 +.... Where, an = Coefficient of nth term. x = Variable a = Constant",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q696",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "थू ें ⊂ म् ां a ्दस्aग्ह aह् ेल्ज्ज्दो ढfहल ग्े a ेलिहम दf aहaत्ब्ूग्म् fल्हम्ूग्दहे दह ें ूद f, ूपह f ग्े aहaत्ब्ूग्म् दह ञ्ञ्ञ्ञ्ञ्ञ्. भ्Eझ् Dएएएँ (ऊउऊ-श्aूप्) २०२१ (०२.०९.२०२१) (एप्ग्fू-घ्घ्) श्aत १२५ भ्ण्ऊ मान लें कि ें ⊂ म् एक प्रभाव क्षेत्र है और मान लें कि ढfहल, ें से f पर वैश्लेषित फलन का अनुक्रम है, तो f ञ्ञ्ञ्ञ्ञ्ञ्ञ् पर वैश्लेषित है।",
+            "options": [
+              {
+                "prompt": "c",
+                "value": "A"
+              },
+              {
+                "prompt": "W",
+                "value": "B"
+              },
+              {
+                "prompt": "c and W",
+                "value": "C"
+              },
+              {
+                "prompt": "fn",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q696",
+              "correct_answer": "B",
+              "explanation": "W ⊂ c fn : W → f ⇒ f is analytic on W.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q697",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ेलिहम दf fल्हम्ूग्दहे ग्े a ेलिहम ैग्ूप् fल्हम्ूग्दहे aे ातसहूे. इह: D → R ग्े ्ग्हिा् दह ोू ञ्ञ्ञ्ञ्ञ्ञ्ञ्. फलन का एक अनुक्रम एलिमेंट के रूप में फलन के साथ एक अनुक्रम है। इह: D → R को समुच्च ञ्ञ्ञ्ञ्ञ्ञ्ञ् पर परिभाषित किया गया है।",
+            "options": [
+              {
+                "prompt": "D ⊂ R",
+                "value": "A"
+              },
+              {
+                "prompt": "D ⊂ R",
+                "value": "B"
+              },
+              {
+                "prompt": "R ⊂ D",
+                "value": "C"
+              },
+              {
+                "prompt": "D ∩ R",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q697",
+              "correct_answer": "A",
+              "explanation": "A sequence of functions is a sequence with functions fn : D → R is defined on set D ⊆ R",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q698",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इग्ह् ूप ज्दैी ेीगे rाज्rोाहूaूग्दह fदr ूप fदत्त्दैग्हु fल्हम्ूग्दह/निम्नलिखित फलन के लिए घात श्रेणी निरूपण ज्ञात करें- ुर्(े) ृ १ ⁄ (१+र् े³)",
+            "options": [
+              {
+                "prompt": "n",
+                "value": "A"
+              },
+              {
+                "prompt": "n",
+                "value": "B"
+              },
+              {
+                "prompt": "g",
+                "value": "C"
+              },
+              {
+                "prompt": "n",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q698",
+              "correct_answer": "D",
+              "explanation": "Correct answer is Option (D). Verified from official answer key.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q699",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ंदल्ह् fल्हम्ूग्दह f : (a, ं) → R ग्े Rगस्aहह ग्हूाुraंत ग्f aह् दहत्ब् ग्f fदr ान्ीब् ε ्न ० ूप्ीार् ोग्ेू a ज्arूग्ूग्दह झ् डa, ं़ ैप्ग्म्प् स्aब् जह् दह ε, ेल्म्प् ूप्aू ञ्ञ्ञ्ञ्ञ्ञ्ञ्ञ्. परिबद्ध फनल f : (a, ं) → R रीमान समाकलन है यदि और केवल यदि प्रत्येक ε ्न ० के लिए विभाजन झ् डa, ं़ मौजूद है जो ε पर निर्भर हो सकता है, इस तरह कि ञ्ञ्ञ्ञ्ञ्ञ्ञ्।",
+            "options": [
+              {
+                "prompt": "U",
+                "value": "A"
+              },
+              {
+                "prompt": "U",
+                "value": "B"
+              },
+              {
+                "prompt": "U",
+                "value": "C"
+              },
+              {
+                "prompt": "U",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q699",
+              "correct_answer": "A",
+              "explanation": "A bounded function f : (a, b) → R is Riemann integrable if and only if for every ε > 0 there exist a partition P [a, b] such that U(f;P) – L(f;P ) < ε",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q700",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् ज्rदज्ीूब् ग्े हदू ेaूग्ेfग् ंब् सूrग्म् ेज्aम? कौन सा गुण मैट्रिक स्पैस द्वारा संतुष्ट नहीं है?",
+            "options": [
+              {
+                "prompt": "non- negativeness /iewj-$e+Ceelcekeâlee",
+                "value": "A"
+              },
+              {
+                "prompt": "identification /henÛeeve",
+                "value": "B"
+              },
+              {
+                "prompt": "स्दहदूदहग्म्ग्ूब् /एकदिष्टता",
+                "value": "C"
+              },
+              {
+                "prompt": "symmetry /meceefceefle",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q700",
+              "correct_answer": "B",
+              "explanation": "Definition of metric space- Let M be non-empty set. A metric d on M is a function d : M × M → ℝSatisfying the following properties- (i) d(x, y) > 0 ∀x, y ∈ M (ii) d(x, y) = 0 if and only if x = y (iii) d(x, y) = d(y, x) for all x, y ∈M (symmetry) (iv) d(x, y) ≤ d(x, z) + d(z, y) for all x, y, z ∈M (triangle inequality) So, Identification property is not satisfied by metric space.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

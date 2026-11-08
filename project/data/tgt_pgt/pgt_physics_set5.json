@@ -1,0 +1,3820 @@
+{
+  "_id": "pgt_physics_set5",
+  "title": "PGT Physics • Mock Test Set 5 (100 MCQs)",
+  "course": "PGT Series",
+  "subject": "Physics",
+  "exam": "pgt",
+  "price": 199,
+  "originalPrice": 999,
+  "duration": 100,
+  "sections": [
+    {
+      "_id": "sec_pgt_physics_set5",
+      "title": "Physics Section",
+      "qCount": 100,
+      "time": 100,
+      "questions": [
+        {
+          "_id": "pgt_physics_q401",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप ्ग्ेज्त्aमसहू न्े. ूग्स ल्aिूग्दह दf aह ए.प्.श्. ग्े                   πू πूर् े ृ ५म्दे +१२ेग्ह ८ ८ , ैप्ीा र्'े' ग्े ग्ह म्स्, aह् 'ू' ग्े ग्ह ोम्, fग्ह् ग्ूे aस्ज्त्ग्ूल्. एस. एच़ एम़ के विस्थापन बनाम समय का समीकरण                   πू πूर् े ृ ५ म्दे +१२ेग्ह ८ ८ , है, जहां र्'े' म्स् में है, और 'ू' सेकंड में है। इसका आयाम ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "17cos",
+                "value": "A"
+              },
+              {
+                "prompt": "8.5 cm",
+                "value": "B"
+              },
+              {
+                "prompt": "17 cm",
+                "value": "C"
+              },
+              {
+                "prompt": "13 cm",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q401",
+              "correct_answer": "D",
+              "explanation": "Given, S.H.M. Equation- t t x 5cos 12sin 8 8  π π      = +             ... (i) We know that, y = A sin(ωt+φ) y = A{sin ωt.cosφ + sinφ.cosωt } y = Asinωt.cosφ + Asinφ.cosωt ... (ii) Comparing the equation (i) and (ii), we get A cosφ= 5, A sinφ = 12 A2cos2φ + A2sin2φ = 25+144 A2(sin2φ+cos2φ) = 169 A2 = 169 A = 169 A = 13 cm",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q402",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्arूग्म्त दf स्aे 'स्' ग्े ेल्ंराम्ू ूद ूैद fदrमे, र्इे ृ २ २ ब् -स्ωर् े;इ ृ -स्ω ब् ग्ह ूैद स्ल्ूल्aत्त्ब् ज्ीजह्ग्म्ल्त्ar ्ग्rाम्ूग्दहे. घ्ू दांब्े ूप ग्हग्ूग्aत् म्दह्ग्ूग्दह: र् ्ब् े ृ ृ ० ्ू . प्a् ूप fदrमे aम्ूा् ग्ह्ग्न्ग््ल्aत्त्ब्,र् ीम्प् ैदल्त्् प्aन त् ूद एप्श्े दf ल्हल्aित् aस्ज्त्ग्ूल्े. (ऊप ेब्स्ंदत्े प्aन ूपग्r ल्ेल्aत् सर््ीहग्हुे). ेंप्aू ैदल्त्् ां ूraराम्ूदrब् दf ूप rोल्त्ूaहू स्दूग्दह दf ूप ज्arूग्म्त? 'स्' द्रव्यमान का एक कण दो बलों के अधीन है, र्इे ृ – स्ω२र् े ; इब् ृ – स्ω२ ब् दो परस्पर लंबवत दिशांए है। यह प्रारंभिक स्थिति: ० ृर् ्ब् े ृ ्ू का पालन करता है। अगर बलों ने अकेले कार्य ही किया होता, तो प्रत्येक का असमान आयाम का एस.एच.एम. होता। (प्रतीकों का उनका स्वाभाविक अर्थ है)। कण की परिणामी गति का प्रक्षेपवक क्या होगा?",
+            "options": [
+              {
+                "prompt": "Ellipse",
+                "value": "A"
+              },
+              {
+                "prompt": "Circle",
+                "value": "B"
+              },
+              {
+                "prompt": "Hyperbola",
+                "value": "C"
+              },
+              {
+                "prompt": "Parabola",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q402",
+              "correct_answer": "A",
+              "explanation": "Given, The force in the x-direction is, Fx = –mω2x and Fy = –mω2y, is in the y direction Both of the particles have the same angular frequency ω and are proportional to position of the particle in their respective direction. • In S.H.M, the trajectory of the particle depends on the ratio of amplitudes of the motion in the x and y direction. If the ratio of the amplitudes is not equal to 1, the trajectory will be an ellipse. If the ratio of the amplitudes is equal to 1. The trajectory will be a circle. • Since the force in this case would have led to S.H.M. of unequal amplitude, the ratio of the amplitude is not equal to 1 (especially less than 1). • Therefore, the trajectory of the resultant motion of the particle will be an ellipse. So option (a) is right.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q403",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्arूग्म्त दf स्aे १० ु ग्ेर् ोाम्ल्ूग्हु ए.प्.श्. दf aस्ज्त्ग्ूल् २ म्स्. ेंपह ूप ज्arूग्म्त ज्aेो ूप्rदल्ुप् ग्ूे सर््ीह ज्देग्ूग्दह, ग्ूे ाहीुब् ग्े २×१०–४ व्. ध्ूंaग्ह ूप ल्aिूग्दह दf स्दूग्दह दf ूप ज्arूग्म्त ग्f ग्ूे ाज्दम्प् ग्े ३०ड्ढ. घ्ू ग्े ुग्नह ूप्aू aू ूप ग्हग्ूग्aत् ग्हेूaहू, ग्ूे ज्देग्ूग्दह ग्े ग्हर्म्rीेग्हु ैग्ूप् ूग्स. र्Eेज्rो ज्देग्ूग्दह र्(े) ग्ह सूrो aह् ूग्स (ू) ग्ह ोम्. Dएएएँ झ्उऊ ९१ भ्ण्ऊ १० ु द्रव्यमान का एक कण २ म्स् आयाम का एस.एच.एम. निष्पादित कर रहा है। जब कण अपनी औसत स्थिति से गुजरता है, तो इसकी ऊर्जा २×१०–४ व् होती है। यदि इसका ३०ड्ढ हो तो कण के गति का समीकरण ज्ञात करें। यह प्रारंभिक समय में दिया गया है, इसकी स्थिति समय के साथ बढ़ रही है। स्थिति र्(े) मीटर में और समय (ू) सेकंड में व्यक्त किया गया है।",
+            "options": [
+              {
+                "prompt": "x=",
+                "value": "A"
+              },
+              {
+                "prompt": "x =",
+                "value": "B"
+              },
+              {
+                "prompt": "x =",
+                "value": "C"
+              },
+              {
+                "prompt": "x =",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q403",
+              "correct_answer": "B",
+              "explanation": "Given that, Mass, m = 10 g = 0.01 kg Energy (K.E) = 2×10–4 J Amplitude, A = 2 cm = 0.02 m, φ = 30º = 3 π Kinetic Energy of particle K.E = 2 1 mv 2 ... (i) In S.H.M. at velocity mean position (V=ωA) K.E = 2 1 Mv 2 2×10–4 = ( ) ( )2 1 0.01 A 2 × × ω 2×10–4 = ( ) ( )2 2 1 0.01 0.02 2 × ×ω × ω2 = 100 ω = 10 The Equation of S.H.M. y = A sin (ωt +φ) y = 0.02 sin 10t 3 π   +    ",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q404",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ंद्ब् दf स्aे ०.२ व्ु ग्े ेल्ेजह् frदस् a ेज्rग्हु दf fदrम म्दहेूaहू १ र्‍स्–१. A ्aस्ज्ग्हु fदrम aम्ूे दह ूप ेब्ेूास् ेल्म्प् ूप्aू ूप rोग्ेूग्न fदrम ग्े ६ र्‍ म्दrrोज्दह्ग्हु ूद aह ग्हेूaहूaहादल्े नत्दम्ग्ूब् दf १० स्े–१. घ्f ूप ेब्ेूास् ग्े हदै ेल्ंराम्ू ूद a ज्ीग्द्ग्म् fदrम, इ ृ १० म्दे ू, ूपह ैप्aू ैदल्त्् ां ूप ज्प्aो ्ग्ffीाहम ाूंौाह ूप fदrम देम्ग्त्त्aूग्दह aह् ूप दrग्ुग्हaत् न्ग्ंraूग्दह? ०.२ व्ु द्रव्यमान का एक पिंड १ र्‍स्–१ बल से किसी कमानी (स्प्रिंग) से लटकाया गया है। प्रणाली पर एक अवमंदन बल इस तरह कार्य करता है कि प्रतिरोधी बल ६ र्‍ तात्कालिक वेग १० स्े–१ के अनुरूप है। यदि प्रणाली एक नए आवधिक बल, इ ृ १० म्देू के अधीन है, तो अनिवार्य परिसंचरण और मूल कंपन के बीच चरण अंतर क्या होगा?",
+            "options": [
+              {
+                "prompt": "tan–1 3",
+                "value": "A"
+              },
+              {
+                "prompt": "tan–1 2",
+                "value": "B"
+              },
+              {
+                "prompt": "1 1",
+                "value": "C"
+              },
+              {
+                "prompt": "tan–1 4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q404",
+              "correct_answer": "A",
+              "explanation": "Correct answer is Option (A). Verified from official answer key.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q405",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंपह ूप ूास्ज्ीaूल्rा दf aग्r ग्हर्म्rीेो frदस् ३०ड्ढण् ूद ूड्ढ ण्, ूप नत्दम्ग्ूब् दf ेदल्ह् ग्ह aग्r (aेल्स् ूद ांप्aन त्ग्व a ज्ीfाम्ू ुaे) ग्हर्म्rीेो ंब् १.६४ज्ञ् (aजर््े). इग्ह् 'ू' (र्हीrोू ूद ैप्दत हल्स्ंी) जब हवा का तापमान ३० ड्ढण् ू से ड्ढण् तक बढ़ जाता है, तो हवा में ध्वनि की गति (मान लीजिए यह एक पूर्ण गैस की तरह व्यवहार करती है) १.६४ज्ञ्(लगभग बढ़ जाती है। 'ू' (संपूर्ण संख्या के करीब) का मान ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "35",
+                "value": "A"
+              },
+              {
+                "prompt": "40",
+                "value": "B"
+              },
+              {
+                "prompt": "45",
+                "value": "C"
+              },
+              {
+                "prompt": "48",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q405",
+              "correct_answer": "B",
+              "explanation": "Speed of sound in air is given by, V = RT M γ ⇒ V T ∝ ⇒ 1 1 2 2 V T V T = ... (i) Given, V2 = V1+1.64% of V1 Let, V1 = V ⇒ V2 = V+ 1.64 V 100 = 101.64 V 100       Now, V 273 30 101.64 273 t V 100 + = +       [From (i)] ⇒ 100 303 101.64 t 273 = + ⇒ t 273 101.64 1.0164 303 100 + = = ⇒ t+273 = 303×1.0164 ⇒ t+273 = 313.019 ⇒ t = 313.019–273 = 40 So, required temperature is 40ºC DSSSB PGT 92 YCT",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q406",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A train is approaching a massive hill with a speed of 55 km",
+            "options": [
+              {
+                "prompt": "595 Hz",
+                "value": "A"
+              },
+              {
+                "prompt": "597.5 Hz",
+                "value": "B"
+              },
+              {
+                "prompt": "585 Hz",
+                "value": "C"
+              },
+              {
+                "prompt": "580.5 Hz",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q406",
+              "correct_answer": "B",
+              "explanation": "Vt = 55 km",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q407",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊैद ैग्rो arा fगर््ेा् दह a ेदहदसूी. ऊप तहुूप् दf ूप ैग्rो arा ग्ह ूप raूग्द ४८ : २५, ूपग्r ्ग्aसूीे arा ग्ह ूप raूग्द ३ :१. ऊप हेग्ूगे दf ूप स्aूीग्aत् दf ूप ैग्rो arा ग्ह ूप raूग्द १ : ९. घ्f ूप ूाहेग्दहे ग्ह ूप ैग्rा arा ग्ह ूप raूग्द ४ : १, ऊपह fग्ह् ूप frलिहम्ब् दfर् ंीूे ज्rद्ल्म् ग्f ूप हदूा दf ूप त्दैी ज्ग्ूम्प् ग्े २४० पर््ै. एक सोनोमीटर पर दो तार बांधे गए हैं। तारों की लंबाई ४८ : २५ अनुपात में है, उनका व्यास ३ : १ अनुपात में हैं। तारों की धातु का घनत्व १ : ९ में अनुपात है। यदि तार में तनाव ४ : १ अनुपात में हो तो निचले पिच के नोट २४० पर््ै होने पर पैदा हुई झंकार की आवृत्ति ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "10 Hz",
+                "value": "A"
+              },
+              {
+                "prompt": "12 Hz",
+                "value": "B"
+              },
+              {
+                "prompt": "15 Hz",
+                "value": "C"
+              },
+              {
+                "prompt": "5 Hz",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q407",
+              "correct_answer": "A",
+              "explanation": "Given, Length of wire ratio = 1 2 48 25 = ℓ ℓ , diameter ratio 1 2 d 3 d 1 = density ratio, 1 2 1 9 ρ = ρ Tension ratio, 1 2 T 4 T 1 = Lower frequency, 2 n = 240 Hz Frequency, n = 1 T 2 m ℓ = 2 1 T 2 r π ρ ℓ = 1 T 2 r πρ ℓ 1 2 2 1 2 2 1 1 2 1 n r T n r T ρ = ⋅ ⋅ ρ ℓ ℓ 1 n 25 1 2 3 240 48 3 = × × × ⇒ 1 n 25 240 24 = ⇒ n1 = 250 Hz Thus,beat frequency, n = n1–n2 = 250–240 = 10 Hz",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q408",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ohm = ? henry",
+            "options": [
+              {
+                "prompt": "S",
+                "value": "A"
+              },
+              {
+                "prompt": "S–1",
+                "value": "B"
+              },
+              {
+                "prompt": "S–2",
+                "value": "C"
+              },
+              {
+                "prompt": "S2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q408",
+              "correct_answer": "B",
+              "explanation": "ohm R henry L = ⇒ L Second R = Unit of –1 R Ohm sec L Henry H Ω = = = Where, R = Resistance L = inductance",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q409",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "उग्नह ांत्दै ग्े ूप ल्aिूग्दह दf ra्ग्दaम्ूग्न म्aब् aह् ूपर् ोज्rोग्दह fदr महूrग्fल्ुaत् fदrम दह a ज्arूग्म्त दf स्aे 'स्' स्दन्ग्हु ैग्ूप् ूप ल्हग्fदrस् aहुल्त्ar नत्दम्ग्ूब् ω, र्‍ ृ र्‍द –λू, इ ृ स्ω२r (ेब्स्ंदत्े प्aन ूपग्r ल्ेल्aत् सर््ीहग्हुे) λ ग्ह ूप fग्rेू ल्aिूग्दह प्aे ूप ेaस ्ग्सहेग्दह aे ूप्aू दf ैप्aू दह ूप rग्ुप्ू प्aह् ेग् दf ूप ोम्दह् ल्aिूग्दह? नीचे रेडियोधर्मी क्षय का समीकरण और 'r' त्रिज्या के एक वृत्त में एक समान कोणीय वेग 'ω' के साथ गतिमान 'स्' द्रव्यमान के कण पर केंद्रापसारक बल का व्यंजक दिया गया है। र्‍ ृ र्‍० ा–λू, इ ृ स्ω२r (प्रतीकों का उनका स्वाभाविक अर्थ है) क्या पहले समीकरण में λका समान आयाम है जैसा कि दूसरे समीकरण के दाईं ओर होता है?",
+            "options": [
+              {
+                "prompt": "m",
+                "value": "A"
+              },
+              {
+                "prompt": "ω2",
+                "value": "B"
+              },
+              {
+                "prompt": "ω",
+                "value": "C"
+              },
+              {
+                "prompt": "r",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q409",
+              "correct_answer": "C",
+              "explanation": "Equation of radioactive decay N = – t 0 N e λ Equation of certifugal force is F = mrω2 dimension",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q410",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A२ए४व्ु–१स्–२ ग्े ल्ग्न्aितहू ूद: A२ ए४ व्ु–१ स्–२ किसके बराबर है?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "ohm",
+                "value": "B"
+              },
+              {
+                "prompt": "mho",
+                "value": "C"
+              },
+              {
+                "prompt": "farad",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q410",
+              "correct_answer": "D",
+              "explanation": "Farad (F) = C Columb V Volt = = 2 4 2 A S kgm Unit of Farad is equal to A2S4 kg–1m2.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q411",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "१ ख्ेंर्प् ोज्rोा् ग्ह ान्न् ग्े: १ ख्ेंप् को ान्न् में व्यक्त किया गया है:",
+            "options": [
+              {
+                "prompt": "2.247×1025",
+                "value": "A"
+              },
+              {
+                "prompt": "1.124×1025",
+                "value": "B"
+              },
+              {
+                "prompt": "2.247×1023",
+                "value": "C"
+              },
+              {
+                "prompt": "1.124×1024",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q411",
+              "correct_answer": "A",
+              "explanation": "1KWh = power × hour = 1000×3600 = 3.6×106 J 1 KWh in electron volt (ev) = 3.6×106 {1J = 6.242×1018 ev) = 3.6×106×6.242×1018 = 22.47×1024 = 2.247×1025ev",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q412",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्ह aहर् ोज्ीग्सहू fदr ूप ूीस्ग्हaूग्दह दf fदम्aत् तहुूप् दf a म्दहर्ने तहे ल्ेग्हु ल् – न् सूप्द्, ूप्aू ग्े aज्ज्त्ब्ग्हु ूप fदrस्ल्त्a १ १ १ + ृ न् ल् f , ूप fदल्r सूप्द्े ेूaूा् ांत्दै ैीा aज्ज्त्ग् fदr म्aत्म्ल्त्aूग्हु ूप fग्हaत् न्aत्ल दf 'f' frदस् ूाह देंीन्aूग्दहे. ल् – न् विधि का प्रयोग करते हुए एक उत्तल लेंस की फोकल लम्बाई के ज्ञात करने के लिए एक प्रयोग में सूत्र १ १ १ + ृ न् ल् f लागू किया जा रहा है, दस अवलोकलों से 'f ' का अंतिम मान ज्ञात करने के लिए नीचे वर्णित चार विधियों को लागू किया जाता है। (झ्) ण्दrrोज्दह्ग्हु ूदर् ीम्प् देंीन्aूग्दह 'f' ैaे म्aत्म्ल्त्aूा् हल्स्ीग्म्aत्त्ब् aह् ूपग्r aन्ीaुा ैaे ूaवह.",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q412",
+              "correct_answer": "B",
+              "explanation": "Focal of convex lens using u–v method, formula 1 1 1 v u f + = Using the observed values u and v a graph of 1 1 vs u v was drawn and the value of 1 f was read from the intercepts on the two axes, and thus f was calculated. Hence, option (b) is right.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q413",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप न्aत्ल दf 'ु' ग्े ांग्हु दूंaग्हा् ल्ेग्हु a ेग्स्ज्त जह्ल्त्ल्स् ंब् aज्ज्त्ब्ग्हु ूप fदrस्ल्त्a, ऊ ृ त् २π ु 'त्' ग्े सर््ीेल्rा् ल्ेग्हु a सूrा ेम्aत प्aन्ग्हु ेस्aत्तेू ्ग्न्ग्ेग्दह १ स्स्, aह् 'ऊ' ग्े सर््ीेल्rा् ल्ेग्हु a ेूदज् ैaूम्प् ैप्दो ेस्aत्तेू ्ग्न्ग्ेग्दह ग्े ०.००१ ोम्. इदr a ज्arूग्म्ल्त्ar सर््ीेल्rासहू त् ृ १ स् aह् ऊ ृ २ ोम्, दूंaग्हा् ंब् ैaब् दf सर््ीेल्rग्हु ूप ूग्स fदr १० देम्ग्त्त्aूग्दहे aे २० ोम्. ेंप्aू ग्े ूप र्स्aेग्स्ल्स् ज्देग्ंत ज्ीमहूaुा ीrदrठ? सूत्र ऊ ृ २π ु त् लागू करते हुए एक सरल पेंडुलम का उपयोग करके 'ु' का मूल्य प्राप्त किया जाता है, 'त्' को मीटर के पैमाने का उपयोग करके मापा जाता है जिसमें सबसे छोटा विभाजन १ स्स् है, और 'ऊ' को स्टॉप वॉच का उपयोग करके मापा जाता है जिसका सबसे छोटा विभाजन ०.००१ ोम् है। एक विशेष माप के लिए त् ृ १ स् और ऊ ृ २ ोम् गणना इस तरह की जाती है जिस तरीके से १० परिसंचरण के लिए समय की गणना २० ोम् के रूप में की जाती है। अधिकतम संभव प्रतिशत त्रुटि क्या होगी? Dएएएँ झ्उऊ ९४ भ्ण्ऊ",
+            "options": [
+              {
+                "prompt": "0.11",
+                "value": "A"
+              },
+              {
+                "prompt": "0.22",
+                "value": "B"
+              },
+              {
+                "prompt": "0.01",
+                "value": "C"
+              },
+              {
+                "prompt": "0.20",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q413",
+              "correct_answer": "A",
+              "explanation": "Given that, ∆ℓ= 1mm = 1×10–3 m ℓ= 1 m T = 2 sec ∆T = 0.001 T = 2 g π ℓ {% error = x 100 x ∆× } Squaring both side g L 2 T g L T ∆ ∆ ∆ = + g L 2 T 100 100 g L T ∆ ∆ ∆   × = + ×     = –3 1 10 2 0.001 100 1 2   × × + ×     = 1 0.001 100 1000 1   + ×     = 2 100 1000  ×     = 0.2 So, g 0.11 g ∆ =",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q414",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "An open carriage is travelling at 20 m",
+            "options": [
+              {
+                "prompt": "x = 0, y = 10t – 5t2,",
+                "value": "A"
+              },
+              {
+                "prompt": "x = 20t, y = 10t – 5t2,",
+                "value": "B"
+              },
+              {
+                "prompt": "x = 0, y = 10t",
+                "value": "C"
+              },
+              {
+                "prompt": "x = 20t, y = 10t,",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q414",
+              "correct_answer": "B",
+              "explanation": "Displacement vs time equation (x, y) (x', y') with time (t, t') Given, v = 20 m",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q415",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्arूग्म्त स्दन्ग्हु ग्ह a ेूraग्ुप्ू त्ग्हा fदत्त्दैे ूप ल्aिूग्दह: न्२ ृ र्४ेर्–े२ ेंप्aू ग्े ूप raहुा दf स्दूग्दह? एक कण समीकरण न्२ ृ र्४े –र् े२का पालन करते हुए सीधी रेखा में चलता है। गति की सीमा क्या होगी?",
+            "options": [
+              {
+                "prompt": "0 < x < 4",
+                "value": "A"
+              },
+              {
+                "prompt": "x ≤ 0",
+                "value": "B"
+              },
+              {
+                "prompt": "x ≥ 4",
+                "value": "C"
+              },
+              {
+                "prompt": "0 ≤ x ≤ 4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q415",
+              "correct_answer": "D",
+              "explanation": "Given, v2 = 4x–x2 v = 2 4x – x ⇒ 4x–x2 ≥ 0 ⇒ x2–4x ≤ 0 ⇒ x(x–4) ≤ 0 ⇒ x(x–4) ≤ 0 ⇒ x∈ (0, 4) Hence, 0 ≤ x ≤4",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q416",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्arूग्म्त ेूarूे frदस् rोू aह् aम्मत्ीaूो, ैप्ीा ग्ूे aम्मत्ीaूग्दह न्े. ूग्स ल्aिूग्दह ग्े: f ृ ज् – qू , ैप्ीा ज् aह् q arा ज्देग्ूग्न म्दहेूaहूे. इग्ह् ूप ्ग्ेूaहम ूraनत्त् ंब् ूप ज्arूग्म्त ूग्त्त् ूप ूग्स ग्ू र्rीम्पे ग्ूे र्स्aेग्स्ल्स् नत्दम्ग्ूब्. एक कण विराम से शुरू होकर तेज हो जाता है, जहां इसका त्वरण बनाम समय समीकरण f ृ ज् – qू है: जहां ज् और q सकारात्मक स्थिरांक हैं। उस कण द्वारा अधिकतम गति को प्राप्त करने तक तय की दूरी की गणना कीजिए।",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q416",
+              "correct_answer": "C",
+              "explanation": "Given equation, f = p–qt dv p – qt dt = ... (i) p –qt = 0 t = p q Equation (i) integrating, we get ( ) dv p – qt dt = ∫ ∫ v = pt– 2 qt 2 ... (ii) Putting value of t equation (ii) we have V = 2 p q q p p – q 2       × = 2 2 p p – q 2q V = 2 p 2q Now, s = V × t = 2 p 2q × p",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q417",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "उग्नह ांत्दै arा fदल्r ेूaूासहूे rात्aूा् ूद ल्हग्fदrस्त्ब् aम्मत्ीaूा् स्दूग्दह. नीचे समान रूप से त्वरित गति से संबंधित चार बयान दिए गए हैं। (ज्) ऊप नत्दम्ग्ूब् न्े. ूग्स ुraज्प् ग्े aत्ैaब्े a ेूraग्ुप्ू त्ग्हा ज्aेग्हु ूप्rदल्ुप् ूप दrग्ुग्ह",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "only",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q417",
+              "correct_answer": "C",
+              "explanation": "1st Equation of Motion, v = v0+at Where, v = Final velocity, v0 = Initial velocity and s = displacement IInd Equation of Motion, s = 2 0 1 s u t at 2 = + IIIrd Equation of Motion, v2 = 2 0 v 2as + Hence, given that square of the velocity is a linear function of displacement, v2 = u2+as • We can say that the average velocity i.e. displacement during a period of time in any time interval is the arithmetic mean of the initial and final velocity. Vaverage = f i V V 2 + Note : Official answer given by commission is option (b).",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q418",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Aर् ेूीस्ी ग्े ुदग्हु ्ल Eaेू ैग्ूप् a नत्दम्ग्ूब् १० स्े–१, aह् ैग्ह् ग्े ंत्दैग्हु frदस् र्‍दrूप्. ऊप ेस्दव ूप म्प्ग्स्हाब् ज्दग्हूे ३०ड्ढ ेंोू दf ेदल्ूप्. इग्ह् ूप स्aुहग्ूल् दf ूप नत्दम्ग्ूब् दf ैग्ह्. एक स्टीमर पूर्व में १० स्े–१ वेग के साथ जा रहा है और हवा उत्तर की ओर बह रही है। चिमनी का धुआं ३०ड्ढ दक्षिण-पश्चिम की ओर इंगित करता है। हवा के वेग का परिमाण बताएं।",
+            "options": [
+              {
+                "prompt": "10 3 ms–1",
+                "value": "A"
+              },
+              {
+                "prompt": "30 ms–1",
+                "value": "B"
+              },
+              {
+                "prompt": "30 3 ms–1",
+                "value": "C"
+              },
+              {
+                "prompt": "10 3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q418",
+              "correct_answer": "A",
+              "explanation": "Given that velocity (v) = 10 m",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q419",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्arूग्म्त ग्ेर् ोाम्ल्ूग्हु aह ल्हग्fदrस् aहुल्त्ar स्दूग्दह ैग्ूप् aह aहुल्त्ar नत्दम्ग्ूब् \u0006   ω     ृ २ग् - र+ ५व् \u0004\u0003 ɵ ɵ ra्ग्aहे ोम्–१ aह् (–१, २, ३) ग्े a ज्देग्ूग्दह दf ूप ज्arूग्म्त ग्ह ग्ूे ज्aूप् (म्द-दr्ग्हaूो Dएएएँ झ्उऊ ९६ भ्ण्ऊ arा ग्ह सूrो). इग्ह् ूप र्त्ग्हीr नत्दम्ग्ूब् दf ूप ज्arूग्म्त ग्ह स्े–१. एक कण एक कोणीय वेग ( ) ˆ ˆ ˆ ω ृ २ग् - र+ ५व् \u0004\u0003 ra्ग्aहे ोम्–१ के साथ एकसमान कोणीय गति निष्पादित कर रहा है और पथ (समन्वय मीटर में है।) में कण की स्थिति (–१, २, ३) हैं, स्े–१ में कण की रैखिक वेग ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "ɵ",
+                "value": "A"
+              },
+              {
+                "prompt": "ɵ",
+                "value": "B"
+              },
+              {
+                "prompt": "ɵ",
+                "value": "C"
+              },
+              {
+                "prompt": "ɵ",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q419",
+              "correct_answer": "B",
+              "explanation": "Angular velocity, ( ) ˆ ˆ ˆ 2i – j 5k ω = + \u0004\u0003 rad",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q420",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्दग्हू स्दने ल्हग्fदrस्त्ब् aत्दहु a ेूraग्ुप्ू त्ग्हा. घ्ूे aहुल्त्ar नत्दम्ग्ूब् aंदल्ू aहब् ज्दग्हू aू a ्ग्ेूaहम 'r' frदस् ग्ू न्arगे aे: कोई बिंदु एक सीधी रेखा के साथ समान रूप से गतिमान है। 'r' दूरी पर किसी बिंदु से इसका कोणीय वेग किस प्रकार बदलेगा?",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "r",
+                "value": "C"
+              },
+              {
+                "prompt": "r2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q420",
+              "correct_answer": "B",
+              "explanation": "Whan a particle is moving in a straight line it has zero angular momentum. So, L = mvr = 0 ⇒ L = m×r×ω×r = mr2ω ⇒ ω = 2 L mr ⇒ ω∝ 2 1 r",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q421",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "उग्नह ांत्दै arा fदल्r ोूे दf हल्स्ंीे ैप्ग्म्प् arा ज्rदज्दrूग्दहaत् ूद ूप स्aुहग्ूल्े दf ूप्rाा fदrमे aम्ूग्हु ेग्स्ल्त्ूaहादल्ेत्ब् aू a ज्दग्हू. नीचे संख्याओं के चार सेट दिए गए हैं जो एक बिंदु पर एक साथ कार्यरत तीन बलों के परिमाण के समानुपाती हैं। (ज्) २, ८, ९ (q) ३, ७, ९ (r) ३, ७, १० (े) ३, ७, ११ घ्ह ैप्ग्म्प् म्aो ल्ग्त्ग्ंिrग्ल्स् ग्े हदू ज्देग्ंत? किस स्थिति में संतुलन संभव नहीं है?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q421",
+              "correct_answer": "D",
+              "explanation": "For equilibrium the third force in the set should not be greater than the same of other two forces. In option (d) i.e. 3, 7, 11 the third force 11 is greater than sum of other two force so in this case equilibrium is not possible.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q422",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A flexible heavy chain of length 10 m, is moving over a smooth fixed pulley. The two unequal portions of the chain are hanging vertically. The instant when the middle point of the chain is at a distance 3 m below the pulley. The acceleration with which it is moving is: (g = 10 m",
+            "options": [
+              {
+                "prompt": "6 m/s2",
+                "value": "A"
+              },
+              {
+                "prompt": "3 m/s2",
+                "value": "B"
+              },
+              {
+                "prompt": "2 m/s2",
+                "value": "C"
+              },
+              {
+                "prompt": "4 m/s2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q422",
+              "correct_answer": "A",
+              "explanation": "Correct answer is Option (A). Verified from official answer key.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q423",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A पर््ीन्ब् ल्हग्fदrस् rद् ग्े ग्ह ल्ग्त्ग्ंिrग्ल्स् ैग्ूप् दहा aह् rोूग्हु aुaग्हेू a ेस्ददूप् न्ीूग्म्aत् ैaत्त्, aह् ूप दूप्ी aुaग्हेू a ेस्ददूप् ज्त्aहा ग्हम्त्ल्् ूद ूप ैaत्त् aू ४५ड्ढ. घ्f 'α' ग्े ूप ग्हम्त्ग्हaूग्दह दf ूप rद् ूद ूप प्दrगर््ैदह, ूपह ूaह α ग्े ल्aित् ूद: एक भारी एकसमान छड़ संतुलन में है और उसकी एक सिरा एक समतल ऊर्ध्वाधर दीवार पर टिका है, और दूसरा सिरा उस दीवार से ४५ड्ढपर स्थित समतल पर टिका है। यदि 'α' क्षितिज से छड़ के झुकाव हो, तो ूaह α किसके बराबर होगा?",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q423",
+              "correct_answer": "C",
+              "explanation": "Given θ = 45º In the equilibrium condition of rod- Torque due to weight = Torque due to normal force on inclination L W sin W.L.cos 2 ⋅ ⋅ α = α sin 1 cos 2 α = α tanα = 1 2",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q424",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A particle of mass 10 g moves with a velocity of 10 m",
+            "options": [
+              {
+                "prompt": "2.5 m",
+                "value": "A"
+              },
+              {
+                "prompt": "4 m/s",
+                "value": "B"
+              },
+              {
+                "prompt": "5 m/s",
+                "value": "C"
+              },
+              {
+                "prompt": "10 m",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q424",
+              "correct_answer": "D",
+              "explanation": "Given, m1 = 10g, m2 = 20g u1 = 10 m",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q425",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ंद्ब् दf स्aे 'स्' ंदल्हमे दह प्ar् ुrदल्ह् frदस् a पग्ुप्ू 'प्१' aह् afूी rांदल्ह् rग्ेो ूद a पग्ुप्ू 'प्२'. इग्ह् ूप ग्स्ज्ल्त्ो. 'स्' द्रव्यमान का एक पिंड सख्त जमीन पर 'प्१' ऊंचाई तक उछालता है और जमीन पर गिरने के बाद फिर 'प्२' ऊंचाई तक उछलता है। इसकी आवेग की गणना करें।",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q425",
+              "correct_answer": "A",
+              "explanation": "u = 0 v2 = u2+2gh 2 1 1 v 0 2gh = + 1 1 v 2gh = Similarly 2 2 v 2gh = Impulse of the force = Change in momentum (of ball due to impact) Impulse = m(v1–v2) = m{(v1–(–v2))} = { } 1 2 m 2gh 2gh + = ( ) 1 2 2gm h h + in the vertically upward direction.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q426",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंप्ग्म्प् aस्दहु ूप fदत्त्दैग्हु ग्े a (arा) म्दहेीन्aूग्न fदrमे(े)? निम्नलिखित में से कौन सा अपरिवर्तनीय बल",
+            "options": [
+              {
+                "prompt": "Only",
+                "value": "A"
+              },
+              {
+                "prompt": "Only",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "Only",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q426",
+              "correct_answer": "B",
+              "explanation": "Conservative Force :- • Workdone due to conservative force in a loop is always zero. • Workdone due to conservative force only depend on the initial and final point and it does not depend on the path taken. • Example Gravity Force, Spring Force, Electrostatic, Magnetic Force.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q427",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A त्aंदल्rी ूप्rदैे ंrग्म्व्े ूद aहदूप्ी त्aंदल्rी न्ीूग्म्aत्त्ब् aंदन प्ग्स् ंब् ४स्, ेद ूप्aूर् ीम्प् ंrग्म्व् र्rीम्पे प्ग्स् aू a ेजा् दf ४ स्े–१. ेंप्aू ज्rदज्दrूग्दह दf प्ग्े ाहीुब् ैदल्त्् प ां aंत ूद ेaन ग्f प ूप्rदैे ूप ंrग्म्व्े, ेद ूप्aूर् ीम्प् दf ूपस् रल्ेू र्rीम्पे प्ग्स्? (ु ृ १०स्े–२) एक श्रमिक अपने ऊपर ऊर्ध्वाधर ४ स् पर उपस्थित एक दूसरे श्रमिक की ओर ईंटें इस प्रकार उछालता है, कि प्रत्येक ईंट उसके पास ४ स्े–१ की गति से पहुँचती है। यदि वह ईंटे इस प्रकार फेंके कि प्रत्येक ईंट उसके पास एक के बाद एक तुरंत पहुंचे, तो वह अपनी ऊर्जा के किस अनुपात को बचाने में सक्षम हो पाएगा?( ु ृ १० स्े–२)",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q427",
+              "correct_answer": "A",
+              "explanation": "Given, h = 4m, v = 4m",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q428",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ूैद - ्ग्सहेग्दहaत् म्दहेीन्aूग्न ज्दूाहूग्aत् ग्े ुग्नह ंब्, र्न्न्(े, ब्) ृर् े२र्–ेब् + ब्२ (ग्ह रदल्ते) ेंप्aू ग्े ूप ैदrव् ्दहा ग्ह ूaव्ग्हु a ज्arूग्म्त ग्ह ूप्ग्े fगत्् frदस् (२, १) ूद (३, २)? एक द्वि-आयामी अपरिवर्तनीय विभव को निम्न रूप से दर्शाया जाता है। न्न् र्(े, ब्) ृर् े२ –र् े२ –र् ेब् + ब्२ (जूल में) इस क्षेत्र में एक कण को (२, १) से (३, २) तक ले जाने में क्या कार्य किया जाएगा?",
+            "options": [
+              {
+                "prompt": "2 J",
+                "value": "A"
+              },
+              {
+                "prompt": "3 J",
+                "value": "B"
+              },
+              {
+                "prompt": "4 J",
+                "value": "C"
+              },
+              {
+                "prompt": "5 J",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q428",
+              "correct_answer": "C",
+              "explanation": "Given, Conservative potential V(x, y) = x2–xy+y2 ... (i) For the point (2, 1) and (3, 2)- Work done, W = ∆V = Change in Potential Energy W = V1–V2 From the equation 1st, For point (2, 1) in equation (i) we get V(2, 1) = 4–2+1 = 3 For point (3, 2) V(3, 2) = 9–6+4 = 7 Work done, W = V(3, 2) – V(3, 1) = 7–3 W = 4 Joule",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q429",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ंद्ब् दf स्aे २ व्ु ग्े स्दन्ग्हु aत्दहु a ज्aूप्, ेल्म्प् ूप्aू ग्ूे ज्देग्ूग्दह नम्ूदrर् ोज्rोा् aे a fल्हम्ूग्दह दf ूग्स ग्े ुग्नह ंब्, ɵ ( ) \u0003 ɵ ɵ २ ४ ३ r ृ ३ू ग् + ू र- ू प् ेंप्ीा 'r' ग्े ग्ह सूrो aह् 'ू; ग्े ग्ह ोम्दह्े. इग्ह् ूप ैदrव् ्दहा दह ूप ंद्ब् ्ल्rग्हु ू ृ ० ू ृ १ ोम्. २ व्ु द्रव्यमान का एक पिंड एक पथ पर इस तरह आगे बढ़ रहा है, कि उसकी स्थिति सदिश समय का फलन नीचे दिए गए समीकरण के रूप में व्यक्त किया गया है। ( ) ˆ ˆ ˆ \u0003 २ ४ ३ r ृ ३ू ग् + ू र- ू प् जहां 'r' मीटर में और 'ू' सेकंड में है। पिंड पर ू ृ ० से ू ृ १ ोम् के दौरान हुए कार्य की गणना करें।",
+            "options": [
+              {
+                "prompt": "41 J",
+                "value": "A"
+              },
+              {
+                "prompt": "52 J",
+                "value": "B"
+              },
+              {
+                "prompt": "61 J",
+                "value": "C"
+              },
+              {
+                "prompt": "72 J",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q429",
+              "correct_answer": "C",
+              "explanation": "Given Vector ( ) 2 4 2 ˆ ˆ r 3t i t j – t h = + \u0003 differentiating both side we get ⇒ 3 2 dr ˆ ˆ 6ti 4t j– 3t h dt = + 3 2 dr ˆ ˆ 6ti 4t j– 3t h dt = + differentiating again, acceleration (a) = 2 2 2 2 d r ˆ ˆ 6i 12t j – 6t h dt = + From t = 0 to t = 1 1 1 0 0 W F dr ma dr = ⋅ = ⋅ ∫ ∫ \u0004\u0004\u0003 \u0003 \u0003 = ( ) 1 5 3 0 2 36t 48t 18t × + + ∫ = ( ) 1 5 3 0 2 36t 48t 18t + + ∫ = 1 2 6 4 0 9 2 18t 18t t 2   ⋅ + +     = 61 2 2 × = 61 Joule",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q430",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ५० ु ंल्त्तू ग्े fग्rा् ूप्rदल्ुप् a ेूaम्व् दf fग्ंrा ंदar् ेपाूे १० म्स् ूप्ग्म्व्. ऊप नत्दम्ग्ूब् दf ूप ंल्त्तू aू ूप ज्दग्हू दf aज्ज्rदaम्प्ग्हु ूप ेूaम्व् ग्े ५०० स्े–१. ेंप्aू ैग्त्त् ां ग्ूे नत्दम्ग्ूब् ग्ह स्े–१ aू ूपर् ोग्ू ज्दग्हू fदrस् ूप ेूaम्व् ग्f ूप aन्ीaुा rोग्ेूaहम दffीा् ंब् ूप ेूaम्व् ूद ूप ंल्त्तू ४ × १०४र्‍ एक ५० ु की गोली १० म्स् मोटे फाइबर बोर्ड शीट्स से बने स्टैक पर दागी जाती है। स्टैक के बिंदु तक पहुंचने के समय गोली का वेग ५०० स्े–१ था। स्टैक से बाहर निकलने गोली का वेग स्े–१ में क्या होगा, यदि गोली के घुसते समय स्टैक का औसत प्रतिरोध ४ × १०४र्‍ है।",
+            "options": [
+              {
+                "prompt": "200",
+                "value": "A"
+              },
+              {
+                "prompt": "300",
+                "value": "B"
+              },
+              {
+                "prompt": "400",
+                "value": "C"
+              },
+              {
+                "prompt": "500",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q430",
+              "correct_answer": "B",
+              "explanation": "Given, m = 50g, S= 10 cm = 10×10–2 m m = 50×10–3 kg, V2 = 500 m",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q431",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ंaत्त् ्ग्rाम्ूत्ब् ेूrग्वे aहदूप्ी ंaत्त् aू rोू aह् ग्े ग्ूोत्f rा्ल्म् ूद rोू ंब् ूप ग्स्ज्aम्ू. घ्f ूैद- ूप्ग्r् दf ग्ूे ग्हग्ूग्aत् व्ग्हाूग्म् ाहीुब् ग्े त्देू ्ल ूद म्दत्त्ग्ेग्दह, fग्ह् ूप म्दfिग्म्गहू दf rोूग्ूल्ूग्दह. एक गेंद सीधे विराम अवस्था की दूसरी गेंद से टकराती है और संघात के बाद विराम अवस्था में आ जाती है। यदि टकराव के कारण इसकी दो तिहाई प्रारंभिक गतिज ऊर्जा लुप्त हो जाता है, तो पुनर्स्थापन गुणांक गुणांक की गणना करें।",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q431",
+              "correct_answer": "A",
+              "explanation": "Using law of conservation of momentum m1u1+m2×0 = m2×0 = m2×0+m2V2 m1u1 = m2V2 ... (i) also coefficient of restitution of e = 2 1 2 1 1 2 1 2 V – V V M u – u u M = = ... (ii) DSSSB PGT 100 YCT Loss of KE = 2 2 1 1 2 2 1 1 m u – m V 2 2 Given that loss of K.E is equal to 2 rd 3 of initial K.E 2 2 2 1 1 1 1 2 2 2 1 1 1 m u m u – m V 3 2 2 2 × = 2 2 2 2 2 1 1 1 1 1 1 1 m V m u – m u 2 2 3 = 2 2 2 2 1 1 1 1 m V m u 2 6 = Now from equation (ii) m1 = 2 2 1 V m u × 2 2 2 2 2 2 1 1 V 1 1 m V m u 2 6 u   = × × ×     2 1 V 1 e u 3 = =",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q432",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ंदस्ंर् ोज्त्दे ग्ह स्ग््-aग्r. ेंप्aू ैग्त्त् ां ूप ज्aूप् ेम्rग्ां् ंर्ब् ीम्प् ेज्त्ग्हूी? एक बम का मध्य हवा में विस्फोट होता। प्रत्येक छोटे टुकड़े का वर्णित पथ क्या होगा?",
+            "options": [
+              {
+                "prompt": "Straight line",
+                "value": "A"
+              },
+              {
+                "prompt": "Rectangular hyperbola",
+                "value": "B"
+              },
+              {
+                "prompt": "Ellipse",
+                "value": "C"
+              },
+              {
+                "prompt": "Parabola",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q432",
+              "correct_answer": "D",
+              "explanation": "When a bomb travelling in a parabolic path under the effect of gravity explodes in mid air, the centre of mass of the fragment will move along the original parabolic path.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q433",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ल्हग्fदrस् ैग्rा ६० म्स्. त्दहु ग्े ांहू ग्हूद ूप ेप्aज दf a ूrग्aहुत Aँण्, ेल्म्प् ूप्aू ेग्े ँण्, ण्A, Aँ arा ग्ह ूप raूग्द ४ : ५ : ६. ऊप्rाा ज्arूग्म्ते दf स्aेोर् े, ब्,र् ै (ग्ह ुraस्े) arा ज्त्aम् aू A, ँ, ण् aह् ग्ू ग्े fदल्ह् ूप्aू ूप महूrा दf ुraन्ग्ूब् rास्aग्हे ल्हम्प्aहुा् ऊपह,र् े : ब् :र् ै ग्े ल्aित् ूद: ६० म्स् लंबा एकसमान तार त्रिभुज Aँण् आकार में इस तरह झुका है, कि भुजाएं ँण्, ण्A, Aँ अनुपात ४ : ५ : ६ में हैं।र् े, ब्,र् ै द्रव्यमान (ग्राम में) के तीन कण A,ँ,ण् पर रखे जाते हैं और यह पाया जाता है कि गुरूत्वाकर्षण का केंद्र अपरिवर्तित बनी हुई है। तोर् े: ब्: र् ै किसके बराबर होंगे?",
+            "options": [
+              {
+                "prompt": "3 : 2 : 1",
+                "value": "A"
+              },
+              {
+                "prompt": "6 : 5 : 4",
+                "value": "B"
+              },
+              {
+                "prompt": "11 : 10 : 9",
+                "value": "C"
+              },
+              {
+                "prompt": "9 : 8 : 7",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q433",
+              "correct_answer": "C",
+              "explanation": "Correct answer is Option (C). Verified from official answer key.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q434",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इग्ह् ूप स्दसहू दf ग्हीूग्a दf aह aहहल्त्ar म्ब्त्ग्ह्ी दf स्aे 'स्' aह् प्aन्ग्हु ग्हही aह् दल्ूी ra्ग्ग् 'r१' aह् 'r२' rोजम्ूग्नत्ब् aंदल्ू ूप र्aेग्े दf ूप म्ब्त्ग्ह्ी. उस एनुलर सिलेंडर के जड़त्व आघूर्ण की गणना करें जिसका द्रव्यामन 'स्' है और सिलेंडर के अक्ष से उसकी आंतरिक त्रिज्याएं क्रमश: 'r१' और 'r२' है।",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q434",
+              "correct_answer": "B",
+              "explanation": "Mass per unit area is given by σ = 2 2 2 2 1 m kg r – r m π π Moment of inertia of angular cylinder given by I = I1–I2 ⇒ I = 2 2 2 2 2 2 1 1 2 2 2 2 2 1 2 1 1 m 1 m r r – r r 2 2 r – r r – r × ×π × × ×π × π π π π ⇒ I = 4 4 2 1 2 2 2 1 1 m r – r 2 r – r          ⇒ I = ( ) ( )( ) 2 2 2 2 2 1 2 1 2 2 2 1 m r – r r r 2 r – r   × +   ⇒ I = ( ) 2 2 1 2 m r r 2 +",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q435",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ूैद ्ग्सहेग्दहaत् म्द-दr्ग्हaूा ेब्ेूास् ग्े ेद म्प्दोह ूप्aू ूपर् े-र्aेग्े ग्े प्दrगर््ैदहूaत् aह् ब्-र्aेग्े ज्दग्हूे न्ीूग्म्aत्त्ब् ्दैहैar्. A ज्arूग्म्त दf स्aे १० ु ग्े rातर््ीो् ूद प्aन a frाा faत्त् frदस् ूप ज्दग्हू (४, ०) (ूप fग्ुल्rा arा ग्ह सूrो). घ्ूे ूदrqल aू aहब् ूग्स 'ू' aंदल्ू ूप दrग्ुग्ह दf म्द-दr्ग्हaूो ग्े: एक दो आयामी निर्देशांक पद्धति इस तरह चुनी गई है किर् े-अक्ष क्षैतिज और ब् -अक्ष बिंदु लंबवत नीचे है। १० ु द्रव्यमान ाक एक पिंड बिंदु (४, ०) (आंकड़े मीटर में है।) से मुक्त रूप से गिरने के लिए छोड़ा जाता है। निर्देशांक के मूल से किसी भी 'ू' समय इसका आघूर्ण कितना होगा?",
+            "options": [
+              {
+                "prompt": "0.4 ɵk Nm",
+                "value": "A"
+              },
+              {
+                "prompt": "–0.4 ɵk Nm",
+                "value": "B"
+              },
+              {
+                "prompt": "Not independent of t",
+                "value": "C"
+              },
+              {
+                "prompt": "Nil/kegâÚ veneR",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q435",
+              "correct_answer": "A",
+              "explanation": "Torque at any time (t) be given by Torque, τ = r F × \u0003 \u0003 DSSSB PGT 101 YCT Thus, ˆ F –10gj = \u0003 , acting in the downward direction and position vector of the particle r \u0003 ,when it is in free fall at time t, = 2 1 ˆ ˆ 4i – gt j 2       = 2 ˆ ˆ ˆ i j k 0 –10g 0 1 4 – gt 0 2 = ( ) ( ) ( ) ˆ ˆ ˆ i 0 – j 0 k 0 40g + + = ˆ 40gk = ˆ 400k = 400 1000 = ˆ 0.4k Nm Thus, torque at any time 't' about the origin of the co- ordinates is .4 N-m in the Z-direction.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q436",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इदr ैप्ग्म्प् aस्दहु ूप fदत्त्दैग्हु ग्े ूप एघ् ल्हग्ू र्‍ेस्–२? निम्नलिखित में से कौन सा र्‍ेस्–२ एघ् इकाई है?",
+            "options": [
+              {
+                "prompt": "Surface tension",
+                "value": "A"
+              },
+              {
+                "prompt": "Coefficient",
+                "value": "B"
+              },
+              {
+                "prompt": "Viscous drag",
+                "value": "C"
+              },
+              {
+                "prompt": "Tensile stress",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q436",
+              "correct_answer": "B",
+              "explanation": "SI Unit = [ ][ ] [ ] –2 2 2 N s MLT T m L ⋅= = [ML–1T–1] = Coefficient of viscosity Hence, SI unit of coefficient of viscosity.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q437",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्ू ूप ्ग्ffीाहूग्aत् ल्aिूग्दह स्गर््े + वर््े ृ ०, ैप्ीा ूप ेब्स्ंदत्े प्aन ूपग्r ल्ेल्aत् सर््ीहग्हुे, ूप ्ग्सहेग्दह दf व् स् ग्े : अवकलन समीकरण स्गर््े + वर््े ृ ०, जहां प्रतीकों का स्वाभाविक अर्थ है। व् , स् का आयाम क्या होगा?",
+            "options": [
+              {
+                "prompt": "LT–2",
+                "value": "A"
+              },
+              {
+                "prompt": "L–1T",
+                "value": "B"
+              },
+              {
+                "prompt": "T2",
+                "value": "C"
+              },
+              {
+                "prompt": "T–2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q437",
+              "correct_answer": "D",
+              "explanation": "Equation, ma + kx = 0 ⇒ k = – ma",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q438",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ख्ु स्२े–२A–२ ग्े ल्ग्न्aितहू ूद : ख्ु स्२ े–२ A–२ किसके बराबर होगा?",
+            "options": [
+              {
+                "prompt": "Henry",
+                "value": "A"
+              },
+              {
+                "prompt": "Farday",
+                "value": "B"
+              },
+              {
+                "prompt": "Ohm/Deesce",
+                "value": "C"
+              },
+              {
+                "prompt": "Watt",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q438",
+              "correct_answer": "A",
+              "explanation": "φ ∝ I φ = LI and e = IR e = di L dt Henry is SI unit of inductance, derived unit of electrical inductance. Reduced to base SI unit, L = 1H = kgm2A–2s–2",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q439",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ेंग्ूप् ूप दंराम्ूग्न दf स्ग्हग्स्गर््ैग्हु ज्ीेदहaत् ीrदr ग्ह सर््ीेल्rासहू दf ्ग्aसूी दf a ैग्rा ंब् a ेम्rौ ुaल्ुा दf तर््ीेू म्दल्हू ०.००१ म्स्, ूप सर््ीेल्rासहू ैaे ूaवह ूप्rग्म aह् ूप र्rी्ग्हुे ैीा ०.३१३ म्स्, ०.३१३ म्स् aह् ०.३१४ म्स्. ैप्aू ेप्दल्त्् ां rाम्दr् aे ूप aन्ीaुा? ०.००१ म्स् अल्पतम माप वाले एक स्क्रूगेज से एक तार के व्यास को मापने में व्यक्तिगत त्रुटि को कम करने के उद्देश्य से गणना की जाती है, माप तीन बार लिया गया और मापांक ०.३१३ म्स्, ०.३१३ म्स् और ०.३१४ म्स् थ। इसका औसत क्या होगा?",
+            "options": [
+              {
+                "prompt": "0.31333 cm",
+                "value": "A"
+              },
+              {
+                "prompt": "0.313333",
+                "value": "B"
+              },
+              {
+                "prompt": "0.3133",
+                "value": "C"
+              },
+              {
+                "prompt": "0.313",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q439",
+              "correct_answer": "D",
+              "explanation": "Average = 0.313 0.313 0.314 3 + + = 0.940 3 Average = 0.313 cm",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q440",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "१ शर्न्न् ोज्rोा् ग्ह प्झ्-प्r ग्े ल्aित् ूद: प्झ्-प्r में व्यक्त १ शन् किसके बराबर होगी?",
+            "options": [
+              {
+                "prompt": "2.984 × 10–20",
+                "value": "A"
+              },
+              {
+                "prompt": "2.984×10–10",
+                "value": "B"
+              },
+              {
+                "prompt": "5.967×10–20",
+                "value": "C"
+              },
+              {
+                "prompt": "5.967×10–10",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q440",
+              "correct_answer": "C",
+              "explanation": "1MeV = 5.967×10–20 Hp-hr",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q441",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप fदrस्ल्त्a ल्ो् fदr ूप सर््ीेल्rासहू दf भ्दल्हु'े श्द्ल्त्ल्े (ब्) दf ूप स्aूीग्aत् दf aर् ंीस् ंब् ूप सूप्द् दf fर्तेल्rा ग्े दूंaग्हा् ल्ेग्हु ूप fदrस्ल्त्a, ३ ३ स्ुत् ब् ृ ४ं् δ ेंप्ीा स् ृ ूप त्दa् aज्ज्त्ग् ूद ूपर् ंीस् ैप्दो न्aत्ल ग्े ेल्ज्ज्त्ग् त् ृ तहुूप् दf ूपर् ंीस्, सर््ीेल्rा् ंब् a सूrा ेम्aत प्aन्ग्हु ेस्aत्तेू ्ग्न्ग्ेग्दह, १ स्स् ं ृ ंर्rीूप् दf ूपर् ंीस् सर््ीेल्rा् ंब् a ेत्ग् म्aत्त्ग्ज्ीे प्aन्ग्हु न्न्ीहग्ी ण्दहेूaहू, ०.०१ म्स्. ् ृ ूप ज्ूप् दf ूपर् ंीस् सर््ीेल्rा् ंब् a ेम्rौ ुaल्ुा प्aन्ग्हु तर््ीेू म्दल्हू ल्aित् ूद ०.०१ स्स्. δ ृ ूप ज्rोग्दह दf ूपर् ंीस् सर््ीेल्rा् ैग्ूप् ूप पत्ज् दf a ूraनत्त्ग्हु स्ग्म्rदेम्दज, पर््ीन्ग्हु न्न्ीहग्ी म्दहेूaहू ल्aित् ूद ०.०१ स्स्. इग्ह् ूप र्स्aेग्स्ल्स् ज्देग्ंत ज्ीमहूaुा ीrदr fदr ूप सर््ीेल्rासहू, ैपह ग्ू ग्े ुग्नह ूप्aू ूप म्दrrोज्दह्ग्हु ्aूa arा त् ृ १स्, ं ृ २ म्स्, ् ृ ०.५ म्स् aह् δ ृ २ स्स् सूत्र ३ ३ स्ु ब् ृ ४ं् δ त् का प्रयोग करके फ्लेचर की विधि से बीम की सामग्री के यंग गुणांक (ब्) मापा जाता है। Dएएएँ झ्उऊ १०२ भ्ण्ऊ जहां स् ृ लोड बीम पर लागू लोड है जिसका मान प्रदान किया जाता है त् ृ १ स्स् अल्पतम माप वाले मीटर पैमाने द्वारा मापी गई बीम की लंबाई, ं ृ ०.०१ म्स् वर्मियर (वर्नियर) स्थिरांक वाले स्लाइड वैâलिपर से मापी गई बीम का चौड़ाई ् ृ अल्पतम माप ०.०१ स्स् के बराबर वाले स्क्रूगेज में कापी गई बीम की गहराई δ ृ बीम का अवनमन जो वर्नियर स्थिरांक ०.०१ स्स् के बराबर वाले ट्रेवेंलिंग माइक्रोस्कोप की मदद से मापा गया है। माप के लिए अधिकतम संभव प्रतिशत त्रुटि की गणना करें, जब यह दिया गया है कि संबंधित डेटा त् ृ १ स्, ं ृ २ म्स्, ् ृ ०.५, δ ृ २ स्स् हैं।",
+            "options": [
+              {
+                "prompt": "1.8%",
+                "value": "A"
+              },
+              {
+                "prompt": "1.9%",
+                "value": "B"
+              },
+              {
+                "prompt": "2.0%",
+                "value": "C"
+              },
+              {
+                "prompt": "2.1%",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q441",
+              "correct_answer": "B",
+              "explanation": "Given, 3 3 mg y 4bd S = ℓ , 1mm ∆= ℓ y m g 3 b 3 d S 100 100 y m g b d S ∆ ∆ ∆ ∆ ∆ ∆ ∆   × = + + + + + ×     ℓ ℓ y 3 4b 3 d S 100 100 y b d S ∆ ∆ ∆ ∆   × = + + + ×     ℓ ℓ = 3×1×10–3+ 0.01 3 0.01 0.01 2 5 2 × + + = 1.9%",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q442",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्ह ूप म्aो दf दहा-्ग्सहेग्दहaत् स्दूग्दह, ूप rात्aूग्दह ाूंौाह ूप नत्दम्ग्ूब् (न्) aह् ज्देग्ूग्दह र्(े) ग्े ुग्नह ंब्. ( ) न् ृ २ aर् ेर्म्दे -ेर्ग्हे , ेंप्ीा 'a' ग्े a म्दहेूaहू. इग्ह् ग्ूे aम्मत्ीaूग्दह एक-आयामी गति करी स्थिति में, वेग (न्) और स्थिति र्(े) के बीच संबंध ( ) २ aर् े म्देर् े -ेर्ग्हे के द्वारा दिया गया है। जहां 'a' एक स्थिरांक है। इसके त्वरण की गणना करें।",
+            "options": [
+              {
+                "prompt": "2axsin x",
+                "value": "A"
+              },
+              {
+                "prompt": "2axcos x",
+                "value": "B"
+              },
+              {
+                "prompt": "–2axsin x",
+                "value": "C"
+              },
+              {
+                "prompt": "–2axcos x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q442",
+              "correct_answer": "C",
+              "explanation": "Given, v = ( ) 2 a xcosx – sin x where, a = constant ( ) 2 v a xcosx – sin x 4 = Now, differentiating both side with respect to 't', we get- dv 1 dx dx dx 2v a –xsin x cosx – cosx dt 4 dt dt dt   ⋅ = +     dx v dt   =     ∵ ⇒ ( ) 1 dv a –xsin x 2 dt = ⇒ ( ) dv 2a –xsin x dt = Acceleration = dv –2axsin x dt =",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q443",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A train moving with a velocity 40 km",
+            "options": [
+              {
+                "prompt": "x = 2 km, t = 9 h 1m 30s",
+                "value": "A"
+              },
+              {
+                "prompt": "x = 2 km, t = 9 h 30s",
+                "value": "B"
+              },
+              {
+                "prompt": "x = 2 km, t = 9 h",
+                "value": "C"
+              },
+              {
+                "prompt": "x = 1 km, t = 9 h",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q443",
+              "correct_answer": "A",
+              "explanation": "Given, Train moving velocity = 40 km",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q444",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्arूग्म्त ग्े स्दन्ग्हु aत्दहु a ेूraग्ुप्ू त्ग्हा. घ्ू ेूarूे frदस् aह् स्दने ैग्ूप् a ल्हग्fदrस् aम्मत्ीaूग्दह 'a', fग्त्त् ग्f aूूaग्हे a नत् 'न्' aह् ूपह ूraनत्े ैग्ूप् ल्हग्fदrस् rाूar्aूग्दह 'ं' ूग्त्त् ग्ू aुaग्ह म्दसे ूद rोू. ऊप ूदूaत् ूग्स दf ूraनत् ग्े 'ू'. ूपह, कोई कण एक सीधी रेखा में गति कर रहा है। यह शून्य से शूरू करता है और एक समान त्वरण 'a' से गति करता हुआ 'न्' वेग प्राप्त करता है। और पुन: शून्य अवस्था में आने तक एक समान गतिरोध से 'ं' गति पर आता है। यदि कुल यात्रा का समय 'ू' है, तो:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q444",
+              "correct_answer": "B",
+              "explanation": "t1 = time taken to attain velocity with acceleration a. t2 = time taken to decelerate to rest with retardation b. DSSSB PGT 103 YCT From the Ist equation of motion, v = u+at u = 0 (at rest) ⇒ v = 0+at t1 = v a Again from Ist equation of motion, v = u+bt2 v = bt2 t2 = v b Total time of travel, t = t1+t2 = v v a b + ⇒ t 1 1 v a b = +",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q445",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इदr a ूैद ्ग्सहेग्दहaत् स्दूग्दह, ूपर् े aह् ब् म्दस्ज्दहाहू दf नत्दम्ग्ूगे दf ूप ज्arूग्म्त arा ुग्नह ंब् र््े ्ब् ृ ६πेग्ह२πू, ृ ३πम्दे२πू ्ू ्ू घ्ू ग्े aत्ेद ुग्नह ूप्aूर् े ृ ६, ब् ृ ० aू ू ृ ०. ऊप ल्aिूग्दह दf ूप ज्aूप् दf ूप ज्arूग्म्त ग्े: कण की दो दिशीय गति के लिएर् े और ब् घटकों को निम्न रूप में दर्शाया जाता है। र््े ्ब् ृ ६π ेग्ह२πू, ृ ३πम्दे२πू ्ू ्ू जहाँ ू ृ ० समय परर् े ृ ६, ब् ृ ० दिया हुआ है। तो कण के पथ का समीकरण होगा:",
+            "options": [
+              {
+                "prompt": "x2+4y2 = 9",
+                "value": "A"
+              },
+              {
+                "prompt": "x2+4",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q445",
+              "correct_answer": "C",
+              "explanation": "Given, dx 6 sin2 t dt = π π , dy 3 cos2 t dt = π π x = 6, y = 0 (at t = 0) Integrating both side, we get dx 6 sin 2 dt = π π + ∫ ∫ x = 6 – cos2 t c –3cos2 t c 2 π π + = π + π ...(i) x = 6, t = 0 Hence, 6 = –3×1+c ⇒ c = 9 x = –3 cos2πt+9 [From (i)] dy 3 cos2 t dt = π π Integrating both side we get dy 3 cos2 t dt = π π ∫ ∫ y = 3 sin2 t c 2 π ⋅ π + π ... (ii) y = 0 and t = 0 Hence, c = 0, y = 3sin 2 t 2 π ... (iii) Now, x = –3cosπt+9 x–9 = –3cos2πt on squaring the both side, (x–9)2 = 9cos2πt ... (i) on squaring the both side, 4y2 = 9sin22πt ... (ii) Adding equation (i) and (ii), we get (x–9)2+4y2 = 9cos2πt+9sin22πt (x–9)2+4y2 = 9",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q446",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊैद ंदaूे म्rदे a rग्न्ी ४०० स् ैग्. ऊप ेजा् दfर् ीम्प् ंदaू ग्ह ेूग्त्त् ैaूी ग्े २.५ स्े–१ aह् ूप ेजा् दf ूप ेूर्rीस् ग्े १.५ स्े–१. ध्हा ंदaू म्rदेो ूप rग्न्ी aत्दहु ूप ेप्दrूोू ज्aूप् aह् ूप ूग्स ूaवह ग्े ज् ोम्, ैपर््ीीे ूप दूप्ी म्rदेो ग्ह ेप्दrूोू ूग्स aह् ूप ूग्स ूaवह ग्े q ोम् ूपह (ज् – q) ग्े ल्aित् ूद: दो नावें एक ४०० स् चौड़ी नदी को पार करती हैं। शांत जल में प्रत्येक नाव की गति २.५ स्े–१ और धारा की गति १.५ स्े–१ है। एक नाव द्वारा सबसे छोटे रस्ते से नदी पार करने में लगा समय झ् ोम् है जबकि दूसरी नाव द्वारा अन्य छोटे रस्ते से नदी पार करने में लगा समय q ोम् है। (ज् – q) का मान होगा:",
+            "options": [
+              {
+                "prompt": "Zero",
+                "value": "A"
+              },
+              {
+                "prompt": "10",
+                "value": "B"
+              },
+              {
+                "prompt": "20",
+                "value": "C"
+              },
+              {
+                "prompt": "40",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q446",
+              "correct_answer": "A",
+              "explanation": "Zero Speed of each boat (u) = 2.5 m",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q447",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इदr ूप ेaस नत्दम्ग्ूब् दf ज्rदराम्ूग्दह a ज्rदराम्ूग्त प्aे ुदू ल्aित् raहुो fदr ूैद aहुते दf ज्rदराम्ूग्दह म्दrrोज्दह्ग्हु ूद ैप्ग्म्प् ुर्rीूोू पग्ुप्ू aूूaग्हा् arा १२ स् aह् २७ स्. ैप्aू ग्े ूप न्aत्ल दf raहुा? दो समान प्रक्षेप वेगों और समान प्रक्षेप कोणों द्वारा प्रक्षेपित किये जाने पर दो पिंडो द्वारा तय की जानेवाली अधिकतम ऊंचाई क्रमश: १२ स् और २७स् है, तो रेंज का मान क्या होगा?",
+            "options": [
+              {
+                "prompt": "36 m",
+                "value": "A"
+              },
+              {
+                "prompt": "72 m",
+                "value": "B"
+              },
+              {
+                "prompt": "54",
+                "value": "C"
+              },
+              {
+                "prompt": "48",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q447",
+              "correct_answer": "B",
+              "explanation": "Given, h1 = 12 m h2 = 27 m For the same velocity- height, h1 = 2 2 u sin 2g θ ... (i) h2 = ( ) 2 2 u sin 90 – 2g θ = 2 2 u cos 2g θ ... (ii) ⇒ h1.h2 = 2 2 2 2 u sin cos 4g θ⋅ θ [From (i) and (ii)] Hence, 16h1h2 = 2 2 u sin2 g   θ     Range, R2 = 16h1h2 R = 1 2 4 h h R = 4 12 27 × R = 4 324 R = 4×18 R = 72 m",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q448",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Aँण्D ग्े a qल्a्rग्त्aूीaत्. इदrमे rाज्rोाहूा् ग्ह स्aुहग्ूल् aह् ्ग्rाम्ूग्दह ंब् \u0004\u0004\u0004\u0003 \u0004\u0004\u0004\u0004\u0003 \u0004\u0004\u0004\u0004\u0003 \u0004\u0004\u0004\u0003 Aँ, AD, ँण्, Dण् aम्ूग्हु ेग्स्ल्त्ूaहादल्ेत्ब्. ऊप ्ग्rाम्ूग्दह दf ूप rोल्त्ूaहू fदrम ग्े: Aँण्D एक समचतुर्भुज है। इसके परिमाण और दिशा को क्रमश: , , , \u0004\u0004\u0004\u0003 \u0004\u0004\u0004\u0003 \u0004\u0004\u0004\u0003 \u0004\u0004\u0004\u0003 Aँ AD ँण् Dण् के रूप में प्रदर्शित किया गया है। परिणामी बल की दिशा होगी:",
+            "options": [
+              {
+                "prompt": "is along AC",
+                "value": "A"
+              },
+              {
+                "prompt": "is along BD",
+                "value": "B"
+              },
+              {
+                "prompt": "bisects AC",
+                "value": "C"
+              },
+              {
+                "prompt": "bisects BD",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q448",
+              "correct_answer": "D",
+              "explanation": "As AB,AD,BC,DC \u0004\u0004\u0004\u0003 \u0004\u0004\u0004\u0003 \u0004\u0004\u0004\u0003 \u0004\u0004\u0004\u0003 form a cyclic quadrilateral ABCD, such that - AB AD BC DC + + + \u0004\u0004\u0004\u0003 \u0004\u0004\u0004\u0003 \u0004\u0004\u0004\u0003 \u0004\u0004\u0004\u0003 = 0 and AB = –BA So, BA = BC + CD + DA Regulant Force = F2 = BA+BC+CD+DA Fr = BA+BA Fr = 2BA Similarly Fr = 2BD Hence the direction of the resultant force is bisecting the BD. DSSSB PGT 105 YCT",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q449",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्ग्म्ूल्rा fraस दf rाम्ूaहुल्त्ar ेप्aज ौग्ुप्ग्हु ५ व्ु ग्े प्ल्हु frदस् a ैaत्त् ंब् a म्दr् ५ म्स् त्दहु, faेूाहा् ूद ूैद rग्हुे ३ म्स् aज्arू दह ूप ूदज् ा्ुा दf ूप fraस. इग्ह् ूप ूाहेग्दह ग्ह ूप म्दr्. (ु ृ १० स्े–२ ५ व्ु वाला एक आयताकार पिक्चर प्रâेम ५ म्स् लंबे तार से लटका हुआ है। इसके सामने के हिस्से में ३ म्स् की दूरी पर दो छल्ले इसके ऊपरी सिरे पर लगे हुए हैं। तार पर आरोपित आघूर्ण बल ज्ञात करें। (ु ृ १० स्े–२)",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q449",
+              "correct_answer": "C",
+              "explanation": "Correct answer is Option (C). Verified from official answer key.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q450",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ंद्ब् दf स्aे 'स्' प्aे ांाह faत्त्ग्हु frदस् rोू ल्ह्ी ूप aम्ूग्दह दf ुraन्ग्ूब् fदr ू ोम्दह्े. इग्ह् ूप न्ीूग्म्aत् fदrम rल्ग्rिा् ूद ां aज्ज्त्ग् ग्ह दr्ी ूद ंrग्हु ग्ू ूद rोू ैग्ूप्ग्ह aहदूप्ी ्ग्ेूaहम 'a'. ('स्' ग्े ग्ह व्ु aह् 'a' ग्े ग्ह सूrो) 'स्' द्रव्यमान का कोई पिंड शून्य वेग से शुरू कर गुरुत्व के अंतर्गत ू समय के लिए गिरता है। अगली 'a' दूरी में इसे पुन: शून्य स्थिति में लाने के लिए आवश्यक लम्बवत बल होगा ('स्' किलोग्राम में और 'a' का मान मीटर में है):",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q450",
+              "correct_answer": "D",
+              "explanation": "Correct answer is Option (D). Verified from official answer key.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q451",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A त्दa् ें ग्े raग्ो् ंब् a rदज, frदस् rोू ूद rोू, ूप्rदल्ुप् a पग्ुप्ू १०स्. ऊप तर््ीेू ूग्स ग्ह ैप्ग्म्प् ूप aेमहू म्aह ां स्a ग्े ५ २ ोम्. घ्ू ग्े व्हदैह ूप्aू ूप ुर्rीूोू ूाहेग्दह ैप्ग्म्प् ूप rदज ेafात्ब् र् ंीr ग्े हें. 'ह' ग्े ल्aित् ूद: ें भार को १० स् की ऊंचाई तक एक रस्सी द्वारा शून्य स्थिति से उठाकर शून्य स्थिति में ले जाया जाता है। इसके आरोहण में लगा न्यूनतम समय ५ ोम् २ है। इस अवस्था में रस्सी द्वारा सह सकने वाला तनाव हें होता है। 'ह' का मान होगा:",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "5",
+                "value": "C"
+              },
+              {
+                "prompt": "10",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q451",
+              "correct_answer": "C",
+              "explanation": "The time of ascent formula is given as- t = ( ) 2nh n –1 g ( ) 5 2n 10 2 n –1 10 × = × 5 2n 2 n –1 = n –1 4 n 5 = ⇒ 1 n 5 0.2 = =",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q452",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A bomb explodes in air into three parts. Two of them having masses 100 g. each move at an angle 120º with each other having equal velocities of 100 m",
+            "options": [
+              {
+                "prompt": "200 g",
+                "value": "A"
+              },
+              {
+                "prompt": "400 g",
+                "value": "B"
+              },
+              {
+                "prompt": "250 g",
+                "value": "C"
+              },
+              {
+                "prompt": "500 g",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q452",
+              "correct_answer": "B",
+              "explanation": "Total momentum before explosion is equal to total momentum after the explosion. Net momentum of the parts is zero. Vertical component of momentum of 1st and 2nd part cancels out and horizontal components are m1v1cos120º + m2v2cos120º Since, Net momentum = 0 ⇒ m1v1cos120º+m2v2cos120º+m3v3 = 0 ⇒ 1 1 100 100º – 100 100 – 25m 2 2     × + × × +         ⇒ 1 –2 100 100 25m 0 2 × × × + = = 25 m = 100×100 m = 400g",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q453",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ेूrग्हु ध्झ्ैंR ग्े ेल्म्प् ूप्aू ध्झ् ृ झ्ैं ृ ैंR. श्aेो ल्aित् ूद १० ु arा faेूाहा् aू झ्, ैं, R aह् ूपो arा स्a ूद rदूaूा दह a ेस्ददूप् प्दrगर््ैदहूaत् ूaंत. घ्f ूप ेूrग्हु aत्ैaब्े rास्aग्हे ेूraग्ुप्ू aह् ूaल्ू, ूपस् ूप ूाहेग्दह ग्ह ूप ज्दrूग्दहे ध्झ्, झ्ैं, झ्R arा aे: एक लड़ी ध्झ्ैंR में ध्झ् ृ झ्ैं ृ ैंR हैं। झ्,ैं और R प्रत्येक से १० ु के भार लटके हुए हैं जिससे ये एक क्षैतिज मेज से लटकने पर समावस्था में रहते हैं। यदि लड़ी सदैव तनी हुयी और सीधी रहती है तो ध्झ्, झ्ैं, झ्R के टर्वेनो और पोर्टेनो के अनुपात क्रमष: होंगे–",
+            "options": [
+              {
+                "prompt": "1 : 2 : 3",
+                "value": "A"
+              },
+              {
+                "prompt": "3 : 2 : 1",
+                "value": "B"
+              },
+              {
+                "prompt": "6 : 5 : 3",
+                "value": "C"
+              },
+              {
+                "prompt": "3 : 5 : 6",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q453",
+              "correct_answer": "C",
+              "explanation": "Correct answer is Option (C). Verified from official answer key.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q454",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which among the following is",
+            "options": [
+              {
+                "prompt": "Only",
+                "value": "A"
+              },
+              {
+                "prompt": "Only",
+                "value": "B"
+              },
+              {
+                "prompt": "Only",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q454",
+              "correct_answer": "D",
+              "explanation": "(p), (q), (r) and (s) Conservative force :- Workdone by a conservative force is independent of the path taken by the particle. Thus change in potential energy between two points is also independent of the path. Workdone to move an object from one point to another point is equal to the negative change in potential energy, by which force is related to negative gradient of potential energy. ∆U = –W = f i – F.dr ∫ \u0003 \u0004\u0004\u0003 du = –Fxdx x du –F dx = Fx = du – dx Since, workdone by a force in moving a particle from point A to B is an integral of force with displacement, which is given by, f i dW – F.dr = ∫ \u0003 \u0004\u0004\u0003 here, initial point = final point W = 0 Total mechanical energy is the sum of kinetic and potential energy, which can neither be created nor be destroyed but can be transferred from one form to another form. Thus it depends upon time and a particle in motion, gain in kinetic energy is equal to loss in potential energy, which is based on the law of conservation of energy. Thus, it is also conservative.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q455",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्arूग्म्त दf स्aे १० ु स्दने ल्ह्ी ूप ग्हfत्लहम दf a fदrम fगत््, ˆ ˆ \u0003 इ ृ २(ेग्हू ग् + म्देू र) ग्ह हौूदहे. घ्f ूप ज्arूग्म्त ग्े ग्हग्ूग्aत्त्ब् aू rोू aू ूप दrग्ुग्ह दf म्द-दr्ग्हaूो, ूपह ूप ग्हेूaहूaहादल्े ज्दैी ग्ह ैaूूे aज्ज्त्ग् ूद ूप ज्arूग्म्त ग्े : Dएएएँ झ्उऊ १०७ भ्ण्ऊ १० ग्राम द्रव्यमान का एक कण, ˆ ˆ \u0003 इ ृ २(ेग्हू ग् + म्देू र) न्यूटन वाले ़फोर्स फील्ड के अंतर्गत गति कर रहा है। यदि कोई कण चतुर्थांश से उत्सर्जित होना चाहता है, तो इस स्थिति में तत्काल उसपर लगने वाली शक्ति का मान वाट में कितना होगा?",
+            "options": [
+              {
+                "prompt": "100 sin t",
+                "value": "A"
+              },
+              {
+                "prompt": "400 sin t",
+                "value": "B"
+              },
+              {
+                "prompt": "200 cos t",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q455",
+              "correct_answer": "B",
+              "explanation": "Given, m = 10g = 10 0.01kg 1000 = Force Field, ( ) ˆ ˆ F 2 sin t i costj = + \u0003 F ma = \u0003 \u0003 F a m = \u0003 \u0003 = ( ) 2 ˆ ˆ sin ti costj 0.01 + dv a dt = \u0003 ⇒ dv = adt \u0003 Integrating both side, we get dv a dt = ⋅ ∫ ∫ \u0003 v = ( ) 2 ˆ ˆ sin ti cost j 0.01 + ∫ dt = 200 ( ) ˆ ˆ sin ti costj + ∫ dt V = 200( ) ˆ ˆ –costi sin tj + V = 200( ) ˆ ˆ –costi sin tj c + + at the origin, V = 0, t = 0 we get C = 200 ⇒ V = 200( ) ˆ ˆ costi sin tj 200 − + + Power, P = Force × Velocity P = F V ⋅ \u0003 \u0004\u0003 = ( ) { } ˆ ˆ ˆ ˆ 2 sin ti costj 200 costi sin tj 1 + ⋅ − + + P = 400 sint",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q456",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A म्दहेीन्aूग्न fदrम fगत्् ग्े ुग्नह ंब्, ( ) ( ) ( ) ɵ \u0004\u0003 \u0003 ɵ इ ृर् े + २ब् + ४ब् ग् + र्२े - ३ब् -र् ै र+ र्४े - ब् + र्२ै व् दूंaग्ह ूप ेम्aत्ar ज्दूाहूग्aत् fल्हम्ूग्दह frदस् ैप्ग्म्प् ग्ू प्aे ांाह ्ीग्न्. एक कं़जर्वेटिव ़फोर्स फील्ड को ( ) ( ) ( ) ˆ ˆ ˆ \u0003 इ ृर् े + २ब् + र्४ै ग् + र्२े – ३ब् –र् ै र+ र्४े - ब् + र्२ै व् के रूप में प्रदर्शित किया गया है। इसके द्वारा अदिश विभव को किस प्रकार ज्ञात किया जा सकता है?",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q456",
+              "correct_answer": "A",
+              "explanation": "Given, Conservation force field ( ) ( ) ( ) ˆ ˆ ˆ F x 2y 4 i 2x – 3y – z j 4x – y 2z k = + + + + + \u0003 The Gradient of the Scalar Potential φ is ˆ ˆ ˆ i j k x y z ∂φ ∂φ ∂φ ∇φ = + + ∂ ∂ ∂ A = ( ) ( ) ( ) ˆ ˆ ˆ x 2y 4z i 2x – 3y – z j 4x – y 2z k + + + + + As, A = ∇φ x 2y 4z x ∂φ = + + ∂ , 2x – 3y – z y ∂φ = ∂ 4x – y 2z z ∂φ = + ∂ ............ (1) The value of φ can be found by integrating the above equations. ∂φ = (x+2y+4z)dx φ = ( ) d x 2y 4z dx xdx 2ydx 4zdx φ = + + = + + ∫ ∫ ∫ ∫ ∫ φ = ( ) 2 x 2yx 4zx C y,z 2 + + + ........... (2) on differentiating the above equation w.r.t to y, 2x – 3y – z y ∂φ = ∂ ........... (3) On comparing the two above equation, C (y, z)) = –3y – z C (y,z)) = ( ) y,z y ∂ ∂ C (y, z) = cydy ∫ C (y, z) = –3ydy – zdy ∫ ∫ C(y, z) = 2 3y – – zy c 2 + .......... (4) Thus, equation for the scalar potential is – φ = ( ) 2 2 x 3y 2yx 4zx – – yz c z 2 2 φ = + + + .........(5) On differentiating the above equation w.r.t to z, ( ) 0 0 4x – 0 – y c' z z ∂φ = + + + ∂ ( ) 4x – y c' z z ∂φ = + ∂ .........(6) Comparing it with 4x – y 2z z ∂φ = + ∂ [from (1)] c'(z) = 2z c(z) = 2zdz ∫ c(z) = 2z 2 c 2 + c(z) = z2+c here c is final constant of integration, DSSSB PGT 108 YCT 0 0 4x – 0 z ∂φ = + + ∂ ( ) 4x – y c' z z ∂φ = + ∂ [from 6] Comparing it with 4x – y 2z z ∂φ = + ∂ ⇒ c'(z) = 2z, c(z) = 2zdz ∫ = z2 .................. (7) Now, putting c(z) in equation (5), we get – 2 2 2 x 3y = + 2xy – yz + 4zx – + z 2 2 φ 2 2 2 x 3y = – + – z – 2xy + yz – 4zx 2 2",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q457",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्arूग्म्त ग्े ल्ह्ी ूप ग्हfत्लहम दf a महूraत् ज्दूाहूग्aत्, ुग्नह ंब् द -२r R द द R न्न् ृ ल् ा r , ैप्ीा ूप ेब्स्ंदत्े प्aन ल्ेल्aत् सर््ीहग्हुे. इग्ह् ूप ल्ग्त्ग्ंिrग्ल्स् ज्देग्ूग्दह दf ूप ज्arूग्म्त. केन्द्रीय विभव के अंतर्गत किसी कण को -२r ० Rद ० R न्न् ृ ल् ा r के रूप में प्रदर्शित किया गया है। जहाँ पर प्रतीकों के अर्थ उनके सामान्य अर्थ हैं। कण की समावस्था होगी:",
+            "options": [
+              {
+                "prompt": "R0",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "o",
+                "value": "C"
+              },
+              {
+                "prompt": "o",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q457",
+              "correct_answer": "C",
+              "explanation": "Given central potential V = –2r",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q458",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ंल्त्तू दf स्aे ५०ु स्दन्ग्हु ैग्ूप् a नत्दम्ग्ूब् 'न्' ेूrग्व a ंत्दम्व् दf स्aे २व्ु. ऊप ंत्दम्व् ग्े frाा ूद स्दन ग्ह ूप ्ग्rाम्ूग्दह दf ूप ंत्दम्व्. घ्ह ूप ज्rदमे ूप्ीा ग्े a त्दे दf व्ग्हाूग्म् ाहीुब् दf ४१००व्. fग्ह् ल् ग्ह सूrो ज्ी ोम्. ५० ु की एक गोली न् वेग से गति करती हुयी २ व्ु के एक ब्लाक से टकराती है। ब्लॉक,ब्लॉक कीदिशा में गति करने के लिए मुक्त है। इस प्रक्रिया के दौरान ४१०० व् की गतिज ऊर्जा का ह्रास होता है। ल् का मान स्",
+            "options": [
+              {
+                "prompt": "205",
+                "value": "A"
+              },
+              {
+                "prompt": "410",
+                "value": "B"
+              },
+              {
+                "prompt": "410",
+                "value": "C"
+              },
+              {
+                "prompt": "820",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q458",
+              "correct_answer": "B",
+              "explanation": "Initially the block is at rest i.e. u = 0 MV+0 = (M+M)V ⇒ V = MV m M + ... (i) ∆K.E = Ki – Kf = ( ) 2 2 1 1 MV – m M V 2 2 + ⇒ ∆KE = 2 1 Mm V 2 M m      +  [From (i)] ⇒ 4100 = 2 1 0.05 2 V 2 2.05 ×   ×    ⇒ 4100 205 5 × ⇒ V2 = 41×41×102 ⇒ V = 2 41 41 10 × × V = 410 m",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q459",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊैद ंaत्त्े दf ल्aित् स्aे arा स्दन्ग्हु ग्ह ूप ेaस ्ग्rाम्ूग्दह aत्दहु ूप ेaस ेूraग्ुप्ू ूग्स ैग्ूप् नत्दम्ग्ूगे दf स्aुहग्ूल् ग्ह ूप raूग्द २:१. ऊपब् म्दत्त्ग् aह् ग्ह ूप ज्rदमे त्दोर् ेज्ञ् दf ूपग्r व्ग्हाूग्म् ाहीुब्. घ्f ूप म्दfिग्म्गहू दf rोूग्ूल्ूग्दह ग्े २ ३ , fर्ग्ह् े: समान भार की दो गेंदें एक ही दिशा में गति कर रही हैं। उनकी गतियों का अनुपात २ : १ है। जब ये आपस में टकराती हैं तो इनकी गतिज ऊर्जा मेंर् ेज्ञ् की क्षति हो जाती है। यदि क्षतिपूर्ति गुणांक २ ३ है तोर् े का मान ज्ञात कीजिए।",
+            "options": [
+              {
+                "prompt": "5 1",
+                "value": "A"
+              },
+              {
+                "prompt": "5 2",
+                "value": "B"
+              },
+              {
+                "prompt": "5 5",
+                "value": "C"
+              },
+              {
+                "prompt": "6 1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q459",
+              "correct_answer": "C",
+              "explanation": "Let the initial velocities of the given balls be 24 and 4 and final velocity after collision be V1 and V2. Applying, Law of conservation of momentum here, here, m1 = m2 = m ⇒ m(24) + mu = mv1+mv2 ⇒ 3mu = mv1+mv2 ⇒ v1+v2 = 3u ... (i) DSSSB PGT 109 YCT and after collision, Net Initial kinetic energy = ( ) ( ) 2 2 1 1 m 24 m u 2 2 + and net final kinetic energy = ( ) 2 2 1 2 1 m v v 2 + APQ, ⇒ ( ) 2 2 1 m 4u u 2 + = ( ) 2 2 2 1 2 1 x 5u m v v 2 100 2   + +     Coefficient of restitution e, = 2 1 2 1 v – v – u – u       e = 2 1 u – v – 2u – u ⇒ ( ) 2 1 v – v 2 – 3 u = ⇒ 3(v1–v2) = 2u ⇒ v1–v2 = 2 u 3 ... (iii) Adding (i) and (iii), equ, we get 2v1 = 2 11 3u u u 3 3 + = ⇒ 1 11 v u 6 = So, v2 = 3u–v1 [From (i)] = 11 3u – u 6 = 7 u 6 So, from (ii), we get 2 2 2 1 x 11 7 5u u 2 100 6 6       = +             ⇒ 2 2 2 x 121 49 5u u u 100 36 36   = +     ⇒ 2 2 x 170 5u u 100 36 = × ⇒ x = 36 10 5 17 × × From (II), we get ( ) 2 2 2 2 2 1 1 11 7 x 5u m 5u – u m 2 2 6 6 100 2       + = × ×             ⇒ 2 2 2 170 x 5u – u mu 36 20 = × ⇒ 2 2 10 x u mu 36 20 = ⇒ x = 20 10 36 × = 50 9 ∴ x = 5 59",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q460",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ंaत्त् स्दन्ग्हु aह a ेस्ददूप् प्दrगर््ैदहूaत् ज्त्aहा ग्ह a ेूraग्ुप्ू ैग्ूप् a नत्दम्ग्ूब् १०० म्स्े–१ प्ग्ूद aह ग्हूग्म्aत् ंaत्त् ैप्ग्म्प् ग्े aू rोू. ऊप म्दत्त्ग्ेग्दह ग्े ज्ीfाम्ूत्ब् ात्aेूग्म् aह् ूप ूैद ंaत्त्े स्दन aत्दहु ूैद ेूraग्ुप्ू ज्aूप्े afूी ूप म्दत्त्ग्ेग्दह. ऊप नत्दम्ग्ूब् दf ूप fग्rेू ंaत्त् ुाूे rा्ल्म् ूद ६० म्स्े–१ fग्ह् ूप aहुत ाूंौाह ूप ्ग्rाम्ूग्दह दf ूप ंaत्त् afूी ूप म्दत्त्ग्ेग्दह. एक गेंद क्षैतिज तल पर सीधी रेखा में १०० म्स्े–१ की गति से गति कर रही है। यह एक दूसरी गेंद से टकराती है जो स्थिर अवस्था में है। टक्कर केबाद दोनों गेंदे सीधी रेखा में गति करने लगती हैं। पहली गेंद का वेग टक्कर के बाद घटकर ६० म्स्े–१ है। टक्कर के बाद बॉल की दिशा का कोण ज्ञात कीजिए।",
+            "options": [
+              {
+                "prompt": "30º",
+                "value": "A"
+              },
+              {
+                "prompt": "45º",
+                "value": "B"
+              },
+              {
+                "prompt": "60º",
+                "value": "C"
+              },
+              {
+                "prompt": "90º",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q460",
+              "correct_answer": "D",
+              "explanation": "Since the collision is elastic the linear momentum and kinetic energy remains conserved. Balls are identical so mass of balls are also same. So, for the kinetic energy and momentum to be same velocity of second ball must be equal to velocity of striking ball and this happens in the case when balls are at 90º after collision.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q461",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्arूग्म्त दf स्aे स् ग्े aू ूप ज्दग्हू (ं,०) ेaब् ँ. ऊप ब्-र्aेग्े ग्े म्प्दोह न्ीूग्म्aत्त्ब् ्दैहैar् aह् ूप ज्arूग्म्त ग्े तू faत्त् frदस् ँ ज्araत्तत् ूद ूप ब्- र्aेग्े, fग्ह् ूप aहुल्त्ar स्दसहूल्स् दf ूप ज्arूग्म्त aंदल्ू ूप दrग्ुग्ह २ ोम् afूी ूप ंaत्त्. स् द्रव्यमान वाला एक कण बिंदू ँ, (ं, द) पर है। ब्- अक्ष को ऊपर से नीचे की ओर चुनकर कण को बिंदू ँ से ब्-अक्ष के समानांतर गिराया जाता है, कण के गिराए जाने के २ सेकंड के बाद इसकी कोणीय गति ज्ञात कीजिए।",
+            "options": [
+              {
+                "prompt": "2 mg b ɵk",
+                "value": "A"
+              },
+              {
+                "prompt": "–2 mg b ɵk",
+                "value": "B"
+              },
+              {
+                "prompt": "1 mg",
+                "value": "C"
+              },
+              {
+                "prompt": "– 1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q461",
+              "correct_answer": "B",
+              "explanation": "After t = 2 sec, particle's velocity will be given by- v = u+at ⇒ v = 0+g×2 ⇒ v = 2g Now, angular momentum, ( ) L m v r = × \u0004\u0003 \u0003 \u0003 = mvrsinθ So, L = m2g.b [θ = 90º] = 2mgb, along the direction perpendicular to v \u0003 and r \u0003 i.e. in the direction of Z'. ∴ L = –2mgb ˆk Note : Official answer given by commission is option (a).",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q462",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Aह ातम्ूrग्म् ्ग्ज्दत दf स्दसहू \u0004\u0003 झ् ग्े ज्त्aम् ग्ह a ल्हग्fदrस् ातम्ूrग्म् fगत्् दf \u0004\u0003 E , ेल्म्प् ूप्aू \u0004\u0003 झ् , स्aवे aह aहुत दf ३०ड्ढ ैग्ूप् \u0004\u0003 E . घ्f ूप ्ग्ज्दत प्aे ूद ां rदूaूा् ूप्rदल्ुप् aह aहुत ९०ड्ढ aंदल्ू aह र्aेग्े ज्ीजह्ग्म्ल्त्ar \u0004\u0003 झ् , ैप्aू ैग्त्त् ां ूप ैदrव् ्दहा? \u0003 झ् संवेग वाले एक विद्युत द्विध्रुव को \u0003 E संवेग वाले एक समान विद्युत क्षेत्र में इस तरह रखा जाता है कि \u0003 झ् , \u0003 E के साथ ३० डिग्री का कोण बनाता है। यदि इस द्विध्रुव को ९० डिग्री पर घुमाना हो, जो \u0003 झ् के लंबवत हो, तो किया जानेवाला कार्य क्या होगा?",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "1 pE",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q462",
+              "correct_answer": "B",
+              "explanation": "Given, θ1 = 30º θ2 = 120º We know that the work done due to a dipole in presence of a uniform electric field is - W = ∆U = pE(cosθ1–cosθ2) = pE (cos30º – cos120º) = pE 3 1 2 2   +     W = pE 3 1 2   +    ",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q463",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A uniformly charged sphere of radius 25 cm has a total charge Q coulomb. Find the electric field intensity at the centre of sphere in newtons",
+            "options": [
+              {
+                "prompt": "Zero",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q463",
+              "correct_answer": "A",
+              "explanation": "The electric field, of insde a uniformly charged sphere is - E = 3 0 Qr 4 R πε at the centre, r = 0 Therefore, electric field intensity at center of sphere is equal to zero - E = 0",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q464",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Aत्त् ूप म्aज्aम्ग्ूदrे ेप्दैह ग्ह ूप aंदन हाूैदrव् प्aन ूप ेaस न्aत्ल दf म्aज्aम्ग्ूaहम. ऊप ल्ग्न्aितहू म्aज्aम्ग्ूaहम ाूंौाह A aह् ँ ूल्rहे दल्ू ूद ां १ २१ १४४ इि. इग्ह् ूप म्aज्aम्ग्ूaहम दfर् ीम्प् म्aज्aम्ग्ूदr. उपर्युक्त नेटवर्क में सभी संधारित्र की धारिता का मान एक समान है। A और ँ के बीच समकक्ष धारिता २१ १ इि १४४ हो जाती है। प्रत्येक संधारित्र की धारिता ज्ञात कीजिए।",
+            "options": [
+              {
+                "prompt": "1 µF",
+                "value": "A"
+              },
+              {
+                "prompt": "1.5 µF",
+                "value": "B"
+              },
+              {
+                "prompt": "3 µF",
+                "value": "C"
+              },
+              {
+                "prompt": "11 µF",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q464",
+              "correct_answer": "C",
+              "explanation": "Given Ceq = 165 144 On solving the figure, the equivalent capacitance is - Ceq = 29C 76 (let say each capacitance is equal to C) 165 29C 144 76 = C = 3µF Hence, The value of capacitance of each capacitor is 3µF.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q465",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A म्aज्aम्ग्ूदr दf म्aज्aम्ग्ूaहम ण्१ ग्े म्प्arुा् ूद a ज्दूाहूग्aत् न्न्१. ऊप म्प्arुग्हु ंaूूीब् ग्े ूपह ्ग्ेम्दहहाम्ूा् aह् ण्१ ग्े म्दहहाम्ूा् ूद a म्aज्aम्ग्ूदr र् ें दf ल्हव्हदैह म्aज्aम्ग्ूaहम. ऊप ज्दूाहूग्aत् ्ग्ffीाहम aम्rदे ूप म्दस्ंग्हaूग्दह ग्े हदै न्न्२. इग्ह् ूप ाहीुब् ेूदrा् ग्ह ूप ेब्ेूास् afूी ूप ेैग्ूम्प् ए ग्े म्त्दो्. ण्१ धारिता वाले एक संधारित्र को विभवांतर (ज्दूाहूग्aत् ्ग्ffीाहम) न्न्१ तक आवेशित किया जाता है। इसके बाद आवेशित करने वाली बैटरी को निकाल दिया जाता है और ण्१ का अज्ञात धारितावालेर् ें संधारित्र से जोड़ दिया जाता है। अब इन संयोजन के बीच का विभवांतर न्न्२ हो जाता है। स्विच ए बंद करने के बाद इस प्रणाली में संचित ऊर्जा ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q465",
+              "correct_answer": "B",
+              "explanation": "Initially when capacitor C1 is charged to a potential difference V1 then charge Q is written as - Q1 = C1V1 After the removal of the battery, both capacitors are parallel then- C = C1+X Now, charge, Q' = (C1+X)V2 Q = Q' (C1+X)V2 Charge is conserved) C1V1 = (C1+X)V2 The energy stored in the system after the switch s is closed is given by - U = ( ) 2 1 2 1 C X V 2 + U = ( ) 1 2 2 1 C X V V 2 + ⋅ U = 1 1 2 1 C V V 2",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q466",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Aह ग्हेल्त्aूग्हु ्ग्ेम् दf ra्ग्ल्े R, प्aे a ल्हग्fदrस् ेल्rfaम म्प्arुा हेग्ूब्, σ. घ्ू rदूaूो ैग्ूप् aह aहुल्त्ar नत्दम्ग्ूब् ω. इग्ह् ूप ूदूaत् म्ग्rम्ल्त्aूग्हु म्ल्rrाहू. R त्रिज्या वाली रोधक डिस्क की सतह समान घनत्व σ से आवेशित है। यह कोणीय वेग ω से धूम रही है। कुल संचालन विद्युत प्रवाह ज्ञात करें। Dएएएँ झ्उऊ ११३ भ्ण्ऊ",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q466",
+              "correct_answer": "A",
+              "explanation": "The total circulating current of insulating disc of radius R, has a uniform surface charge density σ, rotates with an angular velocity ω is given by - I = 2 1 R 2 σω",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q467",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A म्दह्ल्म्ूग्दह ग्े ग्ह ूप fदrस् दf a rद् दf तहुूप् 'त्' aह् म्rदे-ोम्ूग्दहaत् aर्rी 'A'. घ्ूे ूास्ज्ीaूल्rा म्दfिग्म्गहू दf rोग्ेूaहम ग्े αR, ूप ूास्ज्ीaूल्rा म्दfिग्म्गहू दf rोग्ेूaहम दf ग्ूे स्aूीग्aत् ग्े αज् aह् ग्ूे म्दfिग्म्गहू दf र्त्ग्हीr ूप्ीस्aर्त् ोज्aहेग्दह ग्े α. इग्ह् ूप aज्ज्rर्देग्स्aूा rात्aूग्दह ाूंौाह αR, αज् aह् α. एक संचरण एक छड़ के रूप में है जिसकी लंबाई त् और अनुप्रस्थ काट क्षेत्र 'A' है। इसकी रोधकता का तापमान गुणांक αR है और इसकी सामग्री की प्रतिरोधकता का तापमान गुणांक αज् है और इसके रैखिक ताप विस्तार का गुणांक α है। αR, αज् और α के बीच का अनुमानित संबंध ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "αp = αR – α",
+                "value": "A"
+              },
+              {
+                "prompt": "αp = αR – 2α",
+                "value": "B"
+              },
+              {
+                "prompt": "αR = αP – α",
+                "value": "C"
+              },
+              {
+                "prompt": "αR = αP – 2α",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q467",
+              "correct_answer": "C",
+              "explanation": "The relation between temperature coefficient of resistance (αR), temperature coefficient of resistivity of material αp and coefficient of linear thermal expansion is α given by - αR = αp–α",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q468",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A हाूैदrव् दf म्दह्ल्म्ूदrे ग्े स्a ग्ह ूप ेप्aज दf a rाुल्त्ar दम्ूaप्rदह ंब् रदग्हग्हु १२ ल्aित् म्दह्ल्म्ूदr दf ेaस म्दह्ल्म्ूaहम र्(ीम्प् ल्aित् ूद २ स्प्द) aे ेप्दैह ग्ह ूप fग्ुल्rा. घ्f ूप म्ल्rrाहू ाहूीे ूप्rदल्ुप् A aर्ह् ोग्ूे ूप्rदल्ुप् ँ, ूपह fग्ह् ूप ल्ग्न्aितहू म्दह्ल्म्ूaहम दf ूप हाूैदrव् ग्ह स्प्द. ऊपर दिखाए गए चित्र के अनुसार एक नियमित ऑक्टाहेड्रॉन के आकार में समान धारिता वाले १२ संधारित्र (प्रत्येक २ स्प्द के बराबर) को जोड़कर एक नेटवर्क बनाया जाता है। यदि विद्युत प्रवाह A के माध्यम से प्रवेश करता है और ँ के माध्यम से निकलता है, तो नेटवर्क की तुल्यांक धारिता (स्प्द में) ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "4",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "8",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q468",
+              "correct_answer": "B",
+              "explanation": "Correct answer is Option (B). Verified from official answer key.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q469",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्ह ूप म्ग्rम्ल्ग्ू ेप्दैह ग्ह ूप fग्ुल्rा aत्त् ूप rोग्ेूaहम arा ग्ह दप्स्े. इग्ह् ूप ज्दैी ्ग्ेग्ज्aूग्दह ूप्rदल्ुप् ूप ८ दप्स् rोग्ेूaहम. आकृति में दिखाए गए परिपथ में सभी प्रतिरोध दप्स्े में हैं। ८ दप्स्े वाले प्रतिरोध के द्वारा होने वाले विद्युत अपव्यय (्ग्ेग्ज्aूग्दह) ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "64 watt",
+                "value": "A"
+              },
+              {
+                "prompt": "32 watt",
+                "value": "B"
+              },
+              {
+                "prompt": "32 watt",
+                "value": "C"
+              },
+              {
+                "prompt": "64 watt",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q469",
+              "correct_answer": "C",
+              "explanation": "Solution : - Here resistances 6Ω, 8Ω, and 12Ω are in parallel, So net resistance in this combination is given by- 1 1 1 1 R ' 6 8 12 = + + ⇒ 1 4 3 2 R ' 24 + + = = 9 24 ⇒ R' = 24 9 Ω Now, Resistance R', 4Ω and 10Ω are in series combination, So net resistance is given by - Rnet = 24 4 10 9 + + = 24 126 9 + = 150 50 9 3 = Ω DSSSB PGT 114 YCT So, I = net V R = 20 50 3 = 6 A 5 Apply current division rule- I2= 2 Equivalentresistance of oppositebranch TotalCurrent R Equivalentresistance of oppositebranch + I2 = ( ) 1 3 1 3 1 3 2 1 3 R R",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q470",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ुaत्न्aहदसूी दf rोग्ेूaहम १५ Ω ुग्ने fल्त्त् ेम्aत ्तिम्ूग्दह ैपह a म्ल्rrाहू ०.०२ aस्ज् ज्aेो ूप्rदल्ुप् ग्ू. घ्ू ग्े ूद ां म्दहन्ीूा् ग्हूद aह aस्सूी दf र्rी्ग्हु १५A ग्ह ग्ूे fल्त्त् ेम्aत ्तिम्ूग्दह. इदr ूप्ग्े ज्ल्rज्दो ब्दल् प्aन ांाह ज्rदन्ग्् ैग्ूप् aह दहत्ब् ेप्ल्हू rोग्ेूaहम, ०.०४ दप्स्. प्दै ैग्त्त् ूप म्दहन्ीेग्दह ेग्rा् ां aम्प्गन्? १५ Ω प्रतिरोध वाले गैल्वोमीटर के प्रतिरोधक से जब ०.०२ aस्ज् की विद्युत प्रवाहित की जाती है, तो यह पूर्ण पैमाने पर विक्षेपण (्तिम्ूग्दह) देता है। इस पूर्ण पैमाने पर १५ A वाले अमीटर की रीडिंग में परिवर्तित किया जाना है। इस उद्देश्य के लिए आपको केवल ०.०४ दप्स् का शंट प्रतिरोध दिया गया है। वांछित परिवर्तन वैâसे प्राप्त किया जाएगा?",
+            "options": [
+              {
+                "prompt": "By connecting a resistance 0.01 Ω in parallel",
+                "value": "A"
+              },
+              {
+                "prompt": "By connecting a resistance 14.96 Ω in series",
+                "value": "B"
+              },
+              {
+                "prompt": "By connecting a resistance 0.02 Ω in parallel",
+                "value": "C"
+              },
+              {
+                "prompt": "By connecting a resistance 14.58 Ω in series",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q470",
+              "correct_answer": "D",
+              "explanation": "Correct answer is Option (D). Verified from official answer key.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q471",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ण्aत्म्ल्त्aूा ूप व्ग्हाूग्म् ाहीुब् aूूaग्हा् ंब् a म्प्arुा् ज्arूग्म्त दf स्aे 'स्' aह् म्प्arुा 'q' afूी स्दन्ग्हु ूप्rदल्ुप् a ्ग्ेूaहम 'ं' aत्दहु aह ातम्ूrग्म् fगत्् \u0004\u0003 E . 'स्' द्रव्यमान तथा 'q' आवेश वाले आवेशित कण को विद्युतीय क्षेत्र \u0003 E में से 'ं' दूरी तक गुजरने के बाद, इस कण के गतिज ऊर्जा की गणना करें।",
+            "options": [
+              {
+                "prompt": "1 qEb",
+                "value": "A"
+              },
+              {
+                "prompt": "2 qEb",
+                "value": "B"
+              },
+              {
+                "prompt": "qEb",
+                "value": "C"
+              },
+              {
+                "prompt": "2qEb",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q471",
+              "correct_answer": "C",
+              "explanation": "Force on the charged particle 'q' in the electric field E \u0004\u0003 , F = ma = qE a = qE m Now, by the equation of motion, v2 = u2+2aS ⇒ v2 = Eq 0 2 b m + × ⋅ [S=b, given] ⇒ v2 = 2Eqb m ... (i) Now, kinetic energy = 2 1 mv 2 = 1 2Eqb m 2 m × × K.E = qEb Joule",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q472",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A म्प्arुा q २ − ग्े ज्त्aम् aू ूप दrग्ुग्ह दf म्द- दr्ग्हaूो aह् aहदूप्ी म्प्arुा q ३ + ग्े ज्त्aम् aू (a, ०). प्दै far frदस् ूप दrग्ुग्ह ग्े ूप rोल्त्ूaहू ग्हूाहेग्ूब् ्ल ूद ूप ूैद म्प्arुो ग्ेर् ैीद? किसी निर्देशांक (ण्द-दr्ग्हaूो) के मूल बिंदू पर q - २ आवेश रखा जाता है और (a, ०) पर दूसरा आवेश q + ३ रखा जाता है। दो आवेशों के कारण परिणामी तीव्रता शून्य से कितनी दूर है?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q472",
+              "correct_answer": "A",
+              "explanation": "Let denote the charge at origin as Q1 = q – 2 and charge at positon (a, 0) as Q2 = q 3 E1 = 1 2 Q K x ... (i) E2 = ( ) 2 2 Q K x – a ... (ii) ⇒ 1 2 Q K x = ( ) 2 2 Q K x – a ⇒ ( ) 2 2 q",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q473",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्ह ूप म्ग्rम्ल्ग्ू ेप्दैह ैप्aू ेप्दल्त्् ां ूप न्aत्ल दf ूप म्aज्aम्ग्ूaहम दf ूप म्aज्aम्ग्ूदr 'ण्', एद ूप्aू ूप ल्ग्न्aितहू म्aज्aम्ग्ूaहम ाूंौाह ूप ज्दग्हूे A aह् ँ ग्े १ इि. Aत्त् ूप म्aज्aम्ग्ूaहम न्aत्ले ग्ह्ग्म्aूा् arा ग्ह इि ? नीचे दिए गए परिपथ में संधारित्र 'ण्' की धारिता कितनी होनी चाहिये, जिससे A और ँ बिंदुओं के बीच तुल्यांक धारिता १ इि रहे, दर्शाए गए सभी धारिता का मान इि में हैं?",
+            "options": [
+              {
+                "prompt": "24",
+                "value": "A"
+              },
+              {
+                "prompt": "167",
+                "value": "B"
+              },
+              {
+                "prompt": "334",
+                "value": "C"
+              },
+              {
+                "prompt": "156",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q473",
+              "correct_answer": "C",
+              "explanation": "According to the fig. 6µF and 12µF capacitance are in series then the equivalent capacitance is - ' 1 1 1 1 6 12 C = + ' 1 C = 4µF Now, 4µF and 6µF capacitance are in parallel combination then equivalent capacitance is- ' 2 C 4 6 = + ' 2 C 10 F = µ Now, 10µF and 1µF are in series combination then- ' 3 10 C F 11 = µ Now, 4µF and 4µF are in parallel combination then equivalent capacitance is 8µF. 8µF and 6µF are in series combination then- ' 4 24 C 7 = Now, ' 3 C and ' 4 C capacitors are in parallel combination then equivalent capacitance is - ' ' ' 5 3 4 C C C = + = 10 24 11 7 + = 334 77 Now, capacitor C and ' 5 C are in series combination then ' 5 1 1 1 C' C C = + 334 C' F 257 = µ",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q474",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप्rाा म्प्arुो arा त्दम्aूा् aू ूप ूप्rाा म्दrहीे दf ेqल्arा र्(ीम्प् ेग् ृ a) aे ेप्दैह ग्ह ूप fग्ुल्rा. प्दै स्ल्म्प् ाहीुब् ग्े rल्ग्rिा् ूद ंrग्हु aहदूप्ी म्प्arुा +q, frदस् far aैaब् ूद ज्त्aम ग्ू aू ूप न्aम्aहू म्दrही? जैसा कि चित्र में दर्शाया गया है, वर्ग के तीनों कोनों पर आवेश स्थित हैं (प्रत्येक भुजा ृ a )। दूर से एक और आवेश + q को लाकर खाली कोने पर रखने के लिए कितनी ऊर्जा की आवश्यकता होगी? Dएएएँ झ्उऊ ११७ भ्ण्ऊ",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q474",
+              "correct_answer": "A",
+              "explanation": "Solution :- 0 1 q q q V – 4 a a 2a   = +   πε   V = 0 1 q 4 2a πε W = qV = 0 1 q q 4 2a × πε W = 2 0 1 q 4 2a πε Hence, the energy is required to bring another charge +q is - 2 0 1 q 4 2a πε",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q475",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A rोग्ेूaहम प्aे ांाह ज्rदन्ग्् ग्ह ूप fदrस् दf a ेज्प्ीग्म्aत् ेपत्त्, fदrस् दf ूैद म्दहमहूrग्म् सूaत्त्ग्म् ेज्प्ीो दf ra््ग्ग् R१ aह् R२ (R२ ्न R१) aह् ूप ग्हूीहaत् ेज्aम ांग्हु fग्त्त् ैग्ूप् a स्aूीग्aत् दf rोग्ेूग्न्ग्ूब् δ. इग्ह् ग्ूे rोग्ेूaहम. एक गोलाकार ढाँचे के रूप में प्रतिरोधक दिये गए हैं, जो दो R१ और R२ रैडी (ra्ग्) वाले सकंन्द्रीत धातु के गोलों से गई है। प्रतिरोध ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q475",
+              "correct_answer": "B",
+              "explanation": "The formula of resistance of a spherical shell formed of two concentric metallic spheres of raddii R1 and R2 (R2 > R1) and the internal space being filled with a material of resistivity δ is given by- R = ( ) 2 1 1 2 R – R 4 R R δ π",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q476",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A म्arंदह rोग्ेूदr प्aे ूप म्दत्दल्r म्द aे ज्ी ूप ेलिहम : ँRध्ेंर्‍ –ध्RAर्‍उE –ँथ्ळE – RED-उREEर्‍. घ्ूे rोग्ेूaहम ग्े: दिये गए क्रम के अनुसार कार्बन प्रतिरोध का रंग कोड इस प्रकार है: भूरा - नारंगी - नीला - लाल - हरा। इसका प्रतिरोध है:",
+            "options": [
+              {
+                "prompt": "2.58×103 Ohm with a tolerance of ±0.5%",
+                "value": "A"
+              },
+              {
+                "prompt": "36.8 Ohm with a tolerance of ±5%",
+                "value": "B"
+              },
+              {
+                "prompt": "1.36×104 Ohm with a tolerance of ±0.5%",
+                "value": "C"
+              },
+              {
+                "prompt": "4.52×105 Ohm with a tolerance of ±10%",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q476",
+              "correct_answer": "C",
+              "explanation": "Tolrance of green colour is ± 0.5 %. Resistance is - 136×102 1.36×104 Ohm",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q477",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्ह ूप म्ग्rम्ल्ग्ू ेप्दैह, aत्त् ूप rोग्ेूaहमे arा ग्ह दप्स्े. इग्ह् ूप ज्दैी ्ग्ेग्ज्aूग्दह ूप्rदल्ुप् ूप ६ दप्स् rोग्ेूaहम. परिपथ में दिखाए गए सभी प्रतिरोध दप्स्े में हैं। ६ दप्स् प्रतिरोध के द्वारा होनेवाला विद्युत क्षय ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "256",
+                "value": "A"
+              },
+              {
+                "prompt": "324",
+                "value": "B"
+              },
+              {
+                "prompt": "192",
+                "value": "C"
+              },
+              {
+                "prompt": "384",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q477",
+              "correct_answer": "D",
+              "explanation": "Here, 6Ω, 8Ω and 12Ω are in parallel. So, Net resistance through 6Ω, 8Ω and 12Ω given by 1 1 1 1 R ' 6 8 12 = + + = 4 3 2 24 + + ⇒ 1 9 R ' 24 = Ω ⇒ R' = 24 9 Ω Now, Rnet = 24 4 10 9 + + = 126 24 150 9 9 + = = 150 3 Ω i = 20 6 A 50 5 3 = Apply current division rule- I2= 2 Equivalentresistance of oppositebranch TotalCurrent R Equivalentresistance of oppositebranch + I2 = ( ) 2 3 2 3 2 3 1 2 3 R R",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q478",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A rोग्ेूaहम हाूैदrव् ग्े ज्rाज्arा् ग्ह ूप ेप्aज दf a rाुल्त्ar ूाूraप्rदह, ूप ेग्े ांग्हु fदल्r म्दह्ल्म्ूदrेर् ीम्प् दf म्दह्ल्म्ूaहम २ स्प्द. घ्f म्ल्rrाहू ाहूीे ग्हूद ूप ेब्ेूास् frदस् दहा दf ूप fदल्r न्ीूग्मे aह् म्दसे दल्ू frदस् ूप दज्ज्देग्ूा म्दrही, fग्ह् ूप fिाम्ूग्न म्दह्ल्म्ूaहम दf ूप हाूैदrव्. नियमित चतुष्फलक (ूाूraप्rदह) के आकार में एक प्रतिरोध नेटवर्क तैयार किया गया है, चारों तरफ चार चालक लगे हुए है, और प्रत्येक चालक २दप्स् के हैं। यदि चार में से किसी एक कोने से विद्युत प्रवाह इस प्रणाली में प्रवेश करके विपरीत कोने से बाहर निकलता है, तो नेटवर्क का प्रभावी चालकत्व (म्दह्ल्म्ूaहम) ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "4 mho",
+                "value": "A"
+              },
+              {
+                "prompt": "8 mho",
+                "value": "B"
+              },
+              {
+                "prompt": "2 mho",
+                "value": "C"
+              },
+              {
+                "prompt": "1 mho",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q478",
+              "correct_answer": "C",
+              "explanation": "Solution :- Since, G = 1 R So, For series (ACB and ADB) G' = 2 2 1 2 2 × = + G' = 2 2 1 2 2 × = + Now 1 mho and 1 mho are in parallel So, Gnet = 1+1 = 2 mho Note : Official answer given by commission is option (a).",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q479",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "इदल्r ेूaूासहूे प्aन ांाह ुग्नह ांत्दै aंदल्ू झत्ूग्ी Effाम्ू, र्Eेaस्ग्हा ूपस्: पेल्टियर प्रभाव के बारे में चार कथन दिए गए हैं, इन्हें जाँचें: पटेलियर प्रभाव के बारे में चार बयान नीचे दिए गए हैं, उन्हें जांचें: (ज्) Aे a rोल्त्ू दf ूप्ग्े fिाम्ू पर््ीू ग्े aेंदrां् aह् ान्दत्न् aू ूप ेaस ूग्स.",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q479",
+              "correct_answer": "B",
+              "explanation": "(p) and (r) are true, (q) and (s) are false. Peltier effect is a type of thermoelectric effect that is observed in an electric circuit. Peltier discovered that when current is made to flow through a circuit consisting of two different types of conductors, a heating or cooling effect is observed at the junctions between the two materials this change in temperature at the junction is called the Peltier effect. When electric current is passed through a circuit consisting of two different conductors, a cooling effect is observed in one junction wheareas another junction experience a rise in temperature. This effect is reversible in nature and heating or cooling effect observed at a junction can be reversed by changing the direction of the current flow. Peltier effect is used for cooling computes and other electronic equipment.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q480",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ेीगे म्ग्rम्ल्ग्ू म्दहेग्ेूे दf a म्दज्ज्ी न्दत्ूसूी (ग्हूीहaत् rोग्ेूaहम ृ ४ दप्स्), a ंaूूीब् दf हाुत्ग्ुग्ंत ग्हूीहaत् rोग्ेूaहम aह् a rोग्ेूaहम ंर्दे. ँब् a्रल्ेूग्हु ूप rोग्ेूaहम ंर्दे fदr ४ दप्स्, ूप स्aे दf म्दज्ज्ी ज्देग्ूा् aू ूप म्aूप्द ग्ह १० स्ग्हल्ूो ग्े ३० ुस्. ऊद ैप्aू न्aत्ल ेप्दल्त्् ूप rोग्ेूaहम ंर्दे ां a्रल्ेूा् ूद प्aन a ज्देग्ू दf ४० ुस्े दf म्दज्ज्ी ग्ह २० स्ग्हल्ूो? एक श्रेणी परिपथ तांबे के वोल्टमीटर (जिसका आंतरिक प्रतिरोध ृ ४ दप्स् है), नगण्य आंतरिक प्रतिरोध वाली बैटरी और एक प्रतिरोध बॉक्स से मिलकर बना है। ४ दप्स् वाले प्रतिरोध बॉक्स को एडज्सट करने के द्वारा वैâथोड पर दस मिनट में जमा हुए तांबे का द्रव्यमान ३० ुस् है। २० मिनट में ४०ुस् ताबें को जमा होने के लिए प्रतिरोध बॉक्स को किस वैल्यू पर एडजस्ट करना चाहिए।",
+            "options": [
+              {
+                "prompt": "5 ohm",
+                "value": "A"
+              },
+              {
+                "prompt": "6 ohm",
+                "value": "B"
+              },
+              {
+                "prompt": "8 ohm",
+                "value": "C"
+              },
+              {
+                "prompt": "10 ohm",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q480",
+              "correct_answer": "C",
+              "explanation": "Correct answer is Option (C). Verified from official answer key.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q481",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Four charges q1, q1, –q1, –q1, are placed at the four corners A, B, C, D of a square, whose each side is 'a'. L is the midpoint of BC. Find the work done in carrying a charge q2 from the centre of the square to L.",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "1 1",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q481",
+              "correct_answer": "D",
+              "explanation": "V = 0 W q W = 1 2 kq q r Electric potential due to q1, q1, –q1 and –q1 placed on the points A, B, C and D respectively be given by r = 2 2 a a 4 4 + = 2 a a 2 2 = Unit Vnet at the centre point = 1 1 1 1 Kq Kq Kq Kq – – r r r r + = 0 Since, there is not net potential at the centre of the square. So, Workdone in carrying a charge q2 from the centre of the square to L is W = V×q2 = 0 Joule",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q482",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A uniformly charged sphere of radius 25 cm has a total charge of a Columbs. Find the electric field intercity an a point 75 cm. from centre of the sphere in newtons",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q482",
+              "correct_answer": "A",
+              "explanation": "E = ( )2 0 1 Q 4 75cm πε = ( ) 2 –2 0 1 Q 4 75 10 πε × = –4 0 Q 4 5625 10 πε × × = 0 10000 Q 4 5625 πε × = 0 4Q 9πε",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q483",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A सूaत् ेज्प्ीा दf ra्ग्ल्े R१ म्arrगे a म्प्arुा ैं. ग्ू ग्े ेल्rrदल्ह् ंब् a ेज्पहग्म्aत् ेप्aत्त् दf ूप्ग्म्व्हो (R२ – R१) दf a र्त्ग्हीr ्गतम्ूrग्म् स्aूीग्aत् दf ज्ीस्ग्ूूग्नत्ब् ∈. इग्ह् ूप ज्दूाहूग्aत् aू ूप महूrा दf ूप ेज्प्ीा (rात्aूग्न ूद ग्हfग्हग्ूब्) R१ त्रिज्या वाले धातु का एक गोला ैं से आवेशित है। यह (R२ – R१) की मोटाई के ∈ विद्युयत शीलता वाले रैखिक पारदयुतिक (र्त्ग्हीr ्गतम्ूrग्म्) धातु के एक गोलाकार से ढंका हुआ है। गोले के केन्द्र में विभव को ज्ञात करें (अनंत के सापेक्ष में)।",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q483",
+              "correct_answer": "C",
+              "explanation": "A metal sphere of radius 'r' carries a charge Q has electric field, E = 2 0 1 Q ˆr 4 r πε , r > 0 The potential at the centre is therefore :- V = 0 – E.d ∞∫ l = R R 2 1 2 2 0 0 R2 Q Q dr – 4 r 4 r ∞ πε πε ∫ ∫ = R R 2 1 R 0 2 Q 1 Q 1 – – – – 4 r 4 r ∞         πε   πε   = 0 2 1 2 Q 1 Q 1 1 – – – – 4 R 4 R R     +     πε πε     = 0 2 1 2 Q 1 1 1 – 4 R R R   +   π ε ε ε  ",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q484",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्दग्हू म्प्arुा +q ग्े ज्त्aम् aू a ्ग्ेूaहम 'a'२ frदस् aहर् ीrूप् म्ग्rम्ल्त्ar सूaत् ्ग्ेम् दf ra्ग्ल्े 'a'१. इग्ह् ूप ग्ह्ल्म् म्प्arुा. 'a'१ त्रिज्या वाली भूसंपर्कित र्(ीrूप्) गोलाकार चक्रिका से 'a'२ की दूरी पर एक +q आवेशित बिंदू रखा गया है। प्रेरित आवेश ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "–",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "–",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q484",
+              "correct_answer": "B",
+              "explanation": "Correct answer is Option (B). Verified from official answer key.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q485",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A current of 5 amp flows through a wire of diameter 1 mm. if the concentration of charge carriers is 2×1027 m–3. Find the average drift velocity of the electrons in cm",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "6",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q485",
+              "correct_answer": "A",
+              "explanation": "Given, I = 5A diameter, d = 1 mm radius, r = –3 d 1 10 m 2 2 × = Concentration of charge carriers, n = 2×1027 m–3. W e know that, I = neAVd Where, Vd is drift velocity ⇒ 5 = 2×1027×1.6×10–19×πr2×Vd DSSSB PGT 122 YCT ⇒ 5 = 3.2×108×3.14× 2 –3 d 10 V 2  ×     ⇒ Vd = 2 cm",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q486",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्दूाहूग्दसूी ैग्rा प्aे a ूदूaत् तहुूप् दf १००० म्स्. ग्ू ग्े ्rग्नह ंब् a मत्त् दf E.श्.इ ४न्न् प्aन्ग्हु a rोग्ेूaहम ४६० Ω ग्ह ेीगे. A ेदल्rम दf ज्दूाहूग्aत् ्ग्ffीाहम, १० स्न् ुाूे ंaत्aहम् ंब् a तहुूप् दf ६० म्स्. दf ूप ज्दूाहूग्aत् ैग्rा. इग्ह् ूप न्aत्ल दf ूप rोग्ेूaहम दf ूप ज्दूाहूग्दसूी ैग्rा. एक विभवमापी तार की कुल लंबाई १००० म्स् है। इसे ४न्न् के विद्युत् वाहक बल (इलेक्ट्रो मोटिव ़फोर्स",
+            "options": [
+              {
+                "prompt": "10 Ω",
+                "value": "A"
+              },
+              {
+                "prompt": "15 Ω",
+                "value": "B"
+              },
+              {
+                "prompt": "20 Ω",
+                "value": "C"
+              },
+              {
+                "prompt": "30 Ω",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q486",
+              "correct_answer": "D",
+              "explanation": "Total L = 1000 cm E.m.f = 4V Rc = 460Ω Length of wire balancing ( ℓ) = 60 cm Potential difference (V) = 10mV = 0.01V The Potential difference ∝ ( ℓ) V E L = ℓ Rwire = Rc× L – ℓ ℓ Rwire = 460× 60 1000 – 60 = 29.36Ω ≈ 30Ω Note : Official answer given by commission is option (c). DSSSB PGT 123 YCT",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q487",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A rोग्ेूaहम R ग्े म्दहहाम्ूा् ग्ह ज्araत्तत् ैग्ूप् a ंल्त्ं (०.२ें, १न्न्) aह् ूप म्दस्ंग्हaूग्दह ग्े म्दहहाम्ूा् ग्ह ेीगे ैग्ूप् a २ ध्प्स् rोग्ेूदr aह् २ न्न् ंaूूीब् दf ग्हूीहaत् rोग्ेूaहम ०.५ ध्प्स्. घ्f ूप ंल्त्ं ग्े ूद दज्ीaूा aू ूप ेग्ुहा् न्दत्ूaुा, ैप्aू स्ल्ेू ां ूप न्aत्ल दf R? एक प्रतिरोध R एक बल्ब (०.२ें, १न्न्) के साथ समांतर क्रम में संयोजित है और संयोजन २ Ω के एक प्रतिरोधक और ०.५Ω के आंतरिक प्रतिरोध वाली २न्न् की एक बैटरी से श्रेणी क्रम में संयोजित है। यदि बल्ब को अभिकाल्पित वोल्टेज पर प्रचालित करना हो, तो R का मान क्या होगा?",
+            "options": [
+              {
+                "prompt": "4 Ohm",
+                "value": "A"
+              },
+              {
+                "prompt": "5 Ohm",
+                "value": "B"
+              },
+              {
+                "prompt": "6 Ohm",
+                "value": "C"
+              },
+              {
+                "prompt": "10 Ohm",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q487",
+              "correct_answer": "B",
+              "explanation": "P = VI .2 = 1×I I = .2A Also, 2 V P R = R = ( )2 2 V I 1 5 P 2 .2 = = = Ω Now, 5Ω and R are connected in parallel Net resistance through AB = 5R 5 R + 5R 7R 10 2 5 R 5 R + + = + + ∴ I = E R r + = 2 7R 10 0.5 5 R + + + 2 10 = 2 7R 10 1 5 R 2 + + + R = 5Ω",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q488",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ेीगे म्ग्rम्ल्ग्ू म्दहेग्ेूे दf a म्दज्ज्ी न्दत्ूसूी, a ंaूूीब् दf rात्ग्ुग्aंत ंर्दे. ँब् a्रल्ेूग्हु ूप rोग्ेूaहम ंर्दे fदr ४ दप्स्, ूप स्aे दf म्दज्ज्ी ज्देग्ूा् दह ूप म्aूप्द ग्े ३० ुस् ग्ह १० स्ग्हल्ूो, aह् दह a्रल्ेूग्हु ग्f fदr ८ दप्स्, ूप स्aे दf म्दज्ज्ी ज्देग्ूा् ग्े ४० ुस् ग्ह २० स्ग्हल्ूो. इग्ह् ूप ग्हूीहaत् rोग्ेूaहम दf ूप न्दत्ूसूी. श्रेणी क्रम वाले एक परिपथ में तांबे का एक वोल्टमीटर, रेलिजिएबल बक्सा है। प्रतिरोध बक्से को ४ Ω समायोजित करने पर, ़ऋणाग्र पर १० मिनट में तांबे की ३० ग्राम मात्रा निक्षेपित होती है, और इसे ८ Ω समायोजित करने पर २० मिनट में तांबे की ४०ग्राम मात्रा निक्षेपित होती है। वोल्टमीटर का आंतरिक प्रतिरोध ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "1 ohm",
+                "value": "A"
+              },
+              {
+                "prompt": "2 ohm",
+                "value": "B"
+              },
+              {
+                "prompt": "3 ohm",
+                "value": "C"
+              },
+              {
+                "prompt": "4 ohm",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q488",
+              "correct_answer": "D",
+              "explanation": "Correct answer is Option (D). Verified from official answer key.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q489",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Two identically charged spheres are suspended of equal length. At the equilibrium position, the strings make an angle θ with each other. Now, the metal spheres are suspended in a liquid of density 0.6 gm",
+            "options": [
+              {
+                "prompt": "0.8 gm",
+                "value": "A"
+              },
+              {
+                "prompt": "1.2 gm",
+                "value": "B"
+              },
+              {
+                "prompt": "0.9 gm",
+                "value": "C"
+              },
+              {
+                "prompt": "1.6 gm",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q489",
+              "correct_answer": "B",
+              "explanation": "tanθ = qE mg = 2 2 kq d mg = 2 2 kq v d g ρ× × tanθ = 2 2 kq vgd ρ ... (i) Where 'ρ' is the density of material of the sphere. Now when system is suspended in liquid, tanθ = ( ) 2 2 kq K mg – Vg d ρ [K = 2] = ( ) 2 2 kq 2 – 0.6 Vgd ρ ... (ii) Since 'θ' remains unchaged, So, from (i) and (2nd) ( ) 2 2 2 2 kq kq Vgd 2 – 0.6 Vgd = ρ ρ ⇒ ( ) 2 – 0.6 ρ = ρ ⇒ 2ρ–1.2 = ρ ρ = 1.2 gm",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q490",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "उग्नह ांत्दै arा fदल्r ेूaूासहूे ंaो् दह ूप म्दहमज्ू दf ल्ग्ज्दिूाहूग्aत्े. नीचे दिये गए चार कथन समविभवों की अवधारणा पर आधारित हैं। (ज्) ऊप ल्ग्ज्दिूाहूग्aत् ेल्rfaम fदr aह fग्हग्ूात्ब् त्दहु र्त्ग्हीr म्प्arुा arा म्ब्त्ग्ह्rग्म्aत्, ूप र्aेो दf ूप म्ब्त्ग्ह्ीे ांग्हु म्द-र्aेग्aत् ैग्ूप् ूप त्ग्हा म्प्arुा",
+            "options": [
+              {
+                "prompt": "Only",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "Only",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q490",
+              "correct_answer": "D",
+              "explanation": "If the points in an electric field are all at the same electric potential, they are known as the equipotential points, on a surface collectively called as equipotential surface. • Electric field is always perpendicular to equipotential surface. • Two-equipotential surfaces can never intersect each other. • For a point charge, the equipotential surfaces are concentric spherical shells. • For a uniform electric field, the equipotential surfaces are planes normal to the X-axis. • For an electric dipole, equipotential surface is the plane perpendicularly bisecting the line joining the charges. • In a uniform electric field, any plane normal to the field directions an equipotential surface. • E ∝ 1 dr or E = dV – dr • For an infinitely long linear charge, equipotential surface are cylindrical.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q491",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A uniformly charged sphere of radius 25 cm has a total charge of Q coulombs. Find the electric field intensity at a point on the surface of the sphere in newtons",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q491",
+              "correct_answer": "A",
+              "explanation": "Electric field due to uniformly charged sphere 'Q' of radius 'r' at its boundary is given by E = 2 0 1 Q 4 r πε here r = 25 cm ∴ E = ( )2 0 Q 1 4 25 πε E = 0 Q 1 4 625 ⋅ πε N",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q492",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्araत्तत् ज्त्aूा म्aज्aम्ग्ूदr प्aे ज्त्aूो दf aर्rी 'A' aह् a ोज्araूग्दह '्'. ऊप ज्त्aूो arा म्प्arुा् ूद a ज्दूाहूग्aत् ्ग्ffीाहम 'न्न्' afूी ैप्ग्म्प् ूप म्प्arुी ग्े rास्दन्. A ्गतम्ूrग्म् ेत्aं दf ूप्ग्म्व्हो 'ू' aह् ्गतम्ूrग्म् म्दहेूaहू E ग्े ूपह ज्त्aम् ेब्स्सूrग्म्aत्त्ब् ाूंौाह ूप ज्त्aूो. घ्ह ूप्ग्े ेग्ूल्aूग्दह, ेंप्aू ग्े ूप ज्दूाहूग्aत् ्ग्ffीाहम aम्rदे ूप ज्त्aूो? एक समांतर प्लेट संधारित्र में 'A' क्षेत्र की प्लेटें और एक विच्छेद 'D' है। प्लेटें 'न्न्' विभवांतर द्वारा आवेशित की जाती हैं जिसके बाद आवेशक हटा दिया जाता है। इसके बाद प्लेटों के बीच मोटाई 'ू' और परावैद्युत स्थिरांक 'E' का एक परावैद्युत खंड संतुलित रूप से रखा जाता है। इस स्थिति में, प्लेटों के बीच विभवांतर क्या होगा?",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q492",
+              "correct_answer": "B",
+              "explanation": "Given, a parallel plate capacitor of :- A = Area of each plates d = Plate's separation t = thickness of slab inserted between the plates Capacitance, C = q V As q A σ = ⇒ q = σA ∴ C = A V σ Let, V1 = Potential due to dielectric slab V2 = Potential due to air gap Now, potential between the plates V = V1+V2 ... (i) ∵ E = –dV dr ⇒ E = –V r ⇒ Er = V DSSSB PGT 126 YCT So, V1 = Emt Also, Em = m σ ∈ ⇒ Em = 0 k σ ∈ m 0 m 0 k E k ∈   =   ∈     ∴ = ∈   ∵ So, V1 = 0 t k σ ∈ ... (ii) Now, V2 = E0(d–t) 0 0 E σ   =   ∈   ∵ ⇒ V2 = ( ) 0 d – t σ ∈ ... (iii) So, put value of V1 and V2 in 1st equn. V = V1+V2 = ( ) 0 0 t d – t K σ σ + ∈ ∈ Here, K = E ⇒ ( ) 0 σ t V = d – t + E     ∈  0 0 σ 1 1 = d – t 1– = E d – t 1– E E                    ∈           —— (iv Here, 0 0 V E = d ⇒ 0 V 1 V = d – t 1– d E            ",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q493",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊैद म्aज्aम्ग्ूदrे ण्१ aह् ण्२ (ण्१ ्न ण्२) arा म्दहहाम्ूा् ग्ह ेीगे ैग्ूप् a ेल्ज्ज्त्ब् दf न्दत्ूaुा न्न्. ऊप ूदूaत् ातम्ूrग्म्aत् ाहीुब् दf ूप म्aज्aम्ग्ूदrे ग्ह ूप्ग्े ेग्ूल्aूग्दह ग्े E१. ऊपह ूपब् arा म्दहहाम्ूा् ग्ह ज्araत्तत् ूद ूप ेaस ेल्ज्ज्त्ब् न्दत्ूaुा, aह् ूपह ूप ातम्ूrग्म्aत् ाहीुब् दf ूप म्aज्aम्ग्ूदrे ग्े E२. इग्ह् ण्१ ग्ह ूीस्े दf न्न्, E१, E२. दो संधारित्र ण्१ और ण्२ (ण्१ ्न ण्२) श्रेणी क्रम में वोल्टेज न्न् की आपूर्ति के साथ योजित हैं। इस स्थिति में संधारित्रों की कुल वैद्युत ऊर्जा E१ है। फिर उनको उसी वोल्टेज की आपूर्ति के साथ समांतर क्रम में योजित किया जाता है, और तब संधारित्रों की वैद्युत ऊर्जा E२ हो जाती है। ण्१ को न्न्, E१, E२ की शब्दावली में ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q493",
+              "correct_answer": "D",
+              "explanation": "We have, E1 = 2 1 2 1 2 C C 1 V 2 C C     +   ... (i) E2 = ( ) 2 1 2 1 C C V 2 + ... (ii) 2 1 2 2 2E C C V = + C2 = 2 1 2 2E – C V 2 2 1 1 2 1 2 1 1 2 2E 1 C – C V 2 V E 2E C – C V       =   +     2 2 1 2 2 1 1 2 2 4E E 2E C – C V V V   =     2 2 1 2 2 1 1 2 4E E 2E C – V C V = 2 2 1 2 1 2 1 2 4E E C V – 2E C 0 V + = C1 = 2 2 1 2 2 2 2 2 4E E 2E 4E – 4 V V 2V ± × × C1 = ( ) 2 2 2 1 2 2 1 E E – 4E E V +",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q494",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप म्ल्rrाहू हेग्ूब् ग्ह a म्दह्ल्म्ूदr दf म्ग्rम्ल्त्ar म्rदे -ोम्ूग्दह दf ra्ग्ल्े R न्arगे ैग्ूप् ra्ग्ल्े ग्ह aम्म्दr्aहम ैग्ूप् ूप rात्aूग्दह र ृ व्r (π – r). ेंप्ीा ूप ेब्स्ंदत्े प्aन ूपग्r ल्ेल्aत् सर््ीहग्हुे, इग्ह् ूप ूदूaत् म्ल्rrाहू. त्रिज्या R वाले एक वृत्तीय अनुप्रस्थ-खंड वाले एक संवाहक में विद्युत् धारा का घनत्व त्रिज्या के साथ संबंध र ृ व्r (π – r) के अनुरूप परिवर्तित होता है। यहाँ संकेत अपने सामान्य अर्थों में हैं। कुल विद्युत् धारा ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q494",
+              "correct_answer": "A",
+              "explanation": "Given, J = Kr(π–r) di = J.dA On integrating both side, we get total current through the cross-section, ( ) di Kr – r dA = π ∫ ∫ DSSSB PGT 127 YCT di = Kr(π–r)2πrdr ( ) ( ) a a 2 0 0 i di Kr – r 2 rdr 2 K – r r dr = = π π = π π ∫ ∫ ∫ i = 2πK 3 a – a 3 4 π      ",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q495",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्ह ूप म्ग्rम्ल्ग्ू ेप्दैह ग्ह ूप fग्ुल्rा, ूप ग्हूीहaत् rोग्ेूaहम दf ूप ंaूूीब् ग्े ०.५ दप्स्. Aत्त् ूप rोग्ेूaहमे ेप्दैह arा ग्ह दप्स्े. इग्ह् ूप म्ल्rrाहू ग्ह ूप ंaूूीब्. चित्र में दर्शाये गए परिपथ में बैटरी का आंतरिक प्रतिरोध ०.५ Ω है। दर्शाये गए सभी प्रतिरोध ओहम्स (Ω) में हैं। बैटरी में विद्युत धारा ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "1 amp",
+                "value": "A"
+              },
+              {
+                "prompt": "2 amp",
+                "value": "B"
+              },
+              {
+                "prompt": "2.5 amp",
+                "value": "C"
+              },
+              {
+                "prompt": "3 amp",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q495",
+              "correct_answer": "B",
+              "explanation": "1 1 1 1 R 3 6 9 = + + = 6 3 2 11 18 18 + + = R = 18 11 R' = 18 11 R' = 18 4 11 11 + = 22 2 11 = Ω Now, R\" = 2 2 4 1 2 2 4 × = = + Total registance R\"' = 1+3.5 = 4.5 I = V 10 100 2.2A R '\" 4.5 45 = = = i.e, 2 amp",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q496",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "घ्ह ूप म्ग्rम्ल्ग्ू ेप्दैह aत्त् ूप rोग्ेूaहमे arा ग्ह ध्प्स्े. इग्ह् ूप ज्दैी ्ग्ेग्ज्aूग्दह ूप्rदल्ुप् ूप ४ दप्स् rोग्ेूaहम. दर्शाये गए परिपथ में सभी प्रतिरोध ओहम्स (Ω) में हैं। ४ Ω वाले प्रतिरोध में से होने वाली विद्युत् क्षय ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "1.44 W",
+                "value": "A"
+              },
+              {
+                "prompt": "2.88 W",
+                "value": "B"
+              },
+              {
+                "prompt": "5.76 W",
+                "value": "C"
+              },
+              {
+                "prompt": "7.2 W",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q496",
+              "correct_answer": "C",
+              "explanation": "1 1 1 1 R 6 8 12 = + + = 4 3 2 9 3 24 24 8 + + = = R = 8 3 R' = 4+10+ 8 3 R' = 8 14 3 + R' = 50 3 Now, V = IR I = V R = 20 50 3 I = 6 5 P = I2R = 2 6 4 5  ×     = 36 4 25 × = 144 5.76Watt 25 =",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q497",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ज्दूाहूग्दसूी ैग्rा प्aे a ूदूaत् तहुूप् दf १००० म्स्. घ्ू ग्े ्rग्नह ंब् a मत्त् दf E.श्.इ ४न्न् प्aन्ग्हु a rोग्ेूaहम R ग्ह ेीगे ैग्ूप् ग्ू. A ेदल्rम दf ज्दूाहूग्aत् ्ग्ffीाहम १० स्न्न् ुाूे ंaत्aहम् ंब् a तहुूप् दf ६० म्स् दf ूप ज्दूाहूग्दसूी ैग्rा. इग्ह् ूप न्aत्ल दf R ग्f ूप rोग्ेूaहम दf ूप ज्दूाहूग्दसूी ैग्rा ग्े २० ध्प्स्. एक विभवमापी तार की कुल लंबाई १००० म्स् है। इस को ४ न्न् के विद्युत् वाहक बल (इलेक्ट्रो मोटिव ़फोर्स",
+            "options": [
+              {
+                "prompt": "440 ohm",
+                "value": "A"
+              },
+              {
+                "prompt": "460 ohm",
+                "value": "B"
+              },
+              {
+                "prompt": "620 ohm",
+                "value": "C"
+              },
+              {
+                "prompt": "640 ohm",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q497",
+              "correct_answer": "B",
+              "explanation": "Current in the potentiometer wire, I = E R R ' + Now, Resistance of 60 cm wire, R = 20 60 1.2 1000 × = Ω E.m.f of the cell balanced by wire of 60 cm. Since, V = IR –3 4 10 10 1.2 20 R '   × = ×   +   –3 4.8 10 10 20 R ' × = + 20+R' = 4.8×102 R' = 480–20 = 460Ω",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q498",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "ऊप्rाा ेूaूासहूे arा ुग्नह ांत्दै rाुar्ग्हु रदल्त पर््ीूग्हु fिाम्ू- नीचे जूल तापीय प्रभाव से संबंधित तीन कथन दिये गए है। (ज्) पर््ीू ग्े ान्दत्न् aे ौत्त् aे aेंदrां्",
+            "options": [
+              {
+                "prompt": "Only",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "Only",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q498",
+              "correct_answer": "D",
+              "explanation": "Only (q) Joule heating is caused by interactions between charge carriers and the body of the conductor. A potential difference between two points of a conductor creates an electric field that accelerates charge carriers in the direction of the electric field, giving them kinetic energy. Joule heating is the physical effect by which the passes of current through an electrical conductor produces thermal energy. Therefore, The effect takes place throughout the circuit.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q499",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A ेqल्arा त्ददज् दf ेग् a ग्े ज्त्aम् ग्ह a ल्हग्fदrस् स्aुहाूग्म् fगत्् दf ग्ह्ल्म्ूग्दह ँ ेल्म्प् ूप्aू ज्त्aहा दf ूप त्ददज् ग्े ज्ीजह्ग्म्ल्त्ar ूद ूप स्aुहाूग्म् fगत््. ऊप त्ददज् ग्े ेल््हत्ब् ज्ल्त्त् दल्ू दf ूप fगत््. इग्ह् ूप म्प्arुा ूप्aू fत्दैे ूप्rदल्ुप् ूप त्ददज्. Rोग्ेूaहम दf ूप त्ददज् ग्े R. फलक a का एक चौकोर पाश प्रेरण ँ के एक समरूप चुंबकीय क्षेत्र में इस प्रकार स्थित है कि पाश की सतह चुंबकीय क्षेत्र के लंबवत् रहती है। पाश को अकस्मात क्षेत्र से बाहर खींच लिया जाता है। पाश में से प्रवाहित होने वाला आवेश ज्ञात करें। पाश का प्रतिरोध R है।",
+            "options": [
+              {
+                "prompt": "Ba",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q499",
+              "correct_answer": "C",
+              "explanation": "Uniform Magnetic Field DSSSB PGT 129 YCT Given, Plane of the square loop is perpendicular to the magnetic field. R – resistance of the square loop. Charge induced in the magnetic field = ? E.m.f (e) induced in a loop due to magnetic field (B) in area A is given by ( ) d BA d dB e = – = = A dt dt dt φ ⇒ BA e = t Since, e BA I = = R tR ⇒ q BA = t tR ⇒ 2 BA Ba q = = R R",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "pgt_physics_q500",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A rद् दf तहुूप् त् ग्े ज्त्aम् ग्ह a ल्हग्fदrस् स्aुहाूग्म् fगत्् दf ग्ह्ल्म्ूग्दह ँ. ऊप rद् ग्े स्दन् ैग्ूप् नत्दम्ग्ूब् न्न् aे ेप्दैह. इग्ह् ूप ा.स्.f ग्ह्ल्म् aम्rदे ूप rद्. लंबाई त् की एक छड़ प्रेरण ँ के एक समरूप चुबकीय क्षेत्र में स्थित है। छड़ वेग न्न् से अग्रसर होती है जैसा कि निम्नांकित चित्र में दर्शाया गया है। संपूर्ण छड़ में प्रेरित विद्युत् वाहक बल (ई़ एम़ ए़फ) ज्ञात करें।",
+            "options": [
+              {
+                "prompt": "BlV",
+                "value": "A"
+              },
+              {
+                "prompt": "BlV cos θ",
+                "value": "B"
+              },
+              {
+                "prompt": "BlV sin θ",
+                "value": "C"
+              },
+              {
+                "prompt": "zero",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "pgt_physics_q500",
+              "correct_answer": "C",
+              "explanation": "When a rod is moving in a magnetic field then an e.m.f is generated across its ends. The e.m.f is given by e.m.f generated = BlVsinθ. • When a metal rod of length 'l' is placed normal to a uniform magnetic field 'B' and moved with velocity 'V' perpendicular to the field. The induced e.m.f is equal to the rate of change of magnetic flux, which is equal to the cross product of magnetic field and velocity vector and proportional to the length of the rod and depends on the sin of the angle between the B and V. Thus, e = BlV sinθ.",
+              "key_concepts": [
+                "Physics",
+                "PGT Series"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

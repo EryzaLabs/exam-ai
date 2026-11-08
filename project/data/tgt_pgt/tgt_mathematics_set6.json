@@ -1,0 +1,3820 @@
+{
+  "_id": "tgt_mathematics_set6",
+  "title": "TGT Mathematics • Mock Test Set 6 (100 MCQs)",
+  "course": "TGT Series",
+  "subject": "Mathematics",
+  "exam": "tgt",
+  "price": 199,
+  "originalPrice": 999,
+  "duration": 100,
+  "sections": [
+    {
+      "_id": "sec_tgt_mathematics_set6",
+      "title": "Mathematics Section",
+      "qCount": 100,
+      "time": 100,
+      "questions": [
+        {
+          "_id": "tgt_mathematics_q501",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The second derivative of the function f(x) =       1 x x at x = e is :",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q501",
+              "correct_answer": "C",
+              "explanation": "We have 1 ( nx / x) x f(x) (x) e = = ℓ Which on differentiating w.r.t x gives ( nx / x) d nx f '(x) e dx x = ℓ ℓ ( nx / x) 1/ x 2 2 1 nx 1 nx e x x x − −     = =         ℓ ℓ ℓ Which on differentiating again w.r.t x gives 1 1 x x 2 2 d 1 nx 1 nx d f \"(x) x (x) dx x x dx − −     = +         ℓ ℓ 2 1 1 x x 4 2 2 1 x (1 nx)2x 1 nx 1 nx x x (x) x x x     − − −       − −         = +                   ℓ ℓ ℓ ( ) 2 1 x 4 nx 2x. nx 2 nx 3x 1 x x   + − − + =       ℓ ℓ ℓ which on putting x = e gives ( ) 1 3 1/e 3 e e .[ e ] e  −   −   − = −",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q502",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "How many positive integers not exceeding 1000 are divisible by 7 or 11 ?",
+            "options": [
+              {
+                "prompt": "12",
+                "value": "A"
+              },
+              {
+                "prompt": "90",
+                "value": "B"
+              },
+              {
+                "prompt": "220",
+                "value": "C"
+              },
+              {
+                "prompt": "142",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q502",
+              "correct_answer": "C",
+              "explanation": "Since we know that n(A∪B) = n(A) +n(B) – n(A∩B) –––– (i) where, A and B are the sets of integers divisible by 7 and integers divisible by 11 not exceeding 1000 respectively. as numbers of integers divisible by 7, 11 or both will be 1000 7       =142.85≃142, 1000 11       = 90.9≃90 or 1000 77       = 12.98≃ 12 respectively. we get, ⇒ n(A∪B) = 142 + 90 – 12 = 220 {From equation (i) }.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q503",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If (1.5, 0), (1.5, 6) and (–1, 6) are mid points of sides of a triangle, then the incentre of the triangle is:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "2 ,4",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q503",
+              "correct_answer": "A",
+              "explanation": "We have xa = 1.5 + 1.5 – (–1) = 4, ya = 0 + 6 – 6 = 0 xb = 1.5 + (–1) – 1.5 = –1, yb = 0 + 6 – 6 = 0 xc = 1.5 + (–1) –1.5 = –1, yc = 6 + 6 – 0 = 12 Therefore, the vertices of the triangle are A(4,0), B(– 1,0) and C(–1, 12) and hence we get AB = 5, BC = 12 and AC = 13. Therefore, the required coordinates of the incenter of the triangle is 12 4 13 ( 1) 5 ( 1) 12 0 13 0 5 12 , 12 13 5 12 13 5 × + × − + × − × + × + ×     + + + +   = (1, 2)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q504",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The area of the triangle formed by the straight lines 7x – 2y + 10 = 0, 7x + 2y – 10 = 0 and 9x + y + 2 = 0 is:",
+            "options": [
+              {
+                "prompt": "686 sq.units",
+                "value": "A"
+              },
+              {
+                "prompt": "686 sq.units",
+                "value": "B"
+              },
+              {
+                "prompt": "868 sq.units",
+                "value": "C"
+              },
+              {
+                "prompt": "688 sq.units",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q504",
+              "correct_answer": "A",
+              "explanation": "We have the vertices of triangle as (0, 5), 14 104 14 76 , and , 11 11 25 25 −             . Therefore the required area is 1 14 49 14 49 2 11 25 25 11   × + ×     = 343 343 275 275 + = 686 sq.units. 275",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q505",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In a triangle ABC with vertices A(1, 2), B(2, 3) C(3, 1) and ∠C = cos–1 4 5       , ∠B = ∠A = cos–1 1 10 . Then, the coordinates of circumcentre of the triangle are:",
+            "options": [
+              {
+                "prompt": "11,2",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "13 11",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q505",
+              "correct_answer": "D",
+              "explanation": "Here, A(1, 2), B(2, 3) and C(3, 1) are the vertices of the triangle ABC. Let O(x, y) be the coordinates of the circumcenter of the triangle. Then, we must have OA = OB = OC or OA2 = OB2 = OC2 Now, OA2 = (x – 1)2 + (y – 2)2 = x2 + y2 – 2x – 4y + 5 OB2 = (x – 2)2 + (y – 3)2 = x2 + y2 – 4x – 6y + 13 OC2 = (x – 3)2 + (y – 1)2 = x2 + y2 – 6x – 2y + 10 and OA2 = OB2 = OC2 ⇒ x + y = 4 & 2x – 4y = – 3 ⇒ 13 11 (x,y) , 6 6   =    ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q506",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The solution of the recurrence relation an = 6an– 1 –9an–2 , a0 = 1, a1 = 6 is:",
+            "options": [
+              {
+                "prompt": "an =",
+                "value": "A"
+              },
+              {
+                "prompt": "an =",
+                "value": "B"
+              },
+              {
+                "prompt": "an =",
+                "value": "C"
+              },
+              {
+                "prompt": "an =",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q506",
+              "correct_answer": "A",
+              "explanation": "We have the characteristic equation- x2 – 6x + 9 = 0 which has roots –3 and –3 Therefore, a solution of the recurrence relation is given by an = an3n + bn3n Now if a0 = 1 and a1 = 6 we get a = 1 and b = 1 Thus we get, an = (1 + n)3n",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q507",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The set of all points where the function f(x) = 2x|x| is differentiable, is:",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "[0, ∞)",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q507",
+              "correct_answer": "A",
+              "explanation": "We have 2 2 2x ,x 0 f(x) 2x x 2x ,x 0  ≥ = = − <  This is clearly continuous and differentiable everywhere.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q508",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the function f(x) =   ≥   2 ax – b,| x | <1 –1 | x | 1 , | x | is differentiable, then the values of a and b are respectively:",
+            "options": [
+              {
+                "prompt": "1, 2",
+                "value": "A"
+              },
+              {
+                "prompt": "0.5, 1.5",
+                "value": "B"
+              },
+              {
+                "prompt": "0.5, 0.5",
+                "value": "C"
+              },
+              {
+                "prompt": "1, –1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q508",
+              "correct_answer": "B",
+              "explanation": "We must have x 1 lim − →ax2 – b = x 1 1 lim f(1) x + →   − =       ⇒ a – b = –1 & 2a = 1 (since derivative exists at x = 1) Therefore, we get 1 3 a and 2 2 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q509",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f(x) = x ( x x 1) − + , then:",
+            "options": [
+              {
+                "prompt": "f",
+                "value": "A"
+              },
+              {
+                "prompt": "f",
+                "value": "B"
+              },
+              {
+                "prompt": "f",
+                "value": "C"
+              },
+              {
+                "prompt": "f",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q509",
+              "correct_answer": "A",
+              "explanation": "f(x) = ( ) x x x 1 − + to check continuity at x = 0 L.H.L. = ( ) x 0 Limx x x 1 − → − + = does not exist {domain, x ≥ 0} R.H.L. = ( ) x 0 Limx x x 1 0 + → − + = So, f(x) is not continuous and not differentiable",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q510",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Identify the false statement given below:",
+            "options": [
+              {
+                "prompt": "If the quadrilateral is cyclic, then the product",
+                "value": "A"
+              },
+              {
+                "prompt": "Ceva's",
+                "value": "B"
+              },
+              {
+                "prompt": "Menelau's theorem is concerned with the",
+                "value": "C"
+              },
+              {
+                "prompt": "Menelau's theorem is a not dual version of",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q510",
+              "correct_answer": "D",
+              "explanation": "(a) True. In a cyclic quadrilateral, the product of two diagonals is equal to the sum of product of the opposite sides. (b) Ceva's Theorem :- If three cevians, , AX, BY, CZ, one through each vertex of a ∆ABC, are concurrent, then BX CY AZ . . 1 XC YA ZB = (c) Menelaus's Theorem:- If points X, Y, Z on the sides BC, CA, AB (suitably extended) of ∆ABC are collinear then, BX CY AZ . . 1 XC YA ZB =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q511",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The area of the quadrilateral whose vertices, taken in order, are (–4, –2), (3, –5), (–3, –2) and (2, 3) is:",
+            "options": [
+              {
+                "prompt": "22 sq. units",
+                "value": "A"
+              },
+              {
+                "prompt": "23 sq. units",
+                "value": "B"
+              },
+              {
+                "prompt": "26 sq. units",
+                "value": "C"
+              },
+              {
+                "prompt": "28 sq. units",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q511",
+              "correct_answer": "D",
+              "explanation": "Area of the triangle with vertices (x1, y1), (x2, y2) and (x3, y3) is 1 1 2 2 3 3 x y 1 1 x y 1 2 x y 1 . Now ar(∆ABC) = 21 2 sq. units & ar(∆ADC) = 35 2 sq. units Therefore, ar(∆ABCD) = ar(∆ABC) + ar(∆ADC) = 21 35 2 2 + = 28 sq. units.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q512",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Euclid's fifth postulate is:",
+            "options": [
+              {
+                "prompt": "All right angles are equal to one another.",
+                "value": "A"
+              },
+              {
+                "prompt": "A circle may be described with any center",
+                "value": "B"
+              },
+              {
+                "prompt": "The whole is greater than the part.",
+                "value": "C"
+              },
+              {
+                "prompt": "If a straight line, falling on two straight lines",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q512",
+              "correct_answer": "D",
+              "explanation": "Euclid's fifth postulate:- If a Straight line-falling on two straight lines, makes the interior angles on the same side of it, taken together less than two right angles, then the two straight lines if produced indefinitely, meet on that side on which the sum of angles is less than to right angles.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q513",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The following theorems present conditions under which triangles are similar. Which is a false condition of the theorem?",
+            "options": [
+              {
+                "prompt": "The corresponding sides of the triangle are",
+                "value": "A"
+              },
+              {
+                "prompt": "Side-Angle-Side",
+                "value": "B"
+              },
+              {
+                "prompt": "Side-Angle-Side",
+                "value": "C"
+              },
+              {
+                "prompt": "Side-Angle-Side",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q513",
+              "correct_answer": "A",
+              "explanation": "Two triangles are similar if corresponding sides are proportional to each other and corresponding angles are congruent i.e. equal.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q514",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f(x) = x x andg(x)= , sinx tanx 0 ≤ x ≤ 1, then in the interval:",
+            "options": [
+              {
+                "prompt": "Both f",
+                "value": "A"
+              },
+              {
+                "prompt": "f",
+                "value": "B"
+              },
+              {
+                "prompt": "Both f",
+                "value": "C"
+              },
+              {
+                "prompt": "g",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q514",
+              "correct_answer": "B",
+              "explanation": "We have f(x) = x sin x then 2 sin x x cos x f '(x) sin x − = Now f'(x) > 0 gives tanx > x : x∈(0,1] Therefore, f(x) an increasing function. And x g(x) tan x = then 2 2 tan x x sec x g '(x) tan x − = Now g'(x) > 0 gives 2 tan x x sec x > which is false in (0,1] YEP DSSSB (TGT-Math) 2018 (18.11.2018, Shift-III) 96 YCT Section : Discipline-4",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q515",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The value of sin 25º cos 65º + cos 25º sin 65º is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q515",
+              "correct_answer": "A",
+              "explanation": "sin25º cos65º + cos25º sin65º = sin (90º) = 1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q516",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In a histogram, each class rectangle is constructed with base as:",
+            "options": [
+              {
+                "prompt": "frequency",
+                "value": "A"
+              },
+              {
+                "prompt": "size of the class",
+                "value": "B"
+              },
+              {
+                "prompt": "class interval",
+                "value": "C"
+              },
+              {
+                "prompt": "range",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q516",
+              "correct_answer": "C",
+              "explanation": "In a histogram, each rectangle is constructed with base as class interval.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q517",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If tan (A – B) = 1 3 , tan(A + B) = 3 , 0º <∠(A + B) < 90º with ∠A is greater than ∠B, then ∠A and ∠B are:",
+            "options": [
+              {
+                "prompt": "∠A = 45º, ∠B = 25º",
+                "value": "A"
+              },
+              {
+                "prompt": "∠A = 60º, ∠B = 15º",
+                "value": "B"
+              },
+              {
+                "prompt": "∠A = 30º, ∠B = 15º",
+                "value": "C"
+              },
+              {
+                "prompt": "∠A = 45º, ∠B = 15º",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q517",
+              "correct_answer": "D",
+              "explanation": "Given that tan(A–B) = 1 , tan(A B) 3 3 + = (A–B) = ( ) 1 1 tan 1 , (A B) tan 3 3 −   − + =     ( ) ( ) ( ) 1 1 A B tan tan 30 ,(A B) tan tan 60 − − − = ° + = ° A – B = 30º–––(i), A + B = 60º ––––(ii) Adding equation (i) and (ii) We get A = 45º and B = 15º",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q518",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A solid consisting of a right circular cone of height 1.20 m and radius 0.60 m standing on a hemisphere of radius 0.60 m is placed upright in a right circular cylinder full of water such that it touches the bottom. If the radius of the cylinder is 0.60 m and its height is 1.80 m then the volume of water left in the cylinder is:",
+            "options": [
+              {
+                "prompt": "1.132 m3",
+                "value": "A"
+              },
+              {
+                "prompt": "1.130 m3",
+                "value": "B"
+              },
+              {
+                "prompt": "1.131 m3",
+                "value": "C"
+              },
+              {
+                "prompt": "1.031 m3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q518",
+              "correct_answer": "C",
+              "explanation": "Now, volume of the cylinder = π (0.6)2×1.8 = 0.648 πm3h = 1.8 m & volume of the cone and hemisphere (combined) = 3 2 2 1 (0.6) (0.6) (1.2) 3 3 π + π× = 0.144 πm3 + 0.144 πm3 Thus, the required volume is 0.648π – 2(.144π) = 0.36 πm3 = 1.131m3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q519",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The circle x2 + y2 = 1 cuts the x-axis at A and B, another circle with centre at B and variable radius, intersects the first circle at C above the x-axis and the line segment AB at D. Then the maximum area of the triangle is:",
+            "options": [
+              {
+                "prompt": "4 3",
+                "value": "A"
+              },
+              {
+                "prompt": "4 2",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "2 3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q519",
+              "correct_answer": "A",
+              "explanation": "C1 = x2 + y2 = 1 C2: x2 + y2 + 2x +1 = r2 ; r is the radius Now, if C2 intersects C1 and line AB at D then D = (–1 ± r, 0) Now, ar (∆BCD) = A2 = 6 4 1 r r 4 4   −     and to maximize area we must have 6 4 d 1 r r 0 dr 4 4   − =     ⇒ r2 = 8/3 Therefore, the maximum area is ` 16 4 3 A 27 9 = = sq. units",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q520",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If the median of the distribution given below is 28.5, Class: 0 – 10 10 – 20 20 – 30 30 – 40 40 – 50 50 – 60 Freq.: 5 a 20 15 b 5 Total 60 then the missing values of a and b are respectively:",
+            "options": [
+              {
+                "prompt": "3, 7",
+                "value": "A"
+              },
+              {
+                "prompt": "2, 5",
+                "value": "B"
+              },
+              {
+                "prompt": "8, 7",
+                "value": "C"
+              },
+              {
+                "prompt": "8, 5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q520",
+              "correct_answer": "C",
+              "explanation": "Respective cumulative frequencies are 5, 5 + a, 25 + a, 40 + a, 40 + a + b, 45 + a + b ⇒ a + b = 60 – 45 ⇒ a + b = 15 .......(1) Now, median class = 20 – 30 ⇒ lower limit (l) of median class = 20, c.f of class preceding the median class = 5 + a, frequency of median class f = 20, & class size h = 10 YEP DSSSB (TGT-Math) 2018 (18.11.2018, Shift-III) 97 YCT Hence, median = n cf 2 h f   −   +       l gives 28.5 = 20 + 30 (5 a) 10 20 − + × ⇒ 28.5 – 20 = 25 a 2 − ⇒ a = 8 Put a = 8 in equation (1) Then 60 = 45 + 8 + b gives b = 7.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q521",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Construction of a cumulative frequency table is useful in determining the:",
+            "options": [
+              {
+                "prompt": "mode",
+                "value": "A"
+              },
+              {
+                "prompt": "median",
+                "value": "B"
+              },
+              {
+                "prompt": "mean",
+                "value": "C"
+              },
+              {
+                "prompt": "all the three given measures",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q521",
+              "correct_answer": "B",
+              "explanation": "Cumulative frequency is the total of a frequency and all frequencies in a frequency distribution until a certain defined class interval. Therefore, the cumulative frequency table is useful to determine the median.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q522",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The angle θ between the lines joining the points (0, 0), (2, 3) and (2, –2), (3, 5) is:",
+            "options": [
+              {
+                "prompt": "1 1",
+                "value": "A"
+              },
+              {
+                "prompt": "1 11",
+                "value": "B"
+              },
+              {
+                "prompt": "1 11",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q522",
+              "correct_answer": "B",
+              "explanation": "Let θ be the angle between lines. Then 1 2 1 2 m m tan 1 m m − θ = + ....... (1) 2 1 1 2 1 y y m x x   − =   −   and 4 3 2 4 3 y y m x x   − =   −   1 3 0 3 m 2 0 2 −   = =   −   & 2 5 2 m 7 3 2 +   = =   −   Now, equation (1) becomes = 3 7 11 2 3 23 1 7 2 − = + × ⇒ 1 11 tan 23 − θ =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q523",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The angle of elevation of the top of a building from the foot of a tower is 30º and the angle of elevation of the top of the tower from the foot of the building is 60º. If the tower is 50 m high, then the height of the building is:",
+            "options": [
+              {
+                "prompt": "51m",
+                "value": "A"
+              },
+              {
+                "prompt": "49 m",
+                "value": "B"
+              },
+              {
+                "prompt": "50 m",
+                "value": "C"
+              },
+              {
+                "prompt": "47 m",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q523",
+              "correct_answer": "C",
+              "explanation": "Let the height of AB = x m. Now In ∆BDC, tan60º = 50 BD ⇒ BD = 50 m 3 YEP DSSSB (TGT-Math) 2018 (18.11.2018, Shift-III) 98 YCT In ∆ABD tan30º = AB BD ⇒ 1 AB BD 3 = ⇒ 1 x 50 3 3 = ⇒ x = 50 m 3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q524",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The distance between two parallel lines is unity. A point A lies between the lines at a distance 'a' from one of them. If the vertex B lies on one of the parallel lines and the vertex C lies on the other line then the length of a side of an equilateral ∆ABC is",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q524",
+              "correct_answer": "C",
+              "explanation": "We have AL = a, CN = 1 ∆ABC is an equilateral triangle. Now let AB = BC = CA = b. Then CN = 1 = b sin (60º + α) = b (sin60º cosα + cos60º sinα ) = 3 1 b cos sin 2 2   α + α       In ∆ABC, sinα = a b and cosα = 2 2 a 1 b − gives CN = b 2 2 3 a 1 a . 1 1 2 2 b b     − + × =     ⇒ b = 2 2 a a 1 3 × − +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q525",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If sec 4A = cosec (A – 20º), where 4A is an acute angle, then the value of A is:",
+            "options": [
+              {
+                "prompt": "24º",
+                "value": "A"
+              },
+              {
+                "prompt": "20º",
+                "value": "B"
+              },
+              {
+                "prompt": "22º",
+                "value": "C"
+              },
+              {
+                "prompt": "21º",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q525",
+              "correct_answer": "C",
+              "explanation": "We have, sec4A = cosec (90 – 4A ) then cosec (90º – 4A ) = cosec (A – 20º) ⇒ A = 22º.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q526",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A vessel is in the form of a hollow hemisphere mounted by a hollow cylinder. The diameter of the hemisphere is 14 cm and the total height of the vessel is 13 cm. Then the inner surface area of the vessel is:",
+            "options": [
+              {
+                "prompt": "572 cm2",
+                "value": "A"
+              },
+              {
+                "prompt": "562 cm2",
+                "value": "B"
+              },
+              {
+                "prompt": "542 cm2",
+                "value": "C"
+              },
+              {
+                "prompt": "527 cm2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q526",
+              "correct_answer": "A",
+              "explanation": "The radius of the hemisphere = 7 cm, height of the cylinder = 6 cm. Therefore, the total surface area- = 2πr2 + 2πrh = 2 22 22 2 7 2 7 6 7 7 × × + × × = 572 cm2.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q527",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The wheels of a taxi are of diameter 80 cm each. How many complete revolutions does each wheel make is 10 minutes when the taxi is traveling at a speed of 66 km/h?",
+            "options": [
+              {
+                "prompt": "4355",
+                "value": "A"
+              },
+              {
+                "prompt": "4375",
+                "value": "B"
+              },
+              {
+                "prompt": "4735",
+                "value": "C"
+              },
+              {
+                "prompt": "4325",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q527",
+              "correct_answer": "B",
+              "explanation": "The radius of the wheel = 40 cm ∴ circumference of the wheel = 0.8 π m Therefore, number of revolutions = Totaldistance 11000 4375 circumference 0.8   = =   π  ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q528",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In ∆ABC, right angled at B, if tan A = 1 3 , then the value of sin A cos C + cos A sin C is equal to:",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "4",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q528",
+              "correct_answer": "B",
+              "explanation": "If tanA = 1 3 then sinA = 1 2 , cosA = 3 2 , ⇒ A = 30º and B = 90º ⇒ C = 60º sinC = 3 2 and cosC = 1 2 . Therefore, sinA cosC + cosA sinC = 1 3 1 4 4 + =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q529",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A medicine capsule is in the shape of cylinder with two hemispheres stuck to each of its ends. The length of the entire capsule is 14 mm and the diameter of the capsule is 5mm. Then its surface area is:",
+            "options": [
+              {
+                "prompt": "210 mm2",
+                "value": "A"
+              },
+              {
+                "prompt": "220 mm2",
+                "value": "B"
+              },
+              {
+                "prompt": "if the radius of the cylinder is 60 cm and its",
+                "value": "C"
+              },
+              {
+                "prompt": "120 mm2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q529",
+              "correct_answer": "B",
+              "explanation": "Total surface area = surface area of hemisphere + curved surface area of cylinder. = 2πrl + 2πr2 + 2πr2 = 2 22 22 2 (2.5)(9) 4 (2.5) 7 7   + ×     = 220 mm2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q530",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The perimeter of a triangle right angled at C is 70, and the in radius is 6. Then |a – b| equals:",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "9",
+                "value": "B"
+              },
+              {
+                "prompt": "8",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q530",
+              "correct_answer": "D",
+              "explanation": "We have semi perimeter (s) = 1 (a b c) 35 2 + + = & area = 1 ab 2 Now Inradius (r) = 1 ab 2 35 ⇒ 1 ab 2 6 35 = ⇒ ab = 420 and c2 = a2 + b2 gives a + b + c = 70 ⇒ a + b = 70 – c c2 = a2 + b2 + 2ab – 2ab c2 = (a + b)2 – 2ab c2 + 2ab = (a + b)2 = (70 – c)2 c2 + 2 × 420 = (70 – c)2 c = 29 ( ) ( ) 2 2 a b a b 4ab 70 c 4 420 − = + − = − −× = ( ) 2 70 29 4 420 1 − −× = ⇒ |a – b| = 1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q531",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A 120 cm tall boy spots a balloon moving with the wind in a horizontal line at a height of 8820 cm from the ground. The angle of elevation of the balloon from the eyes of the boy at one instant is 60º. After some time, the angle of elevation reduces to 30º. Then the distance travelled by the balloon during this interval is:",
+            "options": [
+              {
+                "prompt": "2900 3 cm",
+                "value": "A"
+              },
+              {
+                "prompt": "5700 3 cm",
+                "value": "B"
+              },
+              {
+                "prompt": "8700 3 cm",
+                "value": "C"
+              },
+              {
+                "prompt": "5800 3 cm",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q531",
+              "correct_answer": "D",
+              "explanation": "In ∆ACE, tan60º = AE CE gives, CE = 8700 2900 3 3 = In ∆BCG, tan30º = BG CG gives CG = 8700 3 Therefore, the distance travelled by the balloon is EG CG CE 5800 3 = − =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q532",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Three circular coins each of radii 1 cm are kept in an equilateral triangle such that all the three coins touch each other and the sides of the triangle. The area of the triangle is :",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q532",
+              "correct_answer": "A",
+              "explanation": "We have that radii of each circle is 1 cm & ∆ABC is an equilateral triangle. Now, since ∠B = 60º ⇒ ∠ EBP = 30º In ∆EBP, EP = r and tan30º = EP BP ⇒ BP = r tan30º and similarly AQ = r tan30º Now, AB = 2 + 2r 2(1 3) tan30º = + ⇒ ar (∆ABC) = 2 3 (2(1 3)) 4 × + = 6 + 4 3 cm2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q533",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In a retail market fruit vendors were selling apple kept in packing boxes. There boxes contained a varying number of apples. The following was the distribution of apples according to the number of boxes. No. of apples: 50 - 52 53 - 55 56 - 58 59 - 61 62- 64 No. of boxes: 15 110 135 115 25 Then the mean number of apples kept in a packing box was:",
+            "options": [
+              {
+                "prompt": "61.54",
+                "value": "A"
+              },
+              {
+                "prompt": "59.16",
+                "value": "B"
+              },
+              {
+                "prompt": "52.64",
+                "value": "C"
+              },
+              {
+                "prompt": "57.19",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q533",
+              "correct_answer": "D",
+              "explanation": "No. of apple No. of boxes (fi) mid point (xi) ∑fixi 50-52 15 51 765 53-55 110 54 5940 56-58 135 57 7695 59-61 115 60 6900 62-64 25 63 1575 ∑fi = 400 22875 Therefore, the required mean is 22875 400 = 57.19 Section : Discipline-5",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q534",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The normal equations for finding a curve of the form y = a + bx + cx2 for 'n' data are:",
+            "options": [
+              {
+                "prompt": "∑y = na + b∑x + c∑x2, ∑xy = a∑x + b∑x2 +",
+                "value": "A"
+              },
+              {
+                "prompt": "∑y = na + b∑x + c∑x2, ∑y2 = a∑xy + b∑x2 +",
+                "value": "B"
+              },
+              {
+                "prompt": "∑y = a + b∑x + c∑x2 , ∑xy = a∑x + b∑x2 +",
+                "value": "C"
+              },
+              {
+                "prompt": "∑y = na + b∑x + c∑x2 , ∑xy = a∑x + b∑x2 +",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q534",
+              "correct_answer": "D",
+              "explanation": "Normal equations are- ∑y = an + b∑x + c∑x2 ∑xy = a∑x + b∑x2 + c∑x3 ∑x2y = a∑x2 + b∑x3 + c∑x4",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q535",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Three identical dice are rolled. The probability that the same number will appear on each of them is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q535",
+              "correct_answer": "C",
+              "explanation": "Let E is the total no. of possibilities. ⇒ n (E) = 216, when three dice are rolled out. ⇒ Possibilities for appearing the same number on each of them n (P) = 6 ⇒ Required probability = ( ) ( ) n P n E = 6 1 216 36 =",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q536",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If log e(x) is normally distributed with mean 1 and variance 4, then P (0.5 < x < 2) is: (where the area between z = 0 and z = 0.25 is 0.0987 and the area between z = 0 and z = 0.5 is 0.1915)",
+            "options": [
+              {
+                "prompt": "0.95",
+                "value": "A"
+              },
+              {
+                "prompt": "0.693",
+                "value": "B"
+              },
+              {
+                "prompt": "0.29",
+                "value": "C"
+              },
+              {
+                "prompt": "0.396",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q536",
+              "correct_answer": "C",
+              "explanation": "Mean (µ) = 1, Variance (σ2) = 4, Standard deviation (σ) = 2. P (z < 0.25) = 0.0987 & P (z < 0.5) = 0.1915 Now, for x = 0.5, z = – 0.25 and for x = 2, z = 0.5 So, P(0.5 < x < 2) = P(–0.25 < z < 0.5) = P(–0.25 < z < 0 ) + P(0 < z < 0.5) = P(0 < z < 0.25) + P(0 < z < 0.5) = 0.0987 + 0.1915 ≈ 0.29. YEP DSSSB (TGT-Math) 2018 (18.11.2018, Shift-III) 101 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q537",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The standard error of the sample mean is:",
+            "options": [
+              {
+                "prompt": "the square root of the variance of the",
+                "value": "A"
+              },
+              {
+                "prompt": "The variance of the population",
+                "value": "B"
+              },
+              {
+                "prompt": "The variance of the sample",
+                "value": "C"
+              },
+              {
+                "prompt": "The standard deviation of the sample man",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q537",
+              "correct_answer": "A",
+              "explanation": "Standard error = 2 x n n σ σ σ = = where σ and σ2 are standard deviation and variance respectively.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q538",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A boy noted the number of taxi passing through a spot on road for 100 periods each of 3 minutes and summarized it in the table given below: No. of taxi 0-10 10-20 20-30 30-40 40-50 50-60 60-70 70-80 Frequency 07 14 13 12 20 11 15 08 Then the mode is:",
+            "options": [
+              {
+                "prompt": "29.8",
+                "value": "A"
+              },
+              {
+                "prompt": "32.1",
+                "value": "B"
+              },
+              {
+                "prompt": "37.5",
+                "value": "C"
+              },
+              {
+                "prompt": "44.7",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q538",
+              "correct_answer": "D",
+              "explanation": "Using the formula we get mode = 40 + 20 12 10 2 20 12 11 − × × − − = 40 + 8 10 17 × = 44.7",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q539",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "A continuous random variable X has a probability density function f(x) = ≤    6x(1 – x),0 < x 1 0,otherwise .Then the variance of X is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q539",
+              "correct_answer": "A",
+              "explanation": "Mean (µ) = 0 1 0 1 xf(x)dx xf (x)dx xf(x)dx xf(x)dx ∞ ∞ −∞ −∞ = + + ∫ ∫ ∫ ∫ = 1 2 0 x(6x 6x )dx − ∫ = 1 2 Therefore, Variance = 2 1 2 0 1 x (6x 6x )dx 2   − −     ∫ = 1 20",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q540",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If two regression coefficients are –0.1 and –0.9, then correlation coefficient is:",
+            "options": [
+              {
+                "prompt": "–0.3",
+                "value": "A"
+              },
+              {
+                "prompt": "0.3",
+                "value": "B"
+              },
+              {
+                "prompt": "–0.9",
+                "value": "C"
+              },
+              {
+                "prompt": "0.9",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q540",
+              "correct_answer": "A",
+              "explanation": "Correlation coefficient = ± (0.1)(0.9) 0.09 0.3 = ± = ± since, signs of regression coefficients are negative we get correlation coefficient = – 0.3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q541",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The probability of getting 4 heads in 6 tosses of a fair coin is:",
+            "options": [
+              {
+                "prompt": "15",
+                "value": "A"
+              },
+              {
+                "prompt": "15",
+                "value": "B"
+              },
+              {
+                "prompt": "15",
+                "value": "C"
+              },
+              {
+                "prompt": "30",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q541",
+              "correct_answer": "C",
+              "explanation": "In 6 tosses, total no. of possibilities = 26 = 64 getting 4 heads, total no. of possibilities = 15 ⇒ The required probability = 15 64",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q542",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "There are four machines and it is known that exactly two of them are faulty. They are tested, one by one, in a random order till both the faulty machines are identified. Then the probability that only two tests are needed is:",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "1",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q542",
+              "correct_answer": "D",
+              "explanation": "Only two tests are needed when the two machines tested are either both working or both are not working. Both are working, Probability is 2 1 1 4 3 6 × = Both are not working, Probability is 2 1 1 4 3 6 × = Hence, Probability that only two test are required is 1 6 .",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q543",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let X be a Poisson random variable such that 2P(X = 0) = P(X = 2). Then the standard deviations of X is:",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "4",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "2",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q543",
+              "correct_answer": "D",
+              "explanation": "We have 2P(X = 0) = P(X = 2) for a Poisson distribution ⇒ 2 e 2e 2 −λ −λ = λ ⇒ λ = ± 2 ⇒ λ = 2 ⇒ standard deviation = λ Therefore, the standard deviation = 2 . YEP DSSSB (TGT-Math) 2021 (2.9.2021, Shift-I-Male) 102 YCT DSSSB TRAINED GRADUATE TEACHER (TGT) 2021 MATH Solved Paper Section : Discipline-1",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q544",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ˆ ˆ r = xi + yj+ zk \u0001 ɵ be the position vector given to us, then find curl ( r\u0001 )?",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "0",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q544",
+              "correct_answer": "C",
+              "explanation": "Position vector ˆ ˆ ˆ r xi yj zk = + + \u0001 We have ( ) ˆ ˆ ˆ i j k curl r x y z x y z ∂ ∂ ∂ = ∂ ∂ ∂ \u0001 = ( ) ( ) ( ) ˆ ˆ ˆ i 0 0 j 0 0 k 0 0 − − − + − = 0 \u0001",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q545",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If sign of f' > 0, then what can you say about nature of f?",
+            "options": [
+              {
+                "prompt": "f neither increases nor decreasing",
+                "value": "A"
+              },
+              {
+                "prompt": "f is increasing",
+                "value": "B"
+              },
+              {
+                "prompt": "f is decreasing",
+                "value": "C"
+              },
+              {
+                "prompt": "f increases as well as decreasing",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q545",
+              "correct_answer": "B",
+              "explanation": "Let f be continuous on [a, b] and differentiable on (a, b). We have f'(x) ≥ 0 on (a, b). Given x < y it follows from mean value theorem (MVT) that f'(c) = f(y) f(x) y x − − for some point c∈ (a, b). Because f'(c) ≥ 0 and y – x > 0, we conclude that f(x) ≤ f(y) and hence f is increasing.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q546",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following is not Euclidean domain?",
+            "options": [
+              {
+                "prompt": "= a",
+                "value": "A"
+              },
+              {
+                "prompt": "Every field F with norm N as N",
+                "value": "B"
+              },
+              {
+                "prompt": "Z",
+                "value": "C"
+              },
+              {
+                "prompt": "The field of rational numbers under absolute",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q546",
+              "correct_answer": "D",
+              "explanation": "(a) ℤ[i] = {a + ib ; a, b ∈ℤ} is a Euclidean domain. (b) Every field F with norm N as N (a) = 1 is a Euclidean domain as for all a, b ∈ F, both nonzero, N (a) = 1 = N (b) and for any a, b ∈ F, (both nonzero), there exist t, r ∈F such that a = t, b r = 0. (c) ℤ, the ring of integers, define f(n) = |n|, the absolute value of n is Euclidean domain. (d) The field of rational numbers ℚ under absolute value given by N (a) = |a| is not a Euclidean domain as for all a, b ∈ℚboth nonzero N (a) = |a| ≤ |ab| = |a| |b| = N(ab) does not hold because by definition N(a) assumes fractional values.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q547",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The surface area of sphere x2 + y2 + z2 = 16, is?",
+            "options": [
+              {
+                "prompt": "4π",
+                "value": "A"
+              },
+              {
+                "prompt": "64π",
+                "value": "B"
+              },
+              {
+                "prompt": "16π",
+                "value": "C"
+              },
+              {
+                "prompt": "8π",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q547",
+              "correct_answer": "B",
+              "explanation": "Radius of the sphere x2 + y2 + z2 = 16 is 4. So, the surface area = 4π (4)2 = 64π",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q548",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The curve given by x2 + y = 0 is symmetrical around y-axis",
+            "options": [
+              {
+                "prompt": "about the origin",
+                "value": "A"
+              },
+              {
+                "prompt": "X - axis",
+                "value": "B"
+              },
+              {
+                "prompt": "Y - axis",
+                "value": "C"
+              },
+              {
+                "prompt": "around the line x= y",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q548",
+              "correct_answer": "C",
+              "explanation": "The curve f(x) = x2 + y = 0 is symmetrical about Y-axis since f(– x) = x2 + y = 0 = f(x)",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q549",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Pick the wrong statement ?",
+            "options": [
+              {
+                "prompt": "A is non singular if and only if AB = I or BA",
+                "value": "A"
+              },
+              {
+                "prompt": "Elementary rows or column operators doesn't",
+                "value": "B"
+              },
+              {
+                "prompt": "Equivalent matrix holds equivalence relation",
+                "value": "C"
+              },
+              {
+                "prompt": "Rank of invertible idempotent matrix is n+1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q549",
+              "correct_answer": "D",
+              "explanation": "(a) Let A be an n×n matrix over the field F. An n×n matrix B such that BA = AB = I is called inverse of A and A is said to be invertible. Hence, A is non - singular. (b) Let the elementary operation be i j R R ↔ or i j C C ↔ then interchanging two rows or columns just interchanges the orders of the vectors and does not change the span of the set of vectors. Similarly, it can be reasoned for multiplication by a scalar (≠ 0) i.e. i i R cR ↔ or i i C cC → . Suppose A = (v1, v2, ...,vn) be the rows of the matrix and v2 is changed to the vector v2 + αv1: α ≠ 0 ∈ F. Now the span of B = (v1, v2 + α [Exam Date : 02/09/2021, Shift-I (Male) YEP DSSSB (TGT-Math) 2021 (2.9.2021, Shift-I-Male) 103 YCT v1,...,vn) contains (v2 + αv1) – αv1 = v2. So, A ⊆ span(B) which implies span(A) ⊆ span(B) and v2 + αv1 ∈ span(A) so B ⊆ span(A) which implies span(B) ⊆ span (A). Thus we have, span(A) = span(B), hence, same rank. (c) If A and B are m×n matrices over the field F, we say that B is equivalent to A if B can be obtained from A by a finite sequence of elementary operations. Each matrix is equivalent to itself; if B is equivalent to A then A is equivalent to B; if B is equivalent to A and C is equivalent to B, then C is equivalent to A. Thus, equivalence of matrices is an equivalence relation. (d) Let A be n × n idempotent matrix, then we have A2 = A Since A is invertible, A–1A2 = A–1A ⇒ A = I; I is the identity matrix of order n. Thus, rank(A) = rank(I) = n",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q550",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f(x) = –x2 + 3, then find the derivative?",
+            "options": [
+              {
+                "prompt": "x",
+                "value": "A"
+              },
+              {
+                "prompt": "–2x",
+                "value": "B"
+              },
+              {
+                "prompt": "–x",
+                "value": "C"
+              },
+              {
+                "prompt": "+2x",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q550",
+              "correct_answer": "B",
+              "explanation": "Using the definition of the derivative, calculate the derivative of f(x) = – x2 + 3 then, f(x + h) = – (x + h)2 + 3 = – (x2 + 2hx + h2) + 3 = – x2 – 2hx – h2 + 3 Since we know that, h 0 df (x) f(x h) – f(x) lim dx h → + = = ( ) ( ) 2 2 2 h 0 –x – 2hx – h 3 – –x 3 lim h → + + ⇒ ( ) ( ) 2 2 2 h 0 –x – 2hx – h 3 x – 3 df x lim dx h → + + = = 2 h 0 –2hx h lim h → − ⇒ ( ) h 0 –h 2x h d f(x) lim dx h → + = = h 0 lim – 2x – h → = – 2x – 0 d f(x) – 2x dx = Therefore, option (b) is correct answer.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q551",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the value of ( ) φ φ 4 5 cos + i sin",
+            "options": [
+              {
+                "prompt": "cos",
+                "value": "A"
+              },
+              {
+                "prompt": "cos",
+                "value": "B"
+              },
+              {
+                "prompt": "cosφ+sinφ",
+                "value": "C"
+              },
+              {
+                "prompt": "cos5φ+sin5φ",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q551",
+              "correct_answer": "A",
+              "explanation": "Since we know that, by demoivre's theorem (cos θ + i sin θ)n = (cos nθ + i sin nθ) ⇒ (cosφ + i sinφ)4/5 = cos(4/5)φ + i sin(4/5)φ Therefore, option (a) is correct answer.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q552",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "When p(z) divides the line joining the points A and B in the ratio m:n internally then z is given by what?",
+            "options": [
+              {
+                "prompt": "m + n + mn",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "m + n – mn",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q552",
+              "correct_answer": "C",
+              "explanation": "Let A(z1) ≡ (x1, y1) and B(z2) ≡ (x2, y2) and P(z) ≡ (x, y), so we have AP : PB = m:n. Now we have from coordinate geometry x = 2 1 2 1 mx nx my ny & y m n m n + + = + + Hence, P(z) = (x + iy) implies z = 2 1 2 1 mx nx my ny i m n m n + + + + + = ( ) ( ) 2 2 1 1 m x iy n x iy m n + + + + = 2 1 mz nz m n + +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q553",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the volume of curve y = x2; on the x axis on interval [0, 1] around x-axis ?",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "π",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q553",
+              "correct_answer": "C",
+              "explanation": "The equation y = x2 represents the parabola with vertex at origin O(0, 0) and focus at S(0, 1/4). We rotate this curve between x = 0 and x = 1 about x-axis. Now, volume of the formed shape is given by V = ( ) 1 1 2 4 2 4 0 0 y dx x dx y x π = π = ∫ ∫ ∵ = 1 5 0 x 5   π     = π/5",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q554",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If a,b,c are vertices of an equilateral triangle, then a2 + b2 + c2 = ...?",
+            "options": [
+              {
+                "prompt": "ab + bc + ca",
+                "value": "A"
+              },
+              {
+                "prompt": "a/",
+                "value": "B"
+              },
+              {
+                "prompt": "ab – bc – ca",
+                "value": "C"
+              },
+              {
+                "prompt": "ab + bc – ca",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q554",
+              "correct_answer": "A",
+              "explanation": "If a, b, c are sides of an equilateral triangle, then, a = b = c ⇒ (a – b) = 0 = (b – c) = (a – c) ⇒ (a – b)2 + (b – c)2 + (a – c)2 = 0 ⇒ 2a2 + 2b2 + 2c2 = 2 (ab + bc + ac) ⇒ a2 + b2 + c2 = ab + ac + bc",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q555",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Using row echelon form find x and y if x + 2y = 1; 2x + y = 2?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q555",
+              "correct_answer": "A",
+              "explanation": "Augmented matrix is given by 1 2 1 2 1 2        ( ) 2 2 1 1 2 1 R R 2R 0 3 0   → −   −    ∼ 2 2 1 2 1 1 R R 0 1 0 3     →−          ∼ Therefore, x = 1 and y = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q556",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If z = 1 + 3i, find the polynomial generated by its roots?",
+            "options": [
+              {
+                "prompt": "z2 + 2z + 20",
+                "value": "A"
+              },
+              {
+                "prompt": "z2 – 2z + 10",
+                "value": "B"
+              },
+              {
+                "prompt": "z2 – 2z – 10",
+                "value": "C"
+              },
+              {
+                "prompt": "z2 + 2z + 10",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q556",
+              "correct_answer": "B",
+              "explanation": "The complex conjugate root theorem states that if a complex number a + bi is a zero of a polynomial with real coefficients, then its complex conjugate a – bi is also a zero of this polynomial. Hence, if z = 1 + 3i is a root then z = 1 – 3i is also a root. Sum of roots = (1 + 3i) + (1 – 3i) = 2 and Product of roots = (1 + 3i)(1 – 3i) = 10 ∴ Polynomial generated is P (z) = z2 – (sum of roots) z + (product of roots) = z2 – 2z + 10",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q557",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the skew symmetric matrix of order 2 whose entries belong to the set {0, 1, –1}?",
+            "options": [
+              {
+                "prompt": "6",
+                "value": "A"
+              },
+              {
+                "prompt": "3",
+                "value": "B"
+              },
+              {
+                "prompt": "4",
+                "value": "C"
+              },
+              {
+                "prompt": "5",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q557",
+              "correct_answer": "B",
+              "explanation": "Skew symmetric matrices of order 2 with entries from the set {0, 1, –1} are 0 1 0 1 0 0 , , 1 0 1 0 0 0 −         −    ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q558",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the x co-ordinate of one of the inflection points of f(x) = x3 + x2 + 1.",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q558",
+              "correct_answer": "A",
+              "explanation": "We have f(x) = x3 + x2 + 1 ∴ f'(x) = 3x2 + 2x & f\"(x) = 6x + 2 = 0 gives x = 1 3 − as an inflection point.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q559",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the polynomial whose roots are –1, 1 – 2ω, 1 – 2ω2?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "x3 + 8",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q559",
+              "correct_answer": "B",
+              "explanation": "Let the polynomial be p(x) = x3 + px2 + qx + r ............... (i) whose roots are given by α = –1, β = 1 – 2ω and γ = 1 – 2ω2 ; where ω, ω2 ≠ 1 are the cube roots of unity. Now, since 2 1 ω+ ω = −we get α + β + γ = ( –1) + (1 – 2ω) + (1 – 2ω2) = 1 – 2(ω + ω2) = 3 = – p, αβ + βγ + γα = (–1)(1–2ω) + (1–2ω)(1–2ω2) + (–1)(1–2ω2) = – 1 + 2ω + 1– 2ω2 – 2ω + 4 – 1 + 2ω2 = 3 = q & αβγ = (–1)(1 – 2ω)(1 – 2ω2) = – (1 –2ω2 – 2ω + 4) = – 7 = – r putting p = – 3, q = 3 & r = 7 in equation (i) then, P(x) = x3 – 3x2 + 3x + 7 = (x – 1)3 + 8 = 0 Hence, option (b) is correct answer.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q560",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If A = 5, then find the number of commutative binary operations on A?",
+            "options": [
+              {
+                "prompt": "515",
+                "value": "A"
+              },
+              {
+                "prompt": "510",
+                "value": "B"
+              },
+              {
+                "prompt": "53",
+                "value": "C"
+              },
+              {
+                "prompt": "55",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q560",
+              "correct_answer": "A",
+              "explanation": "The binary operation f: A × A → A is commutative if f(a, b) = f(b, a) , for all (a, b) ∈ A × A ∴ Let us write A × A = B ∪ C = {(a, a) ; a ∈ A} ∪ {(a, b) ; a ≠ b : a, b ∈ A} and observe that O(B) = 5 & O(C) = 20. Now, for each (a, a) ∈ B, assign any of the possible 5 values of A. Thus, 55 choices. And, for each (a, b) ∈ C, any of the possible 5 values of A can be assigned, since f is commutative, we assign the same values for f(a, b) & f(b, a). So, we only assign values to 10 pairs of C. Thus, 510 choices. Hence, the number of commutative binary operations on A is",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q561",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If ˆ ˆ ˆ a = i + j+ 2k \u0001 ; ˆ ˆ ˆ b = i – j – k \u0001 be the two vectors given to us, then find the value of cosine of angle between them?",
+            "options": [
+              {
+                "prompt": "0.4713",
+                "value": "A"
+              },
+              {
+                "prompt": "0.3556",
+                "value": "B"
+              },
+              {
+                "prompt": "–0.3556",
+                "value": "C"
+              },
+              {
+                "prompt": "–0.4713",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q561",
+              "correct_answer": "D",
+              "explanation": "Scalar (dot) product of two vectors a & b \u0001 \u0001 a.b | a || b | = \u0001 \u0001 \u0001 \u0001 cosθ ; θ - angle between a & b \u0001 \u0001 ∴ ( ) ( ) ˆ ˆ ˆ ˆ ˆ ˆ i j 2k . i j k + + −− ( ) ( ) ( ) 2 2 2 1 1 2 = + + ( ) ( ) ( ) 2 2 2 1 1 1 + − + − cosθ ⇒ (1 – 1 – 2) = 6 3 cosθ ⇒ cosθ = 2 2 3 6 3 − − = ⇒ cosθ = – 0.471404520",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q562",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If R is a relation which connects two elements x and y such that xRy = x – y is even integer, then which of the properties of equivalence relation is satisfied here?",
+            "options": [
+              {
+                "prompt": "R is reflexive",
+                "value": "A"
+              },
+              {
+                "prompt": "R is transitive",
+                "value": "B"
+              },
+              {
+                "prompt": "R is an equivalence relation",
+                "value": "C"
+              },
+              {
+                "prompt": "R is symmetric",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q562",
+              "correct_answer": "C",
+              "explanation": "Relation R in the ℤ, set of integers given by R = {(x, y) : x – y is even integer} R is reflexive, as (x – x) is even for all x ∈ℤ. Further, if (x, y) ∈ R, then (x – y) is an even integer. Therefore, (y – x) is an even integer. Hence, (y, x) ∈ R, which shows that R is symmetric. Similarly, if (x, y) ∈ R and (y, z) ∈ R, then (x – y) and (y – z) are even integers. Now, (x – z) = (x – y) + (y – z) is an even integer. Then, R is transitive. Thus, R is an equivalence relation in ℤ.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q563",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find grad (f) if f(x, y, z) = xy + y2z at the point (0, 1, –1)?",
+            "options": [
+              {
+                "prompt": "ˆ",
+                "value": "A"
+              },
+              {
+                "prompt": "ˆ",
+                "value": "B"
+              },
+              {
+                "prompt": "ˆ",
+                "value": "C"
+              },
+              {
+                "prompt": "ˆ",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q563",
+              "correct_answer": "B",
+              "explanation": "Given f(x, y, z) = xy + y2z since we now that, grad(f) = ∇(f) = f f f ˆ ˆ ˆ i j k x y z ∂ ∂ ∂ + + ∂ ∂ ∂ 2 2 2 (xy y z) (xy y z) (xy y z) ˆ ˆ ˆ i j k x y z ∂ + ∂ + ∂ + = + + ∂ ∂ ∂ grad(f) = ( ) 2 ˆ ˆ ˆ yi x 2yz j y k + + + and at (0, 1, –1) ; grad(f) = ˆ ˆ ˆ i 2j k − + Section : Discipline-2",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q564",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the range of the sequence given by f = < (1/n) >?",
+            "options": [
+              {
+                "prompt": "{1, 1/3, 1/5,...}",
+                "value": "A"
+              },
+              {
+                "prompt": "{1, 1/2, 1/3,...}",
+                "value": "B"
+              },
+              {
+                "prompt": "zero",
+                "value": "C"
+              },
+              {
+                "prompt": "{1,2,3,...}",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q564",
+              "correct_answer": "B",
+              "explanation": "Define a sequence f : N → R by f(n) = 1 n ; n N ∀∈ Putting n = 1, 2, 3, ........... then f(n) = 1 1 1 1, , ,... n 2 3     =        ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q565",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "When per capitarate increases, we take same positive value we get ... growth?",
+            "options": [
+              {
+                "prompt": "linguistics",
+                "value": "A"
+              },
+              {
+                "prompt": "Carrying capacity",
+                "value": "B"
+              },
+              {
+                "prompt": "logistic",
+                "value": "C"
+              },
+              {
+                "prompt": "exponential",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q565",
+              "correct_answer": "D",
+              "explanation": "Population growth rate (change in number of individuals in a population over time) : dN rN; dT = dN growth rateof the populationin a giveninstant dT N populationsize,T time r percapita rateof increase   −   − −   −  When the per capita rate of increase (r) takes the same positive value regardless of the population size, then we get exponential growth.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q566",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "According to which model, top down approach focuses on existing theory and begins with hypothesis is based on?",
+            "options": [
+              {
+                "prompt": "Dynamic static model",
+                "value": "A"
+              },
+              {
+                "prompt": "static model",
+                "value": "B"
+              },
+              {
+                "prompt": "deductive model",
+                "value": "C"
+              },
+              {
+                "prompt": "dynamic model",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q566",
+              "correct_answer": "C",
+              "explanation": "Correct answer is Option (C). Verified from official answer key.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q567",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Solve the given differential equation y2dx + 2xydy = 0",
+            "options": [
+              {
+                "prompt": "xy = k",
+                "value": "A"
+              },
+              {
+                "prompt": "yx2 = k",
+                "value": "B"
+              },
+              {
+                "prompt": "yx3 = k",
+                "value": "C"
+              },
+              {
+                "prompt": "xy2 = k",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q567",
+              "correct_answer": "D",
+              "explanation": "Given differential equation y2dx + 2xy dy = 0 Upon separating the variables we get 1 1 1 dy dx y 2 x =− Integrating, 1 1 2 dy dx we get y x = − ∫ ∫ 2logey = e e log x log k − + 2 logey = – logex + logek ⇒ xy2 = k",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q568",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "In engineering problems, there are some statements in which we have to use mathematical expression in terms of variable, function and equation , such expression are termed as...?",
+            "options": [
+              {
+                "prompt": "terms of continuity",
+                "value": "A"
+              },
+              {
+                "prompt": "mathematical models",
+                "value": "B"
+              },
+              {
+                "prompt": "models of time",
+                "value": "C"
+              },
+              {
+                "prompt": "ring solutions",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q568",
+              "correct_answer": "B",
+              "explanation": "Conversion of physical situation into mathematics with some suitable conditions is known as mathematical modeling and system described is termed as mathematical model. Mathematical modeling is an attempt to study some part (or form) of the real-life problem or situation in mathematical terms.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q569",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The series given by 1 × 5, 2 × 52, 3 × 53, ... is a ...series ?",
+            "options": [
+              {
+                "prompt": "arithmetic-geometric series",
+                "value": "A"
+              },
+              {
+                "prompt": "arithmetic series",
+                "value": "B"
+              },
+              {
+                "prompt": "harmonic series",
+                "value": "C"
+              },
+              {
+                "prompt": "geometric series",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q569",
+              "correct_answer": "A",
+              "explanation": "Arithmetic - Geometric progression (AGP):- This is a sequence in which each term consist of the product of corresponding terms of an arithmetic progression and a geometric progression. That is, a, (a + d)r, (a + 2d)r2, ..., [a + (n – 1)d]rn–1,..., where a is the initial term, d is common difference and r is the common ratio. Thus, 1 × 5, 2 × 52, 3 × 53, ... is an arithmetic - geometric progression.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q570",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following is not a type of mathematical model?",
+            "options": [
+              {
+                "prompt": "insilicators",
+                "value": "A"
+              },
+              {
+                "prompt": "abstractions",
+                "value": "B"
+              },
+              {
+                "prompt": "heuristics",
+                "value": "C"
+              },
+              {
+                "prompt": "presumptions",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q570",
+              "correct_answer": "D",
+              "explanation": "Mathematical modeling does not include presumptions.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q571",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Population growth rate is calculated by which of the following term?",
+            "options": [
+              {
+                "prompt": "dN/dT = rN",
+                "value": "A"
+              },
+              {
+                "prompt": "dN = – rN",
+                "value": "B"
+              },
+              {
+                "prompt": "dN = rN",
+                "value": "C"
+              },
+              {
+                "prompt": "dN/dT = rN",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q571",
+              "correct_answer": "A",
+              "explanation": "General equation for the population growth rate (change in number of individual in a population over time) dN rN dt = where dN dt – growth rate of the population in a given instant, N – population size, T – Time, r – per capita rate of increase",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q572",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "What kind of information is given to us in mathematical models?",
+            "options": [
+              {
+                "prompt": "estimated results",
+                "value": "A"
+              },
+              {
+                "prompt": "wrong results",
+                "value": "B"
+              },
+              {
+                "prompt": "approximate wrong results",
+                "value": "C"
+              },
+              {
+                "prompt": "accurate results",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q572",
+              "correct_answer": "A",
+              "explanation": "Mathematical modeling consists of interpreting the results in terms of original problem and compare the result with observations, experiments and relevant data.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q573",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f = {2, 22, 23,...}, then check about whether it is bounded above or below or bounded or unbounded?",
+            "options": [
+              {
+                "prompt": "f is bounded below by 2 but unbounded above",
+                "value": "A"
+              },
+              {
+                "prompt": "f is unbounded",
+                "value": "B"
+              },
+              {
+                "prompt": "f never attains its bound",
+                "value": "C"
+              },
+              {
+                "prompt": "f is bounded above by 2 but not bounded",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q573",
+              "correct_answer": "A",
+              "explanation": "f = {2, 22, 23,...} Clearly f is bounded below as 2∈R satisfies 2 ≤ 2n, n ∀∈{1, 2, 3, ...} and f is unbounded above as 2k ; k∈{1, 2, 3, ...} eventually surpasses every number on positive real line.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q574",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following is uncountable?",
+            "options": [
+              {
+                "prompt": "The set of all integers",
+                "value": "A"
+              },
+              {
+                "prompt": "The unit interval [0, 1]",
+                "value": "B"
+              },
+              {
+                "prompt": "The set of a rational numbers in [0, 1]",
+                "value": "C"
+              },
+              {
+                "prompt": "Every subset of countable set",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q574",
+              "correct_answer": "B",
+              "explanation": "The unit interval [0, 1] (a) The set of all integers ℤis countable (b) The unit interval [0, 1] is uncountable as equivalent to ℝ. (c) The set of a rational numbers in [0, 1] is countable. (D) If A ⊆B and B is countable, then A is either countable, finite or empty. Thus, every subset of a countable set is countable.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q575",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which growth curve indicates that, \"living organisms is growing in natural environment \"?",
+            "options": [
+              {
+                "prompt": "sigmoid growth curve",
+                "value": "A"
+              },
+              {
+                "prompt": "t curve",
+                "value": "B"
+              },
+              {
+                "prompt": "logistic curve",
+                "value": "C"
+              },
+              {
+                "prompt": "parametric curve",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q575",
+              "correct_answer": "A",
+              "explanation": "In their natural word, the growth living organisms is characterized by an S-Shaped curve named as growth the plotted against time, the sigmoid growth curve. Sigmoid growth curve – consists of three key stages – an exponential growth phase, a transitional phase and a plateau phase.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q576",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which theorem states that,\"Between any two distinct numbers, there lies at least on rational number and hence there lies many rational numbers YEP DSSSB (TGT-Math) 2021 (2.9.2021, Shift-I-Male) 107 YCT",
+            "options": [
+              {
+                "prompt": "Cantor's theorem",
+                "value": "A"
+              },
+              {
+                "prompt": "Density theorem",
+                "value": "B"
+              },
+              {
+                "prompt": "Hahn Banach theorem",
+                "value": "C"
+              },
+              {
+                "prompt": "Archimedean property",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q576",
+              "correct_answer": "B",
+              "explanation": "Density Theorem. Density of ℚ in ℝ :- For every two real numbers a and b with a < b, there exists a rational number r satisfying a < r < b. ℚis dense in ℝ",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q577",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the integrating factor of (y – xy2)dx – (x + x2y) dy?",
+            "options": [
+              {
+                "prompt": "1/2x",
+                "value": "A"
+              },
+              {
+                "prompt": "y/2x",
+                "value": "B"
+              },
+              {
+                "prompt": "1/2xy",
+                "value": "C"
+              },
+              {
+                "prompt": "1/2y",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q577",
+              "correct_answer": "C",
+              "explanation": "Given differential equation (y – xy2)dx – (x + x2y)dy Integrating factor (I.F) = ( ) ( ) 2 2 1 y xy x x x y y − −−− = 2 2 2 2 1 xy x y xy x y − + + = 1 2xy",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q578",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The series given by 1/(2. 3) + 2/(3. 4) + 3(4. 5) +...is ...",
+            "options": [
+              {
+                "prompt": "convergent",
+                "value": "A"
+              },
+              {
+                "prompt": "divergent",
+                "value": "B"
+              },
+              {
+                "prompt": "oscillates finitely",
+                "value": "C"
+              },
+              {
+                "prompt": "oscillates infinitely",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q578",
+              "correct_answer": "B",
+              "explanation": "S = 1 2 3 ... 2.3 3.4 4.5 + + + S = ( )( ) n 1 n n 1 n 2 ∞ = + + ∑ S = 1 1 n n 1 n 2   −   + +   ∑ S = 1 1 1 1 1 1 2 3 ... 2 3 3 4 4 5     − + − + − +         S = 1 1 1 1 ... 2 3 4 5 + + + + S = n 1 1 n 1 ∞ = + ∑ or S = n 2 1 n ∞ =∑ Harmonic series, thus diverges.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q579",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the terms of the sequence given by < 1 + 1/n2 >?",
+            "options": [
+              {
+                "prompt": "< 1, 1/4, 1/9,... >",
+                "value": "A"
+              },
+              {
+                "prompt": "< 1, 1, 1,... >",
+                "value": "B"
+              },
+              {
+                "prompt": "< 2, 5/4, 10/9,... >",
+                "value": "C"
+              },
+              {
+                "prompt": "< 1, 2, 3,... >",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q579",
+              "correct_answer": "C",
+              "explanation": "Let Sn = 2 1 1 n < + > , then < 1 + 2 1 n > = < 1 + 1, 1 + 1 4 , 1 + 1 9 ,... > n = 1, 2, 3 .......... = < 2, 5 10 , 4 9 ,... >",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q580",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which of the following is not a component of mathematical model?",
+            "options": [
+              {
+                "prompt": "factors",
+                "value": "A"
+              },
+              {
+                "prompt": "noise parameters",
+                "value": "B"
+              },
+              {
+                "prompt": "constants",
+                "value": "C"
+              },
+              {
+                "prompt": "variables",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q580",
+              "correct_answer": "A",
+              "explanation": "Mathematical modeling consists of introducing parameters, constants and variables to convert the physical situation into mathematical model.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q581",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Check about monotonicity of the function given by f = ?",
+            "options": [
+              {
+                "prompt": "it is monotonically decreasing",
+                "value": "A"
+              },
+              {
+                "prompt": "it is monotonically increasing",
+                "value": "B"
+              },
+              {
+                "prompt": "it is neither monotonically increasing nor",
+                "value": "C"
+              },
+              {
+                "prompt": "it is monotonically increasing as well as",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q581",
+              "correct_answer": "B",
+              "explanation": "Question is incomplete.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q582",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "The given series 1 + (1/5) + (1/52) +...is",
+            "options": [
+              {
+                "prompt": "oscillates finitely",
+                "value": "A"
+              },
+              {
+                "prompt": "divergent",
+                "value": "B"
+              },
+              {
+                "prompt": "oscillates infinitely",
+                "value": "C"
+              },
+              {
+                "prompt": "convergent",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q582",
+              "correct_answer": "D",
+              "explanation": "Let S = 1 + 2 1 1 ... 5 5 + + S = n n 0 1 5 ∞ =       ∑ ; geometric series ∵ r = 1 1 5 < ; S = n n 0 1 1 5 1 5 4 1 5 ∞ =  = =     − ∑ is convergent. Section : Discipline-3",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q583",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f(x, y, z) = x2 + y2 + z2 – xyz + 4, then f(x, y, z) = ....?",
+            "options": [
+              {
+                "prompt": "f",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "f",
+                "value": "C"
+              },
+              {
+                "prompt": "–f",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q583",
+              "correct_answer": "A",
+              "explanation": "Given that, f(x, y, z) = x2 + y2 + z2 – xyz + 4 ................ (i) Replace x from z in equation (i), then f(z, y, x) = x2 + y2 + z2 – xyz + 4 = f(x, y, z) ⇒ f(x, y, z) = f(z, y, x) YEP DSSSB (TGT-Math) 2021 (2.9.2021, Shift-I-Male) 108 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q584",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Taylor's theorem is mainly used in expressing the function as a sum with ______terms?",
+            "options": [
+              {
+                "prompt": "complete",
+                "value": "A"
+              },
+              {
+                "prompt": "finite",
+                "value": "B"
+              },
+              {
+                "prompt": "infinite",
+                "value": "C"
+              },
+              {
+                "prompt": "partial",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q584",
+              "correct_answer": "C",
+              "explanation": "TAYLOR'S THEOREM :- Suppose f is a real valued function in [a, a + h] and n is a positive integer and f '(x), f ''(x),..., fn(x) exist for every x ∈ [a, a + h] then there exists at least one number θ between 0 and 1, such that f(a + h) = f(a) + hf '(a) + 2 h 2! f \"(a) +...+ n h n! f 'n (a + θh) TAYLOR'S INFINIE SERIES :- Suppose f is a real valued function in [a, a + h] and f(x) possesses derivatives of every order in the interval [a, a + h] and the remainder n h n! [fn(a + θh)] tends to 0 as n tends to infinity then f(a + h) = f(a) + hf '(a) + 2 h 2! f ''(a) +...+ n h n! f 'n(a) +...",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q585",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "According to which theorem, there exists a real number c between a and b such that f'",
+            "options": [
+              {
+                "prompt": "Dirichlet's theorem",
+                "value": "A"
+              },
+              {
+                "prompt": "Milne theorem",
+                "value": "B"
+              },
+              {
+                "prompt": "Darboux's theorem",
+                "value": "C"
+              },
+              {
+                "prompt": "Riesz's theorem",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q585",
+              "correct_answer": "C",
+              "explanation": "Darboux's Theorem :– If f is differentiable on an interval [a, b] and if α satisfies f'(a) < α < f'(b) (or f'(a) > α > f'(b)), then there exists a point c∈(a, b) where f'(c) = α . Particularly, if f'(a) and f'(b) both have opposite signs i.e. f'(a) < 0 < f'(b) (or f'(a) > 0 > f'(b)) then there exist a point c ∈ (a, b) where f'(c) = 0.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q586",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the expansion of cos(x2)?",
+            "options": [
+              {
+                "prompt": "1 + x – x2/2!...",
+                "value": "A"
+              },
+              {
+                "prompt": "1 + x4/2! + x8/4! +...",
+                "value": "B"
+              },
+              {
+                "prompt": "1 – x4/2! + x8/4! –...",
+                "value": "C"
+              },
+              {
+                "prompt": "1 + x + x2/2! +...",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q586",
+              "correct_answer": "C",
+              "explanation": "Since we know that, 2 4 2n n x x x cosx 1– .......... (–1) ......... 2! 4! 2n! = + + + × + ...(i) Replace x by x2 then equation (i) becomes - cos(x2) = 1 – ( ) ( ) 4 8 4n n x x x ... 1 ... 2! 4! 2n ! + − − +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q587",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the limit of sin(y)/x, where (x, y) approaches to (0, 0)?",
+            "options": [
+              {
+                "prompt": "1",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "infinite",
+                "value": "C"
+              },
+              {
+                "prompt": "doesn't exist",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q587",
+              "correct_answer": "D",
+              "explanation": "f : D → ℝbe defined by f(x, y) = sin(y) x ; D = {(x, y) ∈ 2 ℝ ; x ≠ 0}. Now, suppose ( ) ( ) ( ) x,y 0,0 lim f x, y → = l = finite ⇒ For ε = 1 ∃ δ > 0 such that for all (x, y) ∈ D ∩ Bδ (0, 0) |f(x, y) – l| < ε = 1 ...(i) Now, pick y = 2 δ and x = 1 N ; N > 16 δ then f(x, y) = N sin 2 δ . So, 1 f , Nsin N 2 2 δ δ  =     can be made arbitrarily large as N can be taken arbitrarily large. Thus, from (i) : |f(x, y)| < ε + l contradicts the above conclusion. Hence, it must be that ( ) ( ) x,y 0,0 lim → f(x, y) does not exist.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q588",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the value of integral of f; where f(x, y) = (x2y + xy)dx + (x2 + y2)dy over the limits –1 to 1?",
+            "options": [
+              {
+                "prompt": "3",
+                "value": "A"
+              },
+              {
+                "prompt": "1",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q588",
+              "correct_answer": "D",
+              "explanation": "Since, Green's theorem is ( ) C R Q P Pdx Qdy – dxdy x y   ∂ ∂ + =   ∂ ∂   ∫ ∫∫ \b So, we have ( ) ( ) 2 2 2 c x y xy dx x y dy + + + ∫\b = ( ) ( ) 2 2 2 R x y x y xy dx dy x y   ∂ + ∂ +   − ∂ ∂     ∫∫ = 2 R 2x – x – x dxdy     ∫∫ = 2 R x x dx dy   −   ∫∫ = 0",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q589",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the absolute maxima of f(x) = 5x3 + x2 – x + 1 on [–1, 2]?",
+            "options": [
+              {
+                "prompt": "at x = 2",
+                "value": "A"
+              },
+              {
+                "prompt": "at x = 1/5",
+                "value": "B"
+              },
+              {
+                "prompt": "at x = –1",
+                "value": "C"
+              },
+              {
+                "prompt": "at x = 1/3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q589",
+              "correct_answer": "A",
+              "explanation": "Given f(x) = 5x3 + x2 – x + 1 ; x∈ [–1, 2] Now f '(x) = 15x2 + 2x – 1 = 0 gives x = 1 3 and x = – 1 5 as critical points. Now; f ''(x) = 30x + 2 is 12 > 0 at x = 1 3 i.e. f '' 1 3       > 0 & is – 4 < 0 at x = – 1 5 i.e. f \" 1 5   −     < 0 . So, x = – 1 5 is one of the points of maxima of f(x) & f 1 5   −     = 6 5 . But f(2) = 43. Hence, absolute maxima of f(x) = 5x3 + x2 – x + 1 is at x = 2 in [–1, 2]. YEP DSSSB (TGT-Math) 2021 (2.9.2021, Shift-I-Male) 109 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q590",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the maximum and minimum values of f(x) = sin(sin(x))respectively ?",
+            "options": [
+              {
+                "prompt": "and sin",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "sin",
+                "value": "C"
+              },
+              {
+                "prompt": "sin",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q590",
+              "correct_answer": "B",
+              "explanation": "Given f(x) = sin(sin(x)) Now f '(x) = cos(sinx) cosx = 0 gives x = 5 , , 2 2 π π ± ± ... as critical points and f \"(x) = – sin(sinx)cosx.cosx + cos(sinx)(–sinx) is – cos(1) < 0 at x = 5 , ,... 2 2 π π & is cos(1) > 0 at x = – 5 , ,... 2 2 π −π So, maximum and minimum of f(x) = sin(sin(x)) occur at x = 5 , 2 2 π π ,... and at x = – 5 , 2 2 π −π ,... respectively, hence, maximum and minimum of f(x) are sin(1) and sin(–1) respectively.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q591",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If u and v are continuous on [a, b] and have equal finite derivatives in [a, b], then u – v is...",
+            "options": [
+              {
+                "prompt": "finite",
+                "value": "A"
+              },
+              {
+                "prompt": "f/g",
+                "value": "B"
+              },
+              {
+                "prompt": "g",
+                "value": "C"
+              },
+              {
+                "prompt": "constant",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q591",
+              "correct_answer": "D",
+              "explanation": "If u and v are continuous functions on [a, b] and have equal derivatives that is u' = v' ⇒ u'(x) = v'(x) ∀x ∈ [a, b] then on considering the function w = u – v defined by w(x) = u(x) – v(x); ∀x ∈ [a, b] we get dw w ' u ' v' dx = = − ⇒ w' (x) = u'(x) – v'(x) ; ∀x ∈ [a, b] ( ) ( ) { } u' x v' x = ∵ So, w'(x) = 0 ; ∀x ∈ [a, b] Hence, w is a constant function.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q592",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Determine the order of poles of cosec z?",
+            "options": [
+              {
+                "prompt": "z = 0 is the simple pole",
+                "value": "A"
+              },
+              {
+                "prompt": "z = 0 is the irregular singularity",
+                "value": "B"
+              },
+              {
+                "prompt": "a pole of order 3",
+                "value": "C"
+              },
+              {
+                "prompt": "no pole occurs at z = 0",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q592",
+              "correct_answer": "A",
+              "explanation": "Given that f(z) = Cosec z ⇒ f(z) = 1 sin z The pole of f(z) are zeros of sin (z) i.e. nπ for n an integer. since the derivative sin'(nπ) = cos(nπ) ≠ 0 The zeros are simple. therefore f(z) = cosec z has a simple pole at z = nπ, n∈z Thus, the pole of f(z) = cosec z are zeros. So, option (a) is correct answer.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q593",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Find the limit of the derivative of function f(x, y) = xy2/(x2 + y4) at the point u( ) 2, 2 ?",
+            "options": [
+              {
+                "prompt": "0",
+                "value": "A"
+              },
+              {
+                "prompt": "2",
+                "value": "B"
+              },
+              {
+                "prompt": "2",
+                "value": "C"
+              },
+              {
+                "prompt": "3",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q593",
+              "correct_answer": "B",
+              "explanation": "( ) 2 2 4 xy f x,y x y = + ( ) ( ) x,y 2, 2 2.2 2.2 2 lim 2 4 6 3 → = = = +",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q594",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Let F = ɵ xi + yj + zk ɵ ɵ , then find integral of F around the simple closed curve C over the boundary of surface S?",
+            "options": [
+              {
+                "prompt": "2",
+                "value": "A"
+              },
+              {
+                "prompt": "0",
+                "value": "B"
+              },
+              {
+                "prompt": "3",
+                "value": "C"
+              },
+              {
+                "prompt": "1",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q594",
+              "correct_answer": "B",
+              "explanation": "Given F = ˆ ˆ ˆ xi yj zk + + Stokes' theorem : ɵ C S ˆ F.ndS n. FdS = ∇× ∫ ∫∫ \b Now, ∇ × F = ˆ ˆ ˆ i j k x y z x y z ∂ ∂ ∂ ∂ ∂ ∂ = 0 So, integral of F = ˆ ˆ ˆ xi yj zk + + around the simple closed curve C over the boundary of surface S is 0.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q595",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Evaluate the triple integral of f(x, y, z) = x dx dy dz where x, y, z varies from 0 to 1 ?",
+            "options": [
+              {
+                "prompt": "",
+                "value": "A"
+              },
+              {
+                "prompt": "",
+                "value": "B"
+              },
+              {
+                "prompt": "",
+                "value": "C"
+              },
+              {
+                "prompt": "",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q595",
+              "correct_answer": "B",
+              "explanation": "f(x, y, z) = z The triple integral = 1 1 1 0 0 0 x dx dydz ∫∫∫ = 1 1 1 0 0 0 x[z] dx dy ∫∫ = 1 1 0 0 x dx dy ∫∫ = 1 1 0 0 x[y] dx ∫ = 1 0 x dx ∫ = 1 2 0 x 2      = 1 2 YEP DSSSB (TGT-Math) 2021 (2.9.2021, Shift-I-Male) 110 YCT",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q596",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f and g are Riemann integrable on [a, b], then which of the following property doesn't holds ?",
+            "options": [
+              {
+                "prompt": "f2 is R-integrable",
+                "value": "A"
+              },
+              {
+                "prompt": "f is not R-integrable",
+                "value": "B"
+              },
+              {
+                "prompt": "min{f,g} is R-integrable",
+                "value": "C"
+              },
+              {
+                "prompt": "max{f,g} is R-integrable",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q596",
+              "correct_answer": "B",
+              "explanation": "Theorem :- Assume f and g are integrable functions on the interval [a, b] then the function |f| is integrable. PROOF :- Let ε > 0 be arbitrary and choose x1 and x2 so that M' – ε/2 < |f(x1)| and m' + ε/2 > |f(x2)|. Then (M' – m') – ε ≤ |f(x1)| – |f(x2)| ≤ |f(x1) – f(x2)| ≤ M – m ...(i) where M and m are sup(f(x)) and inf(f(x)) on [a, b] respectively & M' and m' are sup (|f(x)|) and inf(|f(x)|) on [a, b] respectively. Because f is integrable, there exists a partition P satisfying U(f, P) – L(f, P) < ε. Now from (i) it follows that U(|f|,P) – L(|f| ,P) ≤ U(f, P) – L(f, P) < ε. And Thus, |f| is integrable.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q597",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Which theorem states that, \"If f and g are continuous function from R to R such that f(x) = g(x) for all rational, then f(x) = g(x) for all reals too\"?",
+            "options": [
+              {
+                "prompt": "Cauchy theorem",
+                "value": "A"
+              },
+              {
+                "prompt": "Mean value theorem",
+                "value": "B"
+              },
+              {
+                "prompt": "Bertrand theorem",
+                "value": "C"
+              },
+              {
+                "prompt": "Identity theorem",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q597",
+              "correct_answer": "D",
+              "explanation": "\"If f and g are defined on all of ℝ, continuous on all of ℝand f(x) = g(x) at every rational point, then f and g are same function\"",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q598",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "Check about the continuity of function given by f(x) = x in interval [0, 2].",
+            "options": [
+              {
+                "prompt": "discontinuous everywhere",
+                "value": "A"
+              },
+              {
+                "prompt": "can't say about continuity of f",
+                "value": "B"
+              },
+              {
+                "prompt": "it is not uniformly continuous",
+                "value": "C"
+              },
+              {
+                "prompt": "it is uniformly continuous",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q598",
+              "correct_answer": "D",
+              "explanation": "f(x) = x defined on [0, 2] Let ε > 0. It c = 0 then x < ε, which happens as long as x < ε2. Thus, if we choose δ = ε2, we see that |x – 0| < δ implies |f(x) – 0| < ε. For a point c ∈ [0, 2] different from zero, write ( ) ( ) x c x c x c x c x c x c c x c   + − −   − = − = ≤   + +   Now, pick δ = ε c . Then, |x – c| < δ implies c x c c ε − < = ε since, [0, 2] is compact set, the continuity of f(x) = x is uniform.",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q599",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If f: R to R is continuous and f(x) is continuous for every x in Q then f(x) is continuous on x in R, which theorem states this fact?",
+            "options": [
+              {
+                "prompt": "Weierstrass factor theorem",
+                "value": "A"
+              },
+              {
+                "prompt": "Riemann theorem",
+                "value": "B"
+              },
+              {
+                "prompt": "Initial value theorem",
+                "value": "C"
+              },
+              {
+                "prompt": "Identity theorem",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q599",
+              "correct_answer": "D",
+              "explanation": "Identity theorem",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        },
+        {
+          "_id": "tgt_mathematics_q600",
+          "type": "single",
+          "posMarks": 1.0,
+          "negMarks": 0.25,
+          "en": {
+            "value": "If r = 3t iɵ + 4tj – 7t2k, find the derivative dr/dt?",
+            "options": [
+              {
+                "prompt": "3i + 4j – 14tk",
+                "value": "A"
+              },
+              {
+                "prompt": "3i + 4j + 14tk",
+                "value": "B"
+              },
+              {
+                "prompt": "3i + 7j + 78tk",
+                "value": "C"
+              },
+              {
+                "prompt": "3i + 2j – 5tk",
+                "value": "D"
+              }
+            ]
+          },
+          "ai_generated": {
+            "english": {
+              "question_id": "tgt_mathematics_q600",
+              "correct_answer": "A",
+              "explanation": "Given 2 ˆ ˆ ˆ r(t) 3ti 4tj 7t k = + − \u0001 ⇒ dr(t) ˆ ˆ ˆ 3i 4j 14tk dt = + − \u0001",
+              "key_concepts": [
+                "Mathematics",
+                "TGT Series"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

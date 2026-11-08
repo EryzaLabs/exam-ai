@@ -9,7 +9,7 @@ export interface UserProfile {
   photoURL?: string | null;
   phoneNumber?: string | null;
   targetCadre: string; // e.g., 'KVS', 'NVS', 'UPSC', 'State Dept'
-  targetExam?: string; // e.g., 'all', 'upsc', 'uppsc'
+  targetExam?: string; // e.g., 'all', 'upsc', 'uppsc', 'tgt', 'pgt'
   currentDesignation: string; // e.g., 'Teacher', 'Vice Principal', 'Other'
   weakestSubject: string; // e.g., 'Education Policy', 'Service Matters', etc.
   languagePreference: 'English' | 'Hindi';
@@ -19,6 +19,7 @@ export interface UserProfile {
   stats: UserStats;
   profileCompleted?: boolean;
   isSubscribed?: boolean;
+  purchasedSeries?: string[]; // e.g. ['tgt-series', 'pgt-series', 'tgt-hindi']
 }
 
 export interface TopicStats {
