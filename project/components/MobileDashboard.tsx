@@ -41,6 +41,7 @@ import {
 import { useAuth } from '@/context/auth-context';
 import { useExam } from '@/context/exam-context';
 import ExamSelector from '@/components/ExamSelector';
+import FeaturedTracksSlider from '@/components/FeaturedTracksSlider';
 import { TestProgressService, SavedTestState } from '@/services/test-progress-service';
 
 export default function MobileDashboard({
@@ -52,7 +53,7 @@ export default function MobileDashboard({
   const { isDark, colors, toggleTheme } = useTheme();
   const [searchQuery, setSearchQuery] = React.useState('');
   const [activeTest, setActiveTest] = React.useState<SavedTestState | null>(null);
-  const { user, isSubscribed: authSubscribed, isSubscriptionLoading } = useAuth();
+  const { user, isSubscribed: authSubscribed, isSubscriptionLoading, requireAuth } = useAuth();
   const { examMode, examInfo } = useExam();
   const isSubscribed = authSubscribed || dashboardStats?.isSubscribed === true;
 
@@ -370,55 +371,18 @@ export default function MobileDashboard({
             </TouchableOpacity>
           )}
 
-          {/* FEATURED BANNER */}
+          {/* FEATURED TRACKS SLIDER */}
           <View style={styles.sectionHeader}>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
               <Star size={20} color="#F59E0B" fill="#F59E0B" />
-              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Featured</Text>
+              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Featured Test Series</Text>
             </View>
-            <TouchableOpacity onPress={() => router.push(isSubscribed ? { pathname: '/test-list', params: { category: 'full' } } : '/premium')}>
+            <TouchableOpacity onPress={() => router.push(isSubscribed ? { pathname: '/test-list', params: { category: 'all' } } : '/premium')}>
               <Text style={styles.viewAll}>{isSubscribed ? 'View All →' : 'Go Premium →'}</Text>
             </TouchableOpacity>
           </View>
 
-          <TouchableOpacity onPress={() => router.push(isSubscribed ? { pathname: '/test-list', params: { category: 'full' } } : '/premium')} activeOpacity={0.92}>
-            <ImageBackground
-              source={require('@/assets/images/upsc-bg.png')}
-              style={[styles.featuredBanner, { backgroundColor: '#1E40AF' }]}
-              imageStyle={{ borderRadius: 24, opacity: 0.35, width: '100%', height: '100%' }}
-              resizeMode="cover"
-            >
-              <LinearGradient
-                colors={['rgba(30,64,175,0.8)', 'rgba(59,130,246,0.6)']}
-                style={[StyleSheet.absoluteFillObject, { borderRadius: 24 }]}
-              />
-              <View style={styles.featuredTagsRow}>
-                <View style={styles.featuredTagBg}>
-                  <Text style={styles.featuredTagTxt}>{examInfo.shortName}</Text>
-                </View>
-                <View style={[styles.featuredTagBg, { flexDirection: 'row', alignItems: 'center', gap: 4 }]}>
-                  <Star size={12} color="#F59E0B" fill="#F59E0B" />
-                  <Text style={styles.featuredTagTxt}>Featured</Text>
-                </View>
-              </View>
-
-              <View style={styles.featuredTitleRow}>
-                <View style={{ flex: 1 }}>
-                  <Text style={styles.featuredTitle}>{examInfo.shortName} Test Series</Text>
-                  <Text style={styles.featuredDesc}>{examInfo.tagline}</Text>
-                </View>
-                <View style={styles.featuredArrowBtn}>
-                  <ChevronRight size={24} color="#fff" />
-                </View>
-              </View>
-
-              <View style={styles.featuredPerks}>
-                <View style={styles.perk}><FileText size={14} color="#fff" /><Text style={styles.perkText}>26 Mocks + 158 Topics</Text></View>
-                <View style={styles.perk}><Clock size={14} color="#fff" /><Text style={styles.perkText}>Timed Tests</Text></View>
-                <View style={styles.perk}><BarChart2 size={14} color="#fff" /><Text style={styles.perkText}>Detailed Analytics</Text></View>
-              </View>
-            </ImageBackground>
-          </TouchableOpacity>
+          <FeaturedTracksSlider />
 
           {/* PRACTICE MODE */}
           <View style={styles.sectionHeader}>

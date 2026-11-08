@@ -40,6 +40,7 @@ import { signOut } from 'firebase/auth';
 import { auth } from '@/services/firebaseConfig';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import UserService from '@/services/user-service';
+import FeaturedTracksSlider from '@/components/FeaturedTracksSlider';
 import Svg, { Circle } from 'react-native-svg';
 
 export default function DesktopDashboard({ performance: propPerformance, dashboardStats: propDashboardStats, children, disableScroll }: any) {
@@ -411,34 +412,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
             </TouchableOpacity>
           </View>
           
-          <ImageBackground
-            source={require('@/assets/images/upsc-bg.png')}
-            style={[styles.featuredBanner, { backgroundColor: '#1E40AF' }]}
-            imageStyle={{ borderRadius: 24, opacity: 0.35, width: '100%', height: '100%' }}
-            resizeMode="cover"
-          >
-             <LinearGradient
-                colors={['rgba(30,64,175,0.8)', 'rgba(59,130,246,0.6)']}
-                style={[StyleSheet.absoluteFillObject, { borderRadius: 24 }]}
-             />
-             <View style={styles.featuredContent}>
-                <View style={styles.featuredBadge}>
-                   <Star size={12} color="#F59E0B" fill="#F59E0B" />
-                   <Text style={styles.featuredBadgeText}>Featured</Text>
-                </View>
-                <Text style={styles.featuredTitle}>{examInfo.shortName} Test Series</Text>
-                <Text style={styles.featuredDesc}>{examInfo.tagline}</Text>
-                
-                <View style={styles.featuredPerks}>
-                   <View style={styles.perk}><Clock size={14} color="#fff" /><Text style={styles.perkText}>Timed Tests</Text></View>
-                   <View style={styles.perk}><BarChart2 size={14} color="#fff" /><Text style={styles.perkText}>Detailed Analytics</Text></View>
-                   <View style={styles.perk}><Brain size={14} color="#fff" /><Text style={styles.perkText}>Detailed Solutions</Text></View>
-                </View>
-             </View>
-             <TouchableOpacity style={styles.browseBtn} onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}>
-                <Text style={styles.browseBtnText}>Browse Tests →</Text>
-             </TouchableOpacity>
-          </ImageBackground>
+          <FeaturedTracksSlider />
 
           {/* PRACTICE MODES */}
           <View style={styles.sectionHeader}>

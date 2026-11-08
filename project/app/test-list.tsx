@@ -60,6 +60,11 @@ interface ServerPaper {
   title: string;
   filename: string;
   hasAnswers: boolean;
+  series?: 'upsc' | 'uppsc' | 'tgt' | 'pgt';
+  subject?: string;
+  year?: string;
+  price?: number;
+  originalPrice?: number;
 }
 
 export const TOPIC_METADATA_CLIENT: Record<string, { name: string; category: string }> = {
@@ -499,6 +504,8 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const [attemptFilter, setAttemptFilter] = useState<'all' | 'attempted' | 'unattempted'>(initialFilter);
   const [selectedTopicCategory, setSelectedTopicCategory] = useState<string>('all');
   const [selectedTopic, setSelectedTopic] = useState<string | null>(params.topic || null);
+  const [selectedSubject, setSelectedSubject] = useState<string>('all');
+  const [displayLimit, setDisplayLimit] = useState<number>(30);
 
   const [history, setHistory] = useState<TestResult[]>([]);
   const [activeTests, setActiveTests] = useState<SavedTestState[]>([]);
@@ -506,10 +513,15 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const [localSubscribed, setLocalSubscribed] = useState<boolean | null>(null);
   const isSubscribed = localSubscribed !== null ? localSubscribed : authSubscribed;
   const [checkingSubscription, setCheckingSubscription] = useState(true);
-  const { examMode, examInfo } = useExam();
+  const { examMode, setExamMode, examInfo } = useExam();
 
   const { width } = useWindowDimensions();
   const isLargeScreen = width >= 1024;
+
+  useEffect(() => {
+    setSelectedSubject('all');
+    setDisplayLimit(30);
+  }, [examMode]);
 
   useEffect(() => {
     if (typeof params.q === 'string') setSearchQuery(params.q);
@@ -638,20 +650,62 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     return undefined;
   }, [attemptedMaps]);
 
+  const isFullMock = useCallback((t: ServerPaper): boolean => {
+    return t.filename.includes('full_mocks/') || t.filename.includes('tgt_pgt/') || t.series === 'tgt' || t.series === 'pgt';
+  }, []);
+
+  const isTopicTest = useCallback((t: ServerPaper): boolean => {
+    return t.filename.includes('topic_wise/');
+  }, []);
+
+  const scopedTests = useMemo(() => {
+    if (examMode === 'tgt') {
+      return tests.filter(t => t.series === 'tgt' || t.filename?.toLowerCase().includes('tgt') || t.title?.toLowerCase().includes('tgt'));
+    } else if (examMode === 'pgt') {
+      return tests.filter(t => t.series === 'pgt' || t.filename?.toLowerCase().includes('pgt') || t.title?.toLowerCase().includes('pgt'));
+    } else if (examMode === 'upsc' || examMode === 'uppsc') {
+      return tests.filter(t => !t.filename?.toLowerCase().includes('tgt_pgt'));
+    }
+    return tests;
+  }, [tests, examMode]);
+
+  const availableSubjects = useMemo(() => {
+    if (examMode !== 'tgt' && examMode !== 'pgt') return [];
+    const countMap: Record<string, number> = {};
+    scopedTests.forEach(t => {
+      const sub = t.subject || 'General';
+      countMap[sub] = (countMap[sub] || 0) + 1;
+    });
+    const list = Object.entries(countMap).map(([name, count]) => ({ id: name, name, count }));
+    list.sort((a, b) => b.count - a.count);
+    return [{ id: 'all', name: 'All Subjects', count: scopedTests.length }, ...list];
+  }, [scopedTests, examMode]);
+
   const attemptedCount = useMemo(() => {
-    return tests.filter(t => !!getAttemptForTest(t)).length;
-  }, [tests, getAttemptForTest]);
+    return scopedTests.filter(t => !!getAttemptForTest(t)).length;
+  }, [scopedTests, getAttemptForTest]);
 
   const unattemptedCount = useMemo(() => {
-    return Math.max(0, tests.length - attemptedCount);
-  }, [tests, attemptedCount]);
+    return Math.max(0, scopedTests.length - attemptedCount);
+  }, [scopedTests, attemptedCount]);
 
-  const fullMockCount = useMemo(() => tests.filter(t => t.filename.includes('full_mocks/')).length, [tests]);
-  const topicTestCount = useMemo(() => tests.filter(t => t.filename.includes('topic_wise/')).length, [tests]);
+  const fullMockCount = useMemo(() => {
+    if (examMode === 'tgt' || examMode === 'pgt') {
+      return scopedTests.length;
+    }
+    return scopedTests.filter(t => t.filename.includes('full_mocks/')).length;
+  }, [scopedTests, examMode]);
+
+  const topicTestCount = useMemo(() => {
+    if (examMode === 'tgt' || examMode === 'pgt') {
+      return 0;
+    }
+    return scopedTests.filter(t => t.filename.includes('topic_wise/')).length;
+  }, [scopedTests, examMode]);
 
   useEffect(() => {
     filterTests();
-  }, [searchQuery, category, selectedTopic, selectedTopicCategory, tests, attemptFilter, getAttemptForTest, examMode]);
+  }, [searchQuery, category, selectedTopic, selectedTopicCategory, selectedSubject, scopedTests, attemptFilter, getAttemptForTest, examMode]);
 
   useFocusEffect(
     useCallback(() => {
@@ -692,14 +746,12 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   };
 
   const filterTests = () => {
-    let baseList = [...tests];
+    let baseList = [...scopedTests];
 
-    if (examMode === 'tgt') {
-      baseList = baseList.filter(t => t.filename?.toLowerCase().includes('tgt') || t.title?.toLowerCase().includes('tgt'));
-    } else if (examMode === 'pgt') {
-      baseList = baseList.filter(t => t.filename?.toLowerCase().includes('pgt') || t.title?.toLowerCase().includes('pgt'));
-    } else if (examMode === 'upsc' || examMode === 'uppsc') {
-      baseList = baseList.filter(t => !t.filename?.toLowerCase().includes('tgt_pgt'));
+    if (examMode === 'tgt' || examMode === 'pgt') {
+      if (selectedSubject !== 'all') {
+        baseList = baseList.filter(t => (t.subject || '').toLowerCase() === selectedSubject.toLowerCase());
+      }
     }
 
     if (attemptFilter === 'attempted') {
@@ -712,17 +764,22 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
     if (!trimmedQuery) {
       let filtered = baseList;
-      if (category === 'full') {
-        filtered = filtered.filter(t => t.filename.includes('full_mocks/'));
-      } else if (category === 'topic') {
-        filtered = filtered.filter(t => t.filename.includes('topic_wise/'));
-        if (selectedTopic) {
-          filtered = filtered.filter(t => getTopicFromFilename(t.filename) === selectedTopic);
-        } else if (selectedTopicCategory !== 'all') {
-          filtered = filtered.filter(t => {
-            const slug = getTopicSlugFromFilename(t.filename);
-            return getCategoryForTopicSlug(slug) === selectedTopicCategory;
-          });
+      if (examMode === 'tgt' || examMode === 'pgt') {
+        // In TGT or PGT mode, all sets are full mock tests of that subject
+        // When category is 'full' or 'all', they are all shown.
+      } else {
+        if (category === 'full') {
+          filtered = filtered.filter(isFullMock);
+        } else if (category === 'topic') {
+          filtered = filtered.filter(isTopicTest);
+          if (selectedTopic) {
+            filtered = filtered.filter(t => getTopicFromFilename(t.filename) === selectedTopic);
+          } else if (selectedTopicCategory !== 'all') {
+            filtered = filtered.filter(t => {
+              const slug = getTopicSlugFromFilename(t.filename);
+              return getCategoryForTopicSlug(slug) === selectedTopicCategory;
+            });
+          }
         }
       }
       setFilteredTests(filtered);
@@ -734,7 +791,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
     const scoreTest = (t: ServerPaper): number => {
       const slug = getTopicSlugFromFilename(t.filename) || (t.filename.includes('full_mocks') ? 'full_mocks' : '');
-      const topicName = getTopicFromFilename(t.filename) || (t.filename.includes('full_mocks') ? 'Full Length CBT Mock Test' : '');
+      const topicName = getTopicFromFilename(t.filename) || (t.filename.includes('full_mocks') ? 'Full Length CBT Mock Test' : (t.subject || ''));
       const catId = getCategoryForTopicSlug(slug);
       const catObj = SYLLABUS_CATEGORIES.find(c => c.id === catId);
       const categoryName = catObj ? catObj.name : '';
@@ -743,12 +800,14 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
       const rawFilename = (t.filename || '').toLowerCase();
       const lowerTopic = topicName.toLowerCase();
       const lowerCat = categoryName.toLowerCase();
+      const lowerSub = (t.subject || '').toLowerCase();
       const aliases = (SEARCH_SEMANTIC_ALIASES[slug] || []).map(a => a.toLowerCase());
 
       let score = 0;
 
       // 1. Phrase / word boundary matches (highest priority)
       if (matchWordOrPhrase(trimmedQuery, cleanTitle)) score += 200;
+      if (matchWordOrPhrase(trimmedQuery, lowerSub)) score += 180;
       if (matchWordOrPhrase(trimmedQuery, lowerTopic)) score += 160;
       if (aliases.some(a => matchWordOrPhrase(trimmedQuery, a) || (trimmedQuery.length > 4 && a.includes(trimmedQuery)))) score += 140;
       if (matchWordOrPhrase(trimmedQuery, lowerCat)) score += 80;
@@ -760,6 +819,10 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         let tokenFound = false;
 
         if (matchWordOrPhrase(token, cleanTitle)) {
+          score += 45;
+          tokenFound = true;
+        }
+        if (matchWordOrPhrase(token, lowerSub)) {
           score += 45;
           tokenFound = true;
         }
@@ -784,6 +847,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         if (!tokenFound && token.length >= 5) {
           if (
             isFuzzyMatch(token, cleanTitle) ||
+            isFuzzyMatch(token, lowerSub) ||
             isFuzzyMatch(token, lowerTopic) ||
             aliases.some(a => isFuzzyMatch(token, a))
           ) {
@@ -806,10 +870,12 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
     // First try filtering within current category/topic
     let scopedList = baseList;
-    if (category === 'full') {
-      scopedList = scopedList.filter(t => t.filename.includes('full_mocks/'));
-    } else if (category === 'topic' && selectedTopic) {
-      scopedList = scopedList.filter(t => getTopicFromFilename(t.filename) === selectedTopic);
+    if (examMode !== 'tgt' && examMode !== 'pgt') {
+      if (category === 'full') {
+        scopedList = scopedList.filter(isFullMock);
+      } else if (category === 'topic' && selectedTopic) {
+        scopedList = scopedList.filter(t => getTopicFromFilename(t.filename) === selectedTopic);
+      }
     }
 
     const scoredScoped = scopedList
@@ -926,6 +992,86 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
   // Hero Section with Category Navigation Cards
   const renderHeroCategoryCards = () => {
+    if (examMode === 'tgt' || examMode === 'pgt') {
+      const isTgt = examMode === 'tgt';
+      return (
+        <View style={styles.heroSection}>
+          <View style={[styles.seriesHeroBanner, { borderColor: isTgt ? '#F97316' : '#A855F7' }]}>
+            <LinearGradient
+              colors={isTgt ? ['#7C2D12', '#C2410C', '#EA580C'] : ['#581C87', '#7E22CE', '#9333EA']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              style={styles.seriesHeroGradient}
+            >
+              <View style={styles.seriesHeroBadgeRow}>
+                <Sparkles size={13} color="#FDE047" />
+                <Text style={[styles.seriesHeroBadge, { color: '#FEF08A' }]}>
+                  {isTgt ? '🎯 TGT SERIES • 132 SOLVED SETS' : '🎓 PGT SERIES • 101 SOLVED SETS'}
+                </Text>
+              </View>
+              <Text style={styles.seriesHeroTitle}>
+                {isTgt ? 'TGT Subject Solved Test Series' : 'PGT Subject Solved Test Series'}
+              </Text>
+              <Text style={styles.seriesHeroSubtitle}>
+                {isTgt
+                  ? '12,867 authentic exam MCQs with bilingual explanations across 7 school teaching subjects.'
+                  : '9,645 authentic exam MCQs with bilingual explanations across 8 postgraduate teaching disciplines.'}
+              </Text>
+              <View style={styles.seriesHeroPerksRow}>
+                <View style={styles.seriesHeroPerk}>
+                  <HelpCircle size={13} color="#fff" />
+                  <Text style={styles.seriesHeroPerkText}>100 MCQs / Set</Text>
+                </View>
+                <View style={styles.seriesHeroPerk}>
+                  <Clock size={13} color="#fff" />
+                  <Text style={styles.seriesHeroPerkText}>2 Hours CBT</Text>
+                </View>
+                <View style={styles.seriesHeroPerk}>
+                  <BookOpen size={13} color="#fff" />
+                  <Text style={styles.seriesHeroPerkText}>
+                    {isTgt ? '7 Subject Tracks' : '8 Subject Tracks'}
+                  </Text>
+                </View>
+                <View style={styles.seriesHeroPerk}>
+                  <Award size={13} color="#fff" />
+                  <Text style={styles.seriesHeroPerkText}>₹199 / Subject</Text>
+                </View>
+              </View>
+            </LinearGradient>
+          </View>
+
+          {/* Custom Test Prompt Banner */}
+          <TouchableOpacity
+            style={[styles.customBanner, { backgroundColor: isDark ? '#1E293B' : '#FFFFFF', borderColor: isDark ? '#3B82F6' : '#93C5FD' }]}
+            onPress={() => router.push(isSubscribed ? '/custom-test' : '/premium')}
+            activeOpacity={0.85}
+          >
+            <LinearGradient
+              colors={isDark ? ['#1E1B4B', '#1E293B'] : ['#EEF2FF', '#F8FAFC']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+              style={styles.customBannerGradient}
+            >
+              <View style={styles.customBannerLeft}>
+                <View style={styles.customBannerIcon}>
+                  <Zap size={20} color="#6366F1" />
+                </View>
+                <View>
+                  <View style={styles.customBannerTagRow}>
+                    <Text style={styles.customBannerTag}>AI BUILDER</Text>
+                    <Text style={styles.customBannerPremium}>👑 PREMIUM</Text>
+                  </View>
+                  <Text style={[styles.customBannerTitle, { color: colors.textPrimary }]}>Build a Custom Test</Text>
+                  <Text style={[styles.customBannerSub, { color: colors.textSecondary }]}>Pick any mix of topics, question count (10-120), and timer.</Text>
+                </View>
+              </View>
+              <ChevronRight size={20} color={colors.accent} />
+            </LinearGradient>
+          </TouchableOpacity>
+        </View>
+      );
+    }
+
     return (
       <View style={styles.heroSection}>
         <View style={styles.heroGrid}>
@@ -1021,6 +1167,45 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             <ChevronRight size={20} color={colors.accent} />
           </LinearGradient>
         </TouchableOpacity>
+      </View>
+    );
+  };
+
+  // Subject Filter Pills for TGT / PGT Mode
+  const renderSubjectPills = () => {
+    if (examMode !== 'tgt' && examMode !== 'pgt') return null;
+    return (
+      <View style={[styles.syllabusPillContainer, { borderBottomColor: colors.borderLight }]}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.syllabusPillsContent}>
+          {availableSubjects.map(sub => {
+            const isSelected = selectedSubject === sub.id;
+            const activeColor = examMode === 'tgt' ? '#EA580C' : '#9333EA';
+            return (
+              <TouchableOpacity
+                key={sub.id}
+                style={[
+                  styles.syllabusPill,
+                  { backgroundColor: colors.surfaceHighlight, borderColor: colors.border },
+                  isSelected && [styles.syllabusPillActive, { backgroundColor: activeColor, borderColor: activeColor }]
+                ]}
+                onPress={() => {
+                  setSelectedSubject(sub.id);
+                  setDisplayLimit(30);
+                }}
+              >
+                <Text
+                  style={[
+                    styles.syllabusPillText,
+                    { color: colors.textSecondary },
+                    isSelected && styles.syllabusPillTextActive
+                  ]}
+                >
+                  {sub.name} ({sub.count})
+                </Text>
+              </TouchableOpacity>
+            );
+          })}
+        </ScrollView>
       </View>
     );
   };
@@ -1144,14 +1329,16 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   };
 
   const renderTestCard = (test: ServerPaper) => {
-    const isMock = test.filename.includes('full_mocks');
-    const totalQuestions = isMock ? 120 : 20;
-    const duration = isMock ? 7200 : 1200; // 20 mins for topics, 2 hours for full mocks
-    const totalMarks = totalQuestions * 2.5;
+    const isTgtPgt = test.filename.includes('tgt_pgt') || test.series === 'tgt' || test.series === 'pgt';
+    const isMock = test.filename.includes('full_mocks') || isTgtPgt;
+    const totalQuestions = isTgtPgt ? 100 : isMock ? 120 : 20;
+    const duration = isTgtPgt ? 7200 : isMock ? 7200 : 1200; // 20 mins for topics, 2 hours for full mocks and TGT/PGT
+    const totalMarks = isTgtPgt ? 200 : isMock ? 300 : 50;
     const isFirstTest = tests.length > 0 && tests[0].id === test.id;
     const isLocked = !isSubscribed && !isFirstTest;
     const attempt = getAttemptForTest(test);
     const isAttempted = !!attempt;
+    const subjectName = test.subject || (test.series === 'tgt' ? 'TGT Mock' : test.series === 'pgt' ? 'PGT Mock' : 'Full Mock');
 
     return (
       <TouchableOpacity
@@ -1184,7 +1371,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             ) : isAttempted ? (
               <CheckCircle2 size={22} color="#16A34A" />
             ) : isMock ? (
-              <Award size={22} color="#2563EB" />
+              <Award size={22} color={isTgtPgt ? (test.series === 'tgt' ? '#EA580C' : '#9333EA') : '#2563EB'} />
             ) : (
               <BookOpen size={22} color="#059669" />
             )}
@@ -1196,7 +1383,9 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                 style={[
                   styles.testTypeBadge,
                   {
-                    backgroundColor: isMock
+                    backgroundColor: isTgtPgt
+                      ? (test.series === 'tgt' ? (isDark ? '#431407' : '#FFEDD5') : (isDark ? '#3B0764' : '#F3E8FF'))
+                      : isMock
                       ? isDark ? '#1E3A5F' : '#DBEAFE'
                       : isDark ? '#064E3B' : '#D1FAE5'
                   }
@@ -1205,10 +1394,14 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                 <Text
                   style={[
                     styles.testTypeBadgeText,
-                    { color: isMock ? '#1D4ED8' : '#047857' }
+                    {
+                      color: isTgtPgt
+                        ? (test.series === 'tgt' ? '#C2410C' : '#7E22CE')
+                        : isMock ? '#1D4ED8' : '#047857'
+                    }
                   ]}
                 >
-                  {isMock ? 'Full Mock' : 'Topic Test'}
+                  {isTgtPgt ? subjectName : isMock ? 'Full Mock' : 'Topic Test'}
                 </Text>
               </View>
 
@@ -1216,7 +1409,9 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                 style={[
                   styles.examBadgePill,
                   {
-                    backgroundColor: examMode === 'uppsc'
+                    backgroundColor: isTgtPgt
+                      ? (test.series === 'tgt' ? (isDark ? '#271B11' : '#FFF7ED') : (isDark ? '#241235' : '#FAF5FF'))
+                      : examMode === 'uppsc'
                       ? (isDark ? '#064E3B' : '#ECFDF5')
                       : examMode === 'upsc'
                       ? (isDark ? '#1E3A5F' : '#EFF6FF')
@@ -1228,11 +1423,15 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                   style={[
                     styles.examBadgePillText,
                     {
-                      color: examMode === 'uppsc' ? '#059669' : examMode === 'upsc' ? '#2563EB' : '#4F46E5',
+                      color: isTgtPgt
+                        ? (test.series === 'tgt' ? '#EA580C' : '#9333EA')
+                        : examMode === 'uppsc' ? '#059669' : examMode === 'upsc' ? '#2563EB' : '#4F46E5',
                     }
                   ]}
                 >
-                  {examMode === 'uppsc' ? 'UP Principal' : examMode === 'upsc' ? 'UPSC Principal' : 'UPSC • UP'}
+                  {isTgtPgt
+                    ? (test.series === 'tgt' ? 'TGT Series' : 'PGT Series')
+                    : examMode === 'uppsc' ? 'UP Principal' : examMode === 'upsc' ? 'UPSC Principal' : 'UPSC • UP'}
                 </Text>
               </View>
 
@@ -1413,6 +1612,33 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     return true;
   });
 
+  const activeSearchSuggestions = useMemo(() => {
+    if (examMode === 'tgt') {
+      return [
+        { label: 'Hindi (35)', query: 'hindi' },
+        { label: 'Physical Ed (25)', query: 'physical education' },
+        { label: 'Mathematics (24)', query: 'mathematics' },
+        { label: 'Social Science (17)', query: 'social science' },
+        { label: 'English (16)', query: 'english' },
+        { label: 'Natural Science (14)', query: 'natural science' },
+        { label: 'Drawing (2)', query: 'drawing' },
+      ];
+    }
+    if (examMode === 'pgt') {
+      return [
+        { label: 'Commerce (32)', query: 'commerce' },
+        { label: 'History (12)', query: 'history' },
+        { label: 'Economics (11)', query: 'economics' },
+        { label: 'Physics (10)', query: 'physics' },
+        { label: 'Biology (9)', query: 'biology' },
+        { label: 'Chemistry (9)', query: 'chemistry' },
+        { label: 'Geography (9)', query: 'geography' },
+        { label: 'Political Science (9)', query: 'political' },
+      ];
+    }
+    return SEARCH_SUGGESTIONS;
+  }, [examMode]);
+
   const content = (
     <ContainerComponent style={[styles.container, { backgroundColor: colors.background, flex: 1 }]} edges={isLargeScreen ? [] : ['top']}>
       {/* Desktop Header */}
@@ -1514,7 +1740,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         {!searchQuery ? (
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.searchSuggestionsContent}>
             <Text style={[styles.quickSearchLabel, { color: colors.textTertiary }]}>Popular:</Text>
-            {SEARCH_SUGGESTIONS.map(s => (
+            {activeSearchSuggestions.map(s => (
               <TouchableOpacity
                 key={s.label}
                 style={[styles.searchSuggestionChip, { backgroundColor: colors.surfaceHighlight, borderColor: colors.border }]}
@@ -1547,7 +1773,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             onPress={() => setAttemptFilter('all')}
           >
             <Text style={[styles.filterChipText, { color: colors.textSecondary }, attemptFilter === 'all' && styles.filterChipTextActive]}>
-              All ({tests.length})
+              All ({scopedTests.length})
             </Text>
           </TouchableOpacity>
 
@@ -1581,8 +1807,11 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         </View>
       </View>
 
-      {/* Category Pills (Only visible when viewing Topics list or All) */}
-      {(category === 'topic' || category === 'all') && !selectedTopic && renderSyllabusPills()}
+      {/* Filter Pills: Subject Pills for TGT/PGT, Syllabus Pills for UPSC */}
+      {examMode === 'tgt' || examMode === 'pgt'
+        ? renderSubjectPills()
+        : (category === 'topic' || category === 'all') && !selectedTopic && renderSyllabusPills()
+      }
 
       {/* Selected Topic Drill-Down Header */}
       {category === 'topic' && selectedTopic && (
@@ -1617,7 +1846,11 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         {/* Section Heading */}
         <View style={styles.sectionHeaderRow}>
           <Text style={[styles.sectionHeadingText, { color: colors.textPrimary }]}>
-            {category === 'full'
+            {examMode === 'tgt' || examMode === 'pgt'
+              ? selectedSubject !== 'all'
+                ? `${selectedSubject} Mock Tests`
+                : `${examInfo.shortName} Solved Test Series`
+              : category === 'full'
               ? 'Full Length Mock Tests'
               : category === 'topic'
               ? selectedTopic
@@ -1626,12 +1859,14 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
               : 'Recommended Tests'}
           </Text>
           <Text style={[styles.sectionCountText, { color: colors.textSecondary }]}>
-            {category === 'topic' && !selectedTopic ? `${visibleTopics.length} topics` : `${filteredTests.length} tests`}
+            {category === 'topic' && !selectedTopic && examMode !== 'tgt' && examMode !== 'pgt'
+              ? `${visibleTopics.length} topics`
+              : `${filteredTests.length} tests`}
           </Text>
         </View>
 
         {/* Grid Display: Either Topic Cards or Test Cards */}
-        {category === 'topic' && !selectedTopic && !searchQuery ? (
+        {category === 'topic' && !selectedTopic && !searchQuery && examMode !== 'tgt' && examMode !== 'pgt' ? (
           visibleTopics.length === 0 ? (
             <View style={styles.emptyState}>
               <Folder size={48} color={colors.textTertiary} />
@@ -1648,13 +1883,30 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             <FileText size={48} color={colors.textTertiary} />
             <Text style={[styles.emptyStateTitle, { color: colors.textPrimary }]}>No tests found</Text>
             <Text style={[styles.emptyStateText, { color: colors.textSecondary }]}>
-              {searchQuery ? `No tests matching "${searchQuery}". Try broader keywords like "NEP", "POCSO", "CBSE", "Mid-Day Meal", or "FLN".` : 'No tests found in this category.'}
+              {searchQuery
+                ? `No tests matching "${searchQuery}". Try broader keywords or clearing the search.`
+                : examMode === 'tgt' || examMode === 'pgt'
+                ? selectedSubject !== 'all'
+                  ? `No tests found for "${selectedSubject}". Try selecting "All Subjects".`
+                  : 'No tests available for this series.'
+                : 'No tests found in this category.'}
             </Text>
+            {(searchQuery || selectedSubject !== 'all') && (
+              <TouchableOpacity
+                style={[styles.clearSearchBtnSmall, { marginTop: 12, paddingHorizontal: 14, paddingVertical: 8 }]}
+                onPress={() => {
+                  setSearchQuery('');
+                  setSelectedSubject('all');
+                }}
+              >
+                <Text style={styles.clearSearchBtnText}>Reset Filters</Text>
+              </TouchableOpacity>
+            )}
           </View>
         ) : (
           <>
             {/* If searching and matching topics exist, show a quick horizontal strip of matching topics */}
-            {searchQuery && visibleTopics.length > 0 && (
+            {searchQuery && visibleTopics.length > 0 && examMode !== 'tgt' && examMode !== 'pgt' && (
               <View style={styles.matchingTopicsStrip}>
                 <Text style={[styles.matchingTopicsLabel, { color: colors.textSecondary }]}>
                   Topics matching "{searchQuery}":
@@ -1677,12 +1929,30 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
               </View>
             )}
             <View style={[styles.testsGrid, width > 768 && styles.testsGridWeb]}>
-              {filteredTests.map((test) => (
+              {filteredTests.slice(0, displayLimit).map((test) => (
                 <View key={test.id} style={width > 768 ? styles.testCardWrapperWeb : undefined}>
                   {renderTestCard(test)}
                 </View>
               ))}
             </View>
+
+            {filteredTests.length > displayLimit && (
+              <View style={styles.loadMoreContainer}>
+                <TouchableOpacity
+                  style={[styles.loadMoreButton, { backgroundColor: colors.surface, borderColor: colors.border }]}
+                  onPress={() => setDisplayLimit((prev) => prev + 30)}
+                  activeOpacity={0.8}
+                >
+                  <Text style={[styles.loadMoreButtonText, { color: colors.accent }]}>
+                    Load More Tests ({filteredTests.length - displayLimit} remaining)
+                  </Text>
+                  <ChevronRight size={16} color={colors.accent} />
+                </TouchableOpacity>
+                <Text style={[styles.loadMoreHint, { color: colors.textTertiary }]}>
+                  Showing {Math.min(displayLimit, filteredTests.length)} of {filteredTests.length} tests
+                </Text>
+              </View>
+            )}
           </>
         )}
       </ScrollView>
@@ -2474,5 +2744,80 @@ const styles = StyleSheet.create({
   matchingTopicChipText: {
     fontSize: 12,
     fontWeight: '600',
+  },
+  seriesHeroBanner: {
+    borderRadius: 18,
+    overflow: 'hidden',
+    borderWidth: 1,
+    marginBottom: 16,
+  },
+  seriesHeroGradient: {
+    padding: 18,
+  },
+  seriesHeroBadgeRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    marginBottom: 8,
+  },
+  seriesHeroBadge: {
+    fontSize: 10,
+    fontWeight: '800',
+    letterSpacing: 0.8,
+  },
+  seriesHeroTitle: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#fff',
+    marginBottom: 4,
+  },
+  seriesHeroSubtitle: {
+    fontSize: 12,
+    color: 'rgba(255, 255, 255, 0.85)',
+    lineHeight: 18,
+    marginBottom: 14,
+  },
+  seriesHeroPerksRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    flexWrap: 'wrap',
+  },
+  seriesHeroPerk: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 8,
+  },
+  seriesHeroPerkText: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: '#fff',
+  },
+  loadMoreContainer: {
+    alignItems: 'center',
+    marginTop: 20,
+    marginBottom: 10,
+    gap: 8,
+  },
+  loadMoreButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+    borderRadius: 12,
+    borderWidth: 1,
+  },
+  loadMoreButtonText: {
+    fontSize: 13,
+    fontWeight: '700',
+  },
+  loadMoreHint: {
+    fontSize: 11,
   },
 });
