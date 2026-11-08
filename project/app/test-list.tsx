@@ -709,6 +709,33 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     return scopedTests.filter(t => t.filename.includes('topic_wise/')).length;
   }, [scopedTests, examMode]);
 
+  const activeSearchSuggestions = useMemo(() => {
+    if (examMode === 'tgt') {
+      return [
+        { label: 'Hindi (35)', query: 'hindi' },
+        { label: 'Physical Ed (25)', query: 'physical education' },
+        { label: 'Mathematics (24)', query: 'mathematics' },
+        { label: 'Social Science (17)', query: 'social science' },
+        { label: 'English (16)', query: 'english' },
+        { label: 'Natural Science (14)', query: 'natural science' },
+        { label: 'Drawing (2)', query: 'drawing' },
+      ];
+    }
+    if (examMode === 'pgt') {
+      return [
+        { label: 'Commerce (32)', query: 'commerce' },
+        { label: 'History (12)', query: 'history' },
+        { label: 'Economics (11)', query: 'economics' },
+        { label: 'Physics (10)', query: 'physics' },
+        { label: 'Biology (9)', query: 'biology' },
+        { label: 'Chemistry (9)', query: 'chemistry' },
+        { label: 'Geography (9)', query: 'geography' },
+        { label: 'Political Science (9)', query: 'political' },
+      ];
+    }
+    return SEARCH_SUGGESTIONS;
+  }, [examMode]);
+
   useEffect(() => {
     filterTests();
   }, [searchQuery, category, selectedTopic, selectedTopicCategory, selectedSubject, scopedTests, attemptFilter, getAttemptForTest, examMode]);
@@ -1685,33 +1712,6 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     }
     return true;
   });
-
-  const activeSearchSuggestions = useMemo(() => {
-    if (examMode === 'tgt') {
-      return [
-        { label: 'Hindi (35)', query: 'hindi' },
-        { label: 'Physical Ed (25)', query: 'physical education' },
-        { label: 'Mathematics (24)', query: 'mathematics' },
-        { label: 'Social Science (17)', query: 'social science' },
-        { label: 'English (16)', query: 'english' },
-        { label: 'Natural Science (14)', query: 'natural science' },
-        { label: 'Drawing (2)', query: 'drawing' },
-      ];
-    }
-    if (examMode === 'pgt') {
-      return [
-        { label: 'Commerce (32)', query: 'commerce' },
-        { label: 'History (12)', query: 'history' },
-        { label: 'Economics (11)', query: 'economics' },
-        { label: 'Physics (10)', query: 'physics' },
-        { label: 'Biology (9)', query: 'biology' },
-        { label: 'Chemistry (9)', query: 'chemistry' },
-        { label: 'Geography (9)', query: 'geography' },
-        { label: 'Political Science (9)', query: 'political' },
-      ];
-    }
-    return SEARCH_SUGGESTIONS;
-  }, [examMode]);
 
   const content = (
     <ContainerComponent style={[styles.container, { backgroundColor: colors.background, flex: 1 }]} edges={isLargeScreen ? [] : ['top']}>
