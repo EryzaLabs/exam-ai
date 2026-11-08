@@ -265,7 +265,14 @@ function loadAllPapersList() {
                 series: fileData.exam || (fileObj.filename.includes('pgt_') ? 'pgt' : 'tgt'),
                 subject: fileData.subject || '',
                 price: fileData.price || 199,
-                originalPrice: fileData.originalPrice || 999
+                originalPrice: fileData.originalPrice || 999,
+                examBoard: fileData.examBoard,
+                year: fileData.year,
+                examDate: fileData.examDate,
+                shift: fileData.shift,
+                gender: fileData.gender,
+                tier: fileData.tier,
+                isPYQ: fileData.isPYQ ?? true,
             };
         }
         const cleanTitle = formatPaperTitle(title, fileObj.filename, topic);
@@ -451,7 +458,8 @@ router.get('/find/:identifier', (req, res) => {
         const fullMockDir = path_1.default.join(TESTS_DIR, 'full_mocks');
         const topicWiseDir = path_1.default.join(TESTS_DIR, 'topic_wise');
         const customMockDir = path_1.default.join(TESTS_DIR, 'custom_mocks');
-        const searchDirs = [fullMockDir, topicWiseDir, customMockDir];
+        const tgtPgtDir = path_1.default.join(TESTS_DIR, 'tgt_pgt');
+        const searchDirs = [fullMockDir, topicWiseDir, customMockDir, tgtPgtDir];
         for (const dir of searchDirs) {
             if (!fs_1.default.existsSync(dir))
                 continue;
