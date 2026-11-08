@@ -428,12 +428,18 @@ export const formatDisplayTitle = (title: string, filename: string, examMode: Ex
     return `${topicName} • Practice Set ${paddedPart}`;
   }
 
+  let formatted = title || `${getPrefix()} Test`;
   if (title) {
-    if (examMode === 'uppsc') return title.replace(/UPSC Principal/gi, 'UP Principal');
-    if (examMode === 'all') return title.replace(/UPSC Principal/gi, 'UPSC & UP Principal');
+    if (examMode === 'uppsc') formatted = formatted.replace(/UPSC Principal/gi, 'UP Principal');
+    if (examMode === 'all') formatted = formatted.replace(/UPSC Principal/gi, 'UPSC & UP Principal');
   }
 
-  return title || `${getPrefix()} Test`;
+  return formatted
+    .replace(/\s*•\s*Mock Test Set\s*(\d+)\s*\([^)]*\)/gi, ' • Official Paper $1')
+    .replace(/\s+Solved Set/gi, ' Official Paper')
+    .replace(/\s+Solved Paper/gi, ' Official Paper')
+    .replace(/\s*\(\s*\d+\s*MCQs?\s*\)/gi, '')
+    .trim();
 };
 
 const SEARCH_SUGGESTIONS = [
@@ -1226,21 +1232,21 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
               <View style={styles.seriesHeroBadgeRow}>
                 <Sparkles size={13} color="#FDE047" />
                 <Text style={[styles.seriesHeroBadge, { color: '#FEF08A' }]}>
-                  {isTgt ? '🎯 TGT SERIES • 132 SOLVED SETS' : '🎓 PGT SERIES • 101 SOLVED SETS'}
+                  {isTgt ? '🎯 TGT SERIES • 132 OFFICIAL PAPERS' : '🎓 PGT SERIES • 101 OFFICIAL PAPERS'}
                 </Text>
               </View>
               <Text style={styles.seriesHeroTitle}>
-                {isTgt ? 'TGT Subject Solved Test Series' : 'PGT Subject Solved Test Series'}
+                {isTgt ? 'TGT Official Previous Year Papers' : 'PGT Official Previous Year Papers'}
               </Text>
               <Text style={styles.seriesHeroSubtitle}>
                 {isTgt
-                  ? '12,867 authentic exam MCQs with bilingual explanations across 7 school teaching subjects.'
-                  : '9,645 authentic exam MCQs with bilingual explanations across 8 postgraduate teaching disciplines.'}
+                  ? '132 official exam question papers (12,867 questions) with authentic shift & date metadata and bilingual explanations.'
+                  : '101 official exam question papers (9,645 questions) with authentic shift & date metadata and bilingual explanations.'}
               </Text>
               <View style={styles.seriesHeroPerksRow}>
                 <View style={styles.seriesHeroPerk}>
                   <HelpCircle size={13} color="#fff" />
-                  <Text style={styles.seriesHeroPerkText}>100 MCQs / Set</Text>
+                  <Text style={styles.seriesHeroPerkText}>100 Questions / Paper</Text>
                 </View>
                 <View style={styles.seriesHeroPerk}>
                   <Clock size={13} color="#fff" />
@@ -1595,7 +1601,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     const isLocked = !isPaperUnlocked(test);
     const attempt = getAttemptForTest(test);
     const isAttempted = !!attempt;
-    const subjectName = test.subject || (test.series === 'tgt' ? 'TGT Mock' : test.series === 'pgt' ? 'PGT Mock' : 'Full Mock');
+    const subjectName = test.subject || (test.series === 'tgt' ? 'TGT Paper' : test.series === 'pgt' ? 'PGT Paper' : 'Full Mock');
 
     return (
       <TouchableOpacity
@@ -1734,7 +1740,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                 <Text style={[styles.pyqChipText, { color: '#2563EB', fontWeight: '800' }]}>📅 {test.year}</Text>
               </View>
             )}
-            {test.examDate && test.examDate !== 'Solved PYQ Collection' && (
+            {test.examDate && test.examDate !== 'Solved PYQ Collection' && test.examDate !== 'Official PYQ Archive' && (
               <View style={[styles.pyqChip, { backgroundColor: isDark ? '#064E3B' : '#ECFDF5', borderColor: isDark ? '#059669' : '#A7F3D0' }]}>
                 <Text style={[styles.pyqChipText, { color: '#059669', fontWeight: '700' }]}>📆 {test.examDate}</Text>
               </View>
@@ -1972,7 +1978,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                         {sub.name}
                       </Text>
                       <Text style={[styles.subjectOptionMeta, { color: colors.textSecondary }]}>
-                        {sub.count} Full Sets • {sub.count * 100} Solved MCQs
+                        {sub.count} Official Papers • {sub.count * 100} Questions
                       </Text>
                     </View>
                     {isCurrent ? (
@@ -2057,7 +2063,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                   </View>
                 </View>
                 <Text style={[styles.unlockOptionDesc, { color: colors.textSecondary }]}>
-                  Complete access to all {unlockTargetPaper.subject} official solved papers, answer keys & pedagogical explanations.
+                  Complete access to all {unlockTargetPaper.subject} official question papers, answer keys & pedagogical explanations.
                 </Text>
                 <View style={[styles.unlockActionBtn, { backgroundColor: activeColor }]}>
                   <Text style={styles.unlockActionBtnText}>
@@ -2309,8 +2315,8 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           <Text style={[styles.sectionHeadingText, { color: colors.textPrimary }]}>
             {examMode === 'tgt' || examMode === 'pgt'
               ? selectedSubject !== 'all'
-                ? `${selectedSubject} Mock Tests`
-                : `${examInfo.shortName} Solved Test Series`
+                ? `${selectedSubject} Official Papers`
+                : `${examInfo.shortName} Official Question Papers`
               : category === 'full'
               ? 'Full Length Mock Tests'
               : category === 'topic'

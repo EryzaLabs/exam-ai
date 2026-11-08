@@ -43,9 +43,9 @@ export const EXAMS: Record<ExamTarget, ExamInfo> = {
   },
   tgt: {
     id: 'tgt',
-    shortName: 'TGT Test Series',
-    fullName: 'TGT (Trained Graduate Teacher) Solved Papers & Mocks',
-    tagline: 'Subject Tracks: Hindi, Mathematics, Science, Social Science, English, Sanskrit',
+    shortName: 'TGT Official Papers',
+    fullName: 'TGT (Trained Graduate Teacher) Official Previous Year Papers',
+    tagline: 'Official Exam Papers: Hindi, Mathematics, Science, Social Science, English, PE, Drawing',
     badge: 'TGT 2026',
     pillLabel: '🎯 TGT Series',
     isIndividualPurchasable: true,
@@ -55,9 +55,9 @@ export const EXAMS: Record<ExamTarget, ExamInfo> = {
   },
   pgt: {
     id: 'pgt',
-    shortName: 'PGT Test Series',
-    fullName: 'PGT (Post Graduate Teacher) Solved Papers & Mocks',
-    tagline: 'Subject Tracks: Hindi, Mathematics, Physics, Chemistry, Biology, History, Geography, Commerce, Economics, English',
+    shortName: 'PGT Official Papers',
+    fullName: 'PGT (Post Graduate Teacher) Official Previous Year Papers',
+    tagline: 'Official Exam Papers: Commerce, Physics, Chemistry, Biology, History, Geography, Economics, English',
     badge: 'PGT 2026',
     pillLabel: '🎓 PGT Series',
     isIndividualPurchasable: true,
@@ -109,7 +109,7 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
         if (examMode === 'pgt') return title.replace(/UPSC Principal/gi, 'PGT');
         if (examMode === 'all') return title;
       }
-      return title || (examMode === 'uppsc' ? 'UP Principal Test' : examMode === 'tgt' ? 'TGT Solved Paper' : examMode === 'pgt' ? 'PGT Solved Paper' : 'Exam Test');
+      return title || (examMode === 'uppsc' ? 'UP Principal Test' : examMode === 'tgt' ? 'TGT Official Paper' : examMode === 'pgt' ? 'PGT Official Paper' : 'Exam Test');
     }
 
     if (filename.includes('tgt_pgt/') || filename.includes('tgt/') || filename.includes('pgt/')) {
@@ -126,10 +126,10 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
         return `UP Principal Full Mock Test ${padded} • Complete CBT Exam`;
       }
       if (examMode === 'tgt') {
-        return `TGT Comprehensive Mock Test ${padded} • Solved Paper`;
+        return `TGT Comprehensive Test ${padded} • Official Paper`;
       }
       if (examMode === 'pgt') {
-        return `PGT Comprehensive Mock Test ${padded} • Solved Paper`;
+        return `PGT Comprehensive Test ${padded} • Official Paper`;
       }
       if (examMode === 'all') {
         return `UPSC & UP Principal Full Mock ${padded} • Complete CBT Exam`;

@@ -118,7 +118,7 @@ export const PLANS: PlanTier[] = [
     originalPrice: 999,
     badge: '80% OFF',
     popular: true,
-    description: 'Complete access to TGT Solved PYQs & Mocks: Hindi, Maths, Science, Social Science, English & Sanskrit',
+    description: 'Complete access to official TGT question papers: Hindi, Maths, Science, Social Science, English & PE',
   },
   {
     id: 'pgt-series',
@@ -128,7 +128,7 @@ export const PLANS: PlanTier[] = [
     price: 199,
     originalPrice: 999,
     badge: '80% OFF',
-    description: 'Complete access to PGT Solved PYQs & Mocks: Hindi, Maths, Physics, Chemistry, Biology, History & Economics',
+    description: 'Complete access to official PGT question papers: Commerce, Physics, Chemistry, Biology, History, Economics & Geography',
   },
 
 ];
