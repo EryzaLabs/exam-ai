@@ -63,6 +63,12 @@ interface ServerPaper {
   series?: 'upsc' | 'uppsc' | 'tgt' | 'pgt';
   subject?: string;
   year?: string;
+  examDate?: string;
+  shift?: string;
+  gender?: string;
+  tier?: string;
+  examBoard?: string;
+  isPYQ?: boolean;
   price?: number;
   originalPrice?: number;
 }
@@ -801,6 +807,11 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
       const lowerTopic = topicName.toLowerCase();
       const lowerCat = categoryName.toLowerCase();
       const lowerSub = (t.subject || '').toLowerCase();
+      const lowerYear = (t.year || '').toLowerCase();
+      const lowerShift = (t.shift || '').toLowerCase();
+      const lowerGender = (t.gender || '').toLowerCase();
+      const lowerDate = (t.examDate || '').toLowerCase();
+      const lowerBoard = (t.examBoard || '').toLowerCase();
       const aliases = (SEARCH_SEMANTIC_ALIASES[slug] || []).map(a => a.toLowerCase());
 
       let score = 0;
@@ -809,7 +820,12 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
       if (matchWordOrPhrase(trimmedQuery, cleanTitle)) score += 200;
       if (matchWordOrPhrase(trimmedQuery, lowerSub)) score += 180;
       if (matchWordOrPhrase(trimmedQuery, lowerTopic)) score += 160;
+      if (lowerYear && matchWordOrPhrase(trimmedQuery, lowerYear)) score += 150;
+      if (lowerBoard && matchWordOrPhrase(trimmedQuery, lowerBoard)) score += 140;
       if (aliases.some(a => matchWordOrPhrase(trimmedQuery, a) || (trimmedQuery.length > 4 && a.includes(trimmedQuery)))) score += 140;
+      if (lowerDate && matchWordOrPhrase(trimmedQuery, lowerDate)) score += 100;
+      if (lowerShift && matchWordOrPhrase(trimmedQuery, lowerShift)) score += 100;
+      if (lowerGender && matchWordOrPhrase(trimmedQuery, lowerGender)) score += 100;
       if (matchWordOrPhrase(trimmedQuery, lowerCat)) score += 80;
       if (matchWordOrPhrase(trimmedQuery, rawFilename)) score += 60;
 
@@ -824,6 +840,26 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         }
         if (matchWordOrPhrase(token, lowerSub)) {
           score += 45;
+          tokenFound = true;
+        }
+        if (lowerYear && matchWordOrPhrase(token, lowerYear)) {
+          score += 45;
+          tokenFound = true;
+        }
+        if (lowerBoard && matchWordOrPhrase(token, lowerBoard)) {
+          score += 40;
+          tokenFound = true;
+        }
+        if (lowerDate && matchWordOrPhrase(token, lowerDate)) {
+          score += 35;
+          tokenFound = true;
+        }
+        if (lowerShift && matchWordOrPhrase(token, lowerShift)) {
+          score += 35;
+          tokenFound = true;
+        }
+        if (lowerGender && matchWordOrPhrase(token, lowerGender)) {
+          score += 35;
           tokenFound = true;
         }
         if (matchWordOrPhrase(token, lowerTopic)) {
@@ -849,6 +885,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             isFuzzyMatch(token, cleanTitle) ||
             isFuzzyMatch(token, lowerSub) ||
             isFuzzyMatch(token, lowerTopic) ||
+            (lowerBoard && isFuzzyMatch(token, lowerBoard)) ||
             aliases.some(a => isFuzzyMatch(token, a))
           ) {
             score += 20;
@@ -1464,6 +1501,43 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         <Text style={[styles.modernTestTitle, { color: colors.textPrimary }]} numberOfLines={2}>
           {formatDisplayTitle(test.title, test.filename, examMode)}
         </Text>
+
+        {isTgtPgt && (test.examDate || test.shift || test.year || test.gender || test.examBoard) && (
+          <View style={styles.pyqMetaChipsRow}>
+            {test.examBoard && (
+              <View style={[styles.pyqChip, { backgroundColor: isDark ? '#1E293B' : '#F1F5F9', borderColor: colors.border }]}>
+                <Text style={[styles.pyqChipText, { color: colors.textPrimary, fontWeight: '700' }]}>{test.examBoard}</Text>
+              </View>
+            )}
+            {test.year && (
+              <View style={[styles.pyqChip, { backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF', borderColor: isDark ? '#2563EB' : '#BFDBFE' }]}>
+                <Text style={[styles.pyqChipText, { color: '#2563EB', fontWeight: '800' }]}>📅 {test.year}</Text>
+              </View>
+            )}
+            {test.examDate && test.examDate !== 'Solved PYQ Collection' && (
+              <View style={[styles.pyqChip, { backgroundColor: isDark ? '#064E3B' : '#ECFDF5', borderColor: isDark ? '#059669' : '#A7F3D0' }]}>
+                <Text style={[styles.pyqChipText, { color: '#059669', fontWeight: '700' }]}>📆 {test.examDate}</Text>
+              </View>
+            )}
+            {test.shift && (
+              <View style={[styles.pyqChip, { backgroundColor: isDark ? '#2A1B0B' : '#FFF7ED', borderColor: isDark ? '#EA580C' : '#FED7AA' }]}>
+                <Text style={[styles.pyqChipText, { color: '#EA580C', fontWeight: '700' }]}>⏱️ {test.shift}</Text>
+              </View>
+            )}
+            {test.gender && (
+              <View style={[styles.pyqChip, { backgroundColor: isDark ? '#2E1065' : '#FAF5FF', borderColor: isDark ? '#7E22CE' : '#E9D5FF' }]}>
+                <Text style={[styles.pyqChipText, { color: '#7E22CE', fontWeight: '700' }]}>
+                  {test.gender === 'Female' ? '👩 Female' : test.gender === 'Male' ? '👨 Male' : '👥 Male & Female'}
+                </Text>
+              </View>
+            )}
+            {test.tier && (
+              <View style={[styles.pyqChip, { backgroundColor: isDark ? '#312E81' : '#EEF2FF', borderColor: isDark ? '#4F46E5' : '#C7D2FE' }]}>
+                <Text style={[styles.pyqChipText, { color: '#4F46E5', fontWeight: '700' }]}>🎯 {test.tier}</Text>
+              </View>
+            )}
+          </View>
+        )}
 
         <View style={[styles.modernTestFooter, { borderTopColor: colors.borderLight }]}>
           <View style={styles.metaStatPillRow}>
@@ -2818,6 +2892,23 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   loadMoreHint: {
+    fontSize: 11,
+  },
+  pyqMetaChipsRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 6,
+    marginBottom: 12,
+  },
+  pyqChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 6,
+    borderWidth: 1,
+  },
+  pyqChipText: {
     fontSize: 11,
   },
 });

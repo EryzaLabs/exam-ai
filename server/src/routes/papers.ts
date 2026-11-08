@@ -272,7 +272,14 @@ function loadAllPapersList(): any[] {
         series: fileData.exam || (fileObj.filename.includes('pgt_') ? 'pgt' : 'tgt'),
         subject: fileData.subject || '',
         price: fileData.price || 199,
-        originalPrice: fileData.originalPrice || 999
+        originalPrice: fileData.originalPrice || 999,
+        examBoard: fileData.examBoard,
+        year: fileData.year,
+        examDate: fileData.examDate,
+        shift: fileData.shift,
+        gender: fileData.gender,
+        tier: fileData.tier,
+        isPYQ: fileData.isPYQ ?? true,
       };
     }
 
