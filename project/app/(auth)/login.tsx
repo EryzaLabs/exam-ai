@@ -85,9 +85,9 @@ export default function LoginScreen() {
 
   // Native Google Auth Session
   const [request, response, promptAsync] = Google.useIdTokenAuthRequest({
-    clientId: process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID || '70133368788-u3k4o6hglldr2n7dgt9ofbe21ro9scbj.apps.googleusercontent.com',
+    clientId: process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID || '576822389770-t834upk5nngfmtm4v6d64k7tcef6kgrl.apps.googleusercontent.com',
     iosClientId: process.env.EXPO_PUBLIC_IOS_CLIENT_ID,
-    androidClientId: process.env.EXPO_PUBLIC_ANDROID_CLIENT_ID || '70133368788-g0633ns48s31sl503vbdi67vjavt697g.apps.googleusercontent.com',
+    androidClientId: process.env.EXPO_PUBLIC_ANDROID_CLIENT_ID || '576822389770-t834upk5nngfmtm4v6d64k7tcef6kgrl.apps.googleusercontent.com',
     redirectUri: makeRedirectUri({ scheme: 'myapp' }),
   });
 
