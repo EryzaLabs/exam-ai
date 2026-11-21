@@ -10,7 +10,9 @@ import {
   RefreshControl,
   Platform,
   Image,
+  ImageBackground,
 } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import { router } from 'expo-router';
@@ -23,15 +25,18 @@ import {
   BarChart2,
   Play,
   ArrowRight,
+  Grid,
   BookOpen,
+  Star,
   ChevronRight,
   Zap,
+  Brain,
   Crown,
   Sparkles,
+  Lock,
   SlidersHorizontal,
   Sun,
   Moon,
-  CheckCircle2,
 } from 'lucide-react-native';
 import { useAuth } from '@/context/auth-context';
 import { useExam } from '@/context/exam-context';
@@ -92,943 +97,1019 @@ export default function MobileDashboard({
       subtitle: 'Create a free account or sign in to start tests and record your score.',
     });
   };
-
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
-      <StatusBar style={isDark ? 'light' : 'dark'} />
+      <StatusBar style="light" />
       <ScrollView
         style={styles.scrollView}
-        contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
       >
-        {/* TOP BAR / BRAND HEADER */}
-        <SafeAreaView edges={['top']} style={[styles.topBar, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
-          <View style={styles.topBarRow}>
-            <View style={styles.brandRow}>
-              <View style={[styles.logoBox, { backgroundColor: isDark ? '#1E293B' : '#0F172A' }]}>
-                <Image
-                  source={require('@/assets/images/logo.png')}
-                  style={styles.logoImage}
-                  resizeMode="contain"
-                />
-              </View>
-              <View>
-                <View style={styles.titleWithBadge}>
-                  <Text style={[styles.brandTitle, { color: colors.textPrimary }]}>Astra Exam AI</Text>
+        {/* HEADER SECTION (BLUE) */}
+        <ImageBackground
+          source={require('@/assets/images/upsc-bg.png')}
+          style={[styles.headerGradient, { backgroundColor: '#3B82F6' }]}
+          imageStyle={{ borderBottomLeftRadius: 32, borderBottomRightRadius: 32, opacity: 0.9, width: '100%', height: '100%' }}
+          resizeMode="cover"
+        >
+          <LinearGradient
+            colors={['rgba(79,70,229,0.8)', 'transparent']}
+            style={[StyleSheet.absoluteFillObject, { borderBottomLeftRadius: 32, borderBottomRightRadius: 32 }]}
+          />
+          <SafeAreaView edges={['top']} style={styles.headerSafeArea}>
+            <View style={styles.headerTop}>
+              <View style={{ flex: 1, paddingRight: 12 }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
+                  <View style={{
+                    width: 44,
+                    height: 44,
+                    borderRadius: 12,
+                    backgroundColor: isDark ? 'rgba(139, 92, 246, 0.16)' : '#0A0915',
+                    borderWidth: 1,
+                    borderColor: 'rgba(139, 92, 246, 0.35)',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginRight: 4,
+                  }}>
+                    <Image
+                      source={require('@/assets/images/logo.png')}
+                      style={{ width: 38, height: 38 }}
+                      resizeMode="contain"
+                    />
+                  </View>
+                  <Text style={styles.headerTitle}>Astra Exam AI</Text>
                   {isSubscribed && (
-                    <View style={styles.proPill}>
-                      <Crown size={11} color="#F59E0B" />
-                      <Text style={styles.proPillText}>PRO</Text>
-                    </View>
+                    <Crown size={22} color="#F59E0B" fill="#F59E0B" />
                   )}
                 </View>
-                <Text style={[styles.brandSubtitle, { color: colors.textSecondary }]}>
-                  {examInfo.fullName || 'Official Exam Preparation'}
+                <Text style={styles.headerSubtitle}>
+                  {isSubscribed ? `👑 Premium Member • ${examInfo.shortName} Unlocked` : user ? examInfo.fullName : `Explore ${dashboardStats?.totalAvailableTests || 190}+ Tests for ${examInfo.shortName}`}
                 </Text>
+              </View>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                <TouchableOpacity
+                  style={[styles.bellBtn, { backgroundColor: isDark ? '#1E293B' : '#FFFFFF' }]}
+                  onPress={toggleTheme}
+                  accessibilityLabel="Toggle Dark Mode"
+                >
+                  {isDark ? <Sun size={20} color="#F59E0B" /> : <Moon size={20} color="#3B82F6" />}
+                </TouchableOpacity>
+                {user ? (
+                  <TouchableOpacity style={styles.bellBtn} onPress={() => {
+                    const { Alert } = require('react-native');
+                    Alert.alert('Notifications', 'No new notifications at the moment.');
+                  }}>
+                    <Bell size={24} color="#3B82F6" />
+                    <View style={styles.notificationDot} />
+                  </TouchableOpacity>
+                ) : (
+                  <TouchableOpacity 
+                    style={styles.headerAuthPill} 
+                    onPress={() => router.push('/(auth)/login')}
+                    activeOpacity={0.8}
+                  >
+                    <Text style={styles.headerAuthPillText}>Sign In</Text>
+                  </TouchableOpacity>
+                )}
               </View>
             </View>
 
-            <View style={styles.headerActions}>
-              <TouchableOpacity
-                style={[styles.actionIconBtn, { backgroundColor: colors.background, borderColor: colors.border }]}
-                onPress={toggleTheme}
-                accessibilityLabel="Toggle Dark Mode"
-                activeOpacity={0.7}
-              >
-                {isDark ? <Sun size={18} color="#F59E0B" /> : <Moon size={18} color="#475569" />}
-              </TouchableOpacity>
+            <View style={styles.headerSpacer} />
+          </SafeAreaView>
+        </ImageBackground>
 
-              {user ? (
-                <TouchableOpacity
-                  style={[styles.actionIconBtn, { backgroundColor: colors.background, borderColor: colors.border }]}
-                  onPress={() => router.push('/(tabs)/profile')}
-                  accessibilityLabel="User Profile"
-                  activeOpacity={0.7}
-                >
-                  <View style={[styles.avatarCircle, { backgroundColor: colors.accent }]}>
-                    <Text style={styles.avatarText}>
-                      {(user.displayName || user.email || 'U').charAt(0).toUpperCase()}
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              ) : (
-                <TouchableOpacity
-                  style={styles.signInBtn}
-                  onPress={() => router.push('/(auth)/login')}
-                  activeOpacity={0.85}
-                >
-                  <Text style={styles.signInBtnText}>Sign In</Text>
-                </TouchableOpacity>
-              )}
+        {/* MAIN CONTENT AREA */}
+        <View style={styles.contentArea}>
+          {/* EXAM TARGET SELECTOR */}
+          <View style={{ paddingHorizontal: 16, marginBottom: 12 }}>
+            <ExamSelector compact={false} showTagline={true} />
+          </View>
+
+          {/* FLOATING SEARCH BAR */}
+          <View style={styles.searchWrapper}>
+            <View style={[styles.searchContainer, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+              <Search size={20} color={colors.textTertiary} />
+              <TextInput
+                style={[styles.searchInput, { color: colors.textPrimary }]}
+                placeholder="Search tests, topics, or keywords..."
+                placeholderTextColor={colors.textTertiary}
+                value={searchQuery}
+                onChangeText={setSearchQuery}
+                onSubmitEditing={() => {
+                  if (searchQuery.trim()) {
+                    router.push({ pathname: '/test-list', params: { q: searchQuery.trim() } });
+                  }
+                }}
+                returnKeyType="search"
+              />
             </View>
           </View>
 
-          {/* EXAM TARGET SWITCHER ROW */}
-          <View style={styles.examSelectorWrapper}>
-            <ExamSelector compact={true} showTagline={false} />
-          </View>
-        </SafeAreaView>
+          {/* GUEST BANNER */}
+          {!user && (
+            <View style={[styles.guestBanner, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+              <View style={styles.guestBannerContent}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 4 }}>
+                  <Sparkles size={16} color="#4F46E5" />
+                  <Text style={[styles.guestBannerTitle, { color: colors.textPrimary }]}>Welcome to Astra Exam AI</Text>
+                </View>
+                <Text style={[styles.guestBannerText, { color: colors.textSecondary }]}>
+                  Create a free account to save test scores, track study streaks & get AI weakness analysis.
+                </Text>
+              </View>
+              <TouchableOpacity
+                style={styles.guestBannerBtn}
+                onPress={() => router.push('/(auth)/signup')}
+                activeOpacity={0.85}
+              >
+                <Text style={styles.guestBannerBtnText}>Get Started</Text>
+              </TouchableOpacity>
+            </View>
+          )}
 
-        {/* SEARCH BAR */}
-        <View style={styles.searchSection}>
-          <View style={[styles.searchBox, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-            <Search size={18} color={colors.textTertiary} />
-            <TextInput
-              style={[styles.searchInput, { color: colors.textPrimary }]}
-              placeholder={`Search ${examInfo.shortName} papers, topics, questions...`}
-              placeholderTextColor={colors.textTertiary}
-              value={searchQuery}
-              onChangeText={setSearchQuery}
-              onSubmitEditing={() => {
-                if (searchQuery.trim()) {
-                  router.push({ pathname: '/test-list', params: { q: searchQuery.trim() } });
-                }
-              }}
-              returnKeyType="search"
-            />
+          {/* STATS GRID */}
+          <View style={styles.statsGrid}>
+            <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+              <View style={[styles.statIconBox, { backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF' }]}>
+                <FileText size={18} color="#3B82F6" />
+              </View>
+              <View>
+                <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.totalAvailableTests ?? 0}</Text>
+                <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Tests Available</Text>
+              </View>
+            </View>
+            <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+              <View style={[styles.statIconBox, { backgroundColor: isDark ? '#064E3B' : '#ECFDF5' }]}>
+                <Target size={18} color="#10B981" />
+              </View>
+              <View>
+                <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.accuracy?.toFixed(1) || '0'}%</Text>
+                <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Avg. Accuracy</Text>
+              </View>
+            </View>
+            <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+              <View style={[styles.statIconBox, { backgroundColor: isDark ? '#2D1B69' : '#F5F3FF' }]}>
+                <Clock size={18} color="#8B5CF6" />
+              </View>
+              <View>
+                <Text style={[styles.statVal, { color: colors.textPrimary }]}>{Math.floor((dashboardStats?.timeSpent || 0) / 60)}h {(dashboardStats?.timeSpent || 0) % 60}m</Text>
+                <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Practice Time</Text>
+              </View>
+            </View>
+            <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
+              <View style={[styles.statIconBox, { backgroundColor: isDark ? '#431407' : '#FFF7ED' }]}>
+                <BarChart2 size={18} color="#F97316" />
+              </View>
+              <View>
+                <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.questionsAttempted || 0}</Text>
+                <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Questions Solved</Text>
+              </View>
+            </View>
           </View>
-        </View>
 
-        {/* PRIMARY FOCUS CARD: RESUME TEST OR START MOCK CBT */}
-        {activeTest ? (
-          <View style={styles.sectionContainer}>
-            <TouchableOpacity
-              style={[styles.resumeCard, { backgroundColor: isDark ? '#1E293B' : '#0F172A', borderColor: isDark ? '#334155' : '#1E293B' }]}
+          {/* CONTINUE TEST CARD (ONLY SHOWN IF THERE IS AN UNFINISHED TEST) */}
+          {activeTest && (
+            <TouchableOpacity 
+              style={styles.resumeCard} 
               activeOpacity={0.9}
               onPress={handleResumeTest}
             >
-              <View style={styles.resumeHeaderRow}>
-                <View style={styles.resumeBadge}>
-                  <View style={styles.resumePulseDot} />
-                  <Text style={styles.resumeBadgeText}>IN PROGRESS TEST</Text>
+              <View style={styles.resumeTop}>
+                <View style={styles.playBtnContainer}>
+                  <View style={styles.playBtnOuter}>
+                    <View style={styles.playBtnInner}>
+                      <Play size={20} color="#fff" fill="#fff" />
+                    </View>
+                  </View>
                 </View>
-                <Text style={styles.resumeTimeLeft}>
-                  {Math.max(1, Math.floor((activeTest.timeRemaining || 0) / 60))}m remaining
-                </Text>
+                <View style={styles.resumeInfo}>
+                  <Text style={styles.resumeTag}>CONTINUE TEST</Text>
+                  <Text style={styles.resumeTitle} numberOfLines={1}>
+                    {activeTest.testTitle || 'Unfinished Mock Test'}
+                  </Text>
+                  <Text style={styles.resumeDesc}>
+                    {(Object.keys(activeTest.answers || {}).length || (activeTest.currentQuestionIndex + 1))} questions attempted • {Math.max(1, Math.floor((activeTest.timeRemaining || 0) / 60))}m left
+                  </Text>
+                </View>
+                <TouchableOpacity style={styles.resumeBtn} onPress={handleResumeTest}>
+                  <Text style={styles.resumeBtnTxt}>Resume</Text>
+                  <ArrowRight size={16} color="#fff" />
+                </TouchableOpacity>
               </View>
-
-              <Text style={styles.resumeTitle} numberOfLines={2}>
-                {activeTest.testTitle || 'Unfinished Mock Test'}
-              </Text>
-
               {(() => {
                 const attempted = Object.keys(activeTest.answers || {}).length || (activeTest.currentQuestionIndex + 1);
                 const total = activeTest.totalQuestions || 120;
                 const pct = Math.min(100, Math.max(1, Math.round((attempted / total) * 100)));
                 return (
-                  <View style={styles.resumeProgressSection}>
-                    <View style={styles.resumeProgressBarTrack}>
-                      <View style={[styles.resumeProgressBarFill, { width: `${pct}%` }]} />
+                  <>
+                    <View style={styles.progressBarBg}>
+                      <View style={[styles.progressBarFill, { width: `${pct}%` }]} />
                     </View>
-                    <View style={styles.resumeProgressMeta}>
-                      <Text style={styles.resumeProgressSubtext}>{attempted} of {total} questions answered</Text>
-                      <Text style={styles.resumeProgressPercent}>{pct}%</Text>
-                    </View>
-                  </View>
+                    <Text style={styles.progressText}>{pct}%</Text>
+                  </>
                 );
               })()}
-
-              <View style={styles.resumeFooter}>
-                <View style={styles.resumeCtaBtn}>
-                  <Play size={14} color="#0F172A" fill="#0F172A" />
-                  <Text style={styles.resumeCtaText}>Resume Exam</Text>
-                </View>
-              </View>
             </TouchableOpacity>
-          </View>
-        ) : (
-          <View style={styles.sectionContainer}>
-            <View style={[styles.heroCard, { backgroundColor: isDark ? '#1E293B' : '#FFFFFF', borderColor: colors.border }]}>
-              <View style={styles.heroHeader}>
-                <View style={[styles.heroBadge, { backgroundColor: isDark ? 'rgba(59, 130, 246, 0.15)' : '#EFF6FF' }]}>
-                  <FileText size={13} color="#2563EB" />
-                  <Text style={styles.heroBadgeText}>{examInfo.shortName} CBT Mock Suite</Text>
-                </View>
-              </View>
-              <Text style={[styles.heroHeading, { color: colors.textPrimary }]}>
-                Official Timed CBT Simulator
-              </Text>
-              <Text style={[styles.heroBody, { color: colors.textSecondary }]}>
-                Full-length authentic examination papers with official section navigation, negative marking, and verified step-by-step solutions.
-              </Text>
-
-              <View style={styles.heroActionsRow}>
-                <TouchableOpacity
-                  style={styles.heroPrimaryBtn}
-                  onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}
-                  activeOpacity={0.88}
-                >
-                  <Text style={styles.heroPrimaryBtnText}>Browse Full Mocks</Text>
-                  <ArrowRight size={15} color="#FFFFFF" />
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                  style={[styles.heroSecondaryBtn, { borderColor: colors.border, backgroundColor: colors.background }]}
-                  onPress={() => router.push('/practice')}
-                  activeOpacity={0.8}
-                >
-                  <Text style={[styles.heroSecondaryBtnText, { color: colors.textPrimary }]}>Quick Practice</Text>
-                </TouchableOpacity>
-              </View>
-            </View>
-          </View>
-        )}
-
-        {/* 4-METRIC GRID (MINIMALIST & UNIFIED) */}
-        <View style={styles.sectionContainer}>
-          <View style={styles.metricsGrid}>
-            <View style={[styles.metricCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-              <View style={[styles.metricIconWrap, { backgroundColor: isDark ? 'rgba(59, 130, 246, 0.12)' : '#F1F5F9' }]}>
-                <FileText size={16} color={isDark ? '#60A5FA' : '#2563EB'} />
-              </View>
-              <Text style={[styles.metricValue, { color: colors.textPrimary }]}>
-                {dashboardStats?.totalAvailableTests ?? 0}
-              </Text>
-              <Text style={[styles.metricLabel, { color: colors.textSecondary }]}>Total Papers</Text>
-            </View>
-
-            <View style={[styles.metricCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-              <View style={[styles.metricIconWrap, { backgroundColor: isDark ? 'rgba(16, 185, 129, 0.12)' : '#F1F5F9' }]}>
-                <Target size={16} color={isDark ? '#34D399' : '#059669'} />
-              </View>
-              <Text style={[styles.metricValue, { color: colors.textPrimary }]}>
-                {dashboardStats?.accuracy ? `${dashboardStats.accuracy.toFixed(1)}%` : '0%'}
-              </Text>
-              <Text style={[styles.metricLabel, { color: colors.textSecondary }]}>Avg. Accuracy</Text>
-            </View>
-
-            <View style={[styles.metricCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-              <View style={[styles.metricIconWrap, { backgroundColor: isDark ? 'rgba(139, 92, 246, 0.12)' : '#F1F5F9' }]}>
-                <Clock size={16} color={isDark ? '#A78BFA' : '#7C3AED'} />
-              </View>
-              <Text style={[styles.metricValue, { color: colors.textPrimary }]}>
-                {Math.floor((dashboardStats?.timeSpent || 0) / 60)}h {(dashboardStats?.timeSpent || 0) % 60}m
-              </Text>
-              <Text style={[styles.metricLabel, { color: colors.textSecondary }]}>Practice Time</Text>
-            </View>
-
-            <View style={[styles.metricCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-              <View style={[styles.metricIconWrap, { backgroundColor: isDark ? 'rgba(249, 115, 22, 0.12)' : '#F1F5F9' }]}>
-                <BarChart2 size={16} color={isDark ? '#FB923C' : '#EA580C'} />
-              </View>
-              <Text style={[styles.metricValue, { color: colors.textPrimary }]}>
-                {dashboardStats?.questionsAttempted ?? 0}
-              </Text>
-              <Text style={[styles.metricLabel, { color: colors.textSecondary }]}>Questions Solved</Text>
-            </View>
-          </View>
-        </View>
-
-        {/* PRACTICE MODES — CLEAN 2-COLUMN CARDS (NO CANDY GRADIENTS) */}
-        <View style={styles.sectionContainer}>
-          <View style={styles.sectionHeaderRow}>
-            <Text style={[styles.sectionHeading, { color: colors.textPrimary }]}>Practice Modes</Text>
-            <TouchableOpacity onPress={() => router.push({ pathname: '/test-list', params: { category: 'all' } })}>
-              <Text style={[styles.sectionLink, { color: colors.accent }]}>View All →</Text>
-            </TouchableOpacity>
-          </View>
-
-          <View style={styles.practiceModesGrid}>
-            <TouchableOpacity
-              style={[styles.practiceCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
-              onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}
-              activeOpacity={0.85}
-            >
-              <View style={[styles.practiceCardIconBox, { backgroundColor: isDark ? 'rgba(37, 99, 235, 0.15)' : '#EFF6FF' }]}>
-                <FileText size={20} color="#2563EB" />
-              </View>
-              <Text style={[styles.practiceCardTitle, { color: colors.textPrimary }]}>Full Mock CBT</Text>
-              <Text style={[styles.practiceCardDesc, { color: colors.textSecondary }]}>
-                Official 200/300-question timed papers with negative marking and authentic section timers.
-              </Text>
-              <View style={styles.practiceCardFooter}>
-                <Text style={[styles.practiceCardAction, { color: colors.accent }]}>Start CBT Exam</Text>
-                <ArrowRight size={14} color={colors.accent} />
-              </View>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={[styles.practiceCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
-              onPress={() => router.push('/practice')}
-              activeOpacity={0.85}
-            >
-              <View style={[styles.practiceCardIconBox, { backgroundColor: isDark ? 'rgba(5, 150, 105, 0.15)' : '#ECFDF5' }]}>
-                <BookOpen size={20} color="#059669" />
-              </View>
-              <Text style={[styles.practiceCardTitle, { color: colors.textPrimary }]}>Topic Practice</Text>
-              <Text style={[styles.practiceCardDesc, { color: colors.textSecondary }]}>
-                Targeted practice sets by subject and discipline to reinforce specific exam areas.
-              </Text>
-              <View style={styles.practiceCardFooter}>
-                <Text style={[styles.practiceCardAction, { color: colors.accent }]}>Practice Topics</Text>
-                <ArrowRight size={14} color={colors.accent} />
-              </View>
-            </TouchableOpacity>
-          </View>
-
-          {/* CUSTOM TEST BUILDER TILE */}
-          <TouchableOpacity
-            style={[styles.customBuilderTile, { backgroundColor: colors.surface, borderColor: colors.border }]}
-            onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-test' : '/premium'), { title: 'Sign In for Custom Test Builder', feature: 'Custom Test Builder' })}
-            activeOpacity={0.85}
-          >
-            <View style={[styles.customBuilderIconWrap, { backgroundColor: isDark ? 'rgba(124, 58, 237, 0.15)' : '#F5F3FF' }]}>
-              <SlidersHorizontal size={18} color="#7C3AED" />
-            </View>
-            <View style={styles.customBuilderContent}>
-              <View style={styles.customBuilderTitleRow}>
-                <Text style={[styles.customBuilderTitle, { color: colors.textPrimary }]}>Custom Test Builder</Text>
-                {!isSubscribed && (
-                  <View style={styles.proSmallPill}>
-                    <Crown size={10} color="#F59E0B" />
-                    <Text style={styles.proSmallPillText}>PRO</Text>
-                  </View>
-                )}
-              </View>
-              <Text style={[styles.customBuilderSubtitle, { color: colors.textSecondary }]}>
-                Generate custom sets by selecting specific topics, question volume, and duration.
-              </Text>
-            </View>
-            <ChevronRight size={18} color={colors.textTertiary} />
-          </TouchableOpacity>
-        </View>
-
-        {/* FEATURED EXAM TRACKS SLIDER */}
-        <View style={styles.sectionContainer}>
-          <View style={styles.sectionHeaderRow}>
-            <Text style={[styles.sectionHeading, { color: colors.textPrimary }]}>Featured Exam Series</Text>
-            <TouchableOpacity onPress={() => router.push({ pathname: '/test-list', params: { category: 'all' } })}>
-              <Text style={[styles.sectionLink, { color: colors.accent }]}>View Catalog →</Text>
-            </TouchableOpacity>
-          </View>
-          <FeaturedTracksSlider />
-        </View>
-
-        {/* RECENT ATTEMPTS */}
-        <View style={styles.sectionContainer}>
-          <View style={styles.sectionHeaderRow}>
-            <Text style={[styles.sectionHeading, { color: colors.textPrimary }]}>Recent Tests</Text>
-            <TouchableOpacity onPress={() => router.push('/test-history')}>
-              <Text style={[styles.sectionLink, { color: colors.accent }]}>View All →</Text>
-            </TouchableOpacity>
-          </View>
-
-          {(!performance?.recentTests || performance.recentTests.length === 0) ? (
-            <View style={[styles.emptyStateCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-              <FileText size={28} color={colors.textTertiary} />
-              <Text style={[styles.emptyStateTitle, { color: colors.textPrimary }]}>No test attempts yet</Text>
-              <Text style={[styles.emptyStateDesc, { color: colors.textSecondary }]}>
-                Choose any official paper or topic test above to begin practicing.
-              </Text>
-            </View>
-          ) : (
-            performance.recentTests.slice(0, 3).map((test: any, i: number) => (
-              <TouchableOpacity
-                key={i}
-                style={[styles.recentCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
-                activeOpacity={0.8}
-                onPress={() => {
-                  if (test.id) {
-                    router.push({ pathname: '/test-result', params: { attemptId: test.id } });
-                  } else {
-                    router.push('/test-history');
-                  }
-                }}
-              >
-                <View style={styles.recentCardTop}>
-                  <View style={[styles.recentCardIcon, { backgroundColor: isDark ? '#1E293B' : '#F1F5F9' }]}>
-                    <CheckCircle2 size={18} color="#2563EB" />
-                  </View>
-                  <View style={styles.recentCardInfo}>
-                    <Text style={[styles.recentCardTitle, { color: colors.textPrimary }]} numberOfLines={1}>
-                      {test.title || `Mock Test ${i + 1}`}
-                    </Text>
-                    <Text style={[styles.recentCardMeta, { color: colors.textSecondary }]}>
-                      {test.date || 'Recently'} • {test.type || 'Official Paper'}
-                    </Text>
-                  </View>
-                  <View style={[styles.scoreBadge, { backgroundColor: isDark ? 'rgba(5, 150, 105, 0.15)' : '#ECFDF5' }]}>
-                    <Text style={styles.scoreBadgeText}>{test.score ?? 0}%</Text>
-                  </View>
-                </View>
-              </TouchableOpacity>
-            ))
           )}
-        </View>
 
-        {/* TASTEFUL PROMO (IF NOT SUBSCRIBED) */}
-        {!isSubscriptionLoading && !isSubscribed && (
-          <View style={[styles.sectionContainer, { marginBottom: 32 }]}>
-            <View style={[styles.proCard, { backgroundColor: isDark ? '#1E293B' : '#0F172A', borderColor: isDark ? '#334155' : '#1E293B' }]}>
-              <View style={styles.proCardHeader}>
-                <View style={styles.proCardBadge}>
-                  <Crown size={12} color="#F59E0B" />
-                  <Text style={styles.proCardBadgeText}>ALL-ACCESS PASS</Text>
-                </View>
-                <Text style={styles.proCardPrice}>from ₹9</Text>
-              </View>
+          {/* PILLS */}
+          <View style={styles.pillsRow}>
+            <TouchableOpacity style={[styles.pill, styles.pillActive]} onPress={() => router.push({ pathname: '/test-list', params: { category: 'all' } })}>
+              <Grid size={16} color="#fff" />
+              <Text style={[styles.pillTxt, styles.pillTxtActive]}>All Tests</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={[styles.pill, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]} onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}>
+              <FileText size={16} color={colors.textSecondary} />
+              <Text style={[styles.pillTxt, { color: colors.textSecondary }]}>Full Mocks</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={[styles.pill, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]} onPress={() => router.push({ pathname: '/test-list', params: { category: 'topic' } })}>
+              <BookOpen size={16} color={colors.textSecondary} />
+              <Text style={[styles.pillTxt, { color: colors.textSecondary }]}>Topic Wise</Text>
+            </TouchableOpacity>
+          </View>
 
-              <Text style={styles.proCardTitle}>Unlock All {examInfo.shortName} Full Mocks & Explanations</Text>
-              <Text style={styles.proCardDesc}>
-                Unlimited re-attempts, authentic CBT timed tests, and genuine step-by-step bilingual solutions.
-              </Text>
-
-              <TouchableOpacity
-                style={styles.proCardBtn}
-                onPress={() => router.push('/premium')}
-                activeOpacity={0.88}
+          {/* GO PREMIUM PROMO CARD (ONLY SHOWN FOR NON-SUBSCRIBED USERS) */}
+          {!isSubscriptionLoading && !isSubscribed && (
+            <TouchableOpacity 
+              style={styles.premiumBannerCard} 
+              onPress={() => router.push('/premium')}
+              activeOpacity={0.9}
+            >
+              <LinearGradient
+                colors={['#1E1B4B', '#312E81', '#4338CA']}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+                style={styles.premiumBannerGradient}
               >
-                <Text style={styles.proCardBtnText}>Upgrade Now</Text>
-                <ArrowRight size={14} color="#0F172A" />
-              </TouchableOpacity>
+                <View style={styles.premiumBannerHeader}>
+                  <View style={styles.premiumBadge}>
+                    <Crown size={12} color="#F59E0B" />
+                    <Text style={styles.premiumBadgeText}>PREMIUM PASS</Text>
+                  </View>
+                  <View style={styles.premiumPriceTag}>
+                    <Text style={styles.premiumPriceDiscount}>FROM</Text>
+                    <Text style={styles.premiumPriceText}>₹9</Text>
+                  </View>
+                </View>
+
+                <Text style={styles.premiumBannerTitle}>UPSC & UP Principal 2026 Test Series</Text>
+                <Text style={styles.premiumBannerSubtitle}>
+                  Unlock 26 Full Mocks • 158 Topic Tests • Covers UPSC & UP Principal
+                </Text>
+
+                <View style={styles.premiumBannerFooter}>
+                  <View style={styles.premiumPerksRow}>
+                    <Sparkles size={14} color="#FBBF24" />
+                    <Text style={styles.premiumPerksText}>Unlimited Re-attempts & Solutions</Text>
+                  </View>
+                  <View style={styles.premiumActionBtn}>
+                    <Text style={styles.premiumActionBtnText}>Upgrade</Text>
+                    <ChevronRight size={16} color="#4338CA" />
+                  </View>
+                </View>
+              </LinearGradient>
+            </TouchableOpacity>
+          )}
+
+          {/* FEATURED TRACKS SLIDER */}
+          <View style={styles.sectionHeader}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+              <Star size={20} color="#F59E0B" fill="#F59E0B" />
+              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Featured Test Series</Text>
+            </View>
+            <TouchableOpacity onPress={() => router.push(isSubscribed ? { pathname: '/test-list', params: { category: 'all' } } : '/premium')}>
+              <Text style={styles.viewAll}>{isSubscribed ? 'View All →' : 'Go Premium →'}</Text>
+            </TouchableOpacity>
+          </View>
+
+          <FeaturedTracksSlider />
+
+          {/* PRACTICE MODE */}
+          <View style={styles.sectionHeader}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+              <Zap size={20} color="#8B5CF6" fill="#8B5CF6" />
+              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Practice Mode</Text>
             </View>
           </View>
-        )}
 
-        <View style={{ height: 40 }} />
+          {/* CUSTOM TEST BUILDER (PREMIUM EXCLUSIVE) */}
+          <TouchableOpacity 
+            style={styles.customTestCard} 
+            activeOpacity={0.88}
+            onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-test' : '/premium'), { title: 'Sign In for Custom Test Builder', feature: 'Custom Test Builder' })}
+          >
+            <LinearGradient
+              colors={['#1E1B4B', '#3730A3', '#4F46E5']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+              style={styles.customTestGradient}
+            >
+              <View style={styles.customTestIconBox}>
+                <SlidersHorizontal size={20} color="#FBBF24" />
+              </View>
+              <View style={{ flex: 1, marginLeft: 12 }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                  <Text style={styles.customTestTitle}>Custom Test Builder</Text>
+                  <View style={styles.customTestBadge}>
+                    <Crown size={10} color="#F59E0B" />
+                    <Text style={styles.customTestBadgeText}>PREMIUM</Text>
+                  </View>
+                </View>
+                <Text style={styles.customTestSubtitle}>
+                  Choose custom topics, question count & duration
+                </Text>
+              </View>
+              <View style={styles.customTestArrow}>
+                <ArrowRight size={16} color="#FFFFFF" />
+              </View>
+            </LinearGradient>
+          </TouchableOpacity>
+
+          <View style={styles.practiceModesRow}>
+            <TouchableOpacity style={{ flex: 1 }} onPress={() => router.push(isSubscribed ? '/custom-ai-test' : '/premium')}>
+              <LinearGradient colors={['#FFC5C5', '#FFDADA']} style={styles.modeCard}>
+                <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
+                <View style={{ flex: 1 }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+                    <Text style={styles.modeTitle}>AI Test</Text>
+                    <Crown size={12} color="#F59E0B" />
+                  </View>
+                  <Text style={styles.modeDesc}>Any topic in the world with AI (1/day).</Text>
+                </View>
+                <View style={styles.modeArrow}><ArrowRight size={16} color="#DC2626" /></View>
+              </LinearGradient>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={{ flex: 1 }} onPress={() => requireAuth(() => router.push('/practice'), { title: 'Sign In for Quick Practice', feature: 'Practice Mode' })}>
+              <LinearGradient colors={['#A7F3D0', '#D1FAE5']} style={styles.modeCard}>
+                <View style={styles.modeIconGreen}><Zap size={24} color="#059669" /></View>
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.modeTitle}>Quick Practice</Text>
+                  <Text style={styles.modeDesc}>Random questions from all topics.</Text>
+                </View>
+                <View style={styles.modeArrow}><ArrowRight size={16} color="#059669" /></View>
+              </LinearGradient>
+            </TouchableOpacity>
+          </View>
+
+          {/* RECENT TESTS */}
+          <View style={styles.sectionHeader}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+              <Clock size={20} color={colors.textSecondary} />
+              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Recent Tests</Text>
+            </View>
+            <TouchableOpacity onPress={() => router.push('/test-history')} hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}>
+              <Text style={styles.viewAll}>View All →</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.recentTestsList}>
+            {(!performance?.recentTests || performance.recentTests.length === 0) ? (
+              <View style={{ padding: 24, backgroundColor: colors.surface, borderRadius: 16, width: '100%', alignItems: 'center', borderWidth: isDark ? 1 : 0, borderColor: colors.border }}>
+                <Text style={{ color: colors.textSecondary }}>No recent tests found. Start practicing!</Text>
+              </View>
+            ) : (
+              performance.recentTests.slice(0, 3).map((test: any, i: number) => (
+                <TouchableOpacity 
+                  key={i} 
+                  style={[styles.recentTestCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}
+                  activeOpacity={0.8}
+                  onPress={() => {
+                    if (test.id) {
+                      router.push({ pathname: '/test-result', params: { attemptId: test.id } });
+                    } else {
+                      router.push('/test-history');
+                    }
+                  }}
+                >
+                  <View style={styles.rtcHeader}>
+                    <View style={[styles.rtcIcon, { backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF' }]}><FileText size={20} color="#3B82F6" /></View>
+                    <View style={{ flex: 1 }}>
+                      <Text style={[styles.rtcTitle, { color: colors.textPrimary }]}>{test.title || `Test ${i + 1}`}</Text>
+                      <Text style={[styles.rtcDate, { color: colors.textSecondary }]}>{test.date || 'Recently'} • {test.type || 'Practice'}</Text>
+                    </View>
+                    <View style={styles.rtcStatus}>
+                      <Text style={styles.rtcStatusText}>{test.status === 'in-progress' ? 'In Progress' : 'Completed'}</Text>
+                    </View>
+                  </View>
+                  <View style={[styles.rtcMetrics, { borderColor: colors.borderLight }]}>
+                    <View style={styles.rtcMetric}><FileText size={16} color={colors.textSecondary} /><View><Text style={[styles.rtcMetricVal, { color: colors.textPrimary }]}>{test.questions || 0}</Text><Text style={[styles.rtcMetricTxt, { color: colors.textSecondary }]}>Questions</Text></View></View>
+                    <View style={styles.rtcMetric}><Clock size={16} color={colors.textSecondary} /><View><Text style={[styles.rtcMetricVal, { color: colors.textPrimary }]}>{test.duration || '0m'}</Text><Text style={[styles.rtcMetricTxt, { color: colors.textSecondary }]}>Duration</Text></View></View>
+                    <View style={styles.rtcMetric}><Star size={16} color={colors.textSecondary} /><View><Text style={[styles.rtcMetricVal, { color: colors.textPrimary }]}>{test.score || 0}%</Text><Text style={[styles.rtcMetricTxt, { color: colors.textSecondary }]}>Score</Text></View></View>
+                    <ChevronRight size={20} color={colors.textTertiary} style={{ marginLeft: 'auto' }} />
+                  </View>
+                </TouchableOpacity>
+              ))
+            )}
+          </View>
+
+          <View style={{ height: 100 }} />
+        </View>
       </ScrollView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  headerAuthPill: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 3,
+  },
+  headerAuthPillText: {
+    color: '#2563EB',
+    fontWeight: '700',
+    fontSize: 13,
+  },
+  guestBanner: {
+    backgroundColor: '#FFFFFF',
+    marginHorizontal: 16,
+    marginBottom: 16,
+    borderRadius: 18,
+    padding: 16,
+    borderWidth: 1.5,
+    borderColor: '#EEF2FF',
+    flexDirection: 'row',
+    alignItems: 'center',
+    shadowColor: '#4F46E5',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.08,
+    shadowRadius: 12,
+    elevation: 3,
+  },
+  guestBannerContent: {
+    flex: 1,
+    paddingRight: 12,
+  },
+  guestBannerTitle: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#1E1B4B',
+  },
+  guestBannerText: {
+    fontSize: 12,
+    color: '#64748B',
+    lineHeight: 16,
+  },
+  guestBannerBtn: {
+    backgroundColor: '#3B82F6',
+    paddingVertical: 9,
+    paddingHorizontal: 14,
+    borderRadius: 12,
+  },
+  guestBannerBtnText: {
+    color: '#FFFFFF',
+    fontSize: 12,
+    fontWeight: '700',
+  },
+
   container: {
     flex: 1,
+    backgroundColor: '#F8FAFC',
   },
   scrollView: {
     flex: 1,
   },
-  scrollContent: {
-    paddingBottom: 24,
+  headerGradient: {
+    paddingBottom: 40,
+    borderBottomLeftRadius: 32,
+    borderBottomRightRadius: 32,
   },
-  topBar: {
-    paddingHorizontal: 16,
-    paddingTop: 8,
-    paddingBottom: 12,
-    borderBottomWidth: 1,
+  headerSafeArea: {
+    paddingHorizontal: 24,
   },
-  topBarRow: {
+  headerTop: {
     flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 10,
+    alignItems: 'flex-start',
+    paddingTop: 20,
   },
-  brandRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 10,
-    flex: 1,
+  headerTitle: {
+    fontSize: 28,
+    fontWeight: '800',
+    color: '#fff',
+    lineHeight: 34,
+    letterSpacing: -0.5,
   },
-  logoBox: {
-    width: 38,
-    height: 38,
-    borderRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
+  headerSubtitle: {
+    fontSize: 14,
+    color: 'rgba(255,255,255,0.8)',
+    marginTop: 8,
   },
-  logoImage: {
-    width: 28,
-    height: 28,
-  },
-  titleWithBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-  },
-  brandTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    letterSpacing: -0.4,
-  },
-  brandSubtitle: {
-    fontSize: 12,
-    marginTop: 1,
-  },
-  proPill: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 3,
-    backgroundColor: 'rgba(245, 158, 11, 0.15)',
-    paddingHorizontal: 6,
-    paddingVertical: 2,
-    borderRadius: 6,
-  },
-  proPillText: {
-    fontSize: 10,
-    fontWeight: '700',
-    color: '#D97706',
-  },
-  headerActions: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  actionIconBtn: {
-    width: 36,
-    height: 36,
-    borderRadius: 9,
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  avatarCircle: {
-    width: 28,
-    height: 28,
-    borderRadius: 14,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  avatarText: {
-    color: '#FFFFFF',
-    fontWeight: '700',
-    fontSize: 13,
-  },
-  signInBtn: {
-    backgroundColor: '#2563EB',
-    paddingHorizontal: 14,
-    paddingVertical: 8,
-    borderRadius: 8,
-  },
-  signInBtnText: {
-    color: '#FFFFFF',
-    fontWeight: '600',
-    fontSize: 13,
-  },
-  examSelectorWrapper: {
-    marginTop: 2,
-  },
-  searchSection: {
-    paddingHorizontal: 16,
-    marginTop: 14,
-    marginBottom: 12,
-  },
-  searchBox: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderRadius: 12,
-    borderWidth: 1,
-    paddingHorizontal: 12,
+  bellBtn: {
+    width: 44,
     height: 44,
-    gap: 10,
+    borderRadius: 22,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 12,
+    elevation: 4,
+  },
+  notificationDot: {
+    position: 'absolute',
+    top: 10,
+    right: 12,
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#EF4444',
+    borderWidth: 2,
+    borderColor: '#fff',
+  },
+  headerSpacer: {
+    height: 40,
+  },
+  contentArea: {
+    flex: 1,
+    paddingHorizontal: 20,
+  },
+  searchWrapper: {
+    marginTop: -28,
+    marginBottom: 24,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.08,
+    shadowRadius: 16,
+    elevation: 8,
+  },
+  searchContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    paddingHorizontal: 16,
+    height: 56,
   },
   searchInput: {
     flex: 1,
-    fontSize: 14,
-    paddingVertical: 0,
+    marginLeft: 12,
+    fontSize: 15,
+    color: '#0F172A',
   },
-  sectionContainer: {
-    paddingHorizontal: 16,
-    marginTop: 14,
-  },
-  sectionHeaderRow: {
+  statsGrid: {
     flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginBottom: 10,
+    flexWrap: 'wrap',
+    gap: 12,
+    marginBottom: 24,
   },
-  sectionHeading: {
-    fontSize: 16,
-    fontWeight: '700',
-    letterSpacing: -0.3,
-  },
-  sectionLink: {
-    fontSize: 13,
-    fontWeight: '600',
-  },
-
-  // HERO CARD
-  heroCard: {
+  statCard: {
+    width: '48%',
+    backgroundColor: '#fff',
     borderRadius: 16,
-    borderWidth: 1,
-    padding: 18,
-  },
-  heroHeader: {
+    padding: 12,
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.03,
+    shadowRadius: 8,
+    elevation: 2,
   },
-  heroBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 6,
-  },
-  heroBadgeText: {
-    fontSize: 11,
-    fontWeight: '600',
-    color: '#2563EB',
-    textTransform: 'uppercase',
-    letterSpacing: 0.3,
-  },
-  heroHeading: {
-    fontSize: 19,
-    fontWeight: '700',
-    letterSpacing: -0.4,
-    marginBottom: 6,
-  },
-  heroBody: {
-    fontSize: 13,
-    lineHeight: 18,
-    marginBottom: 16,
-  },
-  heroActionsRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 10,
-  },
-  heroPrimaryBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    backgroundColor: '#2563EB',
-    paddingVertical: 10,
-    paddingHorizontal: 16,
-    borderRadius: 10,
-  },
-  heroPrimaryBtnText: {
-    color: '#FFFFFF',
-    fontWeight: '600',
-    fontSize: 13,
-  },
-  heroSecondaryBtn: {
-    paddingVertical: 10,
-    paddingHorizontal: 14,
-    borderRadius: 10,
-    borderWidth: 1,
-  },
-  heroSecondaryBtnText: {
-    fontWeight: '600',
-    fontSize: 13,
-  },
-
-  // RESUME CARD (HIGH END EDITORIAL)
-  resumeCard: {
-    borderRadius: 16,
-    borderWidth: 1,
-    padding: 18,
-  },
-  resumeHeaderRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginBottom: 10,
-  },
-  resumeBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-  },
-  resumePulseDot: {
-    width: 7,
-    height: 7,
-    borderRadius: 4,
-    backgroundColor: '#34D399',
-  },
-  resumeBadgeText: {
-    fontSize: 11,
-    fontWeight: '700',
-    color: '#34D399',
-    letterSpacing: 0.5,
-  },
-  resumeTimeLeft: {
-    fontSize: 12,
-    fontWeight: '600',
-    color: '#94A3B8',
-  },
-  resumeTitle: {
-    fontSize: 17,
-    fontWeight: '700',
-    color: '#FFFFFF',
-    marginBottom: 12,
-    letterSpacing: -0.3,
-  },
-  resumeProgressSection: {
-    marginBottom: 14,
-  },
-  resumeProgressBarTrack: {
-    height: 6,
-    backgroundColor: 'rgba(255, 255, 255, 0.15)',
-    borderRadius: 3,
-    overflow: 'hidden',
-    marginBottom: 6,
-  },
-  resumeProgressBarFill: {
-    height: '100%',
-    backgroundColor: '#38BDF8',
-    borderRadius: 3,
-  },
-  resumeProgressMeta: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  resumeProgressSubtext: {
-    fontSize: 12,
-    color: '#94A3B8',
-  },
-  resumeProgressPercent: {
-    fontSize: 12,
-    fontWeight: '700',
-    color: '#38BDF8',
-  },
-  resumeFooter: {
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-  },
-  resumeCtaBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    backgroundColor: '#FFFFFF',
-    paddingVertical: 9,
-    paddingHorizontal: 16,
+  statIconBox: {
+    width: 32,
+    height: 32,
     borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 10,
   },
-  resumeCtaText: {
-    fontSize: 13,
+  statVal: {
+    fontSize: 15,
     fontWeight: '700',
     color: '#0F172A',
   },
-
-  // METRICS GRID
-  metricsGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 10,
+  statLbl: {
+    fontSize: 10,
+    color: '#64748B',
   },
-  metricCard: {
-    flex: 1,
-    minWidth: '46%',
-    borderRadius: 14,
-    borderWidth: 1,
-    padding: 14,
+  resumeCard: {
+    backgroundColor: '#FEF3C7',
+    borderRadius: 20,
+    padding: 20,
+    marginBottom: 24,
   },
-  metricIconWrap: {
-    width: 32,
-    height: 32,
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 8,
-  },
-  metricValue: {
-    fontSize: 18,
-    fontWeight: '700',
-    letterSpacing: -0.3,
-    marginBottom: 2,
-  },
-  metricLabel: {
-    fontSize: 12,
-    fontWeight: '500',
-  },
-
-  // PRACTICE MODES
-  practiceModesGrid: {
-    flexDirection: 'row',
-    gap: 10,
-    marginBottom: 10,
-  },
-  practiceCard: {
-    flex: 1,
-    borderRadius: 14,
-    borderWidth: 1,
-    padding: 14,
-    justifyContent: 'space-between',
-  },
-  practiceCardIconBox: {
-    width: 36,
-    height: 36,
-    borderRadius: 9,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 10,
-  },
-  practiceCardTitle: {
-    fontSize: 15,
-    fontWeight: '700',
-    letterSpacing: -0.3,
-    marginBottom: 4,
-  },
-  practiceCardDesc: {
-    fontSize: 12,
-    lineHeight: 16,
-    marginBottom: 12,
-  },
-  practiceCardFooter: {
+  resumeTop: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
+    marginBottom: 16,
   },
-  practiceCardAction: {
-    fontSize: 12,
-    fontWeight: '600',
+  playBtnContainer: {
+    marginRight: 16,
   },
-
-  // CUSTOM TEST BUILDER TILE
-  customBuilderTile: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderRadius: 14,
-    borderWidth: 1,
-    padding: 14,
-    gap: 12,
-  },
-  customBuilderIconWrap: {
-    width: 36,
-    height: 36,
-    borderRadius: 9,
+  playBtnOuter: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: 'rgba(249,115,22,0.2)',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  customBuilderContent: {
+  playBtnInner: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: '#F97316',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingLeft: 4,
+  },
+  resumeInfo: {
     flex: 1,
   },
-  customBuilderTitleRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    marginBottom: 2,
-  },
-  customBuilderTitle: {
-    fontSize: 14,
-    fontWeight: '700',
-  },
-  customBuilderSubtitle: {
-    fontSize: 12,
-    lineHeight: 16,
-  },
-  proSmallPill: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 2,
-    backgroundColor: 'rgba(245, 158, 11, 0.15)',
-    paddingHorizontal: 5,
-    paddingVertical: 1,
-    borderRadius: 4,
-  },
-  proSmallPillText: {
-    fontSize: 9,
+  resumeTag: {
+    fontSize: 10,
     fontWeight: '700',
     color: '#D97706',
+    letterSpacing: 1,
+    marginBottom: 4,
   },
-
-  // RECENT TESTS
-  emptyStateCard: {
-    borderRadius: 14,
-    borderWidth: 1,
-    padding: 24,
-    alignItems: 'center',
-    gap: 6,
+  resumeTitle: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#1E293B',
+    marginBottom: 4,
   },
-  emptyStateTitle: {
-    fontSize: 14,
-    fontWeight: '600',
-    marginTop: 4,
+  resumeDesc: {
+    fontSize: 11,
+    color: '#475569',
   },
-  emptyStateDesc: {
-    fontSize: 12,
-    textAlign: 'center',
-  },
-  recentCard: {
-    borderRadius: 12,
-    borderWidth: 1,
-    padding: 12,
-    marginBottom: 8,
-  },
-  recentCardTop: {
+  resumeBtn: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 10,
+    backgroundColor: '#F97316',
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderRadius: 12,
+    gap: 6,
   },
-  recentCardIcon: {
-    width: 32,
-    height: 32,
-    borderRadius: 8,
+  resumeBtnTxt: {
+    color: '#fff',
+    fontWeight: '700',
+    fontSize: 13,
+  },
+  progressBarBg: {
+    height: 6,
+    backgroundColor: 'rgba(249,115,22,0.2)',
+    borderRadius: 3,
+    marginBottom: 8,
+  },
+  progressBarFill: {
+    height: '100%',
+    backgroundColor: '#F97316',
+    borderRadius: 3,
+  },
+  progressText: {
+    textAlign: 'right',
+    fontSize: 11,
+    fontWeight: '600',
+    color: '#B45309',
+  },
+  pillsRow: {
+    flexDirection: 'row',
+    gap: 12,
+    marginBottom: 24,
+  },
+  pill: {
+    flex: 1,
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#fff',
+    paddingVertical: 12,
+    borderRadius: 24,
+    gap: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.03,
+    shadowRadius: 8,
+    elevation: 2,
   },
-  recentCardInfo: {
-    flex: 1,
+  pillActive: {
+    backgroundColor: '#3B82F6',
   },
-  recentCardTitle: {
-    fontSize: 14,
+  pillTxt: {
+    fontSize: 13,
     fontWeight: '600',
-    marginBottom: 2,
+    color: '#475569',
   },
-  recentCardMeta: {
-    fontSize: 12,
+  pillTxtActive: {
+    color: '#fff',
   },
-  scoreBadge: {
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    borderRadius: 6,
-  },
-  scoreBadgeText: {
-    fontSize: 12,
-    fontWeight: '700',
-    color: '#059669',
-  },
-
-  // PRO CARD (MINIMALIST)
-  proCard: {
-    borderRadius: 16,
-    borderWidth: 1,
-    padding: 18,
-  },
-  proCardHeader: {
+  sectionHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 8,
+    marginBottom: 16,
   },
-  proCardBadge: {
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '800',
+    color: '#0F172A',
+  },
+  viewAll: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#3B82F6',
+  },
+  featuredBanner: {
+    borderRadius: 24,
+    padding: 20,
+    marginBottom: 32,
+  },
+  featuredTagsRow: {
+    flexDirection: 'row',
+    gap: 8,
+    marginBottom: 16,
+  },
+  featuredTagBg: {
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 12,
+  },
+  featuredTagTxt: {
+    color: '#fff',
+    fontSize: 11,
+    fontWeight: '600',
+  },
+  featuredTitleRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
-    backgroundColor: 'rgba(245, 158, 11, 0.15)',
+    justifyContent: 'space-between',
+    marginBottom: 24,
+  },
+  featuredTitle: {
+    fontSize: 22,
+    fontWeight: '800',
+    color: '#fff',
+    marginBottom: 6,
+  },
+  featuredDesc: {
+    fontSize: 13,
+    color: 'rgba(255,255,255,0.9)',
+    lineHeight: 18,
+  },
+  featuredArrowBtn: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  featuredPerks: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  perk: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  perkText: {
+    color: '#fff',
+    fontSize: 11,
+  },
+  practiceModesRow: {
+    flexDirection: 'row',
+    gap: 12,
+    marginBottom: 32,
+  },
+  modeCard: {
+    flex: 1,
+    borderRadius: 20,
+    padding: 16,
+  },
+  modeIconRed: {
+    width: 40, height: 40, borderRadius: 20, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center', marginBottom: 12,
+  },
+  modeIconGreen: {
+    width: 40, height: 40, borderRadius: 20, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center', marginBottom: 12,
+  },
+  modeTitle: {
+    fontSize: 16, fontWeight: '800', color: '#1E293B', marginBottom: 4,
+  },
+  modeDesc: {
+    fontSize: 11, color: '#475569', lineHeight: 16, marginBottom: 12,
+  },
+  modeArrow: {
+    width: 32, height: 32, borderRadius: 16, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center', alignSelf: 'flex-end',
+  },
+  recentTestsList: {
+    gap: 12,
+  },
+  recentTestCard: {
+    backgroundColor: '#fff',
+    borderRadius: 20,
+    padding: 16,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.03,
+    shadowRadius: 8,
+    elevation: 2,
+  },
+  rtcHeader: {
+    flexDirection: 'row',
+    marginBottom: 16,
+  },
+  rtcIcon: {
+    width: 44, height: 44, borderRadius: 12, backgroundColor: '#EFF6FF', alignItems: 'center', justifyContent: 'center', marginRight: 12,
+  },
+  rtcTitle: {
+    fontSize: 15, fontWeight: '800', color: '#0F172A', marginBottom: 4,
+  },
+  rtcDate: {
+    fontSize: 12, color: '#64748B',
+  },
+  rtcStatus: {
+    paddingHorizontal: 10, paddingVertical: 4, borderRadius: 12, backgroundColor: '#D1FAE5', alignSelf: 'flex-start',
+  },
+  rtcStatusText: {
+    fontSize: 11, fontWeight: '700', color: '#059669',
+  },
+  rtcMetrics: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingTop: 16,
+    borderTopWidth: 1,
+    borderColor: '#F1F5F9',
+  },
+  rtcMetric: {
+    flexDirection: 'row', alignItems: 'center', gap: 8,
+  },
+  rtcMetricVal: {
+    fontSize: 13, fontWeight: '700', color: '#0F172A',
+  },
+  rtcMetricTxt: {
+    fontSize: 10, color: '#64748B',
+  },
+  premiumBannerCard: {
+    borderRadius: 20,
+    marginBottom: 24,
+    overflow: 'hidden',
+    shadowColor: '#4338CA',
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.25,
+    shadowRadius: 14,
+    elevation: 6,
+  },
+  premiumBannerGradient: {
+    padding: 18,
+    borderRadius: 20,
+  },
+  premiumBannerHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 10,
+  },
+  premiumBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: 'rgba(245, 158, 11, 0.18)',
+    borderWidth: 1,
+    borderColor: 'rgba(245, 158, 11, 0.4)',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
+  premiumBadgeText: {
+    fontSize: 10,
+    fontWeight: '800',
+    color: '#FBBF24',
+    letterSpacing: 0.6,
+  },
+  premiumPriceTag: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: 'rgba(255, 255, 255, 0.12)',
     paddingHorizontal: 8,
     paddingVertical: 3,
-    borderRadius: 6,
+    borderRadius: 8,
   },
-  proCardBadgeText: {
-    fontSize: 11,
+  premiumPriceDiscount: {
+    fontSize: 10,
     fontWeight: '700',
-    color: '#F59E0B',
-    letterSpacing: 0.4,
+    color: '#34D399',
   },
-  proCardPrice: {
-    fontSize: 13,
-    fontWeight: '600',
-    color: '#94A3B8',
+  premiumPriceText: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#fff',
   },
-  proCardTitle: {
-    fontSize: 16,
-    fontWeight: '700',
-    color: '#FFFFFF',
+  premiumBannerTitle: {
+    fontSize: 17,
+    fontWeight: '800',
+    color: '#fff',
     marginBottom: 4,
-    letterSpacing: -0.3,
   },
-  proCardDesc: {
+  premiumBannerSubtitle: {
     fontSize: 12,
-    color: '#94A3B8',
+    color: 'rgba(255, 255, 255, 0.82)',
     lineHeight: 17,
     marginBottom: 14,
   },
-  proCardBtn: {
+  premiumBannerFooter: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    gap: 6,
-    backgroundColor: '#FFFFFF',
-    paddingVertical: 10,
-    borderRadius: 8,
+    justifyContent: 'space-between',
+    paddingTop: 12,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(255, 255, 255, 0.12)',
   },
-  proCardBtnText: {
-    fontSize: 13,
+  premiumPerksRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    flex: 1,
+  },
+  premiumPerksText: {
+    fontSize: 11,
+    fontWeight: '600',
+    color: 'rgba(255, 255, 255, 0.9)',
+  },
+  premiumActionBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    backgroundColor: '#fff',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 12,
+  },
+  premiumActionBtnText: {
+    fontSize: 12,
+    fontWeight: '800',
+    color: '#4338CA',
+  },
+  customTestCard: {
+    borderRadius: 16,
+    overflow: 'hidden',
+    marginBottom: 12,
+    shadowColor: '#4F46E5',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.15,
+    shadowRadius: 8,
+    elevation: 4,
+  },
+  customTestGradient: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 16,
+  },
+  customTestIconBox: {
+    width: 42,
+    height: 42,
+    borderRadius: 12,
+    backgroundColor: 'rgba(255, 255, 255, 0.12)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  customTestTitle: {
+    fontSize: 15,
     fontWeight: '700',
-    color: '#0F172A',
+    color: '#FFFFFF',
+  },
+  customTestBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 3,
+    backgroundColor: 'rgba(245, 158, 11, 0.25)',
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 6,
+    borderWidth: 1,
+    borderColor: 'rgba(245, 158, 11, 0.5)',
+  },
+  customTestBadgeText: {
+    fontSize: 9,
+    fontWeight: '800',
+    color: '#FBBF24',
+  },
+  customTestSubtitle: {
+    fontSize: 12,
+    color: '#E0E7FF',
+    marginTop: 2,
+  },
+  customTestArrow: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

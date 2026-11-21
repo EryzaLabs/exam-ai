@@ -345,162 +345,134 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                 <ExamSelector compact={false} />
               </View>
 
-              {/* HERO BANNER (MODERN EDITORIAL MINIMALIST) */}
-              <View style={[styles.heroBannerClean, { backgroundColor: isDark ? '#1E293B' : '#FFFFFF', borderColor: colors.border }]}>
-                <View style={styles.heroContentClean}>
-                  <View style={styles.heroBadgeClean}>
-                    <FileText size={13} color="#2563EB" />
-                    <Text style={styles.heroBadgeTextClean}>{examInfo.shortName} CBT Mock Suite</Text>
-                  </View>
-                  <Text style={[styles.heroTitleClean, { color: colors.textPrimary }]}>
-                    Official Exam Simulator & Practice Suite
-                  </Text>
-                  <Text style={[styles.heroDescClean, { color: colors.textSecondary }]}>
-                    Timed mock tests with authentic marking, real section navigation, and genuine bilingual explanations.
-                  </Text>
-
-                  <View style={styles.heroActionsRowClean}>
-                    <TouchableOpacity
-                      style={styles.heroPrimaryBtnClean}
-                      onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}
-                      activeOpacity={0.88}
-                    >
-                      <Text style={styles.heroPrimaryBtnTextClean}>Browse Full Mocks</Text>
-                      <ArrowRight size={15} color="#FFFFFF" />
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                      style={[styles.heroSecondaryBtnClean, { borderColor: colors.border, backgroundColor: colors.background }]}
-                      onPress={() => router.push('/practice')}
-                      activeOpacity={0.8}
-                    >
-                      <Text style={[styles.heroSecondaryBtnTextClean, { color: colors.textPrimary }]}>Quick Practice</Text>
-                    </TouchableOpacity>
-                  </View>
-                </View>
-
-                {/* 4-METRIC ROW */}
-                <View style={styles.heroStatsRowClean}>
-                  <View style={[styles.heroStatCardClean, { backgroundColor: colors.background, borderColor: colors.border }]}>
-                    <View style={[styles.statIconBoxClean, { backgroundColor: isDark ? 'rgba(59, 130, 246, 0.12)' : '#EFF6FF' }]}>
-                      <FileText size={16} color={isDark ? '#60A5FA' : '#2563EB'} />
-                    </View>
-                    <View>
-                      <Text style={[styles.statValClean, { color: colors.textPrimary }]}>{dashboardStats?.totalAvailableTests ?? 0}</Text>
-                      <Text style={[styles.statLblClean, { color: colors.textSecondary }]}>Tests Available</Text>
-                    </View>
-                  </View>
-
-                  <View style={[styles.heroStatCardClean, { backgroundColor: colors.background, borderColor: colors.border }]}>
-                    <View style={[styles.statIconBoxClean, { backgroundColor: isDark ? 'rgba(16, 185, 129, 0.12)' : '#ECFDF5' }]}>
-                      <Target size={16} color={isDark ? '#34D399' : '#059669'} />
-                    </View>
-                    <View>
-                      <Text style={[styles.statValClean, { color: colors.textPrimary }]}>{dashboardStats?.accuracy ? `${dashboardStats.accuracy.toFixed(1)}%` : '0%'}</Text>
-                      <Text style={[styles.statLblClean, { color: colors.textSecondary }]}>Avg. Accuracy</Text>
-                    </View>
-                  </View>
-
-                  <View style={[styles.heroStatCardClean, { backgroundColor: colors.background, borderColor: colors.border }]}>
-                    <View style={[styles.statIconBoxClean, { backgroundColor: isDark ? 'rgba(139, 92, 246, 0.12)' : '#F5F3FF' }]}>
-                      <Clock size={16} color={isDark ? '#A78BFA' : '#7C3AED'} />
-                    </View>
-                    <View>
-                      <Text style={[styles.statValClean, { color: colors.textPrimary }]}>{Math.floor((dashboardStats?.timeSpent || 0) / 60)}h {(dashboardStats?.timeSpent || 0) % 60}m</Text>
-                      <Text style={[styles.statLblClean, { color: colors.textSecondary }]}>Practice Time</Text>
-                    </View>
-                  </View>
-
-                  <View style={[styles.heroStatCardClean, { backgroundColor: colors.background, borderColor: colors.border }]}>
-                    <View style={[styles.statIconBoxClean, { backgroundColor: isDark ? 'rgba(249, 115, 22, 0.12)' : '#FFF7ED' }]}>
-                      <BarChart2 size={16} color={isDark ? '#FB923C' : '#EA580C'} />
-                    </View>
-                    <View>
-                      <Text style={[styles.statValClean, { color: colors.textPrimary }]}>{dashboardStats?.questionsAttempted ?? 0}</Text>
-                      <Text style={[styles.statLblClean, { color: colors.textSecondary }]}>Questions Solved</Text>
-                    </View>
-                  </View>
-                </View>
-              </View>
-
-              {/* FEATURED BANNER */}
-              <View style={styles.sectionHeader}>
-                <View style={{flexDirection: 'row', alignItems: 'center', gap: 8}}>
-                   <BookOpen size={20} color={colors.accent} />
-                   <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>{examInfo.shortName} Mock Tests</Text>
-                </View>
-                <TouchableOpacity onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}>
-                  <Text style={[styles.viewAll, { color: colors.accent }]}>View All →</Text>
-                </TouchableOpacity>
-              </View>
+              {/* HERO BANNER */}
+              <ImageBackground
+            source={require('@/assets/images/upsc-bg.png')}
+            style={[styles.heroBanner, { backgroundColor: '#E0E7FF' }]}
+            imageStyle={{ borderRadius: 24, opacity: 0.9, width: '100%', height: '100%' }}
+            resizeMode="cover"
+          >
+            <View style={styles.heroContent}>
+              <Text style={styles.heroSub}>ASTRA EXAM AI</Text>
+              <Text style={styles.heroTitle}>Master Your Exams with Intelligent AI.</Text>
+              <Text style={styles.heroDesc}>Practice. Analyze. Improve. Repeat.</Text>
               
-              <FeaturedTracksSlider />
+              <View style={styles.heroStatsRow}>
+                <View style={[styles.heroStatBadge, { backgroundColor: colors.surface }]}>
+                  <View style={[styles.statIconBox, { backgroundColor: isDark ? '#1E3A5F' : '#DBEAFE' }]}>
+                    <FileText size={16} color="#2563EB" />
+                  </View>
+                  <View>
+                    <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats.totalAvailableTests}</Text>
+                    <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Tests Available</Text>
+                  </View>
+                </View>
 
-              {/* PRACTICE MODES — CLEAN MONOCHROME TILES */}
-              <View style={styles.sectionHeader}>
-                <View style={{flexDirection: 'row', alignItems: 'center', gap: 8}}>
-                   <Zap size={20} color={colors.accent} />
-                   <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Choose Your Practice Mode</Text>
+                <View style={[styles.heroStatBadge, { backgroundColor: colors.surface }]}>
+                  <View style={[styles.statIconBox, { backgroundColor: isDark ? '#064E3B' : '#D1FAE5' }]}>
+                    <Target size={16} color="#059669" />
+                  </View>
+                  <View>
+                    <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.accuracy?.toFixed(1) || '0'}%</Text>
+                    <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Avg. Accuracy</Text>
+                  </View>
+                </View>
+
+                <View style={[styles.heroStatBadge, { backgroundColor: colors.surface }]}>
+                  <View style={[styles.statIconBox, { backgroundColor: isDark ? '#2D1B69' : '#EDE9FE' }]}>
+                    <Clock size={16} color="#7C3AED" />
+                  </View>
+                  <View>
+                    <Text style={[styles.statVal, { color: colors.textPrimary }]}>{Math.floor((dashboardStats?.timeSpent || 0) / 60)}h {(dashboardStats?.timeSpent || 0) % 60}m</Text>
+                    <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Practice Time</Text>
+                  </View>
+                </View>
+
+                <View style={[styles.heroStatBadge, { backgroundColor: colors.surface }]}>
+                  <View style={[styles.statIconBox, { backgroundColor: isDark ? '#431407' : '#FFEDD5' }]}>
+                    <BarChart2 size={16} color="#EA580C" />
+                  </View>
+                  <View>
+                    <Text style={[styles.statVal, { color: colors.textPrimary }]}>{dashboardStats?.totalTopics || 0}</Text>
+                    <Text style={[styles.statLbl, { color: colors.textSecondary }]}>Topics Covered</Text>
+                  </View>
                 </View>
               </View>
+            </View>
+          </ImageBackground>
 
-              <View style={styles.practiceModesRowClean}>
-                 <TouchableOpacity 
-                   style={[styles.modeCardClean, { backgroundColor: colors.surface, borderColor: colors.border }]} 
-                   onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}
-                   activeOpacity={0.85}
-                 >
-                    <View style={[styles.modeIconClean, { backgroundColor: isDark ? 'rgba(37, 99, 235, 0.15)' : '#EFF6FF' }]}>
-                      <FileText size={20} color="#2563EB" />
-                    </View>
-                    <Text style={[styles.modeTitleClean, { color: colors.textPrimary }]}>Full Mock CBT</Text>
-                    <Text style={[styles.modeDescClean, { color: colors.textSecondary }]}>Official timed exam papers with negative marking and authentic section timers.</Text>
-                    <View style={styles.modeFooterClean}>
-                      <Text style={[styles.modeActionClean, { color: colors.accent }]}>Start CBT Exam</Text>
-                      <ArrowRight size={14} color={colors.accent} />
-                    </View>
-                 </TouchableOpacity>
+          {/* FEATURED BANNER */}
+          <View style={styles.sectionHeader}>
+            <View style={{flexDirection: 'row', alignItems: 'center', gap: 8}}>
+               <BookOpen size={20} color="#F97316" />
+               <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>{examInfo.shortName} Mock Tests</Text>
+            </View>
+            <TouchableOpacity onPress={() => router.push({ pathname: '/test-list', params: { category: 'full' } })}>
+              <Text style={styles.viewAll}>View All →</Text>
+            </TouchableOpacity>
+          </View>
+          
+          <FeaturedTracksSlider />
 
-                 <TouchableOpacity 
-                   style={[styles.modeCardClean, { backgroundColor: colors.surface, borderColor: colors.border }]} 
-                   onPress={() => requireAuth(() => router.push('/practice'), { title: 'Sign In for Practice Mode', feature: 'Practice Mode' })}
-                   activeOpacity={0.85}
-                 >
-                    <View style={[styles.modeIconClean, { backgroundColor: isDark ? 'rgba(5, 150, 105, 0.15)' : '#ECFDF5' }]}>
-                      <BookOpen size={20} color="#059669" />
-                    </View>
-                    <Text style={[styles.modeTitleClean, { color: colors.textPrimary }]}>Topic Practice</Text>
-                    <Text style={[styles.modeDescClean, { color: colors.textSecondary }]}>Targeted practice sets by subject and discipline to reinforce specific exam areas.</Text>
-                    <View style={styles.modeFooterClean}>
-                      <Text style={[styles.modeActionClean, { color: colors.accent }]}>Practice Topics</Text>
-                      <ArrowRight size={14} color={colors.accent} />
-                    </View>
-                 </TouchableOpacity>
+          {/* PRACTICE MODES */}
+          <View style={styles.sectionHeader}>
+            <View style={{flexDirection: 'row', alignItems: 'center', gap: 8}}>
+               <Zap size={20} color="#8B5CF6" />
+               <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Choose Your Practice Mode</Text>
+            </View>
+          </View>
 
-                 <TouchableOpacity 
-                   style={[styles.modeCardClean, { backgroundColor: colors.surface, borderColor: colors.border }]} 
-                   onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-test' : '/premium'), { title: 'Sign In for Custom Test Builder', feature: 'Custom Test Builder' })}
-                   activeOpacity={0.85}
-                 >
-                    <View style={[styles.modeIconClean, { backgroundColor: isDark ? 'rgba(124, 58, 237, 0.15)' : '#F5F3FF' }]}>
-                      <SlidersHorizontal size={20} color="#7C3AED" />
-                    </View>
-                    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 4 }}>
-                      <Text style={[styles.modeTitleClean, { color: colors.textPrimary }]}>Custom Builder</Text>
-                      {!isSubscribed && (
-                        <View style={styles.proSmallBadge}>
-                          <Crown size={10} color="#F59E0B" />
-                          <Text style={styles.proSmallBadgeText}>PRO</Text>
-                        </View>
-                      )}
-                    </View>
-                    <Text style={[styles.modeDescClean, { color: colors.textSecondary }]}>Custom topics, question counts, and duration tailored to your study schedule.</Text>
-                    <View style={styles.modeFooterClean}>
-                      <Text style={[styles.modeActionClean, { color: colors.accent }]}>Build Custom Test</Text>
-                      <ArrowRight size={14} color={colors.accent} />
-                    </View>
-                 </TouchableOpacity>
-              </View>
+          <View style={styles.practiceModesRow}>
+             <TouchableOpacity style={styles.modeCardWrapper} onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-ai-test' : '/premium'), { title: 'Sign In to Generate AI Tests', feature: 'Custom AI Tests' })}>
+                <LinearGradient colors={['#FEACA1', '#FEACA1']} style={styles.modeCard}>
+                   <View style={{ flex: 1 }}>
+                      <View style={styles.modeIconRed}><Brain size={24} color="#DC2626" /></View>
+                      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+                        <Text style={styles.modeTitle}>AI Test</Text>
+                        <Crown size={14} color="#F59E0B" />
+                      </View>
+                      <Text style={styles.modeDesc}>Any topic in the world generated with AI (1/day)</Text>
+                   </View>
+                   <View style={styles.modeArrow}><ArrowRight size={16} color="#DC2626" /></View>
+                </LinearGradient>
+             </TouchableOpacity>
+             
+             <TouchableOpacity style={styles.modeCardWrapper} onPress={() => requireAuth(() => router.push('/practice'), { title: 'Sign In for Practice Mode', feature: 'Practice Mode' })}>
+                <LinearGradient colors={['#A7F3D0', '#A7F3D0']} style={styles.modeCard}>
+                   <View style={{ flex: 1 }}>
+                      <View style={styles.modeIconGreen}><Zap size={24} color="#059669" /></View>
+                      <Text style={styles.modeTitle}>Quick Practice</Text>
+                      <Text style={styles.modeDesc}>Random questions from all topics</Text>
+                   </View>
+                   <View style={styles.modeArrow}><ArrowRight size={16} color="#059669" /></View>
+                </LinearGradient>
+             </TouchableOpacity>
+
+             <TouchableOpacity style={styles.modeCardWrapper} onPress={() => router.push({ pathname: '/test-list', params: { category: 'topic' } })}>
+                <LinearGradient colors={['#E9D5FF', '#E9D5FF']} style={styles.modeCard}>
+                   <View style={{ flex: 1 }}>
+                      <View style={styles.modeIconPurple}><Library size={24} color="#7C3AED" /></View>
+                      <Text style={styles.modeTitle}>Topic Wise</Text>
+                      <Text style={styles.modeDesc}>Focus on specific topics and weak areas</Text>
+                   </View>
+                   <View style={styles.modeArrow}><ArrowRight size={16} color="#7C3AED" /></View>
+                </LinearGradient>
+             </TouchableOpacity>
+
+             <TouchableOpacity style={styles.modeCardWrapper} onPress={() => requireAuth(() => router.push(isSubscribed ? '/custom-test' : '/premium'), { title: 'Sign In for Custom Test Builder', feature: 'Custom Test Builder' })}>
+                <LinearGradient colors={['#C7D2FE', '#E0E7FF']} style={styles.modeCard}>
+                   <View style={{ flex: 1 }}>
+                      <View style={styles.modeIconIndigo}><SlidersHorizontal size={24} color="#4F46E5" /></View>
+                      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+                        <Text style={styles.modeTitle}>Custom Test</Text>
+                        <Crown size={14} color="#F59E0B" />
+                      </View>
+                      <Text style={styles.modeDesc}>Custom topics, question counts & duration</Text>
+                   </View>
+                   <View style={styles.modeArrow}><ArrowRight size={16} color="#4F46E5" /></View>
+                </LinearGradient>
+             </TouchableOpacity>
+          </View>
 
           {/* RECENT TESTS */}
           <View style={styles.sectionHeader}>
@@ -1014,161 +986,6 @@ const styles = StyleSheet.create({
   examTargetMain: {
     fontSize: 18,
     fontWeight: '800',
-  },
-  // Clean Editorial Minimalist Hero & Metrics
-  heroBannerClean: {
-    borderRadius: 20,
-    borderWidth: 1,
-    padding: 28,
-    marginBottom: 28,
-    gap: 24,
-  },
-  heroContentClean: {
-    maxWidth: 720,
-  },
-  heroBadgeClean: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    backgroundColor: 'rgba(37, 99, 235, 0.1)',
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 6,
-    alignSelf: 'flex-start',
-    marginBottom: 10,
-  },
-  heroBadgeTextClean: {
-    fontSize: 11,
-    fontWeight: '700',
-    color: '#2563EB',
-    textTransform: 'uppercase',
-    letterSpacing: 0.4,
-  },
-  heroTitleClean: {
-    fontSize: 26,
-    fontWeight: '800',
-    letterSpacing: -0.6,
-    marginBottom: 8,
-  },
-  heroDescClean: {
-    fontSize: 14,
-    lineHeight: 20,
-    marginBottom: 18,
-  },
-  heroActionsRowClean: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
-  },
-  heroPrimaryBtnClean: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    backgroundColor: '#2563EB',
-    paddingVertical: 10,
-    paddingHorizontal: 18,
-    borderRadius: 10,
-  },
-  heroPrimaryBtnTextClean: {
-    color: '#FFFFFF',
-    fontWeight: '600',
-    fontSize: 14,
-  },
-  heroSecondaryBtnClean: {
-    paddingVertical: 10,
-    paddingHorizontal: 16,
-    borderRadius: 10,
-    borderWidth: 1,
-  },
-  heroSecondaryBtnTextClean: {
-    fontWeight: '600',
-    fontSize: 14,
-  },
-  heroStatsRowClean: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 12,
-  },
-  heroStatCardClean: {
-    flex: 1,
-    minWidth: 180,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
-    borderRadius: 12,
-    borderWidth: 1,
-    padding: 14,
-  },
-  statIconBoxClean: {
-    width: 36,
-    height: 36,
-    borderRadius: 9,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  statValClean: {
-    fontSize: 16,
-    fontWeight: '700',
-    letterSpacing: -0.3,
-  },
-  statLblClean: {
-    fontSize: 12,
-    marginTop: 1,
-  },
-  // Clean Practice Modes Grid
-  practiceModesRowClean: {
-    flexDirection: 'row',
-    gap: 14,
-    marginBottom: 32,
-  },
-  modeCardClean: {
-    flex: 1,
-    borderRadius: 14,
-    borderWidth: 1,
-    padding: 18,
-    justifyContent: 'space-between',
-  },
-  modeIconClean: {
-    width: 40,
-    height: 40,
-    borderRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 12,
-  },
-  modeTitleClean: {
-    fontSize: 16,
-    fontWeight: '700',
-    letterSpacing: -0.3,
-    marginBottom: 4,
-  },
-  modeDescClean: {
-    fontSize: 13,
-    lineHeight: 18,
-    marginBottom: 14,
-  },
-  modeFooterClean: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-  },
-  modeActionClean: {
-    fontSize: 13,
-    fontWeight: '600',
-  },
-  proSmallBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 3,
-    backgroundColor: 'rgba(245, 158, 11, 0.15)',
-    paddingHorizontal: 6,
-    paddingVertical: 2,
-    borderRadius: 4,
-  },
-  proSmallBadgeText: {
-    fontSize: 10,
-    fontWeight: '700',
-    color: '#D97706',
   },
   heroBanner: {
     borderRadius: 24,
