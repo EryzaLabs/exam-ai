@@ -191,14 +191,15 @@ class SSCCGLService {
       if (response.ok) {
         serverPapers = await response.json();
       }
-      const { INITIAL_TGT_PGT_PAPERS } = require('./paper-service');
-      const existingIds = new Set(serverPapers.map((p: any) => p.id));
-      const additional = (INITIAL_TGT_PGT_PAPERS || []).filter((p: any) => !existingIds.has(p.id));
-      return [...serverPapers, ...additional];
+      const { INITIAL_PAPERS_CATALOG } = require('./paper-service');
+      const existingIds = new Set(serverPapers.map((p: any) => p.id || p.filename));
+      const additional = (INITIAL_PAPERS_CATALOG || []).filter((p: any) => !existingIds.has(p.id || p.filename));
+      const combined = [...serverPapers, ...additional];
+      return combined.length > 0 ? combined : INITIAL_PAPERS_CATALOG;
     } catch (error) {
       console.warn('Error fetching papers list, using bundled catalog:', error);
-      const { INITIAL_TGT_PGT_PAPERS } = require('./paper-service');
-      return INITIAL_TGT_PGT_PAPERS || [];
+      const { INITIAL_PAPERS_CATALOG } = require('./paper-service');
+      return INITIAL_PAPERS_CATALOG || [];
     }
   }
 

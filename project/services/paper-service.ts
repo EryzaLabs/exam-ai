@@ -23,7 +23,29 @@ export interface ServerPaper {
   isPYQ?: boolean;
   price?: number;
   originalPrice?: number;
+  totalQuestions?: number;
+  duration?: number;
+  totalMarks?: number;
 }
+
+export const INITIAL_FULL_MOCKS: ServerPaper[] = Array.from({ length: 150 }, (_, i) => {
+  const num = i + 1;
+  const padded = num < 10 ? `0${num}` : `${num}`;
+  return {
+    id: `full_mocks/mock_test_${num}.json`,
+    testId: `full_mock_${num}`,
+    title: `UPSC Principal Full Mock Test ${padded} • Complete CBT Exam`,
+    filename: `full_mocks/mock_test_${num}.json`,
+    hasAnswers: true,
+    series: 'upsc',
+    totalQuestions: 120,
+    duration: 120,
+    totalMarks: 300,
+    isPYQ: false,
+    price: 199,
+    originalPrice: 399,
+  };
+});
 
 export const INITIAL_TGT_PGT_PAPERS: ServerPaper[] = [
   {
@@ -1850,4 +1872,9 @@ export const INITIAL_TGT_PGT_PAPERS: ServerPaper[] = [
     "price": 199,
     "originalPrice": 999
   }
+];
+
+export const INITIAL_PAPERS_CATALOG: ServerPaper[] = [
+  ...INITIAL_FULL_MOCKS,
+  ...INITIAL_TGT_PGT_PAPERS,
 ];

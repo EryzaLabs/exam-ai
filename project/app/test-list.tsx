@@ -25,7 +25,7 @@ import { useSub } from '@/context/subscription-context';
 import { useExam, EXAMS, ExamTarget } from '@/context/exam-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { SSCCGLService } from '@/services/ssc-cgl-service';
-import PaperService, { INITIAL_TGT_PGT_PAPERS, ServerPaper } from '@/services/paper-service';
+import PaperService, { INITIAL_PAPERS_CATALOG, ServerPaper } from '@/services/paper-service';
 import { TestProgressService } from '@/services/test-progress-service';
 import AppShell from '@/components/chalkboard/AppShell';
 import Card from '@/components/chalkboard/Card';
@@ -39,9 +39,9 @@ import OfferCard from '@/components/chalkboard/OfferCard';
 export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const { user } = useAuth();
   const { isSubscribed } = useSub();
-  const { examMode, examInfo } = useExam();
+  const { examMode, setExamMode, examInfo, formatTestTitle } = useExam();
   const { colors, typography, radii } = useChalkboardTheme();
-  const params = useLocalSearchParams<{ q?: string; category?: string }>();
+  const params = useLocalSearchParams<{ q?: string; category?: string; examId?: string }>();
 
   const [loading, setLoading] = useState(true);
   const [papers, setPapers] = useState<ServerPaper[]>([]);
@@ -49,8 +49,30 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const [activeAttempts, setActiveAttempts] = useState<Map<string, any>>(new Map());
 
   const [searchQuery, setSearchQuery] = useState(params.q || '');
-  const [selectedType, setSelectedType] = useState<'all' | 'full' | 'pyq' | 'topic'>('all');
+  const [selectedType, setSelectedType] = useState<'all' | 'full' | 'pyq' | 'topic'>(
+    (params.category as any) || 'all'
+  );
   const [selectedSeriesId, setSelectedSeriesId] = useState<string | null>(null);
+
+  // Sync examMode if examId param passed in URL
+  useEffect(() => {
+    if (params.examId) {
+      const target = params.examId.toLowerCase();
+      if (
+        (target === 'upsc' || target === 'uppsc' || target === 'tgt' || target === 'pgt' || target === 'all') &&
+        target !== examMode
+      ) {
+        setExamMode(target as ExamTarget);
+      }
+    }
+  }, [params.examId]);
+
+  // Sync category param if passed in URL
+  useEffect(() => {
+    if (params.category && ['all', 'full', 'pyq', 'topic'].includes(params.category)) {
+      setSelectedType(params.category as any);
+    }
+  }, [params.category]);
 
   // Load test catalog & progress
   useEffect(() => {
@@ -64,7 +86,10 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
         try {
           list = await SSCCGLService.fetchPapersList();
         } catch {
-          list = INITIAL_TGT_PGT_PAPERS || [];
+          list = INITIAL_PAPERS_CATALOG || [];
+        }
+        if (!list || list.length === 0) {
+          list = INITIAL_PAPERS_CATALOG || [];
         }
 
         const history = await TestProgressService.getTestHistory();
@@ -105,25 +130,31 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const examPapers = useMemo(() => {
     return papers.filter((p) => {
       if (examMode === 'tgt') {
-        return p.series === 'tgt' || p.filename.includes('tgt');
+        return p.series === 'tgt' || p.filename?.includes('tgt');
       }
       if (examMode === 'pgt') {
-        return p.series === 'pgt' || p.filename.includes('pgt');
+        return p.series === 'pgt' || p.filename?.includes('pgt');
       }
       if (examMode === 'uppsc') {
+        // UP Principal shares the comprehensive Principal syllabus full mocks & topic tests
         return (
           p.series === 'uppsc' ||
-          p.filename.includes('uppsc') ||
-          p.title.toLowerCase().includes('up principal')
+          p.series === 'upsc' ||
+          p.filename?.includes('uppsc') ||
+          p.title?.toLowerCase().includes('up principal') ||
+          (!p.series &&
+            (p.filename?.includes('full_mock') ||
+              p.filename?.includes('SSC_CGL') ||
+              p.filename?.includes('topic_wise')))
         );
       }
       if (examMode === 'upsc') {
         return (
           p.series === 'upsc' ||
           (!p.series &&
-            (p.filename.includes('full_mock') ||
-              p.filename.includes('SSC_CGL') ||
-              p.filename.includes('topic_wise')))
+            (p.filename?.includes('full_mock') ||
+              p.filename?.includes('SSC_CGL') ||
+              p.filename?.includes('topic_wise')))
         );
       }
       return true; // all
@@ -188,26 +219,31 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
     if (selectedSeriesId && selectedSeriesId.startsWith('tgt-')) {
       const subSlug = selectedSeriesId.replace('tgt-', '').replace(/-/g, ' ');
-      pool = pool.filter((p) =>
+      const subFiltered = pool.filter((p) =>
         (p.subject || '').toLowerCase().includes(subSlug.toLowerCase())
       );
+      if (subFiltered.length > 0) pool = subFiltered;
     } else if (selectedSeriesId && selectedSeriesId.startsWith('pgt-')) {
       const subSlug = selectedSeriesId.replace('pgt-', '').replace(/-/g, ' ');
-      pool = pool.filter((p) =>
+      const subFiltered = pool.filter((p) =>
         (p.subject || '').toLowerCase().includes(subSlug.toLowerCase())
       );
+      if (subFiltered.length > 0) pool = subFiltered;
     }
 
     if (selectedType === 'full') {
-      pool = pool.filter((p) => !p.filename.includes('topic_wise'));
+      const fullMocks = pool.filter((p) => !p.filename?.includes('topic_wise'));
+      if (fullMocks.length > 0) pool = fullMocks;
     } else if (selectedType === 'pyq') {
-      pool = pool.filter((p) => p.isPYQ || p.filename.includes('tgt_pgt'));
+      const pyqs = pool.filter((p) => p.isPYQ || p.filename?.includes('tgt_pgt'));
+      if (pyqs.length > 0) pool = pyqs;
     } else if (selectedType === 'topic') {
-      pool = pool.filter((p) => p.filename.includes('topic_wise'));
+      const topics = pool.filter((p) => p.filename?.includes('topic_wise'));
+      if (topics.length > 0) pool = topics;
     }
 
     if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase();
+      const q = searchQuery.toLowerCase().trim();
       pool = pool.filter(
         (p) =>
           p.title.toLowerCase().includes(q) ||
@@ -364,21 +400,27 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                 active={selectedType === 'all'}
                 onPress={() => setSelectedType('all')}
               />
-              <Chip
-                label="Full Mocks"
-                active={selectedType === 'full'}
-                onPress={() => setSelectedType('full')}
-              />
-              <Chip
-                label="Previous Year Papers (PYQs)"
-                active={selectedType === 'pyq'}
-                onPress={() => setSelectedType('pyq')}
-              />
-              <Chip
-                label="Topic Wise"
-                active={selectedType === 'topic'}
-                onPress={() => setSelectedType('topic')}
-              />
+              {(examMode === 'upsc' || examMode === 'uppsc' || examMode === 'all') && (
+                <Chip
+                  label="Full Mocks"
+                  active={selectedType === 'full'}
+                  onPress={() => setSelectedType('full')}
+                />
+              )}
+              {(examMode === 'tgt' || examMode === 'pgt' || examMode === 'all') && (
+                <Chip
+                  label="Official Solved Papers"
+                  active={selectedType === 'pyq'}
+                  onPress={() => setSelectedType('pyq')}
+                />
+              )}
+              {(examMode === 'upsc' || examMode === 'uppsc' || examMode === 'all') && (
+                <Chip
+                  label="Topic Wise"
+                  active={selectedType === 'topic'}
+                  onPress={() => setSelectedType('topic')}
+                />
+              )}
             </ScrollView>
 
             {/* Test Rows List */}
@@ -399,12 +441,13 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
                 const status = comp ? 'completed' : inProg ? 'in-progress' : 'not-started';
                 const score = comp ? Math.round(comp.accuracy || 0) : undefined;
+                const displayTitle = formatTestTitle ? formatTestTitle(paper.title, paper.filename) : paper.title;
 
                 return (
                   <TestRow
                     key={paper.id || `test_${idx}`}
                     id={paper.id}
-                    title={paper.title}
+                    title={displayTitle}
                     questionCount={
                       paper.totalQuestions || (examMode === 'pgt' ? 300 : examMode === 'tgt' ? 200 : 120)
                     }
@@ -427,8 +470,20 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                     No tests found matching your criteria.
                   </Text>
                   <Text style={[styles.emptyCardSub, { color: colors.muted }]}>
-                    Try clearing the search query or selecting a different filter chip.
+                    Try clearing the search query or resetting your active filter.
                   </Text>
+                  <View style={{ marginTop: 14, flexDirection: 'row', justifyContent: 'center' }}>
+                    <Button
+                      label="Reset All Filters"
+                      variant="primary"
+                      size="small"
+                      onPress={() => {
+                        setSearchQuery('');
+                        setSelectedType('all');
+                        setSelectedSeriesId(null);
+                      }}
+                    />
+                  </View>
                 </Card>
               )}
             </View>
