@@ -552,11 +552,11 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
               <View style={{ gap: 8, marginTop: 12 }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
                   <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#2563EB' }} />
-                  <Text style={{ fontSize: 12, color: colors.textPrimary }}><Text style={{ fontWeight: '700' }}>26 Full-Length Mocks</Text> (CBT mode)</Text>
+                  <Text style={{ fontSize: 12, color: colors.textPrimary }}><Text style={{ fontWeight: '700' }}>150 Full-Length Mocks</Text> (CBT mode)</Text>
                 </View>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
                   <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#7C3AED' }} />
-                  <Text style={{ fontSize: 12, color: colors.textPrimary }}><Text style={{ fontWeight: '700' }}>158 Topic-wise Tests</Text> (All subjects)</Text>
+                  <Text style={{ fontSize: 12, color: colors.textPrimary }}><Text style={{ fontWeight: '700' }}>950+ Topic-wise Tests</Text> (All subjects)</Text>
                 </View>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
                   <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#D97706' }} />

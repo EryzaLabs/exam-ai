@@ -341,7 +341,7 @@ export default function MobileDashboard({
 
                 <Text style={styles.premiumBannerTitle}>UPSC & UP Principal 2026 Test Series</Text>
                 <Text style={styles.premiumBannerSubtitle}>
-                  Unlock 26 Full Mocks • 158 Topic Tests • Covers UPSC & UP Principal
+                  Unlock 150 Full Mocks • 950+ Topic Tests • Covers UPSC & UP Principal
                 </Text>
 
                 <View style={styles.premiumBannerFooter}>

@@ -618,7 +618,7 @@ export default function PremiumScreen() {
             <View style={{ flex: 1, marginLeft: 16 }}>
               <Text style={styles.activePlanTitle}>You are a Premium Member!</Text>
               <Text style={styles.activePlanSub}>
-                All 26 Full Mocks and 158 Topic-wise Tests are completely unlocked on your account.
+                All 150 Full Mocks and 950+ Topic-wise Tests are completely unlocked on your account.
               </Text>
             </View>
           </View>
@@ -921,7 +921,7 @@ export default function PremiumScreen() {
             </View>
             <Text style={styles.bpCardQuestion}>What is included in the pass?</Text>
             <Text style={styles.bpCardAnswer}>
-              Immediate unrestricted access to all 26 Full-Length Mocks (120 Qs each), 158 Topic-wise Tests, all new tests added daily, verified Swamy's Handbook legal rationales, and AI diagnostic reports.
+              Immediate unrestricted access to all 150 Full-Length Mocks (120 Qs each), 950+ Topic-wise Tests, all new tests added daily, verified Swamy's Handbook legal rationales, and AI diagnostic reports.
             </Text>
           </View>
 
@@ -1224,13 +1224,13 @@ export default function PremiumScreen() {
           <View style={styles.compTableRow}>
             <Text style={styles.compColFeature}>Full Mock Tests (120 Qs)</Text>
             <Text style={styles.compColFree}>1 Sample Test</Text>
-            <Text style={[styles.compColPremium, styles.compBold]}>All 26 Full Mocks</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>All 150 Full Mocks</Text>
           </View>
 
           <View style={styles.compTableRow}>
             <Text style={styles.compColFeature}>Topic-Wise Practice Tests</Text>
             <Text style={styles.compColFree}>1 Topic</Text>
-            <Text style={[styles.compColPremium, styles.compBold]}>All 158 Topic Packs</Text>
+            <Text style={[styles.compColPremium, styles.compBold]}>All 950+ Topic Sets</Text>
           </View>
 
           <View style={styles.compTableRow}>

@@ -30,6 +30,7 @@ import { auth, db } from '@/services/firebaseConfig';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/context/theme-context';
 import UserService, { UserProfile } from '@/services/user-service';
+import { SSCCGLService } from '@/services/ssc-cgl-service';
 import {
   AppShell,
   Card,
@@ -51,33 +52,37 @@ interface BookmarkItem {
   topic?: string;
 }
 
-const ALL_SERIES = [
+const DEFAULT_SERIES = [
   {
     id: 'upsc-principal',
     name: 'UPSC Principal & Vice-Principal',
-    testsCount: 12,
-    price: '₹1,499',
+    testsCount: 150,
+    unit: 'Full Mock Tests',
+    price: '₹199',
     examKey: 'upsc',
   },
   {
     id: 'up-principal',
     name: 'UP Principal & Headmaster',
-    testsCount: 10,
-    price: '₹999',
+    testsCount: 150,
+    unit: 'Full Mock Tests',
+    price: '₹199',
     examKey: 'uppsc',
   },
   {
     id: 'dsssb-tgt',
     name: 'DSSSB TGT (Trained Graduate Teacher)',
-    testsCount: 15,
-    price: '₹799',
+    testsCount: 190,
+    unit: 'Official Solved Papers',
+    price: '₹199',
     examKey: 'tgt',
   },
   {
     id: 'dsssb-pgt',
     name: 'DSSSB PGT (Post Graduate Teacher)',
-    testsCount: 14,
-    price: '₹799',
+    testsCount: 158,
+    unit: 'Official Solved Papers',
+    price: '₹199',
     examKey: 'pgt',
   },
 ];
@@ -88,6 +93,7 @@ export default function ProfileScreen() {
   const { colors, isDark } = useTheme();
 
   const [loading, setLoading] = useState(true);
+  const [seriesList, setSeriesList] = useState(DEFAULT_SERIES);
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [language, setLanguage] = useState<'English' | 'Hindi'>('English');
 
@@ -105,6 +111,68 @@ export default function ProfileScreen() {
       setLoading(false);
     }
   }, [user]);
+
+  useEffect(() => {
+    let isMounted = true;
+    SSCCGLService.fetchPapersList()
+      .then((papers) => {
+        if (!isMounted || !Array.isArray(papers) || papers.length === 0) return;
+        const upscCount =
+          papers.filter(
+            (p) =>
+              !p.series &&
+              (p.filename?.includes('full_mock') || p.id?.includes('mock'))
+          ).length || 150;
+        const tgtCount =
+          papers.filter(
+            (p) => p.series === 'tgt' || p.filename?.includes('tgt')
+          ).length || 190;
+        const pgtCount =
+          papers.filter(
+            (p) => p.series === 'pgt' || p.filename?.includes('pgt')
+          ).length || 158;
+
+        setSeriesList([
+          {
+            id: 'upsc-principal',
+            name: 'UPSC Principal & Vice-Principal',
+            testsCount: upscCount,
+            unit: 'Full Mock Tests',
+            price: '₹199',
+            examKey: 'upsc',
+          },
+          {
+            id: 'up-principal',
+            name: 'UP Principal & Headmaster',
+            testsCount: upscCount,
+            unit: 'Full Mock Tests',
+            price: '₹199',
+            examKey: 'uppsc',
+          },
+          {
+            id: 'dsssb-tgt',
+            name: 'DSSSB TGT (Trained Graduate Teacher)',
+            testsCount: tgtCount,
+            unit: 'Official Solved Papers',
+            price: '₹199',
+            examKey: 'tgt',
+          },
+          {
+            id: 'dsssb-pgt',
+            name: 'DSSSB PGT (Post Graduate Teacher)',
+            testsCount: pgtCount,
+            unit: 'Official Solved Papers',
+            price: '₹199',
+            examKey: 'pgt',
+          },
+        ]);
+      })
+      .catch(() => {});
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const loadProfile = async () => {
     try {
@@ -315,14 +383,14 @@ export default function ProfileScreen() {
 
         <Card>
           <View style={styles.seriesList}>
-            {ALL_SERIES.map((s, index) => {
+            {seriesList.map((s, index) => {
               const isOwned = isSubscribed || purchasedSeriesList.includes(s.id);
               return (
                 <View
                   key={s.id}
                   style={[
                     styles.seriesRow,
-                    index < ALL_SERIES.length - 1 && {
+                    index < seriesList.length - 1 && {
                       borderBottomWidth: 1,
                       borderBottomColor: colors.line,
                     },
@@ -338,7 +406,7 @@ export default function ProfileScreen() {
                       )}
                     </View>
                     <Text style={[styles.seriesMeta, { color: colors.muted }]}>
-                      {s.testsCount} Full Mock Tests • Bilingual Hindi & English
+                      {s.testsCount} {s.unit || 'Full Mock Tests'} • Bilingual Hindi & English
                     </Text>
                   </View>
 
@@ -348,14 +416,14 @@ export default function ProfileScreen() {
                         label="Open Series"
                         variant="secondary"
                         size="small"
-                        onPress={() => router.push(`/test-list?examId=${s.id}` as any)}
+                        onPress={() => router.push(`/test-list?examId=${s.examKey}` as any)}
                       />
                     ) : (
                       <Button
                         label={`Unlock ${s.price}`}
                         variant="primary"
                         size="small"
-                        onPress={() => router.push(`/test-list?examId=${s.id}` as any)}
+                        onPress={() => router.push(`/test-list?examId=${s.examKey}` as any)}
                       />
                     )}
                   </View>
