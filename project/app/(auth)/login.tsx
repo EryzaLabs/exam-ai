@@ -226,7 +226,14 @@ export default function LoginScreen() {
           <Card style={styles.authCard}>
             {/* Header */}
             <View style={styles.headerBox}>
-              <Text style={[styles.brandText, { color: colors.text }]}>ASTRA EXAM AI</Text>
+              <View style={styles.brandRow}>
+                <Image
+                  source={require('@/assets/images/logo.png')}
+                  style={styles.logoImage}
+                  resizeMode="contain"
+                />
+                <Text style={[styles.brandText, { color: colors.text }]}>ASTRA EXAM AI</Text>
+              </View>
               <Text style={[styles.title, { color: colors.text }]}>Welcome back</Text>
               <Text style={[styles.subtitle, { color: colors.muted }]}>
                 Log in to continue your mock tests and track your rank.
@@ -391,6 +398,16 @@ const styles = StyleSheet.create({
   },
   headerBox: {
     gap: 6,
+  },
+  brandRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  logoImage: {
+    width: 28,
+    height: 28,
+    borderRadius: 6,
   },
   brandText: {
     fontSize: 12,

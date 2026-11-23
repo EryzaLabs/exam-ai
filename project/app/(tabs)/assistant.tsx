@@ -10,6 +10,7 @@ import {
   Platform,
   ActivityIndicator,
   Alert,
+  Image,
 } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import { Send, Bot, Trash2, Sparkles } from 'lucide-react-native';
@@ -231,7 +232,11 @@ export default function AssistantScreen() {
         >
           <View style={styles.topBarLeft}>
             <View style={[styles.avatar, { backgroundColor: colors.surface2, borderColor: colors.line }]}>
-              <Bot size={20} color={colors.text} />
+              <Image
+                source={require('@/assets/images/vidya.png')}
+                style={styles.avatarImg}
+                resizeMode="contain"
+              />
             </View>
             <View>
               <Text style={[styles.title, { color: colors.text }]}>Vidya (विद्या) AI</Text>
@@ -301,6 +306,29 @@ export default function AssistantScreen() {
           contentContainerStyle={styles.messagesContent}
           keyboardShouldPersistTaps="handled"
         >
+          {messages.length <= 1 && (
+            <View
+              style={[
+                styles.vidyaHeroCard,
+                { backgroundColor: colors.surface, borderColor: colors.line },
+              ]}
+            >
+              <Image
+                source={require('@/assets/images/vidya.png')}
+                style={styles.vidyaHeroImg}
+                resizeMode="contain"
+              />
+              <View style={styles.vidyaHeroText}>
+                <Text style={[styles.vidyaHeroTitle, { color: colors.text }]}>
+                  Meet Vidya, your AI study buddy
+                </Text>
+                <Text style={[styles.vidyaHeroDesc, { color: colors.muted }]}>
+                  Ask any question about Administrative Rules (CCS, GFR, FR/SR), Educational Acts (RTE, NEP), or request a mnemonic to memorize tough topics.
+                </Text>
+              </View>
+            </View>
+          )}
+
           {messages.map((item) => {
             const isUser = item.role === 'user';
             return (
@@ -318,7 +346,11 @@ export default function AssistantScreen() {
                       { backgroundColor: colors.surface2, borderColor: colors.line },
                     ]}
                   >
-                    <Bot size={16} color={colors.text} />
+                    <Image
+                      source={require('@/assets/images/vidya.png')}
+                      style={styles.msgAvatarImg}
+                      resizeMode="contain"
+                    />
                   </View>
                 )}
 
@@ -351,7 +383,11 @@ export default function AssistantScreen() {
                   { backgroundColor: colors.surface2, borderColor: colors.line },
                 ]}
               >
-                <Bot size={16} color={colors.text} />
+                <Image
+                  source={require('@/assets/images/vidya.png')}
+                  style={styles.msgAvatarImg}
+                  resizeMode="contain"
+                />
               </View>
               <View
                 style={[
@@ -443,6 +479,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    overflow: 'hidden',
+  },
+  avatarImg: {
+    width: 34,
+    height: 34,
   },
   title: {
     fontFamily: Platform.select({
@@ -520,13 +561,47 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   msgAvatar: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
+    width: 32,
+    height: 32,
+    borderRadius: 16,
     borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 2,
+    overflow: 'hidden',
+  },
+  msgAvatarImg: {
+    width: 28,
+    height: 28,
+  },
+  vidyaHeroCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 16,
+    padding: 16,
+    borderRadius: 14,
+    borderWidth: 1,
+    marginBottom: 6,
+  },
+  vidyaHeroImg: {
+    width: 65,
+    height: 90,
+  },
+  vidyaHeroText: {
+    flex: 1,
+    gap: 4,
+  },
+  vidyaHeroTitle: {
+    fontFamily: Platform.select({
+      web: "'Newsreader', Georgia, serif",
+      default: 'serif',
+    }),
+    fontSize: 18,
+    fontWeight: '600',
+  },
+  vidyaHeroDesc: {
+    fontSize: 13.5,
+    lineHeight: 19,
   },
   bubble: {
     maxWidth: '85%',

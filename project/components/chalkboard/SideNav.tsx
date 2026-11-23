@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Platform, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Platform, ScrollView, Image } from 'react-native';
 import { router, usePathname } from 'expo-router';
 import {
   Home,
@@ -20,7 +20,7 @@ export const NAV_ITEMS = [
   { label: 'Tests', path: '/test-list', icon: FileText },
   { label: 'Practice', path: '/practice', icon: Brain },
   { label: 'Analytics', path: '/progress', icon: BarChart2 },
-  { label: 'AI Assistant', path: '/assistant', icon: MessageSquare },
+  { label: 'Vidya AI', path: '/assistant', icon: MessageSquare, isVidya: true },
   { label: 'Profile', path: '/profile', icon: User },
 ];
 
@@ -47,15 +47,17 @@ export default function SideNav() {
         },
       ]}
     >
-      {/* Brand Header */}
+      {/* Brand Header with Astra AI Original Logo */}
       <TouchableOpacity
         style={styles.brandHeader}
         onPress={() => router.push('/')}
         activeOpacity={0.8}
       >
-        <View style={[styles.brandLogo, { backgroundColor: colors.surface2, borderColor: colors.line }]}>
-          <Text style={[styles.brandStar, { color: colors.accent }]}>✦</Text>
-        </View>
+        <Image
+          source={require('@/assets/images/logo.png')}
+          style={styles.brandLogoImg}
+          resizeMode="contain"
+        />
         <View>
           <Text
             style={[
@@ -97,11 +99,19 @@ export default function SideNav() {
                 accessibilityRole="button"
                 accessibilityState={{ selected: active }}
               >
-                <Icon
-                  size={19}
-                  color={active ? colors.text : colors.muted}
-                  strokeWidth={active ? 2.2 : 1.8}
-                />
+                {item.isVidya ? (
+                  <Image
+                    source={require('@/assets/images/vidya.png')}
+                    style={styles.vidyaNavImg}
+                    resizeMode="contain"
+                  />
+                ) : (
+                  <Icon
+                    size={19}
+                    color={active ? colors.text : colors.muted}
+                    strokeWidth={active ? 2.2 : 1.8}
+                  />
+                )}
                 <Text
                   style={[
                     styles.navItemText,
@@ -172,17 +182,15 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: 'transparent',
   },
-  brandLogo: {
+  brandLogoImg: {
     width: 34,
     height: 34,
     borderRadius: 8,
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
-  brandStar: {
-    fontSize: 18,
-    fontWeight: '700',
+  vidyaNavImg: {
+    width: 22,
+    height: 22,
+    borderRadius: 11,
   },
   brandTitle: {
     fontSize: 17,

@@ -10,6 +10,7 @@ import {
   TouchableWithoutFeedback,
   ScrollView,
   useWindowDimensions,
+  Image,
 } from 'react-native';
 import { router } from 'expo-router';
 import {
@@ -117,9 +118,11 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
               onPress={() => router.push('/')}
               activeOpacity={0.8}
             >
-              <View style={[styles.logoIcon, { backgroundColor: colors.surface2, borderColor: colors.line }]}>
-                <Text style={[styles.logoStar, { color: colors.accent }]}>✦</Text>
-              </View>
+              <Image
+                source={require('@/assets/images/logo.png')}
+                style={styles.logoImg}
+                resizeMode="contain"
+              />
               {width >= 420 && (
                 <Text
                   style={[
@@ -458,17 +461,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
   },
-  logoIcon: {
+  logoImg: {
     width: 32,
     height: 32,
     borderRadius: 8,
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  logoStar: {
-    fontSize: 16,
-    fontWeight: '700',
   },
   logoText: {
     fontSize: 18,

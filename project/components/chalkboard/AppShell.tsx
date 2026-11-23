@@ -7,6 +7,7 @@ import {
   Platform,
   TouchableOpacity,
   Text,
+  Image,
 } from 'react-native';
 import { MessageSquare } from 'lucide-react-native';
 import { router, usePathname } from 'expo-router';
@@ -75,11 +76,15 @@ export default function AppShell({
               ]}
               onPress={() => router.push('/assistant')}
               activeOpacity={0.8}
-              accessibilityLabel="Open AI study assistant"
+              accessibilityLabel="Open Vidya AI study assistant"
             >
-              <MessageSquare size={18} color={colors.accentText} />
+              <Image
+                source={require('@/assets/images/vidya.png')}
+                style={styles.floatingVidyaImg}
+                resizeMode="contain"
+              />
               <Text style={[styles.floatingAIText, { color: colors.accentText }]}>
-                Ask AI
+                Ask Vidya
               </Text>
             </TouchableOpacity>
           )}
@@ -133,6 +138,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.15,
     shadowRadius: 8,
     zIndex: 99,
+  },
+  floatingVidyaImg: {
+    width: 20,
+    height: 20,
+    borderRadius: 10,
   },
   floatingAIText: {
     fontSize: 13,

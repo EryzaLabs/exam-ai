@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Platform } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Platform, Image } from 'react-native';
 import { router } from 'expo-router';
 import { Sun, Moon, ArrowLeft, User as UserIcon } from 'lucide-react-native';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
@@ -36,9 +36,11 @@ export default function FirstVisitHeader({
           onPress={() => router.push('/')}
           activeOpacity={0.8}
         >
-          <View style={[styles.logoBadge, { backgroundColor: colors.surface2, borderColor: colors.line }]}>
-            <Text style={[styles.logoIconText, { color: colors.accent }]}>✦</Text>
-          </View>
+          <Image
+            source={require('@/assets/images/logo.png')}
+            style={styles.logoImage}
+            resizeMode="contain"
+          />
           <View>
             <Text
               style={[
@@ -130,17 +132,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 10,
   },
-  logoBadge: {
+  logoImage: {
     width: 32,
     height: 32,
     borderRadius: 8,
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  logoIconText: {
-    fontSize: 16,
-    fontWeight: '700',
   },
   brandTitle: {
     fontSize: 18,
