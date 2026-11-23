@@ -155,13 +155,30 @@ export default function ExamScreen() {
           const tid = paper.testId || paper.id || `test_${idx}`;
           const isAttempted = attempted.has(tid);
 
+          const isTopic =
+            paper.filename?.includes('topic_wise') ||
+            paper.id?.includes('topic_wise') ||
+            paper.subject === 'Topic Wise';
+
+          const questionCount =
+            paper.totalQuestions ||
+            (isTopic ? 20 : examId === 'pgt' ? 300 : examId === 'tgt' ? 200 : 120);
+
           let duration = 120;
-          let marks = 200;
-          if (examId === 'pgt') {
+          if (paper.duration) {
+            duration = paper.duration > 300 ? Math.round(paper.duration / 60) : paper.duration;
+          } else if (isTopic) {
+            duration = 20;
+          } else if (examId === 'pgt') {
             duration = 180;
-            marks = 300;
-          } else if (examId === 'upsc' || examId === 'uppsc') {
-            duration = 120;
+          }
+
+          let marks = 200;
+          if (paper.totalMarks) {
+            marks = paper.totalMarks;
+          } else if (isTopic) {
+            marks = questionCount * 2.5;
+          } else if (examId === 'pgt' || examId === 'upsc' || examId === 'uppsc') {
             marks = 300;
           }
 
@@ -175,7 +192,7 @@ export default function ExamScreen() {
             testId: tid,
             filename: paper.filename,
             title: displayTitle,
-            questionCount: paper.totalQuestions || (examId === 'pgt' ? 300 : examId === 'tgt' ? 200 : 120),
+            questionCount,
             durationMinutes: duration,
             marks,
             isFree,

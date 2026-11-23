@@ -478,16 +478,41 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                 const score = comp ? Math.round(comp.accuracy || 0) : undefined;
                 const displayTitle = formatTestTitle ? formatTestTitle(paper.title, paper.filename) : paper.title;
 
+                const isTopic =
+                  paper.filename?.includes('topic_wise') ||
+                  paper.id?.includes('topic_wise') ||
+                  paper.subject === 'Topic Wise';
+
+                const questionCount =
+                  paper.totalQuestions ||
+                  (isTopic ? 20 : examMode === 'pgt' ? 300 : examMode === 'tgt' ? 200 : 120);
+
+                let durationMinutes = 120;
+                if (paper.duration) {
+                  durationMinutes = paper.duration > 300 ? Math.round(paper.duration / 60) : paper.duration;
+                } else if (isTopic) {
+                  durationMinutes = 20;
+                } else if (examMode === 'pgt') {
+                  durationMinutes = 180;
+                }
+
+                let marks = 200;
+                if (paper.totalMarks) {
+                  marks = paper.totalMarks;
+                } else if (isTopic) {
+                  marks = questionCount * 2.5;
+                } else if (examMode === 'pgt' || examMode === 'upsc' || examMode === 'uppsc') {
+                  marks = 300;
+                }
+
                 return (
                   <TestRow
                     key={paper.id || `test_${idx}`}
                     id={paper.id}
                     title={displayTitle}
-                    questionCount={
-                      paper.totalQuestions || (examMode === 'pgt' ? 300 : examMode === 'tgt' ? 200 : 120)
-                    }
-                    marks={examMode === 'pgt' || examMode === 'upsc' || examMode === 'uppsc' ? 300 : 200}
-                    durationMinutes={examMode === 'pgt' ? 180 : 120}
+                    questionCount={questionCount}
+                    marks={marks}
+                    durationMinutes={durationMinutes}
                     isFree={isFreeSample}
                     isLocked={isLocked}
                     status={status}
