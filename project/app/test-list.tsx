@@ -426,8 +426,8 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             {/* Test Rows List */}
             <View style={styles.testList}>
               {filteredTests.map((paper, idx) => {
-                const isFreeSample = idx < 2 || isSubscribed;
-                const isLocked = !isFreeSample && !isSubscribed;
+                const isFreeSample = !isSubscribed && idx < 2;
+                const isLocked = !isSubscribed && !isFreeSample;
 
                 const comp =
                   completedAttempts.get(paper.id) ||

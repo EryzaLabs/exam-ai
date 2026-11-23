@@ -148,9 +148,10 @@ export default function ExamScreen() {
           setAttemptedSampleIds(attempted);
         }
 
-        // Map to TestRowItems. First 2 tests are always free samples!
+        // Map to TestRowItems. First 2 tests are free samples for unsubscribed users!
         const mappedTests: TestRowItem[] = filtered.slice(0, 30).map((paper, idx) => {
-          const isFree = idx < 2 || isSubscribed;
+          const isFree = !isSubscribed && idx < 2;
+          const isLocked = !isSubscribed && !isFree;
           const tid = paper.testId || paper.id || `test_${idx}`;
           const isAttempted = attempted.has(tid);
 
@@ -178,6 +179,7 @@ export default function ExamScreen() {
             durationMinutes: duration,
             marks,
             isFree,
+            isLocked,
             isAttempted,
           };
         });
@@ -293,10 +295,11 @@ export default function ExamScreen() {
             sampleQuestionCount={tests[0]?.questionCount || 20}
             sampleDurationMinutes={tests[0]?.durationMinutes || 20}
             onStartSampleTest={() => handleStartSample()}
+            isSubscribed={isSubscribed}
           />
 
           {/* Real Sample Question Explanation Preview */}
-          {sampleQuestion && <SampleQuestionPreview question={sampleQuestion} />}
+          {!isSubscribed && sampleQuestion && <SampleQuestionPreview question={sampleQuestion} />}
 
           {/* Test List Section (Free tests + Locked tests) */}
           <ExamTestList
@@ -304,6 +307,7 @@ export default function ExamScreen() {
             tests={tests}
             onStartTest={(test) => handleStartSample(test.id)}
             onUnlockPress={handleUnlockScroll}
+            isSubscribed={isSubscribed}
           />
 
           {/* Conversion Offer Card Section */}

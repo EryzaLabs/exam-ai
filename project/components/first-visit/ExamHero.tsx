@@ -9,6 +9,7 @@ interface ExamHeroProps {
   sampleQuestionCount?: number;
   sampleDurationMinutes?: number;
   onStartSampleTest: () => void;
+  isSubscribed?: boolean;
 }
 
 export default function ExamHero({
@@ -16,6 +17,7 @@ export default function ExamHero({
   sampleQuestionCount = 20,
   sampleDurationMinutes = 20,
   onStartSampleTest,
+  isSubscribed = false,
 }: ExamHeroProps) {
   const { colors, typography, radii } = useChalkboardTheme();
 
@@ -33,7 +35,9 @@ export default function ExamHero({
       <View style={styles.badgeRow}>
         <View style={[styles.badge, { backgroundColor: colors.surface2, borderColor: colors.line }]}>
           <Zap size={12} color={colors.accent} />
-          <Text style={[styles.badgeText, { color: colors.text }]}>FREE SAMPLE TEST</Text>
+          <Text style={[styles.badgeText, { color: colors.text }]}>
+            {isSubscribed ? 'SERIES PASS ACTIVE' : 'FREE SAMPLE TEST'}
+          </Text>
         </View>
       </View>
 
@@ -46,11 +50,13 @@ export default function ExamHero({
           },
         ]}
       >
-        Try a free {examName} test before you buy
+        {isSubscribed ? `Practice ${examName} Mock Tests` : `Try a free ${examName} test before you buy`}
       </Text>
 
       <Text style={[styles.subheadline, { color: colors.muted }]}>
-        Experience the exact CBT interface, realistic exam timing, and detailed bilingual explanations with zero commitment.
+        {isSubscribed
+          ? 'Access all full-length timed CBT mocks, realistic exam simulations, and detailed bilingual solutions.'
+          : 'Experience the exact CBT interface, realistic exam timing, and detailed bilingual explanations with zero commitment.'}
       </Text>
 
       <View style={styles.ctaRow}>
@@ -65,10 +71,10 @@ export default function ExamHero({
           onPress={onStartSampleTest}
           activeOpacity={0.8}
         >
-          <Text style={[styles.primaryButtonText, { color: colors.white }]}>
-            Start free sample test
+          <Text style={[styles.primaryButtonText, { color: colors.accentText }]}>
+            {isSubscribed ? 'Start Mock Test' : 'Start free sample test'}
           </Text>
-          <ArrowRight size={16} color={colors.white} />
+          <ArrowRight size={16} color={colors.accentText} />
         </TouchableOpacity>
       </View>
 
@@ -77,14 +83,14 @@ export default function ExamHero({
         <View style={styles.factItem}>
           <Clock size={15} color={colors.muted} />
           <Text style={[styles.factText, { color: colors.muted }]}>
-            {sampleQuestionCount} sample questions · {sampleDurationMinutes} mins
+            {sampleQuestionCount} questions · {sampleDurationMinutes} mins
           </Text>
         </View>
 
         <View style={styles.factItem}>
           <ShieldCheck size={15} color={colors.muted} />
           <Text style={[styles.factText, { color: colors.muted }]}>
-            No payment or sign-up
+            {isSubscribed ? 'All tests unlocked' : 'No payment or sign-up'}
           </Text>
         </View>
 
