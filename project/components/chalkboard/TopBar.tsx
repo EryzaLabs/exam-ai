@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -9,6 +9,7 @@ import {
   Modal,
   TouchableWithoutFeedback,
   ScrollView,
+  useWindowDimensions,
 } from 'react-native';
 import { router } from 'expo-router';
 import {
@@ -39,10 +40,30 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
   const { user } = useAuth();
   const { examMode } = useExam();
   const { colors, typography, radii } = useChalkboardTheme();
+  const { width } = useWindowDimensions();
+
+  const isDesktop = width >= 768;
+  const isCompact = width < 540;
 
   const [searchQuery, setSearchQuery] = useState('');
   const [searchOpen, setSearchOpen] = useState(false);
   const [accountMenuOpen, setAccountMenuOpen] = useState(false);
+
+  // Keyboard shortcut (Cmd+K / Ctrl+K) on web
+  useEffect(() => {
+    if (Platform.OS !== 'web') return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        setSearchOpen((prev) => !prev);
+      } else if (e.key === 'Escape') {
+        setSearchOpen(false);
+        setAccountMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   // Grouped search results (Tests, Topics)
   const query = searchQuery.trim().toLowerCase();
@@ -88,9 +109,9 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
   return (
     <View style={[styles.container, { borderBottomColor: colors.line, backgroundColor: colors.bg }]}>
       <View style={styles.inner}>
-        {/* Left: Brand logo if showLogo is true */}
+        {/* Left: Brand logo if showLogo is true, plus search trigger */}
         <View style={styles.leftGroup}>
-          {showLogo ? (
+          {showLogo && (
             <TouchableOpacity
               style={styles.logoRow}
               onPress={() => router.push('/')}
@@ -99,42 +120,66 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
               <View style={[styles.logoIcon, { backgroundColor: colors.surface2, borderColor: colors.line }]}>
                 <Text style={[styles.logoStar, { color: colors.accent }]}>✦</Text>
               </View>
-              <Text
-                style={[
-                  styles.logoText,
-                  {
-                    color: colors.text,
-                    fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
-                  },
-                ]}
-              >
-                Astra Exam AI
-              </Text>
+              {width >= 420 && (
+                <Text
+                  style={[
+                    styles.logoText,
+                    {
+                      color: colors.text,
+                      fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+                    },
+                  ]}
+                  numberOfLines={1}
+                >
+                  {width >= 600 ? 'Astra Exam AI' : 'Astra'}
+                </Text>
+              )}
             </TouchableOpacity>
-          ) : null}
+          )}
 
-          {/* Search Trigger Button */}
-          <TouchableOpacity
-            style={[
-              styles.searchTrigger,
-              {
-                backgroundColor: colors.surface,
-                borderColor: colors.line,
-                borderRadius: radii.button,
-              },
-            ]}
-            onPress={() => setSearchOpen(true)}
-            activeOpacity={0.7}
-            accessibilityLabel="Search tests, topics, bookmarks"
-          >
-            <Search size={15} color={colors.muted} />
-            <Text style={[styles.searchPlaceholder, { color: colors.muted }]}>
-              Search tests, topics...
-            </Text>
-            <View style={[styles.kbdShortcut, { backgroundColor: colors.surface2 }]}>
-              <Text style={[styles.kbdText, { color: colors.muted }]}>⌘K</Text>
-            </View>
-          </TouchableOpacity>
+          {/* Search Trigger: full bar on desktop, compact icon button on mobile/tablet */}
+          {isDesktop ? (
+            <TouchableOpacity
+              style={[
+                styles.searchTrigger,
+                {
+                  backgroundColor: colors.surface,
+                  borderColor: colors.line,
+                  borderRadius: radii.button,
+                },
+              ]}
+              onPress={() => setSearchOpen(true)}
+              activeOpacity={0.7}
+              accessibilityLabel="Search tests, topics, bookmarks"
+            >
+              <Search size={15} color={colors.muted} />
+              <Text
+                style={[styles.searchPlaceholder, { color: colors.muted }]}
+                numberOfLines={1}
+              >
+                Search tests, topics...
+              </Text>
+              <View style={[styles.kbdShortcut, { backgroundColor: colors.surface2 }]}>
+                <Text style={[styles.kbdText, { color: colors.muted }]}>⌘K</Text>
+              </View>
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity
+              style={[
+                styles.searchIconBtn,
+                {
+                  backgroundColor: colors.surface,
+                  borderColor: colors.line,
+                  borderRadius: radii.button,
+                },
+              ]}
+              onPress={() => setSearchOpen(true)}
+              activeOpacity={0.7}
+              accessibilityLabel="Search tests, topics, bookmarks"
+            >
+              <Search size={16} color={colors.muted} />
+            </TouchableOpacity>
+          )}
         </View>
 
         {/* Right: Exam Switcher, Theme Toggle, Account Menu */}
@@ -158,12 +203,14 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
                 accessibilityLabel="Account menu"
               >
                 <UserIcon size={15} color={colors.text} />
-                <Text
-                  style={[styles.accountName, { color: colors.text }]}
-                  numberOfLines={1}
-                >
-                  {user.displayName?.split(' ')[0] || user.email?.split('@')[0] || 'Account'}
-                </Text>
+                {width >= 640 && (
+                  <Text
+                    style={[styles.accountName, { color: colors.text }]}
+                    numberOfLines={1}
+                  >
+                    {user.displayName?.split(' ')[0] || user.email?.split('@')[0] || 'Account'}
+                  </Text>
+                )}
               </TouchableOpacity>
 
               {/* Account Dropdown Modal */}
@@ -199,22 +246,36 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
                           style={[styles.accountMenuItem, { borderBottomColor: colors.line }]}
                           onPress={() => {
                             setAccountMenuOpen(false);
-                            router.push('/profile');
+                            router.push('/(tabs)/profile');
                           }}
+                          activeOpacity={0.7}
                         >
-                          <UserIcon size={16} color={colors.text} />
-                          <Text style={[styles.accountMenuItemText, { color: colors.text }]}>
-                            Profile & My Series
+                          <Text style={[styles.menuItemText, { color: colors.text }]}>
+                            Profile & Settings
+                          </Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                          style={[styles.accountMenuItem, { borderBottomColor: colors.line }]}
+                          onPress={() => {
+                            setAccountMenuOpen(false);
+                            router.push('/(tabs)/profile');
+                          }}
+                          activeOpacity={0.7}
+                        >
+                          <Text style={[styles.menuItemText, { color: colors.text }]}>
+                            Saved Bookmarks
                           </Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity
                           style={styles.accountMenuItem}
                           onPress={handleLogout}
+                          activeOpacity={0.7}
                         >
                           <LogOut size={16} color={colors.danger} />
-                          <Text style={[styles.accountMenuItemText, { color: colors.danger, fontWeight: '600' }]}>
-                            Log Out
+                          <Text style={[styles.menuItemText, { color: colors.danger }]}>
+                            Log out
                           </Text>
                         </TouchableOpacity>
                       </View>
@@ -252,11 +313,11 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
         onRequestClose={() => setSearchOpen(false)}
       >
         <TouchableWithoutFeedback onPress={() => setSearchOpen(false)}>
-          <View style={styles.searchModalBackdrop}>
+          <View style={styles.searchBackdrop}>
             <TouchableWithoutFeedback>
               <View
                 style={[
-                  styles.searchModalCard,
+                  styles.searchModalBox,
                   {
                     backgroundColor: colors.surface,
                     borderColor: colors.line,
@@ -264,38 +325,48 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
                   },
                 ]}
               >
-                {/* Search Input */}
-                <View style={[styles.searchInputRow, { borderBottomColor: colors.line }]}>
+                {/* Search Input Bar */}
+                <View style={[styles.modalInputRow, { borderBottomColor: colors.line }]}>
                   <Search size={18} color={colors.muted} />
                   <TextInput
-                    style={[styles.modalTextInput, { color: colors.text }]}
-                    placeholder="Search tests, topics, previous year papers..."
+                    style={[styles.modalSearchInput, { color: colors.text }]}
+                    placeholder="Search mock tests, topics, papers..."
                     placeholderTextColor={colors.muted}
                     value={searchQuery}
                     onChangeText={setSearchQuery}
                     autoFocus
+                    returnKeyType="search"
                   />
-                  <TouchableOpacity
-                    style={[styles.closeSearchBtn, { backgroundColor: colors.surface2 }]}
-                    onPress={() => setSearchOpen(false)}
-                  >
-                    <X size={15} color={colors.text} />
-                  </TouchableOpacity>
+                  {searchQuery ? (
+                    <TouchableOpacity
+                      onPress={() => setSearchQuery('')}
+                      style={styles.clearBtn}
+                    >
+                      <X size={16} color={colors.muted} />
+                    </TouchableOpacity>
+                  ) : (
+                    <View style={[styles.kbdShortcut, { backgroundColor: colors.surface2 }]}>
+                      <Text style={[styles.kbdText, { color: colors.muted }]}>ESC</Text>
+                    </View>
+                  )}
                 </View>
 
                 {/* Grouped Results */}
-                <ScrollView style={styles.resultsScroll}>
+                <ScrollView
+                  style={styles.resultsScroll}
+                  keyboardShouldPersistTaps="handled"
+                >
                   {query ? (
                     <>
                       {/* Topic Matches */}
                       {matchedTopics.length > 0 && (
                         <View style={styles.groupSection}>
                           <Text style={[styles.groupTitle, { color: colors.muted }]}>
-                            TOPICS
+                            TOPICS & SUBJECTS
                           </Text>
-                          {matchedTopics.map((top, idx) => (
+                          {matchedTopics.map((top) => (
                             <TouchableOpacity
-                              key={idx}
+                              key={top}
                               style={[styles.resultRow, { borderBottomColor: colors.line }]}
                               onPress={() => handleSelectTopic(top!)}
                             >
@@ -374,13 +445,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    gap: 12,
+    gap: 8,
   },
   leftGroup: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 14,
-    flex: 1,
+    gap: 10,
+    flexShrink: 0,
   },
   logoRow: {
     flexDirection: 'row',
@@ -412,8 +483,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 8,
     minHeight: 38,
-    maxWidth: 260,
-    flex: 1,
+    width: 220,
+  },
+  searchIconBtn: {
+    width: 38,
+    height: 38,
+    borderRadius: 8,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   searchPlaceholder: {
     fontSize: 13.5,
@@ -432,13 +510,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
+    flexShrink: 0,
   },
   accountTrigger: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
     borderWidth: 1,
-    paddingHorizontal: 12,
+    paddingHorizontal: 10,
     paddingVertical: 8,
     minHeight: 38,
   },
@@ -461,21 +540,21 @@ const styles = StyleSheet.create({
   },
   modalBackdrop: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.3)',
+    backgroundColor: 'rgba(0,0,0,0.4)',
     justifyContent: 'flex-start',
     alignItems: 'flex-end',
-    paddingTop: 56,
+    paddingTop: 54,
     paddingRight: 16,
   },
   accountDropdown: {
     width: 240,
     borderWidth: 1,
-    overflow: 'hidden',
     elevation: 8,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.15,
     shadowRadius: 10,
+    overflow: 'hidden',
   },
   accountDropdownHeader: {
     padding: 14,
@@ -483,7 +562,7 @@ const styles = StyleSheet.create({
   },
   accountUserTitle: {
     fontSize: 14,
-    fontWeight: '700',
+    fontWeight: '600',
   },
   accountUserEmail: {
     fontSize: 12,
@@ -492,15 +571,15 @@ const styles = StyleSheet.create({
   accountMenuItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 10,
+    gap: 8,
     paddingHorizontal: 14,
     paddingVertical: 12,
+    borderBottomWidth: 1,
   },
-  accountMenuItemText: {
+  menuItemText: {
     fontSize: 13.5,
-    fontWeight: '500',
   },
-  searchModalBackdrop: {
+  searchBackdrop: {
     flex: 1,
     backgroundColor: 'rgba(0,0,0,0.5)',
     justifyContent: 'flex-start',
@@ -508,19 +587,19 @@ const styles = StyleSheet.create({
     paddingTop: 80,
     paddingHorizontal: 16,
   },
-  searchModalCard: {
+  searchModalBox: {
     width: '100%',
-    maxWidth: 600,
+    maxWidth: 580,
+    maxHeight: '80%',
     borderWidth: 1,
-    maxHeight: 460,
-    overflow: 'hidden',
     elevation: 10,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.15,
+    shadowOpacity: 0.2,
     shadowRadius: 16,
+    overflow: 'hidden',
   },
-  searchInputRow: {
+  modalInputRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
@@ -528,43 +607,39 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderBottomWidth: 1,
   },
-  modalTextInput: {
+  modalSearchInput: {
     flex: 1,
     fontSize: 16,
-    padding: 0,
-    borderWidth: 0,
-  },
-  closeSearchBtn: {
-    width: 28,
-    height: 28,
-    borderRadius: 6,
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingVertical: 4,
+    outlineStyle: 'none',
+  } as any,
+  clearBtn: {
+    padding: 4,
   },
   resultsScroll: {
-    padding: 12,
+    padding: 8,
   },
   groupSection: {
-    marginBottom: 16,
+    marginBottom: 12,
   },
   groupTitle: {
     fontSize: 11,
     fontWeight: '700',
     letterSpacing: 0.8,
-    marginBottom: 6,
-    paddingHorizontal: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
   },
   resultRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
-    paddingHorizontal: 8,
+    paddingHorizontal: 12,
     paddingVertical: 10,
     borderBottomWidth: 1,
   },
   resultTitle: {
     fontSize: 14,
-    fontWeight: '600',
+    fontWeight: '500',
   },
   resultSub: {
     fontSize: 12,
@@ -575,7 +650,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   emptySearchText: {
-    fontSize: 13.5,
+    fontSize: 14,
     textAlign: 'center',
+    lineHeight: 20,
   },
 });

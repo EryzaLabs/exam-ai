@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Modal,
   TouchableWithoutFeedback,
+  useWindowDimensions,
 } from 'react-native';
 import { ChevronDown, Check, GraduationCap } from 'lucide-react-native';
 import { useExam, ExamTarget, EXAMS } from '@/context/exam-context';
@@ -14,14 +15,16 @@ import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 export default function ExamSwitcher() {
   const { examMode, setExamMode } = useExam();
   const { colors, radii } = useChalkboardTheme();
+  const { width } = useWindowDimensions();
+  const isCompact = width < 540;
   const [open, setOpen] = useState(false);
 
-  const examOptions: { id: ExamTarget; title: string; short: string }[] = [
-    { id: 'all', title: 'All Teaching Exams', short: 'All Exams' },
-    { id: 'upsc', title: 'UPSC Principal & Vice-Principal', short: 'UPSC Principal' },
-    { id: 'uppsc', title: 'UP Principal & Headmaster', short: 'UP Principal' },
-    { id: 'tgt', title: 'DSSSB TGT (Trained Graduate Teacher)', short: 'DSSSB TGT' },
-    { id: 'pgt', title: 'DSSSB PGT (Post Graduate Teacher)', short: 'DSSSB PGT' },
+  const examOptions: { id: ExamTarget; title: string; short: string; compact: string }[] = [
+    { id: 'all', title: 'All Teaching Exams', short: 'All Exams', compact: 'All' },
+    { id: 'upsc', title: 'UPSC Principal & Vice-Principal', short: 'UPSC Principal', compact: 'UPSC' },
+    { id: 'uppsc', title: 'UP Principal & Headmaster', short: 'UP Principal', compact: 'UP Prin' },
+    { id: 'tgt', title: 'DSSSB TGT (Trained Graduate Teacher)', short: 'DSSSB TGT', compact: 'TGT' },
+    { id: 'pgt', title: 'DSSSB PGT (Post Graduate Teacher)', short: 'DSSSB PGT', compact: 'PGT' },
   ];
 
   const currentExam = examOptions.find((e) => e.id === examMode) || examOptions[0];
@@ -49,10 +52,14 @@ export default function ExamSwitcher() {
       >
         <GraduationCap size={15} color={colors.accent} />
         <Text
-          style={[styles.triggerText, { color: colors.text }]}
+          style={[
+            styles.triggerText,
+            { color: colors.text },
+            isCompact && { maxWidth: 65 },
+          ]}
           numberOfLines={1}
         >
-          {currentExam.short}
+          {isCompact ? currentExam.compact : currentExam.short}
         </Text>
         <ChevronDown size={14} color={colors.muted} />
       </TouchableOpacity>
@@ -130,6 +137,7 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     borderWidth: 1,
     minHeight: 38,
+    flexShrink: 0,
   },
   triggerText: {
     fontSize: 13.5,
