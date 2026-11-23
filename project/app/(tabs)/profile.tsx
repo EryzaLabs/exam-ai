@@ -5,851 +5,759 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-  Switch,
   Alert,
   Platform,
   ActivityIndicator,
-  Dimensions,
-  Image,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { LinearGradient } from 'expo-linear-gradient';
-import { Bell, LogOut, Target, ChevronRight, Award, BookOpen, TrendingUp, Shield, HelpCircle, FileText, History, Trash2, CalendarDays, Globe, Crown, Sun, Moon } from 'lucide-react-native';
+import { useRouter } from 'expo-router';
+import { signOut, deleteUser } from 'firebase/auth';
+import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import {
+  User as UserIcon,
+  LogOut,
+  Trash2,
+  Bookmark,
+  ChevronDown,
+  ChevronUp,
+  CheckCircle2,
+  Lock,
+  Globe,
+  HelpCircle,
+  ExternalLink,
+} from 'lucide-react-native';
+
+import { auth, db } from '@/services/firebaseConfig';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/context/theme-context';
-import { signOut, deleteUser } from 'firebase/auth';
-import { auth } from '@/services/firebaseConfig';
-import UserService, { UserProfile, UserStats } from '@/services/user-service';
-import { router } from 'expo-router';
-import * as WebBrowser from 'expo-web-browser';
-import DesktopDashboard from '@/components/DesktopDashboard';
-import ExamSelector from '@/components/ExamSelector';
-import { useWindowDimensions } from 'react-native';
+import UserService, { UserProfile } from '@/services/user-service';
+import {
+  AppShell,
+  Card,
+  Button,
+  Pill,
+  Chip,
+  ThemeToggle,
+  ExamSwitcher,
+  EmptyState,
+} from '@/components/chalkboard';
 
-// 7-day streak calendar days
-const WEEK_DAYS = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+interface BookmarkItem {
+  id: string;
+  questionId: string;
+  questionText: string;
+  testTitle?: string;
+  createdAt: string;
+  notes?: string;
+  topic?: string;
+}
+
+const ALL_SERIES = [
+  {
+    id: 'upsc-principal',
+    name: 'UPSC Principal & Vice-Principal',
+    testsCount: 12,
+    price: '₹1,499',
+    examKey: 'upsc',
+  },
+  {
+    id: 'up-principal',
+    name: 'UP Principal & Headmaster',
+    testsCount: 10,
+    price: '₹999',
+    examKey: 'uppsc',
+  },
+  {
+    id: 'dsssb-tgt',
+    name: 'DSSSB TGT (Trained Graduate Teacher)',
+    testsCount: 15,
+    price: '₹799',
+    examKey: 'tgt',
+  },
+  {
+    id: 'dsssb-pgt',
+    name: 'DSSSB PGT (Post Graduate Teacher)',
+    testsCount: 14,
+    price: '₹799',
+    examKey: 'pgt',
+  },
+];
 
 export default function ProfileScreen() {
-  const { isDark, colors, toggleTheme } = useTheme();
-  const { width } = useWindowDimensions();
-  const isLargeScreen = width >= 1024;
-  
-  const { user, isSubscribed: authSubscribed, isSubscriptionLoading } = useAuth();
-  const [userName, setUserName] = useState(user?.displayName || (user?.email ? user.email.split('@')[0] : ''));
-  const [userEmail, setUserEmail] = useState(user?.email || user?.phoneNumber || '');
-  const [userPhoto, setUserPhoto] = useState<string | null>(user?.photoURL || null);
-  const [localSubscribed, setLocalSubscribed] = useState<boolean | null>(null);
-  const isSubscribed = localSubscribed !== null ? localSubscribed : authSubscribed;
-  const [notificationsEnabled, setNotificationsEnabled] = useState(true);
-  const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
-  const [userStats, setUserStats] = useState<UserStats | null>(null);
+  const router = useRouter();
+  const { user, isSubscribed } = useAuth();
+  const { colors, isDark } = useTheme();
+
   const [loading, setLoading] = useState(true);
+  const [profile, setProfile] = useState<UserProfile | null>(null);
+  const [language, setLanguage] = useState<'English' | 'Hindi'>('English');
+
+  // Bookmarks
+  const [bookmarks, setBookmarks] = useState<BookmarkItem[]>([]);
+  const [loadingBookmarks, setLoadingBookmarks] = useState(false);
+  const [expandedBookmarkId, setExpandedBookmarkId] = useState<string | null>(null);
+  const [bookmarkFilter, setBookmarkFilter] = useState<string>('all');
 
   useEffect(() => {
-    if (!user) {
+    if (user) {
+      loadProfile();
+      loadBookmarks();
+    } else {
       setLoading(false);
-      return;
     }
-    loadUserData();
   }, [user]);
 
-  const loadUserData = async () => {
-    if (!user) return;
-
-    setLoading(true);
+  const loadProfile = async () => {
     try {
-      const profile = await UserService.getUserProfile();
-      const stats = await UserService.getUserStatistics();
-
-      const effectiveName = profile?.displayName || user?.displayName || (user?.email ? user.email.split('@')[0] : 'User');
-      const effectiveEmail = profile?.email || user?.email || user?.phoneNumber || '';
-      const effectivePhoto = profile?.photoURL || user?.photoURL || null;
-
-      if (profile) {
-        setUserProfile(profile);
-        setNotificationsEnabled(profile.notificationsEnabled ?? true);
+      setLoading(true);
+      const data = await UserService.getUserProfile();
+      if (data) {
+        setProfile(data);
+        if (data.languagePreference) setLanguage(data.languagePreference);
       }
-
-      setUserName(effectiveName);
-      setUserEmail(effectiveEmail);
-      setUserPhoto(effectivePhoto);
-      setLocalSubscribed(profile?.isSubscribed === true);
-
-      setUserStats(stats);
-    } catch (error) {
-      console.error('Error loading user data:', error);
+    } catch (e) {
+      console.warn('Error loading profile:', e);
     } finally {
       setLoading(false);
     }
   };
 
-  const handleToggleNotifications = async (value: boolean) => {
-    setNotificationsEnabled(value);
-    if (userProfile) {
+  const loadBookmarks = async () => {
+    if (!user) return;
+    try {
+      setLoadingBookmarks(true);
+      const bookmarksRef = collection(db, `users/${user.uid}/bookmarks`);
+      const snapshot = await getDocs(bookmarksRef);
+      const list: BookmarkItem[] = [];
+      snapshot.forEach((d) => {
+        list.push({ id: d.id, ...(d.data() as any) });
+      });
+      list.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+      setBookmarks(list);
+    } catch (e) {
+      console.warn('Error loading bookmarks:', e);
+    } finally {
+      setLoadingBookmarks(false);
+    }
+  };
+
+  const handleDeleteBookmark = async (bId: string) => {
+    if (!user) return;
+    try {
+      await deleteDoc(doc(db, `users/${user.uid}/bookmarks`, bId));
+      setBookmarks((prev) => prev.filter((b) => b.id !== bId));
+    } catch (e) {
+      console.error('Failed to delete bookmark:', e);
+    }
+  };
+
+  const handleToggleLanguage = async (nextLang: 'English' | 'Hindi') => {
+    setLanguage(nextLang);
+    if (user) {
       try {
-        await UserService.updateUserProfile({ notificationsEnabled: value });
-      } catch (error) {
-        Alert.alert('Error', 'Could not save notification preferences.');
-        setNotificationsEnabled(!value); // revert on fail
+        await UserService.updateUserProfile({ languagePreference: nextLang });
+      } catch (e) {
+        console.warn('Failed to save language pref', e);
       }
     }
   };
 
-  const doSignOut = async () => {
-    try {
-      await signOut(auth);
-      router.replace('/login');
-    } catch (e: any) {
-      const msg = 'Failed to logout: ' + (e?.message || 'Unknown error');
-      if (Platform.OS === 'web') {
-        window.alert(msg);
-      } else {
-        Alert.alert('Error', msg);
+  const handleLogout = async () => {
+    const doLogout = async () => {
+      try {
+        await signOut(auth);
+        router.replace('/');
+      } catch (e: any) {
+        Alert.alert('Logout Error', e?.message || 'Could not log out');
       }
-    }
-  };
+    };
 
-  const handleLogout = () => {
     if (Platform.OS === 'web') {
-      if (window.confirm('Are you sure you want to logout?')) {
-        doSignOut();
+      if (window.confirm('Are you sure you want to log out?')) {
+        await doLogout();
       }
-      return;
-    }
-
-    Alert.alert(
-      'Logout',
-      'Are you sure you want to logout?',
-      [
+    } else {
+      Alert.alert('Log out', 'Are you sure you want to log out of Astra Exam AI?', [
         { text: 'Cancel', style: 'cancel' },
-        {
-          text: 'Logout',
-          style: 'destructive',
-          onPress: doSignOut
-        }
-      ]
-    );
-  };
-
-  const doDeleteAccount = async () => {
-    try {
-      if (auth.currentUser) {
-        await deleteUser(auth.currentUser);
-        router.replace('/login');
-      }
-    } catch (error: any) {
-      if (error.code === 'auth/requires-recent-login') {
-        const msg = 'Please log out and log back in before deleting your account for security reasons.';
-        if (Platform.OS === 'web') {
-          window.alert(msg);
-        } else {
-          Alert.alert('Authentication Required', msg);
-        }
-      } else {
-        const msg = 'Failed to delete account: ' + (error?.message || 'Unknown error');
-        if (Platform.OS === 'web') {
-          window.alert(msg);
-        } else {
-          Alert.alert('Error', msg);
-        }
-      }
+        { text: 'Log out', style: 'destructive', onPress: doLogout },
+      ]);
     }
   };
 
   const handleDeleteAccount = () => {
-    const confirmMsg = 'This action is permanent and will delete all your test history, stats, and saved bookmarks. Are you absolutely sure?';
+    const doDelete = async () => {
+      try {
+        if (auth.currentUser) {
+          await deleteUser(auth.currentUser);
+          router.replace('/');
+        }
+      } catch (e: any) {
+        if (e.code === 'auth/requires-recent-login') {
+          Alert.alert(
+            'Re-authentication required',
+            'Please log out and log back in before deleting your account.'
+          );
+        } else {
+          Alert.alert('Error', e.message || 'Failed to delete account');
+        }
+      }
+    };
+
+    const confirmMsg =
+      'This will permanently delete your test history, analytics, and bookmarks. This cannot be undone.';
     if (Platform.OS === 'web') {
       if (window.confirm(confirmMsg)) {
-        doDeleteAccount();
+        doDelete();
       }
-      return;
-    }
-
-    Alert.alert(
-      'Delete Account',
-      confirmMsg,
-      [
+    } else {
+      Alert.alert('Delete Account', confirmMsg, [
         { text: 'Cancel', style: 'cancel' },
-        {
-          text: 'Delete Permanently',
-          style: 'destructive',
-          onPress: doDeleteAccount
-        }
-      ]
-    );
-  };
-
-  const openLink = async (url: string) => {
-    await WebBrowser.openBrowserAsync(url);
-  };
-
-  const getInitials = (name: string) => {
-    if (!name) return 'U';
-    return name.split(' ').map((n) => n[0]).join('').toUpperCase().slice(0, 2);
-  };
-
-  if (!user) {
-    const guestView = (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 24, minHeight: 480, backgroundColor: colors.background }}>
-        <View style={{
-          width: 96,
-          height: 96,
-          borderRadius: 24,
-          backgroundColor: isDark ? 'rgba(139, 92, 246, 0.16)' : '#0A0915',
-          borderWidth: 1.5,
-          borderColor: 'rgba(168, 85, 247, 0.4)',
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginBottom: 20,
-          shadowColor: '#8B5CF6',
-          shadowOffset: { width: 0, height: 6 },
-          shadowOpacity: 0.25,
-          shadowRadius: 12,
-          elevation: 6,
-        }}>
-          <Image
-            source={require('@/assets/images/logo.png')}
-            style={{ width: 80, height: 80 }}
-            resizeMode="contain"
-          />
-        </View>
-        <Text style={{ fontSize: 24, fontWeight: '800', color: colors.textPrimary, marginBottom: 8, textAlign: 'center' }}>
-          Guest Explorer
-        </Text>
-        <Text style={{ fontSize: 14, color: colors.textSecondary, textAlign: 'center', maxWidth: 360, lineHeight: 22, marginBottom: 28 }}>
-          Sign in or create a free Astra Exam AI account to track your test history, view rank analytics, and manage your subscription.
-        </Text>
-        <View style={{ width: '100%', maxWidth: 320, gap: 12 }}>
-          <TouchableOpacity
-            style={{ backgroundColor: colors.accent, paddingVertical: 14, borderRadius: 14, alignItems: 'center', shadowColor: colors.accent, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.2, shadowRadius: 8, elevation: 3 }}
-            onPress={() => router.push('/(auth)/signup')}
-          >
-            <Text style={{ color: '#FFFFFF', fontWeight: '700', fontSize: 15 }}>Create Free Account</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={{ backgroundColor: isDark ? colors.surfaceHighlight : '#EFF6FF', paddingVertical: 12, borderRadius: 14, alignItems: 'center', borderWidth: 1, borderColor: colors.border }}
-            onPress={() => router.push('/(auth)/login')}
-          >
-            <Text style={{ color: colors.accent, fontWeight: '600', fontSize: 14 }}>Sign In</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-    );
-
-    if (isLargeScreen) {
-      return (
-        <DesktopDashboard>
-          {guestView}
-        </DesktopDashboard>
-      );
+        { text: 'Delete', style: 'destructive', onPress: doDelete },
+      ]);
     }
+  };
 
-    return (
-      <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]} edges={['top']}>
-        {guestView}
-      </SafeAreaView>
-    );
-  }
+  const displayName =
+    profile?.displayName || user?.displayName || (user?.email ? user.email.split('@')[0] : 'User');
+  const displayEmail = profile?.email || user?.email || 'Guest Visitor';
+  const purchasedSeriesList = profile?.purchasedSeries || [];
 
-  const isPageLoading = loading || isSubscriptionLoading;
-
-  if (isPageLoading) {
-    const loadingView = (
-      <View style={[styles.loadingContainer, { backgroundColor: colors.background }]}>
-        <ActivityIndicator size="large" color={colors.accent || '#4A90E2'} />
-        <Text style={[styles.loadingText, { color: colors.textSecondary }]}>Loading profile & verifying account...</Text>
-      </View>
-    );
-
-    if (isLargeScreen) {
-      return (
-        <DesktopDashboard>
-          {loadingView}
-        </DesktopDashboard>
-      );
-    }
-
-    return (
-      <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]} edges={['top']}>
-        {loadingView}
-      </SafeAreaView>
-    );
-  }
-
-  const content = (
-    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]} edges={['top']}>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={styles.contentWrapper}>
-        {/* Profile Header */}
-        <LinearGradient
-          colors={isDark ? ['#172554', '#1E3A8A', '#1E293B'] : ['#4A90E2', '#357ABD', '#2B6CB0']}
-          style={styles.headerGradient}
-        >
-          <View style={styles.headerContent}>
-            <View style={styles.avatarLarge}>
-              {userPhoto ? (
-                <Image
-                  source={{ uri: userPhoto }}
-                  style={styles.avatarLargeImage}
-                  resizeMode="cover"
-                />
-              ) : (
-                <Text style={styles.avatarText}>{getInitials(userName || userEmail)}</Text>
-              )}
-            </View>
-            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 4 }}>
-              <Text style={styles.profileName}>{userName || 'User'}</Text>
-              {isSubscribed && (
-                <Crown size={20} color="#FBBF24" fill="#FBBF24" />
-              )}
-            </View>
-            {isSubscribed && (
-              <View style={styles.premiumPill}>
-                <Crown size={12} color="#FBBF24" fill="#FBBF24" />
-                <Text style={styles.premiumPillText}>PREMIUM MEMBER</Text>
+  return (
+    <AppShell title="Profile & Account">
+      <ScrollView
+        style={[styles.container, { backgroundColor: colors.background }]}
+        contentContainerStyle={styles.content}
+        showsVerticalScrollIndicator={false}
+      >
+        {/* Section 1: Account Header / Guest Prompt */}
+        {!user ? (
+          <Card style={styles.guestCard}>
+            <View style={styles.guestHeader}>
+              <View style={[styles.avatarBox, { backgroundColor: colors.surface2, borderColor: colors.line }]}>
+                <UserIcon size={24} color={colors.muted} />
               </View>
-            )}
-            {userEmail ? <Text style={styles.profileEmail}>{userEmail}</Text> : null}
-          </View>
-        </LinearGradient>
+              <View style={styles.guestTextCol}>
+                <Text style={[styles.cardHeading, { color: colors.text }]}>Browsing as Guest</Text>
+                <Text style={[styles.cardSubtext, { color: colors.muted }]}>
+                  Log in or create an account to save test scores, track weak topics, and sync bookmarks.
+                </Text>
+              </View>
+            </View>
 
-        {/* Stats Cards */}
-        <View style={styles.statsRow}>
-          <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
-            <View style={[styles.statIconCircle, { backgroundColor: isDark ? '#1E3A5F' : '#EBF5FF' }]}>
-              <TrendingUp size={20} color="#4A90E2" />
+            <View style={styles.guestActionRow}>
+              <Button
+                label="Log in"
+                variant="primary"
+                onPress={() => router.push('/login')}
+                style={{ flex: 1 }}
+              />
+              <Button
+                label="Create account"
+                variant="secondary"
+                onPress={() => router.push('/signup')}
+                style={{ flex: 1 }}
+              />
             </View>
-            <Text style={[styles.statValue, { color: colors.textPrimary }]}>{userStats?.streak || 0}</Text>
-            <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Day Streak</Text>
-          </View>
-          <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
-            <View style={[styles.statIconCircle, { backgroundColor: isDark ? '#064E3B' : '#F0FFF4' }]}>
-              <Target size={20} color="#48BB78" />
+          </Card>
+        ) : (
+          <Card>
+            <View style={styles.profileRow}>
+              <View style={[styles.avatarBox, { backgroundColor: colors.surface2, borderColor: colors.line }]}>
+                <Text style={[styles.avatarInitials, { color: colors.text }]}>
+                  {displayName.slice(0, 2).toUpperCase()}
+                </Text>
+              </View>
+              <View style={styles.profileDetails}>
+                <View style={styles.nameRow}>
+                  <Text style={[styles.profileName, { color: colors.text }]}>{displayName}</Text>
+                  {isSubscribed && <Pill label="Active Pass" variant="success" />}
+                </View>
+                <Text style={[styles.profileEmail, { color: colors.muted }]}>{displayEmail}</Text>
+              </View>
             </View>
-            <Text style={[styles.statValue, { color: colors.textPrimary }]}>{userStats?.accuracy?.toFixed(0) || 0}%</Text>
-            <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Accuracy</Text>
-          </View>
-          <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
-            <View style={[styles.statIconCircle, { backgroundColor: isDark ? '#450A0A' : '#FFF5F5' }]}>
-              <Award size={20} color="#F56565" />
+
+            {/* Target Exam & Language Preferences */}
+            <View style={[styles.divider, { backgroundColor: colors.line }]} />
+
+            <View style={styles.prefGrid}>
+              <View style={styles.prefItem}>
+                <Text style={[styles.prefLabel, { color: colors.muted }]}>Target Exam</Text>
+                <View style={{ marginTop: 6 }}>
+                  <ExamSwitcher />
+                </View>
+              </View>
+
+              <View style={styles.prefItem}>
+                <Text style={[styles.prefLabel, { color: colors.muted }]}>Question Language</Text>
+                <View style={styles.langToggleRow}>
+                  <Chip
+                    label="English"
+                    selected={language === 'English'}
+                    onPress={() => handleToggleLanguage('English')}
+                  />
+                  <Chip
+                    label="हिन्दी"
+                    selected={language === 'Hindi'}
+                    onPress={() => handleToggleLanguage('Hindi')}
+                  />
+                </View>
+              </View>
             </View>
-            <Text style={[styles.statValue, { color: colors.textPrimary }]}>{userStats?.totalTests || 0}</Text>
-            <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Tests</Text>
-          </View>
-          <View style={[styles.statCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
-            <View style={[styles.statIconCircle, { backgroundColor: isDark ? '#422006' : '#FFFFF0' }]}>
-              <BookOpen size={20} color="#ECC94B" />
-            </View>
-            <Text style={[styles.statValue, { color: colors.textPrimary }]}>{userStats?.questionsAttempted || 0}</Text>
-            <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Questions</Text>
-          </View>
+          </Card>
+        )}
+
+        {/* Section 2: My Test Series & Passes */}
+        <View style={styles.sectionHeader}>
+          <Text style={[styles.sectionTitle, { color: colors.text }]}>My Test Series</Text>
+          <Text style={[styles.sectionSubtitle, { color: colors.muted }]}>
+            Series access & mock test entitlements
+          </Text>
         </View>
 
-        {/* Weekly Streak / Activity Goal */}
-        <View style={[styles.sectionCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
-          <View style={styles.sectionHeader}>
-            <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>This Week's Goal</Text>
-            <Text style={[styles.streakStatus, isDark && { color: '#FB923C' }]}>
-              {userStats?.streak && userStats.streak > 0
-                ? `${userStats.streak} Day Streak! 🔥`
-                : 'Start your streak today'}
-            </Text>
-          </View>
-          <View style={styles.calendarStrip}>
-            {WEEK_DAYS.map((day, i) => {
-              const currentDayIndex = new Date().getDay();
-              const streak = userStats?.streak || 0;
-              const isFilled = i <= currentDayIndex && i > currentDayIndex - streak;
-
+        <Card>
+          <View style={styles.seriesList}>
+            {ALL_SERIES.map((s, index) => {
+              const isOwned = isSubscribed || purchasedSeriesList.includes(s.id);
               return (
-                <View key={i} style={styles.calendarDay}>
-                  <Text style={[styles.dayLabel, { color: colors.textTertiary }, i === currentDayIndex && styles.dayLabelToday]}>{day}</Text>
-                  <View style={[
-                    styles.dayCircle,
-                    { backgroundColor: isDark ? colors.surfaceHighlight : '#F7FAFC', borderColor: colors.border },
-                    isFilled && styles.dayCircleFilled,
-                    i === currentDayIndex && !isFilled && [styles.dayCircleToday, { borderColor: colors.accent }]
-                  ]}>
-                    {isFilled && <Text style={styles.checkText}>✓</Text>}
+                <View
+                  key={s.id}
+                  style={[
+                    styles.seriesRow,
+                    index < ALL_SERIES.length - 1 && {
+                      borderBottomWidth: 1,
+                      borderBottomColor: colors.line,
+                    },
+                  ]}
+                >
+                  <View style={styles.seriesLeft}>
+                    <View style={styles.seriesTitleRow}>
+                      <Text style={[styles.seriesName, { color: colors.text }]}>{s.name}</Text>
+                      {isOwned ? (
+                        <Pill label="Unlocked" variant="success" />
+                      ) : (
+                        <Pill label="Locked" variant="neutral" />
+                      )}
+                    </View>
+                    <Text style={[styles.seriesMeta, { color: colors.muted }]}>
+                      {s.testsCount} Full Mock Tests • Bilingual Hindi & English
+                    </Text>
+                  </View>
+
+                  <View style={styles.seriesRight}>
+                    {isOwned ? (
+                      <Button
+                        label="Open Series"
+                        variant="secondary"
+                        size="small"
+                        onPress={() => router.push(`/test-list?examId=${s.id}` as any)}
+                      />
+                    ) : (
+                      <Button
+                        label={`Unlock ${s.price}`}
+                        variant="primary"
+                        size="small"
+                        onPress={() => router.push(`/test-list?examId=${s.id}` as any)}
+                      />
+                    )}
                   </View>
                 </View>
               );
             })}
           </View>
+        </Card>
+
+        {/* Section 3: Bookmarks Viewer */}
+        <View style={styles.sectionHeader}>
+          <View style={styles.bookmarkTitleRow}>
+            <Text style={[styles.sectionTitle, { color: colors.text }]}>Saved Bookmarks</Text>
+            {bookmarks.length > 0 && <Pill label={`${bookmarks.length}`} variant="neutral" />}
+          </View>
+          <Text style={[styles.sectionSubtitle, { color: colors.muted }]}>
+            Questions you flagged during mock tests and practice
+          </Text>
         </View>
 
-        {/* Exam Preferences & Context */}
-        {userProfile && (
-          <View style={[styles.sectionCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
-            <View style={styles.sectionHeader}>
-              <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Preparation Profile</Text>
-              <TouchableOpacity onPress={() => router.push('/profile-setup')}>
-                <Text style={[styles.editText, { color: colors.accent }]}>Edit</Text>
-              </TouchableOpacity>
-            </View>
-
-            <View style={[styles.infoRow, { borderBottomColor: isDark ? colors.border : '#F7FAFC' }]}>
-              <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>Target Cadre</Text>
-              <View style={[styles.badge, { backgroundColor: isDark ? '#1E3A5F' : '#EBF5FF' }]}>
-                <Text style={[styles.badgeText, { color: isDark ? '#93C5FD' : '#4A90E2' }]}>{userProfile.targetCadre || 'UPSC'}</Text>
-              </View>
-            </View>
-
-            <View style={[styles.infoRow, { borderBottomColor: isDark ? colors.border : '#F7FAFC' }]}>
-              <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>Target Exam</Text>
-              <View style={{ flex: 1, alignItems: 'flex-end' }}>
-                <ExamSelector compact={true} />
-              </View>
-            </View>
-
-            <View style={[styles.infoRow, { borderBottomColor: isDark ? colors.border : '#F7FAFC' }]}>
-              <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>Current Designation</Text>
-              <Text style={[styles.infoValue, { color: colors.textPrimary }]}>{userProfile.currentDesignation || 'Teacher'}</Text>
-            </View>
-
-            <View style={[styles.infoRow, { borderBottomColor: isDark ? colors.border : '#F7FAFC' }]}>
-              <Text style={[styles.infoLabel, { color: colors.textSecondary }]}>Language</Text>
-              <Text style={[styles.infoValue, { color: colors.textPrimary }]}>{userProfile.languagePreference || 'English'}</Text>
-            </View>
-
-            {/* Weakest Subject Breakdown */}
-            <View style={[styles.weakAreaContainer, { backgroundColor: isDark ? 'rgba(239, 68, 68, 0.12)' : '#FFF5F5', borderColor: isDark ? 'rgba(239, 68, 68, 0.25)' : '#FED7D7' }]}>
-              <Text style={[styles.weakAreaTitle, { color: isDark ? '#FCA5A5' : '#C53030' }]}>Focus Area (Weakest Subject)</Text>
-              <View style={[styles.weakAreaCard, { backgroundColor: isDark ? colors.surfaceHighlight : '#fff', borderColor: isDark ? 'rgba(239, 68, 68, 0.25)' : '#FED7D7' }]}>
-                <Target size={16} color="#F56565" style={{ marginRight: 8 }} />
-                <Text style={[styles.weakAreaText, { color: colors.textPrimary }]}>{userProfile.weakestSubject || 'General Knowledge'}</Text>
-              </View>
-              <Text style={[styles.helperText, { color: isDark ? '#F87171' : '#E53E3E' }]}>We prioritize this subject in diagnostic tests and generated quizzes.</Text>
-            </View>
+        {!user ? (
+          <EmptyState
+            title="Sign in to view bookmarks"
+            description="Bookmarks are synchronized across your devices once you log in."
+            actionLabel="Log in"
+            onAction={() => router.push('/login')}
+          />
+        ) : loadingBookmarks ? (
+          <View style={styles.loadingBox}>
+            <ActivityIndicator size="small" color={colors.text} />
           </View>
+        ) : bookmarks.length === 0 ? (
+          <EmptyState
+            title="No bookmarks yet"
+            description="Tap the bookmark flag on any question during a test to save it here for revision."
+          />
+        ) : (
+          <Card>
+            <View style={styles.bookmarkList}>
+              {bookmarks.map((b, idx) => {
+                const isExpanded = expandedBookmarkId === b.id;
+                return (
+                  <View
+                    key={b.id}
+                    style={[
+                      styles.bookmarkItem,
+                      idx < bookmarks.length - 1 && {
+                        borderBottomWidth: 1,
+                        borderBottomColor: colors.line,
+                      },
+                    ]}
+                  >
+                    <TouchableOpacity
+                      style={styles.bookmarkItemHeader}
+                      onPress={() => setExpandedBookmarkId(isExpanded ? null : b.id)}
+                      activeOpacity={0.7}
+                    >
+                      <View style={{ flex: 1, gap: 4 }}>
+                        <View style={styles.bookmarkMetaRow}>
+                          {b.testTitle && (
+                            <Text style={[styles.bookmarkTestTag, { color: colors.muted }]}>
+                              {b.testTitle}
+                            </Text>
+                          )}
+                          <Text style={[styles.bookmarkDate, { color: colors.muted }]}>
+                            {new Date(b.createdAt).toLocaleDateString()}
+                          </Text>
+                        </View>
+                        <Text
+                          style={[styles.bookmarkQuestionText, { color: colors.text }]}
+                          numberOfLines={isExpanded ? undefined : 2}
+                        >
+                          {b.questionText}
+                        </Text>
+                      </View>
+                      <View style={styles.bookmarkActions}>
+                        {isExpanded ? (
+                          <ChevronUp size={20} color={colors.muted} />
+                        ) : (
+                          <ChevronDown size={20} color={colors.muted} />
+                        )}
+                      </View>
+                    </TouchableOpacity>
+
+                    {/* Expanded details */}
+                    {isExpanded && (
+                      <View style={[styles.bookmarkDetails, { backgroundColor: colors.surface2 }]}>
+                        {b.notes ? (
+                          <View style={styles.explanationBox}>
+                            <Text style={[styles.explanationLabel, { color: colors.text }]}>
+                              Explanation & Notes:
+                            </Text>
+                            <Text style={[styles.explanationText, { color: colors.muted }]}>
+                              {b.notes}
+                            </Text>
+                          </View>
+                        ) : (
+                          <Text style={[styles.explanationText, { color: colors.muted }]}>
+                            No detailed explanation attached to this bookmark.
+                          </Text>
+                        )}
+                        <View style={styles.bookmarkFooterRow}>
+                          <Button
+                            label="Remove Bookmark"
+                            variant="danger"
+                            size="small"
+                            onPress={() => handleDeleteBookmark(b.id)}
+                          />
+                        </View>
+                      </View>
+                    )}
+                  </View>
+                );
+              })}
+            </View>
+          </Card>
         )}
 
-        {/* Quick Links */}
-        <View style={[styles.sectionCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
-          <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Quick Links</Text>
-
-          <TouchableOpacity style={[styles.menuItem, { borderBottomColor: isDark ? colors.border : '#F7FAFC' }]} onPress={() => router.push('/test-history')}>
-            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#1E3A5F' : '#EBF5FF' }]}>
-              <History size={20} color="#4A90E2" />
-            </View>
-            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Test History</Text>
-            <ChevronRight size={20} color={colors.textTertiary} />
-          </TouchableOpacity>
-
-          <TouchableOpacity style={[styles.menuItem, { borderBottomColor: isDark ? colors.border : '#F7FAFC' }]} onPress={() => router.push('/bookmarks')}>
-            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#422006' : '#FFFFF0' }]}>
-              <BookOpen size={20} color="#ECC94B" />
-            </View>
-            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Bookmarks</Text>
-            <ChevronRight size={20} color={colors.textTertiary} />
-          </TouchableOpacity>
+        {/* Section 4: Appearance & Settings */}
+        <View style={styles.sectionHeader}>
+          <Text style={[styles.sectionTitle, { color: colors.text }]}>Appearance & Theme</Text>
+          <Text style={[styles.sectionSubtitle, { color: colors.muted }]}>
+            Chalkboard high-contrast study palette
+          </Text>
         </View>
 
-        {/* Settings */}
-        <View style={[styles.sectionCard, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
-          <Text style={[styles.sectionTitle, { color: colors.textPrimary }]}>Settings</Text>
-
-          <View style={styles.menuItem}>
-            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF' }]}>
-              {isDark ? <Moon size={20} color="#60A5FA" /> : <Sun size={20} color="#F59E0B" />}
+        <Card>
+          <View style={styles.appearanceRow}>
+            <View style={{ flex: 1 }}>
+              <Text style={[styles.appearanceTitle, { color: colors.text }]}>Color Theme</Text>
+              <Text style={[styles.appearanceSub, { color: colors.muted }]}>
+                {isDark ? 'Dark chalkboard (easy on eyes for night study)' : 'Clean paper light theme'}
+              </Text>
             </View>
-            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Dark Mode</Text>
-            <Switch
-              value={isDark}
-              onValueChange={toggleTheme}
-              trackColor={{ false: '#E2E8F0', true: '#3B82F6' }}
-              thumbColor="#FFFFFF"
-            />
+            <ThemeToggle />
           </View>
+        </Card>
 
-          <View style={styles.menuItem}>
-            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#422006' : '#FFF5EB' }]}>
-              <Bell size={20} color="#ED8936" />
-            </View>
-            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Practice Reminders</Text>
-            <Switch
-              value={notificationsEnabled}
-              onValueChange={handleToggleNotifications}
-              trackColor={{ false: '#E2E8F0', true: '#4A90E2' }}
-              thumbColor="#FFFFFF"
+        {/* Section 5: Account Actions */}
+        {user && (
+          <View style={styles.accountActionsSection}>
+            <Button
+              label="Log out"
+              variant="secondary"
+              onPress={handleLogout}
+              style={{ width: '100%' }}
             />
+            <TouchableOpacity
+              onPress={handleDeleteAccount}
+              style={styles.deleteBtn}
+              accessibilityLabel="Delete Account"
+            >
+              <Text style={[styles.deleteBtnText, { color: colors.danger }]}>
+                Delete account and all test history
+              </Text>
+            </TouchableOpacity>
           </View>
-
-          <TouchableOpacity style={styles.menuItem} onPress={() => openLink('https://hackclub.com/privacy/')}>
-            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#273549' : '#F7FAFC' }]}>
-              <Shield size={20} color={colors.textSecondary} />
-            </View>
-            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Privacy Policy</Text>
-            <ChevronRight size={20} color={colors.textTertiary} />
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.menuItem} onPress={() => openLink('https://hackclub.com/terms/')}>
-            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#273549' : '#F7FAFC' }]}>
-              <FileText size={20} color={colors.textSecondary} />
-            </View>
-            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Terms of Service</Text>
-            <ChevronRight size={20} color={colors.textTertiary} />
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.menuItem} onPress={() => openLink('mailto:support@exam-ai.com')}>
-            <View style={[styles.menuIconCircle, { backgroundColor: isDark ? '#1E3A5F' : '#EBF8FF' }]}>
-              <HelpCircle size={20} color="#4299E1" />
-            </View>
-            <Text style={[styles.menuLabel, { color: colors.textPrimary }]}>Help & Support</Text>
-            <ChevronRight size={20} color={colors.textTertiary} />
-          </TouchableOpacity>
-        </View>
-
-        {/* Danger Zone */}
-        <View style={styles.dangerZone}>
-          <TouchableOpacity style={[styles.logoutButton, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]} onPress={handleLogout}>
-            <LogOut size={20} color="#F56565" />
-            <Text style={styles.logoutText}>Log Out</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={[styles.deleteButton, { borderColor: isDark ? '#7F1D1D' : '#FED7D7' }]} onPress={handleDeleteAccount}>
-            <Trash2 size={20} color="#E53E3E" />
-            <Text style={styles.deleteText}>Delete Account</Text>
-          </TouchableOpacity>
-        </View>
-
-        <Text style={[styles.versionText, { color: colors.textTertiary }]}>Version 1.0.1</Text>
-        </View>
+        )}
       </ScrollView>
-    </SafeAreaView>
+    </AppShell>
   );
-
-  if (isLargeScreen) {
-    return <DesktopDashboard disableScroll>{content}</DesktopDashboard>;
-  }
-
-  return content;
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
   },
-  contentWrapper: {
+  content: {
+    padding: 16,
+    gap: 20,
+    maxWidth: 860,
     width: '100%',
-    paddingBottom: 40,
-  },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  loadingText: {
-    marginTop: 16,
-    fontSize: 16,
-    color: '#718096',
-  },
-  headerGradient: {
-    paddingTop: 32,
+    alignSelf: 'center',
     paddingBottom: 48,
-    alignItems: 'center',
-    borderBottomLeftRadius: 32,
-    borderBottomRightRadius: 32,
-    marginBottom: 8,
   },
-  headerContent: {
+  guestCard: {
+    gap: 16,
+  },
+  guestHeader: {
+    flexDirection: 'row',
+    gap: 14,
     alignItems: 'center',
   },
-  avatarLarge: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    backgroundColor: 'rgba(255,255,255,0.25)',
+  guestTextCol: {
+    flex: 1,
+    gap: 4,
+  },
+  cardHeading: {
+    fontFamily: Platform.select({
+      web: "'Newsreader', Georgia, serif",
+      default: 'serif',
+    }),
+    fontSize: 20,
+    fontWeight: '600',
+  },
+  cardSubtext: {
+    fontSize: 14,
+    lineHeight: 20,
+  },
+  guestActionRow: {
+    flexDirection: 'row',
+    gap: 12,
+  },
+  profileRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 14,
+  },
+  avatarBox: {
+    width: 52,
+    height: 52,
+    borderRadius: 26,
+    borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 12,
-    borderWidth: 3,
-    borderColor: 'rgba(255,255,255,0.5)',
-    overflow: 'hidden',
   },
-  avatarLargeImage: {
-    width: '100%',
-    height: '100%',
-    borderRadius: 40,
+  avatarInitials: {
+    fontFamily: Platform.select({
+      web: "'Newsreader', Georgia, serif",
+      default: 'serif',
+    }),
+    fontSize: 20,
+    fontWeight: '600',
   },
-  avatarText: {
-    fontSize: 28,
-    fontWeight: '800',
-    color: '#fff',
+  profileDetails: {
+    flex: 1,
+    gap: 4,
+  },
+  nameRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    flexWrap: 'wrap',
   },
   profileName: {
-    fontSize: 22,
-    fontWeight: '700',
-    color: '#fff',
-    marginBottom: 2,
+    fontFamily: Platform.select({
+      web: "'Newsreader', Georgia, serif",
+      default: 'serif',
+    }),
+    fontSize: 20,
+    fontWeight: '600',
   },
   profileEmail: {
     fontSize: 14,
-    color: 'rgba(255,255,255,0.8)',
-    marginBottom: 12,
   },
-  premiumPill: {
+  divider: {
+    height: 1,
+    marginVertical: 14,
+  },
+  prefGrid: {
     flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    backgroundColor: 'rgba(251, 191, 36, 0.22)',
-    paddingHorizontal: 12,
-    paddingVertical: 4,
-    borderRadius: 20,
-    marginTop: 2,
-    marginBottom: 6,
-    borderWidth: 1,
-    borderColor: 'rgba(251, 191, 36, 0.45)',
+    flexWrap: 'wrap',
+    gap: 16,
   },
-  premiumPillText: {
-    color: '#FEF3C7',
-    fontSize: 11,
-    fontWeight: '800',
-    letterSpacing: 0.6,
-  },
-  statsRow: {
-    flexDirection: 'row',
-    paddingHorizontal: 16,
-    gap: 10,
-    marginTop: -20,
-    marginBottom: 16,
-  },
-  statCard: {
+  prefItem: {
     flex: 1,
-    backgroundColor: '#fff',
-    borderRadius: 14,
-    padding: 12,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.06,
-    shadowRadius: 8,
-    elevation: 2,
+    minWidth: 200,
   },
-  statIconCircle: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 6,
+  prefLabel: {
+    fontSize: 13,
+    fontWeight: '500',
   },
-  statValue: {
-    fontSize: 18,
-    fontWeight: '800',
-    color: '#1A202C',
-  },
-  statLabel: {
-    fontSize: 10,
-    fontWeight: '600',
-    color: '#A0AEC0',
-    marginTop: 2,
-  },
-  sectionCard: {
-    backgroundColor: '#fff',
-    marginHorizontal: 16,
-    marginBottom: 16,
-    borderRadius: 16,
-    padding: 20,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.04,
-    shadowRadius: 8,
-    elevation: 1,
+  langToggleRow: {
+    flexDirection: 'row',
+    gap: 8,
+    marginTop: 8,
   },
   sectionHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 16,
+    marginTop: 6,
+    gap: 4,
   },
   sectionTitle: {
-    fontSize: 16,
-    fontWeight: '700',
-    color: '#1A202C',
+    fontFamily: Platform.select({
+      web: "'Newsreader', Georgia, serif",
+      default: 'serif',
+    }),
+    fontSize: 20,
+    fontWeight: '600',
   },
-  editText: {
+  sectionSubtitle: {
     fontSize: 14,
-    fontWeight: '600',
-    color: '#4A90E2',
   },
-  streakStatus: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#ED8936',
-  },
-  calendarStrip: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingTop: 8,
-  },
-  calendarDay: {
-    alignItems: 'center',
-    gap: 8,
-  },
-  dayLabel: {
-    fontSize: 12,
-    fontWeight: '600',
-    color: '#A0AEC0',
-  },
-  dayLabelToday: {
-    color: '#4A90E2',
-    fontWeight: '700',
-  },
-  dayCircle: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
-    backgroundColor: '#F7FAFC',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 1,
-    borderColor: '#E2E8F0',
-  },
-  dayCircleFilled: {
-    backgroundColor: '#48BB78',
-    borderColor: '#48BB78',
-  },
-  dayCircleToday: {
-    borderColor: '#4A90E2',
-    borderWidth: 2,
-    borderStyle: 'dashed',
-  },
-  checkText: {
-    color: '#fff',
-    fontSize: 14,
-    fontWeight: '800',
-  },
-  infoRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingVertical: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#F7FAFC',
-  },
-  infoLabel: {
-    fontSize: 14,
-    color: '#718096',
-    fontWeight: '500',
-  },
-  infoValue: {
-    fontSize: 15,
-    fontWeight: '600',
-    color: '#1A202C',
-  },
-  badge: {
-    backgroundColor: '#EBF5FF',
-    paddingHorizontal: 12,
-    paddingVertical: 4,
-    borderRadius: 12,
-  },
-  badgeText: {
-    fontSize: 13,
-    fontWeight: '600',
-    color: '#4A90E2',
-  },
-  weakAreaContainer: {
-    marginTop: 16,
-    backgroundColor: '#FFF5F5',
-    padding: 16,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: '#FED7D7',
-  },
-  weakAreaTitle: {
-    fontSize: 13,
-    fontWeight: '600',
-    color: '#C53030',
-    marginBottom: 8,
-  },
-  weakAreaCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    padding: 12,
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: '#FED7D7',
-  },
-  weakAreaText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#2D3748',
-  },
-  helperText: {
-    fontSize: 12,
-    color: '#E53E3E',
-    marginTop: 8,
-    opacity: 0.8,
-  },
-  menuItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 14,
-    borderBottomWidth: 1,
-    borderBottomColor: '#F7FAFC',
-  },
-  menuIconCircle: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: 14,
-  },
-  menuLabel: {
-    flex: 1,
-    fontSize: 15,
-    fontWeight: '500',
-    color: '#2D3748',
-  },
-  dangerZone: {
-    marginHorizontal: 16,
-    marginBottom: 16,
+  seriesList: {
     gap: 12,
   },
-  logoutButton: {
+  seriesRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 16,
-    backgroundColor: '#fff',
-    borderRadius: 14,
-    gap: 8,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.04,
-    shadowRadius: 8,
-    elevation: 1,
+    justifyContent: 'space-between',
+    paddingVertical: 12,
+    gap: 12,
+    flexWrap: 'wrap',
   },
-  logoutText: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#F56565',
+  seriesLeft: {
+    flex: 1,
+    minWidth: 220,
+    gap: 4,
   },
-  deleteButton: {
+  seriesTitleRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 16,
-    backgroundColor: 'transparent',
-    borderRadius: 14,
     gap: 8,
-    borderWidth: 1,
-    borderColor: '#FED7D7',
+    flexWrap: 'wrap',
   },
-  deleteText: {
+  seriesName: {
     fontSize: 15,
     fontWeight: '600',
-    color: '#E53E3E',
   },
-  versionText: {
-    textAlign: 'center',
+  seriesMeta: {
+    fontSize: 13,
+  },
+  seriesRight: {
+    alignItems: 'flex-end',
+  },
+  bookmarkTitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  loadingBox: {
+    padding: 24,
+    alignItems: 'center',
+  },
+  bookmarkList: {
+    gap: 8,
+  },
+  bookmarkItem: {
+    paddingVertical: 8,
+  },
+  bookmarkItemHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 6,
+    gap: 12,
+  },
+  bookmarkMetaRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  bookmarkTestTag: {
     fontSize: 12,
-    color: '#CBD5E0',
-    marginVertical: 16,
-    marginBottom: 32,
+    fontWeight: '500',
+  },
+  bookmarkDate: {
+    fontSize: 12,
+  },
+  bookmarkQuestionText: {
+    fontSize: 14.5,
+    lineHeight: 20,
+  },
+  bookmarkActions: {
+    padding: 4,
+  },
+  bookmarkDetails: {
+    padding: 12,
+    borderRadius: 8,
+    marginTop: 8,
+    gap: 10,
+  },
+  explanationBox: {
+    gap: 4,
+  },
+  explanationLabel: {
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  explanationText: {
+    fontSize: 14,
+    lineHeight: 20,
+  },
+  bookmarkFooterRow: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    marginTop: 4,
+  },
+  appearanceRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 4,
+  },
+  appearanceTitle: {
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  appearanceSub: {
+    fontSize: 13.5,
+    marginTop: 2,
+  },
+  accountActionsSection: {
+    marginTop: 8,
+    alignItems: 'center',
+    gap: 14,
+  },
+  deleteBtn: {
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+  },
+  deleteBtnText: {
+    fontSize: 14,
+    textDecorationLine: 'underline',
   },
 });

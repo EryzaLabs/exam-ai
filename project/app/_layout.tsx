@@ -109,13 +109,13 @@ function DynamicWebTitle() {
       }
       appleIcon.href = '/favicon.png';
 
-      // Load Newsreader font for chalkboard headings
+      // Load Newsreader & Noto Sans Devanagari fonts for chalkboard headings and bilingual Hindi rendering
       let fontLink = document.querySelector('link#newsreader-font') as HTMLLinkElement | null;
       if (!fontLink) {
         fontLink = document.createElement('link');
         fontLink.id = 'newsreader-font';
         fontLink.rel = 'stylesheet';
-        fontLink.href = 'https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap';
+        fontLink.href = 'https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500..600;1,6..72,500..600&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap';
         document.head.appendChild(fontLink);
       }
     } catch {

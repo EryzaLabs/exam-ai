@@ -5,2481 +5,976 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-  Dimensions,
-  Platform,
-  Alert,
-  Modal,
-  Share,
-  TextInput,
   ActivityIndicator,
+  Platform,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams, router } from 'expo-router';
-import { LinearGradient } from 'expo-linear-gradient';
 import {
-  Trophy,
-  TrendingUp,
-  TrendingDown,
+  RotateCcw,
+  ArrowLeft,
+  CheckCircle2,
+  XCircle,
+  HelpCircle,
+  Bookmark,
+  MessageSquare,
+  Award,
   Clock,
   Target,
-  CheckCircle,
-  XCircle,
-  AlertCircle,
-  Award,
-  BarChart3,
-  Lightbulb,
-  Home,
-  Share2,
-  BookOpen,
-  Flag,
-  RefreshCw,
-  X as CloseIcon,
-  ArrowLeft,
-  ChevronRight,
-  HelpCircle,
-  Filter,
+  Sparkles,
+  Zap,
 } from 'lucide-react-native';
-import RenderHtml from 'react-native-render-html';
 import SSCCGLService, {
   TestAnalytics,
-  SectionAnalytics,
   ParsedMockTest,
   ParsedQuestion,
-  UserAnswer,
 } from '@/services/ssc-cgl-service';
-import { TestProgressService } from '@/services/test-progress-service';
-import ReportService, { ReportType } from '@/services/report-service';
-import { useTheme } from '@/context/theme-context';
+import { TestProgressService, TestResult } from '@/services/test-progress-service';
+import { addBookmark } from '@/services/bookmark-service';
+import { useAuth } from '@/context/auth-context';
+import { useSub } from '@/context/subscription-context';
+import { useExam } from '@/context/exam-context';
+import { useChalkboardTheme } from '@/constants/chalkboard-theme';
+import { extractTestTopicAndSubject } from '@/utils/topic-resolver';
+import AppShell from '@/components/chalkboard/AppShell';
+import Card from '@/components/chalkboard/Card';
+import Button from '@/components/chalkboard/Button';
+import Pill from '@/components/chalkboard/Pill';
+import Chip from '@/components/chalkboard/Chip';
+import TopicBar from '@/components/chalkboard/TopicBar';
+import ProgressRing from '@/components/chalkboard/ProgressRing';
+import OfferCard from '@/components/chalkboard/OfferCard';
 
-function stripHtml(html: string): string {
-  if (!html) return '';
-  return html
-    .replace(/<[^>]+>/g, '')
+const cleanHtml = (text?: string): string => {
+  if (!text) return '';
+  return text
+    .replace(/<[^>]*>/g, '')
     .replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
     .trim();
-}
-
-const { width } = Dimensions.get('window');
+};
 
 export default function TestResultScreen() {
-  const { isDark, colors } = useTheme();
   const params = useLocalSearchParams();
   const attemptId = params.attemptId as string;
+  const testId = params.testId as string;
 
-  const [analytics, setAnalytics] = useState<TestAnalytics | null>(null);
-  const [test, setTest] = useState<ParsedMockTest | null>(null);
-  const [selectedTab, setSelectedTab] = useState<'overview' | 'sections' | 'solutions'>(
-    params.tab === 'solutions' ? 'solutions' : 'overview'
-  );
-  // Filter questions: defaults to 'incorrect' as requested by the user
-  const [questionFilter, setQuestionFilter] = useState<'incorrect' | 'correct' | 'all' | 'skipped'>('incorrect');
-  const [language, setLanguage] = useState<'english' | 'hindi'>('english');
-  const [showReportModal, setShowReportModal] = useState(false);
-  const [reportingQuestion, setReportingQuestion] = useState<ParsedQuestion | null>(null);
-  const [reportType, setReportType] = useState<ReportType>('wrong_answer');
-  const [reportDescription, setReportDescription] = useState('');
-  const [isReevaluating, setIsReevaluating] = useState(false);
+  const { colors, typography, radii } = useChalkboardTheme();
+  const { user } = useAuth();
+  const { isSubscribed } = useSub();
+  const { examMode } = useExam();
 
+  const [loading, setLoading] = useState(true);
+  const [result, setResult] = useState<TestResult | null>(null);
+  const [paper, setPaper] = useState<ParsedMockTest | null>(null);
+  const [activeReviewFilter, setActiveReviewFilter] = useState<
+    'all' | 'correct' | 'wrong' | 'unattempted' | 'bookmarked'
+  >('all');
+  const [bookmarkedSet, setBookmarkedSet] = useState<Set<string>>(new Set());
+
+  // Load analytics & paper
   useEffect(() => {
-    loadResults();
-  }, [attemptId]);
+    let isCancelled = false;
 
-  const loadResults = async () => {
-    try {
-        let result: TestAnalytics | null | undefined = null;
-        
-        // 1. Try Memory first (if just submitted)
-        const memoryAttempt = SSCCGLService.getAttempt(attemptId);
-        if (memoryAttempt) {
-            result = SSCCGLService.submitTest(attemptId);
-            if (result && !result.answers && memoryAttempt.answers) {
-                result.answers = memoryAttempt.answers;
-            }
+    const loadResultData = async () => {
+      try {
+        setLoading(true);
+
+        // 1. Fetch result
+        let res: TestResult | undefined;
+        if (attemptId) {
+          res = await TestProgressService.getTestResult(attemptId);
         }
-        
-        // 2. Try History (Persistent Storage)
-        const historyResult = await TestProgressService.getTestResult(attemptId);
-        if (!result) {
-            result = historyResult;
-        } else if (historyResult) {
-            // Merge in answers, questionStates, and question order from history if missing in memory result
-            if (!result.answers || (Array.isArray(result.answers) && result.answers.length === 0)) {
-                if (historyResult.answers && (Array.isArray(historyResult.answers) ? historyResult.answers.length > 0 : Object.keys(historyResult.answers).length > 0)) {
-                    result.answers = historyResult.answers;
-                } else if ((historyResult as any).questionStates) {
-                    (result as any).questionStates = (historyResult as any).questionStates;
-                } else if ((historyResult as any).userAnswers) {
-                    (result as any).userAnswers = (historyResult as any).userAnswers;
-                }
-            }
-            if ((!result.questionOrder || result.questionOrder.length === 0) && historyResult.questionOrder && historyResult.questionOrder.length > 0) {
-                result.questionOrder = historyResult.questionOrder;
-            }
-            if (!result.testTitle && historyResult.testTitle) {
-                result.testTitle = historyResult.testTitle;
-            }
-        }
-        
-        if (result) {
-            const targetTestId = result.testId || (params.testId as string);
 
-            // Fallback: If answers still missing, check if active test state remains in local storage
-            if ((!result.answers || (Array.isArray(result.answers) && result.answers.length === 0)) && !(result as any).questionStates && !(result as any).userAnswers && targetTestId) {
-                try {
-                    const activeProgress = await TestProgressService.getTestProgress(targetTestId);
-                    if (activeProgress) {
-                        if (activeProgress.answers && Object.keys(activeProgress.answers).length > 0) {
-                            (result as any).answers = activeProgress.answers;
-                        } else if (activeProgress.questionStates && Object.keys(activeProgress.questionStates).length > 0) {
-                            (result as any).questionStates = activeProgress.questionStates;
-                        }
-                    }
-                } catch (storageErr) {
-                    console.warn('Fallback checking active test failed:', storageErr);
-                }
-            }
-
-            setAnalytics(result);
-            
-            const targetFilename = (result as any).filename || (params.filename as string);
-            
-            // Ensure Paper is Loaded
-            let testData: ParsedMockTest | null = null;
-            if (targetTestId) {
-                testData = SSCCGLService.getPaper(targetTestId);
-            }
-            if (!testData && targetFilename) {
-                testData = SSCCGLService.getPaper(targetFilename);
-            }
-            
-            if (!testData) {
-                // 1. If filename is provided, fetch directly from /api/papers/:filename
-                if (targetFilename) {
-                    try {
-                        testData = await SSCCGLService.fetchPaper(targetFilename);
-                    } catch (e) {
-                        console.warn('Failed to fetch paper by filename:', e);
-                    }
-                }
-                
-                // 2. Try fetching by identifier (UUID testId) via /api/papers/find/:id
-                if (!testData && targetTestId) {
-                    try {
-                        testData = await SSCCGLService.fetchPaperById(targetTestId);
-                    } catch (e) {
-                        console.warn('Failed to fetch paper by id:', e);
-                    }
-                }
-                
-                // 3. Match against papers list
-                if (!testData) {
-                    try {
-                        const papers = await SSCCGLService.fetchPapersList();
-                        const paperInfo = papers.find((p: any) => 
-                            p.id === targetTestId || 
-                            p.testId === targetTestId || 
-                            p.filename === targetFilename ||
-                            p.filename === targetTestId ||
-                            (result!.testTitle && p.title && p.title.trim().toLowerCase() === result!.testTitle.trim().toLowerCase()) ||
-                            (params.testTitle && p.title && p.title.trim().toLowerCase() === (params.testTitle as string).trim().toLowerCase())
-                        );
-                        if (paperInfo && paperInfo.filename) {
-                            testData = await SSCCGLService.fetchPaper(paperInfo.filename);
-                        }
-                    } catch (e) {
-                        console.warn('Failed to fetch paper from list:', e);
-                    }
-                }
-            }
-
-            // Restore exact question order that user saw during the test
-            if (testData && result.questionOrder && result.questionOrder.length > 0) {
-              const questionMap = new Map<string, ParsedQuestion>();
-              testData.sections.forEach(s => s.questions.forEach(q => questionMap.set(q.id, q)));
-              
-              const sectionStartIndices: number[] = [];
-              let curIdx = 0;
-              testData.sections.forEach(sec => {
-                sectionStartIndices.push(curIdx);
-                curIdx += sec.questions.length;
-              });
-
-              testData = {
-                ...testData,
-                sections: testData.sections.map((section, sIdx) => {
-                  const start = sectionStartIndices[sIdx];
-                  const end = sIdx < testData!.sections.length - 1 
-                    ? sectionStartIndices[sIdx + 1] 
-                    : result!.questionOrder!.length;
-                  const secQuestionIds = result!.questionOrder!.slice(start, end);
-                  
-                  const orderedQuestions = secQuestionIds
-                    .map(qId => questionMap.get(qId)!)
-                    .filter(Boolean);
-
-                  return {
-                    ...section,
-                    questions: orderedQuestions.length > 0 ? orderedQuestions : section.questions
-                  };
-                })
-              };
-            }
-            
-            setTest(testData || null);
-        }
-    } catch (error) {
-        console.error("Error loading results:", error);
-    }
-  };
-
-  const answers = useMemo(() => {
-    const memoryAttempt = SSCCGLService.getAttempt(attemptId);
-    const a = analytics as any;
-    const ansList =
-      a?.answers ||
-      a?.questionStates ||
-      a?.userAnswers ||
-      a?.user_answers ||
-      a?.attempt?.answers ||
-      memoryAttempt?.answers;
-    if (ansList) return ansList;
-    return [];
-  }, [attemptId, analytics]);
-
-  const resolveUserAnswer = (q: ParsedQuestion, index: number, anyIdMatched: boolean) => {
-    if (!answers) return undefined;
-
-    // 1. If answers is an Array
-    if (Array.isArray(answers)) {
-      if (answers.length === 0) return undefined;
-
-      // 1a. If any question matched by ID across the paper, prioritize ID matching
-      if (anyIdMatched) {
-        const found = answers.find(
-          (a: any) =>
-            a &&
-            (a.questionId === q.id ||
-              a.question_id === q.id ||
-              a.id === q.id ||
-              (a.questionId && String(a.questionId).trim() === String(q.id).trim()) ||
-              (a.question_id && String(a.question_id).trim() === String(q.id).trim()) ||
-              (a.id && String(a.id).trim() === String(q.id).trim()))
-        );
-        if (found) return found;
-      }
-
-      // 1b. If ID matching didn't find anything or ID didn't match, match by index
-      if (!anyIdMatched || typeof answers[index] === 'number') {
-        if (typeof answers[index] === 'number') {
-          return {
-            questionId: q.id,
-            selectedOption: answers[index],
-            isCorrect: answers[index] === q.correctAnswerIndex,
-          };
-        }
-        if (answers[index] && typeof answers[index] === 'object') {
-          const item = answers[index];
-          const opt = item.selectedOption ?? item.selected_option ?? item.userAnswer;
-          if (opt !== undefined && opt !== null) {
-            return {
-              questionId: q.id,
-              ...item,
-              selectedOption: opt,
-              isCorrect: item.isCorrect ?? (opt === q.correctAnswerIndex),
-            };
+        if (!res && attemptId) {
+          const memoryAnalytics = SSCCGLService.getAnalytics(attemptId);
+          if (memoryAnalytics) {
+            res = {
+              ...memoryAnalytics,
+              date: new Date().toISOString(),
+            } as any;
           }
         }
-      }
-    }
 
-    // 2. If answers is a Record/Object: { [questionId]: selectedOption } or { [questionId]: stateObj }
-    if (typeof answers === 'object' && answers !== null && !Array.isArray(answers)) {
-      // 2a. Match by exact question id
-      let val = (answers as any)[q.id];
-      // 2b. Match by index if not matched by ID
-      if (val === undefined || val === null) {
-        val = (answers as any)[index] ?? (answers as any)[String(index)] ?? (answers as any)[`q_${index}`];
-      }
-
-      if (val !== undefined && val !== null) {
-        if (typeof val === 'number') {
-          return {
-            questionId: q.id,
-            selectedOption: val,
-            isCorrect: val === q.correctAnswerIndex,
-          };
+        if (!res) {
+          const history = await TestProgressService.getTestHistory();
+          res = history.find((h) => h.attemptId === attemptId || h.id === attemptId);
         }
-        if (typeof val === 'object') {
-          const opt = val.selectedOption ?? val.selected_option ?? val.userAnswer;
-          if (opt !== undefined && opt !== null) {
-            return {
-              questionId: q.id,
-              selectedOption: opt,
-              isCorrect: val.isCorrect ?? (opt === q.correctAnswerIndex),
-              marked: val.marked,
-              timeTaken: val.timeTaken,
-            };
-          }
+
+        if (isCancelled) return;
+        if (res) setResult(res);
+
+        // 2. Fetch paper
+        const targetFilename = (res as any)?.filename || (params.filename as string);
+        const targetTestId = res?.testId || testId;
+
+        let loadedPaper: ParsedMockTest | null = null;
+        if (targetFilename) {
+          try {
+            loadedPaper = await SSCCGLService.fetchPaper(targetFilename);
+          } catch {}
         }
+
+        if (!loadedPaper && targetTestId) {
+          loadedPaper = SSCCGLService.getPaper(targetTestId);
+        }
+
+        if (!loadedPaper && targetTestId) {
+          try {
+            loadedPaper = await SSCCGLService.fetchPaperById(targetTestId);
+          } catch {}
+        }
+
+        if (isCancelled) return;
+        if (loadedPaper) setPaper(loadedPaper);
+      } catch (err) {
+        console.error('Error loading result:', err);
+      } finally {
+        if (!isCancelled) setLoading(false);
       }
-    }
+    };
 
-    return undefined;
-  };
+    loadResultData();
 
-  const questionsMeta = useMemo(() => {
-    if (!test) return [];
+    return () => {
+      isCancelled = true;
+    };
+  }, [attemptId, testId]);
 
-    const allQuestions = test.sections.flatMap((s) => s.questions);
+  // Aggregate questions with user's attempt answers
+  const allQuestions = useMemo(() => {
+    if (!paper) return [];
+    return paper.sections.flatMap((s) => s.questions);
+  }, [paper]);
 
-    // Check if ID-based matching matches any question
-    let anyIdMatched = false;
-    if (answers) {
-      if (Array.isArray(answers)) {
-        anyIdMatched = allQuestions.some((q) =>
-          answers.some(
-            (a: any) =>
-              a &&
-              (a.questionId === q.id ||
-                a.question_id === q.id ||
-                a.id === q.id ||
-                (a.questionId && String(a.questionId).trim() === String(q.id).trim()))
-          )
-        );
-      } else if (typeof answers === 'object') {
-        anyIdMatched = allQuestions.some((q) => (answers as any)[q.id] !== undefined);
-      }
-    }
+  const questionsWithStatus = useMemo(() => {
+    if (!result) return [];
 
-    let counter = 0;
-    return test.sections.flatMap((section) =>
-      section.questions.map((q) => {
-        const index = counter;
-        counter += 1;
-        const userAnswer = resolveUserAnswer(q, index, anyIdMatched);
-        const selectedOpt =
-          userAnswer?.selectedOption ??
-          userAnswer?.selected_option ??
-          userAnswer?.userAnswer ??
-          (typeof userAnswer === 'number' ? userAnswer : undefined);
-
-        const isAttempted =
-          userAnswer !== undefined &&
-          selectedOpt !== undefined &&
-          selectedOpt !== null &&
-          selectedOpt !== -1;
-
-        const isCorrect =
-          isAttempted &&
-          (userAnswer?.isCorrect === true ||
-            userAnswer?.is_correct === true ||
-            selectedOpt === q.correctAnswerIndex);
-
-        const isIncorrect = isAttempted && !isCorrect;
-        const isSkipped = !isAttempted;
-
-        return {
-          question: q,
-          sectionTitle: section.title,
-          sectionId: section.id,
-          questionNumber: counter,
-          userAnswer,
-          isAttempted,
-          isCorrect,
-          isIncorrect,
-          isSkipped,
-        };
-      })
-    );
-  }, [test, answers]);
-
-  // Section analytics aggregates from the official calculated analytics
-  const sectionCorrect = analytics?.sectionAnalytics?.reduce((sum, s) => sum + (s.correct || 0), 0) ?? 0;
-  const sectionIncorrect = analytics?.sectionAnalytics?.reduce((sum, s) => sum + (s.incorrect || 0), 0) ?? 0;
-  const sectionSkipped = analytics?.sectionAnalytics?.reduce((sum, s) => sum + (s.skipped || 0), 0) ?? 0;
-  const sectionAttempted = analytics?.sectionAnalytics?.reduce((sum, s) => sum + (s.attempted || 0), 0) ?? 0;
-
-  const metaAttempted = questionsMeta.filter((q) => q.isAttempted).length;
-  const metaCorrect = questionsMeta.filter((q) => q.isCorrect).length;
-  const metaIncorrect = questionsMeta.filter((q) => q.isIncorrect).length;
-  const metaSkipped = questionsMeta.filter((q) => q.isSkipped).length;
-
-  const hasDetailedAnswers = metaAttempted > 0;
-
-  // Use question meta if available; fallback to sectionAnalytics totals
-  const correctCount = hasDetailedAnswers ? metaCorrect : sectionCorrect;
-  const incorrectCount = hasDetailedAnswers ? metaIncorrect : sectionIncorrect;
-  const skippedCount = hasDetailedAnswers ? metaSkipped : (sectionAttempted > 0 ? sectionSkipped : questionsMeta.length);
-  const totalQuestionsCount = questionsMeta.length || (analytics?.totalMarks ? Math.round(analytics.totalMarks / 2.5) : 0);
-
-  useEffect(() => {
-    // If no individual answer selections are available for this attempt, default to 'all' so all solutions are immediately shown
-    if (!hasDetailedAnswers) {
-      if (questionFilter !== 'all') {
-        setQuestionFilter('all');
-      }
-    } else if (incorrectCount === 0 && correctCount > 0 && questionFilter === 'incorrect') {
-      // If no incorrect questions exist, show all questions by default
-      setQuestionFilter('all');
-    }
-  }, [hasDetailedAnswers, incorrectCount, correctCount]);
-
-  const formatTime = (seconds: number): string => {
-    const totalSecs = Math.max(0, Math.round(seconds || 0));
-    const hrs = Math.floor(totalSecs / 3600);
-    const mins = Math.floor((totalSecs % 3600) / 60);
-    const secs = totalSecs % 60;
-    
-    if (hrs > 0) {
-      return `${hrs}h ${mins}m ${secs}s`;
-    } else if (mins > 0) {
-      return `${mins}m ${secs}s`;
-    }
-    return `${secs}s`;
-  };
-
-  const handleReevaluate = async () => {
-    try {
-      setIsReevaluating(true);
-      await loadResults();
-      Alert.alert('Refreshed', 'Results reloaded successfully.');
-    } catch (error) {
-      console.error('Re-evaluation error:', error);
-      Alert.alert('Error', 'Failed to refresh test results');
-    } finally {
-      setIsReevaluating(false);
-    }
-  };
-
-  const handleBackToTests = () => {
-    if (router.canGoBack()) {
-      router.back();
-    } else if (Platform.OS === 'web' && typeof window !== 'undefined' && window.history.length > 1) {
-      window.history.back();
-    } else {
-      router.replace('/test-list');
-    }
-  };
-
-  const handleShare = async () => {
-    if (!analytics) return;
-    try {
-      await Share.share({
-        message: [
-          `Test: ${test?.title || 'Test Results'}`,
-          `Score: ${analytics.overallScore.toFixed(1)}/${analytics.totalMarks}`,
-          `Percentage: ${analytics.totalMarks > 0
-            ? ((analytics.overallScore / analytics.totalMarks) * 100).toFixed(1)
-            : '0.0'}%`,
-          `Accuracy: ${analytics.accuracy.toFixed(1)}%`,
-          `Time taken: ${formatTime(analytics.timeTaken)}`,
-        ].join('\n'),
+    const answersMap: Record<string, number> = {};
+    if (result.answers && Array.isArray(result.answers)) {
+      result.answers.forEach((ans: any) => {
+        answersMap[ans.questionId] = ans.selectedOption;
       });
-    } catch (error) {
-      console.error('Share result failed:', error);
-    }
-  };
-
-  const handleReportQuestion = (question: ParsedQuestion) => {
-    setReportingQuestion(question);
-    setReportType('wrong_answer');
-    setReportDescription('');
-    setShowReportModal(true);
-  };
-
-  const submitReport = async () => {
-    if (!reportingQuestion || !reportDescription.trim()) {
-      Alert.alert('Error', 'Please provide a description for your report');
-      return;
-    }
-
-    try {
-      await ReportService.submitReport({
-        userId: '',
-        testId: analytics?.testId || '',
-        testTitle: test?.title,
-        questionId: reportingQuestion.id,
-        questionText: reportingQuestion.questionText.substring(0, 200),
-        reportType,
-        description: reportDescription,
+    } else if (result.questionStates) {
+      Object.keys(result.questionStates).forEach((qId) => {
+        const qs = result.questionStates![qId];
+        if (qs.selectedOption !== null && qs.selectedOption !== undefined) {
+          answersMap[qId] = qs.selectedOption;
+        }
       });
-
-      Alert.alert(
-        'Thank You!',
-        'Your report has been submitted. We will review it and take appropriate action.',
-        [{ text: 'OK' }]
-      );
-
-      setShowReportModal(false);
-      setReportingQuestion(null);
-      setReportDescription('');
-    } catch (error) {
-      Alert.alert('Error', 'Failed to submit report. Please try again.');
-      console.error('Report submission error:', error);
     }
-  };
 
-  const getScoreColor = (score: number, maxScore: number): string => {
-    const percentage = (score / maxScore) * 100;
-    if (percentage >= 75) return '#4CAF50';
-    if (percentage >= 50) return '#FF9800';
-    return '#F44336';
-  };
+    return allQuestions.map((q, idx) => {
+      const selected = answersMap[q.id];
+      const hasAnswered = selected !== null && selected !== undefined && selected !== -1;
+      const isCorrect = hasAnswered && selected === q.correctAnswerIndex;
+      const isWrong = hasAnswered && selected !== q.correctAnswerIndex;
+      const isUnattempted = !hasAnswered;
 
-  const getAccuracyColor = (accuracy: number): string => {
-    if (accuracy >= 75) return '#4CAF50';
-    if (accuracy >= 50) return '#FF9800';
-    return '#F44336';
-  };
+      return {
+        ...q,
+        globalIndex: idx + 1,
+        selectedOption: selected ?? -1,
+        hasAnswered,
+        isCorrect,
+        isWrong,
+        isUnattempted,
+      };
+    });
+  }, [allQuestions, result]);
 
-  const renderOverviewTab = () => {
-    if (!analytics || !test) return null;
+  // Topic Breakdown
+  const topicStats = useMemo(() => {
+    const map: Record<string, { topic: string; total: number; correct: number }> = {};
 
-    const scorePercentage = (analytics.overallScore / analytics.totalMarks) * 100;
-    const scoreColor = getScoreColor(analytics.overallScore, analytics.totalMarks);
-
-    return (
-      <View style={styles.tabContent}>
-        {/* Score Card */}
-        <View style={[styles.scoreCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-          <View style={styles.scoreTopRow}>
-            <View style={styles.scoreIdentity}>
-              <View style={[styles.scoreIconWrap, { backgroundColor: `${colors.accent}18` }]}>
-                <Trophy size={25} color={colors.accent} />
-              </View>
-              <View style={styles.scoreIdentityText}>
-                <Text style={[styles.eyebrow, { color: colors.textSecondary }]}>TEST PERFORMANCE</Text>
-                <View style={styles.scoreValueRow}>
-                  <Text style={[styles.scoreValue, { color: colors.textPrimary }]}>
-                    {analytics.overallScore.toFixed(1)}
-                  </Text>
-                  <Text style={[styles.scoreMax, { color: colors.textSecondary }]}>/ {analytics.totalMarks}</Text>
-                </View>
-                <Text style={[styles.scoreSubtitle, { color: colors.textSecondary }]}>
-                  Overall score · {scorePercentage.toFixed(1)}%
-                </Text>
-              </View>
-            </View>
-            <View style={[styles.scoreBadge, { backgroundColor: `${scoreColor}18` }]}>
-              <Text style={[styles.scoreBadgeValue, { color: scoreColor }]}>{scorePercentage.toFixed(0)}%</Text>
-              <Text style={[styles.scoreBadgeLabel, { color: scoreColor }]}>SCORE</Text>
-            </View>
-          </View>
-          <View style={[styles.progressTrack, { backgroundColor: isDark ? '#29364B' : '#E8EEF7' }]}>
-            <View style={[styles.progressFill, { width: `${Math.max(0, Math.min(scorePercentage, 100))}%`, backgroundColor: scoreColor }]} />
-          </View>
-          <View style={[styles.hairline, { backgroundColor: colors.border }]} />
-          <View style={styles.scoreMetaRow}>
-            <View style={styles.metaItem}>
-              <View style={[styles.metaIcon, { backgroundColor: 'rgba(16,185,129,0.12)' }]}>
-                <Target size={18} color="#10B981" />
-              </View>
-              <View>
-                <Text style={[styles.metaLabel, { color: colors.textSecondary }]}>Accuracy</Text>
-                <Text style={[styles.metaValue, { color: colors.textPrimary }]}>{analytics.accuracy.toFixed(1)}%</Text>
-              </View>
-            </View>
-            <View style={[styles.metaSeparator, { backgroundColor: colors.border }]} />
-            <View style={styles.metaItem}>
-              <View style={[styles.metaIcon, { backgroundColor: 'rgba(129,140,248,0.12)' }]}>
-                <Clock size={18} color="#818CF8" />
-              </View>
-              <View>
-                <Text style={[styles.metaLabel, { color: colors.textSecondary }]}>Time taken</Text>
-                <Text style={[styles.metaValue, { color: colors.textPrimary }]}>{formatTime(analytics.timeTaken)}</Text>
-              </View>
-            </View>
-          </View>
-        </View>
-
-        {/* Quick Review Banner for Incorrect Questions */}
-        {incorrectCount > 0 ? (
-          <TouchableOpacity
-            style={[
-              styles.reviewIncorrectBanner,
-              {
-                backgroundColor: isDark ? 'rgba(239, 68, 68, 0.12)' : '#FEF2F2',
-                borderColor: isDark ? 'rgba(239, 68, 68, 0.35)' : '#FECACA',
-              },
-            ]}
-            onPress={() => {
-              setQuestionFilter(hasDetailedAnswers ? 'incorrect' : 'all');
-              setSelectedTab('solutions');
-            }}
-            activeOpacity={0.8}
-          >
-            <View style={styles.reviewIncorrectLeft}>
-              <View style={[styles.reviewIncorrectIcon, { backgroundColor: isDark ? 'rgba(239, 68, 68, 0.25)' : '#FEE2E2' }]}>
-                <XCircle size={22} color="#EF4444" />
-              </View>
-              <View style={styles.reviewIncorrectTexts}>
-                <Text style={[styles.reviewIncorrectTitle, { color: isDark ? '#FCA5A5' : '#991B1B' }]}>
-                  Review {incorrectCount} Incorrect {incorrectCount === 1 ? 'Question' : 'Questions'}
-                </Text>
-                <Text style={[styles.reviewIncorrectSub, { color: isDark ? '#F87171' : '#B91C1C' }]}>
-                  Tap to view detailed solutions & correct answers
-                </Text>
-              </View>
-            </View>
-            <ChevronRight size={20} color={isDark ? '#FCA5A5' : '#EF4444'} />
-          </TouchableOpacity>
-        ) : (
-          <View
-            style={[
-              styles.reviewIncorrectBanner,
-              {
-                backgroundColor: isDark ? 'rgba(16, 185, 129, 0.12)' : '#ECFDF5',
-                borderColor: isDark ? 'rgba(16, 185, 129, 0.35)' : '#A7F3D0',
-              },
-            ]}
-          >
-            <View style={styles.reviewIncorrectLeft}>
-              <View style={[styles.reviewIncorrectIcon, { backgroundColor: isDark ? 'rgba(16, 185, 129, 0.25)' : '#D1FAE5' }]}>
-                <CheckCircle size={22} color="#10B981" />
-              </View>
-              <View style={styles.reviewIncorrectTexts}>
-                <Text style={[styles.reviewIncorrectTitle, { color: isDark ? '#6EE7B7' : '#065F46' }]}>
-                  All Attempted Questions Correct!
-                </Text>
-                <Text style={[styles.reviewIncorrectSub, { color: isDark ? '#A7F3D0' : '#047857' }]}>
-                  Outstanding score! Zero incorrect questions.
-                </Text>
-              </View>
-            </View>
-          </View>
-        )}
-
-        {/* Interactive Breakdown / Quick Stats Cards */}
-        <View style={styles.quickStatsRow}>
-          <TouchableOpacity
-            style={[
-              styles.quickStatCard,
-              { backgroundColor: colors.surface, borderColor: colors.border },
-            ]}
-            onPress={() => {
-              setQuestionFilter(hasDetailedAnswers ? 'correct' : 'all');
-              setSelectedTab('solutions');
-            }}
-            activeOpacity={0.7}
-          >
-            <View style={[styles.quickStatIconWrap, { backgroundColor: isDark ? 'rgba(16, 185, 129, 0.15)' : '#ECFDF5' }]}>
-              <CheckCircle size={20} color="#10B981" />
-            </View>
-            <Text style={[styles.quickStatValue, { color: colors.textPrimary }]}>{correctCount}</Text>
-            <Text style={[styles.quickStatLabel, { color: colors.textSecondary }]}>Correct</Text>
-            <Text style={[styles.quickStatHint, { color: '#10B981' }]}>
-              {totalQuestionsCount ? `${Math.round(correctCount / totalQuestionsCount * 100)}% of total` : ''}
-            </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={[
-              styles.quickStatCard,
-              { backgroundColor: colors.surface, borderColor: colors.border },
-            ]}
-            onPress={() => {
-              setQuestionFilter(hasDetailedAnswers ? 'incorrect' : 'all');
-              setSelectedTab('solutions');
-            }}
-            activeOpacity={0.7}
-          >
-            <View style={[styles.quickStatIconWrap, { backgroundColor: isDark ? 'rgba(239, 68, 68, 0.15)' : '#FEF2F2' }]}>
-              <XCircle size={20} color="#EF4444" />
-            </View>
-            <Text style={[styles.quickStatValue, { color: colors.textPrimary }]}>{incorrectCount}</Text>
-            <Text style={[styles.quickStatLabel, { color: colors.textSecondary }]}>Incorrect</Text>
-            <Text style={[styles.quickStatHint, { color: '#EF4444' }]}>
-              {totalQuestionsCount ? `${Math.round(incorrectCount / totalQuestionsCount * 100)}% of total` : ''}
-            </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={[
-              styles.quickStatCard,
-              { backgroundColor: colors.surface, borderColor: colors.border },
-            ]}
-            onPress={() => {
-              setQuestionFilter(hasDetailedAnswers ? 'skipped' : 'all');
-              setSelectedTab('solutions');
-            }}
-            activeOpacity={0.7}
-          >
-            <View style={[styles.quickStatIconWrap, { backgroundColor: isDark ? 'rgba(245, 158, 11, 0.15)' : '#FFFBEB' }]}>
-              <AlertCircle size={20} color="#F59E0B" />
-            </View>
-            <Text style={[styles.quickStatValue, { color: colors.textPrimary }]}>{skippedCount}</Text>
-            <Text style={[styles.quickStatLabel, { color: colors.textSecondary }]}>Skipped</Text>
-            <Text style={[styles.quickStatHint, { color: '#F59E0B' }]}>
-              {totalQuestionsCount ? `${Math.round(skippedCount / totalQuestionsCount * 100)}% of total` : ''}
-            </Text>
-          </TouchableOpacity>
-        </View>
-
-        {/* Performance Insights */}
-        <View style={[styles.insightsCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-          <View style={styles.insightsHeader}>
-            <View style={[styles.insightsIcon, { backgroundColor: `${colors.accent}18` }]}>
-              <BarChart3 size={20} color={colors.accent} />
-            </View>
-            <View style={styles.insightsHeaderText}>
-              <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>Performance insights</Text>
-              <Text style={[styles.cardSubtitle, { color: colors.textSecondary }]}>A quick summary of this attempt.</Text>
-            </View>
-          </View>
-          <View style={styles.insightsColumns}>
-            {analytics.strengthAreas.length > 0 && (
-              <View style={[styles.insightPanel, { backgroundColor: isDark ? 'rgba(16,185,129,0.09)' : '#F0FDF4' }]}>
-                <View style={styles.insightPanelHeader}>
-                  <TrendingUp size={17} color="#10B981" />
-                  <Text style={[styles.insightPanelTitle, { color: isDark ? '#6EE7B7' : '#047857' }]}>Strengths</Text>
-                </View>
-                {analytics.strengthAreas.map((area, index) => (
-                  <Text key={index} style={[styles.insightItem, { color: colors.textSecondary }]}>• {area}</Text>
-                ))}
-              </View>
-            )}
-            {analytics.weaknessAreas.length > 0 && (
-              <View style={[styles.insightPanel, { backgroundColor: isDark ? 'rgba(240,82,82,0.09)' : '#FFF5F5' }]}>
-                <View style={styles.insightPanelHeader}>
-                  <TrendingDown size={17} color="#F05252" />
-                  <Text style={[styles.insightPanelTitle, { color: isDark ? '#FCA5A5' : '#B91C1C' }]}>Areas to improve</Text>
-                </View>
-                {analytics.weaknessAreas.map((area, index) => (
-                  <Text key={index} style={[styles.insightItem, { color: colors.textSecondary }]}>• {area}</Text>
-                ))}
-              </View>
-            )}
-          </View>
-          {analytics.recommendations.length > 0 && (
-            <View style={[styles.recommendationStrip, { borderTopColor: colors.border }]}>
-              <Lightbulb size={17} color="#F59E0B" />
-              <Text style={[styles.recommendationStripText, { color: colors.textSecondary }]}>
-                {analytics.recommendations[0]}
-              </Text>
-            </View>
-          )}
-        </View>
-      </View>
-    );
-  };
-
-  const renderSectionsTab = () => {
-    if (!analytics) return null;
-
-    return (
-      <View style={styles.tabContent}>
-        {analytics.sectionAnalytics.map((section) => {
-          const accuracyColor = getAccuracyColor(section.accuracy);
-          const scorePercentage = (section.score / section.maxScore) * 100;
-
-          return (
-            <View key={section.sectionId} style={styles.sectionCard}>
-              <View style={styles.sectionCardHeader}>
-                <Text style={styles.sectionCardTitle}>{section.sectionTitle}</Text>
-                <View
-                  style={[styles.sectionCardBadge, { backgroundColor: accuracyColor + '20' }]}
-                >
-                  <Text style={[styles.sectionCardBadgeText, { color: accuracyColor }]}>
-                    {section.accuracy.toFixed(1)}%
-                  </Text>
-                </View>
-              </View>
-
-              <View style={styles.sectionCardScore}>
-                <Text style={styles.sectionCardScoreValue}>
-                  {section.score.toFixed(1)} / {section.maxScore}
-                </Text>
-                <View style={styles.sectionProgressBar}>
-                  <View
-                    style={[
-                      styles.sectionProgressFill,
-                      {
-                        width: `${Math.min(scorePercentage, 100)}%`,
-                        backgroundColor: accuracyColor,
-                      },
-                    ]}
-                  />
-                </View>
-              </View>
-
-              <View style={styles.sectionCardStats}>
-                <View style={styles.sectionCardStat}>
-                  <Text style={styles.sectionCardStatLabel}>Attempted</Text>
-                  <Text style={styles.sectionCardStatValue}>{section.attempted}</Text>
-                </View>
-                <View style={styles.sectionCardStat}>
-                  <Text style={styles.sectionCardStatLabel}>Correct</Text>
-                  <Text style={[styles.sectionCardStatValue, { color: '#4CAF50' }]}>
-                    {section.correct}
-                  </Text>
-                </View>
-                <View style={styles.sectionCardStat}>
-                  <Text style={styles.sectionCardStatLabel}>Incorrect</Text>
-                  <Text style={[styles.sectionCardStatValue, { color: '#F44336' }]}>
-                    {section.incorrect}
-                  </Text>
-                </View>
-                <View style={styles.sectionCardStat}>
-                  <Text style={styles.sectionCardStatLabel}>Skipped</Text>
-                  <Text style={[styles.sectionCardStatValue, { color: '#FF9800' }]}>
-                    {section.skipped}
-                  </Text>
-                </View>
-              </View>
-
-              <View style={styles.sectionCardTime}>
-                <Clock size={16} color="#666" />
-                <Text style={styles.sectionCardTimeText}>
-                  Avg. {section.averageTimePerQuestion.toFixed(1)}s per question
-                </Text>
-              </View>
-            </View>
-          );
-        })}
-      </View>
-    );
-  };
-
-  const renderSolutionsTab = () => {
-    if (!test || !analytics) return null;
-
-    const filteredQuestions = questionsMeta.filter((item) => {
-      if (!hasDetailedAnswers) return true; // Show all solutions if individual options weren't recorded
-      if (questionFilter === 'incorrect') return item.isIncorrect;
-      if (questionFilter === 'correct') return item.isCorrect;
-      if (questionFilter === 'skipped') return item.isSkipped;
-      return true; // 'all'
+    questionsWithStatus.forEach((q) => {
+      const top = q.keyConcepts?.[0] || 'General Subject';
+      if (!map[top]) {
+        map[top] = { topic: top, total: 0, correct: 0 };
+      }
+      map[top].total++;
+      if (q.isCorrect) map[top].correct++;
     });
 
-    const sectionsWithQuestions = test.sections
-      .map((section) => {
-        const matchingItems = filteredQuestions.filter((item) => item.sectionId === section.id);
-        return {
-          ...section,
-          matchingItems,
-        };
-      })
-      .filter((s) => s.matchingItems.length > 0);
+    return Object.values(map).map((item) => ({
+      ...item,
+      accuracy: item.total > 0 ? (item.correct / item.total) * 100 : 0,
+    }));
+  }, [questionsWithStatus]);
 
-    return (
-      <View style={styles.tabContent}>
-        {/* Info banner when detailed answers could not be reconstructed */}
-        {!hasDetailedAnswers && (
-          <View
-            style={[
-              styles.infoBannerCard,
-              {
-                backgroundColor: isDark ? 'rgba(59, 130, 246, 0.12)' : '#EFF6FF',
-                borderColor: isDark ? 'rgba(59, 130, 246, 0.3)' : '#BFDBFE',
-              },
-            ]}
-          >
-            <View style={[styles.infoBannerIconWrap, { backgroundColor: isDark ? 'rgba(59, 130, 246, 0.25)' : '#DBEAFE' }]}>
-              <BookOpen size={20} color="#3B82F6" />
-            </View>
-            <View style={{ flex: 1 }}>
-              <Text style={[styles.infoBannerTitle, { color: isDark ? '#93C5FD' : '#1E40AF' }]}>
-                Showing all {totalQuestionsCount} verified solutions
-              </Text>
-              <Text style={[styles.infoBannerSub, { color: isDark ? '#BFDBFE' : '#3B82F6' }]}>
-                Detailed option selections were not saved in this earlier session. Review the correct answers and in-depth explanations below.
-              </Text>
-            </View>
-          </View>
-        )}
+  // Weak topics (<50% accuracy)
+  const weakTopics = useMemo(() => {
+    return topicStats.filter((t) => t.accuracy < 50);
+  }, [topicStats]);
 
-        {/* Question Filter Bar */}
-        <View style={[styles.filterBarCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-          <View style={styles.filterBarHeader}>
-            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-              <Filter size={16} color={colors.accent || '#3B82F6'} />
-              <Text style={[styles.filterBarTitle, { color: colors.textPrimary }]}>Filter Questions</Text>
-            </View>
-            <Text style={[styles.filterBarCount, { color: colors.textSecondary }]}>
-              Showing {filteredQuestions.length} of {totalQuestionsCount}
-            </Text>
-          </View>
+  // Filtered Review List
+  const filteredQuestions = useMemo(() => {
+    return questionsWithStatus.filter((q) => {
+      if (activeReviewFilter === 'correct') return q.isCorrect;
+      if (activeReviewFilter === 'wrong') return q.isWrong;
+      if (activeReviewFilter === 'unattempted') return q.isUnattempted;
+      if (activeReviewFilter === 'bookmarked') return bookmarkedSet.has(q.id);
+      return true;
+    });
+  }, [questionsWithStatus, activeReviewFilter, bookmarkedSet]);
 
-          <View style={styles.filterPillsRow}>
-            <TouchableOpacity
-              style={[
-                styles.filterPill,
-                { borderColor: colors.border, backgroundColor: isDark ? colors.surfaceElevated : '#F8FAFC' },
-                questionFilter === 'incorrect' && styles.filterPillIncorrectActive,
-              ]}
-              onPress={() => setQuestionFilter('incorrect')}
-              activeOpacity={0.7}
-            >
-              <XCircle size={15} color={questionFilter === 'incorrect' ? '#fff' : '#EF4444'} />
-              <Text
-                style={[
-                  styles.filterPillText,
-                  { color: colors.textSecondary },
-                  questionFilter === 'incorrect' && styles.filterPillTextActive,
-                ]}
-              >
-                Incorrect ({incorrectCount})
-              </Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={[
-                styles.filterPill,
-                { borderColor: colors.border, backgroundColor: isDark ? colors.surfaceElevated : '#F8FAFC' },
-                questionFilter === 'correct' && styles.filterPillCorrectActive,
-              ]}
-              onPress={() => setQuestionFilter('correct')}
-              activeOpacity={0.7}
-            >
-              <CheckCircle size={15} color={questionFilter === 'correct' ? '#fff' : '#10B981'} />
-              <Text
-                style={[
-                  styles.filterPillText,
-                  { color: colors.textSecondary },
-                  questionFilter === 'correct' && styles.filterPillTextActive,
-                ]}
-              >
-                Correct ({correctCount})
-              </Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={[
-                styles.filterPill,
-                { borderColor: colors.border, backgroundColor: isDark ? colors.surfaceElevated : '#F8FAFC' },
-                questionFilter === 'skipped' && styles.filterPillSkippedActive,
-              ]}
-              onPress={() => setQuestionFilter('skipped')}
-              activeOpacity={0.7}
-            >
-              <AlertCircle size={15} color={questionFilter === 'skipped' ? '#fff' : '#F59E0B'} />
-              <Text
-                style={[
-                  styles.filterPillText,
-                  { color: colors.textSecondary },
-                  questionFilter === 'skipped' && styles.filterPillTextActive,
-                ]}
-              >
-                Skipped ({skippedCount})
-              </Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={[
-                styles.filterPill,
-                { borderColor: colors.border, backgroundColor: isDark ? colors.surfaceElevated : '#F8FAFC' },
-                questionFilter === 'all' && styles.filterPillAllActive,
-              ]}
-              onPress={() => setQuestionFilter('all')}
-              activeOpacity={0.7}
-            >
-              <HelpCircle size={15} color={questionFilter === 'all' ? '#fff' : colors.textSecondary} />
-              <Text
-                style={[
-                  styles.filterPillText,
-                  { color: colors.textSecondary },
-                  questionFilter === 'all' && styles.filterPillTextActive,
-                ]}
-              >
-                All ({totalQuestionsCount})
-              </Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-
-        {/* Empty State when no questions match filter */}
-        {filteredQuestions.length === 0 ? (
-          <View style={[styles.emptyFilterCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-            <View
-              style={[
-                styles.emptyFilterIconWrap,
-                {
-                  backgroundColor:
-                    questionFilter === 'incorrect'
-                      ? isDark ? 'rgba(16, 185, 129, 0.15)' : '#ECFDF5'
-                      : isDark ? 'rgba(59, 130, 246, 0.15)' : '#EFF6FF',
-                },
-              ]}
-            >
-              {questionFilter === 'incorrect' ? (
-                <CheckCircle size={40} color="#10B981" />
-              ) : questionFilter === 'correct' ? (
-                <XCircle size={40} color="#EF4444" />
-              ) : (
-                <AlertCircle size={40} color="#F59E0B" />
-              )}
-            </View>
-            <Text style={[styles.emptyFilterTitle, { color: colors.textPrimary }]}>
-              {questionFilter === 'incorrect'
-                ? (incorrectCount === 0 ? 'No Incorrect Questions!' : 'No Questions to Display')
-                : questionFilter === 'correct'
-                ? (correctCount === 0 ? 'No Correct Questions' : 'No Questions to Display')
-                : 'No Skipped Questions'}
-            </Text>
-            <Text style={[styles.emptyFilterSub, { color: colors.textSecondary }]}>
-              {questionFilter === 'incorrect'
-                ? (incorrectCount === 0
-                    ? 'Congratulations! You answered all your attempted questions correctly.'
-                    : 'Unable to isolate specific incorrect questions for this session. View all solutions below.')
-                : questionFilter === 'correct'
-                ? (correctCount === 0
-                    ? 'Review the questions and explanations below to improve.'
-                    : 'Unable to isolate specific correct questions for this session. View all solutions below.')
-                : 'You attempted every single question in this paper.'}
-            </Text>
-            <TouchableOpacity
-              style={[styles.emptyFilterActionBtn, { backgroundColor: colors.accent || '#3B82F6' }]}
-              onPress={() => setQuestionFilter('all')}
-              activeOpacity={0.8}
-            >
-              <Text style={styles.emptyFilterActionBtnText}>
-                View All Questions ({totalQuestionsCount})
-              </Text>
-            </TouchableOpacity>
-          </View>
-        ) : (
-          sectionsWithQuestions.map((section) => (
-            <View key={section.id} style={styles.solutionsSection}>
-              <View style={styles.sectionHeaderRow}>
-                <Text style={[styles.solutionsSectionTitle, { color: colors.textPrimary }]}>
-                  {section.title}
-                </Text>
-                <View
-                  style={[
-                    styles.sectionCountBadge,
-                    {
-                      backgroundColor: isDark ? colors.surfaceElevated : '#F1F5F9',
-                      borderColor: colors.border,
-                    },
-                  ]}
-                >
-                  <Text style={[styles.sectionCountBadgeText, { color: colors.textSecondary }]}>
-                    {section.matchingItems.length} {section.matchingItems.length === 1 ? 'question' : 'questions'}
-                  </Text>
-                </View>
-              </View>
-
-              {section.matchingItems.map((item) => {
-                const { question, questionNumber, userAnswer, isAttempted, isCorrect } = item;
-
-                return (
-                  <View
-                    key={question.id}
-                    style={[
-                      styles.solutionCard,
-                      { backgroundColor: colors.surface, borderColor: colors.border },
-                    ]}
-                  >
-                    <View style={styles.solutionHeader}>
-                      <Text style={[styles.solutionQuestionNumber, { color: colors.textSecondary }]}>
-                        Question {questionNumber}
-                      </Text>
-                      <View
-                        style={[
-                          styles.solutionStatusBadge,
-                          !hasDetailedAnswers
-                            ? styles.solutionNeutralBadge
-                            : isCorrect
-                            ? styles.solutionCorrectBadge
-                            : isAttempted
-                            ? styles.solutionIncorrectBadge
-                            : styles.solutionSkippedBadge,
-                        ]}
-                      >
-                        {!hasDetailedAnswers ? (
-                          <BookOpen size={16} color="#fff" />
-                        ) : isCorrect ? (
-                          <CheckCircle size={16} color="#fff" />
-                        ) : isAttempted ? (
-                          <XCircle size={16} color="#fff" />
-                        ) : (
-                          <AlertCircle size={16} color="#fff" />
-                        )}
-                        <Text style={styles.solutionStatusText}>
-                          {!hasDetailedAnswers ? 'Solution' : isCorrect ? 'Correct' : isAttempted ? 'Incorrect' : 'Skipped'}
-                        </Text>
-                      </View>
-                    </View>
-
-                    <View style={styles.solutionQuestion}>
-                      <RenderHtml
-                        contentWidth={width - 64}
-                        source={{
-                          html: (language === 'hindi' && question.questionTextHindi
-                            ? question.questionTextHindi
-                            : question.questionText
-                          ).replace(/\n/g, '<br />'),
-                        }}
-                        baseStyle={{
-                          ...styles.solutionQuestionText,
-                          color: colors.textPrimary,
-                        }}
-                      />
-                    </View>
-
-                    <View style={styles.solutionOptions}>
-                      {(language === 'hindi' && question.optionsHindi && question.optionsHindi.length > 0
-                        ? question.optionsHindi
-                        : question.options
-                      ).map((option, optIndex) => {
-                        const isCorrectAnswer = optIndex === question.correctAnswerIndex;
-                        const isUserAnswer = optIndex === userAnswer?.selectedOption;
-
-                        return (
-                          <View
-                            key={optIndex}
-                            style={[
-                              styles.solutionOption,
-                              {
-                                backgroundColor: isDark ? colors.surfaceElevated : '#f9f9f9',
-                                borderColor: colors.border,
-                              },
-                              isCorrectAnswer && (isDark ? styles.solutionOptionCorrectDark : styles.solutionOptionCorrect),
-                              isUserAnswer && !isCorrect && (isDark ? styles.solutionOptionWrongDark : styles.solutionOptionWrong),
-                            ]}
-                          >
-                            <View style={styles.solutionOptionHeader}>
-                              <Text style={[styles.solutionOptionLabel, { color: colors.textSecondary }]}>
-                                Option {optIndex + 1}
-                              </Text>
-                              {isCorrectAnswer && (
-                                <View style={styles.correctAnswerBadge}>
-                                  <CheckCircle size={14} color="#10B981" />
-                                  <Text style={styles.correctAnswerText}>Correct Answer</Text>
-                                </View>
-                              )}
-                              {isUserAnswer && !isCorrect && (
-                                <View style={styles.yourAnswerBadge}>
-                                  <Text style={styles.yourAnswerText}>Your Answer</Text>
-                                </View>
-                              )}
-                            </View>
-                            <RenderHtml
-                              contentWidth={width - 96}
-                              source={{ html: option.replace(/\n/g, '<br />') }}
-                              baseStyle={{
-                                ...styles.solutionOptionText,
-                                color: colors.textPrimary,
-                              }}
-                            />
-                          </View>
-                        );
-                      })}
-                    </View>
-
-                    <View
-                      style={[
-                        styles.solutionExplanation,
-                        {
-                          backgroundColor: isDark ? 'rgba(245, 158, 11, 0.08)' : '#FFF9E6',
-                          borderLeftColor: '#F59E0B',
-                        },
-                      ]}
-                    >
-                      <View style={styles.solutionExplanationHeader}>
-                        <Text style={[styles.solutionExplanationTitle, { color: colors.textPrimary }]}>
-                          Explanation
-                        </Text>
-                        <View style={{ flexDirection: 'row', gap: 8 }}>
-                          <TouchableOpacity
-                            style={[
-                              styles.reportButton,
-                              {
-                                borderColor: colors.accent || '#3B82F6',
-                                backgroundColor: isDark ? 'rgba(59, 130, 246, 0.15)' : '#F0F7FF',
-                              },
-                            ]}
-                            onPress={() => {
-                              const isHindi = language === 'hindi';
-                              const qText = isHindi && question.questionTextHindi
-                                ? stripHtml(question.questionTextHindi)
-                                : stripHtml(question.questionText);
-
-                              const currentOptions = isHindi && question.optionsHindi && question.optionsHindi.length > 0
-                                ? question.optionsHindi
-                                : question.options;
-
-                              const optionsText = currentOptions
-                                .map((opt, i) => `Option ${i + 1}: ${stripHtml(opt)}`)
-                                .join('\n');
-
-                              const correctOptNum = question.correctAnswerIndex + 1;
-                              const correctOptContent = currentOptions[question.correctAnswerIndex]
-                                ? stripHtml(currentOptions[question.correctAnswerIndex])
-                                : '';
-
-                              let prompt = `Can you explain this question and each option in detail?\n\nQuestion:\n${qText}\n\nOptions:\n${optionsText}\n\nCorrect Answer: Option ${correctOptNum}${correctOptContent ? ` - ${correctOptContent}` : ''}`;
-
-                              if (userAnswer && typeof userAnswer.selectedOption === 'number' && userAnswer.selectedOption >= 0) {
-                                const userOptNum = userAnswer.selectedOption + 1;
-                                const userOptContent = currentOptions[userAnswer.selectedOption]
-                                  ? stripHtml(currentOptions[userAnswer.selectedOption])
-                                  : '';
-                                prompt += `\nMy Selected Option: Option ${userOptNum}${userOptContent ? ` - ${userOptContent}` : ''}`;
-                              }
-
-                              prompt += `\n\nPlease explain why Option ${correctOptNum} is correct and why each of the other options is incorrect.`;
-
-                              router.push({ pathname: '/assistant', params: { prompt } });
-                            }}
-                          >
-                            <Lightbulb size={16} color={colors.accent || '#3B82F6'} />
-                            <Text style={[styles.reportButtonText, { color: colors.accent || '#3B82F6' }]}>
-                              Ask AI
-                            </Text>
-                          </TouchableOpacity>
-
-                          <TouchableOpacity
-                            style={styles.reportButton}
-                            onPress={() => handleReportQuestion(question)}
-                          >
-                            <Flag size={16} color="#FF9500" />
-                            <Text style={styles.reportButtonText}>Report</Text>
-                          </TouchableOpacity>
-                        </View>
-                      </View>
-                      <Text style={[styles.solutionExplanationText, { color: colors.textSecondary }]}>
-                        {language === 'hindi' && question.explanation.hindi
-                          ? question.explanation.hindi
-                          : question.explanation.english}
-                      </Text>
-                      {question.keyConcepts.length > 0 && (
-                        <View style={styles.solutionKeyConcepts}>
-                          <Text style={[styles.solutionKeyConceptsTitle, { color: colors.textSecondary }]}>
-                            Key Concepts:
-                          </Text>
-                          <View style={styles.solutionKeyConceptsList}>
-                            {question.keyConcepts.map((concept, i) => (
-                              <View key={i} style={styles.keyConceptBadge}>
-                                <Text style={styles.keyConceptText}>{concept}</Text>
-                              </View>
-                            ))}
-                          </View>
-                        </View>
-                      )}
-                    </View>
-                  </View>
-                );
-              })}
-            </View>
-          ))
-        )}
-      </View>
-    );
+  const handleToggleBookmark = (q: any) => {
+    const next = new Set(bookmarkedSet);
+    if (next.has(q.id)) {
+      next.delete(q.id);
+    } else {
+      next.add(q.id);
+      if (user?.uid) {
+        addBookmark(user.uid, {
+          questionId: q.id,
+          questionText: q.questionText,
+          testTitle: result?.testTitle || 'Mock Exam',
+        }).catch(() => {});
+      }
+    }
+    setBookmarkedSet(next);
   };
 
-  if (!analytics || !test) {
+  const handleAskAI = (q: any) => {
+    const textPrompt = `I need help understanding this exam question:\n\nQuestion: ${cleanHtml(q.questionText)}\n\nMy Answer: Option ${String.fromCharCode(65 + q.selectedOption)}\nCorrect Answer: Option ${String.fromCharCode(65 + q.correctAnswerIndex)}\n\nExplanation: ${cleanHtml(typeof q.explanation === 'string' ? q.explanation : q.explanation?.english)}\n\nPlease explain why my answer is wrong and teach me the core concept.`;
+    router.push({
+      pathname: '/assistant',
+      params: { prefill: textPrompt },
+    } as any);
+  };
+
+  if (loading || !result) {
     return (
-      <View style={[styles.loadingContainer, { backgroundColor: colors.background }]}>
-        <ActivityIndicator size="large" color={colors.accent || '#2563EB'} />
-        <Text style={[styles.loadingText, { color: colors.textSecondary, marginTop: 12 }]}>Loading results...</Text>
+      <View style={[styles.centerLoading, { backgroundColor: colors.bg }]}>
+        <ActivityIndicator size="large" color={colors.accent} />
+        <Text style={[styles.loadingText, { color: colors.muted }]}>
+          Computing performance analytics...
+        </Text>
       </View>
     );
   }
 
+  const accuracy = Math.round(result.accuracy || 0);
+  const totalQuestions = result.totalQuestions || questionsWithStatus.length;
+  const correctCount =
+    result.totalCorrect ?? questionsWithStatus.filter((q) => q.isCorrect).length;
+  const incorrectCount =
+    result.totalIncorrect ?? questionsWithStatus.filter((q) => q.isWrong).length;
+  const unattemptedCount =
+    result.totalUnattempted ?? questionsWithStatus.filter((q) => q.isUnattempted).length;
+
+  const timeMinutes = Math.round((result.timeTaken || 0) / 60);
+
+  // Performance Tier Message
+  let tierTitle = 'Good base to build on';
+  let tierDesc =
+    'You demonstrated clear understanding of syllabus fundamentals. Focused practice on weak topics will help clear the merit cutoff.';
+  if (accuracy >= 80) {
+    tierTitle = 'Strong start!';
+    tierDesc =
+      'Outstanding score! Your conceptual foundation is exceptionally strong. Maintain your speed with full-length mocks.';
+  } else if (accuracy < 40) {
+    tierTitle = 'Plenty of room to grow';
+    tierDesc =
+      'Identifying your weak areas early is the most valuable part of mock practice. Review missed explanations carefully.';
+  }
+
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]} edges={['top']}>
-      {/* Header */}
-      <LinearGradient
-        colors={isDark ? ['#172554', '#1E3A8A'] : ['#2563EB', '#1D4ED8']}
-        style={styles.header}
-      >
-        <View style={styles.headerTopRow}>
-          <View style={styles.headerIdentity}>
-            <TouchableOpacity
-              onPress={handleBackToTests}
-              style={styles.backButton}
-              accessibilityRole="button"
-              accessibilityLabel="Back to tests"
-              activeOpacity={0.7}
-            >
-              <ArrowLeft size={24} color="#fff" />
-            </TouchableOpacity>
-            <View>
-              <Text style={styles.headerKicker}>PERFORMANCE REPORT</Text>
-              <Text style={styles.headerTitle}>Test Results</Text>
-            </View>
-          </View>
-          <TouchableOpacity
-            style={styles.languageButton}
-            onPress={() => setLanguage(l => l === 'english' ? 'hindi' : 'english')}
-          >
-            <Text style={styles.languageButtonText}>
-              {language === 'english' ? 'A/अ' : 'अ/A'}
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <Text style={styles.headerSubtitle} numberOfLines={1}>{test.title}</Text>
-      </LinearGradient>
-
-      {/* Tabs */}
-      <View style={[styles.tabs, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
-        <TouchableOpacity
-          style={[styles.tab, selectedTab === 'overview' && { borderBottomColor: colors.accent || '#3B82F6' }]}
-          onPress={() => setSelectedTab('overview')}
-        >
-          <BarChart3
-            size={20}
-            color={selectedTab === 'overview' ? (colors.accent || '#3B82F6') : colors.textSecondary}
-          />
-          <Text
-            style={[
-              styles.tabText,
-              { color: selectedTab === 'overview' ? (colors.accent || '#3B82F6') : colors.textSecondary },
-              selectedTab === 'overview' && styles.tabTextActive,
-            ]}
-          >
-            Overview
-          </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={[styles.tab, selectedTab === 'sections' && styles.tabActive]}
-          onPress={() => setSelectedTab('sections')}
-        >
-          <Target
-            size={20}
-            color={selectedTab === 'sections' ? (colors.accent || '#3B82F6') : colors.textSecondary}
-          />
-          <Text
-            style={[
-              styles.tabText,
-              { color: selectedTab === 'sections' ? (colors.accent || '#3B82F6') : colors.textSecondary },
-              selectedTab === 'sections' && styles.tabTextActive,
-            ]}
-          >
-            Sections
-          </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={[styles.tab, selectedTab === 'solutions' && styles.tabActive]}
-          onPress={() => setSelectedTab('solutions')}
-        >
-          <BookOpen
-            size={20}
-            color={selectedTab === 'solutions' ? (colors.accent || '#3B82F6') : colors.textSecondary}
-          />
-          <Text
-            style={[
-              styles.tabText,
-              { color: selectedTab === 'solutions' ? (colors.accent || '#3B82F6') : colors.textSecondary },
-              selectedTab === 'solutions' && styles.tabTextActive,
-            ]}
-          >
-            Solutions
-          </Text>
-        </TouchableOpacity>
-      </View>
-
-      {/* Content */}
+    <AppShell maxWidth={840}>
       <ScrollView
-        style={styles.content}
-        contentContainerStyle={styles.contentContainer}
+        contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
       >
-        {selectedTab === 'overview' && renderOverviewTab()}
-        {selectedTab === 'sections' && renderSectionsTab()}
-        {selectedTab === 'solutions' && renderSolutionsTab()}
-      </ScrollView>
-
-      {/* Footer Actions */}
-      <View style={[styles.footer, { backgroundColor: colors.surface, borderTopColor: colors.border }]}>
+        {/* Back Link */}
         <TouchableOpacity
-          style={[styles.footerButton, { backgroundColor: colors.accentLight }]}
-          onPress={handleBackToTests}
+          style={styles.backLink}
+          onPress={() => router.push('/test-list')}
+          activeOpacity={0.7}
         >
-          <Home size={19} color={colors.accent} />
-          <Text style={[styles.footerButtonText, { color: colors.accent }]}>Back to Tests</Text>
+          <ArrowLeft size={15} color={colors.muted} />
+          <Text style={[styles.backLinkText, { color: colors.muted }]}>
+            Back to test series
+          </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity 
-          style={[styles.footerButton, { backgroundColor: colors.accentLight }]}
-          onPress={handleReevaluate}
-          disabled={isReevaluating}
-        >
-          {isReevaluating ? (
-            <ActivityIndicator size="small" color={colors.accent} />
-          ) : (
-            <RefreshCw size={19} color={colors.accent} />
-          )}
-          <Text style={[styles.footerButtonText, { color: colors.accent }]}>Re-evaluate</Text>
-        </TouchableOpacity>
+        {/* Section 1: Score & Performance Summary Card */}
+        <Card style={styles.scoreCard}>
+          <View style={styles.scoreSummaryRow}>
+            {/* Score Ring */}
+            <ProgressRing
+              percentage={accuracy}
+              size={120}
+              strokeWidth={9}
+              label={`${accuracy}%`}
+              sublabel="Accuracy"
+            />
 
-        <TouchableOpacity
-          style={[styles.footerButton, { backgroundColor: colors.accentLight }]}
-          onPress={handleShare}
-        >
-          <Share2 size={19} color={colors.accent} />
-          <Text style={[styles.footerButtonText, { color: colors.accent }]}>Share Result</Text>
-        </TouchableOpacity>
-      </View>
-
-      {/* Report Modal */}
-      <Modal
-        visible={showReportModal}
-        animationType="slide"
-        transparent={true}
-        onRequestClose={() => setShowReportModal(false)}
-      >
-        <View style={styles.modalOverlay}>
-          <View style={styles.modalContent}>
-            <View style={styles.modalHeader}>
-              <Text style={styles.modalTitle}>Report Question</Text>
-              <TouchableOpacity
-                onPress={() => setShowReportModal(false)}
-                style={styles.modalCloseButton}
-              >
-                <CloseIcon size={24} color="#666" />
-              </TouchableOpacity>
-            </View>
-
-            <View style={styles.modalBody}>
-              <Text style={styles.modalLabel}>Report Type</Text>
-              <View style={styles.reportTypeContainer}>
-                {[
-                  { value: 'wrong_answer' as ReportType, label: 'Wrong Answer' },
-                  { value: 'incorrect_question' as ReportType, label: 'Incorrect Question' },
-                  { value: 'typo' as ReportType, label: 'Typo/Error' },
-                  { value: 'inappropriate' as ReportType, label: 'Inappropriate' },
-                  { value: 'other' as ReportType, label: 'Other' },
-                ].map((type) => (
-                  <TouchableOpacity
-                    key={type.value}
-                    style={[
-                      styles.reportTypeButton,
-                      reportType === type.value && styles.reportTypeButtonActive,
-                    ]}
-                    onPress={() => setReportType(type.value)}
-                  >
-                    <Text
-                      style={[
-                        styles.reportTypeButtonText,
-                        reportType === type.value && styles.reportTypeButtonTextActive,
-                      ]}
-                    >
-                      {type.label}
-                    </Text>
-                  </TouchableOpacity>
-                ))}
+            <View style={styles.scoreTextColumn}>
+              <View style={styles.badgeRow}>
+                <Pill label="OFFICIAL EVALUATION" variant="neutral" />
               </View>
 
-              <Text style={styles.modalLabel}>Description</Text>
-              <TextInput
-                style={styles.reportInput}
-                multiline
-                numberOfLines={4}
-                placeholder="Please describe the issue in detail..."
-                value={reportDescription}
-                onChangeText={setReportDescription}
-                textAlignVertical="top"
-              />
+              <Text
+                style={[
+                  styles.tierHeadline,
+                  {
+                    color: colors.text,
+                    fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+                  },
+                ]}
+              >
+                {tierTitle}
+              </Text>
+              <Text style={[styles.tierSubtext, { color: colors.muted }]}>
+                {tierDesc}
+              </Text>
 
-              <View style={styles.modalActions}>
-                <TouchableOpacity
-                  style={styles.modalButtonCancel}
-                  onPress={() => setShowReportModal(false)}
-                >
-                  <Text style={styles.modalButtonCancelText}>Cancel</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={styles.modalButtonSubmit}
-                  onPress={submitReport}
-                >
-                  <Text style={styles.modalButtonSubmitText}>Submit Report</Text>
-                </TouchableOpacity>
+              {/* Metric Chips */}
+              <View style={styles.metricChipsRow}>
+                <View style={[styles.metricChip, { backgroundColor: colors.surface2 }]}>
+                  <Target size={13} color={colors.muted} />
+                  <Text style={[styles.metricChipText, { color: colors.text }]}>
+                    {correctCount} / {totalQuestions} Correct
+                  </Text>
+                </View>
+
+                <View style={[styles.metricChip, { backgroundColor: colors.surface2 }]}>
+                  <Clock size={13} color={colors.muted} />
+                  <Text style={[styles.metricChipText, { color: colors.text }]}>
+                    {timeMinutes} mins spent
+                  </Text>
+                </View>
+
+                {result.rank && (
+                  <View style={[styles.metricChip, { backgroundColor: colors.surface2 }]}>
+                    <Award size={13} color={colors.accent} />
+                    <Text style={[styles.metricChipText, { color: colors.text }]}>
+                      Rank #{result.rank}
+                    </Text>
+                  </View>
+                )}
               </View>
             </View>
           </View>
+
+          {/* Quick Stats Strip */}
+          <View style={[styles.statsStrip, { borderTopColor: colors.line }]}>
+            <View style={styles.statCell}>
+              <Text style={[styles.statVal, { color: colors.success }]}>
+                {correctCount}
+              </Text>
+              <Text style={[styles.statLbl, { color: colors.muted }]}>Correct</Text>
+            </View>
+
+            <View style={styles.statCell}>
+              <Text style={[styles.statVal, { color: colors.danger }]}>
+                {incorrectCount}
+              </Text>
+              <Text style={[styles.statLbl, { color: colors.muted }]}>Incorrect</Text>
+            </View>
+
+            <View style={styles.statCell}>
+              <Text style={[styles.statVal, { color: colors.muted }]}>
+                {unattemptedCount}
+              </Text>
+              <Text style={[styles.statLbl, { color: colors.muted }]}>Unattempted</Text>
+            </View>
+
+            <View style={styles.statCell}>
+              <Text style={[styles.statVal, { color: colors.text }]}>
+                {totalQuestions}
+              </Text>
+              <Text style={[styles.statLbl, { color: colors.muted }]}>Total Questions</Text>
+            </View>
+          </View>
+        </Card>
+
+        {/* Section 2: Action Buttons */}
+        <View style={styles.primaryActionRow}>
+          <Button
+            title="Retake Mock Test"
+            variant="secondary"
+            size="md"
+            onPress={() =>
+              router.push({
+                pathname: '/mock-test',
+                params: { testId, filename: (result as any).filename },
+              } as any)
+            }
+            icon={<RotateCcw size={15} color={colors.text} />}
+            style={{ flex: 1 }}
+          />
+
+          {weakTopics.length > 0 && (
+            <Button
+              title="Drill Weak Topics"
+              variant="primary"
+              size="md"
+              onPress={() =>
+                router.push({
+                  pathname: '/practice',
+                  params: { topic: weakTopics[0].topic },
+                } as any)
+              }
+              icon={<Zap size={15} color={colors.accentText} />}
+              style={{ flex: 1 }}
+            />
+          )}
         </View>
-      </Modal>
-    </SafeAreaView>
+
+        {/* Section 3: Topic Mastery Breakdown */}
+        {topicStats.length > 0 && (
+          <View style={styles.sectionWrap}>
+            <Text
+              style={[
+                styles.sectionHeading,
+                {
+                  color: colors.text,
+                  fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+                },
+              ]}
+            >
+              Topic Performance Breakdown
+            </Text>
+            <Text style={[styles.sectionSub, { color: colors.muted }]}>
+              Topics below 50% accuracy are highlighted in red. Focus your revision on these areas.
+            </Text>
+
+            <Card noPadding style={{ marginTop: 12 }}>
+              {topicStats.map((item, idx) => (
+                <View key={idx} style={{ paddingHorizontal: 16 }}>
+                  <TopicBar
+                    topic={item.topic}
+                    accuracy={item.accuracy}
+                    attempted={item.total}
+                    correct={item.correct}
+                    onDrill={() =>
+                      router.push({
+                        pathname: '/practice',
+                        params: { topic: item.topic },
+                      } as any)
+                    }
+                    drillLabel="Practice Drill"
+                  />
+                </View>
+              ))}
+            </Card>
+          </View>
+        )}
+
+        {/* Section 4: Detailed Question Review */}
+        <View style={styles.sectionWrap}>
+          <Text
+            style={[
+              styles.sectionHeading,
+              {
+                color: colors.text,
+                fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+              },
+            ]}
+          >
+            Review Solutions & Explanations
+          </Text>
+          <Text style={[styles.sectionSub, { color: colors.muted }]}>
+            Study the official derivations and use "Ask AI" to resolve doubts on difficult questions.
+          </Text>
+
+          {/* Filter Chips */}
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.filterChipsScroll}
+          >
+            <Chip
+              label="All"
+              count={questionsWithStatus.length}
+              active={activeReviewFilter === 'all'}
+              onPress={() => setActiveReviewFilter('all')}
+            />
+            <Chip
+              label="Correct"
+              count={correctCount}
+              active={activeReviewFilter === 'correct'}
+              onPress={() => setActiveReviewFilter('correct')}
+            />
+            <Chip
+              label="Wrong"
+              count={incorrectCount}
+              active={activeReviewFilter === 'wrong'}
+              onPress={() => setActiveReviewFilter('wrong')}
+            />
+            <Chip
+              label="Unattempted"
+              count={unattemptedCount}
+              active={activeReviewFilter === 'unattempted'}
+              onPress={() => setActiveReviewFilter('unattempted')}
+            />
+            <Chip
+              label="Bookmarked"
+              count={bookmarkedSet.size}
+              active={activeReviewFilter === 'bookmarked'}
+              onPress={() => setActiveReviewFilter('bookmarked')}
+            />
+          </ScrollView>
+
+          {/* Questions Review Cards List */}
+          <View style={styles.questionsReviewList}>
+            {filteredQuestions.map((q) => {
+              const exp =
+                typeof q.explanation === 'string'
+                  ? q.explanation
+                  : q.explanation?.english ||
+                    'Official answer key derivation and rationale.';
+
+              return (
+                <Card key={q.id} style={styles.reviewQuestionCard}>
+                  {/* Question Header */}
+                  <View style={[styles.reviewHeader, { borderBottomColor: colors.line }]}>
+                    <View style={styles.reviewHeaderLeft}>
+                      <View style={[styles.reviewNumBadge, { backgroundColor: colors.surface2 }]}>
+                        <Text style={[styles.reviewNumText, { color: colors.text }]}>
+                          Q{q.globalIndex}
+                        </Text>
+                      </View>
+
+                      {q.isCorrect ? (
+                        <Pill
+                          label="Correct"
+                          variant="free"
+                          icon={<CheckCircle2 size={12} color={colors.success} />}
+                        />
+                      ) : q.isWrong ? (
+                        <Pill
+                          label="Incorrect"
+                          variant="danger"
+                          icon={<XCircle size={12} color={colors.danger} />}
+                        />
+                      ) : (
+                        <Pill label="Unattempted" variant="neutral" />
+                      )}
+
+                      {q.keyConcepts?.[0] ? (
+                        <Text
+                          style={[styles.reviewTopic, { color: colors.muted }]}
+                          numberOfLines={1}
+                        >
+                          {q.keyConcepts[0]}
+                        </Text>
+                      ) : null}
+                    </View>
+
+                    <View style={styles.reviewHeaderRight}>
+                      <TouchableOpacity
+                        style={[
+                          styles.reviewActionBtn,
+                          {
+                            backgroundColor: bookmarkedSet.has(q.id)
+                              ? colors.accent
+                              : colors.surface2,
+                            borderColor: colors.line,
+                          },
+                        ]}
+                        onPress={() => handleToggleBookmark(q)}
+                        accessibilityLabel="Bookmark this question"
+                      >
+                        <Bookmark
+                          size={14}
+                          color={bookmarkedSet.has(q.id) ? colors.accentText : colors.muted}
+                          fill={bookmarkedSet.has(q.id) ? colors.accentText : 'none'}
+                        />
+                      </TouchableOpacity>
+
+                      <TouchableOpacity
+                        style={[
+                          styles.reviewActionBtn,
+                          { backgroundColor: colors.surface2, borderColor: colors.line },
+                        ]}
+                        onPress={() => handleAskAI(q)}
+                        accessibilityLabel="Ask AI about this question"
+                      >
+                        <MessageSquare size={14} color={colors.text} />
+                        <Text style={[styles.askAIText, { color: colors.text }]}>
+                          Ask AI
+                        </Text>
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+
+                  {/* Question Text */}
+                  <Text
+                    style={[
+                      styles.reviewQuestionText,
+                      {
+                        color: colors.text,
+                        fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+                      },
+                    ]}
+                  >
+                    {cleanHtml(q.questionText)}
+                  </Text>
+
+                  {/* Options */}
+                  <View style={styles.reviewOptionsList}>
+                    {q.options.map((opt, optIdx) => {
+                      const letter = String.fromCharCode(65 + optIdx);
+                      const isCorrect = optIdx === q.correctAnswerIndex;
+                      const isUserChoice = optIdx === q.selectedOption;
+
+                      let optBg = colors.surface;
+                      let optBorder = colors.line;
+                      let textCol = colors.muted;
+
+                      if (isCorrect) {
+                        optBg = colors.successBg;
+                        optBorder = colors.success;
+                        textCol = colors.text;
+                      } else if (isUserChoice) {
+                        optBg = colors.dangerBg;
+                        optBorder = colors.danger;
+                        textCol = colors.danger;
+                      }
+
+                      return (
+                        <View
+                          key={optIdx}
+                          style={[
+                            styles.reviewOptionRow,
+                            {
+                              backgroundColor: optBg,
+                              borderColor: optBorder,
+                              borderRadius: radii.button,
+                            },
+                          ]}
+                        >
+                          <View
+                            style={[
+                              styles.reviewOptionLetterBadge,
+                              {
+                                backgroundColor: isCorrect
+                                  ? colors.success
+                                  : isUserChoice
+                                  ? colors.danger
+                                  : colors.surface2,
+                              },
+                            ]}
+                          >
+                            <Text
+                              style={[
+                                styles.reviewOptionLetterText,
+                                {
+                                  color:
+                                    isCorrect || isUserChoice
+                                      ? colors.white
+                                      : colors.text,
+                                },
+                              ]}
+                            >
+                              {letter}
+                            </Text>
+                          </View>
+
+                          <Text style={[styles.reviewOptionText, { color: textCol }]}>
+                            {cleanHtml(opt)}
+                          </Text>
+
+                          {isCorrect && (
+                            <CheckCircle2 size={16} color={colors.success} />
+                          )}
+                          {isUserChoice && !isCorrect && (
+                            <XCircle size={16} color={colors.danger} />
+                          )}
+                        </View>
+                      );
+                    })}
+                  </View>
+
+                  {/* Official Solution & Explanation Box */}
+                  <View
+                    style={[
+                      styles.reviewExplanationBox,
+                      {
+                        backgroundColor: colors.surface2,
+                        borderColor: colors.line,
+                        borderRadius: radii.button,
+                      },
+                    ]}
+                  >
+                    <View style={styles.reviewExplanationHeader}>
+                      <CheckCircle2 size={15} color={colors.success} />
+                      <Text
+                        style={[styles.reviewExplanationTitle, { color: colors.text }]}
+                      >
+                        Official Answer & Explanation
+                      </Text>
+                    </View>
+                    <Text
+                      style={[styles.reviewExplanationBody, { color: colors.text }]}
+                    >
+                      {cleanHtml(exp)}
+                    </Text>
+                  </View>
+                </Card>
+              );
+            })}
+          </View>
+        </View>
+
+        {/* Section 5: Offer Card for Non-Buyers */}
+        {!isSubscribed && (
+          <OfferCard
+            cardHeading="Keep going with the full series"
+            seriesName={
+              examMode === 'pgt'
+                ? 'DSSSB PGT Complete Series 2026'
+                : examMode === 'tgt'
+                ? 'DSSSB TGT Complete Series 2026'
+                : 'UPSC & UP Principal Complete Mock Test Series'
+            }
+            description="Unlock unlimited full-length CBT mock exams, all previous year solved papers, and in-depth rank analytics."
+            originalPrice={examMode === 'pgt' || examMode === 'tgt' ? 999 : 399}
+            currentPrice={199}
+            planId={
+              examMode === 'pgt'
+                ? 'pgt-series'
+                : examMode === 'tgt'
+                ? 'tgt-series'
+                : 'monthly'
+            }
+            features={[
+              'All official solved previous year papers',
+              'Full-length timed CBT mock tests with rank prediction',
+              'Step-by-step explanations for all questions',
+              'Topic-wise weakness & accuracy analytics',
+              'Unlimited retakes throughout the 2026 examination cycle',
+            ]}
+          />
+        )}
+      </ScrollView>
+    </AppShell>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  centerLoading: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
-  },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    justifyContent: 'center',
+    padding: 24,
   },
   loadingText: {
-    fontSize: 16,
-    color: '#666',
-  },
-  header: {
-    paddingHorizontal: 20,
-    paddingTop: 16,
-    paddingBottom: 18,
-  },
-  headerTopRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  headerIdentity: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    flex: 1,
-  },
-  backButton: {
-    width: 38,
-    height: 38,
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: 10,
-    backgroundColor: 'rgba(255,255,255,0.14)',
-  },
-  headerKicker: {
-    fontSize: 10,
-    fontWeight: '700',
-    letterSpacing: 1.1,
-    color: 'rgba(255,255,255,0.7)',
-    marginBottom: 2,
-  },
-  headerTitle: {
-    fontSize: 22,
-    fontWeight: '800',
-    color: '#fff',
-  },
-  headerSubtitle: {
-    fontSize: 14,
-    color: 'rgba(255,255,255,0.9)',
     marginTop: 14,
-    marginLeft: 48,
-  },
-  languageButton: {
-    backgroundColor: 'rgba(255,255,255,0.16)',
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.14)',
-  },
-  languageButtonText: {
-    color: '#fff',
-    fontWeight: '700',
-    fontSize: 13,
-  },
-  tabs: {
-    flexDirection: 'row',
-    minHeight: 62,
-    borderBottomWidth: 1,
-  },
-  tab: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    gap: 7,
-    borderBottomWidth: 3,
-    borderBottomColor: 'transparent',
-  },
-  tabActive: {
-    borderBottomColor: '#4A90E2',
-  },
-  tabText: {
-    fontSize: 13,
-    fontWeight: '700',
-    color: '#666',
-  },
-  tabTextActive: {
-    color: '#4A90E2',
-  },
-  content: {
-    flex: 1,
-  },
-  contentContainer: {
-    paddingBottom: 118,
-  },
-  tabContent: {
-    padding: 16,
-    paddingTop: 18,
-    gap: 14,
-  },
-  scoreCard: {
-    borderRadius: 20,
-    padding: 18,
-    borderWidth: 1,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.06,
-    shadowRadius: 7,
-    elevation: 2,
-  },
-  scoreTopRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-  },
-  scoreIdentity: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    flex: 1,
-  },
-  scoreIconWrap: {
-    width: 50,
-    height: 50,
-    borderRadius: 15,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: 12,
-  },
-  scoreIdentityText: {
-    flex: 1,
-  },
-  eyebrow: {
-    fontSize: 10,
-    fontWeight: '800',
-    letterSpacing: 1,
-    marginBottom: 4,
-  },
-  scoreValueRow: {
-    flexDirection: 'row',
-    alignItems: 'baseline',
-  },
-  scoreValue: {
-    fontSize: 36,
-    fontWeight: '800',
-    letterSpacing: -1,
-  },
-  scoreMax: {
-    fontSize: 17,
-    fontWeight: '600',
-    marginLeft: 5,
-  },
-  scoreSubtitle: {
-    fontSize: 12,
-    marginTop: 2,
-  },
-  scoreBadge: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    minWidth: 62,
-    paddingVertical: 9,
-    paddingHorizontal: 8,
-    borderRadius: 13,
-  },
-  scoreBadgeValue: {
-    fontSize: 17,
-    fontWeight: '800',
-  },
-  scoreBadgeLabel: {
-    fontSize: 9,
-    fontWeight: '800',
-    letterSpacing: 0.8,
-    marginTop: 1,
-  },
-  progressTrack: {
-    height: 8,
-    borderRadius: 4,
-    overflow: 'hidden',
-    marginTop: 18,
-    marginBottom: 17,
-  },
-  progressFill: {
-    height: '100%',
-    borderRadius: 4,
-  },
-  hairline: {
-    height: 1,
-  },
-  scoreMetaRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingTop: 15,
-  },
-  metaItem: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  metaIcon: {
-    width: 34,
-    height: 34,
-    borderRadius: 11,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: 9,
-  },
-  metaLabel: {
-    fontSize: 11,
-    marginBottom: 2,
-  },
-  metaValue: {
-    fontSize: 13,
-    fontWeight: '700',
-  },
-  metaSeparator: {
-    width: 1,
-    height: 32,
-    marginHorizontal: 10,
-  },
-  quickStats: {
-    backgroundColor: '#fff',
-    borderRadius: 16,
-    padding: 20,
-  },
-  quickStatRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-  },
-  quickStatItem: {
-    alignItems: 'center',
-    gap: 8,
-  },
-  quickStatValue: {
-    fontSize: 24,
-    fontWeight: '800',
-    color: '#333',
-  },
-  quickStatLabel: {
-    fontSize: 12,
-    color: '#666',
-  },
-  strengthsWeaknesses: {
-    gap: 16,
-  },
-  strengthsSection: {
-    backgroundColor: '#fff',
-    borderRadius: 16,
-    padding: 20,
-  },
-  weaknessSection: {
-    backgroundColor: '#fff',
-    borderRadius: 16,
-    padding: 20,
-  },
-  sectionHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
-    marginBottom: 16,
-  },
-  sectionTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: '#333',
-  },
-  topicsList: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 8,
-  },
-  topicBadge: {
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 20,
-  },
-  strengthBadge: {
-    backgroundColor: '#E8F5E9',
-  },
-  strengthBadgeText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#4CAF50',
-  },
-  weaknessBadge: {
-    backgroundColor: '#FFEBEE',
-  },
-  weaknessBadgeText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#F44336',
-  },
-  recommendations: {
-    backgroundColor: '#fff',
-    borderRadius: 16,
-    padding: 20,
-  },
-  recommendationItem: {
-    flexDirection: 'row',
-    marginTop: 12,
-    paddingLeft: 8,
-  },
-  recommendationBullet: {
-    width: 6,
-    height: 6,
-    borderRadius: 3,
-    backgroundColor: '#FF9800',
-    marginRight: 12,
-    marginTop: 8,
-  },
-  recommendationText: {
-    flex: 1,
-    fontSize: 15,
-    color: '#666',
-    lineHeight: 22,
-  },
-  sectionCard: {
-    backgroundColor: '#fff',
-    borderRadius: 16,
-    padding: 20,
-    marginBottom: 12,
-  },
-  sectionCardHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 16,
-  },
-  sectionCardTitle: {
-    fontSize: 16,
-    fontWeight: '700',
-    color: '#333',
-    flex: 1,
-  },
-  sectionCardBadge: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 12,
-  },
-  sectionCardBadgeText: {
-    fontSize: 14,
-    fontWeight: '700',
-  },
-  sectionCardScore: {
-    marginBottom: 16,
-  },
-  sectionCardScoreValue: {
-    fontSize: 20,
-    fontWeight: '700',
-    color: '#333',
-    marginBottom: 8,
-  },
-  sectionProgressBar: {
-    height: 6,
-    backgroundColor: '#f0f0f0',
-    borderRadius: 3,
-    overflow: 'hidden',
-  },
-  sectionProgressFill: {
-    height: '100%',
-    borderRadius: 3,
-  },
-  sectionCardStats: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 12,
-  },
-  sectionCardStat: {
-    alignItems: 'center',
-  },
-  sectionCardStatLabel: {
-    fontSize: 11,
-    color: '#666',
-    marginBottom: 4,
-  },
-  sectionCardStatValue: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: '#333',
-  },
-  sectionCardTime: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    paddingTop: 12,
-    borderTopWidth: 1,
-    borderTopColor: '#f0f0f0',
-  },
-  sectionCardTimeText: {
-    fontSize: 13,
-    color: '#666',
-  },
-  solutionsSection: {
-    marginBottom: 24,
-  },
-  solutionsSectionTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: '#333',
-    marginBottom: 16,
-  },
-  solutionCard: {
-    backgroundColor: '#fff',
-    borderRadius: 16,
-    padding: 20,
-    marginBottom: 16,
-  },
-  solutionHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 16,
-  },
-  solutionQuestionNumber: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#666',
-  },
-  solutionStatusBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 12,
-  },
-  solutionCorrectBadge: {
-    backgroundColor: '#4CAF50',
-  },
-  solutionIncorrectBadge: {
-    backgroundColor: '#F44336',
-  },
-  solutionSkippedBadge: {
-    backgroundColor: '#FF9800',
-  },
-  solutionStatusText: {
-    fontSize: 12,
-    fontWeight: '600',
-    color: '#fff',
-  },
-  solutionQuestion: {
-    marginBottom: 16,
-  },
-  solutionQuestionText: {
-    fontSize: 15,
-    color: '#333',
-    lineHeight: 22,
-  },
-  solutionOptions: {
-    gap: 12,
-    marginBottom: 20,
-  },
-  solutionOption: {
-    padding: 12,
-    borderRadius: 12,
-    backgroundColor: '#f9f9f9',
-    borderWidth: 2,
-    borderColor: '#e0e0e0',
-  },
-  solutionOptionCorrect: {
-    backgroundColor: '#E8F5E9',
-    borderColor: '#4CAF50',
-  },
-  solutionOptionWrong: {
-    backgroundColor: '#FFEBEE',
-    borderColor: '#F44336',
-  },
-  solutionOptionHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 8,
-  },
-  solutionOptionLabel: {
-    fontSize: 12,
-    fontWeight: '600',
-    color: '#666',
-  },
-  correctAnswerBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-  },
-  correctAnswerText: {
-    fontSize: 11,
-    fontWeight: '600',
-    color: '#4CAF50',
-  },
-  yourAnswerBadge: {
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    borderRadius: 8,
-    backgroundColor: '#F44336',
-  },
-  yourAnswerText: {
-    fontSize: 10,
-    fontWeight: '600',
-    color: '#fff',
-  },
-  solutionOptionText: {
-    fontSize: 14,
-    color: '#333',
-  },
-  solutionExplanation: {
-    padding: 16,
-    backgroundColor: '#FFF9E6',
-    borderRadius: 12,
-    borderLeftWidth: 4,
-    borderLeftColor: '#FF9800',
-  },
-  solutionExplanationHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 8,
-  },
-  solutionExplanationTitle: {
-    fontSize: 14,
-    fontWeight: '700',
-    color: '#333',
-  },
-  reportButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    backgroundColor: 'rgba(255, 149, 0, 0.1)',
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: '#FF9500',
-  },
-  reportButtonText: {
-    fontSize: 12,
-    fontWeight: '600',
-    color: '#FF9500',
-  },
-  solutionExplanationText: {
-    fontSize: 14,
-    color: '#666',
-    lineHeight: 22,
-  },
-  solutionKeyConcepts: {
-    marginTop: 12,
-    paddingTop: 12,
-    borderTopWidth: 1,
-    borderTopColor: '#FFE082',
-  },
-  solutionKeyConceptsTitle: {
-    fontSize: 12,
-    fontWeight: '700',
-    color: '#666',
-    marginBottom: 8,
-  },
-  solutionKeyConceptsList: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 6,
-  },
-  keyConceptBadge: {
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderRadius: 12,
-    backgroundColor: '#FFE082',
-  },
-  keyConceptText: {
-    fontSize: 11,
-    fontWeight: '600',
-    color: '#F57C00',
-  },
-  footer: {
-    flexDirection: 'row',
-    borderTopWidth: 1,
-    paddingHorizontal: 12,
-    paddingTop: 10,
-    paddingBottom: Platform.OS === 'ios' ? 20 : 12,
-    gap: 8,
-  },
-  footerButton: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 8,
-    borderRadius: 12,
-    backgroundColor: '#EFF6FF',
-  },
-  footerButtonText: {
-    fontSize: 11,
-    fontWeight: '600',
-    color: '#4A90E2',
-    marginTop: 4,
-  },
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    justifyContent: 'flex-end',
-  },
-  modalContent: {
-    backgroundColor: '#fff',
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
-    maxHeight: '80%',
-  },
-  modalHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 20,
-    paddingVertical: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
-  },
-  modalTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: '#333',
-  },
-  modalCloseButton: {
-    padding: 4,
-  },
-  modalBody: {
-    padding: 20,
-  },
-  modalLabel: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#333',
-    marginBottom: 12,
-  },
-  reportTypeContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 8,
-    marginBottom: 20,
-  },
-  reportTypeButton: {
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 20,
-    backgroundColor: '#f5f5f5',
-    borderWidth: 1,
-    borderColor: '#e0e0e0',
-  },
-  reportTypeButtonActive: {
-    backgroundColor: '#E3F2FD',
-    borderColor: '#4A90E2',
-  },
-  reportTypeButtonText: {
-    fontSize: 13,
-    fontWeight: '600',
-    color: '#666',
-  },
-  reportTypeButtonTextActive: {
-    color: '#4A90E2',
-  },
-  reportInput: {
-    borderWidth: 1,
-    borderColor: '#e0e0e0',
-    borderRadius: 12,
-    padding: 12,
-    fontSize: 14,
-    color: '#333',
-    minHeight: 100,
-    marginBottom: 20,
-  },
-  modalActions: {
-    flexDirection: 'row',
-    gap: 12,
-  },
-  modalButtonCancel: {
-    flex: 1,
-    paddingVertical: 14,
-    borderRadius: 12,
-    backgroundColor: '#f5f5f5',
-    alignItems: 'center',
-  },
-  modalButtonCancelText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#666',
-  },
-  modalButtonSubmit: {
-    flex: 1,
-    paddingVertical: 14,
-    borderRadius: 12,
-    backgroundColor: '#4A90E2',
-    alignItems: 'center',
-  },
-  modalButtonSubmitText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#fff',
-  },
-  reviewIncorrectBanner: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: 14,
-    borderRadius: 18,
-    borderWidth: 1,
-  },
-  reviewIncorrectLeft: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
-    flex: 1,
-  },
-  reviewIncorrectIcon: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  reviewIncorrectTexts: {
-    flex: 1,
-  },
-  reviewIncorrectTitle: {
-    fontSize: 15,
-    fontWeight: '700',
-    marginBottom: 2,
-  },
-  reviewIncorrectSub: {
-    fontSize: 12,
-  },
-  quickStatsRow: {
-    flexDirection: 'row',
-    gap: 9,
-  },
-  quickStatCard: {
-    flex: 1,
-    borderRadius: 18,
-    paddingVertical: 16,
-    paddingHorizontal: 10,
-    alignItems: 'center',
-    borderWidth: 1,
-    elevation: 1,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.05,
-    shadowRadius: 2,
-  },
-  quickStatIconWrap: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 6,
-  },
-  quickStatHint: {
-    fontSize: 10,
-    fontWeight: '600',
-    marginTop: 4,
-    textAlign: 'center',
-  },
-  insightsCard: {
-    borderRadius: 18,
-    borderWidth: 1,
-    padding: 16,
-  },
-  insightsHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 14,
-  },
-  insightsIcon: {
-    width: 38,
-    height: 38,
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: 10,
-  },
-  insightsHeaderText: {
-    flex: 1,
-  },
-  cardTitle: {
-    fontSize: 16,
-    fontWeight: '800',
-  },
-  cardSubtitle: {
-    fontSize: 12,
-    marginTop: 2,
-  },
-  insightsColumns: {
-    flexDirection: 'row',
-    gap: 10,
-  },
-  insightPanel: {
-    flex: 1,
-    borderRadius: 13,
-    padding: 12,
-    minHeight: 92,
-  },
-  insightPanelHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 8,
-    gap: 6,
-  },
-  insightPanelTitle: {
-    fontSize: 12,
-    fontWeight: '800',
-  },
-  insightItem: {
-    fontSize: 12,
-    lineHeight: 19,
-  },
-  recommendationStrip: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    gap: 8,
-    borderTopWidth: 1,
-    marginTop: 14,
-    paddingTop: 13,
-  },
-  recommendationStripText: {
-    flex: 1,
-    fontSize: 12,
-    lineHeight: 18,
-  },
-  filterBarCard: {
-    borderRadius: 16,
-    padding: 16,
-    borderWidth: 1,
-    marginBottom: 4,
-    elevation: 1,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.05,
-    shadowRadius: 2,
-  },
-  filterBarHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 12,
-  },
-  filterBarTitle: {
-    fontSize: 15,
-    fontWeight: '700',
-  },
-  filterBarCount: {
-    fontSize: 12,
+    fontSize: 14.5,
     fontWeight: '500',
   },
-  filterPillsRow: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 8,
+  scrollContent: {
+    paddingHorizontal: 16,
+    paddingVertical: 24,
   },
-  filterPill: {
+  backLink: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    borderRadius: 20,
-    borderWidth: 1,
-  },
-  filterPillText: {
-    fontSize: 12,
-    fontWeight: '600',
-  },
-  filterPillTextActive: {
-    color: '#FFFFFF',
-    fontWeight: '700',
-  },
-  filterPillIncorrectActive: {
-    backgroundColor: '#EF4444',
-    borderColor: '#EF4444',
-  },
-  filterPillCorrectActive: {
-    backgroundColor: '#10B981',
-    borderColor: '#10B981',
-  },
-  filterPillSkippedActive: {
-    backgroundColor: '#F59E0B',
-    borderColor: '#F59E0B',
-  },
-  filterPillAllActive: {
-    backgroundColor: '#3B82F6',
-    borderColor: '#3B82F6',
-  },
-  emptyFilterCard: {
-    borderRadius: 16,
-    padding: 32,
-    alignItems: 'center',
-    borderWidth: 1,
-    marginVertical: 12,
-  },
-  emptyFilterIconWrap: {
-    width: 72,
-    height: 72,
-    borderRadius: 36,
-    alignItems: 'center',
-    justifyContent: 'center',
     marginBottom: 16,
+    alignSelf: 'flex-start',
   },
-  emptyFilterTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    marginBottom: 6,
-    textAlign: 'center',
+  backLinkText: {
+    fontSize: 13.5,
+    fontWeight: '500',
   },
-  emptyFilterSub: {
-    fontSize: 13,
-    textAlign: 'center',
-    lineHeight: 18,
+  scoreCard: {
     marginBottom: 20,
-    maxWidth: 280,
+    padding: 24,
   },
-  emptyFilterActionBtn: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 20,
+  scoreSummaryRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 24,
+    flexWrap: 'wrap',
   },
-  emptyFilterActionBtnText: {
-    color: '#FFFFFF',
-    fontSize: 13,
+  scoreTextColumn: {
+    flex: 1,
+    minWidth: 240,
+  },
+  badgeRow: {
+    marginBottom: 8,
+  },
+  tierHeadline: {
+    fontSize: 24,
+    fontWeight: '700',
+    letterSpacing: -0.4,
+    marginBottom: 6,
+  },
+  tierSubtext: {
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 14,
+  },
+  metricChipsRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  metricChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 6,
+  },
+  metricChipText: {
+    fontSize: 12.5,
     fontWeight: '600',
   },
-  sectionHeaderRow: {
+  statsStrip: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 12,
+    paddingTop: 18,
+    borderTopWidth: 1,
+    marginTop: 20,
   },
-  sectionCountBadge: {
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderRadius: 12,
-    borderWidth: 1,
+  statCell: {
+    alignItems: 'center',
+    flex: 1,
   },
-  sectionCountBadgeText: {
-    fontSize: 11,
-    fontWeight: '600',
+  statVal: {
+    fontSize: 22,
+    fontWeight: '800',
   },
-  solutionOptionCorrectDark: {
-    backgroundColor: 'rgba(16, 185, 129, 0.15)',
-    borderColor: '#10B981',
+  statLbl: {
+    fontSize: 12,
+    marginTop: 2,
   },
-  solutionOptionWrongDark: {
-    backgroundColor: 'rgba(239, 68, 68, 0.15)',
-    borderColor: '#EF4444',
+  primaryActionRow: {
+    flexDirection: 'row',
+    gap: 12,
+    marginBottom: 32,
+    flexWrap: 'wrap',
   },
-  solutionNeutralBadge: {
-    backgroundColor: '#3B82F6',
+  sectionWrap: {
+    marginBottom: 32,
   },
-  infoBannerCard: {
+  sectionHeading: {
+    fontSize: 20,
+    fontWeight: '700',
+    letterSpacing: -0.3,
+    marginBottom: 4,
+  },
+  sectionSub: {
+    fontSize: 13.5,
+    lineHeight: 19,
+  },
+  filterChipsScroll: {
+    flexDirection: 'row',
+    gap: 8,
+    paddingVertical: 14,
+  },
+  questionsReviewList: {
+    gap: 16,
+  },
+  reviewQuestionCard: {
+    padding: 20,
+  },
+  reviewHeader: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
-    borderRadius: 16,
-    padding: 16,
+    justifyContent: 'space-between',
+    paddingBottom: 12,
+    borderBottomWidth: 1,
+    marginBottom: 14,
+  },
+  reviewHeaderLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    flex: 1,
+  },
+  reviewNumBadge: {
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 6,
+  },
+  reviewNumText: {
+    fontSize: 12,
+    fontWeight: '700',
+  },
+  reviewTopic: {
+    fontSize: 12,
+    fontWeight: '500',
+    flex: 1,
+  },
+  reviewHeaderRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  reviewActionBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    paddingHorizontal: 8,
+    paddingVertical: 6,
+    borderRadius: 6,
     borderWidth: 1,
+  },
+  askAIText: {
+    fontSize: 11.5,
+    fontWeight: '600',
+  },
+  reviewQuestionText: {
+    fontSize: 16.5,
+    fontWeight: '600',
+    lineHeight: 24,
     marginBottom: 16,
   },
-  infoBannerIconWrap: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
+  reviewOptionsList: {
+    gap: 8,
+    marginBottom: 16,
+  },
+  reviewOptionRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    borderWidth: 1,
+    gap: 10,
+  },
+  reviewOptionLetterBadge: {
+    width: 24,
+    height: 24,
+    borderRadius: 5,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  infoBannerTitle: {
-    fontSize: 14,
+  reviewOptionLetterText: {
+    fontSize: 11.5,
     fontWeight: '700',
-    marginBottom: 2,
   },
-  infoBannerSub: {
-    fontSize: 12,
-    lineHeight: 16,
+  reviewOptionText: {
+    fontSize: 13.5,
+    lineHeight: 19,
+    flex: 1,
+  },
+  reviewExplanationBox: {
+    padding: 14,
+    borderWidth: 1,
+  },
+  reviewExplanationHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    marginBottom: 6,
+  },
+  reviewExplanationTitle: {
+    fontSize: 12.5,
+    fontWeight: '700',
+  },
+  reviewExplanationBody: {
+    fontSize: 13,
+    lineHeight: 19,
   },
 });

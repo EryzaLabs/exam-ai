@@ -10,64 +10,81 @@ import {
   Platform,
   ActivityIndicator,
   Alert,
-  StatusBar,
-  useWindowDimensions,
 } from 'react-native';
-import DesktopDashboard from '@/components/DesktopDashboard';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams } from 'expo-router';
-import { Send, Bot, User, FileText, Brain, TrendingUp, Target } from 'lucide-react-native';
+import { Send, Bot, Trash2, Sparkles } from 'lucide-react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   ChatMessage as AIMessage,
   chatWithHistory,
 } from '@/services/ai-assistant-service';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useDashboardData } from '@/hooks/useDashboardData';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/context/theme-context';
 import MarkdownText from '@/components/MarkdownText';
+import { AppShell, Pill, Button } from '@/components/chalkboard';
 
-const CHAT_HISTORY_KEY = '@vidya_chat_history_tab';
+const CHAT_HISTORY_KEY = '@vidya_chat_history_tab_v2';
+const DAILY_LIMIT = 5;
 
 interface Message extends AIMessage {
   id: string;
-  timestamp: Date;
+  timestamp: string;
 }
 
-const QUICK_ACTIONS = [
-  { icon: <FileText size={24} color="#667eea" />, label: 'Simplify Rule/Act', action: 'simplify' },
-  { icon: <Brain size={24} color="#667eea" />, label: 'Create Mnemonic', action: 'mnemonic' },
-  { icon: <TrendingUp size={24} color="#667eea" />, label: 'Analyze Weakness', action: 'analyze' },
-  { icon: <Target size={24} color="#667eea" />, label: 'Generate Quiz', action: 'quiz' },
+const PROMPT_CHIPS = [
+  'Explain CCS (Conduct) Rules 1964',
+  'NCF 2005 5 Guiding Principles',
+  'GFR 2017 Procurement rules summary',
+  'RTE Act 2009 key provisions & penalties',
+  'RTE Act Section 12(1)(c) details',
+  'Create a mnemonic for Bloom taxonomy',
 ];
 
 export default function AssistantScreen() {
   const { dashboardStats, performance } = useDashboardData();
-  const { requireAuth } = useAuth();
-  const { isDark, colors } = useTheme();
+  const { user, isSubscribed, showAuthPrompt } = useAuth();
+  const { colors, isDark } = useTheme();
+  const params = useLocalSearchParams();
+
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [queriesUsedToday, setQueriesUsedToday] = useState(0);
   const scrollViewRef = useRef<ScrollView>(null);
-  const params = useLocalSearchParams();
   const initialPromptProcessed = useRef(false);
-  const { width } = useWindowDimensions();
-  const isLargeScreen = width >= 1024;
 
+  const todayKey = `@vidya_daily_queries_${new Date().toISOString().slice(0, 10)}`;
+
+  // Load daily count
+  useEffect(() => {
+    const loadDailyCount = async () => {
+      try {
+        const stored = await AsyncStorage.getItem(todayKey);
+        if (stored) setQueriesUsedToday(parseInt(stored, 10) || 0);
+      } catch (e) {
+        // ignore
+      }
+    };
+    loadDailyCount();
+  }, [todayKey]);
+
+  // Load chat history
   useEffect(() => {
     const loadHistory = async () => {
       try {
         const saved = await AsyncStorage.getItem(CHAT_HISTORY_KEY);
         if (saved) {
           const parsed = JSON.parse(saved);
-          setMessages(parsed.map((m: any) => ({ ...m, timestamp: new Date(m.timestamp) })));
+          setMessages(parsed);
         } else {
           setMessages([
             {
-              id: '1',
+              id: 'initial',
               role: 'assistant',
-              content: "Namaste! I am Vidya (विद्या), your AI study assistant. I can help you with:\n\n• Simplifying complex administrative rules\n• Creating mnemonics for memorization\n• Analyzing your test weaknesses\n• Generating quick quizzes on specific topics\n• Explaining concepts in English and Hindi\n\nWhat would you like to do?",
-              timestamp: new Date(),
+              content:
+                '**Namaste! I am Vidya**, your AI tutor for Indian School Principal & Teacher Recruitment exams (UPSC, UP Principal, DSSSB TGT/PGT).\n\nAsk me about:\n- Administrative & Financial Rules (CCS, GFR, FR/SR)\n- Educational Acts & Policies (RTE 2009, NEP 2020, POCSO)\n- Pedagogy, Mnemonics & Doubt Clearing in English or Hindi',
+              timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
             },
           ]);
         }
@@ -78,520 +95,500 @@ export default function AssistantScreen() {
     loadHistory();
   }, []);
 
+  // Save chat history
   useEffect(() => {
     if (messages.length > 0) {
-      AsyncStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(messages)).catch(e => console.error('Failed to save chat history', e));
+      AsyncStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(messages)).catch(() => {});
     }
   }, [messages]);
 
+  // Handle prefill or prompt from router params (e.g. from test-result "Ask AI")
   useEffect(() => {
-    if (params.prompt && !initialPromptProcessed.current) {
+    const incomingPrompt = (params.prefill || params.prompt) as string | undefined;
+    if (incomingPrompt && !initialPromptProcessed.current) {
       initialPromptProcessed.current = true;
-      const promptText = params.prompt as string;
-      setInputText(promptText);
-      // Slight delay to ensure UI mounts before sending
-      setTimeout(() => sendMessage(promptText), 500);
+      setInputText(incomingPrompt);
+      setTimeout(() => {
+        handleSendMessage(incomingPrompt);
+      }, 400);
     }
-  }, [params.prompt]);
+  }, [params.prefill, params.prompt]);
 
+  // Auto-scroll on new messages
   useEffect(() => {
     setTimeout(() => {
       scrollViewRef.current?.scrollToEnd({ animated: true });
-    }, 100);
+    }, 150);
   }, [messages]);
 
-  const sendMessage = async (text?: string) => {
-    const messageText = text || inputText.trim();
-    if (!messageText || isLoading) return;
+  const remainingQueries = Math.max(0, DAILY_LIMIT - queriesUsedToday);
 
-    const userMessage: Message = {
+  const handleSendMessage = async (textToSend?: string) => {
+    const text = (textToSend || inputText).trim();
+    if (!text || isLoading) return;
+
+    // Check limit if not subscribed
+    if (!isSubscribed && remainingQueries <= 0) {
+      Alert.alert(
+        'Daily Free Limit Reached',
+        `You have used your ${DAILY_LIMIT} free questions for today. Unlock the full test series for unlimited AI tutoring.`,
+        [
+          { text: 'Cancel', style: 'cancel' },
+          {
+            text: 'View Series',
+            onPress: () => {
+              // Can navigate to test-list or offer
+            },
+          },
+        ]
+      );
+      return;
+    }
+
+    const userMsg: Message = {
       id: Date.now().toString(),
       role: 'user',
-      content: messageText,
-      timestamp: new Date(),
+      content: text,
+      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     };
 
-    setMessages((prev) => [...prev, userMessage]);
+    setMessages((prev) => [...prev, userMsg]);
     setInputText('');
     setIsLoading(true);
 
     try {
       const history: AIMessage[] = messages
-        .filter((m) => m.role !== 'system')
-        .map((m) => ({
-          role: m.role,
-          content: m.content,
-        }));
+        .filter((m) => m.id !== 'initial')
+        .map((m) => ({ role: m.role, content: m.content }));
 
       const contextStr = JSON.stringify({
         stats: dashboardStats,
         performance: performance,
       });
 
-      const response = await chatWithHistory(history, messageText, contextStr);
+      const response = await chatWithHistory(history, text, contextStr);
 
-      const assistantMessage: Message = {
+      const assistantMsg: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
         content: response.message,
-        timestamp: new Date(),
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
 
-      setMessages((prev) => [...prev, assistantMessage]);
-    } catch (error) {
-      console.error('Error sending message:', error);
-      const errorMsg = (error as Error).message || 'Failed to get response.';
-      Alert.alert('Error', errorMsg);
+      setMessages((prev) => [...prev, assistantMsg]);
 
-      const errorMessage: Message = {
+      // Increment daily counter if not subscribed
+      if (!isSubscribed) {
+        const nextCount = queriesUsedToday + 1;
+        setQueriesUsedToday(nextCount);
+        AsyncStorage.setItem(todayKey, nextCount.toString()).catch(() => {});
+      }
+    } catch (err: any) {
+      const errorMsg: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: `Error: ${errorMsg}`,
-        timestamp: new Date(),
+        content: `Sorry, I encountered an issue: ${err.message || 'Unable to fetch response. Please try again.'}`,
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
-      setMessages((prev) => [...prev, errorMessage]);
+      setMessages((prev) => [...prev, errorMsg]);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleQuickAction = async (action: string) => {
-    let prompt = '';
-    switch (action) {
-      case 'simplify':
-        prompt = 'Can you simplify the General Financial Rules (GFR) or CCS Conduct Rules for me in simple terms?';
-        break;
-      case 'mnemonic':
-        prompt = 'Create a mnemonic to help me remember the components of the National Curriculum Framework (NCF) 2005.';
-        break;
-      case 'analyze':
-        prompt = 'Analyze my mock test performance and tell me which areas of Educational Administration I need to focus on.';
-        break;
-      case 'quiz':
-        prompt = 'Give me 5 quick practice questions specifically on the Right to Education (RTE) Act 2009.';
-        break;
-    }
-    if (prompt) {
-      setInputText(prompt);
-      sendMessage(prompt);
-    }
-  };
-
-  const clearChat = () => {
-    Alert.alert(
-      'Clear Chat',
-      'Are you sure you want to clear the conversation?',
-      [
-        { text: 'Cancel', style: 'cancel' },
-        {
-          text: 'Clear',
-          style: 'destructive',
-          onPress: () => {
-            setMessages([
-              {
-                id: '1',
-                role: 'assistant',
-                content: "Chat cleared! How can I help you?",
-                timestamp: new Date(),
-              },
-            ]);
-            AsyncStorage.removeItem(CHAT_HISTORY_KEY);
-          },
+  const handleClearChat = () => {
+    Alert.alert('Clear Chat History', 'Are you sure you want to clear your conversation with Vidya?', [
+      { text: 'Cancel', style: 'cancel' },
+      {
+        text: 'Clear',
+        style: 'destructive',
+        onPress: () => {
+          const resetMsg: Message = {
+            id: 'initial',
+            role: 'assistant',
+            content: 'Chat cleared. How can I assist you with your exam prep today?',
+            timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          };
+          setMessages([resetMsg]);
+          AsyncStorage.removeItem(CHAT_HISTORY_KEY).catch(() => {});
         },
-      ]
-    );
+      },
+    ]);
   };
 
-  const content = (
-    <SafeAreaView style={styles.container} edges={['bottom']}>
+  return (
+    <AppShell title="AI Assistant">
       <KeyboardAvoidingView
-        style={styles.container}
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 20}
+        style={[styles.container, { backgroundColor: colors.background }]}
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
-        <View style={[styles.contentWrapper, { backgroundColor: colors.surface }]}>
-        <View style={[styles.header, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
-          <View style={styles.headerLeft}>
-            <View style={styles.botIcon}>
-              <Bot size={24} color="#667eea" />
+        {/* Top Control Bar */}
+        <View
+          style={[
+            styles.topBar,
+            { backgroundColor: colors.surface, borderBottomColor: colors.line },
+          ]}
+        >
+          <View style={styles.topBarLeft}>
+            <View style={[styles.avatar, { backgroundColor: colors.surface2, borderColor: colors.line }]}>
+              <Bot size={20} color={colors.text} />
             </View>
             <View>
-              <Text style={[styles.headerTitle, { color: colors.textPrimary }]}>Vidya (विद्या) AI</Text>
-              <View style={styles.statusContainer}>
-                <View style={styles.statusDot} />
-                <Text style={styles.statusText}>Online</Text>
-              </View>
+              <Text style={[styles.title, { color: colors.text }]}>Vidya (विद्या) AI</Text>
+              <Text style={[styles.subtitle, { color: colors.muted }]}>
+                Concept tutor, rules & acts, mnemonics
+              </Text>
             </View>
           </View>
-          <TouchableOpacity onPress={clearChat} style={styles.clearButton}>
-            <Text style={styles.clearButtonText}>Clear</Text>
-          </TouchableOpacity>
+
+          <View style={styles.topBarRight}>
+            {isSubscribed ? (
+              <Pill label="Unlimited Pass" variant="success" />
+            ) : (
+              <Pill
+                label={`${remainingQueries} free left`}
+                variant={remainingQueries <= 1 ? 'danger' : 'neutral'}
+              />
+            )}
+            {messages.length > 1 && (
+              <TouchableOpacity
+                onPress={handleClearChat}
+                style={[styles.clearBtn, { borderColor: colors.line }]}
+                accessibilityLabel="Clear chat"
+              >
+                <Trash2 size={16} color={colors.muted} />
+              </TouchableOpacity>
+            )}
+          </View>
         </View>
 
-        {messages.length <= 1 && (
-          <View style={[styles.quickActionsContainer, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
-            <Text style={styles.quickActionsTitle}>Quick Actions</Text>
-            <View style={styles.quickActions}>
-              {QUICK_ACTIONS.map((action) => (
+        {/* Suggestion Chips */}
+        {messages.length <= 2 && (
+          <View style={[styles.chipsContainer, { backgroundColor: colors.surface, borderBottomColor: colors.line }]}>
+            <View style={styles.chipsLabelRow}>
+              <Sparkles size={14} color={colors.muted} />
+              <Text style={[styles.chipsLabel, { color: colors.muted }]}>Suggested prompts</Text>
+            </View>
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={styles.chipsScroll}
+            >
+              {PROMPT_CHIPS.map((chip, idx) => (
                 <TouchableOpacity
-                  key={action.action}
-                  style={[styles.quickActionButton, { backgroundColor: colors.surfaceInput, borderColor: colors.border }]}
-                  onPress={() => handleQuickAction(action.action)}
+                  key={idx}
+                  style={[
+                    styles.chip,
+                    { backgroundColor: colors.surface2, borderColor: colors.line },
+                  ]}
+                  onPress={() => {
+                    setInputText(chip);
+                    handleSendMessage(chip);
+                  }}
+                  activeOpacity={0.7}
                 >
-                  <View style={styles.quickActionIcon}>{action.icon}</View>
-                  <Text style={[styles.quickActionLabel, { color: colors.textPrimary }]}>{action.label}</Text>
+                  <Text style={[styles.chipText, { color: colors.text }]}>{chip}</Text>
                 </TouchableOpacity>
               ))}
-            </View>
+            </ScrollView>
           </View>
         )}
 
+        {/* Chat Messages */}
         <ScrollView
           ref={scrollViewRef}
-          style={[styles.messagesContainer, { backgroundColor: colors.background }]}
+          style={styles.messagesScroll}
           contentContainerStyle={styles.messagesContent}
-          showsVerticalScrollIndicator={false}
+          keyboardShouldPersistTaps="handled"
         >
-          {messages.map((message) => (
-            <View
-              key={message.id}
-              style={[
-                styles.messageRow,
-                message.role === 'user' ? styles.userMessageRow : styles.assistantMessageRow,
-              ]}
-            >
-              {message.role === 'assistant' && (
-                <View style={styles.messageIcon}>
-                  <Bot size={20} color="#667eea" />
-                </View>
-              )}
+          {messages.map((item) => {
+            const isUser = item.role === 'user';
+            return (
               <View
+                key={item.id}
                 style={[
-                  styles.messageBubble,
-                  message.role === 'user' ? styles.userBubble : [styles.assistantBubble, { backgroundColor: colors.surface, borderColor: colors.border }],
+                  styles.messageRow,
+                  isUser ? styles.userRow : styles.assistantRow,
                 ]}
               >
-                <MarkdownText
-                  content={message.content}
-                  role={message.role}
-                />
-                <Text
+                {!isUser && (
+                  <View
+                    style={[
+                      styles.msgAvatar,
+                      { backgroundColor: colors.surface2, borderColor: colors.line },
+                    ]}
+                  >
+                    <Bot size={16} color={colors.text} />
+                  </View>
+                )}
+
+                <View
                   style={[
-                    styles.messageTime,
-                    message.role === 'user' ? styles.userMessageTime : styles.assistantMessageTime,
+                    styles.bubble,
+                    isUser
+                      ? [styles.userBubble, { backgroundColor: colors.surface2, borderColor: colors.line }]
+                      : [styles.assistantBubble, { backgroundColor: colors.surface, borderColor: colors.line }],
                   ]}
                 >
-                  {message.timestamp.toLocaleTimeString([], {
-                    hour: '2-digit',
-                    minute: '2-digit',
-                  })}
-                </Text>
-              </View>
-              {message.role === 'user' && (
-                <View style={styles.messageIcon}>
-                  <User size={20} color="#fff" />
+                  {!isUser ? (
+                    <MarkdownText content={item.content} role="assistant" />
+                  ) : (
+                    <Text style={[styles.userMessageText, { color: colors.text }]}>
+                      {item.content}
+                    </Text>
+                  )}
+                  <Text style={[styles.timestamp, { color: colors.muted }]}>{item.timestamp}</Text>
                 </View>
-              )}
-            </View>
-          ))}
+              </View>
+            );
+          })}
+
           {isLoading && (
-            <View style={styles.loadingContainer}>
-              <View style={[styles.loadingBubble, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-                <ActivityIndicator size="small" color="#667eea" />
-                <Text style={[styles.loadingText, { color: colors.textSecondary }]}>Thinking...</Text>
+            <View style={[styles.messageRow, styles.assistantRow]}>
+              <View
+                style={[
+                  styles.msgAvatar,
+                  { backgroundColor: colors.surface2, borderColor: colors.line },
+                ]}
+              >
+                <Bot size={16} color={colors.text} />
+              </View>
+              <View
+                style={[
+                  styles.bubble,
+                  styles.assistantBubble,
+                  { backgroundColor: colors.surface, borderColor: colors.line },
+                ]}
+              >
+                <View style={styles.loadingRow}>
+                  <ActivityIndicator size="small" color={colors.text} />
+                  <Text style={[styles.thinkingText, { color: colors.muted }]}>
+                    Vidya is formulating answer...
+                  </Text>
+                </View>
               </View>
             </View>
           )}
         </ScrollView>
 
-        <View style={[styles.inputContainer, { backgroundColor: colors.surface, borderTopColor: colors.border }]}>
-          <View style={styles.inputWrapper}>
+        {/* Bottom Input Area */}
+        <View
+          style={[
+            styles.inputContainer,
+            { backgroundColor: colors.surface, borderTopColor: colors.line },
+          ]}
+        >
+          <View
+            style={[
+              styles.inputBox,
+              { backgroundColor: colors.surface2, borderColor: colors.line },
+            ]}
+          >
             <TextInput
-              style={[styles.input, { backgroundColor: colors.surfaceInput, borderColor: colors.border, color: colors.textPrimary }]}
-              placeholder="Ask me anything..."
-              placeholderTextColor="#9CA3AF"
+              style={[styles.input, { color: colors.text }]}
               value={inputText}
               onChangeText={setInputText}
+              placeholder="Ask Vidya anything about rules, acts or concepts..."
+              placeholderTextColor={colors.muted}
               multiline
-              maxLength={500}
+              maxLength={1500}
               editable={!isLoading}
+              onSubmitEditing={() => handleSendMessage()}
             />
             <TouchableOpacity
-              style={[styles.sendButton, (!inputText.trim() || isLoading) && styles.sendButtonDisabled]}
-              onPress={() => sendMessage()}
+              style={[
+                styles.sendBtn,
+                {
+                  backgroundColor: inputText.trim() && !isLoading ? colors.accent : colors.surface,
+                  borderColor: colors.line,
+                },
+              ]}
               disabled={!inputText.trim() || isLoading}
+              onPress={() => handleSendMessage()}
+              accessibilityLabel="Send message"
             >
-              {isLoading ? (
-                <ActivityIndicator size="small" color="#fff" />
-              ) : (
-                <Send size={20} color="#fff" />
-              )}
+              <Send
+                size={18}
+                color={inputText.trim() && !isLoading ? colors.accentText : colors.muted}
+              />
             </TouchableOpacity>
           </View>
-          <Text style={styles.disclaimer}>
-            AI responses may not always be accurate. Verify important information.
-          </Text>
-        </View>
         </View>
       </KeyboardAvoidingView>
-    </SafeAreaView>
+    </AppShell>
   );
-
-  if (isLargeScreen) {
-    return <DesktopDashboard disableScroll>{content}</DesktopDashboard>;
-  }
-
-  return content;
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
   },
-  contentWrapper: {
-    flex: 1,
-    width: '100%',
-    backgroundColor: '#ffffff',
-  },
-  header: {
+  topBar: {
     flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#ffffff',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
     borderBottomWidth: 1,
-    borderBottomColor: '#f1f5f9',
   },
-  headerLeft: {
+  topBarLeft: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 16,
+    gap: 12,
   },
-  botIcon: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    backgroundColor: '#EEF2FF',
-    justifyContent: 'center',
+  avatar: {
+    width: 38,
+    height: 38,
+    borderRadius: 19,
+    borderWidth: 1,
     alignItems: 'center',
+    justifyContent: 'center',
   },
-  headerTitle: {
-    fontSize: 20,
-    fontWeight: '700',
-    color: '#0f172a',
+  title: {
+    fontFamily: Platform.select({
+      web: "'Newsreader', Georgia, serif",
+      default: 'serif',
+    }),
+    fontSize: 17,
+    fontWeight: '600',
   },
-  statusContainer: {
+  subtitle: {
+    fontSize: 13,
+  },
+  topBarRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  clearBtn: {
+    width: 32,
+    height: 32,
+    borderRadius: 8,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  chipsContainer: {
+    paddingVertical: 8,
+    borderBottomWidth: 1,
+  },
+  chipsLabelRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    marginTop: 4,
-  },
-  statusDot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: '#10B981',
-  },
-  statusText: {
-    fontSize: 13,
-    color: '#64748b',
-    fontWeight: '500',
-  },
-  clearButton: {
     paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 20,
-    backgroundColor: '#fef2f2',
+    marginBottom: 6,
   },
-  clearButtonText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#ef4444',
+  chipsLabel: {
+    fontSize: 12,
+    fontWeight: '500',
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
-  quickActionsContainer: {
-    padding: 20,
-    backgroundColor: '#ffffff',
-    borderBottomWidth: 1,
-    borderBottomColor: '#f1f5f9',
-  },
-  quickActionsTitle: {
-    fontSize: 15,
-    fontWeight: '600',
-    color: '#64748b',
-    marginBottom: 16,
-  },
-  quickActions: {
-    flexDirection: 'row',
-    gap: 12,
-  },
-  quickActionButton: {
-    flex: 1,
-    padding: 16,
-    borderRadius: 16,
-    backgroundColor: '#f8fafc',
-    borderWidth: 1,
-    borderColor: '#e2e8f0',
-    alignItems: 'center',
+  chipsScroll: {
+    paddingHorizontal: 16,
     gap: 8,
-    ...(Platform.OS === 'web' && {
-      transition: 'all 0.2s ease',
-      cursor: 'pointer',
-    }),
   },
-  quickActionIcon: {
-    marginBottom: 4,
+  chip: {
+    borderWidth: 1,
+    borderRadius: 20,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
   },
-  quickActionLabel: {
-    fontSize: 13,
-    fontWeight: '600',
-    color: '#334155',
-    textAlign: 'center',
+  chipText: {
+    fontSize: 13.5,
   },
-  messagesContainer: {
+  messagesScroll: {
     flex: 1,
-    backgroundColor: '#fafaf9',
   },
   messagesContent: {
-    padding: 20,
-    gap: 20,
+    padding: 16,
+    gap: 14,
+    maxWidth: 860,
+    width: '100%',
+    alignSelf: 'center',
   },
   messageRow: {
     flexDirection: 'row',
-    gap: 12,
-    maxWidth: '85%',
+    gap: 10,
+    alignItems: 'flex-start',
   },
-  userMessageRow: {
-    alignSelf: 'flex-end',
-    flexDirection: 'row-reverse',
+  userRow: {
+    justifyContent: 'flex-end',
   },
-  assistantMessageRow: {
-    alignSelf: 'flex-start',
+  assistantRow: {
+    justifyContent: 'flex-start',
   },
-  messageIcon: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
-    backgroundColor: '#6366f1',
-    justifyContent: 'center',
+  msgAvatar: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    borderWidth: 1,
     alignItems: 'center',
-    marginTop: 4,
+    justifyContent: 'center',
+    marginTop: 2,
   },
-  messageBubble: {
-    flex: 1,
-    padding: 16,
-    borderRadius: 20,
+  bubble: {
+    maxWidth: '85%',
+    borderRadius: 14,
+    borderWidth: 1,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
   },
   userBubble: {
-    backgroundColor: '#6366f1',
     borderBottomRightRadius: 4,
-    ...(Platform.OS === 'web' && {
-      shadowColor: '#6366f1',
-      shadowOffset: { width: 0, height: 4 },
-      shadowOpacity: 0.2,
-      shadowRadius: 8,
-    }),
   },
   assistantBubble: {
-    backgroundColor: '#ffffff',
-    borderWidth: 1,
-    borderColor: '#e2e8f0',
     borderBottomLeftRadius: 4,
-    ...(Platform.OS === 'web' && {
-      shadowColor: '#94a3b8',
-      shadowOffset: { width: 0, height: 4 },
-      shadowOpacity: 0.1,
-      shadowRadius: 8,
-    }),
-  },
-  messageText: {
-    fontSize: 16,
-    lineHeight: 24,
   },
   userMessageText: {
-    color: '#ffffff',
+    fontSize: 15,
+    lineHeight: 22,
   },
-  assistantMessageText: {
-    color: '#334155',
+  timestamp: {
+    fontSize: 11,
+    marginTop: 6,
+    alignSelf: 'flex-end',
   },
-  messageTime: {
-    fontSize: 12,
-    marginTop: 8,
-  },
-  userMessageTime: {
-    color: 'rgba(255, 255, 255, 0.7)',
-    textAlign: 'right',
-  },
-  assistantMessageTime: {
-    color: '#94a3b8',
-  },
-  loadingContainer: {
-    alignSelf: 'flex-start',
-    flexDirection: 'row',
-    gap: 12,
-  },
-  loadingBubble: {
+  loadingRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
-    padding: 16,
-    backgroundColor: '#ffffff',
-    borderWidth: 1,
-    borderColor: '#e2e8f0',
-    borderRadius: 20,
-    borderBottomLeftRadius: 4,
+    gap: 8,
+    paddingVertical: 4,
   },
-  loadingText: {
-    fontSize: 15,
-    color: '#64748b',
-    fontWeight: '500',
+  thinkingText: {
+    fontSize: 14,
+    fontStyle: 'italic',
   },
   inputContainer: {
-    padding: 20,
-    backgroundColor: '#ffffff',
     borderTopWidth: 1,
-    borderTopColor: '#f1f5f9',
+    padding: 12,
   },
-  inputWrapper: {
+  inputBox: {
     flexDirection: 'row',
-    alignItems: 'flex-end',
-    gap: 12,
-    marginBottom: 12,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderRadius: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    maxWidth: 860,
+    width: '100%',
+    alignSelf: 'center',
   },
   input: {
     flex: 1,
-    minHeight: 52,
-    maxHeight: 120,
-    paddingHorizontal: 20,
-    paddingVertical: 14,
-    backgroundColor: '#f8fafc',
+    fontSize: 15,
+    maxHeight: 100,
+    paddingVertical: 6,
+    outlineStyle: 'none',
+  } as any,
+  sendBtn: {
+    width: 38,
+    height: 38,
+    borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
-    borderRadius: 26,
-    fontSize: 16,
-    color: '#0f172a',
-  },
-  sendButton: {
-    width: 52,
-    height: 52,
-    borderRadius: 26,
-    backgroundColor: '#6366f1',
-    justifyContent: 'center',
     alignItems: 'center',
-    ...(Platform.OS === 'web' && {
-      shadowColor: '#6366f1',
-      shadowOffset: { width: 0, height: 4 },
-      shadowOpacity: 0.3,
-      shadowRadius: 8,
-    }),
-  },
-  sendButtonDisabled: {
-    opacity: 0.4,
-    backgroundColor: '#94a3b8',
-  },
-  disclaimer: {
-    fontSize: 12,
-    color: '#94a3b8',
-    textAlign: 'center',
+    justifyContent: 'center',
+    marginLeft: 8,
   },
 });

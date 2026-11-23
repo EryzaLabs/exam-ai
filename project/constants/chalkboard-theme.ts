@@ -9,11 +9,13 @@ export interface ChalkboardColorTokens {
   text: string;
   muted: string;
   accent: string;
+  accentText: string;
   accentHover: string;
   success: string;
   successBg: string;
   danger: string;
   dangerBg: string;
+  hero: string;
   white: string;
   cardBorder: string;
 }
@@ -27,11 +29,13 @@ export const ChalkboardTokens = {
     text: '#16241f',
     muted: '#5b6e65',
     accent: '#e0a800',
+    accentText: '#1b1500',
     accentHover: '#c99700',
     success: '#2f8f62',
     successBg: '#eaf5f0',
     danger: '#c0392b',
     dangerBg: '#fdf0ee',
+    hero: '#e7efe9',
     white: '#ffffff',
     cardBorder: '#d5dfd9',
   },
@@ -43,19 +47,23 @@ export const ChalkboardTokens = {
     text: '#edf2ea',
     muted: '#9bb0a5',
     accent: '#f2c94c',
+    accentText: '#1b1500',
     accentHover: '#e0b83b',
     success: '#5fcf9a',
     successBg: '#122e23',
     danger: '#ff8a7a',
     dangerBg: '#331815',
+    hero: '#1c3029',
     white: '#ffffff',
     cardBorder: '#2b4239',
   },
 } as const;
 
 export const ChalkboardTypography = {
-  headingFamily: 'Newsreader, Georgia, "Times New Roman", serif',
-  bodyFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+  headingFamily: 'Newsreader, Georgia, "Noto Sans Devanagari", "Times New Roman", serif',
+  bodyFamily: 'Inter, "Noto Sans Devanagari", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+  baseSize: 16,
+  minSize: 13.5,
 };
 
 export const ChalkboardRadii = {

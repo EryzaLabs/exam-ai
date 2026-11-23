@@ -1,60 +1,43 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-  Dimensions,
   Alert,
-  Modal,
   Platform,
-  BackHandler,
   ActivityIndicator,
+  useWindowDimensions,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import ResponsiveContainer from '@/components/ResponsiveContainer';
 import { useLocalSearchParams, router } from 'expo-router';
-import { LinearGradient } from 'expo-linear-gradient';
 import {
   Clock,
+  ArrowLeft,
   ChevronLeft,
   ChevronRight,
   Check,
-  X,
   Flag,
-  Menu,
-  AlertCircle,
-  Send,
-  Save,
+  Grid,
   Bookmark,
-  Sun,
-  Moon,
+  CheckCircle2,
+  Globe,
+  RotateCcw,
+  Send,
 } from 'lucide-react-native';
-import RenderHtml from 'react-native-render-html';
 import SSCCGLService, {
   ParsedMockTest,
   ParsedQuestion,
   TestAttempt,
   UserAnswer,
 } from '@/services/ssc-cgl-service';
-import { TestProgressService, SavedTestState, TestResult } from '@/services/test-progress-service';
-import TestSeriesService from '@/services/testseries-service';
+import { TestProgressService, SavedTestState } from '@/services/test-progress-service';
 import { addBookmark } from '@/services/bookmark-service';
 import { useAuth } from '@/context/auth-context';
-import { useTheme } from '@/context/theme-context';
-
-const { width } = Dimensions.get('window');
-
-// Shuffle array utility function
-const shuffleArray = <T,>(array: T[]): T[] => {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-};
+import { useChalkboardTheme } from '@/constants/chalkboard-theme';
+import Button from '@/components/chalkboard/Button';
+import Modal from '@/components/chalkboard/Modal';
 
 interface QuestionState {
   answered: boolean;
@@ -64,28 +47,29 @@ interface QuestionState {
   visited?: boolean;
 }
 
-export default function MockTestScreen() {
-  const { user, isLoading: authLoading, showAuthPrompt } = useAuth();
+const cleanHtml = (text?: string): string => {
+  if (!text) return '';
+  return text
+    .replace(/<[^>]*>/g, '')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .trim();
+};
 
-  useEffect(() => {
-    if (!authLoading && !user) {
-      router.replace('/');
-      showAuthPrompt({
-        title: 'Sign In to Start Test',
-        subtitle: 'Please create a free account or sign in to take tests and save your progress.',
-        feature: 'Mock Test',
-      });
-    }
-  }, [authLoading, user, showAuthPrompt]);
+export default function MockTestScreen() {
+  const { user } = useAuth();
+  const { colors, typography, radii } = useChalkboardTheme();
+  const { width } = useWindowDimensions();
+  const isDesktop = width >= 1024;
+
   const params = useLocalSearchParams();
   const testId = params.testId as string;
   const resume = params.resume === 'true';
-  const source = params.source as string; // 'testseries' or undefined
-  const seriesFolder = params.seriesFolder as string;
-  const sectionFolder = params.sectionFolder as string;
   const initialLang = (params.lang as string) || 'english';
-  const { isDark, colors, toggleTheme } = useTheme();
 
+  const [loading, setLoading] = useState(true);
   const [test, setTest] = useState<ParsedMockTest | null>(null);
   const [language, setLanguage] = useState<'english' | 'hindi'>(initialLang as any);
   const [attempt, setAttempt] = useState<TestAttempt | null>(null);
@@ -93,81 +77,172 @@ export default function MockTestScreen() {
   const [questionStates, setQuestionStates] = useState<Map<string, QuestionState>>(new Map());
   const [timeRemaining, setTimeRemaining] = useState(0);
   const [showQuestionPalette, setShowQuestionPalette] = useState(false);
-  const [paletteFilter, setPaletteFilter] = useState<'all' | 'answered' | 'not-answered' | 'marked' | 'not-visited'>('all');
+
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
   const [showBackConfirm, setShowBackConfirm] = useState(false);
-  const [questionStartTime, setQuestionStartTime] = useState(Date.now());
-  const [isSaving, setIsSaving] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [lastSavedTime, setLastSavedTime] = useState<number | null>(null);
+  const [isBookmarked, setIsBookmarked] = useState(false);
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const autoSaveRef = useRef<NodeJS.Timeout | null>(null);
 
+  // 1. Flattened questions list
+  const getAllQuestions = useCallback((): ParsedQuestion[] => {
+    if (!test) return [];
+    return test.sections.flatMap((s) => s.questions);
+  }, [test]);
+
+  const questions = getAllQuestions();
+  const currentQuestion = questions[currentQuestionIndex];
+  const currentState = currentQuestion ? questionStates.get(currentQuestion.id) : undefined;
+
+  // 2. Load test & restore state
   useEffect(() => {
+    let isCancelled = false;
+
+    const loadTest = async () => {
+      try {
+        setLoading(true);
+        let savedState: SavedTestState | null = null;
+        if (resume) {
+          savedState = await TestProgressService.getTestProgress(testId);
+        }
+
+        const targetFilename = (params.filename as string) || savedState?.filename;
+        let paper: ParsedMockTest | null = null;
+
+        if (targetFilename) {
+          try {
+            paper = await SSCCGLService.fetchPaper(targetFilename);
+          } catch {}
+        }
+
+        if (!paper && testId) {
+          paper = SSCCGLService.getPaper(testId);
+        }
+
+        if (!paper) {
+          try {
+            paper = await SSCCGLService.fetchPaperById(testId);
+          } catch {}
+        }
+
+        if (!paper) {
+          const papers = await SSCCGLService.fetchPapersList();
+          const match = papers.find((p: any) => p.id === testId || p.testId === testId);
+          if (match && match.filename) {
+            paper = await SSCCGLService.fetchPaper(match.filename);
+          }
+        }
+
+        if (!paper || !paper.sections || paper.sections.length === 0) {
+          Alert.alert('Unable to load test', 'Test questions could not be retrieved.');
+          router.back();
+          return;
+        }
+
+        if (isCancelled) return;
+        setTest(paper);
+
+        // Initialize attempt
+        const newAttempt = SSCCGLService.startTest(paper.id, user?.uid || 'guest');
+        setAttempt(newAttempt);
+
+        // Calculate time
+        let durationSecs = paper.duration || 7200;
+        if (savedState && savedState.timeRemaining > 0) {
+          durationSecs = savedState.timeRemaining;
+        }
+        setTimeRemaining(durationSecs);
+
+        // Initialize question states
+        const initialStates = new Map<string, QuestionState>();
+        const allQs = paper.sections.flatMap((s) => s.questions);
+
+        allQs.forEach((q) => {
+          let selectedOpt: number | null = null;
+          let isAnswered = false;
+          let isMarked = false;
+          let isVisited = false;
+
+          if (savedState && savedState.questionStates && savedState.questionStates[q.id]) {
+            const qs = savedState.questionStates[q.id];
+            selectedOpt = qs.selectedOption ?? null;
+            isAnswered = !!qs.answered;
+            isMarked = !!qs.marked;
+            isVisited = !!qs.visited;
+          }
+
+          initialStates.set(q.id, {
+            answered: isAnswered,
+            marked: isMarked,
+            selectedOption: selectedOpt,
+            timeTaken: 0,
+            visited: isVisited,
+          });
+        });
+
+        if (savedState && savedState.currentQuestionIndex >= 0) {
+          setCurrentQuestionIndex(Math.min(savedState.currentQuestionIndex, allQs.length - 1));
+        }
+
+        setQuestionStates(initialStates);
+        setLastSavedTime(Date.now());
+      } catch (err) {
+        console.error('Error loading mock test:', err);
+      } finally {
+        if (!isCancelled) setLoading(false);
+      }
+    };
+
     loadTest();
+
     return () => {
+      isCancelled = true;
       if (timerRef.current) clearInterval(timerRef.current);
       if (autoSaveRef.current) clearInterval(autoSaveRef.current);
     };
-  }, []);
+  }, [testId, resume]);
 
-
-
-  // Auto-save every 30 seconds
+  // 3. Timer Countdown
   useEffect(() => {
-    if (test && attempt && timeRemaining > 0) {
-      if (autoSaveRef.current) clearInterval(autoSaveRef.current);
-      autoSaveRef.current = setInterval(() => {
-        saveProgress();
-      }, 30000);
-      return () => {
-         if (autoSaveRef.current) clearInterval(autoSaveRef.current);
-      }
-    }
-  }, [test, attempt, currentQuestionIndex, questionStates, timeRemaining]);
+    if (!test || timeRemaining <= 0) return;
 
-
-  useEffect(() => {
-    if (test && timeRemaining > 0) {
-      timerRef.current = setInterval(() => {
-        setTimeRemaining((prev) => {
-          if (prev <= 1) {
-            handleAutoSubmit();
-            return 0;
-          }
-          return prev - 1;
-        });
-      }, 1000);
-
-      return () => {
-        if (timerRef.current) clearInterval(timerRef.current);
-      };
-    }
-  }, [test, timeRemaining > 0]); // Changed condition to restart timer only if running
-
-  const saveProgress = async () => {
-    if (!test || !attempt) return;
-    
-    // Create detailed answers map for saving
-    const answersRecord: Record<string, number> = {};
-    questionStates.forEach((state, qId) => {
-        if (state.selectedOption !== null) {
-            answersRecord[qId] = state.selectedOption;
+    timerRef.current = setInterval(() => {
+      setTimeRemaining((prev) => {
+        if (prev <= 1) {
+          handleAutoSubmit();
+          return 0;
         }
-    });
+        return prev - 1;
+      });
+    }, 1000);
 
-    // Convert Map to plain object for Firestore
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [test, timeRemaining > 0]);
+
+  // 4. State Persistence
+  const saveProgress = useCallback(async () => {
+    if (!test || !attempt) return;
+
+    const answersRecord: Record<string, number> = {};
     const questionStatesObj: Record<string, any> = {};
-    questionStates.forEach((value, key) => {
-      questionStatesObj[key] = value;
+
+    questionStates.forEach((state, qId) => {
+      if (state.selectedOption !== null && state.selectedOption !== undefined) {
+        answersRecord[qId] = state.selectedOption;
+      }
+      questionStatesObj[qId] = state;
     });
 
-    // Get current question order
-    const questionOrder = test.sections.flatMap(section => section.questions.map(q => q.id));
+    const questionOrder = test.sections.flatMap((s) => s.questions.map((q) => q.id));
 
     const state: SavedTestState = {
       testId: test.id,
-      attemptId: attempt.id!,
+      attemptId: attempt.id || `attempt_${Date.now()}`,
       currentQuestionIndex,
       timeRemaining,
       questionStates: questionStatesObj,
@@ -175,1326 +250,834 @@ export default function MockTestScreen() {
       lastUpdated: Date.now(),
       questionOrder,
       testTitle: test.title,
-      totalQuestions: test.sections.reduce((sum, s) => sum + s.questions.length, 0),
+      totalQuestions: questions.length,
       filename: (params.filename as string) || (test as any).filename,
     };
 
-    await TestProgressService.saveCurrentTest(state);
-  };
-
-  const loadTest = async () => {
     try {
-      let savedState: SavedTestState | null = null;
-      if (resume) {
-        savedState = await TestProgressService.getTestProgress(testId);
-      }
+      await TestProgressService.saveCurrentTest(state);
+      setLastSavedTime(Date.now());
+    } catch (e) {
+      console.warn('Failed to auto-save test state:', e);
+    }
+  }, [test, attempt, currentQuestionIndex, questionStates, timeRemaining, questions.length]);
 
-      const targetFilename = (params.filename as string) || savedState?.filename;
-      let paper: ParsedMockTest | null = null;
-      const hasQuestions = (p: any) => p && Array.isArray(p.sections) && p.sections.some((s: any) => Array.isArray(s.questions) && s.questions.length > 0);
+  // Auto-save interval (every 25s)
+  useEffect(() => {
+    if (test && attempt && timeRemaining > 0) {
+      autoSaveRef.current = setInterval(() => {
+        saveProgress();
+      }, 25000);
 
-      // 1. If targetFilename is provided, fetch canonical paper directly from source
-      if (targetFilename) {
-        try {
-          paper = await SSCCGLService.fetchPaper(targetFilename);
-        } catch (err) {
-          console.warn('mock-test: fetchPaper by targetFilename failed:', err);
-        }
-      }
-
-      // 2. If not fetched by filename, retrieve from in-memory cache
-      if (!paper || !hasQuestions(paper)) {
-        paper = SSCCGLService.getPaper(testId);
-      }
-
-      // 3. Fallback to AsyncStorage cache or global server search
-      if (!paper || !hasQuestions(paper)) {
-        let cachedPaper = await TestSeriesService.getTestPaperFromCache(testId);
-
-        if (!cachedPaper) {
-          cachedPaper = await TestSeriesService.fetchTestPaperGlobally(testId);
-        }
-
-        if (cachedPaper) {
-          await SSCCGLService.storePaperInMemory(cachedPaper);
-          paper = SSCCGLService.getPaper(testId);
-        }
-      }
-
-      // 4. Final fallbacks by ID or papers list
-      if (!paper || !hasQuestions(paper)) {
-        paper = await SSCCGLService.fetchPaperById(testId);
-        if (!paper || !hasQuestions(paper)) {
-          const papers = await SSCCGLService.fetchPapersList();
-          const paperInfo = papers.find((p: any) => p.id === testId || p.testId === testId);
-          if (paperInfo && paperInfo.filename) {
-            paper = await SSCCGLService.fetchPaper(paperInfo.filename);
-          }
-        }
-      }
-
-      if (!paper || !hasQuestions(paper)) {
-        Alert.alert('Error', 'Test paper could not be loaded or has no questions');
-        router.back();
-        return;
-      }
-      
-      // Check if we are resuming
-      const paperTotalQuestions = paper.sections.reduce((sum, s) => sum + s.questions.length, 0);
-      const isSavedStateValid = savedState && 
-        savedState.questionOrder && 
-        savedState.questionOrder.length === paperTotalQuestions;
-
-      if (resume && isSavedStateValid) {
-        console.log("Resuming test with valid question state...");
-             
-             // Restore shuffled question order
-             let restoredPaper = paper;
-             if (savedState.questionOrder) {
-               const questionOrderMap = new Map<string, ParsedQuestion>();
-               paper.sections.forEach(s => s.questions.forEach(q => questionOrderMap.set(q.id, q)));
-               
-               // Rebuild sections with saved question order
-               const sectionStartIndices: number[] = [];
-               let currentIndex = 0;
-               paper.sections.forEach(section => {
-                 sectionStartIndices.push(currentIndex);
-                 currentIndex += section.questions.length;
-               });
-               
-               restoredPaper = {
-                 ...paper,
-                 sections: paper.sections.map((section, sIdx) => {
-                   const start = sectionStartIndices[sIdx];
-                   const end = sIdx < paper.sections.length - 1 ? sectionStartIndices[sIdx + 1] : savedState.questionOrder!.length;
-                   const sectionQuestionIds = savedState.questionOrder!.slice(start, end);
-                   
-                   return {
-                     ...section,
-                     questions: sectionQuestionIds.map(qId => questionOrderMap.get(qId)!).filter(Boolean)
-                   };
-                 })
-               };
-             }
-             
-             setTest(restoredPaper);
-             
-             // Restore question states from object to Map
-             const restoredStates = new Map<string, QuestionState>(
-               Object.entries(savedState.questionStates)
-             );
-             setQuestionStates(restoredStates);
-             
-             // Reconstruct answers for Service
-             const reconstructedAnswers: UserAnswer[] = [];
-             
-             // Improve: We need to find the question object to get marks
-             // Create a lookup for questions
-             const questionsMap = new Map<string, ParsedQuestion>();
-             paper.sections.forEach(s => s.questions.forEach(q => questionsMap.set(q.id, q)));
-             
-             restoredStates.forEach((state, qId) => {
-                 if (state.selectedOption !== null) {
-                     const q = questionsMap.get(qId);
-                     if (q) {
-                         const isCorrect = state.selectedOption === q.correctAnswerIndex;
-                         reconstructedAnswers.push({
-                             questionId: qId,
-                             selectedOption: state.selectedOption,
-                             timeTaken: state.timeTaken,
-                             isCorrect,
-                             marksAwarded: isCorrect ? q.marks.positive : -q.marks.negative
-                         });
-                     }
-                 }
-             });
-
-             const resumedAttempt: TestAttempt = {
-                id: savedState.attemptId,
-                testId: savedState.testId,
-                userId: 'user', 
-                startTime: new Date(Date.now() - (paper.duration - savedState.timeRemaining) * 1000), // Approx start time
-                answers: reconstructedAnswers,
-                currentQuestionIndex: savedState.currentQuestionIndex,
-                status: 'in-progress',
-                score: 0,
-                totalMarks: 0,
-                accuracy: 0
-             };
-
-             // Hydrate Service
-             SSCCGLService.resumeTestAttempt(savedState.attemptId, resumedAttempt);
-             setAttempt(resumedAttempt);
-             
-             setCurrentQuestionIndex(savedState.currentQuestionIndex);
-             setTimeRemaining(savedState.timeRemaining);
-             return; 
-        }
-
-      if (savedState && !isSavedStateValid) {
-        console.log(`Saved state has ${savedState.questionOrder?.length || 0} questions but paper has ${paperTotalQuestions}. Resetting stale attempt to load full paper.`);
-        await TestProgressService.clearTestProgress(testId);
-      }
-
-      // Start Fresh
-      setTimeRemaining(paper.duration);
-      
-      // Preserve official question order for official PYQ exams, shuffle only custom practice sets
-      const isOfficialPaper = (paper as any).isPYQ || 
-                              ((paper as any).filename && ((paper as any).filename.includes('tgt_pgt') || (paper as any).filename.includes('official')));
-      const activePaper = {
-        ...paper,
-        sections: paper.sections.map(section => ({
-          ...section,
-          questions: isOfficialPaper ? [...section.questions] : shuffleArray(section.questions)
-        }))
+      return () => {
+        if (autoSaveRef.current) clearInterval(autoSaveRef.current);
       };
-      
-      setTest(activePaper);
-      
-      const newAttempt = SSCCGLService.startTestAttempt(testId, 'user_' + Date.now());
-      setAttempt(newAttempt);
-
-      // Initialize question states
-      const states = new Map<string, QuestionState>();
-      activePaper.sections.forEach((section, sIdx) => {
-        section.questions.forEach((q, qIdx) => {
-          states.set(q.id, {
-            answered: false,
-            marked: false,
-            selectedOption: null,
-            timeTaken: 0,
-            visited: sIdx === 0 && qIdx === 0,
-          });
-        });
-      });
-      setQuestionStates(states);
-      
-      // Convert Map to plain object for Firestore
-      const statesObj: Record<string, any> = {};
-      states.forEach((value, key) => {
-        statesObj[key] = value;
-      });
-      
-      // Get active question order
-      const questionOrder = activePaper.sections.flatMap(section => section.questions.map(q => q.id));
-      
-      // Save initial state
-      await TestProgressService.saveCurrentTest({
-          testId: activePaper.id,
-          attemptId: newAttempt.id!,
-          currentQuestionIndex: 0,
-          timeRemaining: activePaper.duration,
-          questionStates: statesObj,
-          answers: {},
-          lastUpdated: Date.now(),
-          questionOrder,
-          testTitle: activePaper.title,
-          totalQuestions: activePaper.sections.reduce((sum, s) => sum + s.questions.length, 0),
-          filename: (params.filename as string) || (activePaper as any).filename,
-      });
-
-    } catch (error) {
-      console.error('Error loading test:', error);
-      Alert.alert('Error', 'Failed to load test');
-      exitTestScreen();
     }
+  }, [test, attempt, timeRemaining, saveProgress]);
+
+  // 5. Option Selection
+  const handleSelectOption = (optionIndex: number) => {
+    if (!currentQuestion) return;
+
+    setQuestionStates((prev) => {
+      const next = new Map(prev);
+      const existing = next.get(currentQuestion.id) || {
+        answered: false,
+        marked: false,
+        selectedOption: null,
+        timeTaken: 0,
+        visited: true,
+      };
+
+      next.set(currentQuestion.id, {
+        ...existing,
+        selectedOption: optionIndex,
+        answered: true,
+        visited: true,
+      });
+
+      return next;
+    });
+
+    // Save immediately on option pick
+    setTimeout(() => saveProgress(), 100);
   };
 
-  const exitTestScreen = () => {
-    if (router.canGoBack()) {
-      router.back();
-    } else if (Platform.OS === 'web' && typeof window !== 'undefined' && window.history.length > 1) {
-      window.history.back();
-    } else {
-      router.replace('/(tabs)/practice');
-    }
+  const handleClearResponse = () => {
+    if (!currentQuestion) return;
+
+    setQuestionStates((prev) => {
+      const next = new Map(prev);
+      const existing = next.get(currentQuestion.id) || {
+        answered: false,
+        marked: false,
+        selectedOption: null,
+        timeTaken: 0,
+        visited: true,
+      };
+
+      next.set(currentQuestion.id, {
+        ...existing,
+        selectedOption: null,
+        answered: false,
+      });
+
+      return next;
+    });
   };
 
-  const handleBack = () => {
-    setShowBackConfirm(true);
+  const handleToggleMark = () => {
+    if (!currentQuestion) return;
+
+    setQuestionStates((prev) => {
+      const next = new Map(prev);
+      const existing = next.get(currentQuestion.id) || {
+        answered: false,
+        marked: false,
+        selectedOption: null,
+        timeTaken: 0,
+        visited: true,
+      };
+
+      next.set(currentQuestion.id, {
+        ...existing,
+        marked: !existing.marked,
+        visited: true,
+      });
+
+      return next;
+    });
   };
-  
-  useEffect(() => {
-    const backAction = () => {
-        handleBack();
-        return true;
-    };
-    const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
-    return () => backHandler.remove();
-  }, [handleBack]);
-   
-  const performSubmit = async () => {
-    try {
-      console.log('Starting test submission...');
-      setIsSubmitting(true);
-      
-      if (!attempt) {
-        console.log('No attempt found');
-        Alert.alert('Error', 'Test attempt not found');
-        setIsSubmitting(false);
-        return;
-      }
 
-      // Use attempt.id since we ensure it is populated
-      const attemptId = attempt.id!;
-      console.log('Submitting test with attemptId:', attemptId);
+  const handleNext = () => {
+    if (currentQuestionIndex < questions.length - 1) {
+      const nextIdx = currentQuestionIndex + 1;
+      setCurrentQuestionIndex(nextIdx);
 
-      // CRITICAL: Synchronize all answered questions from React questionStates into attempt.answers
-      const questionsMap = new Map<string, ParsedQuestion>();
-      test?.sections.forEach(s => s.questions.forEach(q => questionsMap.set(q.id, q)));
-
-      const syncedAnswers: UserAnswer[] = [];
-      questionStates.forEach((state, qId) => {
-        if (state.answered && state.selectedOption !== null && state.selectedOption !== undefined && state.selectedOption !== -1) {
-          const q = questionsMap.get(qId);
-          if (q) {
-            const isCorrect = state.selectedOption === q.correctAnswerIndex;
-            syncedAnswers.push({
-              questionId: qId,
-              selectedOption: state.selectedOption,
-              timeTaken: state.timeTaken || 0,
-              isCorrect,
-              marksAwarded: isCorrect ? q.marks.positive : -q.marks.negative,
-            });
+      const nextQ = questions[nextIdx];
+      if (nextQ) {
+        setQuestionStates((prev) => {
+          const nextMap = new Map(prev);
+          const st = nextMap.get(nextQ.id);
+          if (st && !st.visited) {
+            nextMap.set(nextQ.id, { ...st, visited: true });
           }
-        }
-      });
-
-      if (syncedAnswers.length > 0) {
-        attempt.answers = syncedAnswers;
-        const memoryAttempt = SSCCGLService.getAttempt(attemptId);
-        if (memoryAttempt) {
-          memoryAttempt.answers = syncedAnswers;
-        }
-      }
-      
-      // Check if this is a testseries test and if answers are ready
-      if (source === 'testseries') {
-        console.log('Testseries test detected, checking answer status...');
-        
-        // Check if answers exist
-        const answersStatus = await TestSeriesService.checkAnswerGenerationStatus(testId);
-        
-        if (answersStatus.status === 'not-found' || !answersStatus.answersAvailable) {
-          // If answers generation hasn't started at all, trigger it now!
-          if (answersStatus.status === 'not-found') {
-            console.log('Answers not generated yet. Triggering generation now...');
-            const dummyPath = `testseries/unknown_section/unknown_${testId}.json.gz`;
-            TestSeriesService.requestAnswerGeneration(testId, dummyPath)
-              .catch(err => console.error('Failed to start answer generation:', err));
-          } else {
-            console.log('Answers not yet ready, saving with pending status...');
-          }
-
-          Alert.alert(
-            'Evaluation Pending',
-            'Your answers are being processed. You can check your results in the Test History page once evaluation is complete.',
-            [{ text: 'OK' }]
-          );
-
-          // Save partial result with pending status
-          const partialAnalytics = SSCCGLService.submitTest(attemptId);
-          if (partialAnalytics) {
-            const currentQuestionOrder = test?.sections.flatMap(section => section.questions.map(q => q.id));
-            const questionStatesObj: Record<string, any> = {};
-            questionStates.forEach((val, key) => {
-              questionStatesObj[key] = val;
-            });
-            const effectiveAnswers = (attempt.answers && attempt.answers.length > 0) ? attempt.answers : syncedAnswers;
-            await TestProgressService.saveTestResult({
-              ...partialAnalytics,
-              answers: effectiveAnswers,
-              userAnswers: effectiveAnswers.map((a: any) => a.selectedOption),
-              questionStates: questionStatesObj,
-              date: new Date().toISOString(),
-              testTitle: test?.title,
-              filename: (params.filename as string) || (test as any)?.filename || undefined,
-              answerGenerationStatus: answersStatus.status === 'not-found' ? 'pending' : answersStatus.status as any,
-              evaluationStatus: 'pending',
-              questionOrder: currentQuestionOrder
-            });
-          }
-
-          // Clear active test
-          await TestProgressService.clearTestProgress(testId);
-
-          // Navigate to progress tab
-          router.replace('/(tabs)/progress');
-          setIsSubmitting(false);
-          return;
-        }
-
-        // Answers are ready, proceed with normal submission
-        console.log('Answers available, proceeding with evaluation');
-      }
-
-      const analytics = SSCCGLService.submitTest(attemptId);
-
-      if (analytics) {
-        console.log('Analytics calculated, saving to history...');
-        // Save to history
-        const currentQuestionOrder = test?.sections.flatMap(section => section.questions.map(q => q.id));
-        const questionStatesObj: Record<string, any> = {};
-        questionStates.forEach((val, key) => {
-          questionStatesObj[key] = val;
+          return nextMap;
         });
-        const effectiveAnswers = (attempt.answers && attempt.answers.length > 0) ? attempt.answers : syncedAnswers;
-        await TestProgressService.saveTestResult({
-            ...analytics,
-            answers: effectiveAnswers,
-            userAnswers: effectiveAnswers.map((a: any) => a.selectedOption),
-            questionStates: questionStatesObj,
-            date: new Date().toISOString(),
-            testTitle: test?.title,
-            filename: (params.filename as string) || (test as any)?.filename || undefined,
-            answerGenerationStatus: 'not-needed',
-            evaluationStatus: 'completed',
-            questionOrder: currentQuestionOrder
-        });
-        
-        console.log('Test result saved, clearing active test...');
-        // Clear active test
-        await TestProgressService.clearTestProgress(testId);
-
-        console.log('Navigating to results...');
-        router.replace({
-          pathname: '/test-result',
-          params: { attemptId },
-        });
-      } else {
-        console.log('Analytics is null');
-        setIsSubmitting(false);
-        Alert.alert('Error', 'Failed to submit test');
       }
-    } catch (error) {
-      console.error('Error in performSubmit:', error);
-      setIsSubmitting(false);
-      Alert.alert('Error', 'Failed to submit test: ' + error);
     }
   };
 
-
-  const getAllQuestions = (): ParsedQuestion[] => {
-    if (!test) return [];
-    return test.sections.flatMap((s) => s.questions);
-  };
-
-  const getCurrentQuestion = (): ParsedQuestion | null => {
-    const questions = getAllQuestions();
-    return questions[currentQuestionIndex] || null;
-  };
-
-  // Mark current question as visited whenever it changes
-  useEffect(() => {
-    const q = getCurrentQuestion();
-    if (q) {
-      setQuestionStates((prev) => {
-        const cur = prev.get(q.id);
-        if (!cur || !cur.visited) {
-          const next = new Map(prev);
-          next.set(q.id, {
-            answered: cur?.answered || false,
-            marked: cur?.marked || false,
-            selectedOption: cur?.selectedOption ?? null,
-            timeTaken: cur?.timeTaken || 0,
-            visited: true,
-          });
-          return next;
-        }
-        return prev;
-      });
+  const handlePrevious = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex((prev) => prev - 1);
     }
-  }, [currentQuestionIndex, test]);
-
-  const handleOptionSelect = (optionIndex: number) => {
-    if (isSubmitting) return; // Prevent interaction while submitting
-    
-    const question = getCurrentQuestion();
-    if (!question) return;
-
-    const timeTaken = Math.max(0, Math.floor((Date.now() - questionStartTime) / 1000));
-
-    // Update question state
-    const newStates = new Map(questionStates);
-    const state = newStates.get(question.id) || {
-      answered: false,
-      marked: false,
-      selectedOption: null,
-      timeTaken: 0,
-      visited: true,
-    };
-
-    state.answered = true;
-    state.visited = true;
-    state.selectedOption = optionIndex;
-    state.timeTaken += timeTaken;
-    newStates.set(question.id, state);
-    setQuestionStates(newStates);
-
-    // Record answer
-    if (attempt) {
-      const targetAttemptId = attempt.id || `${attempt.testId}_${attempt.userId}_${attempt.startTime.getTime()}`;
-      SSCCGLService.recordAnswer(
-        targetAttemptId,
-        question.id,
-        optionIndex,
-        state.timeTaken,
-        question
-      );
-    }
-
-    setQuestionStartTime(Date.now());
   };
 
-  const handleMarkForReview = () => {
-    const question = getCurrentQuestion();
-    if (!question) return;
-
-    const newStates = new Map(questionStates);
-    const state = newStates.get(question.id) || {
-      answered: false,
-      marked: false,
-      selectedOption: null,
-      timeTaken: 0,
-      visited: true,
-    };
-
-    state.marked = !state.marked;
-    state.visited = true;
-    newStates.set(question.id, state);
-    setQuestionStates(newStates);
-  };
-
-  const navigateToQuestion = (index: number) => {
-    const questions = getAllQuestions();
+  const handleJumpToQuestion = (index: number) => {
     if (index >= 0 && index < questions.length) {
-      const curQ = questions[currentQuestionIndex];
-      const timeSpent = Math.max(0, Math.floor((Date.now() - questionStartTime) / 1000));
-      
-      setQuestionStates((prev) => {
-        const next = new Map(prev);
-        if (curQ) {
-          const curState = next.get(curQ.id) || {
-            answered: false,
-            marked: false,
-            selectedOption: null,
-            timeTaken: 0,
-            visited: true,
-          };
-          next.set(curQ.id, {
-            ...curState,
-            visited: true,
-            timeTaken: curState.timeTaken + timeSpent,
-          });
-        }
-        const targetQ = questions[index];
-        if (targetQ) {
-          const targetState = next.get(targetQ.id) || {
-            answered: false,
-            marked: false,
-            selectedOption: null,
-            timeTaken: 0,
-            visited: true,
-          };
-          next.set(targetQ.id, {
-            ...targetState,
-            visited: true,
-          });
-        }
-        return next;
-      });
-
       setCurrentQuestionIndex(index);
-      setQuestionStartTime(Date.now());
       setShowQuestionPalette(false);
     }
   };
 
-  const handleNext = () => {
-    navigateToQuestion(currentQuestionIndex + 1);
+  // Keyboard navigation for desktop web
+  useEffect(() => {
+    if (Platform.OS !== 'web' || typeof window === 'undefined') return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+
+      if (e.key === 'ArrowRight') {
+        handleNext();
+      } else if (e.key === 'ArrowLeft') {
+        handlePrevious();
+      } else if (['1', '2', '3', '4'].includes(e.key)) {
+        const opt = parseInt(e.key, 10) - 1;
+        handleSelectOption(opt);
+      } else if (e.key === 'm' || e.key === 'M') {
+        handleToggleMark();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentQuestionIndex, questions.length, currentQuestion]);
+
+  // Back confirmation
+  const handleExitAttempt = () => {
+    saveProgress();
+    router.replace('/(tabs)/practice');
   };
 
-  const handlePrevious = () => {
-    navigateToQuestion(currentQuestionIndex - 1);
-  };
-
-  const handleBookmark = async () => {
-    const currentQuestion = getCurrentQuestion();
-    if (!currentQuestion) return;
-    
-    try {
-      await addBookmark({
-        questionId: currentQuestion.id,
-        questionText: currentQuestion.questionText,
-        testTitle: test?.title,
-      });
-      Alert.alert('Success', 'Question bookmarked successfully!');
-    } catch (error) {
-      console.error('Failed to bookmark:', error);
-      Alert.alert('Error', 'Failed to bookmark question. Please try again.');
-    }
-  };
-
-  const handleSubmit = () => {
-    setShowSubmitConfirm(true);
-  };
-
+  // 6. Test Submission
   const handleAutoSubmit = () => {
-    if (timerRef.current) clearInterval(timerRef.current);
+    if (Platform.OS === 'web') {
+      window.alert('Time is up. Your exam test is being automatically submitted.');
+    } else {
+      Alert.alert('Time Expired', 'Your test has been automatically submitted.');
+    }
     performSubmit();
   };
 
+  const performSubmit = async () => {
+    try {
+      setIsSubmitting(true);
+      if (!attempt) return;
 
+      const attemptId = attempt.id || `attempt_${Date.now()}`;
+      const syncedAnswers: UserAnswer[] = [];
 
-  const confirmSubmit = () => {
-    setShowSubmitConfirm(false);
-    if (timerRef.current) clearInterval(timerRef.current);
-    performSubmit();
+      questionStates.forEach((st, qId) => {
+        if (st.answered && st.selectedOption !== null && st.selectedOption !== undefined) {
+          const q = questions.find((item) => item.id === qId);
+          if (q) {
+            const isCorrect = st.selectedOption === q.correctAnswerIndex;
+            syncedAnswers.push({
+              questionId: qId,
+              selectedOption: st.selectedOption,
+              timeTaken: st.timeTaken || 0,
+              isCorrect,
+              marksAwarded: isCorrect ? (q.marks?.positive || 1) : -(q.marks?.negative || 0.25),
+            });
+          }
+        }
+      });
+
+      attempt.answers = syncedAnswers;
+
+      const analytics = SSCCGLService.submitTest(attemptId);
+      if (analytics) {
+        const questionStatesObj: Record<string, any> = {};
+        questionStates.forEach((val, k) => {
+          questionStatesObj[k] = val;
+        });
+
+        await TestProgressService.saveTestResult({
+          ...analytics,
+          answers: syncedAnswers,
+          userAnswers: syncedAnswers.map((a) => a.selectedOption),
+          questionStates: questionStatesObj,
+          date: new Date().toISOString(),
+          testTitle: test?.title,
+          filename: (params.filename as string) || (test as any)?.filename,
+          questionOrder: questions.map((q) => q.id),
+        });
+      }
+
+      await TestProgressService.clearTestProgress(testId);
+
+      router.replace({
+        pathname: '/test-result',
+        params: {
+          attemptId,
+          testId,
+          filename: params.filename as string,
+        },
+      } as any);
+    } catch (err) {
+      console.error('Submission error:', err);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const formatTime = (seconds: number): string => {
-    const totalSecs = Math.max(0, Math.floor(seconds || 0));
-    const hrs = Math.floor(totalSecs / 3600);
-    const mins = Math.floor((totalSecs % 3600) / 60);
-    const secs = totalSecs % 60;
-    return `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs
-      .toString()
-      .padStart(2, '0')}`;
-  };
+  // Helper Stats for Palette
+  const getQuestionStatus = (qId: string, idx: number) => {
+    const st = questionStates.get(qId);
+    const isCurrent = idx === currentQuestionIndex;
+    const isAns = !!st?.answered && st.selectedOption !== null && st.selectedOption !== undefined;
+    const isMark = !!st?.marked;
 
-  const getQuestionStatus = (qId: string, globalIdx: number): 'answered' | 'not-answered' | 'marked' | 'answered-marked' | 'not-visited' => {
-    const state = questionStates.get(qId);
-    const isCurrent = globalIdx === currentQuestionIndex;
-    const isVisited = !!state?.visited || isCurrent || (state?.timeTaken ? state.timeTaken > 0 : false) || !!state?.answered || !!state?.marked;
-    const isAnswered = !!state?.answered && state.selectedOption !== null && state.selectedOption !== undefined && state.selectedOption !== -1;
-    const isMarked = !!state?.marked;
-
-    if (isAnswered && isMarked) {
-      return 'answered-marked';
-    }
-    if (isMarked) {
-      return 'marked';
-    }
-    if (isAnswered) {
-      return 'answered';
-    }
-    if (isVisited) {
-      return 'not-answered';
-    }
+    if (isAns && isMark) return 'answered-marked';
+    if (isMark) return 'marked';
+    if (isAns) return 'answered';
+    if (st?.visited || isCurrent) return 'not-answered';
     return 'not-visited';
   };
 
-  const getQuestionStats = () => {
-    const questions = getAllQuestions();
-    let answered = 0;
-    let notAnswered = 0;
-    let marked = 0;
-    let answeredAndMarked = 0;
-    let notVisited = 0;
-
-    questions.forEach((q, idx) => {
-      const status = getQuestionStatus(q.id, idx);
-      if (status === 'answered') answered++;
-      else if (status === 'not-answered') notAnswered++;
-      else if (status === 'marked') marked++;
-      else if (status === 'answered-marked') answeredAndMarked++;
-      else if (status === 'not-visited') notVisited++;
-    });
-
-    return {
-      answered,
-      notAnswered,
-      marked,
-      answeredAndMarked,
-      notVisited,
-      total: questions.length,
-    };
+  const stats = {
+    answered: 0,
+    notAnswered: 0,
+    marked: 0,
+    notVisited: 0,
   };
 
-  const renderQuestionPalette = () => {
-    const questions = getAllQuestions();
-    const stats = getQuestionStats();
-    let sectionStartIndex = 0;
+  questions.forEach((q, idx) => {
+    const s = getQuestionStatus(q.id, idx);
+    if (s === 'answered' || s === 'answered-marked') stats.answered++;
+    else if (s === 'marked') stats.marked++;
+    else if (s === 'not-answered') stats.notAnswered++;
+    else stats.notVisited++;
+  });
 
+  // Time format
+  const formatTime = (secs: number) => {
+    const total = Math.max(0, secs);
+    const h = Math.floor(total / 3600);
+    const m = Math.floor((total % 3600) / 60);
+    const s = total % 60;
+    if (h > 0) {
+      return `${h}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    }
+    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  };
+
+  // Danger timer when under 5 mins
+  const isTimeUrgent = timeRemaining > 0 && timeRemaining <= 300;
+
+  if (loading || !test || !currentQuestion) {
     return (
-      <Modal
-        visible={showQuestionPalette}
-        animationType="slide"
-        presentationStyle="pageSheet"
-        onRequestClose={() => setShowQuestionPalette(false)}
-      >
-        <ResponsiveContainer maxWidth={680}>
-          <SafeAreaView style={[styles.paletteContainer, { backgroundColor: colors.surface }]} edges={['top', 'bottom']}>
-            {/* Header */}
-            <View style={[styles.paletteHeader, { borderBottomColor: colors.border }]}>
-              <View style={styles.paletteHeaderLeft}>
-                <Text style={[styles.paletteTitle, { color: colors.textPrimary }]}>Question Palette</Text>
-                <Text style={[styles.paletteSubtitle, { color: colors.textSecondary }]} numberOfLines={1}>
-                  {test?.title || 'Mock Test'}
+      <View style={[styles.centerLoading, { backgroundColor: colors.bg }]}>
+        <ActivityIndicator size="large" color={colors.accent} />
+        <Text style={[styles.loadingText, { color: colors.muted }]}>
+          Preparing examination environment...
+        </Text>
+      </View>
+    );
+  }
+
+  // Active question text & options depending on language
+  const qText =
+    language === 'hindi' && currentQuestion.questionTextHindi
+      ? currentQuestion.questionTextHindi
+      : currentQuestion.questionText;
+
+  const qOpts =
+    language === 'hindi' && currentQuestion.optionsHindi && currentQuestion.optionsHindi.length > 0
+      ? currentQuestion.optionsHindi
+      : currentQuestion.options;
+
+  // Render Palette Content
+  const renderPaletteContent = () => (
+    <View style={styles.paletteInner}>
+      {/* Legend / Status badges with shapes */}
+      <View style={[styles.legendGrid, { borderBottomColor: colors.line }]}>
+        <View style={styles.legendItem}>
+          <View style={[styles.shapeBadge, { backgroundColor: colors.successBg, borderColor: colors.success }]}>
+            <Check size={11} color={colors.success} />
+          </View>
+          <Text style={[styles.legendText, { color: colors.text }]}>
+            Answered ({stats.answered})
+          </Text>
+        </View>
+
+        <View style={styles.legendItem}>
+          <View style={[styles.shapeBadge, { backgroundColor: colors.dangerBg, borderColor: colors.danger }]}>
+            <View style={[styles.dotMarker, { backgroundColor: colors.danger }]} />
+          </View>
+          <Text style={[styles.legendText, { color: colors.text }]}>
+            Unanswered ({stats.notAnswered})
+          </Text>
+        </View>
+
+        <View style={styles.legendItem}>
+          <View style={[styles.shapeBadge, { backgroundColor: colors.surface2, borderColor: colors.accent }]}>
+            <Flag size={11} color={colors.accent} fill={colors.accent} />
+          </View>
+          <Text style={[styles.legendText, { color: colors.text }]}>
+            Marked ({stats.marked})
+          </Text>
+        </View>
+
+        <View style={styles.legendItem}>
+          <View style={[styles.shapeBadge, { backgroundColor: colors.surface, borderColor: colors.line }]}>
+            <View style={[styles.dotMarker, { backgroundColor: colors.muted }]} />
+          </View>
+          <Text style={[styles.legendText, { color: colors.muted }]}>
+            Not Visited ({stats.notVisited})
+          </Text>
+        </View>
+      </View>
+
+      {/* Questions Matrix */}
+      <ScrollView style={styles.paletteScroll} showsVerticalScrollIndicator={false}>
+        <View style={styles.gridNumbers}>
+          {questions.map((q, idx) => {
+            const status = getQuestionStatus(q.id, idx);
+            const isCurrent = idx === currentQuestionIndex;
+
+            let badgeBg = colors.surface;
+            let badgeBorder = colors.line;
+            let textCol = colors.muted;
+
+            if (status === 'answered') {
+              badgeBg = colors.successBg;
+              badgeBorder = colors.success;
+              textCol = colors.success;
+            } else if (status === 'answered-marked') {
+              badgeBg = colors.successBg;
+              badgeBorder = colors.accent;
+              textCol = colors.text;
+            } else if (status === 'marked') {
+              badgeBg = colors.surface2;
+              badgeBorder = colors.accent;
+              textCol = colors.accent;
+            } else if (status === 'not-answered') {
+              badgeBg = colors.dangerBg;
+              badgeBorder = colors.danger;
+              textCol = colors.danger;
+            }
+
+            if (isCurrent) {
+              badgeBorder = colors.accent;
+            }
+
+            return (
+              <TouchableOpacity
+                key={q.id}
+                style={[
+                  styles.numButton,
+                  {
+                    backgroundColor: badgeBg,
+                    borderColor: badgeBorder,
+                    borderWidth: isCurrent ? 2 : 1,
+                    borderRadius: radii.input,
+                  },
+                ]}
+                onPress={() => handleJumpToQuestion(idx)}
+                activeOpacity={0.7}
+              >
+                <Text style={[styles.numText, { color: textCol }]}>{idx + 1}</Text>
+                {status === 'marked' && (
+                  <View style={styles.cornerFlag}>
+                    <Flag size={8} color={colors.accent} fill={colors.accent} />
+                  </View>
+                )}
+              </TouchableOpacity>
+            );
+          })}
+        </View>
+      </ScrollView>
+    </View>
+  );
+
+  return (
+    <SafeAreaView style={[styles.container, { backgroundColor: colors.bg }]}>
+      {/* Sticky Distraction-Free Top Bar */}
+      <View style={[styles.topBar, { borderBottomColor: colors.line, backgroundColor: colors.surface }]}>
+        <View style={styles.topBarLeft}>
+          <TouchableOpacity
+            style={[styles.exitBtn, { borderColor: colors.line, backgroundColor: colors.surface2 }]}
+            onPress={() => setShowBackConfirm(true)}
+            activeOpacity={0.7}
+            accessibilityLabel="Exit test session"
+          >
+            <ArrowLeft size={16} color={colors.text} />
+          </TouchableOpacity>
+
+          <View style={styles.testMetaWrap}>
+            <Text
+              style={[
+                styles.testTitleText,
+                {
+                  color: colors.text,
+                  fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+                },
+              ]}
+              numberOfLines={1}
+            >
+              {test.title}
+            </Text>
+            {test.sections && test.sections.length > 1 ? (
+              <Text style={[styles.sectionMetaText, { color: colors.muted }]}>
+                {test.sections[0].title}
+              </Text>
+            ) : null}
+          </View>
+        </View>
+
+        <View style={styles.topBarRight}>
+          {/* Saved indicator */}
+          {lastSavedTime && (
+            <View style={styles.savedBadge}>
+              <CheckCircle2 size={12} color={colors.success} />
+              <Text style={[styles.savedText, { color: colors.muted }]}>Saved</Text>
+            </View>
+          )}
+
+          {/* Countdown Timer */}
+          <View
+            style={[
+              styles.timerBadge,
+              {
+                backgroundColor: isTimeUrgent ? colors.dangerBg : colors.surface2,
+                borderColor: isTimeUrgent ? colors.danger : colors.line,
+              },
+            ]}
+          >
+            <Clock size={14} color={isTimeUrgent ? colors.danger : colors.muted} />
+            <Text
+              style={[
+                styles.timerText,
+                {
+                  color: isTimeUrgent ? colors.danger : colors.text,
+                  fontWeight: isTimeUrgent ? '800' : '700',
+                },
+              ]}
+            >
+              {formatTime(timeRemaining)}
+            </Text>
+          </View>
+
+          {/* Mobile Palette Trigger */}
+          {!isDesktop && (
+            <TouchableOpacity
+              style={[styles.paletteTriggerBtn, { borderColor: colors.line, backgroundColor: colors.surface }]}
+              onPress={() => setShowQuestionPalette(true)}
+              activeOpacity={0.7}
+            >
+              <Grid size={15} color={colors.text} />
+              <Text style={[styles.paletteTriggerText, { color: colors.text }]}>
+                {stats.answered}/{questions.length}
+              </Text>
+            </TouchableOpacity>
+          )}
+
+          {/* Primary Submit Button */}
+          <Button
+            title="Submit"
+            variant="primary"
+            size="sm"
+            onPress={() => setShowSubmitConfirm(true)}
+            icon={<Send size={13} color={colors.accentText} />}
+          />
+        </View>
+      </View>
+
+      {/* Main Examination View (Two-column on wide screens) */}
+      <View style={styles.workspaceRow}>
+        {/* Left Column: Active Question */}
+        <ScrollView
+          style={styles.questionScroll}
+          contentContainerStyle={styles.questionScrollContent}
+          showsVerticalScrollIndicator={false}
+        >
+          <View style={styles.questionCenterWrapper}>
+            {/* Question Card */}
+            <View
+              style={[
+                styles.questionBox,
+                {
+                  backgroundColor: colors.surface,
+                  borderColor: colors.line,
+                  borderRadius: radii.card,
+                },
+              ]}
+            >
+              {/* Question Sub-Header */}
+              <View style={[styles.qHeaderRow, { borderBottomColor: colors.line }]}>
+                <View style={styles.qNumWrap}>
+                  <Text style={[styles.qIndexText, { color: colors.text }]}>
+                    Question {currentQuestionIndex + 1} of {questions.length}
+                  </Text>
+                </View>
+
+                <View style={styles.qActionsRight}>
+                  {currentQuestion.questionTextHindi && (
+                    <TouchableOpacity
+                      style={[styles.langToggleBtn, { backgroundColor: colors.surface2, borderColor: colors.line }]}
+                      onPress={() => setLanguage((l) => (l === 'english' ? 'hindi' : 'english'))}
+                    >
+                      <Globe size={13} color={colors.text} />
+                      <Text style={[styles.langToggleText, { color: colors.text }]}>
+                        {language === 'english' ? 'हिंदी' : 'English'}
+                      </Text>
+                    </TouchableOpacity>
+                  )}
+
+                  <TouchableOpacity
+                    style={[
+                      styles.actionIconButton,
+                      {
+                        backgroundColor: currentState?.marked ? colors.accent : colors.surface2,
+                        borderColor: currentState?.marked ? colors.accent : colors.line,
+                      },
+                    ]}
+                    onPress={handleToggleMark}
+                    accessibilityLabel="Mark question for review"
+                  >
+                    <Flag
+                      size={14}
+                      color={currentState?.marked ? colors.accentText : colors.muted}
+                      fill={currentState?.marked ? colors.accentText : 'none'}
+                    />
+                  </TouchableOpacity>
+
+                  <TouchableOpacity
+                    style={[
+                      styles.actionIconButton,
+                      {
+                        backgroundColor: isBookmarked ? colors.accent : colors.surface2,
+                        borderColor: isBookmarked ? colors.accent : colors.line,
+                      },
+                    ]}
+                    onPress={() => {
+                      setIsBookmarked(!isBookmarked);
+                      if (user?.uid) {
+                        addBookmark(user.uid, {
+                          questionId: currentQuestion.id,
+                          questionText: currentQuestion.questionText,
+                          testTitle: test.title,
+                        }).catch(() => {});
+                      }
+                    }}
+                    accessibilityLabel="Bookmark question"
+                  >
+                    <Bookmark
+                      size={14}
+                      color={isBookmarked ? colors.accentText : colors.muted}
+                      fill={isBookmarked ? colors.accentText : 'none'}
+                    />
+                  </TouchableOpacity>
+                </View>
+              </View>
+
+              {/* Question Body Text */}
+              <View style={styles.qTextContainer}>
+                <Text
+                  style={[
+                    styles.qText,
+                    {
+                      color: colors.text,
+                      fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+                    },
+                  ]}
+                >
+                  {cleanHtml(qText)}
                 </Text>
               </View>
-              <View style={styles.paletteHeaderRight}>
-                <View style={[styles.paletteTimerBadge, { backgroundColor: isDark ? 'rgba(59,130,246,0.15)' : '#EFF6FF', borderColor: isDark ? '#1E40AF' : '#BFDBFE' }]}>
-                  <Clock size={13} color="#3B82F6" />
-                  <Text style={styles.paletteTimerText}>{formatTime(timeRemaining)}</Text>
-                </View>
-                <TouchableOpacity
-                  style={[styles.paletteCloseButton, { backgroundColor: isDark ? colors.surfaceHighlight : '#F1F5F9' }]}
-                  onPress={() => setShowQuestionPalette(false)}
-                  hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
-                >
-                  <X size={20} color={colors.textPrimary} />
-                </TouchableOpacity>
-              </View>
-            </View>
 
-            {/* Status Summary Dashboard (Metric Strip) */}
-            <View style={[styles.paletteSummaryContainer, { borderBottomColor: colors.border }]}>
-              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.paletteSummaryScroll}>
-                <TouchableOpacity
-                  style={[
-                    styles.summaryCard,
-                    { backgroundColor: isDark ? 'rgba(22,163,74,0.15)' : '#DCFCE7', borderColor: '#16A34A' },
-                    paletteFilter === 'answered' && styles.summaryCardActive,
-                  ]}
-                  onPress={() => setPaletteFilter((prev) => (prev === 'answered' ? 'all' : 'answered'))}
-                  activeOpacity={0.7}
-                >
-                  <Text style={[styles.summaryCardValue, { color: '#16A34A' }]}>{stats.answered}</Text>
-                  <Text style={[styles.summaryCardLabel, { color: isDark ? '#86EFAC' : '#15803D' }]}>Answered</Text>
-                </TouchableOpacity>
+              {/* Options */}
+              <View style={styles.optionsList}>
+                {qOpts.map((opt, idx) => {
+                  const letter = String.fromCharCode(65 + idx);
+                  const isSelected = currentState?.selectedOption === idx;
 
-                <TouchableOpacity
-                  style={[
-                    styles.summaryCard,
-                    { backgroundColor: isDark ? 'rgba(239,68,68,0.15)' : '#FEE2E2', borderColor: '#EF4444' },
-                    paletteFilter === 'not-answered' && styles.summaryCardActive,
-                  ]}
-                  onPress={() => setPaletteFilter((prev) => (prev === 'not-answered' ? 'all' : 'not-answered'))}
-                  activeOpacity={0.7}
-                >
-                  <Text style={[styles.summaryCardValue, { color: '#EF4444' }]}>{stats.notAnswered}</Text>
-                  <Text style={[styles.summaryCardLabel, { color: isDark ? '#FCA5A5' : '#991B1B' }]}>Not Answered</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                  style={[
-                    styles.summaryCard,
-                    { backgroundColor: isDark ? 'rgba(139,92,246,0.15)' : '#F3E8FF', borderColor: '#8B5CF6' },
-                    paletteFilter === 'marked' && styles.summaryCardActive,
-                  ]}
-                  onPress={() => setPaletteFilter((prev) => (prev === 'marked' ? 'all' : 'marked'))}
-                  activeOpacity={0.7}
-                >
-                  <Text style={[styles.summaryCardValue, { color: '#8B5CF6' }]}>{stats.marked}</Text>
-                  <Text style={[styles.summaryCardLabel, { color: isDark ? '#D8B4FE' : '#7E22CE' }]}>Marked</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                  style={[
-                    styles.summaryCard,
-                    { backgroundColor: isDark ? 'rgba(124,58,237,0.15)' : '#EDE9FE', borderColor: '#7C3AED' },
-                    paletteFilter === 'marked' && styles.summaryCardActive,
-                  ]}
-                  onPress={() => setPaletteFilter((prev) => (prev === 'marked' ? 'all' : 'marked'))}
-                  activeOpacity={0.7}
-                >
-                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
-                    <Text style={[styles.summaryCardValue, { color: '#7C3AED' }]}>{stats.answeredAndMarked}</Text>
-                    <View style={styles.summaryBadgeMiniDot} />
-                  </View>
-                  <Text style={[styles.summaryCardLabel, { color: isDark ? '#C4B5FD' : '#6D28D9' }]}>Ans & Marked</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                  style={[
-                    styles.summaryCard,
-                    { backgroundColor: isDark ? '#1E293B' : '#F1F5F9', borderColor: isDark ? '#334155' : '#CBD5E1' },
-                    paletteFilter === 'not-visited' && styles.summaryCardActive,
-                  ]}
-                  onPress={() => setPaletteFilter((prev) => (prev === 'not-visited' ? 'all' : 'not-visited'))}
-                  activeOpacity={0.7}
-                >
-                  <Text style={[styles.summaryCardValue, { color: isDark ? '#94A3B8' : '#64748B' }]}>{stats.notVisited}</Text>
-                  <Text style={[styles.summaryCardLabel, { color: isDark ? '#64748B' : '#475569' }]}>Not Visited</Text>
-                </TouchableOpacity>
-              </ScrollView>
-            </View>
-
-            {/* Filter Pills Bar */}
-            <View style={[styles.paletteFilterBar, { borderBottomColor: colors.border }]}>
-              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.paletteFilterScroll}>
-                {[
-                  { key: 'all', label: 'All', count: stats.total },
-                  { key: 'answered', label: 'Answered', count: stats.answered },
-                  { key: 'not-answered', label: 'Not Answered', count: stats.notAnswered },
-                  { key: 'marked', label: 'Marked', count: stats.marked + stats.answeredAndMarked },
-                  { key: 'not-visited', label: 'Not Visited', count: stats.notVisited },
-                ].map((tab) => {
-                  const isActive = paletteFilter === tab.key;
                   return (
                     <TouchableOpacity
-                      key={tab.key}
+                      key={idx}
                       style={[
-                        styles.filterChip,
+                        styles.optionBtn,
                         {
-                          borderColor: isActive ? '#3B82F6' : colors.border,
-                          backgroundColor: isActive
-                            ? isDark
-                              ? '#1E3A8A'
-                              : '#EFF6FF'
-                            : isDark
-                            ? colors.surfaceHighlight
-                            : '#F8FAFC',
+                          backgroundColor: isSelected ? colors.surface2 : colors.surface,
+                          borderColor: isSelected ? colors.accent : colors.line,
+                          borderRadius: radii.button,
                         },
                       ]}
-                      onPress={() => setPaletteFilter(tab.key as any)}
+                      onPress={() => handleSelectOption(idx)}
                       activeOpacity={0.7}
                     >
-                      <Text
-                        style={[
-                          styles.filterChipText,
-                          {
-                            color: isActive ? '#2563EB' : colors.textSecondary,
-                            fontWeight: isActive ? '700' : '500',
-                          },
-                        ]}
-                      >
-                        {tab.label}
-                      </Text>
                       <View
                         style={[
-                          styles.filterChipBadge,
+                          styles.optionBadge,
                           {
-                            backgroundColor: isActive
-                              ? '#2563EB'
-                              : isDark
-                              ? '#334155'
-                              : '#E2E8F0',
+                            backgroundColor: isSelected ? colors.accent : colors.surface2,
                           },
                         ]}
                       >
                         <Text
                           style={[
-                            styles.filterChipBadgeText,
-                            {
-                              color: isActive ? '#fff' : isDark ? '#CBD5E1' : '#64748B',
-                            },
+                            styles.optionBadgeText,
+                            { color: isSelected ? colors.accentText : colors.text },
                           ]}
                         >
-                          {tab.count}
+                          {letter}
+                        </Text>
+                      </View>
+
+                      <Text style={[styles.optionLabel, { color: colors.text }]}>
+                        {cleanHtml(opt)}
+                      </Text>
+
+                      <View style={[styles.kbdNum, { backgroundColor: colors.surface2 }]}>
+                        <Text style={[styles.kbdNumText, { color: colors.muted }]}>
+                          {idx + 1}
                         </Text>
                       </View>
                     </TouchableOpacity>
                   );
                 })}
-              </ScrollView>
-            </View>
-
-            {/* Questions Grid ScrollView */}
-            <ScrollView style={styles.paletteContent} contentContainerStyle={styles.paletteContentContainer}>
-              {test?.sections.map((section) => {
-                const sectionStart = sectionStartIndex;
-                sectionStartIndex += section.questions.length;
-
-                return (
-                  <View key={section.id} style={styles.paletteSection}>
-                    <View style={styles.paletteSectionHeader}>
-                      <Text style={[styles.paletteSectionTitle, { color: colors.textPrimary }]}>{section.title}</Text>
-                      <Text style={[styles.paletteSectionCount, { color: colors.textSecondary }]}>
-                        {section.questions.length} Questions
-                      </Text>
-                    </View>
-                    <View style={styles.paletteGrid}>
-                      {section.questions.map((q, idx) => {
-                        const globalIdx = sectionStart + idx;
-                        const status = getQuestionStatus(q.id, globalIdx);
-                        const isCurrent = globalIdx === currentQuestionIndex;
-
-                        let matchesFilter = true;
-                        if (paletteFilter === 'answered') matchesFilter = status === 'answered';
-                        else if (paletteFilter === 'not-answered') matchesFilter = status === 'not-answered';
-                        else if (paletteFilter === 'marked') matchesFilter = status === 'marked' || status === 'answered-marked';
-                        else if (paletteFilter === 'not-visited') matchesFilter = status === 'not-visited';
-
-                        return (
-                          <TouchableOpacity
-                            key={q.id}
-                            style={[
-                              styles.paletteButton,
-                              status === 'answered' && styles.paletteButtonAnswered,
-                              status === 'not-answered' && styles.paletteButtonNotAnswered,
-                              status === 'marked' && styles.paletteButtonMarked,
-                              status === 'answered-marked' && styles.paletteButtonAnsweredMarked,
-                              status === 'not-visited' && (isDark ? styles.paletteButtonNotVisitedDark : styles.paletteButtonNotVisitedLight),
-                              isCurrent && styles.paletteButtonCurrent,
-                              !matchesFilter && styles.paletteButtonDimmed,
-                            ]}
-                            onPress={() => navigateToQuestion(globalIdx)}
-                            activeOpacity={0.7}
-                          >
-                            <Text
-                              style={[
-                                styles.paletteButtonText,
-                                status === 'not-visited' && (isDark ? styles.paletteButtonTextNotVisitedDark : styles.paletteButtonTextNotVisitedLight),
-                                isCurrent && styles.paletteButtonTextCurrent,
-                              ]}
-                            >
-                              {globalIdx + 1}
-                            </Text>
-
-                            {status === 'answered-marked' && (
-                              <View style={styles.paletteAnsweredMarkedDot} />
-                            )}
-
-                            {isCurrent && (
-                              <View style={styles.paletteActiveIndicator} />
-                            )}
-                          </TouchableOpacity>
-                        );
-                      })}
-                    </View>
-                  </View>
-                );
-              })}
-            </ScrollView>
-
-            {/* Interactive Legend */}
-            <View style={[styles.paletteLegend, { backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC', borderTopColor: colors.border }]}>
-              <View style={styles.legendRow}>
-                <View style={styles.legendItem}>
-                  <View style={[styles.legendBox, styles.legendAnswered]} />
-                  <Text style={[styles.legendText, { color: colors.textSecondary }]}>Answered</Text>
-                </View>
-                <View style={styles.legendItem}>
-                  <View style={[styles.legendBox, styles.legendNotAnswered]} />
-                  <Text style={[styles.legendText, { color: colors.textSecondary }]}>Not Answered</Text>
-                </View>
-                <View style={styles.legendItem}>
-                  <View style={[styles.legendBox, styles.legendMarked]} />
-                  <Text style={[styles.legendText, { color: colors.textSecondary }]}>Marked</Text>
-                </View>
-              </View>
-              <View style={styles.legendRow}>
-                <View style={styles.legendItem}>
-                  <View style={[styles.legendBox, styles.legendAnsweredMarked]}>
-                    <View style={styles.legendMiniBadge} />
-                  </View>
-                  <Text style={[styles.legendText, { color: colors.textSecondary }]}>Ans & Marked</Text>
-                </View>
-                <View style={styles.legendItem}>
-                  <View style={[styles.legendBox, isDark ? styles.legendNotVisitedDark : styles.legendNotVisitedLight]} />
-                  <Text style={[styles.legendText, { color: colors.textSecondary }]}>Not Visited</Text>
-                </View>
-                <View style={styles.legendItem}>
-                  <View style={[styles.legendBox, styles.legendCurrent]} />
-                  <Text style={[styles.legendText, { color: colors.textSecondary }]}>Current</Text>
-                </View>
               </View>
             </View>
 
-            {/* Submit Test CTA */}
-            <TouchableOpacity 
-              style={styles.paletteSubmitButton}
-              onPress={() => {
-                setShowQuestionPalette(false);
-                setShowSubmitConfirm(true);
-              }}
-              activeOpacity={0.85}
-            >
-              <LinearGradient
-                colors={['#2563EB', '#1D4ED8']}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 0 }}
-                style={styles.paletteSubmitGradient}
-              >
-                <Send size={18} color="#fff" />
-                <Text style={styles.paletteSubmitButtonText}>Submit Test</Text>
-                <View style={styles.paletteSubmitBadge}>
-                  <Text style={styles.paletteSubmitBadgeText}>
-                    {stats.answered}/{stats.total} Answered
-                  </Text>
-                </View>
-              </LinearGradient>
-            </TouchableOpacity>
-          </SafeAreaView>
-        </ResponsiveContainer>
-      </Modal>
-    );
-  };
-
-  const renderBackConfirmModal = () => (
-    <Modal
-      visible={showBackConfirm}
-      animationType="fade"
-      transparent={true}
-      onRequestClose={() => setShowBackConfirm(false)}
-    >
-      <View style={styles.modalOverlay}>
-        <View style={styles.submitConfirmContainer}>
-          <View style={styles.submitConfirmHeader}>
-            <AlertCircle size={48} color="#FF9800" />
-            <Text style={styles.submitConfirmTitle}>Pause or Exit Test</Text>
-          </View>
-
-          <Text style={styles.submitConfirmMessage}>
-            What would you like to do? You can pause the test and resume later, or cancel and reset it completely.
-          </Text>
-
-          <View style={[styles.submitConfirmButtons, {flexDirection: 'column', gap: 12}]}>
-            <TouchableOpacity
-              style={[styles.confirmButton, {backgroundColor: '#4CAF50', width: '100%'}]}
-              onPress={async () => {
-                setShowBackConfirm(false);
-                await saveProgress();
-                exitTestScreen();
-              }}
-            >
-              <Text style={styles.confirmButtonText}>Pause for Later</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={[styles.confirmButton, {backgroundColor: '#F44336', width: '100%'}]}
-              onPress={async () => {
-                setShowBackConfirm(false);
-                await TestProgressService.clearTestProgress(testId);
-                exitTestScreen();
-              }}
-            >
-              <Text style={styles.confirmButtonText}>Cancel Test (Reset)</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={[styles.cancelButton, {width: '100%'}]}
-              onPress={() => setShowBackConfirm(false)}
-            >
-              <Text style={styles.cancelButtonText}>Keep Taking Test</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </View>
-    </Modal>
-  );
-
-  const renderSubmitConfirmModal = () => (
-    <Modal
-      visible={showSubmitConfirm}
-      animationType="fade"
-      transparent={true}
-      onRequestClose={() => setShowSubmitConfirm(false)}
-    >
-      <View style={styles.modalOverlay}>
-        <View style={styles.submitConfirmContainer}>
-          <View style={styles.submitConfirmHeader}>
-            <AlertCircle size={48} color="#FF6B35" />
-            <Text style={styles.submitConfirmTitle}>Submit Test?</Text>
-          </View>
-
-          <Text style={styles.submitConfirmMessage}>
-            Are you sure you want to submit the test? You won't be able to change your answers after
-            submission.
-          </Text>
-
-          <View style={styles.submitStatsContainer}>
-            {(() => {
-              const stats = getQuestionStats();
-              return (
-                <>
-                  <View style={styles.submitStatItem}>
-                    <Text style={[styles.submitStatValue, { color: '#16A34A' }]}>{stats.answered}</Text>
-                    <Text style={styles.submitStatLabel}>Answered</Text>
-                  </View>
-                  <View style={styles.submitStatItem}>
-                    <Text style={[styles.submitStatValue, { color: '#EF4444' }]}>{stats.notAnswered}</Text>
-                    <Text style={styles.submitStatLabel}>Not Answered</Text>
-                  </View>
-                  <View style={styles.submitStatItem}>
-                    <Text style={[styles.submitStatValue, { color: '#8B5CF6' }]}>{stats.marked + stats.answeredAndMarked}</Text>
-                    <Text style={styles.submitStatLabel}>Marked</Text>
-                  </View>
-                  <View style={styles.submitStatItem}>
-                    <Text style={[styles.submitStatValue, { color: '#64748B' }]}>{stats.notVisited}</Text>
-                    <Text style={styles.submitStatLabel}>Not Visited</Text>
-                  </View>
-                </>
-              );
-            })()}
-          </View>
-
-          <View style={styles.submitConfirmButtons}>
-            <TouchableOpacity
-              style={[styles.submitConfirmButton, styles.submitCancelButton]}
-              onPress={() => setShowSubmitConfirm(false)}
-            >
-              <Text style={styles.submitCancelButtonText}>Cancel</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[styles.submitConfirmButton, styles.submitProceedButton]}
-              onPress={confirmSubmit}
-            >
-              <LinearGradient
-                colors={['#4A90E2', '#357ABD']}
-                style={styles.submitProceedGradient}
-              >
-                <Text style={styles.submitProceedButtonText}>Submit Test</Text>
-              </LinearGradient>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </View>
-    </Modal>
-  );
-
-  if (!test || !attempt) {
-    return (
-      <View style={[styles.loadingContainer, { backgroundColor: colors.background }]}>
-        <ActivityIndicator size="large" color={colors.accent || '#4A90E2'} />
-        <Text style={[styles.loadingText, { color: colors.textSecondary, marginTop: 12 }]}>Loading test...</Text>
-      </View>
-    );
-  }
-
-  const currentQuestion = getCurrentQuestion();
-  const questions = getAllQuestions();
-  const stats = getQuestionStats();
-  const currentState = currentQuestion ? questionStates.get(currentQuestion.id) : null;
-  const hasDualLanguage = !!(currentQuestion && (
-    (currentQuestion.questionTextHindi && currentQuestion.questionText && currentQuestion.questionTextHindi !== currentQuestion.questionText) ||
-    (currentQuestion.optionsHindi && currentQuestion.optionsHindi.length > 0 && currentQuestion.options && currentQuestion.options.length > 0)
-  ));
-
-  return (
-    <SafeAreaView style={styles.container} edges={['top']}>
-      {/* Header */}
-      <LinearGradient colors={['#4A90E2', '#357ABD']} style={styles.header}>
-        <View style={styles.headerTop}>
-          <View style={styles.headerLeft}>
-            <TouchableOpacity 
-              style={styles.headerBackButton} 
-              onPress={handleBack}
-              hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
-            >
-              <ChevronLeft size={28} color="#fff" />
-            </TouchableOpacity>
-            <View style={styles.timerContainer}>
-              <Clock size={20} color="#fff" />
-              <Text style={styles.timerText}>{formatTime(timeRemaining)}</Text>
-            </View>
-          </View>
-          <Text style={styles.headerTitle} numberOfLines={1}>
-            {test.title}
-          </Text>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <TouchableOpacity
-              style={{
-                backgroundColor: 'rgba(255,255,255,0.2)',
-                paddingHorizontal: 10,
-                paddingVertical: 6,
-                borderRadius: 16,
-                marginRight: 8
-              }}
-              onPress={toggleTheme}
-              accessibilityLabel="Toggle Dark Mode"
-            >
-              {isDark ? <Sun size={18} color="#FBBF24" /> : <Moon size={18} color="#fff" />}
-            </TouchableOpacity>
-            {hasDualLanguage && (
-              <TouchableOpacity
-                style={{
-                  backgroundColor: 'rgba(255,255,255,0.2)',
-                  paddingHorizontal: 12,
-                  paddingVertical: 6,
-                  borderRadius: 16,
-                  marginRight: 12
-                }}
-                onPress={() => setLanguage(l => l === 'english' ? 'hindi' : 'english')}
-              >
-                <Text style={{color: '#fff', fontWeight: 'bold', fontSize: 13}}>
-                  {language === 'english' ? 'A/अ' : 'अ/A'}
-                </Text>
-              </TouchableOpacity>
-            )}
-            <TouchableOpacity
-              style={styles.headerRight}
-              onPress={() => setShowQuestionPalette(true)}
-            >
-              <Menu size={24} color="#fff" />
-            </TouchableOpacity>
-          </View>
-        </View>
-
-        <View style={styles.headerStats}>
-          <View style={styles.statItem}>
-            <Text style={styles.statValue}>{stats.answered}</Text>
-            <Text style={styles.statLabel}>Answered</Text>
-          </View>
-          <View style={styles.statDivider} />
-          <View style={styles.statItem}>
-            <Text style={styles.statValue}>{stats.notAnswered}</Text>
-            <Text style={styles.statLabel}>Not Answered</Text>
-          </View>
-          <View style={styles.statDivider} />
-          <View style={styles.statItem}>
-            <Text style={styles.statValue}>{stats.marked + stats.answeredAndMarked}</Text>
-            <Text style={styles.statLabel}>Marked</Text>
-          </View>
-        </View>
-      </LinearGradient>
-
-      {/* Question Content */}
-      <ScrollView style={[styles.content, { backgroundColor: colors.background }]} contentContainerStyle={styles.contentContainer}>
-        {currentQuestion && (
-          <>
-            <View style={styles.questionHeader}>
-              <Text style={[styles.questionNumber, { color: colors.textSecondary }]}>
-                Question {currentQuestionIndex + 1} of {questions.length}
-              </Text>
-              <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-                <TouchableOpacity onPress={handleBookmark} style={{ padding: 4 }}>
-                  <Bookmark size={20} color="#3B82F6" />
-                </TouchableOpacity>
-                <View style={[styles.questionMarks, isDark && { backgroundColor: '#064E3B' }]}>
-                  <Text style={[styles.questionMarksText, isDark && { color: '#34D399' }]}>
-                    +{currentQuestion.marks.positive} / -{currentQuestion.marks.negative}
-                  </Text>
-                </View>
-              </View>
-            </View>
-
-            <View style={[styles.questionContainer, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
-              <RenderHtml
-                contentWidth={width - 48}
-                source={{ html: (language === 'hindi' && currentQuestion.questionTextHindi ? currentQuestion.questionTextHindi : currentQuestion.questionText).replace(/\n/g, '<br />') }}
-                baseStyle={{ ...styles.questionText, color: colors.textPrimary }}
-                tagsStyles={{ img: { maxWidth: '100%' } }}
+            {/* Bottom Actions Row */}
+            <View style={styles.bottomControls}>
+              <Button
+                title="Previous"
+                variant="secondary"
+                size="md"
+                onPress={handlePrevious}
+                disabled={currentQuestionIndex === 0}
+                icon={<ChevronLeft size={16} color={colors.text} />}
               />
-            </View>
 
-            <View style={styles.optionsContainer}>
-              {(language === 'hindi' && currentQuestion.optionsHindi && currentQuestion.optionsHindi.length > 0 ? currentQuestion.optionsHindi : currentQuestion.options).map((option, index) => {
-                const isSelected = currentState?.selectedOption === index;
-
-                return (
-                  <TouchableOpacity
-                    key={index}
-                    style={[
-                      styles.optionButton,
-                      { backgroundColor: colors.surface, borderColor: isDark ? colors.border : '#e0e0e0' },
-                      isSelected && { backgroundColor: isDark ? '#1E3A5F' : '#E3F2FD', borderColor: '#4A90E2' }
-                    ]}
-                    onPress={() => handleOptionSelect(index)}
-                    activeOpacity={0.7}
-                  >
-                    <View style={[styles.optionRadio, { borderColor: isDark ? colors.border : '#ccc' }, isSelected && styles.optionRadioSelected]}>
-                      {isSelected && <View style={styles.optionRadioInner} />}
-                    </View>
-                    <RenderHtml
-                      contentWidth={width - 120}
-                      source={{ html: option.replace(/\n/g, '<br />') }}
-                      baseStyle={{ ...styles.optionText, color: colors.textPrimary }}
-                      tagsStyles={{ img: { maxWidth: '100%' } }}
+              <View style={styles.middleButtons}>
+                {currentState?.selectedOption !== null && currentState?.selectedOption !== undefined && (
+                  <Button
+                    title="Clear"
+                    variant="ghost"
+                    size="sm"
+                    onPress={handleClearResponse}
+                    icon={<RotateCcw size={13} color={colors.muted} />}
+                  />
+                )}
+                <Button
+                  title={currentState?.marked ? 'Unmark' : 'Mark for Review'}
+                  variant="secondary"
+                  size="sm"
+                  onPress={handleToggleMark}
+                  icon={
+                    <Flag
+                      size={13}
+                      color={currentState?.marked ? colors.accent : colors.muted}
                     />
-                  </TouchableOpacity>
-                );
-              })}
-            </View>
-          </>
-        )}
-      </ScrollView>
+                  }
+                />
+              </View>
 
-      {/* Navigation Footer */}
-      <View style={[styles.footer, { backgroundColor: colors.surface, borderTopColor: colors.border }]}>
-        <View style={styles.footerButtons}>
-          <TouchableOpacity
-            style={[styles.markButton, { backgroundColor: colors.surfaceHighlight }]}
-            onPress={handleMarkForReview}
-            disabled={!currentQuestion}
-          >
-            <Flag
-              size={20}
-              color={currentState?.marked ? '#FF6B35' : colors.textSecondary}
-              fill={currentState?.marked ? '#FF6B35' : 'none'}
-            />
-            <Text style={[styles.markButtonText, { color: colors.textSecondary }]}>
-              {currentState?.marked ? 'Unmark' : 'Mark for Review'}
-            </Text>
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.navigationButtons}>
-          <TouchableOpacity
-            style={[
-              styles.navButton,
-              { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 },
-              currentQuestionIndex === 0 && styles.navButtonDisabled
-            ]}
-            onPress={handlePrevious}
-            disabled={currentQuestionIndex === 0}
-          >
-            <ChevronLeft size={24} color={currentQuestionIndex === 0 ? (isDark ? '#475569' : '#ccc') : '#4A90E2'} />
-            <Text
-              style={[
-                styles.navButtonText,
-                { color: '#4A90E2' },
-                currentQuestionIndex === 0 && styles.navButtonTextDisabled
-              ]}
-            >
-              Previous
-            </Text>
-          </TouchableOpacity>
-
-          {currentQuestionIndex === questions.length - 1 ? (
-            <TouchableOpacity style={styles.submitButton} onPress={handleSubmit}>
-              <LinearGradient colors={['#4CAF50', '#45a049']} style={styles.submitButtonGradient}>
-                <Send size={20} color="#fff" />
-                <Text style={styles.submitButtonText}>Submit Test</Text>
-              </LinearGradient>
-            </TouchableOpacity>
-          ) : (
-            <TouchableOpacity
-              style={[
-                styles.navButton,
-                { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 },
-                currentQuestionIndex === questions.length - 1 && styles.navButtonDisabled,
-              ]}
-              onPress={handleNext}
-              disabled={currentQuestionIndex === questions.length - 1}
-            >
-              <Text
-                style={[
-                  styles.navButtonText,
-                  { color: '#4A90E2' },
-                  currentQuestionIndex === questions.length - 1 && styles.navButtonTextDisabled,
-                ]}
-              >
-                Next
-              </Text>
-              <ChevronRight
-                size={24}
-                color={currentQuestionIndex === questions.length - 1 ? (isDark ? '#475569' : '#ccc') : '#4A90E2'}
-              />
-            </TouchableOpacity>
-          )}
-        </View>
-      </View>
-
-      {renderQuestionPalette()}
-      {renderSubmitConfirmModal()}
-      {renderBackConfirmModal()}
-      
-      {/* Submitting Overlay */}
-      {isSubmitting && (
-        <Modal visible={true} transparent={true} animationType="fade">
-          <View style={styles.submittingOverlay}>
-            <View style={styles.submittingContainer}>
-              <ActivityIndicator size="large" color="#4A90E2" />
-              <Text style={styles.submittingText}>Submitting Test...</Text>
-              <Text style={styles.submittingSubtext}>Please wait while we save your answers</Text>
+              {currentQuestionIndex === questions.length - 1 ? (
+                <Button
+                  title="Submit Test"
+                  variant="primary"
+                  size="md"
+                  onPress={() => setShowSubmitConfirm(true)}
+                  iconRight={<Send size={15} color={colors.accentText} />}
+                />
+              ) : (
+                <Button
+                  title="Save & Next"
+                  variant="primary"
+                  size="md"
+                  onPress={handleNext}
+                  iconRight={<ChevronRight size={16} color={colors.accentText} />}
+                />
+              )}
             </View>
           </View>
+        </ScrollView>
+
+        {/* Right Column: Question Palette (Sticky on desktop) */}
+        {isDesktop && (
+          <View
+            style={[
+              styles.desktopPaletteRail,
+              {
+                backgroundColor: colors.surface,
+                borderLeftColor: colors.line,
+              },
+            ]}
+          >
+            <View style={[styles.desktopPaletteHeader, { borderBottomColor: colors.line }]}>
+              <Text style={[styles.desktopPaletteTitle, { color: colors.text }]}>
+                Question Palette
+              </Text>
+              <Text style={[styles.desktopPaletteSub, { color: colors.muted }]}>
+                {stats.answered} of {questions.length} Answered
+              </Text>
+            </View>
+            {renderPaletteContent()}
+          </View>
+        )}
+      </View>
+
+      {/* Mobile Question Palette Modal */}
+      {!isDesktop && (
+        <Modal
+          visible={showQuestionPalette}
+          onClose={() => setShowQuestionPalette(false)}
+          title="Question Palette"
+          maxWidth={500}
+        >
+          {renderPaletteContent()}
         </Modal>
       )}
+
+      {/* Submit Confirmation Dialog */}
+      <Modal
+        visible={showSubmitConfirm}
+        onClose={() => setShowSubmitConfirm(false)}
+        title="Submit Examination?"
+      >
+        <View style={styles.confirmModalContent}>
+          <Text style={[styles.confirmSubtitle, { color: colors.muted }]}>
+            Review your progress before finalizing. Once submitted, your score and detailed solutions will be computed immediately.
+          </Text>
+
+          <View style={[styles.statsSummaryGrid, { backgroundColor: colors.surface2, borderColor: colors.line }]}>
+            <View style={styles.summaryItem}>
+              <Text style={[styles.summaryVal, { color: colors.success }]}>
+                {stats.answered}
+              </Text>
+              <Text style={[styles.summaryLbl, { color: colors.muted }]}>Answered</Text>
+            </View>
+
+            <View style={styles.summaryItem}>
+              <Text style={[styles.summaryVal, { color: colors.danger }]}>
+                {stats.notAnswered + stats.notVisited}
+              </Text>
+              <Text style={[styles.summaryLbl, { color: colors.muted }]}>Unanswered</Text>
+            </View>
+
+            <View style={styles.summaryItem}>
+              <Text style={[styles.summaryVal, { color: colors.accent }]}>
+                {stats.marked}
+              </Text>
+              <Text style={[styles.summaryLbl, { color: colors.muted }]}>Marked</Text>
+            </View>
+          </View>
+
+          <View style={styles.modalActionRow}>
+            <Button
+              title="Continue Test"
+              variant="secondary"
+              onPress={() => setShowSubmitConfirm(false)}
+              style={{ flex: 1 }}
+            />
+            <Button
+              title="Yes, Submit Test"
+              variant="primary"
+              loading={isSubmitting}
+              onPress={() => {
+                setShowSubmitConfirm(false);
+                performSubmit();
+              }}
+              style={{ flex: 1 }}
+            />
+          </View>
+        </View>
+      </Modal>
+
+      {/* Back / Exit Confirmation Dialog */}
+      <Modal
+        visible={showBackConfirm}
+        onClose={() => setShowBackConfirm(false)}
+        title="Pause and Exit Test?"
+      >
+        <View style={styles.confirmModalContent}>
+          <Text style={[styles.confirmSubtitle, { color: colors.muted }]}>
+            Your answers and remaining time will be saved locally. You can resume this mock test anytime from your dashboard.
+          </Text>
+
+          <View style={styles.modalActionRow}>
+            <Button
+              title="Resume Test"
+              variant="primary"
+              onPress={() => setShowBackConfirm(false)}
+              style={{ flex: 1 }}
+            />
+            <Button
+              title="Save & Exit"
+              variant="secondary"
+              onPress={() => {
+                setShowBackConfirm(false);
+                handleExitAttempt();
+              }}
+              style={{ flex: 1 }}
+            />
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 }
@@ -1502,693 +1085,322 @@ export default function MockTestScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
   },
-  loadingContainer: {
+  centerLoading: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    justifyContent: 'center',
+    padding: 24,
   },
   loadingText: {
-    fontSize: 16,
-    color: '#666',
+    marginTop: 14,
+    fontSize: 14.5,
+    fontWeight: '500',
   },
-  header: {
+  topBar: {
+    borderBottomWidth: 1,
     paddingHorizontal: 16,
-    paddingVertical: 12,
-  },
-  headerTop: {
+    paddingVertical: 10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 12,
-  },
-  headerLeft: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  headerBackButton: {
-    marginRight: 8,
-    padding: 4,
-  },
-  headerTitle: {
-    flex: 2,
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#fff',
-    textAlign: 'center',
-  },
-  timerContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 20,
-  },
-  timerText: {
-    fontSize: 16,
-    fontWeight: '700',
-    color: '#fff',
-    marginLeft: 6,
-  },
-  headerRight: {
-    flex: 1,
-    alignItems: 'flex-end',
-  },
-  headerStats: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    backgroundColor: 'rgba(255,255,255,0.15)',
-    borderRadius: 12,
-    paddingVertical: 8,
-  },
-  statItem: {
-    alignItems: 'center',
-    flex: 1,
-  },
-  statValue: {
-    fontSize: 20,
-    fontWeight: '700',
-    color: '#fff',
-  },
-  statLabel: {
-    fontSize: 11,
-    color: 'rgba(255,255,255,0.9)',
-    marginTop: 2,
-  },
-  statDivider: {
-    width: 1,
-    height: 30,
-    backgroundColor: 'rgba(255,255,255,0.3)',
-  },
-  content: {
-    flex: 1,
-  },
-  contentContainer: {
-    padding: 16,
-  },
-  questionHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 16,
-  },
-  questionNumber: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#666',
-  },
-  questionMarks: {
-    backgroundColor: '#E8F5E9',
-    paddingHorizontal: 12,
-    paddingVertical: 4,
-    borderRadius: 12,
-  },
-  questionMarksText: {
-    fontSize: 12,
-    fontWeight: '600',
-    color: '#4CAF50',
-  },
-  questionContainer: {
-    backgroundColor: '#fff',
-    padding: 16,
-    borderRadius: 12,
-    marginBottom: 20,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
-  },
-  questionText: {
-    fontSize: 16,
-    color: '#333',
-    lineHeight: 24,
-  },
-  optionsContainer: {
     gap: 12,
   },
-  optionButton: {
+  topBarLeft: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
-    padding: 16,
-    borderRadius: 12,
-    borderWidth: 2,
-    borderColor: '#e0e0e0',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.05,
-    shadowRadius: 2,
-    elevation: 2,
-  },
-  optionButtonSelected: {
-    borderColor: '#4A90E2',
-    backgroundColor: '#E3F2FD',
-  },
-  optionRadio: {
-    width: 24,
-    height: 24,
-    borderRadius: 12,
-    borderWidth: 2,
-    borderColor: '#ccc',
-    marginRight: 12,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  optionRadioSelected: {
-    borderColor: '#4A90E2',
-  },
-  optionRadioInner: {
-    width: 12,
-    height: 12,
-    borderRadius: 6,
-    backgroundColor: '#4A90E2',
-  },
-  optionText: {
-    fontSize: 15,
-    color: '#333',
+    gap: 10,
     flex: 1,
   },
-  footer: {
-    backgroundColor: '#fff',
-    borderTopWidth: 1,
-    borderTopColor: '#e0e0e0',
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-  },
-  footerButtons: {
-    marginBottom: 12,
-  },
-  markButton: {
-    flexDirection: 'row',
+  exitBtn: {
+    width: 36,
+    height: 36,
+    borderRadius: 8,
+    borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 10,
-    backgroundColor: '#f5f5f5',
-    borderRadius: 8,
   },
-  markButtonText: {
-    marginLeft: 8,
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#666',
-  },
-  navigationButtons: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  navButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    backgroundColor: '#f5f5f5',
-    borderRadius: 8,
-  },
-  navButtonDisabled: {
-    opacity: 0.4,
-  },
-  navButtonText: {
-    fontSize: 15,
-    fontWeight: '600',
-    color: '#4A90E2',
-    marginHorizontal: 4,
-  },
-  navButtonTextDisabled: {
-    color: '#ccc',
-  },
-  submitButton: {
+  testMetaWrap: {
     flex: 1,
-    marginLeft: 12,
-    borderRadius: 8,
-    overflow: 'hidden',
   },
-  submitButtonGradient: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    gap: 8,
-  },
-  submitButtonText: {
-    fontSize: 16,
+  testTitleText: {
+    fontSize: 15.5,
     fontWeight: '700',
-    color: '#fff',
+    letterSpacing: -0.2,
   },
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  paletteContainer: {
-    flex: 1,
-    width: '100%',
-    backgroundColor: '#fff',
-  },
-  paletteHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 18,
-    paddingVertical: 14,
-    borderBottomWidth: 1,
-  },
-  paletteHeaderLeft: {
-    flex: 1,
-    marginRight: 12,
-  },
-  paletteTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-  },
-  paletteSubtitle: {
+  sectionMetaText: {
     fontSize: 12,
-    marginTop: 2,
   },
-  paletteHeaderRight: {
+  topBarRight: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
   },
-  paletteTimerBadge: {
+  savedBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  savedText: {
+    fontSize: 11,
+    fontWeight: '600',
+  },
+  timerBadge: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
     paddingHorizontal: 10,
-    paddingVertical: 5,
-    borderRadius: 14,
+    paddingVertical: 6,
+    borderRadius: 8,
     borderWidth: 1,
   },
-  paletteTimerText: {
-    fontSize: 13,
-    fontWeight: '700',
-    color: '#2563EB',
+  timerText: {
+    fontSize: 14,
+    letterSpacing: 0.5,
   },
-  paletteCloseButton: {
-    width: 34,
-    height: 34,
-    borderRadius: 17,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  paletteSummaryContainer: {
-    paddingVertical: 10,
-    borderBottomWidth: 1,
-  },
-  paletteSummaryScroll: {
-    paddingHorizontal: 16,
-    gap: 8,
-  },
-  summaryCard: {
-    minWidth: 88,
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    borderRadius: 10,
-    borderWidth: 1.5,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  summaryCardActive: {
-    borderWidth: 2,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.15,
-    shadowRadius: 3,
-    elevation: 2,
-  },
-  summaryCardValue: {
-    fontSize: 18,
-    fontWeight: '800',
-  },
-  summaryCardLabel: {
-    fontSize: 11,
-    fontWeight: '600',
-    marginTop: 2,
-  },
-  summaryBadgeMiniDot: {
-    width: 6,
-    height: 6,
-    borderRadius: 3,
-    backgroundColor: '#22C55E',
-  },
-  paletteFilterBar: {
-    paddingVertical: 8,
-    borderBottomWidth: 1,
-  },
-  paletteFilterScroll: {
-    paddingHorizontal: 16,
-    gap: 8,
-  },
-  filterChip: {
+  paletteTriggerBtn: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    paddingHorizontal: 12,
+    paddingHorizontal: 10,
     paddingVertical: 6,
-    borderRadius: 20,
+    borderRadius: 8,
     borderWidth: 1,
   },
-  filterChipText: {
-    fontSize: 13,
+  paletteTriggerText: {
+    fontSize: 12.5,
+    fontWeight: '600',
   },
-  filterChipBadge: {
-    paddingHorizontal: 6,
-    paddingVertical: 2,
-    borderRadius: 10,
+  workspaceRow: {
+    flex: 1,
+    flexDirection: 'row',
   },
-  filterChipBadgeText: {
-    fontSize: 11,
-    fontWeight: '700',
-  },
-  paletteContent: {
+  questionScroll: {
     flex: 1,
   },
-  paletteContentContainer: {
+  questionScrollContent: {
     padding: 16,
-    paddingBottom: 24,
+    alignItems: 'center',
   },
-  paletteSection: {
+  questionCenterWrapper: {
+    maxWidth: 780,
+    width: '100%',
+  },
+  questionBox: {
+    borderWidth: 1,
+    overflow: 'hidden',
     marginBottom: 20,
   },
-  paletteSectionHeader: {
+  qHeaderRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 12,
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderBottomWidth: 1,
   },
-  paletteSectionTitle: {
-    fontSize: 15,
+  qNumWrap: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  qIndexText: {
+    fontSize: 13.5,
     fontWeight: '700',
   },
-  paletteSectionCount: {
-    fontSize: 12,
-    fontWeight: '500',
+  qActionsRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
   },
-  paletteGrid: {
+  langToggleBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+    borderWidth: 1,
+  },
+  langToggleText: {
+    fontSize: 11.5,
+    fontWeight: '700',
+  },
+  actionIconButton: {
+    width: 30,
+    height: 30,
+    borderRadius: 6,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  qTextContainer: {
+    padding: 20,
+  },
+  qText: {
+    fontSize: 18,
+    fontWeight: '600',
+    lineHeight: 26,
+    letterSpacing: -0.2,
+  },
+  optionsList: {
+    paddingHorizontal: 20,
+    paddingBottom: 20,
+    gap: 12,
+  },
+  optionBtn: {
+    borderWidth: 1,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    minHeight: 48,
+  },
+  optionBadge: {
+    width: 26,
+    height: 26,
+    borderRadius: 6,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  optionBadgeText: {
+    fontSize: 12.5,
+    fontWeight: '700',
+  },
+  optionLabel: {
+    flex: 1,
+    fontSize: 14.5,
+    lineHeight: 21,
+  },
+  kbdNum: {
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
+  },
+  kbdNumText: {
+    fontSize: 10.5,
+    fontWeight: '600',
+  },
+  bottomControls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 12,
+    marginBottom: 32,
+    flexWrap: 'wrap',
+  },
+  middleButtons: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  desktopPaletteRail: {
+    width: 280,
+    borderLeftWidth: 1,
+    flexDirection: 'column',
+  },
+  desktopPaletteHeader: {
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    borderBottomWidth: 1,
+  },
+  desktopPaletteTitle: {
+    fontSize: 14.5,
+    fontWeight: '700',
+  },
+  desktopPaletteSub: {
+    fontSize: 12,
+    marginTop: 2,
+  },
+  paletteInner: {
+    flex: 1,
+    padding: 14,
+  },
+  legendGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 10,
-    justifyContent: 'flex-start',
-  },
-  paletteButton: {
-    width: 50,
-    height: 46,
-    borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'relative',
-  },
-  paletteButtonAnswered: {
-    backgroundColor: '#16A34A',
-  },
-  paletteButtonNotAnswered: {
-    backgroundColor: '#EF4444',
-  },
-  paletteButtonMarked: {
-    backgroundColor: '#8B5CF6',
-  },
-  paletteButtonAnsweredMarked: {
-    backgroundColor: '#7C3AED',
-  },
-  paletteButtonNotVisitedLight: {
-    backgroundColor: '#F1F5F9',
-    borderWidth: 1,
-    borderColor: '#CBD5E1',
-  },
-  paletteButtonNotVisitedDark: {
-    backgroundColor: '#1E293B',
-    borderWidth: 1,
-    borderColor: '#334155',
-  },
-  paletteButtonCurrent: {
-    borderWidth: 2.5,
-    borderColor: '#2563EB',
-    shadowColor: '#2563EB',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.35,
-    shadowRadius: 4,
-    elevation: 4,
-  },
-  paletteButtonDimmed: {
-    opacity: 0.22,
-  },
-  paletteButtonText: {
-    fontSize: 15,
-    fontWeight: '700',
-    color: '#FFFFFF',
-  },
-  paletteButtonTextNotVisitedLight: {
-    color: '#334155',
-  },
-  paletteButtonTextNotVisitedDark: {
-    color: '#94A3B8',
-  },
-  paletteButtonTextCurrent: {
-    color: '#FFFFFF',
-    fontWeight: '800',
-  },
-  paletteAnsweredMarkedDot: {
-    position: 'absolute',
-    top: 3,
-    right: 3,
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: '#22C55E',
-    borderWidth: 1.5,
-    borderColor: '#FFFFFF',
-  },
-  paletteActiveIndicator: {
-    position: 'absolute',
-    bottom: 3,
-    width: 12,
-    height: 3,
-    borderRadius: 1.5,
-    backgroundColor: '#FFFFFF',
-  },
-  paletteLegend: {
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    borderTopWidth: 1,
-  },
-  legendRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginVertical: 4,
+    paddingBottom: 12,
+    borderBottomWidth: 1,
+    marginBottom: 12,
   },
   legendItem: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    flex: 1,
   },
-  legendBox: {
-    width: 15,
-    height: 15,
+  shapeBadge: {
+    width: 20,
+    height: 20,
     borderRadius: 4,
-    justifyContent: 'center',
+    borderWidth: 1,
     alignItems: 'center',
-    position: 'relative',
+    justifyContent: 'center',
   },
-  legendAnswered: {
-    backgroundColor: '#16A34A',
-  },
-  legendNotAnswered: {
-    backgroundColor: '#EF4444',
-  },
-  legendMarked: {
-    backgroundColor: '#8B5CF6',
-  },
-  legendAnsweredMarked: {
-    backgroundColor: '#7C3AED',
-  },
-  legendMiniBadge: {
-    width: 5,
-    height: 5,
-    borderRadius: 2.5,
-    backgroundColor: '#22C55E',
-  },
-  legendNotVisitedLight: {
-    backgroundColor: '#F1F5F9',
-    borderWidth: 1,
-    borderColor: '#CBD5E1',
-  },
-  legendNotVisitedDark: {
-    backgroundColor: '#1E293B',
-    borderWidth: 1,
-    borderColor: '#334155',
-  },
-  legendCurrent: {
-    backgroundColor: '#F1F5F9',
-    borderWidth: 2,
-    borderColor: '#2563EB',
+  dotMarker: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
   },
   legendText: {
-    fontSize: 11,
-    fontWeight: '600',
+    fontSize: 11.5,
+    fontWeight: '500',
   },
-  paletteSubmitButton: {
-    marginHorizontal: 16,
-    marginTop: 10,
-    marginBottom: 16,
-    borderRadius: 12,
-    overflow: 'hidden',
-    shadowColor: '#2563EB',
-    shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.25,
-    shadowRadius: 5,
-    elevation: 3,
+  paletteScroll: {
+    flex: 1,
   },
-  paletteSubmitGradient: {
+  gridNumbers: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  numButton: {
+    width: 38,
+    height: 38,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 14,
-    gap: 10,
+    position: 'relative',
   },
-  paletteSubmitButtonText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: '700',
-  },
-  paletteSubmitBadge: {
-    backgroundColor: 'rgba(255,255,255,0.22)',
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    borderRadius: 12,
-  },
-  paletteSubmitBadgeText: {
-    color: '#fff',
+  numText: {
     fontSize: 12,
     fontWeight: '700',
   },
-  submitConfirmContainer: {
-    width: width * 0.85,
-    maxWidth: 400,
-    backgroundColor: '#fff',
-    borderRadius: 16,
-    padding: 24,
+  cornerFlag: {
+    position: 'absolute',
+    top: 2,
+    right: 2,
   },
-  submitConfirmHeader: {
+  confirmModalContent: {
+    paddingTop: 8,
+  },
+  confirmSubtitle: {
+    fontSize: 13.5,
+    lineHeight: 19,
+    marginBottom: 18,
+  },
+  statsSummaryGrid: {
+    flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 16,
-  },
-  submitConfirmTitle: {
-    fontSize: 20,
-    fontWeight: '700',
-    color: '#333',
-    marginTop: 12,
-  },
-  submitConfirmMessage: {
-    fontSize: 15,
-    color: '#666',
-    textAlign: 'center',
-    lineHeight: 22,
+    justifyContent: 'space-around',
+    padding: 14,
+    borderWidth: 1,
+    borderRadius: 10,
     marginBottom: 20,
   },
-  submitStatsContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginBottom: 24,
-    paddingVertical: 16,
-    backgroundColor: '#f5f5f5',
-    borderRadius: 12,
-  },
-  submitStatItem: {
+  summaryItem: {
     alignItems: 'center',
   },
-  submitStatValue: {
-    fontSize: 24,
-    fontWeight: '700',
-    color: '#333',
+  summaryVal: {
+    fontSize: 22,
+    fontWeight: '800',
   },
-  submitStatLabel: {
+  summaryLbl: {
     fontSize: 12,
-    color: '#666',
-    marginTop: 4,
+    marginTop: 2,
   },
-  submitConfirmButtons: {
+  modalActionRow: {
     flexDirection: 'row',
+    alignItems: 'center',
     gap: 12,
-  },
-  submitConfirmButton: {
-    flex: 1,
-    borderRadius: 8,
-    overflow: 'hidden',
-  },
-  submitCancelButton: {
-    backgroundColor: '#f5f5f5',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: 14,
-  },
-  submitCancelButtonText: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#666',
-  },
-  submitProceedButton: {},
-  submitProceedGradient: {
-    paddingVertical: 14,
-    alignItems: 'center',
-  },
-  submitProceedButtonText: {
-    fontSize: 16,
-    fontWeight: '700',
-    color: '#fff',
-  },
-  submittingOverlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.7)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  submittingContainer: {
-    backgroundColor: '#fff',
-    padding: 32,
-    borderRadius: 16,
-    alignItems: 'center',
-  },
-  submittingText: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: '#333',
-    marginTop: 16,
-    marginBottom: 8,
-  },
-  submittingSubtext: {
-    fontSize: 14,
-    color: '#666',
-    textAlign: 'center',
-  },
-  confirmButton: {
-    paddingVertical: 14,
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  confirmButtonText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: '700',
-  },
-  cancelButton: {
-    backgroundColor: '#f5f5f5',
-    paddingVertical: 14,
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  cancelButtonText: {
-    color: '#666',
-    fontSize: 16,
-    fontWeight: '600',
   },
 });

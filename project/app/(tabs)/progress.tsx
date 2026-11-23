@@ -1,1127 +1,617 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-  Dimensions,
-  Platform,
-  StatusBar,
-  RefreshControl,
   ActivityIndicator,
-  Alert,
-  useWindowDimensions,
-  Pressable,
+  Platform,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { router } from 'expo-router';
+import { router, useFocusEffect } from 'expo-router';
 import {
-  BarChart3,
-  TrendingUp as TrendUp,
-  Calendar,
-  Clock,
+  BarChart2,
+  TrendingUp,
   Target,
-  BookOpen,
-  Award,
-  Star,
-  Brain,
+  Clock,
+  Calendar,
   Zap,
-  Trophy,
-  ArrowUp,
-  ArrowDown,
-  Minus,
+  ArrowRight,
+  CheckCircle2,
+  Award,
+  AlertCircle,
 } from 'lucide-react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import Card from '@/components/Card';
-import UserService, { UserStats, UserProfile } from '@/services/user-service';
+import { useAuth } from '@/context/auth-context';
+import { useSub } from '@/context/subscription-context';
+import { useExam } from '@/context/exam-context';
+import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { TestProgressService, TestResult } from '@/services/test-progress-service';
-import TestSeriesService from '@/services/testseries-service';
-import DesktopDashboard from '@/components/DesktopDashboard';
-import { extractTestTopicAndSubject } from '@/utils/topic-resolver';
-import { useTheme } from '@/context/theme-context';
+import UserService from '@/services/user-service';
+import AppShell from '@/components/chalkboard/AppShell';
+import Card from '@/components/chalkboard/Card';
+import Chip from '@/components/chalkboard/Chip';
+import Pill from '@/components/chalkboard/Pill';
+import Button from '@/components/chalkboard/Button';
+import TopicBar from '@/components/chalkboard/TopicBar';
+import EmptyState from '@/components/chalkboard/EmptyState';
+import ProgressRing from '@/components/chalkboard/ProgressRing';
 
-const { width } = Dimensions.get('window');
+export default function AnalyticsScreen() {
+  const { user } = useAuth();
+  const { isSubscribed } = useSub();
+  const { examMode, examInfo } = useExam();
+  const { colors, typography, radii } = useChalkboardTheme();
 
-export default function ProgressScreen() {
-  const { isDark, colors } = useTheme();
-  const [selectedPeriod, setSelectedPeriod] = useState<'week' | 'month' | 'year'>('week');
   const [loading, setLoading] = useState(true);
-  const [refreshing, setRefreshing] = useState(false);
-  const { width: windowWidth } = useWindowDimensions();
-  const isLargeScreen = windowWidth >= 1024;
-  const [userStats, setUserStats] = useState<UserStats | null>(null);
-  const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
   const [testHistory, setTestHistory] = useState<TestResult[]>([]);
-  const [hoveredBarIndex, setHoveredBarIndex] = useState<number | null>(null);
+  const [profile, setProfile] = useState<any>(null);
+  const [dateRange, setDateRange] = useState<'7d' | '30d' | 'all'>('30d');
+  const [showTableFallback, setShowTableFallback] = useState(false);
 
-  useEffect(() => {
-    loadProgressData();
-    
-    // Poll for pending evaluations every 30 seconds
-    const pollInterval = setInterval(() => {
-      checkPendingEvaluations();
-    }, 30000); // 30 seconds
-    
-    return () => clearInterval(pollInterval);
-  }, []);
-
-  const loadProgressData = async () => {
-    setLoading(true);
+  const loadData = useCallback(async () => {
     try {
-      const [stats, profile, history] = await Promise.all([
-        UserService.getUserStatistics().catch(err => {
-          console.error('Stats error:', err);
-          return null;
-        }),
-        UserService.getUserProfile().catch(err => {
-          console.error('Profile error:', err);
-          return null;
-        }),
-        TestProgressService.getTestHistory().catch(err => {
-          console.error('History error:', err);
-          return [];
-        })
-      ]);
-      
-      setUserStats(stats);
-      setUserProfile(profile);
-      setTestHistory(history);
-    } catch (error) {
-      console.error('Error loading progress data:', error);
-      // Set default empty states to ensure UI renders
-      setUserStats({
-        questionsAttempted: 0,
-        accuracy: 0,
-        streak: 0,
-        totalTests: 0,
-      });
-      setTestHistory([]);
+      setLoading(true);
+      if (!user) {
+        setLoading(false);
+        return;
+      }
+
+      const p = await UserService.getUserProfile(user.uid);
+      const h = await TestProgressService.getTestHistory();
+      setProfile(p);
+      setTestHistory(h || []);
+    } catch (e) {
+      console.warn('Analytics load error:', e);
     } finally {
       setLoading(false);
     }
-  };
+  }, [user]);
 
-  const onRefresh = async () => {
-    setRefreshing(true);
-    await Promise.all([
-      loadProgressData(),
-      checkPendingEvaluations()
-    ]);
-    setRefreshing(false);
-  };
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
 
-  const checkPendingEvaluations = async () => {
-    try {
-      const pendingTests = testHistory.filter(t => t.evaluationStatus === 'pending');
-      
-      if (pendingTests.length === 0) {
-        console.log('No pending tests to check');
-        return;
-      }
-      
-      console.log(`🔍 Checking ${pendingTests.length} pending evaluations...`);
-      
-      let updatedAny = false;
-      
-      for (const test of pendingTests) {
-        console.log(`Checking test: ${test.testId} (${test.testTitle})`);
-        console.log(`  AttemptId: ${test.attemptId}`);
-        
-        // Check if answers are now available
-        const status = await TestSeriesService.checkAnswerGenerationStatus(test.testId);
-        
-        console.log(`  Status response:`, JSON.stringify(status, null, 2));
-        
-        if (status.answersAvailable && status.status === 'completed') {
-          console.log(`✅ Answers ready! Updating status for attemptId: ${test.attemptId}`);
-          
-          // Update the evaluation status to completed
-          await TestProgressService.updateAnswerGenerationStatus(
-            test.attemptId,
-            'completed'
-          );
-          
-          console.log(`✅ Status updated successfully`);
-          updatedAny = true;
-        } else if (status.status === 'not-found') {
-          console.log(`🚀 Answer generation not started. Triggering it now for ${test.testId}...`);
-          
-          // We don't have the original path, but backend will do a global search using testId
-          // if the path fails, so we can pass a dummy path that includes the testId
-          const dummyPath = `testseries/unknown_section/unknown_${test.testId}.json.gz`;
-          
-          await TestSeriesService.requestAnswerGeneration(test.testId, dummyPath)
-            .then(() => {
-              console.log(`✅ Requested generation for ${test.testId}`);
-              // Update status to 'pending' to reflect it has been requested
-              TestProgressService.updateAnswerGenerationStatus(test.attemptId, 'pending');
-            })
-            .catch(err => console.error('Failed to trigger generation:', err));
-        } else {
-          console.log(`⏳ Still pending: status=${status.status}, answersAvailable=${status.answersAvailable}`);
-        }
-      }
-      
-      // Reload data if any test was updated
-      if (updatedAny) {
-        console.log('✅ Updated test statuses, reloading data...');
-        await loadProgressData();
-        
-        // Show notification
-        Alert.alert(
-          'Evaluation Complete! ✅',
-          'Your test results are now ready. Check your test history!',
-          [{ text: 'OK' }]
-        );
-      } else {
-        console.log('No updates needed');
-      }
-    } catch (error) {
-      console.error('❌ Error checking pending evaluations:', error);
-    }
-  };
+  useFocusEffect(
+    useCallback(() => {
+      loadData();
+    }, [loadData])
+  );
 
-  const calculateRank = (accuracy: number): string => {
-    if (accuracy >= 95) return 'Grandmaster';
-    if (accuracy >= 90) return 'Master';
-    if (accuracy >= 80) return 'Expert';
-    if (accuracy >= 70) return 'Advanced';
-    if (accuracy >= 60) return 'Intermediate';
-    if (accuracy >= 40) return 'Novice';
-    return 'Beginner';
-  };
+  // Date range filtering
+  const filteredHistory = useMemo(() => {
+    if (dateRange === 'all') return testHistory;
 
-  const renderSimpleChart = (data: number[], labels: string[], color: string) => {
-    if (data.length === 0) return null;
-    const maxValue = Math.max(...data, 100);
-    const chartHeight = 120;
-    
-    return (
-      <View style={[styles.chartContainer, { height: chartHeight }]}>
-        <View style={{ flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'flex-start', height: chartHeight - 40 }}>
-          {data.map((value, index) => {
-            const barHeight = Math.max((value / maxValue) * (chartHeight - 40), 4); // min height 4
-            const isHovered = hoveredBarIndex === index;
-            
-            return (
-              <View key={index} style={{ flex: 1, maxWidth: 40, marginRight: 8, alignItems: 'center' }}>
-                {isHovered && (
-                  <View style={{
-                    position: 'absolute',
-                    top: -30,
-                    backgroundColor: '#1E293B',
-                    paddingHorizontal: 8,
-                    paddingVertical: 4,
-                    borderRadius: 6,
-                    zIndex: 10,
-                    minWidth: 40,
-                    alignItems: 'center'
-                  }}>
-                    <Text style={{ color: '#fff', fontSize: 11, fontWeight: 'bold' }}>
-                      {value.toFixed(1)}%
-                    </Text>
-                    {/* Small triangle pointer */}
-                    <View style={{
-                      position: 'absolute',
-                      bottom: -4,
-                      width: 8,
-                      height: 8,
-                      backgroundColor: '#1E293B',
-                      transform: [{ rotate: '45deg' }]
-                    }} />
-                  </View>
-                )}
-                <Pressable
-                  onHoverIn={() => setHoveredBarIndex(index)}
-                  onHoverOut={() => setHoveredBarIndex(null)}
-                  style={[
-                    styles.chartBar,
-                    {
-                      height: barHeight,
-                      width: '100%',
-                      backgroundColor: isHovered ? '#2563EB' : color, // Slightly darker blue on hover
-                      opacity: isHovered ? 1 : 0.85,
-                      transform: [{ scaleY: isHovered ? 1.05 : 1 }],
-                      transformOrigin: 'bottom'
-                    }
-                  ]}
-                />
-              </View>
-            );
-          })}
-        </View>
-        <View style={{ flexDirection: 'row', justifyContent: 'flex-start', marginTop: 8 }}>
-          {labels.map((label, index) => (
-            <Text key={index} style={{ flex: 1, maxWidth: 40, marginRight: 8, textAlign: 'center', fontSize: 12, color: '#8E8E93', fontWeight: '500' }}>
-              {label}
-            </Text>
-          ))}
-        </View>
-      </View>
-    );
-  };
+    const days = dateRange === '7d' ? 7 : 30;
+    const cutoff = Date.now() - days * 24 * 60 * 60 * 1000;
 
-  const getFilteredHistory = () => {
-    const now = new Date();
-    return testHistory.filter(test => {
-      if (!test.date) return false;
-      const testDate = new Date(test.date);
-      if (selectedPeriod === 'week') {
-        return testDate >= new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-      } else if (selectedPeriod === 'month') {
-        return testDate >= new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
-      } else {
-        return testDate >= new Date(now.getTime() - 365 * 24 * 60 * 60 * 1000);
-      }
+    return testHistory.filter((t) => {
+      if (!t.date) return true;
+      return new Date(t.date).getTime() >= cutoff;
     });
-  };
+  }, [testHistory, dateRange]);
 
-  const filteredHistory = getFilteredHistory();
+  // Aggregate stats
+  const totalAttempted = useMemo(() => {
+    return filteredHistory.reduce((sum, t) => {
+      const cnt =
+        t.totalQuestions ||
+        t.sectionAnalytics?.reduce((s: number, a: any) => s + (a.attempted || 0), 0) ||
+        (t.answers ? t.answers.length : 0);
+      return sum + cnt;
+    }, 0);
+  }, [filteredHistory]);
 
-  // Dynamically compute stats based on filtered history
-  let totalQuestionsAttempted = 0;
-  let totalCorrectAnswers = 0;
-  filteredHistory.forEach(t => {
-    if (t.sectionAnalytics && t.sectionAnalytics.length > 0) {
-      t.sectionAnalytics.forEach(sec => {
-        totalQuestionsAttempted += sec.attempted || 0;
-        totalCorrectAnswers += sec.correct || 0;
-      });
-    } else {
-      totalQuestionsAttempted += (t as any).totalQuestions || 0;
-      if ((t as any).totalQuestions && t.accuracy) {
-        totalCorrectAnswers += Math.round(((t as any).totalQuestions * t.accuracy) / 100);
-      }
-    }
-  });
+  const totalCorrect = useMemo(() => {
+    return filteredHistory.reduce((sum, t) => {
+      const cnt =
+        t.totalCorrect ??
+        (t.sectionAnalytics?.reduce((s: number, a: any) => s + (a.correct || 0), 0) ||
+          (t.answers ? t.answers.filter((a: any) => a.isCorrect).length : 0));
+      return sum + cnt;
+    }, 0);
+  }, [filteredHistory]);
 
-  const displayStats = {
-    totalTests: filteredHistory.length,
-    questionsAttempted: totalQuestionsAttempted,
-    accuracy: totalQuestionsAttempted > 0 ? (totalCorrectAnswers / totalQuestionsAttempted) * 100 : 0,
-    streak: userStats?.streak || 0,
-  };
+  const accuracy =
+    totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 100) : 0;
 
-  const topicBreakdown = React.useMemo(() => {
-    const map: Record<string, { topic: string; subject: string; attempted: number; correct: number }> = {};
-    filteredHistory.forEach(test => {
-      const resolved = extractTestTopicAndSubject(test);
-      let testAttempted = 0;
-      let testCorrect = 0;
-      if (test.sectionAnalytics && test.sectionAnalytics.length > 0) {
-        test.sectionAnalytics.forEach(sec => {
-          testAttempted += sec.attempted || 0;
-          testCorrect += sec.correct || 0;
+  const totalMinutes = useMemo(() => {
+    return Math.round(
+      filteredHistory.reduce((sum, t) => sum + (t.timeTaken || 0), 0) / 60
+    );
+  }, [filteredHistory]);
+
+  // Topic mastery list (sorted weakest first)
+  const topicMasteryList = useMemo(() => {
+    const map: Record<string, { topic: string; total: number; correct: number }> = {};
+
+    filteredHistory.forEach((t) => {
+      if (t.sectionAnalytics) {
+        t.sectionAnalytics.forEach((sec: any) => {
+          const name = sec.sectionName || sec.title || 'Core Subject';
+          if (!map[name]) map[name] = { topic: name, total: 0, correct: 0 };
+          map[name].total += sec.attempted || 0;
+          map[name].correct += sec.correct || 0;
         });
-      } else {
-        testAttempted = (test as any).totalQuestions || 0;
-        if (test.accuracy !== undefined) {
-          testCorrect = Math.round((testAttempted * test.accuracy) / 100);
-        }
       }
-
-      if (!map[resolved.topic]) {
-        map[resolved.topic] = {
-          topic: resolved.topic,
-          subject: resolved.subject,
-          attempted: 0,
-          correct: 0,
-        };
-      }
-      map[resolved.topic].attempted += testAttempted;
-      map[resolved.topic].correct += testCorrect;
     });
 
     return Object.values(map)
-      .filter(t => t.topic.toLowerCase() !== 'general' || Object.keys(map).length === 1)
-      .map(item => ({
+      .map((item) => ({
         ...item,
-        accuracy: item.attempted > 0 ? (item.correct / item.attempted) * 100 : 0,
+        accuracy: item.total > 0 ? (item.correct / item.total) * 100 : 0,
       }))
-      .sort((a, b) => b.attempted - a.attempted);
+      .sort((a, b) => a.accuracy - b.accuracy); // weakest first
   }, [filteredHistory]);
-
-  const getRecentTestsData = () => {
-    const recent = filteredHistory.slice(0, 7).reverse();
-    return {
-      accuracy: recent.map(t => t.accuracy),
-      questions: recent.map(t => (t as any).totalQuestions || 0),
-      labels: recent.map((_, i) => `T${i + 1}`)
-    };
-  };
 
   if (loading) {
     return (
-      <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]} edges={['bottom']}>
-        <View style={[styles.loadingContainer, { backgroundColor: colors.background }]}>
-          <ActivityIndicator size="large" color={colors.accent || '#667eea'} />
-          <Text style={[styles.loadingText, { color: colors.textSecondary }]}>Loading your progress...</Text>
-        </View>
-      </SafeAreaView>
+      <View style={[styles.centerLoading, { backgroundColor: colors.bg }]}>
+        <ActivityIndicator size="large" color={colors.accent} />
+        <Text style={[styles.loadingText, { color: colors.muted }]}>
+          Loading performance analytics...
+        </Text>
+      </View>
     );
   }
 
-  // Calculate exam-specific rankings based on filtered history
-  const examRankings: Record<string, string> = {};
-  if (userProfile && userProfile.exams && filteredHistory.length > 0) {
-    userProfile.exams.forEach(exam => {
-      const examTests = filteredHistory.filter(t => t.testTitle?.includes(exam));
-      if (examTests.length > 0) {
-        const avgAccuracy = examTests.reduce((sum, t) => sum + t.accuracy, 0) / examTests.length;
-        examRankings[exam] = calculateRank(avgAccuracy);
-      }
-    });
+  // 1. Logged-out state
+  if (!user) {
+    return (
+      <AppShell maxWidth={820}>
+        <View style={styles.stateWrapper}>
+          <EmptyState
+            icon={<BarChart2 size={26} color={colors.accent} />}
+            title="Sign in to view your analytics"
+            description="Track your accuracy trends, topic weaknesses, study streaks, and rank percentiles across all CBT exams."
+            action={{
+              label: 'Sign in to account',
+              variant: 'primary',
+              onPress: () => router.push('/(auth)/login'),
+            }}
+          />
+        </View>
+      </AppShell>
+    );
   }
 
-  const recentData = getRecentTestsData();
-  const accuracyData = recentData.accuracy;
-  const questionsData = recentData.questions;
+  // 2. Free user with no attempts
+  if (testHistory.length === 0) {
+    return (
+      <AppShell maxWidth={820}>
+        <View style={styles.stateWrapper}>
+          <EmptyState
+            icon={<Target size={26} color={colors.accent} />}
+            title="No test data recorded yet"
+            description="Take your first 10-question warm-up test to generate your baseline accuracy and topic mastery analytics."
+            action={{
+              label: 'Start 10-question warm-up',
+              variant: 'primary',
+              onPress: () => router.push('/practice'),
+              icon: <Zap size={14} color={colors.accentText} />,
+            }}
+          />
+        </View>
+      </AppShell>
+    );
+  }
 
-  const content = (
-    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }, isLargeScreen && { flex: undefined, minHeight: 600 }]}>
-      {/* Header */}
-      <View style={[styles.headerNew, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
-        <View style={styles.headerLeft}>
-          <View style={[styles.progressIconNew, { backgroundColor: isDark ? colors.surfaceHighlight : '#EFF6FF' }]}>
-            <TrendUp size={24} color={colors.accent} />
-          </View>
-          <View>
-            <Text style={[styles.headerTitleNew, { color: colors.textPrimary }]}>Progress</Text>
-            <Text style={[styles.headerSubtitleNew, { color: colors.textSecondary }]}>Track your learning journey</Text>
+  return (
+    <AppShell maxWidth={840}>
+      <ScrollView
+        contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator={false}
+      >
+        {/* Header */}
+        <View style={styles.headerBlock}>
+          <Text
+            style={[
+              styles.screenTitle,
+              {
+                color: colors.text,
+                fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+              },
+            ]}
+          >
+            Performance Analytics
+          </Text>
+          <Text style={[styles.screenSubtitle, { color: colors.muted }]}>
+            Detailed diagnostic insights across your mock tests and practice sets.
+          </Text>
+
+          {/* Date range filter chips */}
+          <View style={styles.dateFilterRow}>
+            <Chip
+              label="Last 7 Days"
+              active={dateRange === '7d'}
+              onPress={() => setDateRange('7d')}
+            />
+            <Chip
+              label="Last 30 Days"
+              active={dateRange === '30d'}
+              onPress={() => setDateRange('30d')}
+            />
+            <Chip
+              label="All Time"
+              active={dateRange === 'all'}
+              onPress={() => setDateRange('all')}
+            />
           </View>
         </View>
-      </View>
 
-      {/* Period Selector */}
-      <View style={[styles.periodSelector, { backgroundColor: colors.surface, borderColor: colors.border, borderWidth: isDark ? 1 : 0 }]}>
-        {(['week', 'month', 'year'] as const).map((period) => (
-          <TouchableOpacity
-            key={period}
-            style={[
-              styles.periodButton,
-              selectedPeriod === period && [styles.periodButtonActive, { backgroundColor: colors.accent }]
-            ]}
-            onPress={() => setSelectedPeriod(period)}
-          >
-            <Text style={[
-              styles.periodText,
-              { color: colors.textSecondary },
-              selectedPeriod === period && styles.periodTextActive
-            ]}>
-              {period.charAt(0).toUpperCase() + period.slice(1)}
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </View>
+        {/* Top Summary Cards */}
+        <Card style={styles.overviewCard}>
+          <View style={styles.overviewRow}>
+            <ProgressRing
+              percentage={accuracy}
+              size={110}
+              strokeWidth={8}
+              label={`${accuracy}%`}
+              sublabel="Accuracy"
+            />
 
-      <ScrollView 
-        style={styles.scrollView} 
-        showsVerticalScrollIndicator={false}
-        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
-      >
-        {testHistory.length === 0 ? (
-          <Card>
-            <View style={styles.emptyState}>
-              <Trophy size={64} color={colors.textTertiary} />
-              <Text style={[styles.emptyTitle, { color: colors.textPrimary }]}>No Progress Yet</Text>
-              <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
-                Take your first test this {selectedPeriod} to start tracking your progress!
+            <View style={styles.overviewDetails}>
+              <Text
+                style={[
+                  styles.overviewHeadline,
+                  {
+                    color: colors.text,
+                    fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+                  },
+                ]}
+              >
+                {accuracy >= 75
+                  ? 'Strong Conceptual Grasp'
+                  : accuracy >= 50
+                  ? 'Moderate Foundation'
+                  : 'Focus on Weaker Topics'}
+              </Text>
+              <Text style={[styles.overviewSub, { color: colors.muted }]}>
+                {accuracy >= 75
+                  ? 'Your answers reflect high accuracy across the syllabus. Keep practicing timed mocks to maximize speed.'
+                  : 'Review missed question explanations and drill topics below 50% accuracy to ensure a safe cutoff margin.'}
+              </Text>
+
+              <View style={styles.statPillsRow}>
+                <View style={[styles.statPill, { backgroundColor: colors.surface2 }]}>
+                  <Text style={[styles.statPillLabel, { color: colors.muted }]}>
+                    Questions:
+                  </Text>
+                  <Text style={[styles.statPillVal, { color: colors.text }]}>
+                    {totalAttempted}
+                  </Text>
+                </View>
+
+                <View style={[styles.statPill, { backgroundColor: colors.surface2 }]}>
+                  <Text style={[styles.statPillLabel, { color: colors.muted }]}>
+                    Time:
+                  </Text>
+                  <Text style={[styles.statPillVal, { color: colors.text }]}>
+                    {totalMinutes}m
+                  </Text>
+                </View>
+
+                <View style={[styles.statPill, { backgroundColor: colors.surface2 }]}>
+                  <Text style={[styles.statPillLabel, { color: colors.muted }]}>
+                    Tests Taken:
+                  </Text>
+                  <Text style={[styles.statPillVal, { color: colors.text }]}>
+                    {filteredHistory.length}
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </Card>
+
+        {/* Topic Mastery List (sorted weakest first with practice button) */}
+        <View style={styles.sectionWrap}>
+          <View style={styles.sectionHeaderRow}>
+            <View>
+              <Text
+                style={[
+                  styles.sectionTitle,
+                  {
+                    color: colors.text,
+                    fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+                  },
+                ]}
+              >
+                Topic Mastery
+              </Text>
+              <Text style={[styles.sectionSubtitle, { color: colors.muted }]}>
+                Sorted weakest-first. Topics below 50% require targeted revision.
               </Text>
             </View>
-          </Card>
-        ) : (
-          <>
-            {/* Overall Stats Grid */}
-            <View style={styles.statsGrid}>
-              <View style={[styles.statCardNew, { backgroundColor: isDark ? colors.surfaceHighlight : '#F0F9FF', borderColor: colors.border }]}>
-                <View style={[styles.statIconBox, { backgroundColor: isDark ? '#1E3A5F' : '#DBEAFE' }]}>
-                  <Target size={20} color="#2563EB" />
-                </View>
-                <View style={{ marginTop: 12 }}>
-                  <Text style={[styles.statValueNew, { color: colors.textPrimary }]}>{displayStats.accuracy.toFixed(1)}%</Text>
-                  <Text style={[styles.statLabelNew, { color: colors.textSecondary }]}>Overall Accuracy</Text>
-                  <Text style={[styles.statRankNew, { color: colors.accent }]}>{calculateRank(displayStats.accuracy)}</Text>
-                </View>
+
+            <TouchableOpacity
+              onPress={() => setShowTableFallback(!showTableFallback)}
+              style={styles.toggleTableBtn}
+            >
+              <Text style={[styles.toggleTableText, { color: colors.accent }]}>
+                {showTableFallback ? 'Show Bars' : 'View Table'}
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* Accessible Table Fallback */}
+          {showTableFallback ? (
+            <Card noPadding style={{ marginTop: 12 }}>
+              <View style={[styles.tableHeaderRow, { borderBottomColor: colors.line, backgroundColor: colors.surface2 }]}>
+                <Text style={[styles.tableColHeader, { flex: 2, color: colors.text }]}>
+                  Topic
+                </Text>
+                <Text style={[styles.tableColHeader, { flex: 1, color: colors.text, textAlign: 'center' }]}>
+                  Accuracy
+                </Text>
+                <Text style={[styles.tableColHeader, { flex: 1, color: colors.text, textAlign: 'right' }]}>
+                  Attempted
+                </Text>
               </View>
-              
-              <View style={[styles.statCardNew, { backgroundColor: isDark ? colors.surfaceHighlight : '#FFF7ED', borderColor: colors.border }]}>
-                <View style={[styles.statIconBox, { backgroundColor: isDark ? '#422006' : '#FFEDD5' }]}>
-                  <Zap size={20} color="#EA580C" />
-                </View>
-                <View style={{ marginTop: 12 }}>
-                  <Text style={[styles.statValueNew, { color: colors.textPrimary }]}>{displayStats.streak}</Text>
-                  <Text style={[styles.statLabelNew, { color: colors.textSecondary }]}>Day Streak</Text>
-                </View>
-              </View>
-              
-              <TouchableOpacity 
-                style={[styles.statCardNew, { backgroundColor: isDark ? colors.surfaceHighlight : '#F0FDF4', borderColor: colors.border }]}
-                onPress={() => router.push('/test-history')}
-                activeOpacity={0.7}
-              >
-                <View style={[styles.statIconBox, { backgroundColor: isDark ? '#064E3B' : '#DCFCE7' }]}>
-                  <BookOpen size={20} color="#16A34A" />
-                </View>
-                <View style={{ marginTop: 12 }}>
-                  <Text style={[styles.statValueNew, { color: colors.textPrimary }]}>{displayStats.questionsAttempted}</Text>
-                  <Text style={[styles.statLabelNew, { color: colors.textSecondary }]}>Questions</Text>
-                </View>
-              </TouchableOpacity>
-              
-              <View style={[styles.statCardNew, { backgroundColor: isDark ? colors.surfaceHighlight : '#FAF5FF', borderColor: colors.border }]}>
-                <View style={[styles.statIconBox, { backgroundColor: isDark ? '#421245' : '#F3E8FF' }]}>
-                  <Trophy size={20} color="#9333EA" />
-                </View>
-                <View style={{ marginTop: 12 }}>
-                  <Text style={[styles.statValueNew, { color: colors.textPrimary }]}>{displayStats.totalTests}</Text>
-                  <Text style={[styles.statLabelNew, { color: colors.textSecondary }]}>Tests Taken</Text>
-                </View>
-              </View>
-            </View>
 
-            {/* Exam-Specific Rankings */}
-            {userProfile && Object.keys(examRankings).length > 0 && (
-              <Card>
-                <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>Exam Rankings</Text>
-                <Text style={[styles.cardSubtitle, { color: colors.textSecondary }]}>Your performance by exam type</Text>
-                <View style={styles.rankingsContainer}>
-                  {Object.entries(examRankings).map(([exam, rank]) => (
-                    <View key={exam} style={[styles.rankingItem, { backgroundColor: isDark ? colors.surfaceHighlight : '#F8F9FA' }]}>
-                      <View style={styles.rankingLeft}>
-                        <Award size={18} color={colors.accent} />
-                        <Text style={[styles.rankingExam, { color: colors.textPrimary }]}>{exam}</Text>
-                      </View>
-                      <View style={[styles.rankingBadge, { backgroundColor: getRankColor(rank) }]}>
-                        <Text style={styles.rankingText}>{rank}</Text>
-                      </View>
-                    </View>
-                  ))}
-                </View>
-              </Card>
-            )}
-
-            {/* Performance Chart */}
-            {accuracyData.length > 0 && (
-              <Card style={styles.chartCard}>
-                <View style={styles.chartHeader}>
-                  <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>Accuracy Trend</Text>
-                </View>
-                <Text style={[styles.chartDescription, { color: colors.textSecondary }]}>Your accuracy over recent tests</Text>
-                {renderSimpleChart(accuracyData, recentData.labels, colors.accent || '#007AFF')}
-              </Card>
-            )}
-
-            {/* Topic Performance */}
-            {topicBreakdown.length > 0 && (
-              <Card>
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-                  <View>
-                    <Text style={[styles.cardTitle, { color: colors.textPrimary, marginBottom: 2 }]}>Topic Performance</Text>
-                    <Text style={{ fontSize: 13, color: colors.textSecondary }}>Breakdown across syllabus topics you have practiced</Text>
-                  </View>
-                  <View style={{ backgroundColor: isDark ? '#1E3A5F' : '#EFF6FF', paddingHorizontal: 10, paddingVertical: 4, borderRadius: 12 }}>
-                    <Text style={{ fontSize: 12, fontWeight: '700', color: colors.accent }}>
-                      {topicBreakdown.length} Topics
-                    </Text>
-                  </View>
-                </View>
-
-                <View style={{ gap: 12 }}>
-                  {topicBreakdown.map((item, idx) => {
-                    const colorsArr = ['#10B981', '#3B82F6', '#F59E0B', '#7C3AED', '#EF4444'];
-                    const barColor = colorsArr[idx % colorsArr.length];
-                    const isMastered = item.accuracy >= 75;
-
-                    return (
-                      <View key={idx} style={{ padding: 12, backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC', borderRadius: 12, borderWidth: 1, borderColor: colors.border }}>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
-                          <View style={{ flex: 1, marginRight: 12 }}>
-                            <Text style={{ fontSize: 14, fontWeight: '700', color: colors.textPrimary }}>
-                              {item.topic}
-                            </Text>
-                            {item.subject && item.subject !== item.topic && item.subject !== 'General' && (
-                              <Text style={{ fontSize: 12, color: colors.textSecondary, marginTop: 2 }}>
-                                {item.subject}
-                              </Text>
-                            )}
-                          </View>
-                          <View style={{ alignItems: 'flex-end' }}>
-                            <Text style={{ fontSize: 15, fontWeight: '800', color: isMastered ? '#16A34A' : colors.accent }}>
-                              {item.accuracy.toFixed(1)}%
-                            </Text>
-                            <Text style={{ fontSize: 11, color: colors.textTertiary }}>
-                              {item.correct}/{item.attempted} Qs
-                            </Text>
-                          </View>
-                        </View>
-                        <View style={{ height: 6, width: '100%', backgroundColor: isDark ? colors.surface : '#E2E8F0', borderRadius: 3, overflow: 'hidden' }}>
-                          <View style={{ height: '100%', width: `${Math.min(100, Math.max(0, item.accuracy))}%`, backgroundColor: barColor, borderRadius: 3 }} />
-                        </View>
-                      </View>
-                    );
-                  })}
-                </View>
-              </Card>
-            )}
-
-            {/* Recent Tests */}
-            <Card>
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-                <Text style={[styles.cardTitle, { color: colors.textPrimary, marginBottom: 0 }]}>Recent Tests</Text>
-                <TouchableOpacity onPress={() => router.push('/test-history')}>
-                  <Text style={{ color: colors.accent, fontWeight: '600' }}>View All →</Text>
-                </TouchableOpacity>
-              </View>
-              <View style={styles.testsContainer}>
-                {filteredHistory.slice(0, 5).map((test, index) => (
-                  <TouchableOpacity 
-                    key={index} 
-                    style={[styles.testItem, { backgroundColor: isDark ? colors.surfaceHighlight : '#F8FAFC' }]}
-                    onPress={() => {
-                      // Check if evaluation is complete
-                      if (test.evaluationStatus === 'pending') {
-                        Alert.alert(
-                          'Evaluation Pending ⏳',
-                          'We are still generating AI answers and evaluating your test. Pull down to refresh or check back in a few minutes.',
-                          [
-                            { text: 'Check Now', onPress: async () => {
-                              console.log('Manual check triggered');
-                              await checkPendingEvaluations();
-                            }},
-                            { text: 'OK' }
-                          ]
-                        );
-                      } else {
-                        router.push({
-                          pathname: '/test-result',
-                          params: { attemptId: test.attemptId }
-                        });
-                      }
-                    }}
+              {topicMasteryList.map((item, idx) => (
+                <View
+                  key={idx}
+                  style={[styles.tableDataRow, { borderBottomColor: colors.line }]}
+                >
+                  <Text
+                    style={[
+                      styles.tableDataText,
+                      { flex: 2, color: item.accuracy < 50 ? colors.danger : colors.text },
+                    ]}
+                    numberOfLines={1}
                   >
-                    <View style={styles.testInfo}>
-                      <Text style={[styles.testTitle, { color: colors.textPrimary }]} numberOfLines={1}>
-                        {test.testTitle || 'Test'}
-                      </Text>
-                      <Text style={[styles.testDate, { color: colors.textSecondary }]}>
-                        {new Date(test.date).toLocaleDateString()}
-                      </Text>
-                      {test.evaluationStatus === 'pending' && (
-                        <View style={styles.pendingBadge}>
-                          <ActivityIndicator size="small" color="#FF9500" />
-                          <Text style={styles.pendingText}>Evaluating...</Text>
-                        </View>
-                      )}
-                    </View>
-                    {test.evaluationStatus === 'completed' ? (
-                      <View style={styles.testStats}>
-                        <Text style={[styles.testAccuracy, { color: colors.accent }]}>{test.accuracy.toFixed(1)}%</Text>
-                        <Text style={[styles.testScore, { color: colors.textSecondary }]}>
-                          {Number(test.overallScore).toFixed(1)}/{test.totalMarks} Marks
-                        </Text>
-                      </View>
-                    ) : (
-                      <View style={styles.testStats}>
-                        <Text style={styles.pendingStatusText}>Pending</Text>
-                      </View>
-                    )}
-                  </TouchableOpacity>
-                ))}
-              </View>
+                    {item.topic}
+                  </Text>
+                  <Text
+                    style={[
+                      styles.tableDataText,
+                      {
+                        flex: 1,
+                        color: item.accuracy < 50 ? colors.danger : colors.success,
+                        textAlign: 'center',
+                        fontWeight: '700',
+                      },
+                    ]}
+                  >
+                    {Math.round(item.accuracy)}%
+                  </Text>
+                  <Text
+                    style={[styles.tableDataText, { flex: 1, color: colors.muted, textAlign: 'right' }]}
+                  >
+                    {item.correct}/{item.total}
+                  </Text>
+                </View>
+              ))}
             </Card>
-          </>
-        )}
+          ) : (
+            <Card noPadding style={{ marginTop: 12 }}>
+              {topicMasteryList.map((item, idx) => (
+                <View key={idx} style={{ paddingHorizontal: 16 }}>
+                  <TopicBar
+                    topic={item.topic}
+                    accuracy={item.accuracy}
+                    attempted={item.total}
+                    correct={item.correct}
+                    onDrill={() =>
+                      router.push({
+                        pathname: '/practice',
+                        params: { topic: item.topic },
+                      } as any)
+                    }
+                    drillLabel="Practice"
+                  />
+                </View>
+              ))}
+            </Card>
+          )}
+        </View>
 
+        {/* Section Performance */}
+        <View style={styles.sectionWrap}>
+          <Text
+            style={[
+              styles.sectionTitle,
+              {
+                color: colors.text,
+                fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+              },
+            ]}
+          >
+            Exam History & Recent Scores
+          </Text>
+          <Text style={[styles.sectionSubtitle, { color: colors.muted }]}>
+            Review your past mock tests and compare your score progression.
+          </Text>
+
+          <View style={styles.historyList}>
+            {filteredHistory.map((h, idx) => (
+              <Card
+                key={idx}
+                style={styles.historyCard}
+                onPress={() =>
+                  router.push({
+                    pathname: '/test-result',
+                    params: { attemptId: h.attemptId || h.id },
+                  } as any)
+                }
+              >
+                <View style={styles.historyLeft}>
+                  <Text style={[styles.historyTitle, { color: colors.text }]} numberOfLines={1}>
+                    {h.testTitle || 'Mock Examination'}
+                  </Text>
+                  <Text style={[styles.historyMeta, { color: colors.muted }]}>
+                    {h.date ? new Date(h.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Recently'} · {Math.round((h.timeTaken || 0) / 60)} mins
+                  </Text>
+                </View>
+
+                <View style={styles.historyRight}>
+                  <Pill
+                    label={h.accuracy !== undefined ? `${Math.round(h.accuracy)}% Accuracy` : 'Completed'}
+                    variant={h.accuracy && h.accuracy >= 50 ? 'owned' : 'danger'}
+                  />
+                </View>
+              </Card>
+            ))}
+          </View>
+        </View>
       </ScrollView>
-    </SafeAreaView>
+    </AppShell>
   );
-
-  if (isLargeScreen) {
-    return <DesktopDashboard>{content}</DesktopDashboard>;
-  }
-
-  return content;
 }
 
-const getRankColor = (rank: string): string => {
-  const colors: Record<string, string> = {
-    Grandmaster: '#FFD700',
-    Master: '#C0C0C0',
-    Expert: '#CD7F32',
-    Advanced: '#4ECDC4',
-    Intermediate: '#45B7D1',
-    Novice: '#96CEB4',
-    Beginner: '#95A5A6',
-  };
-  return colors[rank] || '#95A5A6';
-};
-
 const styles = StyleSheet.create({
-  container: {
+  centerLoading: {
     flex: 1,
-    backgroundColor: '#F2F2F7',
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-  },
-  scrollView: {
-    flex: 1,
-    paddingHorizontal: 16,
-  },
-  headerNew: {
+    alignItems: 'center',
+    justifyContent: 'center',
     padding: 24,
-    backgroundColor: '#fff',
-    borderBottomWidth: 1,
-    borderBottomColor: '#f1f5f9',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginHorizontal: 16,
-    borderRadius: 16,
-    marginTop: 16,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.05,
-    shadowRadius: 8,
-    elevation: 3,
-  },
-  headerLeft: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  progressIconNew: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    backgroundColor: '#EFF6FF',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: 16,
-  },
-  headerTitleNew: {
-    fontSize: 24,
-    fontWeight: '800',
-    color: '#0F172A',
-  },
-  headerSubtitleNew: {
-    fontSize: 14,
-    color: '#64748B',
-    marginTop: 4,
-  },
-  statCardNew: {
-    flex: 1,
-    minWidth: '45%',
-    padding: 16,
-    borderRadius: 16,
-    borderWidth: 1,
-  },
-  statIconBox: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  statValueNew: {
-    fontSize: 24,
-    fontWeight: '800',
-    color: '#0F172A',
-  },
-  statLabelNew: {
-    fontSize: 13,
-    color: '#64748B',
-    marginTop: 4,
-    fontWeight: '500',
-  },
-  statRankNew: {
-    fontSize: 12,
-    color: '#2563EB',
-    fontWeight: '600',
-    marginTop: 4,
-  },
-  periodSelector: {
-    flexDirection: 'row',
-    backgroundColor: '#FFFFFF',
-    borderRadius: 12,
-    margin: 16,
-    padding: 4,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
-  },
-  periodButton: {
-    flex: 1,
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 8,
-    alignItems: 'center',
-  },
-  periodButtonActive: {
-    backgroundColor: '#007AFF',
-  },
-  periodText: {
-    fontSize: 14,
-    fontFamily: 'Inter-Medium',
-    color: '#8E8E93',
-  },
-  periodTextActive: {
-    color: '#FFFFFF',
-  },
-  chartCard: {
-    marginHorizontal: 16,
-    marginVertical: 8,
-  },
-  chartHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 16,
-  },
-  chartInfoButton: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 6,
-    backgroundColor: '#F2F2F7',
-  },
-  chartInfoText: {
-    fontSize: 12,
-    fontFamily: 'Inter-Medium',
-    color: '#007AFF',
-  },
-  trendBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#E8F5E8',
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 12,
-    gap: 4,
-  },
-  subjectInfo: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
-  },
-  subjectIndicator: {
-    width: 4,
-    height: 40,
-    borderRadius: 2,
-  },
-  subjectDetails: {
-    flex: 1,
-  },
-  subjectAccuracyText: {
-    fontSize: 18,
-    fontFamily: 'Inter-Bold',
-    color: '#1C1C1E',
-  },
-  title: {
-    fontSize: 28,
-    fontFamily: 'Inter-Bold',
-    color: '#1C1C1E',
-    marginVertical: 20,
-  },
-  cardTitle: {
-    fontSize: 18,
-    fontFamily: 'Inter-SemiBold',
-    color: '#1C1C1E',
-    marginBottom: 16,
-  },
-  statsGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 12,
-  },
-  statCard: {
-    flex: 1,
-    minWidth: '45%',
-    alignItems: 'center',
-    padding: 16,
-    backgroundColor: '#F8F9FA',
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: '#E5E5EA',
-  },
-  statNumber: {
-    fontSize: 24,
-    fontFamily: 'Inter-Bold',
-    color: '#1C1C1E',
-    marginTop: 8,
-    marginBottom: 4,
-  },
-  statLabel: {
-    fontSize: 12,
-    fontFamily: 'Inter-Medium',
-    color: '#8E8E93',
-    textAlign: 'center',
-  },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
   },
   loadingText: {
-    marginTop: 12,
-    fontSize: 16,
-    color: '#666',
+    marginTop: 14,
+    fontSize: 14.5,
+    fontWeight: '500',
   },
-  emptyState: {
+  stateWrapper: {
+    padding: 24,
     alignItems: 'center',
-    paddingVertical: 40,
+    justifyContent: 'center',
   },
-  emptyTitle: {
-    fontSize: 20,
-    fontFamily: 'Inter-Bold',
-    color: '#333',
-    marginTop: 16,
-    marginBottom: 8,
+  scrollContent: {
+    paddingHorizontal: 16,
+    paddingVertical: 24,
   },
-  emptyText: {
+  headerBlock: {
+    marginBottom: 20,
+  },
+  screenTitle: {
+    fontSize: 26,
+    fontWeight: '700',
+    letterSpacing: -0.4,
+    marginBottom: 6,
+  },
+  screenSubtitle: {
     fontSize: 14,
-    fontFamily: 'Inter-Regular',
-    color: '#666',
-    textAlign: 'center',
-    paddingHorizontal: 20,
-  },
-  statGradient: {
-    padding: 16,
-    alignItems: 'center',
-  },
-  statValue: {
-    fontSize: 28,
-    fontFamily: 'Inter-Bold',
-    color: '#FFFFFF',
-    marginTop: 8,
-  },
-  statRank: {
-    fontSize: 12,
-    fontFamily: 'Inter-Medium',
-    color: '#FFFFFF',
-    opacity: 0.9,
-    marginTop: 4,
-  },
-  cardSubtitle: {
-    fontSize: 14,
-    fontFamily: 'Inter-Regular',
-    color: '#8E8E93',
+    lineHeight: 20,
     marginBottom: 16,
-    marginTop: -8,
   },
-  rankingsContainer: {
-    gap: 12,
-  },
-  rankingItem: {
+  dateFilterRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 12,
-    backgroundColor: '#F8F9FA',
-    borderRadius: 8,
-  },
-  rankingLeft: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
-    flex: 1,
-  },
-  rankingExam: {
-    fontSize: 15,
-    fontFamily: 'Inter-Medium',
-    color: '#1C1C1E',
-  },
-  rankingBadge: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 12,
-  },
-  rankingText: {
-    fontSize: 13,
-    fontFamily: 'Inter-SemiBold',
-    color: '#FFFFFF',
-  },
-  testsContainer: {
-    gap: 12,
-  },
-  testItem: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 12,
-    backgroundColor: '#F8F9FA',
-    borderRadius: 8,
-  },
-  testInfo: {
-    flex: 1,
-  },
-  testTitle: {
-    fontSize: 15,
-    fontFamily: 'Inter-Medium',
-    color: '#1C1C1E',
-    marginBottom: 4,
-  },
-  testDate: {
-    fontSize: 12,
-    fontFamily: 'Inter-Regular',
-    color: '#8E8E93',
-  },
-  testStats: {
-    alignItems: 'flex-end',
-  },
-  testAccuracy: {
-    fontSize: 18,
-    fontFamily: 'Inter-Bold',
-    color: '#007AFF',
-  },
-  testScore: {
-    fontSize: 12,
-    fontFamily: 'Inter-Regular',
-    color: '#8E8E93',
-    marginTop: 2,
-  },
-  chartContainer: {
-    marginVertical: 12,
-  },
-  chartDescription: {
-    fontSize: 14,
-    fontFamily: 'Inter-Regular',
-    color: '#8E8E93',
-    marginBottom: 12,
-  },
-  chartArea: {
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    justifyContent: 'center',
-    paddingHorizontal: 20,
-    height: 80,
-  },
-  chartBar: {
-    borderTopLeftRadius: 2,
-    borderTopRightRadius: 2,
-  },
-  chartLabels: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    paddingHorizontal: 20,
-    marginTop: 8,
-  },
-  chartLabel: {
-    flex: 1,
-    textAlign: 'center',
-    fontSize: 12,
-    fontFamily: 'Inter-Regular',
-    color: '#8E8E93',
-  },
-  trendInfo: {
-    marginTop: 12,
-    padding: 12,
-    backgroundColor: '#F8F9FA',
-    borderRadius: 8,
-  },
-  trendText: {
-    fontSize: 14,
-    fontFamily: 'Inter-Medium',
-    color: '#1C1C1E',
-  },
-  subjectContainer: {
-    gap: 16,
-  },
-  subjectItem: {
     gap: 8,
   },
-  subjectHeader: {
+  overviewCard: {
+    padding: 24,
+    marginBottom: 28,
+  },
+  overviewRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    gap: 24,
+    flexWrap: 'wrap',
+  },
+  overviewDetails: {
+    flex: 1,
+    minWidth: 240,
+  },
+  overviewHeadline: {
+    fontSize: 20,
+    fontWeight: '700',
+    marginBottom: 6,
+  },
+  overviewSub: {
+    fontSize: 13.5,
+    lineHeight: 19,
+    marginBottom: 14,
+  },
+  statPillsRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     gap: 8,
   },
-  subjectDot: {
-    width: 12,
-    height: 12,
-    borderRadius: 6,
-  },
-  subjectName: {
-    fontSize: 16,
-    fontFamily: 'Inter-SemiBold',
-    color: '#1C1C1E',
-    flex: 1,
-  },
-  subjectStats: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  subjectAccuracy: {
-    fontSize: 18,
-    fontFamily: 'Inter-Bold',
-    color: '#1C1C1E',
-  },
-  subjectQuestions: {
-    fontSize: 12,
-    fontFamily: 'Inter-Regular',
-    color: '#8E8E93',
-  },
-  progressBar: {
-    height: 6,
-    backgroundColor: '#E5E5EA',
-    borderRadius: 3,
-    overflow: 'hidden',
-  },
-  progressFill: {
-    height: '100%',
-    borderRadius: 3,
-  },
-  achievementsContainer: {
-    gap: 12,
-  },
-  achievementItem: {
-    padding: 16,
-    borderRadius: 12,
-    borderWidth: 1,
-  },
-  achievementEarned: {
-    backgroundColor: '#F0FFF4',
-    borderColor: '#34C759',
-  },
-  achievementLocked: {
-    backgroundColor: '#F8F9FA',
-    borderColor: '#E5E5EA',
-  },
-  achievementTitle: {
-    fontSize: 16,
-    fontFamily: 'Inter-SemiBold',
-    color: '#1C1C1E',
-    marginBottom: 4,
-  },
-  achievementDescription: {
-    fontSize: 14,
-    fontFamily: 'Inter-Regular',
-    color: '#8E8E93',
-    marginBottom: 8,
-  },
-  achievementStatus: {
-    fontSize: 12,
-    fontFamily: 'Inter-SemiBold',
-  },
-  earnedText: {
-    color: '#34C759',
-  },
-  lockedText: {
-    color: '#8E8E93',
-  },
-  pendingBadge: {
+  statPill: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    marginTop: 4,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 6,
   },
-  pendingText: {
+  statPillLabel: {
     fontSize: 12,
-    fontFamily: 'Inter-Medium',
-    color: '#FF9500',
   },
-  pendingStatusText: {
-    fontSize: 14,
-    fontFamily: 'Inter-SemiBold',
-    color: '#FF9500',
+  statPillVal: {
+    fontSize: 12.5,
+    fontWeight: '700',
+  },
+  sectionWrap: {
+    marginBottom: 32,
+  },
+  sectionHeaderRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 4,
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    letterSpacing: -0.3,
+  },
+  sectionSubtitle: {
+    fontSize: 13.5,
+    marginTop: 2,
+  },
+  toggleTableBtn: {
+    paddingVertical: 4,
+    paddingHorizontal: 8,
+  },
+  toggleTableText: {
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  tableHeaderRow: {
+    flexDirection: 'row',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+  },
+  tableColHeader: {
+    fontSize: 12.5,
+    fontWeight: '700',
+  },
+  tableDataRow: {
+    flexDirection: 'row',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    alignItems: 'center',
+  },
+  tableDataText: {
+    fontSize: 13.5,
+  },
+  historyList: {
+    gap: 10,
+    marginTop: 14,
+  },
+  historyCard: {
+    padding: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  historyLeft: {
+    flex: 1,
+    marginRight: 12,
+  },
+  historyTitle: {
+    fontSize: 15,
+    fontWeight: '600',
+    marginBottom: 3,
+  },
+  historyMeta: {
+    fontSize: 12.5,
+  },
+  historyRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 });

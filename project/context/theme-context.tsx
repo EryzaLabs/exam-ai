@@ -4,135 +4,143 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const STORAGE_KEY = '@astra_theme_preference';
 
 export const LightColors = {
-  // Backgrounds
-  background: '#F8FAFC',
-  surface: '#FFFFFF',
-  surfaceElevated: '#FFFFFF',
-  surfaceHighlight: '#F1F5F9',
-  surfaceInput: '#F1F5F9',
+  // Core chalkboard tokens
+  bg: '#f2f5f3',
+  background: '#f2f5f3',
+  surface: '#ffffff',
+  surface2: '#e9efeb',
+  surfaceElevated: '#ffffff',
+  surfaceHighlight: '#e9efeb',
+  surfaceInput: '#e9efeb',
 
-  // Borders
-  border: '#E2E8F0',
-  borderLight: '#F1F5F9',
+  // Borders & lines
+  line: '#d5dfd9',
+  border: '#d5dfd9',
+  borderLight: '#e9efeb',
 
-  // Text
-  textPrimary: '#0F172A',
-  textSecondary: '#64748B',
-  textTertiary: '#94A3B8',
-  textInverse: '#FFFFFF',
+  // Typography
+  text: '#16241f',
+  textPrimary: '#16241f',
+  textSecondary: '#5b6e65',
+  muted: '#5b6e65',
+  textTertiary: '#83968c',
+  textInverse: '#ffffff',
 
-  // Accent / Brand
-  accent: '#3B82F6',
-  accentHover: '#2563EB',
-  accentLight: '#EFF6FF',
+  // Accent & Actions
+  accent: '#e0a800',
+  accentText: '#1b1500',
+  accentHover: '#c79500',
+  accentLight: '#fdf6e2',
+
+  // Status & Feedback
+  success: '#2f8f62',
+  successBg: '#e6f5ee',
+  danger: '#c0392b',
+  error: '#c0392b',
+  errorBg: '#fcebe9',
+  errorBgLight: '#fdf2f1',
+  errorBorder: '#f5c6cb',
+  warning: '#e0a800',
+  warningBg: '#fdf6e2',
+
+  // Hero & Accents
+  hero: '#e7efe9',
+  heroBg: '#e7efe9',
+  heroSub: '#5b6e65',
+  heroTitle: '#16241f',
+  heroDesc: '#5b6e65',
 
   // Sidebar
-  sidebarBg: '#FFFFFF',
-  sidebarBorder: '#E2E8F0',
+  sidebarBg: '#ffffff',
+  sidebarBorder: '#d5dfd9',
 
-  // Status
-  success: '#059669',
-  successBg: '#D1FAE5',
-  warning: '#D97706',
-  warningBg: '#FEF3C7',
-  error: '#EF4444',
-  errorBg: '#FEE2E2',
-  errorBgLight: '#FEF2F2',
-  errorBorder: '#FEE2E2',
+  // Cards & Visuals
+  metricText: '#5b6e65',
+  cardBorder: '#d5dfd9',
+  progressBarBg: '#d5dfd9',
+  calDayBg: '#e9efeb',
+  calDayText: '#5b6e65',
 
-  // Premium / gold
-  premiumBg: '#FFFBEB',
-  premiumTitle: '#92400E',
-  premiumDesc: '#B45309',
-
-  // Hero banner (remains gradient, these are text colors on it)
-  heroBg: '#EEF2FF',
-  heroSub: '#4338CA',
-  heroTitle: '#1E1B4B',
-  heroDesc: '#4F46E5',
-
-  // Misc icon backgrounds
-  iconBgBlue: '#EFF6FF',
-  iconBgPurple: '#F3E8FF',
-  iconBgOrange: '#FFF7ED',
-  iconBgYellow: '#FEF3C7',
-  iconBgGreen: '#D1FAE5',
-  iconBgRed: '#FEE2E2',
-
-  // Card metrics
-  metricText: '#475569',
-  cardBorder: '#E2E8F0',
-  progressBarBg: '#F1F5F9',
-
-  // Calendar
-  calDayBg: '#F1F5F9',
-  calDayText: '#64748B',
+  // Category & Icon Accents
+  iconBgBlue: '#e9efeb',
+  iconBgPurple: '#e9efeb',
+  iconBgOrange: '#fdf6e2',
+  iconBgYellow: '#fdf6e2',
+  iconBgGreen: '#e6f5ee',
+  iconBgRed: '#fcebe9',
+  premiumBg: '#fdf6e2',
+  premiumTitle: '#1b1500',
+  premiumDesc: '#5b6e65',
 };
 
 export const DarkColors = {
-  // Backgrounds
-  background: '#0F172A',
-  surface: '#1E293B',
-  surfaceElevated: '#243047',
-  surfaceHighlight: '#273549',
-  surfaceInput: '#1E293B',
+  // Core chalkboard tokens
+  bg: '#101c18',
+  background: '#101c18',
+  surface: '#182822',
+  surface2: '#20342d',
+  surfaceElevated: '#20342d',
+  surfaceHighlight: '#263d35',
+  surfaceInput: '#20342d',
 
-  // Borders
-  border: '#334155',
-  borderLight: '#2D3E55',
+  // Borders & lines
+  line: '#2b4239',
+  border: '#2b4239',
+  borderLight: '#20342d',
 
-  // Text
-  textPrimary: '#F8FAFC',
-  textSecondary: '#94A3B8',
-  textTertiary: '#64748B',
-  textInverse: '#FFFFFF',
+  // Typography
+  text: '#edf2ea',
+  textPrimary: '#edf2ea',
+  textSecondary: '#9bb0a5',
+  muted: '#9bb0a5',
+  textTertiary: '#768c82',
+  textInverse: '#101c18',
 
-  // Accent / Brand
-  accent: '#3B82F6',
-  accentHover: '#60A5FA',
-  accentLight: '#1E3A5F',
+  // Accent & Actions
+  accent: '#f2c94c',
+  accentText: '#1b1500',
+  accentHover: '#e0a800',
+  accentLight: '#2c2714',
+
+  // Status & Feedback
+  success: '#5fcf9a',
+  successBg: '#133527',
+  danger: '#ff8a7a',
+  error: '#ff8a7a',
+  errorBg: '#3d1c18',
+  errorBgLight: '#2d1411',
+  errorBorder: '#5c221b',
+  warning: '#f2c94c',
+  warningBg: '#2c2714',
+
+  // Hero & Accents
+  hero: '#1c3029',
+  heroBg: '#1c3029',
+  heroSub: '#9bb0a5',
+  heroTitle: '#edf2ea',
+  heroDesc: '#9bb0a5',
 
   // Sidebar
-  sidebarBg: '#1E293B',
-  sidebarBorder: '#334155',
+  sidebarBg: '#182822',
+  sidebarBorder: '#2b4239',
 
-  // Status
-  success: '#34D399',
-  successBg: '#064E3B',
-  warning: '#FBBF24',
-  warningBg: '#451A03',
-  error: '#F87171',
-  errorBg: '#450A0A',
-  errorBgLight: '#1C0707',
-  errorBorder: '#7F1D1D',
+  // Cards & Visuals
+  metricText: '#9bb0a5',
+  cardBorder: '#2b4239',
+  progressBarBg: '#2b4239',
+  calDayBg: '#20342d',
+  calDayText: '#9bb0a5',
 
-  // Premium / gold
-  premiumBg: '#1C1A07',
-  premiumTitle: '#FDE68A',
-  premiumDesc: '#FCD34D',
-
-  // Hero banner
-  heroBg: '#1A1F3A',
-  heroSub: '#818CF8',
-  heroTitle: '#E0E7FF',
-  heroDesc: '#A5B4FC',
-
-  // Misc icon backgrounds
-  iconBgBlue: '#1E3A5F',
-  iconBgPurple: '#2D1B69',
-  iconBgOrange: '#431407',
-  iconBgYellow: '#422006',
-  iconBgGreen: '#064E3B',
-  iconBgRed: '#450A0A',
-
-  // Card metrics
-  metricText: '#94A3B8',
-  cardBorder: '#334155',
-  progressBarBg: '#334155',
-
-  // Calendar
-  calDayBg: '#273549',
-  calDayText: '#94A3B8',
+  // Category & Icon Accents
+  iconBgBlue: '#20342d',
+  iconBgPurple: '#20342d',
+  iconBgOrange: '#2c2714',
+  iconBgYellow: '#2c2714',
+  iconBgGreen: '#133527',
+  iconBgRed: '#3d1c18',
+  premiumBg: '#2c2714',
+  premiumTitle: '#f2c94c',
+  premiumDesc: '#9bb0a5',
 };
 
 export type ThemeColors = typeof LightColors;
@@ -141,33 +149,36 @@ interface ThemeContextType {
   isDark: boolean;
   colors: ThemeColors;
   toggleTheme: () => void;
+  setTheme: (theme: 'light' | 'dark') => void;
 }
 
 const ThemeContext = createContext<ThemeContextType>({
   isDark: false,
   colors: LightColors,
   toggleTheme: () => {},
+  setTheme: () => {},
 });
 
 export const useTheme = () => useContext(ThemeContext);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  // Default is light theme unless explicitly chosen by the user
   const [isDark, setIsDark] = useState<boolean>(false);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    AsyncStorage.getItem(STORAGE_KEY).then((val) => {
-      if (val === 'dark') {
-        setIsDark(true);
-      } else {
-        setIsDark(false); // Default is light theme
-      }
-      setLoaded(true);
-    }).catch(() => {
-      setIsDark(false); // Default is light theme
-      setLoaded(true);
-    });
+    AsyncStorage.getItem(STORAGE_KEY)
+      .then((val) => {
+        if (val === 'dark') {
+          setIsDark(true);
+        } else {
+          setIsDark(false);
+        }
+        setLoaded(true);
+      })
+      .catch(() => {
+        setIsDark(false);
+        setLoaded(true);
+      });
   }, []);
 
   useEffect(() => {
@@ -188,8 +199,21 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     });
   };
 
+  const setTheme = (theme: 'light' | 'dark') => {
+    const nextDark = theme === 'dark';
+    setIsDark(nextDark);
+    AsyncStorage.setItem(STORAGE_KEY, theme).catch(() => {});
+  };
+
   return (
-    <ThemeContext.Provider value={{ isDark, colors: isDark ? DarkColors : LightColors, toggleTheme }}>
+    <ThemeContext.Provider
+      value={{
+        isDark,
+        colors: isDark ? DarkColors : LightColors,
+        toggleTheme,
+        setTheme,
+      }}
+    >
       {children}
     </ThemeContext.Provider>
   );
