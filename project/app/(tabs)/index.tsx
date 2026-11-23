@@ -7,8 +7,10 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router, useFocusEffect } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import DesktopDashboard from '@/components/DesktopDashboard';
 import MobileDashboard from '@/components/MobileDashboard';
+import ExamPicker, { FIRST_VISIT_EXAM_STORAGE_KEY } from '@/components/first-visit/ExamPicker';
 import UserService from '@/services/user-service';
 import { TestProgressService } from '@/services/test-progress-service';
 import PaperService from '@/services/paper-service';
@@ -38,6 +40,7 @@ export default function EnhancedHomeScreen() {
   const [questionStats, setQuestionStats] = useState<any>(null);
   const [refreshing, setRefreshing] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [showFirstVisitPicker, setShowFirstVisitPicker] = useState<boolean | null>(null);
   const { user: authUser } = useAuth();
 
   const loadDashboardData = useCallback(async () => {
@@ -54,30 +57,55 @@ export default function EnhancedHomeScreen() {
 
       const user = authUser || auth.currentUser;
       if (!user) {
-         setDashboardStats({
-           questionsAttempted: 0,
-           accuracy: 0,
-           timeSpent: 0,
-           streak: 0,
-           rank: 'Guest Explorer',
-           weeklyImprovement: 0,
-           totalTopics: 0,
-           masteredTopics: 0,
-           totalAvailableTests: papersCount,
-           userName: 'Guest Explorer',
-           isSubscribed: false,
-         });
-         setPerformance({
-           subjectWisePerformance: {},
-           recentTests: [],
-         });
-         setLoading(false);
-         return;
+        let savedExam: string | null = null;
+        try {
+          savedExam = await AsyncStorage.getItem(FIRST_VISIT_EXAM_STORAGE_KEY);
+        } catch (e) {
+          console.warn('Failed to read stored exam:', e);
+        }
+
+        if (
+          savedExam &&
+          (savedExam === 'upsc' || savedExam === 'uppsc' || savedExam === 'tgt' || savedExam === 'pgt')
+        ) {
+          router.replace(`/exam/${savedExam}` as any);
+          return;
+        }
+
+        setShowFirstVisitPicker(true);
+        setLoading(false);
+        return;
       }
       
       // Fetch profile using the singleton instance to prevent constructor errors
       const profile = await UserService.getUserProfile(user.uid);
       const history = await TestProgressService.getTestHistory();
+
+      // Returning user check: users without purchases and 0 attempts see the clean exam flow
+      if (!profile?.isSubscribed && (!history || history.length === 0)) {
+        let savedExam: string | null = null;
+        try {
+          savedExam =
+            (await AsyncStorage.getItem(FIRST_VISIT_EXAM_STORAGE_KEY)) ||
+            (await AsyncStorage.getItem('@astra_exam_target'));
+        } catch (e) {
+          console.warn('Failed to read stored exam:', e);
+        }
+
+        if (
+          savedExam &&
+          (savedExam === 'upsc' || savedExam === 'uppsc' || savedExam === 'tgt' || savedExam === 'pgt')
+        ) {
+          router.replace(`/exam/${savedExam}` as any);
+          return;
+        }
+
+        setShowFirstVisitPicker(true);
+        setLoading(false);
+        return;
+      }
+
+      setShowFirstVisitPicker(false);
       
       const stats = profile?.stats || {
           questionsAttempted: 0,
@@ -287,10 +315,14 @@ export default function EnhancedHomeScreen() {
       <SafeAreaView style={{ flex: 1, backgroundColor: '#F8FAFC' }} edges={['bottom']}>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
           <ActivityIndicator size="large" color="#4F46E5" />
-          <Text style={{ marginTop: 16, fontSize: 16, color: '#64748B' }}>Loading your dashboard...</Text>
+          <Text style={{ marginTop: 16, fontSize: 16, color: '#64748B' }}>Loading...</Text>
         </View>
       </SafeAreaView>
     );
+  }
+
+  if (showFirstVisitPicker) {
+    return <ExamPicker />;
   }
 
   if (isLargeScreen) {

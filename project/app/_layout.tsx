@@ -108,6 +108,16 @@ function DynamicWebTitle() {
         document.head.appendChild(appleIcon);
       }
       appleIcon.href = '/favicon.png';
+
+      // Load Newsreader font for chalkboard headings
+      let fontLink = document.querySelector('link#newsreader-font') as HTMLLinkElement | null;
+      if (!fontLink) {
+        fontLink = document.createElement('link');
+        fontLink.id = 'newsreader-font';
+        fontLink.rel = 'stylesheet';
+        fontLink.href = 'https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap';
+        document.head.appendChild(fontLink);
+      }
     } catch {
       // Safe favicon fallback
     }
