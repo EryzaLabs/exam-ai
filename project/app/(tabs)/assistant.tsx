@@ -584,8 +584,9 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   vidyaHeroImg: {
-    width: 65,
-    height: 90,
+    width: 68,
+    height: 68,
+    borderRadius: 34,
   },
   vidyaHeroText: {
     flex: 1,
