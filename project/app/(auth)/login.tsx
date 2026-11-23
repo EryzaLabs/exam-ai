@@ -28,7 +28,7 @@ import { makeRedirectUri } from 'expo-auth-session';
 import Svg, { Path } from 'react-native-svg';
 import { useTheme } from '@/context/theme-context';
 import { useAuth } from '@/context/auth-context';
-import { Button, Card, ThemeToggle } from '@/components/chalkboard';
+import { Button, Card, ThemeToggle, AstraLogo } from '@/components/chalkboard';
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -227,12 +227,7 @@ export default function LoginScreen() {
             {/* Header */}
             <View style={styles.headerBox}>
               <View style={styles.brandRow}>
-                <Image
-                  source={require('@/assets/images/logo.png')}
-                  style={styles.logoImage}
-                  resizeMode="contain"
-                />
-                <Text style={[styles.brandText, { color: colors.text }]}>ASTRA EXAM AI</Text>
+                <AstraLogo variant="full" height={36} />
               </View>
               <Text style={[styles.title, { color: colors.text }]}>Welcome back</Text>
               <Text style={[styles.subtitle, { color: colors.muted }]}>

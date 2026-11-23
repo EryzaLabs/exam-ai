@@ -48,6 +48,7 @@ import { useAuth } from '@/context/auth-context';
 import userService from '@/services/user-service';
 import { initiatePayment } from '@/utils/cashfree';
 import DesktopDashboard from '@/components/DesktopDashboard';
+import { AstraMark } from '@/components/chalkboard/AstraLogo';
 
 export interface PlanTier {
   id: 'daily' | 'weekly' | 'monthly' | 'lifetime' | 'tgt-series' | 'pgt-series';
@@ -531,21 +532,11 @@ export default function PremiumScreen() {
         <View style={styles.heroContent}>
           <View style={styles.heroTagsRow}>
             <View style={{
-              width: 36,
-              height: 36,
-              borderRadius: 10,
-              backgroundColor: '#0A0915',
-              borderWidth: 1,
-              borderColor: 'rgba(168, 85, 247, 0.4)',
               alignItems: 'center',
               justifyContent: 'center',
               marginRight: 6,
             }}>
-              <Image
-                source={require('@/assets/images/logo.png')}
-                style={{ width: 30, height: 30 }}
-                resizeMode="contain"
-              />
+              <AstraMark size={32} />
             </View>
             <View style={styles.heroTagBadge}>
               <Crown size={12} color="#F59E0B" />

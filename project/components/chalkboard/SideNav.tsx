@@ -14,6 +14,7 @@ import {
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { useAuth } from '@/context/auth-context';
 import { useSub } from '@/context/subscription-context';
+import AstraLogo from './AstraLogo';
 
 export const NAV_ITEMS = [
   { label: 'Home', path: '/', icon: Home },
@@ -47,33 +48,13 @@ export default function SideNav() {
         },
       ]}
     >
-      {/* Brand Header with Astra AI Original Logo */}
+      {/* Brand Header with Theme-Aware Astra Logo */}
       <TouchableOpacity
         style={styles.brandHeader}
         onPress={() => router.push('/')}
         activeOpacity={0.8}
       >
-        <Image
-          source={require('@/assets/images/logo.png')}
-          style={styles.brandLogoImg}
-          resizeMode="contain"
-        />
-        <View>
-          <Text
-            style={[
-              styles.brandTitle,
-              {
-                color: colors.text,
-                fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
-              },
-            ]}
-          >
-            Astra Exam AI
-          </Text>
-          <Text style={[styles.brandTagline, { color: colors.muted }]}>
-            Teacher Exam CBT Prep
-          </Text>
-        </View>
+        <AstraLogo variant="full" height={32} />
       </TouchableOpacity>
 
       {/* Nav Menu */}

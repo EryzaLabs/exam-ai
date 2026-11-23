@@ -21,4 +21,6 @@ export { default as QuestionCard } from './QuestionCard';
 export { default as TestRow } from './TestRow';
 export { default as SeriesCard } from './SeriesCard';
 export { default as OfferCard } from './OfferCard';
+export { default as AstraLogo, AstraMark } from './AstraLogo';
+
 

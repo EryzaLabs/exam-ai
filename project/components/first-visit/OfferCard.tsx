@@ -12,6 +12,7 @@ import { Check, ShieldCheck, Zap, ArrowRight, Lock } from 'lucide-react-native';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { initiatePayment } from '@/utils/cashfree';
 import { useAuth } from '@/context/auth-context';
+import { AstraLogo } from '@/components/chalkboard';
 
 export interface OfferCardProps {
   cardHeading?: string; // "Get the full series" or "Keep going with the full series"
@@ -109,6 +110,10 @@ export default function OfferCard({
           },
         ]}
       >
+        <View style={{ marginBottom: 14, alignItems: 'flex-start' }}>
+          <AstraLogo variant="full" height={26} />
+        </View>
+
         <View style={styles.topBadgeRow}>
           <View style={[styles.badgePill, { backgroundColor: colors.surface2, borderColor: colors.line }]}>
             <Zap size={12} color={colors.accent} />

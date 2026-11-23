@@ -30,6 +30,7 @@ import { useExam } from '@/context/exam-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import ExamSwitcher from './ExamSwitcher';
 import ThemeToggle from './ThemeToggle';
+import AstraLogo from './AstraLogo';
 import { INITIAL_TGT_PGT_PAPERS } from '@/services/paper-service';
 
 export interface TopBarProps {
@@ -118,25 +119,7 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
               onPress={() => router.push('/')}
               activeOpacity={0.8}
             >
-              <Image
-                source={require('@/assets/images/logo.png')}
-                style={styles.logoImg}
-                resizeMode="contain"
-              />
-              {width >= 420 && (
-                <Text
-                  style={[
-                    styles.logoText,
-                    {
-                      color: colors.text,
-                      fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
-                    },
-                  ]}
-                  numberOfLines={1}
-                >
-                  {width >= 600 ? 'Astra Exam AI' : 'Astra'}
-                </Text>
-              )}
+              <AstraLogo variant="auto" height={32} />
             </TouchableOpacity>
           )}
 

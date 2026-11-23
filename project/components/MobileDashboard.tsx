@@ -43,6 +43,7 @@ import { useExam } from '@/context/exam-context';
 import ExamSelector from '@/components/ExamSelector';
 import FeaturedTracksSlider from '@/components/FeaturedTracksSlider';
 import { TestProgressService, SavedTestState } from '@/services/test-progress-service';
+import { AstraMark } from '@/components/chalkboard/AstraLogo';
 
 export default function MobileDashboard({
   performance,
@@ -120,22 +121,8 @@ export default function MobileDashboard({
             <View style={styles.headerTop}>
               <View style={{ flex: 1, paddingRight: 12 }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
-                  <View style={{
-                    width: 44,
-                    height: 44,
-                    borderRadius: 12,
-                    backgroundColor: isDark ? 'rgba(139, 92, 246, 0.16)' : '#0A0915',
-                    borderWidth: 1,
-                    borderColor: 'rgba(139, 92, 246, 0.35)',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginRight: 4,
-                  }}>
-                    <Image
-                      source={require('@/assets/images/logo.png')}
-                      style={{ width: 38, height: 38 }}
-                      resizeMode="contain"
-                    />
+                  <View style={{ marginRight: 6 }}>
+                    <AstraMark size={36} />
                   </View>
                   <Text style={styles.headerTitle}>Astra Exam AI</Text>
                   {isSubscribed && (

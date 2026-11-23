@@ -38,6 +38,7 @@ import { useTheme } from '@/context/theme-context';
 import { useDashboardData } from '@/hooks/useDashboardData';
 import { signOut } from 'firebase/auth';
 import { auth } from '@/services/firebaseConfig';
+import { AstraLogo } from '@/components/chalkboard/AstraLogo';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import UserService from '@/services/user-service';
 import FeaturedTracksSlider from '@/components/FeaturedTracksSlider';
@@ -107,20 +108,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           onPress={() => router.push('/')}
           activeOpacity={0.8}
         >
-          <View style={[
-            styles.logoBadge,
-            { backgroundColor: isDark ? 'rgba(139, 92, 246, 0.14)' : '#0A0915' }
-          ]}>
-            <Image
-              source={require('@/assets/images/logo.png')}
-              style={styles.logoImage}
-              resizeMode="contain"
-            />
-          </View>
-          <View>
-            <Text style={[styles.logoText, { color: colors.textPrimary }]}>Astra</Text>
-            <Text style={[styles.logoSubtext, { color: colors.textSecondary }]}>Exam AI</Text>
-          </View>
+          <AstraLogo variant="full" height={32} />
         </TouchableOpacity>
 
         <ScrollView style={styles.navMenu} showsVerticalScrollIndicator={false}>

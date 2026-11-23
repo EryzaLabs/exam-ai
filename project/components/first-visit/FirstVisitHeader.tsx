@@ -4,6 +4,7 @@ import { router } from 'expo-router';
 import { Sun, Moon, ArrowLeft, User as UserIcon } from 'lucide-react-native';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { useAuth } from '@/context/auth-context';
+import { AstraLogo } from '@/components/chalkboard';
 
 interface FirstVisitHeaderProps {
   showChangeExam?: boolean;
@@ -36,26 +37,12 @@ export default function FirstVisitHeader({
           onPress={() => router.push('/')}
           activeOpacity={0.8}
         >
-          <Image
-            source={require('@/assets/images/logo.png')}
-            style={styles.logoImage}
-            resizeMode="contain"
-          />
-          <View>
-            <Text
-              style={[
-                styles.brandTitle,
-                { color: colors.text, fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined }
-              ]}
-            >
-              Astra Exam AI
+          <AstraLogo variant="auto" height={32} />
+          {examName ? (
+            <Text style={[styles.brandSubtitle, { color: colors.muted, marginLeft: 8 }]}>
+              {examName}
             </Text>
-            {examName ? (
-              <Text style={[styles.brandSubtitle, { color: colors.muted }]}>
-                {examName}
-              </Text>
-            ) : null}
-          </View>
+          ) : null}
         </TouchableOpacity>
 
         {/* Right side controls */}
