@@ -23,6 +23,7 @@ if (fs.existsSync(distDir)) {
     'astra-mark.svg',
     'astra-logo-for-light-bg.svg',
     'astra-logo-for-dark-bg.svg',
+    'favicon.ico',
     'favicon.png',
     'icon-192.png',
     'icon-512.png',
@@ -102,8 +103,10 @@ if (fs.existsSync(distIndexPath)) {
   // Meta tags & Favicon links to inject
   const headElements = `  <title>Astra Exam AI • Teacher & Principal Exam Prep</title>
     <link rel="icon" type="image/svg+xml" href="/astra-mark.svg" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="description" content="Astra Exam AI is your all-in-one AI-driven preparation platform for competitive exams. Practice UPSC & UP Principal full mocks, analyze weaknesses, and master your syllabus." />

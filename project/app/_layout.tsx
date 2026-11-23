@@ -92,14 +92,32 @@ function DynamicWebTitle() {
 
     // Ensure favicon is present and linked
     try {
-      let iconLink = document.querySelector('link[rel="icon"]') as HTMLLinkElement | null;
-      if (!iconLink) {
-        iconLink = document.createElement('link');
-        iconLink.rel = 'icon';
-        iconLink.type = 'image/png';
-        document.head.appendChild(iconLink);
+      let svgIcon = document.querySelector('link[rel="icon"][type="image/svg+xml"]') as HTMLLinkElement | null;
+      if (!svgIcon) {
+        svgIcon = document.createElement('link');
+        svgIcon.rel = 'icon';
+        svgIcon.type = 'image/svg+xml';
+        document.head.appendChild(svgIcon);
       }
-      iconLink.href = '/favicon.png';
+      svgIcon.href = '/astra-mark.svg';
+
+      let pngIcon = document.querySelector('link[rel="icon"][sizes="48x48"]') as HTMLLinkElement | null;
+      if (!pngIcon) {
+        pngIcon = document.createElement('link');
+        pngIcon.rel = 'icon';
+        pngIcon.type = 'image/png';
+        pngIcon.setAttribute('sizes', '48x48');
+        document.head.appendChild(pngIcon);
+      }
+      pngIcon.href = '/favicon.png';
+
+      let icoLink = document.querySelector('link[rel="shortcut icon"]') as HTMLLinkElement | null;
+      if (!icoLink) {
+        icoLink = document.createElement('link');
+        icoLink.rel = 'shortcut icon';
+        document.head.appendChild(icoLink);
+      }
+      icoLink.href = '/favicon.ico';
 
       let appleIcon = document.querySelector('link[rel="apple-touch-icon"]') as HTMLLinkElement | null;
       if (!appleIcon) {
@@ -107,7 +125,7 @@ function DynamicWebTitle() {
         appleIcon.rel = 'apple-touch-icon';
         document.head.appendChild(appleIcon);
       }
-      appleIcon.href = '/favicon.png';
+      appleIcon.href = '/icon-192.png';
 
       // Load Newsreader & Noto Sans Devanagari fonts for chalkboard headings and bilingual Hindi rendering
       let fontLink = document.querySelector('link#newsreader-font') as HTMLLinkElement | null;
