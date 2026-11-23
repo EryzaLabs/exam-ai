@@ -1874,7 +1874,16 @@ export const INITIAL_TGT_PGT_PAPERS: ServerPaper[] = [
   }
 ];
 
+export const INITIAL_TOPIC_PAPERS: ServerPaper[] = (() => {
+  try {
+    return require('../data/topic-papers.json');
+  } catch {
+    return [];
+  }
+})();
+
 export const INITIAL_PAPERS_CATALOG: ServerPaper[] = [
   ...INITIAL_FULL_MOCKS,
+  ...INITIAL_TOPIC_PAPERS,
   ...INITIAL_TGT_PGT_PAPERS,
 ];

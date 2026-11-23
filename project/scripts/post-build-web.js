@@ -154,3 +154,29 @@ if (fs.existsSync(dataTgtPgtDir) && fs.existsSync(distDir)) {
     console.warn('⚠️ Warning copying papers to dist:', err.message);
   }
 }
+
+// Copy Full Mocks and Topic Wise papers from tests_json into dist/
+const testsJsonDir = path.resolve(__dirname, '..', '..', 'tests_json');
+if (fs.existsSync(testsJsonDir) && fs.existsSync(distDir)) {
+  const folders = ['full_mocks', 'topic_wise'];
+  for (const folder of folders) {
+    const srcDir = path.join(testsJsonDir, folder);
+    if (fs.existsSync(srcDir)) {
+      try {
+        const destDir = path.resolve(distDir, folder);
+        const destDataDir = path.resolve(distDir, 'data', folder);
+        fs.mkdirSync(destDir, { recursive: true });
+        fs.mkdirSync(destDataDir, { recursive: true });
+
+        const files = fs.readdirSync(srcDir).filter((f) => f.endsWith('.json'));
+        for (const f of files) {
+          fs.copyFileSync(path.join(srcDir, f), path.join(destDir, f));
+          fs.copyFileSync(path.join(srcDir, f), path.join(destDataDir, f));
+        }
+        console.log(`✅ Copied ${files.length} ${folder} papers to dist/${folder}/ and dist/data/${folder}/`);
+      } catch (err) {
+        console.warn(`⚠️ Warning copying ${folder} to dist:`, err.message);
+      }
+    }
+  }
+}

@@ -120,7 +120,7 @@ export default function ProfileScreen() {
         const upscCount =
           papers.filter(
             (p) =>
-              !p.series &&
+              (p.series === 'upsc' || p.series === 'uppsc' || !p.series) &&
               (p.filename?.includes('full_mock') || p.id?.includes('mock'))
           ).length || 150;
         const tgtCount =

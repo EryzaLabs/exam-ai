@@ -185,21 +185,36 @@ class SSCCGLService {
    * Fetch list of available papers from server
    */
   async fetchPapersList(): Promise<any[]> {
-    try {
-      const response = await fetch(`${API_URL}/papers`);
-      let serverPapers: any[] = [];
-      if (response.ok) {
-        serverPapers = await response.json();
+    let serverPapers: any[] = [];
+    const endpoints = [
+      API_URL ? `${API_URL}/papers` : null,
+      'https://astra-backend.eryzalabs.cloud/api/papers',
+    ].filter(Boolean) as string[];
+    const uniqueEndpoints = Array.from(new Set(endpoints));
+
+    for (const url of uniqueEndpoints) {
+      try {
+        const response = await fetch(url);
+        if (response.ok) {
+          const data = await response.json();
+          if (Array.isArray(data) && data.length > 0) {
+            serverPapers = data;
+            break;
+          }
+        }
+      } catch (e) {
+        // try next endpoint
       }
+    }
+
+    try {
       const { INITIAL_PAPERS_CATALOG } = require('./paper-service');
       const existingIds = new Set(serverPapers.map((p: any) => p.id || p.filename));
       const additional = (INITIAL_PAPERS_CATALOG || []).filter((p: any) => !existingIds.has(p.id || p.filename));
       const combined = [...serverPapers, ...additional];
-      return combined.length > 0 ? combined : INITIAL_PAPERS_CATALOG;
+      return combined.length > 0 ? combined : (INITIAL_PAPERS_CATALOG || []);
     } catch (error) {
-      console.warn('Error fetching papers list, using bundled catalog:', error);
-      const { INITIAL_PAPERS_CATALOG } = require('./paper-service');
-      return INITIAL_PAPERS_CATALOG || [];
+      return serverPapers.length > 0 ? serverPapers : [];
     }
   }
 
@@ -211,9 +226,11 @@ class SSCCGLService {
     
     // 1. Try remote API endpoints
     const endpoints = [
-      `${API_URL}/papers/${cleanFilename}`,
-      `${API_URL}/papers/find/${encodeURIComponent(cleanFilename)}`,
-    ];
+      API_URL ? `${API_URL}/papers/${cleanFilename}` : null,
+      API_URL ? `${API_URL}/papers/find/${encodeURIComponent(cleanFilename)}` : null,
+      `https://astra-backend.eryzalabs.cloud/api/papers/${cleanFilename}`,
+      `https://astra-backend.eryzalabs.cloud/api/papers/find/${encodeURIComponent(cleanFilename)}`,
+    ].filter(Boolean) as string[];
 
     if (Platform.OS === 'web') {
       endpoints.push(`/${cleanFilename}`);

@@ -53,6 +53,11 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     (params.category as any) || 'all'
   );
   const [selectedSeriesId, setSelectedSeriesId] = useState<string | null>(null);
+  const [visibleLimit, setVisibleLimit] = useState(50);
+
+  useEffect(() => {
+    setVisibleLimit(50);
+  }, [selectedType, examMode, searchQuery, selectedSeriesId]);
 
   // Sync examMode if examId param passed in URL
   useEffect(() => {
@@ -142,6 +147,8 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
           p.series === 'upsc' ||
           p.filename?.includes('uppsc') ||
           p.title?.toLowerCase().includes('up principal') ||
+          p.filename?.includes('topic_wise') ||
+          p.id?.includes('topic_wise') ||
           (!p.series &&
             (p.filename?.includes('full_mock') ||
               p.filename?.includes('SSC_CGL') ||
@@ -151,6 +158,8 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
       if (examMode === 'upsc') {
         return (
           p.series === 'upsc' ||
+          p.filename?.includes('topic_wise') ||
+          p.id?.includes('topic_wise') ||
           (!p.series &&
             (p.filename?.includes('full_mock') ||
               p.filename?.includes('SSC_CGL') ||
@@ -203,7 +212,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     return [
       {
         id: `${examMode}-main-series`,
-        title: `${info.shortName} Full Mock Test Series`,
+        title: `${info.shortName} Complete Test Series 2026`,
         description: info.tagline,
         testCount: examPapers.length || 20,
         isOwned: isSubscribed,
@@ -232,14 +241,22 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     }
 
     if (selectedType === 'full') {
-      const fullMocks = pool.filter((p) => !p.filename?.includes('topic_wise'));
-      if (fullMocks.length > 0) pool = fullMocks;
+      pool = pool.filter(
+        (p) =>
+          !p.filename?.includes('topic_wise') &&
+          !p.id?.includes('topic_wise') &&
+          !p.isPYQ &&
+          !p.filename?.includes('tgt_pgt')
+      );
     } else if (selectedType === 'pyq') {
-      const pyqs = pool.filter((p) => p.isPYQ || p.filename?.includes('tgt_pgt'));
-      if (pyqs.length > 0) pool = pyqs;
+      pool = pool.filter((p) => p.isPYQ || p.filename?.includes('tgt_pgt'));
     } else if (selectedType === 'topic') {
-      const topics = pool.filter((p) => p.filename?.includes('topic_wise'));
-      if (topics.length > 0) pool = topics;
+      pool = pool.filter(
+        (p) =>
+          p.filename?.includes('topic_wise') ||
+          p.id?.includes('topic_wise') ||
+          p.subject === 'Topic Wise'
+      );
     }
 
     if (searchQuery.trim()) {
@@ -403,6 +420,15 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
               {(examMode === 'upsc' || examMode === 'uppsc' || examMode === 'all') && (
                 <Chip
                   label="Full Mocks"
+                  count={
+                    examPapers.filter(
+                      (p) =>
+                        !p.filename?.includes('topic_wise') &&
+                        !p.id?.includes('topic_wise') &&
+                        !p.isPYQ &&
+                        !p.filename?.includes('tgt_pgt')
+                    ).length
+                  }
                   active={selectedType === 'full'}
                   onPress={() => setSelectedType('full')}
                 />
@@ -410,6 +436,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
               {(examMode === 'tgt' || examMode === 'pgt' || examMode === 'all') && (
                 <Chip
                   label="Official Solved Papers"
+                  count={examPapers.filter((p) => p.isPYQ || p.filename?.includes('tgt_pgt')).length}
                   active={selectedType === 'pyq'}
                   onPress={() => setSelectedType('pyq')}
                 />
@@ -417,6 +444,14 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
               {(examMode === 'upsc' || examMode === 'uppsc' || examMode === 'all') && (
                 <Chip
                   label="Topic Wise"
+                  count={
+                    examPapers.filter(
+                      (p) =>
+                        p.filename?.includes('topic_wise') ||
+                        p.id?.includes('topic_wise') ||
+                        p.subject === 'Topic Wise'
+                    ).length
+                  }
                   active={selectedType === 'topic'}
                   onPress={() => setSelectedType('topic')}
                 />
@@ -425,7 +460,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
             {/* Test Rows List */}
             <View style={styles.testList}>
-              {filteredTests.map((paper, idx) => {
+              {filteredTests.slice(0, visibleLimit).map((paper, idx) => {
                 const isFreeSample = !isSubscribed && idx < 2;
                 const isLocked = !isSubscribed && !isFreeSample;
 
@@ -463,6 +498,16 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                   />
                 );
               })}
+
+              {filteredTests.length > visibleLimit && (
+                <View style={{ alignItems: 'center', marginTop: 16, marginBottom: 16 }}>
+                  <Button
+                    title={`Load More Tests (${visibleLimit} of ${filteredTests.length})`}
+                    variant="secondary"
+                    onPress={() => setVisibleLimit((prev) => prev + 50)}
+                  />
+                </View>
+              )}
 
               {filteredTests.length === 0 && (
                 <Card style={styles.emptyCard}>
