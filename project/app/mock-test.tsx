@@ -77,6 +77,9 @@ export default function MockTestScreen() {
   const [questionStates, setQuestionStates] = useState<Map<string, QuestionState>>(new Map());
   const [timeRemaining, setTimeRemaining] = useState(0);
   const [showQuestionPalette, setShowQuestionPalette] = useState(false);
+  const [paletteFilter, setPaletteFilter] = useState<
+    'all' | 'answered' | 'unanswered' | 'marked' | 'not-visited'
+  >('all');
 
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
   const [showBackConfirm, setShowBackConfirm] = useState(false);
@@ -564,108 +567,279 @@ export default function MockTestScreen() {
       : currentQuestion.options;
 
   // Render Palette Content
-  const renderPaletteContent = () => (
-    <View style={styles.paletteInner}>
-      {/* Legend / Status badges with shapes */}
-      <View style={[styles.legendGrid, { borderBottomColor: colors.line }]}>
-        <View style={styles.legendItem}>
-          <View style={[styles.shapeBadge, { backgroundColor: colors.successBg, borderColor: colors.success }]}>
-            <Check size={11} color={colors.success} />
-          </View>
-          <Text style={[styles.legendText, { color: colors.text }]}>
-            Answered ({stats.answered})
-          </Text>
+  const renderPaletteContent = (isMobile?: boolean) => {
+    const filteredQuestionIndices = questions
+      .map((q, idx) => ({ q, idx }))
+      .filter(({ q, idx }) => {
+        if (paletteFilter === 'all') return true;
+        const s = getQuestionStatus(q.id, idx);
+        if (paletteFilter === 'answered') return s === 'answered' || s === 'answered-marked';
+        if (paletteFilter === 'unanswered') return s === 'not-answered';
+        if (paletteFilter === 'marked') return s === 'marked' || s === 'answered-marked';
+        if (paletteFilter === 'not-visited') return s === 'not-visited';
+        return true;
+      });
+
+    return (
+      <View style={[styles.paletteInner, isMobile && styles.paletteInnerMobile]}>
+        {/* Interactive Filter Chips */}
+        <View style={[styles.legendGrid, { borderBottomColor: colors.line }]}>
+          <TouchableOpacity
+            activeOpacity={0.7}
+            onPress={() => setPaletteFilter('all')}
+            style={[
+              styles.legendFilterChip,
+              {
+                backgroundColor: paletteFilter === 'all' ? colors.surface2 : 'transparent',
+                borderColor: paletteFilter === 'all' ? colors.accent : colors.line,
+              },
+            ]}
+          >
+            <Text
+              style={[
+                styles.legendText,
+                {
+                  color: colors.text,
+                  fontWeight: paletteFilter === 'all' ? '700' : '500',
+                },
+              ]}
+            >
+              All ({questions.length})
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            activeOpacity={0.7}
+            onPress={() => setPaletteFilter(paletteFilter === 'answered' ? 'all' : 'answered')}
+            style={[
+              styles.legendFilterChip,
+              {
+                backgroundColor: paletteFilter === 'answered' ? colors.successBg : 'transparent',
+                borderColor: paletteFilter === 'answered' ? colors.success : colors.line,
+              },
+            ]}
+          >
+            <View style={[styles.shapeBadge, { backgroundColor: colors.successBg, borderColor: colors.success }]}>
+              <Check size={11} color={colors.success} />
+            </View>
+            <Text
+              style={[
+                styles.legendText,
+                {
+                  color: colors.text,
+                  fontWeight: paletteFilter === 'answered' ? '700' : '500',
+                },
+              ]}
+            >
+              Answered ({stats.answered})
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            activeOpacity={0.7}
+            onPress={() => setPaletteFilter(paletteFilter === 'unanswered' ? 'all' : 'unanswered')}
+            style={[
+              styles.legendFilterChip,
+              {
+                backgroundColor: paletteFilter === 'unanswered' ? colors.dangerBg : 'transparent',
+                borderColor: paletteFilter === 'unanswered' ? colors.danger : colors.line,
+              },
+            ]}
+          >
+            <View style={[styles.shapeBadge, { backgroundColor: colors.dangerBg, borderColor: colors.danger }]}>
+              <View style={[styles.dotMarker, { backgroundColor: colors.danger }]} />
+            </View>
+            <Text
+              style={[
+                styles.legendText,
+                {
+                  color: colors.text,
+                  fontWeight: paletteFilter === 'unanswered' ? '700' : '500',
+                },
+              ]}
+            >
+              Unanswered ({stats.notAnswered})
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            activeOpacity={0.7}
+            onPress={() => setPaletteFilter(paletteFilter === 'marked' ? 'all' : 'marked')}
+            style={[
+              styles.legendFilterChip,
+              {
+                backgroundColor: paletteFilter === 'marked' ? colors.accent + '25' : 'transparent',
+                borderColor: paletteFilter === 'marked' ? colors.accent : colors.line,
+              },
+            ]}
+          >
+            <View style={[styles.shapeBadge, { backgroundColor: colors.surface2, borderColor: colors.accent }]}>
+              <Flag size={11} color={colors.accent} fill={colors.accent} />
+            </View>
+            <Text
+              style={[
+                styles.legendText,
+                {
+                  color: colors.text,
+                  fontWeight: paletteFilter === 'marked' ? '700' : '500',
+                },
+              ]}
+            >
+              Marked ({stats.marked})
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            activeOpacity={0.7}
+            onPress={() => setPaletteFilter(paletteFilter === 'not-visited' ? 'all' : 'not-visited')}
+            style={[
+              styles.legendFilterChip,
+              {
+                backgroundColor: paletteFilter === 'not-visited' ? colors.surface2 : 'transparent',
+                borderColor: paletteFilter === 'not-visited' ? colors.muted : colors.line,
+              },
+            ]}
+          >
+            <View style={[styles.shapeBadge, { backgroundColor: colors.surface, borderColor: colors.line }]}>
+              <View style={[styles.dotMarker, { backgroundColor: colors.muted }]} />
+            </View>
+            <Text
+              style={[
+                styles.legendText,
+                {
+                  color: colors.muted,
+                  fontWeight: paletteFilter === 'not-visited' ? '700' : '500',
+                },
+              ]}
+            >
+              Not Visited ({stats.notVisited})
+            </Text>
+          </TouchableOpacity>
         </View>
 
-        <View style={styles.legendItem}>
-          <View style={[styles.shapeBadge, { backgroundColor: colors.dangerBg, borderColor: colors.danger }]}>
-            <View style={[styles.dotMarker, { backgroundColor: colors.danger }]} />
-          </View>
-          <Text style={[styles.legendText, { color: colors.text }]}>
-            Unanswered ({stats.notAnswered})
-          </Text>
-        </View>
-
-        <View style={styles.legendItem}>
-          <View style={[styles.shapeBadge, { backgroundColor: colors.surface2, borderColor: colors.accent }]}>
-            <Flag size={11} color={colors.accent} fill={colors.accent} />
-          </View>
-          <Text style={[styles.legendText, { color: colors.text }]}>
-            Marked ({stats.marked})
-          </Text>
-        </View>
-
-        <View style={styles.legendItem}>
-          <View style={[styles.shapeBadge, { backgroundColor: colors.surface, borderColor: colors.line }]}>
-            <View style={[styles.dotMarker, { backgroundColor: colors.muted }]} />
-          </View>
-          <Text style={[styles.legendText, { color: colors.muted }]}>
-            Not Visited ({stats.notVisited})
-          </Text>
-        </View>
-      </View>
-
-      {/* Questions Matrix */}
-      <ScrollView style={styles.paletteScroll} showsVerticalScrollIndicator={false}>
-        <View style={styles.gridNumbers}>
-          {questions.map((q, idx) => {
-            const status = getQuestionStatus(q.id, idx);
-            const isCurrent = idx === currentQuestionIndex;
-
-            let badgeBg: string = colors.surface;
-            let badgeBorder: string = colors.line;
-            let textCol: string = colors.muted;
-
-            if (status === 'answered') {
-              badgeBg = colors.successBg;
-              badgeBorder = colors.success;
-              textCol = colors.success;
-            } else if (status === 'answered-marked') {
-              badgeBg = colors.successBg;
-              badgeBorder = colors.accent;
-              textCol = colors.text;
-            } else if (status === 'marked') {
-              badgeBg = colors.surface2;
-              badgeBorder = colors.accent;
-              textCol = colors.accent;
-            } else if (status === 'not-answered') {
-              badgeBg = colors.dangerBg;
-              badgeBorder = colors.danger;
-              textCol = colors.danger;
-            }
-
-            if (isCurrent) {
-              badgeBorder = colors.accent;
-            }
-
-            return (
+        {/* Questions Matrix */}
+        <ScrollView
+          style={styles.paletteScroll}
+          contentContainerStyle={[styles.paletteScrollContent, isMobile && { paddingBottom: 24 }]}
+          showsVerticalScrollIndicator={true}
+        >
+          {filteredQuestionIndices.length === 0 ? (
+            <View style={styles.paletteEmptyFilter}>
+              <Text style={[styles.paletteEmptyFilterText, { color: colors.muted }]}>
+                No questions matching "{paletteFilter}".
+              </Text>
               <TouchableOpacity
-                key={q.id}
-                style={[
-                  styles.numButton,
-                  {
-                    backgroundColor: badgeBg,
-                    borderColor: badgeBorder,
-                    borderWidth: isCurrent ? 2 : 1,
-                    borderRadius: radii.input,
-                  },
-                ]}
-                onPress={() => handleJumpToQuestion(idx)}
-                activeOpacity={0.7}
+                onPress={() => setPaletteFilter('all')}
+                style={[styles.paletteResetBtn, { backgroundColor: colors.surface2, borderColor: colors.line }]}
               >
-                <Text style={[styles.numText, { color: textCol }]}>{idx + 1}</Text>
-                {status === 'marked' && (
-                  <View style={styles.cornerFlag}>
-                    <Flag size={8} color={colors.accent} fill={colors.accent} />
-                  </View>
-                )}
+                <Text style={[styles.paletteResetBtnText, { color: colors.text }]}>Show All ({questions.length})</Text>
               </TouchableOpacity>
-            );
-          })}
-        </View>
-      </ScrollView>
-    </View>
-  );
+            </View>
+          ) : (
+            <View style={[styles.gridNumbers, isMobile && styles.gridNumbersMobile]}>
+              {filteredQuestionIndices.map(({ q, idx }) => {
+                const status = getQuestionStatus(q.id, idx);
+                const isCurrent = idx === currentQuestionIndex;
+
+                let badgeBg: string = colors.surface;
+                let badgeBorder: string = colors.line;
+                let textCol: string = colors.muted;
+
+                if (status === 'answered') {
+                  badgeBg = colors.successBg;
+                  badgeBorder = colors.success;
+                  textCol = colors.success;
+                } else if (status === 'answered-marked') {
+                  badgeBg = colors.successBg;
+                  badgeBorder = colors.accent;
+                  textCol = colors.text;
+                } else if (status === 'marked') {
+                  badgeBg = colors.surface2;
+                  badgeBorder = colors.accent;
+                  textCol = colors.accent;
+                } else if (status === 'not-answered') {
+                  badgeBg = colors.dangerBg;
+                  badgeBorder = colors.danger;
+                  textCol = colors.danger;
+                }
+
+                if (isCurrent) {
+                  badgeBorder = colors.accent;
+                }
+
+                return (
+                  <TouchableOpacity
+                    key={q.id}
+                    style={[
+                      styles.numButton,
+                      {
+                        backgroundColor: badgeBg,
+                        borderColor: badgeBorder,
+                        borderWidth: isCurrent ? 2 : 1,
+                        borderRadius: radii.input,
+                      },
+                      isCurrent && { shadowColor: colors.accent, elevation: 3 },
+                    ]}
+                    onPress={() => handleJumpToQuestion(idx)}
+                    activeOpacity={0.7}
+                  >
+                    <Text
+                      style={[
+                        styles.numText,
+                        {
+                          color: textCol,
+                          fontWeight: isCurrent ? '800' : '700',
+                        },
+                      ]}
+                    >
+                      {idx + 1}
+                    </Text>
+                    {status === 'marked' && (
+                      <View style={styles.cornerFlag}>
+                        <Flag size={8} color={colors.accent} fill={colors.accent} />
+                      </View>
+                    )}
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          )}
+        </ScrollView>
+
+        {/* Mobile Palette Bottom Footer */}
+        {isMobile && (
+          <View
+            style={[
+              styles.paletteMobileFooter,
+              { borderTopColor: colors.line, backgroundColor: colors.surface2 },
+            ]}
+          >
+            <View style={styles.paletteFooterLeft}>
+              <Text style={[styles.paletteFooterLabel, { color: colors.muted }]}>
+                Current:
+              </Text>
+              <Text style={[styles.paletteFooterValue, { color: colors.text }]}>
+                Q{currentQuestionIndex + 1}
+              </Text>
+            </View>
+
+            <TouchableOpacity
+              style={[
+                styles.paletteFooterCloseBtn,
+                { backgroundColor: colors.accent },
+              ]}
+              onPress={() => setShowQuestionPalette(false)}
+              activeOpacity={0.8}
+            >
+              <Text style={[styles.paletteFooterCloseText, { color: colors.accentText }]}>
+                Resume Test
+              </Text>
+            </TouchableOpacity>
+          </View>
+        )}
+      </View>
+    );
+  };
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: colors.bg }]}>
@@ -1002,9 +1176,10 @@ export default function MockTestScreen() {
           visible={showQuestionPalette}
           onClose={() => setShowQuestionPalette(false)}
           title="Question Palette"
-          maxWidth={500}
+          maxWidth={460}
+          noPadding
         >
-          {renderPaletteContent()}
+          {renderPaletteContent(true)}
         </Modal>
       )}
 
@@ -1329,15 +1504,31 @@ const styles = StyleSheet.create({
   },
   paletteInner: {
     flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: 0,
     padding: 14,
+  },
+  paletteInnerMobile: {
+    padding: 0,
   },
   legendGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 10,
-    paddingBottom: 12,
+    gap: 6,
+    paddingHorizontal: 12,
+    paddingTop: 10,
+    paddingBottom: 10,
     borderBottomWidth: 1,
-    marginBottom: 12,
+  },
+  legendFilterChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    paddingHorizontal: 8,
+    paddingVertical: 5,
+    borderRadius: 6,
+    borderWidth: 1,
   },
   legendItem: {
     flexDirection: 'row',
@@ -1345,8 +1536,8 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   shapeBadge: {
-    width: 20,
-    height: 20,
+    width: 18,
+    height: 18,
     borderRadius: 4,
     borderWidth: 1,
     alignItems: 'center',
@@ -1359,15 +1550,23 @@ const styles = StyleSheet.create({
   },
   legendText: {
     fontSize: 11.5,
-    fontWeight: '500',
   },
   paletteScroll: {
     flex: 1,
+    minHeight: 0,
+  },
+  paletteScrollContent: {
+    padding: 12,
   },
   gridNumbers: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'flex-start',
     gap: 8,
+  },
+  gridNumbersMobile: {
+    justifyContent: 'center',
+    gap: 7,
   },
   numButton: {
     width: 38,
@@ -1384,6 +1583,56 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 2,
     right: 2,
+  },
+  paletteEmptyFilter: {
+    paddingVertical: 36,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    gap: 12,
+  },
+  paletteEmptyFilterText: {
+    fontSize: 13,
+  },
+  paletteResetBtn: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 6,
+    borderWidth: 1,
+  },
+  paletteResetBtnText: {
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  paletteMobileFooter: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderTopWidth: 1,
+    flexShrink: 0,
+  },
+  paletteFooterLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  paletteFooterLabel: {
+    fontSize: 12,
+  },
+  paletteFooterValue: {
+    fontSize: 13,
+    fontWeight: '700',
+  },
+  paletteFooterCloseBtn: {
+    paddingHorizontal: 14,
+    paddingVertical: 6,
+    borderRadius: 6,
+  },
+  paletteFooterCloseText: {
+    fontSize: 12,
+    fontWeight: '700',
   },
   confirmModalContent: {
     paddingTop: 8,

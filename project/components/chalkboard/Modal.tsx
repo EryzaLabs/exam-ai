@@ -7,6 +7,8 @@ import {
   StyleSheet,
   TouchableWithoutFeedback,
   Platform,
+  useWindowDimensions,
+  DimensionValue,
 } from 'react-native';
 import { X } from 'lucide-react-native';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
@@ -17,6 +19,8 @@ export interface ModalProps {
   title?: string;
   children: React.ReactNode;
   maxWidth?: number;
+  maxHeight?: DimensionValue;
+  noPadding?: boolean;
 }
 
 export default function Modal({
@@ -25,8 +29,19 @@ export default function Modal({
   title,
   children,
   maxWidth = 460,
+  maxHeight,
+  noPadding = false,
 }: ModalProps) {
   const { colors, radii, typography } = useChalkboardTheme();
+  const { width: windowWidth, height: windowHeight } = useWindowDimensions();
+  const isMobile = windowWidth < 640;
+
+  const resolvedMaxHeight: DimensionValue =
+    maxHeight !== undefined
+      ? maxHeight
+      : windowHeight
+      ? Math.min(windowHeight * (isMobile ? 0.86 : 0.88), 720)
+      : '88%';
 
   return (
     <RNModal
@@ -36,7 +51,12 @@ export default function Modal({
       onRequestClose={onClose}
     >
       <TouchableWithoutFeedback onPress={onClose}>
-        <View style={styles.backdrop}>
+        <View
+          style={[
+            styles.backdrop,
+            isMobile && { paddingHorizontal: 12, paddingVertical: 16 },
+          ]}
+        >
           <TouchableWithoutFeedback>
             <View
               style={[
@@ -46,6 +66,7 @@ export default function Modal({
                   borderColor: colors.line,
                   borderRadius: radii.card,
                   maxWidth,
+                  maxHeight: resolvedMaxHeight,
                 },
               ]}
               accessibilityRole="alert"
@@ -63,6 +84,7 @@ export default function Modal({
                             : undefined,
                       },
                     ]}
+                    numberOfLines={1}
                   >
                     {title}
                   </Text>
@@ -79,7 +101,14 @@ export default function Modal({
                 </View>
               ) : null}
 
-              <View style={styles.body}>{children}</View>
+              <View
+                style={[
+                  styles.body,
+                  { padding: noPadding ? 0 : isMobile ? 14 : 20 },
+                ]}
+              >
+                {children}
+              </View>
             </View>
           </TouchableWithoutFeedback>
         </View>
@@ -91,7 +120,7 @@ export default function Modal({
 const styles = StyleSheet.create({
   backdrop: {
     flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.55)',
+    backgroundColor: 'rgba(0, 0, 0, 0.65)',
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
@@ -100,22 +129,25 @@ const styles = StyleSheet.create({
     width: '100%',
     borderWidth: 1,
     overflow: 'hidden',
-    elevation: 5,
+    display: 'flex',
+    flexDirection: 'column',
+    elevation: 6,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 12,
+    shadowOpacity: 0.15,
+    shadowRadius: 14,
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
-    paddingVertical: 16,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
     borderBottomWidth: 1,
+    flexShrink: 0,
   },
   title: {
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: '700',
     flex: 1,
   },
@@ -128,6 +160,7 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   body: {
-    padding: 20,
+    flex: 1,
+    minHeight: 0,
   },
 });
