@@ -775,7 +775,15 @@ class SSCCGLService {
    * Submit test and calculate results
    */
   submitTest(attemptId: string): TestAnalytics | null {
-    const attempt = this.attempts.get(attemptId);
+    let attempt = this.attempts.get(attemptId);
+    if (!attempt) {
+      for (const [id, a] of this.attempts.entries()) {
+        if (id === attemptId || (a.testId && attemptId.startsWith(a.testId))) {
+          attempt = a;
+          break;
+        }
+      }
+    }
     if (!attempt) return null;
 
     if (attempt.status !== 'submitted') {
@@ -784,7 +792,15 @@ class SSCCGLService {
     }
     const endTime = attempt.endTime || new Date();
 
-    const paper = this.papers.get(attempt.testId) || this.parsedTests.get(attempt.testId);
+    let paper = this.papers.get(attempt.testId) || this.parsedTests.get(attempt.testId);
+    if (!paper) {
+      for (const [key, p] of this.papers.entries()) {
+        if (key.includes(attempt.testId) || attempt.testId.includes(key)) {
+          paper = p;
+          break;
+        }
+      }
+    }
     if (!paper) return null;
 
     // Calculate overall score

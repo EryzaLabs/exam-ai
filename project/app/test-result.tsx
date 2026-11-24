@@ -17,6 +17,7 @@ import {
   CheckCircle2,
   XCircle,
   HelpCircle,
+  AlertCircle,
   Bookmark,
   MessageSquare,
   Award,
@@ -102,9 +103,13 @@ export default function TestResultScreen() {
           }
         }
 
-        if (!res) {
+        if (!res && attemptId) {
           const history = await TestProgressService.getTestHistory();
           res = history.find((h) => h.attemptId === attemptId || h.id === attemptId);
+        }
+
+        if (!res) {
+          res = await TestProgressService.getLatestTestResult();
         }
 
         if (isCancelled) return;
@@ -256,13 +261,53 @@ export default function TestResultScreen() {
     } as any);
   };
 
-  if (loading || !result) {
+  if (loading) {
     return (
       <View style={[styles.centerLoading, { backgroundColor: colors.bg }]}>
         <ActivityIndicator size="large" color={colors.accent} />
         <Text style={[styles.loadingText, { color: colors.muted }]}>
           Computing performance analytics...
         </Text>
+      </View>
+    );
+  }
+
+  if (!result) {
+    return (
+      <View style={[styles.centerLoading, { backgroundColor: colors.bg, padding: 24 }]}>
+        <AlertCircle size={48} color={colors.danger} />
+        <Text style={[styles.loadingText, { color: colors.text, fontSize: 18, fontWeight: '700', marginTop: 16 }]}>
+          Unable to Load Test Result
+        </Text>
+        <Text style={{ color: colors.muted, textAlign: 'center', marginTop: 8, marginBottom: 24, fontSize: 14 }}>
+          We couldn't retrieve the analytics for this attempt. It may have already been saved to your history.
+        </Text>
+        <View style={{ flexDirection: 'row', gap: 12 }}>
+          <TouchableOpacity
+            style={{
+              paddingVertical: 12,
+              paddingHorizontal: 20,
+              borderRadius: 8,
+              backgroundColor: colors.surface,
+              borderWidth: 1,
+              borderColor: colors.line,
+            }}
+            onPress={() => router.replace('/test-history' as any)}
+          >
+            <Text style={{ color: colors.text, fontWeight: '600' }}>View Test History</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              paddingVertical: 12,
+              paddingHorizontal: 20,
+              borderRadius: 8,
+              backgroundColor: colors.accent,
+            }}
+            onPress={() => router.replace('/(tabs)/practice')}
+          >
+            <Text style={{ color: colors.accentText || '#1b1500', fontWeight: '600' }}>Back to Tests</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     );
   }

@@ -526,9 +526,10 @@ export default function MockTestScreen() {
   const performSubmit = async () => {
     try {
       setIsSubmitting(true);
-      if (!attempt) return;
+      if (!test && questions.length === 0) return;
 
-      const attemptId = attempt.id || `attempt_${Date.now()}`;
+      const attemptId = attempt?.id || `attempt_${Date.now()}`;
+      const effectiveTestId = test?.id || testId;
       const syncedAnswers: UserAnswer[] = [];
 
       questionStates.forEach((st, qId) => {
@@ -558,26 +559,119 @@ export default function MockTestScreen() {
         }
       });
 
-      attempt.answers = syncedAnswers;
-
-      const analytics = SSCCGLService.submitTest(attemptId);
-      if (analytics) {
-        const questionStatesObj: Record<string, any> = {};
-        questionStates.forEach((val, k) => {
-          questionStatesObj[k] = val;
-        });
-
-        await TestProgressService.saveTestResult({
-          ...analytics,
+      // Register or update attempt in SSCCGLService
+      let currentAttempt: TestAttempt | undefined = SSCCGLService.getAttempt(attemptId);
+      if (!currentAttempt) {
+        currentAttempt = attempt || {
+          id: attemptId,
+          testId: effectiveTestId,
+          userId: user?.uid || 'guest',
+          startTime: new Date(Date.now() - Math.max(0, ((test?.duration ? (test.duration <= 300 ? test.duration * 60 : test.duration) : 7200) - timeRemaining) * 1000)),
           answers: syncedAnswers,
-          userAnswers: syncedAnswers.map((a) => a.selectedOption),
-          questionStates: questionStatesObj,
-          date: new Date().toISOString(),
-          testTitle: test?.title,
-          filename: (params.filename as string) || (test as any)?.filename,
-          questionOrder: questions.map((q) => q.id),
-        });
+          currentQuestionIndex: 0,
+          score: 0,
+          totalMarks: test?.totalMarks || 0,
+          accuracy: 0,
+          status: 'in_progress',
+        };
+        (SSCCGLService as any).attempts.set(attemptId, currentAttempt);
       }
+      if (currentAttempt) {
+        currentAttempt.answers = syncedAnswers;
+      }
+      if (test) {
+        (SSCCGLService as any).papers.set(effectiveTestId, test);
+        if (params.filename) {
+          (SSCCGLService as any).papers.set(params.filename as string, test);
+        }
+      }
+
+      let analytics = SSCCGLService.submitTest(attemptId);
+
+      // Direct fallback calculation if analytics is null
+      const totalCorrect = syncedAnswers.filter((a) => a.isCorrect).length;
+      const totalAttempted = syncedAnswers.length;
+      const totalQuestions = questions.length;
+      const totalIncorrect = syncedAnswers.filter((a) => !a.isCorrect).length;
+      const totalUnattempted = Math.max(0, totalQuestions - totalAttempted);
+      const overallScore = syncedAnswers.reduce((sum, ans) => sum + ans.marksAwarded, 0);
+      const accuracy = totalAttempted > 0 ? (totalCorrect / totalAttempted) * 100 : 0;
+      const totalTestSecs = test?.duration ? (test.duration <= 300 ? test.duration * 60 : test.duration) : 7200;
+      const timeTaken = Math.max(0, totalTestSecs - timeRemaining);
+
+      if (!analytics) {
+        const sectionMap = new Map<string, { attempted: number; correct: number; incorrect: number; score: number; maxScore: number; timeTaken: number; total: number }>();
+        questions.forEach((q) => {
+          const sId = q.sectionId || 'main';
+          if (!sectionMap.has(sId)) {
+            sectionMap.set(sId, { attempted: 0, correct: 0, incorrect: 0, score: 0, maxScore: 0, timeTaken: 0, total: 0 });
+          }
+          const sStat = sectionMap.get(sId)!;
+          sStat.total++;
+          sStat.maxScore += (q.marks?.positive ?? 2);
+        });
+
+        syncedAnswers.forEach((ans) => {
+          const q = questions.find((item) => item.id === ans.questionId);
+          const sId = q?.sectionId || 'main';
+          const sStat = sectionMap.get(sId);
+          if (sStat) {
+            sStat.attempted++;
+            if (ans.isCorrect) sStat.correct++;
+            else sStat.incorrect++;
+            sStat.score += ans.marksAwarded;
+            sStat.timeTaken += (ans.timeTaken || 0);
+          }
+        });
+
+        const sectionAnalytics = Array.from(sectionMap.entries()).map(([sId, stat]) => ({
+          sectionId: sId,
+          sectionTitle: test?.sections?.find((s) => s.id === sId)?.title || sId,
+          attempted: stat.attempted,
+          correct: stat.correct,
+          incorrect: stat.incorrect,
+          skipped: Math.max(0, stat.total - stat.attempted),
+          accuracy: stat.attempted > 0 ? (stat.correct / stat.attempted) * 100 : 0,
+          score: stat.score,
+          maxScore: stat.maxScore,
+          timeTaken: stat.timeTaken,
+          averageTimePerQuestion: stat.attempted > 0 ? stat.timeTaken / stat.attempted : 0,
+        }));
+
+        analytics = {
+          testId: effectiveTestId,
+          attemptId,
+          overallScore,
+          totalMarks: test?.totalMarks || (totalQuestions * 2),
+          accuracy,
+          timeTaken,
+          sectionAnalytics,
+          strengthAreas: [],
+          weaknessAreas: [],
+          recommendations: [],
+          answers: syncedAnswers,
+        };
+      }
+
+      const questionStatesObj: Record<string, any> = {};
+      questionStates.forEach((val, k) => {
+        questionStatesObj[k] = val;
+      });
+
+      await TestProgressService.saveTestResult({
+        ...analytics,
+        totalQuestions,
+        totalCorrect,
+        totalIncorrect,
+        totalUnattempted,
+        answers: syncedAnswers,
+        userAnswers: syncedAnswers.map((a) => a.selectedOption),
+        questionStates: questionStatesObj,
+        date: new Date().toISOString(),
+        testTitle: test?.title,
+        filename: (params.filename as string) || (test as any)?.filename,
+        questionOrder: questions.map((q) => q.id),
+      });
 
       await TestProgressService.clearTestProgress(testId);
       if (params.filename && params.filename !== testId) {

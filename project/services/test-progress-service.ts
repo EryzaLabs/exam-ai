@@ -219,9 +219,20 @@ export const TestProgressService = {
     try {
       const cleanResult = JSON.parse(JSON.stringify(result));
 
-      // 1. Always cache in local AsyncStorage for instant loading
+      // 1. Synchronously save to Web localStorage for instant zero-latency page transition
+      if (typeof window !== 'undefined' && window.localStorage) {
+        try {
+          const serialized = JSON.stringify(cleanResult);
+          window.localStorage.setItem(`@test_result_${result.attemptId}`, serialized);
+          window.localStorage.setItem('@latest_test_result', serialized);
+        } catch {}
+      }
+
+      // 2. Always cache in local AsyncStorage for instant loading
       try {
-        await AsyncStorage.setItem(`@test_result_${result.attemptId}`, JSON.stringify(cleanResult));
+        const serialized = JSON.stringify(cleanResult);
+        await AsyncStorage.setItem(`@test_result_${result.attemptId}`, serialized);
+        await AsyncStorage.setItem('@latest_test_result', serialized);
         const rawIds = await AsyncStorage.getItem('@test_history_ids');
         const ids: string[] = rawIds ? JSON.parse(rawIds) : [];
         if (!ids.includes(result.attemptId)) {
@@ -231,23 +242,27 @@ export const TestProgressService = {
         console.warn('AsyncStorage save error for test result:', storageErr);
       }
 
-      // 2. Save to Firestore if authenticated
+      // 3. Save to Firestore if authenticated
       const user = auth.currentUser;
       if (user) {
-        console.log('Saving test result to Firestore...');
-        const docRef = doc(db, 'users', user.uid, 'history', result.attemptId);
-        await setDoc(docRef, cleanResult);
-        console.log('Test result saved to Firestore');
+        try {
+          const docRef = doc(db, 'users', user.uid, 'history', result.attemptId);
+          await setDoc(docRef, cleanResult);
 
-        // Calculate total attempted from section analytics
-        const totalAttempted = result.sectionAnalytics ? result.sectionAnalytics.reduce((sum, section) => sum + section.attempted, 0) : 0;
+          // Calculate total attempted from section analytics
+          const totalAttempted = result.sectionAnalytics
+            ? result.sectionAnalytics.reduce((sum, section) => sum + (section.attempted || 0), 0)
+            : result.totalQuestions || 0;
 
-        // Update user statistics in background
-        UserService.updateUserStats({
-          questionsAttempted: totalAttempted,
-          accuracy: result.accuracy,
-          totalTests: 1,
-        }).catch(err => console.error('Failed to update user stats:', err));
+          // Update user statistics in background
+          UserService.updateUserStats({
+            questionsAttempted: totalAttempted,
+            accuracy: result.accuracy || 0,
+            totalTests: 1,
+          }).catch((err) => console.error('Failed to update user stats:', err));
+        } catch (fsErr) {
+          console.warn('Firestore saveTestResult error:', fsErr);
+        }
       }
     } catch (e) {
       console.error('Failed to save test result', e);
@@ -317,6 +332,24 @@ export const TestProgressService = {
       return undefined;
     } catch (e) {
       console.error('Failed to get test result', e);
+      return undefined;
+    }
+  },
+
+  async getLatestTestResult(): Promise<TestResult | undefined> {
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        try {
+          const direct = window.localStorage.getItem('@latest_test_result');
+          if (direct) return JSON.parse(direct) as TestResult;
+        } catch {}
+      }
+      const cached = await AsyncStorage.getItem('@latest_test_result');
+      if (cached) {
+        return JSON.parse(cached) as TestResult;
+      }
+      return undefined;
+    } catch {
       return undefined;
     }
   },
