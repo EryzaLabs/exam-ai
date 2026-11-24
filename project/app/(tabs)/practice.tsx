@@ -27,6 +27,7 @@ import { useExam, EXAMS } from '@/context/exam-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { SSCCGLService } from '@/services/ssc-cgl-service';
 import PaperService, {
+  ServerPaper,
   INITIAL_TGT_PGT_PAPERS,
   INITIAL_TOPIC_PAPERS,
   INITIAL_FULL_MOCKS,
@@ -73,20 +74,43 @@ export default function PracticeScreen() {
   // Search topic list
   const [topicSearchQuery, setTopicSearchQuery] = useState('');
 
-  // Extract syllabus topics from available exam papers
-  const syllabusTopics = useMemo(() => {
-    if (examMode === 'upsc' || examMode === 'uppsc') {
-      const topicSubjects = Array.from(
-        new Set(
-          INITIAL_TOPIC_PAPERS.map((p) =>
-            p.subject ? p.subject.replace(/_/g, ' ') : ''
-          ).filter(Boolean)
-        )
-      );
-      if (topicSubjects.length > 0) {
-        return topicSubjects.sort((a, b) => a.localeCompare(b));
+  // Topic Sets Modal state
+  const [selectedTopicGroup, setSelectedTopicGroup] = useState<{
+    topic: string;
+    papers: ServerPaper[];
+    totalQuestions: number;
+  } | null>(null);
+
+  // Group exam papers by syllabus topic
+  const topicGroups = useMemo(() => {
+    let pool = INITIAL_TOPIC_PAPERS;
+    if (examMode === 'tgt') {
+      pool = INITIAL_TGT_PGT_PAPERS.filter((p) => p.series === 'tgt' || p.filename.includes('tgt'));
+    } else if (examMode === 'pgt') {
+      pool = INITIAL_TGT_PGT_PAPERS.filter((p) => p.series === 'pgt' || p.filename.includes('pgt'));
+    } else {
+      pool = INITIAL_TOPIC_PAPERS.length > 0 ? INITIAL_TOPIC_PAPERS : INITIAL_PAPERS_CATALOG;
+    }
+
+    const map = new Map<string, { topic: string; papers: ServerPaper[]; totalQuestions: number }>();
+
+    pool.forEach((p) => {
+      const topicName = (p.subject || '').replace(/_/g, ' ').trim() || (p.title || '').replace(/^Topic Test:\s*/i, '').trim();
+      if (!topicName) return;
+      if (!map.has(topicName)) {
+        map.set(topicName, {
+          topic: topicName,
+          papers: [],
+          totalQuestions: 0,
+        });
       }
-      return [
+      const entry = map.get(topicName)!;
+      entry.papers.push(p);
+      entry.totalQuestions += (p.totalQuestions || 20);
+    });
+
+    if (map.size === 0) {
+      const fallbackList = [
         'GFR Rules & Financial Administration',
         'CCS Conduct & Pension Rules',
         'School Leadership & Administration',
@@ -97,30 +121,27 @@ export default function PracticeScreen() {
         'Logical Reasoning',
         'Quantitative Aptitude',
       ];
+      fallbackList.forEach((fb) => {
+        map.set(fb, {
+          topic: fb,
+          papers: [INITIAL_PAPERS_CATALOG[0]],
+          totalQuestions: 20,
+        });
+      });
     }
 
-    const list = INITIAL_TGT_PGT_PAPERS.filter((p) => {
-      if (examMode === 'tgt') return p.series === 'tgt' || p.filename.includes('tgt');
-      if (examMode === 'pgt') return p.series === 'pgt' || p.filename.includes('pgt');
-      return true;
-    });
-
-    const unique = Array.from(
-      new Set(list.map((p) => p.subject).filter(Boolean))
-    ) as string[];
-
-    if (unique.length === 0) {
-      return [
-        'General Awareness',
-        'General Intelligence & Reasoning',
-        'Arithmetical & Numerical Ability',
-        'Hindi Language & Comprehension',
-        'English Language & Comprehension',
-        'Teaching Methodology / Pedagogy',
-      ];
-    }
-    return unique.sort((a, b) => a.localeCompare(b));
+    return Array.from(map.values()).sort((a, b) => a.topic.localeCompare(b.topic));
   }, [examMode]);
+
+  const syllabusTopics = useMemo(() => {
+    return topicGroups.map((g) => g.topic);
+  }, [topicGroups]);
+
+  const filteredTopicGroups = useMemo(() => {
+    if (!topicSearchQuery.trim()) return topicGroups;
+    const q = topicSearchQuery.toLowerCase();
+    return topicGroups.filter((g) => g.topic.toLowerCase().includes(q));
+  }, [topicGroups, topicSearchQuery]);
 
   // Handle immediate topic drill if routed with param: ?topic=...
   useEffect(() => {
@@ -176,28 +197,15 @@ export default function PracticeScreen() {
     }
   };
 
-  // 2. Topic-wise drill
-  const startTopicDrill = async (topicName: string) => {
+  // 2. Topic Drill and CBT launchers
+  const startPaperDrill = async (paperMeta: ServerPaper, topicName?: string) => {
+    setSelectedTopicGroup(null);
     setLoading(true);
     try {
-      let pool = INITIAL_TOPIC_PAPERS;
-      if (examMode === 'tgt') {
-        pool = INITIAL_TGT_PGT_PAPERS.filter((p) => p.series === 'tgt' || p.filename.includes('tgt'));
-      } else if (examMode === 'pgt') {
-        pool = INITIAL_TGT_PGT_PAPERS.filter((p) => p.series === 'pgt' || p.filename.includes('pgt'));
-      }
-
-      const normalizedTopic = topicName.toLowerCase().replace(/[\s_-]+/g, '');
-      const match =
-        pool.find((p) => {
-          const sub = (p.subject || '').toLowerCase().replace(/[\s_-]+/g, '');
-          const title = (p.title || '').toLowerCase().replace(/[\s_-]+/g, '');
-          return sub === normalizedTopic || title.includes(normalizedTopic) || normalizedTopic.includes(sub);
-        }) || pool[0] || INITIAL_PAPERS_CATALOG[0];
-
-      const paper = await SSCCGLService.fetchPaper(match.filename);
+      const paper = await SSCCGLService.fetchPaper(paperMeta.filename);
       if (paper && paper.sections && paper.sections.length > 0) {
-        const all = paper.sections.flatMap((s) => s.questions).slice(0, 15);
+        // Load all questions in the official paper without artificial truncation
+        const all = paper.sections.flatMap((s) => s.questions);
         const mapped: QuizQuestionItem[] = all.map((q) => ({
           id: q.id,
           questionText: q.questionText,
@@ -207,17 +215,43 @@ export default function PracticeScreen() {
             typeof q.explanation === 'string'
               ? q.explanation
               : q.explanation?.english || 'Official solution derivation.',
-          topic: topicName,
+          topic: topicName || paper.title || 'Practice Set',
         }));
 
-        setActiveQuizTitle(`${topicName} Practice Drill`);
+        setActiveQuizTitle(paper.title || `${topicName || 'Topic'} Practice Set`);
         setActiveQuizQuestions(mapped);
         setQuizCompleted(false);
       }
     } catch (e) {
-      console.warn('Topic drill load error:', e);
+      console.warn('Paper drill load error:', e);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const startPaperCBT = (paperMeta: ServerPaper) => {
+    setSelectedTopicGroup(null);
+    router.push({
+      pathname: '/test-instructions',
+      params: {
+        testId: paperMeta.testId || paperMeta.id,
+        filename: paperMeta.filename,
+      },
+    } as any);
+  };
+
+  const startTopicDrill = async (topicName: string) => {
+    const group = topicGroups.find(
+      (g) => g.topic.toLowerCase() === topicName.toLowerCase() ||
+             topicName.toLowerCase().includes(g.topic.toLowerCase())
+    );
+    if (group && group.papers.length > 0) {
+      setSelectedTopicGroup(group);
+    } else {
+      const fallbackPaper = INITIAL_TOPIC_PAPERS[0] || INITIAL_PAPERS_CATALOG[0];
+      if (fallbackPaper) {
+        startPaperDrill(fallbackPaper, topicName);
+      }
     }
   };
 
@@ -601,7 +635,9 @@ export default function PracticeScreen() {
             Syllabus Topics & Practice Sets
           </Text>
           <Text style={[styles.sectionSubtitle, { color: colors.muted }]}>
-            Tap any topic to begin a focused 15-question practice set with instant feedback.
+            {isSubscribed
+              ? 'Choose any syllabus topic to practice full official question sets with instant step-by-step explanations or timed CBT tests.'
+              : 'Tap any topic to browse official question sets with instant feedback.'}
           </Text>
 
           {/* Search Box */}
@@ -623,24 +659,24 @@ export default function PracticeScreen() {
 
           {/* Topic Rows */}
           <View style={styles.topicRowsList}>
-            {filteredTopics.map((topic, idx) => (
+            {filteredTopicGroups.map((group, idx) => (
               <Card
                 key={idx}
                 style={styles.topicRowCard}
-                onPress={() => startTopicDrill(topic)}
+                onPress={() => setSelectedTopicGroup(group)}
               >
                 <View style={styles.topicRowLeft}>
                   <Text style={[styles.topicRowName, { color: colors.text }]}>
-                    {topic}
+                    {group.topic}
                   </Text>
                   <Text style={[styles.topicRowSub, { color: colors.muted }]}>
-                    Official CBT syllabus topic · 15 practice questions
+                    {group.papers.length} Practice {group.papers.length === 1 ? 'Set' : 'Sets'} · {group.totalQuestions} Questions Total
                   </Text>
                 </View>
 
                 <View style={styles.topicRowRight}>
                   <Text style={[styles.drillBtnText, { color: colors.accent }]}>
-                    Practice
+                    {group.papers.length > 1 ? 'View Sets' : 'Practice'}
                   </Text>
                   <ChevronRight size={14} color={colors.accent} />
                 </View>
@@ -649,6 +685,96 @@ export default function PracticeScreen() {
           </View>
         </View>
       </ScrollView>
+
+      {/* Topic Practice Sets Modal */}
+      <Modal
+        visible={Boolean(selectedTopicGroup)}
+        onClose={() => setSelectedTopicGroup(null)}
+        title={selectedTopicGroup?.topic || 'Topic Practice Sets'}
+      >
+        {selectedTopicGroup && (
+          <View style={styles.modalContent}>
+            <Text style={[styles.topicModalSubtitle, { color: colors.muted }]}>
+              {selectedTopicGroup.papers.length} official practice {selectedTopicGroup.papers.length === 1 ? 'set' : 'sets'} · {selectedTopicGroup.totalQuestions} questions total
+            </Text>
+
+            <ScrollView style={{ maxHeight: 380, marginTop: 12 }} showsVerticalScrollIndicator={false}>
+              <View style={{ gap: 10 }}>
+                {selectedTopicGroup.papers.map((paper, idx) => {
+                  const partMatch = paper.filename.match(/test_(\d+)\.json/i);
+                  const partNum = partMatch ? partMatch[1] : `${idx + 1}`;
+
+                  return (
+                    <View
+                      key={paper.id || idx}
+                      style={[
+                        styles.setRowCard,
+                        {
+                          backgroundColor: colors.surface2,
+                          borderColor: colors.line,
+                          borderRadius: radii.card,
+                        },
+                      ]}
+                    >
+                      <View style={styles.setRowInfo}>
+                        <Text style={[styles.setRowTitle, { color: colors.text }]}>
+                          Practice Set {partNum}
+                        </Text>
+                        <Text style={[styles.setRowMeta, { color: colors.muted }]}>
+                          {paper.totalQuestions || 20} Questions · {paper.duration || 20} Mins
+                        </Text>
+                      </View>
+
+                      <View style={styles.setRowActions}>
+                        <TouchableOpacity
+                          style={[
+                            styles.setActionButton,
+                            {
+                              backgroundColor: colors.surface,
+                              borderColor: colors.line,
+                              borderRadius: radii.button,
+                            },
+                          ]}
+                          onPress={() => startPaperDrill(paper, selectedTopicGroup.topic)}
+                          activeOpacity={0.8}
+                        >
+                          <Text style={[styles.setActionText, { color: colors.text }]}>
+                            Drill
+                          </Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                          style={[
+                            styles.setActionButton,
+                            {
+                              backgroundColor: colors.accent,
+                              borderRadius: radii.button,
+                            },
+                          ]}
+                          onPress={() => startPaperCBT(paper)}
+                          activeOpacity={0.8}
+                        >
+                          <Text style={[styles.setActionText, { color: colors.accentText }]}>
+                            CBT Test
+                          </Text>
+                        </TouchableOpacity>
+                      </View>
+                    </View>
+                  );
+                })}
+              </View>
+            </ScrollView>
+
+            <View style={{ marginTop: 16 }}>
+              <Button
+                title="Close"
+                variant="secondary"
+                onPress={() => setSelectedTopicGroup(null)}
+              />
+            </View>
+          </View>
+        )}
+      </Modal>
 
       {/* Custom Test Modal */}
       <Modal
@@ -955,5 +1081,42 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
+  },
+  topicModalSubtitle: {
+    fontSize: 13,
+    marginBottom: 6,
+  },
+  setRowCard: {
+    padding: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderWidth: 1,
+  },
+  setRowInfo: {
+    flex: 1,
+    marginRight: 10,
+  },
+  setRowTitle: {
+    fontSize: 14,
+    fontWeight: '700',
+    marginBottom: 2,
+  },
+  setRowMeta: {
+    fontSize: 12,
+  },
+  setRowActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  setActionButton: {
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+    borderWidth: 1,
+  },
+  setActionText: {
+    fontSize: 12.5,
+    fontWeight: '700',
   },
 });
