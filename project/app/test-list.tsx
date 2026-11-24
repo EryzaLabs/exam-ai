@@ -276,13 +276,28 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
   // Start / Resume / Review test
   const handleStartTest = (paper: ServerPaper) => {
-    router.push({
-      pathname: '/mock-test',
-      params: {
-        testId: paper.testId || paper.id,
-        filename: paper.filename,
-      },
-    } as any);
+    const hasActive =
+      activeAttempts.has(paper.id) ||
+      activeAttempts.has(paper.testId || '') ||
+      activeAttempts.has(paper.filename);
+
+    if (hasActive) {
+      router.push({
+        pathname: '/mock-test',
+        params: {
+          testId: paper.testId || paper.id,
+          filename: paper.filename,
+        },
+      } as any);
+    } else {
+      router.push({
+        pathname: '/test-instructions',
+        params: {
+          testId: paper.testId || paper.id,
+          filename: paper.filename,
+        },
+      } as any);
+    }
   };
 
   const handleReviewTest = (paper: ServerPaper) => {

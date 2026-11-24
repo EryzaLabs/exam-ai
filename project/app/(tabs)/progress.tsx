@@ -27,6 +27,7 @@ import { useExam } from '@/context/exam-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { TestProgressService, TestResult } from '@/services/test-progress-service';
 import UserService from '@/services/user-service';
+import { extractTestTopicAndSubject } from '@/utils/topic-resolver';
 import AppShell from '@/components/chalkboard/AppShell';
 import Card from '@/components/chalkboard/Card';
 import Chip from '@/components/chalkboard/Chip';
@@ -125,13 +126,32 @@ export default function AnalyticsScreen() {
     const map: Record<string, { topic: string; total: number; correct: number }> = {};
 
     filteredHistory.forEach((t) => {
-      if (t.sectionAnalytics) {
+      const meta = extractTestTopicAndSubject({
+        testTitle: t.testTitle,
+        filename: (t as any).filename,
+      });
+
+      if (t.sectionAnalytics && t.sectionAnalytics.length > 0) {
         t.sectionAnalytics.forEach((sec: any) => {
-          const name = sec.sectionName || sec.title || 'Core Subject';
+          let name = sec.sectionName || sec.title || '';
+          if (
+            !name ||
+            name === 'General' ||
+            name === 'Core Subject' ||
+            name.toLowerCase().startsWith('correct answer:') ||
+            name.length > 65
+          ) {
+            name = meta?.topic || 'Educational Administration & Governance';
+          }
           if (!map[name]) map[name] = { topic: name, total: 0, correct: 0 };
           map[name].total += sec.attempted || 0;
           map[name].correct += sec.correct || 0;
         });
+      } else if (t.answers && t.answers.length > 0) {
+        const name = meta?.topic || 'Educational Administration & Governance';
+        if (!map[name]) map[name] = { topic: name, total: 0, correct: 0 };
+        map[name].total += t.answers.length;
+        map[name].correct += t.answers.filter((a: any) => a.isCorrect).length;
       }
     });
 
