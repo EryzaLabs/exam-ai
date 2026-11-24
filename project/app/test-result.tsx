@@ -13,6 +13,7 @@ import { useLocalSearchParams, router } from 'expo-router';
 import {
   RotateCcw,
   ArrowLeft,
+  ArrowRight,
   CheckCircle2,
   XCircle,
   HelpCircle,
@@ -23,6 +24,8 @@ import {
   Target,
   Sparkles,
   Zap,
+  BookOpen,
+  BarChart2,
 } from 'lucide-react-native';
 import SSCCGLService, {
   TestAnalytics,
@@ -73,6 +76,7 @@ export default function TestResultScreen() {
     'all' | 'correct' | 'wrong' | 'unattempted' | 'bookmarked'
   >('all');
   const [bookmarkedSet, setBookmarkedSet] = useState<Set<string>>(new Set());
+  const [resultViewMode, setResultViewMode] = useState<'solutions' | 'topics'>('solutions');
 
   // Load analytics & paper
   useEffect(() => {
@@ -209,6 +213,11 @@ export default function TestResultScreen() {
   // Weak topics (<50% accuracy)
   const weakTopics = useMemo(() => {
     return topicStats.filter((t) => t.accuracy < 50);
+  }, [topicStats]);
+
+  // Satisfactory / Strong topics (>=50% accuracy)
+  const strongTopics = useMemo(() => {
+    return topicStats.filter((t) => t.accuracy >= 50);
   }, [topicStats]);
 
   // Filtered Review List
@@ -435,9 +444,102 @@ export default function TestResultScreen() {
           )}
         </View>
 
-        {/* Section 3: Topic Mastery Breakdown */}
+        {/* Section 3: Navigation Switcher between Question Review & Topic Analytics */}
         {topicStats.length > 0 && (
+          <View style={[styles.viewModeTabsContainer, { backgroundColor: colors.surface2 }]}>
+            <TouchableOpacity
+              activeOpacity={0.7}
+              onPress={() => setResultViewMode('solutions')}
+              style={[
+                styles.viewModeTab,
+                resultViewMode === 'solutions' && [
+                  styles.viewModeTabActive,
+                  { backgroundColor: colors.surface },
+                ],
+              ]}
+            >
+              <BookOpen
+                size={16}
+                color={resultViewMode === 'solutions' ? colors.text : colors.muted}
+              />
+              <Text
+                style={[
+                  styles.viewModeTabText,
+                  { color: resultViewMode === 'solutions' ? colors.text : colors.muted },
+                ]}
+              >
+                Question Review ({questionsWithStatus.length})
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              activeOpacity={0.7}
+              onPress={() => setResultViewMode('topics')}
+              style={[
+                styles.viewModeTab,
+                resultViewMode === 'topics' && [
+                  styles.viewModeTabActive,
+                  { backgroundColor: colors.surface },
+                ],
+              ]}
+            >
+              <BarChart2
+                size={16}
+                color={resultViewMode === 'topics' ? colors.text : colors.muted}
+              />
+              <Text
+                style={[
+                  styles.viewModeTabText,
+                  { color: resultViewMode === 'topics' ? colors.text : colors.muted },
+                ]}
+              >
+                Topic Analytics ({topicStats.length})
+              </Text>
+              {weakTopics.length > 0 && (
+                <View style={[styles.weakCountBadge, { backgroundColor: colors.danger + '20' }]}>
+                  <Text style={[styles.weakCountBadgeText, { color: colors.danger }]}>
+                    {weakTopics.length} weak
+                  </Text>
+                </View>
+              )}
+            </TouchableOpacity>
+          </View>
+        )}
+
+        {/* View Mode: SOLUTIONS */}
+        {resultViewMode === 'solutions' ? (
           <View style={styles.sectionWrap}>
+            {/* Compact Weak Topics Banner if applicable */}
+            {weakTopics.length > 0 && (
+              <TouchableOpacity
+                activeOpacity={0.8}
+                onPress={() => setResultViewMode('topics')}
+                style={[
+                  styles.weakTopicSummaryBanner,
+                  {
+                    backgroundColor: colors.surface2,
+                    borderColor: colors.danger + '35',
+                  },
+                ]}
+              >
+                <View style={styles.bannerLeft}>
+                  <Target size={16} color={colors.danger} />
+                  <Text style={[styles.bannerText, { color: colors.text }]}>
+                    <Text style={{ fontWeight: '700', color: colors.danger }}>
+                      {weakTopics.length} weak {weakTopics.length === 1 ? 'topic' : 'topics'}
+                    </Text>{' '}
+                    identified under 50% accuracy.
+                  </Text>
+                </View>
+                <View style={styles.bannerRight}>
+                  <Text style={[styles.bannerActionText, { color: colors.text }]}>
+                    View Breakdown
+                  </Text>
+                  <ArrowRight size={13} color={colors.text} />
+                </View>
+              </TouchableOpacity>
+            )}
+
             <Text
               style={[
                 styles.sectionHeading,
@@ -447,50 +549,11 @@ export default function TestResultScreen() {
                 },
               ]}
             >
-              Topic Performance Breakdown
+              Review Solutions & Explanations
             </Text>
             <Text style={[styles.sectionSub, { color: colors.muted }]}>
-              Topics below 50% accuracy are highlighted in red. Focus your revision on these areas.
+              Study the official derivations and use "Ask AI" to resolve doubts on difficult questions.
             </Text>
-
-            <Card noPadding style={{ marginTop: 12 }}>
-              {topicStats.map((item, idx) => (
-                <View key={idx} style={{ paddingHorizontal: 16 }}>
-                  <TopicBar
-                    topic={item.topic}
-                    accuracy={item.accuracy}
-                    attempted={item.total}
-                    correct={item.correct}
-                    onDrill={() =>
-                      router.push({
-                        pathname: '/practice',
-                        params: { topic: item.topic },
-                      } as any)
-                    }
-                    drillLabel="Practice Drill"
-                  />
-                </View>
-              ))}
-            </Card>
-          </View>
-        )}
-
-        {/* Section 4: Detailed Question Review */}
-        <View style={styles.sectionWrap}>
-          <Text
-            style={[
-              styles.sectionHeading,
-              {
-                color: colors.text,
-                fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
-              },
-            ]}
-          >
-            Review Solutions & Explanations
-          </Text>
-          <Text style={[styles.sectionSub, { color: colors.muted }]}>
-            Study the official derivations and use "Ask AI" to resolve doubts on difficult questions.
-          </Text>
 
           {/* Filter Chips */}
           <ScrollView
@@ -734,6 +797,128 @@ export default function TestResultScreen() {
             })}
           </View>
         </View>
+        ) : (
+          /* View Mode: TOPICS */
+          <View style={styles.sectionWrap}>
+            <View style={styles.topicsTabHeader}>
+              <View style={{ flex: 1 }}>
+                <Text
+                  style={[
+                    styles.sectionHeading,
+                    {
+                      color: colors.text,
+                      fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+                    },
+                  ]}
+                >
+                  Topic Performance Breakdown
+                </Text>
+                <Text style={[styles.sectionSub, { color: colors.muted }]}>
+                  Topics below 50% accuracy are highlighted in red. Focus your revision on these areas.
+                </Text>
+              </View>
+              <TouchableOpacity
+                activeOpacity={0.7}
+                onPress={() => setResultViewMode('solutions')}
+                style={[
+                  styles.backToReviewBtn,
+                  {
+                    backgroundColor: colors.surface2,
+                    borderColor: colors.line,
+                  },
+                ]}
+              >
+                <ArrowLeft size={13} color={colors.text} />
+                <Text style={[styles.backToReviewBtnText, { color: colors.text }]}>
+                  Review Questions
+                </Text>
+              </TouchableOpacity>
+            </View>
+
+            {/* Quick Summary Cards */}
+            <View style={styles.topicOverviewCardsRow}>
+              <View
+                style={[
+                  styles.topicStatSummaryCard,
+                  { backgroundColor: colors.surface2, borderColor: colors.line },
+                ]}
+              >
+                <Text style={[styles.topicStatSummaryVal, { color: colors.text }]}>
+                  {topicStats.length}
+                </Text>
+                <Text style={[styles.topicStatSummaryLbl, { color: colors.muted }]}>
+                  Topics Tested
+                </Text>
+              </View>
+
+              <View
+                style={[
+                  styles.topicStatSummaryCard,
+                  {
+                    backgroundColor:
+                      weakTopics.length > 0 ? colors.danger + '12' : colors.surface2,
+                    borderColor:
+                      weakTopics.length > 0 ? colors.danger + '40' : colors.line,
+                  },
+                ]}
+              >
+                <Text
+                  style={[
+                    styles.topicStatSummaryVal,
+                    { color: weakTopics.length > 0 ? colors.danger : colors.text },
+                  ]}
+                >
+                  {weakTopics.length}
+                </Text>
+                <Text
+                  style={[
+                    styles.topicStatSummaryLbl,
+                    { color: weakTopics.length > 0 ? colors.danger : colors.muted },
+                  ]}
+                >
+                  Weak (&lt;50%)
+                </Text>
+              </View>
+
+              <View
+                style={[
+                  styles.topicStatSummaryCard,
+                  {
+                    backgroundColor: colors.success + '12',
+                    borderColor: colors.success + '40',
+                  },
+                ]}
+              >
+                <Text style={[styles.topicStatSummaryVal, { color: colors.success }]}>
+                  {strongTopics.length}
+                </Text>
+                <Text style={[styles.topicStatSummaryLbl, { color: colors.success }]}>
+                  Strong (≥50%)
+                </Text>
+              </View>
+            </View>
+
+            <Card noPadding style={{ marginTop: 4 }}>
+              {topicStats.map((item, idx) => (
+                <View key={idx} style={{ paddingHorizontal: 16 }}>
+                  <TopicBar
+                    topic={item.topic}
+                    accuracy={item.accuracy}
+                    attempted={item.total}
+                    correct={item.correct}
+                    onDrill={() =>
+                      router.push({
+                        pathname: '/practice',
+                        params: { topic: item.topic },
+                      } as any)
+                    }
+                    drillLabel="Practice Drill"
+                  />
+                </View>
+              ))}
+            </Card>
+          </View>
+        )}
 
         {/* Section 5: Offer Card for Non-Buyers */}
         {!isSubscribed && (
@@ -990,5 +1175,116 @@ const styles = StyleSheet.create({
   reviewExplanationBody: {
     fontSize: 13,
     lineHeight: 19,
+  },
+  viewModeTabsContainer: {
+    flexDirection: 'row',
+    borderRadius: 10,
+    padding: 4,
+    marginTop: 20,
+    marginBottom: 16,
+    gap: 6,
+  },
+  viewModeTab: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    borderRadius: 8,
+    gap: 7,
+  },
+  viewModeTabActive: {
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.08,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  viewModeTabText: {
+    fontSize: 13.5,
+    fontWeight: '600',
+  },
+  weakCountBadge: {
+    paddingHorizontal: 6,
+    paddingVertical: 1,
+    borderRadius: 10,
+    marginLeft: 2,
+  },
+  weakCountBadgeText: {
+    fontSize: 11,
+    fontWeight: '700',
+  },
+  weakTopicSummaryBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 8,
+    borderWidth: 1,
+    marginBottom: 16,
+  },
+  bannerLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    flex: 1,
+  },
+  bannerText: {
+    fontSize: 12.5,
+    fontWeight: '500',
+    flex: 1,
+  },
+  bannerRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  bannerActionText: {
+    fontSize: 12.5,
+    fontWeight: '600',
+  },
+  topicOverviewCardsRow: {
+    flexDirection: 'row',
+    gap: 10,
+    marginBottom: 16,
+  },
+  topicStatSummaryCard: {
+    flex: 1,
+    padding: 12,
+    borderRadius: 8,
+    borderWidth: 1,
+    alignItems: 'center',
+  },
+  topicStatSummaryVal: {
+    fontSize: 20,
+    fontWeight: '700',
+    marginBottom: 2,
+  },
+  topicStatSummaryLbl: {
+    fontSize: 11,
+    fontWeight: '500',
+    textAlign: 'center',
+  },
+  topicsTabHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 12,
+    gap: 12,
+  },
+  backToReviewBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    paddingVertical: 6,
+    paddingHorizontal: 10,
+    borderRadius: 6,
+    borderWidth: 1,
+  },
+  backToReviewBtnText: {
+    fontSize: 12,
+    fontWeight: '600',
   },
 });
