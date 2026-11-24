@@ -394,6 +394,21 @@ class SSCCGLService {
     }
     const testId = paper.test_id || paper.id || paper._id || 'unknown_id';
     
+    const isTopicWise = (filename && filename.includes('topic_wise')) || 
+                        (paper.type === 'topic_wise') ||
+                        (testName && testName.toLowerCase().includes('topic')) ||
+                        effectiveFilename.includes('topic_wise');
+
+    const isDsssbOrTgtPgt = effectiveFilename.includes('tgt_pgt') || 
+                            effectiveFilename.includes('dsssb') || 
+                            (paper.exam && paper.exam.toLowerCase().includes('dsssb'));
+
+    const marksScheme = isTopicWise
+      ? { positive: 2.0, negative: 0.67 }
+      : isDsssbOrTgtPgt
+      ? { positive: 1.0, negative: 0.25 }
+      : { positive: 2.5, negative: 0.833 };
+
     // Support both multi-section structures (e.g. DSSSB 10/15 sections) and flat question arrays
     let sections: ParsedSection[] = [];
     let parsedQuestions: ParsedQuestion[] = [];
@@ -406,7 +421,7 @@ class SSCCGLService {
       sections = paper.sections.map((s: any, idx: number) => {
         const sId = s.id || s._id || `section_${idx + 1}`;
         const sTitle = s.title || s.name || `Section ${idx + 1}`;
-        const sQuestions = (s.questions || []).map((q: any) => this.parseQuestion(q, sId));
+        const sQuestions = (s.questions || []).map((q: any) => this.parseQuestion(q, sId, marksScheme));
         return {
           id: sId,
           title: sTitle,
@@ -423,7 +438,7 @@ class SSCCGLService {
         rawQuestions = paper.sections.flatMap((s: any) => s.questions || []);
       }
       
-      parsedQuestions = rawQuestions.map((q: any) => this.parseQuestion(q, 'main'));
+      parsedQuestions = rawQuestions.map((q: any) => this.parseQuestion(q, 'main', marksScheme));
 
       const isTopicWiseFallback = (filename && filename.includes('topic_wise')) || 
                                   (paper.type === 'topic_wise') ||
@@ -448,23 +463,15 @@ class SSCCGLService {
     }
 
     const totalQuestions = parsedQuestions.length;
-    const isTopicWise = (filename && filename.includes('topic_wise')) || 
-                        (paper.type === 'topic_wise') ||
-                        (testName && testName.toLowerCase().includes('topic')) ||
-                        (totalQuestions <= 30 && paper.type !== 'full_mock');
-
-    const isDsssbOrTgtPgt = effectiveFilename.includes('tgt_pgt') || 
-                            effectiveFilename.includes('dsssb') || 
-                            (paper.exam && paper.exam.toLowerCase().includes('dsssb'));
 
     const defaultDuration = isTopicWise ? 1200 : 7200; // 20 mins for topic tests, 2 hours for full mocks
-    const defaultMarks = isDsssbOrTgtPgt ? totalQuestions * 1.0 : totalQuestions * 2.5;
+    const defaultMarks = isTopicWise ? totalQuestions * 2.0 : isDsssbOrTgtPgt ? totalQuestions * 1.0 : totalQuestions * 2.5;
 
     let finalDuration = defaultDuration;
     if (paper.duration_minutes) {
       finalDuration = paper.duration_minutes * 60;
     } else if (paper.duration && (!isTopicWise || paper.duration <= 1800)) {
-      finalDuration = paper.duration;
+      finalDuration = paper.duration <= 300 ? paper.duration * 60 : paper.duration;
     } else {
       finalDuration = defaultDuration;
     }
@@ -475,7 +482,7 @@ class SSCCGLService {
       examType: paper.exam ? `${paper.exam.toUpperCase()} Series` : 'UPSC Principal',
       duration: finalDuration,
       totalQuestions,
-      totalMarks: paper.total_marks || defaultMarks,
+      totalMarks: isTopicWise ? (paper.totalMarks || defaultMarks) : (paper.total_marks || paper.totalMarks || defaultMarks),
       sections,
       metadata: this.extractMetadata(testName),
     };
@@ -543,7 +550,8 @@ class SSCCGLService {
    */
   private parseQuestion(
     question: any,
-    sectionId: string
+    sectionId: string,
+    defaultMarksScheme?: { positive: number; negative: number }
   ): ParsedQuestion {
     // 1. Extract raw options (handles both UPSC array of strings and TGT/PGT object options)
     let rawOptionsEn: string[] = [];
@@ -632,8 +640,8 @@ class SSCCGLService {
       },
       keyConcepts,
       marks: {
-        positive: Number(question.posMarks) || 2.5,
-        negative: Number(question.negMarks) || 0.833, // 33.33% of pos marks
+        positive: Number(question.posMarks) || defaultMarksScheme?.positive || 2.5,
+        negative: Number(question.negMarks) || defaultMarksScheme?.negative || 0.833, // standard negative scheme
       },
       metadata: {
         language: question.language || 'en',

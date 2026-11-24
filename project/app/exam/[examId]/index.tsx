@@ -13,7 +13,7 @@ import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { useAuth } from '@/context/auth-context';
 import { useSub } from '@/context/subscription-context';
 import { SSCCGLService } from '@/services/ssc-cgl-service';
-import PaperService, { INITIAL_TGT_PGT_PAPERS, ServerPaper } from '@/services/paper-service';
+import PaperService, { INITIAL_PAPERS_CATALOG, ServerPaper } from '@/services/paper-service';
 import { PLANS } from '@/app/premium';
 import { EXAMS, ExamTarget } from '@/context/exam-context';
 import FirstVisitHeader from '@/components/first-visit/FirstVisitHeader';
@@ -93,7 +93,7 @@ export default function ExamScreen() {
         try {
           allPapers = await SSCCGLService.fetchPapersList();
         } catch {
-          allPapers = INITIAL_TGT_PGT_PAPERS || [];
+          allPapers = INITIAL_PAPERS_CATALOG || [];
         }
 
         // 2. Filter papers for this exam
@@ -116,7 +116,7 @@ export default function ExamScreen() {
           if (filtered.length === 0) {
             // fallback to full mocks adapted for UP Principal
             filtered = allPapers.filter(
-              (p) => !p.series && (p.filename.includes('full_mock') || p.filename.includes('SSC_CGL'))
+              (p) => p.filename.includes('full_mock') || p.series === 'upsc' || p.filename.includes('topic_wise')
             );
           }
         } else {
@@ -124,7 +124,8 @@ export default function ExamScreen() {
           filtered = allPapers.filter(
             (p) =>
               p.series === 'upsc' ||
-              (!p.series && (p.filename.includes('full_mock') || p.filename.includes('SSC_CGL') || p.filename.includes('topic_wise')))
+              p.filename.includes('full_mock') ||
+              p.filename.includes('topic_wise')
           );
         }
 
@@ -165,19 +166,19 @@ export default function ExamScreen() {
             (isTopic ? 20 : examId === 'pgt' ? 300 : examId === 'tgt' ? 200 : 120);
 
           let duration = 120;
-          if (paper.duration) {
-            duration = paper.duration > 300 ? Math.round(paper.duration / 60) : paper.duration;
-          } else if (isTopic) {
+          if (isTopic) {
             duration = 20;
+          } else if (paper.duration) {
+            duration = paper.duration > 300 ? Math.round(paper.duration / 60) : paper.duration;
           } else if (examId === 'pgt') {
             duration = 180;
           }
 
           let marks = 200;
-          if (paper.totalMarks) {
+          if (isTopic) {
+            marks = paper.totalMarks || (questionCount * 2);
+          } else if (paper.totalMarks) {
             marks = paper.totalMarks;
-          } else if (isTopic) {
-            marks = questionCount * 2.5;
           } else if (examId === 'pgt' || examId === 'upsc' || examId === 'uppsc') {
             marks = 300;
           }

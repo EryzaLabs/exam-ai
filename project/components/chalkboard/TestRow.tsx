@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Lock, Play, RotateCcw, CheckCircle, ArrowRight } from 'lucide-react-native';
+import { useSub } from '@/context/subscription-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import Pill from './Pill';
 import Button from './Button';
@@ -35,6 +36,10 @@ export default function TestRow({
   onReview,
 }: TestRowProps) {
   const { colors, radii } = useChalkboardTheme();
+  const { isSubscribed } = useSub();
+
+  const isActuallyLocked = isSubscribed ? false : isLocked;
+  const isActuallyFree = isSubscribed ? false : isFree;
 
   return (
     <View
@@ -44,7 +49,7 @@ export default function TestRow({
           backgroundColor: colors.surface,
           borderColor: colors.line,
           borderRadius: radii.card,
-          opacity: isLocked ? 0.8 : 1,
+          opacity: isActuallyLocked ? 0.8 : 1,
         },
       ]}
     >
@@ -53,7 +58,7 @@ export default function TestRow({
           <Text
             style={[
               styles.title,
-              { color: isLocked ? colors.muted : colors.text },
+              { color: isActuallyLocked ? colors.muted : colors.text },
             ]}
             numberOfLines={2}
           >
@@ -62,9 +67,9 @@ export default function TestRow({
         </View>
 
         <View style={styles.metaRow}>
-          {isFree ? (
+          {isActuallyFree ? (
             <Pill label="Free" variant="free" />
-          ) : isLocked ? (
+          ) : isActuallyLocked ? (
             <Pill
               label="Series Pass"
               variant="series"
@@ -73,6 +78,12 @@ export default function TestRow({
           ) : status === 'completed' ? (
             <Pill
               label={score !== undefined ? `${Math.round(score)}% Score` : 'Completed'}
+              variant="owned"
+              icon={<CheckCircle size={11} color={colors.success} />}
+            />
+          ) : isSubscribed ? (
+            <Pill
+              label="Unlocked"
               variant="owned"
               icon={<CheckCircle size={11} color={colors.success} />}
             />
@@ -97,7 +108,7 @@ export default function TestRow({
       </View>
 
       <View style={styles.rightAction}>
-        {isLocked ? (
+        {isActuallyLocked ? (
           <Button
             title="Unlock"
             variant="secondary"
@@ -122,7 +133,7 @@ export default function TestRow({
           />
         ) : (
           <Button
-            title={isFree ? 'Start free' : 'Start'}
+            title={isActuallyFree ? 'Start free' : 'Start'}
             variant="primary"
             size="sm"
             onPress={onStart}

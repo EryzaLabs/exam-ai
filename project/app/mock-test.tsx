@@ -150,7 +150,11 @@ export default function MockTestScreen() {
         setAttempt(newAttempt);
 
         // Calculate time
-        let durationSecs = paper.duration || 7200;
+        const isTopic = ((paper as any).filename || '').includes('topic_wise') || (paper.id || '').includes('topic_wise');
+        let durationSecs = isTopic ? 1200 : 7200;
+        if (paper.duration) {
+          durationSecs = paper.duration <= 300 ? paper.duration * 60 : paper.duration;
+        }
         if (savedState && savedState.timeRemaining > 0) {
           durationSecs = savedState.timeRemaining;
         }
@@ -433,12 +437,23 @@ export default function MockTestScreen() {
           const q = questions.find((item) => item.id === qId);
           if (q) {
             const isCorrect = st.selectedOption === q.correctAnswerIndex;
+            const isTopic =
+              (params.filename as string || '').includes('topic_wise') ||
+              (test?.id || '').includes('topic_wise');
+            const isDsssb =
+              (params.filename as string || '').includes('tgt_pgt') ||
+              (test?.id || '').includes('tgt_pgt');
+            const defaultPos = isTopic ? 2.0 : isDsssb ? 1.0 : 2.5;
+            const defaultNeg = isTopic ? 0.67 : isDsssb ? 0.25 : 0.833;
+            const pos = q.marks?.positive ?? defaultPos;
+            const neg = q.marks?.negative ?? defaultNeg;
+
             syncedAnswers.push({
               questionId: qId,
               selectedOption: st.selectedOption,
               timeTaken: st.timeTaken || 0,
               isCorrect,
-              marksAwarded: isCorrect ? (q.marks?.positive || 1) : -(q.marks?.negative || 0.25),
+              marksAwarded: isCorrect ? pos : -neg,
             });
           }
         }

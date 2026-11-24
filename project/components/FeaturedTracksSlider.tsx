@@ -24,6 +24,7 @@ import {
 import { useExam, ExamTarget } from '@/context/exam-context';
 import { useTheme } from '@/context/theme-context';
 import { useAuth } from '@/context/auth-context';
+import { useSub } from '@/context/subscription-context';
 
 export interface FeaturedTrackItem {
   id: string;
@@ -115,7 +116,9 @@ export default function FeaturedTracksSlider({ compact = false }: FeaturedTracks
   const { width } = useWindowDimensions();
   const { examMode, setExamMode } = useExam();
   const { isDark } = useTheme();
-  const { isSubscribed, requireAuth } = useAuth();
+  const { isSubscribed: subIsSubscribed } = useSub();
+  const { isSubscribed: authSubscribed, requireAuth } = useAuth();
+  const isSubscribed = Boolean(subIsSubscribed || authSubscribed);
 
   const isDesktop = width >= 1024;
   const isTablet = width >= 640 && width < 1024;

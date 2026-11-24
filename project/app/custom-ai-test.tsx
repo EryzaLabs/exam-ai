@@ -40,6 +40,7 @@ import {
 import AiTestService from '@/services/ai-test-service';
 import SSCCGLService from '@/services/ssc-cgl-service';
 import { useAuth } from '@/context/auth-context';
+import { useSub } from '@/context/subscription-context';
 import { useTheme } from '@/context/theme-context';
 import { initiatePayment } from '@/utils/cashfree';
 
@@ -62,7 +63,8 @@ const DIFFICULTY_OPTIONS = [
 
 export default function CustomAiTestScreen() {
   const { user, isSubscribed: authSubscribed, isSubscriptionLoading } = useAuth();
-  const isSubscribed = authSubscribed;
+  const { isSubscribed: subIsSubscribed } = useSub();
+  const isSubscribed = Boolean(subIsSubscribed || authSubscribed);
   const { isDark, colors, toggleTheme } = useTheme();
 
   const [topic, setTopic] = useState('');

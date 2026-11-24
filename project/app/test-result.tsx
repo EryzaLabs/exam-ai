@@ -340,6 +340,15 @@ export default function TestResultScreen() {
                   </Text>
                 </View>
 
+                {(result.overallScore !== undefined || (result as any).score !== undefined) && (
+                  <View style={[styles.metricChip, { backgroundColor: colors.surface2 }]}>
+                    <Award size={13} color={colors.accent} />
+                    <Text style={[styles.metricChipText, { color: colors.text }]}>
+                      {Math.round((result.overallScore ?? (result as any).score ?? 0) * 10) / 10} / {result.totalMarks || (result as any).maxScore || paper?.totalMarks || (totalQuestions * 2.5)} Marks
+                    </Text>
+                  </View>
+                )}
+
                 <View style={[styles.metricChip, { backgroundColor: colors.surface2 }]}>
                   <Clock size={13} color={colors.muted} />
                   <Text style={[styles.metricChipText, { color: colors.text }]}>

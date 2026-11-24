@@ -39,6 +39,7 @@ import {
   Moon,
 } from 'lucide-react-native';
 import { useAuth } from '@/context/auth-context';
+import { useSub } from '@/context/subscription-context';
 import { useExam } from '@/context/exam-context';
 import ExamSelector from '@/components/ExamSelector';
 import FeaturedTracksSlider from '@/components/FeaturedTracksSlider';
@@ -56,7 +57,8 @@ export default function MobileDashboard({
   const [activeTest, setActiveTest] = React.useState<SavedTestState | null>(null);
   const { user, isSubscribed: authSubscribed, isSubscriptionLoading, requireAuth } = useAuth();
   const { examMode, examInfo } = useExam();
-  const isSubscribed = authSubscribed || dashboardStats?.isSubscribed === true;
+  const { isSubscribed: subIsSubscribed } = useSub();
+  const isSubscribed = Boolean(subIsSubscribed || authSubscribed || dashboardStats?.isSubscribed === true);
 
   const loadActiveTest = React.useCallback(async () => {
     try {
@@ -339,9 +341,19 @@ export default function MobileDashboard({
                   </View>
                 </View>
 
-                <Text style={styles.premiumBannerTitle}>UPSC & UP Principal 2026 Test Series</Text>
+                <Text style={styles.premiumBannerTitle}>
+                  {examMode === 'tgt'
+                    ? 'DSSSB TGT Official Papers Series'
+                    : examMode === 'pgt'
+                    ? 'DSSSB PGT Official Papers Series'
+                    : 'UPSC & UP Principal 2026 Test Series'}
+                </Text>
                 <Text style={styles.premiumBannerSubtitle}>
-                  Unlock 150 Full Mocks • 950+ Topic Tests • Covers UPSC & UP Principal
+                  {examMode === 'tgt'
+                    ? 'Unlock 190 Official CBT Papers • Section A & B Solved'
+                    : examMode === 'pgt'
+                    ? 'Unlock 158 Official CBT Papers • Section A & B Solved'
+                    : 'Unlock 150 Full Mocks • 950+ Topic Tests • Covers UPSC & UP Principal'}
                 </Text>
 
                 <View style={styles.premiumBannerFooter}>

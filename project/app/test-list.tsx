@@ -226,37 +226,40 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
   const filteredTests = useMemo(() => {
     let pool = examPapers;
 
-    if (selectedSeriesId && selectedSeriesId.startsWith('tgt-')) {
-      const subSlug = selectedSeriesId.replace('tgt-', '').replace(/-/g, ' ');
-      const subFiltered = pool.filter((p) =>
-        (p.subject || '').toLowerCase().includes(subSlug.toLowerCase())
-      );
-      if (subFiltered.length > 0) pool = subFiltered;
-    } else if (selectedSeriesId && selectedSeriesId.startsWith('pgt-')) {
-      const subSlug = selectedSeriesId.replace('pgt-', '').replace(/-/g, ' ');
-      const subFiltered = pool.filter((p) =>
-        (p.subject || '').toLowerCase().includes(subSlug.toLowerCase())
-      );
-      if (subFiltered.length > 0) pool = subFiltered;
-    }
-
-    if (selectedType === 'full') {
-      pool = pool.filter(
-        (p) =>
-          !p.filename?.includes('topic_wise') &&
-          !p.id?.includes('topic_wise') &&
-          !p.isPYQ &&
-          !p.filename?.includes('tgt_pgt')
-      );
-    } else if (selectedType === 'pyq') {
-      pool = pool.filter((p) => p.isPYQ || p.filename?.includes('tgt_pgt'));
-    } else if (selectedType === 'topic') {
-      pool = pool.filter(
+    if (selectedType === 'topic') {
+      // Topic-wise tests pull from all topic-wise practice sets across the catalog
+      pool = papers.filter(
         (p) =>
           p.filename?.includes('topic_wise') ||
           p.id?.includes('topic_wise') ||
           p.subject === 'Topic Wise'
       );
+    } else {
+      if (selectedSeriesId && selectedSeriesId.startsWith('tgt-')) {
+        const subSlug = selectedSeriesId.replace('tgt-', '').replace(/-/g, ' ');
+        const subFiltered = pool.filter((p) =>
+          (p.subject || '').toLowerCase().includes(subSlug.toLowerCase())
+        );
+        if (subFiltered.length > 0) pool = subFiltered;
+      } else if (selectedSeriesId && selectedSeriesId.startsWith('pgt-')) {
+        const subSlug = selectedSeriesId.replace('pgt-', '').replace(/-/g, ' ');
+        const subFiltered = pool.filter((p) =>
+          (p.subject || '').toLowerCase().includes(subSlug.toLowerCase())
+        );
+        if (subFiltered.length > 0) pool = subFiltered;
+      }
+
+      if (selectedType === 'full') {
+        pool = pool.filter(
+          (p) =>
+            !p.filename?.includes('topic_wise') &&
+            !p.id?.includes('topic_wise') &&
+            !p.isPYQ &&
+            !p.filename?.includes('tgt_pgt')
+        );
+      } else if (selectedType === 'pyq') {
+        pool = pool.filter((p) => p.isPYQ || p.filename?.includes('tgt_pgt'));
+      }
     }
 
     if (searchQuery.trim()) {
@@ -269,7 +272,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
     }
 
     return pool;
-  }, [examPapers, selectedSeriesId, selectedType, searchQuery]);
+  }, [papers, examPapers, selectedSeriesId, selectedType, searchQuery]);
 
   // Start / Resume / Review test
   const handleStartTest = (paper: ServerPaper) => {
@@ -413,7 +416,7 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
             >
               <Chip
                 label="All Tests"
-                count={examPapers.length}
+                count={selectedSeriesId ? filteredTests.length : examPapers.length}
                 active={selectedType === 'all'}
                 onPress={() => setSelectedType('all')}
               />
@@ -441,21 +444,22 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                   onPress={() => setSelectedType('pyq')}
                 />
               )}
-              {(examMode === 'upsc' || examMode === 'uppsc' || examMode === 'all') && (
-                <Chip
-                  label="Topic Wise"
-                  count={
-                    examPapers.filter(
-                      (p) =>
-                        p.filename?.includes('topic_wise') ||
-                        p.id?.includes('topic_wise') ||
-                        p.subject === 'Topic Wise'
-                    ).length
-                  }
-                  active={selectedType === 'topic'}
-                  onPress={() => setSelectedType('topic')}
-                />
-              )}
+              <Chip
+                label="Topic Wise"
+                count={
+                  papers.filter(
+                    (p) =>
+                      p.filename?.includes('topic_wise') ||
+                      p.id?.includes('topic_wise') ||
+                      p.subject === 'Topic Wise'
+                  ).length
+                }
+                active={selectedType === 'topic'}
+                onPress={() => {
+                  setSelectedType('topic');
+                  setSelectedSeriesId(null);
+                }}
+              />
             </ScrollView>
 
             {/* Test Rows List */}
@@ -488,19 +492,19 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
                   (isTopic ? 20 : examMode === 'pgt' ? 300 : examMode === 'tgt' ? 200 : 120);
 
                 let durationMinutes = 120;
-                if (paper.duration) {
-                  durationMinutes = paper.duration > 300 ? Math.round(paper.duration / 60) : paper.duration;
-                } else if (isTopic) {
+                if (isTopic) {
                   durationMinutes = 20;
+                } else if (paper.duration) {
+                  durationMinutes = paper.duration > 300 ? Math.round(paper.duration / 60) : paper.duration;
                 } else if (examMode === 'pgt') {
                   durationMinutes = 180;
                 }
 
                 let marks = 200;
-                if (paper.totalMarks) {
+                if (isTopic) {
+                  marks = paper.totalMarks || (questionCount * 2);
+                } else if (paper.totalMarks) {
                   marks = paper.totalMarks;
-                } else if (isTopic) {
-                  marks = questionCount * 2.5;
                 } else if (examMode === 'pgt' || examMode === 'upsc' || examMode === 'uppsc') {
                   marks = 300;
                 }

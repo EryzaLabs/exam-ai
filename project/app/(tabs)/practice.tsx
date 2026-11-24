@@ -26,7 +26,12 @@ import { useSub } from '@/context/subscription-context';
 import { useExam, EXAMS } from '@/context/exam-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { SSCCGLService } from '@/services/ssc-cgl-service';
-import PaperService, { INITIAL_TGT_PGT_PAPERS } from '@/services/paper-service';
+import PaperService, {
+  INITIAL_TGT_PGT_PAPERS,
+  INITIAL_TOPIC_PAPERS,
+  INITIAL_FULL_MOCKS,
+  INITIAL_PAPERS_CATALOG,
+} from '@/services/paper-service';
 import AiTestService from '@/services/ai-test-service';
 import AppShell from '@/components/chalkboard/AppShell';
 import Card from '@/components/chalkboard/Card';
@@ -69,6 +74,30 @@ export default function PracticeScreen() {
 
   // Extract syllabus topics from available exam papers
   const syllabusTopics = useMemo(() => {
+    if (examMode === 'upsc' || examMode === 'uppsc') {
+      const topicSubjects = Array.from(
+        new Set(
+          INITIAL_TOPIC_PAPERS.map((p) =>
+            p.subject ? p.subject.replace(/_/g, ' ') : ''
+          ).filter(Boolean)
+        )
+      );
+      if (topicSubjects.length > 0) {
+        return topicSubjects.sort((a, b) => a.localeCompare(b));
+      }
+      return [
+        'GFR Rules & Financial Administration',
+        'CCS Conduct & Pension Rules',
+        'School Leadership & Administration',
+        'RTE Act & POCSO Act',
+        'NEP 2020 & Educational Policies',
+        'General English',
+        'General Hindi',
+        'Logical Reasoning',
+        'Quantitative Aptitude',
+      ];
+    }
+
     const list = INITIAL_TGT_PGT_PAPERS.filter((p) => {
       if (examMode === 'tgt') return p.series === 'tgt' || p.filename.includes('tgt');
       if (examMode === 'pgt') return p.series === 'pgt' || p.filename.includes('pgt');
@@ -81,15 +110,15 @@ export default function PracticeScreen() {
 
     if (unique.length === 0) {
       return [
-        'Pedagogy & Educational Administration',
-        'General English',
-        'General Hindi',
-        'General Knowledge & Current Affairs',
-        'Reasoning Ability',
-        'Quantitative Aptitude',
+        'General Awareness',
+        'General Intelligence & Reasoning',
+        'Arithmetical & Numerical Ability',
+        'Hindi Language & Comprehension',
+        'English Language & Comprehension',
+        'Teaching Methodology / Pedagogy',
       ];
     }
-    return unique;
+    return unique.sort((a, b) => a.localeCompare(b));
   }, [examMode]);
 
   // Handle immediate topic drill if routed with param: ?topic=...
@@ -103,7 +132,20 @@ export default function PracticeScreen() {
   const startQuickPractice = async () => {
     setLoading(true);
     try {
-      const match = INITIAL_TGT_PGT_PAPERS[Math.floor(Math.random() * INITIAL_TGT_PGT_PAPERS.length)];
+      let pool = INITIAL_TOPIC_PAPERS;
+      if (examMode === 'tgt') {
+        pool = INITIAL_TGT_PGT_PAPERS.filter((p) => p.series === 'tgt' || p.filename.includes('tgt'));
+      } else if (examMode === 'pgt') {
+        pool = INITIAL_TGT_PGT_PAPERS.filter((p) => p.series === 'pgt' || p.filename.includes('pgt'));
+      } else {
+        pool = INITIAL_TOPIC_PAPERS.length > 0 ? INITIAL_TOPIC_PAPERS : INITIAL_FULL_MOCKS;
+      }
+
+      if (!pool || pool.length === 0) {
+        pool = INITIAL_PAPERS_CATALOG;
+      }
+
+      const match = pool[Math.floor(Math.random() * pool.length)];
       const paper = await SSCCGLService.fetchPaper(match.filename);
 
       if (paper && paper.sections && paper.sections.length > 0) {
@@ -137,10 +179,20 @@ export default function PracticeScreen() {
   const startTopicDrill = async (topicName: string) => {
     setLoading(true);
     try {
+      let pool = INITIAL_TOPIC_PAPERS;
+      if (examMode === 'tgt') {
+        pool = INITIAL_TGT_PGT_PAPERS.filter((p) => p.series === 'tgt' || p.filename.includes('tgt'));
+      } else if (examMode === 'pgt') {
+        pool = INITIAL_TGT_PGT_PAPERS.filter((p) => p.series === 'pgt' || p.filename.includes('pgt'));
+      }
+
+      const normalizedTopic = topicName.toLowerCase().replace(/[\s_-]+/g, '');
       const match =
-        INITIAL_TGT_PGT_PAPERS.find(
-          (p) => p.subject?.toLowerCase() === topicName.toLowerCase()
-        ) || INITIAL_TGT_PGT_PAPERS[0];
+        pool.find((p) => {
+          const sub = (p.subject || '').toLowerCase().replace(/[\s_-]+/g, '');
+          const title = (p.title || '').toLowerCase().replace(/[\s_-]+/g, '');
+          return sub === normalizedTopic || title.includes(normalizedTopic) || normalizedTopic.includes(sub);
+        }) || pool[0] || INITIAL_PAPERS_CATALOG[0];
 
       const paper = await SSCCGLService.fetchPaper(match.filename);
       if (paper && paper.sections && paper.sections.length > 0) {
@@ -173,11 +225,21 @@ export default function PracticeScreen() {
     setCustomModalOpen(false);
     setLoading(true);
     try {
-      const match = INITIAL_TGT_PGT_PAPERS[0];
-      const paper = await SSCCGLService.fetchPaper(match.filename);
-      const all = paper.sections.flatMap((s) => s.questions).slice(0, customQuestionCount);
+      let pool = INITIAL_TOPIC_PAPERS;
+      if (examMode === 'tgt') {
+        pool = INITIAL_TGT_PGT_PAPERS.filter((p) => p.series === 'tgt' || p.filename.includes('tgt'));
+      } else if (examMode === 'pgt') {
+        pool = INITIAL_TGT_PGT_PAPERS.filter((p) => p.series === 'pgt' || p.filename.includes('pgt'));
+      } else {
+        pool = INITIAL_FULL_MOCKS.length > 0 ? INITIAL_FULL_MOCKS : INITIAL_TOPIC_PAPERS;
+      }
 
-      const mapped: QuizQuestionItem[] = all.map((q) => ({
+      const match = pool[Math.floor(Math.random() * pool.length)] || INITIAL_PAPERS_CATALOG[0];
+      const paper = await SSCCGLService.fetchPaper(match.filename);
+      const all = (paper?.sections || []).flatMap((s) => s.questions);
+      const shuffled = [...all].sort(() => 0.5 - Math.random()).slice(0, customQuestionCount);
+
+      const mapped: QuizQuestionItem[] = shuffled.map((q) => ({
         id: q.id,
         questionText: q.questionText,
         options: q.options || [],
@@ -189,7 +251,7 @@ export default function PracticeScreen() {
         topic: 'Custom Mock',
       }));
 
-      setActiveQuizTitle(`Custom Test (${customQuestionCount} Questions)`);
+      setActiveQuizTitle(`Custom Test (${mapped.length} Questions)`);
       setActiveQuizQuestions(mapped);
       setQuizCompleted(false);
     } catch (e) {

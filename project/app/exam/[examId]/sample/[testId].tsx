@@ -10,7 +10,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { useSub } from '@/context/subscription-context';
 import { SSCCGLService } from '@/services/ssc-cgl-service';
-import { INITIAL_TGT_PGT_PAPERS } from '@/services/paper-service';
+import { INITIAL_PAPERS_CATALOG } from '@/services/paper-service';
 import { ExamTarget } from '@/context/exam-context';
 import FirstVisitHeader from '@/components/first-visit/FirstVisitHeader';
 import QuizView, { QuizQuestionItem } from '@/components/first-visit/QuizView';
@@ -86,8 +86,8 @@ export default function SampleTestScreen() {
         let filename = '';
         let title = 'Sample Mock Test';
 
-        const foundInCatalog = INITIAL_TGT_PGT_PAPERS.find(
-          (p) => p.id === testId || p.testId === testId
+        const foundInCatalog = INITIAL_PAPERS_CATALOG.find(
+          (p) => p.id === testId || p.testId === testId || p.filename === testId
         );
         if (foundInCatalog) {
           filename = foundInCatalog.filename;
@@ -97,7 +97,7 @@ export default function SampleTestScreen() {
           try {
             const serverPapers = await SSCCGLService.fetchPapersList();
             const sp = serverPapers.find(
-              (p: any) => p.id === testId || p.testId === testId
+              (p: any) => p.id === testId || p.testId === testId || p.filename === testId
             );
             if (sp) {
               filename = sp.filename;
@@ -108,9 +108,11 @@ export default function SampleTestScreen() {
 
         if (!filename) {
           // If no specific paper matched, pick default first paper for exam
-          const fallback = INITIAL_TGT_PGT_PAPERS.find(
-            (p) => p.series === (examId === 'pgt' ? 'pgt' : 'tgt')
-          );
+          const fallback = INITIAL_PAPERS_CATALOG.find((p) => {
+            if (examId === 'pgt') return p.series === 'pgt' || p.filename.includes('pgt');
+            if (examId === 'tgt') return p.series === 'tgt' || p.filename.includes('tgt');
+            return p.series === 'upsc' || p.filename.includes('full_mock') || p.filename.includes('topic_wise');
+          });
           if (fallback) {
             filename = fallback.filename;
             title = fallback.title;

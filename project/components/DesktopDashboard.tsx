@@ -32,6 +32,7 @@ import {
 } from 'lucide-react-native';
 import { router, usePathname, useLocalSearchParams } from 'expo-router';
 import { useAuth } from '@/context/auth-context';
+import { useSub } from '@/context/subscription-context';
 import { useExam } from '@/context/exam-context';
 import ExamSelector from '@/components/ExamSelector';
 import { useTheme } from '@/context/theme-context';
@@ -66,7 +67,8 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
   const performance = propPerformance || hookPerformance;
   const dashboardStats = propDashboardStats || hookDashboardStats;
 
-  const isSubscribed = authSubscribed || dashboardStats?.isSubscribed === true;
+  const { isSubscribed: subIsSubscribed } = useSub();
+  const isSubscribed = Boolean(subIsSubscribed || authSubscribed || dashboardStats?.isSubscribed === true);
 
   const handleLogout = () => {
     const doSignOut = async () => {
@@ -216,7 +218,7 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
           >
             <Crown size={24} color="#F59E0B" style={{ marginBottom: 12 }} />
             <Text style={[styles.premiumTitle, { color: colors.premiumTitle }]}>Go Premium</Text>
-            <Text style={[styles.premiumDesc, { color: colors.premiumDesc }]}>Unlock 26 full mocks, 158 topic tests + new tests added daily.</Text>
+            <Text style={[styles.premiumDesc, { color: colors.premiumDesc }]}>Unlock 150 full mocks, 950+ topic tests, and official solved papers.</Text>
             <View style={styles.premiumBtn}>
               <ArrowRight size={16} color={colors.textSecondary} />
             </View>
@@ -526,15 +528,21 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: colors.borderLight }}>
                   <Text style={{ fontSize: 12, color: colors.textSecondary }}>Questions / Marks</Text>
-                  <Text style={{ fontSize: 12, fontWeight: '700', color: colors.textPrimary }}>120 Qs • 300 Marks</Text>
+                  <Text style={{ fontSize: 12, fontWeight: '700', color: colors.textPrimary }}>
+                    {examMode === 'tgt' ? '200 Qs • 200 Marks' : examMode === 'pgt' ? '300 Qs • 300 Marks' : '120 Qs • 300 Marks'}
+                  </Text>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: colors.borderLight }}>
                   <Text style={{ fontSize: 12, color: colors.textSecondary }}>Duration</Text>
-                  <Text style={{ fontSize: 12, fontWeight: '700', color: colors.textPrimary }}>2 Hours (120 Mins)</Text>
+                  <Text style={{ fontSize: 12, fontWeight: '700', color: colors.textPrimary }}>
+                    {examMode === 'pgt' ? '3 Hours (180 Mins)' : '2 Hours (120 Mins)'}
+                  </Text>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 8, borderBottomWidth: 1, borderBottomColor: colors.borderLight }}>
                   <Text style={{ fontSize: 12, color: colors.textSecondary }}>Marking Scheme</Text>
-                  <Text style={{ fontSize: 12, fontWeight: '700', color: '#DC2626' }}>+2.5  •  -0.83 Negative</Text>
+                  <Text style={{ fontSize: 12, fontWeight: '700', color: '#DC2626' }}>
+                    {examMode === 'tgt' || examMode === 'pgt' ? '+1.0  •  -0.25 Negative' : '+2.5  •  -0.83 Negative'}
+                  </Text>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                   <Text style={{ fontSize: 12, color: colors.textSecondary }}>Language</Text>
@@ -552,11 +560,19 @@ export default function DesktopDashboard({ performance: propPerformance, dashboa
               <View style={{ gap: 8, marginTop: 12 }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
                   <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#2563EB' }} />
-                  <Text style={{ fontSize: 12, color: colors.textPrimary }}><Text style={{ fontWeight: '700' }}>150 Full-Length Mocks</Text> (CBT mode)</Text>
+                  <Text style={{ fontSize: 12, color: colors.textPrimary }}>
+                    <Text style={{ fontWeight: '700' }}>
+                      {examMode === 'tgt' ? '190 Official Solved Papers' : examMode === 'pgt' ? '158 Official Solved Papers' : '150 Full-Length Mocks'}
+                    </Text> {examMode === 'tgt' || examMode === 'pgt' ? '(Complete CBT)' : '(CBT mode)'}
+                  </Text>
                 </View>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
                   <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#7C3AED' }} />
-                  <Text style={{ fontSize: 12, color: colors.textPrimary }}><Text style={{ fontWeight: '700' }}>950+ Topic-wise Tests</Text> (All subjects)</Text>
+                  <Text style={{ fontSize: 12, color: colors.textPrimary }}>
+                    <Text style={{ fontWeight: '700' }}>
+                      {examMode === 'tgt' || examMode === 'pgt' ? 'Section A & Section B Solved' : '950+ Topic-wise Tests'}
+                    </Text> {examMode === 'tgt' || examMode === 'pgt' ? '(Official Keys)' : '(All subjects)'}
+                  </Text>
                 </View>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
                   <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#D97706' }} />

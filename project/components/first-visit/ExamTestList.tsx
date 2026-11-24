@@ -57,8 +57,8 @@ export default function ExamTestList({
 
       <View style={styles.testList}>
         {tests.map((test, index) => {
-          const isFree = Boolean(test.isFree);
-          const isLocked = Boolean(test.isLocked);
+          const isFree = !isSubscribed && Boolean(test.isFree);
+          const isLocked = !isSubscribed && Boolean(test.isLocked);
           const isAttempted = Boolean(test.isAttempted);
 
           return (

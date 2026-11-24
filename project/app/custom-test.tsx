@@ -42,6 +42,7 @@ import {
 } from 'lucide-react-native';
 import SSCCGLService from '@/services/ssc-cgl-service';
 import { useAuth } from '@/context/auth-context';
+import { useSub } from '@/context/subscription-context';
 import { useTheme } from '@/context/theme-context';
 
 interface TopicItem {
@@ -57,7 +58,8 @@ const DURATION_PRESETS = [15, 30, 45, 60, 90, 120];
 
 export default function CustomTestScreen() {
   const { user, isSubscribed: authSubscribed, isSubscriptionLoading } = useAuth();
-  const isSubscribed = authSubscribed;
+  const { isSubscribed: subIsSubscribed } = useSub();
+  const isSubscribed = Boolean(subIsSubscribed || authSubscribed);
   const { isDark, colors, toggleTheme } = useTheme();
 
   const [loading, setLoading] = useState(true);
