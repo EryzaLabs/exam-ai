@@ -303,7 +303,7 @@ export class QuestionExtractionService {
       }
 
       if (
-        question.correctAnswer !== undefined &&
+        typeof question.correctAnswer === 'number' &&
         (question.correctAnswer < 0 || question.correctAnswer >= question.options.length)
       ) {
         errors.push('Correct answer index out of range');

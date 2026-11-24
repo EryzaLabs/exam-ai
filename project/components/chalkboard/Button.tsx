@@ -48,9 +48,9 @@ export default function Button({
   const { colors, radii } = useChalkboardTheme();
   const buttonText = label || title;
 
-  let bg = colors.surface;
-  let borderColor = colors.line;
-  let textColor = colors.text;
+  let bg: string = colors.surface;
+  let borderColor: string = colors.line;
+  let textColor: string = colors.text;
   let borderWidth = 1;
 
   if (variant === 'primary') {

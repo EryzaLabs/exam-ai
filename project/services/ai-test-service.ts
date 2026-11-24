@@ -6,7 +6,7 @@
 
 import SSCCGLService, { ParsedMockTest } from './ssc-cgl-service';
 
-const API_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000/api';
+const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://astra-backend.eryzalabs.cloud/api';
 
 export interface AiDailyStatus {
   canGenerate: boolean;
@@ -42,6 +42,62 @@ export interface AiTestJobStatus {
 }
 
 class AiTestService {
+  /**
+   * Direct AI Test generation with polling or API fallback
+   */
+  async generateTest(params: {
+    topic: string;
+    subject?: string;
+    questionCount?: number;
+    difficulty?: string;
+  }): Promise<{ questions: any[] }> {
+    try {
+      const response = await fetch(`${API_URL}/ai-tests/quick-drill`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(params),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        if (data && Array.isArray(data.questions)) return data;
+      }
+    } catch {}
+
+    // Fallback: start background generation and poll for completion
+    try {
+      const job = await this.startGeneration({
+        userId: 'drill-user',
+        topic: params.topic,
+        questionCount: params.questionCount || 10,
+        durationMinutes: 15,
+        difficulty: params.difficulty || 'Medium',
+      });
+
+      if (job?.jobId) {
+        let attempts = 0;
+        while (attempts < 15) {
+          await new Promise((r) => setTimeout(r, 1000));
+          attempts++;
+          const status = await this.getJobStatus(job.jobId);
+          if (status.status === 'completed' && status.paper) {
+            const raw = status.paper.questions || status.paper.sections?.[0]?.questions || [];
+            return {
+              questions: raw.map((q: any, idx: number) => ({
+                id: q.id || `q_${idx}`,
+                questionText: q.question_english || q.en?.value || q.questionText || '',
+                options: q.options_english || q.options || q.en?.options?.map((o: any) => o.value) || [],
+                correctAnswerIndex: typeof q.correct_answer === 'number' ? q.correct_answer : 0,
+                explanation: q.explanation_english || q.explanation || '',
+              })),
+            };
+          }
+        }
+      }
+    } catch {}
+
+    throw new Error('Quick AI generation failed');
+  }
+
   /**
    * Check if user has available AI test generation quota for today (1 per account per day)
    */

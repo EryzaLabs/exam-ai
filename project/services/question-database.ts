@@ -6,6 +6,13 @@
 import * as FileSystem from 'expo-file-system';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
+import {
+  QuestionDatabase,
+  QuestionCategory,
+  TestGenerationRequest,
+  ExtractedQuestion,
+} from './pdf-processor/types';
+import { TestFilters } from '@/types';
 
 // BharatKosh Question Interface
 export interface BharatKoshQuestion {
@@ -130,7 +137,7 @@ export interface Achievement {
 }
 
 export interface Recommendation {
-  type: 'topic_focus' | 'difficulty_adjustment' | 'time_management' | 'revision';
+  type: 'topic_focus' | 'difficulty_adjustment' | 'time_management' | 'revision' | 'consistency';
   title: string;
   description: string;
   priority: 'high' | 'medium' | 'low';
@@ -231,7 +238,7 @@ export class QuestionDatabaseService {
 
   constructor(databasePath?: string) {
     this.databasePath =
-      databasePath || `${FileSystem.documentDirectory}question_database.json`;
+      databasePath || `${(FileSystem as any).documentDirectory || ''}question_database.json`;
   }
 
   /**
@@ -488,12 +495,188 @@ export class QuestionDatabaseService {
     };
   }
 
+  private convertToAppFormat(question: ExtractedQuestion): AppQuestion {
+    return {
+      id: question.questionId,
+      question: question.questionText.translated || question.questionText.original,
+      options:
+        question.options?.map(
+          (o) => o.text.translated || o.text.original
+        ) || [],
+      correctAnswer: typeof question.correctAnswer === 'number' 
+        ? question.correctAnswer 
+        : 0,
+      correctAnswerLabel: ['a', 'b', 'c', 'd'][typeof question.correctAnswer === 'number' ? question.correctAnswer : 0] || 'a',
+      explanation:
+        question.explanation?.translated ||
+        question.explanation?.original ||
+        '',
+      subject: question.subject,
+      topic: question.topics?.[0] || 'General',
+      difficulty: ((question.difficulty || 'medium').toLowerCase() as 'easy' | 'medium' | 'hard'),
+      timeToSolve: question.timeToSolve || 60,
+      keyFacts: [],
+      language: 'english',
+      metadata: {
+        examType: question.metadata?.examType || 'Exam',
+        year: question.metadata?.year,
+        paperName: question.metadata?.paperName,
+        topics: question.topics || [],
+        source: question.metadata?.paperId || '',
+        aiProcessed: true,
+      },
+    };
+  }
+
+  private async indexQuestions(): Promise<void> {
+    if (!this.database) return;
+    this.questionsMap.clear();
+  }
+
+  private mergeCategories(newCategories: QuestionCategory[]): void {
+    if (!this.database) return;
+
+    for (const newCategory of newCategories) {
+      const existing = this.findCategory(
+        newCategory.id,
+        this.database.categories
+      );
+
+      if (existing) {
+        existing.questions = Array.from(
+          new Set([...existing.questions, ...newCategory.questions])
+        );
+        existing.metadata.questionCount = existing.questions.length;
+      } else {
+        this.database.categories.push(newCategory);
+      }
+    }
+  }
+
+  private findCategory(
+    id: string,
+    categories: QuestionCategory[]
+  ): QuestionCategory | null {
+    for (const category of categories) {
+      if (category.id === id) {
+        return category;
+      }
+
+      if (category.subcategories) {
+        const found = this.findCategory(id, category.subcategories);
+        if (found) return found;
+      }
+    }
+
+    return null;
+  }
+
+  private filterQuestions(filters: TestFilters): AppQuestion[] {
+    let questions = Array.from(this.questionsMap.values());
+    return this.applyFilters(questions, filters);
+  }
+
+  private applyFilters(
+    questions: AppQuestion[],
+    filters: TestFilters
+  ): AppQuestion[] {
+    let filtered = questions;
+
+    if (filters.examTypes && filters.examTypes.length > 0) {
+      filtered = filtered.filter((q) =>
+        filters.examTypes!.includes(q.metadata.examType || '')
+      );
+    }
+
+    if (filters.subjects && filters.subjects.length > 0) {
+      filtered = filtered.filter((q) =>
+        filters.subjects!.includes(q.subject)
+      );
+    }
+
+    if (filters.years && filters.years.length > 0) {
+      filtered = filtered.filter((q) =>
+        filters.years!.includes(q.metadata.year || 0)
+      );
+    }
+
+    if (filters.difficulties && filters.difficulties.length > 0) {
+      filtered = filtered.filter((q) =>
+        filters.difficulties!.includes(q.difficulty as any)
+      );
+    }
+
+    if (filters.topics && filters.topics.length > 0) {
+      filtered = filtered.filter((q) =>
+        q.metadata.topics?.some((t) => filters.topics!.includes(t))
+      );
+    }
+
+    return filtered;
+  }
+
+  private generateTestName(request: TestGenerationRequest): string {
+    const parts: string[] = [];
+
+    if (request.filters.examTypes && request.filters.examTypes.length === 1) {
+      parts.push(request.filters.examTypes[0]);
+    }
+
+    if (request.filters.years && request.filters.years.length === 1) {
+      parts.push(request.filters.years[0].toString());
+    }
+
+    if (request.filters.subjects && request.filters.subjects.length === 1) {
+      parts.push(request.filters.subjects[0]);
+    }
+
+    if (parts.length === 0) {
+      parts.push(request.testType.replace('_', ' '));
+    }
+
+    return parts.join(' - ');
+  }
+
+  private generateTestDescription(request: TestGenerationRequest): string {
+    const count = request.count;
+    const type = request.testType.replace('_', ' ');
+    return `${count} questions - ${type}`;
+  }
+
+  private estimateDuration(questions: AppQuestion[]): number {
+    const totalTime = questions.reduce((sum, q) => sum + q.timeToSolve, 0);
+    return Math.ceil(totalTime / 60); // Convert to minutes
+  }
+
+  private generateTestId(): string {
+    return `test_${Date.now()}_${Math.random().toString(36).substring(7)}`;
+  }
+
+  private shuffleArray<T>(array: T[]): T[] {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  private createEmptyDatabase(): QuestionDatabase {
+    return {
+      id: `db_${Date.now()}`,
+      version: '1.0.0',
+      lastUpdated: new Date(),
+      categories: [],
+      totalQuestions: 0,
+    };
+  }
+
   /**
    * Reset all data (for testing purposes)
    */
   async resetDatabase(): Promise<void> {
     try {
-      const documentsDir = FileSystem.documentDirectory + 'questions/';
+      const documentsDir = ((FileSystem as any).documentDirectory || '') + 'questions/';
       const dirExists = await FileSystem.getInfoAsync(documentsDir);
       
       if (dirExists.exists) {
@@ -1306,183 +1489,6 @@ class EnhancedQuestionDatabase {
         processed_at: new Date().toISOString()
       }
     ];
-  }
-
-  // Private helper methods
-
-  private convertToAppFormat(question: ExtractedQuestion): AppQuestion {
-    return {
-      id: question.questionId,
-      question: question.questionText.translated || question.questionText.original,
-      options:
-        question.options?.map(
-          (o) => o.text.translated || o.text.original
-        ) || [],
-      correctAnswer: typeof question.correctAnswer === 'number' 
-        ? question.correctAnswer 
-        : 0,
-      explanation:
-        question.explanation?.translated ||
-        question.explanation?.original ||
-        '',
-      subject: question.subject,
-      difficulty: question.difficulty || 'Medium',
-      timeToSolve: question.timeToSolve || 60,
-      metadata: {
-        examType: question.metadata.examType,
-        year: question.metadata.year,
-        paperName: question.metadata.paperName,
-        topics: question.topics,
-        source: question.metadata.paperId,
-      },
-    };
-  }
-
-  private async indexQuestions(): Promise<void> {
-    if (!this.database) return;
-
-    // This would need to load actual questions from storage
-    // For now, we'll leave it empty
-    this.questionsMap.clear();
-  }
-
-  private mergeCategories(newCategories: QuestionCategory[]): void {
-    if (!this.database) return;
-
-    for (const newCategory of newCategories) {
-      const existing = this.findCategory(
-        newCategory.id,
-        this.database.categories
-      );
-
-      if (existing) {
-        // Merge questions
-        existing.questions = Array.from(
-          new Set([...existing.questions, ...newCategory.questions])
-        );
-        existing.metadata.questionCount = existing.questions.length;
-      } else {
-        this.database.categories.push(newCategory);
-      }
-    }
-  }
-
-  private findCategory(
-    id: string,
-    categories: QuestionCategory[]
-  ): QuestionCategory | null {
-    for (const category of categories) {
-      if (category.id === id) {
-        return category;
-      }
-
-      if (category.subcategories) {
-        const found = this.findCategory(id, category.subcategories);
-        if (found) return found;
-      }
-    }
-
-    return null;
-  }
-
-  private filterQuestions(filters: TestFilters): AppQuestion[] {
-    let questions = Array.from(this.questionsMap.values());
-    return this.applyFilters(questions, filters);
-  }
-
-  private applyFilters(
-    questions: AppQuestion[],
-    filters: TestFilters
-  ): AppQuestion[] {
-    let filtered = questions;
-
-    if (filters.examTypes && filters.examTypes.length > 0) {
-      filtered = filtered.filter((q) =>
-        filters.examTypes!.includes(q.metadata.examType || '')
-      );
-    }
-
-    if (filters.subjects && filters.subjects.length > 0) {
-      filtered = filtered.filter((q) =>
-        filters.subjects!.includes(q.subject)
-      );
-    }
-
-    if (filters.years && filters.years.length > 0) {
-      filtered = filtered.filter((q) =>
-        filters.years!.includes(q.metadata.year || 0)
-      );
-    }
-
-    if (filters.difficulties && filters.difficulties.length > 0) {
-      filtered = filtered.filter((q) =>
-        filters.difficulties!.includes(q.difficulty)
-      );
-    }
-
-    if (filters.topics && filters.topics.length > 0) {
-      filtered = filtered.filter((q) =>
-        q.metadata.topics?.some((t) => filters.topics!.includes(t))
-      );
-    }
-
-    return filtered;
-  }
-
-  private generateTestName(request: TestGenerationRequest): string {
-    const parts: string[] = [];
-
-    if (request.filters.examTypes && request.filters.examTypes.length === 1) {
-      parts.push(request.filters.examTypes[0]);
-    }
-
-    if (request.filters.years && request.filters.years.length === 1) {
-      parts.push(request.filters.years[0].toString());
-    }
-
-    if (request.filters.subjects && request.filters.subjects.length === 1) {
-      parts.push(request.filters.subjects[0]);
-    }
-
-    if (parts.length === 0) {
-      parts.push(request.testType.replace('_', ' '));
-    }
-
-    return parts.join(' - ');
-  }
-
-  private generateTestDescription(request: TestGenerationRequest): string {
-    const count = request.count;
-    const type = request.testType.replace('_', ' ');
-    return `${count} questions - ${type}`;
-  }
-
-  private estimateDuration(questions: AppQuestion[]): number {
-    const totalTime = questions.reduce((sum, q) => sum + q.timeToSolve, 0);
-    return Math.ceil(totalTime / 60); // Convert to minutes
-  }
-
-  private generateTestId(): string {
-    return `test_${Date.now()}_${Math.random().toString(36).substring(7)}`;
-  }
-
-  private shuffleArray<T>(array: T[]): T[] {
-    const shuffled = [...array];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-  }
-
-  private createEmptyDatabase(): QuestionDatabase {
-    return {
-      id: `db_${Date.now()}`,
-      version: '1.0.0',
-      lastUpdated: new Date(),
-      categories: [],
-      totalQuestions: 0,
-    };
   }
 }
 

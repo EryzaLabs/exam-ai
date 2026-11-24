@@ -199,7 +199,8 @@ export type JobStatus =
   | 'processing'
   | 'completed'
   | 'failed'
-  | 'cancelled';
+  | 'cancelled'
+  | 'partial_failure';
 
 export type PipelineStage = 
   | 'ingestion'

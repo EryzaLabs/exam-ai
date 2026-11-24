@@ -5,7 +5,7 @@ import { useTheme } from '@/context/theme-context';
 interface ResponsiveContainerProps {
   children: React.ReactNode;
   style?: ViewStyle;
-  maxWidth?: number;
+  maxWidth?: number | string;
 }
 
 export default function ResponsiveContainer({
@@ -15,7 +15,8 @@ export default function ResponsiveContainer({
 }: ResponsiveContainerProps) {
   const { colors } = useTheme();
   const { width } = useWindowDimensions();
-  const isWideScreen = width > maxWidth;
+  const numericMaxWidth = typeof maxWidth === 'number' ? maxWidth : 1200;
+  const isWideScreen = typeof maxWidth === 'number' ? width > maxWidth : false;
   
   return (
     <View style={[styles.outerContainer, { backgroundColor: colors.background }, isWideScreen && { backgroundColor: colors.background }]}>

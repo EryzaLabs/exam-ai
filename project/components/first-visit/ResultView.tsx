@@ -367,9 +367,9 @@ export default function ResultView({
                           const isUserChoice = oIdx === q.chosenIndex;
                           const letter = String.fromCharCode(65 + oIdx);
 
-                          let optBg = colors.surface;
-                          let optBorder = colors.line;
-                          let textCol = colors.muted;
+                          let optBg: string = colors.surface;
+                          let optBorder: string = colors.line;
+                          let textCol: string = colors.muted;
 
                           if (isCorrect) {
                             optBg = colors.successBg;

@@ -6,6 +6,7 @@ export interface ChipProps {
   label: string;
   count?: number;
   active?: boolean;
+  selected?: boolean;
   onPress: () => void;
   icon?: React.ReactNode;
   style?: ViewStyle;
@@ -15,19 +16,21 @@ export default function Chip({
   label,
   count,
   active = false,
+  selected,
   onPress,
   icon,
   style,
 }: ChipProps) {
   const { colors, radii } = useChalkboardTheme();
+  const isActive = selected !== undefined ? selected : active;
 
   return (
     <TouchableOpacity
       style={[
         styles.chip,
         {
-          backgroundColor: active ? colors.text : colors.surface,
-          borderColor: active ? colors.text : colors.line,
+          backgroundColor: isActive ? colors.text : colors.surface,
+          borderColor: isActive ? colors.text : colors.line,
           borderRadius: radii.pill,
         },
         style,
@@ -35,15 +38,15 @@ export default function Chip({
       onPress={onPress}
       activeOpacity={0.7}
       accessibilityRole="button"
-      accessibilityState={{ selected: active }}
+      accessibilityState={{ selected: isActive }}
     >
       {icon && <>{icon}</>}
       <Text
         style={[
           styles.label,
           {
-            color: active ? colors.surface : colors.text,
-            fontWeight: active ? '700' : '500',
+            color: isActive ? colors.surface : colors.text,
+            fontWeight: isActive ? '700' : '500',
           },
         ]}
       >

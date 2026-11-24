@@ -28,11 +28,11 @@ export default function OptionButton({
 }: OptionButtonProps) {
   const { colors, radii } = useChalkboardTheme();
 
-  let bg = colors.surface;
-  let borderColor = colors.line;
-  let textColor = colors.text;
-  let badgeBg = colors.surface2;
-  let badgeTextColor = colors.text;
+  let bg: string = colors.surface;
+  let borderColor: string = colors.line;
+  let textColor: string = colors.text;
+  let badgeBg: string = colors.surface2;
+  let badgeTextColor: string = colors.text;
 
   if (showFeedback) {
     if (isCorrect) {

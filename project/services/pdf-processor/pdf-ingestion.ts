@@ -12,6 +12,7 @@ let pdfjsLib: any;
 
 async function loadPdfJs() {
   if (!pdfjsLib) {
+    // @ts-ignore
     pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs');
     pdfjsLib.GlobalWorkerOptions.workerSrc = '';
   }
@@ -42,12 +43,12 @@ export class PDFIngestionService {
         } else {
           // Node.js file system
           const buffer = await fs.readFile(source);
-          return buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength);
+          return buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength) as ArrayBuffer;
         }
       } else if (Buffer.isBuffer(source)) {
-        return source.buffer.slice(source.byteOffset, source.byteOffset + source.byteLength);
-      } else if (source instanceof Blob || source instanceof File) {
-        return await source.arrayBuffer();
+        return source.buffer.slice(source.byteOffset, source.byteOffset + source.byteLength) as ArrayBuffer;
+      } else if ((typeof Blob !== 'undefined' && source instanceof Blob) || (typeof File !== 'undefined' && (source as any) instanceof File)) {
+        return await (source as Blob).arrayBuffer();
       }
       
       throw new Error('Unsupported PDF source type');

@@ -181,6 +181,10 @@ class SSCCGLService {
   private attempts: Map<string, TestAttempt> = new Map();
   private parsedTests: Map<string, ParsedMockTest> = new Map(); // For testseries tests
 
+  getInstance(): SSCCGLService {
+    return this;
+  }
+
   /**
    * Fetch list of available papers from server
    */
@@ -695,6 +699,10 @@ class SSCCGLService {
     return attempt;
   }
 
+  startTest(testId: string, userId: string): TestAttempt & { id: string } {
+    return this.startTestAttempt(testId, userId);
+  }
+
   /**
    * Resume a test attempt from saved state
    */
@@ -741,6 +749,10 @@ class SSCCGLService {
     // Remove existing answer for this question if any
     attempt.answers = attempt.answers.filter((a) => a.questionId !== questionId);
     attempt.answers.push(answer);
+  }
+
+  getAnalytics(attemptId: string): TestAnalytics | null {
+    return this.submitTest(attemptId);
   }
 
   /**
@@ -909,4 +921,6 @@ class SSCCGLService {
   }
 }
 
-export default new SSCCGLService();
+const instance = new SSCCGLService();
+export { instance as SSCCGLService };
+export default instance;

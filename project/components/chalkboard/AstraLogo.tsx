@@ -43,6 +43,7 @@ export function AstraMark({ size = 32 }: { size?: number }) {
  * Aspect ratio: 117 / 40 (~2.925)
  */
 export default function AstraLogo({
+
   variant = 'auto',
   height = 32,
   style,
@@ -109,3 +110,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+
+export { AstraLogo };

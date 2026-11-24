@@ -48,7 +48,7 @@ export default function Modal({
                   maxWidth,
                 },
               ]}
-              accessibilityRole="alertdialog"
+              accessibilityRole="alert"
             >
               {title ? (
                 <View style={[styles.header, { borderBottomColor: colors.line }]}>

@@ -118,7 +118,7 @@ export default function TestResultScreen() {
         }
 
         if (!loadedPaper && targetTestId) {
-          loadedPaper = SSCCGLService.getPaper(targetTestId);
+          loadedPaper = SSCCGLService.getPaper(targetTestId) || null;
         }
 
         if (!loadedPaper && targetTestId) {
@@ -227,7 +227,7 @@ export default function TestResultScreen() {
     } else {
       next.add(q.id);
       if (user?.uid) {
-        addBookmark(user.uid, {
+        addBookmark({
           questionId: q.id,
           questionText: q.questionText,
           testTitle: result?.testTitle || 'Mock Exam',
@@ -622,9 +622,9 @@ export default function TestResultScreen() {
                       const isCorrect = optIdx === q.correctAnswerIndex;
                       const isUserChoice = optIdx === q.selectedOption;
 
-                      let optBg = colors.surface;
-                      let optBorder = colors.line;
-                      let textCol = colors.muted;
+                      let optBg: string = colors.surface;
+                      let optBorder: string = colors.line;
+                      let textCol: string = colors.muted;
 
                       if (isCorrect) {
                         optBg = colors.successBg;

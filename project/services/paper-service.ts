@@ -1887,3 +1887,23 @@ export const INITIAL_PAPERS_CATALOG: ServerPaper[] = [
   ...INITIAL_TOPIC_PAPERS,
   ...INITIAL_TGT_PGT_PAPERS,
 ];
+
+const PaperService = {
+  fetchPapersList: async (): Promise<ServerPaper[]> => {
+    try {
+      const response = await fetch(`${API_URL}/papers`);
+      if (response.ok) {
+        const data = await response.json();
+        if (Array.isArray(data) && data.length > 0) return data;
+      }
+    } catch {}
+    return INITIAL_PAPERS_CATALOG;
+  },
+  getAllPapers: (): ServerPaper[] => INITIAL_PAPERS_CATALOG,
+  getFullMocks: (): ServerPaper[] => INITIAL_FULL_MOCKS,
+  getTopicPapers: (): ServerPaper[] => INITIAL_TOPIC_PAPERS,
+  getTgtPgtPapers: (): ServerPaper[] => INITIAL_TGT_PGT_PAPERS,
+};
+
+export { PaperService };
+export default PaperService;

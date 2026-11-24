@@ -84,8 +84,8 @@ export default function MockTestScreen() {
   const [lastSavedTime, setLastSavedTime] = useState<number | null>(null);
   const [isBookmarked, setIsBookmarked] = useState(false);
 
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const autoSaveRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<any>(null);
+  const autoSaveRef = useRef<any>(null);
 
   // 1. Flattened questions list
   const getAllQuestions = useCallback((): ParsedQuestion[] => {
@@ -119,7 +119,7 @@ export default function MockTestScreen() {
         }
 
         if (!paper && testId) {
-          paper = SSCCGLService.getPaper(testId);
+          paper = SSCCGLService.getPaper(testId) || null;
         }
 
         if (!paper) {
@@ -597,9 +597,9 @@ export default function MockTestScreen() {
             const status = getQuestionStatus(q.id, idx);
             const isCurrent = idx === currentQuestionIndex;
 
-            let badgeBg = colors.surface;
-            let badgeBorder = colors.line;
-            let textCol = colors.muted;
+            let badgeBg: string = colors.surface;
+            let badgeBorder: string = colors.line;
+            let textCol: string = colors.muted;
 
             if (status === 'answered') {
               badgeBg = colors.successBg;
@@ -815,7 +815,7 @@ export default function MockTestScreen() {
                     onPress={() => {
                       setIsBookmarked(!isBookmarked);
                       if (user?.uid) {
-                        addBookmark(user.uid, {
+                        addBookmark({
                           questionId: currentQuestion.id,
                           questionText: currentQuestion.questionText,
                           testTitle: test.title,

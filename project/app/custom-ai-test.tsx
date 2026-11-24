@@ -92,8 +92,8 @@ export default function CustomAiTestScreen() {
     paper?: any;
   } | null>(null);
 
-  const pollIntervalRef = useRef<NodeJS.Timeout | null>(null);
-  const etaTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const pollIntervalRef = useRef<any>(null);
+  const etaTimerRef = useRef<any>(null);
 
   const { width: windowWidth } = useWindowDimensions();
   const isLargeScreen = windowWidth >= 1024;

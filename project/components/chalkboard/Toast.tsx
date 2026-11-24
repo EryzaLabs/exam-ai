@@ -30,9 +30,9 @@ export default function Toast({
 
   if (!visible) return null;
 
-  let bg = colors.surface;
-  let border = colors.line;
-  let text = colors.text;
+  let bg: string = colors.surface;
+  let border: string = colors.line;
+  let text: string = colors.text;
   let icon = <Info size={16} color={colors.accent} />;
 
   if (type === 'success') {

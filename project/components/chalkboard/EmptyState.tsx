@@ -13,6 +13,8 @@ export interface EmptyStateProps {
     variant?: ButtonProps['variant'];
     icon?: React.ReactNode;
   };
+  actionLabel?: string;
+  onAction?: () => void;
   style?: ViewStyle;
 }
 
@@ -21,9 +23,12 @@ export default function EmptyState({
   title,
   description,
   action,
+  actionLabel,
+  onAction,
   style,
 }: EmptyStateProps) {
   const { colors, radii } = useChalkboardTheme();
+  const effectiveAction = action || (actionLabel && onAction ? { label: actionLabel, onPress: onAction } : undefined);
 
   return (
     <View
@@ -53,13 +58,13 @@ export default function EmptyState({
         {description}
       </Text>
 
-      {action && (
+      {effectiveAction && (
         <View style={styles.actionWrap}>
           <Button
-            title={action.label}
-            variant={action.variant || 'primary'}
-            onPress={action.onPress}
-            icon={action.icon}
+            title={effectiveAction.label}
+            variant={effectiveAction.variant || 'primary'}
+            onPress={effectiveAction.onPress}
+            icon={effectiveAction.icon}
           />
         </View>
       )}

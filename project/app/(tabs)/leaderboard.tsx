@@ -16,7 +16,7 @@ export default function LeaderboardScreen() {
         <Text style={[styles.title, { color: colors.text }]}>Rank & Leaderboard</Text>
         
         <EmptyState
-          icon={Trophy}
+          icon={<Trophy size={48} color={colors.accent} />}
           title="Live Candidate Rankings"
           description="State-level percentile and rank standings are calculated upon conclusion of full-length timed mock tests. Complete a mock test to view your relative performance."
           actionLabel="View Available Tests"

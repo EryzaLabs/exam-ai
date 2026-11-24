@@ -19,9 +19,9 @@ export default function Pill({
 }: PillProps) {
   const { colors, radii } = useChalkboardTheme();
 
-  let bg = colors.surface2;
-  let border = colors.line;
-  let text = colors.muted;
+  let bg: string = colors.surface2;
+  let border: string = colors.line;
+  let text: string = colors.muted;
 
   if (variant === 'free' || variant === 'owned' || variant === 'success') {
     bg = colors.successBg;

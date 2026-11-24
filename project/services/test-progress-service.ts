@@ -37,6 +37,13 @@ export interface TestResult extends TestAnalytics {
   evaluationStatus?: 'pending' | 'completed';
   answerGenerationError?: string;
   questionOrder?: string[]; // Array of question IDs in the order they were presented to the user
+  totalQuestions?: number;
+  totalCorrect?: number;
+  totalIncorrect?: number;
+  totalUnattempted?: number;
+  rank?: number;
+  userAnswers?: any[];
+  questionStates?: Record<string, any>;
 }
 
 export const TestProgressService = {

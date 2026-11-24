@@ -21,6 +21,7 @@ export interface AppShellProps {
   children: React.ReactNode;
   maxWidth?: number;
   hideSidebar?: boolean;
+  title?: string;
 }
 
 export default function AppShell({

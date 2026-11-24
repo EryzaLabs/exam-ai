@@ -182,7 +182,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     } else if (!user && !inAuthGroup) {
       // Allow guest user to explore home, tests, and preview features!
       // Only redirect if specifically navigating to profile setup
-      if (segments.includes('profile-setup')) {
+      if ((segments as string[]).includes('profile-setup')) {
         router.replace('/login');
       }
       return;
@@ -190,7 +190,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       // Check if user has completed profile
       const checkProfile = async () => {
         const hasProfile = await UserService.hasCompletedProfile(user.uid);
-        if (!hasProfile && !segments.includes('profile-setup')) {
+        if (!hasProfile && !(segments as string[]).includes('profile-setup')) {
           router.replace('/profile-setup');
         } else if (hasProfile) {
           router.replace('/');

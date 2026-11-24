@@ -54,6 +54,7 @@ export interface TestResult {
   score: number;
   totalQuestions: number;
   correctAnswers: number;
+  totalCorrect?: number;
   timeTaken: number;
   accuracy: number;
   date: Date;

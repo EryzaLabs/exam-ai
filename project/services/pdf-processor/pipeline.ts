@@ -35,7 +35,7 @@ export class PDFProcessingPipeline {
     this.extractionService = new QuestionExtractionService(this.vlmService);
     this.translationService = new TranslationService(this.vlmService, {
       apiKey: config.vlm.apiKey,
-      endpoint: config.vlm.endpoints?.translation,
+      endpoint: config.vlm.endpoint || (config.vlm as any).endpoints?.translation,
       translationModel: config.vlm.translationModel,
     });
     this.exportService = new DataExportService(config.export);
@@ -320,6 +320,7 @@ export class PDFProcessingPipeline {
       totalPages: 0,
       processedPages: 0,
       startTime: new Date(),
+      errors: [],
     };
   }
 
@@ -421,7 +422,7 @@ export class PDFProcessingPipeline {
       const path = await import('path');
       
       // Create cache directory if needed
-      const cacheDir = this.config.processing.cacheDirectory;
+      const cacheDir = this.config.processing.cacheDirectory || './cache';
       try {
         await fs.mkdir(cacheDir, { recursive: true });
       } catch (error) {

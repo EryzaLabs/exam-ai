@@ -242,11 +242,11 @@ export default function QuizView({
                 const isSelected = chosenIndex === optIdx;
                 const isCorrect = optIdx === correctIdx;
 
-                let optionBg = colors.surface;
-                let optionBorder = colors.line;
-                let textColor = colors.text;
-                let badgeBg = colors.surface2;
-                let badgeTextCol = colors.text;
+                let optionBg: string = colors.surface;
+                let optionBorder: string = colors.line;
+                let textColor: string = colors.text;
+                let badgeBg: string = colors.surface2;
+                let badgeTextCol: string = colors.text;
 
                 if (isAnswered) {
                   if (isCorrect) {
