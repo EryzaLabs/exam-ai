@@ -150,6 +150,18 @@ const ACRONYMS: Record<string, string> = {
   fr: 'FR',
   sr: 'SR',
   gem: 'GeM',
+  doe: 'DoE',
+  ews: 'EWS',
+  sc: 'SC',
+  st: 'ST',
+  pwbd: 'PwBD',
+  cbt: 'CBT',
+  pyq: 'PYQ',
+  dsssb: 'DSSSB',
+  tgt: 'TGT',
+  pgt: 'PGT',
+  upsc: 'UPSC',
+  uppsc: 'UPPSC',
 };
 
 const LOWERCASE_WORDS = new Set(['of', 'and', '&', 'in', 'to', 'for', 'the', 'on', 'with', 'from', 'by', 'at']);
@@ -174,6 +186,60 @@ export function formatTopicDisplayName(rawSlug: string): string {
   });
 
   return formattedWords.join(' ');
+}
+
+/**
+ * Transforms any test title or filename into a clean, human-readable Title Case format.
+ * E.g.: "Topic Test: ANEKARTHI_SHABD - Part 1" -> "Anekarthi Shabd • Practice Set 1"
+ *       "Active_and_passive_voice • Practice Set 1" -> "Active and Passive Voice • Practice Set 1"
+ */
+export function formatCleanTestTitle(rawTitle: string, filename?: string): string {
+  if (!rawTitle && !filename) return 'Practice Test';
+  const t = (rawTitle || '').trim();
+  const f = (filename || '').trim();
+
+  // If already a clean full mock title
+  if (t.includes('Full Mock Test') || t.includes('Complete CBT Exam')) {
+    return t;
+  }
+  if (f.includes('full_mocks/')) {
+    const match = f.match(/mock_test_(\d+)\.json/i);
+    if (match) {
+      const num = parseInt(match[1], 10);
+      const padded = num < 10 ? `0${num}` : `${num}`;
+      return `UPSC Principal Full Mock Test ${padded} • Complete CBT Exam`;
+    }
+  }
+
+  // Topic test matching
+  const topicMatch =
+    t.match(/Topic Test:\s*(.+?)\s*-\s*Part\s*(\d+)/i) ||
+    f.match(/topic_wise\/(.+?)_test_(\d+)\.json/i) ||
+    t.match(/^(.+?)\s*[•·-]\s*(?:Practice\s*Set|Part)\s*(\d+)/i) ||
+    t.match(/^(.+?)_test_(\d+)$/i);
+
+  if (topicMatch) {
+    const rawTopic = topicMatch[1];
+    const part = topicMatch[2];
+    const cleanTopic = formatTopicDisplayName(rawTopic);
+    return `${cleanTopic} • Practice Set ${part}`;
+  }
+
+  // DSSSB PGT/TGT official paper title
+  if (t.includes('DSSSB') || f.includes('tgt_pgt/')) {
+    return t.replace(/_/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+
+  if (t) {
+    return formatTopicDisplayName(t);
+  }
+
+  if (f) {
+    const base = f.replace(/^.*[\\/]/, '').replace(/\.json$/i, '');
+    return formatTopicDisplayName(base);
+  }
+
+  return 'Practice Test';
 }
 
 export interface ResolvedTopicInfo {

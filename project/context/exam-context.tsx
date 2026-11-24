@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { formatTopicDisplayName } from '@/utils/topic-resolver';
 
 export type ExamTarget = 'all' | 'upsc' | 'uppsc' | 'tgt' | 'pgt';
 
@@ -113,8 +114,8 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
     }
 
     if (filename.includes('tgt_pgt/') || filename.includes('tgt/') || filename.includes('pgt/')) {
-      const clean = filename.replace(/^.*\//, '').replace(/\.json$/i, '').replace(/[_\-]+/g, ' ');
-      return clean.replace(/\b\w/g, (c) => c.toUpperCase());
+      const clean = formatTopicDisplayName(filename.replace(/^.*\//, '').replace(/\.json$/i, ''));
+      return clean;
     }
 
     if (filename.includes('full_mocks/')) {
@@ -144,9 +145,7 @@ export function ExamProvider({ children }: { children: React.ReactNode }) {
         const slug = match[1];
         const partNum = parseInt(match[2], 10);
         const paddedPart = partNum < 10 ? `0${partNum}` : `${partNum}`;
-        const cleanName = slug
-          .replace(/[_\-]+/g, ' ')
-          .replace(/\b\w/g, (c) => c.toUpperCase());
+        const cleanName = formatTopicDisplayName(slug);
 
         if (examMode === 'uppsc') {
           return `${cleanName} • UP Principal Set ${paddedPart}`;

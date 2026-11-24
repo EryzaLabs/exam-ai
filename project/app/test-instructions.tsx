@@ -23,6 +23,7 @@ import {
   Check,
 } from 'lucide-react-native';
 import SSCCGLService, { ParsedMockTest } from '@/services/ssc-cgl-service';
+import { formatCleanTestTitle } from '@/utils/topic-resolver';
 import AppShell from '@/components/chalkboard/AppShell';
 import Card from '@/components/chalkboard/Card';
 import Button from '@/components/chalkboard/Button';
@@ -167,7 +168,7 @@ export default function TestInstructionsScreen() {
               },
             ]}
           >
-            {paper?.title || (isHindi ? 'सामान्य परीक्षा निर्देश' : 'General Test Instructions')}
+            {paper?.title ? formatCleanTestTitle(paper.title, filename as string) : (isHindi ? 'सामान्य परीक्षा निर्देश' : 'General Test Instructions')}
           </Text>
           <Text style={[styles.screenSubtitle, { color: colors.muted }]}>
             {isHindi

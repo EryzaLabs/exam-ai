@@ -34,6 +34,7 @@ import SSCCGLService, {
 } from '@/services/ssc-cgl-service';
 import { TestProgressService, SavedTestState } from '@/services/test-progress-service';
 import { addBookmark } from '@/services/bookmark-service';
+import { formatCleanTestTitle } from '@/utils/topic-resolver';
 import { useAuth } from '@/context/auth-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import Button from '@/components/chalkboard/Button';
@@ -301,7 +302,7 @@ export default function MockTestScreen() {
       answers: answersRecord,
       lastUpdated: Date.now(),
       questionOrder,
-      testTitle: cur.test.title,
+      testTitle: cur.test ? formatCleanTestTitle(cur.test.title, cur.filename) : undefined,
       totalQuestions: cur.questionsLength,
       filename: cur.filename,
     };
@@ -355,7 +356,7 @@ export default function MockTestScreen() {
         answers: answersRecord,
         lastUpdated: Date.now(),
         questionOrder: cur.test.sections.flatMap((s) => s.questions.map((q) => q.id)),
-        testTitle: cur.test.title,
+        testTitle: cur.test ? formatCleanTestTitle(cur.test.title, cur.filename) : undefined,
         totalQuestions: cur.questionsLength,
         filename: cur.filename,
       };
@@ -668,7 +669,7 @@ export default function MockTestScreen() {
         userAnswers: syncedAnswers.map((a) => a.selectedOption),
         questionStates: questionStatesObj,
         date: new Date().toISOString(),
-        testTitle: test?.title,
+        testTitle: test?.title ? formatCleanTestTitle(test.title, (params.filename as string) || (test as any)?.filename) : undefined,
         filename: (params.filename as string) || (test as any)?.filename,
         questionOrder: questions.map((q) => q.id),
       });
@@ -1059,7 +1060,7 @@ export default function MockTestScreen() {
               ]}
               numberOfLines={1}
             >
-              {test.title}
+              {formatCleanTestTitle(test.title, (params.filename as string) || (test as any)?.filename)}
             </Text>
             {test.sections && test.sections.length > 1 ? (
               <Text style={[styles.sectionMetaText, { color: colors.muted }]}>
@@ -1200,7 +1201,7 @@ export default function MockTestScreen() {
                         addBookmark({
                           questionId: currentQuestion.id,
                           questionText: currentQuestion.questionText,
-                          testTitle: test.title,
+                          testTitle: formatCleanTestTitle(test.title, (params.filename as string) || (test as any)?.filename),
                         }).catch(() => {});
                       }
                     }}

@@ -5,7 +5,7 @@
 
 import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { extractTestTopicAndSubject, resolveQuestionTopic } from '@/utils/topic-resolver';
+import { extractTestTopicAndSubject, resolveQuestionTopic, formatCleanTestTitle, formatTopicDisplayName } from '@/utils/topic-resolver';
 
 const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://astra-backend.eryzalabs.cloud/api';
 
@@ -384,15 +384,8 @@ class SSCCGLService {
         const padded = num < 10 ? `0${num}` : `${num}`;
         testName = `${examPrefix} Full Mock Test ${padded} • Complete CBT Exam`;
       }
-    } else if (effectiveFilename.includes('topic_wise/')) {
-      const base = effectiveFilename.replace('topic_wise/', '').replace('.json', '');
-      const match = base.match(/^(.+)_test_(\d+)$/);
-      if (match) {
-        const slug = match[1].toLowerCase();
-        const partNum = match[2];
-        const displayTopic = slug.split('-').map((s: string) => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
-        testName = `${displayTopic} • Practice Set ${partNum}`;
-      }
+    } else if (effectiveFilename.includes('topic_wise/') || paper.type === 'topic_wise' || testName.includes('Topic Test:')) {
+      testName = formatCleanTestTitle(testName, effectiveFilename);
     }
     const testId = paper.test_id || paper.id || paper._id || 'unknown_id';
     

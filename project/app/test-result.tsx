@@ -39,7 +39,11 @@ import { useAuth } from '@/context/auth-context';
 import { useSub } from '@/context/subscription-context';
 import { useExam } from '@/context/exam-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
-import { extractTestTopicAndSubject, resolveQuestionTopic } from '@/utils/topic-resolver';
+import {
+  extractTestTopicAndSubject,
+  resolveQuestionTopic,
+  formatCleanTestTitle,
+} from '@/utils/topic-resolver';
 import AppShell from '@/components/chalkboard/AppShell';
 import Card from '@/components/chalkboard/Card';
 import Button from '@/components/chalkboard/Button';
@@ -323,6 +327,11 @@ export default function TestResultScreen() {
 
   const timeMinutes = Math.round((result.timeTaken || 0) / 60);
 
+  const displayTestTitle = formatCleanTestTitle(
+    result.testTitle || paper?.title || '',
+    (params.filename as string) || (result as any)?.filename || (paper as any)?.filename
+  );
+
   // Performance Tier Message
   let tierTitle = 'Good base to build on';
   let tierDesc =
@@ -354,6 +363,23 @@ export default function TestResultScreen() {
             Back to test series
           </Text>
         </TouchableOpacity>
+
+        {/* Test Title Header */}
+        {displayTestTitle ? (
+          <View style={{ marginBottom: 14 }}>
+            <Text
+              style={{
+                fontSize: 20,
+                fontWeight: '700',
+                color: colors.text,
+                fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+                letterSpacing: -0.3,
+              }}
+            >
+              {displayTestTitle}
+            </Text>
+          </View>
+        ) : null}
 
         {/* Section 1: Score & Performance Summary Card */}
         <Card style={styles.scoreCard}>

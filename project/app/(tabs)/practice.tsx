@@ -36,6 +36,7 @@ import Card from '@/components/chalkboard/Card';
 import Button from '@/components/chalkboard/Button';
 import Pill from '@/components/chalkboard/Pill';
 import Modal from '@/components/chalkboard/Modal';
+import { formatTopicDisplayName, formatCleanTestTitle } from '@/utils/topic-resolver';
 
 export interface TopicGroup {
   topic: string;
@@ -70,9 +71,10 @@ export default function PracticeScreen() {
     const map = new Map<string, { topic: string; papers: ServerPaper[]; totalQuestions: number }>();
 
     pool.forEach((p) => {
-      const topicName =
-        (p.subject || '').replace(/_/g, ' ').trim() ||
-        (p.title || '').replace(/^Topic Test:\s*/i, '').trim();
+      const rawTopic = p.subject || p.title || '';
+      const topicName = formatTopicDisplayName(
+        rawTopic.replace(/^Topic Test:\s*/i, '').replace(/ - Part \d+$/i, '').trim()
+      );
       if (!topicName) return;
       if (!map.has(topicName)) {
         map.set(topicName, {
