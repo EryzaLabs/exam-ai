@@ -8,6 +8,7 @@ import {
   Platform,
   useWindowDimensions,
   Animated,
+  Image,
 } from 'react-native';
 import {
   X,
@@ -16,6 +17,10 @@ import {
   Target,
   Globe,
   Sparkles,
+  Volume2,
+  VolumeX,
+  Play,
+  Square,
 } from 'lucide-react-native';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { useWalkthrough } from '@/context/walkthrough-context';
@@ -33,6 +38,11 @@ export default function FirstTimeWalkthrough() {
     targetRect,
     language,
     setLanguage,
+    voiceEnabled,
+    isSpeaking,
+    toggleVoice,
+    speakCurrentStep,
+    stopSpeaking,
     stopWalkthrough,
     nextStep,
     prevStep,
@@ -99,8 +109,8 @@ export default function FirstTimeWalkthrough() {
     : 0;
 
   // Tooltip card sizing & smart positioning (above or below spotlight)
-  const cardWidth = Math.min(390, winW - 24);
-  const estimatedCardHeight = 250;
+  const cardWidth = Math.min(395, winW - 24);
+  const estimatedCardHeight = 295;
 
   let cardTop = Math.max(24, (winH - estimatedCardHeight) / 2);
   let cardLeft = Math.max(12, (winW - cardWidth) / 2);
@@ -332,8 +342,114 @@ export default function FirstTimeWalkthrough() {
             </View>
           </View>
 
-          {/* Body: Title & Explanation */}
+          {/* Body: Vidya AI Guide + Title & Explanation */}
           <View style={styles.cardBody}>
+            {/* Vidya AI Voice Strip */}
+            <View
+              style={[
+                styles.vidyaStrip,
+                {
+                  backgroundColor: isSpeaking ? colors.accent + '18' : colors.surface2,
+                  borderColor: isSpeaking ? colors.accent : colors.line,
+                  borderRadius: radii.button,
+                },
+              ]}
+            >
+              <View
+                style={[
+                  styles.vidyaAvatarRing,
+                  {
+                    borderColor: isSpeaking ? colors.accent : colors.line,
+                  },
+                ]}
+              >
+                <Image
+                  source={require('@/assets/images/vidya.png')}
+                  style={styles.vidyaAvatar}
+                  resizeMode="contain"
+                />
+              </View>
+
+              <TouchableOpacity
+                style={styles.vidyaTextCol}
+                onPress={() => {
+                  if (isSpeaking) {
+                    stopSpeaking();
+                  } else {
+                    speakCurrentStep();
+                  }
+                }}
+                activeOpacity={0.75}
+              >
+                <Text style={[styles.vidyaName, { color: colors.text }]}>
+                  {isHi ? 'विद्या AI गाइड' : 'Vidya AI Guide'}
+                </Text>
+                <Text
+                  style={[
+                    styles.vidyaStatus,
+                    { color: isSpeaking ? colors.accent : colors.muted },
+                  ]}
+                  numberOfLines={1}
+                >
+                  {isSpeaking
+                    ? isHi
+                      ? 'बोल रही हैं... (रोकने के लिए टैप करें)'
+                      : 'Speaking... (tap to stop)'
+                    : !voiceEnabled
+                    ? isHi
+                      ? 'आवाज़ बंद है • सुनने के लिए टैप करें'
+                      : 'Muted • Tap to listen'
+                    : isHi
+                    ? 'सुनने के लिए टैप करें'
+                    : 'Tap to hear explanation'}
+                </Text>
+              </TouchableOpacity>
+
+              <View style={styles.vidyaControls}>
+                <TouchableOpacity
+                  onPress={() => {
+                    if (isSpeaking) {
+                      stopSpeaking();
+                    } else {
+                      speakCurrentStep();
+                    }
+                  }}
+                  style={[
+                    styles.voiceBtn,
+                    {
+                      backgroundColor: isSpeaking ? colors.accent : colors.surface,
+                      borderColor: isSpeaking ? colors.accent : colors.line,
+                    },
+                  ]}
+                  accessibilityLabel={isSpeaking ? 'Stop Vidya voice' : 'Play Vidya voice'}
+                >
+                  {isSpeaking ? (
+                    <Square size={12} color={colors.accentText} fill={colors.accentText} />
+                  ) : (
+                    <Play size={12} color={colors.text} fill={colors.text} />
+                  )}
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  onPress={toggleVoice}
+                  style={[
+                    styles.voiceBtn,
+                    {
+                      backgroundColor: colors.surface,
+                      borderColor: colors.line,
+                    },
+                  ]}
+                  accessibilityLabel={voiceEnabled ? 'Mute voice' : 'Unmute voice'}
+                >
+                  {voiceEnabled ? (
+                    <Volume2 size={14} color={colors.text} />
+                  ) : (
+                    <VolumeX size={14} color={colors.muted} />
+                  )}
+                </TouchableOpacity>
+              </View>
+            </View>
+
             <Text
               style={[
                 styles.title,
@@ -588,5 +704,52 @@ const styles = StyleSheet.create({
   skipText: {
     fontSize: 13,
     fontWeight: '600',
+  },
+  vidyaStrip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    borderWidth: 1,
+    marginBottom: 4,
+  },
+  vidyaAvatarRing: {
+    width: 34,
+    height: 34,
+    borderRadius: 17,
+    borderWidth: 1.5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden',
+  },
+  vidyaAvatar: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+  },
+  vidyaTextCol: {
+    flex: 1,
+  },
+  vidyaName: {
+    fontSize: 12.5,
+    fontWeight: '700',
+  },
+  vidyaStatus: {
+    fontSize: 11.5,
+    marginTop: 1,
+  },
+  vidyaControls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  voiceBtn: {
+    width: 28,
+    height: 28,
+    borderRadius: 14,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
