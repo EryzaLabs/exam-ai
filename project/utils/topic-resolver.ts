@@ -293,3 +293,116 @@ export function extractTestTopicAndSubject(test: {
   // 4. Default: If nothing else could be extracted, use "UPSC Principal Practice"
   return { topic: 'Comprehensive Principal Practice', subject: 'General Practice', isFullMock: false };
 }
+
+/**
+ * Resolves a clean, standardized syllabus topic for an individual question.
+ * Strictly prevents question options, correct answers, or explanation fragments from being misclassified as topics.
+ */
+export function resolveQuestionTopic(
+  q: any,
+  sectionTitle?: string,
+  testTitle?: string
+): string {
+  if (!q) return 'Core Syllabus';
+
+  // 1. Direct question topic (from parsed question or raw question object)
+  const rawTopic = q.topic || q.metadata?.topic;
+  if (rawTopic && typeof rawTopic === 'string' && rawTopic.trim()) {
+    const clean = rawTopic.trim();
+    // Ensure it's not an answer or long sentence
+    if (
+      !clean.toLowerCase().startsWith('correct answer:') &&
+      clean.length < 65 &&
+      !clean.includes('||') &&
+      !clean.includes('\n')
+    ) {
+      const lower = clean.toLowerCase();
+      if (lower.includes('delhi education act') || lower.includes('delhi school education') || lower.includes('dsea') || lower.includes('dser')) return 'Delhi School Education Act & Rules 1973';
+      if (lower.includes('right to education') || lower.includes('rte act')) return 'RTE Act 2009: Free & Compulsory Education';
+      if (lower.includes('nep 2020') || lower.includes('national education policy')) return 'NEP 2020 (National Education Policy)';
+      if (lower.includes('ncf')) return 'NCF 2023 (School Education)';
+      if (lower.includes('evaluation') || lower.includes('measurement') || lower.includes('formative') || lower.includes('summative')) return 'Educational Measurement & Evaluation';
+      if (lower.includes('pocso')) return 'POCSO Act 2012 & Child Rights';
+      if (lower.includes('smc') || lower.includes('school management')) return 'School Management Committees (SMC & PTA)';
+      if (lower.includes('gfr') || lower.includes('financial rules')) return 'General Financial Rules (GFR) 2017 & Public Procurement';
+      if (lower.includes('conduct')) return 'CCS (Conduct) Rules, 1964: Civil Services Code';
+      if (lower.includes('cca')) return 'CCS (CCA) Rules, 1965: Disciplinary Procedures';
+      if (lower.includes('leave')) return 'CCS (Leave) Rules, 1972: Leave Entitlements';
+      if (lower.includes('pension') || lower.includes('nps')) return 'National Pension System (NPS) & Retirement Rules';
+      if (lower.includes('leader')) return 'School Leadership: Effective vs. Successful Leader';
+      if (lower.includes('disability') || lower.includes('inclusive') || lower.includes('special talent') || lower.includes('handicapped')) return 'Inclusive Education & Special Needs';
+      if (lower.includes('language') || lower.includes('literacy')) return 'Language Education & Literacy';
+      if (lower.includes('mathematics') || lower.includes('math')) return 'Mathematics & Quantitative Reasoning';
+      if (lower.includes('science')) return 'Science Education & Inquiry';
+      if (lower.includes('constitution')) return 'Constitutional Provisions for Education';
+      if (lower.includes('thinker')) return 'Educational Thinkers & Philosophies';
+      if (lower.includes('play') || lower.includes('preparatory') || lower.includes('initial') || lower.includes('competency') || lower.includes('learning outcome')) return 'Curriculum, Pedagogy & Learning Standards';
+      return formatTopicDisplayName(clean);
+    }
+  }
+
+  // 2. Direct question subject
+  const rawSubject = q.subject || q.metadata?.subject;
+  if (
+    rawSubject &&
+    typeof rawSubject === 'string' &&
+    rawSubject.trim() &&
+    rawSubject !== 'General' &&
+    rawSubject !== 'UPSC Principal Paper' &&
+    rawSubject !== 'Core Subject'
+  ) {
+    const clean = rawSubject.trim();
+    if (!clean.toLowerCase().startsWith('correct answer:') && clean.length < 65) {
+      return formatTopicDisplayName(clean);
+    }
+  }
+
+  // 3. Section Title if meaningful (e.g. in DSSSB TGT/PGT)
+  if (sectionTitle && typeof sectionTitle === 'string' && sectionTitle.trim()) {
+    const cleanSec = sectionTitle.trim();
+    if (
+      cleanSec !== 'main' &&
+      !cleanSec.toLowerCase().startsWith('section') &&
+      cleanSec.toLowerCase() !== 'general' &&
+      cleanSec.toLowerCase() !== 'full mock cbt'
+    ) {
+      return cleanSec;
+    }
+  }
+
+  // 4. Test title / filename extraction (e.g. for topic tests)
+  if (testTitle || q.testTitle || q.filename) {
+    const res = extractTestTopicAndSubject({
+      testTitle: testTitle || q.testTitle,
+      filename: q.filename,
+    });
+    if (res && res.topic && res.topic !== 'Full Mock CBT Exam' && res.topic !== 'Comprehensive Principal Practice') {
+      return res.topic;
+    }
+  }
+
+  // 5. Intelligent syllabus keyword matching on question text
+  const text = (q.questionText || q.question_english || q.question || '').toLowerCase();
+  if (text.includes('rte') || text.includes('right to education')) return 'RTE Act 2009: Free & Compulsory Education';
+  if (text.includes('nep 2020') || text.includes('national education policy 2020') || text.includes('nep-2020')) return 'NEP 2020 (National Education Policy)';
+  if (text.includes('ncf') || text.includes('national curriculum framework')) return 'NCF 2023 (School Education)';
+  if (text.includes('dsea') || text.includes('dser') || text.includes('delhi school education')) return 'Delhi School Education Act & Rules 1973';
+  if (text.includes('ccs (conduct)') || text.includes('conduct rules')) return 'CCS (Conduct) Rules, 1964: Civil Services Code';
+  if (text.includes('ccs (cca)') || text.includes('cca rules')) return 'CCS (CCA) Rules, 1965: Disciplinary Procedures';
+  if (text.includes('ccs (leave)') || text.includes('maternity leave') || text.includes('earned leave')) return 'CCS (Leave) Rules, 1972: Leave Entitlements';
+  if (text.includes('pension rules') || text.includes('nps') || text.includes('gratuity')) return 'National Pension System (NPS) & Retirement Rules';
+  if (text.includes('gfr') || text.includes('general financial') || text.includes('procurement') || text.includes('concurrence')) return 'General Financial Rules (GFR) 2017 & Public Procurement';
+  if (text.includes('fr & sr') || text.includes('fundamental rules') || text.includes('supplementary rules')) return 'Fundamental Rules & Supplementary Rules (FR & SR)';
+  if (text.includes('pocso')) return 'POCSO Act 2012 & Child Rights';
+  if (text.includes('kothari') || text.includes('npe 1968') || text.includes('npe 1986')) return 'National Educational Policies (NPE 1968 & 1986)';
+  if (text.includes('smc') || text.includes('school management committee') || text.includes('pta')) return 'School Management Committees (SMC & PTA)';
+  if (text.includes('pedagogy') || text.includes('andragogy') || text.includes('foundational stage') || text.includes('early childhood') || text.includes('ecce')) return 'Child Development & Pedagogy';
+  if (text.includes('criterion-referenced') || text.includes('norm-referenced') || text.includes('evaluation') || text.includes('assessment') || text.includes('t-score') || text.includes('z-score') || text.includes('standard deviation')) return 'Educational Measurement & Psychometrics';
+  if (text.includes('mathematics') || text.includes('numeracy')) return 'Mathematics & Quantitative Aptitude';
+  if (text.includes('science') || text.includes('scientific inquiry')) return 'Science Education & Methodology';
+  if (text.includes('language') || text.includes('multilingualism') || text.includes('three-language')) return 'Language Education & Multilingualism';
+  if (text.includes('supervision') || text.includes('leadership') || text.includes('head of school') || text.includes('school development plan')) return 'School Leadership: Effective vs. Successful Leader';
+  if (text.includes('disability') || text.includes('inclusive') || text.includes('special education') || text.includes('pwbd') || text.includes('backward classes')) return 'Inclusive Education & Special Needs';
+
+  return 'Administration & Governance';
+}

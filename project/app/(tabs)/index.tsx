@@ -43,6 +43,7 @@ import ProgressBar from '@/components/chalkboard/ProgressBar';
 import TopicBar from '@/components/chalkboard/TopicBar';
 import SeriesCard from '@/components/chalkboard/SeriesCard';
 import OfferCard from '@/components/chalkboard/OfferCard';
+import { extractTestTopicAndSubject } from '@/utils/topic-resolver';
 
 const WEEK_DAYS = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 
@@ -147,13 +148,28 @@ export default function HomeScreen() {
     const map: Record<string, { topic: string; total: number; correct: number }> = {};
 
     testHistory.forEach((t) => {
-      if (t.sectionAnalytics) {
+      const resolved = extractTestTopicAndSubject(t);
+      if (t.sectionAnalytics && t.sectionAnalytics.length > 0) {
         t.sectionAnalytics.forEach((sec: any) => {
-          const name = sec.sectionName || sec.title || 'Core Subject';
-          if (!map[name]) map[name] = { topic: name, total: 0, correct: 0 };
-          map[name].total += sec.attempted || 0;
-          map[name].correct += sec.correct || 0;
+          let name = sec.sectionTitle || sec.sectionName || sec.title;
+          if (!name || name === 'main' || name === 'Full Mock CBT') {
+            name = resolved.topic;
+          }
+          if (name && name !== 'Full Mock CBT Exam') {
+            if (!map[name]) map[name] = { topic: name, total: 0, correct: 0 };
+            map[name].total += sec.attempted || 0;
+            map[name].correct += sec.correct || 0;
+          }
         });
+      } else {
+        const name = resolved.topic;
+        if (name && name !== 'Full Mock CBT Exam') {
+          if (!map[name]) map[name] = { topic: name, total: 0, correct: 0 };
+          const attempted = t.answers ? t.answers.length : (t.totalQuestions || 20);
+          const correct = t.totalCorrect ?? Math.round((attempted * (t.accuracy || 0)) / 100);
+          map[name].total += attempted;
+          map[name].correct += correct;
+        }
       }
     });
 

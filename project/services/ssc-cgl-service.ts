@@ -5,7 +5,7 @@
 
 import { Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { extractTestTopicAndSubject } from '@/utils/topic-resolver';
+import { extractTestTopicAndSubject, resolveQuestionTopic } from '@/utils/topic-resolver';
 
 const API_URL = process.env.EXPO_PUBLIC_API_URL || 'https://astra-backend.eryzalabs.cloud/api';
 
@@ -114,6 +114,8 @@ export interface ParsedQuestion {
     hindi?: string;
   };
   keyConcepts: string[];
+  topic?: string;
+  subject?: string;
   marks: {
     positive: number;
     negative: number;
@@ -625,6 +627,10 @@ class SSCCGLService {
       keyConcepts = question.ai_generated.english.key_concepts;
     }
 
+    // 6. Extract clean syllabus topic and subject
+    const resolvedTopic = resolveQuestionTopic(question, sectionId);
+    const resolvedSubject = question.subject || question.metadata?.subject || '';
+
     return {
       id: question._id || question.id || String(Math.random()),
       sectionId,
@@ -639,14 +645,16 @@ class SSCCGLService {
         hindi: this.processContent(explHi || ''),
       },
       keyConcepts,
+      topic: resolvedTopic,
+      subject: resolvedSubject,
       marks: {
         positive: Number(question.posMarks) || defaultMarksScheme?.positive || 2.5,
         negative: Number(question.negMarks) || defaultMarksScheme?.negative || 0.833, // standard negative scheme
       },
       metadata: {
         language: question.language || 'en',
-        topic: question.topic || '',
-        subject: question.subject || '',
+        topic: resolvedTopic,
+        subject: resolvedSubject,
       },
     };
   }
@@ -794,7 +802,7 @@ class SSCCGLService {
     const sectionAnalytics = this.calculateSectionAnalytics(paper, attempt);
 
     // Identify strengths and weaknesses
-    const { strengthAreas, weaknessAreas } = this.identifyStrengthsWeaknesses(sectionAnalytics);
+    const { strengthAreas, weaknessAreas } = this.identifyStrengthsWeaknesses(sectionAnalytics, paper, attempt);
 
     // Generate recommendations
     const recommendations = this.generateRecommendations(sectionAnalytics, weaknessAreas);
@@ -852,18 +860,54 @@ class SSCCGLService {
    * Identify strength and weakness areas
    */
   private identifyStrengthsWeaknesses(
-    sectionAnalytics: SectionAnalytics[]
+    sectionAnalytics: SectionAnalytics[],
+    paper?: ParsedMockTest,
+    attempt?: TestAttempt
   ): { strengthAreas: string[]; weaknessAreas: string[] } {
     const strengthAreas: string[] = [];
     const weaknessAreas: string[] = [];
 
     sectionAnalytics.forEach((section) => {
-      if (section.accuracy >= 70) {
-        strengthAreas.push(section.sectionTitle);
-      } else if (section.accuracy < 50) {
-        weaknessAreas.push(section.sectionTitle);
+      if (
+        section.sectionTitle &&
+        section.sectionTitle !== 'main' &&
+        section.sectionTitle !== 'Full Mock CBT'
+      ) {
+        if (section.accuracy >= 70) {
+          strengthAreas.push(section.sectionTitle);
+        } else if (section.accuracy < 50) {
+          weaknessAreas.push(section.sectionTitle);
+        }
       }
     });
+
+    // Also compute topic-level breakdown for full mocks
+    if (paper && attempt && Array.isArray(attempt.answers)) {
+      const answersMap = new Map(attempt.answers.map((a) => [a.questionId, a]));
+      const topicStats: Record<string, { total: number; correct: number }> = {};
+      const allQs = paper.sections.flatMap((s) => s.questions);
+
+      allQs.forEach((q) => {
+        const top = resolveQuestionTopic(q, q.sectionId, paper.title);
+        if (!topicStats[top]) topicStats[top] = { total: 0, correct: 0 };
+        topicStats[top].total++;
+        const ans = answersMap.get(q.id);
+        if (ans?.isCorrect) {
+          topicStats[top].correct++;
+        }
+      });
+
+      Object.entries(topicStats).forEach(([top, stats]) => {
+        if (stats.total >= 2) {
+          const acc = (stats.correct / stats.total) * 100;
+          if (acc >= 70 && !strengthAreas.includes(top)) {
+            strengthAreas.push(top);
+          } else if (acc < 50 && !weaknessAreas.includes(top)) {
+            weaknessAreas.push(top);
+          }
+        }
+      });
+    }
 
     return { strengthAreas, weaknessAreas };
   }

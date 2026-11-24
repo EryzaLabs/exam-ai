@@ -35,7 +35,7 @@ import { useAuth } from '@/context/auth-context';
 import { useSub } from '@/context/subscription-context';
 import { useExam } from '@/context/exam-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
-import { extractTestTopicAndSubject } from '@/utils/topic-resolver';
+import { extractTestTopicAndSubject, resolveQuestionTopic } from '@/utils/topic-resolver';
 import AppShell from '@/components/chalkboard/AppShell';
 import Card from '@/components/chalkboard/Card';
 import Button from '@/components/chalkboard/Button';
@@ -190,7 +190,7 @@ export default function TestResultScreen() {
     const map: Record<string, { topic: string; total: number; correct: number }> = {};
 
     questionsWithStatus.forEach((q) => {
-      const top = q.keyConcepts?.[0] || 'General Subject';
+      const top = resolveQuestionTopic(q, q.sectionId, paper?.title);
       if (!map[top]) {
         map[top] = { topic: top, total: 0, correct: 0 };
       }
@@ -198,11 +198,13 @@ export default function TestResultScreen() {
       if (q.isCorrect) map[top].correct++;
     });
 
-    return Object.values(map).map((item) => ({
-      ...item,
-      accuracy: item.total > 0 ? (item.correct / item.total) * 100 : 0,
-    }));
-  }, [questionsWithStatus]);
+    return Object.values(map)
+      .map((item) => ({
+        ...item,
+        accuracy: item.total > 0 ? (item.correct / item.total) * 100 : 0,
+      }))
+      .sort((a, b) => a.accuracy - b.accuracy);
+  }, [questionsWithStatus, paper]);
 
   // Weak topics (<50% accuracy)
   const weakTopics = useMemo(() => {
@@ -564,14 +566,17 @@ export default function TestResultScreen() {
                         <Pill label="Unattempted" variant="neutral" />
                       )}
 
-                      {q.keyConcepts?.[0] ? (
-                        <Text
-                          style={[styles.reviewTopic, { color: colors.muted }]}
-                          numberOfLines={1}
-                        >
-                          {q.keyConcepts[0]}
-                        </Text>
-                      ) : null}
+                      {(() => {
+                        const topicName = resolveQuestionTopic(q, q.sectionId, paper?.title);
+                        return topicName ? (
+                          <Text
+                            style={[styles.reviewTopic, { color: colors.muted }]}
+                            numberOfLines={1}
+                          >
+                            {topicName}
+                          </Text>
+                        ) : null;
+                      })()}
                     </View>
 
                     <View style={styles.reviewHeaderRight}>

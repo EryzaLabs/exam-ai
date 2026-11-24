@@ -12,6 +12,7 @@ import { useSub } from '@/context/subscription-context';
 import { SSCCGLService } from '@/services/ssc-cgl-service';
 import { INITIAL_PAPERS_CATALOG } from '@/services/paper-service';
 import { ExamTarget } from '@/context/exam-context';
+import { resolveQuestionTopic } from '@/utils/topic-resolver';
 import FirstVisitHeader from '@/components/first-visit/FirstVisitHeader';
 import QuizView, { QuizQuestionItem } from '@/components/first-visit/QuizView';
 import ResultView, {
@@ -144,7 +145,7 @@ export default function SampleTestScreen() {
                   options: q.options || [],
                   correctAnswerIndex: q.correctAnswerIndex ?? 0,
                   explanation: exp,
-                  topic: sec.title || q.keyConcepts?.[0] || 'Subject Knowledge',
+                  topic: resolveQuestionTopic(q, sec.title, parsed.title) || 'Subject Knowledge',
                   section: sec.title,
                 });
               });

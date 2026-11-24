@@ -22,6 +22,7 @@ import SampleQuestionPreview, { SampleQuestionData } from '@/components/first-vi
 import ExamTestList, { TestRowItem } from '@/components/first-visit/ExamTestList';
 import OfferCard from '@/components/first-visit/OfferCard';
 import { FIRST_VISIT_EXAM_STORAGE_KEY } from '@/components/first-visit/ExamPicker';
+import { resolveQuestionTopic } from '@/utils/topic-resolver';
 
 export default function ExamScreen() {
   const params = useLocalSearchParams();
@@ -234,7 +235,7 @@ export default function ExamScreen() {
                   options: q.options || [],
                   correctAnswerIndex: q.correctAnswerIndex ?? 0,
                   explanation: exp,
-                  topic: parsed.sections[0].title || q.keyConcepts?.[0] || 'Core Subject',
+                  topic: resolveQuestionTopic(q, parsed.sections[0]?.title, parsed.title) || 'Core Subject',
                 });
               }
             }

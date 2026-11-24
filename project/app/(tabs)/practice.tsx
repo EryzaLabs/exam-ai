@@ -33,6 +33,7 @@ import PaperService, {
   INITIAL_PAPERS_CATALOG,
 } from '@/services/paper-service';
 import AiTestService from '@/services/ai-test-service';
+import { resolveQuestionTopic } from '@/utils/topic-resolver';
 import AppShell from '@/components/chalkboard/AppShell';
 import Card from '@/components/chalkboard/Card';
 import Button from '@/components/chalkboard/Button';
@@ -161,7 +162,7 @@ export default function PracticeScreen() {
             typeof q.explanation === 'string'
               ? q.explanation
               : q.explanation?.english || 'Standard step-by-step derivation.',
-          topic: q.keyConcepts?.[0] || 'Quick Practice',
+          topic: resolveQuestionTopic(q, undefined, paper.title) || 'Quick Practice',
         }));
 
         setActiveQuizTitle('10-Question Quick Practice');
@@ -248,7 +249,7 @@ export default function PracticeScreen() {
           typeof q.explanation === 'string'
             ? q.explanation
             : q.explanation?.english || 'Official solution derivation.',
-        topic: 'Custom Mock',
+        topic: resolveQuestionTopic(q, undefined, paper?.title) || 'Custom Mock',
       }));
 
       setActiveQuizTitle(`Custom Test (${mapped.length} Questions)`);
