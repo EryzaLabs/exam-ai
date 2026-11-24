@@ -12,7 +12,7 @@ import {
   useWindowDimensions,
   Image,
 } from 'react-native';
-import { router } from 'expo-router';
+import { router, usePathname } from 'expo-router';
 import {
   Search,
   User as UserIcon,
@@ -22,11 +22,13 @@ import {
   Folder,
   X,
   LogIn,
+  HelpCircle,
 } from 'lucide-react-native';
 import { signOut } from 'firebase/auth';
 import { auth } from '@/services/firebaseConfig';
 import { useAuth } from '@/context/auth-context';
 import { useExam } from '@/context/exam-context';
+import { useWalkthrough } from '@/context/walkthrough-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import ExamSwitcher from './ExamSwitcher';
 import ThemeToggle from './ThemeToggle';
@@ -42,6 +44,8 @@ export interface TopBarProps {
 export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) {
   const { user } = useAuth();
   const { examMode } = useExam();
+  const { startWalkthrough } = useWalkthrough();
+  const pathname = usePathname();
   const { colors, typography, radii } = useChalkboardTheme();
   const { width } = useWindowDimensions();
 
@@ -176,6 +180,31 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
           <SpotlightTarget id="exam-switcher">
             <ExamSwitcher />
           </SpotlightTarget>
+          <TouchableOpacity
+            style={[
+              styles.searchIconBtn,
+              {
+                backgroundColor: colors.surface,
+                borderColor: colors.line,
+                borderRadius: radii.button,
+              },
+            ]}
+            onPress={() => {
+              const onHome = pathname === '/' || pathname === '/index';
+              if (onHome) {
+                startWalkthrough(user ? 'home' : 'guest');
+              } else {
+                router.push('/');
+                setTimeout(() => {
+                  startWalkthrough(user ? 'home' : 'guest');
+                }, 350);
+              }
+            }}
+            activeOpacity={0.7}
+            accessibilityLabel="Replay interactive walkthrough"
+          >
+            <HelpCircle size={16} color={colors.accent} />
+          </TouchableOpacity>
           <ThemeToggle />
 
           {user ? (

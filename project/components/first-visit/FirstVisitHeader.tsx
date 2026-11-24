@@ -1,9 +1,10 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Platform, Image } from 'react-native';
 import { router } from 'expo-router';
-import { Sun, Moon, ArrowLeft, User as UserIcon } from 'lucide-react-native';
+import { Sun, Moon, ArrowLeft, User as UserIcon, HelpCircle } from 'lucide-react-native';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { useAuth } from '@/context/auth-context';
+import { useWalkthrough } from '@/context/walkthrough-context';
 import { AstraLogo } from '@/components/chalkboard';
 import SpotlightTarget from '@/components/SpotlightTarget';
 
@@ -20,6 +21,7 @@ export default function FirstVisitHeader({
 }: FirstVisitHeaderProps) {
   const { colors, isDark, toggleTheme, typography, radii } = useChalkboardTheme();
   const { user } = useAuth();
+  const { startWalkthrough } = useWalkthrough();
 
   const handleChangeExam = () => {
     if (onChangeExam) {
@@ -59,6 +61,18 @@ export default function FirstVisitHeader({
                 <Text style={[styles.changeExamText, { color: colors.muted }]}>Change exam</Text>
               </TouchableOpacity>
             </SpotlightTarget>
+          )}
+
+          {/* Tour Replay */}
+          {showChangeExam && (
+            <TouchableOpacity
+              style={[styles.iconButton, { borderColor: colors.line, backgroundColor: colors.surface }]}
+              onPress={() => startWalkthrough('guest')}
+              accessibilityLabel="Replay interactive walkthrough"
+              activeOpacity={0.7}
+            >
+              <HelpCircle size={16} color={colors.accent} />
+            </TouchableOpacity>
           )}
 
           {/* Theme Toggle */}
