@@ -152,10 +152,10 @@ export default function SampleTestScreen() {
             });
           }
 
-          // Limit sample test to 20 questions for a snappy high-conversion sample experience
-          const sampleSlice = allQuestions.slice(0, 20);
+          // Provide full questions for subscribed candidates, or 20 questions for sample preview
+          const questionSlice = isSubscribed ? allQuestions : allQuestions.slice(0, 20);
           if (!isCancelled) {
-            setQuestions(sampleSlice);
+            setQuestions(questionSlice);
           }
         }
 
@@ -227,7 +227,7 @@ export default function SampleTestScreen() {
       <View style={[styles.centerLoading, { backgroundColor: colors.bg }]}>
         <ActivityIndicator size="large" color={colors.accent} />
         <Text style={[styles.loadingText, { color: colors.muted }]}>
-          Loading sample test...
+          {isSubscribed ? 'Loading test questions...' : 'Loading sample test...'}
         </Text>
       </View>
     );
@@ -314,6 +314,8 @@ export default function SampleTestScreen() {
       testId={testId}
       testTitle={testTitle}
       questions={questions}
+      isSubscribed={isSubscribed}
+      exitLabel={isSubscribed ? 'Exit test' : 'Exit sample'}
       onFinishTest={handleFinishTest}
       onExitTest={handleBackToExam}
     />

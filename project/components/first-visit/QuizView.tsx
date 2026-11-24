@@ -42,6 +42,8 @@ interface QuizViewProps {
   testId: string;
   testTitle: string;
   questions: QuizQuestionItem[];
+  isSubscribed?: boolean;
+  exitLabel?: string;
   onFinishTest: (answers: Record<number, number>) => void;
   onExitTest: () => void;
 }
@@ -63,6 +65,8 @@ export default function QuizView({
   testId,
   testTitle,
   questions,
+  isSubscribed = false,
+  exitLabel,
   onFinishTest,
   onExitTest,
 }: QuizViewProps) {
@@ -181,7 +185,7 @@ export default function QuizView({
             >
               <ArrowLeft size={14} color={colors.muted} />
               <Text style={[styles.exitLinkText, { color: colors.muted }]}>
-                Exit sample
+                {exitLabel || (isSubscribed ? 'Exit practice' : 'Exit test')}
               </Text>
             </TouchableOpacity>
 

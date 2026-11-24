@@ -297,7 +297,9 @@ export default function HomeScreen() {
                     {currentExamInfo.shortName} Test Series
                   </Text>
                   <Text style={[styles.sectionHeaderSubtitle, { color: colors.muted }]}>
-                    Explore free sample papers and official CBT mocks.
+                    {isSubscribed
+                      ? 'Access full CBT mock tests, official solved papers, and practice drills.'
+                      : 'Explore free sample papers and official CBT mocks.'}
                   </Text>
 
                   <View style={{ marginTop: 14 }}>

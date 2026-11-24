@@ -384,6 +384,8 @@ export default function PracticeScreen() {
         testId="practice_active"
         testTitle={activeQuizTitle}
         questions={activeQuizQuestions}
+        isSubscribed={isSubscribed}
+        exitLabel="Exit practice"
         onFinishTest={(ans) => {
           setUserAnswers(ans);
           setQuizCompleted(true);

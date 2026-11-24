@@ -379,7 +379,9 @@ export default function TestListScreen({ isTab = false }: { isTab?: boolean }) {
 
           <Text style={[styles.screenSubtitle, { color: colors.muted }]}>
             {selectedSeriesId
-              ? 'Complete timed mock examinations and previous year solved papers. Free samples are available below.'
+              ? isSubscribed
+                ? 'Complete timed mock examinations and previous year solved papers. Full access unlocked.'
+                : 'Complete timed mock examinations and previous year solved papers. Free samples are available below.'
               : 'Choose a subject series to browse official previous year papers and full-length CBT mocks.'}
           </Text>
         </View>

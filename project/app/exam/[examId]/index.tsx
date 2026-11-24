@@ -265,6 +265,39 @@ export default function ExamScreen() {
     router.push(`/exam/${examId}/sample/${tid}` as any);
   };
 
+  const handleStartTest = (targetTest: TestRowItem) => {
+    if (isSubscribed) {
+      router.push({
+        pathname: '/test-instructions',
+        params: {
+          testId: targetTest.testId || targetTest.id,
+          filename: targetTest.filename,
+        },
+      } as any);
+    } else {
+      handleStartSample(targetTest.id);
+    }
+  };
+
+  const handleHeroStart = () => {
+    if (isSubscribed) {
+      const first = tests[0];
+      if (first) {
+        router.push({
+          pathname: '/test-instructions',
+          params: {
+            testId: first.testId || first.id,
+            filename: first.filename,
+          },
+        } as any);
+      } else {
+        router.push('/test-list');
+      }
+    } else {
+      handleStartSample();
+    }
+  };
+
   const handleChangeExam = async () => {
     try {
       await AsyncStorage.removeItem(FIRST_VISIT_EXAM_STORAGE_KEY);
@@ -313,7 +346,7 @@ export default function ExamScreen() {
             examName={examDisplayName}
             sampleQuestionCount={tests[0]?.questionCount || 20}
             sampleDurationMinutes={tests[0]?.durationMinutes || 20}
-            onStartSampleTest={() => handleStartSample()}
+            onStartSampleTest={handleHeroStart}
             isSubscribed={isSubscribed}
           />
 
@@ -324,24 +357,26 @@ export default function ExamScreen() {
           <ExamTestList
             examName={examDisplayName}
             tests={tests}
-            onStartTest={(test) => handleStartSample(test.id)}
+            onStartTest={handleStartTest}
             onUnlockPress={handleUnlockScroll}
             isSubscribed={isSubscribed}
           />
 
-          {/* Conversion Offer Card Section */}
-          <View id="offer-card-section" ref={offerSectionRef}>
-            <OfferCard
-              cardHeading="Get the full series"
-              seriesName={`${examDisplayName} Complete Test Series 2026`}
-              description={planDescription}
-              originalPrice={originalPrice}
-              currentPrice={seriesPrice}
-              planId={planId}
-              features={planFeatures}
-              isUnlocked={isSubscribed}
-            />
-          </View>
+          {/* Conversion Offer Card Section (Only for non-subscribers) */}
+          {!isSubscribed && (
+            <View id="offer-card-section" ref={offerSectionRef}>
+              <OfferCard
+                cardHeading="Get the full series"
+                seriesName={`${examDisplayName} Complete Test Series 2026`}
+                description={planDescription}
+                originalPrice={originalPrice}
+                currentPrice={seriesPrice}
+                planId={planId}
+                features={planFeatures}
+                isUnlocked={isSubscribed}
+              />
+            </View>
+          )}
         </View>
       </ScrollView>
     </View>

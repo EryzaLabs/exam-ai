@@ -465,17 +465,19 @@ export default function ResultView({
             </View>
           )}
 
-          {/* Section 4: Main Conversion Offer Card */}
-          <OfferCard
-            cardHeading="Keep going with the full series"
-            seriesName={offerData.seriesName}
-            description={offerData.description}
-            originalPrice={offerData.originalPrice}
-            currentPrice={offerData.currentPrice}
-            planId={offerData.planId}
-            features={offerData.features}
-            isUnlocked={offerData.isUnlocked}
-          />
+          {/* Section 4: Main Conversion Offer Card (Only show for unsubscribed candidates) */}
+          {!offerData.isUnlocked && (
+            <OfferCard
+              cardHeading="Keep going with the full series"
+              seriesName={offerData.seriesName}
+              description={offerData.description}
+              originalPrice={offerData.originalPrice}
+              currentPrice={offerData.currentPrice}
+              planId={offerData.planId}
+              features={offerData.features}
+              isUnlocked={offerData.isUnlocked}
+            />
+          )}
 
           {/* Secondary Action Buttons */}
           <View style={styles.actionButtonsRow}>
@@ -493,7 +495,7 @@ export default function ResultView({
             >
               <RotateCcw size={15} color={colors.text} />
               <Text style={[styles.secondaryActionText, { color: colors.text }]}>
-                Retake the sample
+                {offerData.isUnlocked ? 'Retake practice' : 'Retake test'}
               </Text>
             </TouchableOpacity>
 
