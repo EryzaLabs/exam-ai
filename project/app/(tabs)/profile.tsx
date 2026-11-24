@@ -41,6 +41,7 @@ import {
   ExamSwitcher,
   EmptyState,
 } from '@/components/chalkboard';
+import FirstTimeWalkthrough from '@/components/FirstTimeWalkthrough';
 
 interface BookmarkItem {
   id: string;
@@ -93,6 +94,7 @@ export default function ProfileScreen() {
   const { colors, isDark } = useTheme();
 
   const [loading, setLoading] = useState(true);
+  const [showWalkthrough, setShowWalkthrough] = useState(false);
   const [seriesList, setSeriesList] = useState(DEFAULT_SERIES);
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [language, setLanguage] = useState<'English' | 'Hindi'>('English');
@@ -560,6 +562,31 @@ export default function ProfileScreen() {
             </View>
             <ThemeToggle />
           </View>
+
+          <View
+            style={[
+              styles.appearanceRow,
+              {
+                borderTopWidth: 1,
+                borderTopColor: colors.line,
+                paddingTop: 14,
+                marginTop: 14,
+              },
+            ]}
+          >
+            <View style={{ flex: 1 }}>
+              <Text style={[styles.appearanceTitle, { color: colors.text }]}>App Walkthrough</Text>
+              <Text style={[styles.appearanceSub, { color: colors.muted }]}>
+                Replay the quick tour of mocks, topic sets, and Vidya AI
+              </Text>
+            </View>
+            <Button
+              label="Replay Tour"
+              variant="secondary"
+              size="small"
+              onPress={() => setShowWalkthrough(true)}
+            />
+          </View>
         </Card>
 
         {/* Section 5: Account Actions */}
@@ -583,6 +610,12 @@ export default function ProfileScreen() {
           </View>
         )}
       </ScrollView>
+
+      <FirstTimeWalkthrough
+        visible={showWalkthrough}
+        onComplete={() => setShowWalkthrough(false)}
+        onNavigate={(route) => router.push(route as any)}
+      />
     </AppShell>
   );
 }

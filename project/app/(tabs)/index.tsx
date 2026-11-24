@@ -43,6 +43,7 @@ import ProgressBar from '@/components/chalkboard/ProgressBar';
 import TopicBar from '@/components/chalkboard/TopicBar';
 import SeriesCard from '@/components/chalkboard/SeriesCard';
 import OfferCard from '@/components/chalkboard/OfferCard';
+import FirstTimeWalkthrough, { hasCompletedWalkthrough } from '@/components/FirstTimeWalkthrough';
 import { extractTestTopicAndSubject } from '@/utils/topic-resolver';
 
 const WEEK_DAYS = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
@@ -57,6 +58,7 @@ export default function HomeScreen() {
 
   const [loading, setLoading] = useState(true);
   const [showFirstVisitPicker, setShowFirstVisitPicker] = useState<boolean | null>(null);
+  const [showWalkthrough, setShowWalkthrough] = useState(false);
   const [activeTests, setActiveTests] = useState<SavedTestState[]>([]);
   const [testHistory, setTestHistory] = useState<TestResult[]>([]);
   const [profile, setProfile] = useState<any>(null);
@@ -94,6 +96,11 @@ export default function HomeScreen() {
       setTestHistory(history || []);
       setActiveTests(saved || []);
       setShowFirstVisitPicker(false);
+
+      const done = await hasCompletedWalkthrough();
+      if (!done) {
+        setShowWalkthrough(true);
+      }
     } catch (err) {
       console.error('Failed to load dashboard data:', err);
     } finally {
@@ -643,6 +650,12 @@ export default function HomeScreen() {
           )}
         </View>
       </ScrollView>
+
+      <FirstTimeWalkthrough
+        visible={showWalkthrough}
+        onComplete={() => setShowWalkthrough(false)}
+        onNavigate={(route) => router.push(route as any)}
+      />
     </AppShell>
   );
 }

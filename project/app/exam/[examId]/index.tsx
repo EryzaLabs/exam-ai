@@ -22,6 +22,7 @@ import SampleQuestionPreview, { SampleQuestionData } from '@/components/first-vi
 import ExamTestList, { TestRowItem } from '@/components/first-visit/ExamTestList';
 import OfferCard from '@/components/first-visit/OfferCard';
 import { FIRST_VISIT_EXAM_STORAGE_KEY } from '@/components/first-visit/ExamPicker';
+import FirstTimeWalkthrough, { hasCompletedWalkthrough } from '@/components/FirstTimeWalkthrough';
 import { resolveQuestionTopic } from '@/utils/topic-resolver';
 
 export default function ExamScreen() {
@@ -32,6 +33,7 @@ export default function ExamScreen() {
   const { isSubscribed } = useSub();
 
   const [loading, setLoading] = useState(true);
+  const [showWalkthrough, setShowWalkthrough] = useState(false);
   const [tests, setTests] = useState<TestRowItem[]>([]);
   const [sampleQuestion, setSampleQuestion] = useState<SampleQuestionData | null>(null);
   const [sampleTestId, setSampleTestId] = useState<string>('');
@@ -248,6 +250,11 @@ export default function ExamScreen() {
       } finally {
         if (!isCancelled) {
           setLoading(false);
+          hasCompletedWalkthrough().then((done) => {
+            if (!done && !isCancelled) {
+              setShowWalkthrough(true);
+            }
+          });
         }
       }
     };
@@ -379,6 +386,12 @@ export default function ExamScreen() {
           )}
         </View>
       </ScrollView>
+
+      <FirstTimeWalkthrough
+        visible={showWalkthrough}
+        onComplete={() => setShowWalkthrough(false)}
+        onNavigate={(route) => router.push(route as any)}
+      />
     </View>
   );
 }
