@@ -18,6 +18,7 @@ export interface SavedTestState {
   attemptId: string;
   currentQuestionIndex: number;
   timeRemaining: number;
+  endTime?: number;
   questionStates: Record<string, any>; // Changed from array to object
   answers: Record<string, number>;
   lastUpdated: number;
@@ -54,9 +55,23 @@ export const TestProgressService = {
       // Ensure clean serialization
       const cleanState = JSON.parse(JSON.stringify(state));
 
-      // 1. Always save to local AsyncStorage for instant retrieval
+      // 1. Synchronously save to Web localStorage if available for immediate reload resilience
+      if (typeof window !== 'undefined' && window.localStorage) {
+        try {
+          const serialized = JSON.stringify(cleanState);
+          window.localStorage.setItem(`@active_test_${state.testId}`, serialized);
+          if (state.filename && state.filename !== state.testId) {
+            window.localStorage.setItem(`@active_test_${state.filename}`, serialized);
+          }
+        } catch {}
+      }
+
+      // 2. Always save to local AsyncStorage for cross-platform retrieval
       try {
         await AsyncStorage.setItem(`@active_test_${state.testId}`, JSON.stringify(cleanState));
+        if (state.filename && state.filename !== state.testId) {
+          await AsyncStorage.setItem(`@active_test_${state.filename}`, JSON.stringify(cleanState));
+        }
         const rawIds = await AsyncStorage.getItem('@active_test_ids');
         const ids: string[] = rawIds ? JSON.parse(rawIds) : [];
         if (!ids.includes(state.testId)) {
@@ -66,7 +81,7 @@ export const TestProgressService = {
         console.warn('AsyncStorage save failed for test progress:', storageErr);
       }
 
-      // 2. Sync to Firestore if authenticated
+      // 3. Sync to Firestore if authenticated
       const user = auth.currentUser;
       if (user) {
         const docRef = doc(db, 'users', user.uid, 'active_tests', state.testId);
@@ -80,6 +95,25 @@ export const TestProgressService = {
 
   async getTestProgress(testId: string): Promise<SavedTestState | null> {
     try {
+      if (!testId) return null;
+
+      // 1. Check synchronous Web localStorage first for zero-latency reload recovery
+      if (typeof window !== 'undefined' && window.localStorage) {
+        try {
+          const direct = window.localStorage.getItem(`@active_test_${testId}`);
+          if (direct) {
+            return JSON.parse(direct) as SavedTestState;
+          }
+        } catch {}
+      }
+
+      // 2. Fallback to local AsyncStorage
+      const local = await AsyncStorage.getItem(`@active_test_${testId}`);
+      if (local) {
+        return JSON.parse(local) as SavedTestState;
+      }
+
+      // 3. Check Firestore if authenticated
       const user = auth.currentUser;
       if (user) {
         try {
@@ -93,11 +127,6 @@ export const TestProgressService = {
         }
       }
 
-      // Fallback to local AsyncStorage
-      const local = await AsyncStorage.getItem(`@active_test_${testId}`);
-      if (local) {
-        return JSON.parse(local) as SavedTestState;
-      }
       return null;
     } catch (e) {
       console.error('Failed to load current test', e);
@@ -107,7 +136,16 @@ export const TestProgressService = {
 
   async clearTestProgress(testId: string): Promise<void> {
     try {
-      // 1. Remove from local AsyncStorage
+      if (!testId) return;
+
+      // 1. Remove from Web localStorage
+      if (typeof window !== 'undefined' && window.localStorage) {
+        try {
+          window.localStorage.removeItem(`@active_test_${testId}`);
+        } catch {}
+      }
+
+      // 2. Remove from local AsyncStorage
       try {
         await AsyncStorage.removeItem(`@active_test_${testId}`);
         const rawIds = await AsyncStorage.getItem('@active_test_ids');
@@ -120,7 +158,7 @@ export const TestProgressService = {
         console.warn('AsyncStorage clear failed:', storageErr);
       }
 
-      // 2. Remove from Firestore
+      // 3. Remove from Firestore
       const user = auth.currentUser;
       if (user) {
         const docRef = doc(db, 'users', user.uid, 'active_tests', testId);

@@ -108,8 +108,11 @@ export default function MockTestScreen() {
       try {
         setLoading(true);
         let savedState: SavedTestState | null = null;
-        if (resume) {
+        if (testId) {
           savedState = await TestProgressService.getTestProgress(testId);
+        }
+        if (!savedState && params.filename) {
+          savedState = await TestProgressService.getTestProgress(params.filename as string);
         }
 
         const targetFilename = (params.filename as string) || savedState?.filename;
@@ -148,9 +151,20 @@ export default function MockTestScreen() {
         if (isCancelled) return;
         setTest(paper);
 
-        // Initialize attempt
-        const newAttempt = SSCCGLService.startTest(paper.id, user?.uid || 'guest');
-        setAttempt(newAttempt);
+        // Initialize or restore attempt
+        let currentAttempt: TestAttempt;
+        if (savedState && savedState.attemptId) {
+          const existing = SSCCGLService.getAttempt(savedState.attemptId);
+          if (existing) {
+            currentAttempt = existing;
+          } else {
+            currentAttempt = SSCCGLService.startTest(paper.id, user?.uid || 'guest');
+            (currentAttempt as any).id = savedState.attemptId;
+          }
+        } else {
+          currentAttempt = SSCCGLService.startTest(paper.id, user?.uid || 'guest');
+        }
+        setAttempt(currentAttempt);
 
         // Calculate time
         const isTopic = ((paper as any).filename || '').includes('topic_wise') || (paper.id || '').includes('topic_wise');
@@ -158,8 +172,15 @@ export default function MockTestScreen() {
         if (paper.duration) {
           durationSecs = paper.duration <= 300 ? paper.duration * 60 : paper.duration;
         }
-        if (savedState && savedState.timeRemaining > 0) {
-          durationSecs = savedState.timeRemaining;
+        if (savedState) {
+          if (savedState.endTime && savedState.endTime > Date.now()) {
+            durationSecs = Math.max(1, Math.round((savedState.endTime - Date.now()) / 1000));
+          } else if (savedState.timeRemaining > 0) {
+            const elapsed = savedState.lastUpdated
+              ? Math.max(0, Math.round((Date.now() - savedState.lastUpdated) / 1000))
+              : 0;
+            durationSecs = Math.max(1, savedState.timeRemaining - elapsed);
+          }
         }
         setTimeRemaining(durationSecs);
 
@@ -231,34 +252,58 @@ export default function MockTestScreen() {
     };
   }, [test, timeRemaining > 0]);
 
-  // 4. State Persistence
+  // 4. State Persistence Ref & Callbacks
+  const latestStateRef = useRef({
+    test,
+    attempt,
+    currentQuestionIndex,
+    questionStates,
+    timeRemaining,
+    questionsLength: questions.length,
+    filename: (params.filename as string) || (test as any)?.filename,
+  });
+
+  useEffect(() => {
+    latestStateRef.current = {
+      test,
+      attempt,
+      currentQuestionIndex,
+      questionStates,
+      timeRemaining,
+      questionsLength: questions.length,
+      filename: (params.filename as string) || (test as any)?.filename,
+    };
+  }, [test, attempt, currentQuestionIndex, questionStates, timeRemaining, questions.length, params.filename]);
+
   const saveProgress = useCallback(async () => {
-    if (!test || !attempt) return;
+    const cur = latestStateRef.current;
+    if (!cur.test || !cur.attempt || cur.timeRemaining <= 0) return;
 
     const answersRecord: Record<string, number> = {};
     const questionStatesObj: Record<string, any> = {};
 
-    questionStates.forEach((state, qId) => {
+    cur.questionStates.forEach((state, qId) => {
       if (state.selectedOption !== null && state.selectedOption !== undefined) {
         answersRecord[qId] = state.selectedOption;
       }
       questionStatesObj[qId] = state;
     });
 
-    const questionOrder = test.sections.flatMap((s) => s.questions.map((q) => q.id));
+    const questionOrder = cur.test.sections.flatMap((s) => s.questions.map((q) => q.id));
 
     const state: SavedTestState = {
-      testId: test.id,
-      attemptId: attempt.id || `attempt_${Date.now()}`,
-      currentQuestionIndex,
-      timeRemaining,
+      testId: cur.test.id,
+      attemptId: cur.attempt.id || `attempt_${Date.now()}`,
+      currentQuestionIndex: cur.currentQuestionIndex,
+      timeRemaining: cur.timeRemaining,
+      endTime: Date.now() + cur.timeRemaining * 1000,
       questionStates: questionStatesObj,
       answers: answersRecord,
       lastUpdated: Date.now(),
       questionOrder,
-      testTitle: test.title,
-      totalQuestions: questions.length,
-      filename: (params.filename as string) || (test as any).filename,
+      testTitle: cur.test.title,
+      totalQuestions: cur.questionsLength,
+      filename: cur.filename,
     };
 
     try {
@@ -267,20 +312,71 @@ export default function MockTestScreen() {
     } catch (e) {
       console.warn('Failed to auto-save test state:', e);
     }
-  }, [test, attempt, currentQuestionIndex, questionStates, timeRemaining, questions.length]);
+  }, []);
 
-  // Auto-save interval (every 25s)
+  // Reliable Periodic Auto-Save (Every 5 seconds without resetting on tick)
   useEffect(() => {
-    if (test && attempt && timeRemaining > 0) {
-      autoSaveRef.current = setInterval(() => {
-        saveProgress();
-      }, 25000);
+    if (!test || !attempt) return;
 
-      return () => {
-        if (autoSaveRef.current) clearInterval(autoSaveRef.current);
+    const interval = setInterval(() => {
+      saveProgress();
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [test?.id, attempt?.id, saveProgress]);
+
+  // Web Browser Unload & Reload Protection
+  useEffect(() => {
+    if (Platform.OS !== 'web' || typeof window === 'undefined') return;
+
+    const handleBeforeUnload = () => {
+      const cur = latestStateRef.current;
+      if (!cur.test || !cur.attempt || cur.timeRemaining <= 0) return;
+
+      const answersRecord: Record<string, number> = {};
+      const questionStatesObj: Record<string, any> = {};
+
+      cur.questionStates.forEach((state, qId) => {
+        if (state.selectedOption !== null && state.selectedOption !== undefined) {
+          answersRecord[qId] = state.selectedOption;
+        }
+        questionStatesObj[qId] = state;
+      });
+
+      const saved: SavedTestState = {
+        testId: cur.test.id,
+        attemptId: cur.attempt.id || `attempt_${Date.now()}`,
+        currentQuestionIndex: cur.currentQuestionIndex,
+        timeRemaining: cur.timeRemaining,
+        endTime: Date.now() + cur.timeRemaining * 1000,
+        questionStates: questionStatesObj,
+        answers: answersRecord,
+        lastUpdated: Date.now(),
+        questionOrder: cur.test.sections.flatMap((s) => s.questions.map((q) => q.id)),
+        testTitle: cur.test.title,
+        totalQuestions: cur.questionsLength,
+        filename: cur.filename,
       };
-    }
-  }, [test, attempt, timeRemaining, saveProgress]);
+
+      try {
+        const serialized = JSON.stringify(saved);
+        window.localStorage.setItem(`@active_test_${saved.testId}`, serialized);
+        if (saved.filename && saved.filename !== saved.testId) {
+          window.localStorage.setItem(`@active_test_${saved.filename}`, serialized);
+        }
+      } catch {}
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener('pagehide', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener('pagehide', handleBeforeUnload);
+    };
+  }, []);
 
   // 5. Option Selection
   const handleSelectOption = (optionIndex: number) => {
@@ -484,6 +580,9 @@ export default function MockTestScreen() {
       }
 
       await TestProgressService.clearTestProgress(testId);
+      if (params.filename && params.filename !== testId) {
+        await TestProgressService.clearTestProgress(params.filename as string);
+      }
 
       router.replace({
         pathname: '/test-result',
