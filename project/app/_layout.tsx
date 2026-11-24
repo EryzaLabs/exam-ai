@@ -19,6 +19,8 @@ import { AuthProvider } from '@/context/auth-context';
 import { SubscriptionProvider } from '@/context/subscription-context';
 import { ThemeProvider } from '@/context/theme-context';
 import { ExamProvider, useExam } from '@/context/exam-context';
+import { WalkthroughProvider } from '@/context/walkthrough-context';
+import FirstTimeWalkthrough from '@/components/FirstTimeWalkthrough';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -171,15 +173,18 @@ export default function RootLayout() {
         <AuthProvider>
           <SubscriptionProvider>
             <ExamProvider>
-              <DynamicWebTitle />
-              <ResponsiveContainer>
-                <Stack screenOptions={{ headerShown: false }}>
-                  <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                  <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-                  <Stack.Screen name="+not-found" />
-                </Stack>
-                <StatusBar style="auto" backgroundColor="transparent" translucent={true} />
-              </ResponsiveContainer>
+              <WalkthroughProvider>
+                <DynamicWebTitle />
+                <ResponsiveContainer>
+                  <Stack screenOptions={{ headerShown: false }}>
+                    <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                    <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+                    <Stack.Screen name="+not-found" />
+                  </Stack>
+                  <StatusBar style="auto" backgroundColor="transparent" translucent={true} />
+                </ResponsiveContainer>
+                <FirstTimeWalkthrough />
+              </WalkthroughProvider>
             </ExamProvider>
           </SubscriptionProvider>
         </AuthProvider>

@@ -41,7 +41,7 @@ import {
   ExamSwitcher,
   EmptyState,
 } from '@/components/chalkboard';
-import FirstTimeWalkthrough from '@/components/FirstTimeWalkthrough';
+import { useWalkthrough } from '@/context/walkthrough-context';
 
 interface BookmarkItem {
   id: string;
@@ -92,9 +92,9 @@ export default function ProfileScreen() {
   const router = useRouter();
   const { user, isSubscribed } = useAuth();
   const { colors, isDark } = useTheme();
+  const { startWalkthrough } = useWalkthrough();
 
   const [loading, setLoading] = useState(true);
-  const [showWalkthrough, setShowWalkthrough] = useState(false);
   const [seriesList, setSeriesList] = useState(DEFAULT_SERIES);
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [language, setLanguage] = useState<'English' | 'Hindi'>('English');
@@ -584,7 +584,12 @@ export default function ProfileScreen() {
               label="Replay Tour"
               variant="secondary"
               size="small"
-              onPress={() => setShowWalkthrough(true)}
+              onPress={() => {
+                router.push('/');
+                setTimeout(() => {
+                  startWalkthrough(user ? 'home' : 'guest');
+                }, 350);
+              }}
             />
           </View>
         </Card>
@@ -610,12 +615,6 @@ export default function ProfileScreen() {
           </View>
         )}
       </ScrollView>
-
-      <FirstTimeWalkthrough
-        visible={showWalkthrough}
-        onComplete={() => setShowWalkthrough(false)}
-        onNavigate={(route) => router.push(route as any)}
-      />
     </AppShell>
   );
 }

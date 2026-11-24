@@ -31,6 +31,7 @@ import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import ExamSwitcher from './ExamSwitcher';
 import ThemeToggle from './ThemeToggle';
 import AstraLogo from './AstraLogo';
+import SpotlightTarget from '@/components/SpotlightTarget';
 import { INITIAL_TGT_PGT_PAPERS } from '@/services/paper-service';
 
 export interface TopBarProps {
@@ -124,53 +125,57 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
           )}
 
           {/* Search Trigger: full bar on desktop, compact icon button on mobile/tablet */}
-          {isDesktop ? (
-            <TouchableOpacity
-              style={[
-                styles.searchTrigger,
-                {
-                  backgroundColor: colors.surface,
-                  borderColor: colors.line,
-                  borderRadius: radii.button,
-                },
-              ]}
-              onPress={() => setSearchOpen(true)}
-              activeOpacity={0.7}
-              accessibilityLabel="Search tests, topics, bookmarks"
-            >
-              <Search size={15} color={colors.muted} />
-              <Text
-                style={[styles.searchPlaceholder, { color: colors.muted }]}
-                numberOfLines={1}
+          <SpotlightTarget id="top-search" style={isDesktop ? { flex: 1, maxWidth: 320 } : undefined}>
+            {isDesktop ? (
+              <TouchableOpacity
+                style={[
+                  styles.searchTrigger,
+                  {
+                    backgroundColor: colors.surface,
+                    borderColor: colors.line,
+                    borderRadius: radii.button,
+                  },
+                ]}
+                onPress={() => setSearchOpen(true)}
+                activeOpacity={0.7}
+                accessibilityLabel="Search tests, topics, bookmarks"
               >
-                Search tests, topics...
-              </Text>
-              <View style={[styles.kbdShortcut, { backgroundColor: colors.surface2 }]}>
-                <Text style={[styles.kbdText, { color: colors.muted }]}>⌘K</Text>
-              </View>
-            </TouchableOpacity>
-          ) : (
-            <TouchableOpacity
-              style={[
-                styles.searchIconBtn,
-                {
-                  backgroundColor: colors.surface,
-                  borderColor: colors.line,
-                  borderRadius: radii.button,
-                },
-              ]}
-              onPress={() => setSearchOpen(true)}
-              activeOpacity={0.7}
-              accessibilityLabel="Search tests, topics, bookmarks"
-            >
-              <Search size={16} color={colors.muted} />
-            </TouchableOpacity>
-          )}
+                <Search size={15} color={colors.muted} />
+                <Text
+                  style={[styles.searchPlaceholder, { color: colors.muted }]}
+                  numberOfLines={1}
+                >
+                  Search tests, topics...
+                </Text>
+                <View style={[styles.kbdShortcut, { backgroundColor: colors.surface2 }]}>
+                  <Text style={[styles.kbdText, { color: colors.muted }]}>⌘K</Text>
+                </View>
+              </TouchableOpacity>
+            ) : (
+              <TouchableOpacity
+                style={[
+                  styles.searchIconBtn,
+                  {
+                    backgroundColor: colors.surface,
+                    borderColor: colors.line,
+                    borderRadius: radii.button,
+                  },
+                ]}
+                onPress={() => setSearchOpen(true)}
+                activeOpacity={0.7}
+                accessibilityLabel="Search tests, topics, bookmarks"
+              >
+                <Search size={16} color={colors.muted} />
+              </TouchableOpacity>
+            )}
+          </SpotlightTarget>
         </View>
 
         {/* Right: Exam Switcher, Theme Toggle, Account Menu */}
         <View style={styles.rightGroup}>
-          <ExamSwitcher />
+          <SpotlightTarget id="exam-switcher">
+            <ExamSwitcher />
+          </SpotlightTarget>
           <ThemeToggle />
 
           {user ? (

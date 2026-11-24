@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Platform } from 'react-native
 import { router, usePathname } from 'expo-router';
 import { Home, FileText, Brain, BarChart2, User } from 'lucide-react-native';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
+import SpotlightTarget from '@/components/SpotlightTarget';
 
 export const MOBILE_TABS = [
   { label: 'Home', path: '/', icon: Home },
@@ -36,8 +37,14 @@ export default function BottomNav() {
       {MOBILE_TABS.map((item) => {
         const active = isItemActive(item.path);
         const Icon = item.icon;
+        const targetId =
+          item.path === '/practice'
+            ? 'nav-practice-bottom'
+            : item.path === '/progress'
+            ? 'nav-analytics-bottom'
+            : null;
 
-        return (
+        const tabEl = (
           <TouchableOpacity
             key={item.path}
             style={styles.tabItem}
@@ -63,6 +70,14 @@ export default function BottomNav() {
               {item.label}
             </Text>
           </TouchableOpacity>
+        );
+
+        return targetId ? (
+          <SpotlightTarget key={item.path} id={targetId} style={{ flex: 1 }}>
+            {tabEl}
+          </SpotlightTarget>
+        ) : (
+          tabEl
         );
       })}
     </View>

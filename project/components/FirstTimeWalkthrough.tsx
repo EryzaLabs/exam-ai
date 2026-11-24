@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   Modal as RNModal,
   View,
@@ -7,586 +7,420 @@ import {
   StyleSheet,
   Platform,
   useWindowDimensions,
-  Image,
-  ScrollView,
+  Animated,
 } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   X,
   ArrowRight,
   ArrowLeft,
-  CheckCircle2,
-  ClipboardCheck,
-  BookOpen,
-  BarChart2,
-  Sparkles,
-  GraduationCap,
-  Clock,
   Target,
-  Zap,
+  Globe,
+  Sparkles,
 } from 'lucide-react-native';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
-import { AstraMark } from '@/components/chalkboard/AstraLogo';
+import { useWalkthrough } from '@/context/walkthrough-context';
 import Button from '@/components/chalkboard/Button';
-import Pill from '@/components/chalkboard/Pill';
 
-export const WALKTHROUGH_STORAGE_KEY = '@astra_walkthrough_completed_v1';
+const SPOTLIGHT_PADDING = 6;
+const CARD_GAP = 14;
 
-export async function hasCompletedWalkthrough(): Promise<boolean> {
-  try {
-    const val = await AsyncStorage.getItem(WALKTHROUGH_STORAGE_KEY);
-    return val === 'true';
-  } catch {
-    return false;
-  }
-}
+export default function FirstTimeWalkthrough() {
+  const {
+    isActive,
+    stepIndex,
+    steps,
+    currentStep,
+    targetRect,
+    language,
+    setLanguage,
+    stopWalkthrough,
+    nextStep,
+    prevStep,
+    goToStep,
+  } = useWalkthrough();
 
-export async function markWalkthroughCompleted(): Promise<void> {
-  try {
-    await AsyncStorage.setItem(WALKTHROUGH_STORAGE_KEY, 'true');
-  } catch {
-    // Ignore storage write errors
-  }
-}
-
-export async function resetWalkthrough(): Promise<void> {
-  try {
-    await AsyncStorage.removeItem(WALKTHROUGH_STORAGE_KEY);
-  } catch {
-    // Ignore storage removal errors
-  }
-}
-
-export interface FirstTimeWalkthroughProps {
-  visible: boolean;
-  onComplete: () => void;
-  onNavigate?: (route: string) => void;
-}
-
-interface WalkthroughStep {
-  id: string;
-  badge: string;
-  title: string;
-  subtitle: string;
-  highlights: { title: string; desc: string }[];
-  actionLabel?: string;
-  actionRoute?: string;
-}
-
-const STEPS: WalkthroughStep[] = [
-  {
-    id: 'welcome',
-    badge: 'STEP 1 OF 4 · WELCOME',
-    title: 'Your Exam Command Center',
-    subtitle:
-      'Astra Exam AI is built specifically for UPSC Principal, UP Principal, DSSSB TGT, and DSSSB PGT aspirants. Switch your target exam anytime from the top bar to filter papers, topics, and analytics.',
-    highlights: [
-      {
-        title: 'Tailored Exam Switcher',
-        desc: 'Instantly switch between UPSC, UPPSC, TGT, and PGT tracks.',
-      },
-      {
-        title: 'Bilingual Interface',
-        desc: 'Questions and explanations in both English and Hindi where available.',
-      },
-      {
-        title: 'Chalkboard Focus Mode',
-        desc: 'High-contrast light and dark themes designed for long study sessions.',
-      },
-    ],
-  },
-  {
-    id: 'cbt-mocks',
-    badge: 'STEP 2 OF 4 · MOCK EXAMS',
-    title: 'Real CBT Exam Simulator',
-    subtitle:
-      'Experience authentic Computer-Based Testing before exam day. Full-length mocks mirror official question counts, timing, and negative marking.',
-    highlights: [
-      {
-        title: 'Live Question Palette',
-        desc: 'Jump between sections, mark questions for review, and track answered status.',
-      },
-      {
-        title: 'Auto-Save & Resume',
-        desc: 'Your timer and answers auto-save continuously—never lose progress on reload.',
-      },
-      {
-        title: 'Bookmark & Flag',
-        desc: 'Save tricky questions during any test for quick revision in your Profile.',
-      },
-    ],
-    actionLabel: 'Browse Mock Tests',
-    actionRoute: '/test-list',
-  },
-  {
-    id: 'practice-hub',
-    badge: 'STEP 3 OF 4 · PRACTICE HUB',
-    title: '950+ Topic Sets & AI Custom Tests',
-    subtitle:
-      'Master individual syllabus topics without sitting through a 2-hour mock. Drill high-weightage rules, policies, and subject papers at your own pace.',
-    highlights: [
-      {
-        title: 'Syllabus Topic Sets',
-        desc: 'Focused 20-question sets on NEP 2020, GFR 2017, CCS Rules, RTE Act, Hindi & more.',
-      },
-      {
-        title: 'Quick 10-Question Drills',
-        desc: 'Launch a rapid drill on any topic for fast daily revision.',
-      },
-      {
-        title: 'AI Custom Test Builder',
-        desc: 'Generate personalized tests by difficulty, topic mix, and question count.',
-      },
-    ],
-    actionLabel: 'Open Practice Hub',
-    actionRoute: '/(tabs)/practice',
-  },
-  {
-    id: 'analytics-vidya',
-    badge: 'STEP 4 OF 4 · ANALYTICS & VIDYA AI',
-    title: 'Spot Weak Topics & Ask Vidya AI',
-    subtitle:
-      'Every test ends with a Topic Performance Breakdown so you know exactly what to revise next—backed by Vidya, your 24/7 AI study assistant.',
-    highlights: [
-      {
-        title: 'Topic Accuracy Breakdown',
-        desc: 'Weak topics below 50% are flagged with one-tap Practice Drill shortcuts.',
-      },
-      {
-        title: 'Ask Vidya on Any Question',
-        desc: 'Tap "Ask AI" on any solution to get step-by-step conceptual explanations.',
-      },
-      {
-        title: 'Progress & Streak Tracking',
-        desc: 'Monitor your accuracy trends and daily consistency in the Analytics tab.',
-      },
-    ],
-    actionLabel: 'Meet Vidya AI',
-    actionRoute: '/(tabs)/assistant',
-  },
-];
-
-export default function FirstTimeWalkthrough({
-  visible,
-  onComplete,
-  onNavigate,
-}: FirstTimeWalkthroughProps) {
   const { colors, typography, radii } = useChalkboardTheme();
-  const { width: windowWidth, height: windowHeight } = useWindowDimensions();
-  const isMobile = windowWidth < 640;
+  const { width: winW, height: winH } = useWindowDimensions();
 
-  const [stepIndex, setStepIndex] = useState(0);
-  const currentStep = STEPS[stepIndex];
+  // Subtle pulse animation for the spotlight border box
+  const pulseAnim = useRef(new Animated.Value(1)).current;
+
+  useEffect(() => {
+    if (!isActive) return;
+    const loop = Animated.loop(
+      Animated.sequence([
+        Animated.timing(pulseAnim, {
+          toValue: 1.03,
+          duration: 850,
+          useNativeDriver: true,
+        }),
+        Animated.timing(pulseAnim, {
+          toValue: 1,
+          duration: 850,
+          useNativeDriver: true,
+        }),
+      ])
+    );
+    loop.start();
+    return () => loop.stop();
+  }, [isActive, pulseAnim]);
+
+  // Web keyboard navigation (ArrowRight, ArrowLeft, Escape)
+  useEffect(() => {
+    if (Platform.OS !== 'web' || !isActive || typeof window === 'undefined') return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        stopWalkthrough(true);
+      } else if (e.key === 'ArrowRight') {
+        nextStep();
+      } else if (e.key === 'ArrowLeft') {
+        prevStep();
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isActive, nextStep, prevStep, stopWalkthrough]);
+
+  if (!isActive || !currentStep) return null;
+
+  const isHi = language === 'hi';
   const isFirst = stepIndex === 0;
-  const isLast = stepIndex === STEPS.length - 1;
+  const isLast = stepIndex === steps.length - 1;
 
-  const handleFinish = async () => {
-    await markWalkthroughCompleted();
-    setStepIndex(0);
-    onComplete();
-  };
+  // Compute padded spotlight box coordinates clamped to viewport
+  const hasRect = Boolean(targetRect && targetRect.width > 0 && targetRect.height > 0);
+  const spotX = hasRect ? Math.max(0, targetRect!.x - SPOTLIGHT_PADDING) : 0;
+  const spotY = hasRect ? Math.max(0, targetRect!.y - SPOTLIGHT_PADDING) : 0;
+  const spotW = hasRect
+    ? Math.min(winW - spotX, targetRect!.width + SPOTLIGHT_PADDING * 2)
+    : 0;
+  const spotH = hasRect
+    ? Math.min(winH - spotY, targetRect!.height + SPOTLIGHT_PADDING * 2)
+    : 0;
 
-  const handleSkip = async () => {
-    await markWalkthroughCompleted();
-    setStepIndex(0);
-    onComplete();
-  };
+  // Tooltip card sizing & smart positioning (above or below spotlight)
+  const cardWidth = Math.min(390, winW - 24);
+  const estimatedCardHeight = 250;
 
-  const handleActionPress = async () => {
-    const route = currentStep.actionRoute;
-    await markWalkthroughCompleted();
-    setStepIndex(0);
-    onComplete();
-    if (route && onNavigate) {
-      onNavigate(route);
+  let cardTop = Math.max(24, (winH - estimatedCardHeight) / 2);
+  let cardLeft = Math.max(12, (winW - cardWidth) / 2);
+  let placement: 'below' | 'above' | 'center' = 'center';
+
+  if (hasRect) {
+    const spaceBelow = winH - (spotY + spotH);
+    const spaceAbove = spotY;
+
+    if (spaceBelow >= estimatedCardHeight + CARD_GAP || spaceBelow >= spaceAbove) {
+      placement = 'below';
+      cardTop = Math.min(
+        winH - estimatedCardHeight - 16,
+        spotY + spotH + CARD_GAP
+      );
+    } else {
+      placement = 'above';
+      cardTop = Math.max(16, spotY - estimatedCardHeight - CARD_GAP);
     }
-  };
 
-  const renderVisualBanner = () => {
-    switch (currentStep.id) {
-      case 'welcome':
-        return (
-          <View
-            style={[
-              styles.visualBox,
-              {
-                backgroundColor: colors.hero,
-                borderColor: colors.line,
-                borderRadius: radii.card,
-              },
-            ]}
-          >
-            <View style={styles.visualCenterRow}>
-              <AstraMark size={44} />
-              <View style={{ flex: 1 }}>
-                <Text
-                  style={[
-                    styles.visualTitle,
-                    {
-                      color: colors.text,
-                      fontFamily:
-                        Platform.OS === 'web' ? typography.headingFamily : undefined,
-                    },
-                  ]}
-                >
-                  Astra Exam AI
-                </Text>
-                <Text style={[styles.visualCaption, { color: colors.muted }]}>
-                  UPSC Principal · UP Principal · DSSSB TGT & PGT
-                </Text>
-              </View>
-            </View>
-            <View style={styles.chipPreviewRow}>
-              {['UPSC Principal', 'UP Principal', 'DSSSB TGT', 'DSSSB PGT'].map((exam, idx) => (
-                <View
-                  key={exam}
-                  style={[
-                    styles.previewChip,
-                    {
-                      backgroundColor: idx === 0 ? colors.accent : colors.surface,
-                      borderColor: idx === 0 ? colors.accent : colors.line,
-                      borderRadius: radii.pill,
-                    },
-                  ]}
-                >
-                  <GraduationCap
-                    size={12}
-                    color={idx === 0 ? colors.accentText : colors.muted}
-                  />
-                  <Text
-                    style={[
-                      styles.previewChipText,
-                      { color: idx === 0 ? colors.accentText : colors.text },
-                    ]}
-                  >
-                    {exam}
-                  </Text>
-                </View>
-              ))}
-            </View>
-          </View>
-        );
+    // Center horizontally relative to spotlight target, clamped to screen margins
+    const targetCenterX = spotX + spotW / 2;
+    cardLeft = Math.min(
+      Math.max(12, targetCenterX - cardWidth / 2),
+      winW - cardWidth - 12
+    );
+  }
 
-      case 'cbt-mocks':
-        return (
-          <View
-            style={[
-              styles.visualBox,
-              {
-                backgroundColor: colors.hero,
-                borderColor: colors.line,
-                borderRadius: radii.card,
-              },
-            ]}
-          >
-            <View style={styles.cbtHeaderPreview}>
-              <View style={styles.cbtBadgeRow}>
-                <ClipboardCheck size={18} color={colors.accent} />
-                <Text style={[styles.cbtTitle, { color: colors.text }]}>
-                  Full Mock CBT Interface
-                </Text>
-              </View>
-              <View
-                style={[
-                  styles.timerChip,
-                  { backgroundColor: colors.surface, borderColor: colors.line, borderRadius: radii.pill },
-                ]}
-              >
-                <Clock size={12} color={colors.accent} />
-                <Text style={[styles.timerChipText, { color: colors.text }]}>119:45</Text>
-              </View>
-            </View>
-            <View style={styles.palettePreviewRow}>
-              {[
-                { num: 1, state: 'answered' },
-                { num: 2, state: 'answered' },
-                { num: 3, state: 'marked' },
-                { num: 4, state: 'current' },
-                { num: 5, state: 'unvisited' },
-                { num: 6, state: 'unvisited' },
-              ].map((q) => {
-                const bg =
-                  q.state === 'answered'
-                    ? colors.success
-                    : q.state === 'marked'
-                    ? colors.accent
-                    : q.state === 'current'
-                    ? colors.text
-                    : colors.surface;
-                const fg =
-                  q.state === 'answered'
-                    ? '#ffffff'
-                    : q.state === 'marked'
-                    ? colors.accentText
-                    : q.state === 'current'
-                    ? colors.bg
-                    : colors.muted;
-                return (
-                  <View
-                    key={q.num}
-                    style={[
-                      styles.paletteDot,
-                      { backgroundColor: bg, borderColor: colors.line },
-                    ]}
-                  >
-                    <Text style={[styles.paletteDotText, { color: fg }]}>{q.num}</Text>
-                  </View>
-                );
-              })}
-            </View>
-          </View>
-        );
+  // Pointer triangle horizontal offset relative to cardLeft
+  const pointerLeft = hasRect
+    ? Math.min(
+        Math.max(20, spotX + spotW / 2 - cardLeft - 8),
+        cardWidth - 36
+      )
+    : cardWidth / 2 - 8;
 
-      case 'practice-hub':
-        return (
-          <View
-            style={[
-              styles.visualBox,
-              {
-                backgroundColor: colors.hero,
-                borderColor: colors.line,
-                borderRadius: radii.card,
-              },
-            ]}
-          >
-            <View style={styles.practicePreviewGrid}>
-              <View
-                style={[
-                  styles.practiceMiniCard,
-                  { backgroundColor: colors.surface, borderColor: colors.line, borderRadius: radii.button },
-                ]}
-              >
-                <BookOpen size={16} color={colors.accent} />
-                <Text style={[styles.practiceMiniTitle, { color: colors.text }]}>
-                  950+ Topic Sets
-                </Text>
-                <Text style={[styles.practiceMiniSub, { color: colors.muted }]}>
-                  NEP, GFR, CCS, Hindi
-                </Text>
-              </View>
-              <View
-                style={[
-                  styles.practiceMiniCard,
-                  { backgroundColor: colors.surface, borderColor: colors.line, borderRadius: radii.button },
-                ]}
-              >
-                <Zap size={16} color={colors.success} />
-                <Text style={[styles.practiceMiniTitle, { color: colors.text }]}>
-                  10-Q Quick Drill
-                </Text>
-                <Text style={[styles.practiceMiniSub, { color: colors.muted }]}>
-                  Instant feedback
-                </Text>
-              </View>
-              <View
-                style={[
-                  styles.practiceMiniCard,
-                  { backgroundColor: colors.surface, borderColor: colors.line, borderRadius: radii.button },
-                ]}
-              >
-                <Sparkles size={16} color={colors.accent} />
-                <Text style={[styles.practiceMiniTitle, { color: colors.text }]}>
-                  AI Custom Test
-                </Text>
-                <Text style={[styles.practiceMiniSub, { color: colors.muted }]}>
-                  Tailored to you
-                </Text>
-              </View>
-            </View>
-          </View>
-        );
-
-      case 'analytics-vidya':
-        return (
-          <View
-            style={[
-              styles.visualBox,
-              {
-                backgroundColor: colors.hero,
-                borderColor: colors.line,
-                borderRadius: radii.card,
-              },
-            ]}
-          >
-            <View style={styles.visualCenterRow}>
-              <Image
-                source={require('@/assets/images/vidya.png')}
-                style={styles.vidyaAvatar}
-                resizeMode="contain"
-              />
-              <View style={{ flex: 1 }}>
-                <Text style={[styles.visualTitle, { color: colors.text }]}>
-                  Vidya AI & Topic Analytics
-                </Text>
-                <Text style={[styles.visualCaption, { color: colors.muted }]}>
-                  Pinpoint weak areas & get instant explanations
-                </Text>
-              </View>
-            </View>
-            <View style={styles.analyticsPreviewBars}>
-              <View style={styles.barRow}>
-                <Text style={[styles.barLabel, { color: colors.text }]}>NEP 2020</Text>
-                <View style={[styles.barTrack, { backgroundColor: colors.surface }]}>
-                  <View style={[styles.barFill, { width: '85%', backgroundColor: colors.success }]} />
-                </View>
-                <Text style={[styles.barPct, { color: colors.success }]}>85%</Text>
-              </View>
-              <View style={styles.barRow}>
-                <Text style={[styles.barLabel, { color: colors.text }]}>GFR 2017</Text>
-                <View style={[styles.barTrack, { backgroundColor: colors.surface }]}>
-                  <View style={[styles.barFill, { width: '38%', backgroundColor: colors.danger }]} />
-                </View>
-                <Text style={[styles.barPct, { color: colors.danger }]}>38%</Text>
-              </View>
-            </View>
-          </View>
-        );
-
-      default:
-        return null;
-    }
-  };
+  const stepLabel = isHi
+    ? `चरण ${stepIndex + 1} / ${steps.length}`
+    : `Step ${stepIndex + 1} of ${steps.length}`;
 
   return (
     <RNModal
-      visible={visible}
+      visible={isActive}
       transparent
       animationType="fade"
-      onRequestClose={handleSkip}
+      onRequestClose={() => stopWalkthrough(true)}
     >
-      <View style={[styles.backdrop, isMobile && { paddingHorizontal: 12, paddingVertical: 16 }]}>
+      <View style={styles.overlayRoot}>
+        {/* Dimmed Backdrop (4 rectangles forming a clear cutout around the element) */}
+        {hasRect ? (
+          <>
+            {/* Top dim */}
+            <View
+              style={[
+                styles.dimPanel,
+                { top: 0, left: 0, right: 0, height: spotY },
+              ]}
+            />
+            {/* Bottom dim */}
+            <View
+              style={[
+                styles.dimPanel,
+                {
+                  top: spotY + spotH,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                },
+              ]}
+            />
+            {/* Left dim */}
+            <View
+              style={[
+                styles.dimPanel,
+                {
+                  top: spotY,
+                  left: 0,
+                  width: spotX,
+                  height: spotH,
+                },
+              ]}
+            />
+            {/* Right dim */}
+            <View
+              style={[
+                styles.dimPanel,
+                {
+                  top: spotY,
+                  left: spotX + spotW,
+                  right: 0,
+                  height: spotH,
+                },
+              ]}
+            />
+
+            {/* Glowing Highlight Box Around Screen Element */}
+            <Animated.View
+              pointerEvents="none"
+              style={[
+                styles.highlightBox,
+                {
+                  top: spotY,
+                  left: spotX,
+                  width: spotW,
+                  height: spotH,
+                  borderColor: colors.accent,
+                  borderRadius: radii.card,
+                  transform: [{ scale: pulseAnim }],
+                },
+              ]}
+            />
+          </>
+        ) : (
+          <View style={[styles.dimPanel, StyleSheet.absoluteFillObject]} />
+        )}
+
+        {/* Interactive Bilingual Explanation Card */}
         <View
           style={[
-            styles.card,
+            styles.tooltipCard,
             {
+              top: cardTop,
+              left: cardLeft,
+              width: cardWidth,
               backgroundColor: colors.surface,
-              borderColor: colors.line,
+              borderColor: colors.accent,
               borderRadius: radii.card,
-              maxWidth: 540,
-              maxHeight: windowHeight ? Math.min(windowHeight * 0.9, 700) : '90%',
             },
           ]}
         >
-          {/* Top Header */}
-          <View style={[styles.header, { borderBottomColor: colors.line }]}>
-            <Pill label={currentStep.badge} variant="accent" />
-            <TouchableOpacity
-              style={[styles.closeBtn, { backgroundColor: colors.surface2 }]}
-              onPress={handleSkip}
-              accessibilityLabel="Skip walkthrough"
-            >
-              <X size={16} color={colors.text} />
-            </TouchableOpacity>
+          {/* Directional Pointer Arrow */}
+          {placement === 'below' && (
+            <View
+              style={[
+                styles.arrowUp,
+                {
+                  left: pointerLeft,
+                  borderBottomColor: colors.accent,
+                },
+              ]}
+            />
+          )}
+          {placement === 'above' && (
+            <View
+              style={[
+                styles.arrowDown,
+                {
+                  left: pointerLeft,
+                  borderTopColor: colors.accent,
+                },
+              ]}
+            />
+          )}
+
+          {/* Header: Step Badge + Bilingual Toggle + Close */}
+          <View style={[styles.cardHeader, { borderBottomColor: colors.line }]}>
+            <View style={[styles.stepBadge, { backgroundColor: colors.accent + '22' }]}>
+              <Sparkles size={12} color={colors.accent} />
+              <Text style={[styles.stepBadgeText, { color: colors.accent }]}>
+                {stepLabel}
+              </Text>
+            </View>
+
+            <View style={styles.headerRight}>
+              {/* Language Switcher Pill: EN / हिन्दी */}
+              <View
+                style={[
+                  styles.langSwitch,
+                  {
+                    backgroundColor: colors.surface2,
+                    borderColor: colors.line,
+                    borderRadius: radii.pill,
+                  },
+                ]}
+              >
+                <TouchableOpacity
+                  onPress={() => setLanguage('en')}
+                  style={[
+                    styles.langBtn,
+                    language === 'en' && {
+                      backgroundColor: colors.accent,
+                      borderRadius: radii.pill,
+                    },
+                  ]}
+                  accessibilityLabel="Switch walkthrough to English"
+                >
+                  <Text
+                    style={[
+                      styles.langBtnText,
+                      {
+                        color: language === 'en' ? colors.accentText : colors.muted,
+                      },
+                    ]}
+                  >
+                    EN
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => setLanguage('hi')}
+                  style={[
+                    styles.langBtn,
+                    language === 'hi' && {
+                      backgroundColor: colors.accent,
+                      borderRadius: radii.pill,
+                    },
+                  ]}
+                  accessibilityLabel="वॉकथ्रू को हिंदी में बदलें"
+                >
+                  <Text
+                    style={[
+                      styles.langBtnText,
+                      {
+                        color: language === 'hi' ? colors.accentText : colors.muted,
+                      },
+                    ]}
+                  >
+                    हिन्दी
+                  </Text>
+                </TouchableOpacity>
+              </View>
+
+              <TouchableOpacity
+                onPress={() => stopWalkthrough(true)}
+                style={[styles.closeBtn, { backgroundColor: colors.surface2 }]}
+                accessibilityLabel={isHi ? 'टूर बंद करें' : 'Close tour'}
+              >
+                <X size={15} color={colors.text} />
+              </TouchableOpacity>
+            </View>
           </View>
 
-          {/* Scrollable Body */}
-          <ScrollView
-            style={styles.scrollBody}
-            contentContainerStyle={styles.scrollContent}
-            showsVerticalScrollIndicator={false}
-          >
-            {renderVisualBanner()}
-
+          {/* Body: Title & Explanation */}
+          <View style={styles.cardBody}>
             <Text
               style={[
                 styles.title,
                 {
                   color: colors.text,
-                  fontFamily: Platform.OS === 'web' ? typography.headingFamily : undefined,
+                  fontFamily:
+                    Platform.OS === 'web' ? typography.headingFamily : undefined,
                 },
               ]}
             >
-              {currentStep.title}
+              {isHi ? currentStep.title.hi : currentStep.title.en}
             </Text>
 
-            <Text style={[styles.subtitle, { color: colors.muted }]}>
-              {currentStep.subtitle}
+            <Text style={[styles.description, { color: colors.muted }]}>
+              {isHi ? currentStep.description.hi : currentStep.description.en}
             </Text>
 
-            <View style={styles.highlightsList}>
-              {currentStep.highlights.map((item, idx) => (
-                <View key={idx} style={styles.highlightRow}>
-                  <CheckCircle2
-                    size={16}
-                    color={colors.success}
-                    style={{ marginTop: 2, flexShrink: 0 }}
-                  />
-                  <View style={{ flex: 1 }}>
-                    <Text style={[styles.highlightTitle, { color: colors.text }]}>
-                      {item.title}
-                    </Text>
-                    <Text style={[styles.highlightDesc, { color: colors.muted }]}>
-                      {item.desc}
-                    </Text>
-                  </View>
-                </View>
-              ))}
+            {/* Secondary language quick peek */}
+            <View
+              style={[
+                styles.altLangPreview,
+                { backgroundColor: colors.surface2, borderColor: colors.line, borderRadius: 8 },
+              ]}
+            >
+              <Globe size={12} color={colors.muted} style={{ marginTop: 2 }} />
+              <Text style={[styles.altLangText, { color: colors.muted }]} numberOfLines={2}>
+                {isHi ? currentStep.title.en : currentStep.title.hi}
+              </Text>
             </View>
-          </ScrollView>
+          </View>
 
-          {/* Footer Navigation */}
-          <View style={[styles.footer, { borderTopColor: colors.line }]}>
-            {/* Step Dots */}
+          {/* Footer: Progress Dots + Controls */}
+          <View style={[styles.cardFooter, { borderTopColor: colors.line }]}>
             <View style={styles.dotsRow}>
-              {STEPS.map((s, idx) => (
+              {steps.map((s, idx) => (
                 <TouchableOpacity
                   key={s.id}
-                  onPress={() => setStepIndex(idx)}
-                  accessibilityLabel={`Go to step ${idx + 1}`}
+                  onPress={() => goToStep(idx)}
                   style={[
                     styles.dot,
                     {
                       backgroundColor: idx === stepIndex ? colors.accent : colors.line,
-                      width: idx === stepIndex ? 20 : 8,
+                      width: idx === stepIndex ? 18 : 7,
                     },
                   ]}
+                  accessibilityLabel={`Step ${idx + 1}`}
                 />
               ))}
             </View>
 
-            {/* Action Buttons */}
-            <View style={styles.buttonsRow}>
+            <View style={styles.btnRow}>
               {!isFirst ? (
                 <Button
-                  label="Back"
+                  label={isHi ? 'पीछे' : 'Back'}
                   variant="secondary"
                   size="small"
-                  icon={<ArrowLeft size={14} color={colors.text} />}
-                  onPress={() => setStepIndex((i) => Math.max(0, i - 1))}
+                  icon={<ArrowLeft size={13} color={colors.text} />}
+                  onPress={prevStep}
                 />
               ) : (
-                <TouchableOpacity onPress={handleSkip} style={styles.skipBtn}>
-                  <Text style={[styles.skipText, { color: colors.muted }]}>Skip tour</Text>
+                <TouchableOpacity
+                  onPress={() => stopWalkthrough(true)}
+                  style={styles.skipBtn}
+                >
+                  <Text style={[styles.skipText, { color: colors.muted }]}>
+                    {isHi ? 'छोड़ें' : 'Skip'}
+                  </Text>
                 </TouchableOpacity>
               )}
 
-              <View style={styles.rightBtns}>
-                {currentStep.actionLabel && onNavigate && !isLast && (
-                  <Button
-                    label={currentStep.actionLabel}
-                    variant="secondary"
-                    size="small"
-                    onPress={handleActionPress}
-                  />
-                )}
-                {!isLast ? (
-                  <Button
-                    label="Next"
-                    variant="primary"
-                    size="small"
-                    iconRight={<ArrowRight size={14} color={colors.accentText} />}
-                    onPress={() => setStepIndex((i) => Math.min(STEPS.length - 1, i + 1))}
-                  />
-                ) : (
-                  <Button
-                    label="Get Started"
-                    variant="primary"
-                    size="small"
-                    iconRight={<Target size={14} color={colors.accentText} />}
-                    onPress={handleFinish}
-                  />
-                )}
-              </View>
+              {!isLast ? (
+                <Button
+                  label={isHi ? 'आगे बढ़ें' : 'Next'}
+                  variant="primary"
+                  size="small"
+                  iconRight={<ArrowRight size={13} color={colors.accentText} />}
+                  onPress={nextStep}
+                />
+              ) : (
+                <Button
+                  label={isHi ? 'शुरू करें' : 'Finish'}
+                  variant="primary"
+                  size="small"
+                  iconRight={<Target size={13} color={colors.accentText} />}
+                  onPress={() => stopWalkthrough(true)}
+                />
+              )}
             </View>
           </View>
         </View>
@@ -596,242 +430,163 @@ export default function FirstTimeWalkthrough({
 }
 
 const styles = StyleSheet.create({
-  backdrop: {
+  overlayRoot: {
     flex: 1,
-    backgroundColor: 'rgba(10, 18, 15, 0.72)',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
+    position: 'relative',
   },
-  card: {
-    width: '100%',
-    borderWidth: 1,
-    overflow: 'hidden',
+  dimPanel: {
+    position: 'absolute',
+    backgroundColor: 'rgba(8, 15, 12, 0.72)',
+  },
+  highlightBox: {
+    position: 'absolute',
+    borderWidth: 2.5,
     ...Platform.select({
       web: {
-        boxShadow: '0 20px 50px rgba(0, 0, 0, 0.35)',
+        boxShadow: '0 0 0 4px rgba(242, 201, 76, 0.28)',
       },
       default: {
-        elevation: 12,
+        elevation: 8,
       },
     }),
   },
-  header: {
+  tooltipCard: {
+    position: 'absolute',
+    borderWidth: 1.5,
+    ...Platform.select({
+      web: {
+        boxShadow: '0 18px 44px rgba(0, 0, 0, 0.42)',
+      },
+      default: {
+        elevation: 14,
+      },
+    }),
+  },
+  arrowUp: {
+    position: 'absolute',
+    top: -10,
+    width: 0,
+    height: 0,
+    borderLeftWidth: 8,
+    borderRightWidth: 8,
+    borderBottomWidth: 10,
+    borderLeftColor: 'transparent',
+    borderRightColor: 'transparent',
+  },
+  arrowDown: {
+    position: 'absolute',
+    bottom: -10,
+    width: 0,
+    height: 0,
+    borderLeftWidth: 8,
+    borderRightWidth: 8,
+    borderTopWidth: 10,
+    borderLeftColor: 'transparent',
+    borderRightColor: 'transparent',
+  },
+  cardHeader: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
-    paddingVertical: 14,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
     borderBottomWidth: 1,
+    gap: 8,
+  },
+  stepBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    paddingHorizontal: 9,
+    paddingVertical: 4,
+    borderRadius: 999,
+  },
+  stepBadgeText: {
+    fontSize: 11.5,
+    fontWeight: '700',
+  },
+  headerRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  langSwitch: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 2,
+    borderWidth: 1,
+  },
+  langBtn: {
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+  },
+  langBtnText: {
+    fontSize: 11.5,
+    fontWeight: '700',
   },
   closeBtn: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
+    width: 26,
+    height: 26,
+    borderRadius: 13,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  scrollBody: {
-    flexGrow: 0,
-  },
-  scrollContent: {
-    padding: 20,
-    gap: 14,
-  },
-  visualBox: {
-    padding: 16,
-    borderWidth: 1,
-    gap: 12,
-  },
-  visualCenterRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
-  },
-  visualTitle: {
-    fontSize: 17,
-    fontWeight: '700',
-  },
-  visualCaption: {
-    fontSize: 13,
-    marginTop: 2,
-  },
-  chipPreviewRow: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+  cardBody: {
+    paddingHorizontal: 16,
+    paddingVertical: 14,
     gap: 8,
-  },
-  previewChip: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 5,
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    borderWidth: 1,
-  },
-  previewChipText: {
-    fontSize: 12,
-    fontWeight: '600',
-  },
-  cbtHeaderPreview: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: 8,
-  },
-  cbtBadgeRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  cbtTitle: {
-    fontSize: 14,
-    fontWeight: '700',
-  },
-  timerChip: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 5,
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderWidth: 1,
-  },
-  timerChipText: {
-    fontSize: 12,
-    fontWeight: '700',
-  },
-  palettePreviewRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    flexWrap: 'wrap',
-  },
-  paletteDot: {
-    width: 30,
-    height: 30,
-    borderRadius: 8,
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  paletteDotText: {
-    fontSize: 12,
-    fontWeight: '700',
-  },
-  practicePreviewGrid: {
-    flexDirection: 'row',
-    gap: 8,
-    flexWrap: 'wrap',
-  },
-  practiceMiniCard: {
-    flex: 1,
-    minWidth: 120,
-    padding: 10,
-    borderWidth: 1,
-    gap: 4,
-  },
-  practiceMiniTitle: {
-    fontSize: 12.5,
-    fontWeight: '700',
-    marginTop: 2,
-  },
-  practiceMiniSub: {
-    fontSize: 11.5,
-  },
-  vidyaAvatar: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-  },
-  analyticsPreviewBars: {
-    gap: 8,
-  },
-  barRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  barLabel: {
-    width: 68,
-    fontSize: 12,
-    fontWeight: '600',
-  },
-  barTrack: {
-    flex: 1,
-    height: 8,
-    borderRadius: 4,
-    overflow: 'hidden',
-  },
-  barFill: {
-    height: '100%',
-    borderRadius: 4,
-  },
-  barPct: {
-    width: 36,
-    fontSize: 12,
-    fontWeight: '700',
-    textAlign: 'right',
   },
   title: {
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: '700',
-    letterSpacing: -0.3,
+    letterSpacing: -0.2,
   },
-  subtitle: {
-    fontSize: 14.5,
-    lineHeight: 21,
+  description: {
+    fontSize: 13.5,
+    lineHeight: 20,
   },
-  highlightsList: {
-    gap: 10,
-    marginTop: 2,
-  },
-  highlightRow: {
+  altLangPreview: {
     flexDirection: 'row',
     alignItems: 'flex-start',
-    gap: 10,
+    gap: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+    borderWidth: 1,
+    marginTop: 2,
   },
-  highlightTitle: {
-    fontSize: 14,
-    fontWeight: '600',
+  altLangText: {
+    flex: 1,
+    fontSize: 12,
+    fontWeight: '500',
   },
-  highlightDesc: {
-    fontSize: 13,
-    lineHeight: 18,
-    marginTop: 1,
-  },
-  footer: {
-    paddingHorizontal: 20,
-    paddingVertical: 14,
+  cardFooter: {
+    paddingHorizontal: 14,
+    paddingVertical: 11,
     borderTopWidth: 1,
-    gap: 12,
+    gap: 10,
   },
   dotsRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 6,
+    gap: 5,
   },
   dot: {
-    height: 8,
+    height: 7,
     borderRadius: 4,
   },
-  buttonsRow: {
+  btnRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: 10,
   },
-  rightBtns: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
   skipBtn: {
     paddingVertical: 6,
-    paddingHorizontal: 4,
+    paddingHorizontal: 6,
   },
   skipText: {
-    fontSize: 13.5,
-    fontWeight: '500',
+    fontSize: 13,
+    fontWeight: '600',
   },
 });

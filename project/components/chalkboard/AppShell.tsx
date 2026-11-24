@@ -16,6 +16,7 @@ import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import SideNav from './SideNav';
 import BottomNav from './BottomNav';
 import TopBar from './TopBar';
+import SpotlightTarget from '@/components/SpotlightTarget';
 
 export interface AppShellProps {
   children: React.ReactNode;
@@ -67,27 +68,32 @@ export default function AppShell({
 
           {/* Mobile Floating AI Action */}
           {showFloatingAI && (
-            <TouchableOpacity
-              style={[
-                styles.floatingAI,
-                {
-                  backgroundColor: colors.accent,
-                  borderRadius: radii.pill,
-                },
-              ]}
-              onPress={() => router.push('/assistant')}
-              activeOpacity={0.8}
-              accessibilityLabel="Open Vidya AI study assistant"
+            <SpotlightTarget
+              id="floating-vidya-btn"
+              style={{ position: 'absolute', bottom: 76, right: 20, zIndex: 99 }}
             >
-              <Image
-                source={require('@/assets/images/vidya.png')}
-                style={styles.floatingVidyaImg}
-                resizeMode="contain"
-              />
-              <Text style={[styles.floatingAIText, { color: colors.accentText }]}>
-                Ask Vidya
-              </Text>
-            </TouchableOpacity>
+              <TouchableOpacity
+                style={[
+                  styles.floatingAI,
+                  {
+                    backgroundColor: colors.accent,
+                    borderRadius: radii.pill,
+                  },
+                ]}
+                onPress={() => router.push('/assistant')}
+                activeOpacity={0.8}
+                accessibilityLabel="Open Vidya AI study assistant"
+              >
+                <Image
+                  source={require('@/assets/images/vidya.png')}
+                  style={styles.floatingVidyaImg}
+                  resizeMode="contain"
+                />
+                <Text style={[styles.floatingAIText, { color: colors.accentText }]}>
+                  Ask Vidya
+                </Text>
+              </TouchableOpacity>
+            </SpotlightTarget>
           )}
 
           {/* Mobile Bottom Navigation */}
@@ -125,9 +131,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   floatingAI: {
-    position: 'absolute',
-    bottom: 76,
-    right: 20,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
@@ -138,7 +141,6 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.15,
     shadowRadius: 8,
-    zIndex: 99,
   },
   floatingVidyaImg: {
     width: 20,

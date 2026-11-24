@@ -22,7 +22,11 @@ import SampleQuestionPreview, { SampleQuestionData } from '@/components/first-vi
 import ExamTestList, { TestRowItem } from '@/components/first-visit/ExamTestList';
 import OfferCard from '@/components/first-visit/OfferCard';
 import { FIRST_VISIT_EXAM_STORAGE_KEY } from '@/components/first-visit/ExamPicker';
-import FirstTimeWalkthrough, { hasCompletedWalkthrough } from '@/components/FirstTimeWalkthrough';
+import SpotlightTarget from '@/components/SpotlightTarget';
+import {
+  useWalkthrough,
+  hasCompletedWalkthrough,
+} from '@/context/walkthrough-context';
 import { resolveQuestionTopic } from '@/utils/topic-resolver';
 
 export default function ExamScreen() {
@@ -31,9 +35,9 @@ export default function ExamScreen() {
   const { colors, typography } = useChalkboardTheme();
   const { user } = useAuth();
   const { isSubscribed } = useSub();
+  const { startWalkthrough } = useWalkthrough();
 
   const [loading, setLoading] = useState(true);
-  const [showWalkthrough, setShowWalkthrough] = useState(false);
   const [tests, setTests] = useState<TestRowItem[]>([]);
   const [sampleQuestion, setSampleQuestion] = useState<SampleQuestionData | null>(null);
   const [sampleTestId, setSampleTestId] = useState<string>('');
@@ -252,7 +256,7 @@ export default function ExamScreen() {
           setLoading(false);
           hasCompletedWalkthrough().then((done) => {
             if (!done && !isCancelled) {
-              setShowWalkthrough(true);
+              startWalkthrough('guest');
             }
           });
         }
@@ -349,25 +353,33 @@ export default function ExamScreen() {
       >
         <View style={styles.innerWrapper}>
           {/* Hero Section */}
-          <ExamHero
-            examName={examDisplayName}
-            sampleQuestionCount={tests[0]?.questionCount || 20}
-            sampleDurationMinutes={tests[0]?.durationMinutes || 20}
-            onStartSampleTest={handleHeroStart}
-            isSubscribed={isSubscribed}
-          />
+          <SpotlightTarget id="guest-hero-cta">
+            <ExamHero
+              examName={examDisplayName}
+              sampleQuestionCount={tests[0]?.questionCount || 20}
+              sampleDurationMinutes={tests[0]?.durationMinutes || 20}
+              onStartSampleTest={handleHeroStart}
+              isSubscribed={isSubscribed}
+            />
+          </SpotlightTarget>
 
           {/* Real Sample Question Explanation Preview */}
-          {!isSubscribed && sampleQuestion && <SampleQuestionPreview question={sampleQuestion} />}
+          {!isSubscribed && sampleQuestion && (
+            <SpotlightTarget id="guest-sample-preview">
+              <SampleQuestionPreview question={sampleQuestion} />
+            </SpotlightTarget>
+          )}
 
           {/* Test List Section (Free tests + Locked tests) */}
-          <ExamTestList
-            examName={examDisplayName}
-            tests={tests}
-            onStartTest={handleStartTest}
-            onUnlockPress={handleUnlockScroll}
-            isSubscribed={isSubscribed}
-          />
+          <SpotlightTarget id="guest-test-list">
+            <ExamTestList
+              examName={examDisplayName}
+              tests={tests}
+              onStartTest={handleStartTest}
+              onUnlockPress={handleUnlockScroll}
+              isSubscribed={isSubscribed}
+            />
+          </SpotlightTarget>
 
           {/* Conversion Offer Card Section (Only for non-subscribers) */}
           {!isSubscribed && (
@@ -386,12 +398,6 @@ export default function ExamScreen() {
           )}
         </View>
       </ScrollView>
-
-      <FirstTimeWalkthrough
-        visible={showWalkthrough}
-        onComplete={() => setShowWalkthrough(false)}
-        onNavigate={(route) => router.push(route as any)}
-      />
     </View>
   );
 }

@@ -43,7 +43,11 @@ import ProgressBar from '@/components/chalkboard/ProgressBar';
 import TopicBar from '@/components/chalkboard/TopicBar';
 import SeriesCard from '@/components/chalkboard/SeriesCard';
 import OfferCard from '@/components/chalkboard/OfferCard';
-import FirstTimeWalkthrough, { hasCompletedWalkthrough } from '@/components/FirstTimeWalkthrough';
+import SpotlightTarget from '@/components/SpotlightTarget';
+import {
+  useWalkthrough,
+  hasCompletedWalkthrough,
+} from '@/context/walkthrough-context';
 import { extractTestTopicAndSubject } from '@/utils/topic-resolver';
 
 const WEEK_DAYS = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
@@ -52,13 +56,13 @@ export default function HomeScreen() {
   const { user } = useAuth();
   const { isSubscribed } = useSub();
   const { examMode, examInfo } = useExam();
+  const { startWalkthrough } = useWalkthrough();
   const { colors, typography, radii } = useChalkboardTheme();
   const { width } = useWindowDimensions();
   const isDesktop = width >= 1024;
 
   const [loading, setLoading] = useState(true);
   const [showFirstVisitPicker, setShowFirstVisitPicker] = useState<boolean | null>(null);
-  const [showWalkthrough, setShowWalkthrough] = useState(false);
   const [activeTests, setActiveTests] = useState<SavedTestState[]>([]);
   const [testHistory, setTestHistory] = useState<TestResult[]>([]);
   const [profile, setProfile] = useState<any>(null);
@@ -99,7 +103,7 @@ export default function HomeScreen() {
 
       const done = await hasCompletedWalkthrough();
       if (!done) {
-        setShowWalkthrough(true);
+        startWalkthrough('home');
       }
     } catch (err) {
       console.error('Failed to load dashboard data:', err);
@@ -401,7 +405,8 @@ export default function HomeScreen() {
                 )}
 
                 {/* B. Recommended Next */}
-                <Card style={styles.recommendedCard}>
+                <SpotlightTarget id="home-hero-cta">
+                  <Card style={styles.recommendedCard}>
                   <View style={styles.recommendedHeader}>
                     <Sparkles size={16} color={colors.accent} />
                     <Text style={[styles.recommendedLabel, { color: colors.muted }]}>
@@ -445,7 +450,8 @@ export default function HomeScreen() {
                       iconRight={<ChevronRight size={14} color={hasActiveResume ? colors.text : colors.accentText} />}
                     />
                   </View>
-                </Card>
+                  </Card>
+                </SpotlightTarget>
 
                 {/* C. Compact Progress Strip */}
                 <Card noPadding style={styles.progressStripCard}>
@@ -650,12 +656,6 @@ export default function HomeScreen() {
           )}
         </View>
       </ScrollView>
-
-      <FirstTimeWalkthrough
-        visible={showWalkthrough}
-        onComplete={() => setShowWalkthrough(false)}
-        onNavigate={(route) => router.push(route as any)}
-      />
     </AppShell>
   );
 }

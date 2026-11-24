@@ -5,6 +5,7 @@ import { Sun, Moon, ArrowLeft, User as UserIcon } from 'lucide-react-native';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { useAuth } from '@/context/auth-context';
 import { AstraLogo } from '@/components/chalkboard';
+import SpotlightTarget from '@/components/SpotlightTarget';
 
 interface FirstVisitHeaderProps {
   showChangeExam?: boolean;
@@ -48,14 +49,16 @@ export default function FirstVisitHeader({
         {/* Right side controls */}
         <View style={styles.controlsRow}>
           {showChangeExam && (
-            <TouchableOpacity
-              style={[styles.changeExamBtn, { borderColor: colors.line, backgroundColor: colors.surface }]}
-              onPress={handleChangeExam}
-              activeOpacity={0.7}
-            >
-              <ArrowLeft size={13} color={colors.muted} />
-              <Text style={[styles.changeExamText, { color: colors.muted }]}>Change exam</Text>
-            </TouchableOpacity>
+            <SpotlightTarget id="guest-change-exam">
+              <TouchableOpacity
+                style={[styles.changeExamBtn, { borderColor: colors.line, backgroundColor: colors.surface }]}
+                onPress={handleChangeExam}
+                activeOpacity={0.7}
+              >
+                <ArrowLeft size={13} color={colors.muted} />
+                <Text style={[styles.changeExamText, { color: colors.muted }]}>Change exam</Text>
+              </TouchableOpacity>
+            </SpotlightTarget>
           )}
 
           {/* Theme Toggle */}

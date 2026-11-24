@@ -15,6 +15,7 @@ import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { useAuth } from '@/context/auth-context';
 import { useSub } from '@/context/subscription-context';
 import AstraLogo from './AstraLogo';
+import SpotlightTarget from '@/components/SpotlightTarget';
 
 export const NAV_ITEMS = [
   { label: 'Home', path: '/', icon: Home },
@@ -63,8 +64,16 @@ export default function SideNav() {
           {NAV_ITEMS.map((item) => {
             const active = isItemActive(item.path);
             const Icon = item.icon;
+            const targetId =
+              item.path === '/practice'
+                ? 'nav-practice-side'
+                : item.path === '/assistant'
+                ? 'nav-vidya-side'
+                : item.path === '/progress'
+                ? 'nav-analytics-side'
+                : null;
 
-            return (
+            const buttonEl = (
               <TouchableOpacity
                 key={item.path}
                 style={[
@@ -105,6 +114,14 @@ export default function SideNav() {
                   {item.label}
                 </Text>
               </TouchableOpacity>
+            );
+
+            return targetId ? (
+              <SpotlightTarget key={item.path} id={targetId}>
+                {buttonEl}
+              </SpotlightTarget>
+            ) : (
+              buttonEl
             );
           })}
         </View>
