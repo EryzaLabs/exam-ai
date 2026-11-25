@@ -4,65 +4,56 @@ import * as Speech from 'expo-speech';
 export type VoiceLang = 'en' | 'hi';
 
 interface SpeakOptions {
+  stepId?: string;
   language: VoiceLang;
   onStart?: () => void;
   onDone?: () => void;
   onError?: () => void;
 }
 
-let activeUtteranceId = 0;
+const STEP_AUDIO_PREFIX: Record<string, string> = {
+  'exam-switcher': 'home-exam-switcher',
+  'search-bar': 'home-search-bar',
+  'hero-cta': 'home-hero-cta',
+  'nav-practice': 'home-nav-practice',
+  'nav-vidya': 'home-nav-vidya',
+  'nav-analytics': 'home-nav-analytics',
+  'guest-change-exam': 'guest-change-exam',
+  'guest-hero-cta': 'guest-hero-cta',
+  'guest-sample-preview': 'guest-sample-preview',
+  'guest-test-list': 'guest-test-list',
+};
 
-function pickPreferredWebVoice(lang: VoiceLang): SpeechSynthesisVoice | null {
-  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
-  const voices = window.speechSynthesis.getVoices() || [];
-  if (voices.length === 0) return null;
+let activePlaybackId = 0;
+let activeWebAudio: HTMLAudioElement | null = null;
 
-  if (lang === 'hi') {
-    const hiVoices = voices.filter((v) =>
-      v.lang.toLowerCase().startsWith('hi')
-    );
-    if (hiVoices.length > 0) {
-      // Prefer natural/female Hindi voices (Google हिन्दी, Swara, Lekha, Kalpana)
-      const preferred = hiVoices.find((v) =>
-        /google|swara|lekha|kalpana|heera|female|natural/i.test(v.name)
-      );
-      return preferred || hiVoices[0];
-    }
-    return null;
-  }
-
-  // English: prefer Indian English female/natural voices first, then clear English voices
-  const enInVoices = voices.filter((v) =>
-    v.lang.toLowerCase().startsWith('en-in')
-  );
-  if (enInVoices.length > 0) {
-    const preferredIn = enInVoices.find((v) =>
-      /veena|neerja|google|isha|female|natural/i.test(v.name)
-    );
-    return preferredIn || enInVoices[0];
-  }
-
-  const enVoices = voices.filter((v) =>
-    v.lang.toLowerCase().startsWith('en')
-  );
-  const preferredEn = enVoices.find((v) =>
-    /female|samantha|aria|jenny|google uk english female|zira|natural/i.test(v.name)
-  );
-  return preferredEn || enVoices[0] || null;
+function getWalkthroughAudioUrl(stepId: string | undefined, language: VoiceLang): string | null {
+  if (!stepId) return null;
+  const prefix = STEP_AUDIO_PREFIX[stepId];
+  if (!prefix) return null;
+  return `/audio/walkthrough/${prefix}-${language}.mp3`;
 }
 
 export const VidyaVoiceService = {
   isSupported(): boolean {
     if (Platform.OS === 'web') {
-      return typeof window !== 'undefined' && 'speechSynthesis' in window;
+      return typeof window !== 'undefined' && typeof Audio !== 'undefined';
     }
     return true;
   },
 
   stop(): void {
-    activeUtteranceId++;
+    activePlaybackId++;
     try {
       if (Platform.OS === 'web') {
+        if (activeWebAudio) {
+          activeWebAudio.pause();
+          activeWebAudio.currentTime = 0;
+          activeWebAudio.onplaying = null;
+          activeWebAudio.onended = null;
+          activeWebAudio.onerror = null;
+          activeWebAudio = null;
+        }
         if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
           window.speechSynthesis.cancel();
         }
@@ -75,69 +66,75 @@ export const VidyaVoiceService = {
   },
 
   speak(text: string, options: SpeakOptions): void {
-    if (!text.trim()) return;
     this.stop();
 
-    const myId = ++activeUtteranceId;
-    const { language, onStart, onDone, onError } = options;
+    const myId = ++activePlaybackId;
+    const { stepId, language, onStart, onDone, onError } = options;
 
     if (Platform.OS === 'web') {
-      if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
-        onError?.();
-        return;
-      }
+      const audioUrl = getWalkthroughAudioUrl(stepId, language);
+      if (audioUrl && typeof Audio !== 'undefined') {
+        try {
+          const audio = new Audio(audioUrl);
+          activeWebAudio = audio;
 
-      try {
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = language === 'hi' ? 'hi-IN' : 'en-IN';
-        utterance.rate = language === 'hi' ? 0.96 : 1.0;
-        utterance.pitch = 1.05;
+          audio.onplaying = () => {
+            if (myId === activePlaybackId) {
+              onStart?.();
+            }
+          };
+          audio.onended = () => {
+            if (myId === activePlaybackId) {
+              activeWebAudio = null;
+              onDone?.();
+            }
+          };
+          audio.onerror = () => {
+            if (myId === activePlaybackId) {
+              activeWebAudio = null;
+              onError?.();
+            }
+          };
 
-        const voice = pickPreferredWebVoice(language);
-        if (voice) {
-          utterance.voice = voice;
+          const playPromise = audio.play();
+          if (playPromise && typeof playPromise.then === 'function') {
+            playPromise.catch(() => {
+              // Autoplay blocked before user gesture — fail silently and let user tap Play
+              if (myId === activePlaybackId) {
+                activeWebAudio = null;
+                onError?.();
+              }
+            });
+          }
+          return;
+        } catch {
+          onError?.();
+          return;
         }
-
-        utterance.onstart = () => {
-          if (myId === activeUtteranceId) {
-            onStart?.();
-          }
-        };
-        utterance.onend = () => {
-          if (myId === activeUtteranceId) {
-            onDone?.();
-          }
-        };
-        utterance.onerror = () => {
-          if (myId === activeUtteranceId) {
-            onError?.();
-          }
-        };
-
-        window.speechSynthesis.speak(utterance);
-      } catch {
-        onError?.();
       }
+
+      onError?.();
       return;
     }
 
-    // Native (iOS / Android) via expo-speech
+    // Native fallback (iOS / Android) via expo-speech
+    if (!text.trim()) return;
     try {
       Speech.speak(text, {
         language: language === 'hi' ? 'hi-IN' : 'en-IN',
         rate: language === 'hi' ? 0.94 : 0.98,
         pitch: 1.05,
         onStart: () => {
-          if (myId === activeUtteranceId) onStart?.();
+          if (myId === activePlaybackId) onStart?.();
         },
         onDone: () => {
-          if (myId === activeUtteranceId) onDone?.();
+          if (myId === activePlaybackId) onDone?.();
         },
         onStopped: () => {
-          if (myId === activeUtteranceId) onDone?.();
+          if (myId === activePlaybackId) onDone?.();
         },
         onError: () => {
-          if (myId === activeUtteranceId) onError?.();
+          if (myId === activePlaybackId) onError?.();
         },
       });
     } catch {

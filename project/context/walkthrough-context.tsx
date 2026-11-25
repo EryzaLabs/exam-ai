@@ -381,6 +381,7 @@ export function WalkthroughProvider({ children }: { children: React.ReactNode })
         ? currentStep.voiceScript.hi
         : currentStep.voiceScript.en;
     VidyaVoiceService.speak(script, {
+      stepId: currentStep.id,
       language,
       onStart: () => setIsSpeaking(true),
       onDone: () => setIsSpeaking(false),
