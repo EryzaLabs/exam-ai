@@ -28,6 +28,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ChatMessage as AIMessage } from '@/services/ai-assistant-service';
 import { askVidyaAgent, VidyaAgentAction } from '@/services/vidya-agent-service';
 import { useDashboardData } from '@/hooks/useDashboardData';
+import UserService from '@/services/user-service';
+import { TestProgressService } from '@/services/test-progress-service';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/context/theme-context';
 import { useExam } from '@/context/exam-context';
@@ -75,8 +77,24 @@ export default function AssistantScreen() {
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [queriesUsedToday, setQueriesUsedToday] = useState(0);
+  const [userProfile, setUserProfile] = useState<any>(null);
+  const [testHistory, setTestHistory] = useState<any[]>([]);
+  const [savedTests, setSavedTests] = useState<any[]>([]);
   const scrollViewRef = useRef<ScrollView>(null);
   const initialPromptProcessed = useRef(false);
+
+  const getWelcomeText = (hi: boolean) =>
+    hi
+      ? '**नमस्ते! मैं विद्या हूँ**, आपकी AI स्टडी पार्टनर और वेबसाइट असिस्टेंट।\n\nमुझसे कुछ भी पूछें:\n- **टेस्ट सुझाव या नया AI टेस्ट** (किसी भी टॉपिक पर तुरंत टेस्ट बनवाएँ)\n- **आपका प्रदर्शन व कमज़ोर विषय** (आपकी एनालिटिक्स के आधार पर)\n- **नियम, अधिनियम और प्रश्न** (CCS, GFR, RTE 2009, NEP 2020, Pedagogy)'
+      : '**Namaste! I am Vidya**, your AI Study Partner & Complete Website Assistant.\n\nAsk me anything:\n- **Suggest a Test or Create an AI Test** on any topic (even outside the syllabus)\n- **Your Analytics & Weak Areas** (personalized study plan)\n- **Rules, Acts, Concepts & Site Features** (CCS, GFR, RTE 2009, NEP 2020, Pedagogy)';
+
+  useEffect(() => {
+    if (user?.uid) {
+      UserService.getUserProfile(user.uid).then(setUserProfile).catch(() => {});
+    }
+    TestProgressService.getTestHistory().then((h) => setTestHistory(h || [])).catch(() => {});
+    TestProgressService.getSavedTests().then((s) => setSavedTests(s || [])).catch(() => {});
+  }, [user?.uid]);
 
   const todayKey = `@vidya_daily_queries_${new Date().toISOString().slice(0, 10)}`;
 
@@ -106,8 +124,7 @@ export default function AssistantScreen() {
             {
               id: 'initial',
               role: 'assistant',
-              content:
-                '**Namaste! I am Vidya**, your AI tutor for Indian School Principal & Teacher Recruitment exams (UPSC, UP Principal, DSSSB TGT/PGT).\n\nAsk me about:\n- Administrative & Financial Rules (CCS, GFR, FR/SR)\n- Educational Acts & Policies (RTE 2009, NEP 2020, POCSO)\n- Pedagogy, Mnemonics & Doubt Clearing in English or Hindi',
+              content: getWelcomeText(isHindi),
               timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
             },
           ]);
@@ -118,6 +135,16 @@ export default function AssistantScreen() {
     };
     loadHistory();
   }, []);
+
+  // Update welcome message language when user toggles EN/HI before sending messages
+  useEffect(() => {
+    setMessages((prev) => {
+      if (prev.length === 1 && prev[0].id === 'initial') {
+        return [{ ...prev[0], content: getWelcomeText(isHindi) }];
+      }
+      return prev;
+    });
+  }, [isHindi]);
 
   // Save chat history
   useEffect(() => {
@@ -191,18 +218,50 @@ export default function AssistantScreen() {
       const weakTopicsList = Array.isArray(performance)
         ? performance
             .filter((p: any) => (p.accuracy ?? 100) < 55)
-            .slice(0, 5)
-            .map((p: any) => p.topic || p.name)
-            .filter(Boolean)
+            .slice(0, 6)
+            .map((p: any) => ({
+              topic: p.topic || p.name || 'General',
+              accuracy: p.accuracy ?? 0,
+            }))
         : [];
+
+      const strongTopicsList = Array.isArray(performance)
+        ? performance
+            .filter((p: any) => (p.accuracy ?? 0) >= 55)
+            .slice(0, 5)
+            .map((p: any) => ({
+              topic: p.topic || p.name || 'General',
+              accuracy: p.accuracy ?? 0,
+            }))
+        : [];
+
+      const recentTestsList = testHistory.slice(0, 5).map((r: any) => ({
+        title: r.testTitle || r.testId || 'Mock Test',
+        accuracy: r.accuracy ?? 0,
+        date: r.date,
+      }));
+
+      const activeTestsList = savedTests.slice(0, 3).map((s: any) => ({
+        title: s.testTitle || s.testId || 'In-Progress Test',
+        remainingMins: Math.max(1, Math.round((s.timeRemaining || 0) / 60)),
+      }));
 
       const agentRes = await askVidyaAgent(history, {
         examMode,
         lang,
         isSubscribed,
-        totalTestsCompleted: dashboardStats?.questionsAttempted || 0,
+        userName: userProfile?.fullName || user?.displayName || undefined,
+        targetCadre: userProfile?.targetCadre || undefined,
+        designation: userProfile?.designation || undefined,
+        totalTestsCompleted: testHistory.length,
+        questionsAttempted: dashboardStats?.questionsAttempted || 0,
         overallAccuracy: dashboardStats?.accuracy || 0,
+        streak: dashboardStats?.streak || 0,
+        timeSpentMins: dashboardStats?.timeSpent || 0,
         weakTopics: weakTopicsList,
+        strongTopics: strongTopicsList,
+        recentTests: recentTestsList,
+        activeTests: activeTestsList,
       });
 
       const assistantMsg: Message = {
@@ -235,27 +294,34 @@ export default function AssistantScreen() {
   };
 
   const handleClearChat = () => {
-    Alert.alert('Clear Chat History', 'Are you sure you want to clear your conversation with Vidya?', [
-      { text: 'Cancel', style: 'cancel' },
-      {
-        text: 'Clear',
-        style: 'destructive',
-        onPress: () => {
-          const resetMsg: Message = {
-            id: 'initial',
-            role: 'assistant',
-            content: 'Chat cleared. How can I assist you with your exam prep today?',
-            timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-          };
-          setMessages([resetMsg]);
-          AsyncStorage.removeItem(CHAT_HISTORY_KEY).catch(() => {});
+    Alert.alert(
+      t('Clear Chat History', 'चैट इतिहास साफ़ करें'),
+      t(
+        'Are you sure you want to clear your conversation with Vidya?',
+        'क्या आप विद्या के साथ अपनी बातचीत साफ़ करना चाहते हैं?'
+      ),
+      [
+        { text: t('Cancel', 'रद्द करें'), style: 'cancel' },
+        {
+          text: t('Clear', 'साफ़ करें'),
+          style: 'destructive',
+          onPress: () => {
+            const resetMsg: Message = {
+              id: 'initial',
+              role: 'assistant',
+              content: getWelcomeText(isHindi),
+              timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+            };
+            setMessages([resetMsg]);
+            AsyncStorage.removeItem(CHAT_HISTORY_KEY).catch(() => {});
+          },
         },
-      },
-    ]);
+      ]
+    );
   };
 
   return (
-    <AppShell title="AI Assistant">
+    <AppShell title={t('Vidya AI Assistant', 'विद्या AI असिस्टेंट')}>
       <KeyboardAvoidingView
         style={[styles.container, { backgroundColor: colors.background }]}
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
@@ -276,19 +342,24 @@ export default function AssistantScreen() {
               />
             </View>
             <View>
-              <Text style={[styles.title, { color: colors.text }]}>Vidya (विद्या) AI</Text>
+              <Text style={[styles.title, { color: colors.text }]}>
+                {t('Vidya (विद्या) AI', 'विद्या (Vidya) AI')}
+              </Text>
               <Text style={[styles.subtitle, { color: colors.muted }]}>
-                Concept tutor, rules & acts, mnemonics
+                {t(
+                  'Full-site AI agent, test creator & study mentor',
+                  'पूर्ण वेबसाइट AI एजेंट, टेस्ट क्रिएटर और स्टडी मेंटर'
+                )}
               </Text>
             </View>
           </View>
 
           <View style={styles.topBarRight}>
             {isSubscribed ? (
-              <Pill label="Unlimited Pass" variant="success" />
+              <Pill label={t('Unlimited Pass', 'असीमित पास')} variant="success" />
             ) : (
               <Pill
-                label={`${remainingQueries} free left`}
+                label={t(`${remainingQueries} free left`, `${remainingQueries} मुफ़्त शेष`)}
                 variant={remainingQueries <= 1 ? 'danger' : 'neutral'}
               />
             )}
@@ -309,7 +380,9 @@ export default function AssistantScreen() {
           <View style={[styles.chipsContainer, { backgroundColor: colors.surface, borderBottomColor: colors.line }]}>
             <View style={styles.chipsLabelRow}>
               <Sparkles size={14} color={colors.muted} />
-              <Text style={[styles.chipsLabel, { color: colors.muted }]}>Suggested prompts</Text>
+              <Text style={[styles.chipsLabel, { color: colors.muted }]}>
+                {t('Suggested prompts', 'सुझाए गए प्रश्न')}
+              </Text>
             </View>
             <ScrollView
               horizontal
@@ -357,10 +430,13 @@ export default function AssistantScreen() {
               />
               <View style={styles.vidyaHeroText}>
                 <Text style={[styles.vidyaHeroTitle, { color: colors.text }]}>
-                  Meet Vidya, your AI study buddy
+                  {t('Meet Vidya, your AI study buddy & site guide', 'विद्या से मिलें, आपकी AI स्टडी पार्टनर और वेबसाइट गाइड')}
                 </Text>
                 <Text style={[styles.vidyaHeroDesc, { color: colors.muted }]}>
-                  Ask any question about Administrative Rules (CCS, GFR, FR/SR), Educational Acts (RTE, NEP), or request a mnemonic to memorize tough topics.
+                  {t(
+                    'Ask me to suggest or create any test, analyze your weak topics, explain website features, or clarify Administrative Rules (CCS, GFR, RTE, NEP).',
+                    'मुझसे कोई भी टेस्ट सुझाने या नया AI टेस्ट बनाने, अपने कमज़ोर विषय जानने, वेबसाइट के फीचर्स या CCS, GFR, RTE और NEP के नियम पूछें।'
+                  )}
                 </Text>
               </View>
             </View>
@@ -619,6 +695,31 @@ export default function AssistantScreen() {
                               );
                             }
 
+                            if (act.type === 'QUICK_REPLIES' && Array.isArray(act.options)) {
+                              return (
+                                <View key={aIdx} style={styles.quickRepliesRow}>
+                                  {act.options.map((opt, oIdx) => (
+                                    <TouchableOpacity
+                                      key={oIdx}
+                                      style={[
+                                        styles.quickReplyChip,
+                                        {
+                                          backgroundColor: colors.surface2,
+                                          borderColor: colors.accent,
+                                        },
+                                      ]}
+                                      activeOpacity={0.75}
+                                      onPress={() => handleSendMessage(opt)}
+                                    >
+                                      <Text style={[styles.quickReplyText, { color: colors.text }]}>
+                                        {opt}
+                                      </Text>
+                                    </TouchableOpacity>
+                                  ))}
+                                </View>
+                              );
+                            }
+
                             return null;
                           })}
                         </View>
@@ -659,7 +760,7 @@ export default function AssistantScreen() {
                 <View style={styles.loadingRow}>
                   <ActivityIndicator size="small" color={colors.text} />
                   <Text style={[styles.thinkingText, { color: colors.muted }]}>
-                    Vidya is formulating answer...
+                    {t('Vidya is thinking...', 'विद्या सोच रही हैं...')}
                   </Text>
                 </View>
               </View>
@@ -684,7 +785,10 @@ export default function AssistantScreen() {
               style={[styles.input, { color: colors.text }]}
               value={inputText}
               onChangeText={setInputText}
-              placeholder="Ask Vidya anything about rules, acts or concepts..."
+              placeholder={t(
+                'Ask Vidya anything (tests, analytics, rules, or site help)...',
+                'विद्या से कुछ भी पूछें (टेस्ट, एनालिटिक्स, नियम या वेबसाइट मदद)...'
+              )}
               placeholderTextColor={colors.muted}
               multiline
               maxLength={1500}
@@ -963,5 +1067,21 @@ const styles = StyleSheet.create({
   actionCardBtnText: {
     fontSize: 12,
     fontWeight: '700',
+  },
+  quickRepliesRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    marginTop: 4,
+  },
+  quickReplyChip: {
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+    borderRadius: 999,
+    borderWidth: 1,
+  },
+  quickReplyText: {
+    fontSize: 12.5,
+    fontWeight: '600',
   },
 });
