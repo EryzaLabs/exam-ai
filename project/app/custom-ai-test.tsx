@@ -12,7 +12,7 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { router } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import DesktopDashboard from '@/components/DesktopDashboard';
 import {
@@ -67,11 +67,33 @@ export default function CustomAiTestScreen() {
   const isSubscribed = Boolean(subIsSubscribed || authSubscribed);
   const { isDark, colors, toggleTheme } = useTheme();
 
-  const [topic, setTopic] = useState('');
+  const params = useLocalSearchParams<{ topic?: string; count?: string; difficulty?: string }>();
+  const initialCount = params.count ? parseInt(params.count, 10) : 10;
+  const validCount = [5, 10, 15, 20].includes(initialCount) ? initialCount : 10;
+  const initialDiff =
+    params.difficulty === 'easy' || params.difficulty === 'medium' || params.difficulty === 'hard'
+      ? params.difficulty
+      : 'medium';
+
+  const [topic, setTopic] = useState(params.topic || '');
   const [testTitle, setTestTitle] = useState('');
-  const [questionCount, setQuestionCount] = useState(10);
-  const [durationMinutes, setDurationMinutes] = useState(20);
-  const [difficulty, setDifficulty] = useState('medium');
+  const [questionCount, setQuestionCount] = useState(validCount);
+  const [durationMinutes, setDurationMinutes] = useState(validCount * 2);
+  const [difficulty, setDifficulty] = useState(initialDiff);
+
+  useEffect(() => {
+    if (params.topic) setTopic(params.topic);
+    if (params.count) {
+      const c = parseInt(params.count, 10);
+      if ([5, 10, 15, 20].includes(c)) {
+        setQuestionCount(c);
+        setDurationMinutes(c * 2);
+      }
+    }
+    if (params.difficulty && ['easy', 'medium', 'hard'].includes(params.difficulty)) {
+      setDifficulty(params.difficulty);
+    }
+  }, [params.topic, params.count, params.difficulty]);
 
   // Daily quota state
   const [checkingQuota, setCheckingQuota] = useState(true);

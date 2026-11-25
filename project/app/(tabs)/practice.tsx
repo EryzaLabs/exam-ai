@@ -23,6 +23,7 @@ import {
 import { useAuth } from '@/context/auth-context';
 import { useSub } from '@/context/subscription-context';
 import { useExam } from '@/context/exam-context';
+import { useLanguage } from '@/context/language-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import {
   ServerPaper,
@@ -48,6 +49,7 @@ export default function PracticeScreen() {
   const { user } = useAuth();
   const { isSubscribed } = useSub();
   const { examMode, examInfo } = useExam();
+  const { t } = useLanguage();
   const { colors, typography, radii } = useChalkboardTheme();
   const params = useLocalSearchParams<{ topic?: string }>();
 
@@ -184,10 +186,13 @@ export default function PracticeScreen() {
               },
             ]}
           >
-            Practice Hub
+            {t('Practice Hub', 'अभ्यास केंद्र (Practice Hub)')}
           </Text>
           <Text style={[styles.screenSubtitle, { color: colors.muted }]}>
-            Target your specific weak topics, generate custom tests, or start timed topic examinations.
+            {t(
+              'Target your specific weak topics, generate custom tests, or start timed topic examinations.',
+              'अपने कमजोर विषयों का अभ्यास करें, कस्टम AI टेस्ट बनाएं, या टाइम्ड टॉपिक परीक्षा दें।'
+            )}
           </Text>
         </View>
 

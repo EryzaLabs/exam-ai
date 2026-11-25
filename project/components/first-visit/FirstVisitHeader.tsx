@@ -5,7 +5,8 @@ import { Sun, Moon, ArrowLeft, User as UserIcon, HelpCircle } from 'lucide-react
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { useAuth } from '@/context/auth-context';
 import { useWalkthrough } from '@/context/walkthrough-context';
-import { AstraLogo } from '@/components/chalkboard';
+import { useLanguage } from '@/context/language-context';
+import { AstraLogo, LanguageToggle } from '@/components/chalkboard';
 import SpotlightTarget from '@/components/SpotlightTarget';
 
 interface FirstVisitHeaderProps {
@@ -22,6 +23,7 @@ export default function FirstVisitHeader({
   const { colors, isDark, toggleTheme, typography, radii } = useChalkboardTheme();
   const { user } = useAuth();
   const { startWalkthrough } = useWalkthrough();
+  const { t } = useLanguage();
 
   const handleChangeExam = () => {
     if (onChangeExam) {
@@ -58,7 +60,9 @@ export default function FirstVisitHeader({
                 activeOpacity={0.7}
               >
                 <ArrowLeft size={13} color={colors.muted} />
-                <Text style={[styles.changeExamText, { color: colors.muted }]}>Change exam</Text>
+                <Text style={[styles.changeExamText, { color: colors.muted }]}>
+                  {t('Change exam', 'परीक्षा बदलें')}
+                </Text>
               </TouchableOpacity>
             </SpotlightTarget>
           )}
@@ -74,6 +78,9 @@ export default function FirstVisitHeader({
               <HelpCircle size={16} color={colors.accent} />
             </TouchableOpacity>
           )}
+
+          {/* Language Toggle */}
+          <LanguageToggle />
 
           {/* Theme Toggle */}
           <TouchableOpacity

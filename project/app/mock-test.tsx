@@ -36,6 +36,7 @@ import { TestProgressService, SavedTestState } from '@/services/test-progress-se
 import { addBookmark } from '@/services/bookmark-service';
 import { formatCleanTestTitle } from '@/utils/topic-resolver';
 import { useAuth } from '@/context/auth-context';
+import { useLanguage } from '@/context/language-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import Button from '@/components/chalkboard/Button';
 import Modal from '@/components/chalkboard/Modal';
@@ -61,6 +62,7 @@ const cleanHtml = (text?: string): string => {
 
 export default function MockTestScreen() {
   const { user } = useAuth();
+  const { testLanguage } = useLanguage();
   const { colors, typography, radii } = useChalkboardTheme();
   const { width } = useWindowDimensions();
   const isDesktop = width >= 1024;
@@ -68,7 +70,7 @@ export default function MockTestScreen() {
   const params = useLocalSearchParams();
   const testId = params.testId as string;
   const resume = params.resume === 'true';
-  const initialLang = (params.lang as string) || 'english';
+  const initialLang = (params.lang as string) || testLanguage;
 
   const [loading, setLoading] = useState(true);
   const [test, setTest] = useState<ParsedMockTest | null>(null);

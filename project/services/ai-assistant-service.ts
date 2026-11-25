@@ -9,6 +9,7 @@ const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000/a
 const DIRECT_HACKCLUB_URL = 'https://ai.hackclub.com/proxy/v1/chat/completions';
 const HACKCLUB_API_KEY = process.env.EXPO_PUBLIC_VLM_API_KEY || '';
 const MODEL = 'openai/gpt-4o-mini';
+const FALLBACK_FREE_MODEL = 'openrouter/free';
 
 export interface ChatMessage {
   role: 'user' | 'assistant' | 'system';
@@ -77,7 +78,7 @@ export async function sendChatMessage(
 
   for (const endpoint of endpointsToTry) {
     try {
-      const response = await fetch(endpoint.url, {
+      let response = await fetch(endpoint.url, {
         method: 'POST',
         headers: endpoint.headers,
         body: JSON.stringify(payload),
@@ -85,10 +86,29 @@ export async function sendChatMessage(
 
       if (!response.ok) {
         const errorText = await response.text();
-        if (response.status === 401 || errorText.includes('Authentication failed')) {
-          throw new Error('API Key Expired or Invalid. Please verify your AI API key.');
+        const is402 =
+          response.status === 402 ||
+          errorText.includes('402') ||
+          errorText.toLowerCase().includes('payment required') ||
+          errorText.toLowerCase().includes('spending limit');
+
+        if (is402) {
+          console.warn(`[Vidya AI] 402 Payment Required at ${endpoint.url}, falling back to ${FALLBACK_FREE_MODEL}`);
+          response = await fetch(endpoint.url, {
+            method: 'POST',
+            headers: endpoint.headers,
+            body: JSON.stringify({ ...payload, model: FALLBACK_FREE_MODEL }),
+          });
+          if (!response.ok) {
+            const retryErr = await response.text();
+            throw new Error(`AI API Error (${response.status}): ${retryErr}`);
+          }
+        } else {
+          if (response.status === 401 || errorText.includes('Authentication failed')) {
+            throw new Error('API Key Expired or Invalid. Please verify your AI API key.');
+          }
+          throw new Error(`AI API Error (${response.status}): ${errorText}`);
         }
-        throw new Error(`AI API Error (${response.status}): ${errorText}`);
       }
 
       const data = await response.json();

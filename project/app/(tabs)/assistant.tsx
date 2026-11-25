@@ -12,16 +12,27 @@ import {
   Alert,
   Image,
 } from 'react-native';
-import { useLocalSearchParams } from 'expo-router';
-import { Send, Bot, Trash2, Sparkles } from 'lucide-react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useLocalSearchParams, router } from 'expo-router';
 import {
-  ChatMessage as AIMessage,
-  chatWithHistory,
-} from '@/services/ai-assistant-service';
+  Send,
+  Bot,
+  Trash2,
+  Sparkles,
+  Play,
+  ArrowRight,
+  Compass,
+  Globe,
+  SlidersHorizontal,
+} from 'lucide-react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { ChatMessage as AIMessage } from '@/services/ai-assistant-service';
+import { askVidyaAgent, VidyaAgentAction } from '@/services/vidya-agent-service';
 import { useDashboardData } from '@/hooks/useDashboardData';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/context/theme-context';
+import { useExam } from '@/context/exam-context';
+import { useLanguage } from '@/context/language-context';
+import { useWalkthrough } from '@/context/walkthrough-context';
 import MarkdownText from '@/components/MarkdownText';
 import { AppShell, Pill, Button } from '@/components/chalkboard';
 
@@ -31,22 +42,34 @@ const DAILY_LIMIT = 5;
 interface Message extends AIMessage {
   id: string;
   timestamp: string;
+  actions?: VidyaAgentAction[];
 }
 
-const PROMPT_CHIPS = [
+const PROMPT_CHIPS_EN = [
+  'Suggest a test for me to practice',
+  'Create an AI test on Indian Constitution',
+  'How do full CBT mocks and analytics work?',
   'Explain CCS (Conduct) Rules 1964',
-  'NCF 2005 5 Guiding Principles',
-  'GFR 2017 Procurement rules summary',
   'RTE Act 2009 key provisions & penalties',
-  'RTE Act Section 12(1)(c) details',
-  'Create a mnemonic for Bloom taxonomy',
+];
+
+const PROMPT_CHIPS_HI = [
+  'मेरे लिए एक टेस्ट सुझाएँ',
+  'भारतीय संविधान पर एक AI टेस्ट बनाओ',
+  'फुल CBT मॉक और एनालिटिक्स कैसे काम करते हैं?',
+  'CCS आचरण नियम 1964 समझाएँ',
+  'RTE अधिनियम 2009 के मुख्य नियम',
 ];
 
 export default function AssistantScreen() {
   const { dashboardStats, performance } = useDashboardData();
   const { user, isSubscribed, showAuthPrompt } = useAuth();
   const { colors, isDark } = useTheme();
+  const { examMode, setExamMode } = useExam();
+  const { lang, isHindi, setLang, t } = useLanguage();
+  const { startWalkthrough } = useWalkthrough();
   const params = useLocalSearchParams();
+  const PROMPT_CHIPS = isHindi ? PROMPT_CHIPS_HI : PROMPT_CHIPS_EN;
 
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputText, setInputText] = useState('');
@@ -158,21 +181,35 @@ export default function AssistantScreen() {
     setIsLoading(true);
 
     try {
-      const history: AIMessage[] = messages
-        .filter((m) => m.id !== 'initial')
-        .map((m) => ({ role: m.role, content: m.content }));
+      const history: AIMessage[] = [
+        ...messages
+          .filter((m) => m.id !== 'initial')
+          .map((m) => ({ role: m.role, content: m.content })),
+        { role: 'user', content: text },
+      ];
 
-      const contextStr = JSON.stringify({
-        stats: dashboardStats,
-        performance: performance,
+      const weakTopicsList = Array.isArray(performance)
+        ? performance
+            .filter((p: any) => (p.accuracy ?? 100) < 55)
+            .slice(0, 5)
+            .map((p: any) => p.topic || p.name)
+            .filter(Boolean)
+        : [];
+
+      const agentRes = await askVidyaAgent(history, {
+        examMode,
+        lang,
+        isSubscribed,
+        totalTestsCompleted: dashboardStats?.questionsAttempted || 0,
+        overallAccuracy: dashboardStats?.accuracy || 0,
+        weakTopics: weakTopicsList,
       });
-
-      const response = await chatWithHistory(history, text, contextStr);
 
       const assistantMsg: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: response.message,
+        content: agentRes.text,
+        actions: agentRes.actions,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
 
@@ -363,7 +400,230 @@ export default function AssistantScreen() {
                   ]}
                 >
                   {!isUser ? (
-                    <MarkdownText content={item.content} role="assistant" />
+                    <>
+                      <MarkdownText content={item.content} role="assistant" />
+                      {item.actions && item.actions.length > 0 && (
+                        <View style={styles.actionsWrap}>
+                          {item.actions.map((act, aIdx) => {
+                            if (act.type === 'SUGGEST_TEST') {
+                              return (
+                                <TouchableOpacity
+                                  key={aIdx}
+                                  style={[
+                                    styles.actionCard,
+                                    { backgroundColor: colors.surface2, borderColor: colors.accent },
+                                  ]}
+                                  activeOpacity={0.8}
+                                  onPress={() =>
+                                    router.push({
+                                      pathname: '/test-instructions',
+                                      params: { testId: act.testId, filename: act.filename },
+                                    } as any)
+                                  }
+                                >
+                                  <View style={styles.actionCardLeft}>
+                                    <Text style={[styles.actionCardTitle, { color: colors.text }]} numberOfLines={1}>
+                                      {act.title}
+                                    </Text>
+                                    <Text style={[styles.actionCardSub, { color: colors.muted }]}>
+                                      {act.questions || 20} {t('Qs', 'प्रश्न')} · {act.duration || 20} {t('mins', 'मिनट')}
+                                    </Text>
+                                  </View>
+                                  <View style={[styles.actionCardBtn, { backgroundColor: colors.accent }]}>
+                                    <Play size={12} color={colors.accentText} fill={colors.accentText} />
+                                    <Text style={[styles.actionCardBtnText, { color: colors.accentText }]}>
+                                      {t('Start Test', 'टेस्ट शुरू करें')}
+                                    </Text>
+                                  </View>
+                                </TouchableOpacity>
+                              );
+                            }
+
+                            if (act.type === 'CREATE_AI_TEST') {
+                              return (
+                                <TouchableOpacity
+                                  key={aIdx}
+                                  style={[
+                                    styles.actionCard,
+                                    { backgroundColor: colors.surface2, borderColor: colors.accent },
+                                  ]}
+                                  activeOpacity={0.8}
+                                  onPress={() =>
+                                    router.push({
+                                      pathname: '/custom-ai-test',
+                                      params: {
+                                        topic: act.topic,
+                                        count: String(act.questionCount || 10),
+                                        difficulty: act.difficulty || 'medium',
+                                      },
+                                    } as any)
+                                  }
+                                >
+                                  <View style={styles.actionCardLeft}>
+                                    <Text style={[styles.actionCardTitle, { color: colors.text }]} numberOfLines={1}>
+                                      {t(`AI Test: ${act.topic}`, `AI टेस्ट: ${act.topic}`)}
+                                    </Text>
+                                    <Text style={[styles.actionCardSub, { color: colors.muted }]}>
+                                      {act.questionCount || 10} {t('Custom AI Qs', 'कस्टम AI प्रश्न')} · {act.difficulty || 'medium'}
+                                    </Text>
+                                  </View>
+                                  <View style={[styles.actionCardBtn, { backgroundColor: colors.accent }]}>
+                                    <Sparkles size={12} color={colors.accentText} />
+                                    <Text style={[styles.actionCardBtnText, { color: colors.accentText }]}>
+                                      {t('Create AI Test', 'AI टेस्ट बनाएं')}
+                                    </Text>
+                                  </View>
+                                </TouchableOpacity>
+                              );
+                            }
+
+                            if (act.type === 'START_DRILL') {
+                              return (
+                                <TouchableOpacity
+                                  key={aIdx}
+                                  style={[
+                                    styles.actionCard,
+                                    { backgroundColor: colors.surface2, borderColor: colors.line },
+                                  ]}
+                                  activeOpacity={0.8}
+                                  onPress={() =>
+                                    router.push({
+                                      pathname: '/practice',
+                                      params: { topic: act.topic },
+                                    } as any)
+                                  }
+                                >
+                                  <View style={styles.actionCardLeft}>
+                                    <Text style={[styles.actionCardTitle, { color: colors.text }]} numberOfLines={1}>
+                                      {t(`Topic Drill: ${act.topic}`, `टॉपिक ड्रिल: ${act.topic}`)}
+                                    </Text>
+                                  </View>
+                                  <View style={[styles.actionCardBtn, { backgroundColor: colors.accent }]}>
+                                    <ArrowRight size={12} color={colors.accentText} />
+                                    <Text style={[styles.actionCardBtnText, { color: colors.accentText }]}>
+                                      {t('Practice', 'अभ्यास')}
+                                    </Text>
+                                  </View>
+                                </TouchableOpacity>
+                              );
+                            }
+
+                            if (act.type === 'NAVIGATE') {
+                              return (
+                                <TouchableOpacity
+                                  key={aIdx}
+                                  style={[
+                                    styles.actionCard,
+                                    { backgroundColor: colors.surface2, borderColor: colors.line },
+                                  ]}
+                                  activeOpacity={0.8}
+                                  onPress={() => router.push(act.route as any)}
+                                >
+                                  <View style={styles.actionCardLeft}>
+                                    <Text style={[styles.actionCardTitle, { color: colors.text }]} numberOfLines={1}>
+                                      {act.label}
+                                    </Text>
+                                  </View>
+                                  <View style={[styles.actionCardBtn, { backgroundColor: colors.accent }]}>
+                                    <ArrowRight size={12} color={colors.accentText} />
+                                    <Text style={[styles.actionCardBtnText, { color: colors.accentText }]}>
+                                      {t('Open', 'खोलें')}
+                                    </Text>
+                                  </View>
+                                </TouchableOpacity>
+                              );
+                            }
+
+                            if (act.type === 'SWITCH_EXAM') {
+                              return (
+                                <TouchableOpacity
+                                  key={aIdx}
+                                  style={[
+                                    styles.actionCard,
+                                    { backgroundColor: colors.surface2, borderColor: colors.line },
+                                  ]}
+                                  activeOpacity={0.8}
+                                  onPress={() => {
+                                    setExamMode(act.examMode);
+                                  }}
+                                >
+                                  <View style={styles.actionCardLeft}>
+                                    <Text style={[styles.actionCardTitle, { color: colors.text }]}>
+                                      {act.label || t(`Switch to ${act.examMode.toUpperCase()}`, `${act.examMode.toUpperCase()} पर स्विच करें`)}
+                                    </Text>
+                                  </View>
+                                  <View style={[styles.actionCardBtn, { backgroundColor: colors.accent }]}>
+                                    <SlidersHorizontal size={12} color={colors.accentText} />
+                                    <Text style={[styles.actionCardBtnText, { color: colors.accentText }]}>
+                                      {t('Switch', 'बदलें')}
+                                    </Text>
+                                  </View>
+                                </TouchableOpacity>
+                              );
+                            }
+
+                            if (act.type === 'SWITCH_LANGUAGE') {
+                              return (
+                                <TouchableOpacity
+                                  key={aIdx}
+                                  style={[
+                                    styles.actionCard,
+                                    { backgroundColor: colors.surface2, borderColor: colors.line },
+                                  ]}
+                                  activeOpacity={0.8}
+                                  onPress={() => setLang(act.lang)}
+                                >
+                                  <View style={styles.actionCardLeft}>
+                                    <Text style={[styles.actionCardTitle, { color: colors.text }]}>
+                                      {act.lang === 'hi' ? 'हिंदी में बदलें (Hindi)' : 'Switch to English'}
+                                    </Text>
+                                  </View>
+                                  <View style={[styles.actionCardBtn, { backgroundColor: colors.accent }]}>
+                                    <Globe size={12} color={colors.accentText} />
+                                    <Text style={[styles.actionCardBtnText, { color: colors.accentText }]}>
+                                      {t('Apply', 'लागू करें')}
+                                    </Text>
+                                  </View>
+                                </TouchableOpacity>
+                              );
+                            }
+
+                            if (act.type === 'START_WALKTHROUGH') {
+                              return (
+                                <TouchableOpacity
+                                  key={aIdx}
+                                  style={[
+                                    styles.actionCard,
+                                    { backgroundColor: colors.surface2, borderColor: colors.accent },
+                                  ]}
+                                  activeOpacity={0.8}
+                                  onPress={() => {
+                                    router.push('/');
+                                    setTimeout(() => {
+                                      startWalkthrough(user ? 'home' : 'guest');
+                                    }, 350);
+                                  }}
+                                >
+                                  <View style={styles.actionCardLeft}>
+                                    <Text style={[styles.actionCardTitle, { color: colors.text }]}>
+                                      {t('Interactive Voice Walkthrough', 'इंटरैक्टिव वॉयस वॉकथ्रू')}
+                                    </Text>
+                                  </View>
+                                  <View style={[styles.actionCardBtn, { backgroundColor: colors.accent }]}>
+                                    <Compass size={12} color={colors.accentText} />
+                                    <Text style={[styles.actionCardBtnText, { color: colors.accentText }]}>
+                                      {t('Start Tour', 'टूर शुरू करें')}
+                                    </Text>
+                                  </View>
+                                </TouchableOpacity>
+                              );
+                            }
+
+                            return null;
+                          })}
+                        </View>
+                      )}
+                    </>
                   ) : (
                     <Text style={[styles.userMessageText, { color: colors.text }]}>
                       {item.content}
@@ -666,5 +926,42 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginLeft: 8,
+  },
+  actionsWrap: {
+    marginTop: 10,
+    gap: 8,
+  },
+  actionCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    borderRadius: 10,
+    borderWidth: 1,
+  },
+  actionCardLeft: {
+    flex: 1,
+    gap: 2,
+  },
+  actionCardTitle: {
+    fontSize: 13.5,
+    fontWeight: '700',
+  },
+  actionCardSub: {
+    fontSize: 11.5,
+  },
+  actionCardBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+    borderRadius: 8,
+  },
+  actionCardBtnText: {
+    fontSize: 12,
+    fontWeight: '700',
   },
 });

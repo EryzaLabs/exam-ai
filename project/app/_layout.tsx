@@ -18,6 +18,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AuthProvider } from '@/context/auth-context';
 import { SubscriptionProvider } from '@/context/subscription-context';
 import { ThemeProvider } from '@/context/theme-context';
+import { LanguageProvider } from '@/context/language-context';
 import { ExamProvider, useExam } from '@/context/exam-context';
 import { WalkthroughProvider } from '@/context/walkthrough-context';
 import FirstTimeWalkthrough from '@/components/FirstTimeWalkthrough';
@@ -172,20 +173,22 @@ export default function RootLayout() {
       <SafeAreaProvider>
         <AuthProvider>
           <SubscriptionProvider>
-            <ExamProvider>
-              <WalkthroughProvider>
-                <DynamicWebTitle />
-                <ResponsiveContainer>
-                  <Stack screenOptions={{ headerShown: false }}>
-                    <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                    <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-                    <Stack.Screen name="+not-found" />
-                  </Stack>
-                  <StatusBar style="auto" backgroundColor="transparent" translucent={true} />
-                </ResponsiveContainer>
-                <FirstTimeWalkthrough />
-              </WalkthroughProvider>
-            </ExamProvider>
+            <LanguageProvider>
+              <ExamProvider>
+                <WalkthroughProvider>
+                  <DynamicWebTitle />
+                  <ResponsiveContainer>
+                    <Stack screenOptions={{ headerShown: false }}>
+                      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+                      <Stack.Screen name="+not-found" />
+                    </Stack>
+                    <StatusBar style="auto" backgroundColor="transparent" translucent={true} />
+                  </ResponsiveContainer>
+                  <FirstTimeWalkthrough />
+                </WalkthroughProvider>
+              </ExamProvider>
+            </LanguageProvider>
           </SubscriptionProvider>
         </AuthProvider>
       </SafeAreaProvider>

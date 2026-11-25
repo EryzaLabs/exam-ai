@@ -12,6 +12,7 @@ import {
 import { MessageSquare } from 'lucide-react-native';
 import { router, usePathname } from 'expo-router';
 import { useAuth } from '@/context/auth-context';
+import { useLanguage } from '@/context/language-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import SideNav from './SideNav';
 import BottomNav from './BottomNav';
@@ -33,6 +34,7 @@ export default function AppShell({
   const { width } = useWindowDimensions();
   const isDesktop = width >= 700;
   const { user } = useAuth();
+  const { t } = useLanguage();
   const { colors, radii } = useChalkboardTheme();
   const pathname = usePathname();
 
@@ -90,7 +92,7 @@ export default function AppShell({
                   resizeMode="contain"
                 />
                 <Text style={[styles.floatingAIText, { color: colors.accentText }]}>
-                  Ask Vidya
+                  {t('Ask Vidya', 'विद्या से पूछें')}
                 </Text>
               </TouchableOpacity>
             </SpotlightTarget>

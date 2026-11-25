@@ -18,7 +18,7 @@ router.post(['/', '/chat'], async (req: Request, res: Response) => {
       return res.status(400).json({ error: 'Messages array is required' });
     }
 
-    const response = await fetch(HACKCLUB_URL, {
+    let response = await fetch(HACKCLUB_URL, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${apiKey}`,
@@ -34,7 +34,34 @@ router.post(['/', '/chat'], async (req: Request, res: Response) => {
 
     if (!response.ok) {
       const errText = await response.text();
-      return res.status(response.status).json({ error: errText });
+      const is402 =
+        response.status === 402 ||
+        errText.includes('402') ||
+        errText.toLowerCase().includes('payment required') ||
+        errText.toLowerCase().includes('spending limit');
+
+      if (is402 && model !== 'openrouter/free') {
+        console.warn('[AI Chat Proxy] 402 Payment Required, retrying with openrouter/free');
+        response = await fetch(HACKCLUB_URL, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${apiKey}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            model: 'openrouter/free',
+            messages,
+            temperature,
+            max_tokens,
+          }),
+        });
+        if (!response.ok) {
+          const retryErrText = await response.text();
+          return res.status(response.status).json({ error: retryErrText });
+        }
+      } else {
+        return res.status(response.status).json({ error: errText });
+      }
     }
 
     const data = await response.json();

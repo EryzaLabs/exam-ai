@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useAuth } from '@/context/auth-context';
+import { useLanguage } from '@/context/language-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import {
   ArrowLeft,
@@ -31,12 +32,17 @@ import Pill from '@/components/chalkboard/Pill';
 
 export default function TestInstructionsScreen() {
   const { requireAuth } = useAuth();
+  const { testLanguage } = useLanguage();
   const { colors, typography, radii } = useChalkboardTheme();
   const params = useLocalSearchParams();
   const testId = params.testId as string;
   const filename = params.filename as string;
 
-  const [language, setLanguage] = useState<'english' | 'hindi'>('english');
+  const [language, setLanguage] = useState<'english' | 'hindi'>(testLanguage);
+
+  useEffect(() => {
+    setLanguage(testLanguage);
+  }, [testLanguage]);
   const [agreed, setAgreed] = useState(false);
   const [loading, setLoading] = useState(true);
   const [paper, setPaper] = useState<ParsedMockTest | null>(null);

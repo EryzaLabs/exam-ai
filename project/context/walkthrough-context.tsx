@@ -9,6 +9,7 @@ import React, {
 import { View, Platform, useWindowDimensions } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import VidyaVoiceService from '@/services/vidya-voice-service';
+import { useLanguage } from '@/context/language-context';
 
 export const WALKTHROUGH_STORAGE_KEY = '@astra_walkthrough_completed_v2';
 
@@ -272,13 +273,26 @@ export async function markWalkthroughCompleted(): Promise<void> {
 }
 
 export function WalkthroughProvider({ children }: { children: React.ReactNode }) {
+  const { lang: appLang, setLang: setAppLang } = useLanguage();
   const [isActive, setIsActive] = useState(false);
   const [mode, setMode] = useState<WalkthroughMode>('home');
   const [stepIndex, setStepIndex] = useState(0);
-  const [language, setLanguage] = useState<WalkthroughLang>('en');
+  const [language, setLanguageState] = useState<WalkthroughLang>(appLang);
   const [voiceEnabled, setVoiceEnabled] = useState(true);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [targetRect, setTargetRect] = useState<TargetRect | null>(null);
+
+  useEffect(() => {
+    setLanguageState(appLang);
+  }, [appLang]);
+
+  const setLanguage = useCallback(
+    (next: WalkthroughLang) => {
+      setLanguageState(next);
+      setAppLang(next);
+    },
+    [setAppLang]
+  );
 
   const targetsRef = useRef<Map<string, React.RefObject<View | null>>>(new Map());
   const { width, height } = useWindowDimensions();
@@ -461,8 +475,8 @@ export function WalkthroughProvider({ children }: { children: React.ReactNode })
   );
 
   const toggleLanguage = useCallback(() => {
-    setLanguage((prev) => (prev === 'en' ? 'hi' : 'en'));
-  }, []);
+    setLanguage(language === 'en' ? 'hi' : 'en');
+  }, [language, setLanguage]);
 
   return (
     <WalkthroughContext.Provider

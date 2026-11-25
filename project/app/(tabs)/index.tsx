@@ -28,6 +28,7 @@ import {
 import { useAuth } from '@/context/auth-context';
 import { useSub } from '@/context/subscription-context';
 import { useExam, EXAMS } from '@/context/exam-context';
+import { useLanguage } from '@/context/language-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { SSCCGLService } from '@/services/ssc-cgl-service';
 import { TestProgressService, SavedTestState, TestResult } from '@/services/test-progress-service';
@@ -57,6 +58,7 @@ export default function HomeScreen() {
   const { isSubscribed } = useSub();
   const { examMode, examInfo } = useExam();
   const { startWalkthrough } = useWalkthrough();
+  const { t } = useLanguage();
   const { colors, typography, radii } = useChalkboardTheme();
   const { width } = useWindowDimensions();
   const isDesktop = width >= 1024;
@@ -235,7 +237,7 @@ export default function HomeScreen() {
                   <View style={styles.warmUpBadge}>
                     <Zap size={14} color={colors.accent} />
                     <Text style={[styles.warmUpBadgeText, { color: colors.text }]}>
-                      READY TO BEGIN?
+                      {t('READY TO BEGIN?', 'शुरू करने के लिए तैयार?')}
                     </Text>
                   </View>
 
@@ -248,15 +250,18 @@ export default function HomeScreen() {
                       },
                     ]}
                   >
-                    Start a 10-Question Diagnostic Warm-Up
+                    {t('Start a 10-Question Diagnostic Warm-Up', '10-प्रश्नों का डायग्नोस्टिक वार्म-अप शुरू करें')}
                   </Text>
                   <Text style={[styles.warmUpSub, { color: colors.muted }]}>
-                    Take a quick 10-minute baseline test in {currentExamInfo.shortName} to identify your starting strengths and topic weaknesses.
+                    {t(
+                      `Take a quick 10-minute baseline test in ${currentExamInfo.shortName} to identify your starting strengths and topic weaknesses.`,
+                      `अपनी शुरुआती ताकत और कमजोर विषयों को पहचानने के लिए ${currentExamInfo.shortName} में 10 मिनट का क्विक टेस्ट दें।`
+                    )}
                   </Text>
 
                   <View style={styles.warmUpActionRow}>
                     <Button
-                      title="Start 10-question warm-up"
+                      title={t('Start 10-question warm-up', '10-प्रश्नों का वार्म-अप शुरू करें')}
                       variant="primary"
                       size="md"
                       onPress={() => router.push('/practice')}
@@ -273,7 +278,7 @@ export default function HomeScreen() {
                       size={90}
                       strokeWidth={7}
                       label="0/20"
-                      sublabel="Questions"
+                      sublabel={t('Questions', 'प्रश्न')}
                     />
                     <View style={styles.goalTextWrap}>
                       <Text
@@ -285,10 +290,13 @@ export default function HomeScreen() {
                           },
                         ]}
                       >
-                        Daily Practice Target
+                        {t('Daily Practice Target', 'दैनिक अभ्यास लक्ष्य')}
                       </Text>
                       <Text style={[styles.goalSubtext, { color: colors.muted }]}>
-                        Consistent daily practice of 20 questions increases exam retention by 3.5×. Complete your first warm-up above to start today's goal!
+                        {t(
+                          "Consistent daily practice of 20 questions increases exam retention by 3.5×. Complete your first warm-up above to start today's goal!",
+                          'रोज़ाना 20 प्रश्नों का अभ्यास परीक्षा में सफलता की संभावना 3.5 गुना बढ़ाता है। आज का लक्ष्य शुरू करने के लिए ऊपर दिया वार्म-अप पूरा करें!'
+                        )}
                       </Text>
                     </View>
                   </View>
@@ -410,7 +418,7 @@ export default function HomeScreen() {
                   <View style={styles.recommendedHeader}>
                     <Sparkles size={16} color={colors.accent} />
                     <Text style={[styles.recommendedLabel, { color: colors.muted }]}>
-                      RECOMMENDED NEXT
+                      {t('RECOMMENDED NEXT', 'अगला सुझाव')}
                     </Text>
                   </View>
 
@@ -424,19 +432,29 @@ export default function HomeScreen() {
                     ]}
                   >
                     {weakTopics.length > 0
-                      ? `Target Weak Area: ${weakTopics[0].topic}`
-                      : `Next Full CBT Mock for ${currentExamInfo.shortName}`}
+                      ? t(`Target Weak Area: ${weakTopics[0].topic}`, `कमज़ोर विषय सुधारें: ${weakTopics[0].topic}`)
+                      : t(`Next Full CBT Mock for ${currentExamInfo.shortName}`, `${currentExamInfo.shortName} का अगला फुल CBT मॉक`)}
                   </Text>
 
                   <Text style={[styles.recommendedSub, { color: colors.muted }]}>
                     {weakTopics.length > 0
-                      ? `Your current accuracy in this topic is ${Math.round(weakTopics[0].accuracy)}%. Practice 10 targeted questions to strengthen your score.`
-                      : 'Maintain your test-taking pace with realistic exam timing and live rank analytics.'}
+                      ? t(
+                          `Your current accuracy in this topic is ${Math.round(weakTopics[0].accuracy)}%. Practice 10 targeted questions to strengthen your score.`,
+                          `इस विषय में आपकी सटीकता ${Math.round(weakTopics[0].accuracy)}% है। स्कोर बढ़ाने के लिए 10 प्रश्नों का अभ्यास करें।`
+                        )
+                      : t(
+                          'Maintain your test-taking pace with realistic exam timing and live rank analytics.',
+                          'असली परीक्षा के समय और लाइव रैंक एनालिटिक्स के साथ अपनी गति बनाए रखें।'
+                        )}
                   </Text>
 
                   <View style={styles.recommendedButtonRow}>
                     <Button
-                      title={weakTopics.length > 0 ? 'Drill This Topic' : 'Start Next Mock'}
+                      title={
+                        weakTopics.length > 0
+                          ? t('Drill This Topic', 'इस टॉपिक का अभ्यास करें')
+                          : t('Start Next Mock', 'अगला मॉक शुरू करें')
+                      }
                       variant={hasActiveResume ? 'secondary' : 'primary'}
                       size="sm"
                       onPress={() =>

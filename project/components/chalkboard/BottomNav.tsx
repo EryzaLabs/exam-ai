@@ -3,19 +3,21 @@ import { View, Text, TouchableOpacity, StyleSheet, Platform } from 'react-native
 import { router, usePathname } from 'expo-router';
 import { Home, FileText, Brain, BarChart2, User } from 'lucide-react-native';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
+import { useLanguage } from '@/context/language-context';
 import SpotlightTarget from '@/components/SpotlightTarget';
 
 export const MOBILE_TABS = [
-  { label: 'Home', path: '/', icon: Home },
-  { label: 'Tests', path: '/test-list', icon: FileText },
-  { label: 'Practice', path: '/practice', icon: Brain },
-  { label: 'Analytics', path: '/progress', icon: BarChart2 },
-  { label: 'Profile', path: '/profile', icon: User },
+  { label: 'Home', labelHi: 'होम', path: '/', icon: Home },
+  { label: 'Tests', labelHi: 'टेस्ट', path: '/test-list', icon: FileText },
+  { label: 'Practice', labelHi: 'अभ्यास', path: '/practice', icon: Brain },
+  { label: 'Analytics', labelHi: 'एनालिटिक्स', path: '/progress', icon: BarChart2 },
+  { label: 'Profile', labelHi: 'प्रोफ़ाइल', path: '/profile', icon: User },
 ];
 
 export default function BottomNav() {
   const pathname = usePathname();
   const { colors } = useChalkboardTheme();
+  const { isHindi } = useLanguage();
 
   const isItemActive = (path: string) => {
     if (path === '/') {
@@ -67,7 +69,7 @@ export default function BottomNav() {
                 },
               ]}
             >
-              {item.label}
+              {isHindi ? item.labelHi : item.label}
             </Text>
           </TouchableOpacity>
         );

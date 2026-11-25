@@ -4,6 +4,7 @@ export { default as SideNav } from './SideNav';
 export { default as BottomNav } from './BottomNav';
 export { default as ExamSwitcher } from './ExamSwitcher';
 export { default as ThemeToggle } from './ThemeToggle';
+export { default as LanguageToggle } from './LanguageToggle';
 export { default as Button } from './Button';
 export { default as Pill } from './Pill';
 export { default as Chip } from './Chip';

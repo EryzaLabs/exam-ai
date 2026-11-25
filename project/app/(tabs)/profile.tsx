@@ -38,10 +38,12 @@ import {
   Pill,
   Chip,
   ThemeToggle,
+  LanguageToggle,
   ExamSwitcher,
   EmptyState,
 } from '@/components/chalkboard';
 import { useWalkthrough } from '@/context/walkthrough-context';
+import { useLanguage } from '@/context/language-context';
 
 interface BookmarkItem {
   id: string;
@@ -93,6 +95,7 @@ export default function ProfileScreen() {
   const { user, isSubscribed } = useAuth();
   const { colors, isDark } = useTheme();
   const { startWalkthrough } = useWalkthrough();
+  const { t } = useLanguage();
 
   const [loading, setLoading] = useState(true);
   const [seriesList, setSeriesList] = useState(DEFAULT_SERIES);
@@ -546,18 +549,24 @@ export default function ProfileScreen() {
 
         {/* Section 4: Appearance & Settings */}
         <View style={styles.sectionHeader}>
-          <Text style={[styles.sectionTitle, { color: colors.text }]}>Appearance & Theme</Text>
+          <Text style={[styles.sectionTitle, { color: colors.text }]}>
+            {t('Appearance & Preferences', 'दिखावट और प्राथमिकताएँ')}
+          </Text>
           <Text style={[styles.sectionSubtitle, { color: colors.muted }]}>
-            Chalkboard high-contrast study palette
+            {t('Chalkboard study palette, language & tour', 'थीम, भाषा और ऐप टूर')}
           </Text>
         </View>
 
         <Card>
           <View style={styles.appearanceRow}>
             <View style={{ flex: 1 }}>
-              <Text style={[styles.appearanceTitle, { color: colors.text }]}>Color Theme</Text>
+              <Text style={[styles.appearanceTitle, { color: colors.text }]}>
+                {t('Color Theme', 'रंग थीम')}
+              </Text>
               <Text style={[styles.appearanceSub, { color: colors.muted }]}>
-                {isDark ? 'Dark chalkboard (easy on eyes for night study)' : 'Clean paper light theme'}
+                {isDark
+                  ? t('Dark chalkboard (easy on eyes for night study)', 'डार्क चॉकबोर्ड (रात में पढ़ने के लिए आरामदायक)')
+                  : t('Clean paper light theme', 'साफ़ पेपर लाइट थीम')}
               </Text>
             </View>
             <ThemeToggle />
@@ -575,13 +584,43 @@ export default function ProfileScreen() {
             ]}
           >
             <View style={{ flex: 1 }}>
-              <Text style={[styles.appearanceTitle, { color: colors.text }]}>App Walkthrough</Text>
+              <Text style={[styles.appearanceTitle, { color: colors.text }]}>
+                {t('App & Default Test Language', 'ऐप और डिफ़ॉल्ट टेस्ट भाषा')}
+              </Text>
               <Text style={[styles.appearanceSub, { color: colors.muted }]}>
-                Replay the quick tour of mocks, topic sets, and Vidya AI
+                {t(
+                  'Sets UI language and default language for all tests',
+                  'पूरे ऐप और सभी टेस्ट की डिफ़ॉल्ट भाषा चुनें'
+                )}
+              </Text>
+            </View>
+            <LanguageToggle />
+          </View>
+
+          <View
+            style={[
+              styles.appearanceRow,
+              {
+                borderTopWidth: 1,
+                borderTopColor: colors.line,
+                paddingTop: 14,
+                marginTop: 14,
+              },
+            ]}
+          >
+            <View style={{ flex: 1 }}>
+              <Text style={[styles.appearanceTitle, { color: colors.text }]}>
+                {t('App Walkthrough', 'ऐप वॉकथ्रू')}
+              </Text>
+              <Text style={[styles.appearanceSub, { color: colors.muted }]}>
+                {t(
+                  'Replay the quick tour of mocks, topic sets, and Vidya AI',
+                  'मॉक टेस्ट, टॉपिक सेट और विद्या AI का टूर फिर से देखें'
+                )}
               </Text>
             </View>
             <Button
-              label="Replay Tour"
+              label={t('Replay Tour', 'टूर देखें')}
               variant="secondary"
               size="small"
               onPress={() => {

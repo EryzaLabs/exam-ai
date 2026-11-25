@@ -29,9 +29,11 @@ import { auth } from '@/services/firebaseConfig';
 import { useAuth } from '@/context/auth-context';
 import { useExam } from '@/context/exam-context';
 import { useWalkthrough } from '@/context/walkthrough-context';
+import { useLanguage } from '@/context/language-context';
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import ExamSwitcher from './ExamSwitcher';
 import ThemeToggle from './ThemeToggle';
+import LanguageToggle from './LanguageToggle';
 import AstraLogo from './AstraLogo';
 import SpotlightTarget from '@/components/SpotlightTarget';
 import { INITIAL_TGT_PGT_PAPERS } from '@/services/paper-service';
@@ -45,6 +47,7 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
   const { user } = useAuth();
   const { examMode } = useExam();
   const { startWalkthrough } = useWalkthrough();
+  const { t } = useLanguage();
   const pathname = usePathname();
   const { colors, typography, radii } = useChalkboardTheme();
   const { width } = useWindowDimensions();
@@ -149,7 +152,7 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
                   style={[styles.searchPlaceholder, { color: colors.muted }]}
                   numberOfLines={1}
                 >
-                  Search tests, topics...
+                  {t('Search tests, topics...', 'टेस्ट या टॉपिक खोजें...')}
                 </Text>
                 <View style={[styles.kbdShortcut, { backgroundColor: colors.surface2 }]}>
                   <Text style={[styles.kbdText, { color: colors.muted }]}>⌘K</Text>
@@ -205,6 +208,7 @@ export default function TopBar({ onMenuToggle, showLogo = false }: TopBarProps) 
           >
             <HelpCircle size={16} color={colors.accent} />
           </TouchableOpacity>
+          <LanguageToggle />
           <ThemeToggle />
 
           {user ? (

@@ -14,16 +14,17 @@ import {
 import { useChalkboardTheme } from '@/constants/chalkboard-theme';
 import { useAuth } from '@/context/auth-context';
 import { useSub } from '@/context/subscription-context';
+import { useLanguage } from '@/context/language-context';
 import AstraLogo from './AstraLogo';
 import SpotlightTarget from '@/components/SpotlightTarget';
 
 export const NAV_ITEMS = [
-  { label: 'Home', path: '/', icon: Home },
-  { label: 'Tests', path: '/test-list', icon: FileText },
-  { label: 'Practice', path: '/practice', icon: Brain },
-  { label: 'Analytics', path: '/progress', icon: BarChart2 },
-  { label: 'Vidya AI', path: '/assistant', icon: MessageSquare, isVidya: true },
-  { label: 'Profile', path: '/profile', icon: User },
+  { label: 'Home', labelHi: 'होम', path: '/', icon: Home },
+  { label: 'Tests', labelHi: 'टेस्ट', path: '/test-list', icon: FileText },
+  { label: 'Practice', labelHi: 'अभ्यास', path: '/practice', icon: Brain },
+  { label: 'Analytics', labelHi: 'एनालिटिक्स', path: '/progress', icon: BarChart2 },
+  { label: 'Vidya AI', labelHi: 'विद्या AI', path: '/assistant', icon: MessageSquare, isVidya: true },
+  { label: 'Profile', labelHi: 'प्रोफ़ाइल', path: '/profile', icon: User },
 ];
 
 export default function SideNav() {
@@ -31,6 +32,7 @@ export default function SideNav() {
   const { colors, typography, radii } = useChalkboardTheme();
   const { user } = useAuth();
   const { isSubscribed } = useSub();
+  const { isHindi } = useLanguage();
 
   const isItemActive = (path: string) => {
     if (path === '/') {
@@ -111,7 +113,7 @@ export default function SideNav() {
                     },
                   ]}
                 >
-                  {item.label}
+                  {isHindi ? item.labelHi : item.label}
                 </Text>
               </TouchableOpacity>
             );

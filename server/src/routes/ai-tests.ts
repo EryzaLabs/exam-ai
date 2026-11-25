@@ -395,7 +395,7 @@ CRITICAL REQUIREMENTS:
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 50000);
 
-    const fetchRes = await fetch(apiUrl, {
+    let fetchRes = await fetch(apiUrl, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -421,13 +421,52 @@ CRITICAL REQUIREMENTS:
 
     clearTimeout(timeout);
 
-    // If HTTP error (e.g. 402 spending limit reached, 429 rate limit, 401, 500)
+    // If HTTP 402 Payment Required / spending limit, automatically fall back to openrouter/free
     if (!fetchRes.ok) {
       const errBody = await fetchRes.text().catch(() => '');
-      console.warn(`[AI Generator] Service returned error ${fetchRes.status}: ${errBody}`);
-      job.status = 'failed';
-      job.error = 'AI generator service is currently busy or out of credits. Please try again later.';
-      return;
+      const is402 =
+        fetchRes.status === 402 ||
+        errBody.includes('402') ||
+        errBody.toLowerCase().includes('payment required') ||
+        errBody.toLowerCase().includes('spending limit');
+
+      if (is402 && model !== 'openrouter/free') {
+        console.warn('[AI Generator] 402 Payment Required, retrying with openrouter/free');
+        const retryController = new AbortController();
+        const retryTimeout = setTimeout(() => retryController.abort(), 50000);
+        fetchRes = await fetch(apiUrl, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            model: 'openrouter/free',
+            messages: [
+              {
+                role: 'system',
+                content: 'You are an expert exam question creator. Always respond strictly in valid JSON.',
+              },
+              {
+                role: 'user',
+                content: prompt,
+              },
+            ],
+            response_format: { type: 'json_object' },
+            temperature: 0.6,
+          }),
+          signal: retryController.signal,
+        });
+        clearTimeout(retryTimeout);
+      }
+
+      if (!fetchRes.ok) {
+        const finalErrBody = await fetchRes.text().catch(() => '');
+        console.warn(`[AI Generator] Service returned error ${fetchRes.status}: ${finalErrBody}`);
+        job.status = 'failed';
+        job.error = 'AI generator service is currently busy or out of credits. Please try again later.';
+        return;
+      }
     }
 
     response = await fetchRes.json();
