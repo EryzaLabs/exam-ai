@@ -252,6 +252,24 @@ router.post('/generate', async (req: Request, res: Response) => {
       return res.status(400).json({ error: 'Please enter a valid topic name.' });
     }
 
+    const lowerTopic = topic.toLowerCase();
+    const nonStudyKeywords = [
+      'instagram', 'tiktok', 'snapchat', 'tinder', 'bumble', 'onlyfans',
+      'pubg', 'free fire', 'fortnite', 'valorant', 'minecraft', 'gta',
+      'celebrity gossip', 'bollywood gossip', 'hollywood gossip', 'kardashian',
+      'memes', 'horoscope', 'astrology', 'dating tips', 'pickup lines',
+    ];
+    if (
+      nonStudyKeywords.some((kw) => lowerTopic.includes(kw)) &&
+      !lowerTopic.includes('education') &&
+      !lowerTopic.includes('policy') &&
+      !lowerTopic.includes('law')
+    ) {
+      return res.status(400).json({
+        error: 'Please choose an academic, syllabus, or exam-relevant study topic. Non-study topics like social media, gaming, or entertainment are not supported.',
+      });
+    }
+
     // 1. Verify Daily Limit (1 free per account per day, or via ₹9 paid credit)
     if (orderId) {
       addPaidAiCredit(userId, 1);
