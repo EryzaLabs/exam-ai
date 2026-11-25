@@ -281,10 +281,24 @@ export default function AssistantScreen() {
         AsyncStorage.setItem(todayKey, nextCount.toString()).catch(() => {});
       }
     } catch (err: any) {
+      const raw = String(err?.message || '');
+      const isRateLimit =
+        raw.includes('RATE_LIMIT') || raw.includes('429') || raw.toLowerCase().includes('rate limit');
+
+      const friendlyText = isRateLimit
+        ? t(
+            'I am getting a lot of requests right now — please wait a few seconds and send your message again!',
+            'अभी एक साथ कई अनुरोध आ रहे हैं — कृपया कुछ सेकंड रुकें और अपना संदेश फिर से भेजें!'
+          )
+        : t(
+            'I could not connect right now. Please try again in a moment!',
+            'अभी कनेक्ट नहीं हो पा रहा है। कृपया थोड़ी देर में फिर से प्रयास करें!'
+          );
+
       const errorMsg: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: `Sorry, I encountered an issue: ${err.message || 'Unable to fetch response. Please try again.'}`,
+        content: friendlyText,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
       setMessages((prev) => [...prev, errorMsg]);

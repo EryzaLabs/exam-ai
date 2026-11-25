@@ -76,6 +76,25 @@ export async function sendChatMessage(
 
   let lastError: Error | null = null;
 
+function classifyAIError(status: number, rawText: string): string {
+  const lower = (rawText || '').toLowerCase();
+  if (status === 429 || lower.includes('rate limit') || lower.includes('429')) {
+    return 'RATE_LIMIT: Vidya is receiving many requests right now. Please wait a few seconds and try again.';
+  }
+  if (
+    status === 402 ||
+    lower.includes('402') ||
+    lower.includes('payment required') ||
+    lower.includes('spending limit')
+  ) {
+    return 'CREDITS_EXHAUSTED: AI service is temporarily busy. Please try again in a moment.';
+  }
+  if (status === 401 || lower.includes('authentication failed')) {
+    return 'AUTH_ERROR: AI service authentication is temporarily unavailable.';
+  }
+  return 'SERVICE_UNAVAILABLE: Unable to reach Vidya AI right now. Please try again shortly.';
+}
+
   for (const endpoint of endpointsToTry) {
     try {
       let response = await fetch(endpoint.url, {
@@ -99,21 +118,41 @@ export async function sendChatMessage(
             headers: endpoint.headers,
             body: JSON.stringify({ ...payload, model: FALLBACK_FREE_MODEL }),
           });
+          if (response.status === 429) {
+            // Brief backoff and single retry for free-tier per-minute rate limit
+            await new Promise((r) => setTimeout(r, 1800));
+            response = await fetch(endpoint.url, {
+              method: 'POST',
+              headers: endpoint.headers,
+              body: JSON.stringify({ ...payload, model: FALLBACK_FREE_MODEL }),
+            });
+          }
           if (!response.ok) {
             const retryErr = await response.text();
-            throw new Error(`AI API Error (${response.status}): ${retryErr}`);
+            console.warn(`[Vidya AI] Fallback error (${response.status}):`, retryErr);
+            throw new Error(classifyAIError(response.status, retryErr));
+          }
+        } else if (response.status === 429) {
+          await new Promise((r) => setTimeout(r, 1800));
+          response = await fetch(endpoint.url, {
+            method: 'POST',
+            headers: endpoint.headers,
+            body: JSON.stringify(payload),
+          });
+          if (!response.ok) {
+            const retryErr = await response.text();
+            console.warn(`[Vidya AI] Rate limit retry error (${response.status}):`, retryErr);
+            throw new Error(classifyAIError(response.status, retryErr));
           }
         } else {
-          if (response.status === 401 || errorText.includes('Authentication failed')) {
-            throw new Error('API Key Expired or Invalid. Please verify your AI API key.');
-          }
-          throw new Error(`AI API Error (${response.status}): ${errorText}`);
+          console.warn(`[Vidya AI] HTTP ${response.status} error:`, errorText);
+          throw new Error(classifyAIError(response.status, errorText));
         }
       }
 
       const data = await response.json();
       if (!data?.choices?.[0]?.message?.content) {
-        throw new Error('Invalid response structure from AI model');
+        throw new Error('SERVICE_UNAVAILABLE: Received an empty response from Vidya AI.');
       }
 
       return {
